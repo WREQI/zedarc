@@ -9,6 +9,6 @@ export class AlertsController {
   constructor(private readonly service: AlertsService) {}
   @Get() list(@Req() req: { user: AuthUser }) { return this.service.list(req.user.id) }
   @Post() create(@Req() req: { user: AuthUser }, @Body() body: AlertInput) { return this.service.create(req.user.id, body) }
-  @Patch(':id') update(@Req() req: { user: AuthUser }, @Param('id') id: string, @Body() body: { enabled: boolean }) { return this.service.update(req.user.id, id, Boolean(body.enabled)) }
+  @Patch(':id') update(@Req() req: { user: AuthUser }, @Param('id') id: string, @Body() body: { enabled?: boolean; targetPrice?: number; direction?: 'above' | 'below'; repeat?: boolean }) { return this.service.update(req.user.id, id, body) }
   @Delete(':id') remove(@Req() req: { user: AuthUser }, @Param('id') id: string) { return this.service.remove(req.user.id, id) }
 }

@@ -5,6 +5,8 @@ import { getMarketStocksSnapshot, getStockQuote } from '@/services/market'
 import { calculateKDJ, calculateRSI, calculateSAR, createKlineSeries, getKlineSeries, getMinuteSeries, type KlineCandle } from '@/services/kline'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { connectMarketSocket } from '@/services/market-socket'
+import { createPriceAlert } from '@/services/alerts'
+import { getAccessToken } from '@/services/api-client'
 
 const marketStocks = getMarketStocksSnapshot()
 
@@ -44,6 +46,12 @@ const settings = ref({ trendLine: false, supportPressure: false, areaSelect: fal
 const drawPoints = ref<Array<{ x: number; y: number }>>([])
 const areaPoints = ref<Array<{ x: number; y: number }>>([])
 const isFollowed = ref(false)
+const showAlert = ref(false)
+const alertPrice = ref('')
+const alertDirection = ref<'above' | 'below'>('above')
+const alertRepeat = ref(false)
+const alertError = ref('')
+const alertSaved = ref(false)
 let disconnectMarketSocket: () => void = () => undefined
 
 const chartPreferencesKey = 'zedarc-kline-preferences'
@@ -113,6 +121,18 @@ onUnmounted(() => {
 function toggleFollow() {
   watchlistStore.toggle(stock.value.code)
   isFollowed.value = watchlistStore.has(stock.value.code)
+}
+function openAlert() {
+  alertError.value = ''
+  alertSaved.value = false
+  alertPrice.value = Number(stock.value.price.replace(',', '')).toFixed(2)
+  showAlert.value = true
+}
+async function saveAlert() {
+  if (!getAccessToken()) { alertError.value = '请先登录后设置价格提醒'; return }
+  const targetPrice = Number(alertPrice.value)
+  if (!Number.isFinite(targetPrice) || targetPrice <= 0) { alertError.value = '请输入有效的目标价格'; return }
+  try { await createPriceAlert({ code: stock.value.code, targetPrice, direction: alertDirection.value, repeat: alertRepeat.value }); alertSaved.value = true; window.setTimeout(() => { showAlert.value = false; alertSaved.value = false }, 900) } catch { alertError.value = '保存失败，请稍后重试' }
 }
 
 
@@ -220,7 +240,7 @@ function settingEnabled(key: string) { return settings.value[key as keyof typeof
 
 <template>
   <section class="detail-page">
-    <div class="detail-top"><RouterLink class="back-link" to="/market">‹ 返回行情</RouterLink><div class="detail-actions"><button @click="showSignals = !showSignals">{{ showSignals ? '隐藏买卖点' : '显示买卖点' }}</button><button @click="resetChart">刷新 ↻</button></div></div>
+    <div class="detail-top"><RouterLink class="back-link" to="/market">‹ 返回行情</RouterLink><div class="detail-actions"><button @click="openAlert">⌁ 价格提醒</button><button @click="showSignals = !showSignals">{{ showSignals ? '隐藏买卖点' : '显示买卖点' }}</button><button @click="resetChart">刷新 ↻</button></div></div>
     <section class="stock-header panel"><div><div class="stock-title"><h1>{{ stock.name }}</h1><span>{{ stock.code }} · 沪深 A 股</span></div><div class="stock-price mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stock.price }} <small>{{ stock.change }} {{ stock.percent }}</small></div></div><div class="stock-header-stats"><div><small>今开</small><strong>{{ stockStats.open }}</strong></div><div><small>最高</small><strong :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stockStats.high }}</strong></div><div><small>最低</small><strong>{{ stockStats.low }}</strong></div><div><small>成交额</small><strong>{{ stockStats.turnover }}</strong></div></div><button class="follow-button" :class="{ followed: isFollowed }" @click="toggleFollow">{{ isFollowed ? '★ 已自选' : '☆ 自选' }}</button></section>
     <div class="detail-tabs"><button v-for="tab in ['分时 / K线', '盘口', '资金', '资讯', '分析']" :key="tab" :class="{ selected: activeDetailTab === tab }" @click="activeDetailTab = tab">{{ tab }}</button></div>
 
@@ -240,7 +260,7 @@ function settingEnabled(key: string) { return settings.value[key as keyof typeof
       <section v-else-if="activeDetailTab === '资讯'" class="panel detail-block news-detail-panel"><div class="block-title"><h2>相关资讯</h2><span class="muted">共 36 条</span></div><RouterLink v-for="item in detailNews" :key="item.time + item.title" to="/news" class="detail-news-row"><time class="mono">{{ item.time }}</time><span class="news-tag">{{ item.tag }}</span><strong>{{ item.title }}</strong><span class="result-arrow">›</span></RouterLink><RouterLink class="text-button more-detail-news" to="/news">查看全部资讯 →</RouterLink></section>
       <section v-else class="panel detail-block analysis-panel"><div class="block-title"><h2>基本面与估值</h2><span class="muted">数据日期 08-10</span></div><div class="analysis-grid"><div v-for="item in analysisMetrics" :key="item.label" class="analysis-card"><small>{{ item.label }}</small><strong class="mono">{{ item.value }}</strong><span :class="item.trend === 'up' ? 'text-up' : 'muted'">{{ item.note }}</span></div></div><div class="analysis-summary"><span class="signal-icon">◆</span><p><strong>技术面偏强</strong> 短期均线呈多头排列，成交量较前一交易日放大。</p></div></section>
     </section>
-    <section v-if="showSettings" class="settings-mask" @click.self="showSettings = false"><div class="settings-sheet"><div class="settings-sheet-head"><h2>K线设置</h2><button @click="showSettings = false">×</button></div><div class="setting-group"><h3>复权方式</h3><div class="setting-chips"><button v-for="item in ['不复权', '前复权', '后复权']" :key="item" :class="{ selected: adjustment === item }" @click="adjustment = item">{{ item }}</button></div></div><div class="setting-group"><h3>图表工具</h3><button v-for="item in [{ key: 'trendLine', label: '趋势线' }, { key: 'supportPressure', label: '支撑压力位' }, { key: 'draw', label: '画线工具' }, { key: 'areaSelect', label: '区间统计' }, { key: 'magicNine', label: '神奇九转' }, { key: 'tradeLine', label: '操盘线' }]" :key="item.key" class="setting-switch-row" @click="toggleSettingByName(item.key)"><span>{{ item.label }}</span><i :class="{ on: settingEnabled(item.key) }"><b /></i></button></div><button class="settings-done" @click="showSettings = false">完成</button></div></section>
+    <section v-if="showAlert" class="settings-mask" @click.self="showAlert = false"><div class="settings-sheet alert-sheet"><div class="settings-sheet-head"><h2>设置价格提醒</h2><button @click="showAlert = false">×</button></div><p class="alert-stock">{{ stock.name }}（{{ stock.code }}）当前价 {{ stock.price }}</p><div class="alert-form"><label>目标价格<input v-model="alertPrice" inputmode="decimal" /></label><label>触发条件<select v-model="alertDirection"><option value="above">价格高于目标价</option><option value="below">价格低于目标价</option></select></label></div><label class="alert-repeat"><input v-model="alertRepeat" type="checkbox" /> 每次达到条件都提醒</label><p v-if="alertError" class="alert-error">{{ alertError }}</p><p v-if="alertSaved" class="alert-success">提醒已保存</p><button class="settings-done" :disabled="alertSaved" @click="saveAlert">{{ alertSaved ? '已保存' : '保存提醒' }}</button></div></section><section v-if="showSettings" class="settings-mask" @click.self="showSettings = false"><div class="settings-sheet"><div class="settings-sheet-head"><h2>K线设置</h2><button @click="showSettings = false">×</button></div><div class="setting-group"><h3>复权方式</h3><div class="setting-chips"><button v-for="item in ['不复权', '前复权', '后复权']" :key="item" :class="{ selected: adjustment === item }" @click="adjustment = item">{{ item }}</button></div></div><div class="setting-group"><h3>图表工具</h3><button v-for="item in [{ key: 'trendLine', label: '趋势线' }, { key: 'supportPressure', label: '支撑压力位' }, { key: 'draw', label: '画线工具' }, { key: 'areaSelect', label: '区间统计' }, { key: 'magicNine', label: '神奇九转' }, { key: 'tradeLine', label: '操盘线' }]" :key="item.key" class="setting-switch-row" @click="toggleSettingByName(item.key)"><span>{{ item.label }}</span><i :class="{ on: settingEnabled(item.key) }"><b /></i></button></div><button class="settings-done" @click="showSettings = false">完成</button></div></section>
         <section class="detail-lower"><article class="panel detail-block"><div class="block-title"><h2>五档盘口</h2><button>更多 →</button></div><div v-for="row in orderBook.slice(0, 5)" :key="row.label" class="order-row"><span>{{ row.label }}</span><span class="mono" :class="row.side === 'sell' ? 'text-up' : 'text-down'">{{ row.price }}</span><span class="mono muted">{{ row.amount }}</span></div></article><article class="panel detail-block"><div class="block-title"><h2>相关资讯</h2><button>更多 →</button></div><p class="related-news">新能源板块持续活跃，机构关注盈利修复</p><p class="related-news">成交额快速放大，短线资金偏好明显</p><p class="related-news">公司发布最新业务进展公告</p></article></section>
   </section>
 </template>

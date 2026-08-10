@@ -23,6 +23,7 @@ const menuItems = [
   { icon: '▣', title: '消息中心', subtitle: '查看系统通知和互动消息' },
   { icon: '◷', title: '浏览历史', subtitle: '查看最近浏览的股票和资讯' },
   { icon: '☆', title: '我的收藏', subtitle: '管理收藏的资讯内容' },
+  { icon: '◉', title: '价格提醒', subtitle: '管理目标价提醒' },
   { icon: '⚙', title: '设置', subtitle: '通知、主题和隐私设置' },
 ]
 
@@ -49,6 +50,7 @@ function handleMenu(title: string) {
   if (title === '浏览历史') { router.push('/watchlist'); return }
   if (title === '我的收藏') { router.push('/news?saved=1'); return }
   if (title === '消息中心') { showMessages.value = true; unreadMessages.value = 0; if (auth.user) void markNotificationsRead().catch(() => undefined); return }
+  if (title === '价格提醒') { router.push('/alerts'); return }
   if (title === '设置') { showSettings.value = true; return }
   showToast(`${title}功能即将开放`)
 }

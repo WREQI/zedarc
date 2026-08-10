@@ -1,16 +1,26 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { apiFetch } from '@/services/api-client'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
 const router = useRouter()
+const providerLabel = ref('连接检查中')
+const providerTone = ref('pending')
+async function loadProviderStatus() {
+  try {
+    const status = await apiFetch<{ provider: string; providerOk: boolean; redis: boolean }>('/api/market/status')
+    providerLabel.value = status.providerOk ? status.provider.toUpperCase() : status.redis ? 'CACHE' : 'MOCK FALLBACK'
+    providerTone.value = status.providerOk ? 'live' : status.redis ? 'cache' : 'mock'
+  } catch { providerLabel.value = 'MOCK FALLBACK'; providerTone.value = 'mock' }
+}
 function onGlobalShortcut(event: KeyboardEvent) {
   if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
     event.preventDefault()
     router.push('/search')
   }
 }
-onMounted(() => window.addEventListener('keydown', onGlobalShortcut))
+onMounted(() => { window.addEventListener('keydown', onGlobalShortcut); void loadProviderStatus() })
 onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
 
 function isSectionActive(section: string) {
@@ -46,7 +56,7 @@ function isSectionActive(section: string) {
         <RouterLink class="side-link" :class="{ 'section-active': isSectionActive('market') }" to="/market"><span class="nav-icon"><img class="nav-icon-active" src="/nav/hq.png" alt="" /><img class="nav-icon-inactive" src="/nav/hq1.png" alt="" /></span> 行情</RouterLink>
         <RouterLink class="side-link" :class="{ 'section-active': isSectionActive('trade') }" to="/trade"><span class="nav-icon"><img class="nav-icon-active" src="/nav/kh.png" alt="" /><img class="nav-icon-inactive" src="/nav/kh1.png" alt="" /></span> 交易</RouterLink>
         <RouterLink class="side-link" :class="{ 'section-active': isSectionActive('account') }" to="/account"><span class="nav-icon"><img class="nav-icon-active" src="/nav/me.png" alt="" /><img class="nav-icon-inactive" src="/nav/me1.png" alt="" /></span> 我的</RouterLink>
-        <div class="sidebar-footer"><span class="connection-dot" /> 数据连接正常<br /><small>MOCK DATA · v0.1</small></div>
+        <div class="sidebar-footer"><span class="connection-dot" :class="providerTone" /> {{ providerTone === 'live' ? '实时数据连接正常' : providerTone === 'cache' ? '缓存数据连接正常' : '演示数据模式' }}<br /><small>{{ providerLabel }}</small></div>
       </aside>
       <main class="main-content"><RouterView /></main>
     </div>

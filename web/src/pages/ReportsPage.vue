@@ -4,7 +4,9 @@ import EmptyState from '@/components/EmptyState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { getReports, type ResearchReport } from '@/services/reports'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const reports = ref<ResearchReport[]>([])
 const keyword = ref('')
 const isLoading = ref(true)
@@ -15,7 +17,7 @@ onMounted(load)
 </script>
 
 <template>
-  <section class="reports-page"><div class="page-heading"><div><p class="eyebrow">RESEARCH / REPORTS</p><h1>研报</h1><p class="muted">跟踪机构观点和行业研究，辅助基本面分析。</p></div><label class="report-search">⌕<input v-model="keyword" placeholder="搜索标题、机构或标签" /></label></div><LoadingState v-if="isLoading" label="正在加载研报" /><ErrorState v-else-if="error" title="研报加载失败" :message="error" :retry="load" /><section v-else class="report-list"><article v-for="report in filteredReports" :key="report.id" class="panel report-card"><div class="report-head"><span class="report-rating">{{ report.rating }}</span><time>{{ report.date }}</time></div><h2>{{ report.title }}</h2><p>{{ report.summary }}</p><div class="report-foot"><span>{{ report.institution }}</span><div><b v-for="tag in report.tags" :key="tag">{{ tag }}</b></div><button>查看详情 →</button></div></article><EmptyState v-if="!filteredReports.length" title="没有匹配研报" message="请尝试其他关键词。" /></section></section>
+  <section class="reports-page"><div class="page-heading"><div><p class="eyebrow">RESEARCH / REPORTS</p><h1>研报</h1><p class="muted">跟踪机构观点和行业研究，辅助基本面分析。</p></div><label class="report-search">⌕<input v-model="keyword" placeholder="搜索标题、机构或标签" /></label></div><LoadingState v-if="isLoading" label="正在加载研报" /><ErrorState v-else-if="error" title="研报加载失败" :message="error" :retry="load" /><section v-else class="report-list"><article v-for="report in filteredReports" :key="report.id" class="panel report-card"><div class="report-head"><span class="report-rating">{{ report.rating }}</span><time>{{ report.date }}</time></div><h2>{{ report.title }}</h2><p>{{ report.summary }}</p><div class="report-foot"><span>{{ report.institution }}</span><div><b v-for="tag in report.tags" :key="tag">{{ tag }}</b></div><button @click="router.push(`/reports/${report.id}`)">查看详情 →</button></div></article><EmptyState v-if="!filteredReports.length" title="没有匹配研报" message="请尝试其他关键词。" /></section></section>
 </template>
 
 <style scoped>

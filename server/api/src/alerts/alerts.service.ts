@@ -5,6 +5,7 @@ import { DatabaseService } from '../database/database.service.js'
 import { priceAlerts } from '../database/schema.js'
 
 export type AlertInput = { code: string; targetPrice: number; direction: 'above' | 'below'; repeat?: boolean }
+export type AlertUpdate = { enabled?: boolean; targetPrice?: number; direction?: 'above' | 'below'; repeat?: boolean }
 
 @Injectable()
 export class AlertsService {
@@ -26,12 +27,15 @@ export class AlertsService {
     const row = { id: crypto.randomUUID(), userId, code, targetPrice: input.targetPrice, direction: input.direction, repeat: input.repeat ?? false, enabled: true, createdAt: new Date().toISOString() }
     this.memory.set(userId, [row, ...(this.memory.get(userId) ?? [])]); await this.syncWorker(); return row
   }
-  async update(userId: string, id: string, enabled: boolean) {
+  async update(userId: string, id: string, input: AlertUpdate) {
+    if (input.targetPrice != null && (!Number.isFinite(Number(input.targetPrice)) || Number(input.targetPrice) <= 0)) throw new BadRequestException('目标价格无效')
+    if (input.direction && !['above', 'below'].includes(input.direction)) throw new BadRequestException('提醒方向无效')
+    const values = { ...(input.enabled == null ? {} : { enabled: Boolean(input.enabled) }), ...(input.targetPrice == null ? {} : { targetPrice: String(input.targetPrice) }), ...(input.direction == null ? {} : { direction: input.direction }), ...(input.repeat == null ? {} : { repeat: Boolean(input.repeat) }) }
     if (this.database.db) try {
-      const [row] = await this.database.db.update(priceAlerts).set({ enabled }).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))).returning()
+      const [row] = await this.database.db.update(priceAlerts).set(values).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))).returning()
       if (!row) throw new NotFoundException('提醒不存在'); await this.syncWorker(); return this.toDto(row)
     } catch (error) { if (error instanceof NotFoundException) throw error }
-    const row = (this.memory.get(userId) ?? []).find((item) => item.id === id); if (!row) throw new NotFoundException('提醒不存在'); row.enabled = enabled; await this.syncWorker(); return row
+    const row = (this.memory.get(userId) ?? []).find((item) => item.id === id); if (!row) throw new NotFoundException('提醒不存在'); Object.assign(row, input); await this.syncWorker(); return row
   }
   async remove(userId: string, id: string) {
     if (this.database.db) try { await this.database.db.delete(priceAlerts).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))); await this.syncWorker(); return { deleted: true } } catch { /* fallback */ }

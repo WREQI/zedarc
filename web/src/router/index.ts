@@ -12,6 +12,8 @@ import NewsDetailPage from '../pages/NewsDetailPage.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 import BoardListPage from '../pages/BoardListPage.vue'
 import ReportsPage from '../pages/ReportsPage.vue'
+import ReportDetailPage from '../pages/ReportDetailPage.vue'
+import AlertsPage from '../pages/AlertsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -25,6 +27,8 @@ const router = createRouter({
         { path: 'sector', name: 'sector', component: BoardListPage },
         { path: 'etf', name: 'etf', component: BoardListPage },
         { path: 'reports', name: 'reports', component: ReportsPage },
+        { path: 'reports/:id', name: 'report-detail', component: ReportDetailPage },
+        { path: 'alerts', name: 'alerts', component: AlertsPage },
         { path: 'stock/:code', name: 'stock-detail', component: StockDetailPage },
         { path: 'watchlist', name: 'watchlist', component: WatchlistPage },
         { path: 'trade', name: 'trade', component: TradePage },
