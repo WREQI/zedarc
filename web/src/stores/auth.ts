@@ -8,7 +8,7 @@ export function useAuthStore() {
   if (!initialized) {
     try {
       state.user = JSON.parse(window.localStorage.getItem('zedarc-user') ?? 'null') as UserProfile | null
-      if (!getAccessToken()) state.user = null
+      if (!getAccessToken() && !window.localStorage.getItem('zedarc-refresh-token')) state.user = null
     } catch { state.user = null }
     initialized = true
   }
@@ -16,16 +16,16 @@ export function useAuthStore() {
     state.loading = true; state.error = ''
     try {
       if (!/^1\d{10}$/.test(phone)) throw new Error('请输入有效的手机号')
-      try {
-        const result = await loginApi(phone, code)
-        setAccessToken(result.accessToken)
-        state.user = result.user
-      } catch {
-        state.user = { id: phone, name: `用户${phone.slice(-4)}`, phone }
-      }
+      const result = await loginApi(phone, code)
+      setAccessToken(result.accessToken)
+      state.user = result.user
       window.localStorage.setItem('zedarc-user', JSON.stringify(state.user))
     } catch (error) { state.error = error instanceof Error ? error.message : '登录失败' } finally { state.loading = false }
   }
-  function logout() { state.user = null; clearAccessToken(); window.localStorage.removeItem('zedarc-user') }
+  function logout() {
+    state.user = null
+    clearAccessToken()
+    window.localStorage.removeItem('zedarc-user')
+  }
   return { user: computed(() => state.user), isAuthenticated: computed(() => Boolean(state.user && getAccessToken())), loading: computed(() => state.loading), error: computed(() => state.error), login, logout }
 }

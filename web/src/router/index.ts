@@ -1,45 +1,34 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AppLayout from '../layouts/AppLayout.vue'
-import HomePage from '../pages/HomePage.vue'
-import MarketPage from '../pages/MarketPage.vue'
-import WatchlistPage from '../pages/WatchlistPage.vue'
-import TradePage from '../pages/TradePage.vue'
-import NewsPage from '../pages/NewsPage.vue'
-import AccountPage from '../pages/AccountPage.vue'
-import StockDetailPage from '../pages/StockDetailPage.vue'
-import SearchPage from '../pages/SearchPage.vue'
-import NewsDetailPage from '../pages/NewsDetailPage.vue'
-import NotFoundPage from '../pages/NotFoundPage.vue'
-import BoardListPage from '../pages/BoardListPage.vue'
-import ReportsPage from '../pages/ReportsPage.vue'
-import ReportDetailPage from '../pages/ReportDetailPage.vue'
-import AlertsPage from '../pages/AlertsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      component: AppLayout,
+      component: () => import('../layouts/AppLayout.vue'),
       children: [
-        { path: '', name: 'home', component: HomePage },
-        { path: 'market', name: 'market', component: MarketPage },
-        { path: 'sector', name: 'sector', component: BoardListPage },
-        { path: 'etf', name: 'etf', component: BoardListPage },
-        { path: 'reports', name: 'reports', component: ReportsPage },
-        { path: 'reports/:id', name: 'report-detail', component: ReportDetailPage },
-        { path: 'alerts', name: 'alerts', component: AlertsPage },
-        { path: 'stock/:code', name: 'stock-detail', component: StockDetailPage },
-        { path: 'watchlist', name: 'watchlist', component: WatchlistPage },
-        { path: 'trade', name: 'trade', component: TradePage },
-        { path: 'news', name: 'news', component: NewsPage },
-        { path: 'news/:id', name: 'news-detail', component: NewsDetailPage },
-        { path: 'account', name: 'account', component: AccountPage },
-        { path: 'search', name: 'search', component: SearchPage },
-        { path: ':pathMatch(.*)*', name: 'not-found', component: NotFoundPage },
+        { path: '', name: 'home', component: () => import('../pages/HomePage.vue') },
+        { path: 'market', name: 'market', component: () => import('../pages/MarketPage.vue') },
+        { path: 'sector', name: 'sector', component: () => import('../pages/BoardListPage.vue') },
+        { path: 'etf', name: 'etf', component: () => import('../pages/BoardListPage.vue') },
+        { path: 'reports', name: 'reports', component: () => import('../pages/ReportsPage.vue') },
+        { path: 'reports/:id', name: 'report-detail', component: () => import('../pages/ReportDetailPage.vue') },
+        { path: 'alerts', name: 'alerts', component: () => import('../pages/AlertsPage.vue'), meta: { requiresAuth: true } },
+        { path: 'stock/:code', name: 'stock-detail', component: () => import('../pages/StockDetailPage.vue') },
+        { path: 'watchlist', name: 'watchlist', component: () => import('../pages/WatchlistPage.vue') },
+        { path: 'trade', name: 'trade', component: () => import('../pages/TradePage.vue') },
+        { path: 'news', name: 'news', component: () => import('../pages/NewsPage.vue') },
+        { path: 'news/:id', name: 'news-detail', component: () => import('../pages/NewsDetailPage.vue') },
+        { path: 'account', name: 'account', component: () => import('../pages/AccountPage.vue') },
+        { path: 'search', name: 'search', component: () => import('../pages/SearchPage.vue') },
+        { path: ':pathMatch(.*)*', name: 'not-found', component: () => import('../pages/NotFoundPage.vue') },
       ],
     },
   ],
 })
 
 export default router
+
+router.beforeEach((to) => {
+  if (to.meta.requiresAuth && !window.localStorage.getItem('zedarc-access-token')) return { path: '/account', query: { redirect: to.fullPath } }
+})

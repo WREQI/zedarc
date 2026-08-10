@@ -44,11 +44,24 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
     const token = await refreshAccessToken()
     if (token) response = await request()
   }
-  if (!response.ok) throw new Error((await response.text()) || `请求失败 (${response.status})`)
+  if (!response.ok) {
+    const text = await response.text()
+    let message = text || `请求失败 (${response.status})`
+    try {
+      const body = JSON.parse(text) as { message?: string | string[]; error?: { message?: string | string[] } }
+      const value = body.message ?? body.error?.message
+      message = Array.isArray(value) ? value.join('，') : value ?? message
+    } catch { /* keep the raw response when it is not JSON */ }
+    throw new Error(message)
+  }
   return response.json() as Promise<T>
 }
 
-export async function loginApi(phone: string, code = '123456') {
+export async function sendCodeApi(phone: string) {
+  return apiFetch<{ success: boolean; expiresIn: number }>('/api/auth/code', { method: 'POST', body: JSON.stringify({ phone }) })
+}
+
+export async function loginApi(phone: string, code: string) {
   const result = await apiFetch<{ accessToken: string; refreshToken: string; user: { id: string; name: string; phone: string } }>('/api/auth/login', { method: 'POST', body: JSON.stringify({ phone, code }) })
   setAccessToken(result.accessToken)
   setRefreshToken(result.refreshToken)
