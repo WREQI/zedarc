@@ -12,6 +12,7 @@ import { ReportsModule } from './reports/reports.module.js'
 import { RealtimeModule } from './realtime/realtime.module.js'
 import { TradeModule } from './trade/trade.module.js'
 import { WatchlistModule } from './watchlist/watchlist.module.js'
+import { SettingsModule } from './settings/settings.module.js'
 
-@Module({ imports: [DatabaseModule, AuthModule, AlertsModule, NotificationsModule, KlineModule, WatchlistModule, FavoritesModule, HealthModule, MarketModule, RealtimeModule, NewsModule, ReportsModule, TradeModule] })
+@Module({ imports: [DatabaseModule, AuthModule, AlertsModule, NotificationsModule, KlineModule, WatchlistModule, FavoritesModule, HealthModule, MarketModule, RealtimeModule, NewsModule, ReportsModule, TradeModule, SettingsModule] })
 export class AppModule {}

@@ -4,7 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import EmptyState from '@/components/EmptyState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
-import { newsCategories, type NewsArticle } from '@/mock/news'
+import { newsCategories, type NewsArticle } from '@/services/news-types'
 import { getNewsArticles } from '@/services/news'
 import { useFavoritesStore } from '@/stores/favorites'
 

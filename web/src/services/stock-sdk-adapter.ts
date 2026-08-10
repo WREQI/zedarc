@@ -1,5 +1,5 @@
 import { StockSDK } from 'stock-sdk'
-import type { IndexQuote, MarketBoardQuote, StockQuote } from '@/mock/market'
+import type { IndexQuote, MarketBoardQuote, StockQuote } from '@/services/market-types'
 import type { KlineCandle } from '@/services/kline'
 
 const sdk = new StockSDK({ timeout: 8000, retry: { maxRetries: 1 } })

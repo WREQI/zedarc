@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { getMarketStocksSnapshot } from '@/services/market'
-import type { StockQuote } from '@/mock/market'
+import type { StockQuote } from '@/services/market-types'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 

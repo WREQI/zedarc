@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { getBoardQuotes, getIndexQuotes, getMarketStocks } from '@/services/market'
-import type { IndexQuote, MarketBoardQuote, StockQuote } from '@/mock/market'
+import type { IndexQuote, MarketBoardQuote, StockQuote } from '@/services/market-types'
 
 const mainTabs = ['行情', '板块', 'ETF', '债券', '科创', '港股']
 const marketLabels = ['沪深市场', '沪深港通', '美股']

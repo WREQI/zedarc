@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { getNotifications, markNotificationsRead, type NotificationItem } from '@/services/notifications'
-import { sendCodeApi } from '@/services/api-client'
+import { getSettingsApi, sendCodeApi, updateSettingsApi } from '@/services/api-client'
 
 const router = useRouter()
 const auth = useAuthStore()
@@ -42,11 +42,13 @@ onMounted(async () => {
   recentCount.value = (JSON.parse(window.localStorage.getItem('zedarc-recent-stocks') ?? '[]') as string[]).length
   notifications.value = window.localStorage.getItem('zedarc-setting-notifications') !== 'false'
   priceAlerts.value = window.localStorage.getItem('zedarc-setting-price-alerts') !== 'false'
+  if (auth.user.value) { try { const settings = await getSettingsApi(); if (typeof settings.notifications === 'boolean') notifications.value = settings.notifications; if (typeof settings.priceAlerts === 'boolean') priceAlerts.value = settings.priceAlerts } catch { /* local preferences remain available offline */ } }
   await loadMessages()
 })
 
 function persistSetting(key: string, value: boolean) {
   window.localStorage.setItem(key, String(value))
+  if (auth.user.value) void updateSettingsApi({ [key.replace('zedarc-setting-', '')]: value }).catch(() => undefined)
 }
 
 function stopCountdown() {

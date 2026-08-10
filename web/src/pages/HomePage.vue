@@ -5,8 +5,8 @@ import LoadingState from '@/components/LoadingState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 import { getIndexQuotes, getMarketStocks } from '@/services/market'
 import { getNewsArticles } from '@/services/news'
-import type { IndexQuote, StockQuote } from '@/mock/market'
-import type { NewsArticle } from '@/mock/news'
+import type { IndexQuote, StockQuote } from '@/services/market-types'
+import type { NewsArticle } from '@/services/news-types'
 
 const router = useRouter()
 

@@ -49,3 +49,6 @@ export function sendCodeApi(phone: string) { return apiFetch<{ success: boolean;
 export async function loginApi(phone: string, code: string) { const result = await apiFetch<{ accessToken: string; refreshToken: string; user: { id: string; name?: string; phone: string } }>('/api/auth/login', { method: 'POST', body: JSON.stringify({ phone, code }) }); setAccessToken(result.accessToken); setRefreshToken(result.refreshToken); return result }
 export function meApi() { return apiFetch<{ id: string; name?: string; phone: string }>('/api/auth/me') }
 export async function logoutApi() { const refreshToken = getRefreshToken(); try { if (refreshToken) await apiFetch<{ success: boolean }>('/api/auth/logout', { method: 'POST', body: JSON.stringify({ refreshToken }) }) } finally { clearAccessToken() } }
+
+export function getSettingsApi() { return apiFetch<Record<string, boolean | string | number>>('/api/settings') }
+export function updateSettingsApi(patch: Record<string, boolean | string | number>) { return apiFetch<Record<string, boolean | string | number>>('/api/settings', { method: 'PATCH', body: JSON.stringify(patch) }) }

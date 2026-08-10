@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { getMarketStocksSnapshot } from '@/services/market'
-import type { StockQuote } from '@/mock/market'
+import type { StockQuote } from '@/services/market-types'
 import { cancelTrade, getTradeAccount, getTradeOrders, getTradePositions, getTradeStats, loadDemoAccount, placeTrade, saveDemoAccount, type DemoAccount } from '@/services/trade'
 import { getAccessToken } from '@/services/api-client'
 

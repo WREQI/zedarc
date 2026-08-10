@@ -3,7 +3,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
-import type { NewsArticle } from '@/mock/news'
+import type { NewsArticle } from '@/services/news-types'
 import { getNewsArticle, getNewsArticles } from '@/services/news'
 import { useFavoritesStore } from '@/stores/favorites'
 
