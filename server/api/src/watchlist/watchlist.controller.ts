@@ -7,8 +7,8 @@ import { WatchlistService } from './watchlist.service.js'
 @ApiTags('watchlist') @ApiBearerAuth() @UseGuards(AuthGuard) @Controller('api/watchlist')
 export class WatchlistController {
   constructor(private readonly service: WatchlistService) {}
-  @Get() list(@Req() req: { user: AuthUser }) { return this.service.list(req.user.id) }
-  @Post() add(@Req() req: { user: AuthUser }, @Body() body: { code: string; name?: string; sortOrder?: number }) { return this.service.upsert(req.user.id, body) }
-  @Patch(':code') update(@Req() req: { user: AuthUser }, @Param('code') code: string, @Body() body: { name?: string; sortOrder?: number }) { return this.service.update(req.user.id, code, body) }
-  @Delete(':code') remove(@Req() req: { user: AuthUser }, @Param('code') code: string) { return this.service.remove(req.user.id, code) }
+  @Get() async list(@Req() req: { user: AuthUser }) { return this.service.list(req.user.id) }
+  @Post() async add(@Req() req: { user: AuthUser }, @Body() body: { code: string; name?: string; sortOrder?: number }) { return this.service.upsert(req.user.id, body) }
+  @Patch(':code') async update(@Req() req: { user: AuthUser }, @Param('code') code: string, @Body() body: { name?: string; sortOrder?: number }) { return this.service.update(req.user.id, code, body) }
+  @Delete(':code') async remove(@Req() req: { user: AuthUser }, @Param('code') code: string) { return this.service.remove(req.user.id, code) }
 }

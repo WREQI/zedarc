@@ -93,6 +93,7 @@ export const priceAlerts = pgTable('price_alerts', {
   direction: varchar('direction', { length: 8 }).notNull(),
   repeat: boolean('repeat').notNull().default(false),
   enabled: boolean('enabled').notNull().default(true),
+  lastTriggeredAt: timestamp('last_triggered_at', { withTimezone: true }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCodeIdx: index('price_alerts_user_code_idx').on(table.userId, table.code) }))
 
