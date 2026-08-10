@@ -10,7 +10,7 @@ export type AlertUpdate = { enabled?: boolean; targetPrice?: number; direction?:
 @Injectable()
 export class AlertsService {
   private readonly redis: RedisClientType = createClient({ url: process.env.REDIS_URL ?? 'redis://localhost:6379', socket: { connectTimeout: 500, reconnectStrategy: false } })
-  private readonly memory = new Map<string, Array<{ id: string; userId: string; code: string; targetPrice: number; direction: 'above' | 'below'; repeat: boolean; enabled: boolean; createdAt: string }>>()
+  private readonly memory = new Map<string, Array<{ id: string; userId: string; code: string; targetPrice: number; direction: 'above' | 'below'; repeat: boolean; enabled: boolean; lastTriggeredAt: string | null; createdAt: string }>>()
   constructor(private readonly database: DatabaseService) { void this.redis.connect().catch(() => undefined) }
   async list(userId: string) {
     if (this.database.db) try { return (await this.database.db.select().from(priceAlerts).where(eq(priceAlerts.userId, userId)).orderBy(desc(priceAlerts.createdAt))).map(this.toDto) } catch { /* local fallback */ }
@@ -24,7 +24,7 @@ export class AlertsService {
       await this.syncWorker()
       return this.toDto(row)
     } catch { /* local fallback */ }
-    const row = { id: crypto.randomUUID(), userId, code, targetPrice: input.targetPrice, direction: input.direction, repeat: input.repeat ?? false, enabled: true, createdAt: new Date().toISOString() }
+    const row = { id: crypto.randomUUID(), userId, code, targetPrice: input.targetPrice, direction: input.direction, repeat: input.repeat ?? false, enabled: true, lastTriggeredAt: null, createdAt: new Date().toISOString() }
     this.memory.set(userId, [row, ...(this.memory.get(userId) ?? [])]); await this.syncWorker(); return row
   }
   async update(userId: string, id: string, input: AlertUpdate) {
@@ -42,6 +42,6 @@ export class AlertsService {
     this.memory.set(userId, (this.memory.get(userId) ?? []).filter((item) => item.id !== id)); await this.syncWorker(); return { deleted: true }
   }
   private validate(input: AlertInput) { if (!input.code?.trim() || !Number.isFinite(Number(input.targetPrice)) || Number(input.targetPrice) <= 0 || !['above', 'below'].includes(input.direction)) throw new BadRequestException('提醒参数无效') }
-  private toDto(row: typeof priceAlerts.$inferSelect) { return { ...row, targetPrice: Number(row.targetPrice), createdAt: row.createdAt.toISOString() } }
-  private async syncWorker() { if (!this.redis.isOpen) return; const all = this.database.db ? await this.database.db.select().from(priceAlerts).where(eq(priceAlerts.enabled, true)).catch(() => []) : [...this.memory.values()].flat().filter((item) => item.enabled); await this.redis.set('alerts:active', JSON.stringify(all.map((row) => ({ id: row.id, userId: row.userId, code: row.code, targetPrice: Number(row.targetPrice), direction: row.direction, repeat: row.repeat ?? false })))) }
+  private toDto(row: typeof priceAlerts.$inferSelect) { return { ...row, targetPrice: Number(row.targetPrice), lastTriggeredAt: row.lastTriggeredAt?.toISOString() ?? null, createdAt: row.createdAt.toISOString() } }
+  private async syncWorker() { if (!this.redis.isOpen) return; const all = this.database.db ? await this.database.db.select().from(priceAlerts).where(eq(priceAlerts.enabled, true)).catch(() => []) : [...this.memory.values()].flat().filter((item) => item.enabled); await this.redis.set('alerts:active', JSON.stringify(all.map((row) => ({ id: row.id, userId: row.userId, code: row.code, targetPrice: Number(row.targetPrice), direction: row.direction, repeat: row.repeat ?? false, lastTriggeredAt: row.lastTriggeredAt instanceof Date ? row.lastTriggeredAt.getTime() : (row.lastTriggeredAt ? Date.parse(row.lastTriggeredAt) : null) })))) }
 }
