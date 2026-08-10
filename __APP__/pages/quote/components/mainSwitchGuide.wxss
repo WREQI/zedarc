@@ -1,0 +1,66 @@
+.guide-wrap {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+}
+.guide-wrap .guide-box {
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: 0.4266666666666667rem;
+  position: absolute;
+  width: 100%;
+}
+.guide-wrap .title {
+  color: #262e40;
+  font-size: 0.48rem;
+  font-weight: 500;
+  line-height: 0.6666666666666666rem;
+  position: relative;
+  text-align: center;
+}
+.guide-wrap .title .close {
+  background-image: url(https://st.gtimg.com/design/e970750b602bc77a629d604a62d75b2a.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.26666666666666666rem 0.26666666666666666rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.0666666666666667rem;
+}
+.guide-wrap .desc {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.8533333333333334rem;
+  margin-top: 0.4266666666666667rem;
+  text-align: center;
+}
+.guide-wrap .img {
+  background-image: url(https://st.gtimg.com/design/6c41bcbc62ddb2b0d759f9ef5f8957c1.gif);
+  background-size: contain;
+  height: 4.306666666666667rem;
+  margin: 0.4266666666666667rem auto 0;
+  width: 9.36rem;
+}
+.guide-wrap .guide-button {
+  background-color: #e63535;
+  border-radius: 0.10666666666666667rem;
+  border-top: 0.013333333333333334rem solid #edeff3;
+  color: #fff;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  margin: 0.4266666666666667rem auto 0.32rem;
+  text-align: center;
+  width: 9.36rem;
+}

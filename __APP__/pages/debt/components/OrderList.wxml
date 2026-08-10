@@ -1,0 +1,98 @@
+<view class="{{['debt-orderlist','data-v-7f5874b3',e]}}">
+  <list-header
+    bind:__l="__l"
+    class="data-v-7f5874b3"
+    uI="7f5874b3-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></list-header>
+  <view class="stock-list-body data-v-7f5874b3" wx:if="{{b}}">
+    <view
+      bindtap="{{item.z}}"
+      class="stock-list-item flex border--bottom data-v-7f5874b3"
+      wx:for="{{c}}"
+      wx:key="y"
+    >
+      <list-cell
+        bind:__l="__l"
+        class="col-item col-a data-v-7f5874b3"
+        uI="{{item.c}}"
+        uS="{{['title','subtitle']}}"
+      >
+        <label class="data-v-7f5874b3" slot="title">{{item.a}}</label>
+        <label class="data-v-7f5874b3" slot="subtitle">{{item.b}}</label>
+      </list-cell>
+      <list-cell
+        bind:__l="__l"
+        class="col-item col-b align-r data-v-7f5874b3"
+        uI="{{item.g}}"
+        uS="{{['title','subtitle']}}"
+      >
+        <label class="{{['data-v-7f5874b3',item.e]}}" slot="title"
+          >{{item.d}}元</label
+        >
+        <label class="data-v-7f5874b3" slot="subtitle">{{item.f}}%</label>
+      </list-cell>
+      <list-cell
+        bind:__l="__l"
+        class="col-item col-c align-r data-v-7f5874b3"
+        uI="{{item.i}}"
+        uS="{{['title']}}"
+      >
+        <label class="data-v-7f5874b3" slot="title">{{item.h}}元</label>
+      </list-cell>
+      <list-cell
+        bind:__l="__l"
+        class="col-item col-d align-r data-v-7f5874b3"
+        uI="{{item.x}}"
+        uS="{{['title','subtitle']}}"
+      >
+        <view slot="title">
+          <label class="fs-24 data-v-7f5874b3" wx:if="{{item.j}}">已撤单</label>
+          <label class="fs-24 data-v-7f5874b3" wx:elif="{{item.k}}"
+            >未成交</label
+          >
+          <label class="fs-24 data-v-7f5874b3" wx:elif="{{item.l}}">废单</label>
+          <button
+            catchtap="{{item.n}}"
+            class="btn data-v-7f5874b3"
+            disabled="{{true}}"
+            type="primary"
+            wx:elif="{{item.m}}"
+          >
+            撤单中
+          </button>
+          <button
+            catchtap="{{item.p}}"
+            class="btn data-v-7f5874b3"
+            type="primary"
+            wx:elif="{{item.o}}"
+          >
+            撤单
+          </button>
+          <label class="fs-24 data-v-7f5874b3" wx:elif="{{item.q}}"
+            >本金借出</label
+          >
+          <label class="fs-24 data-v-7f5874b3" wx:elif="{{item.r}}"
+            >本息到账</label
+          >
+        </view>
+        <view slot="subtitle">
+          <label class="fs-24 data-v-7f5874b3" wx:if="{{item.s}}"
+            >{{item.t}}</label
+          >
+          <label class="fs-24 data-v-7f5874b3" wx:elif="{{item.v}}"
+            >{{item.w}}</label
+          >
+        </view>
+      </list-cell>
+    </view>
+  </view>
+  <empty
+    bind:__l="__l"
+    class="data-v-7f5874b3"
+    uI="7f5874b3-5"
+    uP="{{d||''}}"
+    wx:else
+  ></empty>
+</view>

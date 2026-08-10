@@ -1,0 +1,102 @@
+.quote-animate.data-v-c7ca0582 {
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.bg-quote-rise.data-v-c7ca0582 {
+  background-color: #fcd6d6 !important;
+}
+.bg-quote-drop.data-v-c7ca0582 {
+  background-color: #cff1d9 !important;
+}
+.red.data-v-c7ca0582 {
+  color: var(--color-red) !important;
+}
+.equal.data-v-c7ca0582 {
+  color: var(--color-gray) !important;
+}
+.green.data-v-c7ca0582 {
+  color: var(--color-green) !important;
+}
+.snp-red.data-v-c7ca0582 {
+  color: red;
+  display: inline !important;
+}
+.snp-blue.data-v-c7ca0582 {
+  color: #3077ec;
+  display: inline !important;
+}
+.news-link.data-v-c7ca0582 {
+  border-bottom: 0.04rem dashed #007aff;
+  color: #1f2126;
+  display: inline !important;
+}
+.news-text .list div span.data-v-c7ca0582 {
+  display: inline-block;
+}
+[data-theme="light"] .tap-on.data-v-c7ca0582:active {
+  background: #e8e8e8 !important;
+}
+[data-theme="dark"] .bg-quote-rise.data-v-c7ca0582 {
+  background-color: #4b2428 !important;
+}
+[data-theme="dark"] .bg-quote-drop.data-v-c7ca0582 {
+  background-color: #2a5236 !important;
+}
+[data-theme="dark"] .red.data-v-c7ca0582 {
+  color: #e63535 !important;
+}
+[data-theme="dark"] .equal.data-v-c7ca0582 {
+  color: #a7b0c4;
+}
+[data-theme="dark"] .green.data-v-c7ca0582 {
+  color: #1caa3c !important;
+}
+.container.data-v-c7ca0582 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  min-height: 4rem;
+  position: relative;
+  width: 100%;
+}
+[data-theme="light"] .container.data-v-c7ca0582 {
+  background: #fff;
+}
+[data-theme="dark"] .container.data-v-c7ca0582 {
+  background: #12161f;
+}
+.icon.data-v-c7ca0582 {
+  background-image: url(https://st.gtimg.com/design/8b9a993dae48a9fe2b108f8d56d55a5a.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.7733333333333334rem;
+  width: 1.48rem;
+}
+[data-st-theme="dark"] .icon.data-v-c7ca0582,
+[data-theme="dark"] .icon.data-v-c7ca0582 {
+  background-image: url(https://st.gtimg.com/design/b6c9bf772cc386fe67c81c23ac5d916a.png);
+}
+.text.data-v-c7ca0582 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  margin-top: 0.32rem;
+}
+[data-theme="light"] .text.data-v-c7ca0582 {
+  color: #a7b0c4;
+}
+[data-theme="dark"] .text.data-v-c7ca0582 {
+  color: #69738c;
+}
+.horizontal.data-v-c7ca0582 {
+  min-height: 1.6rem;
+}
+.horizontal .icon.data-v-c7ca0582 {
+  height: 0.5866666666666667rem;
+  margin-right: 0.24rem;
+  width: 0.49333333333333335rem;
+}
+.horizontal .text.data-v-c7ca0582 {
+  margin-top: 0;
+}

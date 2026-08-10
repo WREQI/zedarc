@@ -1,0 +1,77 @@
+.ai-search-bar.data-v-61b7c22b {
+  position: relative;
+}
+.ai-search-bar .ai-search-enrty.data-v-61b7c22b {
+  align-items: center;
+  background-color: #f5f6fa;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  height: 0.96rem;
+  padding: 0 0.21333333333333335rem;
+}
+.ai-search-bar .ai-search-enrty.top.data-v-61b7c22b {
+  background-color: var(--color-white) !important;
+}
+.ai-search-bar .ai-search-enrty .ai-icon.data-v-61b7c22b {
+  color: #e63535;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.5333333333333333rem;
+  line-height: 0.5333333333333333rem;
+}
+.ai-search-bar .ai-search-enrty .ai-divider-line.data-v-61b7c22b {
+  background-color: #c9d0dc;
+  height: 0.5333333333333333rem;
+  margin-left: 0.13333333333333333rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.013333333333333334rem;
+}
+.ai-search-bar .ai-search-enrty .ai-question.data-v-61b7c22b {
+  align-items: center;
+  color: #7a8499;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  height: 0.5333333333333333rem;
+  line-height: 0.5333333333333333rem;
+  min-width: 0.13333333333333333rem;
+}
+.ai-search-bar
+  .ai-search-enrty
+  .ai-question
+  .ai-question-title.data-v-61b7c22b {
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+.ai-search-bar .ai-search-enrty .more-btn.data-v-61b7c22b {
+  background-image: url(https://st.gtimg.com/design/59ab73ef1399900d93a2bcc782a4c589.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.32rem;
+  width: 0.32rem;
+}
+.ai-search-bar .fake-input.data-v-61b7c22b {
+  height: 0;
+  width: 0;
+}
+[data-st-theme="black"] .ai-search-enrty.data-v-61b7c22b,
+[data-st-theme="dark"] .ai-search-enrty.data-v-61b7c22b,
+html.black .ai-search-enrty.data-v-61b7c22b {
+  background-color: #171d28 !important;
+}
+[data-st-theme="black"] .ai-search-enrty .ai-divider-line.data-v-61b7c22b,
+[data-st-theme="dark"] .ai-search-enrty .ai-divider-line.data-v-61b7c22b,
+html.black .ai-search-enrty .ai-divider-line.data-v-61b7c22b {
+  background-color: #262e40 !important;
+}
+[data-st-theme="black"] .ai-search-enrty .ai-question.data-v-61b7c22b,
+[data-st-theme="dark"] .ai-search-enrty .ai-question.data-v-61b7c22b,
+html.black .ai-search-enrty .ai-question.data-v-61b7c22b {
+  color: #7d88a1 !important;
+}

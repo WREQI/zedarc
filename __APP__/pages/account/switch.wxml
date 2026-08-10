@@ -1,0 +1,62 @@
+<page-meta class="data-v-5b0853a3" rootFontSize="{{a}}"></page-meta>
+<view class="_div container data-v-5b0853a3">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5b0853a3"
+    uI="5b0853a3-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5b0853a3"
+    uI="5b0853a3-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div tip data-v-5b0853a3">请选择要切换的证券账户</view>
+  <view class="_div broker-list-wrap data-v-5b0853a3">
+    <view
+      bindtap="{{item.g}}"
+      class="{{['_div','data-v-5b0853a3','broker-item',item.f&&'space-between']}}"
+      wx:for="{{c}}"
+      wx:key="e"
+    >
+      <view class="_div broker-info data-v-5b0853a3">
+        <view class="_div broker-info-logo data-v-5b0853a3">
+          <broker-logo
+            bind:__l="__l"
+            class="broker-logo data-v-5b0853a3"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></broker-logo>
+        </view>
+        <view class="_div broker-info-text data-v-5b0853a3">
+          <view class="_div broker-name data-v-5b0853a3">{{item.c}}</view>
+          <view class="_div label data-v-5b0853a3">合作券商</view>
+        </view>
+      </view>
+      <view class="{{['_div','use-status','data-v-5b0853a3',item.d&&'hide']}}">
+        <label class="_span blue-dot data-v-5b0853a3"></label>
+        <label class="_span use-label data-v-5b0853a3">当前使用</label>
+      </view>
+    </view>
+    <view
+      bindtap="{{d}}"
+      class="_div broker-item broker-item-other data-v-5b0853a3"
+    >
+      <view class="_div ico-add data-v-5b0853a3"></view>
+      <view class="_p broker-name broker-add data-v-5b0853a3"
+        >添加证券账号</view
+      >
+    </view>
+  </view>
+  <broker-action-sheet
+    bind:__l="__l"
+    bindclose="{{f}}"
+    class="data-v-5b0853a3"
+    data-c-h="{{!e}}"
+    uI="5b0853a3-3"
+    uP="{{g}}"
+    wx:if="{{g}}"
+  ></broker-action-sheet>
+</view>

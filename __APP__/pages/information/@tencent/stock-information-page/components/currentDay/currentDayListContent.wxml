@@ -1,0 +1,32 @@
+<view class="_div current data-v-14be881e" id="current">
+  <view class="_div current-list current-day data-v-14be881e">
+    <view
+      catchtap="{{flash.g}}"
+      class="_div current-item data-v-14be881e"
+      wx:for="{{a}}"
+      wx:for-item="flash"
+      wx:key="h"
+    >
+      <view class="_div li-date-box data-v-14be881e">
+        <label class="li-date-circle data-v-14be881e"></label>
+        <label class="li-date data-v-14be881e">{{flash.a}}</label>
+      </view>
+      <view class="_div item-container data-v-14be881e">
+        <view class="{{['_div','title','data-v-14be881e',flash.c]}}"
+          >{{flash.b}}</view
+        >
+        <view
+          class="{{['_div','content','data-v-14be881e',flash.e&&'notitle',flash.f&&'red']}}"
+          >{{flash.d}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <supporter
+    bind:__l="__l"
+    class="data-v-14be881e"
+    uI="14be881e-0"
+    uP="{{c}}"
+    wx:if="{{b}}"
+  ></supporter>
+</view>

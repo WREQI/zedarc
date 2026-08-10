@@ -1,0 +1,115 @@
+<view class="_div guess-op data-v-5e5c859d">
+  <view class="_div guess-op__body data-v-5e5c859d">
+    <view class="_div guess-op__ai-bar data-v-5e5c859d">
+      <view
+        class="_div guess-op__ai-guide data-v-5e5c859d"
+        wx:if="{{a}}"
+      ></view>
+      <image
+        alt="竞猜提示"
+        class="_img guess-op__ai-icon data-v-5e5c859d"
+        src="{{b}}"
+      ></image>
+      <image
+        alt=""
+        class="_img guess-op__ai-triangle data-v-5e5c859d"
+        src="{{c}}"
+      ></image>
+      <search-ai-bar
+        bind:__l="__l"
+        bindonClickAiDialog="{{d}}"
+        class="guess-op__ai-search data-v-5e5c859d"
+        uI="5e5c859d-0"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></search-ai-bar>
+    </view>
+    <view class="_div guess-op__percentage data-v-5e5c859d">
+      <view class="_div guess-op__bar data-v-5e5c859d">
+        <view
+          class="_div guess-op__bar-rise data-v-5e5c859d"
+          style="{{'width:'+f}}"
+        >
+          <view class="_div guess-op__bar-rise-cap data-v-5e5c859d"></view>
+        </view>
+        <view
+          class="_div guess-op__bar-fall data-v-5e5c859d"
+          style="{{'width:'+g}}"
+        >
+          <view class="_div guess-op__bar-fall-cap data-v-5e5c859d"></view>
+        </view>
+      </view>
+      <view class="_div guess-op__bar-labels data-v-5e5c859d">
+        <view class="_div guess-op__bar-rate data-v-5e5c859d"
+          >{{h}}%用户看涨</view
+        >
+        <view class="_div guess-op__bar-rate data-v-5e5c859d"
+          >{{i}}%用户看跌</view
+        >
+      </view>
+    </view>
+    <view class="_div guess-op__actions data-v-5e5c859d">
+      <view class="_div guess-op__result data-v-5e5c859d" wx:if="{{j}}">
+        <view class="_div guess-op__result-wrap data-v-5e5c859d" wx:if="{{k}}">
+          <image
+            alt="看涨成功"
+            class="_img guess-op__result-img data-v-5e5c859d"
+            src="{{l}}"
+          ></image>
+        </view>
+        <view class="_div guess-op__result-wrap data-v-5e5c859d" wx:if="{{m}}">
+          <image
+            alt="看跌成功"
+            class="_img guess-op__result-img data-v-5e5c859d"
+            src="{{n}}"
+          ></image>
+        </view>
+      </view>
+      <view class="_div guess-op__guess-btns data-v-5e5c859d" wx:else>
+        <view
+          class="_div guess-op__guess-group guess-op__guess-group--rise data-v-5e5c859d"
+        >
+          <view class="_div guess-op__inviter-tip data-v-5e5c859d" wx:if="{{o}}"
+            >{{p}}</view
+          >
+          <view
+            bindtap="{{q}}"
+            class="_div guess-op__guess-btn guess-op__guess-btn--rise data-v-5e5c859d"
+            >看涨</view
+          >
+        </view>
+        <view
+          class="_div guess-op__guess-group guess-op__guess-group--fall data-v-5e5c859d"
+        >
+          <view class="_div guess-op__inviter-tip data-v-5e5c859d" wx:if="{{r}}"
+            >{{s}}</view
+          >
+          <view
+            bindtap="{{t}}"
+            class="_div guess-op__guess-btn guess-op__guess-btn--fall data-v-5e5c859d"
+            >看跌</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div guess-op__timer data-v-5e5c859d">
+      <view class="_div guess-op__timer-result data-v-5e5c859d" wx:if="{{v}}"
+        >{{w}}</view
+      >
+      <view class="_div guess-op__countdown data-v-5e5c859d" wx:else>
+        <view class="_div guess-op__countdown-text data-v-5e5c859d"
+          >距{{x}}竞猜结束还有：</view
+        >
+        <view class="_div guess-op__countdown-time data-v-5e5c859d">
+          <view class="_div guess-op__countdown-digit data-v-5e5c859d"
+            >{{y}}</view
+          >时:<view class="_div guess-op__countdown-digit data-v-5e5c859d"
+            >{{z}}</view
+          >分:<view class="_div guess-op__countdown-digit data-v-5e5c859d"
+            >{{A}}</view
+          >秒</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

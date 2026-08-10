@@ -1,0 +1,10 @@
+<scroll-view
+  class="scroll-view-x data-v-194a6195"
+  scrollX="{{true}}"
+  wx:if="{{a}}"
+>
+  <slot></slot>
+</scroll-view>
+<view class="_div web-scroll-x data-v-194a6195" wx:else>
+  <slot></slot>
+</view>

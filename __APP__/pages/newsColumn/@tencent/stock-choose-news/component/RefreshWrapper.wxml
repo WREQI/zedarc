@@ -1,0 +1,23 @@
+<view class="_div" wx:if="{{a}}">
+  <slot></slot>
+</view>
+<st-pull-refresh
+  bind:__l="__l"
+  bindpullDownRefresh="{{d}}"
+  class="r"
+  uI="64d62f9e-0"
+  uP="{{e||''}}"
+  uR="refresh"
+  uS="{{['d']}}"
+  wx:else
+>
+  <st-reach-bottom
+    bind:__l="__l"
+    uI="64d62f9e-1,64d62f9e-0"
+    uP="{{b}}"
+    uS="{{['d']}}"
+    wx:if="{{b}}"
+  >
+    <slot></slot>
+  </st-reach-bottom>
+</st-pull-refresh>

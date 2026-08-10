@@ -1,0 +1,32 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{h}}"
+  bindmaskClick="{{g}}"
+  class="data-v-0ec6a304"
+  uI="0ec6a304-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="invest-cond-time data-v-0ec6a304">
+    <picker-view
+      immediateChange
+      bindchange="{{e}}"
+      class="date-picker-view data-v-0ec6a304"
+      indicatorClass="indicator-class"
+      indicatorStyle="{{c}}"
+      maskClass="mask-class"
+      value="{{d}}"
+    >
+      <picker-view-column class="data-v-0ec6a304">
+        <view
+          class="{{['item','data-v-0ec6a304',item.c]}}"
+          wx:for="{{b}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </picker-view-column>
+    </picker-view>
+    <button bindtap="{{f}}" class="confirm-btn data-v-0ec6a304">确定</button>
+  </view>
+</action-sheet>

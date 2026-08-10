@@ -1,0 +1,22 @@
+.popup-warpper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 9999999;
+}
+.popup-warpper,
+.popup-warpper .wrapper {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.popup-warpper .wrapper {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  position: absolute;
+}

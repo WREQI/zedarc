@@ -1,0 +1,100 @@
+@import "/app.wxss";
+.content-wrap.data-v-31ea0800 {
+  background-color: var(--fill-2);
+  padding: 0 0 0.4rem 0.32rem;
+}
+.content-wrap .content-wrap-detail.data-v-31ea0800 {
+  padding-bottom: 1.173333rem;
+}
+.content-wrap .content-wrap-detail .desc.data-v-31ea0800 {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  padding-bottom: 0.106667rem;
+  text-align: left;
+}
+.content-wrap .content-wrap-detail .btn-list.data-v-31ea0800 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-wrap .content-wrap-detail .btn-list .btn-item.data-v-31ea0800 {
+  background-color: var(--fill-1);
+  border: 0.026667rem solid transparent;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  margin-right: 0.32rem;
+  margin-top: 0.32rem;
+  width: 2.88rem;
+}
+[data-theme="dark"]
+  .content-wrap
+  .content-wrap-detail
+  .btn-list
+  .btn-item.data-v-31ea0800 {
+  background-color: #171d28;
+}
+.content-wrap
+  .content-wrap-detail
+  .btn-list
+  .btn-item.selected.data-v-31ea0800 {
+  background: rgba(48, 119, 236, 0.08);
+  border-color: var(--color-primary-1);
+  color: var(--color-primary-1);
+  font-weight: 500;
+}
+.content-wrap .button-wrap.data-v-31ea0800 {
+  padding-right: 0.32rem;
+}
+.content-wrap .confirm-btn.data-v-31ea0800 {
+  background-color: var(--color-buy) !important;
+  color: #fff;
+}
+.content-wrap .cancel-btn.data-v-31ea0800,
+.content-wrap .confirm-btn.data-v-31ea0800 {
+  font-size: 0.426667rem;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  padding: 0;
+  text-align: center;
+}
+.content-wrap .cancel-btn.data-v-31ea0800 {
+  background-color: var(--border-color-2) !important;
+  color: var(--text-color-1);
+}
+.content-wrap .cancel-btn.data-v-31ea0800:after {
+  border: none;
+}
+.content-wrap .cancel-btn + button.data-v-31ea0800 {
+  margin-left: 0.32rem;
+}
+.content-wrap .deduction-btn.data-v-31ea0800 {
+  color: #98a0b3;
+  line-height: 0.853333rem;
+  margin-top: 1.066667rem;
+}
+[data-theme="dark"] .content-wrap .deduction-btn.data-v-31ea0800 {
+  color: #69738c;
+}
+.content-wrap .deduction-btn .icon.data-v-31ea0800 {
+  color: #98a0b3;
+  margin-left: 0.106667rem;
+  transform: translateY(-0.026667rem);
+}
+[data-theme="dark"] .content-wrap .deduction-btn .icon.data-v-31ea0800 {
+  color: #69738c;
+}
+.content-wrap.content-wrap__simple-mode
+  .content-wrap-detail
+  .btn-list
+  .btn-item.selected.data-v-31ea0800 {
+  background: rgba(230, 53, 53, 0.08);
+  color: var(--color-primary-1);
+}

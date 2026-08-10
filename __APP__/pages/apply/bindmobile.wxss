@@ -1,0 +1,80 @@
+@import "/app.wxss";
+.container.data-v-3588f16e {
+  height: 100%;
+}
+.container .protocol-container.data-v-3588f16e,
+.container .submit-container.data-v-3588f16e {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.container .tip-text.data-v-3588f16e {
+  padding: 0.8rem 0 0.76rem 0.4rem;
+}
+.container .tip-text .title.data-v-3588f16e {
+  font-size: 0.64rem;
+  font-weight: Medium;
+  line-height: 0.893333rem;
+}
+.container .tip-text .sub-title.data-v-3588f16e {
+  font-size: 0.32rem;
+  line-height: 0.44rem;
+  margin-top: 0.093333rem;
+}
+.container .form-container .sms-button.data-v-3588f16e {
+  background: #fff;
+  border: 0.013333rem solid var(--color-primary-1);
+  border-radius: 0.053333rem;
+  color: var(--color-primary-1);
+  line-height: 2;
+}
+[data-theme="dark"] .container .form-container .sms-button.data-v-3588f16e {
+  background: transparent;
+}
+.container .form-container .sms-button.data-v-3588f16e:after,
+.container .form-container .sms-button[disabled].data-v-3588f16e {
+  border: none;
+}
+.container .form-container .icon.data-v-3588f16e {
+  line-height: 1.8;
+}
+.container .form-container .icon-close.data-v-3588f16e {
+  padding-left: 0.4rem;
+}
+.container .protocol-container.data-v-3588f16e {
+  font-size: 0.32rem;
+  line-height: 2;
+  margin-top: 0.4rem;
+}
+.container .protocol-container.data-v-3588f16e .protocol-checkbox {
+  transform: scale(0.7);
+}
+.container .protocol-container .protocol-tip.data-v-3588f16e {
+  vertical-align: middle;
+}
+.container .submit-container .action-button.data-v-3588f16e {
+  background: var(--color-primary-2);
+  color: #fff;
+  margin-top: 0.8rem;
+}
+.container .input-area.data-v-3588f16e {
+  padding-bottom: 0.533333rem;
+}
+.container .input-area .input-content-wrap.data-v-3588f16e {
+  background-color: #fff;
+  padding-bottom: 0.8rem;
+}
+[data-theme="dark"] .container .input-area .input-content-wrap.data-v-3588f16e {
+  background-color: transparent !important;
+}
+.container .foot.data-v-3588f16e {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}
+.container .foot .bottom-text.data-v-3588f16e {
+  color: var(--text-color-5);
+  font-size: 0.346667rem;
+  font-weight: 400;
+  line-height: 0.586667rem;
+  opacity: 0.9;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+<view catchtap="{{m}}" class="{{['_div','data-v-a43cbb95','input-pop-container',l]}}">
+    <view catchtap="{{k}}" class="_div input-pop-inner data-v-a43cbb95" style="{{'transform:'+j}}">
+        <view class="_div input-modal-content data-v-a43cbb95">
+            <view class="_div input-modal-input data-v-a43cbb95">
+                <input focus adjustPosition="{{false}}" bindinput="{{c}}" bindkeyboardheightchange="{{d}}" class="data-v-a43cbb95" maxlength="{{a}}" placeholder="请点击添加标注" ref="textInput" value="{{b}}"></input>
+                <view class="{{['_div','data-v-a43cbb95','input-modal-tips',g]}}">
+                    <label class="_span data-v-a43cbb95">{{e}}/{{f}}</label>
+                </view>
+            </view>
+            <view class="_div input-modal-tool data-v-a43cbb95">
+                <label catchtap="{{h}}" class="_span input-modal-tool-item data-v-a43cbb95">取消</label>
+                <label catchtap="{{i}}" class="_span input-modal-tool-item active data-v-a43cbb95">完成</label>
+            </view>
+        </view>
+    </view>
+</view>

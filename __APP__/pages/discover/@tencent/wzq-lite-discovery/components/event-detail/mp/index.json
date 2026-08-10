@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "news-status": "../../../../../../newsSbg/@tencent/stock-news-core/components/status/index",
+    "hot-event-bar": "../../../../../../newsSbg/@tencent/stock-common-bar/component/hot-event-bar/hotEventBar",
+    "event-detail": "../index",
+    "profile-pop": "../../../../../../communitySbg/@tencent/stock-community-ui/components/profilePop/index"
+  },
+  "componentPlaceholder": {
+    "news-status": "view",
+    "hot-event-bar": "view",
+    "profile-pop": "view"
+  }
+}

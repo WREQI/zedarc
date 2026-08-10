@@ -1,0 +1,28 @@
+<view class="_div component-ai-strategy-card data-v-fb0f543a">
+  <view
+    bindtap="{{b}}"
+    class="_div card-title flex-vcenter flex-between data-v-fb0f543a"
+  >
+    <view class="_div title-text data-v-fb0f543a">智能选股</view>
+    <view class="_div sub-title-text data-v-fb0f543a">{{a}}更新</view>
+  </view>
+  <view class="_div card-content data-v-fb0f543a">
+    <view bindtap="{{d}}" class="_div list-title data-v-fb0f543a">{{c}}</view>
+    <stock-list
+      bind:__l="__l"
+      bindclick="{{f}}"
+      bindstar="{{e}}"
+      class="data-v-fb0f543a"
+      uI="fb0f543a-0"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></stock-list>
+    <view
+      bindtap="{{i}}"
+      class="_div list-summary flex-vcenter data-v-fb0f543a"
+    >
+      <view class="_div summary-text data-v-fb0f543a">共{{h}}只股票</view>
+      <view class="_div arrow-icon arrow-right data-v-fb0f543a"></view>
+    </view>
+  </view>
+</view>

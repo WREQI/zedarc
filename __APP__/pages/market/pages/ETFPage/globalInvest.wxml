@@ -1,0 +1,14 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-invest-home-page
+  bind:__l="__l"
+  class="r"
+  uI="53dbc6d8-0"
+  uR="globalInvestHomePageRef"
+></global-invest-home-page>
+<mp-privacy-dialog bind:__l="__l" uI="53dbc6d8-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="53dbc6d8-2"
+  uP="{{c}}"
+  wx:if="{{c}}"
+></stock-privacy-dialog>

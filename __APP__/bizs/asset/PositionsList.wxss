@@ -1,0 +1,14 @@
+@import "/app.wxss";
+.positions-list-container {
+  height: 100%;
+}
+.positions-list-container.positions-list-container__classic-mode.positions-list-container__embedded-mode {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.positions-list-container__hold-delisted .container {
+  height: 4.853333rem !important;
+}
+.positions-list-container__simple-mode.positions-list-container__hold-delisted
+  .container {
+  height: 3.573333rem !important;
+}

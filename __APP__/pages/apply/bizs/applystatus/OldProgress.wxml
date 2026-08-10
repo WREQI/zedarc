@@ -1,0 +1,192 @@
+<view
+  class="{{['data-v-210cee12','page-apply-progress','bg-color',P&&'with-nav']}}"
+  style="{{'height:'+Q}}"
+>
+  <view class="content-container flex-column data-v-210cee12">
+    <common-bulletin-bar
+      bind:__l="__l"
+      class="data-v-210cee12"
+      uI="210cee12-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></common-bulletin-bar>
+    <progress-bar
+      bind:__l="__l"
+      class="data-v-210cee12"
+      uI="210cee12-1"
+      uP="{{c}}"
+      wx:if="{{b}}"
+    ></progress-bar>
+    <view
+      class="noaccount suc-container flex-column flex-1 data-v-210cee12"
+      wx:if="{{d}}"
+    >
+      <view class="step-bar data-v-210cee12" wx:if="{{e}}">
+        <view
+          class="status-container flex-center data-v-210cee12"
+          wx:if="{{f}}"
+        >
+          <label class="icon success data-v-210cee12"></label>
+          <label class="fs-28 text-color-1 data-v-210cee12"
+            >开户申请资料已提交成功</label
+          >
+        </view>
+        <st-steps
+          bind:__l="__l"
+          class="step-container data-v-210cee12"
+          uI="210cee12-2"
+          uP="{{g}}"
+          wx:if="{{g}}"
+        ></st-steps>
+      </view>
+      <view
+        class="{{['unvisited','visit-info','flex-1','flex-column','flex-center','data-v-210cee12',n]}}"
+        wx:if="{{h}}"
+      >
+        <view class="{{['data-v-210cee12','icon-tel status-logo',i]}}"></view>
+        <view class="data-v-210cee12" wx:if="{{j}}">
+          <label class="fs-32 tel-label data-v-210cee12"
+            >客服正在给您来电，请注意接听</label
+          >
+        </view>
+        <view class="flex-column flex-vcenter data-v-210cee12" wx:else>
+          <view class="tel-number data-v-210cee12">{{k}}</view>
+          <view class="fs-32 tel-label data-v-210cee12"
+            >请注意接听「{{l}}」回访电话</view
+          >
+          <label class="fs-28 queue data-v-210cee12">{{m}}</label>
+          <view class="supervision-tips flex-center data-v-210cee12">
+            <view class="icon data-v-210cee12"></view>
+            <label class="fs-28 text text-color-1 data-v-210cee12"
+              >根据监管要求，未回访将无法开立证券账户</label
+            >
+          </view>
+        </view>
+      </view>
+      <view
+        class="visited result-container flex-1 flex-column flex-center data-v-210cee12"
+        wx:else
+      >
+        <label class="{{['icon','status-logo','data-v-210cee12',o]}}"></label>
+        <view class="fs-32 title text-color-1 data-v-210cee12">{{p}}</view>
+        <view class="fs-28 text text-color-1 data-v-210cee12">
+          <rich-text class="data-v-210cee12" nodes="{{q}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <view
+      class="hasaccount result-container flex-1 flex-column flex-center data-v-210cee12"
+      wx:else
+    >
+      <label class="{{['icon','status-logo','data-v-210cee12',r]}}"></label>
+      <view class="fs-32 title text-color-1 data-v-210cee12">{{s}}</view>
+      <view class="fs-28 text text-color-1 data-v-210cee12">
+        <rich-text class="data-v-210cee12" nodes="{{t}}"></rich-text>
+      </view>
+      <view class="supervision-tips flex-center data-v-210cee12" wx:if="{{v}}">
+        <view class="icon data-v-210cee12"></view>
+        <label class="fs-28 tips-text data-v-210cee12"
+          >根据监管要求，未回访将无法激活证券账户</label
+        >
+      </view>
+      <view class="supervision-tips flex-vcenter data-v-210cee12" wx:if="{{w}}">
+        <view class="icon data-v-210cee12"></view>
+        <label class="fs-28 tips-text data-v-210cee12"
+          >根据监管要求，未回访将无法开立证券账户</label
+        >
+      </view>
+    </view>
+    <progress-operate
+      bind:__l="__l"
+      class="data-v-210cee12"
+      uI="210cee12-3"
+    ></progress-operate>
+    <view class="flex-center link-home data-v-210cee12" wx:if="{{x}}">
+      <view class="subscribe-block data-v-210cee12" wx:if="{{y}}">
+        <view class="button-subcribe data-v-210cee12">
+          <button
+            borderRadius
+            bindtap="{{A}}"
+            class="data-v-210cee12"
+            type="primary"
+          >
+            {{z}}
+          </button>
+        </view>
+        <view class="subscribe-tips data-v-210cee12"
+          >请尽快关注，以免影响后续交易</view
+        >
+      </view>
+      <view
+        bindtap="{{C}}"
+        class="link-not-call fs-28 blue data-v-210cee12"
+        wx:if="{{B}}"
+        >没接到电话？</view
+      >
+      <view
+        class="button-container button-home data-v-210cee12"
+        wx:elif="{{D}}"
+      >
+        <button
+          borderRadius
+          bindtap="{{E}}"
+          class="data-v-210cee12"
+          data-stat="trade.apply.progress.enter_homepage"
+          type="primary"
+        >
+          返回自选
+        </button>
+      </view>
+    </view>
+    <view class="flex-column flex-center data-v-210cee12" wx:elif="{{F}}">
+      <view class="button-container data-v-210cee12" wx:if="{{G}}">
+        <button
+          borderRadius
+          bindtap="{{H}}"
+          class="sms-button data-v-210cee12"
+          data-stat="trade.apply.progress.dial_back"
+          type="primary"
+        >
+          一键回拨
+        </button>
+      </view>
+    </view>
+    <view class="flex-column flex-center data-v-210cee12" wx:if="{{I}}">
+      <view class="button-container data-v-210cee12">
+        <button
+          borderRadius
+          bindtap="{{J}}"
+          class="data-v-210cee12"
+          data-stat="trade.apply.progress.back_yanbao"
+          type="primary"
+        >
+          返回脱水研报
+        </button>
+      </view>
+    </view>
+    <multi-broker-entry
+      bind:__l="__l"
+      class="data-v-210cee12"
+      uI="210cee12-4"
+      uP="{{K}}"
+      wx:if="{{K}}"
+    ></multi-broker-entry>
+    <view class="bottom-text data-v-210cee12" wx:if="{{L}}">
+      <rich-text class="data-v-210cee12" nodes="{{M}}"></rich-text>
+    </view>
+    <foot-print
+      bind:__l="__l"
+      class="foot data-v-210cee12"
+      uI="210cee12-5"
+      wx:else
+    ></foot-print>
+  </view>
+  <subscribe-popup
+    bind:__l="__l"
+    bindinput="{{N}}"
+    class="data-v-210cee12"
+    uI="210cee12-6"
+    uP="{{O}}"
+    wx:if="{{O}}"
+  ></subscribe-popup>
+</view>

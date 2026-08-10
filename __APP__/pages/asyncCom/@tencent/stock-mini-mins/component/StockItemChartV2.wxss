@@ -1,0 +1,19 @@
+.mini-chart-wrap {
+  display: -webkit-flex;
+  display: flex;
+}
+.min-line-chart {
+  pointer-events: none;
+  width: 0.8rem;
+}
+.min-line-chart,
+.min-line-chart.chart-height {
+  height: 0.7466666666666667rem;
+}
+.min-line-chart.mini {
+  height: 0.4266666666666667rem;
+  width: 0.72rem;
+}
+.min-line-chart.mini.chart-height {
+  height: 0.64rem;
+}

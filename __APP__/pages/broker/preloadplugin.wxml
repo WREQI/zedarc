@@ -1,0 +1,19 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div">
+  <mp-privacy-dialog bind:__l="__l" uI="166d8921-0"></mp-privacy-dialog>
+  <zhao-shang bind:__l="__l" uI="166d8921-1" wx:if="{{b}}"></zhao-shang>
+  <hua-lin bind:__l="__l" uI="166d8921-2" wx:if="{{c}}"></hua-lin>
+  <guo-xin bind:__l="__l" uI="166d8921-3" wx:if="{{d}}"></guo-xin>
+  <guo-jin bind:__l="__l" uI="166d8921-4" wx:if="{{e}}"></guo-jin>
+  <guang-fa bind:__l="__l" uI="166d8921-5" wx:if="{{f}}"></guang-fa>
+  <zhong-jin-cai-fu
+    bind:__l="__l"
+    uI="166d8921-6"
+    wx:if="{{g}}"
+  ></zhong-jin-cai-fu>
+  <zhong-xin-jian-tou
+    bind:__l="__l"
+    uI="166d8921-7"
+    wx:if="{{h}}"
+  ></zhong-xin-jian-tou>
+</view>

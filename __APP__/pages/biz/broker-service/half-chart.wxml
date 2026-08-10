@@ -1,0 +1,60 @@
+<page-meta class="data-v-9e6ecf9d" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-9e6ecf9d"
+  id="global-wrap"
+  uI="9e6ecf9d-0"
+  uP="{{t}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{t}}"
+>
+  <view
+    class="half-chart embedded-shadow data-v-9e6ecf9d"
+    data-simple="{{q}}"
+    data-theme="{{p}}"
+    style="{{r}}"
+  >
+    <view class="half-chart__header data-v-9e6ecf9d">
+      <view class="half-chart__header-title data-v-9e6ecf9d">{{b}}</view>
+      <view
+        bindtap="{{d}}"
+        class="half-chart__close data-v-9e6ecf9d"
+        wx:if="{{c}}"
+      ></view>
+    </view>
+    <view class="half-chart__chart data-v-9e6ecf9d">
+      <detail-kline
+        bind:__l="__l"
+        class="r data-v-9e6ecf9d"
+        uI="9e6ecf9d-1,9e6ecf9d-0"
+        uP="{{g}}"
+        uR="detailKline"
+        wx:if="{{e}}"
+      ></detail-kline>
+    </view>
+    <view class="half-chart__disclaimer data-v-9e6ecf9d">
+      <text class="half-chart__disclaimer-text data-v-9e6ecf9d">{{h}}</text>
+    </view>
+    <password
+      bind:__l="__l"
+      bindcancel="{{j}}"
+      bindhide="{{k}}"
+      class="password-component--with-shadow r data-v-9e6ecf9d"
+      id="password-component"
+      uI="9e6ecf9d-2,9e6ecf9d-0"
+      uP="{{l}}"
+      uR="#password-component"
+      wx:if="{{l}}"
+    ></password>
+    <network-detect
+      bind:__l="__l"
+      class="r data-v-9e6ecf9d"
+      id="network-detect-component"
+      uI="9e6ecf9d-3,9e6ecf9d-0"
+      uP="{{o}}"
+      uR="#network-detect-component"
+      wx:if="{{m}}"
+    ></network-detect>
+  </view>
+</global-wrap>

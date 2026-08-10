@@ -1,0 +1,40 @@
+<view class="{{[g]}}">
+  <view class="{{['mp-tab-bar','^mp-tab-bar',f]}}" ref="nav">
+    <view
+      bindtap="{{item.t}}"
+      class="{{['mp-tab','^mp-tab',item.p,item.q,item.r]}}"
+      data-value="{{item.s}}"
+      wx:for="{{a}}"
+      wx:key="o"
+    >
+      <label bindtap="{{item.n}}" class="tab-text ^tab-text">
+        <label class="{{[item.b,item.c]}}" wx:if="{{item.a}}"></label>
+        <label class="label ^label">{{item.d}}</label>
+        <view class="corner" wx:if="{{item.e}}">{{item.f}}</view>
+        <label class="slider ^slider" wx:if="{{item.g}}"></label>
+        <label
+          class="icon icon-triangle triangle-down ^triangle-down"
+          wx:if="{{item.h}}"
+        ></label>
+        <view catchtap="{{item.j}}" class="mask" wx:if="{{item.i}}"></view>
+        <view class="drop-down ^drop-down" wx:if="{{item.k}}">
+          <view class="triangle ^triangle"></view>
+          <view
+            catchtap="{{d.e}}"
+            class="{{['drop-down-item','^drop-down-item',d.c,d.d,item.m]}}"
+            wx:for="{{item.l}}"
+            wx:for-item="d"
+            wx:key="b"
+            >{{d.a}}</view
+          >
+        </view>
+      </label>
+    </view>
+    <view
+      class="mp-tab-bar-slider"
+      ref="slider"
+      style="{{'width:'+c+';'+'transition:'+d+';'+'transform:'+e}}"
+      wx:if="{{b}}"
+    ></view>
+  </view>
+</view>

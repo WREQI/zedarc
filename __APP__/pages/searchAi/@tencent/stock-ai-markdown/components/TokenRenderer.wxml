@@ -1,0 +1,53 @@
+<block wx:for="{{a}}" wx:for-item="element" wx:key="F">
+  <card-component
+    bind:__l="__l"
+    uI="{{element.b}}"
+    uP="{{element.c}}"
+    wx:if="{{element.a}}"
+  ></card-component>
+  <streaming-text
+    bind:__l="__l"
+    bindclick="{{element.e}}"
+    uI="{{element.f}}"
+    uP="{{element.g}}"
+    wx:elif="{{element.d}}"
+  ></streaming-text>
+  <streaming-text
+    bind:__l="__l"
+    bindclick="{{element.i}}"
+    uI="{{element.j}}"
+    uP="{{element.k}}"
+    wx:elif="{{element.h}}"
+  ></streaming-text>
+  <image
+    alt="{{element.n}}"
+    class="_img"
+    mode="widthFix"
+    src="{{element.m}}"
+    title="{{element.o}}"
+    wx:elif="{{element.l}}"
+  ></image>
+  <streaming-text
+    bind:__l="__l"
+    uI="{{element.q}}"
+    uP="{{element.r}}"
+    wx:elif="{{element.p}}"
+  ></streaming-text>
+  <streaming-text
+    bind:__l="__l"
+    uI="{{element.t}}"
+    uP="{{element.v}}"
+    wx:elif="{{element.s}}"
+  ></streaming-text>
+  <view class="{{element.x}}" wx:elif="{{element.w}}"></view>
+  <view class="{{element.E}}" wx:elif="{{element.y}}">
+    <token-renderer
+      bind:__l="__l"
+      bindlinkClick="{{element.A}}"
+      bindquoteLinkClick="{{element.B}}"
+      uI="{{element.C}}"
+      uP="{{element.D}}"
+      wx:if="{{element.z}}"
+    ></token-renderer>
+  </view>
+</block>

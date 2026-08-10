@@ -1,0 +1,35 @@
+.tab-wrapper.data-v-dc4c0700 {
+  font-size: 0.013333333333333334rem;
+  line-height: 0;
+  min-width: 100%;
+  overflow: auto;
+  width: 100%;
+}
+.brief-tab.data-v-dc4c0700 {
+  display: inline-block;
+  line-height: 0.32rem;
+  min-width: 100%;
+  padding: 0.10666666666666667rem 0 0.10666666666666667rem 0.4rem;
+  white-space: nowrap;
+}
+.brief-tab.data-v-dc4c0700::-webkit-scrollbar {
+  display: none;
+}
+.brief-tab .brief-tab-span.data-v-dc4c0700 {
+  background-color: var(--color-card);
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-midgray);
+  display: inline-block;
+  font-size: 0.32rem;
+  height: 0.7466666666666667rem;
+  letter-spacing: 0;
+  line-height: 0.7466666666666667rem;
+  margin-right: 0.21333333333333335rem;
+  padding: 0 0.26666666666666666rem;
+  text-align: center;
+}
+.brief-tab .brief-tab-span.active.data-v-dc4c0700 {
+  background: var(--color-card3);
+  color: var(--color-blue);
+  font-weight: 500;
+}

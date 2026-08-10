@@ -1,0 +1,117 @@
+@import "/app.wxss";
+.trans-info.data-v-b1ea49aa {
+  background: var(--fill-2);
+  font-size: 0.32rem;
+}
+.trans-info .progress-bar.data-v-b1ea49aa {
+  height: 0.133333rem;
+  line-height: 0.48rem;
+  overflow: hidden;
+}
+.trans-info .progress-bar-item.data-v-b1ea49aa {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+}
+.trans-info .progress-bar-item.buy.data-v-b1ea49aa {
+  background: var(--color-rise);
+}
+.trans-info .progress-bar-item.sell.data-v-b1ea49aa {
+  background: var(--color-drop);
+}
+.trans-info .ul .li.data-v-b1ea49aa {
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-size: 0.32rem;
+  height: 0.72rem;
+}
+.trans-info .ul .li .wrapper.data-v-b1ea49aa {
+  height: 0.72rem;
+  padding: 0 0.4rem;
+}
+.trans-info .ul .li .label.data-v-b1ea49aa {
+  border-radius: 0.053333rem;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.293333rem;
+  font-style: normal;
+  height: 0.346667rem;
+  line-height: normal;
+  margin: 0 0.16rem;
+  text-align: center;
+  width: 0.346667rem;
+}
+.trans-info .ul .li .label.buy-bg.data-v-b1ea49aa {
+  background-color: var(--color-rise);
+}
+.trans-info .ul .li .label.sell-bg.data-v-b1ea49aa {
+  background-color: var(--color-drop);
+}
+.trans-info .ul .li .trans-info-btn.data-v-b1ea49aa {
+  font-size: 0.32rem;
+}
+.trans-info .ul.buy.data-v-b1ea49aa {
+  background: var(--color-rise-bg);
+}
+.trans-info .ul.sell.data-v-b1ea49aa {
+  background: var(--color-drop-bg);
+}
+.trans-info .hotarea-wrap-buy.data-v-b1ea49aa,
+.trans-info .hotarea-wrap-sell.data-v-b1ea49aa {
+  position: relative;
+}
+.trans-info .hotarea-wrap-buy .hotarea.data-v-b1ea49aa {
+  left: 0;
+  right: 1.066667rem;
+}
+.trans-info .hotarea-wrap-sell .hotarea.data-v-b1ea49aa {
+  left: 1.066667rem;
+  right: 0;
+}
+.trans-info .hotarea.data-v-b1ea49aa {
+  bottom: 0;
+  position: absolute;
+  top: 0;
+}
+.trans-info.trans-info__simple-mode.data-v-b1ea49aa {
+  margin: 0 0.32rem;
+}
+.trans-info.trans-info__simple-mode .progress-bar.data-v-b1ea49aa {
+  border-top-left-radius: 0.106667rem;
+  border-top-right-radius: 0.106667rem;
+  height: 0.106667rem;
+  overflow: hidden;
+}
+.trans-info.trans-info__simple-mode .progress-bar .buy.data-v-b1ea49aa {
+  background: var(--color-rise);
+  position: relative;
+}
+.trans-info.trans-info__simple-mode .progress-bar .buy.data-v-b1ea49aa:after {
+  background: #fff;
+  content: "";
+  height: 0.106667rem;
+  position: absolute;
+  right: -0.026667rem;
+  transform: skew(-14deg);
+  width: 0.053333rem;
+  z-index: 1;
+}
+.trans-info.trans-info__simple-mode .progress-bar .sell.data-v-b1ea49aa {
+  background: var(--color-drop);
+}
+.trans-info.trans-info__simple-mode .box.data-v-b1ea49aa {
+  border-bottom-left-radius: 0.106667rem;
+  border-bottom-right-radius: 0.106667rem;
+  overflow: hidden;
+}
+.trans-info.trans-info__simple-mode .ul .li .wrapper.data-v-b1ea49aa {
+  padding: 0 0.32rem 0 0.106667rem;
+}
+.trans-info.trans-info__simple-mode .ul.buy .label.data-v-b1ea49aa {
+  background-color: var(--color-rise);
+  margin: 0 0.133333rem;
+}
+.trans-info.trans-info__simple-mode .ul.sell.data-v-b1ea49aa {
+  margin-left: 0.053333rem;
+}

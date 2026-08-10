@@ -1,0 +1,130 @@
+<page-meta class="data-v-cc828023" rootFontSize="{{a}}"></page-meta>
+<view
+  bindtap="{{S}}"
+  class="{{['morning-report-container','data-v-cc828023',P,Q]}}"
+  data-st-theme="{{R}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-1"
+  ></stock-privacy-dialog>
+  <skeleton
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-2"
+    wx:if="{{b}}"
+  ></skeleton>
+  <morning-report-card
+    bind:__l="__l"
+    binddataReady="{{e}}"
+    bindmpScrollTop="{{f}}"
+    bindshare="{{g}}"
+    class="r data-v-cc828023"
+    id="morningReportCard"
+    uI="cc828023-3"
+    uP="{{h}}"
+    uR="morningReportCard"
+    wx:if="{{c}}"
+  ></morning-report-card>
+  <morning-report-com-list
+    bind:__l="__l"
+    bindcomListDataReady="{{m}}"
+    bindcommentReport="{{l}}"
+    bindgoEdit="{{k}}"
+    bindshowProfilePop="{{n}}"
+    class="r data-v-cc828023"
+    uI="cc828023-4"
+    uP="{{o}}"
+    uR="morningComList"
+    wx:if="{{i}}"
+  ></morning-report-com-list>
+  <view class="_div logo_wrap data-v-cc828023" wx:if="{{p}}">
+    <view class="_div zxg_logo data-v-cc828023"></view>
+  </view>
+  <view bindtap="{{s}}" class="_div error data-v-cc828023" wx:if="{{q}}">
+    <view class="_div errorImg data-v-cc828023"></view>页面数据出错了{{r}}</view
+  >
+  <navigator-bar
+    bind:__l="__l"
+    class="data-v-cc828023"
+    id="navBar"
+    uI="cc828023-5"
+    uP="{{v}}"
+    wx:if="{{t}}"
+  ></navigator-bar>
+  <share-layer
+    bind:__l="__l"
+    bindhidden="{{x}}"
+    class="share-layer data-v-cc828023"
+    uI="cc828023-6"
+    wx:if="{{w}}"
+  ></share-layer>
+  <view class="delivery-globalcurtainadv-wzqxcx data-v-cc828023" wx:if="{{y}}">
+    <global-curtain-adv
+      bind:__l="__l"
+      class="data-v-cc828023"
+      uI="cc828023-7"
+      uP="{{A}}"
+      wx:if="{{z}}"
+    ></global-curtain-adv>
+  </view>
+  <view class="delivery-bottom-banner data-v-cc828023" wx:if="{{B}}">
+    <bottom-banner
+      bind:__l="__l"
+      class="data-v-cc828023"
+      uI="cc828023-8"
+      uP="{{D}}"
+      wx:if="{{C}}"
+    ></bottom-banner>
+  </view>
+  <empty-news
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-9"
+    wx:if="{{E}}"
+  ></empty-news>
+  <empty-quote
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-10"
+    wx:if="{{F}}"
+  ></empty-quote>
+  <nav-bar
+    bind:__l="__l"
+    class="r data-v-cc828023"
+    uI="cc828023-11"
+    uR="_navBar"
+  ></nav-bar>
+  <thirteen-anniversary-task
+    bind:__l="__l"
+    class="data-v-cc828023"
+    uI="cc828023-12"
+    uP="{{H}}"
+    wx:if="{{H}}"
+  ></thirteen-anniversary-task>
+  <block wx:if="{{I}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{J}}"
+      class="data-v-cc828023"
+      uI="cc828023-13"
+      uP="{{K}}"
+      wx:if="{{K}}"
+    ></profile-pop>
+  </block>
+  <half-editor
+    bind:__l="__l"
+    bindonHide="{{N}}"
+    class="r data-v-cc828023"
+    uI="cc828023-14"
+    uP="{{O}}"
+    uR="halfEditor"
+    wx:if="{{L}}"
+  ></half-editor>
+</view>

@@ -1,0 +1,58 @@
+<view
+  catchtouchmove="{{l}}"
+  class="{{['_div','data-v-71da7849','monitoring-remind-pop',j,k]}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{b}}" class="_div pop-mask data-v-71da7849"></view>
+  <view class="{{['_div','data-v-71da7849','pop-content-wrap',i]}}">
+    <view class="_div nav-bar data-v-71da7849">
+      <label bindtap="{{c}}" class="_span close-container data-v-71da7849">
+        <image
+          alt="关闭"
+          class="_img close-btn data-v-71da7849"
+          src="https://st.gtimg.com/design/f2a8543fd8a53d011af849bf437d80d5.png"
+        ></image>
+      </label>
+      <label class="_span title data-v-71da7849">自选智能盯盘</label>
+    </view>
+    <view class="_div content-section data-v-71da7849">
+      <view class="_p desc-text data-v-71da7849"
+        >智能识别自选中值得关注的异动，通过微信公众号第一时间通知你</view
+      >
+      <view
+        class="_div radar-container data-v-71da7849"
+        ref="radarContainerRef"
+      >
+        <view class="_div radar-ring data-v-71da7849"></view>
+        <view class="_div radar-ring data-v-71da7849"></view>
+        <view class="_div radar-ring data-v-71da7849"></view>
+        <view class="_div radar-ring data-v-71da7849"></view>
+        <view class="_div radar-sweep data-v-71da7849">
+          <image
+            alt=""
+            class="_img radar-sweep-img data-v-71da7849"
+            src="{{d}}"
+          ></image>
+        </view>
+        <view class="_div radar-center data-v-71da7849">我的自选股票</view>
+        <view
+          class="{{['_div','data-v-71da7849','radar-dot',dot.c,dot.d]}}"
+          wx:for="{{e}}"
+          wx:for-item="dot"
+          wx:key="b"
+        >
+          <label class="_span radar-dot__bubble data-v-71da7849"
+            >{{dot.a}}</label
+          >
+          <label class="_span radar-dot__point data-v-71da7849"></label>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtap="{{h}}"
+      class="{{['_div','data-v-71da7849','action-btn',g]}}"
+      data-eventsync="true"
+      >{{f}}</view
+    >
+  </view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "a-i-financial-report": "./@tencent/stock-ai-financial-report/pages/AIFinancialReport",
+    "reply-box": "../newsCon/newsDetail/replybox",
+    "privacy-policy-modal": "../indexSbg/@tencent/wzq-privacy-policy-modal/PrivacyPolicyModal",
+    "news-com-list": "../newsSbg/@tencent/stock-sq/src/source/NewsComList/index"
+  },
+  "componentPlaceholder": {
+    "reply-box": "view",
+    "privacy-policy-modal": "view",
+    "news-com-list": "view"
+  }
+}

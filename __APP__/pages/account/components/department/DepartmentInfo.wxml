@@ -1,0 +1,30 @@
+<popup
+  bind:__l="__l"
+  class="data-v-2b2bd2e8"
+  uI="2b2bd2e8-0"
+  uP="{{k}}"
+  uS="{{['d']}}"
+  wx:if="{{k}}"
+>
+  <view class="dept-info-container data-v-2b2bd2e8">
+    <view class="header data-v-2b2bd2e8">
+      <label class="name data-v-2b2bd2e8">所属营业部</label>
+      <label bindtap="{{a}}" class="icon icon-close data-v-2b2bd2e8"></label>
+    </view>
+    <view class="content data-v-2b2bd2e8">
+      <view class="name data-v-2b2bd2e8">{{b}}</view>
+      <view class="info-wrap data-v-2b2bd2e8" wx:if="{{c}}">
+        <view class="address data-v-2b2bd2e8" wx:if="{{d}}">地址：{{e}}</view>
+        <view bindtap="{{h}}" class="tel data-v-2b2bd2e8" wx:if="{{f}}"
+          >电话：<label class="number data-v-2b2bd2e8">{{g}}</label>
+        </view>
+      </view>
+      <view bindtap="{{i}}" class="more-dept data-v-2b2bd2e8"
+        >查询更多营业部 ></view
+      >
+    </view>
+    <button bindtap="{{j}}" class="btn data-v-2b2bd2e8" type="primary">
+      知道了
+    </button>
+  </view>
+</popup>

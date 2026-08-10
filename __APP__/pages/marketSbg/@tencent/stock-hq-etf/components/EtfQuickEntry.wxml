@@ -1,0 +1,23 @@
+<view class="{{['_div','data-v-54236af0','quick-entry-wrapper',b]}}">
+  <view class="_div quick-entry-block data-v-54236af0">
+    <view
+      bindtap="{{item.g}}"
+      class="_div quick-entry-item data-v-54236af0"
+      wx:for="{{a}}"
+      wx:key="f"
+    >
+      <view class="{{['_div','data-v-54236af0','item-icon',item.d]}}">
+        <image
+          class="_img item-icon-img data-v-54236af0"
+          src="{{item.a}}"
+        ></image>
+        <image
+          class="_img badge-icon data-v-54236af0"
+          src="{{item.c}}"
+          wx:if="{{item.b}}"
+        ></image>
+      </view>
+      <view class="_div item-text data-v-54236af0">{{item.e}}</view>
+    </view>
+  </view>
+</view>

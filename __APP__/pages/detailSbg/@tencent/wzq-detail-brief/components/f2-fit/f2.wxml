@@ -1,0 +1,14 @@
+<view class="{{['_div',g]}}" style="{{h}}">
+  <canvas
+    bindtouchend="{{f}}"
+    bindtouchmove="{{e}}"
+    bindtouchstart="{{d}}"
+    canvasId="{{b}}"
+    class="{{['f2-canvas']}}"
+    id="{{a}}"
+    style="{{c}}"
+    type="2d"
+    wx:if="{{r0}}"
+  ></canvas>
+  <slot></slot>
+</view>

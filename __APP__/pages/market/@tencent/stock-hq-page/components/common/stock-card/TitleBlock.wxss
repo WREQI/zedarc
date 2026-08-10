@@ -1,0 +1,88 @@
+.layout.data-v-b7f80d42 {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-b7f80d42,
+.layout-align-start-center.data-v-b7f80d42 {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-b7f80d42 {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-b7f80d42 {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-b7f80d42 {
+  justify-content: flex-start;
+}
+.layout-column.data-v-b7f80d42 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-b7f80d42 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-b7f80d42 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.block-title.data-v-b7f80d42 {
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+    Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.4rem;
+  font-weight: 500;
+  height: 0.96rem;
+  padding: 0 0.32rem;
+}
+.block-title.divider.data-v-b7f80d42 {
+  border-bottom: 0.013333333333333334rem solid var(--border-light);
+}
+.block-title .left-part .name.data-v-b7f80d42 {
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+}
+.block-title .left-part .tip-wrapper.data-v-b7f80d42 {
+  box-sizing: initial;
+  padding: 0.2rem 0.29333333333333333rem 0.2rem 0.10666666666666667rem;
+}
+.block-title .left-part .tip-wrapper .icon-tip.data-v-b7f80d42,
+.block-title .left-part .tip-wrapper.data-v-b7f80d42 {
+  height: 0.3466666666666667rem;
+  width: 0.3466666666666667rem;
+}
+.block-title .right-part .text.data-v-b7f80d42 {
+  color: var(--text-color-4);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.52rem;
+  margin-right: 0.10666666666666667rem;
+  position: relative;
+}
+.block-title .right-part .text.with-red-dot.data-v-b7f80d42 {
+  padding-right: 0.29333333333333333rem;
+}
+.block-title .right-part .text .red-dot.data-v-b7f80d42 {
+  background-color: var(--color-red);
+  border-radius: 50%;
+  height: 0.18666666666666668rem;
+  position: absolute;
+  right: 0;
+  top: 0.04rem;
+  width: 0.18666666666666668rem;
+}
+.block-title .icon-arrow.data-v-b7f80d42 {
+  color: var(--color-lightgray-1);
+  height: 0.48rem;
+  line-height: 0.48rem;
+  width: 0.48rem;
+}

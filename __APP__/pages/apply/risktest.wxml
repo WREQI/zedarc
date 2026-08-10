@@ -1,0 +1,69 @@
+<page-meta class="data-v-aecd3438" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-aecd3438"
+  id="global-wrap"
+  uI="aecd3438-0"
+  uP="{{s}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{s}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-aecd3438"
+    uI="aecd3438-1,aecd3438-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-risk data-v-aecd3438">
+      <digital-human
+        bind:__l="__l"
+        class="r data-v-aecd3438"
+        uI="aecd3438-2,aecd3438-1"
+        uP="{{d}}"
+        uR="digitalHumanRef"
+        wx:if="{{b}}"
+      ></digital-human>
+      <view class="{{['data-v-aecd3438',p]}}">
+        <progress-bar
+          bind:__l="__l"
+          class="data-v-aecd3438"
+          uI="aecd3438-3,aecd3438-1"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></progress-bar>
+        <view class="content-container data-v-aecd3438">
+          <risk-test
+            bind:__l="__l"
+            bindsubmit="{{h}}"
+            bindupdateVideoId="{{i}}"
+            class="r data-v-aecd3438"
+            uI="aecd3438-4,aecd3438-1"
+            uP="{{j}}"
+            uR="tester"
+            wx:if="{{f}}"
+          ></risk-test>
+          <risk-result
+            bind:__l="__l"
+            bindconfirm="{{l}}"
+            bindretest="{{m}}"
+            bindupdateVideoId="{{n}}"
+            class="r data-v-aecd3438"
+            uI="aecd3438-5,aecd3438-1"
+            uP="{{o||''}}"
+            uR="testerRes"
+            wx:else
+          ></risk-result>
+        </view>
+      </view>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-aecd3438"
+        id="mp-dialog"
+        uI="aecd3438-6,aecd3438-1"
+        uP="{{q}}"
+        wx:if="{{q}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

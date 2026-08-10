@@ -1,0 +1,95 @@
+@import "/app.wxss";
+.page-apply-prereview.data-v-ae18426d {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  background: var(--fill-1);
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.page-apply-prereview__body.data-v-ae18426d {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow-y: scroll;
+}
+.page-apply-prereview__cards.data-v-ae18426d {
+  padding: 0 0.32rem 0.32rem;
+}
+.prereview-banner.data-v-ae18426d {
+  -webkit-box-align: center;
+  align-items: center;
+  background: rgba(255, 137, 30, 0.05);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.32rem;
+}
+.prereview-banner__icon.data-v-ae18426d {
+  flex-shrink: 0;
+  height: 1.173333rem;
+  width: 1.173333rem;
+}
+.prereview-banner__text.data-v-ae18426d {
+  margin-left: 0.266667rem;
+}
+.prereview-banner__title.data-v-ae18426d {
+  color: var(--color-orange);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.prereview-banner__desc.data-v-ae18426d {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  margin-top: 0.053333rem;
+}
+.prereview-card.data-v-ae18426d {
+  background: var(--fill-2);
+  border-radius: 0.213333rem;
+  margin-top: 0.32rem;
+  padding: 0.32rem;
+}
+.prereview-card__header.data-v-ae18426d {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.prereview-card__title.data-v-ae18426d {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.prereview-card__badge.data-v-ae18426d {
+  background: rgba(255, 137, 30, 0.05);
+  border: 0.013333rem solid rgba(255, 137, 30, 0.3);
+  border-radius: 0.053333rem;
+  color: var(--color-orange);
+  font-size: 0.293333rem;
+  font-weight: 500;
+  line-height: 0.453333rem;
+  padding: 0.04rem 0.133333rem;
+}
+.prereview-card__tips.data-v-ae18426d {
+  margin-top: 0.266667rem;
+}
+.prereview-card__tip.data-v-ae18426d {
+  color: var(--text-color-2);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  white-space: pre-line;
+}
+.prereview-card__tip + .prereview-card__tip.data-v-ae18426d {
+  margin-top: 0.053333rem;
+}
+.prereview-card__photos.data-v-ae18426d {
+  margin-top: 0.32rem;
+}

@@ -1,0 +1,40 @@
+<view
+  catchtap="{{k}}"
+  catchtouchmove="{{l}}"
+  class="{{['_div','data-v-2999252e','subscribe-container-wrapper',h,i]}}"
+  style="{{'top:'+j+';'+'left:'+0+';'+'right:'+0}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{g}}" class="_div subscribe-container data-v-2999252e">
+    <view class="_div subscribe-title-container data-v-2999252e">
+      <label class="{{['_span','subscribe-title-text','data-v-2999252e',b]}}"
+        >订阅直播提醒</label
+      >
+      <image
+        catchtap="{{d}}"
+        class="_img subscribe-title-close data-v-2999252e"
+        src="{{c}}"
+      ></image>
+    </view>
+    <label class="_span subscribe-subtitle data-v-2999252e"
+      >每日八点，推送今日必看的热门直播合集</label
+    >
+    <view class="_div subscribe-wzqshot-wrapper data-v-2999252e">
+      <image
+        class="_img wzq-shot-img data-v-2999252e"
+        src="https://st.gtimg.com/design/bc1ced6aaacdfe66cba91eeddaefc7c5.png"
+      ></image>
+      <view class="_div subscribe-wzqshot-mask data-v-2999252e"></view>
+    </view>
+    <view class="_div subscribe-footer data-v-2999252e">
+      <view catchtap="{{e}}" class="_div subscribe-cancel data-v-2999252e">
+        <label class="_span subscribe-cancel-text data-v-2999252e"
+          >暂不开启</label
+        >
+      </view>
+      <view catchtap="{{f}}" class="_div subscribe-confirm data-v-2999252e">
+        <label class="_span confirm-text data-v-2999252e">立即订阅</label>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "news-normal": "./NewsNormal",
+    "news-report": "./NewsReport",
+    "text-selection-overlay": "./components/TextSelectionOverlay/mp",
+    "news-status": "../../../../../newsSbg/@tencent/stock-news-core/components/status/index",
+    "translate": "./components/Translate/index",
+    "half-screen-ai-entry": "../../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry"
+  },
+  "componentPlaceholder": {
+    "news-status": "view",
+    "half-screen-ai-entry": "view"
+  }
+}

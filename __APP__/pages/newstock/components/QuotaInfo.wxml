@@ -1,0 +1,50 @@
+<view class="quota-info flex-column-between data-v-0ce7fd7a" data-type="{{h}}">
+  <view class="bg-blue data-v-0ce7fd7a"></view>
+  <view
+    class="{{['bg-back','data-v-0ce7fd7a',a&&'bg-back-with-extra']}}"
+  ></view>
+  <view
+    class="{{['flex-column','quota','flex-center','data-v-0ce7fd7a',g&&'quota-with-extra']}}"
+  >
+    <view class="quota-content flex-between data-v-0ce7fd7a">
+      <block wx:if="{{b}}">
+        <view class="box align-c data-v-0ce7fd7a" wx:for="{{c}}" wx:key="j">
+          <block wx:if="{{item.a}}">
+            <adapt-font-size
+              bind:__l="__l"
+              class="num data-v-0ce7fd7a"
+              uI="{{item.c}}"
+              uP="{{item.d}}"
+              uS="{{['d']}}"
+              wx:if="{{item.d}}"
+            >
+              <view class="num-text data-v-0ce7fd7a">{{item.b}}</view>
+            </adapt-font-size>
+          </block>
+          <view class="tip data-v-0ce7fd7a" wx:if="{{item.e}}"
+            >{{item.f}}<label
+              bindtap="{{item.i}}"
+              class="{{['icon','data-v-0ce7fd7a',item.h]}}"
+              wx:if="{{item.g}}"
+            ></label>
+          </view>
+        </view>
+      </block>
+      <block wx:if="{{d}}">
+        <view class="dividing-line vertical data-v-0ce7fd7a"></view>
+        <view class="box align-c data-v-0ce7fd7a">
+          <view bindtap="{{e}}" class="flex-column-between data-v-0ce7fd7a">
+            <view class="icon icon-newstock-record data-v-0ce7fd7a"></view>
+            <view class="tip data-v-0ce7fd7a">申购记录</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view
+      class="extra-wrapper border-top text-color-2 data-v-0ce7fd7a"
+      hidden="{{!f}}"
+    >
+      <slot name="extra"></slot>
+    </view>
+  </view>
+</view>

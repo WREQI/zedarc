@@ -1,0 +1,187 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="62671e04-0"
+  uP="{{Z}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{Z}}"
+>
+  <view class="account-setting">
+    <view class="title-list-account secure-setting">安全设置</view>
+    <st-cell-group
+      bind:__l="__l"
+      class="secure-setting-cell auth-setting ^auth-setting"
+      uI="62671e04-1,62671e04-0"
+      uP="{{q}}"
+      uS="{{['d']}}"
+      wx:if="{{q}}"
+    >
+      <st-cell
+        bind:__l="__l"
+        bindclick="{{b}}"
+        data-stat="trade.setting.trade_rate.select"
+        uI="62671e04-2,62671e04-1"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></st-cell>
+      <view class="border-line border--top"></view>
+      <st-cell
+        bind:__l="__l"
+        bindclick="{{d}}"
+        data-stat="trade.setting.visit_rate.select"
+        uI="62671e04-3,62671e04-1"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></st-cell>
+      <st-cell
+        bind:__l="__l"
+        uI="62671e04-4,62671e04-1"
+        uS="{{['title','d']}}"
+        wx:if="{{f}}"
+      >
+        <view class="flex-vcenter" slot="title">{{g}}</view>
+        <view bindtap="{{l}}">
+          <switch
+            checked="{{j}}"
+            class="{{['switch-disabled-event',i&&'close']}}"
+            color="{{k}}"
+            disabled="{{h}}"
+          ></switch>
+        </view>
+      </st-cell>
+      <view class="biometrics-tips" wx:if="{{m}}"
+        >开启后，验证交易密码时可用{{n}}代替。{{o}}仅针对本机有效，开启即视为同意<label
+          bindtap="{{p}}"
+          class="biometrics-link"
+          >《生物认证服务确认书》</label
+        >
+      </view>
+    </st-cell-group>
+    <view class="title-list-account secure-setting">下单仓位设置</view>
+    <st-cell-group
+      bind:__l="__l"
+      class="secure-setting-cell"
+      uI="62671e04-5,62671e04-0"
+      uP="{{t}}"
+      uS="{{['d']}}"
+      wx:if="{{t}}"
+    >
+      <st-cell
+        bind:__l="__l"
+        bindclick="{{r}}"
+        data-stat="trade.setting.set_position.select"
+        uI="62671e04-6,62671e04-5"
+        uP="{{s}}"
+        wx:if="{{s}}"
+      ></st-cell>
+    </st-cell-group>
+    <block wx:if="{{v}}">
+      <view class="title-list-account secure-setting">下单模式设置</view>
+      <st-cell-group
+        bind:__l="__l"
+        class="secure-setting-cell"
+        uI="62671e04-7,62671e04-0"
+        uP="{{B}}"
+        uS="{{['d']}}"
+        wx:if="{{B}}"
+      >
+        <st-cell
+          bind:__l="__l"
+          uI="62671e04-8,62671e04-7"
+          uS="{{['title','d']}}"
+        >
+          <view bindtap="{{w}}" class="flex-vcenter" slot="title"
+            >半屏下单模式<label class="icon icon-italic-info fs-32"></label>
+          </view>
+          <switch
+            bindchange="{{A}}"
+            checked="{{y}}"
+            class="{{[x&&'close']}}"
+            color="{{z}}"
+          ></switch>
+        </st-cell>
+      </st-cell-group>
+      <view class="embedded-trade-intro fs-24"
+        >开启后，在个股详情页点击“买入”、“卖出”按钮将直接展示半屏下单面板。</view
+      >
+    </block>
+    <view bindtap="{{E}}" class="build-version">
+      <view class="fs-32 text-color-4 align-c" wx:if="{{C}}">V{{D}}</view>
+    </view>
+    <view hidden="{{!false}}">{{F}}</view>
+    <action-sheet
+      bind:__l="__l"
+      bindinput="{{M}}"
+      uI="62671e04-9,62671e04-0"
+      uP="{{N}}"
+      uS="{{['d']}}"
+      wx:if="{{N}}"
+    >
+      <view class="action-sheet-wrap">
+        <view bindtap="{{H}}" class="action-sheet-item border--bottom">
+          <view class="item-title">每次都输入</view>
+          <label class="icon icon-check" wx:if="{{G}}"></label>
+        </view>
+        <view bindtap="{{J}}" class="action-sheet-item border--bottom">
+          <view class="item-title">每小时一次</view>
+          <label class="icon icon-check" wx:if="{{I}}"></label>
+        </view>
+        <view bindtap="{{L}}" class="action-sheet-item">
+          <view class="item-title">每两小时一次</view>
+          <label class="icon icon-check" wx:if="{{K}}"></label>
+        </view>
+      </view>
+    </action-sheet>
+    <action-sheet
+      bind:__l="__l"
+      bindinput="{{U}}"
+      uI="62671e04-10,62671e04-0"
+      uP="{{V}}"
+      uS="{{['d']}}"
+      wx:if="{{V}}"
+    >
+      <view class="action-sheet-wrap">
+        <view bindtap="{{P}}" class="action-sheet-item border--bottom">
+          <view class="item-title">15分钟</view>
+          <label class="icon icon-check" wx:if="{{O}}"></label>
+        </view>
+        <view bindtap="{{R}}" class="action-sheet-item border--bottom">
+          <view class="item-title">4小时</view>
+          <label class="icon icon-check" wx:if="{{Q}}"></label>
+        </view>
+        <view bindtap="{{T}}" class="action-sheet-item border--bottom">
+          <view class="item-title">8小时</view>
+          <label class="icon icon-check" wx:if="{{S}}"></label>
+        </view>
+        <view class="tip text-color-5 fs-24 align-l"
+          >离开交易、账户信息及设置模块后，为保护你的隐私，超过设置时间，需再次验证交易密码</view
+        >
+      </view>
+    </action-sheet>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="62671e04-11,62671e04-0"
+      uP="{{W}}"
+      wx:if="{{W}}"
+    ></mp-dialog>
+    <mp-dialog
+      bind:__l="__l"
+      id="embedded-trade-dialog"
+      uI="62671e04-12,62671e04-0"
+      uP="{{X}}"
+      uS="{{['d']}}"
+      wx:if="{{X}}"
+    >
+      <view class="mp-dialog__message mp-dialog__message--justify">
+        <view class=""
+          >开启后，在个股详情页点击“买入”、“卖出”按钮将直接展示半屏下单面板，体验更加顺畅的下单流程。</view
+        >
+        <view class="intro-bg"></view>
+      </view>
+    </mp-dialog>
+  </view>
+</global-wrap>

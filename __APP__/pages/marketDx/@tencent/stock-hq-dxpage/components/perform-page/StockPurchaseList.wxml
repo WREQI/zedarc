@@ -1,0 +1,29 @@
+<view class="_div content-wrapper data-v-dd3c25fb">
+  <view class="_div list-wrapper data-v-dd3c25fb">
+    <view class="_div data-v-dd3c25fb">
+      <view class="_div data-v-dd3c25fb" ref="topContainer" wx:if="{{a}}">
+        <stock-purchase-header
+          bind:__l="__l"
+          bindshowTips="{{b}}"
+          class="{{['data-v-dd3c25fb','top-menu-container',c,d]}}"
+          uI="dd3c25fb-0"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></stock-purchase-header>
+      </view>
+      <view class="_div bottom-container data-v-dd3c25fb">
+        <scroll-list
+          bind:__l="__l"
+          bindcolumnClick="{{g}}"
+          bindrowClick="{{h}}"
+          class="scroll-list-wrapper r data-v-dd3c25fb"
+          uI="dd3c25fb-1"
+          uP="{{i}}"
+          uR="scrollList"
+          wx:if="{{i}}"
+        ></scroll-list>
+      </view>
+      <view class="_div bot-text data-v-dd3c25fb" wx:if="{{j}}">{{k}}</view>
+    </view>
+  </view>
+</view>

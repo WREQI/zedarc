@@ -1,0 +1,13 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<error bind:__l="__l" uI="1fcfd113-0" uS="{{['d']}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    uI="1fcfd113-1,1fcfd113-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="1fcfd113-2,1fcfd113-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+</error>

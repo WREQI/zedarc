@@ -1,0 +1,27 @@
+<view class="{{['_div','pj-list','data-v-c8064431',d]}}" wx:if="{{a}}">
+  <view class="_div pj-title data-v-c8064431">
+    <label
+      class="_span data-v-c8064431"
+      style="{{'text-align:'+t.c}}"
+      wx:for="{{b}}"
+      wx:for-item="t"
+      wx:key="b"
+      >{{t.a}}</label
+    >
+  </view>
+  <view
+    class="_div pj-li data-v-c8064431"
+    wx:for="{{c}}"
+    wx:for-item="c"
+    wx:key="b"
+  >
+    <label
+      class="_span data-v-c8064431"
+      style="{{'text-align:'+li.c}}"
+      wx:for="{{c.a}}"
+      wx:for-item="li"
+      wx:key="b"
+      >{{li.a}}</label
+    >
+  </view>
+</view>

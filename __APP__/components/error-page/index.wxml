@@ -1,0 +1,22 @@
+<view
+  class="error-page-container"
+  hidden="{{errorCode===SUCCESS_ERROR_CODE||!useErrorPage}}"
+>
+  <view class="error-message">{{errorMessage||'some error occurred'}}</view>
+  <view class="error-button-container">
+    <button class="error-button" openType="feedback" wx:if="{{useFeedback}}">
+      反馈问题
+    </button>
+    <view class="retry-button-container" wx:else>
+      <image
+        class="retry-icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAKKADAAQAAAABAAAAKAAAAAB65masAAAD6UlEQVRYCe1YS1LjMBBNQopi6SOIEww3iDnBwAkmWQBFsZi5AeEGsKCogkWSE5A5QXyDyQ1GR/CS4jvvGbWq7ciJ4ySTDaqSuyW1np5aLVl2o/GVVvNAc7XujcZgMDAvLy/xx8dHBCxmpnRnZ8e+v7/b09PT6WdVvWctgg8PDzGG+w4CXUghBTWYbLPZTJBHJycnSdAClXd3d11MqoOJ/j47OxuL3VIESQwAl8ixACwpSfYKXh3qfiBnWq3WX1eX7u7u7vd6vZTltjYs0wmA2Q3gsbjMBvVWtdGrIc8aTG5wf3/feXt7uzo/P8/6tNttA2zpLn2rEby9vT3A7B4BbATByZTLhoHGe3t7U5mx2CA2o6enJ/btoq6DbJCzBKwu6mMQPV4Uo3OXmOQwuwlQtTdSzPYGpK6LpNz4QcEYA6lLNBplwEkeIkfA5DhZcktsWWhlNYFHCbkxO2Np+suQIzz6DEHiEOpIDRfBmxPkb6oupwY96IKWMzJiDXDGTF/Kq0jg9503BYbx5ldpoQexIXJLsU5yZMSJElPYaXKqLlNndjFjhUEshoiP4To8544oI7iQFuNYSINcmmYIFlxveRyU9q7YwEnDY4OK5jmz3CZxbwgjFvCeP6ukro4EzsGS/RiTWcoRhMt/SAMk36NDVa6tAveaeFUAGJv6hMgtMYBiAcGsE9FXlYhhC4z9OjjegzjVuQxGQBB7I9G3KT1BeM+TIyG+vrZJTMb2BFFhpBIy1XGg6v+7qglGavRU6VtVNcGtEikbXO/irXqN1zNszBifD1O36zPO3oM4fzRBww5ls9pE/fPz8x8QfMSbbKLH9gQxaKIH5mVTlzepF95gBmN553iCzq3ei7jRHG2SlMYuvsFwglhp9wRZAUN/OLOTdrV02ITEWLHgFt9gRYJjMYSMEBe/VHkjKm86ADYCXnyDNaVBJF55EzWj3Ceg2KxLghw/N/XN3eKbeF/j5zzIBszgShnQi7XucQqjVC3e3Hm9KxrPEMRm4V+ARBkeYZddqvJaVGJipboChjGHoevdDEF2gBd7EJY6E87I/jpJEouYGfjno/Tm3lRGOTX02clZMgT0SZ/rtKDAU8GFjD7C0tfX18OLi4tpqHspQRqHSKI6+H8lBC51JAYSP+E1ngqR1EPOJUe7uQRp4Eg+QjUsq0SijNcR/j4Ef32A1AHsy/6CWbQfl3lOxllIkIbuOOhD1d8sbNIpRYFZkhGlKDkxxnmVUKlEUAbgoeo+S0sHF9uQdMQYw0moPVS3FEEBANEYRLsod5AN8rzk/4ItQ0wAaxGUzpQuRg1UZtkA/APG5U6qLCPsvtLGPPAPkSHUuzMOwqYAAAAASUVORK5CYII="
+      ></image>
+      <button bind:tap="onRefreshBtnTap" class="error-button">刷新试试</button>
+    </view>
+  </view>
+  <view class="error-code-container">
+    <view>错误码：{{errorCode}}</view>
+    <view>{{guid}}</view>
+  </view>
+</view>

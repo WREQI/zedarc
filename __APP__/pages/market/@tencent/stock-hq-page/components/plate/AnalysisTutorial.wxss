@@ -1,0 +1,75 @@
+.layout.data-v-01251dab {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-01251dab,
+.layout-align-start-center.data-v-01251dab {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-01251dab {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-01251dab {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-01251dab {
+  justify-content: flex-start;
+}
+.layout-column.data-v-01251dab {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-01251dab {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-01251dab {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.tutorial-wrapper.data-v-01251dab {
+  background: var(--fill-2);
+  padding: 0.26666666666666666rem 0.4rem 0.5333333333333333rem;
+}
+.tutorial-wrapper .tutorial-box.data-v-01251dab {
+  background: var(--fill-2);
+  border: 0.013333333333333334rem solid var(--border-heavy);
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  height: 1.8133333333333332rem;
+  padding: 0 0.4266666666666667rem 0 0.26666666666666666rem;
+}
+.tutorial-wrapper .tutorial-box .icon-tutorial.data-v-01251dab {
+  height: 1.7066666666666668rem;
+  margin-right: 0.28rem;
+  width: 1.7066666666666668rem;
+}
+.tutorial-wrapper .tutorial-box .top-text.data-v-01251dab {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.6rem;
+  margin-bottom: 0.05333333333333334rem;
+}
+.sys-ios .tutorial-wrapper .tutorial-box .top-text.data-v-01251dab {
+  font-weight: 600 !important;
+}
+.sys-android .tutorial-wrapper .tutorial-box .top-text.data-v-01251dab {
+  -webkit-text-stroke-width: 0.005333333333333334rem !important;
+  font-weight: unset !important;
+}
+.tutorial-wrapper .tutorial-box .bottom-text.data-v-01251dab {
+  color: var(--color-midgray);
+  font-size: 0.37333333333333335rem;
+  line-height: 0.52rem;
+}
+.tutorial-wrapper .tutorial-box .icon-arrow.data-v-01251dab {
+  height: 0.48rem;
+  width: 0.48rem;
+}

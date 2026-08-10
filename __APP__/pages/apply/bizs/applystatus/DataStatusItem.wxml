@@ -1,0 +1,35 @@
+<common-status-item
+  bind:__l="__l"
+  class="data-v-29289eeb"
+  uI="29289eeb-0"
+  uP="{{l}}"
+  uS="{{['d']}}"
+  wx:if="{{l}}"
+>
+  <view class="data-status-item data-v-29289eeb" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <view class="reasons-container data-v-29289eeb" wx:if="{{c}}">
+        <view
+          class="reasons data-v-29289eeb"
+          wx:for="{{d}}"
+          wx:for-item="reason"
+        >
+          <view class="{{['reason-title','data-v-29289eeb',e&&'highlight']}}"
+            >{{reason.a}}{{reason.b}}</view
+          >
+          <view class="reason-text data-v-29289eeb">{{reason.c}}</view>
+        </view>
+      </view>
+      <view class="data-v-29289eeb" wx:elif="{{f}}"
+        >提交的资料不完整或不符合审核标准，请重新提供开户资料</view
+      >
+      <view class="data-v-29289eeb" wx:elif="{{g}}"
+        >开户信息异常，请重新提交开户申请。</view
+      >
+      <view bindtap="{{j}}" class="button data-v-29289eeb" wx:if="{{h}}"
+        >{{i}}</view
+      >
+    </block>
+    <view class="data-v-29289eeb" wx:else>{{k}}</view>
+  </view>
+</common-status-item>

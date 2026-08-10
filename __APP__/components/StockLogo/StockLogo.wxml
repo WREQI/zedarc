@@ -1,0 +1,15 @@
+<view class="stock-logo data-v-10327448">
+  <image
+    binderror="{{c}}"
+    class="stock-logo__img data-v-10327448"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <market-label
+    bind:__l="__l"
+    class="stock-logo__fallback data-v-10327448"
+    uI="10327448-0"
+    uP="{{d||''}}"
+    wx:else
+  ></market-label>
+</view>

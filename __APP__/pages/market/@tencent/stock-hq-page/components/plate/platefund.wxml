@@ -1,0 +1,35 @@
+<view class="_div platefund-wrapper data-v-a602f571">
+  <view
+    class="_div title-wrapper layout-row layout-align-space-between data-v-a602f571"
+  >
+    <view class="_div title-box data-v-a602f571"
+      >板块资金<view
+        catchtap="{{a}}"
+        class="_i image-tip data-v-a602f571"
+      ></view>
+    </view>
+    <view class="_div date-range data-v-a602f571">
+      <view catchtap="{{c}}" class="{{['_div','data-v-a602f571','title',b]}}"
+        >今日</view
+      >
+      <view class="_div divider data-v-a602f571"></view>
+      <view catchtap="{{e}}" class="{{['_div','data-v-a602f571','title',d]}}"
+        >5日</view
+      >
+      <view class="_div divider data-v-a602f571"></view>
+      <view catchtap="{{g}}" class="{{['_div','data-v-a602f571','title',f]}}"
+        >20日</view
+      >
+    </view>
+  </view>
+  <platefund
+    bind:__l="__l"
+    bindgoToBarDetail="{{i}}"
+    bindgoToDetail="{{h}}"
+    bindgotoNorthPlate="{{j}}"
+    class="data-v-a602f571"
+    uI="a602f571-0"
+    uP="{{k}}"
+    wx:if="{{k}}"
+  ></platefund>
+</view>

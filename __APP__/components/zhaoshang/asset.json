@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index",
+    "asset-placeholder": "/components/brokerAssetPluginPlaceHolder",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "plugin-asset": "plugin://wx821cd4a621f449e7/PluginAssetDataInfo"
+  },
+  "componentPlaceholder": { "plugin-asset": "asset-placeholder" }
+}

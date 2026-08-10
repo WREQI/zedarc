@@ -1,0 +1,45 @@
+<view class="_div module-zjdx data-v-305560c2" ref="zjdx">
+  <base-title
+    bind:__l="__l"
+    class="data-v-305560c2"
+    uI="305560c2-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></base-title>
+  <news-template
+    bind:__l="__l"
+    class="snp-content data-v-305560c2"
+    uI="305560c2-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></news-template>
+  <view class="_div content data-v-305560c2" wx:if="{{c}}">
+    <view
+      class="_div sub-title flex flex-align-center data-v-305560c2"
+      wx:if="{{d}}"
+    >
+      <view class="_div sub-title-desc data-v-305560c2">资金热点</view>
+      <view
+        class="_div sub-panel flex flex-justify-between flex-align-center data-v-305560c2"
+      >
+        <view class="_div sub-title-date data-v-305560c2">更新于{{e}}</view>
+        <view
+          bindtap="{{g}}"
+          class="_div sub-title-right data-v-305560c2"
+          wx:if="{{f}}"
+          >查看更多</view
+        >
+      </view>
+    </view>
+    <zjrd-list
+      bind:__l="__l"
+      bindonFundPlateClick="{{i}}"
+      bindstatReport="{{j}}"
+      bindviewStockDetail="{{h}}"
+      class="data-v-305560c2"
+      uI="305560c2-2"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></zjrd-list>
+  </view>
+</view>

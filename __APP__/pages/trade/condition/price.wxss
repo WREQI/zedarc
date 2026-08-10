@@ -1,0 +1,332 @@
+@import "/app.wxss";
+.data-v-3036c67f .cond-container {
+  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom));
+}
+.cond-content-container.data-v-3036c67f {
+  background: var(--fill-1);
+  min-height: 100vh;
+  overflow: hidden;
+}
+.cond-search.data-v-3036c67f {
+  background: var(--fill-2);
+  padding: 0.32rem;
+}
+.condition-form.data-v-3036c67f {
+  background: var(--fill-2);
+  padding: 0 0.4rem 0.533333rem;
+}
+.condition-form .condition-quote-wrapper.data-v-3036c67f {
+  background: var(--fill-2);
+  border-radius: 0.213333rem 0.213333rem 0 0;
+  padding: 0 0.32rem;
+}
+.condition-form .condition-quote-wrapper.mp.data-v-3036c67f .quote-wrap {
+  padding-top: 0;
+}
+.condition-form .condition-quote-wrapper.mp.data-v-3036c67f .icon-search {
+  margin-top: 0.293333rem;
+}
+.condition-form .module-title.data-v-3036c67f {
+  color: var(--text-color-3);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-bottom: 0.133333rem;
+}
+.condition-form .time.data-v-3036c67f {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+}
+.condition-form .trigger-price-tips.data-v-3036c67f {
+  color: var(--text-color-4);
+  margin-left: 0.106667rem;
+}
+.condition-form .trigger-price-tips.icon-italic-info.data-v-3036c67f {
+  color: var(--text-color-5);
+  font-size: 0.4rem;
+}
+[data-theme="dark"]
+  .condition-form
+  .trigger-price-tips.icon-italic-info.data-v-3036c67f {
+  color: #98a0b3;
+}
+.condition-form .tips-bar.data-v-3036c67f {
+  background: var(--fill-1);
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  height: 0.72rem;
+  margin: 0.266667rem -0.4rem;
+  padding-left: 0.4rem;
+}
+.condition-form .input-gap.data-v-3036c67f {
+  margin-bottom: 0.4rem;
+}
+.condition-form .type-gap.data-v-3036c67f {
+  margin-bottom: 0.266667rem;
+}
+.condition-form__simple-mode.data-v-3036c67f {
+  background: transparent;
+  box-sizing: border-box;
+  margin: 0.32rem;
+  padding: 0;
+}
+.condition-form__simple-mode.has-tips.data-v-3036c67f {
+  padding-bottom: calc(2.106667rem + constant(safe-area-inset-bottom));
+}
+.condition-form__simple-mode.data-v-3036c67f .form-wrap {
+  -webkit-box-pack: justify;
+  background: var(--fill-2);
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.condition-form__simple-mode.data-v-3036c67f .form-wrap .form-wrap-left {
+  color: var(--text-color-2);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  width: auto;
+}
+.condition-form__simple-mode.data-v-3036c67f .form-wrap .form-wrap-right {
+  -webkit-box-flex: 0;
+  flex: none;
+  position: relative;
+  width: 4.693333rem;
+}
+.condition-form__simple-mode .trigger-price-form.data-v-3036c67f .form-wrap,
+.condition-form__simple-mode .trigger-price-form.form-wrap.data-v-3036c67f {
+  border-radius: 0.213333rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 0.36rem 0.32rem 0.32rem;
+}
+.condition-form__simple-mode
+  .trigger-price-form.data-v-3036c67f
+  .form-wrap
+  .form-wrap-left,
+.condition-form__simple-mode
+  .trigger-price-form.form-wrap
+  .form-wrap-left.data-v-3036c67f {
+  height: 100%;
+}
+.condition-form__simple-mode:not(.is-set)
+  .trigger-price-form.data-v-3036c67f
+  .form-wrap,
+.condition-form__simple-mode:not(.is-set)
+  .trigger-price-form.form-wrap.data-v-3036c67f {
+  border-radius: 0.213333rem;
+}
+.condition-form__simple-mode .trigger-price-form .placeholder.data-v-3036c67f {
+  height: 0.373333rem;
+  margin-top: 0.08rem;
+  width: 100%;
+}
+.condition-form__simple-mode .tips-bar.data-v-3036c67f {
+  height: 0.453333rem;
+  margin: 0.213333rem auto 0.426667rem 0.32rem;
+  padding: 0;
+}
+.condition-form__simple-mode .input-gap.data-v-3036c67f,
+.condition-form__simple-mode .input-gap.data-v-3036c67f .form-wrap,
+.condition-form__simple-mode .type-gap.data-v-3036c67f,
+.condition-form__simple-mode .type-gap.data-v-3036c67f .form-wrap {
+  margin-bottom: 0;
+}
+.condition-form__simple-mode .price-form.data-v-3036c67f,
+.condition-form__simple-mode .price-form.data-v-3036c67f .form-wrap {
+  height: 1.466667rem;
+}
+.condition-form__simple-mode .trigger-price-zdf.data-v-3036c67f {
+  color: var(--text-color-1);
+  font-size: 0.266667rem;
+  font-weight: 500;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  margin-top: 0.08rem;
+  text-align: center;
+}
+.condition-form__simple-mode .trigger-price-zdf.equal.data-v-3036c67f {
+  color: var(--text-color-5) !important;
+}
+.condition-form__simple-mode .trigger-price-zdf .prefix.data-v-3036c67f {
+  color: #7a8499;
+  font-weight: 400;
+  margin-right: 0.053333rem;
+}
+.condition-form__simple-mode .amount-form.data-v-3036c67f,
+.condition-form__simple-mode .amount-form.data-v-3036c67f .form-wrap,
+.condition-form__simple-mode .way-form.data-v-3036c67f,
+.condition-form__simple-mode .way-form.data-v-3036c67f .form-wrap {
+  height: 1.466667rem;
+}
+.condition-form__simple-mode .time-form.data-v-3036c67f {
+  padding: 0.32rem 0 0.04rem;
+}
+.condition-form__simple-mode .time-form .cond-price-form-tips.data-v-3036c67f {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  text-align: right;
+}
+.condition-form__simple-mode .time-form.data-v-3036c67f .form-wrap {
+  padding-bottom: 0.266667rem;
+}
+.condition-form__simple-mode .time-form.data-v-3036c67f .form-wrap-right {
+  width: auto;
+}
+.condition-form__simple-mode .bottom-wrapper.data-v-3036c67f {
+  background: var(--fill-2);
+  border-radius: 0.213333rem;
+  padding: 0 0.32rem 0.32rem;
+}
+.condition-form__simple-mode .entrust-type.data-v-3036c67f {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  height: 0.746667rem;
+  width: 1.6rem;
+}
+.condition-form__simple-mode .entrust-type--buy.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/bg-buy.jpg);
+}
+[data-theme="dark"]
+  .condition-form__simple-mode
+  .entrust-type--buy.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/design/c65e98595341996771be9fc3fc17085c.png);
+}
+.condition-form__simple-mode .entrust-type--buy.active.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/bg-buy-active.jpg);
+  color: #fff;
+  font-weight: 600;
+}
+.condition-form__simple-mode
+  .entrust-type--buy.active.classic-mode.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/design/7ebdf6860e88f812308051c1fa2eebb7.png);
+}
+.condition-form__simple-mode .entrust-type--sell.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/bg-sell.jpg);
+}
+[data-theme="dark"]
+  .condition-form__simple-mode
+  .entrust-type--sell.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/design/03207746e02c0c62e4ac77d37d84968b.png);
+}
+.condition-form__simple-mode .entrust-type--sell.active.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/bg-sell-active.jpg);
+  color: #fff;
+  font-weight: 600;
+}
+.condition-form__simple-mode
+  .entrust-type--sell.active.classic-mode.data-v-3036c67f {
+  background-image: url(https://st.gtimg.com/design/0dc607fecf9f02558064201a3f9adff9.png);
+}
+.condition-form__simple-mode uni-button.data-v-3036c67f {
+  font-size: 0.426667rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.condition-form__simple-mode .buy.data-v-3036c67f {
+  background-color: var(--color-buy) !important;
+}
+.condition-form__simple-mode .sell.data-v-3036c67f {
+  background-color: var(--color-sell) !important;
+}
+.condition-form__simple-mode .buy.data-v-3036c67f,
+.condition-form__simple-mode .no-action.data-v-3036c67f,
+.condition-form__simple-mode .sell.data-v-3036c67f {
+  color: #fff;
+  margin-top: 0.32rem;
+}
+.condition-form__simple-mode button[disabled].data-v-3036c67f,
+.condition-form__simple-mode uni-button[disabled].data-v-3036c67f {
+  background: var(--text-color-5) !important;
+}
+.condition-form__simple-mode .popover-wrap.long.data-v-3036c67f .popover.top,
+.condition-form__simple-mode pop-over.long.data-v-3036c67f .popover.top {
+  left: 20%;
+}
+.condition-form__simple-mode
+  .popover-wrap.long.data-v-3036c67f
+  .popover.top:before,
+.condition-form__simple-mode pop-over.long.data-v-3036c67f .popover.top:before {
+  left: 70%;
+}
+.condition-form__simple-mode.data-v-3036c67f .popover.top {
+  top: -0.773333rem !important;
+}
+.condition-form__simple-mode .max-info.data-v-3036c67f {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  margin-bottom: 0.173333rem;
+  margin-top: 0.173333rem;
+}
+.condition-form__simple-mode .max-info .quick-amount.data-v-3036c67f {
+  border-radius: 0.213333rem;
+  color: var(--text-color-1);
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  margin-left: 0.266667rem;
+  overflow: visible;
+  position: relative;
+  text-align: center;
+  width: 1.066667rem;
+}
+.condition-form__simple-mode .max-info .quick-amount.data-v-3036c67f:active {
+  background-color: var(--border-color-1);
+}
+.condition-form__simple-mode .max-info .quick-amount.active.data-v-3036c67f {
+  background-color: var(--border-color-1);
+  border-radius: 0.106667rem;
+}
+[data-theme="dark"]
+  .condition-form__simple-mode
+  .max-info
+  .quick-amount.active.data-v-3036c67f {
+  background-color: #000;
+}
+.condition-form__simple-mode .max-info .quick-amount.data-v-3036c67f:after {
+  border-radius: 0.213333rem;
+}
+.condition-form__simple-mode .max-info .quick-amount.data-v-3036c67f:before {
+  bottom: -0.053333rem;
+  content: " ";
+  left: -0.053333rem;
+  position: absolute;
+  right: -0.053333rem;
+  top: -0.053333rem;
+}
+.condition-form .cond-risk-tips.data-v-3036c67f {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.506667rem;
+  margin-top: 0.64rem;
+}
+.condition-form.data-v-3036c67f .fake-input {
+  z-index: auto !important;
+}
+.cond-btnwrap.data-v-3036c67f {
+  background: var(--fill-2);
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  padding: 0 0.32rem calc(env(safe-area-inset-bottom) + 0.32rem);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.cond-btnwrap .buy.data-v-3036c67f {
+  background-color: var(--color-buy) !important;
+}
+.cond-btnwrap .sell.data-v-3036c67f {
+  background-color: var(--color-sell) !important;
+}
+.cond-btnwrap .buy.data-v-3036c67f,
+.cond-btnwrap .no-action.data-v-3036c67f,
+.cond-btnwrap .sell.data-v-3036c67f {
+  color: #fff;
+  margin-top: 0.32rem;
+}
+.data-v-3036c67f .st-action-sheet-panel {
+  z-index: 5;
+}

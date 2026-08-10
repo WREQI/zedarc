@@ -1,0 +1,27 @@
+<view class="_div reply-container data-v-01f1e91f">
+    <view class="{{['_div','mod-replyBox','reply','data-v-01f1e91f',n&&'isTl']}}">
+        <view bindtap="{{b}}" class="_div head-container data-v-01f1e91f">
+            <image class="_img head data-v-01f1e91f" src="{{a}}"></image>
+        </view>
+        <view bindtap="{{h}}" class="_div replyBox_footNew data-v-01f1e91f">
+            <image class="_img cursor data-v-01f1e91f" src="https://st.gtimg.com/design/7ed40f91f945c3a0fee4404d8d454b48.png" wx:if="{{c}}"></image>
+            <block wx:if="{{d}}">
+                <view class="_div forbid-comment data-v-01f1e91f" wx:if="{{e}}">{{f}}</view>
+                <view class="_div inline share-typing data-v-01f1e91f" wx:else>{{g}}</view>
+            </block>
+        </view>
+        <input class="my-input data-v-01f1e91f" ref="myInput"></input>
+        <view class="_div op-area data-v-01f1e91f">
+            <view bindtap="{{j}}" class="{{['_div','data-v-01f1e91f','op-btn',i]}}">
+                <view class="_div icon icon-hotSubject data-v-01f1e91f"></view>
+                <label class="_span icon-text data-v-01f1e91f">社区首页</label>
+            </view>
+            <view bindtap="{{m}}" class="_div op-btn data-v-01f1e91f" wx:if="{{k}}">
+                <view class="_div icon icon-friends data-v-01f1e91f">
+                    <label class="_span hasRedDot data-v-01f1e91f" wx:if="{{l}}"></label>
+                </view>
+                <label class="_span icon-text data-v-01f1e91f">股友圈</label>
+            </view>
+        </view>
+    </view>
+</view>

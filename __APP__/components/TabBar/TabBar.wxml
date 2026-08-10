@@ -1,0 +1,14 @@
+<view change:value="tab.propObserver" class="{{['_div',d,'tab-wrapper']}}">
+  <view class="{{['_div','st-tab-bar',b,c]}}" ref="nav">
+    <view
+      bindtap="{{tab.d}}"
+      class="{{['_div','st-tab',tab.b]}}"
+      wx:for="{{a}}"
+      wx:for-item="tab"
+      wx:key="c"
+    >
+      <label class="_span">{{tab.a}}</label>
+    </view>
+    <view class="_div st-tab-last"></view>
+  </view>
+</view>

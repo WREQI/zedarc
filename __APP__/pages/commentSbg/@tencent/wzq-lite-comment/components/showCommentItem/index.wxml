@@ -1,0 +1,77 @@
+<view
+  catchtap="{{E}}"
+  class="_div mod-show-comment-item data-v-ab36eca9"
+  data-commentid="{{F}}"
+  ref="commentItemRef"
+>
+  <view class="_div header-wrap data-v-ab36eca9">
+    <view
+      catchtap="{{f}}"
+      class="{{['_div','data-v-ab36eca9','image-box',b,c,d]}}"
+      data-userid="{{e}}"
+    >
+      <base-image
+        bind:__l="__l"
+        class="data-v-ab36eca9"
+        uI="ab36eca9-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></base-image>
+    </view>
+  </view>
+  <view class="_div mod-comment-item data-v-ab36eca9">
+    <item-header
+      bind:__l="__l"
+      bindhandleHeader="{{h}}"
+      bindtapDetail="{{g}}"
+      class="data-v-ab36eca9"
+      uI="ab36eca9-1"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></item-header>
+    <view class="{{['_div','data-v-ab36eca9',D&&C]}}" id="{{B}}">
+      <view class="_div content-box data-v-ab36eca9">
+        <short-content
+          bind:__l="__l"
+          bindinitShowMore="{{q}}"
+          bindtapContent="{{v}}"
+          bindtapDetail="{{s}}"
+          bindtapImage="{{r}}"
+          bindtoggleShow="{{t}}"
+          class="data-v-ab36eca9"
+          uI="ab36eca9-2"
+          uP="{{w}}"
+          uS="{{['start']}}"
+          wx:if="{{w}}"
+        >
+          <label class="{{['_span','data-v-ab36eca9','start',p]}}" slot="start">
+            <block wx:if="{{j}}">
+              <slot wx:if="{{$slots.d}}"></slot>
+              <block wx:else>
+                <label class="_span reply data-v-ab36eca9">回复</label>
+                <label
+                  catchtap="{{o}}"
+                  class="{{['_span','data-v-ab36eca9','b',m,n]}}"
+                  wx:if="{{k}}"
+                  >{{l}}</label
+                >
+                <label class="_span maohao data-v-ab36eca9">:</label>
+              </block>
+            </block>
+          </label>
+        </short-content>
+      </view>
+      <item-image
+        bind:__l="__l"
+        bindtapImage="{{x}}"
+        class="data-v-ab36eca9"
+        uI="ab36eca9-3"
+        uP="{{y}}"
+        wx:if="{{y}}"
+      ></item-image>
+      <view class="_div com-yb-disclaimer data-v-ab36eca9" wx:if="{{z}}"
+        >{{A}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,464 @@
+.container.data-v-d71f6440 {
+  background-color: var(--fill-3);
+}
+.container .share-wrapper.data-v-d71f6440 {
+  height: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.container .share-wrapper .shareWidget.data-v-d71f6440 {
+  left: 105vw;
+  position: absolute;
+}
+.stock-watch-list-container.data-v-d71f6440 {
+  background-color: var(--fill-3);
+  background-repeat: no-repeat;
+  background-size: 10rem 12.573333333333334rem;
+  padding-bottom: calc(1.3866666666666667rem + env(safe-area-inset-bottom));
+  width: 100vw;
+}
+.stock-watch-list-container.bg-0.data-v-d71f6440 {
+  background-image: url(https://st.gtimg.com/design/6c64339aa4a82c5fd31c5f054bf778c7.png);
+}
+.stock-watch-list-container.bg-1.data-v-d71f6440 {
+  background-image: url(https://st.gtimg.com/design/c7ecb029196043188b7508a1c4d5af0d.png);
+}
+.stock-watch-list-container.bg-2.data-v-d71f6440 {
+  background-image: url(https://st.gtimg.com/design/fe1c947e346514723dd667e781561786.png);
+}
+.stock-watch-list-container .header-container.data-v-d71f6440 {
+  position: relative;
+  width: 100%;
+}
+.stock-watch-list-container .header-container .header-img.data-v-d71f6440 {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+.stock-watch-list-container .header-container .overlay.data-v-d71f6440 {
+  background: linear-gradient(
+    180deg,
+    rgba(38, 38, 38, 0.7) 24.55%,
+    rgba(38, 38, 38, 0.9) 80.91%
+  );
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.stock-watch-list-container .header-container .header-text.data-v-d71f6440 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  position: relative;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container.data-v-d71f6440 {
+  margin: 2.56rem 0.4266666666666667rem 0.4266666666666667rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container
+  .header-text-title.data-v-d71f6440 {
+  color: #fff;
+  font-size: 0.5333333333333333rem;
+  font-weight: 600;
+  line-height: 0.8rem;
+  opacity: 0.9;
+  text-align: left;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container
+  .header-text-desc.data-v-d71f6440 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.56rem;
+  margin-top: 0.26666666666666666rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container
+  .header-text-desc
+  .desc.data-v-d71f6440 {
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  color: #fff;
+  display: -webkit-box;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  opacity: 0.6;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container
+  .header-text-desc
+  .desc-icon.data-v-d71f6440 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5866666666666667rem;
+  justify-content: center;
+  width: 0.5866666666666667rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-desc-container
+  .header-text-desc
+  .desc-icon
+  .header-icon.data-v-d71f6440 {
+  height: 0.37333333333333335rem;
+  width: 0.37333333333333335rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra.data-v-d71f6440 {
+  align-items: left;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin: 0.10666666666666667rem 0.4266666666666667rem 0.21333333333333335rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .change-percent-month.data-v-d71f6440,
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .change-percent.data-v-d71f6440 {
+  align-items: left;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .change-percent-month.data-v-d71f6440 {
+  margin-left: 0.96rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .rise-title.data-v-d71f6440 {
+  color: #fff;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  opacity: 0.6;
+  text-align: left;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .rise-value.data-v-d71f6440 {
+  font-size: 0.6933333333333334rem;
+  font-weight: 600;
+  line-height: 1.04rem;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .up.data-v-d71f6440 {
+  color: #e63535;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .down.data-v-d71f6440 {
+  color: #1caa3c;
+}
+.stock-watch-list-container
+  .header-container
+  .header-text
+  .header-text-extra
+  .flat.data-v-d71f6440 {
+  color: #fff;
+}
+.stock-watch-list-container .desc-content.data-v-d71f6440 {
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.32rem;
+  margin: 0 0.32rem;
+  padding-top: 0.32rem;
+}
+.stock-watch-list-container .desc-content .evaluation.data-v-d71f6440 {
+  color: var(--color-heavygray);
+  margin: 0.10666666666666667rem 0;
+}
+.stock-watch-list-container .desc-content .evaluation ._span.data-v-d71f6440,
+.stock-watch-list-container .desc-content .evaluation span.data-v-d71f6440 {
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+}
+.stock-watch-list-container .desc-content .evaluation .icon.data-v-d71f6440 {
+  display: inline-block;
+  height: 0.37333333333333335rem;
+  margin-left: 0.10666666666666667rem;
+  position: relative;
+  top: 0.06666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.stock-watch-list-container .desc-content .institutional.data-v-d71f6440 {
+  align-items: center;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4533333333333333rem;
+  line-height: 0.4533333333333333rem;
+  margin: 0.10666666666666667rem 0;
+}
+.stock-watch-list-container
+  .desc-content
+  .institutional
+  .divide-line.data-v-d71f6440 {
+  background-color: var(--border-heavy);
+  height: 0.32rem;
+  margin: 0 0.4266666666666667rem;
+  width: 0.013333333333333334rem;
+}
+.stock-watch-list-container .stock-watch-list.data-v-d71f6440 {
+  background-color: #fff;
+  min-height: 2.6666666666666665rem;
+}
+.stock-watch-list-container .chart-area.data-v-d71f6440 {
+  margin-bottom: 0.21333333333333335rem;
+}
+.stock-watch-list-container .related-news.data-v-d71f6440 {
+  background-color: #fff;
+  margin-top: 0.21333333333333335rem;
+  padding: 0.4266666666666667rem 0.4266666666666667rem 0;
+}
+.stock-watch-list-container .related-news .title.data-v-d71f6440 {
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  text-align: left;
+}
+.stock-watch-list-container .related-news .news-item.data-v-d71f6440 {
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.4266666666666667rem 0;
+}
+.stock-watch-list-container
+  .related-news
+  .news-item.data-v-d71f6440:last-child {
+  border-bottom: 0 solid #e9ebf0;
+}
+.stock-watch-list-container .related-news .news-item .content.data-v-d71f6440 {
+  flex-direction: column;
+  flex-shrink: 1;
+  margin-right: 0.32rem;
+}
+.stock-watch-list-container
+  .related-news
+  .news-item
+  .content
+  .title.data-v-d71f6440 {
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #262e40;
+  display: -webkit-box;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.64rem;
+  overflow: hidden;
+  text-align: left;
+}
+.stock-watch-list-container
+  .related-news
+  .news-item
+  .content
+  .source.data-v-d71f6440 {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.21333333333333335rem;
+  text-align: left;
+}
+.stock-watch-list-container
+  .related-news
+  .news-item
+  .news-image.data-v-d71f6440 {
+  background-color: red;
+  flex-shrink: 0;
+  height: 1.9466666666666668rem;
+  width: 1.9466666666666668rem;
+}
+.stock-watch-list-container .relevance-plate.data-v-d71f6440 {
+  margin: 0.21333333333333335rem 0 0;
+}
+.stock-watch-list-container .community-scope.data-v-d71f6440 {
+  margin: 0.21333333333333335rem 0 0;
+  overflow: hidden;
+}
+.stock-watch-list-container .community-scope.data-v-d71f6440 .mod-list-item {
+  margin-left: 0.4266666666666667rem !important;
+  margin-right: 0.4266666666666667rem !important;
+}
+.stock-watch-list-container .community-scope .item-title.data-v-d71f6440 {
+  align-items: center;
+  background-color: #fff;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.9866666666666667rem;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.4266666666666667rem 0.4266666666666667rem 0;
+  width: 100%;
+}
+.stock-watch-list-container .community-scope .item-title .icon.data-v-d71f6440 {
+  background: url(https://st.gtimg.com/design/120984d9cc555b7af44576461470f178.png)
+    0 0 no-repeat;
+  background-size: contain;
+  height: 0.56rem;
+  width: 0.08rem;
+}
+.stock-watch-list-container
+  .community-scope
+  .item-title
+  .item-title-span.data-v-d71f6440 {
+  color: #262e40;
+  font-size: 0.4rem;
+  font-weight: 500;
+}
+.stock-watch-list-container
+  .community-scope
+  .item-title
+  .item-title-button.data-v-d71f6440 {
+  color: #576b95;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+}
+.stock-watch-list-container .brand.data-v-d71f6440 {
+  background-color: #fff;
+  background-image: url(https://st.gtimg.com/design/aa65870c4a9bbd7ba311225f19e33525.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 1.76rem;
+  width: 100%;
+}
+.modal-content-text.data-v-d71f6440 {
+  max-height: calc(75vh - 1.52rem);
+  min-height: calc(25vh - 1.52rem);
+}
+.modal-content-text .desc.data-v-d71f6440 {
+  display: block;
+  font-size: 0.4266666666666667rem;
+  line-height: 0.8533333333333334rem;
+  margin: 0 0.32rem;
+  min-height: 0.32rem;
+  text-align: justify;
+}
+.modal-content-text .info.data-v-d71f6440 {
+  word-wrap: break-word;
+  background-color: var(--fill-1);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.8533333333333334rem;
+  margin: 0.5333333333333333rem 0.32rem 0.32rem;
+  padding: 0.4266666666666667rem 0.32rem;
+  word-break: break-all;
+}
+.modal-content-text .info .title.data-v-d71f6440 {
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  text-align: left;
+}
+.modal-content-text .info .info-item.data-v-d71f6440 {
+  display: block;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.7466666666666667rem;
+  margin-top: 0.32rem;
+  text-align: left;
+}
+.nav-bar.data-v-d71f6440 {
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+.nav-bar .btn.data-v-d71f6440,
+.nav-bar.data-v-d71f6440 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+}
+.nav-bar .btn.data-v-d71f6440 {
+  justify-content: center;
+  width: 1.1733333333333333rem;
+}
+.nav-bar .btn .back-icon.data-v-d71f6440 {
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.nav-bar .right-arrow.data-v-d71f6440 {
+  background-color: #fff;
+  height: 0.4533333333333333rem;
+  mask-image: url(https://st.gtimg.com/design/cd41628924039703991105993f46fb55.svg);
+  mask-size: 100% 100%;
+  width: 0.4533333333333333rem;
+}
+.nav-bar .right-arrow.left.data-v-d71f6440 {
+  transform: rotate(180deg);
+}
+.nav-bar .right-arrow.dark.data-v-d71f6440 {
+  background-color: #12161f;
+}
+.nav-bar .home.data-v-d71f6440 {
+  justify-content: flex-end;
+}
+.nav-bar .home .home-icon.data-v-d71f6440 {
+  height: 0.8533333333333334rem;
+  width: 0.8533333333333334rem;
+}
+.nav-bar .title.data-v-d71f6440 {
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  display: -webkit-box;
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  max-width: 4.266666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

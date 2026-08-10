@@ -1,0 +1,32 @@
+<page-meta class="data-v-f8a035e0" rootFontSize="{{a}}"></page-meta>
+<view class="_div data-v-f8a035e0">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f8a035e0"
+    uI="f8a035e0-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f8a035e0"
+    uI="f8a035e0-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div global_bubble_holder data-v-f8a035e0"></view>
+  <dx-home-page
+    bind:__l="__l"
+    class="dx-home-page r data-v-f8a035e0"
+    uI="f8a035e0-2"
+    uP="{{d}}"
+    uR="dxhomepage"
+    wx:if="{{d}}"
+  ></dx-home-page>
+  <mp-bubble
+    bind:__l="__l"
+    class="data-v-f8a035e0"
+    data-c-h="{{!e}}"
+    uI="f8a035e0-3"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></mp-bubble>
+</view>

@@ -1,0 +1,23 @@
+<view
+  class="{{['_div','data-v-9b6651c3','mod-handle-follow',j,k,l,m]}}"
+  wx:if="{{a}}"
+>
+  <label
+    catchtap="{{d}}"
+    class="_span btn isBlack data-v-9b6651c3"
+    wx:if="{{b}}"
+    >{{c}}</label
+  >
+  <label
+    catchtap="{{i}}"
+    class="{{['_span','data-v-9b6651c3','btn',h]}}"
+    wx:else
+    >{{e}}<bubble-tip
+      bind:__l="__l"
+      class="follow-bubble data-v-9b6651c3"
+      uI="9b6651c3-0"
+      uP="{{g}}"
+      wx:if="{{f}}"
+    ></bubble-tip>
+  </label>
+</view>

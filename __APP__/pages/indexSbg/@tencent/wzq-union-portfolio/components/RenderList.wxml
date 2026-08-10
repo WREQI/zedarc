@@ -1,0 +1,107 @@
+<view class="{{['_div','scroll-view-content','data-v-7ae0b62b',D]}}">
+  <view class="{{['_div','data-v-7ae0b62b','scroll-content',p]}}" style="{{q}}">
+    <block wx:if="{{a}}">
+      <view
+        class="_div data-v-7ae0b62b"
+        wx:for="{{b}}"
+        wx:for-item="sections"
+        wx:key="e"
+      >
+        <block wx:if="{{sections.a}}">
+          <render-section
+            bind:__l="__l"
+            bindsort="{{sections.b}}"
+            class="data-v-7ae0b62b"
+            uI="{{sections.c}}"
+            uP="{{sections.d}}"
+            wx:if="{{sections.d}}"
+          ></render-section>
+        </block>
+      </view>
+      <view class="_div loading-dots data-v-7ae0b62b" wx:if="{{c}}">
+        <view class="_div dot dot-1 data-v-7ae0b62b"></view>
+        <view class="_div dot dot-2 data-v-7ae0b62b"></view>
+        <view class="_div dot dot-3 data-v-7ae0b62b"></view>
+      </view>
+    </block>
+    <view class="_div empty-wrap data-v-7ae0b62b" wx:if="{{d}}">
+      <view class="_div empty-page data-v-7ae0b62b" wx:if="{{e}}">
+        <empty
+          bind:__l="__l"
+          class="data-v-7ae0b62b"
+          uI="7ae0b62b-1"
+          uP="{{f}}"
+          wx:if="{{f}}"
+        ></empty>
+        <view
+          catchtap="{{j}}"
+          class="_div add-stock-btn data-v-7ae0b62b"
+          wx:if="{{g}}"
+        >
+          <view
+            class="_div icon icon-add-bold data-v-7ae0b62b"
+            wx:if="{{h}}"
+          ></view
+          >{{i}}</view
+        >
+        <view catchtap="{{l}}" class="_div data-v-7ae0b62b" wx:if="{{k}}">
+          <view
+            class="_div hot-search layout layout-align-center-center data-v-7ae0b62b"
+          >
+            <label class="_span data-v-7ae0b62b">查看热搜榜单</label>
+            <label class="_span ico-arrow data-v-7ae0b62b"></label>
+          </view>
+        </view>
+      </view>
+      <choose-recommend
+        bind:__l="__l"
+        class="data-v-7ae0b62b"
+        uI="7ae0b62b-2"
+        uP="{{n}}"
+        wx:if="{{m}}"
+      ></choose-recommend>
+      <view
+        class="_div empty-privacy-placeholder data-v-7ae0b62b"
+        wx:if="{{o}}"
+      ></view>
+    </view>
+  </view>
+  <block wx:if="{{r}}">
+    <view
+      class="_div hk-message border-bottom-1px data-v-7ae0b62b"
+      wx:if="{{s}}"
+      >应港交所要求基本行情需手动刷新<label
+        class="_span data-v-7ae0b62b"
+        wx:if="{{t}}"
+        >，超出20只的港股延时15分钟</label
+      >
+    </view>
+    <view class="_div add-stock-tail-border data-v-7ae0b62b" wx:if="{{v}}">
+      <add-stock
+        bind:__l="__l"
+        bindclick="{{w}}"
+        class="data-v-7ae0b62b"
+        uI="7ae0b62b-3"
+      ></add-stock>
+    </view>
+    <slot name="after-stock-list"></slot>
+    <choose-recommend
+      bind:__l="__l"
+      class="data-v-7ae0b62b"
+      uI="7ae0b62b-4"
+      uP="{{y}}"
+      wx:if="{{x}}"
+    ></choose-recommend>
+  </block>
+  <view
+    class="{{['_div','mp-list-placeholder','data-v-7ae0b62b',A]}}"
+    wx:if="{{z}}"
+  ></view>
+  <view class="_div empty-safe data-v-7ae0b62b" wx:if="{{B}}"></view>
+  <dynamic-height-placeholder
+    bind:__l="__l"
+    class="data-v-7ae0b62b"
+    uI="7ae0b62b-5"
+    wx:if="{{C}}"
+  ></dynamic-height-placeholder>
+</view>

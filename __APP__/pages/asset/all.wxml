@@ -1,0 +1,52 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="5288c902-0"
+  uP="{{d}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <view class="asset-all-container">
+    <view class="section">
+      <view
+        class="{{['section-item',group.d,group.e]}}"
+        wx:for="{{b}}"
+        wx:for-item="group"
+        wx:key="c"
+      >
+        <view class="header text-color-1">{{group.a}}</view>
+        <view class="entry-wrap">
+          <view
+            class="flex flex-between"
+            wx:for="{{group.b}}"
+            wx:for-item="row"
+            wx:key="b"
+          >
+            <block wx:for="{{row.a}}" wx:key="i">
+              <view class="item" wx:if="{{item.a}}"></view>
+              <view
+                bindtap="{{item.h}}"
+                class="{{['item','flex-column','flex-center',item.g]}}"
+                wx:else
+              >
+                <view class="{{item.e}}">
+                  <view class="{{['item-icon',item.b]}}"></view>
+                  <entry-adv
+                    bind:__l="__l"
+                    uI="{{item.c}}"
+                    uP="{{item.d}}"
+                    wx:if="{{item.d}}"
+                  ></entry-adv>
+                </view>
+                <view class="item-name">{{item.f}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</global-wrap>

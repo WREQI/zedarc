@@ -1,0 +1,91 @@
+<excite-celebrate-shell
+  bind:__l="__l"
+  class="data-v-b8ead36b"
+  uI="b8ead36b-0"
+  uP="{{t}}"
+  uS="{{['title','subtitle','body','footer']}}"
+  wx:if="{{t}}"
+>
+  <label class="{{['data-v-b8ead36b',b]}}" slot="title">{{a}}</label>
+  <view slot="subtitle">{{c}}</view>
+  <view class="permission-unlock-template__body data-v-b8ead36b" slot="body">
+    <view
+      class="permission-unlock-template__single data-v-b8ead36b"
+      wx:if="{{d}}"
+    >
+      <permission-unlock-card
+        bind:__l="__l"
+        bindindexClick="{{e}}"
+        class="data-v-b8ead36b"
+        uI="b8ead36b-1,b8ead36b-0"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></permission-unlock-card>
+    </view>
+    <view
+      class="permission-unlock-template__swiper-wrapper data-v-b8ead36b"
+      wx:else
+    >
+      <swiper
+        autoplay="{{h}}"
+        bindanimationfinish="{{n}}"
+        bindchange="{{j}}"
+        bindtouchend="{{l}}"
+        bindtouchstart="{{k}}"
+        bindtransition="{{m}}"
+        circular="{{true}}"
+        class="permission-unlock-template__swiper data-v-b8ead36b"
+        current="{{i}}"
+        duration="{{300}}"
+        interval="{{2000}}"
+        nextMargin="62rpx"
+        previousMargin="62rpx"
+      >
+        <swiper-item
+          class="permission-unlock-template__swiper-item data-v-b8ead36b"
+          wx:for="{{g}}"
+          wx:key="e"
+        >
+          <view
+            class="permission-unlock-template__card-inner data-v-b8ead36b"
+            style="{{'transform:'+item.d}}"
+          >
+            <permission-unlock-card
+              bind:__l="__l"
+              bindindexClick="{{item.a}}"
+              class="data-v-b8ead36b"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.c}}"
+            ></permission-unlock-card>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view
+        class="permission-unlock-template__indicator data-v-b8ead36b"
+        wx:if="{{o}}"
+      >
+        <view
+          class="{{['permission-unlock-template__indicator-dot','data-v-b8ead36b',item.b&&'permission-unlock-template__indicator-dot--active']}}"
+          wx:for="{{p}}"
+          wx:key="a"
+        ></view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="permission-unlock-template__actions data-v-b8ead36b"
+    slot="footer"
+  >
+    <view
+      catchtap="{{r}}"
+      class="permission-unlock-template__action-btn data-v-b8ead36b"
+      >{{q}}</view
+    >
+    <view
+      catchtap="{{s}}"
+      class="permission-unlock-template__btn data-v-b8ead36b"
+      >我知道了</view
+    >
+  </view>
+</excite-celebrate-shell>

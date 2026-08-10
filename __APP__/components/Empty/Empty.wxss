@@ -1,0 +1,44 @@
+@import "/app.wxss";
+.container.data-v-ff70ae49 {
+  background: var(--fill-2);
+  height: 100%;
+  min-height: 3.573333rem;
+  position: relative;
+  width: 100%;
+}
+.container.bottom-border-radius.data-v-ff70ae49 {
+  border-bottom-left-radius: 0.213333rem;
+  border-bottom-right-radius: 0.213333rem;
+}
+.icon.data-v-ff70ae49 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/no-count.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.6rem;
+  width: 1.466667rem;
+}
+[data-theme="dark"] .icon.data-v-ff70ae49 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/no-count-black.png);
+}
+.text.data-v-ff70ae49 {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  margin-top: 0.32rem;
+}
+.vertical.data-v-ff70ae49 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+.horizontal.data-v-ff70ae49 {
+  min-height: 1.6rem;
+}
+.horizontal .icon.data-v-ff70ae49 {
+  height: 0.586667rem;
+  margin-right: 0.24rem;
+  width: 0.493333rem;
+}
+.horizontal .text.data-v-ff70ae49 {
+  font-size: 0.32rem;
+  margin-top: 0;
+}

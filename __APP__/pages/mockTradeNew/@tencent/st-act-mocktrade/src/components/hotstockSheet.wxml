@@ -1,0 +1,76 @@
+<view class="_div hot-action-sheet data-v-0db526ed">
+  <view bindtap="{{b}}" class="{{['_div','data-v-0db526ed',a]}}"></view>
+  <view
+    class="{{['_div','modal-container','data-v-0db526ed',w&&'modal-show',x&&'rank-modal-container']}}"
+  >
+    <view
+      bindtap="{{v}}"
+      class="{{['_div','sheet-container','data-v-0db526ed',t&&'sheet-rank-container']}}"
+      wx:if="{{c}}"
+    >
+      <view class="_div sheet-header data-v-0db526ed">
+        <view class="_div sheet-header-title data-v-0db526ed">{{d}}</view>
+        <view class="_div sheet-header-time data-v-0db526ed" wx:if="{{e}}"
+          >{{f}}</view
+        >
+        <view bindtap="{{g}}" class="_div modal-close data-v-0db526ed"></view>
+      </view>
+      <view class="_div sheet-rank-title data-v-0db526ed" wx:if="{{h}}">
+        <view class="_div item-title item-rank-title data-v-0db526ed"
+          >序号</view
+        >
+        <view class="_div item-title item-desc-title data-v-0db526ed"
+          >股票</view
+        >
+        <view class="_div item-title item-popvalue-title data-v-0db526ed">
+          <label class="_span data-v-0db526ed">{{i}}</label>
+        </view>
+        <view class="_div item-title item-info-title data-v-0db526ed">
+          <view catchtap="{{k}}" class="_div item-info data-v-0db526ed">
+            <label class="_span data-v-0db526ed">{{j}}</label>
+            <image
+              class="_img title-icon data-v-0db526ed"
+              src="https://st.gtimg.com/design/dfb64edf08404a6a73b1031ab32fc6a3.svg"
+            ></image>
+          </view>
+          <view
+            bindtap="{{n}}"
+            class="_div tip-pop data-v-0db526ed"
+            wx:if="{{l}}"
+          >
+            <label class="_span data-v-0db526ed">{{m}}</label>
+          </view>
+        </view>
+      </view>
+      <view class="_div sheet-content-container data-v-0db526ed">
+        <view
+          bindtap="{{item.i}}"
+          class="{{['_div','sheet-container-item','data-v-0db526ed',s&&'sheet-rank-item']}}"
+          wx:for="{{o}}"
+          wx:key="j"
+        >
+          <view class="_div item-rank data-v-0db526ed">NO.{{item.a}}</view>
+          <view class="_div item-desc data-v-0db526ed">
+            <view class="_div name data-v-0db526ed">{{item.b}}</view>
+            <view class="_div symbol data-v-0db526ed">{{item.c}}</view>
+          </view>
+          <view class="_div item-popvalue data-v-0db526ed" wx:if="{{p}}"
+            >{{item.d}}</view
+          >
+          <view
+            class="_div item-info data-v-0db526ed"
+            style="{{'color:'+item.f}}"
+            wx:if="{{q}}"
+            >{{item.e}}</view
+          >
+          <view
+            class="_div item-zdf data-v-0db526ed"
+            style="{{'color:'+item.h}}"
+            wx:if="{{r}}"
+            >{{item.g}}%</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

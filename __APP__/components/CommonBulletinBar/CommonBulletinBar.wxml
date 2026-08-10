@@ -1,0 +1,12 @@
+<view>
+  <bulletin-bar
+    bind:__l="__l"
+    bindclose="{{c}}"
+    bindtextClick="{{d}}"
+    uI="ce99813c-0"
+    uP="{{e}}"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+    >{{b}}</bulletin-bar
+  >
+</view>

@@ -1,0 +1,144 @@
+.zxg-sa-block.data-v-c630f590 {
+  background: var(--fill-2);
+  border-bottom: 0.16rem solid var(--fill-1);
+  padding: 0.4rem;
+  position: relative;
+}
+.zxg-sa-block .zxg-sa-block-title.data-v-c630f590 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  margin-bottom: 0.32rem;
+  position: relative;
+}
+.zxg-sa-block .zxg-sa-block-title .vertical-line.data-v-c630f590 {
+  background: var(--color-primary-1);
+  border: 0.08rem solid var(--fill-2);
+  border-left-color: var(--color-primary-1);
+  height: 0.37333333333333335rem;
+  left: -0.4rem;
+  position: absolute;
+  top: -0.05333333333333334rem;
+}
+.zxg-sa-block .zxg-sa-block-title .vb.data-v-c630f590 {
+  color: var(--text-color-1);
+  font-weight: 500;
+}
+.zxg-sa-block .trend-tag-wrapper.data-v-c630f590 {
+  height: 0.37333333333333335rem;
+  margin-left: 0.21333333333333335rem;
+  width: 0.7466666666666667rem;
+}
+.zxg-sa-block .trend-tag-wrapper .trend-tag.data-v-c630f590 {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.5333333333333333rem;
+  height: 0.7466666666666667rem;
+  padding: 0 0.21333333333333335rem;
+  transform: scale(0.5);
+  transform-origin: left top;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.zxg-sa-block .trend-tag-wrapper .trend-red.data-v-c630f590 {
+  border: 0.02666666666666667rem solid var(--color-red);
+  color: var(--color-red);
+}
+.zxg-sa-block .trend-tag-wrapper .trend-green.data-v-c630f590 {
+  border: 0.02666666666666667rem solid var(--color-green);
+  color: var(--color-green);
+}
+.zxg-sa-block .trend-tag-wrapper .trend-orange.data-v-c630f590 {
+  border: 0.02666666666666667rem solid #ff7400;
+  color: #ff7400;
+}
+.zxg-sa-block .trend-tag-wrapper .trend-grey.data-v-c630f590 {
+  border: 0.02666666666666667rem solid var(--color-gray);
+  color: var(--color-gray);
+}
+.zxg-sa-block .trend-tag-wrapper .trend-safe.data-v-c630f590 {
+  border: 0.02666666666666667rem solid var(--color-blue);
+  color: var(--color-blue);
+}
+.zxg-sa-block .trend-tag-wrapper .trend-low.data-v-c630f590 {
+  border: 0.02666666666666667rem solid #52a7cc;
+  color: #52a7cc;
+  font-weight: 500;
+}
+.zxg-sa-block .trend-tag-wrapper .trend-mid.data-v-c630f590 {
+  border: 0.02666666666666667rem solid #41a39c;
+  color: #41a39c;
+  font-weight: 500;
+}
+.zxg-sa-block .trend-tag-wrapper .trend-high.data-v-c630f590 {
+  border: 0.02666666666666667rem solid #56ac6a;
+  color: #56ac6a;
+  font-weight: 500;
+}
+.overview .cap-title.data-v-c630f590 {
+  color: var(--text-color-1);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.overview .cap-type.data-v-c630f590 {
+  align-items: center;
+  background: linear-gradient(90deg, #f5f6fa, rgba(245, 246, 250, 0));
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8533333333333334rem;
+  margin: 0.4rem 0 0.13333333333333333rem -0.4rem;
+}
+.overview .cap-type-name.data-v-c630f590 {
+  color: var(--text-color-1);
+  font-size: 0.37333333333333335rem;
+  font-weight: 700;
+  margin-left: 0.4rem;
+}
+.overview .cap-type-tag.data-v-c630f590 {
+  border-radius: 0.05333333333333334rem;
+  font-size: 0.26666666666666666rem;
+  margin-left: 0.16rem;
+  padding: 0.05333333333333334rem 0.10666666666666667rem;
+}
+.overview .cap-caption.data-v-c630f590,
+.overview .cap-item.data-v-c630f590 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.37333333333333335rem;
+}
+.overview .cap-caption .cap-col-title.data-v-c630f590,
+.overview .cap-item .cap-col-title.data-v-c630f590 {
+  text-align: left;
+  width: 50%;
+}
+.overview .cap-caption .cap-col-number.data-v-c630f590,
+.overview .cap-caption .cap-col-rank.data-v-c630f590,
+.overview .cap-item .cap-col-number.data-v-c630f590,
+.overview .cap-item .cap-col-rank.data-v-c630f590 {
+  text-align: right;
+  width: 25%;
+}
+.overview .cap-caption.data-v-c630f590 {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+}
+.overview .cap-item.data-v-c630f590 {
+  color: var(--text-color-2);
+  font-size: 0.37333333333333335rem;
+}
+.overview .cap-rise.data-v-c630f590 {
+  color: var(--color-red);
+}
+.overview .cap-down.data-v-c630f590 {
+  color: var(--color-green);
+}
+.overview .cap-equal.data-v-c630f590 {
+  color: var(--text-color-3);
+}

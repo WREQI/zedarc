@@ -1,0 +1,21 @@
+<st-action-sheet
+  bind:__l="__l"
+  bindinput="{{d}}"
+  class="data-v-da867a29"
+  uI="da867a29-0"
+  uP="{{e}}"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <view class="_div actionsheet-feedback-container data-v-da867a29">
+    <view class="_div brand-container data-v-da867a29">
+      <view class="_div left data-v-da867a29"></view>
+      <label class="_span feedback-desc data-v-da867a29">免责声明</label>
+      <view catchtap="{{a}}" class="_div close data-v-da867a29"></view>
+    </view>
+    <view class="_div content-container data-v-da867a29">
+      <label class="_span content data-v-da867a29">{{b}}</label>
+    </view>
+    <view catchtap="{{c}}" class="_div btn data-v-da867a29">我知道了</view>
+  </view>
+</st-action-sheet>

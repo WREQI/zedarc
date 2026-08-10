@@ -1,0 +1,117 @@
+<view
+  class="_div zxg-sa-block data-v-0edc88cf"
+  ref="fundamental"
+  style="border-bottom: 0"
+  wx:if="{{a}}"
+>
+  <view class="_div zxg-sa-block-title data-v-0edc88cf">
+    <view class="_i vertical-line data-v-0edc88cf"></view>
+    <view class="vb data-v-0edc88cf">基本面</view>
+    <view class="_div trend-tag-wrapper data-v-0edc88cf">
+      <view class="{{['_div','trend-tag','data-v-0edc88cf',c]}}">{{b}}</view>
+    </view>
+  </view>
+  <view class="_div overview data-v-0edc88cf">
+    <view class="_div stock-value data-v-0edc88cf" wx:if="{{d}}">
+      <view class="_div stock-value-name data-v-0edc88cf">
+        <view class="stock-h5 data-v-0edc88cf">股票估值</view>
+        <view catchtap="{{f}}" class="_div tips-wrapper data-v-0edc88cf"
+          >{{e}}<view class="_i tip-i data-v-0edc88cf"></view>
+        </view>
+      </view>
+      <view class="_div stock-value-pos stock-pb data-v-0edc88cf">
+        <view class="_div value-line data-v-0edc88cf" style="{{j}}">
+          <view class="_i pos data-v-0edc88cf"></view>
+          <view class="_i pos66 data-v-0edc88cf"></view>
+          <view class="_p sub-tip dp data-v-0edc88cf" style="{{'left:'+i}}"
+            >{{g}}<view class="db data-v-0edc88cf" style="{{'left:'+h}}"></view>
+          </view>
+        </view>
+        <view class="_div value-pos data-v-0edc88cf">
+          <label class="_span vp-span data-v-0edc88cf">低</label>
+          <label class="_span vp-span data-v-0edc88cf">高</label>
+        </view>
+      </view>
+      <view class="_div stock-value-pos data-v-0edc88cf" ref="valBar">
+        <view class="_div value-line data-v-0edc88cf" style="{{n}}">
+          <view class="_i pos data-v-0edc88cf"></view>
+          <view class="_i pos66 data-v-0edc88cf"></view>
+          <view
+            class="_p sub-tip dp data-v-0edc88cf"
+            ref="hisValBar"
+            style="{{'left:'+m}}"
+            >{{k}}<view class="db data-v-0edc88cf" style="{{'left:'+l}}"></view>
+          </view>
+        </view>
+        <view class="_div value-pos data-v-0edc88cf">
+          <label class="_span vp-span data-v-0edc88cf">低</label>
+          <label class="_span vp-span data-v-0edc88cf">高</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div fd-row data-v-0edc88cf">
+      <view class="_div fd-ability data-v-0edc88cf">
+        <view class="_div fd-ability-name data-v-0edc88cf">盈利</view>
+        <view class="_div trend-tag-wrapper data-v-0edc88cf">
+          <view class="{{['_div','trend-tag','data-v-0edc88cf',p]}}"
+            >{{o}}</view
+          >
+        </view>
+        <view class="{{['_i','star','data-v-0edc88cf',s]}}">
+          <label
+            class="{{['_span','star-span','data-v-0edc88cf',r&&'isDark']}}"
+            wx:for="{{q}}"
+            wx:key="a"
+          ></label>
+        </view>
+      </view>
+      <view class="_div fd-ability data-v-0edc88cf">
+        <view class="_div fd-ability-name data-v-0edc88cf">成长</view>
+        <view class="_div trend-tag-wrapper data-v-0edc88cf">
+          <view class="{{['_div','trend-tag','data-v-0edc88cf',v]}}"
+            >{{t}}</view
+          >
+        </view>
+        <view class="{{['_i','star','data-v-0edc88cf',y]}}">
+          <label
+            class="{{['_span','star-span','data-v-0edc88cf',x&&'isDark']}}"
+            wx:for="{{w}}"
+            wx:key="a"
+          ></label>
+        </view>
+      </view>
+    </view>
+    <view class="_div fd-row data-v-0edc88cf">
+      <view class="_div fd-ability data-v-0edc88cf">
+        <view class="_div fd-ability-name data-v-0edc88cf">营运</view>
+        <view class="_div trend-tag-wrapper data-v-0edc88cf">
+          <view class="{{['_div','trend-tag','data-v-0edc88cf',A]}}"
+            >{{z}}</view
+          >
+        </view>
+        <view class="{{['_i','star','data-v-0edc88cf',D]}}">
+          <label
+            class="{{['_span','star-span','data-v-0edc88cf',C&&'isDark']}}"
+            wx:for="{{B}}"
+            wx:key="a"
+          ></label>
+        </view>
+      </view>
+      <view class="_div fd-ability data-v-0edc88cf">
+        <view class="_div fd-ability-name data-v-0edc88cf">偿债</view>
+        <view class="_div trend-tag-wrapper data-v-0edc88cf">
+          <view class="{{['_div','trend-tag','data-v-0edc88cf',F]}}"
+            >{{E}}</view
+          >
+        </view>
+        <view class="{{['_i','star','data-v-0edc88cf',I]}}">
+          <label
+            class="{{['_span','star-span','data-v-0edc88cf',H&&'isDark']}}"
+            wx:for="{{G}}"
+            wx:key="a"
+          ></label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

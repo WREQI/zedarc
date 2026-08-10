@@ -1,0 +1,12 @@
+<label class="st-checkbox-wrapper ^st-checkbox-wrapper">
+  <label class="{{['st-checkbox','^st-checkbox',c]}}">
+    <checkbox
+      checked="{{b}}"
+      class="st-checkbox-input"
+      disabled="{{a}}"
+    ></checkbox>
+    <label
+      class="st-checkbox-inner ^st-checkbox-inner icon icon-check ^icon-check"
+    ></label>
+  </label>
+</label>

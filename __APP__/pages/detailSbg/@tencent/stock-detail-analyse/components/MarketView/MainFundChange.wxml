@@ -1,0 +1,64 @@
+<view class="_div main-fund-change data-v-f6a84e5c" wx:if="{{a}}">
+  <view class="_div fund-title data-v-f6a84e5c">主动偏股基金持仓变动</view>
+  <view class="_div sub-title data-v-f6a84e5c"
+    >主动偏股基金对该持仓比例变化+1.85%，同期股价变化+23.12%。</view
+  >
+  <view class="_div fund-flow data-v-f6a84e5c">
+    <view class="_div flow-item data-v-f6a84e5c">
+      <view class="_div item-center data-v-f6a84e5c">
+        <label class="_span f-up data-v-f6a84e5c" wx:if="{{b}}">+{{c}}家</label>
+        <label class="_span f-hori data-v-f6a84e5c" wx:if="{{d}}">不变</label>
+        <label class="_span f-down data-v-f6a84e5c" wx:if="{{e}}"
+          >{{f}}家</label
+        >
+      </view>
+      <view class="_div item-top data-v-f6a84e5c">{{g}}家</view>
+      <view class="_div item-bottom data-v-f6a84e5c">基金数</view>
+    </view>
+    <view class="_div flow-item data-v-f6a84e5c">
+      <view class="_div item-center data-v-f6a84e5c">
+        <label class="_span f-up data-v-f6a84e5c" wx:if="{{h}}">+{{i}}万</label>
+        <label class="_span f-hori data-v-f6a84e5c" wx:if="{{j}}">不变</label>
+        <label class="_span f-down data-v-f6a84e5c" wx:if="{{k}}"
+          >{{l}}万</label
+        >
+      </view>
+      <view class="_div item-top data-v-f6a84e5c">{{m}}万</view>
+      <view class="_div item-bottom data-v-f6a84e5c">持股数</view>
+    </view>
+    <view class="_div flow-item data-v-f6a84e5c">
+      <view class="_div item-center data-v-f6a84e5c">
+        <label class="_span f-up data-v-f6a84e5c" wx:if="{{n}}">+{{o}}%</label>
+        <label class="_span f-hori data-v-f6a84e5c" wx:if="{{p}}">不变</label>
+        <label class="_span f-down data-v-f6a84e5c" wx:if="{{q}}">{{r}}%</label>
+      </view>
+      <view class="_div item-top data-v-f6a84e5c">{{s}}%</view>
+      <view class="_div item-bottom data-v-f6a84e5c">持股比例</view>
+    </view>
+  </view>
+  <view
+    class="_div fund-chart-container data-v-f6a84e5c"
+    id="fundChart-container"
+  >
+    <f2
+      bind:__l="__l"
+      bindonInit="{{t}}"
+      bindtouchend="{{v}}"
+      bindtouchmove="{{x}}"
+      bindtouchstart="{{w}}"
+      class="data-v-f6a84e5c"
+      uI="f6a84e5c-0"
+      uP="{{y}}"
+      wx:if="{{y}}"
+    ></f2>
+    <view
+      class="{{['_ul','canvas-toolTip','data-v-f6a84e5c',B]}}"
+      wx:if="{{z}}"
+    >
+      <view class="_li tips-item data-v-f6a84e5c" wx:for="{{A}}" wx:key="c">
+        <label class="_span data-v-f6a84e5c">{{item.a}}</label>
+        <label class="_span data-v-f6a84e5c">{{item.b}}</label>
+      </view>
+    </view>
+  </view>
+</view>

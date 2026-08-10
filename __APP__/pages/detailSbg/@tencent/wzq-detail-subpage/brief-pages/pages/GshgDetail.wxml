@@ -1,0 +1,133 @@
+<view class="_div detail-container data-v-9eefc257">
+  <view class="_div detail-content data-v-9eefc257">
+    <view
+      class="_div brief-block brief-block-chart data-v-9eefc257"
+      id="hg-overview"
+      wx:if="{{a}}"
+    >
+      <view class="_div brief-block-title data-v-9eefc257">回购总览{{b}}</view>
+      <view class="_div data-board data-v-9eefc257">
+        <view class="_div data-board-item data-v-9eefc257">
+          <view class="_div data-value data-v-9eefc257">{{c}}</view>
+          <view class="_div sub-title data-v-9eefc257"
+            >回购均价 (今年以来)</view
+          >
+        </view>
+        <view class="_div data-board-item item-right data-v-9eefc257">
+          <view class="_div data-value data-v-9eefc257">{{d}}</view>
+          <view class="_div sub-title data-v-9eefc257"
+            >回购金额 (今年以来)</view
+          >
+        </view>
+      </view>
+      <view class="_div chart data-v-9eefc257" wx:if="{{e}}">
+        <view class="_div chart-content data-v-9eefc257">
+          <view class="_div data-v-9eefc257" wx:if="{{f}}">
+            <gshg-chart
+              bind:__l="__l"
+              bindupdateRenderData="{{h}}"
+              class="r data-v-9eefc257"
+              uI="9eefc257-0"
+              uP="{{i}}"
+              uR="chart"
+              wx:if="{{i}}"
+            ></gshg-chart>
+          </view>
+          <view class="_div chart-time-content data-v-9eefc257" wx:if="{{j}}">
+            <label
+              class="_span chart-time-item data-v-9eefc257"
+              wx:for="{{k}}"
+              wx:for-item="dt"
+              wx:key="b"
+              >{{dt.a}}</label
+            >
+          </view>
+        </view>
+        <view class="_div chart-range-content data-v-9eefc257">
+          <range-slider
+            bind:__l="__l"
+            bindinit="{{n}}"
+            bindrangeChange="{{m}}"
+            class="r data-v-9eefc257"
+            uI="9eefc257-1"
+            uR="rangeSlider"
+          ></range-slider>
+        </view>
+        <view class="_div chart-bottom-content data-v-9eefc257">
+          <view class="_div chart-legend-content data-v-9eefc257">
+            <view class="_div chart-legend-item data-v-9eefc257">
+              <label
+                class="_span chart-legend-icon square data-v-9eefc257"
+              ></label>
+              <label class="_span chart-legend-title data-v-9eefc257"
+                >回购金额</label
+              >
+            </view>
+            <view class="_div chart-legend-item data-v-9eefc257">
+              <label
+                class="_span chart-legend-icon bar data-v-9eefc257"
+              ></label>
+              <label class="_span chart-legend-title data-v-9eefc257"
+                >均价</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div title-area data-v-9eefc257" wx:if="{{o}}">
+      <view class="{{['_div','data-v-9eefc257',s]}}">
+        <view class="_div gray-line data-v-9eefc257"></view>
+        <view class="_div brief-block hq-gshg-list-title data-v-9eefc257">
+          <view class="_div hq-gshg-list-col col-1 data-v-9eefc257">{{p}}</view>
+          <view class="_div hq-gshg-list-col col-2 data-v-9eefc257"
+            >金额 ({{q}})</view
+          >
+          <view class="_div hq-gshg-list-col col-3 data-v-9eefc257"
+            >均价 ({{r}})</view
+          >
+          <view class="_div hq-gshg-list-col col-4 data-v-9eefc257"
+            >数量 (股)</view
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div brief-block brief-list-content data-v-9eefc257"
+      wx:if="{{t}}"
+    >
+      <view bindtouchend="{{w}}" class="_div hq-gshg-list data-v-9eefc257">
+        <view class="_div hq-gshg-list-content data-v-9eefc257">
+          <view
+            class="_div hq-gshg-list-row data-v-9eefc257"
+            wx:for="{{v}}"
+            wx:key="e"
+          >
+            <view class="_div hq-gshg-list-col col-1 data-v-9eefc257"
+              >{{item.a}}</view
+            >
+            <view class="_div hq-gshg-list-col col-2 data-v-9eefc257"
+              >{{item.b}}</view
+            >
+            <view class="_div hq-gshg-list-col col-3 data-v-9eefc257"
+              >{{item.c}}</view
+            >
+            <view class="_div hq-gshg-list-col col-4 data-v-9eefc257"
+              >{{item.d}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-9eefc257" wx:else>
+      <gshg-list
+        bind:__l="__l"
+        class="data-v-9eefc257"
+        uI="9eefc257-2"
+        uP="{{y}}"
+        wx:if="{{x}}"
+      ></gshg-list>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-9eefc257"></view>
+</view>

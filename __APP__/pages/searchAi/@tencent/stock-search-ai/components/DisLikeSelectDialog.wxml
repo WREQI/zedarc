@@ -1,0 +1,31 @@
+<view class="{{['_div','data-v-732b1922',h,i]}}">
+  <view bindtap="{{a}}" class="_div dialog-backdrop data-v-732b1922"></view>
+  <view class="_div dialog-body data-v-732b1922">
+    <image
+      bindtap="{{c}}"
+      class="_img dialog-title-close data-v-732b1922"
+      src="{{b}}"
+    ></image>
+    <view class="_div dialog-title data-v-732b1922">你不喜欢的原因是?</view>
+    <view class="_div dialog-sub-title data-v-732b1922">（可多选）</view>
+    <view class="_div data-v-732b1922" wx:for="{{d}}" wx:key="i">
+      <view class="_div reasonLine data-v-732b1922" wx:if="{{item.a}}">
+        <view
+          bindtap="{{item.d}}"
+          class="{{['_div','data-v-732b1922','reasonItem',item.c]}}"
+          >{{item.b}}</view
+        >
+        <view class="_div reasonDivider data-v-732b1922"></view>
+        <view
+          bindtap="{{item.h}}"
+          class="{{['_div','data-v-732b1922','reasonItem',item.f,item.g]}}"
+          >{{item.e}}</view
+        >
+      </view>
+    </view>
+    <view bindtap="{{f}}" class="{{['_div','data-v-732b1922','submitBtn',e]}}"
+      >提交</view
+    >
+    <view bindtap="{{g}}" class="_div complaintBtn data-v-732b1922">投诉</view>
+  </view>
+</view>

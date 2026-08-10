@@ -1,0 +1,473 @@
+@font-face {
+  font-family: label;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://st.gtimg.com/files/062bd50d_1a7kW88-yOG.woff2)
+      format("woff2"),
+    url(https://st.gtimg.com/files/062bd50d_FqXZuDqWhHU.woff) format("woff");
+}
+[class*=" lbl-"].data-v-941d98dd,
+[class^="lbl-"].data-v-941d98dd {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 0.02666666666666667rem;
+  font-family: label;
+  font-size: 0.26666666666666666rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+}
+.lbl-us-market.data-v-941d98dd:before {
+  content: "";
+}
+.lbl-hk-market.data-v-941d98dd:before {
+  content: "";
+}
+.lbl-sh-market.data-v-941d98dd:before {
+  content: "";
+}
+.lbl-sz-market.data-v-941d98dd:before {
+  content: "";
+}
+.lbl-pt-market.data-v-941d98dd:before {
+  content: "板";
+}
+.lbl-cnjj-market.data-v-941d98dd:before,
+.lbl-cwjj-market.data-v-941d98dd:before {
+  content: "基";
+}
+.lbl-bj-market.data-v-941d98dd:before {
+  content: "BJ";
+}
+.lbl-uk-market.data-v-941d98dd:before {
+  content: "UK";
+}
+.lbl-nq-market.data-v-941d98dd:before {
+  content: "NQ";
+}
+.lbl-sp-market.data-v-941d98dd:before {
+  content: "SP";
+}
+.lbl-fx-market.data-v-941d98dd:before {
+  content: "FX";
+}
+.lbl-zhai-market.data-v-941d98dd:before {
+  content: "债";
+}
+.lbl-kch-market.data-v-941d98dd:before {
+  content: "科";
+}
+.lbl-chy-market.data-v-941d98dd:before {
+  content: "创";
+}
+.lbl-ft-market.data-v-941d98dd:before,
+.lbl-hkzs-market.data-v-941d98dd:before,
+.lbl-hszs-market.data-v-941d98dd:before,
+.lbl-nqzs-market.data-v-941d98dd:before,
+.lbl-ukzs-market.data-v-941d98dd:before,
+.lbl-uszs-market.data-v-941d98dd:before {
+  content: "指";
+}
+.lbl-cnjj-market.data-v-941d98dd:before,
+.lbl-cwjj-market.data-v-941d98dd:before,
+.lbl-ft-market.data-v-941d98dd:before,
+.lbl-pt-market.data-v-941d98dd:before {
+  font-size: 0.24rem;
+}
+.lbl-fu-market.data-v-941d98dd:before,
+.lbl-hd-market.data-v-941d98dd:before {
+  content: "FT";
+}
+.lbl-bj-market.data-v-941d98dd,
+.lbl-chy-market.data-v-941d98dd,
+.lbl-cnjj-market.data-v-941d98dd,
+.lbl-cwjj-market.data-v-941d98dd,
+.lbl-ft-market.data-v-941d98dd,
+.lbl-fu-market.data-v-941d98dd,
+.lbl-fx-market.data-v-941d98dd,
+.lbl-hd-market.data-v-941d98dd,
+.lbl-hk-market.data-v-941d98dd,
+.lbl-hkzs-market.data-v-941d98dd,
+.lbl-hszs-market.data-v-941d98dd,
+.lbl-kch-market.data-v-941d98dd,
+.lbl-nq-market.data-v-941d98dd,
+.lbl-nqzs-market.data-v-941d98dd,
+.lbl-pt-market.data-v-941d98dd,
+.lbl-sh-market.data-v-941d98dd,
+.lbl-sp-market.data-v-941d98dd,
+.lbl-sz-market.data-v-941d98dd,
+.lbl-uk-market.data-v-941d98dd,
+.lbl-ukzs-market.data-v-941d98dd,
+.lbl-us-market.data-v-941d98dd,
+.lbl-uszs-market.data-v-941d98dd,
+.lbl-zhai-market.data-v-941d98dd {
+  display: inline-block;
+  height: 0.26666666666666666rem;
+  line-height: 1;
+  margin-right: 0.10666666666666667rem;
+  padding: 0 0 0.02666666666666667rem 0.013333333333333334rem;
+  width: 0.37333333333333335rem;
+}
+.lbl-nq-market.data-v-941d98dd {
+  padding: 0 0.02666666666666667rem;
+  width: 0.38666666666666666rem;
+}
+.lbl-kc-market.data-v-941d98dd {
+  background-image: url(https://st.gtimg.com/design/35a415a9038999ba4a61b90d18fe2ddf.png);
+  background-size: 100% 100%;
+  border-radius: 0.02666666666666667rem;
+  display: inline-block;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.4rem;
+}
+.lbl-sh-market.data-v-941d98dd,
+.lbl-sz-market.data-v-941d98dd {
+  color: #eb5a66;
+}
+.lbl-hk-market.data-v-941d98dd {
+  color: #eb9664;
+}
+.lbl-ft-market.data-v-941d98dd,
+.lbl-fu-market.data-v-941d98dd,
+.lbl-fx-market.data-v-941d98dd,
+.lbl-hd-market.data-v-941d98dd,
+.lbl-sp-market.data-v-941d98dd {
+  background-color: #70bfed;
+  color: var(--card-shadow8);
+}
+.lbl-bj-market.data-v-941d98dd,
+.lbl-chy-market.data-v-941d98dd,
+.lbl-cnjj-market.data-v-941d98dd,
+.lbl-hszs-market.data-v-941d98dd,
+.lbl-kch-market.data-v-941d98dd,
+.lbl-pt-market.data-v-941d98dd,
+.lbl-zhai-market.data-v-941d98dd {
+  background-color: #eb5a66;
+  color: var(--card-shadow8);
+}
+.lbl-nq-market.data-v-941d98dd,
+.lbl-nqzs-market.data-v-941d98dd {
+  background-color: #e0b863;
+  color: var(--card-shadow8);
+}
+.lbl-uk-market.data-v-941d98dd,
+.lbl-ukzs-market.data-v-941d98dd {
+  background-color: #5c76e7;
+  color: var(--card-shadow8);
+}
+.lbl-uszs-market.data-v-941d98dd {
+  background-color: #5692f2;
+  color: var(--card-shadow8);
+}
+.lbl-hkzs-market.data-v-941d98dd {
+  background-color: #eb9664;
+  color: var(--card-shadow8);
+}
+.lbl-us-market.data-v-941d98dd {
+  color: #5692f2;
+}
+.lbl-cwjj-market.data-v-941d98dd {
+  background-color: #c96edc;
+  color: var(--card-shadow8);
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .adaptive-btn-wrap.data-v-941d98dd,
+  .details-btn.data-v-941d98dd,
+  .fixed-btn.data-v-941d98dd {
+    background: #fbfafc;
+    padding-bottom: 40px;
+  }
+  .btn-gray-tips.data-v-941d98dd {
+    background: #fbfafc;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .adaptive-btn-wrap.data-v-941d98dd,
+  .details-btn.data-v-941d98dd,
+  .fixed-btn.data-v-941d98dd {
+    background: #fbfafc;
+    padding-bottom: 40px;
+  }
+  .btn-gray-tips.data-v-941d98dd {
+    background: #fbfafc;
+  }
+}
+.item-top-hd.data-v-941d98dd,
+.switch-nav-line .cur-tab.data-v-941d98dd,
+.wrap-nav .lay-nav .nav-cur.data-v-941d98dd {
+  font-weight: 500 !important;
+}
+@media (width: 360) {
+  .item-top-hd.data-v-941d98dd,
+  .switch-nav-line .cur-tab.data-v-941d98dd,
+  .wrap-nav .lay-nav .nav-cur.data-v-941d98dd {
+    font-weight: 700;
+  }
+}
+.font_26.data-v-941d98dd {
+  font-size: 0.3466666666666667rem !important;
+}
+.ellipsis-text.data-v-941d98dd {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.search-icon.data-v-941d98dd {
+  background-size: 100% 100%;
+  background: url(https://st.gtimg.com/design/101fcf2b5be3050e6b56e3b846944de9.svg);
+  height: 0.38666666666666666rem;
+  width: 0.37333333333333335rem;
+}
+@-webkit-keyframes load-941d98dd {
+  0%,
+  80%,
+  to {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes load-941d98dd {
+  0%,
+  80%,
+  to {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+.wx-sup.data-v-941d98dd {
+  margin-top: -0.04rem;
+  transform: scale(0.7);
+}
+.item-search.data-v-941d98dd {
+  display: -webkit-flex;
+  display: flex;
+  height: 1.7066666666666668rem;
+  margin-left: 0.4rem;
+}
+.item-search.profession.data-v-941d98dd {
+  box-sizing: border-box;
+  height: 1.2933333333333332rem;
+}
+.item-search.profession.item-border-bottom.data-v-941d98dd {
+  position: relative;
+}
+.item-search.profession.item-border-bottom.data-v-941d98dd:before {
+  border-color: var(--border-heavy-divider);
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 0 1px;
+  bottom: 0;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .item-search.profession.item-border-bottom.data-v-941d98dd:before {
+    height: 150%;
+    transform: scale(0.666666);
+    width: 150%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .item-search.profession.item-border-bottom.data-v-941d98dd:before {
+    height: 200%;
+    transform: scale(0.5);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .item-search.profession.item-border-bottom.data-v-941d98dd:before {
+    height: 300%;
+    transform: scale(0.33);
+    width: 300%;
+  }
+}
+.item-search.profession .etf-hold-percent.data-v-941d98dd,
+.item-search.profession .stock-name.data-v-941d98dd {
+  font-size: 0.4rem;
+  margin-bottom: 0.08rem;
+}
+.item-search.profession .stock-label.data-v-941d98dd {
+  border: 0.013333333333333334rem solid rgba(48, 119, 236, 0.2);
+}
+.item-search.profession .stock-label .stock-label-text.data-v-941d98dd {
+  color: var(--color-blue);
+}
+.row-b-margin-left.data-v-941d98dd {
+  margin-left: 0.4266666666666667rem;
+}
+.row-b.data-v-941d98dd {
+  font-size: 0.4rem;
+  padding: 0.26666666666666666rem 0;
+  text-align: center;
+}
+.rank-num.data-v-941d98dd {
+  font-family: xcxfont;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  width: 0.5466666666666666rem;
+}
+.rank-num.rank-num-1.data-v-941d98dd {
+  color: var(--color-red, #e63535);
+}
+.rank-num.rank-num-2.data-v-941d98dd {
+  color: var(--color-orange, #ff891e);
+}
+.rank-num.rank-num-3.data-v-941d98dd {
+  color: #f5bf0f;
+}
+.rank-price-ratio.data-v-941d98dd {
+  font-family: xcxfont;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+}
+.rank-price-ratio.rank-price-ratio-equal.data-v-941d98dd {
+  color: #98a0b3;
+}
+.rank-price-ratio.rank-price-ratio-up.data-v-941d98dd {
+  color: var(--color-red, #e63535);
+}
+.rank-price-ratio.rank-price-ratio-down.data-v-941d98dd {
+  color: var(--color-green, #1caa3c);
+}
+.row-a.data-v-941d98dd {
+  flex: 1;
+  flex-direction: column;
+}
+.row-a .stock-col.data-v-941d98dd,
+.row-a.data-v-941d98dd {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.row-a .stock-name.data-v-941d98dd {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.row-a .etf-hold-percent.data-v-941d98dd,
+.row-a .stock-name.data-v-941d98dd {
+  color: var(--text-color-0);
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.13333333333333333rem;
+  text-align: left;
+}
+.row-a .etf-hold-percent.data-v-941d98dd {
+  flex: none;
+  word-break: keep-all;
+}
+.row-a .tag-wrapper.data-v-941d98dd {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-right: 0.13333333333333333rem;
+}
+.row-a .tag-wrapper.data-v-941d98dd .text-box {
+  color: var(--color-lightgray-2);
+}
+.row-a .scode-code.data-v-941d98dd {
+  color: #7a8499;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  word-break: keep-all;
+}
+.row-a .stock-label.data-v-941d98dd {
+  align-items: center;
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.3);
+  border-radius: 0.05333333333333334rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.37333333333333335rem;
+  justify-content: center;
+  margin-left: 0.13333333333333333rem;
+}
+.row-a .stock-label .stock-label-text.data-v-941d98dd {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  color: var(--color-red);
+  display: -webkit-box;
+  font-size: 0.26666666666666666rem;
+  margin: 0 0.10666666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: translateY(0.013333333333333334rem);
+  word-break: break-all;
+}
+.row-a .stock-label.label-gray.data-v-941d98dd {
+  border: 0.013333333333333334rem solid rgba(152, 160, 179, 0.3);
+}
+.row-a .stock-label.label-gray .stock-label-text.data-v-941d98dd {
+  color: #98a0b3;
+}
+.row-a .stock-label.label-orange.data-v-941d98dd {
+  border: 0.013333333333333334rem solid rgba(255, 137, 30, 0.3);
+}
+.row-a .stock-label.label-orange .stock-label-text.data-v-941d98dd {
+  color: #ff891e;
+}
+.row-a .pt-code.data-v-941d98dd {
+  margin-left: 0.05333333333333334rem;
+}
+.item-search-inner.data-v-941d98dd {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-right: 0.4rem;
+}
+.item-search-inner .is-choose.data-v-941d98dd {
+  opacity: 0;
+}
+.delisted-stock.data-v-941d98dd {
+  height: 0.26666666666666666rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.5066666666666667rem;
+}
+.former-name-box.data-v-941d98dd {
+  align-items: center;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+}
+.former-name-box .former-name-label.data-v-941d98dd {
+  margin-right: 0.10666666666666667rem;
+}
+.css-add.data-v-941d98dd,
+.css-added.data-v-941d98dd {
+  height: 0.64rem;
+  line-height: 0.6666666666666666rem;
+  text-align: center;
+  width: 0.64rem;
+}

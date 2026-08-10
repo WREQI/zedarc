@@ -1,0 +1,99 @@
+<view class="transfer-in">
+  <block wx:if="{{a}}">
+    <transfer-info
+      bind:__l="__l"
+      uI="a5363550-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></transfer-info>
+    <transfer-form
+      bind:__l="__l"
+      bindblur="{{q}}"
+      bindfocus="{{p}}"
+      bindinput="{{o}}"
+      uI="a5363550-1"
+      uP="{{r}}"
+      uS="{{['tips']}}"
+      wx:if="{{r}}"
+    >
+      <view class="flex-center flex-between" slot="tips">
+        <label class="text-color-1 fs-32">转入到证券账户</label>
+        <view wx:if="{{c}}">
+          <view wx:if="{{d}}">
+            <view
+              bindtap="{{g}}"
+              class="{{['fs-28','search-card-money',f]}}"
+              wx:if="{{e}}"
+              >查询银行卡余额</view
+            >
+            <view class="loading" wx:if="{{h}}">
+              <view class="loading-item"></view>
+              <view class="loading-item"></view>
+              <view class="loading-item"></view>
+            </view>
+            <view wx:if="{{i}}">
+              <label class="fs-28 search-error-retry-text">查询失败，</label>
+              <label bindtap="{{k}}" class="{{[j,'fs-28']}}">点击重试</label>
+            </view>
+            <view class="fs-28 card-balance" wx:if="{{l}}"
+              >银行卡余额：{{m}}元</view
+            >
+          </view>
+          <view class="fs-28 card-balance" wx:else>{{n}}</view>
+        </view>
+      </view>
+    </transfer-form>
+    <view class="button-wrapper">
+      <button bindtap="{{t}}" disabled="{{s}}" type="primary">立即转入</button>
+    </view>
+    <view class="tips">
+      <label wx:if="{{v}}">
+        <label class="red">{{w}}<label wx:if="{{x}}">。</label> </label>
+        <label bindtap="{{A}}" class="link" wx:if="{{y}}">{{z}}</label>
+      </label>
+      <label wx:else>{{B}}</label>
+    </view>
+    <transfer-bottom-nav
+      bind:__l="__l"
+      class="transfer-bottom-nav"
+      uI="a5363550-2"
+      uP="{{D}}"
+      wx:if="{{C}}"
+    ></transfer-bottom-nav>
+    <transfer-pending-tip
+      bind:__l="__l"
+      uI="a5363550-3"
+      uP="{{E}}"
+      wx:if="{{E}}"
+    ></transfer-pending-tip>
+  </block>
+  <view class="transfer-fixed-block" wx:elif="{{F}}">
+    <transfer-loading bind:__l="__l" uI="a5363550-4"></transfer-loading>
+  </view>
+  <view class="transfer-fixed-block" wx:elif="{{G}}">
+    <transfer-bank-pwd
+      bind:__l="__l"
+      bindclick="{{H}}"
+      uI="a5363550-5"
+      uP="{{I}}"
+      wx:if="{{I}}"
+    ></transfer-bank-pwd>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    id="pre-time-confirm"
+    uI="a5363550-6"
+    uP="{{K}}"
+    uS="{{['d']}}"
+    wx:if="{{K}}"
+  >
+    <view class="pre-time-dialog">
+      <view class="pre-time-title">温馨提示</view>
+      <view class="pre-time-tips"
+        >根据交易结算规则，将使用预约转账功能，预计<label class="pre-time-date"
+          >{{J}}前到账</label
+        >
+      </view>
+    </view>
+  </mp-dialog>
+</view>

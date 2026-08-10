@@ -1,0 +1,27 @@
+<view class="_div zxfx-pm-wrap data-v-6a5e5d98" wx:if="{{a}}">
+  <view class="_div flex flex-justify-between bar-info data-v-6a5e5d98">
+    <view class="_div bar-info-left data-v-6a5e5d98"
+      >今日涨跌幅排名 前{{b}}%</view
+    >
+    <view bindtap="{{c}}" class="_div bar-info-right data-v-6a5e5d98"
+      >查看自选列表</view
+    >
+  </view>
+  <view class="_div flex bar-list data-v-6a5e5d98" wx:if="{{d}}">
+    <view
+      class="_div bar-item bar-red data-v-6a5e5d98"
+      style="{{'width:'+f}}"
+      wx:if="{{e}}"
+    ></view>
+    <view
+      class="_div bar-item bar-green data-v-6a5e5d98"
+      style="{{'width:'+h}}"
+      wx:if="{{g}}"
+    ></view>
+  </view>
+  <view class="_div flex flex-justify-between bar-desc data-v-6a5e5d98">
+    <view class="_div bar-desc-left data-v-6a5e5d98">涨{{i}}只</view>
+    <view class="_div bar-desc-right data-v-6a5e5d98">跌{{j}}只</view>
+  </view>
+  <view class="_div grey-line data-v-6a5e5d98"></view>
+</view>

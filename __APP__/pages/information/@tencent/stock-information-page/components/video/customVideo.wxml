@@ -1,0 +1,320 @@
+<view class="{{['_div','data-v-a0e3a99d','custom-video-item',bo]}}" id="{{bn}}">
+  <view class="_div top-source data-v-a0e3a99d" wx:if="{{a}}"
+    >来自微信视频号</view
+  >
+  <view class="_div data-v-a0e3a99d" wx:if="{{b}}">
+    <view class="_div placeholder-bar data-v-a0e3a99d"></view>
+    <recom-spliter
+      bind:__l="__l"
+      class="recom-spliter-content r data-v-a0e3a99d"
+      uI="a0e3a99d-0"
+      uR="videoRecom"
+    ></recom-spliter>
+  </view>
+  <view class="_div custom-video-header flex-between data-v-a0e3a99d">
+    <view class="_div media-info-content data-v-a0e3a99d">
+      <view catchtap="{{e}}" class="_div media-icon-content data-v-a0e3a99d">
+        <image
+          class="_img media-icon-content-img data-v-a0e3a99d"
+          src="{{d}}"
+        ></image>
+      </view>
+      <view class="_div meida-info-inner data-v-a0e3a99d">
+        <view class="_div meida-info-title data-v-a0e3a99d">{{f}}</view>
+        <view class="_div live-info-mask data-v-a0e3a99d" wx:if="{{g}}">
+          <view class="_i icon icon-living data-v-a0e3a99d"></view>
+          <label class="_span data-v-a0e3a99d">直播中</label>
+        </view>
+      </view>
+    </view>
+    <view
+      catchtap="{{j}}"
+      class="_div media-order-area data-v-a0e3a99d"
+      wx:if="{{h}}"
+    >
+      <view class="_div btn-media-order data-v-a0e3a99d" wx:if="{{i}}">
+        <view class="_i icon icon-add data-v-a0e3a99d"></view>
+        <label class="_span data-v-a0e3a99d">关注</label>
+      </view>
+      <view class="_div btn-media-order subscribed data-v-a0e3a99d" wx:else>
+        <label class="_span data-v-a0e3a99d">已关注</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div custom-video-body data-v-a0e3a99d">
+    <view
+      catchtap="{{l}}"
+      class="_div custom-video-title textLine2 data-v-a0e3a99d"
+      >{{k}}</view
+    >
+    <view
+      catchtap="{{q}}"
+      class="{{['_div','data-v-a0e3a99d','custom-video-player',o]}}"
+      style="{{p}}"
+      wx:if="{{m}}"
+    >
+      <view class="_div custom-video-inner data-v-a0e3a99d">
+        <image class="_img preview-image data-v-a0e3a99d" src="{{n}}"></image>
+      </view>
+    </view>
+    <view
+      class="{{['_div','data-v-a0e3a99d','custom-video-player',aD]}}"
+      style="{{aE}}"
+      wx:else
+    >
+      <view
+        catchtap="{{L}}"
+        class="_div custom-video-inner video-info data-v-a0e3a99d"
+        hidden="{{!K}}"
+      >
+        <view class="_div custom-live-status data-v-a0e3a99d" wx:if="{{r}}">
+          <label class="{{['_span','data-v-a0e3a99d','dot',s]}}"></label>
+          <label class="_span status-text data-v-a0e3a99d">{{t}}</label>
+          <label class="_span sdot data-v-a0e3a99d" wx:if="{{v}}"></label>
+          <label class="_span status-text data-v-a0e3a99d" wx:if="{{w}}"
+            >{{x}}人{{y}}</label
+          >
+        </view>
+        <image
+          catchtap="{{A}}"
+          class="_img preview-image data-v-a0e3a99d"
+          src="{{z}}"
+        ></image>
+        <label
+          catchtap="{{C}}"
+          class="_span btn-play data-v-a0e3a99d"
+          wx:if="{{B}}"
+        >
+          <view class="_i icon-play data-v-a0e3a99d"></view>
+        </label>
+        <view class="_div custom-video-desc data-v-a0e3a99d" wx:if="{{D}}">
+          <label class="_span custom-video-number data-v-a0e3a99d" wx:if="{{E}}"
+            >{{F}}{{G}}</label
+          >
+          <label class="_span spliter data-v-a0e3a99d" wx:if="{{H}}"></label>
+          <label class="_span custom-video-time data-v-a0e3a99d" wx:if="{{I}}"
+            >{{J}}</label
+          >
+        </view>
+      </view>
+      <view
+        class="_div custom-video-inner player data-v-a0e3a99d"
+        key="{{V}}"
+        wx:if="{{M}}"
+      >
+        <video-player
+          bind:__l="__l"
+          binderror="{{T}}"
+          bindonDurationChange="{{R}}"
+          bindonPlayStatusChange="{{Q}}"
+          bindplayClick="{{S}}"
+          class="custom-player-content r data-v-a0e3a99d"
+          data-c-h="{{!O}}"
+          uI="a0e3a99d-1"
+          uP="{{U}}"
+          uR="{{P}}"
+          wx:if="{{U}}"
+        ></video-player>
+      </view>
+      <view
+        catchtap="{{az}}"
+        class="_div custom-video-inner player data-v-a0e3a99d"
+        hidden="{{!ax}}"
+        ref="{{ay}}"
+        wx:elif="{{W}}"
+      >
+        <video
+          autoplay="{{aa}}"
+          bindended="{{ah}}"
+          binderror="{{ai}}"
+          bindpause="{{ag}}"
+          bindplay="{{af}}"
+          bindtimeupdate="{{aj}}"
+          class="live-player-container data-v-a0e3a99d"
+          danmuBtn="{{false}}"
+          id="live-player-container"
+          isLive="{{ab}}"
+          muted="{{Z}}"
+          objectFit="contain"
+          poster="{{ad}}"
+          showCenterPlayBtn="{{false}}"
+          showFullscreenBtn="{{false}}"
+          showPlayBtn="{{false}}"
+          showProgress="{{ac}}"
+          src="{{Y}}"
+          title="{{ae}}"
+          wx:if="{{X}}"
+        ></video>
+        <txv-video
+          autoplay="{{ao}}"
+          bindended="{{at}}"
+          binderror="{{as}}"
+          bindpause="{{ar}}"
+          bindplay="{{aq}}"
+          bindstatechange="{{av}}"
+          bindtimeupdate="{{aw}}"
+          class="data-v-a0e3a99d"
+          controls="{{false}}"
+          height="100%"
+          isNeedMutex="{{true}}"
+          muted="{{ap}}"
+          playerid="{{am}}"
+          poster="{{an}}"
+          showCenterPlayBtn="{{false}}"
+          showFullscreenBtn="{{false}}"
+          vid="{{al}}"
+          width="auto"
+          wx:elif="{{ak}}"
+        ></txv-video>
+      </view>
+      <view
+        catchtap="{{aC}}"
+        class="_div custom-voice-box data-v-a0e3a99d"
+        hidden="{{!aB}}"
+      >
+        <view class="_div custom-voice-inner data-v-a0e3a99d">
+          <view class="{{['_i','data-v-a0e3a99d','icon',aA]}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div custom-video-text data-v-a0e3a99d" wx:if="{{aF}}">
+      <view
+        class="_div custom-text-inner data-v-a0e3a99d"
+        ref="videoSummary"
+        wx:if="{{aG}}"
+      >
+        <label class="_span data-v-a0e3a99d">{{aH}}</label>
+      </view>
+      <view class="_div custom-text-labels data-v-a0e3a99d" wx:if="{{aI}}">
+        <view
+          class="_div custom-text-label data-v-a0e3a99d"
+          wx:for="{{aJ}}"
+          wx:for-item="la"
+          wx:key="c"
+        >
+          <view class="{{['_i','data-v-a0e3a99d','icon',la.a]}}"></view>
+          <label class="_span data-v-a0e3a99d">{{la.b}}</label>
+        </view>
+      </view>
+      <view
+        class="_div custom-live-users flex-between data-v-a0e3a99d"
+        wx:if="{{aK}}"
+      >
+        <view class="_div custom-live-left flex-between data-v-a0e3a99d">
+          <view class="_div custom-live-user data-v-a0e3a99d" wx:if="{{aL}}">
+            <view
+              class="{{['_div','data-v-a0e3a99d','custom-user-icon',u.d]}}"
+              wx:for="{{aM}}"
+              wx:for-item="u"
+              wx:key="c"
+            >
+              <image
+                class="_img custom-user-icon-img data-v-a0e3a99d"
+                key="{{u.a}}"
+                src="{{u.b}}"
+              ></image>
+            </view>
+          </view>
+          <label class="_span data-v-a0e3a99d">{{aN}}人{{aO}}</label>
+        </view>
+        <view class="_div custom-live-right data-v-a0e3a99d">
+          <view
+            catchtap="{{aQ}}"
+            class="_div operate-content data-v-a0e3a99d"
+            wx:if="{{aP}}"
+          >
+            <label class="_span icon icon-share-img data-v-a0e3a99d"></label>
+            <label class="_span data-v-a0e3a99d">分享</label>
+          </view>
+          <view class="_div operate-content data-v-a0e3a99d" wx:if="{{aR}}">
+            <button
+              bindtap="{{aS}}"
+              class="share-btn-mp data-v-a0e3a99d"
+              openType="share"
+              plain="true"
+            >
+              <label class="_span icon icon-share-img data-v-a0e3a99d"></label>
+              <label class="_span data-v-a0e3a99d">分享</label>
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-a0e3a99d','custom-video-footer course-bar',aW]}}"
+    wx:if="{{aT}}"
+  >
+    <class-bar
+      bind:__l="__l"
+      bindbarClick="{{aU}}"
+      class="data-v-a0e3a99d"
+      uI="a0e3a99d-2"
+      uP="{{aV}}"
+      wx:if="{{aV}}"
+    ></class-bar>
+  </view>
+  <view
+    class="{{['_div','data-v-a0e3a99d','custom-video-footer',bm]}}"
+    wx:elif="{{aX}}"
+  >
+    <view
+      class="_div custom-footer-inner flex-between data-v-a0e3a99d"
+      wx:if="{{aY}}"
+    >
+      <view class="_div custom-footer-left data-v-a0e3a99d">
+        <view catchtap="{{bc}}" class="_div operate-content data-v-a0e3a99d">
+          <label class="{{['_span','data-v-a0e3a99d','icon',aZ]}}"></label>
+          <label class="_span data-v-a0e3a99d" wx:if="{{ba}}">{{bb}}</label>
+          <label class="_span data-v-a0e3a99d" wx:else>评论</label>
+        </view>
+      </view>
+      <view class="_div custom-footer-right data-v-a0e3a99d">
+        <view
+          catchtap="{{bg}}"
+          class="_div operate-content like-content data-v-a0e3a99d"
+        >
+          <label
+            class="{{['_span','data-v-a0e3a99d','icon','icon-like',bd]}}"
+          ></label>
+          <label class="_span data-v-a0e3a99d" wx:if="{{be}}">{{bf}}</label>
+          <label class="_span data-v-a0e3a99d" wx:else>点赞</label>
+        </view>
+        <view
+          catchtap="{{bi}}"
+          class="_div operate-content data-v-a0e3a99d"
+          wx:if="{{bh}}"
+        >
+          <label class="_span icon icon-share-img data-v-a0e3a99d"></label>
+          <label class="_span data-v-a0e3a99d">分享</label>
+        </view>
+        <view class="_div operate-content data-v-a0e3a99d" wx:if="{{bj}}">
+          <button
+            bindtap="{{bk}}"
+            class="share-btn-mp data-v-a0e3a99d"
+            openType="share"
+            plain="true"
+          >
+            <label class="_span icon icon-share-img data-v-a0e3a99d"></label>
+            <label class="_span data-v-a0e3a99d">分享</label>
+          </button>
+        </view>
+      </view>
+    </view>
+    <view class="_div custom-footer-inner data-v-a0e3a99d" wx:else>
+      <view
+        catchtap="{{bl}}"
+        class="_div more-live flex-between data-v-a0e3a99d"
+      >
+        <view class="_div more-live-inner flex-between data-v-a0e3a99d">
+          <view class="_i icon icon-live data-v-a0e3a99d"></view>
+          <label class="_span data-v-a0e3a99d">进入直播广场查看更多精彩</label>
+        </view>
+        <view class="_div more-live-after data-v-a0e3a99d">
+          <view class="_i icon icon-arrow data-v-a0e3a99d"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div custom-video-seprator data-v-a0e3a99d"></view>
+</view>

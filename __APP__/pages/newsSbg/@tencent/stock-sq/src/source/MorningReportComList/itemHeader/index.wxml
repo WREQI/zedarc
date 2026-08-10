@@ -1,0 +1,21 @@
+<view catchtap="{{h}}" class="_div mod-item-header data-v-5c32fcd3">
+  <avator-card
+    bind:__l="__l"
+    bindtapPerson="{{a}}"
+    bindtapStock="{{b}}"
+    class="data-v-5c32fcd3"
+    uI="5c32fcd3-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></avator-card>
+  <view class="{{['_div','data-v-5c32fcd3',g]}}">
+    <handle-oper
+      bind:__l="__l"
+      bindonHandleOper="{{e}}"
+      class="data-v-5c32fcd3"
+      uI="5c32fcd3-1"
+      uP="{{f}}"
+      wx:if="{{d}}"
+    ></handle-oper>
+  </view>
+</view>

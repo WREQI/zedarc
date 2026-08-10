@@ -1,0 +1,23 @@
+{
+  "component": true,
+  "usingComponents": {
+    "loading-place-holder": "./loadingPlaceholder",
+    "zhaoshang-broker-message": "plugin://zhaoshang-trade/PluginMessageBox",
+    "hualin-broker-message": "plugin://hualin-trade/PluginMessageBox",
+    "guoxin-broker-message": "plugin://guoxin-trade/PluginMessageBox",
+    "guojin-broker-message": "plugin://guojin-trade/PluginMessageBox",
+    "zhongjincaifu-broker-message": "plugin://zhongjincaifu-trade/PluginMessageBox",
+    "guangfa-broker-message": "plugin://guangfa-trade/PluginMessageBox",
+    "zhongxinjiantou-broker-message": "plugin://zhongxinjiantou-trade/PluginMessageBox"
+  },
+  "enablePullDownRefresh": false,
+  "componentPlaceholder": {
+    "zhaoshang-broker-message": "view",
+    "hualin-broker-message": "view",
+    "guoxin-broker-message": "view",
+    "guojin-broker-message": "view",
+    "zhongjincaifu-broker-message": "view",
+    "guangfa-broker-message": "view",
+    "zhongxinjiantou-broker-message": "view"
+  }
+}

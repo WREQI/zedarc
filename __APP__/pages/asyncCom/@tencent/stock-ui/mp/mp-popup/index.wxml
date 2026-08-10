@@ -1,0 +1,13 @@
+<view class="_div data-v-9a20e48e">
+  <overlay
+    bind:__l="__l"
+    bindclick="{{b}}"
+    class="data-v-9a20e48e"
+    uI="9a20e48e-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></overlay>
+  <view class="{{['_div','mp-popup','data-v-9a20e48e',e,f]}}" hidden="{{!d}}">
+    <slot></slot>
+  </view>
+</view>

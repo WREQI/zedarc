@@ -1,0 +1,217 @@
+.guess-ranking.data-v-35245244 {
+  background: #fff;
+  border: 0.013333333333333334rem solid hsla(218, 5%, 68%, 0.2);
+  border-radius: 0.21333333333333335rem;
+  box-shadow: 0 0.08rem 0.08rem rgba(0, 0, 0, 0.04);
+  font-size: 0.4266666666666667rem;
+}
+.guess-ranking__header.data-v-35245244 {
+  align-items: center;
+  color: #868e9e;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  justify-content: space-between;
+  padding: 0.4rem 0.4rem 0.26666666666666666rem;
+}
+.guess-ranking__header--empty.data-v-35245244 {
+  box-sizing: border-box;
+  padding: 0.4rem 0.4rem 0;
+}
+.guess-ranking__title.data-v-35245244 {
+  color: #323a4d;
+  font-family: TTTGBMedium;
+  font-size: 0.5066666666666667rem;
+}
+.guess-ranking__history-btn.data-v-35245244 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.guess-ranking__history-text.data-v-35245244 {
+  margin-right: 0.09333333333333334rem;
+}
+.guess-ranking__history-icon.data-v-35245244 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-right: -0.06666666666666667rem;
+}
+.guess-ranking__arrow-img.data-v-35245244 {
+  height: 0.26666666666666666rem;
+  width: 0.26666666666666666rem;
+}
+.guess-ranking__table.data-v-35245244 {
+  background: #fff;
+  border-radius: 0.21333333333333335rem;
+  margin-top: 0.30666666666666664rem;
+  padding: 0 0 0.4rem;
+}
+.guess-ranking__table-head.data-v-35245244 {
+  border-top: 0.013333333333333334rem solid rgba(0, 0, 0, 0.05);
+  height: 0.8266666666666667rem;
+}
+.guess-ranking__row.data-v-35245244,
+.guess-ranking__table-head.data-v-35245244 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 0.4rem;
+}
+.guess-ranking__row.data-v-35245244 {
+  border-bottom: 0.02666666666666667rem solid rgba(0, 0, 0, 0.05);
+  height: 1.3333333333333333rem;
+}
+.guess-ranking__row--mine.data-v-35245244 {
+  background-color: rgba(240, 241, 245, 0.5);
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.guess-ranking__row-border.data-v-35245244 {
+  border-bottom: 0.02666666666666667rem solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+  position: absolute;
+  width: 91%;
+}
+.guess-ranking__rank-num.data-v-35245244 {
+  color: #b8becc;
+  font-weight: 600;
+  width: 8%;
+}
+.guess-ranking__rank-num--label.data-v-35245244 {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  font-weight: 400;
+  width: 1.7333333333333334rem;
+}
+.guess-ranking__rank-num--small.data-v-35245244 {
+  font-size: 0.24rem;
+}
+.guess-ranking__avatar.data-v-35245244 {
+  border-radius: 0.4rem;
+  height: 0.8rem;
+  margin-right: 0.26666666666666666rem;
+  overflow: hidden;
+  width: 0.8rem;
+}
+.guess-ranking__avatar-img.data-v-35245244 {
+  display: block;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.guess-ranking__avatar-img--default.data-v-35245244 {
+  height: 0.6666666666666666rem;
+  width: 0.6666666666666666rem;
+}
+.guess-ranking__info.data-v-35245244 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+.guess-ranking__nickname.data-v-35245244 {
+  color: #323336;
+  font-size: 0.37333333333333335rem;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 2.1333333333333333rem;
+}
+.guess-ranking__nickname--label.data-v-35245244 {
+  color: #98a0b3;
+  font-size: 0.32rem;
+}
+.guess-ranking__auth-btn.data-v-35245244 {
+  align-items: center;
+  background-color: #e73838;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  justify-content: center;
+  left: -0.6rem;
+  padding: 0.17333333333333334rem 0.37333333333333335rem;
+  position: absolute;
+  top: -0.2rem;
+}
+.guess-ranking__auth-link.data-v-35245244 {
+  color: #4774b3;
+}
+.guess-ranking__stats.data-v-35245244 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.guess-ranking__stat-item.data-v-35245244 {
+  color: #1d2a46;
+  font-size: 0.4266666666666667rem;
+  width: 33.3%;
+}
+.guess-ranking__stat-item--label.data-v-35245244 {
+  color: #98a0b3;
+  font-size: 0.32rem;
+}
+.guess-ranking__stat-item--bold.data-v-35245244 {
+  font-weight: 700;
+}
+.guess-ranking__stat-item--total.data-v-35245244 {
+  margin-left: 0.26666666666666666rem;
+}
+.guess-ranking__stat-item--streak.data-v-35245244 {
+  margin-left: 0.4rem;
+}
+.guess-ranking__stat-item--rate.data-v-35245244 {
+  color: #ff075d;
+  text-align: right;
+  width: 25%;
+}
+.guess-ranking__stat-unit.data-v-35245244 {
+  font-size: 0.29333333333333333rem;
+}
+.guess-ranking__view-more.data-v-35245244 {
+  align-items: center;
+  color: #98a0b3;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  justify-content: center;
+  padding-top: 0.36rem;
+}
+.guess-ranking__view-more.data-v-35245244:after {
+  border-bottom: 0.10666666666666667rem solid transparent;
+  border-left: 0.10666666666666667rem solid #868e9e;
+  border-top: 0.10666666666666667rem solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  margin-left: 0.13333333333333333rem;
+  width: 0;
+}
+.guess-ranking__empty.data-v-35245244 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 3.7333333333333334rem;
+  padding: 0 0.4rem;
+}
+.guess-ranking__empty-icon.data-v-35245244 {
+  background: url(https://wzq.gtimg.com/image/activity/guessRiseFall/no-count@3x.png);
+  background-size: 100% 100%;
+  height: 2.64rem;
+  transform: scale(0.8);
+  width: 2.2rem;
+}
+.guess-ranking__empty-text.data-v-35245244 {
+  margin-bottom: 0.26666666666666666rem;
+  margin-top: 0.6666666666666666rem;
+}

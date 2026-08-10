@@ -1,0 +1,97 @@
+<view class="_div store-list-container data-v-2faec92e">
+  <view class="_ul data-v-2faec92e">
+    <view
+      bindtap="{{item.z}}"
+      class="_li list-item data-v-2faec92e"
+      wx:for="{{a}}"
+      wx:key="y"
+    >
+      <view class="_div top-part data-v-2faec92e">
+        <view class="_div left data-v-2faec92e">
+          <view class="_div main data-v-2faec92e">{{item.a}}</view>
+          <view class="_div sub data-v-2faec92e">
+            <label class="_span fund data-v-2faec92e"></label>{{item.b}}<label
+              class="_span t0tag data-v-2faec92e"
+              wx:for="{{item.c}}"
+              wx:for-item="it"
+              wx:key="b"
+              >{{it.a}}</label
+            >
+          </view>
+        </view>
+        <view class="_div right data-v-2faec92e" wx:if="{{b}}">
+          <view class="_div main data-v-2faec92e">{{item.d}}</view>
+          <view class="_div sub data-v-2faec92e">认购开始时间</view>
+        </view>
+        <view class="_div right data-v-2faec92e" wx:if="{{c}}">
+          <view class="_div main data-v-2faec92e">
+            <label class="_span data-v-2faec92e" wx:if="{{item.e}}"
+              >{{item.f}}天</label
+            >
+            <label class="_span today-end data-v-2faec92e" wx:else>
+              <image
+                class="_img icon-time data-v-2faec92e"
+                src="https://st.gtimg.com/design/394fa753bf6523fd43ad8a1d100c937c.png"
+              ></image
+              >今天截止</label
+            >
+          </view>
+          <view class="_div sub data-v-2faec92e">距离认购结束还剩</view>
+        </view>
+        <view class="_div right data-v-2faec92e" wx:if="{{d}}">
+          <view class="_div main data-v-2faec92e">{{item.g}}</view>
+          <view class="_div sub data-v-2faec92e">上市时间</view>
+        </view>
+      </view>
+      <view class="_div middle-part data-v-2faec92e">
+        <view class="_div index-track data-v-2faec92e" wx:if="{{item.h}}">
+          <view class="_div trade-text data-v-2faec92e"
+            >跟踪指数：{{item.i}}</view
+          >
+          <view class="_div trade-zdf data-v-2faec92e"
+            >{{item.j}}<label
+              class="_span jiacu data-v-2faec92e"
+              style="{{item.m}}"
+              wx:if="{{item.k}}"
+              >{{item.l}}</label
+            >
+          </view>
+        </view>
+        <view
+          catchtap="{{item.p}}"
+          class="_div light-pointer data-v-2faec92e"
+          wx:if="{{item.n}}"
+        >
+          <view class="_div left-text data-v-2faec92e">
+            <view class="_div highlight data-v-2faec92e">亮点</view>
+            <view class="_div subtext data-v-2faec92e">{{item.o}}</view>
+          </view>
+          <image
+            class="_img right-img data-v-2faec92e"
+            src="https://st.gtimg.com/design/be06fc85dfe6a20fb79b3b67e485fcf0.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div split-line data-v-2faec92e" wx:if="{{item.q}}"></view>
+      <view class="_div bottom-part data-v-2faec92e">
+        <view class="_div desc-text data-v-2faec92e">
+          <view class="_div house-icon data-v-2faec92e"></view>{{item.r}}</view
+        >
+        <add-fav
+          bind:__l="__l"
+          class="r-i-f data-v-2faec92e"
+          uI="{{item.t}}"
+          uP="{{item.v}}"
+          uR="addFav"
+          wx:if="{{e}}"
+        ></add-fav>
+        <view
+          catchtap="{{item.x}}"
+          class="{{['_div','data-v-2faec92e',item.w]}}"
+          wx:else
+          >去认购</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

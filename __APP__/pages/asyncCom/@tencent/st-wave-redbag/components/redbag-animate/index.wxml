@@ -1,0 +1,56 @@
+<view class="_div animate-container data-v-9ae2531d" wx:if="{{a}}">
+  <view
+    class="_div red-point data-v-9ae2531d"
+    style="{{'top:'+c+';'+'left:'+d}}"
+    wx:if="{{b}}"
+  ></view>
+  <view
+    class="_div bdong-logo data-v-9ae2531d"
+    id="bdong-logo"
+    style="{{'transform:'+n+';'+'-webkit-transform:'+o}}"
+    wx:if="{{e}}"
+  >
+    <view
+      class="_div redbag-wrap data-v-9ae2531d"
+      style="{{'transform:'+l+';'+'-webkit-transform:'+m}}"
+    >
+      <view class="{{['_div','data-v-9ae2531d',k]}}">
+        <image
+          alt=""
+          bindtap="{{g}}"
+          class="_img redbag-img data-v-9ae2531d"
+          src="{{f}}"
+        ></image>
+        <view
+          bindtap="{{j}}"
+          class="_div close-area data-v-9ae2531d"
+          hidden="{{!i}}"
+        >
+          <image
+            alt=""
+            class="_img close-img data-v-9ae2531d"
+            src="{{h}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <animation
+    bind:__l="__l"
+    bindcomplete="{{q}}"
+    class="redbag-lottie-animate data-v-9ae2531d"
+    uI="9ae2531d-0"
+    uP="{{r}}"
+    wx:elif="{{p}}"
+  ></animation>
+  <close-confirm
+    bind:__l="__l"
+    bindclose="{{s}}"
+    bindcloseAlways="{{v}}"
+    bindcloseToday="{{t}}"
+    class="data-v-9ae2531d"
+    uI="9ae2531d-1"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></close-confirm>
+</view>

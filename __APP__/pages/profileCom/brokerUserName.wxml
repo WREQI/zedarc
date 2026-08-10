@@ -1,0 +1,9 @@
+<view class="_div">
+  <view class="_div" wx:if="{{a}}">
+    <zhaoshang-username
+      bindsetUserName="{{c}}"
+      wx:if="{{b}}"
+    ></zhaoshang-username>
+    <hualin-username bindsetUserName="{{e}}" wx:elif="{{d}}"></hualin-username>
+  </view>
+</view>

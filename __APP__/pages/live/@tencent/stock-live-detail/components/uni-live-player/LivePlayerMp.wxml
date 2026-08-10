@@ -1,0 +1,34 @@
+<view class="player-container" wx:if="{{a}}">
+  <video
+    autoplay="{{true}}"
+    bindended="{{n}}"
+    binderror="{{o}}"
+    bindfullscreenchange="{{q}}"
+    bindpause="{{m}}"
+    bindplay="{{l}}"
+    bindtimeupdate="{{p}}"
+    class="live-player-container"
+    controls="{{false}}"
+    danmuBtn="{{false}}"
+    id="live-player-container"
+    isLive="{{h}}"
+    muted="{{k}}"
+    objectFit="contain"
+    showCenterPlayBtn="{{false}}"
+    showPlayBtn="{{false}}"
+    showProgress="{{i}}"
+    src="{{g}}"
+    title="{{j}}"
+  >
+    <live-player-mask
+      bind:__l="__l"
+      bindchangeSlide="{{e}}"
+      bindonFullScreenEvent="{{c}}"
+      bindonMuteChange="{{b}}"
+      bindtoggleLivePlayer="{{d}}"
+      uI="ba1b10f6-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></live-player-mask>
+  </video>
+</view>

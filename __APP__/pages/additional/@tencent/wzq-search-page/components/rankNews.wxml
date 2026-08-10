@@ -1,0 +1,19 @@
+<view class="_div rank-wrap data-v-1b776984" wx:if="{{a}}">
+  <view
+    catchtap="{{item.f}}"
+    class="_div rank-item data-v-1b776984"
+    wx:for="{{b}}"
+    wx:key="e"
+  >
+    <view class="_div num font-numeric-tabular data-v-1b776984"
+      >{{item.a}}</view
+    >
+    <view class="_div content data-v-1b776984">
+      <view class="_div title data-v-1b776984">{{item.b}}</view>
+      <view class="_div info data-v-1b776984">
+        <view class="_div source data-v-1b776984">{{item.c}}</view>
+        <view class="_div time data-v-1b776984">{{item.d}}</view>
+      </view>
+    </view>
+  </view>
+</view>

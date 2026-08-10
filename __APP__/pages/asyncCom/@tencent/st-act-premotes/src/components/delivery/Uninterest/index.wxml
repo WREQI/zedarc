@@ -1,0 +1,10 @@
+<view class="_div not-interested-wrap data-v-6ce69ebb">
+  <view
+    catchtap="{{b}}"
+    class="_i adv-not-more data-v-6ce69ebb"
+    wx:if="{{a}}"
+  ></view>
+  <label catchtap="{{c}}" class="_span adv-not-text data-v-6ce69ebb" wx:else
+    >对此内容不感兴趣</label
+  >
+</view>

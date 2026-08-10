@@ -1,0 +1,50 @@
+<view class="_div stock-history-block data-v-8a1af952">
+  <view class="_div title data-v-8a1af952">{{a}}</view>
+  <view class="_div stock-list-block data-v-8a1af952">
+    <view class="_div list-header data-v-8a1af952">
+      <view class="_div col1 col data-v-8a1af952">股票</view>
+      <view class="_div col2 col data-v-8a1af952">最新价</view>
+      <view class="_div col3 col data-v-8a1af952">涨跌幅</view>
+      <view class="_div col4 col data-v-8a1af952"></view>
+    </view>
+    <view class="_div list-content data-v-8a1af952">
+      <view
+        bindtap="{{item.l}}"
+        class="_div list-item data-v-8a1af952"
+        wx:for="{{b}}"
+        wx:key="k"
+      >
+        <view class="_div col1 stock-info col data-v-8a1af952">
+          <view class="_div stock-name data-v-8a1af952">{{item.a}}</view>
+          <view class="_div stock-detail-symbol data-v-8a1af952">
+            <market-icon
+              bind:__l="__l"
+              class="{{['data-v-8a1af952','m-icon',c]}}"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.c}}"
+            ></market-icon>
+            <view class="_div stock-code data-v-8a1af952">{{item.d}}</view>
+            <image
+              alt=""
+              class="_img delay data-v-8a1af952"
+              src="https://st.gtimg.com/design/d9bdf6eb6ce682f94ee4882d2c8c4622.png"
+              wx:if="{{item.e}}"
+            ></image>
+          </view>
+        </view>
+        <view class="_div col2 col stock-price data-v-8a1af952"
+          >{{item.f}}</view
+        >
+        <view class="{{['_div','data-v-8a1af952','col3 col zdf',item.h]}}"
+          >{{item.g}}</view
+        >
+        <view catchtap="{{item.j}}" class="_div col4 col add data-v-8a1af952">
+          <view
+            class="{{['_div','data-v-8a1af952','add-choose-icon',item.i,d]}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

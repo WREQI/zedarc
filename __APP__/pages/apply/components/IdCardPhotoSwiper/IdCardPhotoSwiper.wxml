@@ -1,0 +1,24 @@
+<swiper
+  autoplay="{{c}}"
+  circular="{{d}}"
+  class="idcard-photo-swiper data-v-cc7e1663"
+  duration="300"
+  indicatorActiveColor="#3077ec"
+  indicatorColor="rgba(0, 0, 0, 0.15)"
+  indicatorDots="{{e}}"
+  interval="3000"
+  wx:if="{{a}}"
+>
+  <swiper-item
+    class="idcard-photo-swiper__item data-v-cc7e1663"
+    wx:for="{{b}}"
+    wx:for-item="photo"
+    wx:key="b"
+  >
+    <image
+      class="idcard-photo-swiper__img data-v-cc7e1663"
+      mode="aspectFit"
+      src="{{photo.a}}"
+    ></image>
+  </swiper-item>
+</swiper>

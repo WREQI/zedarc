@@ -1,0 +1,87 @@
+<view class="etf-method data-v-7280c484">
+  <view class="etf-method__header data-v-7280c484">
+    <view class="_div etf-method__header-bar data-v-7280c484">
+      <view class="_div etf-method__header-inner data-v-7280c484">
+        <view class="_div etf-method__title data-v-7280c484">实战方法</view>
+        <image
+          alt="极简版图标"
+          bindtap="{{a}}"
+          class="_img etf-method__header-icon data-v-7280c484"
+          src="https://st.gtimg.com/pcm/mpuvkgsn_f3154aec0ea2fe2eb772304181644cda.svg"
+        ></image>
+      </view>
+    </view>
+  </view>
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{b}}"
+    class="etf-method__tags data-v-7280c484"
+    uI="7280c484-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></tabbar>
+  <swiper
+    autoplay="{{false}}"
+    bindchange="{{g}}"
+    circular="{{false}}"
+    class="etf-method__swiper data-v-7280c484"
+    current="{{e}}"
+    duration="{{300}}"
+    options="{{f}}"
+    ref="swiperRoot"
+  >
+    <swiper-item
+      class="data-v-7280c484"
+      wx:for="{{d}}"
+      wx:for-item="tab"
+      wx:key="h"
+    >
+      <view class="{{['_div','data-v-7280c484','etf-method__slide',tab.g]}}">
+        <block wx:if="{{tab.a}}">
+          <view class="_div etf-method__select data-v-7280c484">
+            <view class="_div etf-method__select-title data-v-7280c484"
+              >选ETF：</view
+            >
+            <view class="_div etf-method__select-desc data-v-7280c484"
+              >{{tab.b}}</view
+            >
+          </view>
+          <view class="_div etf-method__divider data-v-7280c484"></view>
+        </block>
+        <view class="_div etf-method__signal data-v-7280c484">
+          <view class="_div etf-method__signal-group data-v-7280c484">
+            <view class="_div etf-method__signal-title data-v-7280c484"
+              >操作信号参考：</view
+            >
+            <view
+              class="_div etf-method__signal-item data-v-7280c484"
+              wx:for="{{tab.c}}"
+              wx:for-item="line"
+              wx:key="b"
+              >{{line.a}}</view
+            >
+          </view>
+          <view class="_div etf-method__signal-tips data-v-7280c484"
+            >{{tab.d}}</view
+          >
+        </view>
+        <view class="_div etf-method__chart data-v-7280c484">
+          <view
+            class="{{['_div','data-v-7280c484','etf-method__chart-line',tab.e]}}"
+          ></view>
+        </view>
+        <view class="_div etf-method__chart-caption data-v-7280c484"
+          >{{tab.f}}</view
+        >
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="_div etf-method__disclaimer data-v-7280c484">
+    <view class="_div etf-method__disclaimer-inner data-v-7280c484">
+      <view class="_div etf-method__disclaimer-text data-v-7280c484"
+        >本文仅供学习参考，不构成投资建议。投资有风险，入市需谨慎。</view
+      >
+      <view class="_div etf-method__disclaimer-inner-bg data-v-7280c484"></view>
+    </view>
+  </view>
+</view>

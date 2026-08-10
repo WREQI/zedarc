@@ -1,0 +1,29 @@
+<view
+  catchtap="{{h}}"
+  class="{{['_div','data-v-3647ec42','card-wrapper',g]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div content-wrapper data-v-3647ec42">
+    <view class="_div title-container data-v-3647ec42" wx:if="{{b}}">
+      <view class="_div stock_header_line data-v-3647ec42"
+        >{{c}}({{d}})-业绩趋势</view
+      >
+      <view class="_div spec-line-small data-v-3647ec42"></view>
+    </view>
+    <performance-trends
+      bind:__l="__l"
+      class="data-v-3647ec42"
+      uI="3647ec42-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></performance-trends>
+  </view>
+  <view class="_div bottom-detail-container data-v-3647ec42">
+    <block wx:if="{{f}}">
+      <view class="_div bottom-detail-container-image data-v-3647ec42"></view>
+      <view class="_div bottom-detail-container-text data-v-3647ec42"
+        >点击查看详情</view
+      >
+    </block>
+  </view>
+</view>

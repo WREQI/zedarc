@@ -1,0 +1,47 @@
+<view class="{{['container','data-v-9fb869e8',d]}}">
+  <view class="placeholder-container data-v-9fb869e8" wx:if="{{a}}">
+    <view
+      class="placeholder-row data-v-9fb869e8"
+      wx:for="{{b}}"
+      wx:for-item="count"
+      wx:key="b"
+    >
+      <view
+        class="placeholder-item data-v-9fb869e8"
+        wx:for="{{count.a}}"
+        wx:for-item="i"
+        wx:key="a"
+      >
+        <view class="placeholder-icon data-v-9fb869e8"></view>
+        <view class="placeholder-text data-v-9fb869e8"></view>
+      </view>
+    </view>
+  </view>
+  <block wx:else>
+    <view
+      class="entry-wrap data-v-9fb869e8"
+      wx:for="{{c}}"
+      wx:for-item="row"
+      wx:key="b"
+    >
+      <view
+        bindtap="{{item.i}}"
+        class="{{['entry-item','data-v-9fb869e8',item.g,item.h]}}"
+        wx:for="{{row.a}}"
+        wx:key="f"
+      >
+        <view class="{{['data-v-9fb869e8',item.d]}}">
+          <view class="{{['icon','data-v-9fb869e8',item.a]}}"></view>
+          <entry-adv
+            bind:__l="__l"
+            class="data-v-9fb869e8"
+            uI="{{item.b}}"
+            uP="{{item.c}}"
+            wx:if="{{item.c}}"
+          ></entry-adv>
+        </view>
+        <view class="data-v-9fb869e8">{{item.e}}</view>
+      </view>
+    </view>
+  </block>
+</view>

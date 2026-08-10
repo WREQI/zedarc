@@ -1,0 +1,145 @@
+<view class="_div data-v-cbc644a6" wx:if="{{a}}">
+  <view class="_div data-v-cbc644a6">
+    <news-comp-jump-page
+      bind:__l="__l"
+      class="data-v-cbc644a6"
+      uI="cbc644a6-0"
+      uP="{{c}}"
+      wx:if="{{b}}"
+    ></news-comp-jump-page>
+    <news-comp-event-source
+      bind:__l="__l"
+      class="data-v-cbc644a6"
+      uI="cbc644a6-1"
+      uP="{{e}}"
+      wx:if="{{d}}"
+    ></news-comp-event-source>
+    <view
+      class="{{['_div','data-v-cbc644a6',i]}}"
+      id="news_title"
+      style="{{'text-align:'+j+';'+'padding-top:'+k}}"
+    >
+      <label class="_span data-v-cbc644a6" wx:if="{{f}}">{{g}}</label>
+      <text class="data-v-cbc644a6" userSelect="true" wx:else>{{h}}</text>
+    </view>
+    <view class="_div pa-source-container data-v-cbc644a6" wx:if="{{l}}">
+      <view class="_div source data-v-cbc644a6">
+        <view class="_div from data-v-cbc644a6">来自微信公众号</view>
+        <image
+          class="_img media-avatar data-v-cbc644a6"
+          src="{{n}}"
+          wx:if="{{m}}"
+        ></image>
+        <view class="_div media-name data-v-cbc644a6">{{o}}</view>
+        <view class="_div publish-time data-v-cbc644a6">{{p}}</view>
+      </view>
+      <view class="_div wx-tags data-v-cbc644a6" wx:if="{{q}}">{{r}}</view>
+    </view>
+    <view class="_div lct-source-container data-v-cbc644a6" wx:elif="{{s}}">
+      <view class="_div source data-v-cbc644a6">
+        <view class="_div publish-time data-v-cbc644a6">{{t}}</view>
+      </view>
+      <view class="_div reading-time data-v-cbc644a6" wx:if="{{v}}"
+        >阅读完约{{w}}分钟</view
+      >
+      <speech
+        bind:__l="__l"
+        class="speech_container data-v-cbc644a6"
+        id="lct-speech_container"
+        uI="cbc644a6-2"
+        uP="{{y}}"
+        wx:if="{{x}}"
+      ></speech>
+    </view>
+    <view class="_div news_description_container data-v-cbc644a6" wx:else>
+      <view
+        class="_div news_description data-v-cbc644a6"
+        id="news_description"
+        wx:if="{{z}}"
+      >
+        <image
+          class="_img media_avatar data-v-cbc644a6"
+          src="{{B}}"
+          wx:if="{{A}}"
+        ></image>
+        <label
+          catchtap="{{E}}"
+          class="{{['_span','data-v-cbc644a6',D]}}"
+          id="news_source"
+          >{{C}}</label
+        >
+        <label class="_span news_time data-v-cbc644a6" id="news_time"
+          >{{F}}</label
+        >
+      </view>
+      <speech
+        bind:__l="__l"
+        class="speech_container data-v-cbc644a6"
+        uI="cbc644a6-3"
+        uP="{{H}}"
+        wx:if="{{G}}"
+      ></speech>
+    </view>
+    <news-comp-related-stock
+      bind:__l="__l"
+      class="r data-v-cbc644a6"
+      uI="cbc644a6-4"
+      uP="{{K}}"
+      uR="newsCompRelatedStock"
+      wx:if="{{I}}"
+    ></news-comp-related-stock>
+    <information-detail-apply
+      bind:__l="__l"
+      class="data-v-cbc644a6"
+      uI="cbc644a6-5"
+      uP="{{M}}"
+      wx:if="{{L}}"
+    ></information-detail-apply>
+    <view
+      class="{{['_div','news_lead','data-v-cbc644a6',R&&'lct']}}"
+      id="news_lead"
+      wx:if="{{N}}"
+    >
+      <label class="_span lead-title data-v-cbc644a6">{{O}}</label>
+      <label
+        class="_span lead-detail data-v-cbc644a6"
+        style="{{'text-align:'+Q}}"
+        >{{P}}</label
+      >
+    </view>
+    <a-i-reading
+      bind:__l="__l"
+      class="data-v-cbc644a6"
+      uI="cbc644a6-6"
+      uP="{{T}}"
+      wx:if="{{S}}"
+    ></a-i-reading>
+    <a-i-summary
+      bind:__l="__l"
+      class="data-v-cbc644a6"
+      uI="cbc644a6-7"
+      uP="{{V}}"
+      wx:elif="{{U}}"
+    ></a-i-summary>
+  </view>
+  <news-html
+    bind:__l="__l"
+    class="data-v-cbc644a6"
+    uI="cbc644a6-8"
+    uP="{{X}}"
+    wx:if="{{W}}"
+  ></news-html>
+  <news-content
+    bind:__l="__l"
+    class="r data-v-cbc644a6"
+    uI="cbc644a6-9"
+    uP="{{aa||''}}"
+    uR="newsContent"
+    uS="{{['txvplayer']}}"
+    wx:else
+  >
+    <view slot="txvplayer">
+      <slot name="txvplayer" wx:if="{{Y}}"></slot>
+    </view>
+  </news-content>
+</view>

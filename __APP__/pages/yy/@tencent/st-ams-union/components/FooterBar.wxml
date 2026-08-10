@@ -1,0 +1,43 @@
+<view
+  class="{{['_div','ams-footer-bar','data-v-1cd72fa7',p&&'ams-footer-with-tip',q&&'ams-action-group-multi']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div ams-action-group data-v-1cd72fa7" wx:if="{{b}}">
+    <button bindtap="{{d}}" class="ams-button-outline data-v-1cd72fa7">
+      <button-text
+        bind:__l="__l"
+        class="data-v-1cd72fa7"
+        uI="1cd72fa7-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></button-text>
+    </button>
+    <button bindtap="{{f}}" class="ams-button-primary data-v-1cd72fa7">
+      <button-text
+        bind:__l="__l"
+        class="data-v-1cd72fa7"
+        uI="1cd72fa7-1"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></button-text>
+    </button>
+  </view>
+  <button bindtap="{{h}}" class="ams-button-primary data-v-1cd72fa7" wx:else>
+    {{g}}
+  </button>
+  <image
+    alt=""
+    class="_img ams-decoration-animation data-v-1cd72fa7"
+    src="{{i}}"
+  ></image>
+  <agreement
+    bind:__l="__l"
+    bindchange="{{l}}"
+    class="data-v-1cd72fa7"
+    key="{{k}}"
+    uI="1cd72fa7-2"
+    uP="{{m}}"
+    wx:if="{{j}}"
+  ></agreement>
+  <view class="_div ams-footer-note data-v-1cd72fa7" wx:if="{{n}}">{{o}}</view>
+</view>

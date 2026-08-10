@@ -1,0 +1,33 @@
+<view class="_div search-wrapper data-v-72340929" ref="searchWrapper">
+    <view class="_div data-v-72340929">
+        <view class="_div search-panel data-v-72340929">
+            <view class="_div search-bar data-v-72340929">
+                <image class="_img search-icon data-v-72340929" ref="assetFooter" src="https://wzq.gtimg.com/resource/images/c400453dc9328df46a366a1631b39c96.png"></image>
+                <input bindfocus="{{b}}" bindinput="{{d}}" bindtap="{{a}}" class="search-input data-v-72340929" placeholder="请输入交易股票名称/代码/首字母" placeholderStyle="color:#98a0b3;" ref="searchInput" value="{{c}}"></input>
+            </view>
+            <label bindtap="{{f}}" class="_span search-btn data-v-72340929" wx:if="{{e}}">取消</label>
+        </view>
+        <bubble bind:__l="__l" bindcloseBubble="{{h}}" class="data-v-72340929" uI="72340929-0" uP="{{i}}" wx:if="{{g}}"></bubble>
+        <view class="_div data-v-72340929" wx:if="{{j}}">
+            <search-panel bind:__l="__l" bindgoStock="{{k}}" class="data-v-72340929" uI="72340929-1" uP="{{l}}" wx:if="{{l}}"></search-panel>
+        </view>
+        <view class="_div rank-panel-wrapper data-v-72340929" wx:elif="{{m}}">
+            <view class="_div rank-pannel data-v-72340929" wx:if="{{n}}">
+                <view class="_div rank-pannel-title data-v-72340929">
+                    <label class="_span pannel-title-text data-v-72340929">热搜榜</label>
+                    <label bindtap="{{p}}" class="{{['_span','data-v-72340929',q]}}">全部榜单<image class="_img right-arrow data-v-72340929" src="https://st.gtimg.com/design/f3877117b1540f305c4dbfe24f4c9dc3.webp" wx:if="{{o}}"></image>
+                    </label>
+                </view>
+                <view class="_div rank-stocks data-v-72340929">
+                    <view bindtap="{{stock.d}}" class="_div rank-item data-v-72340929" style="{{'border-top-width:'+s+';'+'border-right-width:'+t+';'+'width:'+v}}" wx:for="{{r}}" wx:for-item="stock" wx:key="c">
+                        <label class="_span stock-name data-v-72340929">{{stock.a}}</label>
+                        <label class="_span stock-code data-v-72340929">{{stock.b}}</label>
+                    </view>
+                </view>
+            </view>
+            <search-panel bind:__l="__l" bindclear="{{x}}" bindgoStock="{{w}}" bindtoggleTab="{{y}}" class="data-v-72340929" uI="72340929-2" uP="{{z}}" wx:if="{{z}}"></search-panel>
+        </view>
+        <error-modal bind:__l="__l" bindhideMsg="{{A}}" class="data-v-72340929" uI="72340929-3" uP="{{B}}" wx:if="{{B}}"></error-modal>
+        <task-log bind:__l="__l" bindcloseLog="{{D}}" class="data-v-72340929" uI="72340929-4" uP="{{E}}" wx:if="{{C}}"></task-log>
+    </view>
+</view>

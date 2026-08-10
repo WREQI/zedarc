@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "answer-item-jg-rate": "./plugin/AnswerItemJgRate",
+    "answer-item-performance-trends": "./plugin/AnswerItemPerformanceTrends",
+    "answer-item-profit-forcast": "./plugin/AnswerItemProfitForcast",
+    "jgpj-card": "../../../../../stock-widget/@tencent/stock-widget/cardKits/jgpjCard",
+    "yjqs-card": "../../../../../stock-widget/@tencent/stock-widget/cardKits/yjqsCard",
+    "ylyc-card": "../../../../../stock-widget/@tencent/stock-widget/cardKits/ylycCard"
+  },
+  "componentPlaceholder": {
+    "jgpj-card": "view",
+    "yjqs-card": "view",
+    "ylyc-card": "view"
+  }
+}

@@ -1,0 +1,79 @@
+.global-market-swiper-section.data-v-5e704c44 {
+  --color-red: #e63535;
+  --color-green: #1caa3c;
+}
+.tabbar-mp.data-v-5e704c44 {
+  width: calc(100% - 1.6rem);
+}
+.global-market-swiper-section__swiper.data-v-5e704c44 {
+  overflow: hidden;
+  width: 100%;
+}
+.global-market-swiper-section__slide.data-v-5e704c44 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.global-market-swiper-section__slide .market-fund-card.data-v-5e704c44 {
+  width: 100%;
+}
+.global-market-swiper-section__slide
+  .market-fund-card
+  .market-fund-card__divider.data-v-5e704c44 {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  margin: 0 0.32rem;
+}
+.index-filter.data-v-5e704c44 {
+  height: 1.1733333333333333rem;
+  margin-top: 0.32rem;
+  position: relative;
+  width: 100%;
+}
+.index-filter__bg.data-v-5e704c44 {
+  background-color: #fff;
+  height: 1.1733333333333333rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.index-filter__content.data-v-5e704c44 {
+  background-color: var(--fill-content-layer);
+  box-sizing: border-box;
+  padding: 0.16rem 0.32rem 0;
+}
+.index-filter__row.data-v-5e704c44 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.index-filter__row .index-filter__arrow.data-v-5e704c44 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.32rem;
+  width: 0.64rem;
+}
+.index-filter__checkbox-icon.data-v-5e704c44 {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.32rem;
+  width: 0.32rem;
+}
+.index-filter__label.data-v-5e704c44 {
+  color: var(--color-heavygray);
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin: 0 0.10666666666666667rem;
+}
+.index-filter__arrow-icon.data-v-5e704c44 {
+  height: 0.3466666666666667rem;
+  object-fit: cover;
+  width: 0.3466666666666667rem;
+}

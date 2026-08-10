@@ -1,0 +1,44 @@
+<view class="_div" style="{{'width:'+D+';'+'height:'+E}}">
+  <kline
+    bind:__l="__l"
+    binddrawEnd="{{s}}"
+    binderror="{{q}}"
+    bindgetInitData="{{n}}"
+    bindgetMore="{{j}}"
+    bindonAreaSwitch="{{l}}"
+    bindonBarTap="{{h}}"
+    bindonChange="{{f}}"
+    bindonChipSwitch="{{k}}"
+    bindonDoubleTap="{{m}}"
+    bindonPinch="{{o}}"
+    bindonPopup="{{g}}"
+    bindonSwipeX="{{r}}"
+    bindonTap="{{p}}"
+    bindonTipTap="{{i}}"
+    bindonTouchCancle="{{d}}"
+    bindonTouchEnd="{{e}}"
+    bindonTouchMove="{{c}}"
+    class="r"
+    id="chart"
+    uI="7f1251f3-0"
+    uP="{{t}}"
+    uR="chart"
+    wx:if="{{a}}"
+  ></kline>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{w}}"
+    uI="7f1251f3-1"
+    uP="{{x}}"
+    wx:if="{{v}}"
+  ></status>
+  <no-data bind:__l="__l" uI="7f1251f3-2" uP="{{z}}" wx:if="{{y}}"></no-data>
+  <selector
+    bind:__l="__l"
+    class="r"
+    uI="7f1251f3-3"
+    uP="{{C}}"
+    uR="selector"
+    wx:if="{{A}}"
+  ></selector>
+</view>

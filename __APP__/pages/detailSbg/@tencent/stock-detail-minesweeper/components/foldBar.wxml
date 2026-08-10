@@ -1,0 +1,17 @@
+<view
+  class="{{['_div','block-item','data-v-315adf4b',i]}}"
+  id="{{j}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{e}}" class="_div fold-bar data-v-315adf4b">
+    <label class="{{['_span','level3','data-v-315adf4b',c]}}">{{b}}</label>
+    <label class="_span over-view data-v-315adf4b">{{d}}</label>
+    <label class="_span fold-op data-v-315adf4b"></label>
+  </view>
+  <view class="_div fold-content data-v-315adf4b">
+    <view class="_p brief data-v-315adf4b" wx:if="{{f}}"
+      >{{g}}<view catchtap="{{h}}" class="_i data-v-315adf4b"></view>
+    </view>
+    <slot></slot>
+  </view>
+</view>

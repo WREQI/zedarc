@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fin-cal-widget": "../../../investment/@tencent/wzq-investment-calendar/components/widget/Widget",
+    "module-wraper": "./components/ModuleWraper",
+    "plate-box": "./components/PlateBox",
+    "board-list": "./components/BoardList",
+    "stock-chart": "./components/StockChart",
+    "long-hu-list": "./components/LongHuList",
+    "national-debt": "./components/NationalDebt",
+    "broker-gold-stock": "./components/BrokerGoldStock",
+    "e-t-f-list": "./components/ETFList",
+    "e-t-f-change": "./components/ETFChange",
+    "main-fund-h-s": "./components/MainFundCard/index",
+    "sale-empty-h-k": "./components/SaleEmpty/index"
+  },
+  "componentPlaceholder": { "fin-cal-widget": "view" }
+}

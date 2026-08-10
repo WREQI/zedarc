@@ -1,0 +1,13 @@
+<view
+  catchtap="{{f}}"
+  class="{{['_div','data-v-71ad27e9','bubble-tip-container',e]}}"
+  wx:if="{{a}}"
+>
+  <slot wx:if="{{$slots.d}}"></slot>
+  <block wx:else>{{b}}</block>
+  <view
+    catchtap="{{d}}"
+    class="_div close-box data-v-71ad27e9"
+    wx:if="{{c}}"
+  ></view>
+</view>

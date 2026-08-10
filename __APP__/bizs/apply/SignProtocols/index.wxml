@@ -1,0 +1,20 @@
+<view catchtap="{{h}}" class="signprotocol-container data-v-1f19c11c">
+  <dynamic-mode
+    bind:__l="__l"
+    bindcheck="{{b}}"
+    catchclick="{{c}}"
+    class="data-v-1f19c11c"
+    uI="1f19c11c-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></dynamic-mode>
+  <configuration-mode
+    bind:__l="__l"
+    bindcheck="{{e}}"
+    catchclick="{{f}}"
+    class="data-v-1f19c11c"
+    uI="1f19c11c-1"
+    uP="{{g||''}}"
+    wx:else
+  ></configuration-mode>
+</view>

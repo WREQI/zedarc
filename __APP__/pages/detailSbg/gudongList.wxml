@@ -1,0 +1,25 @@
+<page-meta class="data-v-d5aec6df" rootFontSize="{{a}}"></page-meta>
+<view class="_div gudong-mod-container data-v-d5aec6df" data-st-theme="{{g}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d5aec6df"
+    uI="d5aec6df-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d5aec6df"
+    uI="d5aec6df-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <holding-owner-list
+    bind:__l="__l"
+    bindloaded="{{e}}"
+    class="r data-v-d5aec6df"
+    uI="d5aec6df-2"
+    uP="{{f}}"
+    uR="list"
+    wx:if="{{c}}"
+  ></holding-owner-list>
+  <view class="_div zxg-logo data-v-d5aec6df"></view>
+</view>

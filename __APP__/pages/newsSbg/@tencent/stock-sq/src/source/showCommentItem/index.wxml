@@ -1,0 +1,49 @@
+<view
+  catchtap="{{y}}"
+  class="_div mod-show-comment-item data-v-8aa1a29f"
+  data-commentid="{{x}}"
+  data-page-type="{{v}}"
+  data-platform="{{w}}"
+  ref="commentItemRef"
+>
+  <short-content
+    bind:__l="__l"
+    bindinitShowMore="{{r}}"
+    bindtapImage="{{s}}"
+    class="data-v-8aa1a29f"
+    uI="8aa1a29f-0"
+    uP="{{t}}"
+    uS="{{['start']}}"
+    wx:if="{{t}}"
+  >
+    <label class="_span start data-v-8aa1a29f" slot="start">
+      <label
+        catchtap="{{e}}"
+        class="{{['_span','data-v-8aa1a29f','b',c,d]}}"
+        wx:if="{{a}}"
+        >{{b}}</label
+      >
+      <label class="{{['_span','user-mark','data-v-8aa1a29f',h]}}" wx:if="{{f}}"
+        >{{g}}</label
+      >
+      <block wx:if="{{i}}">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <block wx:else>
+          <label class="_span reply data-v-8aa1a29f">回复</label>
+          <label
+            catchtap="{{n}}"
+            class="{{['_span','data-v-8aa1a29f','b',l,m]}}"
+            wx:if="{{j}}"
+            >{{k}}</label
+          >
+          <label
+            class="{{['_span','user-mark','data-v-8aa1a29f',q]}}"
+            wx:if="{{o}}"
+            >{{p}}</label
+          >
+        </block>
+      </block>
+      <label class="_span maohao data-v-8aa1a29f">:</label>
+    </label>
+  </short-content>
+</view>

@@ -1,0 +1,22 @@
+<view class="{{['_div','ai-financial-report-container','data-v-45296178',q]}}" style="{{r}}">
+    <view class="_div ai-content-container data-v-45296178">
+        <view class="_div ai-search-container data-v-45296178">
+            <view class="_div ai-search-input-container data-v-45296178">
+                <image class="_img ai-search-icon data-v-45296178" src="{{a}}"></image>
+                <input bindfocus="{{e}}" bindinput="{{d}}" class="data-v-45296178" placeholder="搜索关注公司，查看财报速递" ref="aiSearchInput" type="text" value="{{c}}" wx:if="{{b}}"></input>
+                <input bindfocus="{{i}}" bindinput="{{h}}" class="data-v-45296178" focus="{{f}}" placeholder="搜索关注公司，查看财报速递" ref="aiSearchInput" type="text" value="{{g}}" wx:else></input>
+                <view catchtap="{{l}}" class="_div ai-search-clear-container data-v-45296178" wx:if="{{j}}">
+                    <image class="_img ai-search-clear data-v-45296178" src="{{k}}"></image>
+                </view>
+            </view>
+            <view catchtap="{{m}}" class="_div ai-search-cancel data-v-45296178">取消</view>
+        </view>
+        <view class="_div ai-content data-v-45296178" wx:for="{{n}}" wx:key="c">
+            <stock-search-item bind:__l="__l" class="data-v-45296178" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></stock-search-item>
+        </view>
+    </view>
+    <view class="_div ai-search-no-container data-v-45296178" wx:if="{{o}}">
+        <image class="_img ai-search-no-img data-v-45296178" src="{{p}}"></image>
+        <view class="_div ai-search-no-tip data-v-45296178">未检索到对应公司</view>
+    </view>
+</view>

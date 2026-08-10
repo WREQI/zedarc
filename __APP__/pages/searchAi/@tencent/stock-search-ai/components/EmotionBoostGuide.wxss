@@ -1,0 +1,87 @@
+.emotion-boost-guide.data-v-e00574b8 {
+  box-sizing: border-box;
+  margin-left: 0.32rem;
+  margin-right: 0.32rem;
+  margin-top: 0.32rem;
+  width: calc(100vw - 0.64rem);
+}
+.guide-card.data-v-e00574b8 {
+  background: var(--fill-content-layer, #fff);
+  border-radius: 0 0.21333333333333335rem 0.21333333333333335rem;
+  overflow: hidden;
+}
+.guide-content.data-v-e00574b8 {
+  padding: 0.32rem;
+}
+.guide-content.data-v-e00574b8,
+.guide-icon.data-v-e00574b8 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.guide-icon.data-v-e00574b8 {
+  flex-shrink: 0;
+  height: 0.64rem;
+  justify-content: center;
+  width: 0.64rem;
+}
+.guide-icon__img.data-v-e00574b8 {
+  height: 100%;
+  width: 100%;
+}
+.guide-text.data-v-e00574b8 {
+  color: var(--color-heavygray, #262e40);
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+  margin-left: 0.21333333333333335rem;
+  margin-right: 0.21333333333333335rem;
+  min-width: 0;
+}
+.guide-btn.data-v-e00574b8 {
+  align-items: center;
+  background: rgba(230, 53, 53, 0.1);
+  border: 0.02666666666666667rem solid transparent;
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-red, #e63535);
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 0.4533333333333333rem;
+  opacity: 0;
+  padding: 0.16rem 0.21333333333333335rem;
+  transition: opacity 0.3s ease, visibility 0s;
+  visibility: hidden;
+  white-space: nowrap;
+}
+.guide-btn--visible.data-v-e00574b8 {
+  opacity: 1;
+  visibility: visible;
+}
+.guide-btn--added.data-v-e00574b8 {
+  background: transparent;
+  border: 0.02666666666666667rem solid var(--border-heavy-divider, #dcdfe6);
+  color: var(--color-lightgray-2, #98a0b3);
+}
+.skin-black .guide-card.data-v-e00574b8,
+.skin-panda .guide-card.data-v-e00574b8 {
+  background: #1e2330;
+}
+.skin-black .guide-text.data-v-e00574b8,
+.skin-panda .guide-text.data-v-e00574b8 {
+  color: #f0f1f5;
+}
+.skin-black .guide-btn.data-v-e00574b8,
+.skin-panda .guide-btn.data-v-e00574b8 {
+  background: rgba(230, 53, 53, 0.15);
+}
+.skin-black .guide-btn--added.data-v-e00574b8,
+.skin-panda .guide-btn--added.data-v-e00574b8 {
+  background: transparent;
+  border-color: #3a4050;
+  color: #5a6275;
+}

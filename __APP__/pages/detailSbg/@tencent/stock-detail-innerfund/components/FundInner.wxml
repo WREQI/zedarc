@@ -1,0 +1,14 @@
+<view class="_div fund-inner-block data-v-77765bea">
+  <view bindtap="{{b}}" class="_div title data-v-77765bea">
+    <view div class="_div data-v-77765bea">相关场内基金</view>
+    <view class="_div icon data-v-77765bea" wx:if="{{a}}"></view>
+  </view>
+  <freeze-scroll-list
+    bind:__l="__l"
+    bindclickStockDetail="{{c}}"
+    class="data-v-77765bea"
+    uI="77765bea-0"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></freeze-scroll-list>
+</view>

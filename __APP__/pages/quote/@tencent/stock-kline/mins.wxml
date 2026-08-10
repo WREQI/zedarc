@@ -1,0 +1,23 @@
+<view class="_div mins-comp" style="position: relative" wx:if="{{a}}">
+  <canvas
+    bindmousedown="{{l}}"
+    bindmousemove="{{m}}"
+    bindmouseup="{{n}}"
+    bindtouchend="{{k}}"
+    bindtouchmove="{{j}}"
+    bindtouchstart="{{i}}"
+    disableScroll="{{h}}"
+    height="{{d}}"
+    id="{{b}}"
+    ref="{{g}}"
+    style="{{'width:'+e+';'+'height:'+f}}"
+    type="2d"
+    width="{{c}}"
+    wx:if="{{r0}}"
+  ></canvas>
+  <view class="_div dot-container" style="{{q}}">
+    <view class="_div shine-dot" style="{{p}}">
+      <label class="_span dot-inner" style="{{o}}"></label>
+    </view>
+  </view>
+</view>

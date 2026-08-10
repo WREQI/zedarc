@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "empty": "./Empty",
+    "stock-basket": "../../../../stockBasket/@tencent/wzq-lite-basket/components/basketForChoose",
+    "select-plate": "./SelectPlate",
+    "dynamic-height-placeholder": "./DynamicHeightPlaceholder"
+  },
+  "componentPlaceholder": { "stock-basket": "view" }
+}

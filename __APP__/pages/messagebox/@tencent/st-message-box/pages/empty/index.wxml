@@ -1,0 +1,28 @@
+<view class="_div empty-wrapper data-v-a7f5f46c">
+  <view class="_div empty-content data-v-a7f5f46c">
+    <image
+      alt=""
+      class="_img empty-icon data-v-a7f5f46c"
+      src="https://st.gtimg.com/design/81c4f3b91a4a2d2cbe2fbf4e9e7067ea.png"
+    ></image>
+    <view class="_div empty-text data-v-a7f5f46c">{{a}}</view>
+  </view>
+  <image
+    alt=""
+    class="_img logo-icon data-v-a7f5f46c"
+    src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+    wx:if="{{b}}"
+  ></image>
+  <image
+    alt=""
+    class="_img logo-icon pro data-v-a7f5f46c"
+    src="https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png"
+    wx:elif="{{c}}"
+  ></image>
+  <image
+    alt=""
+    class="_img logo-icon pro data-v-a7f5f46c"
+    src="https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png"
+    wx:else
+  ></image>
+</view>

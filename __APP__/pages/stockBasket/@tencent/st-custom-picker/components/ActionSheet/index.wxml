@@ -1,0 +1,75 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{s}}"
+  class="{{['data-v-273d64e3',r&&'st-action-sheet_picker']}}"
+  uI="273d64e3-0"
+  uP="{{t}}"
+  uS="{{['d']}}"
+  wx:if="{{t}}"
+>
+  <view class="_div data-v-273d64e3" name="st-action-sheet-move">
+    <view class="_div st-action-sheet-panel st-safe-area-pb data-v-273d64e3">
+      <view
+        class="{{['_div','st-action-sheet-header','^st-action-sheet-header','data-v-273d64e3',k,l,m]}}"
+        hidden="{{!j}}"
+      >
+        <block wx:if="{{a}}">
+          <view
+            bindtap="{{b}}"
+            class="_div st-action-sheet-cancel ^st-action-sheet-cancel data-v-273d64e3"
+          >
+            <label class="_span icon icon-close data-v-273d64e3"></label>
+          </view>
+          <label
+            bindtap="{{d}}"
+            class="_span st-action-sheet-confirm ^st-action-sheet-confirm data-v-273d64e3"
+          >
+            <rich-text class="data-v-273d64e3" nodes="{{c}}"></rich-text>
+          </label>
+        </block>
+        <view
+          bindtap="{{f}}"
+          class="_div st-action-sheet-cancel-right data-v-273d64e3"
+          wx:elif="{{e}}"
+        >
+          <label class="_span icon icon-close data-v-273d64e3"></label>
+        </view>
+        <view class="_div st-action-sheet-title-group data-v-273d64e3">
+          <view
+            class="_div st-action-sheet-title ^st-action-sheet-title data-v-273d64e3"
+          >
+            <rich-text class="data-v-273d64e3" nodes="{{g}}"></rich-text>
+          </view>
+          <view
+            class="_div st-action-sheet-subtitle data-v-273d64e3"
+            wx:if="{{h}}"
+          >
+            <rich-text class="data-v-273d64e3" nodes="{{i}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view
+        class="_div st-action-sheet-content ^st-action-sheet-content data-v-273d64e3"
+      >
+        <slot wx:if="{{$slots.d}}"></slot>
+        <view class="_div st-action-sheet-list data-v-273d64e3" wx:else>
+          <view
+            bindtap="{{item.e}}"
+            class="{{['_div','st-action-sheet-item','border--bottom','data-v-273d64e3',item.c,item.d]}}"
+            wx:for="{{n}}"
+            wx:key="b"
+          >
+            <rich-text class="data-v-273d64e3" nodes="{{item.a}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view class="_div st-action-sheet-space data-v-273d64e3"></view>
+      <view
+        bindtap="{{q}}"
+        class="_div st-action-sheet-cancel data-v-273d64e3"
+        wx:if="{{o}}"
+        >{{p}}</view
+      >
+    </view>
+  </view>
+</popup>

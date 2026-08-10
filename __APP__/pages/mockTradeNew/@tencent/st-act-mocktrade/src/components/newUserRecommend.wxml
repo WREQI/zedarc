@@ -1,0 +1,90 @@
+<view class="_div new-user-recommend data-v-3911ace5" wx:if="{{a}}">
+  <view class="_div recommend-content data-v-3911ace5">
+    <view class="_div recommend-title data-v-3911ace5" wx:if="{{b}}"
+      >{{c}}</view
+    >
+    <view
+      bindtap="{{j}}"
+      class="_div recommend-desc data-v-3911ace5"
+      wx:if="{{d}}"
+    >
+      <view class="_div desc-content data-v-3911ace5" ref="descContent">
+        <label
+          bindtap="{{f}}"
+          class="_span desc-more data-v-3911ace5"
+          wx:if="{{e}}"
+        >
+          <label class="_span desc-more-text data-v-3911ace5">详情</label>
+          <image
+            class="_img arrow-icon data-v-3911ace5"
+            src="https://st.gtimg.com/design/5469de4604008fc263ca2d4922b6acd6.png"
+          ></image>
+        </label>
+        <label class="_span desc-label data-v-3911ace5">热点解读：</label>
+        <label class="_span desc-text data-v-3911ace5" ref="descText"
+          >{{g}}</label
+        >
+        <label class="_span desc-more-inline data-v-3911ace5" wx:if="{{h}}">
+          <label class="_span desc-more-text data-v-3911ace5">详情</label>
+          <image
+            class="_img arrow-icon data-v-3911ace5"
+            src="https://st.gtimg.com/design/5469de4604008fc263ca2d4922b6acd6.png"
+          ></image>
+        </label>
+      </view>
+      <view class="_div desc-content-full data-v-3911ace5">
+        <label class="_span desc-label data-v-3911ace5">热点解读：</label>
+        <label class="_span desc-text data-v-3911ace5">{{i}}</label>
+      </view>
+    </view>
+    <view class="_div stock-info data-v-3911ace5" wx:if="{{k}}">
+      <view class="_div stock-header data-v-3911ace5">
+        <view class="_div stock-name-code data-v-3911ace5">
+          <image class="_img stock-badge data-v-3911ace5" src="{{l}}"></image>
+          <label class="_span stock-name data-v-3911ace5">{{m}}</label>
+        </view>
+        <view
+          bindtap="{{o}}"
+          class="_div change-stock data-v-3911ace5"
+          wx:if="{{n}}"
+        >
+          <image
+            class="_img change-icon data-v-3911ace5"
+            src="https://st.gtimg.com/design/06845f855ba39edadbc01bdf55123af3.png"
+          ></image>
+          <label class="_span change-text data-v-3911ace5">换一换</label>
+        </view>
+      </view>
+      <view class="_div stock-tags data-v-3911ace5" wx:if="{{p}}">
+        <label
+          class="_span tag data-v-3911ace5"
+          wx:for="{{q}}"
+          wx:for-item="tag"
+          wx:key="b"
+          >{{tag.a}}</label
+        >
+      </view>
+      <view class="_div stock-performance data-v-3911ace5">
+        <view class="_div performance-item data-v-3911ace5">
+          <view
+            class="_div performance-value data-v-3911ace5"
+            style="{{'color:'+s}}"
+            >{{r}}</view
+          >
+          <view class="_div performance-label data-v-3911ace5">今日涨跌</view>
+        </view>
+        <view class="_div performance-item data-v-3911ace5">
+          <view
+            class="_div performance-value data-v-3911ace5"
+            style="{{'color:'+v}}"
+            >{{t}}</view
+          >
+          <view class="_div performance-label data-v-3911ace5">近一周涨跌</view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="{{x}}" class="_div action-button data-v-3911ace5"
+      >{{w}}</view
+    >
+  </view>
+</view>

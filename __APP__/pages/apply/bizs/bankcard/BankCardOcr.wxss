@@ -1,0 +1,60 @@
+@import "/app.wxss";
+.photo-contaier.data-v-06c37515 {
+  background-color: var(--fill-1);
+  padding: 0.4rem;
+  position: relative;
+}
+.photo-contaier .photo-content.data-v-06c37515 {
+  height: 1.466667rem;
+  position: relative;
+  width: 100%;
+}
+.photo-contaier .photo-content.local.data-v-06c37515 {
+  height: 5.706667rem;
+}
+.photo-contaier .photo.data-v-06c37515 {
+  height: 100%;
+  object-fit: fill;
+  position: relative;
+  width: 100%;
+}
+.photo-contaier .photo.unset.data-v-06c37515:before {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/case_txt.png);
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 1.68rem;
+  width: 2.666667rem;
+}
+.photo-contaier .photo.unset.data-v-06c37515:before,
+.photo-contaier .status-layer.data-v-06c37515 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.photo-contaier .status-layer.data-v-06c37515 {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.photo-contaier .status-layer.fail.data-v-06c37515 {
+  border: 0.053333rem solid var(--color-red);
+}
+.photo-contaier .status-layer-tip.data-v-06c37515 {
+  color: #fff;
+  left: 50%;
+  line-height: 0.533333rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+.photo-contaier .status-icon.data-v-06c37515 {
+  position: absolute;
+  right: calc((100% - 6.613333rem) / 4);
+  top: 50%;
+  transform: translate(50%, -50%);
+}

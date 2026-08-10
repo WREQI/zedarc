@@ -1,0 +1,21 @@
+<mp-dialog
+  bind:__l="__l"
+  bindclose="{{c}}"
+  bindconfirm="{{b}}"
+  class="protocols data-v-a17be538"
+  uI="a17be538-0"
+  uP="{{d}}"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <view class="protocol-list data-v-a17be538">
+    <view
+      bindtap="{{protocol.c}}"
+      class="protocol-item data-v-a17be538"
+      wx:for="{{a}}"
+      wx:for-item="protocol"
+      wx:key="b"
+      >{{protocol.a}}</view
+    >
+  </view>
+</mp-dialog>

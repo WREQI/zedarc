@@ -1,0 +1,46 @@
+<view class="_div timeline-container data-v-9662257c">
+  <view class="_div event-item data-v-9662257c" wx:for="{{a}}" wx:key="o">
+    <view class="_div event-time data-v-9662257c">
+      <view class="_div date data-v-9662257c">{{item.a}}</view>
+      <view class="_div year data-v-9662257c" wx:if="{{item.b}}"
+        >{{item.c}}</view
+      >
+    </view>
+    <view class="_div line-bar data-v-9662257c">
+      <view class="{{['_div','data-v-9662257c',item.e]}}">
+        <view class="{{['_div','data-v-9662257c',item.d]}}"></view>
+      </view>
+      <view class="_div line data-v-9662257c"></view>
+    </view>
+    <view class="_div event-detail data-v-9662257c">
+      <view class="_div detail-title data-v-9662257c">
+        <view class="_div text data-v-9662257c">{{item.f}}</view>
+        <view
+          catchtap="{{item.i}}"
+          class="_div more-event data-v-9662257c"
+          wx:if="{{item.g}}"
+          >近期相似事件<image
+            class="{{['_img','data-v-9662257c','icon',item.h]}}"
+            src="https://st.gtimg.com/design/e46a92f9c8f9b7c7108959699426f14b.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div detail-des data-v-9662257c">
+        <match-text
+          bind:__l="__l"
+          class="single-desc data-v-9662257c"
+          uI="{{item.k}}"
+          uP="{{item.l}}"
+          wx:if="{{item.j}}"
+        ></match-text>
+        <event-block
+          bind:__l="__l"
+          class="data-v-9662257c"
+          uI="{{item.m}}"
+          uP="{{item.n||''}}"
+          wx:else
+        ></event-block>
+      </view>
+    </view>
+  </view>
+</view>

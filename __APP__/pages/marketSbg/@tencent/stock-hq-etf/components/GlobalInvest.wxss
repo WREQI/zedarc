@@ -1,0 +1,212 @@
+.global-invest-wrapper.data-v-95384e06 {
+  --color-red: #e63535;
+  --color-green: #1caa3c;
+  background-color: var(--fill-content-layer);
+}
+[data-zdf="greenup"] .global-invest-wrapper.data-v-95384e06 {
+  --color-rise: var(--color-green);
+  --color-drop: var(--color-red);
+}
+.global-invest-wrapper:not(.lite) .global-invest-block.data-v-95384e06 {
+  margin-top: 0.16rem;
+  padding-bottom: 0.32rem;
+}
+.global-invest-wrapper:not(.lite)
+  .global-invest-block
+  .card-split.data-v-95384e06 {
+  margin: 0.32rem 0 0;
+}
+.global-invest-wrapper:not(.lite) .global-invest-block .header.data-v-95384e06 {
+  padding: 0.32rem 0.4rem;
+}
+.global-invest-wrapper:not(.lite) .global-invest-content.data-v-95384e06 {
+  border: 0.013333333333333334rem solid var(--border-heavy);
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  margin: 0 0.4rem;
+  padding: 0.32rem;
+}
+[data-st-theme="black"]
+  .global-invest-wrapper:not(.lite)
+  .global-invest-content.data-v-95384e06,
+[data-st-theme="dark"]
+  .global-invest-wrapper:not(.lite)
+  .global-invest-content.data-v-95384e06,
+[data-theme="black"]
+  .global-invest-wrapper:not(.lite)
+  .global-invest-content.data-v-95384e06,
+[data-theme="dark"]
+  .global-invest-wrapper:not(.lite)
+  .global-invest-content.data-v-95384e06 {
+  background: #171d28;
+}
+.global-invest-wrapper:not(.lite)
+  .global-invest-content
+  .hot-desc.data-v-95384e06 {
+  padding: 0;
+}
+.global-invest-wrapper:not(.lite)
+  .global-invest-content
+  .etf-card.data-v-95384e06 {
+  margin: 0.32rem 0 0;
+  max-width: 100%;
+}
+.global-invest-wrapper.lite.data-v-95384e06 {
+  border-radius: 0.21333333333333335rem;
+  margin-bottom: 0.32rem;
+}
+.global-invest-wrapper.lite .global-invest-block .header.data-v-95384e06 {
+  padding: 0.4266666666666667rem 0.32rem 0.32rem;
+}
+.global-invest-wrapper.lite
+  .global-invest-block
+  .header
+  .right-arrow-icon.data-v-95384e06 {
+  background: url(https://st.gtimg.com/design/4db798796fdbac98c20c441114fc2133.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.26666666666666666rem;
+  width: 0.17333333333333334rem;
+}
+.global-invest-wrapper.lite .global-invest-block .hot-desc.data-v-95384e06,
+.global-invest-wrapper.lite .global-invest-block .skeleton.data-v-95384e06 {
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+}
+.global-invest-block .header.data-v-95384e06 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.21333333333333335rem 0.4rem 0.32rem;
+}
+.global-invest-block .header .title.data-v-95384e06 {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 0.56rem;
+}
+.global-invest-block .header .title .main-title.data-v-95384e06 {
+  height: 0.5066666666666667rem;
+  width: 1.36rem;
+}
+.global-invest-block .header .title .main-title .title-img.data-v-95384e06 {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.global-invest-block .header .title .sub-title.data-v-95384e06 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-left: 0.21333333333333335rem;
+}
+.global-invest-block .header .right-arrow-icon.data-v-95384e06 {
+  background: url(https://st.gtimg.com/design/5c8d3517ec1225898294d85de0281be8.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.32rem;
+  width: 0.21333333333333335rem;
+}
+.global-invest-block .hot-desc.data-v-95384e06 {
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  color: var(--color-heavygray);
+  display: -webkit-box;
+  font-size: 0.4rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  overflow: hidden;
+  padding: 0 0.4rem;
+  position: relative;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.global-invest-block .hot-desc .hot-tag.data-v-95384e06 {
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.05333333333333334rem;
+  color: #e63535;
+  display: inline;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  margin-right: 0.10666666666666667rem;
+  padding: 0.013333333333333334rem 0.10666666666666667rem;
+  vertical-align: 0.04rem;
+  white-space: nowrap;
+}
+.global-invest-block .hot-desc .hot-text.data-v-95384e06 {
+  display: inline;
+}
+.global-invest-block .etf-card.data-v-95384e06 {
+  align-items: center;
+  background-color: var(--color-card);
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5866666666666667rem;
+  margin: 0.32rem 0.4rem 0;
+  max-width: calc(100% - 0.8rem);
+  padding: 0.06666666666666667rem 0.21333333333333335rem;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+[data-st-theme="black"] .global-invest-block .etf-card.data-v-95384e06,
+[data-st-theme="dark"] .global-invest-block .etf-card.data-v-95384e06,
+[data-theme="black"] .global-invest-block .etf-card.data-v-95384e06,
+[data-theme="dark"] .global-invest-block .etf-card.data-v-95384e06 {
+  background-color: #1e2431;
+}
+.global-invest-block .etf-card .etf-info.data-v-95384e06 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  min-width: 0;
+}
+.global-invest-block .etf-card .etf-tag.data-v-95384e06 {
+  display: block;
+  flex-shrink: 0;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.global-invest-block .etf-card .etf-name.data-v-95384e06 {
+  color: var(--color-midgray);
+  font-size: 0.32rem;
+  font-weight: 500;
+  line-height: 0.4533333333333333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.global-invest-block .etf-card .etf-change.data-v-95384e06 {
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-left: 0.21333333333333335rem;
+}
+.global-invest-block .card-split.data-v-95384e06 {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  margin: 0.32rem 0.32rem 0;
+}
+.global-invest-block .skeleton.data-v-95384e06 {
+  padding: 0.10666666666666667rem 0.4rem 0.32rem;
+}
+.global-invest-block .skeleton .skeleton-row.data-v-95384e06 {
+  background-color: var(--color-card);
+  border-radius: 0.05333333333333334rem;
+}
+.global-invest-block .skeleton .skeleton-row--top.data-v-95384e06 {
+  height: 1.1466666666666667rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.global-invest-block .skeleton .skeleton-row--mid.data-v-95384e06 {
+  height: 1.1733333333333333rem;
+  margin-bottom: 0.21333333333333335rem;
+}

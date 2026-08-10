@@ -1,0 +1,15 @@
+<view class="_div">
+  <hold-stock
+    bindjumpStockDetail="{{e}}"
+    class="broker-hold-stock"
+    containerHeight="{{b}}"
+    skin="{{d}}"
+    tabInfo="{{c}}"
+    visible="{{a}}"
+  ></hold-stock>
+  <position-list
+    bind:__l="__l"
+    uI="0937fcf1-0"
+    wx:if="{{false}}"
+  ></position-list>
+</view>

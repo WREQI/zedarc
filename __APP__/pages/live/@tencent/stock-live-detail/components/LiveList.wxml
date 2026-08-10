@@ -1,0 +1,144 @@
+<view class="{{['_div','data-v-ae900279','live-list',b]}}">
+  <view
+    class="{{['_div','list-item','data-v-ae900279',live.O&&'red']}}"
+    wx:for="{{a}}"
+    wx:for-item="live"
+    wx:key="N"
+  >
+    <block wx:if="{{live.a}}">
+      <view
+        class="_div flex flex-align-center data-v-ae900279"
+        wx:if="{{live.b}}"
+      >
+        <view class="_div live-user-avatar data-v-ae900279">
+          <image
+            class="_img live-user-avatar data-v-ae900279"
+            src="{{live.d}}"
+            wx:if="{{live.c}}"
+          ></image>
+        </view>
+        <view class="_div data-v-ae900279">
+          <view class="_div live-user-name data-v-ae900279">{{live.e}}</view>
+          <view class="_div live-user-time data-v-ae900279" wx:if="{{live.f}}"
+            >{{live.g}}</view
+          >
+          <view class="_div live-user-time data-v-ae900279" wx:else
+            >{{live.h}}</view
+          >
+        </view>
+        <view class="_div live-tag data-v-ae900279" wx:if="{{live.i}}">
+          <view class="_div tag-text data-v-ae900279">置顶</view>
+        </view>
+      </view>
+      <view class="_div live-title data-v-ae900279" wx:if="{{live.j}}">
+        <label
+          class="{{['_span','data-v-ae900279',item.c]}}"
+          wx:for="{{live.k}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+      <view class="_div live-comment data-v-ae900279">
+        <label class="_span live-comment-title data-v-ae900279"
+          >{{live.l}}回复：</label
+        >
+        <label class="_span live-comment-text data-v-ae900279">
+          <label
+            class="{{['_span','data-v-ae900279',item.c]}}"
+            wx:for="{{live.m}}"
+            wx:key="b"
+            >{{item.a}}</label
+          >
+        </label>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="_div flex flex-align-center data-v-ae900279">
+        <view class="_div live-dot data-v-ae900279"></view>
+        <label class="_span live-time data-v-ae900279" wx:if="{{live.n}}"
+          >{{live.o}}</label
+        >
+        <label class="_span live-time data-v-ae900279" wx:else
+          >{{live.p}}</label
+        >
+        <view class="_div live-tag data-v-ae900279" wx:if="{{live.q}}">
+          <view class="_div tag-text data-v-ae900279">置顶</view>
+        </view>
+      </view>
+      <view class="_div live-title data-v-ae900279" wx:if="{{live.r}}">
+        <label
+          class="{{['_span','data-v-ae900279',item.c]}}"
+          wx:for="{{live.s}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+      <view
+        bindtap="{{live.C}}"
+        class="_div live-news flex flex-justify-between data-v-ae900279"
+        wx:if="{{live.t}}"
+      >
+        <view class="_div live-news-title data-v-ae900279" wx:if="{{live.v}}">
+          <label class="_span news-title-text clamp-2 data-v-ae900279"
+            >{{live.w}}</label
+          >
+          <view class="_div live-news-type data-v-ae900279">
+            <view class="_div type-text data-v-ae900279">{{live.x}}</view>
+            <view class="_div source-text data-v-ae900279">腾讯自选股</view>
+          </view>
+        </view>
+        <view class="_div live-news-title flex-1 data-v-ae900279" wx:else>
+          <label class="_span news-title-text clamp-2 data-v-ae900279"
+            >{{live.y}}</label
+          >
+        </view>
+        <view class="_div live-news-thumb data-v-ae900279">
+          <image
+            alt
+            class="_img thumb-img data-v-ae900279"
+            src="{{live.A}}"
+            wx:if="{{live.z}}"
+          ></image>
+          <view class="_div thumb-play data-v-ae900279" wx:if="{{live.B}}">
+            <view class="_div play-icon data-v-ae900279"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div live-pics flex data-v-ae900279" wx:if="{{live.D}}">
+        <image
+          bindtap="{{img.c}}"
+          class="{{['_img','data-v-ae900279','live-pic-thumb',live.F]}}"
+          src="{{img.b}}"
+          wx:for="{{live.E}}"
+          wx:for-item="img"
+          wx:key="a"
+        ></image>
+      </view>
+      <view
+        class="_div live-relate-quotes flex data-v-ae900279"
+        wx:if="{{live.G}}"
+      >
+        <related-stock-item
+          bind:__l="__l"
+          bindmanageSelfStock="{{live.H}}"
+          class="flex-1 data-v-ae900279"
+          uI="{{live.I}}"
+          uP="{{live.J}}"
+          wx:if="{{live.J}}"
+        ></related-stock-item>
+      </view>
+      <view
+        class="_div live-open-account-container flex data-v-ae900279"
+        wx:if="{{live.K}}"
+      >
+        <open-account-big-card
+          bind:__l="__l"
+          class="data-v-ae900279"
+          uI="{{live.L}}"
+          uP="{{live.M}}"
+          wx:if="{{live.M}}"
+        ></open-account-big-card>
+      </view>
+    </block>
+  </view>
+</view>

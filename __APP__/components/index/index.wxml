@@ -1,0 +1,15 @@
+<popup bindcancel="pCancel" bindconfirm="pConfirm" isShowPop="{{isShowPop}}">
+  <view slot="after">
+    <captcha
+      aidEncrypted="{{aidEncrypted}}"
+      appId="{{appId||appid}}"
+      bind:close="handlerClose"
+      bind:error="handlerError"
+      bind:ready="handlerReady"
+      bind:verify="handlerVerify"
+      id="captcha"
+      lang="{{lang}}"
+      themeColor="{{themeColor}}"
+    ></captcha>
+  </view>
+</popup>

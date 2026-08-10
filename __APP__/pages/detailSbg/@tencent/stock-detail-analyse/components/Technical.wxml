@@ -1,0 +1,101 @@
+<view class="_div zxg-sa-block data-v-8fca55f0" ref="technical" wx:if="{{a}}">
+  <view class="_div zxg-sa-block-title data-v-8fca55f0">
+    <view class="_i vertical-line data-v-8fca55f0"></view>
+    <view class="vb data-v-8fca55f0">技术</view>
+    <view class="_div trend-tag-wrapper data-v-8fca55f0">
+      <view class="{{['_div','trend-tag','data-v-8fca55f0',c]}}">{{b}}</view>
+    </view>
+  </view>
+  <view class="_div overview data-v-8fca55f0">
+    <view class="_div title-wrapper data-v-8fca55f0">
+      <view class="_div title data-v-8fca55f0">近5日累计涨跌幅</view>
+      <view class="_div timespan data-v-8fca55f0">({{d}}～{{e}})</view>
+    </view>
+    <view class="_div zdfChart data-v-8fca55f0">
+      <view class="_div zd-div data-v-8fca55f0" wx:for="{{f}}" wx:key="f">
+        <view class="_div stock-name data-v-8fca55f0">{{item.a}}</view>
+        <view class="_div stock-line-wrapper data-v-8fca55f0">
+          <view
+            class="_div stock-line data-v-8fca55f0"
+            style="{{'width:'+item.b+';'+'background-color:'+item.c}}"
+          ></view>
+        </view>
+        <view
+          class="_div stock-number data-v-8fca55f0"
+          style="{{'color:'+item.e}}"
+          >{{item.d}}</view
+        >
+      </view>
+    </view>
+    <view
+      catchtap="{{g}}"
+      class="_div title tips-wrapper data-v-8fca55f0"
+      style="margin-top: 32px"
+      >压力位/支撑位<view class="_i tip-i data-v-8fca55f0"></view>
+    </view>
+    <view class="_div ylwmaplab data-v-8fca55f0" wx:if="{{h}}">
+      <view class="_i lab-i zc data-v-8fca55f0"></view>
+      <label class="_span data-v-8fca55f0">支撑位</label>
+      <view
+        class="_i lab-i yl data-v-8fca55f0"
+        style="{{'background-color:'+i}}"
+      ></view>
+      <label class="_span data-v-8fca55f0">压力位</label>
+    </view>
+    <view
+      class="_div chart-container data-v-8fca55f0"
+      id="chartContainer"
+      ref="chartContainer"
+    >
+      <block wx:if="{{j}}">
+        <f2
+          bind:__l="__l"
+          bindonInit="{{l}}"
+          bindtouchend="{{m}}"
+          bindtouchmove="{{o}}"
+          bindtouchstart="{{n}}"
+          class="data-v-8fca55f0"
+          uI="8fca55f0-0"
+          uP="{{p}}"
+          wx:if="{{k}}"
+        ></f2>
+        <view
+          class="{{['_ul','canvas-toolTip','data-v-8fca55f0',z]}}"
+          wx:if="{{q}}"
+        >
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">日期</label>
+            <label class="_span data-v-8fca55f0">{{r}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">压力位</label>
+            <label class="_span data-v-8fca55f0">{{s}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">支撑位</label>
+            <label class="_span data-v-8fca55f0">{{t}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">收盘价</label>
+            <label class="_span data-v-8fca55f0">{{v}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">开盘价</label>
+            <label class="_span data-v-8fca55f0">{{w}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">最高价</label>
+            <label class="_span data-v-8fca55f0">{{x}}</label>
+          </view>
+          <view class="_li tip-item data-v-8fca55f0">
+            <label class="_span data-v-8fca55f0">最低价</label>
+            <label class="_span data-v-8fca55f0">{{y}}</label>
+          </view>
+        </view>
+      </block>
+      <view class="_div chart-empty data-v-8fca55f0" wx:else
+        >上市时间不足统计周期，暂无图表。</view
+      >
+    </view>
+  </view>
+</view>

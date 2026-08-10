@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "position-list": "../../pages/indexSbg/@tencent/wzq-union-portfolio/components/PositionList",
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "hold-stock": "plugin://wx8c0059a9f61679d1/PluginAssetHoldStock"
+  },
+  "componentPlaceholder": { "position-list": "view", "hold-stock": "view" }
+}

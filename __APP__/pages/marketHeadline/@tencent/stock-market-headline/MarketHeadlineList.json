@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "market-headline-item": "./component/MarketHeadlineItem",
+    "basket-overview": "../../../stockBasket/@tencent/wzq-lite-basket/components/basketOverview",
+    "basket-guide-modal": "../../../stockBasket/@tencent/wzq-lite-basket/components/basketGuideModal",
+    "follow-guide": "./component/followGuide"
+  },
+  "componentPlaceholder": {
+    "basket-overview": "view",
+    "basket-guide-modal": "view"
+  }
+}

@@ -1,0 +1,59 @@
+<view class="_div data-v-6424be95">
+  <base-title
+    bind:__l="__l"
+    class="data-v-6424be95"
+    uI="6424be95-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></base-title>
+  <view class="_div wrap data-v-6424be95">
+    <view class="_div tcrd-rank-wrap data-v-6424be95" wx:if="{{b}}">
+      <view
+        bindtap="{{concept.j}}"
+        class="_div list-item data-v-6424be95"
+        wx:for="{{c}}"
+        wx:for-item="concept"
+        wx:key="i"
+      >
+        <view
+          class="_div list-item-title flex flex-align-center data-v-6424be95"
+        >
+          <view class="{{['_div','data-v-6424be95','item-order',concept.b]}}">
+            <label class="_span order-text tttgb data-v-6424be95"
+              >{{concept.a}}</label
+            >
+          </view>
+          <view class="_div title-info data-v-6424be95">{{concept.c}}</view>
+          <view class="{{['_div','data-v-6424be95','title-change',concept.e]}}"
+            >{{concept.d}}</view
+          >
+        </view>
+        <view class="_div list-item-desc flex data-v-6424be95">
+          <label class="_span desc-type data-v-6424be95">热点</label>
+          <label class="_span desc-dot data-v-6424be95"> · </label>
+          <label class="_span desc-tips flex-1 data-v-6424be95"
+            >{{concept.f}}</label
+          >
+        </view>
+        <view
+          class="_div list-item-stocks flex flex-align-center data-v-6424be95"
+          wx:if="{{concept.g}}"
+        >
+          <view
+            catchtap="{{stock.e}}"
+            class="_div stock-item data-v-6424be95"
+            wx:for="{{concept.h}}"
+            wx:for-item="stock"
+            wx:key="d"
+          >
+            <label class="_span stock-name data-v-6424be95">{{stock.a}}</label>
+            <label
+              class="{{['_span','data-v-6424be95','stock-change',stock.c]}}"
+              >{{stock.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

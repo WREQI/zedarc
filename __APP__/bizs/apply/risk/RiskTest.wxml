@@ -1,0 +1,97 @@
+<view class="com__risk-test data-v-b059668d">
+  <view class="claim-container flex-column data-v-b059668d" hidden="{{!e}}">
+    <view class="claim-content-container flex-1 bg-color data-v-b059668d">
+      <view class="claim-title text-color-1 fs-36 data-v-b059668d">{{a}}</view>
+      <view class="claim-content text-color-2 fs-28 data-v-b059668d">
+        <view
+          class="data-v-b059668d"
+          wx:for="{{b}}"
+          wx:for-item="text"
+          wx:key="b"
+        >
+          <view class="data-v-b059668d">
+            <rich-text class="data-v-b059668d" nodes="{{text.a}}"></rich-text>
+          </view>
+          <view class="data-v-b059668d" style="color: transparent"
+            >旋转 跳跃 我不见了</view
+          >
+        </view>
+      </view>
+      <foot-print
+        bind:__l="__l"
+        class="foot data-v-b059668d"
+        uI="b059668d-0"
+      ></foot-print>
+    </view>
+    <step-buttons
+      bind:__l="__l"
+      bindclickNext="{{c}}"
+      class="data-v-b059668d"
+      uI="b059668d-1"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></step-buttons>
+  </view>
+  <view class="test-container flex-column data-v-b059668d" hidden="{{!o}}">
+    <view
+      class="title bg-color text-color-1 fs-36 data-v-b059668d"
+      wx:if="{{f}}"
+      >{{g}}</view
+    >
+    <view class="question-container bg-color data-v-b059668d">
+      <transition
+        bind:__l="__l"
+        class="data-v-b059668d"
+        uI="{{question.h}}"
+        uP="{{i}}"
+        uS="{{['d']}}"
+        wx:for="{{h}}"
+        wx:for-item="question"
+        wx:key="g"
+      >
+        <view
+          class="question-content data-v-b059668d"
+          hidden="{{!question.e}}"
+          key="{{question.f}}"
+        >
+          <risk-question
+            bind:__l="__l"
+            bindselect="{{question.b}}"
+            class="r-i-f data-v-b059668d"
+            uI="{{question.c}}"
+            uP="{{question.d}}"
+            uR="question"
+            wx:if="{{question.d}}"
+          ></risk-question>
+        </view>
+      </transition>
+    </view>
+    <view class="progress-container data-v-b059668d">
+      <label
+        bindtap="{{k}}"
+        class="last-question-text fs-24 primary-color data-v-b059668d"
+        style="{{'visibility:'+j}}"
+        >上一题</label
+      >
+      <view class="progress-outer data-v-b059668d">
+        <view
+          class="progress-inner data-v-b059668d"
+          style="{{'width:'+l}}"
+        ></view>
+      </view>
+      <view class="prgress-text fs-24 text-color-1 data-v-b059668d"
+        >{{m}} / {{n}}</view
+      >
+    </view>
+  </view>
+  <risk-question-extra
+    bind:__l="__l"
+    bindclose="{{r}}"
+    bindselect="{{q}}"
+    class="r data-v-b059668d"
+    uI="b059668d-4"
+    uP="{{s}}"
+    uR="riskQuestionExtra"
+    wx:if="{{s}}"
+  ></risk-question-extra>
+</view>

@@ -1,0 +1,24 @@
+<page-meta class="data-v-ea99c417" rootFontSize="{{a}}"></page-meta>
+<view class="_div rzrq-container data-v-ea99c417" data-st-theme="{{f}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-ea99c417"
+    uI="ea99c417-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-ea99c417"
+    uI="ea99c417-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <rzrq-detail
+    bind:__l="__l"
+    class="r data-v-ea99c417"
+    uI="ea99c417-2"
+    uP="{{e}}"
+    uR="rzrqDetail"
+    wx:if="{{c}}"
+  ></rzrq-detail>
+  <view class="_div zxg-logo data-v-ea99c417"></view>
+</view>

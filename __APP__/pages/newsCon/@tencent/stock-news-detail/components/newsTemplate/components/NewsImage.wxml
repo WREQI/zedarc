@@ -1,0 +1,82 @@
+<view
+  class="{{['_div','data-v-57837672','limit-max-width',K]}}"
+  hidden="{{!J}}"
+>
+  <view
+    bindtap="{{j}}"
+    class="_div news-image news-image-lv2 data-v-57837672"
+    wx:if="{{a}}"
+  >
+    <base-image
+      bind:__l="__l"
+      binderror="{{d}}"
+      bindload="{{c}}"
+      class="data-v-57837672"
+      uI="57837672-0"
+      uP="{{e}}"
+      wx:if="{{b}}"
+    ></base-image>
+    <view class="_div image-link data-v-57837672" wx:if="{{f}}">
+      <image alt="" class="_img link-icon data-v-57837672" src="{{g}}"></image>
+    </view>
+    <view class="_div image-desc-link data-v-57837672" wx:if="{{h}}">
+      <rich-text class="data-v-57837672" nodes="{{i}}"></rich-text>
+    </view>
+  </view>
+  <view
+    bindtap="{{s}}"
+    class="_div news-image news-image-openaccount data-v-57837672"
+    wx:elif="{{k}}"
+  >
+    <base-image
+      bind:__l="__l"
+      binderror="{{m}}"
+      bindload="{{l}}"
+      class="data-v-57837672"
+      uI="57837672-1"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></base-image>
+    <view class="_div image-link data-v-57837672" wx:if="{{o}}">
+      <image alt="" class="_img link-icon data-v-57837672" src="{{p}}"></image>
+    </view>
+    <view class="_div image-desc-link data-v-57837672" wx:if="{{q}}">
+      <rich-text class="data-v-57837672" nodes="{{r}}"></rich-text>
+    </view>
+  </view>
+  <view
+    bindtap="{{B}}"
+    class="_div news-image news-image-link data-v-57837672"
+    wx:elif="{{t}}"
+  >
+    <base-image
+      bind:__l="__l"
+      binderror="{{w}}"
+      bindload="{{v}}"
+      class="data-v-57837672"
+      uI="57837672-2"
+      uP="{{x}}"
+      wx:if="{{x}}"
+    ></base-image>
+    <view class="_div image-link data-v-57837672">
+      <image alt="" class="_img link-icon data-v-57837672" src="{{y}}"></image>
+    </view>
+    <view class="_div image-desc-link data-v-57837672" wx:if="{{z}}">
+      <rich-text class="data-v-57837672" nodes="{{A}}"></rich-text>
+    </view>
+  </view>
+  <view bindtap="{{I}}" class="_div news-image data-v-57837672" wx:elif="{{C}}">
+    <base-image
+      bind:__l="__l"
+      binderror="{{E}}"
+      bindload="{{D}}"
+      class="data-v-57837672"
+      uI="57837672-3"
+      uP="{{F}}"
+      wx:if="{{F}}"
+    ></base-image>
+    <view class="_div image-desc data-v-57837672" wx:if="{{G}}">
+      <rich-text class="data-v-57837672" nodes="{{H}}"></rich-text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view
+  bindtap="{{g}}"
+  class="{{['bubble-tip ^bubble-tip flex-vcenter',e,f]}}"
+  wx:if="{{a}}"
+>
+  <view class="^content content">{{b}}</view>
+  <slot></slot>
+  <view class="close-box flex-center" wx:if="{{c}}">
+    <view catchtap="{{d}}" class="icon icon-close ^icon-close"></view>
+  </view>
+</view>

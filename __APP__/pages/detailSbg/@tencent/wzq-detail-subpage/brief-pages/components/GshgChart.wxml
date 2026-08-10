@@ -1,0 +1,33 @@
+<view class="_div data-v-dee137d9">
+  <f2
+    bind:__l="__l"
+    bindonInit="{{f}}"
+    bindtouchend="{{g}}"
+    bindtouchmove="{{i}}"
+    bindtouchstart="{{h}}"
+    class="r data-v-dee137d9"
+    uI="dee137d9-0"
+    uP="{{j}}"
+    uR="gshgChart"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <view class="{{['_div','data-v-dee137d9','f2-tooltip',d]}}" wx:if="{{a}}">
+      <view class="_div f2-tooltip-inner data-v-dee137d9">
+        <view class="_div f2-tooltip-title data-v-dee137d9">{{b}}</view>
+        <view
+          class="_div f2-tooltip-value data-v-dee137d9"
+          wx:for="{{c}}"
+          wx:key="c"
+        >
+          <label class="_span f2-tooltip-subtitle data-v-dee137d9"
+            >{{item.a}}</label
+          >
+          <label class="_span f2-tooltip-after data-v-dee137d9"
+            >{{item.b}}</label
+          >
+        </view>
+      </view>
+    </view>
+  </f2>
+</view>

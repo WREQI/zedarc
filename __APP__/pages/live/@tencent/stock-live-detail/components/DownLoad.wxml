@@ -1,0 +1,10 @@
+<view class="_div component-download" id="down" wx:if="{{a}}">
+  <view class="_div download-bar flex flex-align-center flex-justify-between">
+    <view class="_div flex flex-align-center">
+      <view class="_div logo"></view>
+      <view class="_div brand-text" wx:if="{{b}}">腾讯自选股</view>
+      <view class="_div title-text">{{c}}</view>
+    </view>
+    <view bindtap="{{e}}" class="_div button">{{d}}</view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+.component-time-counter .flex.data-v-cf9cd42a {
+  display: -webkit-flex;
+  display: flex;
+}
+.component-time-counter .time-text.data-v-cf9cd42a {
+  color: #000;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 0.96rem;
+  margin-right: 0.02666666666666667rem;
+}
+.component-time-counter .time-unit.data-v-cf9cd42a {
+  color: #7a8499;
+  font-size: 0.37333333333333335rem;
+  margin-right: 0.26666666666666666rem;
+  position: relative;
+  top: 0.29333333333333333rem;
+}
+[data-st-theme="black"] .time-text.data-v-cf9cd42a,
+[data-st-theme="dark"] .time-text.data-v-cf9cd42a {
+  color: var(--color-heavygray);
+}
+[data-st-theme="black"] .time-unit.data-v-cf9cd42a,
+[data-st-theme="dark"] .time-unit.data-v-cf9cd42a {
+  color: var(--color-lightgray);
+}

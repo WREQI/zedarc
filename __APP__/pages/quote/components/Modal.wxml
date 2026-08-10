@@ -1,0 +1,26 @@
+<view
+  catchtouchmove="{{i}}"
+  class="{{['_div','mask-wrapper','data-v-d902a6d8',h&&'mask-wrapper-landscape']}}"
+>
+  <view class="_div popup-wrapper data-v-d902a6d8">
+    <view class="_div title-area data-v-d902a6d8" wx:if="{{a}}">{{b}}</view>
+    <scroll-view
+      class="content-area data-v-d902a6d8"
+      ref="scrollView"
+      scrollY="{{true}}"
+    >
+      <slot></slot>
+    </scroll-view>
+    <view class="_div button-area data-v-d902a6d8">
+      <view
+        bindtap="{{e}}"
+        class="_div button-left data-v-d902a6d8"
+        wx:if="{{c}}"
+        >{{d}}</view
+      >
+      <view bindtap="{{g}}" class="_div button-right data-v-d902a6d8"
+        >{{f}}</view
+      >
+    </view>
+  </view>
+</view>

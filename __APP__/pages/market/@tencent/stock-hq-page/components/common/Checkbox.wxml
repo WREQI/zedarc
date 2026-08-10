@@ -1,0 +1,7 @@
+<view class="{{['_div','st-checkbox','data-v-6d87e1c1',f]}}">
+    <input bindinput="{{c}}" class="st-checkbox-input data-v-6d87e1c1" disabled="{{a}}" type="checkbox" value="{{b}}"></input>
+    <view catchtap="{{d}}" class="_div hover data-v-6d87e1c1"></view>
+    <label class="_span st-checkbox-inner data-v-6d87e1c1">
+        <image alt="" class="_img st-checkbox-check data-v-6d87e1c1" src="https://st.gtimg.com/design/4b4bda0863228cc557835b2caf6c6aaa.png" wx:if="{{e}}"></image>
+    </label>
+</view>

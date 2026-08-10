@@ -1,0 +1,93 @@
+<view class="{{['_div','hold-list-container','data-v-1dc1fd80',l]}}">
+  <caption-bar
+    bind:__l="__l"
+    bindsort="{{a}}"
+    class="data-v-1dc1fd80"
+    uI="1dc1fd80-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></caption-bar>
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{i}}"
+    bindrefresherrefresh="{{k}}"
+    bindrefresherrestore="{{j}}"
+    class="stock-scroll-list data-v-1dc1fd80"
+    refresherDefaultStyle="{{g}}"
+    refresherEnabled="{{f}}"
+    refresherThreshold="100"
+    refresherTriggered="{{h}}"
+    style="{{e}}"
+  >
+    <view
+      class="_div data-v-1dc1fd80"
+      wx:for="{{c}}"
+      wx:for-item="stock"
+      wx:key="p"
+    >
+      <view
+        bindtap="{{stock.o}}"
+        class="_div stock-item portfolio-stock-item data-v-1dc1fd80"
+      >
+        <view class="_div item-wrap data-v-1dc1fd80" hoverClass="press">
+          <view class="_div stock-info column data-v-1dc1fd80">
+            <label
+              class="{{['_span','stock-info-name','text-black','data-v-1dc1fd80',stock.b]}}"
+              >{{stock.a}}</label
+            >
+            <label class="_span stock-info-scode text-gray data-v-1dc1fd80">
+              <view class="_div new-market-icon data-v-1dc1fd80">
+                <market-icon-sprite
+                  bind:__l="__l"
+                  class="data-v-1dc1fd80"
+                  uI="{{stock.c}}"
+                  uP="{{stock.d}}"
+                  wx:if="{{stock.d}}"
+                ></market-icon-sprite>
+              </view>
+              <label class="block stock-code-wrapper data-v-1dc1fd80">
+                <label class="_span stock-code data-v-1dc1fd80"
+                  >{{stock.e}}</label
+                >
+                <image
+                  alt=""
+                  class="_img icon icon-delay delay data-v-1dc1fd80"
+                  src="https://st.gtimg.com/design/d9bdf6eb6ce682f94ee4882d2c8c4622.png"
+                  wx:if="{{stock.f}}"
+                ></image>
+              </label>
+            </label>
+          </view>
+          <view
+            class="_div stock-chart-price data-v-1dc1fd80"
+            wx:if="{{stock.g}}"
+          >
+            <stock-item-chart
+              bind:__l="__l"
+              class="item-chart-wrapper column data-v-1dc1fd80"
+              uI="{{stock.i}}"
+              uP="{{stock.j}}"
+              wx:if="{{stock.h}}"
+            ></stock-item-chart>
+            <view class="_div price-rise-group data-v-1dc1fd80">
+              <view
+                class="_div stock-price text-black add-touch data-v-1dc1fd80"
+                >{{stock.k}}</view
+              >
+              <view class="_div stock-rise add-touch data-v-1dc1fd80">
+                <view
+                  class="{{['_div','stock-rise-info','data-v-1dc1fd80',stock.m,stock.n]}}"
+                  >{{stock.l}}</view
+                >
+              </view>
+            </view>
+          </view>
+          <view class="_div stock-unusable data-v-1dc1fd80" wx:else
+            >该行情仅自选股App可看</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div mp-list-placeholder data-v-1dc1fd80" wx:if="{{d}}"></view>
+  </scroll-view>
+</view>

@@ -1,0 +1,98 @@
+<view class="{{['purchase-list',aB&&'today-hastock',aC&&'with-nav']}}">
+    <view wx:if="{{a}}">
+        <purchase-list-item bind:__l="__l" bindonPicker="{{c}}" bindselect="{{d}}" uI="50878bb2-0" uP="{{e}}" wx:if="{{b}}"></purchase-list-item>
+        <purchase-list-item bind:__l="__l" bindonPicker="{{g}}" bindselect="{{h}}" uI="50878bb2-1" uP="{{i}}" wx:if="{{f}}"></purchase-list-item>
+        <purchase-list-item bind:__l="__l" bindonPicker="{{k}}" bindselect="{{l}}" uI="50878bb2-2" uP="{{m}}" wx:if="{{j}}"></purchase-list-item>
+        <purchase-list-item bind:__l="__l" bindonPicker="{{o}}" bindselect="{{p}}" uI="50878bb2-3" uP="{{q}}" wx:if="{{n}}"></purchase-list-item>
+        <purchase-list-item bind:__l="__l" bindonPicker="{{s}}" bindselect="{{t}}" uI="50878bb2-4" uP="{{v}}" wx:if="{{r}}"></purchase-list-item>
+        <purchase-list-item bind:__l="__l" bindonPicker="{{x}}" bindselect="{{y}}" uI="50878bb2-5" uP="{{z}}" wx:if="{{w}}"></purchase-list-item>
+        <view class="risk-tip" wx:if="{{A}}">
+            <view class="header">风险提示</view>{{B}}</view>
+        <view class="empty-block"></view>
+    </view>
+    <view class="no-newstock" wx:elif="{{C}}">
+        <empty bind:__l="__l" class="empty-comp" uI="50878bb2-6" uP="{{D}}" wx:if="{{D}}"></empty>
+        <view class="extended-info" wx:if="{{E}}">
+            <st-divider bind:__l="__l" class="divider text-color-2" style="font-weight:normal" uI="50878bb2-7" uS="{{['d']}}">近期申购</st-divider>
+            <view class="lists-contianer">
+                <view class="header flex-between">
+                    <view class="flex-1 align-l">股票名称</view>
+                    <view class="flex-1 align-c">发行价</view>
+                    <view class="flex-1 align-r">申购时间</view>
+                </view>
+                <view class="lists">
+                    <view bindtap="{{item.h}}" class="flex-between" wx:for="{{F}}" wx:key="g">
+                        <view class="flex-1 align-l">
+                            <view class="stock-name">{{item.a}}</view>
+                            <view class="stock-code">
+                                <label class="code">{{item.b}}{{item.c}}</label>
+                                <label class="icon-kcb" wx:if="{{item.d}}">科</label>
+                            </view>
+                        </view>
+                        <view class="flex-1 align-c">{{item.e}}</view>
+                        <view class="flex-1 align-r">{{item.f}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="risk-tip no-newstock border-top" wx:if="{{G}}">
+                <view class="header">风险提示</view>{{H}}</view>
+        </view>
+    </view>
+    <view class="submit-buy flex-between" wx:if="{{I}}">
+        <view bindtap="{{M}}" class="select-all flex-vcenter">
+            <view class="icon-wrapper">
+                <label class="{{['icon','icon-check-box','custom-radio',J&&'icon-checked',K&&'custom-radio-disabled']}}"></label>
+            </view>
+            <view class="{{['fs-34',L]}}">全选</view>
+        </view>
+        <view bindtap="{{Q}}" class="select-only-stock flex-vcenter">
+            <view class="icon-wrapper">
+                <label class="{{['icon','icon-check-box','custom-radio',N&&'icon-checked',O&&'custom-radio-disabled']}}"></label>
+            </view>
+            <view class="{{['fs-34',P]}}">仅新股</view>
+        </view>
+        <button bindtap="{{T}}" class="newstock-btn" disabled="{{S}}" type="primary">一键申购{{R}}</button>
+    </view>
+    <view class="bottom-bar flex-center">
+        <view bindtap="{{V}}" class="setting fs-24 primary-color border-right" data-stat="trade.playnew.setting" wx:if="{{U}}">提醒设置</view>
+        <view class="trade-time text-color-4 fs-24">申购时间：交易日9:30~15:00</view>
+    </view>
+    <mp-dialog bind:__l="__l" bindcancel="{{af}}" bindconfirm="{{ae}}" uI="50878bb2-8" uP="{{ag}}" uS="{{['d']}}" wx:if="{{ag}}">
+        <view class="mp-dialog__message newstock-buy-dialog-container">
+            <view class="title">申购{{W}}</view>
+            <view class="flex-between item" wx:for="{{X}}" wx:key="d">
+                <label>{{item.a}}</label>
+                <label>{{item.b}} {{item.c}}</label>
+            </view>
+            <view class="risk-tip popup" wx:if="{{Y}}">
+                <view class="header">{{Z}}</view>
+                <view class="{{['text',ab&&'expand']}}">{{aa}}<label class="em"></label>
+                </view>
+                <label bindtap="{{ad}}" class="expand-btn">{{ac}}</label>
+            </view>
+        </view>
+    </mp-dialog>
+    <action-sheet bind:__l="__l" bindconfirm="{{as}}" bindinput="{{ar}}" class="amount-action-sheet" uI="50878bb2-9" uP="{{at}}" uS="{{['d']}}" wx:if="{{at}}">
+        <radio-group bindchange="{{aq}}">
+            <view class="input-li-content border--bottom">
+                <radio checked="{{ai}}" class="left-checkbox" color="var(--color-primary)" value="0">
+                    <view class="wrapper flex-between">
+                        <view class="left-title">顶额申购</view>
+                        <view class="right-text">{{ah}}</view>
+                    </view>
+                </radio>
+            </view>
+            <view class="input-li-content border-bottom-1">
+                <radio checked="{{ap}}" class="left-checkbox" color="var(--color-primary)" value="1">
+                    <view class="wrapper flex-between">
+                        <view class="left-title">自定义申购</view>
+                        <input alwaysEmbed="{{true}}" bindblur="{{al}}" bindfocus="{{am}}" bindinput="{{ao}}" class="right-input" focus="{{aj}}" id="debtNumInput" maxlength="{{5}}" pattern="d*" placeholder="{{ak}}" placeholderClass="input-placeholder" type="tel" value="{{an}}"></input>
+                    </view>
+                </radio>
+            </view>
+        </radio-group>
+    </action-sheet>
+    <mp-dialog bind:__l="__l" bindconfirm="{{av}}" uI="50878bb2-10" uP="{{aw}}" wx:if="{{aw}}"></mp-dialog>
+    <register-risk-popup bind:__l="__l" uI="50878bb2-11" uP="{{ax}}" wx:if="{{ax}}"></register-risk-popup>
+    <protocol-dialog bind:__l="__l" bindcancel="{{az}}" bindconfirm="{{ay}}" uI="50878bb2-12" uP="{{aA}}" wx:if="{{aA}}"></protocol-dialog>
+</view>

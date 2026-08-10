@@ -1,0 +1,99 @@
+<view class="_div mod-LoadIfNews data-v-78677d7d" wx:if="{{a}}">
+  <view class="_div news_title data-v-78677d7d" id="news_title">{{b}}</view>
+  <view class="_div news_description data-v-78677d7d" id="news_description">
+    <label
+      class="{{['_span','news_source','data-v-78677d7d',d]}}"
+      id="news_source"
+      >{{c}}</label
+    >
+    <label
+      class="_span news_time font-numeric-tabular data-v-78677d7d"
+      id="news_time"
+      >{{e}}</label
+    >
+    <label bindtap="{{h}}" class="_span data-v-78677d7d" wx:if="{{f}}">
+      <label class="_span pdf_download data-v-78677d7d" id="pdf_download">
+        <label class="_span icon data-v-78677d7d"></label>
+        <label class="_span text data-v-78677d7d">{{g}}</label>
+      </label>
+    </label>
+  </view>
+  <news-comp-related-stock
+    bind:__l="__l"
+    class="data-v-78677d7d"
+    uI="78677d7d-0"
+    uP="{{j}}"
+    wx:if="{{i}}"
+  ></news-comp-related-stock>
+  <block wx:if="{{k}}">
+    <view class="_div ths_news_text news_text data-v-78677d7d" wx:if="{{l}}">
+      <rich-text class="data-v-78677d7d" nodes="{{m}}"></rich-text>
+    </view>
+    <view class="_div ths_news_text news_text data-v-78677d7d" wx:else></view>
+  </block>
+  <view class="_div news_text data-v-78677d7d" id="news_text" wx:elif="{{n}}">
+    <rich-text class="data-v-78677d7d" nodes="{{o}}"></rich-text>
+  </view>
+  <view class="_div news_text data-v-78677d7d" id="news_text" wx:elif="{{p}}">
+    <view class="_div data-v-78677d7d">
+      <label class="{{['_span','data-v-78677d7d','gonggao',q]}}"
+        >该公告为独立文件:</label
+      >
+      <view class="data-v-78677d7d"></view>
+      <view class="_div blue-btn-double data-v-78677d7d" wx:if="{{r}}">
+        <view bindtap="{{s}}" class="_div original inner-btn data-v-78677d7d"
+          >查看公告原文</view
+        >
+        <view bindtap="{{t}}" class="_div english inner-btn data-v-78677d7d"
+          >查看公告翻译</view
+        >
+      </view>
+      <view class="_div blue-btn-double data-v-78677d7d" wx:elif="{{v}}">
+        <view bindtap="{{x}}" class="_div original inner-btn data-v-78677d7d"
+          >{{w}}</view
+        >
+        <view bindtap="{{z}}" class="_div english inner-btn data-v-78677d7d"
+          >{{y}}</view
+        >
+      </view>
+      <view bindtap="{{B}}" class="_div downLoad data-v-78677d7d" wx:else
+        >{{A}}</view
+      >
+    </view>
+  </view>
+  <view
+    class="_div news-text data-v-78677d7d"
+    id="news-text-wrapper"
+    ref="content"
+    style="{{'margin:'+0}}"
+    wx:elif="{{C}}"
+  >
+    <block wx:for="{{D}}">
+      <view class="_p news-normal data-v-78677d7d" wx:if="{{item.a}}">
+        <rich-text class="data-v-78677d7d" nodes="{{item.b}}"></rich-text>
+      </view>
+      <view class="_p text-h2 data-v-78677d7d" wx:if="{{item.c}}">
+        <rich-text class="data-v-78677d7d" nodes="{{item.d}}"></rich-text>
+      </view>
+      <view class="_div news-table data-v-78677d7d" wx:if="{{item.e}}">
+        <rich-text class="data-v-78677d7d" nodes="{{item.f}}"></rich-text>
+      </view>
+      <view
+        class="_div news-image data-v-78677d7d"
+        data-type="image"
+        wx:if="{{item.g}}"
+      >
+        <image
+          alt=""
+          class="_img data-v-78677d7d"
+          data-preview="1"
+          src="{{item.h}}"
+          style="{{'width:'+item.i+';'+'max-width:'+'100%'}}"
+        ></image>
+      </view>
+    </block>
+  </view>
+  <view class="{{['_div','data-v-78677d7d','footer-note',F]}}">
+    <view class="_div data-v-78677d7d">{{E}}</view>
+  </view>
+</view>

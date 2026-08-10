@@ -1,0 +1,20 @@
+<view class="_div vote-title data-v-1a61b9ae">
+  <view class="_div top-box data-v-1a61b9ae">
+    <view class="{{['_div','data-v-1a61b9ae','icon',a]}}"></view>
+    <view class="_div title-text data-v-1a61b9ae" wx:if="{{b}}">{{c}}</view>
+  </view>
+  <slot name="votetitledesc"></slot>
+  <view class="_div desc data-v-1a61b9ae">
+    <view class="_div count-wrap data-v-1a61b9ae">
+      <view class="_div count data-v-1a61b9ae">{{d}}人参与</view>
+    </view>
+    <view class="_div time data-v-1a61b9ae" wx:if="{{e}}"
+      >还剩<label class="_span time data-v-1a61b9ae" wx:if="{{f}}"
+        >{{g}}天</label
+      >
+      <label class="_span time data-v-1a61b9ae">{{h}}小时</label>
+      <label class="_span time data-v-1a61b9ae">{{i}}分钟</label>
+    </view>
+    <view class="_div time data-v-1a61b9ae" wx:else>已结束</view>
+  </view>
+</view>

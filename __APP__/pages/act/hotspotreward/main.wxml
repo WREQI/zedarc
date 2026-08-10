@@ -1,0 +1,17 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="container" wx:if="{{b}}">
+  <mp-privacy-dialog bind:__l="__l" uI="31ab3fbc-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="31ab3fbc-1"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></stock-privacy-dialog>
+  <zxg-webview
+    bind:__l="__l"
+    bindmessage="{{d}}"
+    uI="31ab3fbc-2"
+    uP="{{e}}"
+    wx:if="{{e}}"
+  ></zxg-webview>
+</view>

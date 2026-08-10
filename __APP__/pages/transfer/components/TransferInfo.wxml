@@ -1,0 +1,52 @@
+<view
+  class="{{['transfer-info-container','flex-between','data-v-a22a1c5d',k]}}"
+>
+  <view class="{{['left','data-v-a22a1c5d',d]}}">
+    <view class="transfer-icon flex-center data-v-a22a1c5d">
+      <bank-logo
+        bind:__l="__l"
+        class="server-bank-logo data-v-a22a1c5d"
+        uI="a22a1c5d-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></bank-logo>
+    </view>
+    <view class="wrapper data-v-a22a1c5d">
+      <view class="text-color-1 fs-30 data-v-a22a1c5d">{{b}}</view>
+      <view class="text-color-5 fs-28 data-v-a22a1c5d">{{c}}</view>
+    </view>
+  </view>
+  <view class="middle align-c data-v-a22a1c5d">
+    <view class="{{['data-v-a22a1c5d',e]}}"></view>
+    <view class="fs-22 text-color-5 transfer-tips data-v-a22a1c5d"
+      >银证转账</view
+    >
+  </view>
+  <view class="{{['right','data-v-a22a1c5d',j]}}">
+    <view class="transfer-icon data-v-a22a1c5d">
+      <image
+        alt=""
+        class="avatar data-v-a22a1c5d"
+        src="{{g}}"
+        wx:if="{{f}}"
+      ></image>
+      <label class="transfer-icon avatar data-v-a22a1c5d" wx:else>
+        <broker-logo
+          bind:__l="__l"
+          class="data-v-a22a1c5d"
+          uI="a22a1c5d-1"
+        ></broker-logo>
+      </label>
+    </view>
+    <view class="wrapper data-v-a22a1c5d">
+      <view class="text-color-1 fs-30 data-v-a22a1c5d" wx:if="{{h}}"
+        >证券账户</view
+      >
+      <view class="flex-vcenter data-v-a22a1c5d" wx:else>
+        <view class="text-color-1 fs-30 data-v-a22a1c5d">信用账户</view>
+        <view class="margin-tag flex-center data-v-a22a1c5d">融</view>
+      </view>
+      <view class="text-color-5 fs-28 data-v-a22a1c5d">**{{i}}</view>
+    </view>
+  </view>
+</view>

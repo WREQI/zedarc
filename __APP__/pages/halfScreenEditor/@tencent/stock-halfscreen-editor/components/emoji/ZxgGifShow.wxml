@@ -1,0 +1,10 @@
+<view class="_div panel-area">
+  <view class="_div gpanel">
+    <view class="_div gif_block" wx:for="{{a}}" wx:key="d">
+      <view catchtap="{{item.c}}" class="_div btn_block">
+        <view class="{{['_div','gif_btn',item.a]}}"></view>
+        <view class="_div gif_txt">{{item.b}}</view>
+      </view>
+    </view>
+  </view>
+</view>

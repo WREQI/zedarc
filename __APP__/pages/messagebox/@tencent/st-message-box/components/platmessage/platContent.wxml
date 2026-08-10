@@ -1,0 +1,38 @@
+<view class="_div plat-content data-v-6d7327f8">
+  <message-empty
+    bind:__l="__l"
+    class="data-v-6d7327f8"
+    uI="6d7327f8-0"
+    wx:if="{{a}}"
+  ></message-empty>
+  <block wx:else>
+    <plat-item
+      bind:__l="__l"
+      class="data-v-6d7327f8"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:for="{{b}}"
+      wx:key="a"
+    ></plat-item>
+    <view class="_div tx-logo data-v-6d7327f8">
+      <image
+        alt=""
+        class="_img logo-icon data-v-6d7327f8"
+        src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+        wx:if="{{c}}"
+      ></image>
+      <image
+        alt=""
+        class="_img logo-icon pro data-v-6d7327f8"
+        src="https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png"
+        wx:elif="{{d}}"
+      ></image>
+      <image
+        alt=""
+        class="_img logo-icon pro data-v-6d7327f8"
+        src="https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png"
+        wx:else
+      ></image>
+    </view>
+  </block>
+</view>

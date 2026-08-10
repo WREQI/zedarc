@@ -1,0 +1,46 @@
+<view class="{{['_div','message-clear-and-entry','data-v-d94a9963',j]}}">
+  <message-clear
+    bind:__l="__l"
+    bindclearAll="{{b}}"
+    class="data-v-d94a9963"
+    uI="d94a9963-0"
+    wx:if="{{a}}"
+  ></message-clear>
+  <message-clear-mp
+    bind:__l="__l"
+    bindclearAll="{{d}}"
+    class="data-v-d94a9963"
+    uI="d94a9963-1"
+    wx:elif="{{c}}"
+  ></message-clear-mp>
+  <view class="{{['_div','message-entry-container','data-v-d94a9963',f,g,h]}}">
+    <view
+      bindtap="{{item.j}}"
+      class="_div message-item data-v-d94a9963"
+      wx:for="{{e}}"
+      wx:key="i"
+    >
+      <view class="_div icon-wrapper data-v-d94a9963">
+        <view class="{{['_div','icon-icon-bg-dd','data-v-d94a9963',item.c]}}">
+          <image
+            alt=""
+            class="{{['_img','icon-icon','data-v-d94a9963',item.b]}}"
+            src="{{item.a}}"
+          ></image>
+        </view>
+        <view class="{{[item.e,'_div','icon-text','data-v-d94a9963']}}"
+          >{{item.d}}</view
+        >
+        <view class="{{['_div','data-v-d94a9963',item.f]}}"></view>
+      </view>
+      <red-point-num
+        bind:__l="__l"
+        class="data-v-d94a9963"
+        uI="{{item.g}}"
+        uP="{{item.h}}"
+        wx:if="{{item.h}}"
+      ></red-point-num>
+    </view>
+  </view>
+  <slot name="trade-entry" wx:if="{{i}}"></slot>
+</view>

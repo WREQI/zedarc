@@ -1,0 +1,89 @@
+<view class="{{['_div','list-container','data-v-43c86cff',e]}}">
+  <view class="{{['_div','list-header','data-v-43c86cff',b]}}">
+    <view
+      bindtap="{{column.q}}"
+      class="{{['_div','col-item','data-v-43c86cff',column.m,column.n,column.o,column.p]}}"
+      wx:for="{{a}}"
+      wx:for-item="column"
+      wx:key="l"
+    >
+      <view
+        class="{{['_div','col-label','data-v-43c86cff',column.e,column.f]}}"
+      >
+        <view class="{{['_div','data-v-43c86cff',column.b]}}"
+          >{{column.a}}</view
+        >
+        <view class="_div data-v-43c86cff" wx:if="{{column.c}}"
+          >{{column.d}}</view
+        >
+      </view>
+      <view class="_div sorter data-v-43c86cff" wx:if="{{column.g}}">
+        <view
+          class="{{['_div','sort-arrow','up','data-v-43c86cff',column.h]}}"
+        ></view>
+        <view
+          class="{{['_div','sort-arrow','down','data-v-43c86cff',column.i]}}"
+        ></view>
+      </view>
+      <view
+        catchtap="{{column.k}}"
+        class="_div icon icon-italic-info data-v-43c86cff"
+        wx:if="{{column.j}}"
+      ></view>
+    </view>
+  </view>
+  <view class="_div data-v-43c86cff">
+    <view class="_div list-body data-v-43c86cff">
+      <view
+        bindtap="{{item.d}}"
+        bindtouchend="{{item.f}}"
+        bindtouchstart="{{item.e}}"
+        class="{{['_div','list-item-wrap','data-v-43c86cff',d]}}"
+        wx:for="{{c}}"
+        wx:key="c"
+      >
+        <view class="{{['_div','list-item','data-v-43c86cff',item.b]}}">
+          <view
+            class="{{['_div','col-item','data-v-43c86cff',column.m,column.n,column.o]}}"
+            wx:for="{{item.a}}"
+            wx:for-item="column"
+            wx:key="l"
+          >
+            <block wx:if="{{column.a}}">
+              <view
+                class="{{['_div','col-text-1','data-v-43c86cff',column.c,'row-2']}}"
+                >{{column.b}}</view
+              >
+              <view class="_div flex-vcenter data-v-43c86cff">
+                <market-icon-sprite
+                  bind:__l="__l"
+                  class="market-icon data-v-43c86cff"
+                  uI="{{column.d}}"
+                  uP="{{column.e}}"
+                  wx:if="{{column.e}}"
+                ></market-icon-sprite>
+                <view class="_div col-text-2 data-v-43c86cff"
+                  >{{column.f}}</view
+                >
+              </view>
+            </block>
+            <view
+              catchtap="{{column.i}}"
+              class="{{['_div','check-icon','data-v-43c86cff',column.h]}}"
+              wx:elif="{{column.g}}"
+            ></view>
+            <block wx:else>
+              <view
+                class="{{['_div','data-v-43c86cff',field.c,column.k,field.d,field.e]}}"
+                wx:for="{{column.j}}"
+                wx:for-item="field"
+                wx:key="b"
+                >{{field.a}}</view
+              >
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

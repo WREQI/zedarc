@@ -1,0 +1,13 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<hot-topic-list-page
+  bind:__l="__l"
+  bindscroll="{{b}}"
+  uI="23f229e0-0"
+></hot-topic-list-page>
+<mp-privacy-dialog bind:__l="__l" uI="23f229e0-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="23f229e0-2"
+  uP="{{c}}"
+  wx:if="{{c}}"
+></stock-privacy-dialog>

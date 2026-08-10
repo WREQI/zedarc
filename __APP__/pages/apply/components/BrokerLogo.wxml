@@ -1,0 +1,7 @@
+<view
+  class="{{['broker-logo-icon',c]}}"
+  style="{{'width:'+d+';'+'height:'+e}}"
+  wx:if="{{a}}"
+>
+  <image alt="" class="_img broker-logo-img" src="{{b}}"></image>
+</view>

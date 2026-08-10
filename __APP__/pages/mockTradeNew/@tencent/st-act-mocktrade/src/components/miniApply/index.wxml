@@ -1,0 +1,79 @@
+<view class="_div mini-apply-wrapper data-v-5e0720fa">
+  <semi-mask
+    bind:__l="__l"
+    bindcloseSemimask="{{s}}"
+    class="mini-apply-sheet r data-v-5e0720fa"
+    data-c-h="{{!r}}"
+    uI="5e0720fa-0"
+    uR="semimask"
+    uS="{{['d']}}"
+  >
+    <view class="_div mock-trade-container data-v-5e0720fa">
+      <view class="_div header data-v-5e0720fa">
+        <view
+          bindtap="{{b}}"
+          class="_div back-btn data-v-5e0720fa"
+          wx:if="{{a}}"
+        >
+          <image
+            alt="close"
+            class="_img back-btn-img data-v-5e0720fa"
+            src="https://st.gtimg.com/design/e5e2c7e571ebb7de29a3859b9423d87b.svg"
+          ></image>
+        </view>
+        <view class="_div title data-v-5e0720fa">模拟交易</view>
+        <view bindtap="{{c}}" class="_div close-btn data-v-5e0720fa">
+          <image
+            alt="close"
+            class="_img close-btn-img data-v-5e0720fa"
+            src="https://st.gtimg.com/design/4cc4653db51dc4df382dfd38fcd329c1.svg"
+          ></image>
+        </view>
+      </view>
+      <trade-component
+        bind:__l="__l"
+        bindchangeTradeType="{{e}}"
+        bindfundInsufficient="{{g}}"
+        bindshow="{{f}}"
+        class="trade-component r data-v-5e0720fa"
+        data-c-h="{{!h}}"
+        uI="5e0720fa-1,5e0720fa-0"
+        uP="{{i}}"
+        uR="tradeComponentRef"
+        wx:if="{{i}}"
+      ></trade-component>
+      <confirm-component
+        bind:__l="__l"
+        bindsubmitOrderFinish="{{k}}"
+        class="comfirm-component data-v-5e0720fa"
+        data-c-h="{{!j}}"
+        uI="5e0720fa-2,5e0720fa-0"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></confirm-component>
+      <finish-component
+        bind:__l="__l"
+        bindbackTrade="{{n}}"
+        bindcloseSemimask="{{o}}"
+        class="finish-component data-v-5e0720fa"
+        data-c-h="{{!m}}"
+        uI="5e0720fa-3,5e0720fa-0"
+        uP="{{p}}"
+        wx:if="{{p}}"
+      ></finish-component>
+    </view>
+  </semi-mask>
+  <info-modal
+    bind:__l="__l"
+    bindclose="{{z}}"
+    class="data-v-5e0720fa"
+    uI="5e0720fa-4"
+    uP="{{A}}"
+    uS="{{['d']}}"
+    wx:if="{{t}}"
+  >
+    <block wx:if="{{v}}"
+      >资金不足，交易可用资金相差{{w}}元（含预估手续费{{x}}元），当前最大可买{{y}}股</block
+    >
+  </info-modal>
+</view>

@@ -1,0 +1,1189 @@
+{
+  "plugins": {
+    "captcha": {
+      "version": "2.1.3",
+      "provider": "wx1fe8d9a3cb067a75",
+      "subpackage": "/pages/account/"
+    },
+    "tencentvideo": {
+      "version": "2.6.1",
+      "provider": "wxa75efa648b60994b",
+      "subpackage": "/pages/information/"
+    },
+    "QCloudAIVoice": {
+      "version": "2.2.6",
+      "provider": "wx3e17776051baf153",
+      "subpackage": "/pages/searchAi/"
+    },
+    "zhaoshang-trade": {
+      "version": "0.3.50",
+      "provider": "wx821cd4a621f449e7",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/zhaoshang/"
+    },
+    "hualin-trade": {
+      "version": "0.3.45",
+      "provider": "wx8c0059a9f61679d1",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/hualin/"
+    },
+    "guoxin-trade": {
+      "version": "1.0.21",
+      "provider": "wx5e94b5ebebe246b0",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/guoxin/"
+    },
+    "guojin-trade": {
+      "version": "1.0.29",
+      "provider": "wx93273579df1046e3",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/guojin/"
+    },
+    "zhongjincaifu-trade": {
+      "version": "1.0.84",
+      "provider": "wxe1e9715c9b3f7904",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/zhongjincaifu/"
+    },
+    "guangfa-trade": {
+      "version": "1.0.17",
+      "provider": "wx8d36debd2261346f",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/guangfa/"
+    },
+    "zhongxinjiantou-trade": {
+      "version": "1.0.28",
+      "provider": "wx8182de72a1713fb5",
+      "export": "exports/plugin.js",
+      "genericsImplementation": {
+        "webview-index": {
+          "main-webview": "/components/webView"
+        }
+      },
+      "subpackage": "/pages/zhongxinjiantou/"
+    }
+  },
+  "resizable": true,
+  "preloadRule": {
+    "pages/quote/quote": {
+      "network": "all",
+      "packages": [
+        "pages/detailSbg",
+        "pages/newsCon",
+        "pages/newsSbg",
+        "pages/searchAi",
+        "pages/comment",
+        "pages/marketSbg"
+      ]
+    },
+    "pages/index/market": {
+      "network": "all",
+      "packages": [
+        "pages/marketSbg"
+      ]
+    },
+    "pages/index/account/main": {
+      "network": "all",
+      "packages": [
+        "pages/messagebox",
+        "pages/square",
+        "pages/account",
+        "pages/guessRiseFall",
+        "pages/mockTradeNew"
+      ]
+    },
+    "pages/index/information/main": {
+      "network": "all",
+      "packages": []
+    },
+    "pages/newsCon/newsDetail/main": {
+      "network": "all",
+      "packages": []
+    },
+    "pages/report/AIFinancial/index": {
+      "network": "all",
+      "packages": [
+        "pages/newsCon"
+      ]
+    },
+    "pages/additional/search/main": {
+      "network": "all",
+      "packages": [
+        "pages/searchAi",
+        "pages/quote"
+      ]
+    },
+    "pages/additional/search/stockSelect": {
+      "network": "all",
+      "packages": []
+    },
+    "pages/discover/event/detail": {
+      "network": "all",
+      "packages": [
+        "pages/searchAi"
+      ]
+    },
+    "independentpack/webview/index": {
+      "network": "all",
+      "packages": [
+        "pages/broker",
+        "pages/quote"
+      ]
+    },
+    "pages/market/pages/index": {
+      "network": "all",
+      "packages": [
+        "pages/marketDx",
+        "pages/marketSbg"
+      ]
+    },
+    "pages/act/webview/main": {
+      "network": "all",
+      "packages": [
+        "pages/quote",
+        "pages/searchAi",
+        "pages/report",
+        "pages/newsCon",
+        "pages/comment",
+        "pages/additional",
+        "pages/broker"
+      ]
+    },
+    "pages/yy/ams": {
+      "network": "all",
+      "packages": [
+        "pages/quote",
+        "pages/additional",
+        "pages/newsCon",
+        "pages/apply",
+        "pages/broker"
+      ]
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "accountCardPackage": {
+    "root": "accountCardPackage/",
+    "cardList": [
+      {
+        "type": 5007,
+        "componentPath": "securitiesAccountCard/index"
+      }
+    ]
+  },
+  "componentFramework": "exparser",
+  "tabBar": {
+    "custom": false,
+    "selectedColor": "#262E40",
+    "list": [
+      {
+        "pagePath": "pages/index/information/main",
+        "text": "新闻",
+        "iconPath": "static/nav/info1.png",
+        "selectedIconPath": "static/nav/info.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "自选",
+        "iconPath": "static/nav/zx1.png",
+        "selectedIconPath": "static/nav/zx.png"
+      },
+      {
+        "pagePath": "pages/index/market",
+        "text": "行情",
+        "iconPath": "static/nav/hq1.png",
+        "selectedIconPath": "static/nav/hq.png"
+      },
+      {
+        "pagePath": "pages/index/trade",
+        "text": "交易",
+        "iconPath": "static/nav/zc1.png",
+        "selectedIconPath": "static/nav/zc.png"
+      },
+      {
+        "pagePath": "pages/index/account/main",
+        "text": "我的",
+        "iconPath": "static/nav/me1.png",
+        "selectedIconPath": "static/nav/me.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/stockBasket/",
+      "pages": [
+        "square",
+        "stock-basket-list",
+        "detail",
+        "updateHistory"
+      ]
+    },
+    {
+      "root": "pages/asyncCom/",
+      "pages": [
+        "components/privpopup"
+      ]
+    },
+    {
+      "root": "pages/noaccount/",
+      "pages": [
+        "index",
+        "textImage/TextImage"
+      ]
+    },
+    {
+      "root": "pages/detailSbg/",
+      "pages": [
+        "index",
+        "jgrate",
+        "event_detail",
+        "hydb",
+        "cpyBuyback",
+        "dzjy_detail",
+        "remindStock/index",
+        "remindStock/remindList",
+        "jgpjDetail",
+        "financeFileList",
+        "gudongList",
+        "FhspDetail",
+        "indicatorSetting",
+        "klineSetting",
+        "chartSettingAvg",
+        "chartSettingParams",
+        "EtfBaseDetail",
+        "ownerListDetail",
+        "rzrqDetail",
+        "rankDetail",
+        "finance/cbzyDetail",
+        "gshgDetail"
+      ]
+    },
+    {
+      "root": "pages/quote/",
+      "pages": [
+        "quote",
+        "rotateDetail",
+        "tradeLineIntro",
+        "empty"
+      ]
+    },
+    {
+      "root": "pages/market/",
+      "pages": [
+        "pages/index",
+        "pages/PlateList",
+        "pages/ETFPage",
+        "pages/ETFRankPage",
+        "pages/TRankPage",
+        "pages/T0TradingZonePage",
+        "pages/HsIndexEtf",
+        "pages/ETFPage/buyIndexLanding",
+        "pages/ETFPage/etfhotlist",
+        "pages/ETFPage/etfhotspotdetail",
+        "pages/ETFPage/etfzonebonus",
+        "pages/ETFPage/etfhotsearch",
+        "pages/ETFPage/globalInvest",
+        "pages/ETFPage/globalMarket",
+        "pages/ETFPage/longTermInvestment",
+        "pages/HotEtf",
+        "pages/NationalDebtDetail",
+        "pages/CommonView",
+        "pages/NewPublishETF",
+        "pages/NewPubETFTeach"
+      ]
+    },
+    {
+      "root": "pages/account/",
+      "plugins": {
+        "captcha": {
+          "version": "2.1.3",
+          "provider": "wx1fe8d9a3cb067a75",
+          "subpackage": "/pages/account/"
+        }
+      },
+      "pages": [
+        "about",
+        "setting",
+        "privateSetting",
+        "skin/main",
+        "aiSetting",
+        "recover/main",
+        "protocol",
+        "cancellation/apply",
+        "cancellation/query",
+        "cancellation/detail",
+        "cancellation/detailZhuxiao",
+        "cancellation/confirm",
+        "switch",
+        "applyrecords"
+      ]
+    },
+    {
+      "root": "pages/profileCom/",
+      "pages": [
+        "brokerAccount",
+        "history",
+        "cardSetting"
+      ]
+    },
+    {
+      "root": "pages/common/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/stock-widget/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/information/",
+      "plugins": {
+        "tencentvideo": {
+          "version": "2.6.1",
+          "provider": "wxa75efa648b60994b",
+          "subpackage": "/pages/information/"
+        }
+      },
+      "pages": [
+        "index",
+        "NewsColumnEdit"
+      ]
+    },
+    {
+      "root": "pages/newsCon/",
+      "pages": [
+        "newsDetail/main",
+        "topic/main",
+        "video/videoDetail",
+        "tsyb/index"
+      ]
+    },
+    {
+      "root": "pages/video/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/live/",
+      "pages": [
+        "liveDetail"
+      ]
+    },
+    {
+      "root": "pages/searchAi/",
+      "plugins": {
+        "QCloudAIVoice": {
+          "version": "2.2.6",
+          "provider": "wx3e17776051baf153",
+          "subpackage": "/pages/searchAi/"
+        }
+      },
+      "pages": [
+        "main",
+        "share",
+        "strategy",
+        "jgpjDetail"
+      ]
+    },
+    {
+      "root": "pages/marketHeadline/",
+      "name": "information_marketHeadline",
+      "pages": [
+        "List"
+      ]
+    },
+    {
+      "root": "pages/report/",
+      "pages": [
+        "morning/main",
+        "daily/main",
+        "AIFinancial/index",
+        "AIFinancial/list",
+        "AIFinancial/search"
+      ]
+    },
+    {
+      "root": "pages/reportFinancialSbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/investment/",
+      "pages": [
+        "calendar"
+      ]
+    },
+    {
+      "root": "pages/reportSbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/newsColumn/",
+      "pages": [
+        "ChooseNews"
+      ]
+    },
+    {
+      "root": "pages/newsSbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/commentSbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/communitySbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/comment/",
+      "pages": [
+        "comment",
+        "topicDetail",
+        "feedbackDetail",
+        "detailView/main",
+        "personal/main",
+        "edit/edit"
+      ]
+    },
+    {
+      "root": "pages/discover/",
+      "pages": [
+        "flash/main",
+        "wx-top-news/main",
+        "event/detail"
+      ]
+    },
+    {
+      "root": "pages/square/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/additional/",
+      "pages": [
+        "search/main",
+        "search/stockSelect",
+        "search/hot_stock/main",
+        "webview/index",
+        "topicPlaza/topicPlaza",
+        "search/imgOcr"
+      ]
+    },
+    {
+      "root": "pages/stock/",
+      "pages": [
+        "report",
+        "shareholder",
+        "holder_us",
+        "detail_hr",
+        "detail_change",
+        "detail_buyback"
+      ]
+    },
+    {
+      "root": "pages/strategy/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/guessRiseFall/",
+      "pages": [
+        "main",
+        "guest/main"
+      ]
+    },
+    {
+      "root": "pages/apply/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/forbidden/",
+      "pages": [
+        "webview"
+      ]
+    },
+    {
+      "root": "pages/mockTradeNew/",
+      "pages": [
+        "home/index",
+        "rank/index",
+        "deal/index",
+        "rule/index",
+        "hot/index",
+        "result/index"
+      ]
+    },
+    {
+      "root": "pages/act/",
+      "pages": [
+        "navigateToMp/main",
+        "webview/main",
+        "holidayreward/main",
+        "hotspotreward/main",
+        "oldwithnew/main",
+        "transition/main",
+        "wx_subscribe",
+        "investcalendar/main",
+        "investcalendar/detail",
+        "channelcooperation/main"
+      ]
+    },
+    {
+      "root": "pages/broker/",
+      "pages": [
+        "transfer",
+        "system/error",
+        "preloadplugin"
+      ]
+    },
+    {
+      "root": "pages/zhaoshang/",
+      "plugins": {
+        "zhaoshang-trade": {
+          "version": "0.3.50",
+          "provider": "wx821cd4a621f449e7",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/zhaoshang/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx821cd4a621f449e7/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx821cd4a621f449e7/platforms/mp-weixin/webview/index",
+        "__plugin__/wx821cd4a621f449e7/pages/asset/index",
+        "__plugin__/wx821cd4a621f449e7/pages/asset/all",
+        "__plugin__/wx821cd4a621f449e7/pages/asset/currency-setting",
+        "__plugin__/wx821cd4a621f449e7/pages/account/bind",
+        "__plugin__/wx821cd4a621f449e7/pages/account/find-account",
+        "__plugin__/wx821cd4a621f449e7/pages/account/personal",
+        "__plugin__/wx821cd4a621f449e7/pages/account/safesetting",
+        "__plugin__/wx821cd4a621f449e7/pages/account/switching",
+        "__plugin__/wx821cd4a621f449e7/pages/account/detail",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/guide",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/bindmobile",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/idcard",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/profile",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/bindcard",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/bankpwd",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/setpwd",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/risktest",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/submit",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/pre-review",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/progress",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/recover",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/facecheck",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/video",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/advisory",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/questionnaire",
+        "__plugin__/wx821cd4a621f449e7/pages/apply/take-photo",
+        "__plugin__/wx821cd4a621f449e7/pages/biz/pwd-reset/form",
+        "__plugin__/wx821cd4a621f449e7/pages/debt/index",
+        "__plugin__/wx821cd4a621f449e7/pages/debt/auto-order",
+        "__plugin__/wx821cd4a621f449e7/pages/newstock/index",
+        "__plugin__/wx821cd4a621f449e7/pages/newstock/result",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/stock",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/stock-new",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/stock-embedded",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/history",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/detail",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/debt",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/debt/result",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/protocol",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/ca-validation",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/index",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/detail",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/grid",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/tpsl",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/price",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/invest",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/limit-up",
+        "__plugin__/wx821cd4a621f449e7/pages/trade/condition/opening-sell",
+        "__plugin__/wx821cd4a621f449e7/pages/transfer/fund",
+        "__plugin__/wx821cd4a621f449e7/pages/transfer/history",
+        "__plugin__/wx821cd4a621f449e7/pages/transfer/fund/records",
+        "__plugin__/wx821cd4a621f449e7/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/hualin/",
+      "plugins": {
+        "hualin-trade": {
+          "version": "0.3.45",
+          "provider": "wx8c0059a9f61679d1",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/hualin/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/webview/index",
+        "__plugin__/wx8c0059a9f61679d1/pages/asset/index",
+        "__plugin__/wx8c0059a9f61679d1/pages/asset/all",
+        "__plugin__/wx8c0059a9f61679d1/pages/asset/currency-setting",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/bind",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/find-account",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/personal",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/safesetting",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/switching",
+        "__plugin__/wx8c0059a9f61679d1/pages/account/detail",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/guide",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/bindmobile",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/idcard",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/profile",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/bindcard",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/bankpwd",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/setpwd",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/risktest",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/submit",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/pre-review",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/progress",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/recover",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/facecheck",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/video",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/advisory",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/questionnaire",
+        "__plugin__/wx8c0059a9f61679d1/pages/apply/take-photo",
+        "__plugin__/wx8c0059a9f61679d1/pages/biz/pwd-reset/form",
+        "__plugin__/wx8c0059a9f61679d1/pages/debt/index",
+        "__plugin__/wx8c0059a9f61679d1/pages/debt/auto-order",
+        "__plugin__/wx8c0059a9f61679d1/pages/newstock/index",
+        "__plugin__/wx8c0059a9f61679d1/pages/newstock/result",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/stock",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-new",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-embedded",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/history",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/detail",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/debt",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/debt/result",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/protocol",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/ca-validation",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/index",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/detail",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/grid",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/tpsl",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/price",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/invest",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/limit-up",
+        "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/opening-sell",
+        "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund",
+        "__plugin__/wx8c0059a9f61679d1/pages/transfer/history",
+        "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/records",
+        "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/guoxin/",
+      "plugins": {
+        "guoxin-trade": {
+          "version": "1.0.21",
+          "provider": "wx5e94b5ebebe246b0",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/guoxin/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx5e94b5ebebe246b0/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx5e94b5ebebe246b0/platforms/mp-weixin/webview/index",
+        "__plugin__/wx5e94b5ebebe246b0/pages/asset/index",
+        "__plugin__/wx5e94b5ebebe246b0/pages/asset/all",
+        "__plugin__/wx5e94b5ebebe246b0/pages/asset/currency-setting",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/bind",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/find-account",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/personal",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/safesetting",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/switching",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/detail",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/ts-bind-phone",
+        "__plugin__/wx5e94b5ebebe246b0/pages/account/ts-bind-account",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/guide",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/bindmobile",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/idcard",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/profile",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/bindcard",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/bankpwd",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/setpwd",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/risktest",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/submit",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/progress",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/recover",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/facecheck",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/video",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/advisory",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/questionnaire",
+        "__plugin__/wx5e94b5ebebe246b0/pages/apply/take-photo",
+        "__plugin__/wx5e94b5ebebe246b0/pages/biz/pwd-reset/form",
+        "__plugin__/wx5e94b5ebebe246b0/pages/debt/index",
+        "__plugin__/wx5e94b5ebebe246b0/pages/debt/auto-order",
+        "__plugin__/wx5e94b5ebebe246b0/pages/newstock/index",
+        "__plugin__/wx5e94b5ebebe246b0/pages/newstock/result",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/stock",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/stock-new",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/stock-embedded",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/history",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/detail",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/debt",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/debt/result",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/protocol",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/ca-validation",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/index",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/detail",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/grid",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/tpsl",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/price",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/invest",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/limit-up",
+        "__plugin__/wx5e94b5ebebe246b0/pages/trade/condition/opening-sell",
+        "__plugin__/wx5e94b5ebebe246b0/pages/transfer/fund",
+        "__plugin__/wx5e94b5ebebe246b0/pages/transfer/history",
+        "__plugin__/wx5e94b5ebebe246b0/pages/transfer/fund/records",
+        "__plugin__/wx5e94b5ebebe246b0/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/guojin/",
+      "plugins": {
+        "guojin-trade": {
+          "version": "1.0.29",
+          "provider": "wx93273579df1046e3",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/guojin/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx93273579df1046e3/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx93273579df1046e3/platforms/mp-weixin/webview/index",
+        "__plugin__/wx93273579df1046e3/pages/asset/index",
+        "__plugin__/wx93273579df1046e3/pages/asset/all",
+        "__plugin__/wx93273579df1046e3/pages/asset/currency-setting",
+        "__plugin__/wx93273579df1046e3/pages/account/bind",
+        "__plugin__/wx93273579df1046e3/pages/account/find-account",
+        "__plugin__/wx93273579df1046e3/pages/account/personal",
+        "__plugin__/wx93273579df1046e3/pages/account/safesetting",
+        "__plugin__/wx93273579df1046e3/pages/account/switching",
+        "__plugin__/wx93273579df1046e3/pages/account/detail",
+        "__plugin__/wx93273579df1046e3/pages/account/ts-bind-phone",
+        "__plugin__/wx93273579df1046e3/pages/account/ts-bind-account",
+        "__plugin__/wx93273579df1046e3/pages/apply/guide",
+        "__plugin__/wx93273579df1046e3/pages/apply/bindmobile",
+        "__plugin__/wx93273579df1046e3/pages/apply/idcard",
+        "__plugin__/wx93273579df1046e3/pages/apply/profile",
+        "__plugin__/wx93273579df1046e3/pages/apply/bindcard",
+        "__plugin__/wx93273579df1046e3/pages/apply/bankpwd",
+        "__plugin__/wx93273579df1046e3/pages/apply/setpwd",
+        "__plugin__/wx93273579df1046e3/pages/apply/risktest",
+        "__plugin__/wx93273579df1046e3/pages/apply/submit",
+        "__plugin__/wx93273579df1046e3/pages/apply/progress",
+        "__plugin__/wx93273579df1046e3/pages/apply/recover",
+        "__plugin__/wx93273579df1046e3/pages/apply/facecheck",
+        "__plugin__/wx93273579df1046e3/pages/apply/video",
+        "__plugin__/wx93273579df1046e3/pages/apply/advisory",
+        "__plugin__/wx93273579df1046e3/pages/apply/questionnaire",
+        "__plugin__/wx93273579df1046e3/pages/apply/take-photo",
+        "__plugin__/wx93273579df1046e3/pages/biz/pwd-reset/form",
+        "__plugin__/wx93273579df1046e3/pages/debt/index",
+        "__plugin__/wx93273579df1046e3/pages/debt/auto-order",
+        "__plugin__/wx93273579df1046e3/pages/newstock/index",
+        "__plugin__/wx93273579df1046e3/pages/newstock/result",
+        "__plugin__/wx93273579df1046e3/pages/trade/stock",
+        "__plugin__/wx93273579df1046e3/pages/trade/stock-new",
+        "__plugin__/wx93273579df1046e3/pages/trade/stock-embedded",
+        "__plugin__/wx93273579df1046e3/pages/trade/history",
+        "__plugin__/wx93273579df1046e3/pages/trade/detail",
+        "__plugin__/wx93273579df1046e3/pages/trade/debt",
+        "__plugin__/wx93273579df1046e3/pages/trade/debt/result",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/protocol",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/ca-validation",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/index",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/detail",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/grid",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/tpsl",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/price",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/invest",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/limit-up",
+        "__plugin__/wx93273579df1046e3/pages/trade/condition/opening-sell",
+        "__plugin__/wx93273579df1046e3/pages/transfer/fund",
+        "__plugin__/wx93273579df1046e3/pages/transfer/history",
+        "__plugin__/wx93273579df1046e3/pages/transfer/fund/records",
+        "__plugin__/wx93273579df1046e3/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/zhongjincaifu/",
+      "plugins": {
+        "zhongjincaifu-trade": {
+          "version": "1.0.84",
+          "provider": "wxe1e9715c9b3f7904",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/zhongjincaifu/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wxe1e9715c9b3f7904/platforms/mp-weixin/plugin-component",
+        "__plugin__/wxe1e9715c9b3f7904/platforms/mp-weixin/webview/index",
+        "__plugin__/wxe1e9715c9b3f7904/pages/asset/index",
+        "__plugin__/wxe1e9715c9b3f7904/pages/asset/all",
+        "__plugin__/wxe1e9715c9b3f7904/pages/asset/currency-setting",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/bind",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/find-account",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/personal",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/safesetting",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/switching",
+        "__plugin__/wxe1e9715c9b3f7904/pages/account/detail",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/guide",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/bindmobile",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/idcard",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/profile",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/bindcard",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/bankpwd",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/setpwd",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/risktest",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/submit",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/pre-review",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/progress",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/recover",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/facecheck",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/video",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/advisory",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/questionnaire",
+        "__plugin__/wxe1e9715c9b3f7904/pages/apply/take-photo",
+        "__plugin__/wxe1e9715c9b3f7904/pages/biz/pwd-reset/form",
+        "__plugin__/wxe1e9715c9b3f7904/pages/biz/broker-service/half-chart",
+        "__plugin__/wxe1e9715c9b3f7904/pages/debt/index",
+        "__plugin__/wxe1e9715c9b3f7904/pages/debt/auto-order",
+        "__plugin__/wxe1e9715c9b3f7904/pages/newstock/index",
+        "__plugin__/wxe1e9715c9b3f7904/pages/newstock/result",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/stock",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/stock-new",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/stock-embedded",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/history",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/detail",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/debt",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/debt/result",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/protocol",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/ca-validation",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/index",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/detail",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/grid",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/tpsl",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/price",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/invest",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/limit-up",
+        "__plugin__/wxe1e9715c9b3f7904/pages/trade/condition/opening-sell",
+        "__plugin__/wxe1e9715c9b3f7904/pages/transfer/fund",
+        "__plugin__/wxe1e9715c9b3f7904/pages/transfer/history",
+        "__plugin__/wxe1e9715c9b3f7904/pages/transfer/fund/records",
+        "__plugin__/wxe1e9715c9b3f7904/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/guangfa/",
+      "plugins": {
+        "guangfa-trade": {
+          "version": "1.0.17",
+          "provider": "wx8d36debd2261346f",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/guangfa/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx8d36debd2261346f/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx8d36debd2261346f/platforms/mp-weixin/webview/index",
+        "__plugin__/wx8d36debd2261346f/pages/asset/index",
+        "__plugin__/wx8d36debd2261346f/pages/asset/all",
+        "__plugin__/wx8d36debd2261346f/pages/asset/currency-setting",
+        "__plugin__/wx8d36debd2261346f/pages/account/bind",
+        "__plugin__/wx8d36debd2261346f/pages/account/find-account",
+        "__plugin__/wx8d36debd2261346f/pages/account/personal",
+        "__plugin__/wx8d36debd2261346f/pages/account/safesetting",
+        "__plugin__/wx8d36debd2261346f/pages/account/switching",
+        "__plugin__/wx8d36debd2261346f/pages/account/detail",
+        "__plugin__/wx8d36debd2261346f/pages/apply/guide",
+        "__plugin__/wx8d36debd2261346f/pages/apply/bindmobile",
+        "__plugin__/wx8d36debd2261346f/pages/apply/idcard",
+        "__plugin__/wx8d36debd2261346f/pages/apply/profile",
+        "__plugin__/wx8d36debd2261346f/pages/apply/bindcard",
+        "__plugin__/wx8d36debd2261346f/pages/apply/bankpwd",
+        "__plugin__/wx8d36debd2261346f/pages/apply/setpwd",
+        "__plugin__/wx8d36debd2261346f/pages/apply/risktest",
+        "__plugin__/wx8d36debd2261346f/pages/apply/submit",
+        "__plugin__/wx8d36debd2261346f/pages/apply/progress",
+        "__plugin__/wx8d36debd2261346f/pages/apply/recover",
+        "__plugin__/wx8d36debd2261346f/pages/apply/facecheck",
+        "__plugin__/wx8d36debd2261346f/pages/apply/video",
+        "__plugin__/wx8d36debd2261346f/pages/apply/advisory",
+        "__plugin__/wx8d36debd2261346f/pages/apply/questionnaire",
+        "__plugin__/wx8d36debd2261346f/pages/apply/take-photo",
+        "__plugin__/wx8d36debd2261346f/pages/biz/pwd-reset/form",
+        "__plugin__/wx8d36debd2261346f/pages/debt/index",
+        "__plugin__/wx8d36debd2261346f/pages/debt/auto-order",
+        "__plugin__/wx8d36debd2261346f/pages/newstock/index",
+        "__plugin__/wx8d36debd2261346f/pages/newstock/result",
+        "__plugin__/wx8d36debd2261346f/pages/trade/stock",
+        "__plugin__/wx8d36debd2261346f/pages/trade/stock-new",
+        "__plugin__/wx8d36debd2261346f/pages/trade/stock-embedded",
+        "__plugin__/wx8d36debd2261346f/pages/trade/history",
+        "__plugin__/wx8d36debd2261346f/pages/trade/detail",
+        "__plugin__/wx8d36debd2261346f/pages/trade/debt",
+        "__plugin__/wx8d36debd2261346f/pages/trade/debt/result",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/protocol",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/ca-validation",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/index",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/detail",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/grid",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/tpsl",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/price",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/invest",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/limit-up",
+        "__plugin__/wx8d36debd2261346f/pages/trade/condition/opening-sell",
+        "__plugin__/wx8d36debd2261346f/pages/transfer/fund",
+        "__plugin__/wx8d36debd2261346f/pages/transfer/history",
+        "__plugin__/wx8d36debd2261346f/pages/transfer/fund/records",
+        "__plugin__/wx8d36debd2261346f/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/zhongxinjiantou/",
+      "plugins": {
+        "zhongxinjiantou-trade": {
+          "version": "1.0.28",
+          "provider": "wx8182de72a1713fb5",
+          "export": "exports/plugin.js",
+          "genericsImplementation": {
+            "webview-index": {
+              "main-webview": "/components/webView"
+            }
+          },
+          "subpackage": "/pages/zhongxinjiantou/"
+        }
+      },
+      "pages": [
+        "index",
+        "__plugin__/wx8182de72a1713fb5/platforms/mp-weixin/plugin-component",
+        "__plugin__/wx8182de72a1713fb5/platforms/mp-weixin/webview/index",
+        "__plugin__/wx8182de72a1713fb5/pages/asset/index",
+        "__plugin__/wx8182de72a1713fb5/pages/asset/all",
+        "__plugin__/wx8182de72a1713fb5/pages/asset/currency-setting",
+        "__plugin__/wx8182de72a1713fb5/pages/account/bind",
+        "__plugin__/wx8182de72a1713fb5/pages/account/find-account",
+        "__plugin__/wx8182de72a1713fb5/pages/account/personal",
+        "__plugin__/wx8182de72a1713fb5/pages/account/safesetting",
+        "__plugin__/wx8182de72a1713fb5/pages/account/switching",
+        "__plugin__/wx8182de72a1713fb5/pages/account/detail",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/guide",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/bindmobile",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/idcard",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/profile",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/bindcard",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/bankpwd",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/setpwd",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/risktest",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/submit",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/pre-review",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/progress",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/recover",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/facecheck",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/video",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/advisory",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/questionnaire",
+        "__plugin__/wx8182de72a1713fb5/pages/apply/take-photo",
+        "__plugin__/wx8182de72a1713fb5/pages/biz/pwd-reset/form",
+        "__plugin__/wx8182de72a1713fb5/pages/biz/broker-service/half-chart",
+        "__plugin__/wx8182de72a1713fb5/pages/debt/index",
+        "__plugin__/wx8182de72a1713fb5/pages/debt/auto-order",
+        "__plugin__/wx8182de72a1713fb5/pages/newstock/index",
+        "__plugin__/wx8182de72a1713fb5/pages/newstock/result",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/stock",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/stock-new",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/stock-embedded",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/history",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/detail",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/debt",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/debt/result",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/protocol",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/ca-validation",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/index",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/detail",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/grid",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/tpsl",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/price",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/invest",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/limit-up",
+        "__plugin__/wx8182de72a1713fb5/pages/trade/condition/opening-sell",
+        "__plugin__/wx8182de72a1713fb5/pages/transfer/fund",
+        "__plugin__/wx8182de72a1713fb5/pages/transfer/history",
+        "__plugin__/wx8182de72a1713fb5/pages/transfer/fund/records",
+        "__plugin__/wx8182de72a1713fb5/pages/transfer/fund/recordsdetail"
+      ]
+    },
+    {
+      "root": "pages/common-second-page/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "pages/messagebox/",
+      "pages": [
+        "interaction/main",
+        "home/main",
+        "home/mainv2",
+        "plat/main",
+        "empty/main",
+        "custom/main",
+        "feedback/main",
+        "feedback/detail"
+      ]
+    },
+    {
+      "root": "pages/marketDx/",
+      "pages": [
+        "DxPage",
+        "DxDetailPage",
+        "DxIntroducePage",
+        "DxPerformDetailPage"
+      ]
+    },
+    {
+      "root": "pages/landscape/",
+      "pages": [
+        "landscape"
+      ]
+    },
+    {
+      "root": "pages/marketSbg/",
+      "pages": [
+        "TrendMap"
+      ]
+    },
+    {
+      "root": "pages/yy/",
+      "pages": [
+        "ams"
+      ]
+    },
+    {
+      "root": "pages/halfScreenEditor/",
+      "pages": [
+        "stockFriends/index",
+        "topicCircle/index"
+      ]
+    },
+    {
+      "root": "pages/indexSbg/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "independentpack/",
+      "independent": true,
+      "pages": [
+        "webview/index"
+      ]
+    },
+    {
+      "root": "accountCardPackage/",
+      "independent": true,
+      "pages": []
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "腾讯自选股",
+    "enablePullDownRefresh": true,
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "initialRenderingCache": "static"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/index/trade",
+    "pages/index/market",
+    "pages/index/account/main",
+    "pages/index/information/main",
+    "pages/custom-tabbar/index"
+  ]
+}

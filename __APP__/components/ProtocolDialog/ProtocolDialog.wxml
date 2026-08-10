@@ -1,0 +1,58 @@
+<mp-dialog
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  bindconfirm="{{f}}"
+  class="data-v-9951543a"
+  uI="9951543a-0"
+  uP="{{h}}"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <view
+    class="{{['mp-dialog__message','risk-confirm-modal','data-v-9951543a',e&&'preview-modal']}}"
+  >
+    <view class="risk-confirm-modal__body data-v-9951543a">
+      <view class="content data-v-9951543a">
+        <view class="text-protocol data-v-9951543a" wx:if="{{a}}">
+          <label class="prefix-content data-v-9951543a">{{b}}</label>
+          <label
+            class="data-v-9951543a"
+            wx:for="{{c}}"
+            wx:for-item="protocol"
+            wx:key="d"
+          >
+            <label
+              bindtap="{{protocol.c}}"
+              class="link data-v-9951543a"
+              wx:if="{{protocol.a}}"
+              >{{protocol.b}}</label
+            >
+          </label>
+        </view>
+        <view class="protocol-container flex-center data-v-9951543a" wx:else>
+          <loading-provider
+            bind:__l="__l"
+            class="data-v-9951543a"
+            uI="9951543a-1,9951543a-0"
+            uS="{{['d']}}"
+          >
+            <label
+              class="data-v-9951543a"
+              wx:for="{{d}}"
+              wx:for-item="protocol"
+              wx:key="d"
+            >
+              <v-protocol
+                bind:__l="__l"
+                class="data-v-9951543a"
+                uI="{{protocol.b}}"
+                uP="{{protocol.c}}"
+                wx:if="{{protocol.a}}"
+              ></v-protocol>
+            </label>
+          </loading-provider>
+        </view>
+      </view>
+    </view>
+  </view>
+</mp-dialog>

@@ -1,0 +1,36 @@
+<cond-action-sheet-base
+  bind:__l="__l"
+  bindcancel="{{i}}"
+  bindconfirm="{{j}}"
+  uI="dc66f1c6-0"
+  uP="{{k}}"
+  uS="{{['content']}}"
+  wx:if="{{k}}"
+>
+  <view slot="content">
+    <grid-item
+      bind:__l="__l"
+      uI="dc66f1c6-1,dc66f1c6-0"
+      uP="{{b}}"
+      wx:if="{{a}}"
+    ></grid-item>
+    <t-p-s-l-item
+      bind:__l="__l"
+      uI="dc66f1c6-2,dc66f1c6-0"
+      uP="{{d}}"
+      wx:elif="{{c}}"
+    ></t-p-s-l-item>
+    <limit-up-item
+      bind:__l="__l"
+      uI="dc66f1c6-3,dc66f1c6-0"
+      uP="{{f}}"
+      wx:elif="{{e}}"
+    ></limit-up-item>
+    <opening-sell-item
+      bind:__l="__l"
+      uI="dc66f1c6-4,dc66f1c6-0"
+      uP="{{h}}"
+      wx:elif="{{g}}"
+    ></opening-sell-item>
+  </view>
+</cond-action-sheet-base>

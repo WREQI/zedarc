@@ -1,0 +1,67 @@
+<view class="data-v-d2c75c0a">
+  <view
+    bindtap="{{o}}"
+    class="{{['photo-content','data-v-d2c75c0a',m&&'fail',n&&'layer']}}"
+  >
+    <image
+      binderror="{{e}}"
+      bindload="{{d}}"
+      class="{{['photo','data-v-d2c75c0a',a]}}"
+      mode="{{c}}"
+      src="{{b}}"
+    ></image>
+    <view class="layer-content layer-tip data-v-d2c75c0a" wx:if="{{f}}">
+      <st-loading
+        bind:__l="__l"
+        class="layer-loading data-v-d2c75c0a"
+        uI="d2c75c0a-0"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></st-loading>
+      <view class="data-v-d2c75c0a">身份证上传识别中</view>
+    </view>
+    <view class="layer-content layer-tip data-v-d2c75c0a" wx:elif="{{h}}">
+      <view class="data-v-d2c75c0a">{{i}}</view>
+      <view class="layer-btn data-v-d2c75c0a">手动上传</view>
+    </view>
+    <view class="layer-content layer-tip data-v-d2c75c0a" wx:elif="{{j}}">
+      <view class="data-v-d2c75c0a">身份证照片已失效</view>
+      <view class="layer-btn data-v-d2c75c0a">手动上传</view>
+    </view>
+    <view class="data-v-d2c75c0a">
+      <label class="photo-ico ico-camera data-v-d2c75c0a" wx:if="{{k}}"></label>
+      <label class="photo-ico ico-edit data-v-d2c75c0a" wx:if="{{l}}"></label>
+      <label class="safety-tips data-v-d2c75c0a">仅用于证券开户</label>
+    </view>
+  </view>
+  <view class="tip align-c fs-24 text-color-1 data-v-d2c75c0a" wx:if="{{p}}"
+    >点击上传{{q}}</view
+  >
+  <view class="tip align-c fs-24 text-color-1 data-v-d2c75c0a" wx:elif="{{r}}"
+    >正在上传{{s}}</view
+  >
+  <view class="tip align-c fs-24 text-color-1 data-v-d2c75c0a" wx:else>
+    <label class="data-v-d2c75c0a">身份证{{t}}</label>
+  </view>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{w}}"
+    bindselect="{{v}}"
+    class="data-v-d2c75c0a"
+    uI="d2c75c0a-1"
+    uP="{{x}}"
+    wx:if="{{x}}"
+  ></action-sheet>
+  <image
+    alt=""
+    class="data-v-d2c75c0a"
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/apply/idcard/mask-front.png"
+  ></image>
+  <image
+    alt=""
+    class="data-v-d2c75c0a"
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/apply/idcard/mask-back.png"
+  ></image>
+</view>

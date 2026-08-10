@@ -1,0 +1,147 @@
+<view class="{{['_div','data-v-b1166ab7',bn&&'skin-black']}}" wx:if="{{a}}">
+    <view class="{{['_div','stock-overview','data-v-b1166ab7',aw&&'no-margin']}}" wx:if="{{b}}">
+        <view class="_div stock-brief data-v-b1166ab7">
+            <view class="_div brief-left data-v-b1166ab7">
+                <view class="_div price-info data-v-b1166ab7">
+                    <flash-price bind:__l="__l" class="price data-v-b1166ab7" uI="b1166ab7-0" uP="{{c}}" wx:if="{{c}}"></flash-price>
+                    <view class="_div t0-tag data-v-b1166ab7" wx:if="{{d}}">
+                        <image alt="" class="_img t0-tag-icon data-v-b1166ab7" src="https://st.gtimg.com/design/237101798b5b943333aca7d3fa52c44f.png"></image>
+                    </view>
+                    <view class="_div pink-sheet data-v-b1166ab7" wx:if="{{e}}">
+                        <view class="_div data-v-b1166ab7">USD</view>
+                        <view class="_div bottom-area data-v-b1166ab7">
+                            <view class="_div data-v-b1166ab7">延时</view>
+                            <view class="_div seperate data-v-b1166ab7"></view>
+                            <view bindtap="{{f}}" class="_div otc-wrapper data-v-b1166ab7">
+                                <view class="_div data-v-b1166ab7">OTC</view>
+                                <image class="_img arrow data-v-b1166ab7" src="https://st.gtimg.com/design/9b826c68d064b975bc4aaaf86e44de15.png"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="{{['_div','data-v-b1166ab7',j&&'unitContent']}}" wx:else>
+                        <view class="_div unit data-v-b1166ab7" wx:if="{{g}}">{{h}}</view>
+                        <view class="_div delay data-v-b1166ab7" wx:if="{{i}}">延时</view>
+                    </view>
+                    <view class="_div tracked-label data-v-b1166ab7" wx:if="{{k}}">{{l}}</view>
+                </view>
+                <view class="_div zd-info data-v-b1166ab7">
+                    <label class="{{['_span','zd','data-v-b1166ab7',n,o]}}">{{m}}</label>
+                    <label class="{{['_span','zd','zd-last','data-v-b1166ab7',q,r]}}">{{p}}%</label>
+                    <label class="_span seperate data-v-b1166ab7" wx:if="{{s}}"></label>
+                    <label bindtap="{{z}}" class="_span plate data-v-b1166ab7" wx:if="{{t}}">
+                        <label class="_span plate-name data-v-b1166ab7">{{v}}</label>
+                        <label class="{{['_span','data-v-b1166ab7','plate-zdf',y]}}">{{w}}{{x}}%</label>
+                        <image class="_img plate-arrow data-v-b1166ab7" src="https://st.gtimg.com/design/9b826c68d064b975bc4aaaf86e44de15.png"></image>
+                    </label>
+                    <label class="_span seperate data-v-b1166ab7" wx:if="{{A}}"></label>
+                    <view catchtap="{{D}}" class="_div plate-wrapper data-v-b1166ab7" id="plateEntry" ref="plateEntry" wx:if="{{B}}">
+                        <image class="_img plate-check data-v-b1166ab7" src="https://st.gtimg.com/design/7a67366a121b9a30494923667693e0ea.png" wx:if="{{C}}"></image>
+                        <image class="_img plate-check data-v-b1166ab7" src="https://st.gtimg.com/design/624722832fcfba3bfd80ef1fb4bed94d.png" wx:else></image>
+                    </view>
+                    <label bindtap="{{H}}" class="_span trans-debt-index data-v-b1166ab7" wx:if="{{E}}">
+                        <label class="_span trans-debt-index-name data-v-b1166ab7">可转债指数</label>
+                        <label class="{{['_span','trans-debt-index-zdf','data-v-b1166ab7',G]}}">{{F}}%</label>
+                        <image class="_img trans-debt-index-arrow data-v-b1166ab7" src="https://st.gtimg.com/design/9b826c68d064b975bc4aaaf86e44de15.png"></image>
+                    </label>
+                </view>
+            </view>
+            <view class="_div brief-right data-v-b1166ab7">
+                <view catchtap="{{P}}" class="_div status data-v-b1166ab7" wx:if="{{I}}">{{J}}<label class="_span image-tip data-v-b1166ab7" wx:if="{{K}}"></label>{{L}}<view catchtap="{{O}}" class="_div right-refresh-btn data-v-b1166ab7" wx:if="{{M}}">
+                        <label class="{{['_span','refresh-icon','data-v-b1166ab7',N&&'loading-status']}}"></label>
+                        <label class="_span refresh-text data-v-b1166ab7">刷新</label>
+                    </view>
+                </view>
+                <view class="_div data-v-b1166ab7" wx:elif="{{Q}}">
+                    <view bindtap="{{S}}" class="_div stock-tag-wrapper data-v-b1166ab7">
+                        <label class="{{['_span','data-v-b1166ab7',tag.b]}}" wx:for="{{R}}" wx:for-item="tag" wx:key="a"></label>
+                        <label class="_span tag dot data-v-b1166ab7"></label>
+                    </view>
+                </view>
+            </view>
+            <view class="_div brief-right brief-right-bottom data-v-b1166ab7">
+                <view class="_div right-btn-wrapper data-v-b1166ab7">
+                    <add-fav bind:__l="__l" bindchangeAdded="{{V}}" class="r data-v-b1166ab7" uI="b1166ab7-1" uP="{{W}}" uR="addFav" wx:if="{{T}}"></add-fav>
+                    <view class="_div btn-line data-v-b1166ab7" wx:if="{{X}}"></view>
+                    <view catchtap="{{Y}}" class="_div quotation-search data-v-b1166ab7">
+                        <image class="_img search-img data-v-b1166ab7" src="https://st.gtimg.com/design/71b14957906ad96c526eac6afc058d66.png"></image>
+                        <input class="temp-focus data-v-b1166ab7" ref="tempFocus"></input>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="{{ad}}" class="{{['_div','stock-info','data-v-b1166ab7',ac&&'stock-info-fold']}}" ref="stockInfo">
+            <view class="_div stock-info-basic data-v-b1166ab7">
+                <label catchtap="{{item.n}}" class="_span stock-info-item data-v-b1166ab7" wx:for="{{Z}}" wx:key="m">
+                    <label class="label data-v-b1166ab7">{{item.a}}<label class="_span upper-text data-v-b1166ab7" wx:if="{{item.b}}">{{item.c}}</label>
+                        <label catchtap="{{item.e}}" class="_span image-tip data-v-b1166ab7" wx:if="{{item.d}}"></label>
+                        <image class="{{['_img','triangle','data-v-b1166ab7',item.g&&'triangle-up']}}" id="zszTriangle" ref="zszTriangle" src="https://st.gtimg.com/design/3ce16ec5a56b74f91adb4363a4d04a5f.png" wx:if="{{item.f}}"></image>
+                        <image class="{{['_img','triangle','data-v-b1166ab7',item.i&&'triangle-up']}}" id="zgbTriangle" ref="zgbTriangle" src="https://st.gtimg.com/design/3ce16ec5a56b74f91adb4363a4d04a5f.png" wx:elif="{{item.h}}"></image>
+                    </label>
+                    <label class="{{['content','data-v-b1166ab7',item.k]}}" style="{{'padding-right:'+item.l}}">{{item.j}}</label>
+                </label>
+            </view>
+            <view class="_div sep-line data-v-b1166ab7" wx:if="{{aa}}"></view>
+            <view class="_div stock-info-extra data-v-b1166ab7">
+                <label class="_span stock-info-item data-v-b1166ab7" wx:for="{{ab}}" wx:key="d">
+                    <label class="label data-v-b1166ab7">{{item.a}}</label>
+                    <label class="content data-v-b1166ab7" style="{{'padding-right:'+item.c}}">{{item.b}}</label>
+                </label>
+            </view>
+        </view>
+        <view catchtap="{{ah}}" class="_div folder data-v-b1166ab7" wx:if="{{ae}}">
+            <image class="{{['_img','arrow','data-v-b1166ab7',af&&'reverse']}}" src="https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png"></image>
+            <view class="_div auto-test data-v-b1166ab7">{{ag}}</view>
+        </view>
+        <u-s-pan bind:__l="__l" class="data-v-b1166ab7" uI="b1166ab7-2" uP="{{aj}}" wx:if="{{ai}}"></u-s-pan>
+        <a-d-rbar bind:__l="__l" class="r data-v-b1166ab7" uI="b1166ab7-3" uP="{{am}}" uR="adrbar" wx:if="{{ak}}"></a-d-rbar>
+        <warrants-bar bind:__l="__l" bindloadData="{{ap}}" class="r data-v-b1166ab7" uI="b1166ab7-4" uP="{{aq}}" uR="warrantsBar" wx:if="{{an}}"></warrants-bar>
+        <e-t-f-bar bind:__l="__l" bindaddETFPush="{{at}}" class="r data-v-b1166ab7" uI="b1166ab7-5" uP="{{av}}" uR="etfBar" wx:if="{{ar}}"></e-t-f-bar>
+        <slot name="bond"></slot>
+    </view>
+    <view class="{{['_div','stock-overview-landscape','data-v-b1166ab7',aE&&'stock-overview-landscape-mp']}}" wx:else>
+        <view class="_div stock-info-landscape data-v-b1166ab7">
+            <view class="_div stock-info-title data-v-b1166ab7">{{ax}}({{ay}})</view>
+            <view class="{{['_div','stock-info-price','data-v-b1166ab7',aA&&'stock-pl-zs']}}">
+                <flash-price bind:__l="__l" class="price data-v-b1166ab7" uI="b1166ab7-6" uP="{{az}}" wx:if="{{az}}"></flash-price>
+            </view>
+            <view class="_div stock-item-content data-v-b1166ab7">
+                <label class="_span data-v-b1166ab7">成交</label>
+                <label class="_span stock-item-after data-v-b1166ab7">{{aB}}</label>
+            </view>
+            <view class="_div stock-item-content data-v-b1166ab7">
+                <label class="_span data-v-b1166ab7">时间</label>
+                <label class="_span stock-item-after data-v-b1166ab7">{{aC}}</label>
+            </view>
+            <slot name="openApp"></slot>
+        </view>
+        <image catchtap="{{aD}}" class="_img close data-v-b1166ab7" src="https://st.gtimg.com/design/e563f72e8949ed4e9ac0fcbdf80f767c.svg"></image>
+    </view>
+    <index-bar bind:__l="__l" bindaddIndexPush="{{aH}}" bindshowModal="{{aI}}" class="r data-v-b1166ab7" uI="b1166ab7-7" uP="{{aJ}}" uR="indexbar" wx:if="{{aF}}"></index-bar>
+    <delist-bar bind:__l="__l" bindshowModal="{{aM}}" bindshowTip="{{aL}}" class="data-v-b1166ab7" uI="b1166ab7-8" uP="{{aN}}" wx:if="{{aK}}"></delist-bar>
+    <teach bind:__l="__l" bindclose="{{aP}}" class="data-v-b1166ab7" uI="b1166ab7-9" uP="{{aQ}}" wx:if="{{aO}}"></teach>
+    <zsz-popup bind:__l="__l" bindclose="{{aS}}" class="data-v-b1166ab7" uI="b1166ab7-10" uP="{{aT}}" wx:if="{{aR}}"></zsz-popup>
+    <zgb-popup bind:__l="__l" bindclose="{{aV}}" class="data-v-b1166ab7" uI="b1166ab7-11" uP="{{aW}}" wx:if="{{aU}}"></zgb-popup>
+    <plate-popup bind:__l="__l" bindclose="{{aZ}}" class="plate-popwrapper r data-v-b1166ab7" uI="b1166ab7-12" uP="{{ba}}" uR="plateboard" wx:if="{{aX}}"></plate-popup>
+    <trade-timeline bind:__l="__l" bindclose="{{bc}}" class="data-v-b1166ab7" uI="b1166ab7-13" uP="{{bd}}" wx:if="{{bb}}"></trade-timeline>
+    <custom-modal bind:__l="__l" bindclose="{{bg}}" bindconfirm="{{bf}}" class="data-v-b1166ab7" uI="b1166ab7-14" uP="{{bh}}" wx:if="{{be}}"></custom-modal>
+    <popup bind:__l="__l" bindmaskClick="{{bl}}" class="data-v-b1166ab7" uI="b1166ab7-15" uP="{{bm}}" uS="{{['d']}}" wx:if="{{bm}}">
+        <view class="_div popup-container data-v-b1166ab7">
+            <view catchtap="{{bj}}" class="_div data-v-b1166ab7" style="{{bi}}"></view>
+            <view catchtap="{{tag.i}}" class="_div popup-wrapper data-v-b1166ab7" wx:for="{{bk}}" wx:for-item="tag" wx:key="h">
+                <view class="_div tag-popup-wrapper data-v-b1166ab7" wx:if="{{tag.a}}">
+                    <view class="_div left-wrap data-v-b1166ab7">
+                        <label class="{{['_span','data-v-b1166ab7',tag.b]}}"></label>
+                        <view class="_div text-group data-v-b1166ab7">
+                            <label class="_span main data-v-b1166ab7">{{tag.c}}</label>
+                            <label class="_span sub data-v-b1166ab7">{{tag.d}}</label>
+                        </view>
+                    </view>
+                    <view class="_div right-wrap data-v-b1166ab7">
+                        <label class="_span right-text data-v-b1166ab7" wx:if="{{tag.e}}">{{tag.f}}</label>
+                        <image class="_img arrow data-v-b1166ab7" src="https://st.gtimg.com/design/fd9a288e0a3511afe0ab85345f537373.svg" wx:if="{{tag.g}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </popup>
+</view>

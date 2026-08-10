@@ -1,0 +1,56 @@
+<view class="certificate-container data-v-ba197006">
+  <view class="explain fs-24 text-color-5 data-v-ba197006">{{a}}</view>
+  <view class="item-card data-v-ba197006">
+    <view class="title text-color-1 data-v-ba197006">手机号登记情况</view>
+    <radio-group bindchange="{{c}}" class="option-wrapper data-v-ba197006">
+      <view class="option data-v-ba197006" wx:for="{{b}}" wx:key="c">
+        <radio
+          class="data-v-ba197006"
+          color="var(--color-primary)"
+          value="{{item.b}}"
+        >
+          <label class="fs-30 text-color-1 data-v-ba197006">{{item.a}}</label>
+        </radio>
+      </view>
+    </radio-group>
+  </view>
+  <view class="item-card data-v-ba197006">
+    <view class="title text-color-1 data-v-ba197006">手机机主证明材料</view>
+    <view bindtap="{{g}}" class="option-wrapper upload data-v-ba197006">
+      <image class="img data-v-ba197006" src="{{e}}" wx:if="{{d}}"></image>
+      <label class="icon icon-add data-v-ba197006" wx:else></label>
+      <label class="icon ico-edit data-v-ba197006" wx:if="{{f}}"></label>
+    </view>
+  </view>
+  <view class="tips data-v-ba197006">
+    <view class="data-v-ba197006"
+      >请上传手机缴费单(发票)、运营商APP查询结果截图或情况说明(任意一种即可)</view
+    >
+    <view class="data-v-ba197006">注: 缴费单及APP截图需包含姓名及手机号</view>
+  </view>
+  <step-buttons
+    bind:__l="__l"
+    bindclickNext="{{h}}"
+    class="data-v-ba197006"
+    uI="ba197006-0"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></step-buttons>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{l}}"
+    bindselect="{{k}}"
+    class="data-v-ba197006"
+    uI="ba197006-1"
+    uP="{{m}}"
+    wx:if="{{j}}"
+  ></action-sheet>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-ba197006"
+    id="mp-dialog"
+    uI="ba197006-2"
+    uP="{{n}}"
+    wx:if="{{n}}"
+  ></mp-dialog>
+</view>

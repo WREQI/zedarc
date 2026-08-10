@@ -1,0 +1,26 @@
+<view class="_div" style="{{'width:'+p+';'+'height:'+q}}">
+  <mins
+    bind:__l="__l"
+    binderror="{{i}}"
+    bindgetInitData="{{g}}"
+    bindonBarTap="{{f}}"
+    bindonDoubleTap="{{e}}"
+    bindonTap="{{h}}"
+    bindonTouchCancle="{{d}}"
+    bindonTouchMove="{{c}}"
+    class="r"
+    id="chart"
+    uI="273451cf-0"
+    uP="{{j}}"
+    uR="chart"
+    wx:if="{{a}}"
+  ></mins>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{l}}"
+    uI="273451cf-1"
+    uP="{{m}}"
+    wx:if="{{k}}"
+  ></status>
+  <no-data bind:__l="__l" uI="273451cf-2" uP="{{o}}" wx:if="{{n}}"></no-data>
+</view>

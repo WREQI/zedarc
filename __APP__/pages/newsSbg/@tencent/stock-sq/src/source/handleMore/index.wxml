@@ -1,0 +1,27 @@
+<view class="_div mod-handleMore-container data-v-79bb70e2">
+  <view
+    catchtap="{{d}}"
+    class="{{['_div','data-v-79bb70e2','mod-handle-more',b]}}"
+    style="{{c}}"
+    wx:if="{{a}}"
+  >
+    <label class="_span sq-icon-sangedian data-v-79bb70e2"></label>
+  </view>
+  <view
+    class="{{['_div','data-v-79bb70e2','complaint-banner',h]}}"
+    wx:if="{{e}}"
+  >
+    <view class="_div text data-v-79bb70e2">{{f}}</view>
+    <view catchtap="{{g}}" class="_div btn data-v-79bb70e2">举报</view>
+  </view>
+  <view class="_div data-v-79bb70e2" wx:if="{{i}}">
+    <list-pop
+      bind:__l="__l"
+      bindcloseComplaintPop="{{j}}"
+      class="data-v-79bb70e2"
+      uI="79bb70e2-0"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></list-pop>
+  </view>
+</view>

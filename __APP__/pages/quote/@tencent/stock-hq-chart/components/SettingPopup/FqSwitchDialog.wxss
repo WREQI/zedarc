@@ -1,0 +1,82 @@
+.fq-switch-dialog.data-v-90ee0d71 {
+  align-items: center;
+  background: var(--fill-mask, rgba(0, 0, 0, 0.4));
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+}
+.fq-switch-dialog__panel.data-v-90ee0d71 {
+  background: var(--color-white, #fff);
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 8rem;
+}
+.fq-switch-dialog__body.data-v-90ee0d71 {
+  padding: 0.64rem;
+}
+.fq-switch-dialog__title.data-v-90ee0d71 {
+  color: var(--color-heavygray, #262e40);
+  font-size: 0.48rem;
+  font-weight: 500;
+  line-height: 0.6666666666666666rem;
+  text-align: center;
+}
+.fq-switch-dialog__desc.data-v-90ee0d71 {
+  color: var(--color-midgray, #475166);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-top: 0.4266666666666667rem;
+  text-align: justify;
+}
+.fq-switch-dialog__image.data-v-90ee0d71 {
+  border: 0.013333333333333334rem solid var(--border-light-divider, #e9ebf0);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: block;
+  height: 3.7866666666666666rem;
+  margin-top: 0.4266666666666667rem;
+  object-fit: cover;
+  width: 6.72rem;
+}
+.fq-switch-dialog__footer.data-v-90ee0d71 {
+  width: 100%;
+}
+.fq-switch-dialog__divider.data-v-90ee0d71 {
+  background: var(--border-light-divider, #e9ebf0);
+  height: 0.013333333333333334rem;
+}
+.fq-switch-dialog__actions.data-v-90ee0d71 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.28rem;
+}
+.fq-switch-dialog__action-divider.data-v-90ee0d71 {
+  background: var(--border-light-divider, #edeff3);
+  height: 1.28rem;
+  width: 0.013333333333333334rem;
+}
+.fq-switch-dialog__button.data-v-90ee0d71 {
+  align-items: center;
+  color: var(--color-blue, #3077ec);
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.48rem;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  line-height: 0.6666666666666666rem;
+}
+.fq-switch-dialog__button.data-v-90ee0d71:active {
+  background: var(--color-card, #f5f6fa);
+}

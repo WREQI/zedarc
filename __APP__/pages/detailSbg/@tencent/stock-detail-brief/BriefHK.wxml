@@ -1,0 +1,621 @@
+<view
+  class="{{['_div','mod-brief-hk-zxg','data-v-2b81f406',bs&&'black']}}"
+  ref="briefHK"
+>
+  <view class="_div data-v-2b81f406" wx:if="{{a}}">
+    <view
+      catchtap="{{c}}"
+      class="_div mask data-v-2b81f406"
+      ref="maskBlock"
+      wx:if="{{b}}"
+    ></view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{d}}">
+      <view class="_div item-title-zxg data-v-2b81f406">公司简介</view>
+      <wiki
+        bind:__l="__l"
+        class="data-v-2b81f406"
+        uI="2b81f406-0"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></wiki>
+      <view class="_div item-block one-column data-v-2b81f406" wx:if="{{f}}">
+        <view class="_div layout data-v-2b81f406" wx:if="{{g}}">
+          <view class="_div item-label data-v-2b81f406">所属行业</view>
+          <view
+            bindtap="{{m}}"
+            class="{{['_div','data-v-2b81f406','item-value',l]}}"
+            >{{h}}<label
+              class="{{['_span','data-v-2b81f406','zdf-text',k]}}"
+              wx:if="{{i}}"
+              >{{j}}</label
+            >
+          </view>
+        </view>
+      </view>
+      <view
+        class="_div item-block one-column data-v-2b81f406"
+        wx:for="{{n}}"
+        wx:for-item="val"
+        wx:key="p"
+      >
+        <view class="_div layout data-v-2b81f406" wx:if="{{val.a}}">
+          <view class="_div item-label data-v-2b81f406">{{val.b}}</view>
+          <view class="_div extra-text data-v-2b81f406" wx:if="{{val.c}}">
+            <navigator
+              bindtap="{{val.g}}"
+              class="{{['_a','data-v-2b81f406','item-value','blue-title']}}"
+              href="{{val.f}}"
+              wx:if="{{val.d}}"
+              >{{val.e}}</navigator
+            >
+            <view class="_div item-value black-title data-v-2b81f406" wx:else
+              >{{val.h}}</view
+            >
+          </view>
+          <view class="_div extra-text data-v-2b81f406" wx:else>
+            <view
+              bindtap="{{val.k}}"
+              class="{{['_div','data-v-2b81f406','item-value','theme-title',val.j]}}"
+              >{{val.i}}</view
+            >
+            <view
+              bindtap="{{val.o}}"
+              class="_div tip-text data-v-2b81f406"
+              wx:if="{{val.l}}"
+              >{{val.m}}<view
+                class="{{['data-v-2b81f406','arrow',val.n]}}"
+              ></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" ref="jyfx" wx:if="{{o}}">
+      <view class="_div item-title-zxg data-v-2b81f406"
+        >主营构成 (元)<view class="_div float-list data-v-2b81f406">
+          <label catchtap="{{q}}" class="_span data-v-2b81f406" ref="zysrYears"
+            >{{p}}</label
+          >
+          <view class="select-arrow data-v-2b81f406" wx:if="{{r}}"></view>
+          <view
+            class="_div data-v-2b81f406"
+            hidden="{{!v}}"
+            id="float-list-layer"
+          >
+            <image
+              class="_img triangle-up data-v-2b81f406"
+              src="https://st.gtimg.com/design/7e8907cb447b2814f39b31e92cb7fd47.svg"
+              wx:if="{{s}}"
+            ></image>
+            <image
+              class="_img triangle-up data-v-2b81f406"
+              src="https://st.gtimg.com/design/a9aec288e78bb5f677569a5cdbb12d91.svg"
+              wx:else
+            ></image>
+            <view class="_p float-list-p data-v-2b81f406">
+              <label
+                catchtap="{{val.d}}"
+                class="{{['_span','float-list-span','bubble-text','data-v-2b81f406',val.c]}}"
+                wx:for="{{t}}"
+                wx:for-item="val"
+                wx:key="b"
+                >{{val.a}}</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-2b81f406" style="text-align: center">
+        <view class="_div item-sub-tab-zxg data-v-2b81f406">
+          <label
+            catchtap="{{val.d}}"
+            class="{{['_span','sub-tab','data-v-2b81f406',val.b]}}"
+            wx:for="{{w}}"
+            wx:for-item="val"
+            wx:key="c"
+            >{{val.a}}</label
+          >
+        </view>
+      </view>
+      <view class="_div data-v-2b81f406">
+        <f2
+          bind:__l="__l"
+          bindonInit="{{z}}"
+          class="r data-v-2b81f406"
+          uI="2b81f406-1"
+          uP="{{A}}"
+          uR="zysrChart"
+          wx:if="{{x}}"
+        ></f2>
+      </view>
+      <view class="_div chart-err data-v-2b81f406" wx:if="{{B}}"
+        >暂无{{C}}数据</view
+      >
+      <view class="_div extra-data data-v-2b81f406" wx:if="{{D}}">
+        <view class="_div row caption data-v-2b81f406">
+          <view class="_div col-name data-v-2b81f406">{{E}}</view>
+          <view class="_div col-value data-v-2b81f406">营业收入</view>
+          <view class="_div col-percent data-v-2b81f406">占比</view>
+        </view>
+        <view class="_div row data-v-2b81f406" wx:for="{{F}}" wx:key="h">
+          <view
+            bindtap="{{item.e}}"
+            class="_div col-name zy-block data-v-2b81f406"
+          >
+            <view
+              class="_i col-name-i data-v-2b81f406"
+              style="{{'background-color:'+item.a}}"
+            ></view>
+            <view class="_div zy-name data-v-2b81f406">{{item.b}}</view>
+            <view
+              class="{{['_i','data-v-2b81f406',item.d]}}"
+              wx:if="{{item.c}}"
+            ></view>
+          </view>
+          <view class="_div col-value data-v-2b81f406">{{item.f}}</view>
+          <view class="_div col-percent data-v-2b81f406">{{item.g}}%</view>
+        </view>
+        <view class="_div data-v-2b81f406" hidden="{{!I}}" wx:if="{{G}}">
+          <view class="_div line data-v-2b81f406"></view>
+          <view
+            class="_div row children data-v-2b81f406"
+            wx:for="{{H}}"
+            wx:key="d"
+          >
+            <view class="_div col-name data-v-2b81f406">
+              <view
+                class="_i col-name-i data-v-2b81f406"
+                style="opacity: 0"
+              ></view
+              >{{item.a}}</view
+            >
+            <view class="_div col-value data-v-2b81f406">{{item.b}}</view>
+            <view class="_div col-percent data-v-2b81f406">{{item.c}}%</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{J}}">
+      <view class="_div item-title-zxg data-v-2b81f406"
+        >机构预测目标价格（港币）</view
+      >
+      <view class="_p forecast-price data-v-2b81f406"
+        >当前有<view class="forecast-price-em data-v-2b81f406">{{K}}</view
+        >家机构对目标价做出预测，目标均价为<view
+          class="forecast-price-em data-v-2b81f406"
+          >{{L}}</view
+        >，其中最低目标价为<view class="forecast-price-em data-v-2b81f406"
+          >{{M}}</view
+        >，最高目标价为<view class="forecast-price-em data-v-2b81f406"
+          >{{N}}</view
+        >
+      </view>
+      <view class="_div target-price-percent data-v-2b81f406">
+        <view class="_div row-price-per data-v-2b81f406">
+          <label class="_span col-ttl data-v-2b81f406">目标均价</label>
+          <label
+            class="_span col-bar bar-blue data-v-2b81f406"
+            style="{{'width:'+O}}"
+          ></label>
+          <label class="_span col-price data-v-2b81f406" style="{{'width:'+Q}}"
+            >{{P}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-2b81f406">
+          <label class="_span col-ttl data-v-2b81f406">当前价</label>
+          <label
+            class="_span col-bar bar-yellow data-v-2b81f406"
+            style="{{'width:'+R}}"
+          ></label>
+          <label class="_span col-price data-v-2b81f406" style="{{'width:'+T}}"
+            >{{S}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-2b81f406">
+          <label class="_span col-ttl data-v-2b81f406">最高目标价</label>
+          <label
+            class="_span col-bar bar-blue data-v-2b81f406"
+            style="width: 50%"
+          ></label>
+          <label class="_span col-price data-v-2b81f406" style="width: 25%"
+            >{{U}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-2b81f406">
+          <label class="_span col-ttl data-v-2b81f406">最低目标价</label>
+          <label
+            class="_span col-bar bar-blue data-v-2b81f406"
+            style="{{'width:'+V}}"
+          ></label>
+          <label class="_span col-price data-v-2b81f406" style="{{'width:'+X}}"
+            >{{W}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{Y}}">
+      <view class="_div item-title-zxg data-v-2b81f406">机构分析</view>
+      <view
+        class="_div brief-block data-v-2b81f406"
+        style="border: 0px; padding: 0"
+        wx:if="{{Z}}"
+      >
+        <view class="_div item-title-zxg-sub data-v-2b81f406">机构评级</view>
+        <view class="_div analysis-block-rating data-v-2b81f406">
+          <view
+            class="_div col-rating data-v-2b81f406"
+            wx:for="{{aa}}"
+            wx:key="l"
+          >
+            <label
+              class="_span col-rating-span column-top data-v-2b81f406"
+              wx:if="{{item.a}}"
+            >
+              <view class="column-top-em theme-color data-v-2b81f406"
+                >{{item.b}}</view
+              >家</label
+            >
+            <view class="_div column-level data-v-2b81f406" wx:if="{{item.c}}">
+              <label
+                class="_span column-level-span level-buy data-v-2b81f406"
+                style="{{'height:'+item.e}}"
+                >{{item.d}}</label
+              >
+              <label
+                class="_span column-level-span level-hold data-v-2b81f406"
+                style="{{'height:'+item.g}}"
+                >{{item.f}}</label
+              >
+              <label
+                class="_span column-level-span level-sale data-v-2b81f406"
+                style="{{'height:'+item.i}}"
+                >{{item.h}}</label
+              >
+            </view>
+            <label class="_span column-btm data-v-2b81f406" wx:if="{{item.j}}"
+              >{{item.k}}月</label
+            >
+          </view>
+        </view>
+        <view class="_div analysis-sign-rating data-v-2b81f406">
+          <view class="_div col-sign data-v-2b81f406">
+            <label
+              class="_span col-sign-span square-color bg-buy data-v-2b81f406"
+            ></label>
+            <label class="_span text data-v-2b81f406">买入+增持</label>
+          </view>
+          <view class="_div col-sign data-v-2b81f406">
+            <label
+              class="_span col-sign-span square-color bg-hold data-v-2b81f406"
+            ></label>
+            <label class="_span col-sign-span text data-v-2b81f406">持有</label>
+          </view>
+          <view class="_div col-sign data-v-2b81f406">
+            <label
+              class="_span col-sign-span square-color bg-sale data-v-2b81f406"
+            ></label>
+            <label class="_span col-sign-span text text2 data-v-2b81f406"
+              >减持+卖出</label
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div separate-line data-v-2b81f406" wx:if="{{ab}}"></view>
+      <view
+        class="_div brief-block data-v-2b81f406"
+        style="border: 0px; padding: 0"
+        wx:if="{{ac}}"
+      >
+        <view class="_div item-title-zxg-sub data-v-2b81f406">历史走势</view>
+        <view class="_div analysis-block-trend data-v-2b81f406">
+          <f2
+            bind:__l="__l"
+            bindonInit="{{af}}"
+            class="r data-v-2b81f406"
+            uI="2b81f406-2"
+            uP="{{ag}}"
+            uR="hislineChart"
+            wx:if="{{ad}}"
+          ></f2>
+        </view>
+        <view class="_div analysis-sign-trend data-v-2b81f406">
+          <view class="_div col-sign data-v-2b81f406">
+            <label class="_span line-color line-trend data-v-2b81f406"></label>
+            <label class="_span text data-v-2b81f406">实际价格</label>
+          </view>
+          <view class="_div col-sign data-v-2b81f406">
+            <label class="_span line-color line-price data-v-2b81f406"></label>
+            <label class="_span text2 data-v-2b81f406">机构平均目标价格</label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{ah}}">
+      <view class="_div item-title-zxg data-v-2b81f406">股东股本</view>
+      <view
+        class="_div brief-block data-v-2b81f406"
+        style="border: 0px; padding: 0"
+        wx:if="{{ai}}"
+      >
+        <view class="_div item-title-zxg-sub data-v-2b81f406"
+          >机构持仓统计<view
+            catchtap="{{ak}}"
+            class="_div item-title-time data-v-2b81f406"
+            >{{aj}} 更新<view class="arrow right data-v-2b81f406"></view>
+          </view>
+        </view>
+        <view class="_div ratio-line data-v-2b81f406" wx:if="{{al}}">
+          <view class="_div organ-ratiovalue data-v-2b81f406">
+            <view class="_div blue data-v-2b81f406">
+              <label class="_span data-v-2b81f406">持股比例</label>
+              <label class="_span ratio-value blue data-v-2b81f406"
+                >{{am}}</label
+              >
+            </view>
+          </view>
+          <view class="_div organ-ratio data-v-2b81f406">
+            <view
+              class="_div organ-ratio-div blue data-v-2b81f406"
+              style="{{'width:'+ao}}"
+              wx:if="{{an}}"
+            ></view>
+            <view
+              class="_div organ-ratio-div grey data-v-2b81f406"
+              style="{{'width:'+aq}}"
+              wx:if="{{ap}}"
+            ></view>
+          </view>
+          <view class="_div organ-ratiovalue data-v-2b81f406">
+            <view class="_div data-v-2b81f406">
+              <label class="_span organ-ratiovalue-div grey data-v-2b81f406"
+                >机构数<view class="ratio-value data-v-2b81f406">{{ar}}</view>
+                <view class="{{['ratio-value','data-v-2b81f406',at]}}"
+                  >({{as}})</view
+                >
+              </label>
+            </view>
+            <view class="_div data-v-2b81f406">
+              <label class="_span organ-ratiovalue-div grey data-v-2b81f406"
+                >持股数<view class="ratio-value data-v-2b81f406">{{av}}股</view>
+                <view class="{{['ratio-value','data-v-2b81f406',ax]}}"
+                  >({{aw}})</view
+                >
+              </label>
+            </view>
+          </view>
+        </view>
+        <view class="_div chart-text data-v-2b81f406" wx:if="{{ay}}">
+          <view class="_div data-v-2b81f406">持股比例</view>
+          <view class="_div data-v-2b81f406">价格</view>
+        </view>
+        <view
+          class="_div chart-container data-v-2b81f406"
+          id="chartContainer"
+          ref="chartContainer"
+          wx:if="{{az}}"
+        >
+          <view
+            bindtouchend="{{aD}}"
+            bindtouchmove="{{aC}}"
+            bindtouchstart="{{aB}}"
+            class="_div fake-chart data-v-2b81f406"
+            wx:if="{{aA}}"
+          ></view>
+          <f2
+            bind:__l="__l"
+            bindonInit="{{aG}}"
+            class="r data-v-2b81f406"
+            uI="2b81f406-3"
+            uP="{{aH}}"
+            uR="lineChart"
+            wx:if="{{aE}}"
+          ></f2>
+          <view
+            class="{{['_ul','canvas-toolTip','data-v-2b81f406',aO]}}"
+            wx:if="{{aI}}"
+          >
+            <view class="_li canvas-toolTip-item data-v-2b81f406">
+              <label class="_span data-v-2b81f406">日期</label>
+              <label class="_span data-v-2b81f406">{{aJ}}</label>
+            </view>
+            <view class="_li canvas-toolTip-item data-v-2b81f406">
+              <label class="_span data-v-2b81f406">机构数</label>
+              <label class="_span data-v-2b81f406">{{aK}}</label>
+            </view>
+            <view class="_li canvas-toolTip-item data-v-2b81f406">
+              <label class="_span data-v-2b81f406">持股比例</label>
+              <label class="_span data-v-2b81f406">{{aL}}</label>
+            </view>
+            <view class="_li canvas-toolTip-item data-v-2b81f406">
+              <label class="_span data-v-2b81f406">价格</label>
+              <label class="{{['_span','data-v-2b81f406',aN]}}">{{aM}}</label>
+            </view>
+          </view>
+        </view>
+        <view class="_div chart-legend data-v-2b81f406" wx:if="{{aP}}">
+          <label class="_span chart-legend-span data-v-2b81f406"
+            >持股比例</label
+          >
+          <label class="_span chart-legend-span data-v-2b81f406">价格</label>
+        </view>
+        <view class="_div chart-err data-v-2b81f406" wx:if="{{aQ}}"
+          >暂无数据</view
+        >
+      </view>
+      <view class="_div separate-line data-v-2b81f406" wx:if="{{aR}}"></view>
+      <view
+        class="_div brief-block data-v-2b81f406"
+        style="border: 0px; padding: 0"
+        wx:if="{{aS}}"
+      >
+        <view class="_div item-title-zxg-sub data-v-2b81f406"
+          >股东统计<view
+            catchtap="{{aU}}"
+            class="_div item-title-time data-v-2b81f406"
+            >{{aT}} 更新<view class="arrow right data-v-2b81f406"></view>
+          </view>
+        </view>
+        <view class="_div chart-toptext-container data-v-2b81f406">
+          <view class="_div item-sub-tab-blue data-v-2b81f406">
+            <label
+              bindtap="{{val.d}}"
+              class="{{['_span','sub-tab-blue','data-v-2b81f406',val.b]}}"
+              wx:for="{{aV}}"
+              wx:for-item="val"
+              wx:key="c"
+              >{{val.a}}</label
+            >
+          </view>
+        </view>
+        <view class="_div chart-err data-v-2b81f406" wx:if="{{aW}}"
+          >暂无数据</view
+        >
+        <view class="_div extra-data data-v-2b81f406" wx:if="{{aX}}">
+          <view class="_div row caption data-v-2b81f406">
+            <view class="_div col-name data-v-2b81f406">{{aY}}</view>
+            <view class="_div col-value data-v-2b81f406">持股数(股)</view>
+            <view class="_div col-percent data-v-2b81f406">占比</view>
+          </view>
+          <view class="_div row data-v-2b81f406" wx:for="{{aZ}}" wx:key="d">
+            <view class="_div col-name gd-name data-v-2b81f406"
+              >{{item.a}}</view
+            >
+            <view class="_div col-value data-v-2b81f406">{{item.b}}</view>
+            <view class="_div col-percent data-v-2b81f406">{{item.c}}%</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{ba}}">
+      <view class="_div item-title-zxg data-v-2b81f406">公司高管</view>
+      <view class="_div item-block one-column data-v-2b81f406">
+        <view class="_div layout data-v-2b81f406">
+          <view
+            class="_div item-label name-mar data-v-2b81f406"
+            style="width: 40%"
+            >高管</view
+          >
+          <view class="_div item-label data-v-2b81f406" style="width: 60%"
+            >职务</view
+          >
+        </view>
+        <view
+          class="_div layout data-v-2b81f406"
+          wx:for="{{bb}}"
+          wx:for-item="val"
+          wx:key="d"
+        >
+          <view class="_div flex-row-item data-v-2b81f406" wx:if="{{val.a}}">
+            <view
+              class="_div item-value black-title name-mar data-v-2b81f406"
+              style="width: 40%"
+              >{{val.b}}</view
+            >
+            <view
+              class="_div item-value black-title data-v-2b81f406"
+              style="width: 60%"
+              >{{val.c}}</view
+            >
+          </view>
+        </view>
+        <view
+          catchtap="{{bf}}"
+          class="_div toggle-list data-v-2b81f406"
+          wx:if="{{bc}}"
+          >{{bd}}<view class="{{['data-v-2b81f406','arrow',be]}}"></view>
+        </view>
+      </view>
+      <view class="_div data-v-2b81f406"></view>
+    </view>
+    <view class="_div separate-strip data-v-2b81f406" wx:if="{{bg}}">
+      <gshg
+        bind:__l="__l"
+        bindopenDetail="{{bi}}"
+        bindshowTeachTips="{{bh}}"
+        class="data-v-2b81f406"
+        uI="2b81f406-4"
+        uP="{{bj}}"
+        wx:if="{{bj}}"
+      ></gshg>
+    </view>
+    <view class="_div brief-block data-v-2b81f406" wx:if="{{bk}}">
+      <view class="_div item-title-zxg data-v-2b81f406">
+        <view class="_div title-text data-v-2b81f406"
+          >分红送配<view
+            catchtap="{{bl}}"
+            class="_div image-tip data-v-2b81f406"
+          ></view>
+        </view>
+        <view bindtap="{{bm}}" class="_div title-jump data-v-2b81f406"
+          >查看更多<image
+            class="_img img-arrow data-v-2b81f406"
+            src="https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div item-block one-column data-v-2b81f406">
+        <view class="_div layout data-v-2b81f406">
+          <view class="_div item-label data-v-2b81f406" style="width: 30%"
+            >除权日期</view
+          >
+          <view
+            class="_div item-label data-v-2b81f406"
+            style="width: 70%; text-align: right"
+            >方案</view
+          >
+        </view>
+        <view
+          class="_div layout data-v-2b81f406"
+          hidden="{{!val.e}}"
+          wx:for="{{bn}}"
+          wx:for-item="val"
+          wx:key="d"
+        >
+          <view class="_div flex-row-item data-v-2b81f406" wx:if="{{val.a}}">
+            <view
+              class="_div item-value black-title data-v-2b81f406"
+              style="width: 30%"
+              >{{val.b}}</view
+            >
+            <view
+              class="_div item-value black-title data-v-2b81f406"
+              style="width: 70%; text-align: right"
+              >{{val.c}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-2b81f406"
+    uI="2b81f406-5"
+    uS="{{['d']}}"
+    wx:elif="{{bo}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无简况数据</block>
+  </no-data>
+  <view class="_div teach-bottom data-v-2b81f406" wx:if="{{bp}}">
+    <view catchtap="{{bq}}" class="_div teach-img data-v-2b81f406">
+      <view class="_div teach-left data-v-2b81f406">
+        <image
+          class="_img img-logo data-v-2b81f406"
+          src="https://st.gtimg.com/design/56d67054e1577bfd084b05db1ac74062.png"
+        ></image>
+        <view class="_div teach-text data-v-2b81f406">
+          <view class="_div brief-black-text data-v-2b81f406"
+            >简况教程 · 港股篇</view
+          >
+          <view class="_div data-v-2b81f406">学习基本面分析方法</view>
+        </view>
+      </view>
+      <image
+        class="_img img-arrow data-v-2b81f406"
+        src="https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div place-holder data-v-2b81f406" wx:if="{{br}}"></view>
+</view>

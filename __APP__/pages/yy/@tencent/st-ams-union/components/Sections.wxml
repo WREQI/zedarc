@@ -1,0 +1,83 @@
+<view class="_div data-v-6137b834">
+  <view
+    class="_div data-v-6137b834"
+    wx:for="{{a}}"
+    wx:for-item="section"
+    wx:key="B"
+  >
+    <view
+      class="_div ams-content-section data-v-6137b834"
+      wx:if="{{section.a}}"
+    >
+      <stock-query
+        bind:__l="__l"
+        bindreportData="{{section.b}}"
+        class="data-v-6137b834"
+        uI="{{section.c}}"
+        uP="{{section.d}}"
+        wx:if="{{section.d}}"
+      ></stock-query>
+    </view>
+    <view
+      class="{{['_div','ams-content-section','data-v-6137b834',section.z]}}"
+      style="{{'background-image:'+section.A+';'+'background-size:'+'100% 100%'}}"
+      wx:else
+    >
+      <image
+        class="_img ams-section-index data-v-6137b834"
+        src="{{section.f}}"
+        wx:if="{{section.e}}"
+      ></image>
+      <view
+        class="_div ams-image-container data-v-6137b834"
+        wx:if="{{section.g}}"
+      >
+        <image
+          class="_img section-img data-v-6137b834"
+          key="{{section.h}}"
+          mode="widthFix"
+          src="{{section.i}}"
+          style="width: 100%"
+        ></image>
+        <view
+          bindtap="{{section.l}}"
+          class="{{['_div','data-v-6137b834',section.k]}}"
+          wx:if="{{section.j}}"
+        ></view>
+        <view
+          bindtap="{{section.o}}"
+          class="_div ams-feature-button ams-feature-button2 data-v-6137b834"
+          wx:if="{{section.m}}"
+          >{{section.n}}</view
+        >
+      </view>
+      <block wx:else>
+        <view
+          class="_div ams-feature-title data-v-6137b834"
+          wx:if="{{section.p}}"
+        >
+          <rich-text class="data-v-6137b834" nodes="{{section.q}}"></rich-text>
+        </view>
+        <view class="_div ams-feature-description data-v-6137b834">
+          <rich-text class="data-v-6137b834" nodes="{{section.r}}"></rich-text>
+        </view>
+        <view
+          class="_div ams-feature-tip data-v-6137b834"
+          wx:if="{{section.s}}"
+        >
+          <rich-text class="data-v-6137b834" nodes="{{section.t}}"></rich-text>
+        </view>
+        <view
+          bindtap="{{section.x}}"
+          class="_div ams-feature-button data-v-6137b834"
+          wx:if="{{section.v}}"
+          >{{section.w}}</view
+        >
+        <view
+          class="_div border-1px data-v-6137b834"
+          wx:if="{{section.y}}"
+        ></view>
+      </block>
+    </view>
+  </view>
+</view>

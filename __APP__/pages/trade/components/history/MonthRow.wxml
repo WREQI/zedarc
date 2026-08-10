@@ -1,0 +1,7 @@
+<view class="history-new-time data-v-ae607a6d">
+  <view bindtap="{{b}}" class="history-timefilter data-v-ae607a6d">
+    <label class="history-timetxt data-v-ae607a6d">{{a}}</label>
+    <label class="icon icon-arrow-down data-v-ae607a6d"></label>
+  </view>
+  <view class="history-total data-v-ae607a6d">共{{c}}笔</view>
+</view>

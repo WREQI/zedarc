@@ -1,0 +1,32 @@
+<view class="_div" style="{{'width:'+t+';'+'height:'+v}}">
+  <kline
+    bind:__l="__l"
+    bindgetInitData="{{m}}"
+    bindgetMore="{{j}}"
+    bindonBarTap="{{i}}"
+    bindonChange="{{f}}"
+    bindonChipSwitch="{{k}}"
+    bindonDoubleTap="{{l}}"
+    bindonPopup="{{g}}"
+    bindonTipTap="{{h}}"
+    bindonTouchCancle="{{d}}"
+    bindonTouchEnd="{{e}}"
+    bindonTouchMove="{{c}}"
+    class="r"
+    id="chart"
+    uI="dadd4860-0"
+    uP="{{n}}"
+    uR="chart"
+    wx:if="{{a}}"
+  ></kline>
+  <no-data bind:__l="__l" uI="dadd4860-1" wx:if="{{o}}"></no-data>
+  <selector
+    bind:__l="__l"
+    bindshowLesson="{{r}}"
+    class="r"
+    uI="dadd4860-2"
+    uP="{{s}}"
+    uR="selector"
+    wx:if="{{p}}"
+  ></selector>
+</view>

@@ -1,0 +1,146 @@
+.sheet.data-v-7074e901 .st-action-sheet-header {
+  background-color: initial;
+  background-image: url(https://st.gtimg.com/design/e4bacdbed191385749071eec4c6bda5e.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.21333333333333335rem;
+}
+[data-theme="dark"] .sheet.data-v-7074e901 .st-action-sheet-header {
+  background-image: url(https://st.gtimg.com/design/f67367ce37be8632156be475d1044c8a.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.sheet.data-v-7074e901 .st-action-sheet-header .st-action-sheet-title {
+  font-size: 0.48rem;
+  font-weight: bolder;
+}
+.sheet.data-v-7074e901 .st-action-sheet-header .st-action-sheet-cancel {
+  height: 0.4533333333333333rem;
+  margin: auto;
+  right: 0;
+  width: 0.4533333333333333rem;
+}
+.sheet.data-v-7074e901 .mp-popup {
+  animation: roll-7074e901 0.5s forwards;
+  background-color: initial;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  transform: translateY(100%);
+}
+@-webkit-keyframes roll-7074e901 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes roll-7074e901 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.sheet-container.data-v-7074e901 {
+  line-height: 0.44rem;
+  max-height: 11.306666666666667rem;
+  overflow: auto;
+  position: relative;
+  text-align: left;
+}
+.sheet-container-item.data-v-7074e901 {
+  align-items: center;
+  border-bottom: 0.013333333333333334rem solid
+    var(--border-light-divider, #e9ebf0);
+  display: -webkit-flex;
+  display: flex;
+  margin: 0.4266666666666667rem 0.4rem;
+  min-height: 1.6rem;
+  padding-bottom: 0.4266666666666667rem;
+}
+.sheet-container-item.data-v-7074e901:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.sheet-container-item-img.data-v-7074e901 {
+  align-content: center;
+  background-color: var(--fill-4, #f1f7ff);
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6rem;
+  justify-content: center;
+  width: 1.6rem;
+}
+[data-theme="dark"] .sheet-container-item-img.data-v-7074e901 {
+  background-color: #000;
+}
+.sheet-container-item-img-each.data-v-7074e901 {
+  height: 1.0666666666666667rem;
+  margin: auto;
+  width: 1.0666666666666667rem;
+}
+.sheet-container-item-main.data-v-7074e901 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 0.4rem;
+  position: relative;
+}
+.sheet-container-item-main-first.data-v-7074e901 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+}
+.sheet-container-item-main-first-title.data-v-7074e901 {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: bolder;
+  margin-right: 0.16rem;
+}
+[data-theme="dark"] .sheet-container-item-main-first-title.data-v-7074e901 {
+  color: #f0f1f5;
+}
+.sheet-container-item-main-first-label.data-v-7074e901 {
+  margin-top: -0.02666666666666667rem;
+}
+.sheet-container-item-main-first-label .sheet-intro-item.data-v-7074e901 {
+  border: 0.02666666666666667rem solid rgba(48, 119, 236, 0.5);
+  border-radius: 0.05333333333333334rem;
+  color: #3077ec;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  line-height: 0.37333333333333335rem;
+  margin-right: 0.10666666666666667rem;
+  padding: 0.02666666666666667rem 0.06666666666666667rem;
+}
+.sheet-container-item-main-text.data-v-7074e901 {
+  color: #475166;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  margin-top: 0.16rem;
+}
+[data-theme="dark"] .sheet-container-item-main-text.data-v-7074e901 {
+  color: #7d88a1;
+}
+.zhanwei.data-v-7074e901 {
+  height: 1.76rem;
+  width: 100%;
+}
+.action-button.data-v-7074e901 {
+  background-color: #3077ec;
+  border-radius: 0.10666666666666667rem;
+  bottom: 0;
+  color: #fff;
+  font-size: 0.48rem;
+  font-weight: bolder;
+  line-height: 0.72rem;
+  margin-bottom: 0.32rem;
+  margin-left: 0.4rem;
+  padding: 0.22666666666666666rem 0;
+  position: fixed;
+  width: 9.2rem;
+  z-index: 100;
+}

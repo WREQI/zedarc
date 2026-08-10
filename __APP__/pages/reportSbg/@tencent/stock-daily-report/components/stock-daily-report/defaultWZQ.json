@@ -1,0 +1,34 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tab": "./components/tab",
+    "base-title": "./components/BaseTitle",
+    "subscribe-btn": "./components/SubscribeBtn",
+    "base-date": "./components/BaseDate",
+    "zxfxpm-list": "./components/ZxfxpmList",
+    "zxgpdt-list": "./components/ZxgpdtList",
+    "zxfxfx-list": "./components/ZxfxfxList",
+    "tcrd-list": "./components/TcrdList",
+    "sqry-list": "./components/SqryList",
+    "guo-zhai": "./components/NationalDebt",
+    "guess-rise-fall-mod": "../../../../../communitySbg/@tencent/stock-community-ui/components/GuessRiseFallMod/index",
+    "normal-content": "./components/NormalContent",
+    "zjrd": "./components/Zjrd",
+    "noon-report": "./components/noonReport",
+    "sshq": "./components/Sshq",
+    "live-card": "../../../../../live/@tencent/stock-live-combine/component/LiveCard",
+    "subscribe-wx-msg-bar": "../../../../../live/@tencent/stock-live-detail/components/SubscribeWxMsgBar",
+    "related-stock": "../../../../../newsCon/@tencent/stock-news-detail/components/NewsBody/components/NewsCompContent/components/NewsContentNormal/related-stock",
+    "stock-list": "../../../../../communitySbg/@tencent/stock-community-ui/components/StockList/index",
+    "follow-guide": "../../../stock-morning-report/morning-report-card/component/followGuide",
+    "half-editor": "../../../../../halfScreenEditor/@tencent/stock-halfscreen-editor/components/halfscreen-editor"
+  },
+  "componentPlaceholder": {
+    "guess-rise-fall-mod": "view",
+    "live-card": "view",
+    "subscribe-wx-msg-bar": "view",
+    "related-stock": "view",
+    "stock-list": "view",
+    "half-editor": "view"
+  }
+}

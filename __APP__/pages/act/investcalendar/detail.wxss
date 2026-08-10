@@ -1,0 +1,240 @@
+.container {
+  background: #f5f6fa;
+  overflow: hidden;
+}
+.container .bg-color {
+  background-size: 100% 100%;
+  height: 12.573333333333334rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.container .bg-color .bg-img {
+  height: 12.573333333333334rem;
+  width: 10rem;
+}
+.container .header {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  height: 2.3466666666666667rem;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+.container .header .back-img {
+  display: inline-block;
+  height: 0.64rem;
+  left: 0.22666666666666666rem;
+  position: absolute;
+  width: 0.64rem;
+}
+.container .header .title {
+  color: #141414;
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  left: 0;
+  line-height: 0.48rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 4rem;
+}
+.container .detail {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  padding: 0 0.32rem calc(1.7066666666666668rem + env(safe-area-inset-bottom));
+  z-index: 1;
+}
+.container .detail .info {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  position: relative;
+}
+.container .detail .info .logo {
+  background: rgba(152, 160, 179, 0.06);
+  border: 0.013333333333333334rem solid rgba(152, 160, 179, 0.5);
+  border-radius: 0.05333333333333334rem;
+  color: #98a0b3;
+  display: inline-block;
+  font-size: 0.32rem;
+  font-weight: 600;
+  height: 0.5866666666666667rem;
+  line-height: 0.6133333333333333rem;
+  margin-right: 0.16rem;
+  padding: 0 0.16rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.container .detail .info .creater {
+  color: #98a0b3;
+  display: inline-block;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+}
+.container .detail .description {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin: 0.26666666666666666rem 0 0.64rem;
+  position: relative;
+}
+.container .detail .list {
+  border-radius: 0.21333333333333335rem;
+  overflow-y: scroll;
+  position: relative;
+}
+.container .detail .list .content-wrap {
+  background: linear-gradient(0deg, #fff, #fff),
+    radial-gradient(
+      554.12% 142.6%at 100% 101.66%,
+      #dde0e5,
+      #eceef1 72.18%,
+      #f5f7fa
+    );
+}
+.container .detail .list .list-item {
+  margin: 0 0.32rem;
+}
+.container .detail .list .list-item .content {
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  padding: 0.32rem 0;
+}
+.container .detail .list .list-item .content.last {
+  border-bottom: none;
+}
+.container .detail .list .list-item .content .title .title-color {
+  border-radius: 0.5333333333333333rem;
+  display: inline-block;
+  height: 0.32rem;
+  margin-right: 0.21333333333333335rem;
+  width: 0.08rem;
+}
+.container .detail .list .list-item .content .title .title-color.COLOR_RED,
+.container .detail .list .list-item .content .title .title-color.red {
+  background: #e63535;
+}
+.container .detail .list .list-item .content .title .title-color.COLOR_BLUE {
+  background: #3077ec;
+}
+.container .detail .list .list-item .content .title .title-color.COLOR_ORANGE {
+  background: #ff891e;
+}
+.container .detail .list .list-item .content .title .title-color.COLOR_GREEN {
+  background: #1caa3c;
+}
+.container .detail .list .list-item .content .title .title-val {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+}
+.container .detail .list .list-item .content .frequency,
+.container .detail .list .list-item .content .subtitle {
+  align-items: center;
+  color: #7a8499;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin-left: 0.29333333333333333rem;
+  margin-top: 0.16rem;
+}
+.container .detail .list .list-item .content .frequency .line,
+.container .detail .list .list-item .content .subtitle .line {
+  background: #dcdfe6;
+  display: inline-block;
+  height: 0.32rem;
+  margin: 0 0.21333333333333335rem;
+  width: 0.013333333333333334rem;
+}
+.container .detail .empty-tip {
+  align-items: center;
+  background: #fff;
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 5.333333333333333rem;
+  justify-content: center;
+  position: relative;
+}
+.container .detail .empty-tip .tip-img {
+  height: 1.6rem;
+  margin-bottom: 0.32rem;
+  width: 1.3333333333333333rem;
+}
+.container .detail .empty-tip .tip-text {
+  color: #98a0b3;
+  font-size: 0.37333333333333335rem;
+}
+.container .bottom {
+  align-items: center;
+  background: #fff;
+  border-top: 0.013333333333333334rem solid #e9ebf0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  left: 0;
+  padding-bottom: calc(0.2rem + env(safe-area-inset-bottom));
+  padding-top: 0.2rem;
+  position: fixed;
+  right: 0;
+}
+.container .bottom .left {
+  background: none;
+  border: none;
+  line-height: 0;
+  margin: 0 0.64rem;
+  padding: 0;
+  text-align: center;
+  width: 0.56rem;
+}
+.container .bottom .left .share-img {
+  display: inline-block;
+  height: 0.4533333333333333rem;
+  margin-bottom: 0.10666666666666667rem;
+  width: 0.4533333333333333rem;
+}
+.container .bottom .left .share-val {
+  color: #262e40;
+  display: inline-block;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 144%;
+}
+.container .bottom .right {
+  align-items: center;
+  background: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  font-weight: 600;
+  height: 0.96rem;
+  justify-content: center;
+  width: 7.866666666666666rem;
+}
+.container .bottom .right.yes {
+  background: rgba(230, 53, 53, 0.05);
+  border: 0.02666666666666667rem solid rgba(230, 53, 53, 0.2);
+  color: #e63535;
+}

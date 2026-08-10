@@ -1,0 +1,85 @@
+.section.data-v-263c173d {
+  background-color: var(--color-white);
+}
+.section .section-header.data-v-263c173d {
+  color: var(--color-heavygray);
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+  padding: 0.4266666666666667rem 0 0 0.4266666666666667rem;
+}
+.part-up.data-v-263c173d {
+  align-items: stretch;
+  border-bottom: 0.013333333333333334rem solid var(--border-light);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0.4266666666666667rem;
+  min-height: 1.84rem;
+  padding: 0.4266666666666667rem 0;
+}
+.part-up.last.data-v-263c173d {
+  border-bottom: 0 solid var(--border-light);
+}
+.part-up .part-up-left.data-v-263c173d {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 1.9733333333333334rem;
+  overflow: hidden;
+}
+.part-up .part-up-left .title.data-v-263c173d {
+  color: var(--color-heavygray);
+  flex: 0;
+  font-size: 0.4266666666666667rem;
+  line-break: anywhere;
+  line-height: 0.64rem;
+  text-align: left;
+}
+.part-up .part-up-left .info.data-v-263c173d {
+  align-items: center;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 0.5333333333333333rem;
+  line-height: 1;
+  margin-top: 0.26666666666666666rem;
+}
+.part-up .part-up-left .info .source.data-v-263c173d,
+.part-up .part-up-left .info .tag.data-v-263c173d,
+.part-up .part-up-left .info .time.data-v-263c173d {
+  margin-right: 0.21333333333333335rem;
+}
+.part-up .part-up-left .info .tag.data-v-263c173d {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+.part-up .part-up-left .info .source.data-v-263c173d {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.part-up .part-up-left .info .time.data-v-263c173d {
+  flex-shrink: 0;
+}
+.part-up .part-up-right.data-v-263c173d {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  margin-left: 0.26666666666666666rem;
+  width: 1.9733333333333334rem;
+}
+.part-up .part-up-right .cover.data-v-263c173d {
+  border-radius: 0.10666666666666667rem;
+  flex-shrink: 0;
+  height: 1.9733333333333334rem;
+  margin-top: 0.05333333333333334rem;
+  object-fit: cover;
+  width: 1.9733333333333334rem;
+}

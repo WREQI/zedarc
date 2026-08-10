@@ -1,0 +1,42 @@
+<view
+  bindtap="{{q}}"
+  catchtouchmove="{{p}}"
+  class="{{['_div','data-v-bc077ce6','service-agreement-modal-overlay',l,m,n]}}"
+  style="{{o}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{k}}" class="_div modal-content data-v-bc077ce6">
+    <view class="_div title data-v-bc077ce6">历史对话服务协议</view>
+    <view class="_div content-body data-v-bc077ce6">
+      <view class="_div scroll-area data-v-bc077ce6"
+        >问元宝可以查看对话历史了。为了更好为您服务，请您阅读<label
+          catchtap="{{c}}"
+          class="_span link data-v-bc077ce6"
+          >{{b}}</label
+        >相关条款并确认是否签署。</view
+      >
+    </view>
+    <view bindtap="{{g}}" class="_div checkbox-area data-v-bc077ce6">
+      <view
+        class="{{['_div','checkbox','data-v-bc077ce6',d&&'checked']}}"
+      ></view>
+      <view class="_div label data-v-bc077ce6"
+        >我已知悉、同意授权和签署<label
+          catchtap="{{f}}"
+          class="_span link data-v-bc077ce6"
+          >{{e}}</label
+        >
+      </view>
+    </view>
+    <view class="_div footer data-v-bc077ce6">
+      <view bindtap="{{h}}" class="_div btn cancel-btn data-v-bc077ce6"
+        >不同意</view
+      >
+      <view
+        catchtap="{{j}}"
+        class="{{['_div','btn','confirm-btn','data-v-bc077ce6',i&&'disabled']}}"
+        >同意</view
+      >
+    </view>
+  </view>
+</view>

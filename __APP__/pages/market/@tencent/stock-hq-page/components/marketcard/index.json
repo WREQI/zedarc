@@ -1,0 +1,21 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabbar": "../tabs/mp",
+    "market-index": "../common/MarketIndex",
+    "plate-card": "./PlateCard",
+    "cross-border": "./CrossBorder",
+    "market-interpretation": "./market-info-bar/MarketInterpretation",
+    "market-analysis": "./market-analysis/index",
+    "hangqing-bar": "./HangqingBar",
+    "function-area": "./hs/function-area/index",
+    "market-icon": "../../../../../detailSbg/@tencent/stock-markets-base/components/MarketIcon",
+    "wzq-info-modal": "../../node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "etf-rank-list": "./etf/RankList",
+    "daxin-calendar": "./hs/daxin-calendar/index",
+    "status": "../../../../../../node-modules/@tencent/st-status/mp/index",
+    "st-checkbox": "../common/Checkbox",
+    "plate-container": "../plate/plate-container/PlateContainerOne"
+  },
+  "componentPlaceholder": { "market-icon": "view" }
+}

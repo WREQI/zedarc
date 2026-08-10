@@ -1,0 +1,15 @@
+<view wx:if="{{a}}">
+  <main-webview
+    binderror="{{d}}"
+    bindmessage="{{e}}"
+    isMpPlugin="{{true}}"
+    src="{{c}}"
+    wx:if="{{b}}"
+  ></main-webview>
+  <web-view
+    binderror="{{g}}"
+    bindmessage="{{h}}"
+    src="{{f}}"
+    wx:else
+  ></web-view>
+</view>

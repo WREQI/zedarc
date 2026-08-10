@@ -1,0 +1,15 @@
+<view class="{{['cond-detail-row','^cond-detail-row','data-v-04135daa',d]}}">
+  <view class="cond-detail-row-left ^cond-detail-row-left data-v-04135daa"
+    >{{a}}</view
+  >
+  <view
+    class="cond-detail-row-right ^cond-detail-row-right data-v-04135daa"
+    wx:if="{{b}}"
+    >{{c}}<slot name="right"></slot>
+  </view>
+  <view
+    class="cond-detail-row-right ^cond-detail-row-right data-v-04135daa"
+    wx:else
+    >***</view
+  >
+</view>

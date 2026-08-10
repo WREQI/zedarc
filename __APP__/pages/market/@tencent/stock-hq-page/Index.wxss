@@ -1,0 +1,244 @@
+@-webkit-keyframes slideUp-474a8fae {
+  0% {
+    transform: translateY(100%);
+  }
+  36% {
+    transform: translateY(100%);
+  }
+  38% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp-474a8fae {
+  0% {
+    transform: translateY(100%);
+  }
+  36% {
+    transform: translateY(100%);
+  }
+  38% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideDown-474a8fae {
+  0% {
+    transform: translateY(0);
+  }
+  36% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slideDown-474a8fae {
+  0% {
+    transform: translateY(0);
+  }
+  36% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.etf-board-wrapper.data-v-474a8fae .teach-pop-wrapper .mask-wrapper {
+  bottom: calc(49px + constant(safe-area-inset-bottom));
+  bottom: calc(49px + env(safe-area-inset-bottom));
+}
+.etf-board-wrapper.data-v-474a8fae
+  .teach-pop-wrapper
+  .mask-wrapper
+  .pop-content {
+  bottom: 0;
+}
+.etf-board-wrapper.data-v-474a8fae
+  .teach-pop-wrapper
+  .mask-wrapper
+  .pop-content
+  .content-mid,
+.etf-board-wrapper.is-pc.data-v-474a8fae .teach-pop-wrapper .content-mid {
+  background-size: 100% 100%;
+}
+.board-mask.data-v-474a8fae {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+.counter-wrapper.data-v-474a8fae {
+  bottom: 27px;
+  left: calc(50% - 1.4533333333333334rem);
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  z-index: 10;
+}
+.counter-wrapper .counter.data-v-474a8fae {
+  align-items: center;
+  background: var(--card-shadow8);
+  border: 0.013333333333333334rem solid var(--border-light);
+  border-radius: 0.37333333333333335rem;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  height: 0.64rem;
+  justify-content: center;
+  padding: 0 0.32rem;
+}
+.counter-wrapper .counter .fold.data-v-474a8fae {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 0.16rem;
+}
+.counter-wrapper .counter .fold .icon.data-v-474a8fae {
+  background-image: url(https://st.gtimg.com/design/6378ea321ab7f2adcf62ae106b43bc5d.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0.16rem;
+  margin-left: 0.05333333333333334rem;
+  transform: rotate(180deg);
+  width: 0.24rem;
+}
+.counter-wrapper .counter .com-text.data-v-474a8fae {
+  color: #7a8499;
+}
+.counter-wrapper .counter .spe-text.data-v-474a8fae {
+  color: #3077ec;
+}
+.bubble-tip.data-v-474a8fae {
+  background: transparent;
+  height: 0.13333333333333333rem;
+  position: absolute;
+  top: 0.6666666666666666rem;
+  width: 0.6666666666666666rem;
+}
+.page-choose-hq.data-v-474a8fae {
+  background: var(--fill-1);
+  color: var(--text-color-1);
+  position: relative;
+  width: 100%;
+}
+.page-choose-hq .sub-swiper.data-v-474a8fae {
+  height: 100%;
+  width: 100%;
+}
+.page-choose-hq .sub-swiper .swiper-item.data-v-474a8fae {
+  height: 100%;
+}
+.page-choose-hq .slide-header.data-v-474a8fae {
+  position: relative;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae {
+  background-color: var(--fill-2);
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .tabbar-scroll-wrapper {
+  overflow: hidden;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .cont {
+  flex: none;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .tab {
+  color: var(--text-color-2);
+  flex: none;
+  font-size: 0.4rem;
+  padding-bottom: 0.28rem;
+  padding-top: 0.28rem;
+  text-align: center;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .tab.selected {
+  color: var(--text-color-1);
+  position: relative;
+}
+.sys-ios .page-choose-hq .slide-header .tabbar.data-v-474a8fae .tab.selected {
+  font-weight: 500 !important;
+}
+.sys-android
+  .page-choose-hq
+  .slide-header
+  .tabbar.data-v-474a8fae
+  .tab.selected {
+  -webkit-text-stroke-width: 0.002666666666666667rem !important;
+  font-weight: unset !important;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .tab.selected:after {
+  background-color: var(--color-primary-1);
+  border-radius: 0.05333333333333334rem;
+  bottom: 0.08rem;
+  box-sizing: border-box;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.page-choose-hq .slide-header .tabbar.data-v-474a8fae .common-red-dot:after {
+  right: -0.18666666666666668rem;
+  top: 0.12rem;
+}
+.page-choose-hq .loading-wrapper.data-v-474a8fae {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 1.0666666666666667rem;
+  z-index: 100;
+}
+.page-choose-hq .loading-wrapper-label.data-v-474a8fae {
+  top: 2.0533333333333332rem;
+}
+.page-choose-hq .hs-swiper-container.data-v-474a8fae {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.page-choose-hq .hs-swiper-container .content-wrapper.data-v-474a8fae {
+  height: 100%;
+}
+.page-choose-hq .hs-tab-label.data-v-474a8fae {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  height: 0.9866666666666667rem;
+  padding: 0.10666666666666667rem 0 0.16rem 0.4rem;
+  position: relative;
+}
+.page-choose-hq .hs-tab-label .label.data-v-474a8fae {
+  align-items: center;
+  background-color: var(--fill-1);
+  border-radius: 0.10666666666666667rem;
+  color: var(--text-color-2);
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 0.32rem;
+  height: 100%;
+  letter-spacing: 0;
+  margin-right: 0.21333333333333335rem;
+  padding: 0 0.26666666666666666rem;
+}
+.page-choose-hq .hs-tab-label .label.active.data-v-474a8fae {
+  background: var(--fill-5);
+  color: var(--color-primary-1);
+}
+.sys-ios .page-choose-hq .hs-tab-label .label.active.data-v-474a8fae {
+  font-weight: 600 !important;
+}
+.sys-android .page-choose-hq .hs-tab-label .label.active.data-v-474a8fae {
+  -webkit-text-stroke-width: 0.005333333333333334rem !important;
+  font-weight: unset !important;
+}

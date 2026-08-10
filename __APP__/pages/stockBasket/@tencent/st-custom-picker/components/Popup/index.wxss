@@ -1,0 +1,110 @@
+.mp-popup {
+  -webkit-overflow-scrolling: touch;
+  animation: ease both;
+  background-color: var(--fill-3);
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  z-index: 101;
+}
+.mp-popup--center {
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.mp-popup--center.mp-popup--round {
+  border-radius: 0.21333333333333335rem;
+}
+.mp-popup--top {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.mp-popup--top.mp-popup--round {
+  border-radius: 0 0 0.21333333333333335rem 0.21333333333333335rem;
+}
+.mp-popup--right {
+  right: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+.mp-popup--right.mp-popup--round {
+  border-radius: 0.21333333333333335rem 0 0 0.21333333333333335rem;
+}
+.mp-popup--bottom {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  width: 100%;
+}
+.mp-popup--bottom,
+.mp-popup--bottom.mp-popup--round {
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+}
+.mp-popup--left {
+  left: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+.mp-popup--left.mp-popup--round {
+  border-radius: 0 0.21333333333333335rem 0.21333333333333335rem 0;
+}
+.mp-scale-enter-active,
+.mp-scale-leave-active {
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+.mp-scale-enter,
+.mp-scale-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+}
+.mp-fade-enter-active,
+.mp-fade-leave-active {
+  transition-property: opacity;
+}
+.mp-fade-enter,
+.mp-fade-leave-to {
+  opacity: 0;
+}
+.mp-center-enter-active,
+.mp-center-leave-active {
+  transition-property: opacity;
+}
+.mp-center-enter,
+.mp-center-leave-to {
+  opacity: 0;
+}
+.mp-bottom-enter-active,
+.mp-bottom-leave-active,
+.mp-left-enter-active,
+.mp-left-leave-active,
+.mp-right-enter-active,
+.mp-right-leave-active,
+.mp-top-enter-active,
+.mp-top-leave-active {
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.mp-bottom-enter,
+.mp-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+.mp-top-enter,
+.mp-top-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+.mp-left-enter,
+.mp-left-leave-to {
+  transform: translate3d(-100%, -50%, 0);
+}
+.mp-right-enter,
+.mp-right-leave-to {
+  transform: translate3d(100%, -50%, 0);
+}

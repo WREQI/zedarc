@@ -1,0 +1,166 @@
+.mod-item-wrap.data-v-4025b032 {
+  background-color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.32rem 0.7466666666666667rem;
+  position: relative;
+}
+.mod-item-wrap.last.data-v-4025b032 {
+  padding-bottom: 0.32rem;
+}
+.mod-item-wrap .header-wrap.data-v-4025b032 {
+  flex-shrink: 0;
+  width: 1.1733333333333333rem;
+}
+.mod-item-wrap .header-wrap .image-box.data-v-4025b032 {
+  border-radius: 0.10666666666666667rem;
+  height: 0.8533333333333334rem;
+  margin-top: 0.10666666666666667rem;
+  overflow: visible;
+  position: relative;
+  width: 0.8533333333333334rem;
+}
+.mod-item-wrap .header-wrap .image-box.data-v-4025b032:after {
+  border: 0.02666666666666667rem solid #0000001a;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  height: 0.8533333333333334rem;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 0.8533333333333334rem;
+}
+.mod-item-wrap .header-wrap .image-box.data-v-4025b032 .image_item img {
+  border-radius: 0.10666666666666667rem;
+  height: 100%;
+  width: 100%;
+}
+.mod-item-wrap .header-wrap .image-box img.data-v-4025b032 {
+  border-radius: 0.10666666666666667rem;
+  height: 0.8533333333333334rem;
+  width: 0.8533333333333334rem;
+}
+.mod-item-wrap .header-wrap .image-box.vip.data-v-4025b032:before {
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -0.05333333333333334rem;
+  content: "";
+  height: 0.32rem;
+  position: absolute;
+  right: -0.05333333333333334rem;
+  width: 0.32rem;
+  z-index: 1;
+}
+.mod-item-wrap .header-wrap .image-box.personal.vip.data-v-4025b032:before {
+  background-image: url(https://st.gtimg.com/design/3bfd6c30a5d005073611e7279ad4b43e.png);
+}
+.mod-item-wrap .header-wrap .image-box.enterprise.vip.data-v-4025b032:before {
+  background-image: url(https://st.gtimg.com/design/627988a4e8609d981e7f7ab2a1c5a09c.png);
+}
+.mod-list-item.data-v-4025b032 {
+  -webkit-tap-highlight-color: transparent;
+  flex: 1;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+.mod-list-item.last.data-v-4025b032 {
+  border-bottom: 0;
+}
+.mod-list-item.is-topic.data-v-4025b032 {
+  border-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.mod-list-item [class*="blink-active-comItem-"].data-v-4025b032 {
+  animation: blink-4025b032 1s ease-in-out;
+  animation-fill-mode: none;
+}
+@-webkit-keyframes blink-4025b032 {
+  0%,
+  to {
+    background-color: rgba(230, 53, 53, 0);
+  }
+  50% {
+    background-color: rgba(230, 53, 53, 0.2);
+  }
+}
+@keyframes blink-4025b032 {
+  0%,
+  to {
+    background-color: rgba(230, 53, 53, 0);
+  }
+  50% {
+    background-color: rgba(230, 53, 53, 0.2);
+  }
+}
+.mod-list-item .content-box.data-v-4025b032 {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  line-height: 1.5;
+  padding-top: 0.10666666666666667rem;
+}
+.mod-list-item .content-box .source_content.data-v-4025b032 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0;
+  text-align: left;
+}
+.mod-list-item
+  .content-box
+  .source_content
+  .mod-show-content
+  span.plain.data-v-4025b032,
+.mod-list-item .content-box .source_content .mod-show-content.data-v-4025b032 {
+  font-size: 0.4266666666666667rem;
+}
+.mod-list-item .content-box .mod-otherSource.data-v-4025b032 {
+  margin-top: 0.13333333333333333rem;
+}
+.mod-list-item .show-turn.data-v-4025b032 {
+  margin-bottom: 0.26666666666666666rem;
+  margin-top: 0.13333333333333333rem;
+}
+.mod-list-item .related-stock-container.data-v-4025b032 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-top: 0.21333333333333335rem;
+}
+.mod-list-item .related-stock-container .stock-bar.data-v-4025b032 {
+  width: 4.44rem;
+}
+.mod-list-item
+  .related-stock-container
+  .stock-bar.data-v-4025b032:first-of-type {
+  margin-right: 0.32rem;
+}
+.mod-list-item .comment-box .reply-bar-box.data-v-4025b032 {
+  align-items: center;
+  border-bottom: 0.4266666666666667rem solid #e5e5e5;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.4rem;
+}
+.mod-list-item .comment-box .reply-bar-box .mod-avatorName.data-v-4025b032 {
+  flex-grow: 1;
+}
+.mod-list-item .comment-box .last.data-v-4025b032 {
+  font-size: 0;
+  width: 0;
+}
+.mod-list-item .com-yb-disclaimer.data-v-4025b032 {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin: 0.10666666666666667rem 0 0;
+}

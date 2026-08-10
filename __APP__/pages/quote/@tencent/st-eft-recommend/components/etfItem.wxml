@@ -1,0 +1,26 @@
+<view class="_div etf-item data-v-d2f844d2">
+  <view bindtap="{{d}}" class="_div etf-item-inner data-v-d2f844d2">
+    <view class="_div data-v-d2f844d2">
+      <view class="_div etf-name data-v-d2f844d2">{{a}}</view>
+      <view class="_div etf-symbol data-v-d2f844d2">
+        <image
+          alt=""
+          class="_img market-img data-v-d2f844d2"
+          src="https://st.gtimg.com/design/3ee13e03c6f8038968d306c92c06e3a3.svg"
+        ></image>
+        <view class="_div etf-code data-v-d2f844d2">{{b}}</view>
+      </view>
+    </view>
+    <view
+      class="_div field-item data-v-d2f844d2"
+      wx:for="{{c}}"
+      wx:for-item="field"
+      wx:key="d"
+    >
+      <view class="{{['_div','data-v-d2f844d2','field-value',field.b]}}"
+        >{{field.a}}</view
+      >
+      <view class="_div field-name data-v-d2f844d2">{{field.c}}</view>
+    </view>
+  </view>
+</view>

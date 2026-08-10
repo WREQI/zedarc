@@ -1,0 +1,248 @@
+<view
+  class="_div case-page flex-grow data-v-f38b25d2"
+  data-st-theme="{{R}}"
+  data-test-id="global-invest-home-page"
+>
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    class="data-v-f38b25d2"
+    uI="f38b25d2-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="_div status-card data-v-f38b25d2" wx:if="{{d}}">加载中...</view>
+  <no-data
+    bind:__l="__l"
+    class="case-page__status data-v-f38b25d2"
+    uI="f38b25d2-1"
+    uS="{{['d']}}"
+    wx:elif="{{e}}"
+    >暂无相关数据</no-data
+  >
+  <block wx:else>
+    <view class="{{['_div','data-v-f38b25d2','case-page__hero',g]}}">
+      <image
+        alt=""
+        class="_img case-page__header-image data-v-f38b25d2"
+        src="{{f}}"
+      ></image>
+    </view>
+    <view class="{{['_div','data-v-f38b25d2','case-page__title-wrap',i]}}">
+      <image
+        alt="投全球"
+        class="_img case-page__title-svg data-v-f38b25d2"
+        src="{{h}}"
+      ></image>
+      <view class="_div case-page__subtitle data-v-f38b25d2"
+        >用A股账户投全球，不限购享 T+0 交易</view
+      >
+    </view>
+    <view class="_div hotspot-card data-v-f38b25d2" wx:if="{{j}}">
+      <view class="_div hotspot-card__section-title data-v-f38b25d2"
+        >全球热点</view
+      >
+      <swiper
+        autoplay="{{m}}"
+        bindchange="{{n}}"
+        circular="{{true}}"
+        class="hotspot-card__swiper data-v-f38b25d2"
+        current="{{l}}"
+        duration="{{300}}"
+        interval="{{7000}}"
+      >
+        <swiper-item
+          class="data-v-f38b25d2"
+          wx:for="{{k}}"
+          wx:for-item="hotspot"
+          wx:key="i"
+        >
+          <hotspot-visual
+            bind:__l="__l"
+            class="data-v-f38b25d2"
+            uI="{{hotspot.g}}"
+            uP="{{hotspot.h}}"
+            uS="{{['fund']}}"
+            wx:if="{{hotspot.h}}"
+          >
+            <view class="_div hotspot-card__fund data-v-f38b25d2" slot="fund">
+              <view
+                bindtap="{{hotspot.c}}"
+                class="_div hotspot-card__fund-info data-v-f38b25d2"
+              >
+                <view class="_div hotspot-card__fund-name data-v-f38b25d2"
+                  >{{hotspot.a}}</view
+                >
+                <view class="_div hotspot-card__fund-tags data-v-f38b25d2">
+                  <view
+                    class="_div hotspot-card__fund-tag data-v-f38b25d2"
+                    wx:for="{{hotspot.b}}"
+                    wx:for-item="tag"
+                    wx:key="b"
+                  >
+                    <view
+                      class="_div hotspot-card__fund-tag-text data-v-f38b25d2"
+                      >{{tag.a}}</view
+                    >
+                  </view>
+                </view>
+              </view>
+              <view class="_div hotspot-card__metric data-v-f38b25d2">
+                <view
+                  class="_div hotspot-card__metric-value-row data-v-f38b25d2"
+                >
+                  <view
+                    class="_div hotspot-card__metric-value-wrap data-v-f38b25d2"
+                  >
+                    <view
+                      class="{{['_div','hotspot-card__metric-value','data-v-f38b25d2',hotspot.e]}}"
+                      >{{hotspot.d}}</view
+                    >
+                  </view>
+                </view>
+                <view class="_div hotspot-card__metric-label data-v-f38b25d2"
+                  >涨跌幅</view
+                >
+              </view>
+              <view
+                bindtap="{{hotspot.f}}"
+                class="_div hotspot-card__buy-button data-v-f38b25d2"
+              >
+                <view class="_div hotspot-card__buy-text data-v-f38b25d2"
+                  >买入</view
+                >
+              </view>
+            </view>
+          </hotspot-visual>
+        </swiper-item>
+      </swiper>
+      <view class="_div hotspot-card__pager data-v-f38b25d2">
+        <view
+          class="{{['_div','data-v-f38b25d2','hotspot-card__pager-dot',item.b,item.c,item.d]}}"
+          wx:for="{{o}}"
+          wx:key="a"
+        ></view>
+      </view>
+    </view>
+    <view class="_div recommend-card data-v-f38b25d2" wx:if="{{p}}">
+      <view bindtap="{{r}}" class="_div recommend-card__header data-v-f38b25d2">
+        <view class="_div hotspot-card__section-title data-v-f38b25d2"
+          >长期投资</view
+        >
+        <image
+          alt="查看详情"
+          class="_img recommend-card__arrow global-invest-card-header-arrow data-v-f38b25d2"
+          src="{{q}}"
+        ></image>
+      </view>
+      <etf-invest-header
+        bind:__l="__l"
+        class="recommend-card__hot-topic-header r data-v-f38b25d2"
+        uI="f38b25d2-3"
+        uP="{{t}}"
+        uR="etfInvestHeaderRef"
+        wx:if="{{t}}"
+      ></etf-invest-header>
+      <view class="_div recommend-card__btn-group data-v-f38b25d2">
+        <view
+          bindtap="{{w}}"
+          class="_div recommend-card__sip-button data-v-f38b25d2"
+          wx:if="{{v}}"
+        >
+          <view
+            class="_div recommend-card__sip-button-bg data-v-f38b25d2"
+          ></view>
+          <view class="_div recommend-card__sip-button-text data-v-f38b25d2"
+            >开启定投</view
+          >
+        </view>
+        <view
+          bindtap="{{x}}"
+          class="_div recommend-card__buy-button data-v-f38b25d2"
+        >
+          <view
+            class="_div recommend-card__buy-button-bg data-v-f38b25d2"
+          ></view>
+          <view class="_div recommend-card__buy-button-text data-v-f38b25d2"
+            >立即买入</view
+          >
+        </view>
+      </view>
+      <view class="_div recommend-card__highlight-row data-v-f38b25d2">
+        <view class="_div recommend-card__highlight-badge data-v-f38b25d2">
+          <view
+            class="_div recommend-card__highlight-badge-text data-v-f38b25d2"
+            >产品亮点</view
+          >
+        </view>
+        <view class="_div recommend-card__highlight-text data-v-f38b25d2"
+          >{{y}}</view
+        >
+      </view>
+    </view>
+    <view class="_div market-section data-v-f38b25d2" wx:if="{{z}}">
+      <view class="_div market-section__header data-v-f38b25d2">
+        <view
+          bindtap="{{B}}"
+          class="_div market-section__title-row data-v-f38b25d2"
+        >
+          <image
+            alt="查看详情"
+            class="_img market-section__more-icon global-invest-card-header-arrow data-v-f38b25d2"
+            src="{{A}}"
+          ></image>
+          <view class="_div market-section__title data-v-f38b25d2"
+            >全球市场</view
+          >
+        </view>
+      </view>
+      <global-market-swiper-section
+        bind:__l="__l"
+        bindtabbarHeaderClick="{{C}}"
+        class="data-v-f38b25d2"
+        uI="f38b25d2-4"
+        uP="{{D}}"
+        wx:if="{{D}}"
+      ></global-market-swiper-section>
+    </view>
+    <view class="_div case-page__risk-note data-v-f38b25d2"
+      >本页内容仅供参考，不构成投资建议。基金过往业绩并不预示其未来表现。基金有风险，投资需谨慎。</view
+    >
+    <trust-footer
+      bind:__l="__l"
+      class="data-v-f38b25d2"
+      uI="f38b25d2-5"
+      wx:if="{{E}}"
+    ></trust-footer>
+    <footer-bar
+      bind:__l="__l"
+      bindaiHide="{{H}}"
+      bindaiShow="{{G}}"
+      bindask="{{I}}"
+      bindshare="{{J}}"
+      class="r data-v-f38b25d2"
+      uI="f38b25d2-6"
+      uP="{{K}}"
+      uR="footerBarRef"
+      wx:if="{{K}}"
+    ></footer-bar>
+    <root-portal class="data-v-f38b25d2" enable="{{true}}" wx:if="{{L}}">
+      <half-screen-ai-entry
+        bind:__l="__l"
+        bindonSubscribeTipsClose="{{M}}"
+        class="data-v-f38b25d2"
+        uI="f38b25d2-7"
+        uP="{{N}}"
+        wx:if="{{N}}"
+      ></half-screen-ai-entry>
+    </root-portal>
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{P}}"
+      class="data-v-f38b25d2"
+      uI="f38b25d2-8"
+      uP="{{Q}}"
+      wx:elif="{{O}}"
+    ></half-screen-ai-entry>
+  </block>
+</view>

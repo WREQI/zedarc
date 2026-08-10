@@ -1,0 +1,110 @@
+<view class="{{['data-v-99a5c613','etf-invest-card',x]}}">
+  <view class="_div etf-invest-card__title data-v-99a5c613">用ETF投资</view>
+  <view bindtap="{{n}}" class="_div etf-invest-card__hotspot data-v-99a5c613">
+    <view class="_div etf-invest-card__logo data-v-99a5c613" wx:if="{{a}}">
+      <st-mini-mins
+        bind:__l="__l"
+        class="etf-invest-card__logo-chart data-v-99a5c613"
+        uI="99a5c613-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></st-mini-mins>
+    </view>
+    <view class="_div etf-invest-card__name-wrap data-v-99a5c613">
+      <view class="_div etf-invest-card__name data-v-99a5c613">{{c}}</view>
+    </view>
+    <image
+      alt="{{f}}"
+      catchtap="{{g}}"
+      class="{{['_img','data-v-99a5c613','etf-invest-card__watchlist',d]}}"
+      src="{{e}}"
+    ></image>
+    <view
+      class="_div etf-invest-card__metric etf-invest-card__metric--ratio data-v-99a5c613"
+    >
+      <view
+        class="{{['_div','data-v-99a5c613','etf-invest-card__metric-value',i]}}"
+        >{{h}}</view
+      >
+      <view class="_div etf-invest-card__metric-label data-v-99a5c613"
+        >涨跌幅</view
+      >
+    </view>
+    <view
+      class="_div etf-invest-card__metric etf-invest-card__metric--relevance data-v-99a5c613"
+    >
+      <view class="_div etf-invest-card__metric-value data-v-99a5c613"
+        >{{j}}</view
+      >
+      <view class="_div etf-invest-card__metric-label data-v-99a5c613"
+        >板块相关性</view
+      >
+    </view>
+    <view
+      class="_div etf-invest-card__metric etf-invest-card__metric--price data-v-99a5c613"
+    >
+      <view class="_div etf-invest-card__metric-value data-v-99a5c613"
+        >{{k}}元</view
+      >
+      <view class="_div etf-invest-card__metric-label data-v-99a5c613"
+        >买一笔仅需</view
+      >
+    </view>
+    <view class="_div etf-invest-card__history data-v-99a5c613"
+      >如果{{l}}你投了1000元，现在大约是{{m}}元。<label
+        class="_span etf-invest-card__history-tip data-v-99a5c613"
+        >(历史回测，不代表未来收益)</label
+      >
+    </view>
+  </view>
+  <view class="_div etf-invest-card__flow data-v-99a5c613">
+    <view bindtap="{{o}}" class="_div etf-invest-card__buy data-v-99a5c613"
+      >立即买入</view
+    >
+    <block wx:if="{{p}}">
+      <view class="_div etf-invest-card__divider data-v-99a5c613"></view>
+      <view class="_div etf-invest-card__list-placeholder data-v-99a5c613">
+        <view
+          bindtap="{{r}}"
+          class="_div etf-invest-card__rank-list-wrap data-v-99a5c613"
+        >
+          <rank-list
+            bind:__l="__l"
+            class="etf-invest-card__rank-list data-v-99a5c613"
+            uI="99a5c613-1"
+            uP="{{q}}"
+            wx:if="{{q}}"
+          ></rank-list>
+        </view>
+        <view
+          bindtap="{{t}}"
+          class="_div etf-invest-card__more etf-invest-card__more--collapse data-v-99a5c613"
+          wx:if="{{s}}"
+        >
+          <label class="_span etf-invest-card__more-text data-v-99a5c613"
+            >查看更多</label
+          >
+          <image
+            alt="查看更多"
+            class="_img etf-invest-card__more-icon data-v-99a5c613"
+            src="https://st.gtimg.com/pcm/mp3q0p1t_73d6bfffa6c38202a2bbb9a1458c72fc.svg"
+          ></image>
+        </view>
+      </view>
+    </block>
+    <view
+      bindtap="{{w}}"
+      class="_div etf-invest-card__more data-v-99a5c613"
+      wx:elif="{{v}}"
+    >
+      <label class="_span etf-invest-card__more-text data-v-99a5c613"
+        >其他相关ETF</label
+      >
+      <image
+        alt="展开"
+        class="_img etf-invest-card__more-icon data-v-99a5c613"
+        src="https://st.gtimg.com/pcm/mp16i571_c04b65dc06e9c400126c302350557c1f.svg"
+      ></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,107 @@
+.semi-mask-wrapper.data-v-816252c7 {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  width: 100%;
+  z-index: 10000;
+}
+.semi-mask-wrapper.in.data-v-816252c7 {
+  animation: comein-816252c7 0.3s ease forwards;
+}
+@-webkit-keyframes comein-816252c7 {
+  0% {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+@keyframes comein-816252c7 {
+  0% {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.semi-mask-wrapper.out.data-v-816252c7 {
+  animation: comeout-816252c7 0.3s ease forwards;
+}
+@-webkit-keyframes comeout-816252c7 {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background: transparent;
+  }
+}
+@keyframes comeout-816252c7 {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background: transparent;
+  }
+}
+.semi-mask-wrapper .semi-mask-content.data-v-816252c7 {
+  background: #fff;
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+.semi-mask-wrapper .semi-mask-content.up.data-v-816252c7 {
+  animation: slide-up-816252c7 0.3s ease-out forwards;
+  transform: translateY(100%);
+}
+@-webkit-keyframes slide-up-816252c7 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up-816252c7 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.semi-mask-wrapper .semi-mask-content.down.data-v-816252c7 {
+  animation: slide-down-816252c7 0.3s ease-in forwards;
+  transform: translateY(0);
+}
+@-webkit-keyframes slide-down-816252c7 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slide-down-816252c7 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.semi-mask-wrapper .semi-mask-content-dark.data-v-816252c7 {
+  background-color: var(--fill-content-layer);
+  overflow: hidden;
+}

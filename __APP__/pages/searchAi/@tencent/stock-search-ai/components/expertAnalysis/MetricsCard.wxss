@@ -1,0 +1,53 @@
+.metrics-card.data-v-c5516d97 {
+  align-items: stretch;
+  background-color: var(--fill-content-layer, #fff);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.32rem 0;
+  width: 100%;
+}
+.metrics-card__item.data-v-c5516d97 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 0.10666666666666667rem;
+}
+.metrics-card__item.data-v-c5516d97:not(:last-child) {
+  border-right: 0.013333333333333334rem solid
+    var(--border-heavy-divider, #dcdfe6);
+}
+.metrics-card__label.data-v-c5516d97 {
+  color: var(--color-lightgray, #7a8499);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+}
+.metrics-card__value.data-v-c5516d97 {
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+}
+.metrics-card__value--up.data-v-c5516d97 {
+  color: var(--color-red, #e63535);
+}
+.metrics-card__value--down.data-v-c5516d97 {
+  color: var(--color-green, #1caa3c);
+}
+.metrics-card__value--normal.data-v-c5516d97 {
+  color: var(--color-heavygray, #262e40);
+}
+.metrics-card__sub.data-v-c5516d97 {
+  color: var(--color-lightgray, #7a8499);
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  margin-top: 0.05333333333333334rem;
+}

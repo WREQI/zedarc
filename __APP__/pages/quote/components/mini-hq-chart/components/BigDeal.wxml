@@ -1,0 +1,114 @@
+<view
+  catchtouchmove="{{x}}"
+  class="{{['_div','data-v-c9e63c36','dadan-wrapper']}}"
+  ref="bigDeal"
+>
+  <scroll-view
+    bindscrolltolower="{{t}}"
+    bindtouchstart="{{r}}"
+    catchtouchmove="{{s}}"
+    class="list-details scroll-container data-v-c9e63c36"
+    ref="scrollView"
+    scrollY="true"
+    style="height: 100%"
+  >
+    <view class="_div scroll-content data-v-c9e63c36">
+      <view bindtap="{{c}}" class="_div dadan-percent-div data-v-c9e63c36">
+        <view class="_div toast-btn data-v-c9e63c36">
+          <label class="_span nowap data-v-c9e63c36">
+            <label class="_span data-v-c9e63c36">大单占比</label>
+            <view class="_i icon-i data-v-c9e63c36"></view>
+          </label>
+          <label class="_span data-v-c9e63c36">{{a}}%</label>
+        </view>
+        <view class="_div dadan-total data-v-c9e63c36">
+          <view
+            class="_div dadan-percent data-v-c9e63c36"
+            style="{{'width:'+b}}"
+          ></view>
+        </view>
+      </view>
+      <view
+        class="_div layout-chart data-v-c9e63c36"
+        style="text-align: center"
+      >
+        <f2
+          bind:__l="__l"
+          bindonInit="{{e}}"
+          class="data-v-c9e63c36"
+          uI="c9e63c36-0"
+          uP="{{f}}"
+          wx:if="{{d}}"
+        ></f2>
+      </view>
+      <view class="_div chart-txt data-v-c9e63c36">
+        <view
+          class="_div row-txt-dd flex flex-pack-justify flex-align-center data-v-c9e63c36"
+        >
+          <label class="_span block square-red data-v-c9e63c36"></label>
+          <label class="_span block col-pan data-v-c9e63c36">主动买入</label>
+          <label class="{{['_span','block','col-3','data-v-c9e63c36',i]}}"
+            >{{g}}{{h}}</label
+          >
+        </view>
+        <view
+          class="_div row-txt-dd flex flex-pack-justify flex-align-center data-v-c9e63c36"
+        >
+          <label class="_span block square-green data-v-c9e63c36"></label>
+          <label class="_span block col-pan data-v-c9e63c36">主动卖出</label>
+          <label class="{{['_span','block','col-3','data-v-c9e63c36',l]}}"
+            >{{j}}{{k}}</label
+          >
+        </view>
+        <view
+          class="_div row-txt-dd flex flex-pack-justify flex-align-center data-v-c9e63c36"
+        >
+          <label class="_span block square-mid data-v-c9e63c36"></label>
+          <label class="_span block col-pan data-v-c9e63c36">中性盘</label>
+          <label class="{{['_span','block','col-3','data-v-c9e63c36',o]}}"
+            >{{m}}{{n}}</label
+          >
+        </view>
+        <view class="_div row-txt-dd hide data-v-c9e63c36"
+          >注:单笔成交额>100万</view
+        >
+      </view>
+      <view class="_div details-txt data-v-c9e63c36">
+        <view class="_ul list-details data-v-c9e63c36">
+          <view
+            class="_li list-item flex flex-pack-justify data-v-c9e63c36"
+            wx:for="{{p}}"
+            wx:for-item="tsd_ddArr"
+            wx:key="g"
+          >
+            <label class="_span block col-lft data-v-c9e63c36"
+              >{{tsd_ddArr.a}}</label
+            >
+            <label class="_span block col-mid data-v-c9e63c36"
+              >{{tsd_ddArr.b}}</label
+            >
+            <label
+              class="{{['_span','block','col-rht','data-v-c9e63c36',tsd_ddArr.f]}}"
+            >
+              <label class="_span data-v-c9e63c36">{{tsd_ddArr.c}}</label>
+              <label class="{{['_span','data-v-c9e63c36',tsd_ddArr.e]}}"
+                >{{tsd_ddArr.d}}</label
+              >
+            </label>
+          </view>
+        </view>
+        <view class="_div prompt-info data-v-c9e63c36" wx:if="{{q}}"
+          >没有更多了</view
+        >
+      </view>
+    </view>
+  </scroll-view>
+  <modal
+    bind:__l="__l"
+    bindclose="{{v}}"
+    class="data-v-c9e63c36"
+    uI="c9e63c36-1"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></modal>
+</view>

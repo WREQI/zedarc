@@ -1,0 +1,18 @@
+<view class="_div btn-wrapper data-v-5591a932">
+  <view class="_div un-bind data-v-5591a932" wx:if="{{a}}">
+    <view
+      bindtap="{{d}}"
+      class="{{['_div','bind-btn','data-v-5591a932',c]}}"
+      wx:if="{{b}}"
+      >登录已有账户</view
+    >
+    <view bindtap="{{g}}" class="{{['_div','open-btn','data-v-5591a932',e,f]}}"
+      >立即开户</view
+    >
+  </view>
+  <view class="_div has-bind data-v-5591a932" wx:else>
+    <view bindtap="{{i}}" class="{{['_div','trade-btn','data-v-5591a932',h]}}"
+      >立即交易</view
+    >
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class="_div draw-board-container data-v-4222dd9a">
+  <canvas
+    bindtouchend="{{c}}"
+    bindtouchmove="{{d}}"
+    bindtouchstart="{{b}}"
+    class="draw-board-content data-v-4222dd9a"
+    ref="drawContainer"
+    style="{{a}}"
+    type="2d"
+    wx:if="{{r0}}"
+  ></canvas>
+  <tool-box
+    bind:__l="__l"
+    bindselect="{{h}}"
+    class="r data-v-4222dd9a"
+    data-c-h="{{!g}}"
+    uI="4222dd9a-0"
+    uP="{{i}}"
+    uR="toolBox"
+    wx:if="{{e}}"
+  ></tool-box>
+  <line-box
+    bind:__l="__l"
+    bindsave="{{m}}"
+    bindselect="{{l}}"
+    class="r data-v-4222dd9a"
+    uI="4222dd9a-1"
+    uP="{{n}}"
+    uR="lineBox"
+    wx:if="{{j}}"
+  ></line-box>
+  <input-modal
+    bind:__l="__l"
+    bindclose="{{p}}"
+    bindsubmit="{{q}}"
+    class="data-v-4222dd9a"
+    uI="4222dd9a-2"
+    uP="{{r}}"
+    wx:if="{{o}}"
+  ></input-modal>
+</view>

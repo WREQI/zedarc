@@ -1,0 +1,45 @@
+@import "/app.wxss";
+.fixed-quote {
+  background-color: var(--fill-2);
+  box-shadow: 0 0.213333rem 0.266667rem hsla(0, 0%, 78%, 0.2);
+  box-sizing: border-box;
+  font-size: 0.32rem;
+  left: 0;
+  line-height: 0.453333rem;
+  padding: 0.2rem 0.4rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.3s;
+  z-index: 10;
+}
+[data-theme="dark"] .fixed-quote {
+  box-shadow: 0 0.213333rem 0.48rem hsla(0, 0%, 100%, 0.05);
+}
+.fixed-quote .quote-info .dqj,
+.fixed-quote .quote-info .label,
+.fixed-quote .quote-info .price-ceiling,
+.fixed-quote .quote-info .zde {
+  margin-right: 0.16rem;
+}
+.fixed-quote .status-info {
+  margin-top: 0.16rem;
+}
+.fixed-quote .status-info .label {
+  box-sizing: border-box;
+  color: var(--color-primary-1);
+  font-size: 0.266667rem;
+  line-height: normal;
+  padding: 0 0.106667rem;
+  white-space: nowrap;
+}
+.fixed-quote .status-info .label.label {
+  margin-left: 0.16rem;
+}
+.fixed-quote .status-info .label:after {
+  border-color: var(--color-primary-1);
+  border-radius: 0.053333rem;
+}
+.fixed-quote__simple {
+  padding: 0.2rem 0.32rem;
+}

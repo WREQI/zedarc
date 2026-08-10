@@ -1,0 +1,8 @@
+<view class="custom-navbar data-v-9ce1f510" style="{{'padding-top:'+c}}">
+  <view class="navbar-content data-v-9ce1f510">
+    <view bindtap="{{b}}" class="navbar-left data-v-9ce1f510" wx:if="{{a}}">
+      <view class="back-icon data-v-9ce1f510"></view>
+    </view>
+    <view class="navbar-title data-v-9ce1f510">账户信息</view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<view
+  class="{{[f,g,h]}}"
+  data-color-mode="{{k}}"
+  data-font="{{m}}"
+  data-simple="{{j}}"
+  data-theme="{{i}}"
+  data-zero-bottom="{{l}}"
+>
+  <slot></slot>
+  <password
+    bind:__l="__l"
+    class="r"
+    id="password-component"
+    uI="75d297be-0"
+    uP="{{b}}"
+    uR="#password-component"
+    wx:if="{{b}}"
+  ></password>
+  <navbar-for-mp
+    bind:__l="__l"
+    uI="75d297be-1"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></navbar-for-mp>
+  <network-detect
+    bind:__l="__l"
+    id="network-detect-component"
+    uI="75d297be-2"
+    uP="{{e}}"
+    wx:if="{{e}}"
+  ></network-detect>
+</view>

@@ -1,0 +1,33 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{f}}"
+  bindmaskClick="{{e}}"
+  class="data-v-211a1cad"
+  uI="211a1cad-0"
+  uP="{{g}}"
+  uS="{{['d']}}"
+  wx:if="{{g}}"
+>
+  <view class="invest-cond-num data-v-211a1cad">
+    <radio-group bindchange="{{c}}" class="data-v-211a1cad">
+      <label
+        class="{{['invest-cond-num-item','data-v-211a1cad',item.f&&'border-bottom']}}"
+        wx:for="{{a}}"
+        wx:key="e"
+      >
+        <radio
+          checked="{{item.b}}"
+          class="data-v-211a1cad"
+          color="{{b}}"
+          size="32"
+          value="{{item.a}}"
+        ></radio>
+        <view class="right-wrap data-v-211a1cad">
+          <view class="title data-v-211a1cad">{{item.c}}</view>
+          <view class="desc data-v-211a1cad">{{item.d}}</view>
+        </view>
+      </label>
+    </radio-group>
+    <button bindtap="{{d}}" class="confirm-btn data-v-211a1cad">确定</button>
+  </view>
+</action-sheet>

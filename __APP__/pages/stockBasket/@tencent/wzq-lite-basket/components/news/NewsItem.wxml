@@ -1,0 +1,23 @@
+<view class="_div basket-news-item data-v-c8254de2">
+  <view
+    catchtap="{{i}}"
+    class="{{['_div','data-v-c8254de2','part-up',h]}}"
+    ref="newsItemRef"
+  >
+    <view class="_div part-up-left data-v-c8254de2">
+      <view class="_div title data-v-c8254de2">{{a}}</view>
+      <view class="_div info data-v-c8254de2">
+        <view class="_div tag data-v-c8254de2" wx:if="{{b}}">{{c}}</view>
+        <view class="_div source data-v-c8254de2">{{d}}</view>
+        <view class="_div time data-v-c8254de2">{{e}}</view>
+      </view>
+    </view>
+    <view class="_div part-up-right data-v-c8254de2" wx:if="{{f}}">
+      <image
+        class="_img cover data-v-c8254de2"
+        mode="aspectFill"
+        src="{{g}}"
+      ></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{n}}"
+  class="one-click-transcription data-v-7bb2a46b"
+  uI="7bb2a46b-0"
+  uP="{{o}}"
+  uS="{{['d']}}"
+  wx:if="{{o}}"
+>
+  <view class="container data-v-7bb2a46b">
+    <view class="header flex-center data-v-7bb2a46b">
+      <label class="title fs-36 text-color-1 data-v-7bb2a46b">风险确认</label>
+      <label
+        catchtap="{{a}}"
+        class="icon fs-24 text-color-5 data-v-7bb2a46b"
+      ></label>
+    </view>
+    <view class="content data-v-7bb2a46b">
+      <view class="transcribe-instructions text-color-1 data-v-7bb2a46b"
+        >{{b}}</view
+      >
+      <view
+        class="transcribe-content data-v-7bb2a46b"
+        wx:for="{{c}}"
+        wx:for-item="sentence"
+        wx:key="b"
+      >
+        <label
+          bindtap="{{item.d}}"
+          class="{{['data-v-7bb2a46b',item.c&&'link']}}"
+          wx:for="{{sentence.a}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+      <view class="transcribe-wrapper flex-column data-v-7bb2a46b">
+        <textarea
+          bindblur="{{d}}"
+          bindinput="{{f}}"
+          class="transcribe-input data-v-7bb2a46b"
+          cursorSpacing="{{240}}"
+          placeholder="请输入上述抄写内容"
+          placeholderClass="textarea-placeholder"
+          value="{{e}}"
+          wx:if="{{r0}}"
+        ></textarea>
+        <button
+          bindtap="{{h}}"
+          class="copy-button data-v-7bb2a46b"
+          disabled="{{g}}"
+          size="mini"
+          type="primary"
+        >
+          一键抄写
+        </button>
+      </view>
+      <view class="warn-tips data-v-7bb2a46b" wx:if="{{i}}">{{j}}</view>
+      <button
+        catchtap="{{m}}"
+        class="submit-button data-v-7bb2a46b"
+        disabled="{{l}}"
+        type="primary"
+      >
+        {{k}}
+      </button>
+    </view>
+  </view>
+</popup>

@@ -1,0 +1,268 @@
+<view
+  class="{{['_div','composition-wrapper','data-v-545bb323',bm&&'landscape-wrapper',bn&&'skin-dark']}}"
+  style="{{bo}}"
+>
+  <view class="_div bar-area data-v-545bb323" id="tabbar" ref="tabbar">
+    <view class="_div tab-bar data-v-545bb323">
+      <view class="_div items-wrapper data-v-545bb323" style="{{f}}">
+        <view
+          catchtap="{{tab.d}}"
+          class="{{['_div','tab-item','data-v-545bb323',tab.b&&'selected']}}"
+          wx:for="{{a}}"
+          wx:for-item="tab"
+          wx:key="c"
+          >{{tab.a}}</view
+        >
+        <view
+          catchtap="{{e}}"
+          class="{{['_div','tab-item','data-v-545bb323',d&&'selected']}}"
+          id="moreTabItem"
+          ref="moreTabItem"
+          wx:if="{{b}}"
+          >{{c}}<view class="_div triangle data-v-545bb323"></view>
+        </view>
+      </view>
+      <label
+        bindtap="{{l}}"
+        class="_span btn-setting data-v-545bb323"
+        wx:if="{{g}}"
+      >
+        <setting-tip-bubble
+          bind:__l="__l"
+          class="data-v-545bb323"
+          uI="545bb323-0"
+          uP="{{i}}"
+          wx:if="{{h}}"
+        ></setting-tip-bubble>
+        <setting-tip-bubble
+          bind:__l="__l"
+          class="data-v-545bb323"
+          uI="545bb323-1"
+          uP="{{k}}"
+          wx:elif="{{j}}"
+        ></setting-tip-bubble>
+      </label>
+      <view
+        class="_div items-wrapper data-v-545bb323"
+        style="{{o}}"
+        wx:if="{{m}}"
+      >
+        <view
+          catchtap="{{tab.d}}"
+          class="{{['_div','tab-item','data-v-545bb323',tab.b&&'selected']}}"
+          wx:for="{{n}}"
+          wx:for-item="tab"
+          wx:key="c"
+          >{{tab.a}}</view
+        >
+      </view>
+      <root-portal class="data-v-545bb323" enable="{{true}}" wx:if="{{p}}">
+        <selector
+          bind:__l="__l"
+          class="r data-v-545bb323"
+          uI="545bb323-2"
+          uP="{{s}}"
+          uR="selector"
+          wx:if="{{q}}"
+        ></selector>
+      </root-portal>
+    </view>
+    <view class="_div data-bar data-v-545bb323" wx:if="{{t}}">
+      <mins-bar
+        bind:__l="__l"
+        class="data-v-545bb323"
+        uI="545bb323-3"
+        uP="{{w}}"
+        wx:if="{{v}}"
+      ></mins-bar>
+      <kline-bar
+        bind:__l="__l"
+        class="data-v-545bb323"
+        uI="545bb323-4"
+        uP="{{y}}"
+        wx:if="{{x}}"
+      ></kline-bar>
+      <area-selectbar
+        bind:__l="__l"
+        class="data-v-545bb323"
+        uI="545bb323-5"
+        uP="{{A}}"
+        wx:if="{{z}}"
+      ></area-selectbar>
+    </view>
+  </view>
+  <view class="_div chart-area data-v-545bb323" style="{{'height:'+bd}}">
+    <view class="_div canvas-area data-v-545bb323" style="{{'width:'+aB}}">
+      <slot name="redBag"></slot>
+      <fq-bubble
+        bind:__l="__l"
+        bindclose="{{C}}"
+        bindjump="{{D}}"
+        class="data-v-545bb323"
+        uI="545bb323-6"
+        uP="{{E}}"
+        wx:if="{{E}}"
+      ></fq-bubble>
+      <mins
+        bind:__l="__l"
+        binderror="{{O}}"
+        bindhandleExtra="{{J}}"
+        bindonDoubleTap="{{M}}"
+        bindonTouchCancel="{{L}}"
+        bindonTouchMove="{{K}}"
+        bindshowLesson="{{I}}"
+        bindupdateSetting="{{N}}"
+        class="r data-v-545bb323"
+        data-c-h="{{!H}}"
+        uI="545bb323-7"
+        uP="{{P}}"
+        uR="mins"
+        wx:if="{{F}}"
+      ></mins>
+      <five-mins
+        bind:__l="__l"
+        binderror="{{Y}}"
+        bindhandleExtra="{{T}}"
+        bindonDoubleTap="{{W}}"
+        bindonTouchCancel="{{V}}"
+        bindonTouchMove="{{U}}"
+        bindupdateSetting="{{X}}"
+        class="r data-v-545bb323"
+        data-c-h="{{!S}}"
+        uI="545bb323-8"
+        uP="{{Z}}"
+        uR="fiveMins"
+        wx:if="{{Q}}"
+      ></five-mins>
+      <kline
+        bind:__l="__l"
+        binddrawInit="{{an}}"
+        binderror="{{ar}}"
+        bindgotDrawData="{{ap}}"
+        bindhandleExtra="{{ae}}"
+        bindonAreaSwitch="{{al}}"
+        bindonChipSwitch="{{am}}"
+        bindonDoubleTap="{{ai}}"
+        bindonDrawEnd="{{aq}}"
+        bindonSwipeX="{{ah}}"
+        bindonTouchCancel="{{ag}}"
+        bindonTouchMove="{{af}}"
+        bindoptionChange="{{ao}}"
+        bindshowAreaSelect="{{ak}}"
+        bindshowLesson="{{ad}}"
+        bindupdateSetting="{{aj}}"
+        class="r data-v-545bb323"
+        data-c-h="{{!ac}}"
+        uI="545bb323-9"
+        uP="{{as}}"
+        uR="kline"
+        wx:if="{{aa}}"
+      ></kline>
+      <view
+        bindtap="{{av}}"
+        class="_div open-landscape data-v-545bb323"
+        wx:if="{{at}}"
+      ></view>
+      <draw-board
+        bind:__l="__l"
+        bindhandleTouch="{{az}}"
+        bindsave="{{ay}}"
+        class="draw-board r data-v-545bb323"
+        uI="545bb323-10"
+        uP="{{aA}}"
+        uR="drawBoard"
+        wx:if="{{aw}}"
+      ></draw-board>
+    </view>
+    <view
+      class="{{['_div','data-v-545bb323','side-area',aR&&'hide']}}"
+      style="{{'width:'+aS}}"
+      wx:if="{{aC}}"
+    >
+      <view
+        class="{{['_div','side-content','data-v-545bb323',aO&&'show-tabs']}}"
+      >
+        <handicap
+          bind:__l="__l"
+          class="data-v-545bb323"
+          data-c-h="{{!aE}}"
+          style="width: 100%"
+          uI="545bb323-11"
+          uP="{{aF}}"
+          wx:if="{{aD}}"
+        ></handicap>
+        <trade-detail
+          bind:__l="__l"
+          class="r data-v-545bb323"
+          data-c-h="{{!aI}}"
+          style="width: 100%"
+          uI="545bb323-12"
+          uP="{{aJ}}"
+          uR="tradeDetail"
+          wx:if="{{aG}}"
+        ></trade-detail>
+        <big-deal
+          bind:__l="__l"
+          class="r data-v-545bb323"
+          data-c-h="{{!aM}}"
+          style="width: 100%"
+          uI="545bb323-13"
+          uP="{{aN}}"
+          uR="bigDeal"
+          wx:if="{{aK}}"
+        ></big-deal>
+      </view>
+      <view class="_div tab-bar mins-tab-bar data-v-545bb323" wx:if="{{aP}}">
+        <view
+          catchtap="{{tab.d}}"
+          class="{{['_div','tab-item','data-v-545bb323',tab.b&&'selected']}}"
+          wx:for="{{aQ}}"
+          wx:for-item="tab"
+          wx:key="c"
+          >{{tab.a}}</view
+        >
+      </view>
+    </view>
+    <view class="_div data-v-545bb323">
+      <mins-indicator-bar
+        bind:__l="__l"
+        bindswitchIndicator="{{aV}}"
+        class="r data-v-545bb323"
+        uI="545bb323-14"
+        uP="{{aW}}"
+        uR="indiBar"
+        wx:if="{{aT}}"
+      ></mins-indicator-bar>
+      <indicator-bar
+        bind:__l="__l"
+        bindclickFq="{{aZ}}"
+        bindfuncEvent="{{bb}}"
+        bindswitchIndicator="{{ba}}"
+        class="r data-v-545bb323"
+        uI="545bb323-15"
+        uP="{{bc}}"
+        uR="indiBar"
+        wx:if="{{aX}}"
+      ></indicator-bar>
+    </view>
+  </view>
+  <setting-popup
+    bind:__l="__l"
+    bindchangeSetting="{{bg}}"
+    bindcloseSetting="{{bf}}"
+    bindswitchChart="{{bi}}"
+    bindupdateSetting="{{bh}}"
+    class="data-v-545bb323"
+    uI="545bb323-16"
+    uP="{{bj}}"
+    wx:if="{{be}}"
+  ></setting-popup>
+  <fq-switch-dialog
+    bind:__l="__l"
+    bindclose="{{bk}}"
+    class="data-v-545bb323"
+    uI="545bb323-17"
+    uP="{{bl}}"
+    wx:if="{{bl}}"
+  ></fq-switch-dialog>
+</view>

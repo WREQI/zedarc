@@ -1,0 +1,48 @@
+<view class="_div calendar-wrapper data-v-b7cf0c51">
+  <view class="_div calendar-content-wrapper data-v-b7cf0c51">
+    <view class="_div calendar-row-header calendar-row data-v-b7cf0c51">
+      <view
+        class="_div calendar-item data-v-b7cf0c51"
+        wx:for="{{a}}"
+        wx:for-item="dataLabel"
+        wx:key="b"
+        >{{dataLabel.a}}</view
+      >
+    </view>
+    <view class="_div split-line data-v-b7cf0c51"></view>
+    <view
+      class="_div calendar-row data-v-b7cf0c51"
+      wx:for="{{b}}"
+      wx:for-item="weekDateList"
+      wx:key="b"
+    >
+      <view
+        class="_div calendar-item data-v-b7cf0c51"
+        wx:for="{{weekDateList.a}}"
+        wx:for-item="dateItem"
+        wx:key="h"
+      >
+        <view class="_div date-number data-v-b7cf0c51"
+          >{{dateItem.a}}<label
+            class="_span date-label half data-v-b7cf0c51"
+            wx:if="{{dateItem.b}}"
+            >半</label
+          >
+          <label
+            class="{{['_span','data-v-b7cf0c51','date-label','rest',dateItem.d]}}"
+            wx:elif="{{dateItem.c}}"
+            >休</label
+          >
+          <label
+            class="_span date-label open data-v-b7cf0c51"
+            wx:elif="{{dateItem.e}}"
+            >开</label
+          >
+        </view>
+        <view class="_div date-holiday data-v-b7cf0c51" wx:if="{{dateItem.f}}"
+          >{{dateItem.g}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

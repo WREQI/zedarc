@@ -1,0 +1,27 @@
+<view
+  bindtap="{{f}}"
+  catchtouchmove="{{e}}"
+  class="_div buy-index-filter-teach data-v-5cf186b6"
+  wx:if="{{a}}"
+>
+  <view class="_div buy-index-filter-teach__body data-v-5cf186b6">
+    <view class="_div buy-index-filter-teach__header data-v-5cf186b6">
+      <view class="_div buy-index-filter-teach__header-bar data-v-5cf186b6">
+        <view class="_div buy-index-filter-teach__header-inner data-v-5cf186b6">
+          <view class="_div buy-index-filter-teach__title data-v-5cf186b6"
+            >{{b}}</view
+          >
+          <image
+            alt="极简版图标"
+            catchtap="{{c}}"
+            class="_img buy-index-filter-teach__close-btn data-v-5cf186b6"
+            src="https://st.gtimg.com/pcm/mpuvkgsn_f3154aec0ea2fe2eb772304181644cda.svg"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div buy-index-filter-teach__content data-v-5cf186b6"
+      >{{d}}</view
+    >
+  </view>
+</view>

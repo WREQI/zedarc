@@ -1,0 +1,89 @@
+<page-meta class="data-v-03a58303" rootFontSize="{{a}}"></page-meta>
+<view class="{{['data-v-03a58303','container',i,j,'gudong']}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-03a58303"
+    uI="03a58303-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-03a58303"
+    uI="03a58303-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="scroll-content data-v-03a58303">
+    <view class="bd-cont data-v-03a58303" id="scroll_pull">
+      <view class="bd-cont-row data-v-03a58303">
+        <view class="listplate-title-fixtop data-v-03a58303">
+          <view
+            class="top-list flex flex-pack-justify flex-align-center btmline-gray data-v-03a58303"
+          >
+            <view class="title data-v-03a58303">
+              <view class="ft-bold data-v-03a58303">主要股东</view>
+              <view class="gray data-v-03a58303">({{c}})</view>
+            </view>
+          </view>
+          <view
+            class="top-list-sub flex flex-pack-justify flex-align-center data-v-03a58303"
+          >
+            <view class="title row-name data-v-03a58303">流通股东</view>
+            <view class="title row-number data-v-03a58303">持股数(股)</view>
+            <view class="title row-propo data-v-03a58303">占比</view>
+            <view class="title row-change data-v-03a58303">变动</view>
+          </view>
+        </view>
+        <view class="list-cont-holder data-v-03a58303">
+          <view class="data-v-03a58303">
+            <view
+              class="li-box flex flex-align-center flex-pack-justify data-v-03a58303"
+              wx:for="{{d}}"
+              wx:key="f"
+            >
+              <view class="row-name data-v-03a58303">{{item.a}}</view>
+              <view class="row-number data-v-03a58303">{{item.b}}</view>
+              <view class="row-propo data-v-03a58303">{{item.c}}</view>
+              <view class="{{['data-v-03a58303','row-change',item.e]}}"
+                >{{item.d}}</view
+              >
+            </view>
+          </view>
+        </view>
+        <view class="listplate-title-fixtop data-v-03a58303" wx:if="{{e}}">
+          <view
+            class="top-list flex flex-pack-justify flex-align-center btmline-gray data-v-03a58303"
+          >
+            <view class="title data-v-03a58303">
+              <view class="ft-bold data-v-03a58303">十大持股基金&ETF</view>
+              <view class="gray data-v-03a58303">({{f}})</view>
+            </view>
+          </view>
+          <view
+            class="top-list-sub flex flex-pack-justify flex-align-center data-v-03a58303"
+          >
+            <view class="title row-name data-v-03a58303">流通股东</view>
+            <view class="title row-number data-v-03a58303">持股数(股)</view>
+            <view class="title row-propo data-v-03a58303">占比</view>
+            <view class="title row-change data-v-03a58303">变动</view>
+          </view>
+        </view>
+        <view class="list-cont-holder data-v-03a58303" wx:if="{{g}}">
+          <view class="data-v-03a58303">
+            <view
+              class="li-box flex flex-align-center flex-pack-justify data-v-03a58303"
+              wx:for="{{h}}"
+              wx:key="f"
+            >
+              <view class="row-name data-v-03a58303">{{item.a}}</view>
+              <view class="row-number data-v-03a58303">{{item.b}}</view>
+              <view class="row-propo data-v-03a58303">{{item.c}}</view>
+              <view class="{{['data-v-03a58303','row-change',item.e]}}"
+                >{{item.d}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

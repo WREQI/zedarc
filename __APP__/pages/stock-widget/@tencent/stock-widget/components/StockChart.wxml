@@ -1,0 +1,29 @@
+<view class="{{['_div','mp-stock-chart','data-v-dc5793fa',o]}}" style="{{n}}">
+  <view class="_div title-bar data-v-dc5793fa" wx:if="{{a}}">
+    <view class="_div row1 data-v-dc5793fa">{{b}}</view>
+    <view class="{{['_div','row2','data-v-dc5793fa',d]}}">{{c}}</view>
+  </view>
+  <view
+    class="{{['_div','chart-wrapper','data-v-dc5793fa',l,m]}}"
+    ref="chartWrapper"
+  >
+    <view class="_div chart-container data-v-dc5793fa" style="{{k}}">
+      <mins
+        bind:__l="__l"
+        bindgetQTData="{{f}}"
+        class="data-v-dc5793fa"
+        uI="dc5793fa-0"
+        uP="{{g}}"
+        wx:if="{{e}}"
+      ></mins>
+      <kline
+        bind:__l="__l"
+        bindgetQTData="{{i}}"
+        class="data-v-dc5793fa"
+        uI="dc5793fa-1"
+        uP="{{j}}"
+        wx:if="{{h}}"
+      ></kline>
+    </view>
+  </view>
+</view>

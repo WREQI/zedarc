@@ -1,0 +1,12 @@
+<view class="_div ams-brand-logo data-v-dfe60861">
+  <image
+    alt="券商logo"
+    class="_img broker-logo data-v-dfe60861"
+    mode="widthFix"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <view class="_div logo-text bottom-text data-v-dfe60861">
+    <rich-text class="data-v-dfe60861" nodes="{{c}}"></rich-text>
+  </view>
+</view>

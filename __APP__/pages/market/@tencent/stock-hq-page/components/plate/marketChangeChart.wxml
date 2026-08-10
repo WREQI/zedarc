@@ -1,0 +1,34 @@
+<view class="{{['_div','data-v-62351579','market-change-container']}}">
+  <view class="{{['_div','data-v-62351579','wrapper','top']}}">
+    <trend-map
+      bind:__l="__l"
+      class="data-v-62351579"
+      uI="62351579-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></trend-map>
+  </view>
+  <view class="_div bottom-infor data-v-62351579">
+    <view
+      class="_div time layout-align-space-between layout-row layout-align-end-center data-v-62351579"
+      wx:if="{{b}}"
+    >
+      <view class="_div time-item data-v-62351579">
+        <label class="_span data-v-62351579">{{c}}</label>
+      </view>
+      <label class="_span colon data-v-62351579">:</label>
+      <view class="_div time-item data-v-62351579">
+        <label class="_span data-v-62351579">{{d}}</label>
+      </view>
+      <label class="_span colon data-v-62351579">:</label>
+      <view class="_div time-item data-v-62351579">
+        <label class="_span data-v-62351579">{{e}}</label>
+      </view>
+    </view>
+    <label class="_span stock-infor name data-v-62351579">{{f}}</label>
+    <label class="{{['_span','stock-infor','data-v-62351579',i]}}" wx:if="{{g}}"
+      >{{h}}</label
+    >
+    <label class="_span stock-infor name data-v-62351579">{{j}}</label>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="_div mod-show-turn-num data-v-fc06bd6d">
+  <view class="_div turn data-v-fc06bd6d">
+    <label class="_span icon-zhuanfa sq-icon-zhuanfa data-v-fc06bd6d"></label>
+    <label class="_span data-v-fc06bd6d">{{a}}</label>
+  </view>
+  <view class="_div comment data-v-fc06bd6d">
+    <label class="_span icon-pinglun sq-icon-pinglun data-v-fc06bd6d"></label>
+    <label class="_span data-v-fc06bd6d">{{b}}</label>
+  </view>
+  <view class="_div niu data-v-fc06bd6d" wx:if="{{c}}">
+    <label class="_span icon-niu sq-icon-niu data-v-fc06bd6d"></label>
+    <label class="_span data-v-fc06bd6d">{{d}}</label>
+  </view>
+</view>

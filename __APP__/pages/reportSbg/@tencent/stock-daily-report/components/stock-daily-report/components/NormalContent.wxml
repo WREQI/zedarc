@@ -1,0 +1,31 @@
+<view class="_div module-hsyp data-v-6241b6fe" ref="hsyp">
+  <base-title
+    bind:__l="__l"
+    class="data-v-6241b6fe"
+    uI="6241b6fe-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></base-title>
+  <view class="_div daily-component-base-content data-v-6241b6fe">
+    <view class="_div item data-v-6241b6fe" wx:for="{{b}}" wx:key="i">
+      <view catchtap="{{item.e}}" class="_div base-content data-v-6241b6fe">
+        <label
+          class="{{['_span','content-order','data-v-6241b6fe',item.b&&'content-open']}}"
+          >{{item.a}}.</label
+        >
+        <label
+          class="{{['_span','content-title','data-v-6241b6fe',item.d&&'content-open']}}"
+          >{{item.c}}</label
+        >
+      </view>
+      <news-template
+        bind:__l="__l"
+        class="snp-content data-v-6241b6fe"
+        data-c-h="{{!item.f}}"
+        uI="{{item.g}}"
+        uP="{{item.h}}"
+        wx:if="{{item.h}}"
+      ></news-template>
+    </view>
+  </view>
+</view>

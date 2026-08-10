@@ -1,0 +1,17 @@
+<view bindtap="{{c}}" class="_div performance-bar-wrapper data-v-f1e1cac9">
+  <view class="_div left-wrapper data-v-f1e1cac9">
+    <image
+      class="_img gold-coin data-v-f1e1cac9"
+      src="https://st.gtimg.com/design/9f7f171f270d37d4cbd433f3bbbe01d1.png"
+    ></image>
+    <label class="_span main-title data-v-f1e1cac9">{{a}}</label>
+  </view>
+  <view class="_div right-wrapper data-v-f1e1cac9">
+    <label class="_span sub-title data-v-f1e1cac9">{{b}}</label>
+    <image
+      class="_img arrow-right data-v-f1e1cac9"
+      src="https://st.gtimg.com/design/514edb6ec8bd162de590d2ed4e27bf3f.png"
+    ></image>
+    <label class="_span right-wrapper-icon-arrow data-v-f1e1cac9"></label>
+  </view>
+</view>

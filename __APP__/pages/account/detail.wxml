@@ -1,0 +1,52 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="47a4ea74-0"
+  uP="{{m}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{m}}"
+>
+  <view
+    class="{{['account-detail-container',k&&'account-detail-container__simple-mode']}}"
+  >
+    <view class="detail-content">
+      <view class="detail-account-wrap">
+        <view class="account-wrap-title text-color-1 fs-28 border--bottom"
+          >证券账户({{b}})：<label>{{c}}</label>
+          <label bindtap="{{d}}" class="copy-btn">复制</label>
+        </view>
+        <view class="li-account flex-between">
+          <view class="li-item align-c flex-1 border-right">
+            <view class="item-attr text-color-1">沪股东卡</view>
+            <view class="item-val text-color-4">{{e}}</view>
+            <label class="cont" wx:if="{{f}}">
+              <navigator>去开通</navigator>
+            </label>
+          </view>
+          <view class="li-item align-c flex-1">
+            <view class="item-attr text-color-1">深股东卡</view>
+            <view class="item-val text-color-4">{{g}}</view>
+            <label class="cont" wx:if="{{h}}">
+              <navigator>去开通</navigator>
+            </label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="authority-bottom">
+      <view class="box-button-account">
+        <button bindtap="{{i}}" type="primary">解除绑定账户</button>
+      </view>
+    </view>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="47a4ea74-1,47a4ea74-0"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

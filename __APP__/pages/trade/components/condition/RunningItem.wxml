@@ -1,0 +1,64 @@
+<condition-card
+  bind:__l="__l"
+  bindclick="{{n}}"
+  class="data-v-82c948c4"
+  uI="82c948c4-0"
+  uP="{{o}}"
+  uS="{{['header','content']}}"
+  wx:if="{{o}}"
+>
+  <condition-detail-header
+    bind:__l="__l"
+    bindnameClick="{{a}}"
+    class="data-v-82c948c4"
+    slot="header"
+    uI="82c948c4-1,82c948c4-0"
+    uP="{{b}}"
+  ></condition-detail-header>
+  <view class="cond-detail-body data-v-82c948c4" slot="content">
+    <view class="trigger-row-wrap data-v-82c948c4">
+      <condition-detail-row
+        bind:__l="__l"
+        class="data-v-82c948c4"
+        uI="82c948c4-2,82c948c4-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></condition-detail-row>
+      <debt-auto-order-time-guide
+        bind:__l="__l"
+        class="data-v-82c948c4"
+        uI="82c948c4-3,82c948c4-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></debt-auto-order-time-guide>
+    </view>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-82c948c4"
+      uI="82c948c4-4,82c948c4-0"
+      uP="{{f}}"
+      wx:if="{{e}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-82c948c4"
+      uI="82c948c4-5,82c948c4-0"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-82c948c4"
+      uI="82c948c4-6,82c948c4-0"
+      uP="{{j}}"
+      wx:if="{{i}}"
+    ></condition-detail-row>
+    <condition-profit
+      bind:__l="__l"
+      class="{{['data-v-82c948c4',l&&'cond-profit']}}"
+      uI="82c948c4-7,82c948c4-0"
+      uP="{{m}}"
+      wx:if="{{k}}"
+    ></condition-profit>
+  </view>
+</condition-card>

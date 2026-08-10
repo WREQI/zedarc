@@ -1,0 +1,124 @@
+<view class="com__apply-riskresult data-v-6c9d20d9">
+  <view class="main-container flex-column data-v-6c9d20d9">
+    <view class="main-content-container flex-1 data-v-6c9d20d9">
+      <view class="content-container align-c bg-color data-v-6c9d20d9">
+        <view class="title text-color-1 data-v-6c9d20d9">测评结果：{{a}}</view>
+        <view class="risk-img-container center data-v-6c9d20d9">
+          <image
+            class="risk-img data-v-6c9d20d9"
+            src="{{c}}"
+            wx:if="{{b}}"
+          ></image>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9" wx:if="{{d}}">
+          <view class="suggestion-text-content data-v-6c9d20d9">{{e}}</view>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9" wx:if="{{f}}">
+          <view class="suggestion-text-title data-v-6c9d20d9">{{g}}：</view>
+          <view class="suggestion-text-content data-v-6c9d20d9">{{h}}</view>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9">
+          <view class="text-color-1 data-v-6c9d20d9" wx:if="{{i}}">{{j}}</view>
+          <block wx:else>
+            <view class="suggestion-text-title data-v-6c9d20d9">{{k}}：</view>
+            <view class="suggestion-text-content data-v-6c9d20d9">{{l}}</view>
+          </block>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9" wx:if="{{m}}">
+          <view class="suggestion-text-title data-v-6c9d20d9"
+            >匹配产品服务：</view
+          >
+          <view class="suggestion-text-content data-v-6c9d20d9">{{n}}</view>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9" wx:if="{{o}}">
+          <view class="suggestion-text-title data-v-6c9d20d9"
+            >风险测评得分</view
+          >
+          <view class="suggestion-text-content data-v-6c9d20d9">{{p}}分</view>
+        </view>
+        <view class="suggestion-text data-v-6c9d20d9" wx:if="{{q}}">
+          <view class="data-v-6c9d20d9">
+            <rich-text class="data-v-6c9d20d9" nodes="{{r}}"></rich-text>
+          </view>
+        </view>
+        <view
+          bindtap="{{v}}"
+          class="fs-28 link retest-text primary-color data-v-6c9d20d9"
+          data-stat="trade.apply.riskresult.reevaluation"
+          wx:if="{{s}}"
+          >{{t}}</view
+        >
+      </view>
+      <view class="protocol-container fs-24 text-color-2 data-v-6c9d20d9">
+        <view class="data-v-6c9d20d9" wx:if="{{w}}">
+          <rich-text class="data-v-6c9d20d9" nodes="{{x}}"></rich-text>
+        </view>
+        <block wx:else>
+          <view class="data-v-6c9d20d9" wx:if="{{y}}">{{z}}</view>
+          <view class="data-v-6c9d20d9"
+            >本人已经了解并愿意遵守国家有关证券市场管理的法律、法规、规章及相关业务规则，本人在此郑重承诺以上填写的内容真实、准确、完整。若本人提供的信息发生任何重大变化，本人将及时书面通知贵公司。</view
+          >
+        </block>
+      </view>
+      <view class="data-v-6c9d20d9" wx:if="{{A}}">
+        <block wx:if="{{B}}">
+          <mp-rich-text
+            bind:__l="__l"
+            class="rich-text data-v-6c9d20d9"
+            uI="{{content.b}}"
+            uP="{{content.c}}"
+            wx:for="{{C}}"
+            wx:for-item="content"
+            wx:key="a"
+          ></mp-rich-text>
+        </block>
+        <view
+          class="suitable-protocol-placeholder data-v-6c9d20d9"
+          wx:if="{{D}}"
+          >协议获取中...</view
+        >
+      </view>
+      <foot-print
+        bind:__l="__l"
+        class="foot data-v-6c9d20d9"
+        uI="6c9d20d9-1"
+      ></foot-print>
+    </view>
+    <view class="submit-container data-v-6c9d20d9">
+      <step-buttons
+        bind:__l="__l"
+        bindclickNext="{{K}}"
+        class="data-v-6c9d20d9"
+        uI="6c9d20d9-2"
+        uP="{{L}}"
+        uS="{{['d']}}"
+        wx:if="{{L}}"
+      >
+        <view class="protocol fs-26 data-v-6c9d20d9" wx:if="{{E}}">
+          <checkbox-group
+            bindchange="{{J}}"
+            class="protocol-bar data-v-6c9d20d9"
+          >
+            <checkbox
+              checked="{{F}}"
+              class="protocol-checkbox data-v-6c9d20d9"
+              color="{{'#3077ec'}}"
+            ></checkbox>
+            <label bindtap="{{G}}" class="data-v-6c9d20d9"
+              >请阅读并确认签署</label
+            >
+            <label bindtap="{{I}}" class="link data-v-6c9d20d9">{{H}}</label>
+          </checkbox-group>
+        </view>
+      </step-buttons>
+    </view>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-6c9d20d9"
+    id="mp-dialog"
+    uI="6c9d20d9-3"
+    uP="{{M}}"
+    wx:if="{{M}}"
+  ></mp-dialog>
+</view>

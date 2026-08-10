@@ -1,0 +1,36 @@
+<view
+  class="{{['_div','kline-set-content','data-v-4bd93b27',e&&'skin-black']}}"
+>
+  <view class="_div item-first-line data-v-4bd93b27">
+    <view
+      bindtap="{{item.e}}"
+      class="{{['_div','data-v-4bd93b27','switch-item-gt',item.d]}}"
+      wx:for="{{a}}"
+      wx:key="c"
+    >
+      <image class="_img icon-img data-v-4bd93b27" src="{{item.a}}"></image>
+      <view class="_div big-icon-text data-v-4bd93b27">{{item.b}}</view>
+    </view>
+  </view>
+  <view class="_div split-line data-v-4bd93b27"></view>
+  <view class="_div item-set kset data-v-4bd93b27">
+    <view class="_div item-title data-v-4bd93b27">复权类型</view>
+    <view class="_div fuquan data-v-4bd93b27">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','data-v-4bd93b27','fq-tag',item.c]}}"
+        wx:for="{{b}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+  <view catchtap="{{c}}" class="_div item-set kset data-v-4bd93b27">
+    <label class="_span item-title data-v-4bd93b27">K线显示</label>
+    <label class="_span right-arraw-tech data-v-4bd93b27"></label>
+  </view>
+  <view catchtap="{{d}}" class="_div item-set kset data-v-4bd93b27">
+    <label class="_span item-title data-v-4bd93b27">技术指标</label>
+    <label class="_span right-arraw-tech data-v-4bd93b27"></label>
+  </view>
+</view>

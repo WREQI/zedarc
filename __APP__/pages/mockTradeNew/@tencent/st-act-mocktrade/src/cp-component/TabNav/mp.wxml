@@ -1,0 +1,14 @@
+<view class="_div tab-nav tab-wrapper slider data-v-a1251f07" wx:if="{{a}}">
+  <view class="_div st-tab-bar slider data-v-a1251f07">
+    <view
+      bindtap="{{tab.d}}"
+      class="{{['_div','data-v-a1251f07','st-tab',tab.b]}}"
+      wx:for="{{b}}"
+      wx:for-item="tab"
+      wx:key="c"
+    >
+      <label class="_span data-v-a1251f07">{{tab.a}}</label>
+    </view>
+    <view class="_div st-tab-last data-v-a1251f07"></view>
+  </view>
+</view>

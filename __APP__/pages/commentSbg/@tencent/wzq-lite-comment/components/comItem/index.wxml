@@ -1,0 +1,86 @@
+<view
+  class="{{['_div','data-v-4025b032','mod-item-wrap',M]}}"
+  data-postid="{{N}}"
+  ref="comItemRef"
+>
+  <view class="_div header-wrap data-v-4025b032">
+    <view
+      catchtap="{{f}}"
+      class="{{['_div','data-v-4025b032','image-box',b,c,d]}}"
+      data-userid="{{e}}"
+    >
+      <base-image
+        bind:__l="__l"
+        class="data-v-4025b032"
+        uI="4025b032-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></base-image>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-4025b032','mod-list-item',K]}}"
+    data-comid="{{L}}"
+  >
+    <item-header
+      bind:__l="__l"
+      bindhandleHeader="{{h}}"
+      bindtapDetail="{{g}}"
+      class="data-v-4025b032"
+      uI="4025b032-1"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></item-header>
+    <view class="{{['_div','data-v-4025b032',B&&A]}}" id="{{z}}">
+      <view catchtap="{{t}}" class="_div content-box data-v-4025b032">
+        <view class="_div source_content data-v-4025b032">
+          <short-content
+            bind:__l="__l"
+            bindtapContent="{{n}}"
+            bindtapDetail="{{l}}"
+            bindtapImage="{{k}}"
+            bindtoggleShow="{{m}}"
+            class="data-v-4025b032"
+            uI="4025b032-2"
+            uP="{{o}}"
+            wx:if="{{j}}"
+          ></short-content>
+          <long-content
+            bind:__l="__l"
+            bindtapDetail="{{q}}"
+            bindtoggleShow="{{r}}"
+            class="data-v-4025b032"
+            uI="4025b032-3"
+            uP="{{s}}"
+            wx:if="{{p}}"
+          ></long-content>
+        </view>
+      </view>
+      <item-image
+        bind:__l="__l"
+        bindtapImage="{{v}}"
+        class="data-v-4025b032"
+        uI="4025b032-4"
+        uP="{{w}}"
+        wx:if="{{w}}"
+      ></item-image>
+      <view class="_div com-yb-disclaimer data-v-4025b032" wx:if="{{x}}"
+        >{{y}}</view
+      >
+    </view>
+    <show-comment
+      bind:__l="__l"
+      bindhandleHeader="{{I}}"
+      bindonHandleTapItem="{{D}}"
+      bindtapCommentItem="{{E}}"
+      bindtapDetail="{{G}}"
+      bindtapImage="{{F}}"
+      bindtapPerson="{{H}}"
+      class="data-v-4025b032"
+      key="{{C}}"
+      uI="4025b032-5"
+      uP="{{J}}"
+      wx:if="{{J}}"
+    ></show-comment>
+  </view>
+</view>

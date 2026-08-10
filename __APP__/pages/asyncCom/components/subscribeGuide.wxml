@@ -1,0 +1,10 @@
+<view class="_div guide-wrap" wx:if="{{a}}">
+  <view class="_div guide-box">
+    <view class="_div title"
+      >{{b}}<label bindtap="{{c}}" class="_span close"></label>
+    </view>
+    <view class="_div desc">选择订阅消息，打开接收通知和涨幅变动通知。</view>
+    <view class="_div img" style="{{'background-image:'+d}}"></view>
+    <view bindtap="{{e}}" class="_div guide-button">去开启</view>
+  </view>
+</view>

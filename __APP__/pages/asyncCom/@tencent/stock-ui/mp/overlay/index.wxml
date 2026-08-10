@@ -1,0 +1,9 @@
+<view
+  bindtap="{{c}}"
+  catchtouchmove="{{d}}"
+  class="{{['_div','mp-overlay','data-v-3968f1ea',b]}}"
+  hidden="{{!a}}"
+  style="{{'z-index:'+e}}"
+>
+  <slot></slot>
+</view>

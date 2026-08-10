@@ -1,0 +1,30 @@
+<view class="{{['_div','anchor-tip','data-v-cfdf4807',h]}}" style="{{i}}">
+  <canvas
+    class="anchor-tip__canvas data-v-cfdf4807"
+    id="{{a}}"
+    ref="canvasRef"
+    style="{{b}}"
+    type="2d"
+    wx:if="{{r0}}"
+  ></canvas>
+  <view
+    class="_div anchor-tip__content data-v-cfdf4807"
+    id="anchor-tip__content"
+    ref="contentRef"
+    style="{{g}}"
+  >
+    <view catchtap="{{d}}" class="_div anchor-tip__bubble data-v-cfdf4807">
+      <label class="_span anchor-tip__prefix data-v-cfdf4807">问元宝</label>
+      <label class="_span anchor-tip__text data-v-cfdf4807">{{c}}</label>
+      <label class="_span anchor-tip__arrow data-v-cfdf4807"></label>
+    </view>
+    <view catchtap="{{f}}" class="_div anchor-tip__close data-v-cfdf4807">
+      <view class="_div anchor-tip__close-ring-bg data-v-cfdf4807"></view>
+      <view
+        class="_div anchor-tip__close-ring-progress data-v-cfdf4807"
+        style="{{e}}"
+      ></view>
+      <view class="_div anchor-tip__close-icon data-v-cfdf4807"></view>
+    </view>
+  </view>
+</view>

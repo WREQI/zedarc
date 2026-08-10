@@ -1,0 +1,19 @@
+<view
+  class="{{['footprint','^footprint','data-v-67ee74ff',e&&'fixed',f&&'colorful',g&&'navBar']}}"
+  wx:if="{{a}}"
+>
+  <slot name="before"></slot>
+  <view class="flex-center data-v-67ee74ff">
+    <broker-logo
+      bind:__l="__l"
+      class="server-broker-logo data-v-67ee74ff"
+      uI="67ee74ff-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></broker-logo
+    >{{c}}提供证券服务<label class="ipv6 data-v-67ee74ff" wx:if="{{d}}"
+      >IPV6</label
+    >
+  </view>
+  <slot name="after"></slot>
+</view>

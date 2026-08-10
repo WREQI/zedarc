@@ -1,0 +1,86 @@
+<view class="{{['_div','data-v-7d6e7a49','national-debt','list-warpper',o,p]}}">
+  <view class="_div module-header-wrap data-v-7d6e7a49" wx:if="{{a}}">
+    <view class="_div title data-v-7d6e7a49"></view>
+    <view class="_div subtitle-wrap data-v-7d6e7a49"
+      >{{b}}<label class="_span more-text data-v-7d6e7a49">了解更多</label>
+      <image
+        class="_img more-right data-v-7d6e7a49"
+        src="https://st.gtimg.com/design/84501ddf64ea78721fa523897181ac82.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div module-content-wrap data-v-7d6e7a49">
+    <view class="_div slide-header data-v-7d6e7a49" ref="hqHeader">
+      <tabs
+        bind:__l="__l"
+        bindselect="{{e}}"
+        class="tabbar data-v-7d6e7a49"
+        uI="7d6e7a49-0"
+        uP="{{f}}"
+        uS="{{['d']}}"
+        wx:if="{{f}}"
+      >
+        <tab
+          bind:__l="__l"
+          class="data-v-7d6e7a49"
+          uI="{{tab.c}}"
+          uP="{{tab.d}}"
+          uS="{{['d']}}"
+          wx:for="{{d}}"
+          wx:for-item="tab"
+          wx:key="b"
+          >{{tab.a}}</tab
+        >
+      </tabs>
+    </view>
+    <view class="_div rank-list data-v-7d6e7a49">
+      <view class="_div rank-header data-v-7d6e7a49">
+        <view class="_div header-text-1 data-v-7d6e7a49">品种</view>
+        <view class="_div header-text-2 data-v-7d6e7a49">年化收益率</view>
+        <view class="_div header-text-3 data-v-7d6e7a49">每10万收益</view>
+        <view class="_div header-text-4 data-v-7d6e7a49"
+          >计息天数/资金可用日</view
+        >
+      </view>
+      <view
+        catchtap="{{item.i}}"
+        class="_div rank-content data-v-7d6e7a49"
+        wx:for="{{g}}"
+      >
+        <view class="_div content-1 data-v-7d6e7a49">
+          <view class="_div date data-v-7d6e7a49">{{item.a}}天期</view>
+          <view class="_div card-tag data-v-7d6e7a49" wx:if="{{item.b}}"
+            >7日最高</view
+          >
+          <view class="_div code data-v-7d6e7a49">{{item.c}}</view>
+        </view>
+        <view class="_div content-2 data-v-7d6e7a49">{{item.d}}%</view>
+        <view class="_div content-3 data-v-7d6e7a49">{{item.e}}元</view>
+        <view class="_div content-4 data-v-7d6e7a49">
+          <view class="_div content-4-1 data-v-7d6e7a49">
+            <view class="_div num data-v-7d6e7a49">{{item.f}}天</view>
+            <view class="_div date data-v-7d6e7a49">{{item.g}}</view>
+          </view>
+          <view catchtap="{{item.h}}" class="_div trade-btn data-v-7d6e7a49"
+            >交易</view
+          >
+        </view>
+      </view>
+      <view
+        catchtap="{{k}}"
+        class="_div rank-footer data-v-7d6e7a49"
+        wx:if="{{h}}"
+      >
+        <label class="_span data-v-7d6e7a49">{{i}}</label>
+        <view class="{{['_div','more','data-v-7d6e7a49',j]}}"></view>
+      </view>
+    </view>
+    <view
+      catchtap="{{n}}"
+      class="_div open-trade-btn data-v-7d6e7a49"
+      wx:if="{{l}}"
+    >
+      <view class="_div icon data-v-7d6e7a49"></view>{{m}}</view
+    >
+  </view>
+</view>

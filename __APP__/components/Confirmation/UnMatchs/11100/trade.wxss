@@ -1,0 +1,13 @@
+@import "/app.wxss";
+.confirmation.standard .btn-wrapper button {
+  border-radius: 0;
+  margin: 0;
+}
+.confirmation.standard .btn-wrapper button.flex-1 {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.confirmation.standard .btn-wrapper button.flex-2 {
+  -webkit-box-flex: 2;
+  flex: 2;
+}

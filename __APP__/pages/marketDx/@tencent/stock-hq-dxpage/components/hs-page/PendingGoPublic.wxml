@@ -1,0 +1,37 @@
+<view class="{{['_div','pending-go-public-wrapper','data-v-e6571f81',k]}}">
+  <block wx:if="{{a}}">
+    <label-block
+      bind:__l="__l"
+      bindupdateLabelTab="{{c}}"
+      class="label-wrapper-outer r data-v-e6571f81"
+      uI="e6571f81-0"
+      uP="{{d}}"
+      uR="labelBlock"
+      wx:if="{{d}}"
+    ></label-block>
+    <category-content
+      bind:__l="__l"
+      class="data-v-e6571f81"
+      data-c-h="{{!e}}"
+      uI="e6571f81-1"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></category-content>
+    <category-content
+      bind:__l="__l"
+      bindshowTeachPop="{{h}}"
+      class="data-v-e6571f81"
+      data-c-h="{{!g}}"
+      uI="e6571f81-2"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></category-content>
+  </block>
+  <no-data-block
+    bind:__l="__l"
+    class="data-v-e6571f81"
+    uI="e6571f81-3"
+    uP="{{j||''}}"
+    wx:else
+  ></no-data-block>
+</view>

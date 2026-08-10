@@ -1,0 +1,19 @@
+<view
+  bindcatchtouchmove="{{c}}"
+  catchtap="{{b}}"
+  class="_div preview-wrap data-v-534f60a1"
+>
+  <view class="_div item-view data-v-534f60a1" wx:for="{{a}}" wx:key="e">
+    <image
+      alt=""
+      catchtap="{{item.b}}"
+      class="_img pic-view data-v-534f60a1"
+      src="{{item.a}}"
+    ></image>
+    <view
+      catchtap="{{item.d}}"
+      class="_div pic-del data-v-534f60a1"
+      wx:if="{{item.c}}"
+    ></view>
+  </view>
+</view>

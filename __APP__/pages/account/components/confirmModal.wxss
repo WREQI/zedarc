@@ -1,0 +1,176 @@
+.site-popup.data-v-b4eaa1a8 {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.site-popup.show.data-v-b4eaa1a8 {
+  display: -webkit-flex !important;
+  display: flex !important;
+}
+image.data-v-b4eaa1a8 {
+  height: 9.88rem;
+  width: 7.24rem;
+}
+.site-popup-item.data-v-b4eaa1a8 {
+  position: relative;
+}
+.close.data-v-b4eaa1a8 {
+  background-image: url(https://st.gtimg.com/design/4b6cd1d1dd68516672517081ccacdff3.png);
+  background-size: 100% 100%;
+  display: block;
+  height: 0.5333333333333333rem;
+  position: absolute;
+  right: 0;
+  top: -0.6666666666666666rem;
+  width: 0.5333333333333333rem;
+}
+.st-button.data-v-b4eaa1a8 {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 0.013333333333333334rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.06666666666666667rem;
+  box-sizing: border-box;
+  color: #353535;
+  display: block;
+  font-size: 0.48rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  outline: 0;
+  padding: 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+}
+.st-modal .st-popup-center .st-popup-content.data-v-b4eaa1a8 {
+  width: 100%;
+}
+.st-modal-confirm.data-v-b4eaa1a8 {
+  width: 8.106666666666667rem;
+}
+.st-modal-main.data-v-b4eaa1a8 {
+  background-color: #fff;
+  border-radius: 0.10666666666666667rem;
+  margin: auto;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  width: 8.106666666666667rem;
+}
+.st-modal-title.data-v-b4eaa1a8 {
+  color: #262e40;
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  line-height: 0.64rem;
+  padding: 0.4rem 0;
+  text-align: center;
+}
+.st-modal-content.data-v-b4eaa1a8 {
+  -webkit-overflow-scrolling: touch;
+  color: #475166;
+  font-size: 0.4rem;
+  line-height: 0.6133333333333333rem;
+  margin: 0 0 0.4rem;
+  max-height: 6.746666666666667rem;
+  overflow: scroll;
+  padding: 0 0.4rem;
+  text-align: justify;
+}
+.st-modal-btns.data-v-b4eaa1a8 {
+  font-size: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.st-modal-btns .st-button.data-v-b4eaa1a8:after {
+  content: none;
+}
+.st-modal-btn.data-v-b4eaa1a8 {
+  background-clip: padding-box;
+  border: none;
+  box-sizing: border-box;
+  color: #0a1428;
+  font-size: 0.4rem;
+  font-weight: 600;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.st-modal-btn.data-v-b4eaa1a8:before {
+  border-color: #edeff3 !important;
+}
+.st-modal-btn_highlight .st-button__text.data-v-b4eaa1a8 {
+  color: #007aff !important;
+}
+.st-modal-btn_disabled.data-v-b4eaa1a8 {
+  color: #999;
+}
+.st-modal-fade-enter-active.data-v-b4eaa1a8 {
+  animation: modal-fadein 0.4s;
+}
+.st-modal-confirm .st-modal-btns .st-modal-btn.data-v-b4eaa1a8 {
+  float: left;
+  width: 50%;
+}
+.clear-fix.data-v-b4eaa1a8:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.border-bottom-1px.data-v-b4eaa1a8,
+.border-left-1px.data-v-b4eaa1a8,
+.border-right-1px.data-v-b4eaa1a8,
+.border-top-1px.data-v-b4eaa1a8 {
+  position: relative;
+}
+.border-bottom-1px.data-v-b4eaa1a8:after,
+.border-bottom-1px.data-v-b4eaa1a8:before,
+.border-left-1px.data-v-b4eaa1a8:after,
+.border-left-1px.data-v-b4eaa1a8:before,
+.border-right-1px.data-v-b4eaa1a8:after,
+.border-right-1px.data-v-b4eaa1a8:before,
+.border-top-1px.data-v-b4eaa1a8:after,
+.border-top-1px.data-v-b4eaa1a8:before {
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: 0 0;
+}
+.border-top-1px.data-v-b4eaa1a8:before {
+  border-top: 0.013333333333333334rem solid #e5e5e5;
+  left: 0;
+  top: 0;
+  transform-origin: 0 top;
+  width: 100%;
+}
+.border-right-1px.data-v-b4eaa1a8 {
+  border-radius: 0;
+  border-right: 0.013333333333333334rem solid #e5e5e5;
+  box-sizing: border-box;
+  height: 100%;
+  transform-origin: right 0;
+}
+.border-bottom-1px.data-v-b4eaa1a8:after {
+  border-bottom: 0.013333333333333334rem solid #e5e5e5;
+  bottom: 0;
+  left: 0;
+  transform-origin: 0 bottom;
+  width: 100%;
+}
+.border-left-1px.data-v-b4eaa1a8:before {
+  border-left: 0.013333333333333334rem solid #e5e5e5;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform-origin: left 0;
+}

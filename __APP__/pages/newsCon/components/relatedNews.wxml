@@ -1,0 +1,18 @@
+<view class="_div" wx:if="{{a}}">
+  <view class="_div review-stock">
+    <view class="_div item-title">
+      <label class="_span item-title-span">相关新闻</label>
+    </view>
+    <view class="_div related-review-list" wx:for="{{b}}" wx:key="f">
+      <view class="_div js_relative-news">
+        <view bindtap="{{item.b}}" class="_p">{{item.a}}</view>
+        <view class="_p review-list-from">
+          <label class="_span list-from-time" wx:if="{{item.c}}"
+            >{{item.d}}</label
+          >
+          <label class="_span list-from-time">{{item.e}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

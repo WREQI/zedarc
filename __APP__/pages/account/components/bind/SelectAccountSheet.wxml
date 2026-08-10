@@ -1,0 +1,25 @@
+<action-sheet
+  bind:__l="__l"
+  bindinput="{{b}}"
+  class="data-v-638ff186"
+  uI="638ff186-0"
+  uP="{{c}}"
+  uS="{{['d']}}"
+  wx:if="{{c}}"
+>
+  <view class="account-action-sheet-wrap data-v-638ff186">
+    <view
+      bindtap="{{account.d}}"
+      class="action-sheet-item border--bottom data-v-638ff186"
+      wx:for="{{a}}"
+      wx:for-item="account"
+      wx:key="c"
+    >
+      <view class="data-v-638ff186">{{account.a}}</view>
+      <label
+        class="icon icon-check data-v-638ff186"
+        wx:if="{{account.b}}"
+      ></label>
+    </view>
+  </view>
+</action-sheet>

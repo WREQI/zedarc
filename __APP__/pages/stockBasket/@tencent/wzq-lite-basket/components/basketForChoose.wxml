@@ -1,0 +1,8 @@
+<basket-overview
+  bind:__l="__l"
+  bindgoToBasketDetail="{{b}}"
+  bindgoToStockDetail="{{a}}"
+  uI="2590c494-0"
+  uP="{{c}}"
+  wx:if="{{c}}"
+></basket-overview>

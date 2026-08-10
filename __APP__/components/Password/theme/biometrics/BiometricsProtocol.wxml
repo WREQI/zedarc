@@ -1,0 +1,49 @@
+<view class="data-v-908b7d6e">
+  <biometrics-protocol-container
+    bind:__l="__l"
+    bindagree="{{g}}"
+    bindrefuse="{{f}}"
+    class="data-v-908b7d6e"
+    uI="908b7d6e-0"
+    uP="{{h}}"
+    uS="{{['content']}}"
+    wx:if="{{a}}"
+  >
+    <view class="data-v-908b7d6e" slot="content"
+      >您正在开启{{b}}，开启后，验证交易密码时可用{{c}}代替。{{d}}仅针对本机有效，开启即视为同意<label
+        bindtap="{{e}}"
+        class="link data-v-908b7d6e"
+        >《生物认证服务确认书》</label
+      >。</view
+    >
+  </biometrics-protocol-container>
+  <biometrics-protocol-container
+    bind:__l="__l"
+    bindagree="{{m}}"
+    bindback="{{j}}"
+    bindclose="{{k}}"
+    bindrefuse="{{l}}"
+    class="data-v-908b7d6e"
+    uI="908b7d6e-1"
+    uP="{{n||''}}"
+    uS="{{['content']}}"
+    wx:else
+  >
+    <view class="bio-protocol-container data-v-908b7d6e" slot="content">
+      <loading-provider
+        bind:__l="__l"
+        class="data-v-908b7d6e"
+        uI="908b7d6e-2,908b7d6e-1"
+        uS="{{['d']}}"
+      >
+        <v-protocol
+          bind:__l="__l"
+          class="data-v-908b7d6e"
+          uI="908b7d6e-3,908b7d6e-2"
+          uP="{{i}}"
+          wx:if="{{i}}"
+        ></v-protocol>
+      </loading-provider>
+    </view>
+  </biometrics-protocol-container>
+</view>

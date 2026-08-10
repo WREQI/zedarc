@@ -1,0 +1,42 @@
+<view
+  class="{{['_div','discover-detail-page-wrapper','data-v-498820be',g&&'lite',h&&'mp']}}"
+>
+  <navigation
+    bind:__l="__l"
+    class="data-v-498820be"
+    uI="498820be-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></navigation>
+  <view class="{{['_div','data-v-498820be','header-wrapper',d]}}">
+    <view class="{{['_div','data-v-498820be','header-text',c]}}"></view>
+  </view>
+  <view class="_div content-wrapper data-v-498820be">
+    <view
+      class="_div date-content-wrapper test data-v-498820be"
+      wx:for="{{e}}"
+      wx:for-item="dateTitle"
+      wx:key="c"
+    >
+      <view class="_div date-title data-v-498820be">{{dateTitle.a}}</view>
+      <discover-card
+        bind:__l="__l"
+        class="card-wrapper data-v-498820be"
+        uI="{{config.b}}"
+        uP="{{config.c}}"
+        wx:for="{{dateTitle.b}}"
+        wx:for-item="config"
+        wx:key="a"
+      ></discover-card>
+    </view>
+  </view>
+  <view class="_div bottom-wrapper data-v-498820be"
+    >本页内容仅供参考，不构成投资建议和保证，基金过往业绩并不预示其未来表现。基金有风险，投资需谨慎。</view
+  >
+  <trust-footer
+    bind:__l="__l"
+    class="trust-footer data-v-498820be"
+    uI="498820be-2"
+    wx:if="{{f}}"
+  ></trust-footer>
+</view>

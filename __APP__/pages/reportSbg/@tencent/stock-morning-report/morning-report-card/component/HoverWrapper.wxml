@@ -1,0 +1,12 @@
+<view
+  catchtouchend="{{d}}"
+  catchtouchmove="{{c}}"
+  catchtouchstart="{{b}}"
+  class="_div"
+  wx:if="{{a}}"
+>
+  <slot></slot>
+</view>
+<view class="_div" wx:else>
+  <slot></slot>
+</view>

@@ -1,0 +1,100 @@
+.mp-bubble-container.data-v-065f0fd0 {
+  height: 2.6666666666666665rem;
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.bubble-main.data-v-065f0fd0 {
+  animation: bubbleFadeIn-065f0fd0 0.3s ease-out;
+  pointer-events: auto;
+  position: absolute;
+}
+.bubble-content.data-v-065f0fd0 {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.16rem;
+  box-shadow: 0 0.10666666666666667rem 0.32rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  max-width: 8.533333333333333rem;
+  padding: 0.26666666666666666rem 0.32rem;
+  position: relative;
+}
+.bubble-text.data-v-065f0fd0 {
+  flex: 1;
+  font-family: PingFangSC-Regular, sans-serif;
+  font-size: 0.3466666666666667rem;
+  line-height: 0.48rem;
+}
+.bubble-text .text-line.data-v-065f0fd0 {
+  margin-bottom: 0.10666666666666667rem;
+}
+.bubble-text .text-line.data-v-065f0fd0:last-child {
+  margin-bottom: 0;
+}
+.bubble-close.data-v-065f0fd0 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  height: 0.4266666666666667rem;
+  justify-content: center;
+  margin-left: 0.21333333333333335rem;
+  width: 0.4266666666666667rem;
+}
+.close-icon.data-v-065f0fd0 {
+  height: 0.32rem;
+  position: relative;
+  width: 0.32rem;
+}
+.close-line.data-v-065f0fd0 {
+  background: #fff;
+  border-radius: 0.013333333333333334rem;
+  height: 0.02666666666666667rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: center;
+  width: 0.32rem;
+}
+.close-line-1.data-v-065f0fd0 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.close-line-2.data-v-065f0fd0 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.bubble-arrow.data-v-065f0fd0 {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.bubble-arrow.top-right.data-v-065f0fd0 {
+  border-bottom: 0.16rem solid rgba(0, 0, 0, 0.6);
+  border-left: 0.16rem solid transparent;
+  border-right: 0.16rem solid transparent;
+  top: -0.14666666666666667rem;
+  transform: translateZ(0);
+}
+@-webkit-keyframes bubbleFadeIn-065f0fd0 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes bubbleFadeIn-065f0fd0 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

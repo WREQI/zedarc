@@ -1,0 +1,17 @@
+<view class="wrapper data-v-039f370a">
+  <checkbox-group
+    bindchange="{{e}}"
+    class="{{['data-v-039f370a',d]}}"
+    wx:if="{{a}}"
+  >
+    <checkbox
+      checked="{{c}}"
+      class="protocol-checkbox ^protocol-checkbox data-v-039f370a"
+      color="{{b}}"
+    ></checkbox>
+    <slot></slot>
+  </checkbox-group>
+  <view class="{{['data-v-039f370a',f]}}" wx:else>
+    <slot></slot>
+  </view>
+</view>

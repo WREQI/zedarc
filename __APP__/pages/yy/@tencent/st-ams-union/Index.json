@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "add-to-mp-guide": "./components/AddToMpGuide",
+    "sections": "./components/Sections",
+    "brand-area": "./components/BrandArea",
+    "extra-images": "./components/ExtraImages",
+    "overlay-modal": "./components/OverlayModal",
+    "footer-bar": "./components/FooterBar",
+    "half-screen-ai-entry": "../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry"
+  },
+  "componentPlaceholder": { "half-screen-ai-entry": "view" }
+}

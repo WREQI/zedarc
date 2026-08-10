@@ -1,0 +1,14 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-market-page
+  bind:__l="__l"
+  class="r"
+  uI="b489d54a-0"
+  uR="globalMarketPageRef"
+></global-market-page>
+<mp-privacy-dialog bind:__l="__l" uI="b489d54a-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="b489d54a-2"
+  uP="{{c}}"
+  wx:if="{{c}}"
+></stock-privacy-dialog>

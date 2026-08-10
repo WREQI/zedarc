@@ -1,0 +1,31 @@
+<view class="{{['_div','mod-like-box','data-v-7bb2f9b9',m,n,o]}}">
+  <block wx:if="{{a}}">
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>
+      <view class="_div sq-icon-hongniu data-v-7bb2f9b9" wx:if="{{b}}"></view>
+      <view class="_div sq-icon-niu data-v-7bb2f9b9" wx:if="{{c}}"></view>
+    </block>
+  </block>
+  <view class="_div niu-sq-icon-box data-v-7bb2f9b9" wx:if="{{d}}">
+    <view class="_div ripple data-v-7bb2f9b9">
+      <view class="_div ripple-item data-v-7bb2f9b9"></view>
+    </view>
+    <view class="_div ripple outline data-v-7bb2f9b9">
+      <view class="_div ripple-item data-v-7bb2f9b9"></view>
+    </view>
+  </view>
+  <view class="_div scrollable-box data-v-7bb2f9b9">
+    <view
+      class="{{['_div','scrollable','data-v-7bb2f9b9',k&&'isTap',l&&'selected']}}"
+    >
+      <block wx:if="{{e}}">
+        <label class="_span span data-v-7bb2f9b9">{{f}}</label>
+        <label class="_span span data-v-7bb2f9b9">{{g}}</label>
+      </block>
+      <block wx:if="{{h}}">
+        <label class="_span span data-v-7bb2f9b9">{{i}}</label>
+        <label class="_span span data-v-7bb2f9b9">{{j}}</label>
+      </block>
+    </view>
+  </view>
+</view>

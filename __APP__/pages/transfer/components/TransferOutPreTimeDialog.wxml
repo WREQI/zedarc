@@ -1,0 +1,38 @@
+<dialog
+  bind:__l="__l"
+  bindcancel="{{l}}"
+  bindconfirm="{{k}}"
+  class="data-v-48d96512"
+  uI="48d96512-0"
+  uP="{{m}}"
+  uS="{{['d']}}"
+  wx:if="{{m}}"
+>
+  <view class="transfer-plan-dialog data-v-48d96512">
+    <view class="title data-v-48d96512">温馨提示</view>
+    <view class="{{['tips','data-v-48d96512',d&&'margin-bottom']}}">
+      <label class="text data-v-48d96512">{{a}}</label>
+      <label class="{{['text','pay-pen-text','data-v-48d96512',c&&'primary']}}"
+        >{{b}}</label
+      >
+    </view>
+    <block wx:if="{{e}}">
+      <transfer-out-progress
+        bind:__l="__l"
+        class="data-v-48d96512"
+        uI="48d96512-1,48d96512-0"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></transfer-out-progress>
+    </block>
+    <view class="balance-tip data-v-48d96512" hidden="{{!h}}"
+      >本次转出将赎回余额增值资金{{g}}元，转出发起后赎回金额不享受今日增值收益。</view
+    >
+    <view
+      bindtap="{{j}}"
+      class="balance-pen-reason fs-28 data-v-48d96512"
+      wx:if="{{i}}"
+      >资金为什么要分几笔到账？</view
+    >
+  </view>
+</dialog>

@@ -1,0 +1,51 @@
+<view
+  catchtap="{{h}}"
+  catchtouchmove="{{i}}"
+  class="{{['_div','data-v-336e9583','voice-dialog-mask',g]}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{f}}" class="_div voice-dialog-panel data-v-336e9583">
+    <view class="_div voice-dialog-header data-v-336e9583">
+      <view class="_div voice-dialog-title data-v-336e9583">播放设置</view>
+      <view
+        catchtap="{{b}}"
+        class="_div voice-dialog-close data-v-336e9583"
+      ></view>
+    </view>
+    <view class="_div voice-dialog-tabs data-v-336e9583">
+      <view
+        catchtap="{{tab.d}}"
+        class="{{['_div','data-v-336e9583','voice-dialog-tab',tab.c]}}"
+        wx:for="{{c}}"
+        wx:for-item="tab"
+        wx:key="b"
+        >{{tab.a}}</view
+      >
+    </view>
+    <view class="_div voice-dialog-list data-v-336e9583">
+      <view
+        catchtap="{{item.g}}"
+        class="{{['_div','data-v-336e9583','voice-dialog-item',item.f]}}"
+        wx:for="{{d}}"
+        wx:key="e"
+      >
+        <image
+          alt=""
+          class="_img voice-dialog-avatar data-v-336e9583"
+          src="{{item.a}}"
+        ></image>
+        <view class="_div voice-dialog-info data-v-336e9583">
+          <view class="_div voice-dialog-name data-v-336e9583">{{item.b}}</view>
+          <view class="_div voice-dialog-desc data-v-336e9583">{{item.c}}</view>
+        </view>
+        <view
+          class="{{['_div','data-v-336e9583','voice-dialog-radio',item.d]}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div voice-dialog-tips data-v-336e9583">更多音色敬请期待</view>
+    <view catchtap="{{e}}" class="_div voice-dialog-confirm data-v-336e9583"
+      >确认</view
+    >
+  </view>
+</view>

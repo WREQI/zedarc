@@ -1,0 +1,10 @@
+<view class="_div comp-block data-v-887d1636">
+  <view class="_div comp-block-item data-v-887d1636" wx:for="{{a}}" wx:key="f">
+    <view class="_div field-title data-v-887d1636" key="{{item.b}}"
+      >{{item.a}}</view
+    >
+    <view class="_div field-content data-v-887d1636" key="{{item.e}}"
+      >{{item.c}}<view catchtap="{{item.d}}" class="_i data-v-887d1636"></view>
+    </view>
+  </view>
+</view>

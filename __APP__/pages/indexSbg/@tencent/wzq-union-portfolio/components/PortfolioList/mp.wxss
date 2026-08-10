@@ -1,0 +1,36 @@
+.stock-scroll-list.data-v-fa44983f {
+  box-sizing: border-box;
+  position: relative;
+}
+.portfolio-mask.data-v-fa44983f {
+  background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+  bottom: 0;
+  height: 3.6266666666666665rem;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+[data-st-theme="black"] .portfolio-mask.data-v-fa44983f {
+  background: linear-gradient(180deg, hsla(0, 0%, 9%, 0), #12161f);
+}
+.dynamic-height-wrapper.data-v-fa44983f {
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: height 0.1s ease-in-out;
+}
+.dynamic-height-wrapper.with-radius.data-v-fa44983f {
+  border-bottom-left-radius: 0.21333333333333335rem;
+  border-bottom-right-radius: 0.21333333333333335rem;
+}
+.content-wrapper .rcmd-cards.data-v-fa44983f {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.content-wrapper .empty-tip.data-v-fa44983f {
+  height: 4rem;
+}
+.content-wrapper .empty-tip.data-v-fa44983f .text {
+  color: #6c7eb3 !important;
+}

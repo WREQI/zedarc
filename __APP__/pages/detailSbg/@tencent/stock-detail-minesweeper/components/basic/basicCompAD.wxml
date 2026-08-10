@@ -1,0 +1,33 @@
+<view class="_div comp-block data-v-652e38ae" wx:if="{{a}}">
+  <view
+    class="_div comp-group data-v-652e38ae"
+    wx:for="{{b}}"
+    wx:for-item="detail"
+    wx:key="h"
+  >
+    <view class="_div date data-v-652e38ae">{{detail.a}}</view>
+    <view
+      catchtap="{{detail.g}}"
+      class="_div detail-wrapper data-v-652e38ae"
+      wx:if="{{detail.b}}"
+    >
+      <view class="_div title-wrapper data-v-652e38ae">
+        <view class="_div data-v-652e38ae">{{detail.c}}</view>
+        <image
+          class="_img fold-icon data-v-652e38ae"
+          src="https://st.gtimg.com/design/6ba52d389d2cace415895acfc29f74fb.png"
+          wx:if="{{detail.d}}"
+        ></image>
+        <image
+          class="_img fold-icon data-v-652e38ae"
+          src="https://st.gtimg.com/design/5eb8b1a2fcb2896281a18a8a9116ad53.png"
+          wx:else
+        ></image>
+      </view>
+      <view
+        class="{{['_div','content','data-v-652e38ae',detail.f&&'unfolded']}}"
+        >{{detail.e}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,113 @@
+.item-wrapper.data-v-34443aac {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.26666666666666666rem;
+  justify-content: space-between;
+  transition: background-color 0.3s linear;
+  white-space: nowrap;
+}
+.item-wrapper.bg-color-rise.data-v-34443aac {
+  background-color: var(--color-rise-bg1);
+}
+.item-wrapper.bg-color-drop.data-v-34443aac {
+  background-color: var(--color-drop-bg1);
+}
+.item-wrapper .title.data-v-34443aac {
+  color: var(--color-lightgray-1);
+  font-weight: 400;
+  line-height: 0.32rem;
+  width: 25%;
+}
+.item-wrapper .price.data-v-34443aac {
+  color: var(--color-lightgray-1);
+  font-weight: 500;
+  line-height: 0.32rem;
+  padding-right: 0.10666666666666667rem;
+  text-align: right;
+}
+.item-wrapper .price.color-equal.data-v-34443aac {
+  color: var(--color-gray);
+}
+.item-wrapper .price.color-rise.data-v-34443aac {
+  color: var(--color-rise);
+}
+.item-wrapper .price.color-drop.data-v-34443aac {
+  color: var(--color-drop);
+}
+.item-wrapper .item-content.data-v-34443aac {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.item-wrapper .amount.data-v-34443aac {
+  color: var(--color-heavygray);
+  font-weight: 500;
+  line-height: 0.32rem;
+  padding-right: 0.10666666666666667rem;
+  position: relative;
+  text-align: right;
+  width: 35%;
+}
+.item-wrapper .amount .bg-amount.data-v-34443aac {
+  bottom: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.item-wrapper .amount .bg-amount.color-rise.data-v-34443aac {
+  background-color: var(--color-rise);
+}
+.item-wrapper .amount .bg-amount.color-drop.data-v-34443aac {
+  background-color: var(--color-drop);
+}
+.ten-trans.data-v-34443aac {
+  margin-bottom: 0.04rem !important;
+}
+.ten-trans .amount.data-v-34443aac,
+.ten-trans .price.data-v-34443aac,
+.ten-trans .title.data-v-34443aac {
+  line-height: 1.8 !important;
+}
+.ten-trans .price.data-v-34443aac,
+.ten-trans .title.data-v-34443aac {
+  text-align: left !important;
+}
+.ten-trans .amount.data-v-34443aac {
+  text-align: right !important;
+  width: 35% !important;
+}
+.ten-trans .amount .bg-amount.data-v-34443aac {
+  height: 0.37333333333333335rem;
+  top: 0.05333333333333334rem;
+}
+@media (min-width: 320px) {
+  .ten-trans .amount.data-v-34443aac,
+  .ten-trans .price.data-v-34443aac,
+  .ten-trans .title.data-v-34443aac {
+    font-size: 8.5333px !important;
+  }
+}
+@media (min-width: 360px) {
+  .ten-trans .amount.data-v-34443aac,
+  .ten-trans .price.data-v-34443aac,
+  .ten-trans .title.data-v-34443aac {
+    font-size: 9.6px !important;
+  }
+}
+@media (min-width: 375px) {
+  .ten-trans .amount.data-v-34443aac,
+  .ten-trans .price.data-v-34443aac,
+  .ten-trans .title.data-v-34443aac {
+    font-size: 10px !important;
+  }
+}
+@media (min-width: 414px) {
+  .ten-trans .amount.data-v-34443aac,
+  .ten-trans .price.data-v-34443aac,
+  .ten-trans .title.data-v-34443aac {
+    font-size: 11px !important;
+  }
+}

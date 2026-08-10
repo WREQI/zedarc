@@ -1,0 +1,87 @@
+.reply.data-v-0ba4f3b5 {
+  box-align: center;
+  align-content: center;
+  align-items: center;
+  background: #171d28;
+  bottom: 0;
+  box-sizing: border-box;
+  box-sizing: initial;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3333333333333333rem;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.reply .my-input.data-v-0ba4f3b5 {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.reply .replyBox_footNew.data-v-0ba4f3b5 {
+  box-pack: center;
+  box-align: center;
+  align-content: center;
+  align-items: center;
+  background: #12161f;
+  box-sizing: border-box;
+  color: #7d88a1;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  height: 0.8933333333333333rem;
+  justify-content: center;
+  margin: 0 auto;
+  width: 9.2rem;
+}
+.reply .replyBox_footNew .cursor.data-v-0ba4f3b5 {
+  animation: twinkle 0.8s linear 0.8s infinite alternate;
+  background-color: #3077ec;
+  border-radius: 0.02666666666666667rem;
+  height: 0.48rem;
+  margin: 0 0.26666666666666666rem;
+  width: 0.05333333333333334rem;
+}
+.reply .replyBox_footNew .inline.data-v-0ba4f3b5 {
+  line-height: 1;
+}
+.reply.isNewsDetail .replyBox_footNew.data-v-0ba4f3b5,
+.reply.isNewsDetail.data-v-0ba4f3b5 {
+  box-pack: start;
+  justify-content: flex-start;
+}
+.reply.isNewsDetail .replyBox_footNew.data-v-0ba4f3b5 {
+  background: #12161f;
+  color: #7d88a1;
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  height: 0.8933333333333333rem;
+  margin: 0 0.4rem;
+}
+.reply.isNewsDetail .replyBox_footNew .icon.data-v-0ba4f3b5 {
+  background: url(https://st.gtimg.com/design/7ed40f91f945c3a0fee4404d8d454b48.png)
+    no-repeat;
+  background-size: contain;
+  height: 0.4266666666666667rem;
+  margin-left: 0.22666666666666666rem;
+  opacity: 0.5;
+  padding-right: 0.13333333333333333rem;
+  position: relative;
+  top: -0.013333333333333334rem;
+  width: 0.4266666666666667rem;
+}
+.reply.isNewsDetail .replyBox_footNew .icon-noComment.data-v-0ba4f3b5 {
+  background: url(https://st.gtimg.com/design/59d135de67535d4390419ee00b0df728.png)
+    no-repeat;
+  background-size: contain;
+  height: 0.3466666666666667rem;
+  margin-left: 0.26666666666666666rem;
+  padding-right: 0.13333333333333333rem;
+  position: relative;
+  top: 0.02666666666666667rem;
+  width: 0.4rem;
+}
+.reply.isNewsDetail .replyBox_footNew .inline.data-v-0ba4f3b5 {
+  line-height: 1;
+}

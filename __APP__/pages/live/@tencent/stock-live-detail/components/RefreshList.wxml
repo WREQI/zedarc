@@ -1,0 +1,26 @@
+<view class="_div component-refresh-list">
+  <st-pull-refresh
+    bind:__l="__l"
+    bindpullDownRefresh="{{c}}"
+    class="r"
+    uI="799a60c4-0"
+    uP="{{d}}"
+    uR="refresh"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <slot></slot>
+  </st-pull-refresh>
+  <st-pull-refresh
+    bind:__l="__l"
+    bindpullDownRefresh="{{f}}"
+    class="r"
+    uI="799a60c4-1"
+    uP="{{g||''}}"
+    uR="refresh"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <slot></slot>
+  </st-pull-refresh>
+</view>

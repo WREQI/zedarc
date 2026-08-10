@@ -1,0 +1,24 @@
+<view class="_div hotspot-card__visual data-v-e2d7908f">
+  <image
+    alt="热点背景"
+    class="_img hotspot-card__visual-bg data-v-e2d7908f"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <view class="_div hotspot-card__oil-art data-v-e2d7908f">
+    <image
+      alt="热点装饰图"
+      class="_img hotspot-card__oil-image data-v-e2d7908f"
+      src="{{d}}"
+      wx:if="{{c}}"
+    ></image>
+  </view>
+  <view class="_div hotspot-card__badge data-v-e2d7908f">
+    <view class="_div hotspot-card__badge-text data-v-e2d7908f">{{e}}</view>
+  </view>
+  <view class="_div hotspot-card__copy data-v-e2d7908f">
+    <view class="_div hotspot-card__headline data-v-e2d7908f">{{f}}</view>
+    <view class="_div hotspot-card__description data-v-e2d7908f">{{g}}</view>
+  </view>
+  <slot name="fund"></slot>
+</view>

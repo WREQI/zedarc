@@ -1,0 +1,26 @@
+<page-meta class="data-v-1c0e9fc4" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-1c0e9fc4" id="global-wrap" uI="1c0e9fc4-0" uP="{{s}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{s}}">
+    <st-cell-group bind:__l="__l" class="ca-validation-form data-v-1c0e9fc4" uI="1c0e9fc4-1,1c0e9fc4-0" uP="{{q}}" uS="{{['d']}}" wx:if="{{q}}">
+        <view class="container data-v-1c0e9fc4">
+            <view class="prompt-info data-v-1c0e9fc4">{{b}}<label bindtap="{{d}}" class="broker-tel data-v-1c0e9fc4">{{c}}</label>
+                <label class="data-v-1c0e9fc4" wx:if="{{e}}">修改</label>
+            </view>
+            <view class="form-warpper data-v-1c0e9fc4">
+                <st-cell bind:__l="__l" class="form-item data-v-1c0e9fc4" uI="1c0e9fc4-2,1c0e9fc4-1" uP="{{h}}" uS="{{['d']}}" wx:if="{{h}}">
+                    <view class="value-wrapper flex-column flex-hcenter data-v-1c0e9fc4">
+                        <input bindinput="{{g}}" class="form-input input data-v-1c0e9fc4" disabled="{{true}}" maxlength="11" value="{{f}}"></input>
+                    </view>
+                </st-cell>
+                <st-cell bind:__l="__l" class="form-item data-v-1c0e9fc4" uI="1c0e9fc4-3,1c0e9fc4-1" uP="{{o}}" uS="{{['extra','d']}}" wx:if="{{o}}">
+                    <view class="value-wrapper flex-column flex-hcenter data-v-1c0e9fc4">
+                        <input bindinput="{{k}}" class="form-input code data-v-1c0e9fc4" disabled="{{i}}" maxlength="6" placeholder="请输入短信验证码" type="number" value="{{j}}"></input>
+                    </view>
+                    <button bindtap="{{n}}" class="btn-code data-v-1c0e9fc4" disabled="{{m}}" size="mini" slot="extra">{{l}}</button>
+                </st-cell>
+            </view>
+        </view>
+        <view class="cond-btnwrap data-v-1c0e9fc4">
+            <button bindtap="{{p}}" class="btn solid next-btn flex-center data-v-1c0e9fc4">下一步</button>
+        </view>
+    </st-cell-group>
+</global-wrap>

@@ -1,0 +1,39 @@
+<view class="_div list-wrapper data-v-5b35fbb9">
+  <title-block
+    bind:__l="__l"
+    bindgotoList="{{b}}"
+    bindtipClick="{{a}}"
+    class="data-v-5b35fbb9"
+    uI="5b35fbb9-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></title-block>
+  <view class="_div card-container data-v-5b35fbb9">
+    <card-block
+      bind:__l="__l"
+      bindgotoDetail="{{item.e}}"
+      class="card-block-wrapper data-v-5b35fbb9"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      uS="{{['card-bottom']}}"
+      wx:for="{{d}}"
+      wx:key="d"
+    >
+      <view class="_div card-bottom data-v-5b35fbb9" slot="card-bottom">
+        <view class="_div label-wrapper data-v-5b35fbb9" wx:if="{{item.a}}">
+          <label
+            class="{{['_span','data-v-5b35fbb9','label-item',label.c]}}"
+            wx:for="{{item.b}}"
+            wx:for-item="label"
+            wx:key="b"
+            >{{label.a}}</label
+          >
+        </view>
+        <view class="_div scale data-v-5b35fbb9" wx:else>规模{{item.c}}</view>
+      </view>
+    </card-block>
+  </view>
+  <view class="_div etf-zj-qj-hq-wrapper data-v-5b35fbb9">
+    <view class="_div etf-zj-qj-hq-entry data-v-5b35fbb9"></view>
+  </view>
+</view>

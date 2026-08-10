@@ -1,0 +1,34 @@
+<view class="_div HeaderView data-v-ae1443cb">
+  <view class="_div default-box data-v-ae1443cb">
+    <image
+      alt=""
+      class="_img image-content data-v-ae1443cb"
+      mode="widthFix"
+      src="{{a}}"
+    ></image>
+    <view class="_div data-v-ae1443cb">
+      <view class="_div header-guide-right data-v-ae1443cb" wx:if="{{b}}">
+        <view
+          bindtap="{{d}}"
+          class="_div guide-home-btn data-v-ae1443cb"
+          wx:if="{{c}}"
+          >去首页</view
+        >
+        <subscribe-btn
+          bind:__l="__l"
+          bindsubscribe="{{f}}"
+          class="r data-v-ae1443cb"
+          uI="ae1443cb-0"
+          uP="{{g||''}}"
+          uR="subscribeBtn"
+          wx:else
+        ></subscribe-btn>
+      </view>
+    </view>
+    <view class="_div data-v-ae1443cb" wx:if="{{h}}">
+      <label class="{{['_span','percent-text','data-v-ae1443cb',j]}}"
+        >{{i}}</label
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<common-status-item
+  bind:__l="__l"
+  class="data-v-80b3cff6"
+  uI="80b3cff6-0"
+  uP="{{j}}"
+  uS="{{['d']}}"
+  wx:if="{{j}}"
+>
+  <view class="bank-status-item data-v-80b3cff6" wx:if="{{a}}">
+    <view class="reasons-container data-v-80b3cff6" wx:if="{{b}}">
+      <view class="reasons data-v-80b3cff6" wx:for="{{c}}" wx:for-item="reason">
+        <view class="{{['reason-title','data-v-80b3cff6',d&&'highlight']}}"
+          >{{reason.a}}{{reason.b}}</view
+        >
+        <view class="reason-text data-v-80b3cff6">{{reason.c}}</view>
+      </view>
+    </view>
+    <view class="data-v-80b3cff6" wx:else
+      >银行卡绑定后才能进行资金转账，请等待券商侧处理。如有疑问，请联系券商客服<label
+        bindtap="{{f}}"
+        class="tel data-v-80b3cff6"
+        >{{e}}</label
+      >。</view
+    >
+    <view bindtap="{{i}}" class="button data-v-80b3cff6" wx:if="{{g}}"
+      >{{h}}</view
+    >
+  </view>
+</common-status-item>

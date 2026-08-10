@@ -1,0 +1,55 @@
+<view class="{{['fixed-quote','border--bottom',p]}}" wx:if="{{a}}">
+  <view class="quote-info flex-between">
+    <view class="flex">
+      <label class="label text-color-1">最新</label>
+      <value-color
+        bind:__l="__l"
+        class="dqj"
+        uI="48c4b257-0"
+        uP="{{c}}"
+        uS="{{['d']}}"
+        wx:if="{{c}}"
+        >{{b}}</value-color
+      >
+      <value-color
+        bind:__l="__l"
+        class="zde"
+        uI="48c4b257-1"
+        uP="{{e}}"
+        uS="{{['d']}}"
+        wx:if="{{e}}"
+        >{{d}}</value-color
+      >
+      <value-color
+        bind:__l="__l"
+        class="zdf"
+        uI="48c4b257-2"
+        uP="{{g}}"
+        uS="{{['d']}}"
+        wx:if="{{g}}"
+        >{{f}}%</value-color
+      >
+    </view>
+    <view class="flex" wx:if="{{h}}">
+      <label class="label text-color-1">涨停</label>
+      <view class="price-ceiling rise">{{i}}</view>
+      <label class="label text-color-1">跌停</label>
+      <view class="price-floor drop">{{j}}</view>
+    </view>
+  </view>
+  <view class="status-info flex-between" wx:if="{{false}}">
+    <view class="flex">
+      <label class="market-status text-color-2" wx:if="{{k}}">{{l}}</label>
+      <label class="market-status text-color-2" wx:elif="{{m}}">{{n}}</label>
+    </view>
+    <view class="flex">
+      <label
+        class="label border--surround"
+        wx:for="{{o}}"
+        wx:for-item="label"
+        wx:key="b"
+        >{{label.a}}</label
+      >
+    </view>
+  </view>
+</view>

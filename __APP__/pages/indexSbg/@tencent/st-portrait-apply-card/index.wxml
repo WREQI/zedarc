@@ -1,0 +1,18 @@
+<view class="_div portrait-apply-guide-card-container" wx:if="{{a}}">
+  <view class="_div gray-line"></view>
+  <view class="_div text">
+    <view class="_div main_title">{{b}}</view>
+    <view class="_div sub_title" wx:if="{{c}}">
+      <rich-text nodes="{{d}}"></rich-text>
+    </view>
+    <view class="_div sub_title2" wx:if="{{e}}">
+      <view class="{{['_div','sub_item',g]}}" wx:for="{{f}}" wx:key="c">
+        <view class="_div" wx:if="{{item.a}}">
+          <rich-text nodes="{{item.b}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <view bindtap="{{j}}" class="_div btn" wx:if="{{h}}">{{i}}</view>
+  </view>
+  <view class="_div bg" style="{{'background-image:'+l}}" wx:if="{{k}}"></view>
+</view>

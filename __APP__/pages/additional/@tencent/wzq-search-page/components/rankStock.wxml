@@ -1,0 +1,40 @@
+<view class="_div rank-wrap data-v-33c7fd94" wx:if="{{a}}">
+  <view
+    catchtap="{{item.s}}"
+    class="_div rank-item data-v-33c7fd94"
+    data-index="{{item.r}}"
+    ref="rank-item"
+    wx:for="{{b}}"
+    wx:key="q"
+  >
+    <view class="_div num font-numeric-tabular data-v-33c7fd94"
+      >{{item.a}}</view
+    >
+    <view class="_div content data-v-33c7fd94">
+      <view class="_div name data-v-33c7fd94" wx:if="{{item.b}}"
+        >{{item.c}}</view
+      >
+      <view class="_div symbol data-v-33c7fd94" wx:if="{{item.d}}">
+        <view class="{{['_i','market-icon','data-v-33c7fd94',item.e]}}"></view>
+        <view class="_div code data-v-33c7fd94">{{item.f}}</view>
+        <view
+          class="{{['_div','data-v-33c7fd94','tag',item.i]}}"
+          wx:if="{{item.g}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </view>
+    <view class="_div zdf gray data-v-33c7fd94" wx:if="{{item.j}}"
+      >{{item.k}}</view
+    >
+    <view
+      class="{{['_div','zdf','font-numeric-tabular','data-v-33c7fd94',item.n]}}"
+      wx:elif="{{item.l}}"
+      >{{item.m}}%</view
+    >
+    <view
+      catchtap="{{item.p}}"
+      class="{{['_div','addbtn','data-v-33c7fd94',item.o]}}"
+    ></view>
+  </view>
+</view>

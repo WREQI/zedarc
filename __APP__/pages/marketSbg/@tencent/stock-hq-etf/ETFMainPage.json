@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "etf-bulletin": "./components/EtfBulletin",
+    "etf-quick-entry": "./components/EtfQuickEntry",
+    "etf-discover-block": "./components/EtfDiscoverBlock",
+    "etf-dividend-block": "./components/EtfDividendBlock",
+    "etf-dig-hot-block": "./components/EtfDigHotBlock",
+    "etf-buy-index-entry": "./components/EtfBuyIndexEntry",
+    "global-invest": "./components/GlobalInvest",
+    "etf-rank-block": "./components/EtfRankBlock/mp",
+    "etf-teach": "./components/EtfTeach",
+    "etf-zone-t0-module": "./components/EtfZoneT0Module",
+    "newpub-etf-bar": "./components/NewpubEtfBar",
+    "etf-pop-com": "./components/EtfPopCom",
+    "teach-pop": "./components/TeachPop",
+    "trust-footer": "../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index"
+  },
+  "componentPlaceholder": { "trust-footer": "view" }
+}

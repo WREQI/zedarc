@@ -1,0 +1,385 @@
+<view
+  class="{{['_div','mod-brief-us-zxg','data-v-827d0e6e',av&&'skin-black']}}"
+>
+  <view class="_div data-v-827d0e6e" wx:if="{{a}}">
+    <view class="_div brief-block data-v-827d0e6e">
+      <view class="_div title-wrapper theme-color data-v-827d0e6e">
+        <label class="_span data-v-827d0e6e">公司简况</label>
+      </view>
+      <view class="_div item-wrapper wiki data-v-827d0e6e">
+        <wiki
+          bind:__l="__l"
+          class="wiki-box data-v-827d0e6e"
+          uI="827d0e6e-0"
+          uP="{{b}}"
+          wx:if="{{b}}"
+        ></wiki>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{c}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">公司名称</view>
+        <view class="_p item-wrapper-p theme-color data-v-827d0e6e">{{d}}</view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{e}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">上市日期</view>
+        <view class="_p item-wrapper-p theme-color data-v-827d0e6e">{{f}}</view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{g}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">交易所</view>
+        <view class="_p item-wrapper-p theme-color data-v-827d0e6e">{{h}}</view>
+      </view>
+      <view
+        bindtap="{{o}}"
+        class="_div item-wrapper data-v-827d0e6e"
+        wx:if="{{i}}"
+      >
+        <view class="_p item-wrapper-p data-v-827d0e6e">所属板块</view>
+        <view class="{{['_p','data-v-827d0e6e','item-wrapper-p',n]}}"
+          >{{j}}<label
+            class="{{['_span','data-v-827d0e6e','zdf-text',m]}}"
+            wx:if="{{k}}"
+            >{{l}}</label
+          >
+        </view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{p}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">公司网址</view>
+        <navigator
+          bindtap="{{t}}"
+          class="_a blue data-v-827d0e6e"
+          href="{{s}}"
+          wx:if="{{q}}"
+          >{{r}}</navigator
+        >
+        <view class="_div theme-color data-v-827d0e6e" wx:else>{{v}}</view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{w}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">总股本</view>
+        <view class="_p item-wrapper-p theme-color data-v-827d0e6e">{{x}}</view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{y}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">业务描述</view>
+        <view class="_p item-wrapper-p theme-color data-v-827d0e6e">{{z}}</view>
+      </view>
+      <view class="_div item-wrapper data-v-827d0e6e" wx:if="{{A}}">
+        <view class="_p item-wrapper-p data-v-827d0e6e">公司简介</view>
+        <view
+          bindtap="{{D}}"
+          class="{{['_p','item-wrapper-p','theme-color','data-v-827d0e6e',C&&'show-fiveLine']}}"
+          >{{B}}</view
+        >
+      </view>
+    </view>
+    <view class="_div brief-block data-v-827d0e6e" ref="jyfx" wx:if="{{E}}">
+      <view class="_div title-wrapper theme-color data-v-827d0e6e">
+        <label class="_span data-v-827d0e6e">主营收入</label>
+        <label class="_span date-list-wrapper blue data-v-827d0e6e">
+          <label bindtap="{{G}}" class="_span data-v-827d0e6e">{{F}}</label>
+          <view class="_div date-list data-v-827d0e6e" hidden="{{!I}}">
+            <view
+              bindtap="{{item.c}}"
+              class="_div data-v-827d0e6e"
+              wx:for="{{H}}"
+              wx:key="b"
+              >{{item.a}}</view
+            >
+          </view>
+        </label>
+      </view>
+      <view
+        class="_div list-item list-item-color list-item-business data-v-827d0e6e"
+      >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >业务名称</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >营业收入（美元）</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >占比</view
+        >
+      </view>
+      <view
+        class="_div list-item list-item-business theme-color data-v-827d0e6e"
+        wx:for="{{J}}"
+        wx:key="d"
+      >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >{{item.a}}</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >{{item.b}}</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-827d0e6e"
+          >{{item.c}}</view
+        >
+      </view>
+    </view>
+    <view class="_div brief-block data-v-827d0e6e" wx:if="{{K}}">
+      <view class="_div title-wrapper theme-color data-v-827d0e6e">
+        <label class="_span data-v-827d0e6e">机构预测目标价格（美元）</label>
+      </view>
+      <view class="_p forecast-price theme-color data-v-827d0e6e"
+        >当前有<view class="forecast-price-em data-v-827d0e6e">{{L}}</view
+        >家机构对目标价做出预测，目标均价为<view
+          class="forecast-price-em data-v-827d0e6e"
+          >{{M}}</view
+        >，其中最低目标价为<view class="forecast-price-em data-v-827d0e6e"
+          >{{N}}</view
+        >，最高目标价为<view class="forecast-price-em data-v-827d0e6e"
+          >{{O}}</view
+        >
+      </view>
+      <view class="_div target-price-percent data-v-827d0e6e">
+        <view class="_div row-price-per data-v-827d0e6e">
+          <label class="_span col-ttl data-v-827d0e6e">目标均价</label>
+          <label
+            class="_span col-bar bar-blue data-v-827d0e6e"
+            style="{{'width:'+P}}"
+          ></label>
+          <label class="_span col-price data-v-827d0e6e" style="{{'width:'+R}}"
+            >{{Q}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-827d0e6e">
+          <label class="_span col-ttl data-v-827d0e6e">当前价</label>
+          <label
+            class="_span col-bar bar-yellow data-v-827d0e6e"
+            style="{{'width:'+S}}"
+          ></label>
+          <label class="_span col-price data-v-827d0e6e" style="{{'width:'+U}}"
+            >{{T}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-827d0e6e">
+          <label class="_span col-ttl data-v-827d0e6e">最高目标价</label>
+          <label
+            class="_span col-bar bar-blue data-v-827d0e6e"
+            style="width: 50%"
+          ></label>
+          <label class="_span col-price data-v-827d0e6e" style="width: 25%"
+            >{{V}}</label
+          >
+        </view>
+        <view class="_div row-price-per data-v-827d0e6e">
+          <label class="_span col-ttl data-v-827d0e6e">最低目标价</label>
+          <label
+            class="_span col-bar bar-blue data-v-827d0e6e"
+            style="{{'width:'+W}}"
+          ></label>
+          <label class="_span col-price data-v-827d0e6e" style="{{'width:'+Y}}"
+            >{{X}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div brief-block data-v-827d0e6e" wx:if="{{Z}}">
+      <view class="_div title-wrapper theme-color data-v-827d0e6e">
+        <label class="_span data-v-827d0e6e">机构分析</label>
+      </view>
+      <view class="_p analysis-block-title data-v-827d0e6e">机构评级</view>
+      <view class="_div analysis-block-rating data-v-827d0e6e">
+        <view
+          class="_div col-rating data-v-827d0e6e"
+          wx:for="{{aa}}"
+          wx:key="i"
+        >
+          <label class="_span col-rating-span column-top data-v-827d0e6e">
+            <view class="column-top-em theme-color data-v-827d0e6e"
+              >{{item.a}}</view
+            >家</label
+          >
+          <view class="_div column-level data-v-827d0e6e">
+            <label
+              class="_span column-level-span level-buy data-v-827d0e6e"
+              style="{{'height:'+item.c}}"
+              >{{item.b}}</label
+            >
+            <label
+              class="_span column-level-span level-hold data-v-827d0e6e"
+              style="{{'height:'+item.e}}"
+              >{{item.d}}</label
+            >
+            <label
+              class="_span column-level-span level-sale data-v-827d0e6e"
+              style="{{'height:'+item.g}}"
+              >{{item.f}}</label
+            >
+          </view>
+          <label class="_span col-rating-span column-btm data-v-827d0e6e"
+            >{{item.h}}月</label
+          >
+        </view>
+      </view>
+      <view class="_div analysis-sign-rating data-v-827d0e6e">
+        <view class="_div col-sign data-v-827d0e6e">
+          <label class="_span square-color bg-buy data-v-827d0e6e"></label>
+          <label class="_span text data-v-827d0e6e">买入+增持</label>
+        </view>
+        <view class="_div col-sign data-v-827d0e6e">
+          <label class="_span square-color bg-hold data-v-827d0e6e"></label>
+          <label class="_span text data-v-827d0e6e">持有</label>
+        </view>
+        <view class="_div col-sign data-v-827d0e6e">
+          <label class="_span square-color bg-sale data-v-827d0e6e"></label>
+          <label class="_span text text2 data-v-827d0e6e">减持+卖出</label>
+        </view>
+      </view>
+      <view class="_p analysis-block-title data-v-827d0e6e">历史走势对比</view>
+      <view class="_div analysis-block-trend data-v-827d0e6e">
+        <f2
+          bind:__l="__l"
+          bindonInit="{{ad}}"
+          class="r data-v-827d0e6e"
+          uI="827d0e6e-1"
+          uP="{{ae}}"
+          uR="hislineChart"
+          wx:if="{{ab}}"
+        ></f2>
+      </view>
+      <view class="_div analysis-sign-trend data-v-827d0e6e">
+        <view class="_div col-sign data-v-827d0e6e">
+          <label class="_span line-color line-trend data-v-827d0e6e"></label>
+          <label class="_span text data-v-827d0e6e">实际价格</label>
+        </view>
+        <view class="_div col-sign data-v-827d0e6e">
+          <label class="_span line-color line-price data-v-827d0e6e"></label>
+          <label class="_span text2 data-v-827d0e6e">机构平均目标价格</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div gdtj-container data-v-827d0e6e" wx:if="{{af}}">
+      <holder-stat
+        bind:__l="__l"
+        bindopenDetail="{{ag}}"
+        class="data-v-827d0e6e"
+        uI="827d0e6e-2"
+        uP="{{ah}}"
+        wx:if="{{ah}}"
+      ></holder-stat>
+    </view>
+    <view class="_div brief-block data-v-827d0e6e" wx:if="{{ai}}">
+      <view catchtap="{{ak}}" class="_div title-wrapper data-v-827d0e6e">
+        <label class="_span data-v-827d0e6e">
+          <label class="_span theme-color data-v-827d0e6e">主要股东</label>
+          <label class="_span date-content data-v-827d0e6e">({{aj}})</label>
+        </label>
+        <label class="_span blue data-v-827d0e6e"
+          >更多<view class="_i arrow-zxg data-v-827d0e6e"></view>
+        </label>
+      </view>
+      <view
+        class="_div list-item list-item-color list-item-circulation data-v-827d0e6e"
+      >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >股东名称</view
+        >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >持股数(股)</view
+        >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >占比</view
+        >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >变动</view
+        >
+      </view>
+      <view
+        class="_div list-item list-item-circulation theme-color data-v-827d0e6e"
+        wx:for="{{al}}"
+        wx:key="g"
+      >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >{{item.a}}</view
+        >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >{{item.b}}</view
+        >
+        <view
+          class="_div list-item-div list-item-circulation-div data-v-827d0e6e"
+          >{{item.c}}</view
+        >
+        <view
+          class="{{['_div','list-item-div','list-item-circulation-div','data-v-827d0e6e',item.e&&'rise',item.f&&'drop']}}"
+          >{{item.d}}</view
+        >
+      </view>
+    </view>
+    <view
+      class="{{['_div','brief-block','data-v-827d0e6e',aq&&'gdtj-container']}}"
+      wx:if="{{am}}"
+    >
+      <view class="_div title-wrapper theme-color data-v-827d0e6e">
+        <label class="_span detail-tips-wrapper data-v-827d0e6e"
+          >分红送配<view
+            catchtap="{{an}}"
+            class="_div image-tip data-v-827d0e6e"
+          ></view>
+        </label>
+        <view bindtap="{{ao}}" class="_div title-jump data-v-827d0e6e"
+          >查看更多<image
+            class="_img img-arrow data-v-827d0e6e"
+            src="https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png"
+          ></image>
+        </view>
+      </view>
+      <view
+        class="_div list-item list-item-color list-item-dividend data-v-827d0e6e"
+      >
+        <view class="_div list-item-div list-item-dividend-div data-v-827d0e6e"
+          >除权日期</view
+        >
+        <view class="_div list-item-div list-item-dividend-div data-v-827d0e6e"
+          >方案</view
+        >
+      </view>
+      <view
+        class="_div list-item list-item-dividend theme-color data-v-827d0e6e"
+        wx:for="{{ap}}"
+        wx:key="c"
+      >
+        <view class="_div list-item-div list-item-dividend-div data-v-827d0e6e"
+          >{{item.a}}</view
+        >
+        <view class="_div list-item-div list-item-dividend-div data-v-827d0e6e"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-827d0e6e"
+    uI="827d0e6e-3"
+    uS="{{['d']}}"
+    wx:elif="{{ar}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无简况数据</block>
+  </no-data>
+  <view class="_div teach-bottom data-v-827d0e6e" wx:if="{{as}}">
+    <view catchtap="{{at}}" class="_div teach-img data-v-827d0e6e">
+      <view class="_div teach-left data-v-827d0e6e">
+        <image
+          class="_img img-logo data-v-827d0e6e"
+          src="https://st.gtimg.com/design/56d67054e1577bfd084b05db1ac74062.png"
+        ></image>
+        <view class="_div teach-text data-v-827d0e6e">
+          <view class="_div brief-black-text data-v-827d0e6e"
+            >简况教程 · 美股篇</view
+          >
+          <view class="_div data-v-827d0e6e">学习基本面分析方法</view>
+        </view>
+      </view>
+      <image
+        class="_img img-arrow data-v-827d0e6e"
+        src="https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png"
+      ></image>
+    </view>
+  </view>
+</view>

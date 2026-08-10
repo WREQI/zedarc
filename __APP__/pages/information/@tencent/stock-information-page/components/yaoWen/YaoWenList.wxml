@@ -1,0 +1,83 @@
+<view class="_div refresh-yaowen data-v-ca973a53">
+  <block wx:if="{{a}}">
+    <st-pull-refresh
+      bind:__l="__l"
+      bindpullDownRefresh="{{s}}"
+      class="r data-v-ca973a53"
+      uI="ca973a53-0"
+      uP="{{t}}"
+      uR="ywScroll"
+      uS="{{['d']}}"
+      wx:if="{{t}}"
+    >
+      <st-reach-bottom
+        bind:__l="__l"
+        class="r data-v-ca973a53"
+        uI="ca973a53-1,ca973a53-0"
+        uP="{{o}}"
+        uR="reachBottom"
+        uS="{{['d']}}"
+        wx:if="{{o}}"
+      >
+        <yao-wen-list-content
+          bind:__l="__l"
+          bindfeedbackDismiss="{{j}}"
+          bindfeedbackExposed="{{i}}"
+          bindgoodAndBadClick="{{f}}"
+          bindgoodAndBadNewsExposure="{{g}}"
+          bindhandleSendReportData="{{l}}"
+          bindonMuteStatusChange="{{e}}"
+          bindopen="{{h}}"
+          bindopenHeadlineItem="{{c}}"
+          bindopenVideoCard="{{d}}"
+          bindshowFeedback="{{k}}"
+          class="r data-v-ca973a53"
+          uI="ca973a53-2,ca973a53-1"
+          uP="{{m}}"
+          uR="contentRef"
+          wx:if="{{m}}"
+        ></yao-wen-list-content>
+      </st-reach-bottom>
+      <view class="_div empty-layer data-v-ca973a53" ref="errlist" wx:if="{{p}}"
+        >{{q}}</view
+      >
+    </st-pull-refresh>
+  </block>
+  <block wx:else>
+    <scroll-view
+      bindrefresherrefresh="{{O}}"
+      bindscroll="{{P}}"
+      bindscrolltolower="{{Q}}"
+      class="data-v-ca973a53"
+      refresherDefaultStyle="{{N}}"
+      refresherEnabled="{{L}}"
+      refresherThreshold="100"
+      refresherTriggered="{{M}}"
+      scrollY="{{true}}"
+      style="{{'width:'+'100%'+';'+'height:'+K}}"
+      wx:if="{{v}}"
+    >
+      <yao-wen-list-content
+        bind:__l="__l"
+        bindfeedbackDismiss="{{E}}"
+        bindfeedbackExposed="{{D}}"
+        bindgoodAndBadClick="{{A}}"
+        bindgoodAndBadNewsExposure="{{B}}"
+        bindhandleSendReportData="{{G}}"
+        bindonMuteStatusChange="{{z}}"
+        bindopen="{{C}}"
+        bindopenHeadlineItem="{{x}}"
+        bindopenVideoCard="{{y}}"
+        bindshowFeedback="{{F}}"
+        class="r data-v-ca973a53"
+        uI="ca973a53-3"
+        uP="{{H}}"
+        uR="contentRef"
+        wx:if="{{H}}"
+      ></yao-wen-list-content>
+      <view class="_div empty-layer data-v-ca973a53" ref="errlist" wx:if="{{I}}"
+        >{{J}}</view
+      >
+    </scroll-view>
+  </block>
+</view>

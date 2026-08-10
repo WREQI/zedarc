@@ -1,0 +1,17 @@
+.tabbar-scroll-wrapper.data-v-46ed6ca3 {
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+}
+.tabbar-row.data-v-46ed6ca3 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.tabbar-indicator.data-v-46ed6ca3 {
+  height: 0.04rem;
+  position: relative;
+}
+.data-v-46ed6ca3 .tab,
+.tabbar-indicator.data-v-46ed6ca3 {
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}

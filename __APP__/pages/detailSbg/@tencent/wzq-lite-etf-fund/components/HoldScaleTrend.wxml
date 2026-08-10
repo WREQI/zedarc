@@ -1,0 +1,122 @@
+<view
+  class="{{['_div','hold-scale-trend','data-v-227bcac1',I&&'lite',J&&'black']}}"
+>
+  <view class="_div main-title data-v-227bcac1">
+    <view class="_div title data-v-227bcac1">
+      <label class="_span data-v-227bcac1">份额和规模走势</label>
+      <image
+        bindtap="{{b}}"
+        class="_img icon data-v-227bcac1"
+        lazyLoad="{{true}}"
+        src="https://st.gtimg.com/design/a495b29720e9bab1eaea87f780be63aa.png"
+        wx:if="{{a}}"
+      ></image>
+    </view>
+    <label class="_span time data-v-227bcac1" wx:if="{{c}}">（{{d}}）</label>
+    <label class="_span time data-v-227bcac1" wx:else>{{e}}更新</label>
+  </view>
+  <view class="_div sub-content data-v-227bcac1">{{f}}</view>
+  <view class="_div chart-container data-v-227bcac1" id="holdScaleetf">
+    <f2
+      bind:__l="__l"
+      bindonInit="{{g}}"
+      class="data-v-227bcac1"
+      uI="227bcac1-0"
+      uP="{{h}}"
+      wx:if="{{h}}"
+    ></f2>
+    <view class="_div slider data-v-227bcac1" wx:if="{{i}}">
+      <range-slider
+        bind:__l="__l"
+        bindhadInit="{{l}}"
+        bindrangeChange="{{k}}"
+        class="r data-v-227bcac1"
+        uI="227bcac1-1"
+        uR="sliderETFhold"
+      ></range-slider>
+    </view>
+    <view class="_div chart-choose data-v-227bcac1" wx:if="{{m}}">
+      <view bindtap="{{p}}" class="_div share data-v-227bcac1">
+        <label
+          class="_span radio-outer data-v-227bcac1"
+          style="{{'border-color:'+o}}"
+        >
+          <label
+            class="_span radio-inner data-v-227bcac1"
+            style="{{'background:'+n}}"
+          ></label>
+        </label>
+        <label class="_span text data-v-227bcac1">基金份额</label>
+      </view>
+      <view bindtap="{{s}}" class="_div size data-v-227bcac1">
+        <label
+          class="_span radio-outer data-v-227bcac1"
+          style="{{'border-color:'+r}}"
+        >
+          <label
+            class="_span radio-inner data-v-227bcac1"
+            style="{{'background:'+q}}"
+          ></label>
+        </label>
+        <label class="_span text data-v-227bcac1">基金规模</label>
+      </view>
+      <view class="_div close data-v-227bcac1">
+        <label class="_span icon data-v-227bcac1"></label>
+        <label class="_span text data-v-227bcac1">收盘价</label>
+      </view>
+    </view>
+    <view class="_div chart-choose data-v-227bcac1" wx:else>
+      <view bindtap="{{w}}" class="_div share data-v-227bcac1">
+        <label class="_span icon data-v-227bcac1"></label>
+        <label class="_span text data-v-227bcac1">基金份额(亿份)</label>
+        <label
+          class="_span radio-outer data-v-227bcac1"
+          style="{{'border-color:'+v}}"
+        >
+          <label
+            class="_span radio-inner data-v-227bcac1"
+            style="{{'background:'+t}}"
+          ></label>
+        </label>
+      </view>
+      <view bindtap="{{z}}" class="_div size data-v-227bcac1">
+        <label class="_span icon data-v-227bcac1"></label>
+        <label class="_span text data-v-227bcac1">基金规模(亿元)</label>
+        <label
+          class="_span radio-outer data-v-227bcac1"
+          style="{{'border-color:'+y}}"
+        >
+          <label
+            class="_span radio-inner data-v-227bcac1"
+            style="{{'background:'+x}}"
+          ></label>
+        </label>
+      </view>
+      <view class="_div close data-v-227bcac1">
+        <label class="_span icon data-v-227bcac1"></label>
+        <label class="_span text data-v-227bcac1">收盘价(元)</label>
+      </view>
+    </view>
+    <view
+      class="{{['_ul','canvas-toolTip','data-v-227bcac1',H]}}"
+      wx:if="{{A}}"
+    >
+      <view class="_li li-item data-v-227bcac1">
+        <label class="_span name data-v-227bcac1">时间</label>
+        <label class="_span value data-v-227bcac1">{{B}}</label>
+      </view>
+      <view class="_li li-item data-v-227bcac1" wx:if="{{C}}">
+        <label class="_span name data-v-227bcac1">基金份额</label>
+        <label class="_span value data-v-227bcac1">{{D}}亿份</label>
+      </view>
+      <view class="_li li-item data-v-227bcac1" wx:if="{{E}}">
+        <label class="_span name data-v-227bcac1">基金规模</label>
+        <label class="_span value data-v-227bcac1">{{F}}亿元</label>
+      </view>
+      <view class="_li li-item data-v-227bcac1">
+        <label class="_span name data-v-227bcac1">收盘价</label>
+        <label class="_span value data-v-227bcac1">{{G}}元</label>
+      </view>
+    </view>
+  </view>
+</view>

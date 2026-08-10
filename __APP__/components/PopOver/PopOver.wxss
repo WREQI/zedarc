@@ -1,0 +1,35 @@
+@import "/app.wxss";
+.popover-wrap.data-v-9695556f {
+  position: relative;
+}
+.popover-wrap .popover.data-v-9695556f {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.053333rem;
+  color: #fff;
+  font-size: 0.32rem;
+  left: 50%;
+  line-height: 1;
+  padding: 0.16rem 0.213333rem;
+  transform: translate(-50%);
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 11;
+}
+.popover-wrap .popover.data-v-9695556f:before {
+  border: 0.16rem solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 0;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%);
+  width: 0;
+}
+.popover-wrap .popover.top.data-v-9695556f {
+  position: absolute;
+  top: -0.533333rem;
+}

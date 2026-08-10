@@ -1,0 +1,20 @@
+<view catchtap="{{g}}" class="_div mod-show-comment-item data-v-c00f3a0d">
+  <item-header
+    bind:__l="__l"
+    bindhandleHeader="{{b}}"
+    bindtapDetail="{{a}}"
+    class="data-v-c00f3a0d"
+    uI="c00f3a0d-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></item-header>
+  <short-content
+    bind:__l="__l"
+    bindinitShowMore="{{d}}"
+    bindtapImage="{{e}}"
+    class="data-v-c00f3a0d"
+    uI="c00f3a0d-1"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></short-content>
+</view>

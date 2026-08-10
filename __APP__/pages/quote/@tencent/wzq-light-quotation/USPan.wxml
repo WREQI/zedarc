@@ -1,0 +1,18 @@
+<view class="{{['_div','us-pan-container','data-v-48697cbb',h&&'isLite']}}">
+  <view class="_div seperate data-v-48697cbb"></view>
+  <view class="_div pan-info data-v-48697cbb">
+    <view class="_div label1 data-v-48697cbb">{{a}}</view>
+    <block wx:if="{{b}}">
+      <view class="{{['_div','label2','data-v-48697cbb',f]}}">
+        <view class="_div number-item data-v-48697cbb">{{c}}</view>
+        <view class="_div number-item data-v-48697cbb">{{d}}</view>
+        <view class="_div number-item data-v-48697cbb">{{e}}%</view>
+      </view>
+      <view class="_div label3 data-v-48697cbb">
+        <label class="_span text data-v-48697cbb">{{g}}</label>
+        <label class="_span text data-v-48697cbb">美东时间</label>
+      </view>
+    </block>
+    <view class="_div label2 data-v-48697cbb" wx:else>暂无对盘成交数据</view>
+  </view>
+</view>

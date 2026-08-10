@@ -1,0 +1,32 @@
+<view
+  catchtap="{{e}}"
+  class="_div message-dialog-container data-v-b9bff72e"
+  hidden="{{!c}}"
+  style="{{'top:'+d}}"
+>
+  <view class="_div message-dialog data-v-b9bff72e">
+    <label class="_span dialog-jio data-v-b9bff72e"></label>
+    <scroll-view
+      class="dialog-content data-v-b9bff72e"
+      ref="eventcontainer"
+      scrollY="{{true}}"
+    >
+      <view class="_div content-item data-v-b9bff72e" wx:for="{{a}}" wx:key="d">
+        <view class="_div item-title data-v-b9bff72e">{{item.a}}</view>
+        <match-text
+          bind:__l="__l"
+          class="item-desc data-v-b9bff72e"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></match-text>
+      </view>
+      <view catchtap="{{b}}" class="_div go-detail data-v-b9bff72e"
+        >更多大事提醒<image
+          class="_img right-icon data-v-b9bff72e"
+          src="https://st.gtimg.com/design/5cf17a591694b7bb4f5c7cad77e6f084.png"
+        ></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+@import "/app.wxss";
+.box-item.data-v-e42309a4 {
+  background-color: var(--fill-2);
+  border-radius: 0.213333rem;
+  padding: 0.32rem 0 0;
+  width: 100%;
+}
+.box-item .mb24.data-v-e42309a4 {
+  padding-bottom: 0.32rem;
+}
+.box-item .mb0.data-v-e42309a4 {
+  margin-bottom: 0 !important;
+}
+.box-item-content.data-v-e42309a4 {
+  padding: 0 0.32rem;
+}
+.box-item-content .header.data-v-e42309a4 {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.106667rem;
+}
+.box-item-content .header .title.data-v-e42309a4 {
+  -webkit-box-flex: 1;
+  color: var(--text-color-1);
+  flex: 1;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin-right: 0.32rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box-item-content .header .time.data-v-e42309a4 {
+  color: var(--text-color-5);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+}
+.box-item-content .first.data-v-e42309a4,
+.box-item-content .kv-content.data-v-e42309a4 {
+  color: var(--text-color-4);
+  font-size: 0.4rem;
+  line-height: 0.586667rem;
+}
+.box-item-content .kv-content.data-v-e42309a4 {
+  margin-top: 0.426667rem;
+}
+.box-item-content .kv-content .kv-item.data-v-e42309a4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.213333rem;
+}
+.box-item-content .kv-content .kv-item .key-txt.data-v-e42309a4 {
+  -webkit-box-flex: 1;
+  flex: 1;
+  margin-right: 0.16rem;
+}
+.box-item-content .kv-content .kv-item .value-txt.data-v-e42309a4 {
+  -webkit-box-flex: 4;
+  color: var(--text-color-1);
+  flex: 4;
+  white-space: pre-wrap;
+}
+.box-item-line.data-v-e42309a4 {
+  background-color: var(--border-color-2);
+  height: 0.013333rem;
+  margin: 0.426667rem 0.32rem 0;
+}
+.box-item-button.data-v-e42309a4 {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.213333rem 0.32rem;
+}
+.box-item-button .button-text.data-v-e42309a4 {
+  -webkit-box-flex: 1;
+  flex: 1;
+  font-size: 0.4rem;
+  line-height: 0.533333rem;
+}
+.box-item-button .right-arrow.data-v-e42309a4 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.466667rem;
+}

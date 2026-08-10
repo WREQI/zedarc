@@ -1,0 +1,20 @@
+<template name="playbackrate-select">
+  <view catch:tap="onPlaybackRateMaskTap" class="mask-container">
+    <view class="mask-title">倍速</view>
+    <view class="mask-item-container mask-item-container-scrollable">
+      <view
+        bind:tap="onPlaybackRateSelect"
+        class="mask-item {{item.selected?'mask-item-selected':''}}"
+        data-item="{{item.rate}}"
+        wx:for="{{playbackRateList}}"
+        wx:key="rate"
+      >
+        <view
+          class="mask-item-text mask-item-main-text {{item.selected?'mask-item-selected':''}}"
+        >
+          {{item.rate}}X
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

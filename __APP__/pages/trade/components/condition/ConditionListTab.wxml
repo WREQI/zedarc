@@ -1,0 +1,18 @@
+<view class="{{['data-v-edbd59f7','cond-list-tab',d]}}">
+  <view class="tab-container data-v-edbd59f7">
+    <view class="tab-items data-v-edbd59f7">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['data-v-edbd59f7','tab-item',item.c&&'active']}}"
+        wx:for="{{a}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+    <view bindtap="{{c}}" class="create-btn data-v-edbd59f7" wx:if="{{b}}">
+      <view class="divider data-v-edbd59f7"></view>
+      <label class="create-icon data-v-edbd59f7"></label>
+      <label class="create-text data-v-edbd59f7">创建</label>
+    </view>
+  </view>
+</view>

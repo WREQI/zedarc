@@ -1,0 +1,110 @@
+@import "/app.wxss";
+.trade-detail-container {
+  min-height: 100vh;
+}
+.trade-detail-container .base-info {
+  background-color: var(--fill-2);
+  height: 1.333333rem;
+  padding: 0 0.4rem;
+}
+.trade-detail-container .base-info .text-color-1 {
+  font-weight: 500;
+  margin-right: 0.133333rem;
+}
+.trade-detail-container .steps-wraper {
+  background-color: var(--fill-2);
+  padding: 0.6rem 0;
+}
+.trade-detail-container .section {
+  padding: 0 0.4rem;
+}
+.trade-detail-container .section-detail {
+  background-color: var(--fill-2);
+}
+.trade-detail-container .section-detail .detail-order-num {
+  height: 2.186667rem;
+}
+.trade-detail-container .section-detail .detail-total {
+  height: 1.626667rem;
+}
+.trade-detail-container .section-detail .detail-total .value {
+  font-size: 0.666667rem;
+  font-weight: 500;
+}
+.trade-detail-container .section-detail .left {
+  padding: 0.48rem 0.4rem 0.48rem 0;
+}
+.trade-detail-container .section-detail .right {
+  padding: 0.48rem 0 0.48rem 0.4rem;
+}
+.trade-detail-container .section-detail .flex-1:first-child {
+  padding-left: 0;
+}
+.trade-detail-container .section-detail .flex-1:last-child {
+  padding-right: 0;
+}
+.trade-detail-container .section-fees {
+  background-color: var(--fill-2);
+  margin-top: 0.266667rem;
+}
+.trade-detail-container .section-fees .fee {
+  padding: 0.24rem 0;
+}
+.trade-detail-container .section-fees .fee:nth-child(2) {
+  padding-top: 0.48rem;
+}
+.trade-detail-container .section-fees .fee:last-child {
+  padding-bottom: 0.48rem;
+}
+.trade-detail-container .section-fees .fee-total {
+  box-sizing: border-box;
+  height: 1.466667rem;
+}
+.trade-detail-container .section-fees .fee-total .title {
+  font-size: 0.4rem;
+}
+.trade-detail-container .section-fees .fee-total .value {
+  font-size: 0.666667rem;
+  font-weight: 500;
+}
+.trade-detail-container .section-fees .fee-total .value.smaller {
+  font-size: 0.426667rem;
+}
+.trade-detail-container .section-fees .tip-icon {
+  font-size: 0.32rem;
+  height: 0.32rem;
+  margin-left: 0.16rem;
+  position: relative;
+  width: 0.32rem;
+}
+.trade-detail-container .section-tips {
+  margin-top: 1.066667rem;
+}
+.trade-detail-container .section-tips .tip-title {
+  font-size: 0.346667rem;
+  font-weight: 500;
+  line-height: 0.4rem;
+  margin-bottom: 0.133333rem;
+}
+.trade-detail-container .section-tips .tip-content {
+  font-size: 0.346667rem;
+  line-height: 0.56rem;
+}
+.trade-detail-container .mp-dialog__message-text .avg-price-tip-1 {
+  color: var(--text-color-2);
+}
+[data-theme="dark"]
+  .trade-detail-container
+  .mp-dialog__message-text
+  .avg-price-tip-1 {
+  color: #a7b0c4;
+}
+.trade-detail-container .mp-dialog__message-text .avg-price-tip-2 {
+  color: var(--text-color-4);
+}
+[data-theme="dark"]
+  .trade-detail-container
+  .mp-dialog__message-text
+  .avg-price-tip-2 {
+  color: #7d88a1;
+}

@@ -1,0 +1,58 @@
+<view class="select-shareholder">
+  <view class="notice text-color-2 fs-24"
+    >提示：您的上海A股、深圳A股交易账户已达3户，若您希望继续在华泰证券开立证券账户，<label
+      class="red"
+      >请从其他券商转户</label
+    >
+  </view>
+  <view class="card sz" wx:if="{{a}}">
+    <view class="title flex flex-vcenter">
+      <label bindtap="{{c}}" class="{{['icon','market',b]}}"></label>
+      <label>深圳A股交易账户</label>
+    </view>
+    <view
+      bindtap="{{code.d}}"
+      class="share-holder-item"
+      wx:for="{{d}}"
+      wx:for-item="code"
+      wx:key="c"
+    >
+      <label class="{{['icon',code.a]}}"></label>
+      <label class="code">{{code.b}}</label>
+    </view>
+  </view>
+  <view class="card sh" wx:if="{{e}}">
+    <view class="title flex flex-vcenter">
+      <label bindtap="{{g}}" class="{{['icon','market',f]}}"></label>
+      <label>上海A股交易账户</label>
+    </view>
+    <view
+      bindtap="{{code.d}}"
+      class="share-holder-item"
+      wx:for="{{h}}"
+      wx:for-item="code"
+      wx:key="c"
+    >
+      <label class="{{['icon',code.a]}}"></label>
+      <label class="code">{{code.b}}</label>
+    </view>
+  </view>
+  <view class="remind text-color-4 fs-24" wx:if="{{i}}">
+    <rich-text nodes="{{j}}"></rich-text>
+  </view>
+  <foot-print bind:__l="__l" class="foot" uI="14f7d8b0-0"></foot-print>
+  <step-buttons
+    bind:__l="__l"
+    bindclickNext="{{k}}"
+    uI="14f7d8b0-1"
+    uP="{{l}}"
+    wx:if="{{l}}"
+  ></step-buttons>
+  <mp-dialog
+    bind:__l="__l"
+    id="mp-dialog"
+    uI="14f7d8b0-2"
+    uP="{{m}}"
+    wx:if="{{m}}"
+  ></mp-dialog>
+</view>

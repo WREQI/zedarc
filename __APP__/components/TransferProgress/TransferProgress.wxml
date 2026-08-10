@@ -1,0 +1,42 @@
+<view class="{{['transfer-progress','data-v-985d6255',c,d]}}">
+  <view
+    class="{{['state-item','data-v-985d6255',item.v&&'current',item.w&&'finish',item.x&&'special-text-color',item.y&&'progress-text',b&&'state-item-plugin',item.z&&'animate-line']}}"
+    style="{{item.A}}"
+    wx:for="{{a}}"
+    wx:key="t"
+  >
+    <view class="item-inner data-v-985d6255">
+      <success-icon
+        bind:__l="__l"
+        bindanimationComplete="{{item.c}}"
+        class="data-v-985d6255"
+        style="{{'--icon-delay:'+item.b}}"
+        uI="{{item.d}}"
+        uP="{{item.e}}"
+        wx:if="{{item.a}}"
+      ></success-icon>
+      <label class="{{['ico','data-v-985d6255',item.f]}}" wx:else></label>
+      <view
+        class="{{['node-info','data-v-985d6255',item.o]}}"
+        style="{{item.p}}"
+      >
+        <label class="{{['text','data-v-985d6255',item.h]}}">{{item.g}}</label>
+        <label class="money data-v-985d6255" wx:if="{{item.i}}"
+          >¥ {{item.j}}</label
+        >
+        <label class="date data-v-985d6255" wx:if="{{item.k}}"
+          >{{item.l}}</label
+        >
+        <label class="time data-v-985d6255" wx:if="{{item.m}}"
+          >{{item.n}}</label
+        >
+      </view>
+    </view>
+    <view
+      bindanimationend="{{item.s}}"
+      class="line-animation-trigger data-v-985d6255"
+      style="{{'animation-delay:'+item.r}}"
+      wx:if="{{item.q}}"
+    ></view>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+<view class="password-component--embeded-wrap">
+  <biometrics-protocol
+    bind:__l="__l"
+    bindagree="{{c}}"
+    bindhideProtocolDetail="{{e}}"
+    bindrefuse="{{b}}"
+    bindtoProtocolDetail="{{d}}"
+    uI="8e0fb3da-0"
+    uP="{{f}}"
+    wx:if="{{a}}"
+  ></biometrics-protocol>
+  <popup
+    bind:__l="__l"
+    bindclickOverlay="{{R}}"
+    uI="8e0fb3da-1"
+    uP="{{S||''}}"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="{{['password-component--embeded',O,P,Q]}}">
+      <view class="title-wrap">
+        <view bindtap="{{h}}" class="{{g}}"></view>
+        <view class="title-wrap-center">
+          <view class="broker-logo">
+            <broker-logo
+              bind:__l="__l"
+              class="server-broker-logo"
+              uI="8e0fb3da-2,8e0fb3da-1"
+            ></broker-logo>
+          </view>
+          <view class="broker-name">{{i}} {{j}}</view>
+        </view>
+        <view>
+          <view bindtap="{{l}}" class="close-bg" wx:if="{{k}}"></view>
+          <view bindtap="{{n}}" class="close-bg" wx:elif="{{m}}"></view>
+        </view>
+      </view>
+      <block wx:if="{{o}}">
+        <view class="content-wrap" wx:if="{{p}}">输入交易密码，开启{{q}}</view>
+        <view class="content-wrap" wx:else>请输入{{r}}</view>
+        <st-password-input
+          bind:__l="__l"
+          bindcomplete="{{s}}"
+          uI="8e0fb3da-3,8e0fb3da-1"
+          uP="{{t}}"
+          wx:if="{{t}}"
+        ></st-password-input>
+        <view class="{{['flex','actions',D]}}" hidden="{{!C}}">
+          <view>
+            <view bindtap="{{x}}" class="pwd-left-action" wx:if="{{v}}"
+              >开启{{w}}</view
+            >
+            <view bindtap="{{A}}" wx:if="{{y}}">返回{{z}}账户</view>
+          </view>
+          <view bindtap="{{B}}">忘记密码</view>
+        </view>
+        <view class="notice" wx:if="{{E}}">{{F}}</view>
+        <st-number-keyboard
+          bind:__l="__l"
+          binddelete="{{H}}"
+          bindinput="{{G}}"
+          uI="8e0fb3da-4,8e0fb3da-1"
+          uP="{{I}}"
+          wx:if="{{I}}"
+        ></st-number-keyboard>
+      </block>
+      <view class="lock-tips flex-column flex-center" wx:else>
+        <label class="icon icon-pwd-lock"></label>
+        <view class="title">账户已被锁定</view>
+        <view class="tips-content">{{J}}</view>
+        <view class="btn-wrap flex-center">
+          <button bindtap="{{K}}" class="btn call-broker">联系券商</button>
+          <button bindtap="{{N}}" class="btn reset-pwd" wx:if="{{L}}">
+            {{M}}
+          </button>
+        </view>
+      </view>
+    </view>
+  </popup>
+</view>

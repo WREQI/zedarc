@@ -1,0 +1,23 @@
+<view catchtap="{{f}}" class="_div fast-news-item data-v-7696a62b" id="{{e}}">
+  <view class="_div joint-container data-v-7696a62b" wx:if="{{a}}">
+    <label
+      class="_span title-container data-v-7696a62b"
+      wx:for="{{b}}"
+      wx:key="e"
+    >
+      <view
+        class="{{['_div','data-v-7696a62b','index',item.c]}}"
+        wx:if="{{item.a}}"
+        >{{item.b}}</view
+      >
+      <label class="_span title joint data-v-7696a62b">{{item.d}}</label>
+    </label>
+  </view>
+  <fast-news-item-footer
+    bind:__l="__l"
+    class="{{['data-v-7696a62b','item-footer',c]}}"
+    uI="7696a62b-0"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></fast-news-item-footer>
+</view>

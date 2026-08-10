@@ -1,0 +1,122 @@
+<view
+  catchtap="{{r}}"
+  class="{{['_div','data-v-796afa13','brief-block',p,q]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div jg-wrapper data-v-796afa13">
+    <view class="_div line-wrapper data-v-796afa13" wx:if="{{b}}">
+      <view class="_div line-top data-v-796afa13">
+        <view
+          class="{{['_div','line-top-item','data-v-796afa13',line.f]}}"
+          style="{{'width:'+line.g}}"
+          wx:for="{{c}}"
+          wx:for-item="line"
+          wx:key="e"
+        >
+          <view
+            class="{{['_div','color-line','data-v-796afa13',line.a,line.b,d]}}"
+            style="{{'background-color:'+line.c}}"
+          ></view>
+          <view
+            class="_div spec-color-line data-v-796afa13"
+            wx:if="{{line.d}}"
+          ></view>
+        </view>
+      </view>
+      <view class="_div line-desc data-v-796afa13">
+        <view class="_div line-desc-left data-v-796afa13">
+          <view
+            class="_div line-desc-item data-v-796afa13"
+            wx:for="{{e}}"
+            wx:for-item="line"
+            wx:key="e"
+          >
+            <view
+              class="_div line-desc-item-sq data-v-796afa13"
+              style="{{'background-color:'+line.a}}"
+            ></view>
+            <view
+              class="{{['_div','line-desc-item-text','data-v-796afa13',line.d]}}"
+              >{{line.b}} {{line.c}} {{f}}</view
+            >
+          </view>
+        </view>
+        <view class="_div line-text data-v-796afa13" wx:if="{{g}}"
+          >共{{h}}位分析师做出评级</view
+        >
+      </view>
+      <view class="_div line-text data-v-796afa13" wx:if="{{i}}"
+        >共{{j}}位分析师做出评级</view
+      >
+    </view>
+    <block wx:if="{{k}}">
+      <view
+        class="_div spec-line-small-light data-v-796afa13"
+        wx:if="{{l}}"
+      ></view>
+      <view class="_div table-wrapper data-v-796afa13">
+        <view class="_div pj-title data-v-796afa13">
+          <view class="_div pj-title-item data-v-796afa13" style="width: 45%"
+            >评级日期</view
+          >
+          <view
+            class="_div pj-title-item text-right data-v-796afa13"
+            style="width: 30%"
+            >研究机构</view
+          >
+          <view
+            class="_div oj-title-item text-right data-v-796afa13"
+            style="width: 25%"
+            >评级</view
+          >
+        </view>
+        <view
+          class="_div pj-content data-v-796afa13"
+          wx:for="{{m}}"
+          wx:for-item="val"
+          wx:key="d"
+        >
+          <view class="_div content-row data-v-796afa13">
+            <view class="_div row-item data-v-796afa13" style="width: 45%"
+              >{{val.a}}</view
+            >
+            <view
+              class="_div row-item text-right data-v-796afa13"
+              style="width: 30%"
+              >{{val.b}}</view
+            >
+            <view
+              class="_div row-item text-right data-v-796afa13"
+              style="width: 25%"
+              >{{val.c}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="_div news-wrapper data-v-796afa13" wx:if="{{n}}">
+    <view class="_div spec-line-small-light data-v-796afa13"></view>
+    <view class="_div news-title data-v-796afa13">券商研报</view>
+    <view class="_div news-content data-v-796afa13">
+      <view
+        catchtap="{{item.f}}"
+        class="_div news-content-item data-v-796afa13"
+        wx:for="{{o}}"
+        wx:key="e"
+      >
+        <view class="_div news-item-top data-v-796afa13">
+          <view class="_div news-item-left data-v-796afa13">{{item.a}}</view>
+          <view class="_div new-item-subtitle data-v-796afa13">
+            <label class="_span data-v-796afa13">{{item.b}}</label>
+            <label class="_span data-v-796afa13">{{item.c}}</label>
+          </view>
+        </view>
+        <view
+          class="_div spec-line-small-light data-v-796afa13"
+          wx:if="{{item.d}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+</view>

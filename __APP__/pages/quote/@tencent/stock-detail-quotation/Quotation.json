@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "flash-price": "../wzq-light-quotation/FlashPrice",
+    "add-fav": "./components/AddFav",
+    "u-s-pan": "../wzq-light-quotation/USPan",
+    "teach": "./components/Teach/index",
+    "zsz-popup": "./components/ZszPopup",
+    "zgb-popup": "./components/ZgbPopup",
+    "plate-popup": "./components/PlatePopup",
+    "a-d-rbar": "../wzq-light-quotation/AHADRBar",
+    "warrants-bar": "../wzq-light-quotation/WarrantsBar",
+    "e-t-f-bar": "../wzq-light-quotation/ETFBar",
+    "index-bar": "../wzq-light-quotation/IndexBar",
+    "delist-bar": "../wzq-light-quotation/DelistBar",
+    "trade-timeline": "./components/TradeTimeline",
+    "custom-modal": "./node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "popup": "../wzq-light-quotation/components/batch/Popup"
+  }
+}

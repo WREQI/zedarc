@@ -1,0 +1,45 @@
+@import "/app.wxss";
+.invest-cond-num.data-v-211a1cad {
+  background-color: var(--fill-2);
+  padding: 0 0.32rem 0.32rem;
+}
+.invest-cond-num .invest-cond-num-item.data-v-211a1cad {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  padding: 0.32rem 0;
+}
+.invest-cond-num .invest-cond-num-item.data-v-211a1cad uni-radio {
+  transform: scale(1);
+}
+.invest-cond-num .invest-cond-num-item .right-wrap.data-v-211a1cad {
+  padding-left: 0.32rem;
+  text-align: left;
+}
+.invest-cond-num .invest-cond-num-item .right-wrap .title.data-v-211a1cad {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 600;
+  line-height: 0.586667rem;
+  padding-bottom: 0.106667rem;
+}
+.invest-cond-num .invest-cond-num-item .right-wrap .desc.data-v-211a1cad {
+  color: var(--text-color-4);
+  font-size: 0.346667rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+}
+.invest-cond-num .confirm-btn.data-v-211a1cad {
+  background-color: var(--color-buy) !important;
+  color: #fff;
+  font-size: 0.48rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  margin-top: 0.32rem;
+  padding: 0;
+  text-align: center;
+}

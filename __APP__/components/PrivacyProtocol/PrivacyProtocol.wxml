@@ -1,0 +1,15 @@
+<dialog
+  bind:__l="__l"
+  bindconfirm="{{d}}"
+  uI="27f6ea40-0"
+  uP="{{e}}"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <view class="mp-dialog__message trade-stock-confirm-modal">
+    <label class="black"
+      >欢迎登录{{a}}系统，为保障您的权益，在使用我们的服务前，请仔细阅读并同意</label
+    >
+    <label bindtap="{{c}}" style="color: #275ee7">《{{b}}隐私政策》</label>
+  </view>
+</dialog>

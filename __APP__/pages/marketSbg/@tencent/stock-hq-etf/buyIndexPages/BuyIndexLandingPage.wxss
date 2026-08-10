@@ -1,0 +1,38 @@
+.etf-buy-index.data-v-46c16173 {
+  background: var(--fill-background);
+  box-sizing: border-box;
+  font-family: stockFont, -apple-system, BlinkMacSystemFont, Roboto, PingFang SC,
+    Hiragino Sans GB, Source Han Sans CN, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.etf-buy-index__content.data-v-46c16173 {
+  margin-top: -0.9333333333333333rem;
+  padding-bottom: calc(2.2133333333333334rem + env(safe-area-inset-bottom));
+  position: relative;
+}
+.etf-buy-index__module.data-v-46c16173 {
+  margin: 0 0.32rem;
+  position: relative;
+}
+.etf-buy-index__module--rank.data-v-46c16173,
+.etf-buy-index__module--recommend.data-v-46c16173 {
+  margin-top: 0.32rem;
+}
+.etf-buy-index__module--tips.data-v-46c16173 {
+  margin-top: 0.64rem;
+}
+.etf-buy-index__brand-logo.data-v-46c16173 {
+  background-image: url(https://st.gtimg.com/design/114b3ab0b5052774e13de00c771146a1.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 0.48rem;
+  margin-bottom: env(safe-area-inset-bottom);
+  margin-top: 0.64rem;
+  width: 100%;
+}
+.etf-buy-index__footer-bar.data-v-46c16173 {
+  z-index: 80;
+}

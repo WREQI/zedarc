@@ -1,0 +1,374 @@
+<view class="_div introduce-wrapper data-v-c971b1d6">
+  <view class="_div introduce-content data-v-c971b1d6">
+    <view class="_div tab-header data-v-c971b1d6">
+      <view
+        catchtap="{{c}}"
+        class="{{['_div','tab-item','data-v-c971b1d6',b]}}"
+      >
+        <view class="_div data-v-c971b1d6">新股</view>
+        <view class="_div indi-cot data-v-c971b1d6" wx:if="{{a}}"></view>
+      </view>
+      <view
+        catchtap="{{f}}"
+        class="{{['_div','tab-item','data-v-c971b1d6',e]}}"
+      >
+        <view class="_div data-v-c971b1d6">新债</view>
+        <view class="_div indi-cot data-v-c971b1d6" wx:if="{{d}}"></view>
+      </view>
+    </view>
+    <view class="_div gu-wrapper data-v-c971b1d6" wx:if="{{g}}">
+      <view class="_div intro-block data-v-c971b1d6">
+        <view class="_div block-title data-v-c971b1d6">打新口诀</view>
+        <view class="_div block-content data-v-c971b1d6">
+          <view class="_div schedule-wrapper data-v-c971b1d6">
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T日: 申购日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div left-line long-line data-v-c971b1d6"></view>
+                <view class="_div right-text data-v-c971b1d6">
+                  <label class="_span red-text data-v-c971b1d6">交易时间</label
+                  >均可申，每只证券<label class="_span red-text data-v-c971b1d6"
+                    >仅一次</label
+                  >
+                  <view class="data-v-c971b1d6"></view>一键打新<label
+                    class="_span red-text data-v-c971b1d6"
+                    >不花钱</label
+                  >，能申多少<label class="_span red-text data-v-c971b1d6"
+                    >看额度</label
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T+1日: 中签公布日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div left-line data-v-c971b1d6"></view>
+                <view class="_div right-text data-v-c971b1d6"
+                  >休市之后发结果，中签莫忘<label
+                    class="_span red-text data-v-c971b1d6"
+                    >备资金</label
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T+2日: 中签扣费日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div right-text no-line data-v-c971b1d6">
+                  <label class="_span red-text data-v-c971b1d6">下午四点</label
+                  >就截止，账户资金<label class="_span red-text data-v-c971b1d6"
+                    >自动扣</label
+                  >
+                  <view class="data-v-c971b1d6"></view
+                  >扣款失败视放弃，一年三次<label
+                    class="_span red-text data-v-c971b1d6"
+                    >要被罚</label
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div spec-line data-v-c971b1d6"></view>
+      <view class="_div intro-block data-v-c971b1d6">
+        <view class="_div block-title data-v-c971b1d6">规则解读</view>
+        <view class="_div block-content data-v-c971b1d6">
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >打新的申购配额如何获得及计算？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">普通新股：</label
+                >申购配额由申购前一定时间的平均持股市值计算所得，沪深市场分开独立计算，多账户用户则合并多个账户一起计算</view
+              >
+              <view class="_div hs-img data-v-c971b1d6"></view>
+              <view class="_div data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">科创板新股：</label
+                >申购配额由申购前一定时间的沪市平均持股市值计算所得，多账户用户则合并多个账户一起计算</view
+              >
+              <view class="_div kc-img data-v-c971b1d6"></view>
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >同一只新股是否可以重复申购？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >同一只新股仅首次申购有效，多次申购以第一次申购数量为准，重复申购的订单将于申购当天结束后以无效委托的形式进行处理</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >什么时候可以申购？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >申购日的交易时间内均可申购，具体时间为交易日9:30-15:00</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >申购时候需要缴纳费用或资金么？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >申购时无需缴纳或冻结资金，但中签后需要根据中签数量在指定的时间内保证股票账户中有足够资金用于中签扣款</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >申购配额是共享还能可以重复使用？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >普通新股和科创板新股的申购配额独立。对于同一类型新股，额度可以重复使用。如T日可申购的沪市普通新股有3只，沪市申购配额为1000股，则3只新股均可申购1000股</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >申购后什么时候知道是否中签？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >中签结果一般于第二个交易日休市后的晚上公布，对于中签的用户会以消息进行通知</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >中签后，中签扣费如何缴纳？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >中签后，资金会从股票账户中自动划扣，因此中签用户需保证账户可用资金多余中签需缴纳的资金，以免扣款时资金不足导致中签未足额认购</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >可用资金不足导致中签扣款失败，会有什么后果？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >一年内累计3次中签后未正常认购中签新股/新债，那么第三次未足额缴款的次日起180天内将不能进行网上申购，因此中签后需要关注可用资金情况，以保证正常扣款</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div zhai-wrapper data-v-c971b1d6" wx:if="{{h}}">
+      <view class="_div intro-block data-v-c971b1d6">
+        <view class="_div block-content data-v-c971b1d6">
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >什么是可转债？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >可转债是上市公司发行的可以转换为股票的特殊债券，兼具债券和期权的双重属性。如果持有人在持有期内选择将债券转换为发行公司的股票，将产生正股股价与转股股价价差的损益；若持有人持有债券到期，则获取公司定期支付的本金及利息收益</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >转债打新风险与收益？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >转债打新的收益取决于行情和对应正股的情况，根据2019年可转债上市表现统计，按1个账户全部转债中1签，上市首日开盘价卖出来计算，单签最大收益为256元，最大亏损为50元，账户累计收益为9563元</view
+              >
+              <view class="_div data-v-c971b1d6"
+                >但转债打新并非是稳赚不赔的，也存在破发的风险，根据市场统计，2019年上市的106只可转债，首日破发数量为13只，熊市情况下首日破发情况更为常见。请大家综合评估理性决策，投资有风险，打新需谨慎</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div spec-line data-v-c971b1d6"></view>
+      <view class="_div intro-block data-v-c971b1d6">
+        <view class="_div block-title data-v-c971b1d6">打新口诀</view>
+        <view class="_div block-content data-v-c971b1d6">
+          <view class="_div schedule-wrapper data-v-c971b1d6">
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T日: 申购日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div left-line data-v-c971b1d6"></view>
+                <view class="_div right-text data-v-c971b1d6">
+                  <label class="_span red-text data-v-c971b1d6">交易时间</label
+                  >均可申，无须市值预缴款</view
+                >
+              </view>
+            </view>
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T+1日: 中签公布日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div left-line data-v-c971b1d6"></view>
+                <view class="_div right-text data-v-c971b1d6"
+                  >休市之后发结果，中签莫忘<label
+                    class="_span red-text data-v-c971b1d6"
+                    >备资金</label
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div part-block data-v-c971b1d6">
+              <view class="_div top-part data-v-c971b1d6">
+                <view class="_div left-circle data-v-c971b1d6"></view>
+                <view class="_div right-title data-v-c971b1d6"
+                  >T+2日: 中签扣费日</view
+                >
+              </view>
+              <view class="_div bot-part data-v-c971b1d6">
+                <view class="_div right-text no-line data-v-c971b1d6">
+                  <label class="_span red-text data-v-c971b1d6">下午四点</label
+                  >就截止，账户资金<label class="_span red-text data-v-c971b1d6"
+                    >自动扣</label
+                  >
+                  <view class="data-v-c971b1d6"></view
+                  >扣款失败视放弃，一年三次<label
+                    class="_span red-text data-v-c971b1d6"
+                    >要被罚</label
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div spec-line data-v-c971b1d6"></view>
+      <view class="_div intro-block data-v-c971b1d6">
+        <view class="_div block-title data-v-c971b1d6">规则解读</view>
+        <view class="_div block-content data-v-c971b1d6">
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >网上申购可转债有什么条件？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div text-mar-small data-v-c971b1d6"
+                >1.
+                2022年6月18日起个人投资者参与向不特定对象发行的可转债申购、交易的，应当同时符合下列条件：</view
+              >
+              <view class="_div text-mar-small data-v-c971b1d6"
+                >（一）申请权限开通前20个交易日证券账户及资金账户内的资产日均不低于人民币10万元；</view
+              >
+              <view class="_div text-mar-small data-v-c971b1d6"
+                >（二）参与证券交易24个月以上。</view
+              >
+              <view class="_div text-mar-small data-v-c971b1d6"
+                >2.
+                2022年6月18日前已开通向不特定对象发行的可转债交易权限，且未销户的个人投资者，不适用上述规定。</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >什么是可转债的正股价、转股价、转股价值、转股溢价？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div text-mar data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">正股价：</label
+                >可转债对标股票的当前价格，即可转债发行公司的股票价格；</view
+              >
+              <view class="_div text-mar data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">转股价：</label
+                >可转债转换为发行公司每股股票所支付的价格；</view
+              >
+              <view class="_div text-mar data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">转股价值：</label
+                >可转债转换为股票后对应的股票价值，计算方法为：转股价值=(发行价/转股价)*当前正股价；</view
+              >
+              <view class="_div text-mar data-v-c971b1d6">
+                <label class="_span b-text data-v-c971b1d6">转股溢价：</label
+                >可转债价格超过其转股价值的部分；</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >同一只新债是否可以重复申购？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >同一只新债仅首次申购有效，多次申购以第一次申购数量为准，重复申购的订单将于申购当天结束后以无效委托的形式进行处理</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >申购后什么时候知道是否中签？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >中签结果一般于第二个交易日休市后的晚上公布，对于中签的用户会以消息进行通知</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >中签后，中签扣费如何缴纳？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >中签后，资金会从股票账户中自动划扣，因此中签用户需保证账户可用资金多余中签需缴纳的资金，若您当日结算时账户资金不足，则视为放弃认购</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >可用资金不足导致中签扣款失败，会有什么后果？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >一年内累计3次中签后未正常认购中签新股/新债，那么第三次未足额缴款的次日起180天内将不能进行网上申购，因此中签后需要关注可用资金情况，以保证正常扣款</view
+              >
+            </view>
+          </view>
+          <view class="_div sub-block data-v-c971b1d6">
+            <view class="_div sub-block-title data-v-c971b1d6"
+              >可转债上市首日有涨跌幅限制吗？</view
+            >
+            <view class="_div sub-block-content data-v-c971b1d6">
+              <view class="_div data-v-c971b1d6"
+                >可转债交易不设涨跌幅限制，但为减少市场波动、控制风险，转债交易设置了熔断机制，上交所规定当涨跌幅超过20％时，停牌30分钟；当涨跌幅超过30％，停牌到14:57分，直接进入尾盘集合竞价。深交所规定涨跌幅达到20%或30%时，实施盘中临时停牌，单次盘中临时停牌的持续时间为30分钟。临时停牌时间跨越14:57的，于当日14:57复牌</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-c971b1d6"></view>
+</view>

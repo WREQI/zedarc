@@ -1,0 +1,76 @@
+<view class="{{['_div','week-rank-wrapper','data-v-89a9ec41',w&&'flex']}}">
+  <view
+    class="_div rank-title row layout-align-space-between data-v-89a9ec41"
+    style="{{'border-bottom-width:'+f}}"
+  >
+    <label class="_span rank__title--right data-v-89a9ec41">模拟周赛榜</label>
+    <label
+      class="_span rank__title--time data-v-89a9ec41"
+      style="{{'margin-bottom:'+d}}"
+      wx:if="{{a}}"
+      >本期{{b}}-{{c}}</label
+    >
+    <label class="_span rank__title--time data-v-89a9ec41" wx:else
+      >本周休赛,下周再战</label
+    >
+    <view bindtap="{{e}}" class="_div rank__title--left data-v-89a9ec41">
+      <label class="_span rank-title--text data-v-89a9ec41">全部排行</label>
+      <view class="_div rank-title--icon data-v-89a9ec41"></view>
+    </view>
+  </view>
+  <view class="_div rank-subtitle data-v-89a9ec41"
+    >正收益即可瓜分现金红包，冠军独得888元</view
+  >
+  <view
+    class="{{['_div','rank-cnt','data-v-89a9ec41',v&&'rank-cnt-empty']}}"
+    wx:if="{{g}}"
+  >
+    <view class="_div rank-cnt-wrapper data-v-89a9ec41">
+      <view
+        class="_div rank-myself rank-list-self-item row layout-align-space-between data-v-89a9ec41"
+        style="{{'border-bottom-width:'+s}}"
+      >
+        <label
+          class="_span rank-row-a rank-myself__order data-v-89a9ec41"
+          wx:if="{{h}}"
+          >{{i}}</label
+        >
+        <label class="_span norank--left-text data-v-89a9ec41" wx:else
+          >暂无排名</label
+        >
+        <view class="_div rank-row-b rank-myself__info row data-v-89a9ec41">
+          <image
+            alt=""
+            class="_img rank-myself__hdimg data-v-89a9ec41"
+            src="{{j}}"
+          ></image>
+          <label class="_span rank-myself__name data-v-89a9ec41" wx:if="{{k}}"
+            >{{l}}</label
+          >
+          <label class="_span rank-myself__name data-v-89a9ec41" wx:else
+            >****</label
+          >
+        </view>
+        <view
+          class="_div rank-row-c row rank-myself__percent data-v-89a9ec41"
+          wx:if="{{m}}"
+        >
+          <label class="{{['_span','data-v-89a9ec41',o]}}">{{n}}</label>
+          <label class="{{['_span','data-v-89a9ec41',q]}}" wx:if="{{p}}"
+            >%</label
+          >
+        </view>
+        <label class="_span norank--right-text data-v-89a9ec41" wx:else
+          >{{r}}</label
+        >
+      </view>
+      <rank-list
+        bind:__l="__l"
+        class="data-v-89a9ec41"
+        uI="89a9ec41-0"
+        uP="{{t}}"
+        wx:if="{{t}}"
+      ></rank-list>
+    </view>
+  </view>
+</view>

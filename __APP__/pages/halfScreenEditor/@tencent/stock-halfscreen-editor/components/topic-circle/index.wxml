@@ -1,0 +1,36 @@
+<view class="_div topic-circle-wrapper data-v-880470d7">
+  <view class="_div topic-list-container data-v-880470d7" wx:if="{{a}}">
+    <view class="_div topic-list data-v-880470d7">
+      <view class="_div topicPlaza data-v-880470d7">
+        <view
+          catchtap="{{item.f}}"
+          class="_div topicPlaza_item data-v-880470d7"
+          data-dataObj="{{item.e}}"
+          data-tid="{{item.c}}"
+          data-topic="{{item.d}}"
+          wx:for="{{b}}"
+          wx:key="b"
+        >
+          <view class="_div topicPlaza_item_title data-v-880470d7"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div brand data-v-880470d7"
+      style="{{'padding-bottom:'+c}}"
+    ></view>
+  </view>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{e}}"
+    class="load-container data-v-880470d7"
+    uI="880470d7-0"
+    uP="{{f}}"
+    wx:if="{{d}}"
+  ></status>
+  <view class="_div empty-state data-v-880470d7" wx:if="{{g}}">
+    <view class="_div data-v-880470d7">暂无话题数据</view>
+  </view>
+</view>

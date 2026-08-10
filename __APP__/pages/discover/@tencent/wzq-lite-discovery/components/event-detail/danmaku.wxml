@@ -1,0 +1,35 @@
+<view class="_div danmaku-container data-v-4fe1995c" wx:if="{{a}}">
+  <view
+    animation="{{d}}"
+    class="{{['_div','data-v-4fe1995c','danmaku']}}"
+    ref="animationContainerRef"
+    style="{{'animation-duration:'+c}}"
+  >
+    <view
+      class="{{['_div','data-v-4fe1995c',danmakuArr.d]}}"
+      wx:for="{{b}}"
+      wx:for-item="danmakuArr"
+      wx:key="c"
+    >
+      <view
+        class="_div headerMargin data-v-4fe1995c"
+        wx:if="{{danmakuArr.a}}"
+      ></view>
+      <view
+        class="_div danmaku-item data-v-4fe1995c"
+        ref="danmakuItemRef"
+        wx:for="{{danmakuArr.b}}"
+        wx:key="e"
+      >
+        <view class="_div header data-v-4fe1995c">
+          <image class="_img avatar data-v-4fe1995c" src="{{item.a}}"></image>
+          <view class="_div cover data-v-4fe1995c"></view>
+        </view>
+        <label class="_span danmaku-content data-v-4fe1995c">{{item.b}}</label>
+        <label class="_span like-num data-v-4fe1995c" wx:if="{{item.c}}"
+          >{{item.d}}</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

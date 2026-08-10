@@ -1,0 +1,55 @@
+<condition-card
+  bind:__l="__l"
+  bindclick="{{j}}"
+  class="data-v-62aca0f2"
+  uI="62aca0f2-0"
+  uP="{{k}}"
+  uS="{{['header','content']}}"
+  wx:if="{{k}}"
+>
+  <condition-detail-header
+    bind:__l="__l"
+    bindnameClick="{{a}}"
+    class="data-v-62aca0f2"
+    slot="header"
+    uI="62aca0f2-1,62aca0f2-0"
+    uP="{{b}}"
+  ></condition-detail-header>
+  <view class="cond-detail-body data-v-62aca0f2" slot="content">
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-62aca0f2"
+      uI="62aca0f2-2,62aca0f2-0"
+      uP="{{d}}"
+      wx:if="{{c}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-62aca0f2"
+      uI="62aca0f2-3,62aca0f2-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-62aca0f2"
+      uI="62aca0f2-4,62aca0f2-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-62aca0f2"
+      uI="62aca0f2-5,62aca0f2-0"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-62aca0f2"
+      uI="62aca0f2-6,62aca0f2-0"
+      uP="{{i}}"
+      wx:if="{{h}}"
+    ></condition-detail-row>
+  </view>
+</condition-card>

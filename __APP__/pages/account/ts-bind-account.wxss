@@ -1,0 +1,103 @@
+@import "/app.wxss";
+.account-top-tip.data-v-86ed79b8 {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.586667rem;
+  padding: 0.32rem 0;
+  vertical-align: middle;
+}
+.account-common-form.data-v-86ed79b8 {
+  padding: 0 0.32rem;
+}
+.account-common-form.data-v-86ed79b8 .st-cell-group {
+  border-radius: 0.213333rem;
+  overflow: hidden;
+}
+.account-common-form.data-v-86ed79b8 .st-cell {
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 1.386667rem;
+  padding: 0.373333rem 0.24rem;
+  width: 100%;
+}
+.account-common-form .find-account.data-v-86ed79b8,
+.account-common-form.data-v-86ed79b8 .st-cell input,
+.account-common-form.data-v-86ed79b8 .st-cell--title span,
+.account-common-form.data-v-86ed79b8 .st-cell--value,
+.account-common-form.data-v-86ed79b8 .st-cell--value .uni-input-wrapper,
+.account-common-form.data-v-86ed79b8 .st-cell--value uni-input {
+  font-size: 0.4rem;
+  height: 100%;
+}
+.account-common-form .form-input.data-v-86ed79b8 {
+  color: var(--text-color-1);
+}
+.account-common-form .second-group.data-v-86ed79b8 {
+  margin-top: 0.213333rem;
+}
+.account-common-form .sms-cell.data-v-86ed79b8 .st-cell--title {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.account-common-form .sms-button.data-v-86ed79b8 {
+  font-size: 0.32rem;
+  height: 0.746667rem;
+  line-height: 0.746667rem;
+  padding: 0;
+  width: 2.026667rem;
+}
+.account-common-form .input-placeholder.data-v-86ed79b8 {
+  color: var(--text-color-5);
+}
+.account-common-form .submit-wrapper.data-v-86ed79b8 {
+  margin: 0.426667rem 0 0.533333rem;
+}
+.account-common-form .submit-button.data-v-86ed79b8 {
+  font-size: 0.426667rem;
+}
+.account-common-form .protocol-container.data-v-86ed79b8 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-top: 0.426667rem;
+}
+.account-common-form .protocol-container .protocol-checkbox.data-v-86ed79b8 {
+  transform: scale(0.7);
+}
+.account-common-form
+  .protocol-container
+  .protocol-checkbox.data-v-86ed79b8
+  .uni-checkbox-input {
+  background-color: initial;
+  border: 0.013333rem solid #98a0b3;
+  border-radius: 50%;
+  margin: unset;
+}
+.account-common-form
+  .protocol-container
+  .protocol-checkbox.data-v-86ed79b8
+  .uni-checkbox-input-checked {
+  background-color: var(--color-primary-1);
+  border-color: var(--color-primary-1);
+  color: #fff !important;
+}
+.account-common-form .protocol-container .all-protocol-text.data-v-86ed79b8 {
+  color: var(--color-link);
+  font-weight: 500;
+}
+.ts-bind-account.data-v-86ed79b8 {
+  height: calc(100vh - env(safe-area-inset-bottom));
+}
+.ts-bind-account .bind-bottom-nav.data-v-86ed79b8 {
+  margin-top: 0.533333rem;
+}

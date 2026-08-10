@@ -1,0 +1,106 @@
+<view
+  class="{{['stock-list-container','stock-list--stock',q,r,s,t,v]}}"
+  hidden="{{!p}}"
+>
+  <scroll-view bindscroll="{{n}}" scrollX="true">
+    <view class="stock-list-content">
+      <list-header
+        bind:__l="__l"
+        bindexplain="{{b}}"
+        bindsort="{{a}}"
+        uI="37704a64-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></list-header>
+      <view class="stock-list-body">
+        <view
+          bindtap="{{item.P}}"
+          bindtouchend="{{item.R}}"
+          bindtouchstart="{{item.Q}}"
+          class="{{['stock-list-item',m,item.O]}}"
+          wx:for="{{d}}"
+          wx:key="N"
+        >
+          <view class="{{['col-item','col-a','cell',item.m]}}" wx:if="{{e}}">
+            <market-label
+              bind:__l="__l"
+              class="stock-market"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.a}}"
+            ></market-label>
+            <view class="{{['title',item.h]}}">
+              <label class="stock-name"
+                >{{item.d}}<label
+                  catchtap="{{item.g}}"
+                  class="icon icon-info"
+                  key="{{item.f}}"
+                  wx:if="{{item.e}}"
+                ></label>
+              </label>
+            </view>
+            <view class="subtitle">{{item.i}}</view>
+            <view
+              catchtap="{{item.l}}"
+              class="item-extra"
+              data-stat="TRADE.ASSET.RATIONEDSHARES"
+              wx:if="{{item.j}}"
+            >
+              <view class="item-extra-content flex-center">
+                <view class="allotment-icon flex-center">配股</view>
+                <label class="allotment-text flex-1">{{item.k}}</label>
+                <label class="icon icon-arrow-right"></label>
+              </view>
+            </view>
+          </view>
+          <view class="col-item col-a cell text-color-1" wx:else>***</view>
+          <view class="col-item col-b cell" wx:if="{{f}}">
+            <view class="{{['title',item.p]}}">{{item.n}} {{item.o}}</view>
+            <view class="subtitle">{{item.q}}</view>
+          </view>
+          <view class="col-item col-b cell text-color-1" wx:else>***</view>
+          <view class="col-item col-c cell" wx:if="{{g}}">
+            <view class="{{['title',item.s]}}">{{item.r}}</view>
+            <view class="subtitle">{{item.t}}</view>
+          </view>
+          <view class="col-item col-c cell text-color-1" wx:else>***</view>
+          <view class="col-item col-d cell" wx:if="{{h}}">
+            <view class="{{['title',item.w,item.x]}}">{{item.v}}</view>
+            <view class="{{['lighter-equa','subtitle',item.z]}}"
+              >{{item.y}}</view
+            >
+          </view>
+          <view class="col-item col-d cell text-color-1" wx:else>***</view>
+          <view class="col-item col-e cell" wx:if="{{i}}">
+            <view class="{{['title',item.B,item.C]}}">{{item.A}}</view>
+            <view class="{{['subtitle',item.E]}}">{{item.D}}</view>
+          </view>
+          <view class="col-item col-e cell text-color-1" wx:else>***</view>
+          <view
+            class="{{['col-item','col-f','cell',item.G&&'pr-30']}}"
+            wx:if="{{j}}"
+          >
+            <view class="title">{{item.F}}</view>
+          </view>
+          <view
+            class="{{['col-item','col-f','cell','text-color-1',item.H&&'pr-30']}}"
+            wx:else
+            >***</view
+          >
+          <view class="col-item col-g cell col-fun" wx:if="{{k}}">
+            <view catchtap="{{item.K}}" class="radius-bg" wx:if="{{item.I}}">
+              <label class="{{['share',item.J]}}"></label>分析</view
+            >
+          </view>
+          <view class="col-item col-h cell col-fun" wx:if="{{l}}">
+            <view catchtap="{{item.L}}" class="radius-bg">
+              <label class="icon share icon-share"></label>分享</view
+            >
+          </view>
+          <view class="mock-border-bottom" wx:if="{{item.M}}"></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="stock-list-body-gradient" wx:if="{{o}}"></view>
+</view>

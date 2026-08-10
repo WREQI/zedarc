@@ -1,0 +1,10 @@
+<view class="_div yy-activity-task" wx:if="{{a}}">
+  <guide bind:__l="__l" uI="36a4aabd-0" uP="{{c}}" wx:if="{{b}}"></guide>
+  <snack-bar
+    bind:__l="__l"
+    uI="36a4aabd-1"
+    uP="{{e}}"
+    wx:if="{{d}}"
+  ></snack-bar>
+  <back-pop bind:__l="__l" uI="36a4aabd-2" uP="{{g}}" wx:if="{{f}}"></back-pop>
+</view>

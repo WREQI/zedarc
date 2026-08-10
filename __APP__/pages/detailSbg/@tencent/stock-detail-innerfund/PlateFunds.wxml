@@ -1,0 +1,222 @@
+<view class="{{['_div','plate-mod-funds','data-v-8abd3883',z&&'skin-dark']}}">
+  <view class="_div today-funds data-v-8abd3883">
+    <view class="_div blod-title data-v-8abd3883"
+      >今日资金流向<view
+        bindtap="{{a}}"
+        class="_i alert data-v-8abd3883"
+      ></view>
+    </view>
+    <view
+      class="_div funds-info layout layout-align-space-between layout-align-center-end data-v-8abd3883"
+    >
+      <view class="_div data-v-8abd3883">
+        <view class="{{['_div','value','big','data-v-8abd3883',c]}}">
+          <label class="_span data-v-8abd3883">{{b}}</label>
+        </view>
+        <view class="_div title layout data-v-8abd3883">
+          <label class="_span sp-title data-v-8abd3883">主力净流入</label>
+          <label class="_span funds-rank data-v-8abd3883"
+            >{{d}}<view class="_i icon icon-arrow hide data-v-8abd3883"></view>
+          </label>
+        </view>
+      </view>
+      <view class="_div layout data-v-8abd3883">
+        <view class="_div right-block data-v-8abd3883">
+          <view class="{{['_div','value','bottom','data-v-8abd3883',f]}}">
+            <label class="_span data-v-8abd3883">{{e}}</label>
+          </view>
+          <view class="_div title data-v-8abd3883">主力流入</view>
+        </view>
+        <view class="{{['_div','right-block','data-v-8abd3883',h]}}">
+          <view class="_div value bottom data-v-8abd3883">
+            <label class="_span data-v-8abd3883">{{g}}</label>
+          </view>
+          <view class="_div title data-v-8abd3883">主力流出</view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div funds-chart-ytitle layout layout-align-space-between data-v-8abd3883"
+    >
+      <label class="_span data-v-8abd3883">板块指数</label>
+      <label class="_span data-v-8abd3883">今日资金净流入(万元)</label>
+    </view>
+    <view class="_div funds-chart data-v-8abd3883">
+      <fund-chart
+        bind:__l="__l"
+        class="data-v-8abd3883"
+        uI="8abd3883-0"
+        uP="{{j}}"
+        wx:if="{{i}}"
+      ></fund-chart>
+    </view>
+    <view class="_div funds-chart-label data-v-8abd3883">
+      <label class="_span layout layout-align-center-center data-v-8abd3883">
+        <view class="_i label-item-line line-orange data-v-8abd3883"></view
+        >主力净流入</label
+      >
+      <label class="_span layout layout-align-center-center data-v-8abd3883">
+        <view class="_i label-item-line line-gray data-v-8abd3883"></view
+        >板块指数</label
+      >
+    </view>
+  </view>
+  <view class="_div hot-funds-list data-v-8abd3883" wx:if="{{k}}">
+    <view
+      class="_div blod-title layout layout-align-space-between data-v-8abd3883"
+    >
+      <label class="_span data-v-8abd3883">资金热捧股票</label>
+      <label bindtap="{{l}}" class="_span list-more data-v-8abd3883"
+        >去看全部<view class="_i icon icon-arrow data-v-8abd3883"></view>
+      </label>
+    </view>
+    <view class="_div sub-title data-v-8abd3883"
+      >分析板块资金流入top榜单，快速了解资金看点</view
+    >
+    <view
+      class="_div funds-li data-v-8abd3883"
+      wx:for="{{m}}"
+      wx:for-item="val"
+      wx:key="y"
+    >
+      <view class="_div tag data-v-8abd3883">
+        <label
+          class="{{['_span','data-v-8abd3883',tag.c]}}"
+          wx:for="{{val.a}}"
+          wx:for-item="tag"
+          wx:key="b"
+          >{{tag.a}}</label
+        >
+      </view>
+      <view
+        class="_div hq layout layout-align-space-between layout-align-center-center data-v-8abd3883"
+      >
+        <view
+          catchtap="{{val.g}}"
+          class="_div hq-left layout layout-align-center-center data-v-8abd3883"
+        >
+          <view
+            class="_div layout hq-symbol layout-align-space-between data-v-8abd3883"
+          >
+            <view class="_div stock-name data-v-8abd3883">{{val.b}}</view>
+            <view class="_div stock-code data-v-8abd3883">{{val.c}}</view>
+          </view>
+          <view class="_div hq-price data-v-8abd3883">{{val.d}}</view>
+          <view class="{{['_div','hq-zdf','data-v-8abd3883',val.f]}}"
+            >{{val.e}}%</view
+          >
+        </view>
+        <view class="_div hq-right data-v-8abd3883">
+          <add-fav-btn
+            bind:__l="__l"
+            class="data-v-8abd3883"
+            uI="{{val.i}}"
+            uP="{{val.j}}"
+            wx:if="{{val.h}}"
+          ></add-fav-btn>
+        </view>
+      </view>
+      <view
+        class="_div funds layout layout-align-space-between layout-align-center-end data-v-8abd3883"
+      >
+        <view catchtap="{{val.m}}" class="_div funds-chart data-v-8abd3883">
+          <fund-thumb
+            bind:__l="__l"
+            class="data-v-8abd3883"
+            uI="{{val.k}}"
+            uP="{{val.l}}"
+            wx:if="{{val.l}}"
+          ></fund-thumb>
+        </view>
+        <view class="_div right-block layout data-v-8abd3883">
+          <view class="_div right-block-item data-v-8abd3883">
+            <view class="_div title data-v-8abd3883">主力净流入</view>
+            <view class="{{['_div','value','data-v-8abd3883',val.o]}}"
+              >{{val.n}}</view
+            >
+          </view>
+          <view class="_div right-block-item data-v-8abd3883">
+            <view class="_div title data-v-8abd3883">总市值</view>
+            <view class="{{['_div','value','data-v-8abd3883',val.q]}}"
+              >{{val.p}}亿</view
+            >
+          </view>
+        </view>
+      </view>
+      <view class="{{['_div','des','data-v-8abd3883',val.w]}}" id="{{val.v}}"
+        >{{val.r}}<label bindtap="{{val.t}}" class="_span btn data-v-8abd3883"
+          >{{val.s}}</label
+        >
+      </view>
+      <view class="_div point data-v-8abd3883">
+        <view class="_div title data-v-8abd3883">资金看点</view>
+        <view
+          class="_div point-list data-v-8abd3883"
+          wx:for="{{val.x}}"
+          wx:for-item="v"
+          wx:key="b"
+          >{{v.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div funds-trend data-v-8abd3883" wx:if="{{n}}">
+    <view
+      class="_div blod-title layout layout-align-space-between data-v-8abd3883"
+    >
+      <label class="_span data-v-8abd3883">历史主力资金趋势</label>
+      <label
+        bindtap="{{s}}"
+        class="_span change-btn data-v-8abd3883"
+        wx:if="{{o}}"
+        >{{p}}日 <view class="_i funds-icon-triangle data-v-8abd3883"></view>
+        <view class="{{['_div','dropdown-wrap','down','data-v-8abd3883',r]}}">
+          <view class="_div dropdown-box-arrow data-v-8abd3883"></view>
+          <view
+            class="_div dropdown-box-arrow dropdown-box-arrow-mask data-v-8abd3883"
+          ></view>
+          <view class="_div dropdown-box dropdown-box-date data-v-8abd3883">
+            <view
+              bindtap="{{v.d}}"
+              class="{{['_div','dropdown-item','data-v-8abd3883',v.c]}}"
+              wx:for="{{q}}"
+              wx:for-item="v"
+              wx:key="b"
+              >{{v.a}}日</view
+            >
+          </view>
+        </view>
+      </label>
+    </view>
+    <view class="_div funds-total data-v-8abd3883"
+      >主力净流入<label class="{{['_span','total-funds','data-v-8abd3883',w]}}"
+        >{{t}}{{v}}</label
+      >
+    </view>
+    <view
+      class="_div funds-chart-ytitle layout layout-align-space-between data-v-8abd3883"
+    >
+      <label class="_span data-v-8abd3883">板块指数</label>
+      <label class="_span data-v-8abd3883">资金净流入(万元)</label>
+    </view>
+    <view class="_div funds-chart data-v-8abd3883">
+      <fund-chart
+        bind:__l="__l"
+        class="data-v-8abd3883"
+        uI="8abd3883-3"
+        uP="{{y}}"
+        wx:if="{{x}}"
+      ></fund-chart>
+    </view>
+    <view class="_div funds-chart-label data-v-8abd3883">
+      <label class="_span layout layout-align-center-center data-v-8abd3883">
+        <view class="_i label-item-line line-orange data-v-8abd3883"></view
+        >主力净流入</label
+      >
+      <label class="_span layout layout-align-center-center data-v-8abd3883">
+        <view class="_i label-item-line line-gray data-v-8abd3883"></view
+        >板块指数</label
+      >
+    </view>
+  </view>
+</view>

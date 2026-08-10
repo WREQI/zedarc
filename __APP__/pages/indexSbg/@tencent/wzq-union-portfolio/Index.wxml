@@ -1,0 +1,139 @@
+<view
+  class="{{['_div','page-choose-index','data-v-54e20fad',L]}}"
+  ref="chooseIndex"
+  style="transform: translateZ(0)"
+>
+  <slot name="trade-assets"></slot>
+  <view class="_div slide-header data-v-54e20fad" ref="chooseHeader">
+    <slot name="yy-adv_choose_marquee"></slot>
+    <view class="_div tabbar-container data-v-54e20fad" wx:if="{{a}}">
+      <tabbar
+        bind:__l="__l"
+        bindclickTab="{{b}}"
+        bindreportQianjiGo="{{c}}"
+        class="tabbar tabbar-mp tabbar-nopadding data-v-54e20fad"
+        uI="54e20fad-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></tabbar>
+      <view bindtap="{{e}}" class="_div options data-v-54e20fad">
+        <view class="_div optionsbtn data-v-54e20fad"></view>
+      </view>
+      <view
+        bindtap="{{h}}"
+        class="{{['_div','refresh-btn','data-v-54e20fad',g&&'loading']}}"
+        wx:if="{{f}}"
+      ></view>
+    </view>
+  </view>
+  <swiper
+    bindanimationfinish="{{q}}"
+    bindchange="{{n}}"
+    bindtouchstart="{{o}}"
+    bindtransition="{{p}}"
+    class="sub-swiper data-v-54e20fad"
+    current="{{m}}"
+    duration="{{250}}"
+    nextMargin="-1px"
+    previousMargin="-1px"
+    style="{{'height:'+l}}"
+    wx:if="{{i}}"
+  >
+    <swiper-item
+      bindtouchend="{{events.touchend}}"
+      bindtouchmove="{{events.touchmove}}"
+      bindtouchstart="{{events.touchstart}}"
+      class="data-v-54e20fad"
+      data-first="{{t.t}}"
+      data-last="{{t.v}}"
+      wx:for="{{j}}"
+      wx:for-item="t"
+      wx:key="s"
+    >
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{t.a}}"
+        class="data-v-54e20fad"
+        uI="{{t.b}}"
+        uP="{{t.c}}"
+        wx:if="{{k}}"
+      ></st-status>
+      <view class="_div swiper-content-container data-v-54e20fad">
+        <slot name="trade-position" wx:if="{{t.d}}"></slot>
+        <basket-list
+          bind:__l="__l"
+          class="data-v-54e20fad"
+          uI="{{t.f}}"
+          uP="{{t.g}}"
+          wx:elif="{{t.e}}"
+        ></basket-list>
+        <portfolio-list
+          bind:__l="__l"
+          bindmonitoringRemindClick="{{t.p}}"
+          bindrefresh="{{t.n}}"
+          bindshowPolicyModal="{{t.o}}"
+          class="r-i-f data-v-54e20fad"
+          uI="{{t.q}}"
+          uP="{{t.r}}"
+          uR="{{t.m}}"
+          uS="{{['after-stock-list']}}"
+          wx:elif="{{t.h}}"
+        >
+          <block wx:if="{{t.i}}">
+            <view slot="{{v1.c}}" wx:for="{{t.j}}" wx:for-item="v1" wx:key="b">
+              <slot name="{{t.k}}"></slot>
+            </view>
+          </block>
+        </portfolio-list>
+      </view>
+    </swiper-item>
+  </swiper>
+  <scroll-view
+    scrollY
+    class="all-empty-page data-v-54e20fad"
+    style="{{'height:'+t}}"
+    wx:elif="{{r}}"
+  >
+    <choose-recommend
+      bind:__l="__l"
+      class="data-v-54e20fad"
+      uI="54e20fad-4"
+      uP="{{s}}"
+      wx:if="{{s}}"
+    ></choose-recommend>
+    <view class="_div height-placeholder data-v-54e20fad"></view>
+  </scroll-view>
+  <group-pop
+    bind:__l="__l"
+    bindaddGroup="{{y}}"
+    bindclose="{{A}}"
+    binddelStock="{{z}}"
+    bindmoveStocks="{{x}}"
+    class="r data-v-54e20fad"
+    uI="54e20fad-5"
+    uP="{{B}}"
+    uR="groupListPop"
+    wx:if="{{v}}"
+  ></group-pop>
+  <root-portal class="data-v-54e20fad" enable="{{true}}">
+    <monitoring-remind-pop
+      bind:__l="__l"
+      bindclose="{{D}}"
+      bindconfirm="{{E}}"
+      class="data-v-54e20fad"
+      uI="54e20fad-6"
+      uP="{{F}}"
+      wx:if="{{C}}"
+    ></monitoring-remind-pop>
+    <close-monitoring-pop
+      bind:__l="__l"
+      bindcancel="{{J}}"
+      bindconfirm="{{I}}"
+      class="r data-v-54e20fad"
+      uI="54e20fad-7"
+      uP="{{K}}"
+      uR="closeMonitoringPop"
+      wx:if="{{G}}"
+    ></close-monitoring-pop>
+  </root-portal>
+</view>

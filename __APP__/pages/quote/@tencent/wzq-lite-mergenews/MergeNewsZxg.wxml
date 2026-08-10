@@ -1,0 +1,163 @@
+<view class="_div news-container data-v-b068eae4">
+  <view class="_ul news-list data-v-b068eae4">
+    <view class="_div search-ai-bar data-v-b068eae4" hidden="{{!f}}">
+      <search-ai-bar
+        bind:__l="__l"
+        bindonClickAiDialog="{{b}}"
+        bindonHideAiEntry="{{d}}"
+        bindonShowAiEntry="{{c}}"
+        class="data-v-b068eae4"
+        uI="b068eae4-0"
+        uP="{{e}}"
+        wx:if="{{a}}"
+      ></search-ai-bar>
+    </view>
+    <view class="_li data-v-b068eae4" wx:for="{{g}}" wx:key="J">
+      <news-item-zxg-observer
+        bind:__l="__l"
+        class="data-v-b068eae4"
+        uI="{{item.H}}"
+        uP="{{item.I}}"
+        uS="{{['d']}}"
+        wx:if="{{item.I}}"
+      >
+        <view catchtap="{{item.w}}" class="_div news-item data-v-b068eae4">
+          <view class="{{['_div','data-v-b068eae4','content',item.b]}}"
+            >{{item.a}}</view
+          >
+          <view class="_div bottom-bar data-v-b068eae4">
+            <view
+              class="{{['_div','data-v-b068eae4','mul-tag',item.n,item.o]}}"
+            >
+              <label
+                class="_span live-icon data-v-b068eae4"
+                wx:if="{{item.c}}"
+              ></label>
+              <label class="_span video-tag data-v-b068eae4" wx:if="{{item.d}}"
+                >直播</label
+              >
+              <image
+                class="_img video-icon data-v-b068eae4"
+                mode="aspectFit"
+                src="https://st.gtimg.com/design/03723629f3a3847036885d8137d41432.png"
+                wx:if="{{item.e}}"
+              ></image>
+              <label class="_span video-tag data-v-b068eae4" wx:if="{{item.f}}"
+                >视频</label
+              >
+              <label class="_span importance data-v-b068eae4" wx:if="{{item.g}}"
+                >{{item.h}}</label
+              >
+              <label class="_span normal data-v-b068eae4" wx:if="{{item.i}}"
+                >{{item.j}}</label
+              >
+              <label class="_span normal data-v-b068eae4" wx:if="{{item.k}}"
+                >{{item.l}}</label
+              >
+              <label class="_span normal data-v-b068eae4" wx:if="{{item.m}}"
+                >译</label
+              >
+            </view>
+            <view
+              catchtap="{{item.t}}"
+              class="{{['_div','data-v-b068eae4','fold-text',item.r,item.s]}}"
+              wx:if="{{item.p}}"
+              >{{item.q}}<image
+                class="_img fold-icon data-v-b068eae4"
+                src="https://st.gtimg.com/design/5f36886ed40dc46d2b20e4adff120ff8.png"
+              ></image>
+            </view>
+            <view class="_div time data-v-b068eae4">{{item.v}}</view>
+          </view>
+        </view>
+        <view
+          class="{{['_div','data-v-b068eae4','item-group',item.G]}}"
+          style="{{'max-height:'+item.F}}"
+          wx:if="{{item.x}}"
+        >
+          <view class="{{['_ul','data-v-b068eae4','item-container',item.E]}}">
+            <view
+              catchtap="{{it.p}}"
+              class="_li news-item data-v-b068eae4"
+              wx:for="{{item.y}}"
+              wx:for-item="it"
+              wx:key="o"
+            >
+              <view class="{{['_div','data-v-b068eae4','content',item.z]}}"
+                >{{it.a}}</view
+              >
+              <view class="_div bottom-bar data-v-b068eae4">
+                <view class="{{['_div','data-v-b068eae4','mul-tag',it.h]}}">
+                  <label
+                    class="_span live-icon data-v-b068eae4"
+                    wx:if="{{item.A}}"
+                  ></label>
+                  <label
+                    class="_span video-tag data-v-b068eae4"
+                    wx:if="{{item.B}}"
+                    >直播</label
+                  >
+                  <image
+                    class="_img video-icon data-v-b068eae4"
+                    mode="aspectFit"
+                    src="https://st.gtimg.com/design/03723629f3a3847036885d8137d41432.png"
+                    wx:if="{{item.C}}"
+                  ></image>
+                  <label
+                    class="_span video-tag data-v-b068eae4"
+                    wx:if="{{item.D}}"
+                    >视频</label
+                  >
+                  <label
+                    class="_span importance data-v-b068eae4"
+                    wx:if="{{it.b}}"
+                    >重要</label
+                  >
+                  <label class="_span normal data-v-b068eae4" wx:if="{{it.c}}"
+                    >{{it.d}}</label
+                  >
+                  <label class="_span normal data-v-b068eae4" wx:if="{{it.e}}"
+                    >{{it.f}}</label
+                  >
+                  <label class="_span normal data-v-b068eae4" wx:if="{{it.g}}"
+                    >译</label
+                  >
+                </view>
+                <view
+                  catchtap="{{it.m}}"
+                  class="{{['_div','data-v-b068eae4','fold-text',it.k,it.l]}}"
+                  wx:if="{{it.i}}"
+                  >{{it.j}}<image
+                    class="_img fold-icon data-v-b068eae4"
+                    src="https://st.gtimg.com/design/e4c040caf4dd1a1e6609d833e1867a1a.png"
+                  ></image>
+                </view>
+                <view class="_div time data-v-b068eae4">{{it.n}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </news-item-zxg-observer>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-b068eae4"
+    uI="b068eae4-2"
+    uS="{{['d']}}"
+    wx:if="{{h}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无新闻数据</block>
+  </no-data>
+  <view class="_div error-status data-v-b068eae4" wx:if="{{i}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{j}}"
+      class="data-v-b068eae4"
+      uI="b068eae4-3"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></st-status>
+  </view>
+</view>

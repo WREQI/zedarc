@@ -1,0 +1,34 @@
+<page-meta class="data-v-25ba1d48" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-25ba1d48" id="global-wrap" uI="25ba1d48-0" uP="{{G}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{G}}">
+    <view class="find-account account-common-form data-v-25ba1d48">
+        <view class="account-top-tip data-v-25ba1d48">请输入你的身份信息</view>
+        <st-cell-group bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-1,25ba1d48-0" uP="{{h}}" uS="{{['d']}}" wx:if="{{h}}">
+            <st-cell bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-2,25ba1d48-1" uP="{{d}}" uS="{{['d']}}" wx:if="{{d}}">
+                <input bindinput="{{c}}" class="data-v-25ba1d48" maxlength="{{10}}" placeholder="请输入本人姓名" placeholderClass="input-placeholder" type="text" value="{{b}}"></input>
+            </st-cell>
+            <st-cell bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-3,25ba1d48-1" uP="{{g}}" uS="{{['d']}}" wx:if="{{g}}">
+                <input bindinput="{{f}}" class="data-v-25ba1d48" maxlength="{{18}}" placeholder="请输入15或18位身份证号码" placeholderClass="input-placeholder" type="idcard" value="{{e}}"></input>
+            </st-cell>
+        </st-cell-group>
+        <block wx:if="{{i}}">
+            <view class="second-group data-v-25ba1d48"></view>
+            <st-cell-group bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-4,25ba1d48-0" uP="{{v}}" uS="{{['d']}}" wx:if="{{v}}">
+                <st-cell bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-5,25ba1d48-4" uP="{{l}}" uS="{{['d']}}" wx:if="{{l}}">
+                    <input bindinput="{{k}}" class="data-v-25ba1d48" maxlength="11" placeholder="请输入预留手机号" placeholderClass="input-placeholder" type="number" value="{{j}}"></input>
+                </st-cell>
+                <st-cell bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-6,25ba1d48-4" uP="{{t}}" uS="{{['extra','d']}}" wx:if="{{t}}">
+                    <input bindinput="{{p}}" class="flex-1 data-v-25ba1d48" disabled="{{false}}" maxlength="{{n}}" placeholder="{{m}}" placeholderClass="input-placeholder" type="number" value="{{o}}"></input>
+                    <button bindtap="{{s}}" class="sms-button data-v-25ba1d48" disabled="{{r}}" size="mini" slot="extra" type="primary">{{q}}</button>
+                </st-cell>
+            </st-cell-group>
+            <forget-mobile bind:__l="__l" bindfacecheck="{{w}}" class="forget-mobile data-v-25ba1d48" uI="25ba1d48-7,25ba1d48-0"></forget-mobile>
+            <protocol-check bind:__l="__l" class="r data-v-25ba1d48" uI="25ba1d48-8,25ba1d48-0" uR="protocolCheck"></protocol-check>
+        </block>
+        <view class="submit-wrapper data-v-25ba1d48">
+            <button bindtap="{{z}}" class="data-v-25ba1d48" disabled="{{y}}" type="primary">立即找回</button>
+        </view>
+        <server-broker bind:__l="__l" class="data-v-25ba1d48" uI="25ba1d48-9,25ba1d48-0" uP="{{A}}" wx:if="{{A}}"></server-broker>
+        <mp-dialog bind:__l="__l" class="data-v-25ba1d48" id="mp-dialog" uI="25ba1d48-10,25ba1d48-0" uP="{{B}}" wx:if="{{B}}"></mp-dialog>
+        <c-f-t-privacy-popup bind:__l="__l" bindclose="{{D}}" bindconfirm="{{C}}" class="data-v-25ba1d48" uI="25ba1d48-11,25ba1d48-0" uP="{{E}}" wx:if="{{E}}"></c-f-t-privacy-popup>
+    </view>
+</global-wrap>

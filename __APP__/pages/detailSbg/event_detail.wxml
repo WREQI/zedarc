@@ -1,0 +1,22 @@
+<page-meta class="data-v-52aa4cb9" rootFontSize="{{a}}"></page-meta>
+<view class="_div rate-container data-v-52aa4cb9" data-st-theme="{{d}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-52aa4cb9"
+    uI="52aa4cb9-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-52aa4cb9"
+    uI="52aa4cb9-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <event-detail
+    bind:__l="__l"
+    class="data-v-52aa4cb9"
+    uI="52aa4cb9-2"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></event-detail>
+</view>

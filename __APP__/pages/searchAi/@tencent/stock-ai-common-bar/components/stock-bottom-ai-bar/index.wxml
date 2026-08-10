@@ -1,0 +1,11 @@
+<view
+  bindtap="{{f}}"
+  class="{{['_div','data-v-423b52ba','ai-search-bar',e]}}"
+  id="aiSearchBar"
+  wx:if="{{a}}"
+>
+  <view class="_div ai-icon data-v-423b52ba">问元宝</view>
+  <view class="{{['_div','data-v-423b52ba','ai-question',d]}}" wx:if="{{b}}"
+    >{{c}}</view
+  >
+</view>

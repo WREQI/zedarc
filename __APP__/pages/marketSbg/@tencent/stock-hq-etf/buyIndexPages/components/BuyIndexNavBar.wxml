@@ -1,0 +1,30 @@
+<navigation
+  bind:__l="__l"
+  bindback="{{c}}"
+  class="r data-v-029c1939"
+  uI="029c1939-0"
+  uP="{{d}}"
+  uR="appNavigationRef"
+  wx:if="{{a}}"
+></navigation>
+<view class="_div etf-buy-index__nav data-v-029c1939" wx:elif="{{e}}">
+  <view
+    class="_div etf-buy-index__nav-title-layer data-v-029c1939"
+    style="{{i}}"
+  >
+    <view
+      class="_div etf-buy-index__nav-safe-area data-v-029c1939"
+      style="{{f}}"
+    ></view>
+    <view class="_div etf-buy-index__nav-content data-v-029c1939" style="{{h}}">
+      <view class="_div etf-buy-index__nav-title data-v-029c1939">{{g}}</view>
+    </view>
+  </view>
+  <image
+    ariaLabel="back-icon"
+    catchtap="{{l}}"
+    class="_img etf-buy-index__nav-back data-v-029c1939"
+    src="{{k}}"
+    style="{{j}}"
+  ></image>
+</view>

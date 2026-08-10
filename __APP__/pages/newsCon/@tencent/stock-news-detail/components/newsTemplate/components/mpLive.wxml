@@ -1,0 +1,23 @@
+<view class="_div live-container-mp data-v-33f80371">
+  <view class="_div custom-live-status data-v-33f80371">
+    <label class="{{['_span','data-v-33f80371','dot',a]}}"></label>
+    <label class="_span status-text data-v-33f80371">{{b}}</label>
+  </view>
+  <video
+    autoplay="{{false}}"
+    bindfullscreenchange="{{g}}"
+    class="data-v-33f80371"
+    poster="{{f}}"
+    showPlayBtn="{{true}}"
+    src="{{e}}"
+    style="{{d}}"
+    wx:if="{{c}}"
+  ></video>
+  <image
+    catchtap="{{j}}"
+    class="_img live-poster data-v-33f80371"
+    src="{{h}}"
+    style="{{i}}"
+    wx:else
+  ></image>
+</view>

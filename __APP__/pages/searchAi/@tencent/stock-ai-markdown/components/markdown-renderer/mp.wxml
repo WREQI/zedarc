@@ -1,0 +1,10 @@
+<view class="_div">
+  <token-renderer
+    bind:__l="__l"
+    bindlinkClick="{{a}}"
+    bindquoteLinkClick="{{b}}"
+    uI="e7071944-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></token-renderer>
+</view>

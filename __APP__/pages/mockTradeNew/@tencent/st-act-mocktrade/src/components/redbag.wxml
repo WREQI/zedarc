@@ -1,0 +1,84 @@
+<view catchtouchmove="{{j}}" class="_div dialog-wrapper data-v-497ca22c">
+  <view class="_div redbag-main data-v-497ca22c">
+    <view class="_div redbag-cover data-v-497ca22c">
+      <animation
+        bind:__l="__l"
+        class="animation-top data-v-497ca22c"
+        uI="497ca22c-0"
+        uP="{{b}}"
+        uS="{{['d']}}"
+        wx:if="{{a}}"
+      >
+        <view class="_div redbag-cover-top data-v-497ca22c">
+          <image
+            class="_img imgcover-top data-v-497ca22c"
+            src="https://wzq.gtimg.com/image/mp-weapp/assets/redbag_top.png"
+          ></image>
+          <view class="_div redbag-info data-v-497ca22c"></view>
+          <slot name="redbagCoverInfo"></slot>
+        </view>
+      </animation>
+      <animation
+        bind:__l="__l"
+        class="animation-bottom data-v-497ca22c"
+        uI="497ca22c-1"
+        uP="{{d}}"
+        uS="{{['d']}}"
+        wx:if="{{c}}"
+      >
+        <view class="_div redbag-cover-bottom data-v-497ca22c">
+          <image
+            class="_img imgcover-bottom data-v-497ca22c"
+            src="https://wzq.gtimg.com/image/mp-weapp/assets/redbag_bottom.png"
+          ></image>
+        </view>
+      </animation>
+      <animation
+        bind:__l="__l"
+        class="animation-inner data-v-497ca22c"
+        uI="497ca22c-2"
+        uP="{{h}}"
+        uS="{{['d']}}"
+        wx:if="{{h}}"
+      >
+        <view class="_div redbag-inner data-v-497ca22c">
+          <image
+            class="_img imgcover-inner data-v-497ca22c"
+            src="https://wzq.gtimg.com/image/mp-weapp/assets/redbag_inner.png"
+          ></image>
+          <view class="_div state-success data-v-497ca22c">
+            <slot
+              name="redbagSuccessTitle"
+              wx:if="{{$slots.redbagSuccessTitle}}"
+            ></slot>
+            <label class="_span title data-v-497ca22c" wx:else
+              >恭喜你获得</label
+            >
+            <reward
+              bind:__l="__l"
+              class="data-v-497ca22c"
+              uI="497ca22c-3,497ca22c-2"
+              uP="{{e}}"
+              wx:if="{{e}}"
+            ></reward>
+            <view class="_div path-tips-box data-v-497ca22c">
+              <label class="_span tips-txt data-v-497ca22c">{{f}}</label>
+            </view>
+          </view>
+          <view bindtap="{{g}}" class="_div row redbag-btn data-v-497ca22c">
+            <image
+              class="_img redbag-btn__img data-v-497ca22c"
+              src="https://wzq.gtimg.com/image/mp-weapp/assets/redbag_btn.png"
+            ></image>
+          </view>
+        </view>
+      </animation>
+    </view>
+    <view bindtap="{{i}}" class="_div close data-v-497ca22c">
+      <image
+        class="_img close__img data-v-497ca22c"
+        src="https://st.gtimg.com/design/011cb590dfdd94a86da2adb0437bb262.png"
+      ></image>
+    </view>
+  </view>
+</view>

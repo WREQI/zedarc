@@ -1,0 +1,73 @@
+<view
+  class="{{['_div','ai-expert-info-card','data-v-7cb9caf8',q&&'ai-expert-info-card--bordered']}}"
+>
+  <view class="_div ai-expert-info-card__main data-v-7cb9caf8">
+    <view class="_div ai-expert-info-card__avatar data-v-7cb9caf8">
+      <image
+        alt="{{c}}"
+        class="_img ai-expert-info-card__avatar-img data-v-7cb9caf8"
+        src="{{b}}"
+        wx:if="{{a}}"
+      ></image>
+      <view
+        class="_div ai-expert-info-card__avatar-mask data-v-7cb9caf8"
+      ></view>
+    </view>
+    <view class="_div ai-expert-info-card__detail data-v-7cb9caf8">
+      <view class="_div ai-expert-info-card__name-row data-v-7cb9caf8">
+        <label class="_span ai-expert-info-card__name data-v-7cb9caf8"
+          >{{d}}</label
+        >
+        <label
+          class="_span ai-expert-info-card__field-tag data-v-7cb9caf8"
+          wx:if="{{e}}"
+        >
+          <image
+            alt="{{h}}"
+            class="_img ai-expert-info-card__field-tag-icon data-v-7cb9caf8"
+            src="{{g}}"
+            wx:if="{{f}}"
+          ></image>
+          <label
+            class="_span ai-expert-info-card__field-tag-text data-v-7cb9caf8"
+            >{{i}}</label
+          >
+        </label>
+      </view>
+      <view
+        class="_div ai-expert-info-card__tags data-v-7cb9caf8"
+        wx:if="{{j}}"
+      >
+        <label
+          class="_span ai-expert-info-card__tag-item data-v-7cb9caf8"
+          wx:for="{{k}}"
+          wx:for-item="tag"
+          wx:key="c"
+        >
+          <label class="_span ai-expert-info-card__tag-text data-v-7cb9caf8"
+            >{{tag.a}}</label
+          >
+          <label
+            class="_span ai-expert-info-card__tag-divider data-v-7cb9caf8"
+            wx:if="{{tag.b}}"
+          ></label>
+        </label>
+      </view>
+    </view>
+  </view>
+  <view
+    bindtap="{{p}}"
+    class="{{['_div','ai-expert-info-card__follow','data-v-7cb9caf8',o&&'ai-expert-info-card__follow--active']}}"
+    wx:if="{{l}}"
+  >
+    <image
+      alt="关注"
+      class="_img ai-expert-info-card__follow-icon data-v-7cb9caf8"
+      src="https://st.gtimg.com/pcm/mpcazcbd_129026637956e914581923947d86d2d8.svg"
+      wx:if="{{m}}"
+    ></image>
+    <label class="_span ai-expert-info-card__follow-text data-v-7cb9caf8"
+      >{{n}}</label
+    >
+  </view>
+</view>

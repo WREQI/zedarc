@@ -1,0 +1,38 @@
+<view
+  catchtap="{{f}}"
+  class="_div mod-show-comment data-v-ecafe2dc"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','data-v-ecafe2dc','mod-box',e]}}">
+    <view class="_div data-v-ecafe2dc" wx:for="{{b}}">
+      <show-comment-item
+        bind:__l="__l"
+        bindnewComment="{{item.g}}"
+        bindsemiTapSubmit="{{item.f}}"
+        bindtapCommentTail="{{item.e}}"
+        bindtapImage="{{item.d}}"
+        bindtapPerson="{{item.c}}"
+        class="data-v-ecafe2dc"
+        data-c-h="{{!item.a}}"
+        key="{{item.b}}"
+        uI="{{item.h}}"
+        uP="{{item.i}}"
+        wx:if="{{item.i}}"
+      ></show-comment-item>
+      <view class="_div com-yb-disclaimer data-v-ecafe2dc" wx:if="{{item.j}}"
+        >{{item.k}}</view
+      >
+    </view>
+    <view
+      catchtap="{{d}}"
+      class="_div show-more data-v-ecafe2dc"
+      hidden="{{!c}}"
+    >
+      <label class="_span data-v-ecafe2dc">全部评论</label>
+      <image
+        class="_img show-more-img data-v-ecafe2dc"
+        src="https://st.gtimg.com/design/d8f761c54b2fa6c4a9a1eb91e388347a.png"
+      ></image>
+    </view>
+  </view>
+</view>

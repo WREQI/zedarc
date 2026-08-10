@@ -1,0 +1,69 @@
+<view class="_div tzrl-wrapper data-v-9d6ec5c2">
+  <card-header
+    bind:__l="__l"
+    class="data-v-9d6ec5c2"
+    uI="9d6ec5c2-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></card-header>
+  <view catchtap="{{c}}" class="_div view-more data-v-9d6ec5c2" wx:if="{{b}}">
+    <label class="_span view-more__text data-v-9d6ec5c2">查看更多</label>
+    <label class="_span view-more__arrow data-v-9d6ec5c2"></label>
+  </view>
+  <view class="_div tzrl-content data-v-9d6ec5c2">
+    <view class="_div today data-v-9d6ec5c2">
+      <image
+        class="_img calendar-icon data-v-9d6ec5c2"
+        src="https://st.gtimg.com/design/9a1ea114202f0113fcba0d1e50a92604.png"
+      ></image>
+      <view class="_div today-right data-v-9d6ec5c2" hoverClass="onLongTouch">
+        <label class="_span top-title disable-touch data-v-9d6ec5c2"
+          >今日宜 • 关注</label
+        >
+        <label catchtap="{{e}}" class="_span tzrl data-v-9d6ec5c2">{{d}}</label>
+      </view>
+    </view>
+    <view class="_div divider-line data-v-9d6ec5c2"></view>
+    <view class="_div point-wrapper data-v-9d6ec5c2" wx:if="{{f}}">
+      <label class="_span title disable-touch data-v-9d6ec5c2" wx:if="{{g}}"
+        >{{h}} ｜</label
+      >
+      <label class="_span point disable-touch data-v-9d6ec5c2">{{i}}</label>
+      <label class="_span source disable-touch data-v-9d6ec5c2" wx:if="{{j}}"
+        >——{{k}}</label
+      >
+    </view>
+    <view class="_div share-banner data-v-9d6ec5c2">
+      <image
+        class="_img zxg-logo data-v-9d6ec5c2"
+        src="https://st.gtimg.com/design/394f2dbe1df0c9fef2214dd58f3d28eb.png"
+      ></image>
+      <label class="_span share-tips data-v-9d6ec5c2"
+        >受益匪浅，推荐给朋友看</label
+      >
+      <view catchtap="{{l}}" class="_div data-v-9d6ec5c2">
+        <share-button-wrapper
+          bind:__l="__l"
+          class="data-v-9d6ec5c2"
+          uI="9d6ec5c2-1"
+          uS="{{['d']}}"
+        >
+          <view class="_div share-btn data-v-9d6ec5c2">
+            <image
+              class="_img share-icon data-v-9d6ec5c2"
+              src="https://st.gtimg.com/design/bea9e3024d8276d4739bba9117b5e1b4.png"
+            ></image
+            >分享</view
+          >
+        </share-button-wrapper>
+      </view>
+    </view>
+  </view>
+  <image-link-item
+    bind:__l="__l"
+    class="data-v-9d6ec5c2"
+    uI="9d6ec5c2-2"
+    uP="{{n}}"
+    wx:if="{{m}}"
+  ></image-link-item>
+</view>

@@ -1,0 +1,55 @@
+<view bindtap="{{y}}" class="cond-detail-header data-v-708e8934">
+  <view class="cond-detail-headerinner data-v-708e8934">
+    <view class="cond-detail-row1 data-v-708e8934">
+      <view class="{{['data-v-708e8934','cond-detail-title',i]}}" wx:if="{{a}}">
+        <label
+          catchtap="{{d}}"
+          class="{{['data-v-708e8934','cond-detail-name',c]}}"
+          >{{b}}</label
+        >
+        <label class="cond-detail-code data-v-708e8934" wx:if="{{e}}"
+          >{{f}}{{g}}</label
+        >
+        <label class="cond-detail-label data-v-708e8934">{{h}}</label>
+      </view>
+      <view class="cond-detail-title hide-fund data-v-708e8934" wx:else>
+        <label catchtap="{{j}}" class="cond-detail-name data-v-708e8934"
+          >***</label
+        >
+      </view>
+      <view
+        class="cond-detail-arrow icon icon-arrow data-v-708e8934"
+        wx:if="{{k}}"
+      ></view>
+    </view>
+    <view class="cond-detail-row2 data-v-708e8934" wx:if="{{l}}">
+      <block wx:if="{{m}}">
+        <view class="cond-detail-price-info data-v-708e8934" wx:if="{{n}}">
+          <label
+            class="{{['data-v-708e8934','cond-detail-dqj',q]}}"
+            wx:if="{{o}}"
+            >{{p}}</label
+          >
+          <label
+            class="{{['data-v-708e8934','cond-detail-zdf',t]}}"
+            wx:if="{{r}}"
+            >{{s}}</label
+          >
+        </view>
+      </block>
+      <block wx:else>
+        <market-label
+          bind:__l="__l"
+          class="cond-detail-market data-v-708e8934"
+          uI="708e8934-0"
+          uP="{{v}}"
+          wx:if="{{v}}"
+        ></market-label>
+        <label class="cond-detail-code data-v-708e8934">{{w}}</label>
+      </block>
+    </view>
+    <view class="cond-detail-row2 data-v-708e8934" wx:elif="{{x}}">
+      <label class="cond-detail-codehide data-v-708e8934">***</label>
+    </view>
+  </view>
+</view>

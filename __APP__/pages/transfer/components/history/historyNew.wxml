@@ -1,0 +1,110 @@
+<view class="{{['history-wrap-new',L]}}">
+  <view class="{{['history-title-wrap',k]}}">
+    <view class="choose-wrap">
+      <view bindtap="{{d}}" class="all-btn">
+        <label class="text">{{a}}{{b}}</label>
+        <label class="line">|</label>
+        <image class="icon-classify" src="{{c}}"></image>
+      </view>
+    </view>
+    <view class="headers border--bottom">
+      <view class="col-1">资金流水类型</view>
+      <view class="col-2">名称/代码</view>
+      <view class="{{['col-3',e&&'col-3-short']}}">变动金额/时间</view>
+    </view>
+    <view class="month-title-wrap" wx:if="{{f}}">
+      <view bindtap="{{h}}" class="month-text"
+        >{{g}}<label class="icon icon-arrow-down"></label>
+      </view>
+      <view class="total-num" wx:if="{{i}}">共{{j}}笔</view>
+    </view>
+  </view>
+  <st-pull-and-pagination
+    bind:__l="__l"
+    bindrefresh="{{A}}"
+    bindscroll="{{y}}"
+    bindscrolltolower="{{z}}"
+    bindtopChange="{{B}}"
+    class="r"
+    uI="eff4dfe2-0"
+    uP="{{C}}"
+    uR="transferHistory"
+    uS="{{['d']}}"
+    wx:if="{{C}}"
+  >
+    <view class="month-title-wrap pulling-month border--bottom" wx:if="{{l}}">
+      <view bindtap="{{n}}" class="month-text"
+        >{{m}}<label class="icon icon-arrow-down"></label>
+      </view>
+      <view class="total-num" wx:if="{{o}}">共{{p}}笔</view>
+    </view>
+    <loading
+      bind:__l="__l"
+      class="flex-center py-30 loading"
+      uI="eff4dfe2-1,eff4dfe2-0"
+      uP="{{r}}"
+      wx:if="{{q}}"
+    ></loading>
+    <empty
+      bind:__l="__l"
+      uI="eff4dfe2-2,eff4dfe2-0"
+      uP="{{t}}"
+      wx:elif="{{s}}"
+    ></empty>
+    <view class="history-detail-wrap" wx:else>
+      <view wx:for="{{v}}" wx:for-item="group" wx:key="f">
+        <view class="month-title-wrap list-group" wx:if="{{group.a}}">
+          <view bindtap="{{group.c}}" class="month-text"
+            >{{group.b}}<label class="icon icon-arrow-down"></label>
+          </view>
+          <view class="total-num">共{{group.d}}笔</view>
+        </view>
+        <view
+          bindtap="{{item.m}}"
+          class="item-detail"
+          data-item="{{item.l}}"
+          wx:for="{{group.e}}"
+          wx:key="k"
+        >
+          <view class="{{['col-1',item.b]}}">{{item.a}}</view>
+          <view class="col-2">
+            <view class="{{['stock-name',item.d]}}">{{item.c}}</view>
+            <view class="desc">{{item.e}}</view>
+          </view>
+          <view class="{{['col-3',w&&'col-3-short']}}">
+            <view class="{{[item.i]}}">
+              <value-color
+                bind:__l="__l"
+                class="num"
+                uI="{{item.g}}"
+                uP="{{item.h}}"
+                uS="{{['d']}}"
+                wx:if="{{item.h}}"
+                >{{item.f}}</value-color
+              >
+            </view>
+            <view class="desc">{{item.j}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </st-pull-and-pagination>
+  <custom-picker
+    bind:__l="__l"
+    bindclose="{{E}}"
+    bindconfirm="{{F}}"
+    bindinput="{{D}}"
+    uI="eff4dfe2-4"
+    uP="{{G}}"
+    wx:if="{{G}}"
+  ></custom-picker>
+  <transfer-classify-popup
+    bind:__l="__l"
+    bindchange="{{J}}"
+    bindclose="{{I}}"
+    bindinput="{{H}}"
+    uI="eff4dfe2-5"
+    uP="{{K}}"
+    wx:if="{{K}}"
+  ></transfer-classify-popup>
+</view>

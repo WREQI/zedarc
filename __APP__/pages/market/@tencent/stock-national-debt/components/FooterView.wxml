@@ -1,0 +1,22 @@
+<view class="{{['_div','FooterView','data-v-d38d20ed',e]}}">
+  <view class="_div trainning-tips data-v-d38d20ed">
+    <view class="_div left data-v-d38d20ed">
+      <view class="_div alarm data-v-d38d20ed"></view
+      >仅需一个股票账户即可操作</view
+    >
+    <view bindtap="{{b}}" class="_div right data-v-d38d20ed"
+      >了解更多通用回购<view
+        class="{{['_div','data-v-d38d20ed','arrow',a]}}"
+      ></view>
+    </view>
+  </view>
+  <view class="_div trainning-box data-v-d38d20ed" hidden="{{!d}}">
+    <view class="_div gap data-v-d38d20ed"></view>
+    <image
+      alt=""
+      class="_img image-content data-v-d38d20ed"
+      mode="widthFix"
+      src="{{c}}"
+    ></image>
+  </view>
+</view>

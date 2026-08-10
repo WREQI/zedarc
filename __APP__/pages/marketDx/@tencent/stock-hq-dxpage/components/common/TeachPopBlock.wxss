@@ -1,0 +1,172 @@
+.teach-pop-wrapper .mask-wrapper.data-v-e32100d1 {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+.teach-pop-wrapper .mask-wrapper.in.data-v-e32100d1 {
+  animation: comein-e32100d1 0.3s ease forwards;
+}
+@-webkit-keyframes comein-e32100d1 {
+  0% {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+@keyframes comein-e32100d1 {
+  0% {
+    background: transparent;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.teach-pop-wrapper .mask-wrapper.out.data-v-e32100d1 {
+  animation: comeout-e32100d1 0.3s ease forwards;
+}
+@-webkit-keyframes comeout-e32100d1 {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background: transparent;
+  }
+}
+@keyframes comeout-e32100d1 {
+  0% {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  to {
+    background: transparent;
+  }
+}
+.teach-pop-wrapper .mask-wrapper .pop-content.data-v-e32100d1 {
+  animation: popframe 0.6s ease-in-out;
+  background: var(--fill-2);
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: 0 0.32rem;
+  position: absolute;
+  width: calc(100% - 0.64rem);
+}
+.teach-pop-wrapper .mask-wrapper .pop-content.up.data-v-e32100d1 {
+  animation: slide-up-e32100d1 0.3s ease-out forwards;
+  transform: translateY(100%);
+}
+@-webkit-keyframes slide-up-e32100d1 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-up-e32100d1 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.teach-pop-wrapper .mask-wrapper .pop-content.down.data-v-e32100d1 {
+  animation: slide-down-e32100d1 0.3s ease-in forwards;
+  transform: translateY(0);
+}
+@-webkit-keyframes slide-down-e32100d1 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes slide-down-e32100d1 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.teach-pop-wrapper .mask-wrapper .pop-safe-area.data-v-e32100d1 {
+  padding-bottom: 0.9066666666666666rem;
+}
+.teach-pop-wrapper .mask-wrapper .pop-title.data-v-e32100d1 {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.48rem;
+  font-weight: 500;
+  height: 1.52rem;
+  justify-content: center;
+  line-height: 0.6666666666666666rem;
+  width: 100%;
+}
+.teach-pop-wrapper .mask-wrapper .pop-title .top-close.data-v-e32100d1 {
+  background: url(https://st.gtimg.com/design/a1933d548ece848ec357b5e116607550.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.32rem;
+  position: absolute;
+  right: 0.32rem;
+  width: 0.32rem;
+}
+.teach-pop-wrapper .mask-wrapper .pop-list.data-v-e32100d1 {
+  margin-bottom: 0.4266666666666667rem;
+}
+.teach-pop-wrapper .mask-wrapper .pop-list .list-item.data-v-e32100d1 {
+  color: var(--color-midgray-1);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  text-align: justify;
+}
+.teach-pop-wrapper
+  .mask-wrapper
+  .pop-list
+  .list-item
+  .list-item-title.data-v-e32100d1 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+  margin-bottom: 0.16rem;
+}
+.teach-pop-wrapper
+  .mask-wrapper
+  .pop-list
+  .list-item
+  .list-item-context.data-v-e32100d1 {
+  font-weight: 400;
+}
+.teach-pop-wrapper
+  .mask-wrapper
+  .pop-list
+  .list-item
+  .list-item-spec.data-v-e32100d1 {
+  background: var(--border-light);
+  height: 0.013333333333333334rem;
+  margin: 0.4266666666666667rem 0;
+  width: 100%;
+}
+.teach-pop-wrapper .mask-wrapper .pop-tips.data-v-e32100d1 {
+  background: var(--fill-1);
+  color: var(--color-lightgray-2);
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  margin-left: -0.32rem;
+  padding: 0.32rem 0.32rem 0.9333333333333333rem;
+  text-align: justify;
+  width: 100%;
+}

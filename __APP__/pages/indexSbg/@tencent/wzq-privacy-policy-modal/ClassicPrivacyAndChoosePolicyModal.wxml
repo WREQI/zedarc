@@ -1,0 +1,29 @@
+<view class="_div privacy-container data-v-136ab40c">
+  <layer-modal
+    bind:__l="__l"
+    bindcancel="{{h}}"
+    bindclose="{{i}}"
+    bindconfirm="{{g}}"
+    class="data-v-136ab40c"
+    uI="136ab40c-0"
+    uP="{{j}}"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <privacy-agreement-check-list
+      bind:__l="__l"
+      class="r data-v-136ab40c"
+      uI="136ab40c-1,136ab40c-0"
+      uP="{{c}}"
+      uR="agreementCheckList"
+      wx:if="{{a}}"
+    ></privacy-agreement-check-list>
+    <view
+      class="{{['_div','data-v-136ab40c','text-box','choose']}}"
+      wx:if="{{d}}"
+    >
+      <label class="_span text-context data-v-136ab40c">{{e}}</label>
+      <label bindtap="{{f}}" class="_span info-icon data-v-136ab40c"></label>
+    </view>
+  </layer-modal>
+</view>

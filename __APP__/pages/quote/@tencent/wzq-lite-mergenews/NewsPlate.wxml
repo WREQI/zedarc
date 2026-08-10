@@ -1,0 +1,101 @@
+<view class="_div mod-news-zxg data-v-f6bcaff9">
+  <view class="_div ai-xiaobao-entry-wrapper data-v-f6bcaff9">
+    <search-ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{b}}"
+      class="data-v-f6bcaff9"
+      uI="f6bcaff9-0"
+      uP="{{c}}"
+      wx:if="{{a}}"
+    ></search-ai-bar>
+  </view>
+  <view class="_div top-mod data-v-f6bcaff9" wx:if="{{d}}">
+    <view class="_div top-bar data-v-f6bcaff9">
+      <view class="_div title data-v-f6bcaff9">最新热点</view>
+      <view
+        bindtap="{{i}}"
+        class="_div rank-info data-v-f6bcaff9"
+        wx:if="{{e}}"
+      >
+        <view
+          class="{{['_i','top-icon','data-v-f6bcaff9',g]}}"
+          wx:if="{{f}}"
+        ></view>
+        <label class="_span data-v-f6bcaff9">入选热门题材第 </label>
+        <label class="_span span-rank data-v-f6bcaff9">{{h}}</label>
+        <view class="_i icon icon-arrow data-v-f6bcaff9"></view>
+      </view>
+      <view
+        bindtap="{{l}}"
+        class="_div rank-info data-v-f6bcaff9"
+        wx:if="{{j}}"
+      >
+        <label class="_span data-v-f6bcaff9">{{k}}</label>
+        <view class="_i icon icon-arrow data-v-f6bcaff9"></view>
+      </view>
+    </view>
+    <view
+      class="_div top-info data-v-f6bcaff9"
+      style="{{'visibility:'+p}}"
+      wx:if="{{m}}"
+    >
+      <label class="_span info-span data-v-f6bcaff9">{{n}}</label> {{o}}</view
+    >
+    <view
+      catchtouchmove="{{s}}"
+      class="_div spot-chart data-v-f6bcaff9"
+      wx:if="{{q}}"
+    >
+      <spot-chart
+        bind:__l="__l"
+        class="data-v-f6bcaff9"
+        uI="f6bcaff9-1"
+        uP="{{r}}"
+        wx:if="{{r}}"
+      ></spot-chart>
+    </view>
+  </view>
+  <view class="_ul news-list data-v-f6bcaff9" wx:if="{{t}}">
+    <view class="_div auto-test data-v-f6bcaff9">news-list</view>
+    <view
+      catchtap="{{item.k}}"
+      class="_li list-li data-v-f6bcaff9"
+      wx:for="{{v}}"
+      wx:key="j"
+    >
+      <view class="_p news-title data-v-f6bcaff9">{{item.a}}</view>
+      <view class="_p source-info data-v-f6bcaff9">
+        <label
+          class="_span live-icon data-v-f6bcaff9"
+          wx:if="{{item.b}}"
+        ></label>
+        <label class="_span video-tag data-v-f6bcaff9" wx:if="{{item.c}}"
+          >直播</label
+        >
+        <image
+          class="_img video-icon data-v-f6bcaff9"
+          src="https://st.gtimg.com/design/03723629f3a3847036885d8137d41432.png"
+          wx:if="{{item.d}}"
+        ></image>
+        <label class="_span video-tag data-v-f6bcaff9" wx:if="{{item.e}}"
+          >视频</label
+        >
+        <label class="_span importance data-v-f6bcaff9" wx:if="{{item.f}}"
+          >{{item.g}}</label
+        >
+        <label class="_span data-v-f6bcaff9">{{item.h}}</label>
+        <label class="_span time-right data-v-f6bcaff9">{{item.i}}</label>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-f6bcaff9"
+    uI="f6bcaff9-2"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无新闻数据</block>
+  </no-data>
+</view>

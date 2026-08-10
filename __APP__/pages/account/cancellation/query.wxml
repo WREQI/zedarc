@@ -1,0 +1,76 @@
+<page-meta class="data-v-1f8ab1a4" rootFontSize="{{a}}"></page-meta>
+<view class="_div cancellation-wrapper wrapper data-v-1f8ab1a4" wx:if="{{b}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1f8ab1a4"
+    uI="1f8ab1a4-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1f8ab1a4"
+    uI="1f8ab1a4-1"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></stock-privacy-dialog>
+  <view class="_div query-wrapper data-v-1f8ab1a4">
+    <view class="_div header data-v-1f8ab1a4">
+      <view class="{{['_div','data-v-1f8ab1a4',d]}}"></view>
+      <view class="{{['_div','data-v-1f8ab1a4','title',f]}}">{{e}}</view>
+      <view class="_div desc data-v-1f8ab1a4" wx:if="{{g}}"
+        >由于以下原因，暂时无法注销账号</view
+      >
+    </view>
+    <view class="_div cell-group data-v-1f8ab1a4">
+      <view bindtap="{{l}}" class="_div cell data-v-1f8ab1a4">
+        <view class="_div sub-title data-v-1f8ab1a4"
+          >1.{{h}}<label class="{{['_span','data-v-1f8ab1a4',j,'tips']}}"
+            >{{i}}</label
+          >
+          <view
+            class="_div icon icon-arrow data-v-1f8ab1a4"
+            wx:if="{{k}}"
+          ></view>
+        </view>
+      </view>
+      <view bindtap="{{q}}" class="_div cell data-v-1f8ab1a4">
+        <view class="_div sub-title data-v-1f8ab1a4"
+          >2.{{m}}<label class="{{['_span','data-v-1f8ab1a4',o,'tips']}}"
+            >{{n}}</label
+          >
+          <view
+            class="_div icon icon-arrow data-v-1f8ab1a4"
+            wx:if="{{p}}"
+          ></view>
+        </view>
+      </view>
+      <view bindtap="{{w}}" class="_div cell data-v-1f8ab1a4">
+        <view class="_div sub-title data-v-1f8ab1a4"
+          >3.{{r}}<label class="{{['_span','data-v-1f8ab1a4',t,'tips']}}"
+            >{{s}}</label
+          >
+          <view
+            class="_div icon icon-arrow data-v-1f8ab1a4"
+            wx:if="{{v}}"
+          ></view>
+        </view>
+      </view>
+      <view bindtap="{{B}}" class="_div cell data-v-1f8ab1a4">
+        <view class="_div sub-title data-v-1f8ab1a4"
+          >4.{{x}}<label class="{{['_span','data-v-1f8ab1a4',z,'tips']}}"
+            >{{y}}</label
+          >
+          <view
+            class="_div icon icon-arrow data-v-1f8ab1a4"
+            wx:if="{{A}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div btn-wrapper data-v-1f8ab1a4">
+      <button bindtap="{{C}}" class="btn left data-v-1f8ab1a4">放弃</button>
+      <button bindtap="{{E}}" class="btn data-v-1f8ab1a4" disabled="{{D}}">
+        下一步
+      </button>
+    </view>
+  </view>
+</view>

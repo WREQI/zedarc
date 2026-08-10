@@ -1,0 +1,20 @@
+<view
+  catchtap="{{h}}"
+  class="{{['_div','data-v-83de1c4b','news-card',g]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div news-card-left data-v-83de1c4b">
+    <view class="_div title data-v-83de1c4b">{{b}}</view>
+    <view class="_div info data-v-83de1c4b">
+      <view class="_div source data-v-83de1c4b">{{c}}</view>
+      <view class="_div time data-v-83de1c4b">{{d}}</view>
+    </view>
+  </view>
+  <view class="_div news-card-right data-v-83de1c4b" wx:if="{{e}}">
+    <image
+      class="_img cover data-v-83de1c4b"
+      mode="aspectFill"
+      src="{{f}}"
+    ></image>
+  </view>
+</view>

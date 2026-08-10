@@ -1,0 +1,13 @@
+<view catchtap="{{g}}" class="_div hq-mask data-v-6490904c" wx:if="{{a}}">
+  <stock-list
+    bind:__l="__l"
+    bindmanageSelfStock="{{d}}"
+    bindonHideRelatedStock="{{c}}"
+    bindreport="{{e}}"
+    class="r data-v-6490904c"
+    uI="6490904c-0"
+    uP="{{f}}"
+    uR="relatedStockList"
+    wx:if="{{f}}"
+  ></stock-list>
+</view>

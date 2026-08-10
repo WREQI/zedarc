@@ -1,0 +1,34 @@
+.switch-box .switch.data-v-c85b613b {
+  background-color: rgba(38, 46, 64, 0.5);
+  border-radius: 0.4266666666666667rem;
+  box-sizing: border-box;
+  height: 0.64rem;
+  position: relative;
+  transition: background-color 0.2s ease;
+  width: 1.0666666666666667rem;
+}
+.switch-box .switch .switch-block.data-v-c85b613b {
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 0.013333333333333334rem rgba(0, 0, 0, 0.05),
+    0 0 0.02666666666666667rem rgba(0, 0, 0, 0.1),
+    0 0 0.04rem rgba(0, 0, 0, 0.05);
+  height: 0.5866666666666667rem;
+  left: 0.02666666666666667rem;
+  position: absolute;
+  top: 0.02666666666666667rem;
+  transition: left 0.2s ease, right 0.2s ease;
+  width: 0.5866666666666667rem;
+}
+.switch-box .switch.on.data-v-c85b613b {
+  background-color: #3077ec;
+  border: none;
+}
+.switch-box .switch.on .switch-block.data-v-c85b613b {
+  left: unset;
+  right: 0.02666666666666667rem;
+  top: 0.02666666666666667rem;
+}
+.switch-box .switch.on.lite.data-v-c85b613b {
+  background-color: #e63535;
+}

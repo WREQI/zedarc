@@ -1,0 +1,82 @@
+<view class="_div stock-value data-v-34c62401" wx:if="{{a}}">
+  <view class="_div stock-value-name data-v-34c62401">
+    <view class="_div stock-h5 data-v-34c62401">机构评级</view>
+    <view class="_div stock-p data-v-34c62401">{{b}}</view>
+  </view>
+  <view class="_div stock-value-pos rating data-v-34c62401">
+    <view class="_div value-line rating data-v-34c62401">
+      <view
+        class="{{['_div','green1','rat-div','data-v-34c62401',h&&'flex1']}}"
+        style="{{'width:'+g}}"
+        wx:if="{{c}}"
+      >
+        <view class="_i green1 rat-i data-v-34c62401"></view>
+        <view class="{{['_p','green1','dp','data-v-34c62401',f&&'sub-tip']}}"
+          >{{d}} {{e}}<view class="db green1 data-v-34c62401"></view>
+        </view>
+        <view class="_i green1 rat-i data-v-34c62401"></view>
+      </view>
+      <view
+        class="{{['_div','green2','rat-div','data-v-34c62401',n&&'flex1']}}"
+        style="{{'width:'+m}}"
+        wx:if="{{i}}"
+      >
+        <view class="_i green2 rat-i data-v-34c62401"></view>
+        <view class="{{['_p','green2','dp','data-v-34c62401',l&&'sub-tip']}}"
+          >{{j}} {{k}}<view class="green2 db data-v-34c62401"></view>
+        </view>
+        <view class="_i green2 rat-i data-v-34c62401"></view>
+      </view>
+      <view
+        class="{{['_div','plain','rat-div','data-v-34c62401',t&&'flex1']}}"
+        style="{{'width:'+s}}"
+        wx:if="{{o}}"
+      >
+        <view class="_i plain rat-i data-v-34c62401"></view>
+        <view class="{{['_p','plain','dp','data-v-34c62401',r&&'sub-tip']}}"
+          >{{p}} {{q}}<view class="plain db data-v-34c62401"></view>
+        </view>
+        <view class="_i plain rat-i data-v-34c62401"></view>
+      </view>
+      <view
+        class="{{['_div','red1','rat-div','data-v-34c62401',A&&'flex1']}}"
+        style="{{'width:'+z}}"
+        wx:if="{{v}}"
+      >
+        <view class="_i red1 data-v-34c62401"></view>
+        <view class="{{['_p','red1','dp','data-v-34c62401',y&&'sub-tip']}}"
+          >{{w}} {{x}}<view class="red1 db data-v-34c62401"></view>
+        </view>
+        <view class="_i red1 data-v-34c62401"></view>
+      </view>
+      <view
+        class="{{['_div','red2','rat-div','data-v-34c62401',G&&'flex1']}}"
+        style="{{'width:'+F}}"
+        wx:if="{{B}}"
+      >
+        <view class="_i red2 rat-i data-v-34c62401"></view>
+        <view class="{{['_p','red2','dp','data-v-34c62401',E&&'sub-tip']}}"
+          >{{C}} {{D}}<view class="red2 db data-v-34c62401"></view>
+        </view>
+        <view class="_i red2 rat-i data-v-34c62401"></view>
+      </view>
+    </view>
+    <view class="_div value-pos rating data-v-34c62401">
+      <label class="_span green1 vp-span data-v-34c62401">
+        <view class="_i green1 vp-i data-v-34c62401"></view>卖出</label
+      >
+      <label class="_span green2 vp-span data-v-34c62401">
+        <view class="_i green2 vp-i data-v-34c62401"></view>减持</label
+      >
+      <label class="_span plain vp-span data-v-34c62401">
+        <view class="_i plain vp-i data-v-34c62401"></view>持平</label
+      >
+      <label class="_span red1 vp-span data-v-34c62401">
+        <view class="_i red1 vp-i data-v-34c62401"></view>增持</label
+      >
+      <label class="_span red2 vp-span data-v-34c62401">
+        <view class="_i red2 vp-i data-v-34c62401"></view>买入</label
+      >
+    </view>
+  </view>
+</view>

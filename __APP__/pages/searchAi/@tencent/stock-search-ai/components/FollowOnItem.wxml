@@ -1,0 +1,38 @@
+<view
+  class="{{['_div','data-v-0ae685ae','content-buttom-container',c]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div buttom-main data-v-0ae685ae">
+    <view class="_div question-buttom-main-line data-v-0ae685ae"
+      >💡 以下产品同样适合这个阶段的你：</view
+    >
+    <view
+      class="_div question-buttom-line-container data-v-0ae685ae"
+      wx:for="{{b}}"
+      wx:key="c"
+    >
+      <view
+        bindtap="{{item.b}}"
+        class="_div question-buttom-line data-v-0ae685ae"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+</view>
+<view class="{{['_div','data-v-0ae685ae','bubble-container',f]}}" wx:else>
+  <view
+    class="_div bubble-item-wrapper data-v-0ae685ae"
+    wx:for="{{d}}"
+    wx:key="e"
+  >
+    <view
+      bindtap="{{item.b}}"
+      class="_div bubble-item data-v-0ae685ae"
+      wx:if="{{e}}"
+      >{{item.a}}</view
+    >
+    <view bindtap="{{item.d}}" class="_div bubble-item data-v-0ae685ae" wx:else
+      >{{item.c}}</view
+    >
+  </view>
+</view>

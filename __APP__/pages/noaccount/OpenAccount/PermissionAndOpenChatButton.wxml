@@ -1,0 +1,15 @@
+<button
+  bindtap="{{c}}"
+  class="permission-openchat-button data-v-95d0354c"
+  openType="contact"
+  sendMessageImg="https://wzq.gtimg.com/resources/images/zxg_brand_share.png"
+  sendMessagePath="{{b}}"
+  sendMessageTitle="腾讯自选股"
+  showMessageCard="true"
+  wx:if="{{a}}"
+></button>
+<button
+  bindtap="{{d}}"
+  class="permission-openchat-button data-v-95d0354c"
+  wx:else
+></button>

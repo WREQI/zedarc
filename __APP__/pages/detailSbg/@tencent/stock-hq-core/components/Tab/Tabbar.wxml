@@ -1,0 +1,22 @@
+<view class="_div tabbar data-v-46ed6ca3">
+  <view
+    bindtouchmove="{{f}}"
+    catchtouchstart="{{e}}"
+    class="_div tabbar-scroll-wrapper data-v-46ed6ca3"
+    ref="tabRef"
+  >
+    <label class="_span data-v-46ed6ca3" wx:if="{{a}}"></label>
+    <view
+      class="_div tabbar-row data-v-46ed6ca3"
+      data-typeid="{{b}}"
+      id="tabbarRow"
+    >
+      <slot></slot>
+    </view>
+    <view
+      class="_div tabbar-indicator data-v-46ed6ca3"
+      style="{{d}}"
+      wx:if="{{c}}"
+    ></view>
+  </view>
+</view>

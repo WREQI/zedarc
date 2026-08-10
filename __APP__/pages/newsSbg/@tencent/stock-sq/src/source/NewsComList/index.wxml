@@ -1,0 +1,42 @@
+<view class="_div mod-newsComList-list data-v-cb43bb3d">
+  <no-network
+    bind:__l="__l"
+    bindclickReload="{{b}}"
+    class="data-v-cb43bb3d"
+    data-c-h="{{!a}}"
+    uI="cb43bb3d-0"
+  ></no-network>
+  <block wx:if="{{c}}">
+    <view
+      class="_div mod-com-list-item data-v-cb43bb3d"
+      data-postid="{{item.f}}"
+      wx:for="{{d}}"
+      wx:key="e"
+    >
+      <com-item
+        bind:__l="__l"
+        bindonHandleTapItem="{{item.a}}"
+        bindshowProfilePop="{{item.b}}"
+        class="data-v-cb43bb3d"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:if="{{item.d}}"
+      ></com-item>
+    </view>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-cb43bb3d"
+    uI="cb43bb3d-2"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></no-data>
+  <load-more
+    bind:__l="__l"
+    binddoLoadmore="{{h}}"
+    class="data-v-cb43bb3d"
+    uI="cb43bb3d-3"
+    uP="{{i}}"
+    wx:if="{{g}}"
+  ></load-more>
+</view>

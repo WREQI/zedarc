@@ -1,0 +1,78 @@
+<view
+  bindtap="{{d}}"
+  catchtouchmove="{{c}}"
+  class="_div pe-percentile-modal data-v-a282a6ef"
+  wx:if="{{a}}"
+>
+  <view class="_div pe-percentile-modal__sheet data-v-a282a6ef">
+    <view class="_div pe-percentile-modal__header data-v-a282a6ef">
+      <view class="_div pe-percentile-modal__header-bar data-v-a282a6ef">
+        <view class="_div pe-percentile-modal__header-inner data-v-a282a6ef">
+          <view class="_div pe-percentile-modal__title data-v-a282a6ef"
+            >PE百分位</view
+          >
+          <image
+            alt="极简版图标"
+            catchtap="{{b}}"
+            class="_img pe-percentile-modal__close-btn data-v-a282a6ef"
+            src="https://st.gtimg.com/pcm/mpuvkgsn_f3154aec0ea2fe2eb772304181644cda.svg"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div pe-percentile-modal__desc-wrap data-v-a282a6ef">
+      <view class="_div pe-percentile-modal__desc data-v-a282a6ef"
+        >衡量ETF跟踪指数当前市盈率（PE_TTM）在近五年中的高低位置。数值越低，代表估值越便宜，性价比越高。</view
+      >
+    </view>
+    <view class="_div pe-percentile-modal__level-row data-v-a282a6ef">
+      <view class="_div pe-percentile-modal__level data-v-a282a6ef">
+        <view class="_div pe-percentile-modal__level-range data-v-a282a6ef"
+          >0～30%</view
+        >
+        <view
+          class="_div pe-percentile-modal__level-name pe-percentile-modal__level-name--undervalued data-v-a282a6ef"
+          >低估</view
+        >
+        <view class="_div pe-percentile-modal__level-hint data-v-a282a6ef"
+          >值得关注</view
+        >
+      </view>
+      <view
+        class="_div pe-percentile-modal__level-divider data-v-a282a6ef"
+      ></view>
+      <view class="_div pe-percentile-modal__level data-v-a282a6ef">
+        <view class="_div pe-percentile-modal__level-range data-v-a282a6ef"
+          >30～70%</view
+        >
+        <view
+          class="_div pe-percentile-modal__level-name pe-percentile-modal__level-name--fair data-v-a282a6ef"
+          >适中</view
+        >
+        <view class="_div pe-percentile-modal__level-hint data-v-a282a6ef"
+          >正常持有</view
+        >
+      </view>
+      <view
+        class="_div pe-percentile-modal__level-divider data-v-a282a6ef"
+      ></view>
+      <view class="_div pe-percentile-modal__level data-v-a282a6ef">
+        <view class="_div pe-percentile-modal__level-range data-v-a282a6ef"
+          >70～100%</view
+        >
+        <view
+          class="_div pe-percentile-modal__level-name pe-percentile-modal__level-name--overvalued data-v-a282a6ef"
+          >高估</view
+        >
+        <view class="_div pe-percentile-modal__level-hint data-v-a282a6ef"
+          >谨慎追高</view
+        >
+      </view>
+    </view>
+    <view class="_div pe-percentile-modal__footer data-v-a282a6ef">
+      <view class="_div pe-percentile-modal__disclaimer data-v-a282a6ef"
+        >PE百分位和市盈率PE仅每日盘后更新一次，估值数据仅供参考，不构成投资建议。</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<view
+  catchtouchmove="preventTouchMove"
+  class="half-chart-screen-shell data-v-3f3778d3"
+  hidden="{{!q}}"
+>
+  <half-screen-chart
+    bind:__l="__l"
+    class="r data-v-3f3778d3"
+    uI="3f3778d3-0"
+    uP="{{p}}"
+    uR="halfScreenChartRef"
+    uS="{{['d']}}"
+    wx:if="{{p}}"
+  >
+    <zhong-jin-cai-fu-half-chart
+      bindclose="{{g}}"
+      bindmounted="{{f}}"
+      class="embedded-chart data-v-3f3778d3"
+      embedded_market="{{c}}"
+      embedded_name="{{d}}"
+      embedded_stock="{{b}}"
+      embedded_visible="{{e}}"
+      key="zhongjincaifu-half-chart"
+      wx:if="{{a}}"
+    ></zhong-jin-cai-fu-half-chart>
+    <zhong-xin-jian-tou-half-chart
+      bindclose="{{n}}"
+      bindmounted="{{m}}"
+      class="embedded-chart data-v-3f3778d3"
+      embedded_market="{{j}}"
+      embedded_name="{{k}}"
+      embedded_stock="{{i}}"
+      embedded_visible="{{l}}"
+      key="zhongxinjiantou-half-chart"
+      wx:if="{{h}}"
+    ></zhong-xin-jian-tou-half-chart>
+  </half-screen-chart>
+</view>

@@ -1,0 +1,81 @@
+<view class="_div cross-border-card data-v-eabb0381">
+  <view
+    catchtap="{{j}}"
+    class="_div cross-border-title layout-row layout-align-space-between data-v-eabb0381"
+    data-stat="{{i}}"
+    ref="title"
+  >
+    <view class="{{['_div','data-v-eabb0381','title-box',d]}}"
+      >{{a}}<view
+        catchtap="{{c}}"
+        class="_i image-tip data-v-eabb0381"
+        wx:if="{{b}}"
+      ></view>
+    </view>
+    <view class="_div title-right data-v-eabb0381">
+      <view class="_div tip-guide data-v-eabb0381" wx:if="{{e}}">
+        <view class="_div data-v-eabb0381">{{f}}</view>
+      </view>
+      <label class="_span data-v-eabb0381" wx:if="{{g}}">></label>
+      <image
+        class="_img right-arrow data-v-eabb0381"
+        src="{{h}}"
+        wx:else
+      ></image>
+    </view>
+  </view>
+  <view
+    class="_div plate-item-row layout-row data-v-eabb0381"
+    wx:for="{{k}}"
+    wx:for-item="row"
+    wx:key="b"
+  >
+    <view
+      catchtap="{{item.j}}"
+      class="_div plate-item layout-column flex data-v-eabb0381"
+      tag="div"
+      wx:for="{{row.a}}"
+      wx:key="i"
+    >
+      <view
+        class="_div plate-name data-v-eabb0381"
+        style="{{'font-size:'+item.b}}"
+        >{{item.a}}</view
+      >
+      <view
+        class="{{['_div','data-v-eabb0381','plate-quote',item.e]}}"
+        wx:if="{{item.c}}"
+        >{{item.d}}%</view
+      >
+      <view
+        class="{{['_div','data-v-eabb0381','plate-feature-stock','layout-column','layout-align-space-between',l]}}"
+      >
+        <view class="_div plate-stock-label data-v-eabb0381">
+          <view class="_div label-wrapper data-v-eabb0381" wx:if="{{item.f}}">
+            <label
+              class="{{['_span','data-v-eabb0381','plate-label-item',label.c]}}"
+              wx:for="{{item.g}}"
+              wx:for-item="label"
+              wx:key="b"
+              >{{label.a}}</label
+            >
+          </view>
+          <view class="_div scale data-v-eabb0381" wx:else>规模{{item.h}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div plate-account-bar data-v-eabb0381" wx:if="{{m}}">
+    <view class="_div plate-account-inner data-v-eabb0381">
+      <view class="_div plate-account-content data-v-eabb0381"
+        >在线开通A股账户，100元可买{{n}}ETF</view
+      >
+      <view class="_div plate-account-after data-v-eabb0381">
+        <label bindtap="{{o}}" class="_span btn-account data-v-eabb0381"
+          >立即开户</label
+        >
+        <label bindtap="{{p}}" class="_span close data-v-eabb0381"></label>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<view
+  bindtap="{{q}}"
+  catchtouchmove="{{p}}"
+  class="{{['_div','mask-wrapper','data-v-ac7f28e9',m&&'skin-dark',n&&'mask-wrapper-lite']}}"
+  hidden="{{!l}}"
+  style="{{'opacity:'+o}}"
+>
+  <view
+    catchtap="{{k}}"
+    class="_div popup-wrapper data-v-ac7f28e9"
+    id="popup"
+    ref="popup"
+    style="{{'top:'+i+';'+'left:'+j}}"
+  >
+    <image
+      class="_img triangle-up data-v-ac7f28e9"
+      hidden="{{!a}}"
+      src="{{b}}"
+    ></image>
+    <scroll-view
+      catchtouchmove="{{f}}"
+      class="option-wrapper data-v-ac7f28e9"
+      ref="popupScroll"
+      scrollY="{{true}}"
+      style="{{'height:'+e}}"
+    >
+      <view class="{{['_div','data-v-ac7f28e9',d]}}">
+        <view class="_div data-v-ac7f28e9" wx:for="{{c}}" wx:key="g">
+          <view
+            bindtap="{{item.d}}"
+            class="{{['_div','item','data-v-ac7f28e9',item.c&&'item-selected']}}"
+            key="{{item.b}}"
+            >{{item.a}}</view
+          >
+          <view
+            class="_div seperate-line data-v-ac7f28e9"
+            hidden="{{!item.e}}"
+            key="{{item.f}}"
+          ></view>
+        </view>
+      </view>
+    </scroll-view>
+    <image
+      class="_img triangle-down data-v-ac7f28e9"
+      hidden="{{!g}}"
+      src="{{h}}"
+    ></image>
+  </view>
+</view>

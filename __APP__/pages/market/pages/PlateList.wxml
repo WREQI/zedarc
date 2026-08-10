@@ -1,0 +1,62 @@
+<page-meta class="data-v-1ec8cc90" rootFontSize="{{a}}"></page-meta>
+<view
+  class="{{['_div','rank-list','data-v-1ec8cc90',g&&'skin-black']}}"
+  data-st-theme="{{h}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1ec8cc90"
+    uI="1ec8cc90-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1ec8cc90"
+    uI="1ec8cc90-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div rank-header data-v-1ec8cc90">
+    <view class="_div header-wrapper data-v-1ec8cc90">
+      <view class="_div rank-left data-v-1ec8cc90">名称代码</view>
+      <view class="_div rank-middle data-v-1ec8cc90">最新价</view>
+      <view bindtap="{{e}}" class="_div rank-right data-v-1ec8cc90">
+        <view class="_div sort-name data-v-1ec8cc90">涨跌幅</view>
+        <label class="_span caption-arrow data-v-1ec8cc90">
+          <view class="{{['_i','up','data-v-1ec8cc90',c&&'activated']}}"></view>
+          <view
+            class="{{['_i','down','data-v-1ec8cc90',d&&'activated']}}"
+          ></view>
+        </label>
+      </view>
+    </view>
+  </view>
+  <view class="_div rank-body data-v-1ec8cc90">
+    <view
+      bindtap="{{stock.h}}"
+      class="_div rank-item data-v-1ec8cc90"
+      wx:for="{{f}}"
+      wx:for-item="stock"
+      wx:key="g"
+    >
+      <view class="_div rank-left data-v-1ec8cc90">
+        <view class="_div rank-list-wrapper data-v-1ec8cc90">
+          <view class="_div stock-name data-v-1ec8cc90">{{stock.a}}</view>
+          <view class="_div rank-list-box data-v-1ec8cc90">
+            <image
+              class="_img market-icon data-v-1ec8cc90"
+              src="{{stock.b}}"
+            ></image>
+            <view class="_div stock-list-symbol data-v-1ec8cc90"
+              >{{stock.c}}</view
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div rank-middle data-v-1ec8cc90">{{stock.d}}</view>
+      <view class="{{['_div','data-v-1ec8cc90','rank-right',stock.f]}}">
+        <view class="_div zdf data-v-1ec8cc90">{{stock.e}}%</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-1ec8cc90"></view>
+</view>

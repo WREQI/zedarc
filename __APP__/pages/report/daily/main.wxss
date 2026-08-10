@@ -1,0 +1,12 @@
+.container.data-v-b2b5efc2 {
+  background-color: var(--fill-background);
+}
+.loading-background.data-v-b2b5efc2 {
+  background: linear-gradient(#fff, #f8f8f8);
+}
+[data-st-theme="black"] .loading-background.data-v-b2b5efc2 {
+  background: linear-gradient(#000, #080808);
+}
+.scroll-wrapper.data-v-b2b5efc2 {
+  height: calc(100vh - env(safe-area-inset-bottom));
+}

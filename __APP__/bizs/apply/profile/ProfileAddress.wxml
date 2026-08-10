@@ -1,0 +1,38 @@
+<view class="data-v-ce12d3fd">
+    <mp-action-sheet bind:__l="__l" bindinput="{{O}}" class="{{['apply-profile-addr__container','plugin-component-action-sheet','data-v-ce12d3fd',N&&'isUnSubmitable']}}" uI="ce12d3fd-0" uP="{{P}}" uS="{{['d']}}" wx:if="{{P}}">
+        <view class="{{['actionsheet-content-container','data-v-ce12d3fd',M&&'mb-100']}}" ref="contentContainer">
+            <st-cell-group bind:__l="__l" class="data-v-ce12d3fd" uI="ce12d3fd-1,ce12d3fd-0" uP="{{H}}" uS="{{['d']}}" wx:if="{{H}}">
+                <st-cell bind:__l="__l" class="data-v-ce12d3fd" uI="ce12d3fd-2,ce12d3fd-1" uP="{{f}}" uS="{{['d']}}" wx:if="{{f}}">
+                    <view bindtap="{{e}}" class="area-textarea-container flex-vcenter data-v-ce12d3fd">
+                        <textarea disabled autoHeight="{{b}}" bindinput="{{d}}" class="flex-1 area-textarea data-v-ce12d3fd" value="{{c}}" wx:if="{{a}}"></textarea>
+                        <view class="text-color-5 fs-32 data-v-ce12d3fd" wx:else>请选择地区</view>
+                        <label class="triangle data-v-ce12d3fd"></label>
+                    </view>
+                </st-cell>
+                <view class="street-cell data-v-ce12d3fd">
+                    <st-cell bind:__l="__l" class="data-v-ce12d3fd" uI="ce12d3fd-3,ce12d3fd-1" uP="{{q}}" uS="{{['d']}}" wx:if="{{q}}">
+                        <view class="{{['flex-vcenter','data-v-ce12d3fd',p&&'street-error']}}">
+                            <textarea bindblur="{{l}}" bindfocus="{{k}}" bindinput="{{j}}" class="street-textarea data-v-ce12d3fd" cursorSpacing="240" focus="{{i}}" id="profileAddressTextarea" maxlength="{{g}}" placeholder="{{h}}" placeholderClass="text-color-5" value="{{m}}" wx:if="{{r0}}"></textarea>
+                            <label bindtap="{{o}}" class="icon-clear data-v-ce12d3fd" wx:if="{{n}}"></label>
+                        </view>
+                    </st-cell>
+                    <suggestion-list bind:__l="__l" bindchoose="{{v}}" bindclose="{{t}}" bindtouchstart="{{w}}" class="suggestion_list data-v-ce12d3fd" key="{{s}}" uI="ce12d3fd-4,ce12d3fd-1" uP="{{x}}" wx:if="{{r}}"></suggestion-list>
+                </view>
+                <st-cell bind:__l="__l" class="data-v-ce12d3fd" style="padding-top:0" uI="ce12d3fd-5,ce12d3fd-1" uP="{{G}}" uS="{{['d']}}" wx:if="{{G}}">
+                    <input alwaysEmbed="{{true}}" bindblur="{{C}}" bindfocus="{{B}}" bindinput="{{F}}" bindtap="{{D}}" class="{{['profile-input','data-v-ce12d3fd',z&&'street-error']}}" cursorSpacing="60" focus="{{A}}" id="addressSuggestionList" maxlength="10" placeholder="请填写门牌号" placeholderClass="text-color-5" type="text" value="{{E}}" wx:if="{{y}}"></input>
+                </st-cell>
+            </st-cell-group>
+            <view class="fs-24 red warn-tip data-v-ce12d3fd" wx:if="{{I}}">{{J}}</view>
+            <view class="address-tips data-v-ce12d3fd" wx:else>
+                <view class="fs-24 orange data-v-ce12d3fd">例：广东省广州市天河区天河北路东湖苑小区A栋10楼14室</view>
+                <view class="fs-24 text-color-5 tips data-v-ce12d3fd">提示：详细地址需精确到门牌号，<label class="red data-v-ce12d3fd">否则无法通过审核</label>
+                </view>
+            </view>
+            <view bindtap="{{L}}" class="weixin-import-addr flex-vcenter data-v-ce12d3fd" wx:if="{{K}}">
+                <label class="wechat-icon data-v-ce12d3fd"></label>快速导入微信地址<label class="icon icon-arrow data-v-ce12d3fd"></label>
+            </view>
+        </view>
+    </mp-action-sheet>
+    <district-select bind:__l="__l" bindchange="{{S}}" bindclose="{{R}}" bindconfirm="{{T}}" class="data-v-ce12d3fd" uI="ce12d3fd-6" uP="{{U}}" wx:if="{{Q}}"></district-select>
+    <mp-dialog bind:__l="__l" class="data-v-ce12d3fd" id="mp-dialog" uI="ce12d3fd-7" uP="{{V}}" wx:if="{{V}}"></mp-dialog>
+</view>

@@ -1,0 +1,14 @@
+<view class="_div yy-guide" wx:if="{{a}}">
+  <view class="_div guide">
+    <icon
+      bind:__l="__l"
+      class="guide-icon"
+      uI="d179442a-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></icon>
+    <view class="_div text">
+      <slot></slot>
+    </view>
+  </view>
+</view>

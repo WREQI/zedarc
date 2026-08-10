@@ -1,0 +1,48 @@
+<view class="_div topic-area data-v-0e8fd151" id="topicAreaContainer">
+  <view
+    class="{{['_div','data-v-0e8fd151','mod-topicArea',f]}}"
+    id="topicAreaImg"
+    style="{{'background-image:'+g}}"
+  >
+    <view class="_div topic-wrap data-v-0e8fd151" wx:if="{{a}}">
+      <view catchtap="{{c}}" class="_div title-wrap data-v-0e8fd151">
+        <label class="_span title-text data-v-0e8fd151">{{b}}</label>
+      </view>
+      <view class="_div topic-data data-v-0e8fd151">
+        <label class="_span hot-tag data-v-0e8fd151">Hot</label>
+        <label class="_span data-v-0e8fd151" wx:if="{{d}}">{{e}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div topic-desc-wrap data-v-0e8fd151" id="topicAreaDesc">
+    <view
+      class="{{['_div','data-v-0e8fd151','topic-desc-container']}}"
+      wx:if="{{h}}"
+    >
+      <label
+        class="_span topic-desc data-v-0e8fd151"
+        id="topicDesc"
+        ref="topicDesc"
+        >{{i}}</label
+      >
+    </view>
+  </view>
+  <view class="_div announcement-wrap data-v-0e8fd151" wx:if="{{j}}">
+    <view class="_div announcement-title data-v-0e8fd151">{{k}}</view>
+    <view
+      class="_div announcement-item data-v-0e8fd151"
+      hidden="{{!item.c}}"
+      wx:for="{{l}}"
+      wx:key="d"
+      >{{item.a}}. {{item.b}}</view
+    >
+    <view
+      bindtap="{{p}}"
+      class="{{['_div','announcement-toggle','data-v-0e8fd151',o&&'expanded']}}"
+      wx:if="{{m}}"
+    >
+      <label class="_span toggle-text data-v-0e8fd151">{{n}}</label>
+      <view class="_div toggle-icon data-v-0e8fd151"></view>
+    </view>
+  </view>
+</view>

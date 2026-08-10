@@ -1,0 +1,21 @@
+<scroll-list
+  bind:__l="__l"
+  bindcolumnClick="{{e}}"
+  bindreportHorizontalScroll="{{g}}"
+  bindrowClick="{{f}}"
+  class="list-wrapper r data-v-93a1dfe0"
+  uI="93a1dfe0-0"
+  uP="{{h}}"
+  uR="scrollList"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <no-data-card
+    bind:__l="__l"
+    class="{{['no-data-list','data-v-93a1dfe0',b]}}"
+    slot="noData"
+    uI="93a1dfe0-1,93a1dfe0-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></no-data-card>
+</scroll-list>

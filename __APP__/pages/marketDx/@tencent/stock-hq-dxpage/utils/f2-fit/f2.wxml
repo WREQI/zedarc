@@ -1,0 +1,23 @@
+<view class="{{['_div',k]}}" style="{{l}}">
+  <canvas
+    bindtouchend="{{g}}"
+    bindtouchmove="{{f}}"
+    bindtouchstart="{{e}}"
+    canvasId="{{c}}"
+    class="{{['f2-canvas']}}"
+    id="{{b}}"
+    style="{{d}}"
+    type="2d"
+    wx:if="{{a}}"
+  ></canvas>
+  <block wx:else>
+    <canvas
+      canvasId="{{i}}"
+      class="{{['f2-canvas']}}"
+      id="{{h}}"
+      style="{{j}}"
+      type="2d"
+      wx:if="{{r0}}"
+    ></canvas>
+  </block>
+</view>

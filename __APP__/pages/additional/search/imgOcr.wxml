@@ -1,0 +1,29 @@
+<page-meta class="data-v-53a43232" rootFontSize="{{a}}"></page-meta>
+<view class="imgocr-wrap data-v-53a43232" data-st-theme="{{f}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-53a43232"
+    uI="53a43232-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-53a43232"
+    uI="53a43232-1"
+  ></stock-privacy-dialog>
+  <img-ocr
+    bind:__l="__l"
+    class="data-v-53a43232"
+    data-st-theme="{{b}}"
+    uI="53a43232-2"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></img-ocr>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{d}}"
+    class="data-v-53a43232"
+    uI="53a43232-3"
+    uP="{{e}}"
+    wx:if="{{e}}"
+  ></privacy-policy-modal>
+</view>

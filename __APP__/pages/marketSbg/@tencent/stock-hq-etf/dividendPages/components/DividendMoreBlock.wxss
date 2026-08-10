@@ -1,0 +1,283 @@
+.more-block.data-v-67a51642 {
+  background: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  margin-bottom: 0.32rem;
+  padding: 0.4266666666666667rem 0.32rem 0.21333333333333335rem;
+}
+[data-zdf="greenup"] .more-block.data-v-67a51642 {
+  --color-rise: var(--color-green);
+  --color-drop: var(--color-red);
+}
+[data-st-theme="black"] .more-block.data-v-67a51642,
+[data-st-theme="dark"] .more-block.data-v-67a51642 {
+  background: #171d28;
+}
+.more-block .more-header.data-v-67a51642 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.10666666666666667rem;
+}
+.more-block .more-header .more-title.data-v-67a51642 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+}
+.sys-ios .more-block .more-header .more-title.data-v-67a51642 {
+  font-weight: 500 !important;
+}
+.sys-android .more-block .more-header .more-title.data-v-67a51642 {
+  -webkit-text-stroke-width: 0.002666666666666667rem !important;
+  font-weight: unset !important;
+}
+.more-block .more-header .more-arrow.data-v-67a51642 {
+  background: url(https://st.gtimg.com/design/5c8d3517ec1225898294d85de0281be8.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.32rem;
+  width: 0.21333333333333335rem;
+}
+.more-block .rank-swiper.data-v-67a51642 {
+  width: 100%;
+}
+.more-block .ranktop-wrapper.data-v-67a51642,
+.more-block .swiper-item.data-v-67a51642 {
+  box-sizing: border-box;
+}
+.more-block .empty-tips.data-v-67a51642 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.37333333333333335rem;
+  justify-content: center;
+  padding: 1.28rem 0 0.8533333333333334rem;
+}
+.more-block .empty-tips .empty-img.data-v-67a51642 {
+  background-image: url(https://st.gtimg.com/design/5bbbe01fb0c0bc8f3017041334e19929.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  height: 1.6rem;
+  width: 1.3333333333333333rem;
+}
+.more-block .empty-tips .empty-tips-text.data-v-67a51642 {
+  margin-top: 0.32rem;
+}
+[data-st-theme="black"] .more-block .empty-tips .empty-img.data-v-67a51642,
+[data-st-theme="dark"] .more-block .empty-tips .empty-img.data-v-67a51642 {
+  background-image: url(https://st.gtimg.com/design/ba021d4abe82dc415fa132032de800b8.png);
+}
+.more-block .rank-head.data-v-67a51642 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.21333333333333335rem 0 0.10666666666666667rem;
+}
+.more-block .rank-head .rank-left.data-v-67a51642 {
+  align-items: center;
+  color: var(--color-midgray);
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.32rem;
+}
+.more-block .rank-head .rank-left .index-filter-btn.data-v-67a51642 {
+  height: 0.37333333333333335rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.more-block .rank-head .rank-left .filter-text.data-v-67a51642 {
+  margin-right: 0.05333333333333334rem;
+}
+.more-block .rank-head .rank-left .filter-info.data-v-67a51642 {
+  transform: translateY(-0.013333333333333334rem);
+}
+.more-block .rank-head .rank-left .filter-info-img.data-v-67a51642 {
+  height: 0.29333333333333333rem;
+  vertical-align: middle;
+  width: 0.29333333333333333rem;
+}
+.more-block .rank-head .rank-middle.data-v-67a51642,
+.more-block .rank-head .rank-right.data-v-67a51642 {
+  color: var(--color-midgray);
+  font-size: 0.32rem;
+  text-align: right;
+}
+.more-block .rank-head .rank-middle.data-v-67a51642 {
+  width: 2.1333333333333333rem;
+}
+.more-block .rank-head .rank-right.data-v-67a51642 {
+  width: 2.4rem;
+}
+.more-block .rank-body .rank-item.data-v-67a51642 {
+  border-top: 0.013333333333333334rem solid var(--border-light-divider);
+  padding: 0.32rem 0;
+}
+.more-block .rank-body .rank-item.data-v-67a51642:first-child {
+  border-top: 0;
+}
+.more-block .rank-body .rank-row.data-v-67a51642 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.more-block .rank-body .rank-left.data-v-67a51642 {
+  flex: 1;
+  min-width: 0;
+}
+.more-block .rank-body .rank-name.data-v-67a51642 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+  margin-bottom: 0.10666666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.more-block .rank-body .rank-symbol.data-v-67a51642 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  line-height: 0.4rem;
+}
+.more-block .rank-body .rank-symbol .market-icon.data-v-67a51642 {
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.more-block .rank-body .rank-symbol .stock-code.data-v-67a51642 {
+  margin-right: 0.10666666666666667rem;
+}
+.more-block .rank-body .rank-symbol .stock-tag.data-v-67a51642 {
+  color: var(--color-red);
+  font-size: 0.26666666666666666rem;
+  line-height: 0.37333333333333335rem;
+  padding: 0 0.08rem;
+  position: relative;
+}
+.more-block .rank-body .rank-symbol .stock-tag.data-v-67a51642:after {
+  border: 1px solid #e63535;
+  border-radius: 0.02666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .more-block .rank-body .rank-symbol .stock-tag.data-v-67a51642:after {
+    border-radius: 4px;
+    height: 200%;
+    transform: scale(0.5) translateZ(0);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .more-block .rank-body .rank-symbol .stock-tag.data-v-67a51642:after {
+    border-radius: 6px;
+    height: 300%;
+    transform: scale(0.333) translateZ(0);
+    width: 300%;
+  }
+}
+.more-block .rank-body .rank-desc.data-v-67a51642 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.16rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.more-block .rank-body .rank-middle.data-v-67a51642,
+.more-block .rank-body .rank-right.data-v-67a51642 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+  text-align: right;
+}
+.more-block .rank-body .rank-middle.rise.data-v-67a51642,
+.more-block .rank-body .rank-right.rise.data-v-67a51642 {
+  color: var(--color-rise, var(--color-red));
+}
+.more-block .rank-body .rank-middle.drop.data-v-67a51642,
+.more-block .rank-body .rank-right.drop.data-v-67a51642 {
+  color: var(--color-drop, var(--color-green));
+}
+.more-block .rank-body .rank-middle.equal.data-v-67a51642,
+.more-block .rank-body .rank-right.equal.data-v-67a51642 {
+  color: var(--color-equal, var(--color-lightgray));
+}
+.more-block .rank-body .rank-middle.data-v-67a51642 {
+  width: 2.1333333333333333rem;
+}
+.more-block .rank-body .rank-right.data-v-67a51642 {
+  width: 2.4rem;
+}
+.more-block:not(.lite)
+  .rank-body
+  .rank-item
+  .rank-symbol
+  .stock-tag.data-v-67a51642 {
+  color: var(--color-link);
+  position: relative;
+}
+.more-block:not(.lite)
+  .rank-body
+  .rank-item
+  .rank-symbol
+  .stock-tag.data-v-67a51642:after {
+  border: 1px solid #3077ec80;
+  border-radius: 0.02666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .more-block:not(.lite)
+    .rank-body
+    .rank-item
+    .rank-symbol
+    .stock-tag.data-v-67a51642:after {
+    border-radius: 4px;
+    height: 200%;
+    transform: scale(0.5) translateZ(0);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .more-block:not(.lite)
+    .rank-body
+    .rank-item
+    .rank-symbol
+    .stock-tag.data-v-67a51642:after {
+    border-radius: 6px;
+    height: 300%;
+    transform: scale(0.333) translateZ(0);
+    width: 300%;
+  }
+}
+.data-v-67a51642 .tabbar-wrapper {
+  background: transparent;
+  padding-left: 0 !important;
+}
+.data-v-67a51642 .tab--align-left {
+  margin-left: 0 !important;
+}

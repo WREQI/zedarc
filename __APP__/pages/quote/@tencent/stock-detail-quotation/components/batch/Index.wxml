@@ -1,0 +1,23 @@
+<view class="_div data-v-0fb450dc">
+    <popup bind:__l="__l" bindcancel="{{b}}" bindconfirm="{{c}}" class="data-v-0fb450dc" uI="0fb450dc-0" uP="{{d}}" wx:if="{{a}}"></popup>
+    <popup bind:__l="__l" bindcancel="{{k}}" bindconfirm="{{l}}" bindtouchmove="{{m}}" class="data-v-0fb450dc" uI="0fb450dc-1" uP="{{n}}" uS="{{['d']}}" wx:if="{{e}}">
+        <view class="{{['_div','add-popup-container','data-v-0fb450dc',j&&'black-skin']}}">
+            <view class="_div input data-v-0fb450dc">
+                <input bindinput="{{h}}" class="data-v-0fb450dc" maxLength="{{f}}" placeholder="{{g}}" placeholderClass="placeholder" value="{{i}}"></input>
+            </view>
+        </view>
+    </popup>
+    <popup bind:__l="__l" bindcancel="{{s}}" bindconfirm="{{t}}" class="data-v-0fb450dc" uI="0fb450dc-2" uP="{{v}}" uS="{{['d']}}" wx:if="{{o}}">
+        <scroll-view class="{{['move-popup-container','data-v-0fb450dc',r&&'black-skin']}}" scrollY="{{true}}">
+            <view catchtap="{{v.f}}" class="_div groupli border-bottom-1px data-v-0fb450dc" wx:for="{{p}}" wx:for-item="v" wx:key="e">
+                <view class="_div data-v-0fb450dc">
+                    <checkbox bind:__l="__l" class="movegroupcheck data-v-0fb450dc" uI="{{v.a}}" uP="{{v.b}}" wx:if="{{v.b}}"></checkbox>{{v.c}}</view>
+                <label class="_span added data-v-0fb450dc" wx:if="{{v.d}}">已添加</label>
+            </view>
+            <view catchtap="{{q}}" class="_div groupli addgroup data-v-0fb450dc">
+                <view class="_div data-v-0fb450dc">
+                    <label class="_span add-icon data-v-0fb450dc"></label>添加分组</view>
+            </view>
+        </scroll-view>
+    </popup>
+</view>

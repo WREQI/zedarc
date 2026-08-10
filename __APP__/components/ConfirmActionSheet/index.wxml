@@ -1,0 +1,38 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{h}}"
+  class="cond-actionsheet data-v-869065fe"
+  uI="869065fe-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{i}}"
+>
+  <view class="cond-actionsheet-header data-v-869065fe">
+    <view class="left-placeholder data-v-869065fe"></view>
+    <view class="flex-2 align-c cond-actionsheet-title data-v-869065fe"
+      >{{a}}</view
+    >
+    <view bindtap="{{b}}" class="close-bg data-v-869065fe"></view>
+  </view>
+  <view class="cond-actionsheet-body data-v-869065fe">
+    <slot name="content"></slot>
+  </view>
+  <view class="cond-actionsheet-action data-v-869065fe">
+    <view class="cond-actionsheet-tips data-v-869065fe" wx:if="{{c}}">
+      <view
+        class="flex-center data-v-869065fe"
+        wx:for="{{d}}"
+        wx:for-item="tip"
+        wx:key="b"
+      >
+        <label class="tips-icon-bg data-v-869065fe"></label>{{tip.a}}</view
+      >
+    </view>
+    <button bindtap="{{g}}" class="{{['data-v-869065fe',f]}}">{{e}}</button>
+  </view>
+  <broker-footer
+    bind:__l="__l"
+    class="data-v-869065fe"
+    uI="869065fe-1,869065fe-0"
+  ></broker-footer>
+</action-sheet>

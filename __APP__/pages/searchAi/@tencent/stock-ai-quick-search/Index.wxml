@@ -1,0 +1,82 @@
+<view
+  class="{{['_div','quick-search-container','data-v-c4e1891e',F]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div quickSearch data-v-c4e1891e" wx:if="{{b}}">
+    <view class="_div quick-header-abt data-v-c4e1891e" wx:if="{{c}}"
+      >问元宝 · 快速回答</view
+    >
+    <view class="_div title-container-abt data-v-c4e1891e" wx:if="{{d}}"
+      >{{e}}</view
+    >
+    <view class="_div quote-container data-v-c4e1891e" wx:if="{{f}}"
+      >{{g}}</view
+    >
+    <view
+      class="{{['_div','card-container','data-v-c4e1891e',o&&'expanded']}}"
+      id="card-container"
+      ref="card"
+    >
+      <view class="{{['_div','data-v-c4e1891e','mainContent',i]}}">
+        <rich-text class="data-v-c4e1891e" nodes="{{h}}"></rich-text>
+      </view>
+      <view
+        bindtap="{{n}}"
+        class="{{['_div','toggle-btn','data-v-c4e1891e',m&&'expanded']}}"
+        wx:if="{{j}}"
+      >
+        <view
+          class="_div toggle-btn-mengceng-bg data-v-c4e1891e"
+          wx:if="{{k}}"
+        ></view>
+        <view class="_div toggle-btn-text data-v-c4e1891e">{{l}}</view>
+      </view>
+    </view>
+    <view class="_div quick-follow-on-margin-top data-v-c4e1891e"></view>
+    <view class="_div data-v-c4e1891e" wx:if="{{p}}">
+      <view
+        class="_div quick-follow-on-container data-v-c4e1891e"
+        wx:if="{{q}}"
+      >
+        <view class="_div quick-follow-on-border data-v-c4e1891e">
+          <view
+            bindtap="{{item.c}}"
+            class="_div quick-follow-on-item data-v-c4e1891e"
+            wx:for="{{r}}"
+            wx:key="b"
+            >· {{item.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div quickSearch data-v-c4e1891e" wx:elif="{{s}}">
+    <view class="_div title-container data-v-c4e1891e" wx:if="{{t}}"
+      >{{v}}</view
+    >
+    <view class="_div quote-container data-v-c4e1891e" wx:if="{{w}}"
+      >{{x}}</view
+    >
+    <view
+      class="{{['_div','card-container','data-v-c4e1891e',E&&'expanded']}}"
+      id="card-container"
+      ref="card"
+    >
+      <view class="_div mainContent data-v-c4e1891e">
+        <rich-text class="data-v-c4e1891e" nodes="{{y}}"></rich-text>
+      </view>
+      <view
+        bindtap="{{D}}"
+        class="{{['_div','toggle-btn','data-v-c4e1891e',C&&'expanded']}}"
+        wx:if="{{z}}"
+      >
+        <view
+          class="_div toggle-btn-mengceng-bg data-v-c4e1891e"
+          wx:if="{{A}}"
+        ></view>
+        <view class="_div toggle-btn-text data-v-c4e1891e">{{B}}</view>
+      </view>
+    </view>
+    <view class="_div bottomLine data-v-c4e1891e">问元宝 · 快速回答</view>
+  </view>
+</view>

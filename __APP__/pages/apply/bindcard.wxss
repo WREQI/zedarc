@@ -1,0 +1,35 @@
+@import "/app.wxss";
+.data-v-56301e98 .container {
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+}
+.data-v-56301e98 .container .section-content {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}
+.data-v-56301e98 .container .loading-wrap {
+  -webkit-box-flex: 1;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.data-v-56301e98 .container .bankpwd-processing-mask {
+  background-color: var(--fill-1);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}

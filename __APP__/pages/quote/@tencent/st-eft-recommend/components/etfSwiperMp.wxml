@@ -1,0 +1,31 @@
+<view class="_div data-v-fddda210">
+  <view class="_div eft-desc data-v-fddda210">
+    <view class="_div unhas-recommend-etf data-v-fddda210" wx:if="{{a}}"
+      >“暂无该个股相关ETF，可关注以下人气ETF”</view
+    >
+  </view>
+  <view
+    bindchange="{{d}}"
+    class="_div swiper-wrapper-etf-recommend data-v-fddda210"
+    indicatorActiveColor="#98A0B3"
+    indicatorColor="#DCDFE6"
+    indicatorDots="{{true}}"
+    nextMargin="18rpx"
+    previousMargin="18rpx"
+  >
+    <view
+      class="{{['_div','swiper-item-etf-recommend','data-v-fddda210',c&&'swiper-item-etf-recommend-hasetf']}}"
+      wx:for="{{b}}"
+      wx:key="d"
+    >
+      <etf-item
+        bind:__l="__l"
+        bindgoETFDetail="{{item.a}}"
+        class="data-v-fddda210"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:if="{{item.c}}"
+      ></etf-item>
+    </view>
+  </view>
+</view>

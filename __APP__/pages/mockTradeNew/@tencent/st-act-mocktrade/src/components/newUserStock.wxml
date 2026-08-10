@@ -1,0 +1,56 @@
+<view
+  class="{{['_div','newuser-stock','data-v-7f9f114d',o&&'stock-dark']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div stock-rank data-v-7f9f114d">
+    <view class="_div title-row data-v-7f9f114d">
+      <label class="_span title data-v-7f9f114d">{{b}}</label>
+      <image
+        bindtap="{{c}}"
+        class="_img title-icon data-v-7f9f114d"
+        src="https://st.gtimg.com/design/dfb64edf08404a6a73b1031ab32fc6a3.svg"
+      ></image>
+    </view>
+    <view class="_div subtitle data-v-7f9f114d" wx:if="{{d}}">{{e}}</view>
+    <view class="_div subtitle data-v-7f9f114d" wx:else>{{f}}</view>
+    <view class="_div main data-v-7f9f114d">
+      <view
+        bindtap="{{item.g}}"
+        class="_div main-item data-v-7f9f114d"
+        wx:for="{{g}}"
+        wx:key="f"
+      >
+        <view class="_div stock-row data-v-7f9f114d">
+          <image
+            class="_img icon-market data-v-7f9f114d"
+            src="{{item.a}}"
+          ></image>
+          <label class="_span stock-name data-v-7f9f114d">{{item.b}}</label>
+        </view>
+        <view class="_div profit-desc data-v-7f9f114d">{{h}}</view>
+        <view class="_div profit data-v-7f9f114d" style="{{'color:'+item.d}}"
+          >{{item.c}}</view
+        >
+        <view class="_div holders data-v-7f9f114d">{{item.e}}{{i}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div hot-refresh data-v-7f9f114d" wx:if="{{j}}">
+    <image
+      bindtap="{{k}}"
+      class="_img icon-hot-refresh data-v-7f9f114d"
+      src="https://st.gtimg.com/design/ac9aee71fc9609ecb924639cb17041fc.png"
+    ></image>
+    <view bindtap="{{l}}" class="_div refresh-text data-v-7f9f114d"
+      >换一换</view
+    >
+  </view>
+  <desc-modal
+    bind:__l="__l"
+    bindclose="{{m}}"
+    class="data-v-7f9f114d"
+    uI="7f9f114d-0"
+    uP="{{n}}"
+    wx:if="{{n}}"
+  ></desc-modal>
+</view>

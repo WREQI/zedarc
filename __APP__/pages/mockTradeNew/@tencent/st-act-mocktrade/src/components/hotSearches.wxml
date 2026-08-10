@@ -1,0 +1,30 @@
+<view class="_div hot-searches-wrapper data-v-9b4de186">
+  <view
+    bindtap="{{stock.k}}"
+    class="_div list-item data-v-9b4de186"
+    style="{{'border-bottom-width:'+b}}"
+    wx:for="{{a}}"
+    wx:for-item="stock"
+    wx:key="j"
+  >
+    <view class="_div item-rank col-1 data-v-9b4de186">
+      <label class="{{['_span','rank-label','data-v-9b4de186',stock.b]}}"
+        >NO.{{stock.a}}</label
+      >
+      <view class="_div rank-meta data-v-9b4de186">
+        <view class="{{['_div','rank-icon','data-v-9b4de186',stock.c]}}"></view>
+        <label class="_span rank-text data-v-9b4de186">{{stock.d}}</label>
+      </view>
+    </view>
+    <view class="_div item-stock col-2 data-v-9b4de186">
+      <label class="_span stock-name data-v-9b4de186">{{stock.e}}</label>
+      <label class="_span stock-code data-v-9b4de186">{{stock.f}}</label>
+    </view>
+    <label class="{{['_span','stock-quote','col-3','data-v-9b4de186',stock.h]}}"
+      >{{stock.g}}</label
+    >
+    <label class="_span stock-heat col-4 data-v-9b4de186"
+      >{{stock.i}}热度</label
+    >
+  </view>
+</view>

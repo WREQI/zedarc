@@ -1,0 +1,19 @@
+<view class="_div data-v-60197759" wx:if="{{a}}">
+  <module-hel
+    bind:__l="__l"
+    bindgotoDetail="{{c}}"
+    class="data-v-60197759"
+    uI="60197759-0"
+    uP="{{d}}"
+    wx:if="{{b}}"
+  ></module-hel>
+  <module
+    bind:__l="__l"
+    bindgotoDetail="{{e}}"
+    class="data-v-60197759"
+    id="mpMobule"
+    uI="60197759-1"
+    uP="{{f||''}}"
+    wx:else
+  ></module>
+</view>

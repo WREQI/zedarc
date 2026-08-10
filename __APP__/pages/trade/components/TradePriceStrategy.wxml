@@ -1,0 +1,28 @@
+<overlay
+  bind:__l="__l"
+  bindclick="{{g}}"
+  class="price-strategy-overlay ^price-strategy-overlay"
+  uI="5a5a8063-0"
+  uP="{{h}}"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <view
+    class="{{['price-strategy-popup','triangle','^price-strategy-popup','^triangle',d]}}"
+    style="{{'top:'+e+';'+'left:'+f}}"
+  >
+    <scroll-view
+      class="{{['scroll-height','^scroll-height',b&&'use-transition',c&&'embedded-mode']}}"
+      scrollY="true"
+      showScrollbar="{{false}}"
+    >
+      <view
+        catchtap="{{item.d}}"
+        class="{{['strategy-item','border--bottom','^strategy-item',item.c]}}"
+        wx:for="{{a}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </scroll-view>
+  </view>
+</overlay>

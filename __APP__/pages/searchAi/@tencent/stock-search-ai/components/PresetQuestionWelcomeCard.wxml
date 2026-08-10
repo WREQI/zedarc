@@ -1,0 +1,22 @@
+<view
+  class="{{['_div','data-v-bf714f27','preset-question-container',i]}}"
+  style="{{j}}"
+>
+  <view
+    class="{{['_div','data-v-bf714f27','preset-question-content',e,f,g]}}"
+    style="{{h}}"
+  >
+    <view class="_div welcome-text data-v-bf714f27">Hi,我帮你看清{{a}}</view>
+    <view
+      bindmousedown="{{d}}"
+      catchtouchstart="{{c}}"
+      class="_div question-item data-v-bf714f27"
+    >
+      <view class="_div question-text data-v-bf714f27">{{b}}</view>
+      <view class="_div question-heat data-v-bf714f27">
+        <view class="_div question-heat-icon data-v-bf714f27"></view>
+        <label class="_span data-v-bf714f27">你可能感兴趣</label>
+      </view>
+    </view>
+  </view>
+</view>

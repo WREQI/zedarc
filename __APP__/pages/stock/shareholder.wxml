@@ -1,0 +1,49 @@
+<page-meta class="data-v-dc6b091d" rootFontSize="{{a}}"></page-meta>
+<view class="{{['data-v-dc6b091d','container',g]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-dc6b091d"
+    uI="dc6b091d-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-dc6b091d"
+    uI="dc6b091d-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="bd-cont data-v-dc6b091d" id="scroll_pull">
+    <view class="bd-cont-row data-v-dc6b091d">
+      <view class="listplate-title-fixtop data-v-dc6b091d">
+        <view
+          class="top-list flex flex-pack-justify flex-align-center btmline-gray data-v-dc6b091d"
+        >
+          <view class="title data-v-dc6b091d" wx:if="{{c}}">十大流通股东</view>
+          <view class="title data-v-dc6b091d" wx:else>基金持股</view>
+          <view class="title data-v-dc6b091d">{{d}}</view>
+        </view>
+        <view
+          class="top-list-sub flex flex-pack-justify flex-align-center data-v-dc6b091d"
+        >
+          <view class="title row-a data-v-dc6b091d" wx:if="{{e}}"
+            >流通股东</view
+          >
+          <view class="title row-a data-v-dc6b091d" wx:else>机构股东</view>
+          <view class="title row-b data-v-dc6b091d">占比</view>
+          <view class="title row-c data-v-dc6b091d">变动</view>
+        </view>
+      </view>
+      <view class="list-cont data-v-dc6b091d">
+        <view
+          class="li-wrap flex flex-align-center flex-pack-justify data-v-dc6b091d"
+          wx:for="{{f}}"
+          wx:key="d"
+        >
+          <view class="row-a data-v-dc6b091d">{{item.a}}</view>
+          <view class="row-b data-v-dc6b091d">{{item.b}}%</view>
+          <view class="row-c data-v-dc6b091d">{{item.c}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

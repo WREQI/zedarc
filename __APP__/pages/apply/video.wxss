@@ -1,0 +1,214 @@
+@import "/app.wxss";
+.data-v-ef8b168d .page-apply-video {
+  background: var(--fill-1);
+  height: 100%;
+}
+.data-v-ef8b168d .page-apply-video .scroll-container {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow-y: scroll;
+}
+.data-v-ef8b168d .page-apply-video--body {
+  background: -webkit-linear-gradient(top, #fff 6.51%, #f5f6fa 20.53%);
+  background: linear-gradient(180deg, #fff 6.51%, #f5f6fa 20.53%);
+  padding: 0.64rem 0.4rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-title {
+  font-size: 0.533333rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.72rem;
+  margin-bottom: 0.213333rem;
+  position: relative;
+  top: 0.026667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-title .small-text {
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.72rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-subtitle {
+  font-size: 0.373333rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  margin-bottom: 0.32rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-subtitle .icon-shield {
+  -webkit-box-flex: 0;
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_\ security.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  flex: 0 0 0.266667rem;
+  height: 0.333333rem;
+  margin-right: 0.133333rem;
+  transform: translateY(0.08rem);
+}
+.data-v-ef8b168d .page-apply-video--body .body-card {
+  -webkit-box-pack: justify;
+  background: var(--fill-2);
+  border-radius: 0.213333rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 4.426667rem;
+  justify-content: space-between;
+  line-height: 0.48rem;
+  padding: 0.533333rem 0.426667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .title {
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.586667rem;
+  margin-bottom: 0.853333rem;
+  margin-top: 0.426667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .subtilte {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 0.48rem;
+  margin-bottom: 0.16rem;
+  position: relative;
+  top: -0.026667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .subtilte .dot {
+  font-size: 0.666667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .img-wrapper {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 2.666667rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .img-wrapper-face {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/video/face.png);
+  height: 3.36rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card .img-wrapper-volume {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/video/sound.png);
+  height: 3.413333rem;
+}
+.data-v-ef8b168d .page-apply-video--body .body-card.gap {
+  margin-bottom: 0.32rem;
+}
+.data-v-ef8b168d .page-apply-video .status-unset {
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+}
+.data-v-ef8b168d .page-apply-video .section-content {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-sizing: border-box;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}
+.data-v-ef8b168d .page-apply-video .result-tips {
+  padding: 0.4rem 0 0.6rem;
+}
+.data-v-ef8b168d .page-apply-video .result-tips .label {
+  color: var(--text-color-4);
+  font-family: PingFang SC;
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.72rem;
+  padding-bottom: 0.12rem;
+}
+.data-v-ef8b168d .page-apply-video .result-tips .text {
+  color: var(--text-color-0);
+  font-family: PingFang SC;
+  font-size: 0.426667rem;
+  font-weight: 400;
+  line-height: 0.746667rem;
+}
+.data-v-ef8b168d .page-apply-video .status-preview {
+  height: 100%;
+}
+.data-v-ef8b168d .page-apply-video .status-preview,
+.data-v-ef8b168d .page-apply-video .status-preview .scroll-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.data-v-ef8b168d .page-apply-video .status-preview .preview-container {
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.266667rem 0.4rem 0.533333rem;
+}
+.data-v-ef8b168d .page-apply-video .status-preview .preview-video {
+  -webkit-box-flex: 1;
+  flex: 1;
+  width: 100%;
+}
+.data-v-ef8b168d .page-apply-video .status-preview .preview-button-wrap {
+  align-self: center;
+}
+.data-v-ef8b168d
+  .page-apply-video
+  .status-preview
+  .preview-button-wrap
+  .preview-button {
+  color: var(--color-primary-1);
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.533333rem;
+}
+.data-v-ef8b168d .page-apply-video .record-button {
+  background-color: var(--fill-3);
+  color: var(--color-primary-1);
+  font-size: 0.48rem;
+  height: 1.28rem;
+  line-height: 1.28rem;
+}
+.data-v-ef8b168d .page-apply-video .record-button:after {
+  border: none;
+  border-radius: 0;
+}
+.data-v-ef8b168d .page-apply-video .mp-dialog__footer {
+  width: 100%;
+}
+.data-v-ef8b168d .page-apply-video .button-custom {
+  font-size: 0.426667rem;
+}
+.data-v-ef8b168d
+  .page-apply-video.page-apply-video__simple-mode
+  .page-apply-video--body
+  .img-wrapper-volume {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/video/sound_simple.png);
+}
+.data-v-ef8b168d .footprint {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}
+[data-theme="dark"] .page-apply-video--body.data-v-ef8b168d {
+  background: -webkit-linear-gradient(top, #12161f 6.51%, #000 20.53%);
+  background: linear-gradient(180deg, #12161f 6.51%, #000 20.53%);
+}
+[data-theme="dark"]
+  .page-apply-video--body
+  .img-wrapper-volume.data-v-ef8b168d {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/video/sound_dark.png) !important;
+}

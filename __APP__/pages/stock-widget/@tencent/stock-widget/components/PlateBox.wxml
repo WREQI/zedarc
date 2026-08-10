@@ -1,0 +1,60 @@
+<view class="{{['_div','plate-box','data-v-32276f84',k]}}" ref="plate">
+  <view class="_div plate-body data-v-32276f84" wx:if="{{a}}">
+    <view class="_div plate-head data-v-32276f84" wx:if="{{b}}">
+      <view class="_div plate-info-title data-v-32276f84">{{c}}</view>
+      <view class="{{['_div','plate-info-price','data-v-32276f84',g]}}"
+        >{{d}} {{e}} {{f}}%</view
+      >
+    </view>
+    <view class="{{['_table','data-v-32276f84',j]}}">
+      <view class="_thead data-v-32276f84">
+        <view class="_tr data-v-32276f84">
+          <view class="_td stock-col-1 data-v-32276f84">股票名称</view>
+          <view class="_td data-v-32276f84">最新价</view>
+          <view class="_td data-v-32276f84">主力净流入</view>
+          <view class="_td stock-col-4 mp-head-col-4 data-v-32276f84"
+            >涨跌幅</view
+          >
+        </view>
+      </view>
+      <view class="_tbody data-v-32276f84">
+        <view
+          class="_tr data-v-32276f84"
+          wx:for="{{h}}"
+          wx:for-item="stock"
+          wx:key="l"
+        >
+          <view class="_td stock-col-1 data-v-32276f84">
+            <view class="_div stock-name data-v-32276f84">{{stock.a}}</view>
+            <view class="_div stock-code data-v-32276f84">
+              <view class="{{['_i','data-v-32276f84',stock.b]}}"></view>
+              <label class="_span data-v-32276f84">{{stock.c}}</label>
+            </view>
+          </view>
+          <view class="_td font-numeric-tabular data-v-32276f84"
+            >{{stock.d}}</view
+          >
+          <view
+            class="{{['_td','data-v-32276f84',stock.f,'font-numeric-tabular']}}"
+            >{{stock.e}}</view
+          >
+          <view
+            class="{{['_td','stock-col-4','font-numeric-tabular','data-v-32276f84',stock.h]}}"
+            >{{stock.g}}</view
+          >
+          <view class="_td addFav-wrap data-v-32276f84" wx:if="{{i}}">
+            <add-fav
+              bind:__l="__l"
+              bindreport="{{stock.i}}"
+              class="data-v-32276f84"
+              uI="{{stock.j}}"
+              uP="{{stock.k}}"
+              wx:if="{{stock.k}}"
+            ></add-fav>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div plate-placeholder data-v-32276f84" wx:else></view>
+</view>

@@ -1,0 +1,184 @@
+.global-market-rank-item.data-v-bf8b365c {
+  --color-red: #e63535;
+  --color-green: #1caa3c;
+  box-sizing: border-box;
+  padding: 0.32rem;
+  width: 100%;
+}
+.global-market-rank-item--classic-home.data-v-bf8b365c {
+  padding: 0.32rem 0 0;
+  width: auto;
+}
+.rank-item.data-v-bf8b365c {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.04rem;
+  justify-content: space-between;
+}
+.rank-left.data-v-bf8b365c {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  text-align: left;
+}
+.rank-left-long.data-v-bf8b365c {
+  max-width: 50%;
+}
+.global-market-rank-item--with-buy .rank-left.data-v-bf8b365c {
+  max-width: 3.3333333333333335rem;
+  width: 3.3333333333333335rem;
+}
+.rank-detail-name.data-v-bf8b365c {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.05333333333333334rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 3.2666666666666666rem;
+}
+.rank-detail-name-long.data-v-bf8b365c {
+  width: 4rem;
+}
+.rank-detail-symbol.data-v-bf8b365c {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4533333333333333rem;
+}
+.market-icon.data-v-bf8b365c {
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.stock-code.data-v-bf8b365c {
+  color: var(--color-lightgray-1);
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.stock-tag.data-v-bf8b365c,
+.tag-list.data-v-bf8b365c {
+  display: -webkit-flex;
+  display: flex;
+}
+.stock-tag.data-v-bf8b365c {
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--color-red);
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.38666666666666666rem;
+  justify-content: center;
+  line-height: 0.38666666666666666rem;
+  margin-left: 0.12rem;
+  padding: 0 0.10666666666666667rem;
+  position: relative;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.stock-tag.data-v-bf8b365c:after {
+  border: 1px solid #e63535;
+  border-radius: 0.02666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .stock-tag.data-v-bf8b365c:after {
+    border-radius: 4px;
+    height: 200%;
+    transform: scale(0.5) translateZ(0);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .stock-tag.data-v-bf8b365c:after {
+    border-radius: 6px;
+    height: 300%;
+    transform: scale(0.333) translateZ(0);
+    width: 300%;
+  }
+}
+.rank-right-block.data-v-bf8b365c {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.fund-card__buy-button--nasdaq-100.data-v-bf8b365c {
+  align-items: center;
+  border: 0.02666666666666667rem solid #e63535;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-left: 0.32rem;
+  min-height: 0.64rem;
+  padding: 0.09333333333333334rem 0.21333333333333335rem;
+  width: 1.0666666666666667rem;
+}
+.fund-card__buy-text--nasdaq-100.data-v-bf8b365c {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 700;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.rank-middle.data-v-bf8b365c,
+.rank-right.data-v-bf8b365c {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.37333333333333335rem;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.rank-right.data-v-bf8b365c {
+  margin-left: 0.6666666666666666rem;
+  width: 1.8666666666666667rem;
+}
+.rank-right .num.data-v-bf8b365c {
+  color: var(--color-heavygray);
+}
+.num.data-v-bf8b365c {
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.05333333333333334rem;
+}
+.desc.data-v-bf8b365c {
+  color: var(--color-lightgray-1);
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.013333333333333334rem;
+}
+.rank-description.data-v-bf8b365c {
+  color: #7a8499;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.32rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}

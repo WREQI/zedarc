@@ -1,0 +1,53 @@
+<view class="_div my-choose data-v-6732a0c8" id="my-choose">
+  <view class="_div choose-list-container data-v-6732a0c8" wx:if="{{a}}">
+    <view class="_div choose-list data-v-6732a0c8">
+      <view
+        class="{{['_div','data-v-6732a0c8','choose-item',choose.n]}}"
+        wx:for="{{b}}"
+        wx:for-item="choose"
+        wx:key="o"
+      >
+        <view
+          bindtap="{{choose.f}}"
+          class="_div news-stock data-v-6732a0c8"
+          wx:if="{{choose.a}}"
+        >
+          <image
+            class="_img stock-icon data-v-6732a0c8"
+            src="{{choose.b}}"
+          ></image>
+          <label class="_span stock-n data-v-6732a0c8">{{choose.c}}</label>
+          <label class="{{['_span','stock-zdf','data-v-6732a0c8',choose.e]}}"
+            >{{choose.d}}</label
+          >
+        </view>
+        <view bindtap="{{choose.h}}" class="_div news-title data-v-6732a0c8"
+          >{{choose.g}}</view
+        >
+        <view bindtap="{{choose.m}}" class="_div news-info data-v-6732a0c8">
+          <label
+            class="_span news-importance data-v-6732a0c8"
+            wx:if="{{choose.i}}"
+            >重要</label
+          >
+          <label class="_span news-source data-v-6732a0c8" wx:if="{{choose.j}}"
+            >{{choose.k}}</label
+          >
+          <label class="_span news-time data-v-6732a0c8">{{choose.l}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div logo_wrap data-v-6732a0c8" wx:if="{{c}}">
+    <view class="_div zxg_logo data-v-6732a0c8"></view>
+  </view>
+  <view class="_div choose-empty-tip data-v-6732a0c8" wx:elif="{{d}}">
+    <image
+      class="_img empty-img data-v-6732a0c8"
+      src="https://st.gtimg.com/design/058f36a362c620bd33be780dff7b7c94.png"
+    ></image>
+    <label class="_span empty-text data-v-6732a0c8"
+      >添加自选后将显示所选股票的相关新闻</label
+    >
+  </view>
+</view>

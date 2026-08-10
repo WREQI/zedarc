@@ -1,0 +1,52 @@
+<view class="{{['_div','data-v-fd442fc2','ai-container',w]}}">
+  <view class="_div ai-header data-v-fd442fc2">
+    <view class="_div left data-v-fd442fc2">
+      <image alt="" class="_img head-gif data-v-fd442fc2" src="{{a}}"></image>
+      <view class="{{['_div','data-v-fd442fc2','left-content',c]}}">{{b}}</view>
+    </view>
+    <view bindtap="{{e}}" class="_div right data-v-fd442fc2">{{d}}</view>
+  </view>
+  <view class="_div ai-seperate-line data-v-fd442fc2" wx:if="{{f}}"></view>
+  <view class="_div ai-content data-v-fd442fc2" wx:if="{{g}}">
+    <render-template
+      bind:__l="__l"
+      class="r data-v-fd442fc2"
+      uI="fd442fc2-0"
+      uP="{{i}}"
+      uR="renderTemplate"
+      wx:if="{{i}}"
+    ></render-template>
+  </view>
+  <view class="_div ai-footer data-v-fd442fc2" wx:if="{{j}}">
+    <view bindtap="{{k}}" class="_div left data-v-fd442fc2">免责声明</view>
+    <view class="_div right data-v-fd442fc2">
+      <view
+        bindtap="{{m}}"
+        class="{{['_i','data-v-fd442fc2','ai-icon','ai-icon-like',l]}}"
+      ></view>
+      <view
+        bindtap="{{o}}"
+        class="{{['_i','data-v-fd442fc2','ai-icon','ai-icon-dislike',n]}}"
+      ></view>
+      <view
+        bindtap="{{p}}"
+        class="{{['_i','data-v-fd442fc2','ai-icon','ai-icon-copy']}}"
+      ></view>
+      <view
+        bindtap="{{r}}"
+        class="{{['_i','data-v-fd442fc2','ai-icon','ai-icon-share']}}"
+        wx:if="{{q}}"
+      ></view>
+    </view>
+  </view>
+  <view class="_div data-v-fd442fc2" wx:if="{{s}}">
+    <disclaimers
+      bind:__l="__l"
+      bindonHide="{{t}}"
+      class="data-v-fd442fc2"
+      uI="fd442fc2-1"
+      uP="{{v}}"
+      wx:if="{{v}}"
+    ></disclaimers>
+  </view>
+</view>

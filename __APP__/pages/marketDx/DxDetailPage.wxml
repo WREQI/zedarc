@@ -1,0 +1,18 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div">
+  <mp-privacy-dialog bind:__l="__l" uI="5932aa70-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="5932aa70-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <dx-detail-page
+    bind:__l="__l"
+    class="r"
+    uI="5932aa70-2"
+    uP="{{d}}"
+    uR="dxdetailpage"
+    wx:if="{{d}}"
+  ></dx-detail-page>
+</view>

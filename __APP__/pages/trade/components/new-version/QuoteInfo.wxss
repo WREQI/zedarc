@@ -1,0 +1,262 @@
+@import "/app.wxss";
+.trade-stock-quote.data-v-81ecbd79 {
+  background: var(--fill-2);
+}
+.trade-stock-quote .quote-info-wrapper.data-v-81ecbd79 {
+  box-sizing: border-box;
+  margin-bottom: 0.213333rem;
+}
+.trade-stock-quote .smt-input.data-v-81ecbd79 {
+  height: 0.8rem;
+  padding: 0.32rem 0.32rem 0.426667rem;
+}
+.trade-stock-quote .smt-input input.data-v-81ecbd79 {
+  background-color: var(--fill-1);
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/search-light.png);
+  background-position: 0.24rem;
+  background-repeat: no-repeat;
+  background-size: 0.346667rem;
+  border-radius: 0.106667rem;
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  height: 100%;
+  padding-left: 0.866667rem;
+  width: 100%;
+}
+.trade-stock-quote .smt-input input.data-v-81ecbd79::-webkit-input-placeholder {
+  color: var(--text-color-4);
+}
+.trade-stock-quote .smt-input .smb-cancel.data-v-81ecbd79 {
+  color: var(--color-primary-1);
+  font-size: 0.4rem;
+  line-height: 0.8rem;
+  margin-left: 0.4rem;
+}
+.trade-stock-quote .info.data-v-81ecbd79 {
+  height: 0.586667rem;
+  margin-bottom: 0.12rem;
+  padding: 0.4rem 0.4rem 0;
+}
+.trade-stock-quote .info .stockname.data-v-81ecbd79 {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: 0.426667rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.trade-stock-quote .info .stockcode.data-v-81ecbd79 {
+  font-size: 0.32rem;
+  margin: 0 0.16rem;
+}
+.trade-stock-quote .info .market-status.data-v-81ecbd79 {
+  box-sizing: border-box;
+  color: var(--text-color-4);
+  flex-shrink: 0;
+  font-size: 0.266667rem;
+  line-height: normal;
+  margin-right: 0.16rem;
+  padding: 0 0.106667rem;
+  white-space: nowrap;
+}
+.trade-stock-quote .info .market-status.data-v-81ecbd79:after {
+  border-color: var(--text-color-4);
+  border-radius: 0.106667rem;
+  opacity: 0.5;
+}
+.trade-stock-quote .info .market-status.active.data-v-81ecbd79 {
+  color: var(--color-blue);
+}
+.trade-stock-quote .info .market-status.active.data-v-81ecbd79:after {
+  border-color: var(--color-blue);
+}
+.trade-stock-quote .stock-hq.data-v-81ecbd79 {
+  height: 0.906667rem;
+  margin-bottom: 0.053333rem;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.trade-stock-quote .stock-hq .quote.data-v-81ecbd79 {
+  margin-right: 0.133333rem;
+}
+.trade-stock-quote .stock-hq .quote .flex.data-v-81ecbd79 {
+  font-size: 0.32rem;
+  margin-top: 0.133333rem;
+}
+.trade-stock-quote .stock-hq .quote .flex .zde.data-v-81ecbd79 {
+  margin-right: 0.213333rem;
+}
+.trade-stock-quote .stock-hq .right.data-v-81ecbd79 {
+  margin-top: 0.133333rem;
+}
+.trade-stock-quote .stock-hq .right .price-lower-limit.data-v-81ecbd79,
+.trade-stock-quote .stock-hq .right .price-upper-limit.data-v-81ecbd79 {
+  font-size: 0.32rem;
+  white-space: nowrap;
+}
+.trade-stock-quote .stock-hq .right .price-upper-limit.data-v-81ecbd79 {
+  margin-right: 0.32rem;
+}
+.trade-stock-quote .stock-hq .right .tabular-nums.data-v-81ecbd79 {
+  margin-left: 0.16rem;
+}
+.trade-stock-quote .stock-hq .dqj.data-v-81ecbd79 {
+  font-size: 0.533333rem;
+  font-weight: 500;
+  margin-right: 0.213333rem;
+}
+.trade-stock-quote .stock-hq .light-equal.equal.data-v-81ecbd79 {
+  color: var(--text-color-5) !important;
+}
+.trade-stock-quote .icon-label.data-v-81ecbd79 {
+  color: var(--text-color-3);
+}
+.trade-stock-quote .icon-label.icon.data-v-81ecbd79 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  width: 0.426667rem;
+}
+.trade-stock-quote .icon-label.icon-search.data-v-81ecbd79 {
+  margin-right: 0.533333rem;
+  transform: scale(1.3);
+}
+.trade-stock-quote .icon-label.icon-all-safesetting.data-v-81ecbd79 {
+  margin-left: 0.533333rem;
+  transform: scale(1.2);
+}
+.trade-stock-quote .loading-wrapper.data-v-81ecbd79 {
+  height: 0.426667rem;
+  position: relative;
+  width: 0.426667rem;
+}
+.trade-stock-quote .loading.data-v-81ecbd79 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/loading.png);
+  background-size: 100%;
+  color: var(--text-color-3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.426667rem;
+  height: 0.426667rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0.426667rem;
+}
+.trade-stock-quote .loading.rotate.data-v-81ecbd79 {
+  animation: rotate-81ecbd79 0.35s linear infinite forwards;
+}
+@-webkit-keyframes rotate-81ecbd79 {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate-81ecbd79 {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.trade-stock-quote .mins-comp.data-v-81ecbd79 {
+  user-select: none;
+}
+.trade-stock-quote .chart-wrapper.data-v-81ecbd79 {
+  height: 4.853333rem;
+  padding: 0 0.4rem;
+}
+.trade-stock-quote .chart-wrapper .handicap-wrapper.data-v-81ecbd79 {
+  height: 100%;
+  margin-left: 0.16rem;
+  width: 2.746667rem;
+}
+.trade-stock-quote .switch-bar.data-v-81ecbd79 {
+  font-size: 0.266667rem;
+  line-height: 0.373333rem;
+  padding: 0.16rem 0;
+  position: relative;
+}
+.trade-stock-quote .switch-bar .icon.data-v-81ecbd79 {
+  color: var(--text-color-5);
+  font-size: 0.133333rem;
+  line-height: 0.373333rem;
+  margin-left: 0.053333rem;
+}
+.trade-stock-quote .switch-bar .entry-bubble-tip.data-v-81ecbd79 {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+}
+.trade-stock-quote-ggt.data-v-81ecbd79 {
+  padding: 0.053333rem 0 0.16rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode.data-v-81ecbd79 {
+  background: transparent;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode .smt-input.data-v-81ecbd79 {
+  padding: 0.32rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .smt-input
+  input.data-v-81ecbd79 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/search-simple.png);
+  background-size: 0.426667rem 0.426667rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .quote-info-wrapper.data-v-81ecbd79 {
+  margin-bottom: 0.32rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode .info.data-v-81ecbd79 {
+  padding: 0.32rem 0.32rem 0;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .info
+  .stockcode.data-v-81ecbd79 {
+  margin: 0 0.133333rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .info
+  .market-status.data-v-81ecbd79 {
+  background-color: var(--fill-1);
+  border-radius: 0.053333rem;
+  box-sizing: border-box;
+  color: var(--text-color-4);
+  display: block;
+  font-size: 0.266667rem;
+  height: 0.453333rem;
+  line-height: 0.453333rem;
+  text-align: center;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .info
+  .market-status--width.data-v-81ecbd79 {
+  width: 1.386667rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .info
+  .market-status.active.data-v-81ecbd79 {
+  background-color: rgba(48, 119, 236, 0.06);
+  color: var(--color-blue);
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .chart-wrapper.data-v-81ecbd79 {
+  height: 4.853333rem;
+  padding: 0 0.32rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .chart-wrapper
+  .handicap-wrapper.data-v-81ecbd79 {
+  width: 2.826667rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode .switch-bar.data-v-81ecbd79 {
+  padding: 0.16rem 0 0.32rem;
+}
+.trade-stock-quote.trade-stock-quote__simple-mode
+  .switch-bar-ggt.data-v-81ecbd79 {
+  padding: 0 0 0.32rem;
+}

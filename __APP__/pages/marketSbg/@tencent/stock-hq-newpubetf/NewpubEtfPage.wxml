@@ -1,0 +1,178 @@
+<view
+  class="{{['_div','data-v-37d35d71','newpub-outter',W]}}"
+  data-st-theme="{{V}}"
+>
+  <view class="_div data-v-37d35d71" ref="upcontainer">
+    <view class="_div header-container data-v-37d35d71">
+      <view class="_div header-bg-txt data-v-37d35d71"></view>
+      <image
+        catchtap="{{a}}"
+        class="_img rengou-icon data-v-37d35d71"
+        src="https://st.gtimg.com/design/53b9a1f959c36560013583aebe5780d2.png"
+      ></image>
+    </view>
+    <tabbar
+      bind:__l="__l"
+      bindswitchTab="{{c}}"
+      class="tab-bar r data-v-37d35d71"
+      uI="37d35d71-0"
+      uP="{{d}}"
+      uR="tabBar"
+      wx:if="{{d}}"
+    ></tabbar>
+  </view>
+  <view class="{{['_div','data-v-37d35d71','scroll-wrapper',S]}}" ref="scroll">
+    <swiper
+      bindchange="{{R}}"
+      class="swiper-outer data-v-37d35d71"
+      current="{{P}}"
+      duration="{{250}}"
+      style="{{'height:'+Q}}"
+    >
+      <swiper-item class="swiper-item data-v-37d35d71">
+        <view class="_div describe data-v-37d35d71"
+          >90个交易日内即将进入网上现金认购期的ETF</view
+        >
+        <view class="_div list-content-wrapper data-v-37d35d71">
+          <store-list
+            bind:__l="__l"
+            class="data-v-37d35d71"
+            uI="37d35d71-1"
+            uP="{{f}}"
+            wx:if="{{e}}"
+          ></store-list>
+          <empty
+            bind:__l="__l"
+            bindswitchTab="{{h}}"
+            class="data-v-37d35d71"
+            uI="37d35d71-2"
+            uP="{{i}}"
+            wx:if="{{g}}"
+          ></empty>
+        </view>
+        <trust-footer
+          bind:__l="__l"
+          class="data-v-37d35d71"
+          uI="37d35d71-3"
+          wx:if="{{j}}"
+        ></trust-footer>
+      </swiper-item>
+      <swiper-item class="swiper-item data-v-37d35d71">
+        <view class="_div describe data-v-37d35d71"
+          >正在网上现金认购期内的ETF</view
+        >
+        <view class="_div list-content-wrapper data-v-37d35d71">
+          <store-list
+            bind:__l="__l"
+            bindgoBuy="{{l}}"
+            class="data-v-37d35d71"
+            uI="37d35d71-4"
+            uP="{{m}}"
+            wx:if="{{k}}"
+          ></store-list>
+          <empty
+            bind:__l="__l"
+            bindswitchTab="{{o}}"
+            class="data-v-37d35d71"
+            uI="37d35d71-5"
+            uP="{{p}}"
+            wx:if="{{n}}"
+          ></empty>
+        </view>
+        <trust-footer
+          bind:__l="__l"
+          class="data-v-37d35d71"
+          uI="37d35d71-6"
+          wx:if="{{q}}"
+        ></trust-footer>
+      </swiper-item>
+      <swiper-item class="swiper-item data-v-37d35d71">
+        <view class="_div describe data-v-37d35d71">一周内即将上市的ETF</view>
+        <view class="_div list-content-wrapper data-v-37d35d71">
+          <store-list
+            bind:__l="__l"
+            class="data-v-37d35d71"
+            uI="37d35d71-7"
+            uP="{{s}}"
+            wx:if="{{r}}"
+          ></store-list>
+          <empty
+            bind:__l="__l"
+            bindswitchTab="{{v}}"
+            class="data-v-37d35d71"
+            uI="37d35d71-8"
+            uP="{{w}}"
+            wx:if="{{t}}"
+          ></empty>
+        </view>
+        <trust-footer
+          bind:__l="__l"
+          class="data-v-37d35d71"
+          uI="37d35d71-9"
+          wx:if="{{x}}"
+        ></trust-footer>
+      </swiper-item>
+      <swiper-item class="swiper-item data-v-37d35d71" ref="loaderContainer">
+        <scroll-view
+          scrollY
+          bindrefresherpulling="{{K}}"
+          bindrefresherrefresh="{{M}}"
+          bindrefresherrestore="{{L}}"
+          bindscroll="{{N}}"
+          bindscrolltolower="{{O}}"
+          class="data-v-37d35d71"
+          lowerThreshold="50"
+          refresherEnabled="{{I}}"
+          refresherThreshold="100"
+          refresherTriggered="{{J}}"
+          style="{{'height:'+'100%'}}"
+        >
+          <view class="_div describe data-v-37d35d71" ref="tip"
+            >一年内持续上市的新发ETF的集合</view
+          >
+          <st-reach-bottom
+            bind:__l="__l"
+            class="r data-v-37d35d71"
+            uI="37d35d71-10"
+            uP="{{G}}"
+            uR="loadMore"
+            uS="{{['d']}}"
+            wx:if="{{G}}"
+          >
+            <order-list
+              bind:__l="__l"
+              bindchangeStatus="{{z}}"
+              bindchangeSwiperAble="{{A}}"
+              class="data-v-37d35d71"
+              uI="37d35d71-11,37d35d71-10"
+              uP="{{B}}"
+              wx:if="{{y}}"
+            ></order-list>
+            <empty
+              bind:__l="__l"
+              bindswitchTab="{{D}}"
+              class="data-v-37d35d71"
+              uI="37d35d71-12,37d35d71-10"
+              uP="{{E}}"
+              wx:if="{{C}}"
+            ></empty>
+          </st-reach-bottom>
+          <view class="_div mp-finished-tip data-v-37d35d71" wx:if="{{H}}">
+            <view class="_div st-reach-bottom__finished data-v-37d35d71">
+              <view class="_div st-reach-bottom__finished-text data-v-37d35d71"
+                >没有更多了</view
+              >
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <counter
+    bind:__l="__l"
+    class="data-v-37d35d71"
+    uI="37d35d71-13"
+    uP="{{U}}"
+    wx:if="{{T}}"
+  ></counter>
+</view>

@@ -1,0 +1,169 @@
+.bottom-spliter.data-v-b6bb83bc {
+  margin-bottom: 0.16rem;
+}
+.title-wrapper.data-v-b6bb83bc {
+  align-items: center;
+  background-color: var(--fill-2);
+  display: -webkit-flex;
+  display: flex;
+  height: 1.0666666666666667rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.title-wrapper .title.data-v-b6bb83bc {
+  color: var(--text-color-1);
+  font-size: 0.4rem;
+  font-weight: 500;
+}
+.title-wrapper .stock-wrapper.data-v-b6bb83bc {
+  align-items: center;
+  color: var(--text-color-4);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+}
+.title-wrapper.data-v-b6bb83bc:after {
+  border-bottom: 0.02666666666666667rem solid var(--border-light);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleY(0.5);
+}
+.new-title-wrapper.data-v-b6bb83bc {
+  align-items: center;
+  background-color: var(--fill-2);
+  display: -webkit-flex;
+  display: flex;
+  height: 1.76rem;
+  width: 10rem;
+}
+.new-title-wrapper .new-icon-wrapper.data-v-b6bb83bc {
+  flex-direction: column;
+  height: 1.76rem;
+  width: 2.3466666666666667rem;
+}
+.new-title-wrapper .new-icon-wrapper .new-icon-img.data-v-b6bb83bc,
+.new-title-wrapper .new-icon-wrapper.data-v-b6bb83bc {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.new-title-wrapper .new-icon-wrapper .new-icon-img.data-v-b6bb83bc {
+  height: 0.6133333333333333rem;
+  margin-bottom: 0.24rem;
+  position: relative;
+  width: 0.6133333333333333rem;
+}
+.new-title-wrapper .new-icon-wrapper .new-icon-img-outer.data-v-b6bb83bc {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IuWbvuWxgiAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NiA0NiI+PGRlZnM+PGNsaXBQYXRoIGlkPSJhIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzIDMpIj48cGF0aCBkPSJNMiAwaDM2YTIgMiAwIDAgMSAyIDJ2MjhhMTAgMTAgMCAwIDEtMTAgMTBIMmEyIDIgMCAwIDEtMi0yVjJhMiAyIDAgMCAxIDItMloiIHN0eWxlPSJjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOm5vbmUiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iYiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMyAzKSI+PHBhdGggc3R5bGU9ImZpbGw6bm9uZSIgZD0iTS02Ny02NTVoNzUwdjI0NDhILTY3eiIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIHN0eWxlPSJjbGlwLXBhdGg6dXJsKCNhKSI+PGcgc3R5bGU9ImNsaXAtcGF0aDp1cmwoI2IpIj48cGF0aCBkPSJNMzAgNDNIMmE1IDUgMCAwIDEtNS01VjJhNSA1IDAgMCAxIDUtNWgzNmE1IDUgMCAwIDEgNSA1djI4YTEzIDEzIDAgMCAxLTEzIDEzWk0zIDM3aDI3YTcgNyAwIDAgMCA3LTdWM0gzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMyAzKSIgc3R5bGU9ImZpbGw6IzEyMTYxZiIvPjwvZz48L2c+PC9zdmc+);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  height: 0.6133333333333333rem;
+  width: 0.6133333333333333rem;
+}
+.new-title-wrapper .new-icon-wrapper .new-icon-img-inner.data-v-b6bb83bc {
+  background-color: var(--color-primary-1);
+  background-position: 50%;
+  display: block;
+  height: 0.32rem;
+  left: 50%;
+  -webkit-mask-image: url(../../assets/images/ico_ipo_inner.png-do-not-use-local-path-./pages/market/@tencent/stock-hq-page/components/marketcard/HangqingBar.wxss&1&2803);
+  -webkit-mask-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.37333333333333335rem;
+}
+.new-title-wrapper .new-icon-wrapper .new-icon-text.data-v-b6bb83bc {
+  color: var(--text-color-1);
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.32rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+.new-title-wrapper .seprate-line.data-v-b6bb83bc {
+  background-color: var(--border-light);
+  height: 1.0933333333333333rem;
+  width: 0.013333333333333334rem;
+}
+.new-title-wrapper .new-stock-wrapper.data-v-b6bb83bc {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.new-title-wrapper .new-stock-wrapper .new-stock.data-v-b6bb83bc {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1.7066666666666668rem;
+}
+.new-title-wrapper
+  .new-stock-wrapper
+  .new-stock
+  .new-stock-num.data-v-b6bb83bc {
+  color: var(--text-color-1);
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  height: 0.4266666666666667rem;
+  letter-spacing: 0;
+  line-height: 0.4266666666666667rem;
+  margin-bottom: 0.16rem;
+}
+.new-title-wrapper
+  .new-stock-wrapper
+  .new-stock
+  .new-stock-text.data-v-b6bb83bc {
+  color: var(--text-color-2);
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.32rem;
+  height: 0.32rem;
+  letter-spacing: 0;
+  line-height: 0.32rem;
+}
+.new-title-wrapper
+  .h5-or-wzq-wrapper
+  .new-stock
+  .new-stock-text.data-v-b6bb83bc {
+  color: var(--text-color-4);
+}
+.new-title-wrapper .new-button-wrapper.data-v-b6bb83bc {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  width: 2.533333333333333rem;
+}
+.new-title-wrapper .new-button-wrapper .new-button-container.data-v-b6bb83bc {
+  margin-left: 0.32rem;
+  position: relative;
+}
+.new-title-wrapper .new-button-wrapper .new-button.data-v-b6bb83bc {
+  background: var(--color-primary-1);
+  border: none;
+  border-radius: 0.05333333333333334rem;
+  color: var(--fill-2);
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.32rem;
+  height: 0.7466666666666667rem;
+  line-height: 0.7466666666666667rem;
+  padding: 0;
+  width: 1.8133333333333332rem;
+}
+.new-title-wrapper .new-button-wrapper .bubble-guide.data-v-b6bb83bc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+}
+.data-v-b6bb83bc .yy-pop__content {
+  white-space: nowrap;
+}

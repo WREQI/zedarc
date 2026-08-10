@@ -1,0 +1,123 @@
+.ai-half-container.data-v-0bd62cca {
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 899;
+}
+.subscribe-container-wrapper.data-v-0bd62cca {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  width: 100%;
+}
+.subscribe-container-wrapper.light-mask.data-v-0bd62cca {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.subscribe-container-wrapper.dark-mask.data-v-0bd62cca {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.subscribe-container-wrapper .subscribe-container.data-v-0bd62cca {
+  background: var(--fill-2);
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+  padding-bottom: 0;
+  width: 100%;
+}
+.subscribe-container-wrapper .subscribe-container.wzq.data-v-0bd62cca {
+  flex: 1;
+  height: auto;
+  min-height: 0;
+}
+.subscribe-container-wrapper.fade-enter-active.data-v-0bd62cca {
+  animation: dialog-fadein-0bd62cca 0.4s;
+  animation-fill-mode: forwards;
+}
+.subscribe-container-wrapper.fade-enter-active
+  .subscribe-container.data-v-0bd62cca {
+  animation: dialog-slidein-0bd62cca 0.4s;
+  animation-fill-mode: forwards;
+}
+.subscribe-container-wrapper.fade-leave-active.data-v-0bd62cca {
+  animation: dialog-fadeout-0bd62cca 0.4s;
+  animation-fill-mode: forwards;
+}
+.subscribe-container-wrapper.fade-leave-active
+  .subscribe-container.data-v-0bd62cca {
+  animation: dialog-slideout-0bd62cca 0.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes dialog-fadein-0bd62cca {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialog-fadein-0bd62cca {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dialog-slidein-0bd62cca {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes dialog-slidein-0bd62cca {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes dialog-fadeout-0bd62cca {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dialog-fadeout-0bd62cca {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes dialog-slideout-0bd62cca {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes dialog-slideout-0bd62cca {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}

@@ -1,0 +1,82 @@
+<view
+  catchtouchmove="{{B}}"
+  class="_div history-mins data-v-fcade407"
+  id="historyMins"
+  ref="historyMins"
+>
+  <view class="_div sep-line data-v-fcade407"></view>
+  <view class="_div box-shadow data-v-fcade407">
+    <view class="{{['_div','top-bar','data-v-fcade407',m&&'no-padding']}}">
+      <view
+        class="_div text-area data-v-fcade407"
+        id="historyTextArea"
+        ref="historyTextArea"
+      >
+        <view class="_div date data-v-fcade407">{{a}}</view>
+        <block wx:if="{{b}}">
+          <view class="_div margin-block data-v-fcade407"></view>
+          <view class="_div title data-v-fcade407">均价</view>
+          <view class="{{['_div','content','data-v-fcade407',d]}}">{{c}}</view>
+          <view class="_div margin-block data-v-fcade407"></view>
+          <view class="_div title data-v-fcade407">{{e}}</view>
+          <view class="{{['_div','content','data-v-fcade407',g]}}">{{f}}</view>
+          <view class="{{['_div','content','data-v-fcade407',i]}}">{{h}}</view>
+          <view class="{{['_div','content','data-v-fcade407',k]}}">{{j}}</view>
+          <view class="_div margin-block data-v-fcade407"></view>
+        </block>
+      </view>
+      <image
+        bindtap="{{l}}"
+        class="_img btn-close data-v-fcade407"
+        src="https://st.gtimg.com/image/kline/close.png"
+      ></image>
+    </view>
+    <view
+      class="_div chart-wrapper data-v-fcade407"
+      id="historyChartWrapper"
+      ref="historyChartWrapper"
+      wx:if="{{n}}"
+    >
+      <history-mins
+        bind:__l="__l"
+        bindgetData="{{p}}"
+        bindonTouchCancel="{{r}}"
+        bindonTouchMove="{{q}}"
+        class="data-v-fcade407"
+        uI="fcade407-0"
+        uP="{{s}}"
+        wx:if="{{o}}"
+      ></history-mins>
+    </view>
+    <view class="_div no-data data-v-fcade407" wx:else>
+      <image
+        class="_img no-data-image data-v-fcade407"
+        src="https://st.gtimg.com/image/kline/no-data.png"
+      ></image>
+      <view class="_div no-data-text data-v-fcade407">
+        <block wx:if="{{t}}">暂不支持查看 {{v}} 的分时</block>
+        <block wx:else>暂不支持查看 {{w}} 前的分时</block>
+      </view>
+    </view>
+    <view class="_div bottom-bar data-v-fcade407">
+      <view bindtap="{{y}}" class="_div btn-wrapper data-v-fcade407">
+        <view class="{{['_div','btn-switch','data-v-fcade407',x&&'disabled']}}">
+          <image
+            class="_img icon reverse data-v-fcade407"
+            src="https://st.gtimg.com/image/kline/next.png"
+          ></image>
+          <label class="_span text data-v-fcade407">前一日</label>
+        </view>
+      </view>
+      <view bindtap="{{A}}" class="_div btn-wrapper data-v-fcade407">
+        <view class="{{['_div','btn-switch','data-v-fcade407',z&&'disabled']}}">
+          <label class="_span text data-v-fcade407">后一日</label>
+          <image
+            class="_img icon data-v-fcade407"
+            src="https://st.gtimg.com/image/kline/next.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,86 @@
+<view
+  class="{{['_div','data-v-7b32a6fc','wx-news-content']}}"
+  style="{{'padding-top:'+B}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div header-bg data-v-7b32a6fc"
+    style="{{'top:'+c+';'+'background-position-y:'+d+';'+'background-image:'+e}}"
+  >
+    <view
+      class="_div header-cover data-v-7b32a6fc"
+      style="{{'background-position-y:'+b}}"
+    ></view>
+  </view>
+  <view class="_div danmaku content-relative data-v-7b32a6fc">
+    <danmaku
+      bind:__l="__l"
+      class="data-v-7b32a6fc"
+      uI="7b32a6fc-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></danmaku>
+  </view>
+  <eventinfo
+    bind:__l="__l"
+    bindshowWxTopTips="{{g}}"
+    class="content-relative data-v-7b32a6fc"
+    uI="7b32a6fc-1"
+    uP="{{h}}"
+    wx:if="{{h}}"
+  ></eventinfo>
+  <view class="_div ai-search-container data-v-7b32a6fc" hidden="{{!m}}">
+    <search-ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{i}}"
+      bindonHideAiEntry="{{k}}"
+      bindonShowAiEntry="{{j}}"
+      class="data-v-7b32a6fc"
+      uI="7b32a6fc-2"
+      uP="{{l}}"
+      wx:if="{{l}}"
+    ></search-ai-bar>
+  </view>
+  <news
+    bind:__l="__l"
+    class="content-relative data-v-7b32a6fc"
+    uI="7b32a6fc-3"
+    uP="{{o}}"
+    wx:if="{{n}}"
+  ></news>
+  <market-coditions
+    bind:__l="__l"
+    class="data-v-7b32a6fc"
+    uI="7b32a6fc-4"
+    uP="{{p}}"
+    wx:if="{{p}}"
+  ></market-coditions>
+  <view class="_div section border-top data-v-7b32a6fc" id="commentContainer">
+    <view class="_div section-header data-v-7b32a6fc">最新评论</view>
+    <view catchtap="{{q}}" class="_div go-edit data-v-7b32a6fc">写评论</view>
+    <view class="_div comment-container data-v-7b32a6fc">
+      <com-list
+        bind:__l="__l"
+        bindcheckUserAgreementStatus="{{t}}"
+        bindgetCommentCount="{{s}}"
+        bindshowProfilePop="{{v}}"
+        class="r data-v-7b32a6fc"
+        uI="7b32a6fc-5"
+        uP="{{w}}"
+        uR="eventCommentListRef"
+        wx:if="{{w}}"
+      ></com-list>
+    </view>
+  </view>
+  <root-portal class="data-v-7b32a6fc" enable="{{true}}" wx:if="{{x}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{z}}"
+      bindshareAiAnswer="{{y}}"
+      class="data-v-7b32a6fc"
+      uI="7b32a6fc-6"
+      uP="{{A}}"
+      wx:if="{{A}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+</view>

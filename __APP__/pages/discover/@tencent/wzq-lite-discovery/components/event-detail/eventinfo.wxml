@@ -1,0 +1,34 @@
+<view class="_div header-container data-v-f02a72d4" wx:if="{{a}}">
+  <view class="_div title-container data-v-f02a72d4">
+    <view class="_div title data-v-f02a72d4">{{b}}</view>
+    <view class="{{['_div','data-v-f02a72d4','tag',c]}}"></view>
+  </view>
+  <view
+    class="_div info-bar-content upper-region data-v-f02a72d4"
+    ref="upperContainer"
+  >
+    <view class="{{['_div','data-v-f02a72d4','info-bar-inner']}}">
+      <label
+        class="{{['_span','data-v-f02a72d4','view-detail']}}"
+        wx:if="{{d}}"
+      >
+        <view
+          catchtap="{{e}}"
+          class="_div tooltips data-v-f02a72d4"
+          id="tooltips"
+          ref="tooltipsRef"
+        ></view>
+      </label>
+      <label class="_span info-content data-v-f02a72d4" ref="infoContent"
+        >{{f}}</label
+      >
+      <image
+        catchtap="{{h}}"
+        class="_img inner-tooltip-logo data-v-f02a72d4"
+        src="https://st.gtimg.com/design/bf91fce2f0a2ced7fe71189b963b6b24.png"
+        wx:if="{{g}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div hot data-v-f02a72d4" wx:if="{{i}}">{{j}}</view>
+</view>

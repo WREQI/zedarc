@@ -1,0 +1,7 @@
+<view class="_div mini-chart-wrap">
+  <image
+    class="{{['_img','min-line-chart',c,d]}}"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+</view>

@@ -1,0 +1,138 @@
+.us-etf-block .title.data-v-ef8cbe3c {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.4rem;
+  font-weight: 500;
+  height: 0.96rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+}
+.us-etf-block .etf-caption.data-v-ef8cbe3c {
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  line-height: 1;
+  margin-bottom: 0.22666666666666666rem;
+  padding: 0 0.4rem;
+}
+.us-etf-block .etf-caption__name.data-v-ef8cbe3c {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  width: 40%;
+}
+.us-etf-block .etf-caption__sort.data-v-ef8cbe3c {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  width: 30%;
+}
+.us-etf-block .etf-caption__sort .trend.data-v-ef8cbe3c {
+  display: inline-block;
+  margin-left: 0.10666666666666667rem;
+}
+.us-etf-block .etf-caption__sort .trend .up.data-v-ef8cbe3c {
+  border-bottom: 0.10666666666666667rem solid var(--color-lightgray-2);
+  border-left: 0.09333333333333334rem solid transparent;
+  border-right: 0.09333333333333334rem solid transparent;
+  border-top: 0.10666666666666667rem solid transparent;
+  display: block;
+  height: 0;
+  margin-bottom: 0.08rem;
+  width: 0;
+}
+.us-etf-block .etf-caption__sort .trend .up.active.data-v-ef8cbe3c {
+  border-bottom: 0.13333333333333333rem solid var(--color-heavygray);
+}
+.us-etf-block .etf-caption__sort .trend .down.data-v-ef8cbe3c {
+  border-bottom: 0.10666666666666667rem solid transparent;
+  border-left: 0.09333333333333334rem solid transparent;
+  border-right: 0.09333333333333334rem solid transparent;
+  border-top: 0.10666666666666667rem solid var(--color-lightgray-2);
+  display: block;
+  height: 0;
+  width: 0;
+}
+.us-etf-block .etf-caption__sort .trend .down.active.data-v-ef8cbe3c {
+  border-top: 0.13333333333333333rem solid var(--color-heavygray);
+}
+.us-etf-block .etf-list.data-v-ef8cbe3c {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.4rem;
+}
+.us-etf-block .etf-list__item.data-v-ef8cbe3c {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 1.3333333333333333rem;
+}
+.us-etf-block .etf-list__name.data-v-ef8cbe3c {
+  min-width: 0;
+  width: 40%;
+}
+.us-etf-block .etf-list__name .name-text.data-v-ef8cbe3c {
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.us-etf-block .etf-list__name .code-text.data-v-ef8cbe3c {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  margin-top: 0.10666666666666667rem;
+}
+.us-etf-block .etf-list__name .code-text .market-icon.data-v-ef8cbe3c {
+  height: 0.26666666666666666rem;
+  margin-right: 0.05333333333333334rem;
+  width: 0.37333333333333335rem;
+}
+.us-etf-block .etf-list__value.data-v-ef8cbe3c {
+  font-size: 0.4266666666666667rem;
+  text-align: right;
+  width: 30%;
+}
+.us-etf-block .etf-more.data-v-ef8cbe3c {
+  align-items: center;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  justify-content: center;
+  line-height: 0.5333333333333333rem;
+  margin: 0.26666666666666666rem 0;
+}
+.us-etf-block .etf-more__text.data-v-ef8cbe3c {
+  margin-right: 0.2rem;
+}
+.us-etf-block .etf-more__arrow.data-v-ef8cbe3c {
+  background: url(https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.37333333333333335rem;
+  width: 0.2rem;
+}
+.us-etf-block .rise.data-v-ef8cbe3c {
+  color: var(--color-rise);
+}
+.us-etf-block .drop.data-v-ef8cbe3c {
+  color: var(--color-drop);
+}
+.us-etf-block .gray.data-v-ef8cbe3c {
+  color: #7a8499;
+}

@@ -1,0 +1,78 @@
+<page-meta class="data-v-8010c15f" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-8010c15f" id="global-wrap" uI="8010c15f-0" uP="{{aD}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{aD}}">
+    <view class="container account-common-form data-v-8010c15f">
+        <view class="broker-wrapper flex-vcenter data-v-8010c15f" wx:if="{{b}}">
+            <broker-logo bind:__l="__l" class="broker-logo data-v-8010c15f" uI="8010c15f-1,8010c15f-0"></broker-logo>
+            <view class="text-wrap flex-start data-v-8010c15f">
+                <view class="fs-32 text-color-1 data-v-8010c15f">{{c}}· 信用账户</view>
+            </view>
+            <view class="margin-tag flex-center data-v-8010c15f">融</view>
+        </view>
+        <view bindtap="{{h}}" class="{{['tip-text','text-color-4','data-v-8010c15f',g&&'spec']}}" wx:else>
+            <label class="data-v-8010c15f" wx:if="{{d}}">{{e}}</label>
+            <label class="data-v-8010c15f" wx:else>你已有{{f}}账户，请完成绑定</label>
+        </view>
+        <view class="form-container data-v-8010c15f">
+            <st-cell-group bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-2,8010c15f-0" uP="{{K}}" uS="{{['d']}}" wx:if="{{K}}">
+                <st-cell bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-3,8010c15f-2" uP="{{w}}" uS="{{['extra','d']}}" wx:if="{{w}}">
+                    <input bindblur="{{m}}" bindinput="{{l}}" class="data-v-8010c15f" disabled="{{k}}" maxlength="{{j}}" placeholder="{{i}}" placeholderClass="input-placeholder" type="number" value="{{n}}"></input>
+                    <view bindtap="{{p}}" class="pseudo-input data-v-8010c15f" wx:if="{{o}}"></view>
+                    <view slot="extra">
+                        <label bindtap="{{s}}" class="find-account primary-color data-v-8010c15f" wx:if="{{q}}">找回{{r}}</label>
+                        <label bindtap="{{v}}" class="right-slot data-v-8010c15f" wx:elif="{{t}}">
+                            <view class="icon icon-arrow-right data-v-8010c15f"></view>
+                        </label>
+                    </view>
+                </st-cell>
+                <st-cell bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-4,8010c15f-2" uP="{{J}}" uS="{{['extra','d']}}" wx:if="{{J}}">
+                    <input alwaysEmbed="{{true}}" bindfocus="{{B}}" bindinput="{{A}}" class="data-v-8010c15f" maxlength="6" password="{{z}}" placeholder="{{y}}" placeholderClass="input-placeholder" type="number" value="{{C}}" wx:if="{{x}}"></input>
+                    <block wx:else>
+                        <st-custom-text-input bind:__l="__l" bindconfirm="{{F}}" bindinput="{{E}}" class="flex-1 r data-v-8010c15f" uI="8010c15f-5,8010c15f-4" uP="{{G}}" uR="customPwdInput" wx:if="{{G}}"></st-custom-text-input>
+                    </block>
+                    <label class="right-slot data-v-8010c15f" slot="extra">
+                        <view bindtap="{{I}}" class="{{[H,'icon','icon-eye','data-v-8010c15f']}}"></view>
+                    </label>
+                </st-cell>
+            </st-cell-group>
+            <block wx:if="{{L}}">
+                <view class="second-group data-v-8010c15f"></view>
+                <st-cell-group bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-6,8010c15f-0" uP="{{aa}}" uS="{{['d']}}" wx:if="{{aa}}">
+                    <st-cell bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-7,8010c15f-6" uP="{{Q}}" uS="{{['d']}}" wx:if="{{Q}}">
+                        <input bindfocus="{{N}}" bindinput="{{P}}" class="data-v-8010c15f" disabled="{{M}}" maxlength="11" placeholder="请输入本人手机号码" placeholderClass="input-placeholder" type="number" value="{{O}}"></input>
+                    </st-cell>
+                    <st-cell bind:__l="__l" class="sms-cell data-v-8010c15f" uI="8010c15f-8,8010c15f-6" uP="{{Z}}" uS="{{['extra','d']}}" wx:if="{{Z}}">
+                        <input bindfocus="{{T}}" bindinput="{{V}}" class="data-v-8010c15f" disabled="{{S}}" maxlength="{{R}}" placeholder="请输入短信验证码" placeholderClass="input-placeholder" ref="bindCodeInput" type="number" value="{{U}}"></input>
+                        <button bindtap="{{Y}}" class="sms-button data-v-8010c15f" disabled="{{X}}" size="mini" slot="extra">{{W}}</button>
+                    </st-cell>
+                </st-cell-group>
+                <forget-mobile bind:__l="__l" bindfacecheck="{{ac}}" class="forget-mobile data-v-8010c15f" uI="8010c15f-9,8010c15f-0" wx:if="{{ab}}"></forget-mobile>
+            </block>
+        </view>
+        <checkbox-group bindchange="{{aj}}" class="protocol-container data-v-8010c15f" wx:if="{{ad}}">
+            <checkbox checked="{{af}}" class="protocol-checkbox data-v-8010c15f" color="{{ae}}"></checkbox>
+            <label bindtap="{{ag}}" class="text-color-4 data-v-8010c15f">本人已详细阅读并同意签署</label>
+            <label bindtap="{{ai}}" class="{{['data-v-8010c15f',ah]}}">全部文件</label>
+        </checkbox-group>
+        <view class="submit-container data-v-8010c15f">
+            <button bindtap="{{al}}" class="action-button data-v-8010c15f">立即登录{{ak}}</button>
+        </view>
+        <view class="forget-pwd primary-color data-v-8010c15f">
+            <label bindtap="{{am}}" class="data-v-8010c15f">忘记密码</label>
+        </view>
+        <view class="build-version data-v-8010c15f">
+            <view class="fs-32 text-color-4 align-c data-v-8010c15f" wx:if="{{an}}">V{{ao}}</view>
+        </view>
+        <action-sheet bind:__l="__l" bindinput="{{ar}}" class="data-v-8010c15f" uI="8010c15f-10,8010c15f-0" uP="{{as}}" uS="{{['d']}}" wx:if="{{ap}}">
+            <view class="action-sheet-wrap data-v-8010c15f">
+                <view bindtap="{{account.d}}" class="action-sheet-item border--bottom data-v-8010c15f" wx:for="{{aq}}" wx:for-item="account" wx:key="c">
+                    <view class="data-v-8010c15f">{{account.a}}</view>
+                    <label class="icon icon-check data-v-8010c15f" wx:if="{{account.b}}"></label>
+                </view>
+            </view>
+        </action-sheet>
+        <foot-print bind:__l="__l" class="data-v-8010c15f" uI="8010c15f-11,8010c15f-0" uP="{{at}}" wx:if="{{at}}"></foot-print>
+        <protocols bind:__l="__l" bindcancel="{{aw}}" bindclose="{{ax}}" bindconfirm="{{av}}" bindview="{{ay}}" class="data-v-8010c15f" uI="8010c15f-12,8010c15f-0" uP="{{az}}" wx:if="{{az}}"></protocols>
+        <mp-dialog bind:__l="__l" class="data-v-8010c15f" id="mp-dialog" uI="8010c15f-13,8010c15f-0" uP="{{aA}}" wx:if="{{aA}}"></mp-dialog>
+        <id-card-form bind:__l="__l" class="r data-v-8010c15f" uI="8010c15f-14,8010c15f-0" uR="idcardForm"></id-card-form>
+    </view>
+</global-wrap>

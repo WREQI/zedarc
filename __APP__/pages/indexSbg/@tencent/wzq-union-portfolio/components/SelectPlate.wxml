@@ -1,0 +1,24 @@
+<view
+  catchtap="{{g}}"
+  catchtouchmove="{{h}}"
+  class="{{['_div','mask-wrapper','data-v-d9744042',f]}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div plate-wrapper data-v-d9744042"
+    style="{{'top:'+d+';'+'left:'+e}}"
+  >
+    <view
+      class="_div plate-arrow data-v-d9744042"
+      style="{{'transform:'+b}}"
+    ></view>
+    <view
+      catchtap="{{config.d}}"
+      class="{{['_div','data-v-d9744042','config',config.c]}}"
+      wx:for="{{c}}"
+      wx:for-item="config"
+      wx:key="b"
+      >{{config.a}}</view
+    >
+  </view>
+</view>

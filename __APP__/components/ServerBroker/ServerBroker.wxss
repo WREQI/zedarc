@@ -1,0 +1,48 @@
+@import "/app.wxss";
+.footprint {
+  color: #c3c9d9;
+  font-size: 0.266667rem;
+  text-align: center;
+  width: 100%;
+}
+.footprint.fixed {
+  top: calc(100vh - 74px - env(safe-area-inset-bottom));
+}
+.footprint.fixed,
+.footprint.fixedv2 {
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: -1;
+}
+.footprint.fixedv2 {
+  top: calc(100vh - 0.64rem - 0.373333rem);
+}
+.footprint.fixedv2.calcSafeArea {
+  top: calc(100vh - 0.64rem - 0.373333rem - env(safe-area-inset-bottom));
+}
+.footprint.fixedv2.calcNav {
+  margin-top: -49px;
+}
+.footprint.fixed-without-navbar {
+  top: calc(100vh - 1.306667rem);
+}
+.footprint:not(.fixed):not(.fixedv2) {
+  margin-top: 0.4rem;
+}
+.footprint:not(.colorful) {
+  color: #c3c9d9;
+}
+.footprint .server-broker-logo {
+  height: 0.373333rem;
+  margin-right: 0.133333rem;
+  width: 0.373333rem;
+}
+.footprint .server-broker-logo.icon-10000 {
+  display: none;
+}
+.footprint .ipv6 {
+  line-height: normal;
+  margin-left: 0.133333rem;
+  padding: 0 0.106667rem;
+}

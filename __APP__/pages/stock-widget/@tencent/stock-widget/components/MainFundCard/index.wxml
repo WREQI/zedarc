@@ -1,0 +1,51 @@
+<view
+  catchlongpress="{{v}}"
+  class="{{['_div','funds-container','funds-main','data-v-d6d18c93',s,t]}}"
+>
+  <view class="_div funds-summary data-v-d6d18c93">
+    <view class="_div widget funds-title data-v-d6d18c93" wx:if="{{a}}">
+      <view class="_div title-text data-v-d6d18c93">{{b}}20日主力资金趋势</view>
+      <view class="_div sub-title data-v-d6d18c93" wx:if="{{c}}"
+        >{{d}}更新</view
+      >
+    </view>
+    <view class="_div funds-title data-v-d6d18c93" wx:else>
+      <label class="_span title-text data-v-d6d18c93">主力资金</label>
+    </view>
+    <view class="_div total-net-inflow data-v-d6d18c93">
+      <label class="_span data-v-d6d18c93" wx:if="{{e}}">{{f}}</label>
+      <label class="_span data-v-d6d18c93">主力资金净流入</label>
+      <label
+        class="_span total-net-inflow-val data-v-d6d18c93"
+        id="main_net_inflow"
+        style="{{i}}"
+        >{{g}}{{h}}</label
+      >
+      <label class="_span summary-text data-v-d6d18c93" wx:if="{{j}}"
+        >{{k}}</label
+      >
+    </view>
+  </view>
+  <view class="_div fund-tabs data-v-d6d18c93" wx:if="{{l}}">
+    <view
+      bindtap="{{val.d}}"
+      class="{{['_div','sub-tab','data-v-d6d18c93',val.c&&'active']}}"
+      wx:for="{{m}}"
+      wx:for-item="val"
+      wx:key="b"
+      >{{val.a}}</view
+    >
+  </view>
+  <view class="_div funds-trend-chart data-v-d6d18c93">
+    <history-trend
+      bind:__l="__l"
+      bindcanvasInfo="{{q}}"
+      class="r data-v-d6d18c93"
+      id="{{p}}"
+      uI="d6d18c93-0"
+      uP="{{r}}"
+      uR="historyTrend"
+      wx:if="{{n}}"
+    ></history-trend>
+  </view>
+</view>

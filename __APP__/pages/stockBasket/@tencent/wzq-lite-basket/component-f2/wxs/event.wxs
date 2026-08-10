@@ -1,0 +1,41 @@
+var lastTouchX = 0;
+var startX = 0;
+var startY = 0;
+var endX = 0;
+var endY = 0;
+module.exports = {
+  touchstart: function (event) {
+    if (event.currentTarget.dataset.displaytooltip) {
+      var touch = event.touches[0];
+      lastTouchX = touch.pageX;
+      startX = touch.clientX;
+      startY = touch.clientY;
+    }
+  },
+  touchmove: function (event) {
+    if (event.currentTarget.dataset.displaytooltip) {
+      var touch = event.touches[0];
+      endX = touch.clientX;
+      endY = touch.clientY;
+      var deltaX = endX - startX;
+      var deltaY = endY - startY;
+      var changeDelta = touch.pageX - lastTouchX;
+      lastTouchX = event.touches[0].pageX;
+      if (Math.abs(deltaX) < Math.abs(deltaY)) {
+        return true;
+      }
+      if (Math.abs(changeDelta) > 0) {
+        return false;
+      }
+    }
+  },
+  touchend: function (event) {
+    if (event.currentTarget.dataset.displaytooltip) {
+      lastTouchX = 0;
+      startX = 0;
+      startY = 0;
+      endX = 0;
+      endY = 0;
+    }
+  },
+};

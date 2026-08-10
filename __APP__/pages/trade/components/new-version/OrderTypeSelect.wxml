@@ -1,0 +1,77 @@
+<view
+  class="{{['ordertype-select','flex-between','data-v-bee416b9',h]}}"
+  wx:if="{{a}}"
+>
+  <view class="title flex-vcenter data-v-bee416b9">
+    <label class="type text-color-1 data-v-bee416b9">智能下单</label>
+    <label
+      bindtap="{{b}}"
+      class="icon icon-italic-info data-v-bee416b9"
+    ></label>
+  </view>
+  <view class="popup-wrapper data-v-bee416b9">
+    <view bindtap="{{d}}" class="switch-warpper flex-vcenter data-v-bee416b9">
+      <label class="text data-v-bee416b9">{{c}}</label>
+      <label class="triangle data-v-bee416b9"></label>
+    </view>
+    <view class="dropdown-wrapper data-v-bee416b9" wx:if="{{e}}">
+      <view bindtap="{{f}}" class="mask data-v-bee416b9"></view>
+      <view class="dropdown data-v-bee416b9">
+        <view
+          bindtap="{{key.e}}"
+          class="{{['dropdown-item','data-v-bee416b9',key.c,key.d]}}"
+          wx:for="{{g}}"
+          wx:for-item="key"
+          wx:key="b"
+          >{{key.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{i}}"
+  bindmaskClick="{{j}}"
+  class="intelligent-entrust-explain data-v-bee416b9"
+  uI="bee416b9-0"
+  uP="{{k}}"
+  uS="{{['d']}}"
+  wx:if="{{k}}"
+>
+  <view class="content-container data-v-bee416b9">
+    <view class="title data-v-bee416b9">标准下单</view>
+    <view class="content data-v-bee416b9"
+      >这是股票交易的基础方式，您可手动输入目标价格、买卖数量进行委托。无论是抓住突发机会快速买卖，还是耐心挂单等待理想价位，都能灵活应对。</view
+    >
+    <view class="title data-v-bee416b9">条件下单</view>
+    <view class="content data-v-bee416b9"
+      >当您无法盯盘时，系统将代替您监控市场。预设条件触发后自动执行交易，避免情绪干扰和机会流失。支持多类核心策略：止盈止损、价格条件单、定期定投、网格交易等。</view
+    >
+    <view class="title data-v-bee416b9" wx:if="{{false}}">券商精选</view>
+    <view class="content data-v-bee416b9" wx:if="{{false}}"
+      >通过接入合作券商的精选交易工具，将机构级策略转化为简单操作。无需复杂设置，一键启用经过实战验证的量化工具，“懒人投资”首选。</view
+    >
+  </view>
+</action-sheet>
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{n}}"
+  bindmaskClick="{{o}}"
+  class="trade-tool-action-sheet data-v-bee416b9"
+  uI="bee416b9-1"
+  uP="{{p}}"
+  uS="{{['d']}}"
+  wx:if="{{p}}"
+>
+  <view class="content-container data-v-bee416b9">
+    <trade-tool-option
+      bind:__l="__l"
+      bindconditionItemClick="{{l}}"
+      class="data-v-bee416b9"
+      uI="bee416b9-2,bee416b9-1"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></trade-tool-option>
+  </view>
+</action-sheet>

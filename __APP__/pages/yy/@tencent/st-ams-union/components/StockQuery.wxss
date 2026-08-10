@@ -1,0 +1,333 @@
+.stock-query-section.data-v-ad2023f6 {
+  background: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0.4266666666666667rem 0.4266666666666667rem 0;
+  position: relative;
+  width: 100%;
+}
+.ams-section-index.data-v-ad2023f6 {
+  height: 1.0666666666666667rem;
+  left: 0.4266666666666667rem;
+  position: absolute;
+  top: 0.4266666666666667rem;
+  width: 2.68rem;
+  z-index: 1;
+}
+.header.data-v-ad2023f6 {
+  margin-bottom: 0.4266666666666667rem;
+  padding-top: 1.04rem;
+  position: relative;
+  z-index: 2;
+}
+.stock-query-section.etf-mode .header.data-v-ad2023f6 {
+  margin-bottom: 0.21333333333333335rem !important;
+  padding-top: 0.64rem !important;
+}
+.stock-query-section.etf-mode .sq-footer.data-v-ad2023f6 {
+  padding-bottom: 0 !important;
+}
+.title-container.data-v-ad2023f6 {
+  width: 100%;
+}
+.main-title.data-v-ad2023f6 {
+  color: #262e40;
+  display: block;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.72rem;
+  margin-bottom: 0.16rem;
+}
+.sub-title.data-v-ad2023f6 {
+  color: #7a8499;
+  display: block;
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+}
+.stock-list.data-v-ad2023f6 {
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.10666666666666667rem;
+  justify-content: space-between;
+  margin-bottom: 0.32rem;
+}
+.stock-card.data-v-ad2023f6 {
+  background: #f5f6fa;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 2.6666666666666665rem;
+  padding: 0.32rem 0.16rem;
+  width: 0;
+}
+.stock-content.data-v-ad2023f6 {
+  height: 100%;
+  justify-content: space-between;
+}
+.stock-content.data-v-ad2023f6,
+.stock-name.data-v-ad2023f6 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.stock-name.data-v-ad2023f6 {
+  margin-bottom: 0.26666666666666666rem;
+  max-width: 100%;
+  width: 100%;
+}
+.name.data-v-ad2023f6 {
+  color: #262e40;
+  display: block;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+  margin-bottom: 0.10666666666666667rem;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.name.etf-name.data-v-ad2023f6 {
+  font-size: 0.32rem;
+}
+.stock-code.data-v-ad2023f6 {
+  color: #7a8499;
+  font-size: 0.26666666666666666rem;
+  gap: 0.08rem;
+  line-height: 0.37333333333333335rem;
+}
+.market-tag.data-v-ad2023f6,
+.stock-code.data-v-ad2023f6 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.market-tag.data-v-ad2023f6 {
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: PingFang SC;
+  font-size: 0.24rem;
+  height: 0.32rem;
+  line-height: 0.26666666666666666rem;
+  min-height: 0.32rem;
+  padding: 0.02666666666666667rem 0.08rem;
+  text-align: center;
+}
+.market-tag.sh.data-v-ad2023f6,
+.market-tag.sz.data-v-ad2023f6 {
+  background: #eb5a66;
+}
+.market-tag.hk.data-v-ad2023f6 {
+  background: #eb9664;
+}
+.market-tag.us.data-v-ad2023f6 {
+  background: #4a90e2;
+}
+.code.data-v-ad2023f6 {
+  color: #7a8499;
+  font-family: PingFang SC;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  height: 0.32rem;
+  line-height: 0.32rem;
+}
+.code.data-v-ad2023f6,
+.stock-price.data-v-ad2023f6 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.stock-price.data-v-ad2023f6 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.26666666666666666rem;
+}
+.price.data-v-ad2023f6 {
+  color: #262e40;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.price.price-black.data-v-ad2023f6 {
+  color: #999;
+}
+.change.data-v-ad2023f6 {
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.change.change-bold.data-v-ad2023f6 {
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+}
+.change.change-black.data-v-ad2023f6 {
+  color: #999;
+}
+@-webkit-keyframes priceUpdate-ad2023f6 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes priceUpdate-ad2023f6 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes changeUpdate-ad2023f6 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes changeUpdate-ad2023f6 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.15);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes gentleFlash-ad2023f6 {
+  0%,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes gentleFlash-ad2023f6 {
+  0%,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.price.down.data-v-ad2023f6,
+.price.up.data-v-ad2023f6 {
+  animation: priceUpdate-ad2023f6 0.6s ease, gentleFlash-ad2023f6 0.6s ease;
+}
+.change.down.data-v-ad2023f6,
+.change.up.data-v-ad2023f6 {
+  animation: changeUpdate-ad2023f6 0.6s ease, gentleFlash-ad2023f6 0.6s ease;
+}
+.change.up.data-v-ad2023f6,
+.price.up.data-v-ad2023f6 {
+  color: #e63535;
+}
+.change.down.data-v-ad2023f6,
+.price.down.data-v-ad2023f6 {
+  color: #1caa3c;
+}
+.ask-ai-btn.data-v-ad2023f6 {
+  align-items: center;
+  background: #fff;
+  border: 0.02666666666666667rem solid #e63535;
+  border-radius: 0.08rem;
+  color: #e63535;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC;
+  font-size: 0.29333333333333333rem;
+  font-weight: 500;
+  height: 0.64rem;
+  justify-content: center;
+  line-height: 0.64rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: all 0.2s ease;
+  user-select: none;
+  width: 1.3333333333333333rem;
+}
+.ask-ai-btn.data-v-ad2023f6:active {
+  background: #e63535;
+  color: #fff;
+  transform: scale(0.95);
+}
+.sq-footer.data-v-ad2023f6 {
+  margin-top: 0.21333333333333335rem;
+  padding-bottom: 0.4266666666666667rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+.refresh-tip.data-v-ad2023f6 {
+  color: #98a0b3;
+  display: block;
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.border-1px.data-v-ad2023f6 {
+  bottom: 0;
+  position: absolute;
+  width: 9.146666666666667rem;
+}
+.border-1px.data-v-ad2023f6:after {
+  background: #e9ebf0;
+  bottom: 0;
+  content: "";
+  height: 0.02666666666666667rem;
+  left: 0;
+  position: absolute;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .border-1px.data-v-ad2023f6:after {
+    -webkit-font-smoothing: antialiased;
+    transform: scaleY(0.5) translateZ(0);
+  }
+}

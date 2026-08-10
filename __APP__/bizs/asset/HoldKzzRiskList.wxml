@@ -1,0 +1,17 @@
+<view class="hold-kzz-risk-container data-v-95feddbf" wx:if="{{a}}">
+  <view class="hold-kzz-risk-lists data-v-95feddbf">
+    <view
+      class="{{['hold-kzz-risk-tip','data-v-95feddbf',item.f]}}"
+      wx:for="{{b}}"
+      wx:key="e"
+    >
+      <view bindtap="{{item.c}}" class="hold-kzz-risk-text data-v-95feddbf"
+        >【持仓风险】{{item.a}}将在{{item.b}}后停止转股并被强制赎回后退市</view
+      >
+      <label
+        bindtap="{{item.d}}"
+        class="tip-button-close icon icon-close data-v-95feddbf"
+      ></label>
+    </view>
+  </view>
+</view>

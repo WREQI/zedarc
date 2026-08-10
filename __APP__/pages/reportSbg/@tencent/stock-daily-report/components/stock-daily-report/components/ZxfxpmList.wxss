@@ -1,0 +1,94 @@
+flex.data-v-6a5e5d98 {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-1.data-v-6a5e5d98 {
+  flex: 1;
+}
+.flex-justify-center.data-v-6a5e5d98 {
+  justify-content: center;
+}
+.flex-align-center.data-v-6a5e5d98 {
+  align-items: center;
+}
+.flex-justify-between.data-v-6a5e5d98 {
+  justify-content: space-between;
+}
+.zxfx-pm-wrap.data-v-6a5e5d98 {
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  margin-bottom: 0.26666666666666666rem;
+  padding-bottom: 0.4266666666666667rem;
+}
+.zxfx-pm-wrap .bar-info.data-v-6a5e5d98 {
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.16rem;
+}
+.zxfx-pm-wrap .bar-info .bar-info-left.data-v-6a5e5d98 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+}
+.zxfx-pm-wrap .bar-info .bar-info-right.data-v-6a5e5d98 {
+  color: var(--color-lightgray);
+  font-size: 0.37333333333333335rem;
+  padding-right: 0.26666666666666666rem;
+  position: relative;
+}
+.zxfx-pm-wrap .bar-info .bar-info-right.data-v-6a5e5d98:after {
+  background: #7a8499;
+  border: none;
+  content: "";
+  height: 0.29333333333333333rem;
+  margin-top: -0.14666666666666667rem;
+  -webkit-mask-image: url(https://st.gtimg.com/design/82f4f21c41bb22b045947434702e8aec.svg);
+  -webkit-mask-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.16rem;
+}
+.zxfx-pm-wrap .bar-list.data-v-6a5e5d98 {
+  margin-bottom: 0.16rem;
+}
+.zxfx-pm-wrap .bar-list .bar-item.data-v-6a5e5d98 {
+  height: 0.21333333333333335rem;
+  transform: skew(-30deg);
+}
+.zxfx-pm-wrap .bar-list .bar-item.bar-red.data-v-6a5e5d98 {
+  background: #e63535;
+  margin-right: 0.08rem;
+}
+.zxfx-pm-wrap .bar-list .bar-item.bar-red.data-v-6a5e5d98:before {
+  border-right: 0.13333333333333333rem solid transparent;
+  border-top: 0.21333333333333335rem solid #e63535;
+  content: " ";
+  height: 0;
+  left: -0.05333333333333334rem;
+  position: absolute;
+  top: 0;
+  transform: skew(30deg);
+  width: 0;
+}
+.zxfx-pm-wrap .bar-list .bar-item.bar-green.data-v-6a5e5d98 {
+  background: #1caa3c;
+}
+.zxfx-pm-wrap .bar-list .bar-item.bar-green.data-v-6a5e5d98:after {
+  border-bottom: 0.21333333333333335rem solid #1caa3c;
+  border-left: 0.13333333333333333rem solid transparent;
+  content: " ";
+  height: 0;
+  position: absolute;
+  right: -0.05333333333333334rem;
+  top: 0;
+  transform: skew(30deg);
+  width: 0;
+}
+.zxfx-pm-wrap .bar-desc.data-v-6a5e5d98 {
+  font-size: 0.32rem;
+  line-height: 0.44rem;
+}
+.zxfx-pm-wrap .bar-desc .bar-desc-left.data-v-6a5e5d98 {
+  color: #e63535;
+}
+.zxfx-pm-wrap .bar-desc .bar-desc-right.data-v-6a5e5d98 {
+  color: #1caa3c;
+}

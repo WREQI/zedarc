@@ -1,0 +1,193 @@
+<page-meta class="data-v-f50de900" rootFontSize="{{a}}"></page-meta>
+<view class="_div account-setting data-v-f50de900">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f50de900"
+    uI="f50de900-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f50de900"
+    uI="f50de900-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div setting-section basic-info data-v-f50de900">
+    <label class="_span setting-section__title data-v-f50de900">基础信息</label>
+    <view class="_div group-inner data-v-f50de900">
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >允许获取头像、昵称信息</label
+          >
+          <view
+            bindtap="{{c}}"
+            class="_div desc-label desc-label--link data-v-f50de900"
+          >
+            <label class="_span data-v-f50de900">查看详细</label>
+            <label class="_span active data-v-f50de900"
+              >头像、昵称信息使用规则</label
+            >
+          </view>
+        </view>
+        <view bindtap="{{e}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',d]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div setting-section data-share data-v-f50de900">
+    <label class="_span setting-section__title data-v-f50de900">数据共享</label>
+    <view class="_div group-inner data-v-f50de900">
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900">个人信息授权</label>
+          <view class="_div desc-label data-v-f50de900"
+            >同意将您的活动或场景服务数据共享给腾讯自选股小程序和腾讯微证券小程序，详见<label
+              catchtap="{{f}}"
+              class="_span active data-v-f50de900"
+              >《腾讯自选股微信版｜微证券个人信息授权书》</label
+            >
+          </view>
+        </view>
+        <view bindtap="{{h}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',g]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >自选列表同步授权</label
+          >
+          <view class="_div desc-label data-v-f50de900"
+            >同意将您的自选数据提供给腾讯自选股微信版｜微证券</view
+          >
+        </view>
+        <view bindtap="{{j}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',i]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >场外基金行情自选列表授权</label
+          >
+          <view class="_div desc-label data-v-f50de900"
+            >同意将您的场外基金行情自选列表数据提供给腾讯理财通</view
+          >
+        </view>
+        <view bindtap="{{l}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',k]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div setting-section personalization data-v-f50de900">
+    <label class="_span setting-section__title data-v-f50de900"
+      >个性化与体验</label
+    >
+    <view class="_div group-inner data-v-f50de900">
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >资讯和社区个性化推荐服务</label
+          >
+          <view class="_div desc-label data-v-f50de900"
+            >为你推荐资讯和社区个性化信息流和猜涨跌标的，以及点击要闻可能提供标识为“猜你喜欢”的个性化推荐服务</view
+          >
+        </view>
+        <view bindtap="{{n}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',m]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900">自选列表K线图</label>
+          <view class="_div desc-label data-v-f50de900"
+            >开启后自选列表将展示K线图</view
+          >
+        </view>
+        <view bindtap="{{p}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',o]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >问元宝体验优化计划</label
+          >
+          <view class="_div desc-label data-v-f50de900"
+            >允许元宝使用您的数据优化问元宝服务，关闭后不影响您使用问元宝服务，<label
+              catchtap="{{q}}"
+              class="_span active data-v-f50de900"
+              >了解更多</label
+            >
+          </view>
+        </view>
+        <view bindtap="{{s}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',r]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900">个性化推荐广告</label>
+          <view class="_div desc-label data-v-f50de900"
+            >允许平台智能推荐您可能感兴趣的广告内容</view
+          >
+        </view>
+        <view bindtap="{{v}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',t]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div set-item data-v-f50de900">
+        <view class="_div set-item__content data-v-f50de900">
+          <label class="_span title-slot data-v-f50de900"
+            >自选股个性化推荐服务</label
+          >
+          <view class="_div desc-label data-v-f50de900"
+            >开启后，可能提供值得关注的自选股异动个性化推荐服务</view
+          >
+        </view>
+        <view bindtap="{{x}}" class="_div switch-box data-v-f50de900">
+          <view class="{{['_div','data-v-f50de900','switch',w]}}">
+            <view class="_div switch-block data-v-f50de900"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <choose-privacy-modal
+    bind:__l="__l"
+    bindconfirm="{{z}}"
+    bindinput="{{y}}"
+    class="data-v-f50de900"
+    uI="f50de900-2"
+    uP="{{A}}"
+    wx:if="{{A}}"
+  ></choose-privacy-modal>
+  <layer-modal
+    bind:__l="__l"
+    bindcancel="{{B}}"
+    bindconfirm="{{C}}"
+    class="data-v-f50de900"
+    uI="f50de900-3"
+    uP="{{D}}"
+    wx:if="{{D}}"
+  ></layer-modal>
+</view>

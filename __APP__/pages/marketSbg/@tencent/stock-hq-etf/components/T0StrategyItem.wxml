@@ -1,0 +1,52 @@
+<view
+  bindtap="{{k}}"
+  class="_div t0-strategy-item data-v-012bf9c9"
+  wx:if="{{a}}"
+>
+  <view class="_div t0-strategy-item__thumb data-v-012bf9c9">
+    <st-mini-mins
+      bind:__l="__l"
+      class="t0-strategy-item__chart data-v-012bf9c9"
+      uI="012bf9c9-0"
+      uP="{{c}}"
+      wx:if="{{b}}"
+    ></st-mini-mins>
+  </view>
+  <view class="_div t0-strategy-item__info data-v-012bf9c9">
+    <view class="_div t0-strategy-item__name data-v-012bf9c9">{{d}}</view>
+    <fund-tags
+      bind:__l="__l"
+      class="t0-strategy-item__tags data-v-012bf9c9"
+      uI="012bf9c9-1"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></fund-tags>
+  </view>
+  <view class="_div t0-strategy-item__metric data-v-012bf9c9">
+    <view class="_div t0-strategy-item__metric-row data-v-012bf9c9">
+      <view class="_div t0-strategy-item__metric-inner data-v-012bf9c9">
+        <view
+          class="_div t0-strategy-item__metric-value t0-strategy-item__metric-value--premium data-v-012bf9c9"
+          wx:if="{{f}}"
+          >低于<label
+            class="_span t0-strategy-item__metric-emphasis data-v-012bf9c9"
+            >{{g}}%</label
+          >时间</view
+        >
+        <view
+          class="{{['_div','t0-strategy-item__metric-value','data-v-012bf9c9',i]}}"
+          wx:else
+          >{{h}}</view
+        >
+      </view>
+    </view>
+    <view class="_div t0-strategy-item__metric-label data-v-012bf9c9"
+      >{{j}}</view
+    >
+  </view>
+</view>
+<view
+  class="_div t0-strategy-item t0-strategy-item--empty data-v-012bf9c9"
+  wx:else
+  >{{l}}</view
+>

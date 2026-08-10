@@ -1,0 +1,45 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  bindmaskClick="{{f}}"
+  class="data-v-9fafe07d"
+  uI="9fafe07d-0"
+  uP="{{h}}"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <view
+    class="{{['content-wrap','data-v-9fafe07d',e&&'content-wrap__simple-mode']}}"
+  >
+    <view class="content-wrap-detail data-v-9fafe07d">
+      <view class="desc data-v-9fafe07d">类型</view>
+      <view class="btn-list data-v-9fafe07d">
+        <label
+          bindtap="{{item.d}}"
+          class="{{['btn-item','data-v-9fafe07d',item.c]}}"
+          wx:for="{{a}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+      <view class="desc mt-48 data-v-9fafe07d">状态</view>
+      <view class="btn-list data-v-9fafe07d">
+        <label
+          bindtap="{{item.d}}"
+          class="{{['btn-item','data-v-9fafe07d',item.c]}}"
+          wx:for="{{b}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+    </view>
+    <view class="button-wrap flex flex-v data-v-9fafe07d">
+      <button bindtap="{{c}}" class="cancel-btn flex-1 data-v-9fafe07d">
+        取消
+      </button>
+      <button bindtap="{{d}}" class="confirm-btn flex-1 data-v-9fafe07d">
+        确定
+      </button>
+    </view>
+  </view>
+</action-sheet>

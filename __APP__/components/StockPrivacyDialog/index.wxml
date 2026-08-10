@@ -1,0 +1,9 @@
+<view hidden="{{!c}}">
+  <classic-privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{a}}"
+    uI="1657a294-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></classic-privacy-policy-modal>
+</view>

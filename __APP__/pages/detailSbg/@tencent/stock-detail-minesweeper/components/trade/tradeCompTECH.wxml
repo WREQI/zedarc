@@ -1,0 +1,24 @@
+<view class="_div tech-wrapper data-v-956b3284">
+  <view
+    class="_div tech-wrapper-item data-v-956b3284"
+    wx:for="{{a}}"
+    wx:key="c"
+  >
+    <view class="_div div-line data-v-956b3284"></view>
+    <view class="_div fd-title data-v-956b3284">{{item.a}}</view>
+    <view
+      class="_div div-detail data-v-956b3284"
+      wx:for="{{item.b}}"
+      wx:for-item="itemDetail"
+      wx:key="d"
+    >
+      <label class="_span fd-contentLeft data-v-956b3284"
+        >{{itemDetail.a}}</label
+      >
+      <label
+        class="{{['_span','fd-contentRight','data-v-956b3284',itemDetail.c]}}"
+        >{{itemDetail.b}}</label
+      >
+    </view>
+  </view>
+</view>

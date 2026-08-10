@@ -1,0 +1,93 @@
+.fade-enter-active.data-v-9c163ced,
+.fade-leave-active.data-v-9c163ced {
+  transition: all 0.35s;
+}
+.fade-enter.data-v-9c163ced,
+.fade-leave-to.data-v-9c163ced {
+  opacity: 0;
+}
+.animation-enter-active.data-v-9c163ced,
+.animation-leave-active.data-v-9c163ced {
+  transition: all 0.35s;
+}
+.animation-enter.data-v-9c163ced,
+.animation-leave-to.data-v-9c163ced {
+  transform: translate3d(0, 100%, 0);
+}
+.ActionSheet .Action_mask.data-v-9c163ced {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 105;
+}
+.ActionSheet .Action_wrap.data-v-9c163ced {
+  background: #fff;
+  background: #efeff4;
+  border-radius: 0.32rem 0.32rem 0 0;
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 106;
+}
+.iphonex-adapt .ActionSheet .Action_wrap.data-v-9c163ced {
+  background-color: #fff;
+  padding-bottom: 0.4533333333333333rem;
+}
+.ActionSheet .Action_wrap .title.data-v-9c163ced {
+  border-radius: 0.32rem 0.32rem 0 0;
+  color: #121c32;
+  font-size: 0.48rem;
+  font-weight: 600;
+  padding: 0.4666666666666667rem;
+  text-align: center;
+}
+.ActionSheet .Action_wrap .item.data-v-9c163ced {
+  color: #121c32;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  justify-content: space-between;
+  padding: 0.41333333333333333rem 0.4rem 0.4rem 0.5333333333333333rem;
+}
+.ActionSheet .Action_wrap .item .more-icon.data-v-9c163ced {
+  background-image: url(https://st.gtimg.com/design/a8999885ffa266d4be91f1b720a31097.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0.22626666666666664rem;
+  width: 0.22626666666666664rem;
+}
+.ActionSheet .Action_wrap .cancel.data-v-9c163ced {
+  background: #fff;
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  padding: 0.4533333333333333rem 0.4266666666666667rem 0.4266666666666667rem;
+  text-align: center;
+}
+.ActionSheet .menu_cell.data-v-9c163ced {
+  background: #fff;
+  position: relative;
+}
+.ActionSheet .menu_cell.data-v-9c163ced:after {
+  background-color: #e5e5e5;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 0.013333333333333334rem;
+  left: 0;
+  margin-bottom: -0.006666666666666667rem;
+  position: absolute;
+  transform: scaleY(0.5);
+  transform-origin: 0 0 0;
+  width: 100%;
+  z-index: 1;
+}
+.ActionSheet.isIphoneX .Action_wrap .menu_cell.data-v-9c163ced:last-child {
+  padding-bottom: 0.64rem;
+}

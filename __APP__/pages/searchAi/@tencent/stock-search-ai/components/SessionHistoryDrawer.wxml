@@ -1,0 +1,144 @@
+<view
+  bindtouchcancel="{{aj}}"
+  bindtouchend="{{ai}}"
+  bindtouchmove="{{ah}}"
+  bindtouchstart="{{ag}}"
+  class="{{['_div','data-v-4d7d0ea6','ai-history-drawer',ac,ad,ae]}}"
+  style="{{af}}"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{I}}"
+    class="_div ai-drawer-container data-v-4d7d0ea6"
+    style="{{H}}"
+  >
+    <view catchtap="{{d}}" class="_div navTitleWrapper data-v-4d7d0ea6">
+      <view class="_div navTitleContainer data-v-4d7d0ea6">
+        <image
+          catchtap="{{c}}"
+          class="_img navTitleBack data-v-4d7d0ea6"
+          src="{{b}}"
+        ></image>
+        <label class="_span navTitle data-v-4d7d0ea6">历史对话</label>
+      </view>
+    </view>
+    <block wx:if="{{e}}">
+      <scroll-view
+        bindscroll="{{q}}"
+        bindscrolltolower="{{r}}"
+        class="scroll-container data-v-4d7d0ea6"
+        enableBackToTop="{{true}}"
+        enhanced="{{true}}"
+        scrollAnchoring="{{true}}"
+        scrollTop="{{p}}"
+        scrollWithAnimation="{{true}}"
+        scrollY="{{o}}"
+        showScrollbar="{{true}}"
+        wx:if="{{f}}"
+      >
+        <session-history-list
+          bind:__l="__l"
+          bindbindingWxClaw="{{l}}"
+          bindchangeStickyTitle="{{j}}"
+          bindjumpSessionCreate="{{k}}"
+          bindlongPress="{{h}}"
+          bindsessionOperate="{{i}}"
+          bindunbindingWxClaw="{{m}}"
+          class="r data-v-4d7d0ea6"
+          uI="4d7d0ea6-0"
+          uP="{{n}}"
+          uR="listRef"
+          wx:if="{{n}}"
+        ></session-history-list>
+      </scroll-view>
+      <st-scroll
+        bind:__l="__l"
+        bindscroll="{{C}}"
+        class="scroll-container r data-v-4d7d0ea6"
+        uI="4d7d0ea6-1"
+        uP="{{D||''}}"
+        uR="scrollh5Ref"
+        uS="{{['d']}}"
+        wx:else
+      >
+        <session-history-list
+          bind:__l="__l"
+          bindbindingWxClaw="{{y}}"
+          bindchangeStickyTitle="{{w}}"
+          bindjumpSessionCreate="{{x}}"
+          bindlongPress="{{t}}"
+          bindsessionOperate="{{v}}"
+          bindunbindingWxClaw="{{z}}"
+          class="r data-v-4d7d0ea6"
+          uI="4d7d0ea6-2,4d7d0ea6-1"
+          uP="{{A}}"
+          uR="listRef"
+          wx:if="{{A}}"
+        ></session-history-list>
+      </st-scroll>
+    </block>
+    <view
+      class="_div empty-container layout-column-align-center data-v-4d7d0ea6"
+      wx:elif="{{E}}"
+    >
+      <view class="_div layout-column-align-center data-v-4d7d0ea6">
+        <image class="_img empty-icon data-v-4d7d0ea6" src="{{F}}"></image>
+        <label class="_span empty-tips data-v-4d7d0ea6"
+          >暂无内容，快去开启对话吧～</label
+        >
+        <view catchtap="{{G}}" class="_div btn-news-session data-v-4d7d0ea6"
+          >新建对话</view
+        >
+      </view>
+    </view>
+  </view>
+  <view catchtap="{{J}}" class="_div ai-drawer-mask data-v-4d7d0ea6"></view>
+  <session-history-pop
+    bind:__l="__l"
+    binddelSession="{{M}}"
+    bindrenameSession="{{L}}"
+    class="history-pop-container r data-v-4d7d0ea6"
+    uI="4d7d0ea6-3"
+    uR="popDialogRef"
+  ></session-history-pop>
+  <service-agreement-modal
+    bind:__l="__l"
+    bindconfirm="{{N}}"
+    bindreject="{{O}}"
+    class="data-v-4d7d0ea6"
+    uI="4d7d0ea6-4"
+    uP="{{P}}"
+    wx:if="{{P}}"
+  ></service-agreement-modal>
+  <block wx:if="{{Q}}">
+    <view
+      class="{{['_div','data-v-4d7d0ea6','sesstion-title-container',V]}}"
+      wx:if="{{R}}"
+    >
+      <image
+        class="_img icon-stick data-v-4d7d0ea6"
+        src="{{T}}"
+        wx:if="{{S}}"
+      ></image>
+      <label class="_span session-title data-v-4d7d0ea6">{{U}}</label>
+    </view>
+    <view
+      class="_div pop-action-wrapper data-v-4d7d0ea6"
+      style="{{ab}}"
+      wx:if="{{W}}"
+    >
+      <view class="_div pop-action data-v-4d7d0ea6">
+        <label class="arrow-btm data-v-4d7d0ea6"></label>
+        <view catchtap="{{X}}" class="_div menu-item flex-1 data-v-4d7d0ea6">
+          <label class="_span text data-v-4d7d0ea6">重命名</label>
+        </view>
+        <view catchtap="{{Z}}" class="_div menu-item flex-1 data-v-4d7d0ea6">
+          <label class="_span text data-v-4d7d0ea6">{{Y}}</label>
+        </view>
+        <view catchtap="{{aa}}" class="_div menu-item flex-1 data-v-4d7d0ea6">
+          <label class="_span text data-v-4d7d0ea6">删除</label>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

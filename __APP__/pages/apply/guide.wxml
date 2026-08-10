@@ -1,0 +1,35 @@
+<page-meta class="data-v-65e4e03e" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-65e4e03e"
+  id="global-wrap"
+  uI="65e4e03e-0"
+  uP="{{e}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-65e4e03e"
+    uI="65e4e03e-1,65e4e03e-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-autoguide data-v-65e4e03e">
+      <view class="content-container data-v-65e4e03e">
+        <broker-logo
+          bind:__l="__l"
+          class="broker-logo data-v-65e4e03e"
+          uI="65e4e03e-2,65e4e03e-1"
+          uP="{{b}}"
+          wx:if="{{b}}"
+        ></broker-logo>
+        <view class="title data-v-65e4e03e">
+          <view class="text data-v-65e4e03e"
+            >即将跳转{{c}}服务页面<label class="dot data-v-65e4e03e"></label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </apply-wrap>
+</global-wrap>

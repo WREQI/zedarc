@@ -1,0 +1,230 @@
+.chip-info-content.data-v-eb9bb28a {
+  background-color: var(--fill-content-layer);
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.chip-info-content .chip-info-header.data-v-eb9bb28a {
+  color: var(--color-midgray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  justify-content: space-around;
+  line-height: 0.37333333333333335rem;
+  padding-left: 0.08rem;
+  width: 100%;
+}
+.chip-info-content .chip-info-header.flexStart.data-v-eb9bb28a {
+  justify-content: flex-start;
+}
+.chip-info-content .chip-info-header .sp-chip-percent.data-v-eb9bb28a {
+  color: #e63535;
+}
+.chip-info-content .chip-info-header .legend-item.data-v-eb9bb28a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.chip-info-content .chip-info-header .legend-item .i-color.data-v-eb9bb28a {
+  display: inline-block;
+  height: 0.13333333333333333rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.13333333333333333rem;
+}
+.chip-info-content
+  .chip-info-header
+  .legend-item
+  .i-color.color-drop.data-v-eb9bb28a {
+  background-color: var(--color-green);
+}
+.chip-info-content
+  .chip-info-header
+  .legend-item
+  .i-color.color-rise.data-v-eb9bb28a {
+  background-color: var(--color-red);
+}
+.chip-info-content
+  .chip-info-header
+  .legend-item
+  .i-color.color-avg.data-v-eb9bb28a {
+  background-color: var(--color-blue);
+}
+.chip-info-content .chip-info-header .currentTpis.data-v-eb9bb28a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.chip-info-content .chip-info-footer.data-v-eb9bb28a {
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  justify-content: space-between;
+  line-height: 0.37333333333333335rem;
+  padding-left: 0.08rem;
+}
+.chip-info-content .chip-info-footer .btn-chip-content.data-v-eb9bb28a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  justify-content: flex-end;
+}
+.chip-info-content
+  .chip-info-footer
+  .btn-chip-content
+  .btn-chip.data-v-eb9bb28a {
+  height: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.32rem;
+}
+.chip-info-content .chip-info-body.data-v-eb9bb28a {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.06666666666666667rem 0 0.06666666666666667rem 0.08rem;
+  white-space: nowrap;
+}
+.chip-info-content .chip-info-body.guide-mode.data-v-eb9bb28a {
+  animation-direction: alternate;
+  animation-duration: 2s;
+  animation-iteration-count: 4;
+  animation-name: guideShow-eb9bb28a;
+  animation-timing-function: linear;
+}
+.chip-info-content .chip-info-body .chip-info-item.data-v-eb9bb28a {
+  align-items: center;
+  color: var(--color-midgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  justify-content: flex-start;
+  line-height: 0.37333333333333335rem;
+  margin-bottom: 0.02666666666666667rem;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .chip-item-title.data-v-eb9bb28a {
+  width: 1.2rem;
+}
+.chip-info-content .chip-info-body .chip-info-item .shrink.data-v-eb9bb28a {
+  flex-shrink: 0;
+}
+.chip-info-content .chip-info-body .chip-info-item .weight.data-v-eb9bb28a {
+  font-weight: 700;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .profitPercent.data-v-eb9bb28a {
+  background-color: var(--color-green);
+  border-radius: 0.02666666666666667rem;
+  height: 0.32rem;
+  position: relative;
+  width: 1.6rem;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .profitPercent
+  .rise.data-v-eb9bb28a {
+  background-color: var(--color-red);
+  border-bottom-left-radius: 0.02666666666666667rem;
+  border-top-left-radius: 0.02666666666666667rem;
+  display: inline-block;
+  height: 0.32rem;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .profitPercent
+  .rise-text.data-v-eb9bb28a {
+  color: var(--color-white);
+  left: 0.04rem;
+  position: absolute;
+  top: 0;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .chip-type-switch.data-v-eb9bb28a {
+  border: 0.013333333333333334rem solid var(--border-heavy-divider);
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4533333333333333rem;
+  justify-content: space-between;
+  line-height: 0.4533333333333333rem;
+  width: 2.6666666666666665rem;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .chip-type-switch
+  .chip-switch-item.data-v-eb9bb28a {
+  text-align: center;
+  width: 50%;
+}
+.chip-info-content
+  .chip-info-body
+  .chip-info-item
+  .chip-type-switch
+  .chip-switch-item.active.data-v-eb9bb28a {
+  background-color: var(--color-card);
+  border: 0.013333333333333334rem solid var(--color-icon);
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-midgray);
+}
+.chip-info-content .miniFont.data-v-eb9bb28a {
+  transform: scale(0.9);
+  transform-origin: left;
+}
+@-webkit-keyframes guideShow-eb9bb28a {
+  0% {
+    background-color: rgba(255, 137, 30, 0);
+  }
+  25% {
+    background-color: rgba(255, 137, 30, 0.05);
+  }
+  50% {
+    background-color: rgba(255, 137, 30, 0.1);
+  }
+  75% {
+    background-color: rgba(255, 137, 30, 0.15);
+  }
+  to {
+    background-color: rgba(255, 137, 30, 0.2);
+  }
+}
+@keyframes guideShow-eb9bb28a {
+  0% {
+    background-color: rgba(255, 137, 30, 0);
+  }
+  25% {
+    background-color: rgba(255, 137, 30, 0.05);
+  }
+  50% {
+    background-color: rgba(255, 137, 30, 0.1);
+  }
+  75% {
+    background-color: rgba(255, 137, 30, 0.15);
+  }
+  to {
+    background-color: rgba(255, 137, 30, 0.2);
+  }
+}

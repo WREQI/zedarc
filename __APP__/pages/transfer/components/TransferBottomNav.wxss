@@ -1,0 +1,44 @@
+@import "/app.wxss";
+.transfer-bottom-nav {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  bottom: 0.64rem;
+  bottom: calc(0.64rem + env(safe-area-inset-bottom));
+  bottom: calc(0.64rem + constant(safe-area-inset-bottom));
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  padding: 0 0.4rem;
+  position: fixed;
+  right: 0;
+}
+.transfer-bottom-nav.transfer-bottom-navbar-mp {
+  bottom: 1.946667rem;
+  bottom: calc(1.946667rem + env(safe-area-inset-bottom));
+  bottom: calc(1.946667rem + constant(safe-area-inset-bottom));
+}
+.transfer-bottom-nav .nav-text {
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+}
+.transfer-bottom-nav .nav-text + .nav-text {
+  margin-left: 0.666667rem;
+  position: relative;
+}
+.transfer-bottom-nav .nav-text + .nav-text:before {
+  background: #c9d0dc;
+  content: "";
+  height: 0.32rem;
+  left: -0.333333rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.013333rem;
+}
+[data-theme="dark"] .transfer-bottom-nav .nav-text + .nav-text:before {
+  background: #262e40;
+}

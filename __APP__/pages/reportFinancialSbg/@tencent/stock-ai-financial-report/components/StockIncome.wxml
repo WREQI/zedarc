@@ -1,0 +1,25 @@
+<view class="_div data-v-db3bece2" wx:if="{{a}}">
+  <view class="_div brief-block data-v-db3bece2">
+    <view class="_div item-title-zxg increase-margin data-v-db3bece2"
+      >{{b}}</view
+    >
+    <view class="_div sub-line data-v-db3bece2"
+      >{{c}}{{d}}<label
+        class="_span sub-line-span data-v-db3bece2"
+        style="{{'color:'+g}}"
+        >{{e}}{{f}}元</label
+      >同比增长<label
+        class="_span sub-line-span data-v-db3bece2"
+        style="{{'color:'+i}}"
+        >{{h}}</label
+      >
+    </view>
+    <f2
+      bind:__l="__l"
+      class="data-v-db3bece2"
+      uI="db3bece2-0"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></f2>
+  </view>
+</view>

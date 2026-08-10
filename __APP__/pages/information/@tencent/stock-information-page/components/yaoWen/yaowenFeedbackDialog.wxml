@@ -1,0 +1,45 @@
+<view catchtap="{{f}}" class="_div feedback-container data-v-d3746d57">
+  <view class="_div feedback-title data-v-d3746d57">
+    <label class="_span title1 data-v-d3746d57">您不喜欢的原因是</label>
+    <label class="_span title2 data-v-d3746d57">（可多选）</label>
+  </view>
+  <view class="_div horizontal-line data-v-d3746d57"></view>
+  <view class="_div feedback-reasons-wrapper data-v-d3746d57">
+    <view
+      class="_div feedback-reasons data-v-d3746d57"
+      wx:for="{{a}}"
+      wx:for-item="rowIndex"
+      wx:key="b"
+    >
+      <view
+        catchtap="{{columnIndex.d}}"
+        class="{{['_div','data-v-d3746d57','feedback-reason-tag',columnIndex.c]}}"
+        wx:for="{{rowIndex.a}}"
+        wx:for-item="columnIndex"
+        wx:key="b"
+      >
+        <label class="_span feedback-reason-text data-v-d3746d57"
+          >{{columnIndex.a}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div horizontal-line2 data-v-d3746d57"></view>
+  <view catchtap="{{c}}" class="_div feedback-check data-v-d3746d57">
+    <view class="{{['_div','data-v-d3746d57',b]}}"></view>
+    <view class="_div feedback-check-tips data-v-d3746d57">
+      <label class="_span title1 data-v-d3746d57">关闭所有要闻即时反馈</label>
+      <label class="_span title2 data-v-d3746d57">可在系统设置里开启</label>
+    </view>
+  </view>
+  <view class="_div horizontal-line data-v-d3746d57"></view>
+  <view class="_div feedback-footer data-v-d3746d57">
+    <view catchtap="{{d}}" class="_div feedback-cancel data-v-d3746d57">
+      <label class="_span feedback-cancel-text data-v-d3746d57">取消</label>
+    </view>
+    <view class="_div vertical-line data-v-d3746d57"></view>
+    <view catchtap="{{e}}" class="_div feedback-confirm data-v-d3746d57">
+      <label class="_span confirm-text data-v-d3746d57">确定</label>
+    </view>
+  </view>
+</view>

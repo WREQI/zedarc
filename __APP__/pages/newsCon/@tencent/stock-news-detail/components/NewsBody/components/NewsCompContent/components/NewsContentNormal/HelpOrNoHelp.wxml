@@ -1,0 +1,103 @@
+<view class="_div help-container data-v-a1326eb1" wx:if="{{a}}">
+  <view class="_div title-container data-v-a1326eb1">
+    <view class="_div devider-line data-v-a1326eb1"></view>
+    <view class="_div title-content data-v-a1326eb1" ref="titleContent"
+      >这篇文章是否对您有帮助</view
+    >
+    <view class="_div devider-line data-v-a1326eb1"></view>
+  </view>
+  <view class="_div content-container data-v-a1326eb1">
+    <view class="_div content-left data-v-a1326eb1" ref="left">
+      <view
+        catchtap="{{d}}"
+        class="_div box-container data-v-a1326eb1"
+        ref="leftBox"
+        style="{{'opacity:'+c}}"
+      >
+        <view
+          class="_div box-icon data-v-a1326eb1"
+          style="{{'background-image:'+b}}"
+        ></view>
+        <view class="_div box-content data-v-a1326eb1" ref="leftWord"
+          >有帮助</view
+        >
+      </view>
+      <label
+        class="_span content-word data-v-a1326eb1"
+        ref="leftContent"
+        style="{{'opacity:'+0}}"
+        >已收到您的反馈，感谢您的肯定</label
+      >
+    </view>
+    <view class="_div content-right data-v-a1326eb1" ref="right">
+      <view
+        catchtap="{{g}}"
+        class="{{['_div','data-v-a1326eb1','box-container','right-index']}}"
+        ref="rightBox"
+        style="{{'opacity:'+f}}"
+      >
+        <view
+          class="_div box-icon data-v-a1326eb1"
+          style="{{'background-image:'+e}}"
+        ></view>
+        <view class="_div box-content data-v-a1326eb1" ref="rightWord"
+          >没帮助</view
+        >
+      </view>
+      <view
+        class="_div content-word data-v-a1326eb1"
+        ref="rightContent"
+        style="{{'opacity:'+0}}"
+        >感谢建议，我们将继续努力</view
+      >
+    </view>
+  </view>
+  <st-action-sheet
+    bind:__l="__l"
+    bindtoggle="{{q}}"
+    class="data-v-a1326eb1"
+    uI="a1326eb1-0"
+    uP="{{r}}"
+    uS="{{['d']}}"
+    wx:if="{{r}}"
+  >
+    <view
+      class="{{['_div','data-v-a1326eb1','actionsheet-feedback-container',p]}}"
+    >
+      <view class="_div brand-container data-v-a1326eb1">
+        <view class="_div brand-icon data-v-a1326eb1"></view>
+        <label class="_span feedback-desc data-v-a1326eb1">{{h}}</label>
+        <view catchtap="{{i}}" class="_div close data-v-a1326eb1"></view>
+      </view>
+      <view class="_div btn-container data-v-a1326eb1">
+        <view
+          class="_div row data-v-a1326eb1"
+          wx:for="{{j}}"
+          wx:for-item="lineItem"
+          wx:key="b"
+        >
+          <view
+            bindtouchstart="{{item.b}}"
+            catchtap="{{item.e}}"
+            class="{{['_div','feedback-btn','data-v-a1326eb1',item.c]}}"
+            wx:for="{{lineItem.a}}"
+            wx:key="d"
+          >
+            <label class="_span data-v-a1326eb1">{{item.a}}</label>
+          </view>
+        </view>
+      </view>
+      <textarea
+        bindinput="{{l}}"
+        class="inputarea data-v-a1326eb1"
+        maxlength="200"
+        placeholder="{{'详细反馈可以帮我们提供更好的内容服务...'}}"
+        ref="feedbackInput"
+        value="{{k}}"
+        wx:if="{{r0}}"
+      ></textarea>
+      <view catchtap="{{m}}" class="_div btn data-v-a1326eb1">提交反馈</view>
+      <view class="{{['_div','data-v-a1326eb1',n,o]}}"></view>
+    </view>
+  </st-action-sheet>
+</view>

@@ -1,0 +1,40 @@
+<view
+  class="{{['_div','page-container','system-error','data-v-f57aea05',p]}}"
+  data-st-theme="{{q}}"
+>
+  <view class="_div present-container data-v-f57aea05">
+    <image class="_img server-img data-v-f57aea05" src="{{a}}"></image>
+    <view class="_div maintain-header-container data-v-f57aea05" wx:if="{{b}}">
+      <label class="_span maintain-header-title data-v-f57aea05">公告</label>
+    </view>
+  </view>
+  <view class="_div solution-container data-v-f57aea05">
+    <view class="_p server-text main data-v-f57aea05"
+      >{{c}}<label bindtap="{{f}}" class="_span data-v-f57aea05" wx:if="{{d}}"
+        >如有疑问可联系券商：<label class="_span blue data-v-f57aea05"
+          >{{e}}</label
+        >
+      </label>
+    </view>
+    <view class="_p server-text sub data-v-f57aea05" wx:if="{{g}}"
+      >你的资金仍然是安全的</view
+    >
+    <button
+      bindtap="{{i}}"
+      class="btn data-v-f57aea05"
+      type="primary"
+      wx:if="{{h}}"
+    >
+      去自选看看
+    </button>
+  </view>
+  <view class="_p bottom-info system-errcode data-v-f57aea05" wx:if="{{j}}"
+    >错误码信息：{{k}}</view
+  >
+  <view
+    bindtap="{{o}}"
+    class="_p bottom-info broker-contact data-v-f57aea05"
+    wx:if="{{l}}"
+    >{{m}}<label class="_span blue data-v-f57aea05">{{n}}</label>
+  </view>
+</view>

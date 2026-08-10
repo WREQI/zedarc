@@ -1,0 +1,11 @@
+<view class="_div section data-v-630d00ba" wx:if="{{a}}">
+  <view class="_div section-header data-v-630d00ba">相关热文</view>
+  <new-item
+    bind:__l="__l"
+    class="data-v-630d00ba"
+    uI="{{item.b}}"
+    uP="{{item.c}}"
+    wx:for="{{b}}"
+    wx:key="a"
+  ></new-item>
+</view>

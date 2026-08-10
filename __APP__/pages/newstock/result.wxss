@@ -1,0 +1,120 @@
+@import "/app.wxss";
+.container.data-v-e9bf911b {
+  background: var(--fill-2);
+  height: 100%;
+  min-height: 100vh;
+}
+.section-result.data-v-e9bf911b {
+  padding: 2.653333rem 0 1.146667rem;
+  text-align: center;
+}
+.section-result .tit.data-v-e9bf911b {
+  color: var(--text-color-1);
+  font-size: 0.453333rem;
+  font-weight: 400;
+  padding: 0.666667rem 0.4rem 0.4rem;
+}
+.section-result .result-desc.data-v-e9bf911b {
+  color: var(--text-color-4);
+  font-size: 0.346667rem;
+  line-height: 0.48rem;
+  padding: 0 0.533333rem;
+}
+.section-result .btn-line.data-v-e9bf911b {
+  padding: 0.8rem 0.4rem 0.4rem;
+}
+.section-result .btn-tips.data-v-e9bf911b {
+  padding: 0 0.4rem;
+}
+.section-result .desc.data-v-e9bf911b {
+  color: var(--text-color-4);
+  font-size: 0.346667rem;
+  line-height: 0.24rem;
+}
+.section-result .btn-link.data-v-e9bf911b {
+  font-size: 0.16rem;
+  padding-top: 0.373333rem;
+}
+.section-result .split-line.data-v-e9bf911b {
+  color: var(--text-color-4);
+  padding: 0 0.133333rem;
+}
+.banner-img.data-v-e9bf911b {
+  height: 1.866667rem;
+  margin: 0 auto;
+  position: relative;
+  width: 1.866667rem;
+}
+.banner-img > img.data-v-e9bf911b {
+  height: 100%;
+}
+.funds-result .section-result .tit p.data-v-e9bf911b {
+  line-height: 0.64rem;
+}
+.symbol-wrap.data-v-e9bf911b {
+  height: 2.4rem;
+  margin: 0 auto;
+  position: relative;
+  width: 2.4rem;
+}
+.symbol-fail.data-v-e9bf911b,
+.symbol-inf.data-v-e9bf911b,
+.symbol-suc.data-v-e9bf911b {
+  border-radius: 50%;
+  color: #fff;
+  height: 1.866667rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transform-origin: center center;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  width: 1.866667rem;
+}
+.symbol-suc.data-v-e9bf911b {
+  border: 1px solid var(--color-blue);
+  color: var(--color-blue);
+}
+.symbol-fail.data-v-e9bf911b {
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+}
+.symbol-inf.data-v-e9bf911b {
+  background-color: var(--color-orange);
+}
+.result-fail .symbol-fail.data-v-e9bf911b,
+.result-inf .symbol-inf.data-v-e9bf911b,
+.result-suc .symbol-suc.data-v-e9bf911b {
+  transform: scale(1);
+}
+.symbol-fail .icon-mark.data-v-e9bf911b,
+.symbol-inf .icon-inf.data-v-e9bf911b,
+.symbol-suc .icon-tick.data-v-e9bf911b {
+  font-size: 1.013333rem;
+  margin-left: 0.04rem;
+  margin-top: 0.053333rem;
+}
+.symbol-fail .i-mark.data-v-e9bf911b,
+.symbol-inf .i-inf.data-v-e9bf911b,
+.symbol-suc .i-tick.data-v-e9bf911b {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon_result.png);
+  background-repeat: no-repeat;
+  background-size: 2.32rem 1.013333rem;
+}
+.symbol-suc .i-tick.data-v-e9bf911b {
+  background-position: 0 0;
+  height: 0.826667rem;
+  width: 1.013333rem;
+}
+.symbol-fail .i-mark.data-v-e9bf911b {
+  background-position: -1.36rem 0;
+  height: 1.013333rem;
+  width: 0.213333rem;
+}
+.symbol-inf .i-inf.data-v-e9bf911b {
+  background-position: -2.106667rem 0;
+  height: 1.013333rem;
+  width: 0.24rem;
+}

@@ -1,0 +1,53 @@
+@import "/app.wxss";
+.entryIconAdvWrapper .icon-type-wrapper {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.666667rem;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+  width: 0.693333rem;
+}
+.entryIconAdvWrapper .icon-type-wrapper .rect {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/quick-entry/all-debt-number_light.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #3077ec;
+  font-size: 0.24rem;
+  font-weight: 600;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  text-align: center;
+  width: 0.693333rem;
+}
+.entryIconAdvWrapper .icon-type-wrapper .rect span {
+  font-size: 0.186667rem;
+}
+.entryIconAdvWrapper .rp-type-wrapper {
+  background-color: #e63535;
+  border-radius: 0.16rem;
+  color: #fff;
+  font-size: 0.213333rem;
+  font-weight: 600;
+  height: 0.32rem;
+  left: 0.32rem;
+  line-height: 0.346667rem;
+  padding: 0 0.106667rem;
+  position: absolute;
+  top: -0.16rem;
+  white-space: nowrap;
+  width: "auto";
+}
+.entryIconAdvWrapper.ios .rp-type-wrapper {
+  line-height: 0.346667rem;
+}
+.entryIconAdvWrapper.ios .rect {
+  line-height: 0.693333rem;
+}
+[data-theme="dark"] .entryIconAdvWrapper .rect {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/quick-entry/all-debt-number_dark.svg);
+}

@@ -1,0 +1,303 @@
+@font-face {
+  font-family: label;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://st.gtimg.com/files/062bd50d_1a7kW88-yOG.woff2)
+      format("woff2"),
+    url(https://st.gtimg.com/files/062bd50d_FqXZuDqWhHU.woff) format("woff");
+}
+[class*=" lbl-"].data-v-1b776984,
+[class^="lbl-"].data-v-1b776984 {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 0.02666666666666667rem;
+  font-family: label;
+  font-size: 0.26666666666666666rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  text-transform: none;
+}
+.lbl-us-market.data-v-1b776984:before {
+  content: "";
+}
+.lbl-hk-market.data-v-1b776984:before {
+  content: "";
+}
+.lbl-sh-market.data-v-1b776984:before {
+  content: "";
+}
+.lbl-sz-market.data-v-1b776984:before {
+  content: "";
+}
+.lbl-pt-market.data-v-1b776984:before {
+  content: "板";
+}
+.lbl-cnjj-market.data-v-1b776984:before,
+.lbl-cwjj-market.data-v-1b776984:before {
+  content: "基";
+}
+.lbl-bj-market.data-v-1b776984:before {
+  content: "BJ";
+}
+.lbl-uk-market.data-v-1b776984:before {
+  content: "UK";
+}
+.lbl-nq-market.data-v-1b776984:before {
+  content: "NQ";
+}
+.lbl-sp-market.data-v-1b776984:before {
+  content: "SP";
+}
+.lbl-fx-market.data-v-1b776984:before {
+  content: "FX";
+}
+.lbl-zhai-market.data-v-1b776984:before {
+  content: "债";
+}
+.lbl-kch-market.data-v-1b776984:before {
+  content: "科";
+}
+.lbl-chy-market.data-v-1b776984:before {
+  content: "创";
+}
+.lbl-ft-market.data-v-1b776984:before,
+.lbl-hkzs-market.data-v-1b776984:before,
+.lbl-hszs-market.data-v-1b776984:before,
+.lbl-nqzs-market.data-v-1b776984:before,
+.lbl-ukzs-market.data-v-1b776984:before,
+.lbl-uszs-market.data-v-1b776984:before {
+  content: "指";
+}
+.lbl-cnjj-market.data-v-1b776984:before,
+.lbl-cwjj-market.data-v-1b776984:before,
+.lbl-ft-market.data-v-1b776984:before,
+.lbl-pt-market.data-v-1b776984:before {
+  font-size: 0.24rem;
+}
+.lbl-fu-market.data-v-1b776984:before,
+.lbl-hd-market.data-v-1b776984:before {
+  content: "FT";
+}
+.lbl-bj-market.data-v-1b776984,
+.lbl-chy-market.data-v-1b776984,
+.lbl-cnjj-market.data-v-1b776984,
+.lbl-cwjj-market.data-v-1b776984,
+.lbl-ft-market.data-v-1b776984,
+.lbl-fu-market.data-v-1b776984,
+.lbl-fx-market.data-v-1b776984,
+.lbl-hd-market.data-v-1b776984,
+.lbl-hk-market.data-v-1b776984,
+.lbl-hkzs-market.data-v-1b776984,
+.lbl-hszs-market.data-v-1b776984,
+.lbl-kch-market.data-v-1b776984,
+.lbl-nq-market.data-v-1b776984,
+.lbl-nqzs-market.data-v-1b776984,
+.lbl-pt-market.data-v-1b776984,
+.lbl-sh-market.data-v-1b776984,
+.lbl-sp-market.data-v-1b776984,
+.lbl-sz-market.data-v-1b776984,
+.lbl-uk-market.data-v-1b776984,
+.lbl-ukzs-market.data-v-1b776984,
+.lbl-us-market.data-v-1b776984,
+.lbl-uszs-market.data-v-1b776984,
+.lbl-zhai-market.data-v-1b776984 {
+  display: inline-block;
+  height: 0.26666666666666666rem;
+  line-height: 1;
+  margin-right: 0.10666666666666667rem;
+  padding: 0 0 0.02666666666666667rem 0.013333333333333334rem;
+  width: 0.37333333333333335rem;
+}
+.lbl-nq-market.data-v-1b776984 {
+  padding: 0 0.02666666666666667rem;
+  width: 0.38666666666666666rem;
+}
+.lbl-kc-market.data-v-1b776984 {
+  background-image: url(https://st.gtimg.com/design/35a415a9038999ba4a61b90d18fe2ddf.png);
+  background-size: 100% 100%;
+  border-radius: 0.02666666666666667rem;
+  display: inline-block;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.4rem;
+}
+.lbl-sh-market.data-v-1b776984,
+.lbl-sz-market.data-v-1b776984 {
+  color: #eb5a66;
+}
+.lbl-hk-market.data-v-1b776984 {
+  color: #eb9664;
+}
+.lbl-ft-market.data-v-1b776984,
+.lbl-fu-market.data-v-1b776984,
+.lbl-fx-market.data-v-1b776984,
+.lbl-hd-market.data-v-1b776984,
+.lbl-sp-market.data-v-1b776984 {
+  background-color: #70bfed;
+  color: var(--card-shadow8);
+}
+.lbl-bj-market.data-v-1b776984,
+.lbl-chy-market.data-v-1b776984,
+.lbl-cnjj-market.data-v-1b776984,
+.lbl-hszs-market.data-v-1b776984,
+.lbl-kch-market.data-v-1b776984,
+.lbl-pt-market.data-v-1b776984,
+.lbl-zhai-market.data-v-1b776984 {
+  background-color: #eb5a66;
+  color: var(--card-shadow8);
+}
+.lbl-nq-market.data-v-1b776984,
+.lbl-nqzs-market.data-v-1b776984 {
+  background-color: #e0b863;
+  color: var(--card-shadow8);
+}
+.lbl-uk-market.data-v-1b776984,
+.lbl-ukzs-market.data-v-1b776984 {
+  background-color: #5c76e7;
+  color: var(--card-shadow8);
+}
+.lbl-uszs-market.data-v-1b776984 {
+  background-color: #5692f2;
+  color: var(--card-shadow8);
+}
+.lbl-hkzs-market.data-v-1b776984 {
+  background-color: #eb9664;
+  color: var(--card-shadow8);
+}
+.lbl-us-market.data-v-1b776984 {
+  color: #5692f2;
+}
+.lbl-cwjj-market.data-v-1b776984 {
+  background-color: #c96edc;
+  color: var(--card-shadow8);
+}
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .adaptive-btn-wrap.data-v-1b776984,
+  .details-btn.data-v-1b776984,
+  .fixed-btn.data-v-1b776984 {
+    background: #fbfafc;
+    padding-bottom: 40px;
+  }
+  .btn-gray-tips.data-v-1b776984 {
+    background: #fbfafc;
+  }
+}
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  .adaptive-btn-wrap.data-v-1b776984,
+  .details-btn.data-v-1b776984,
+  .fixed-btn.data-v-1b776984 {
+    background: #fbfafc;
+    padding-bottom: 40px;
+  }
+  .btn-gray-tips.data-v-1b776984 {
+    background: #fbfafc;
+  }
+}
+.item-top-hd.data-v-1b776984,
+.switch-nav-line .cur-tab.data-v-1b776984,
+.wrap-nav .lay-nav .nav-cur.data-v-1b776984 {
+  font-weight: 500 !important;
+}
+@media (width: 360) {
+  .item-top-hd.data-v-1b776984,
+  .switch-nav-line .cur-tab.data-v-1b776984,
+  .wrap-nav .lay-nav .nav-cur.data-v-1b776984 {
+    font-weight: 700;
+  }
+}
+.font_26.data-v-1b776984 {
+  font-size: 0.3466666666666667rem !important;
+}
+.ellipsis-text.data-v-1b776984 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.search-icon.data-v-1b776984 {
+  background-size: 100% 100%;
+  background: url(https://st.gtimg.com/design/101fcf2b5be3050e6b56e3b846944de9.svg);
+  height: 0.38666666666666666rem;
+  width: 0.37333333333333335rem;
+}
+@-webkit-keyframes load-1b776984 {
+  0%,
+  80%,
+  to {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes load-1b776984 {
+  0%,
+  80%,
+  to {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+.wx-sup.data-v-1b776984 {
+  margin-top: -0.04rem;
+  transform: scale(0.7);
+}
+.rank-wrap .rank-item.data-v-1b776984 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.32rem 0.32rem 0.32rem 0;
+}
+.rank-wrap .rank-item:nth-child(1) .num.data-v-1b776984 {
+  color: #e63535;
+}
+.rank-wrap .rank-item:nth-child(2) .num.data-v-1b776984 {
+  color: #ff891e;
+}
+.rank-wrap .rank-item:nth-child(3) .num.data-v-1b776984 {
+  color: #fcba47;
+}
+.rank-wrap .rank-item .num.data-v-1b776984 {
+  color: #98a0b3;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+  width: 0.8533333333333334rem;
+}
+.rank-wrap .rank-item .content.data-v-1b776984 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+.rank-wrap .rank-item .content .title.data-v-1b776984 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #262e40;
+  display: -webkit-box;
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.rank-wrap .rank-item .content .info.data-v-1b776984 {
+  color: #98a0b3;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  justify-content: space-between;
+  margin-top: 0.16rem;
+}

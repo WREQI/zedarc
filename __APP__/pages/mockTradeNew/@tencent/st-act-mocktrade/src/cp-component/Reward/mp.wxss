@@ -1,0 +1,116 @@
+@font-face {
+  font-family: TSW7;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://st.gtimg.com/files/062bd50d_vmlWnOl01Ak.ttf)
+    format("truetype");
+}
+p.data-v-f625f98d {
+  margin: 0;
+  padding: 0;
+}
+.layout.data-v-f625f98d {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-column.data-v-f625f98d {
+  flex-direction: column;
+}
+.flex.data-v-f625f98d {
+  flex: 1;
+}
+.popup-cnt.data-v-f625f98d {
+  align-content: center;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+.popup-cnt .mult-welfare--list-list.data-v-f625f98d,
+.popup-cnt.data-v-f625f98d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popup-cnt .lottie-canvas.data-v-f625f98d {
+  height: 8.666666666666666rem !important;
+  position: absolute;
+  top: 1.9333333333333333rem;
+  width: 8.666666666666666rem !important;
+  z-index: -1;
+}
+.popup-cnt .coin.data-v-f625f98d {
+  height: 2.6133333333333333rem;
+  margin-bottom: 0.64rem;
+  width: 4.213333333333333rem;
+}
+.popup-cnt .main-title.data-v-f625f98d {
+  color: #fff;
+  font-size: 0.48rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.72rem;
+  text-align: center;
+}
+.popup-cnt .reward-desc.data-v-f625f98d {
+  align-items: center;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-family: TSW7 !important;
+  font-size: 0.64rem;
+  font-weight: 700;
+  justify-content: space-between;
+  line-height: 0.88rem;
+  padding: 0 0 0.37333333333333335rem;
+  text-align: center;
+}
+.popup-cnt .reward-desc.data-v-f625f98d .reward-main {
+  font-family: TSW7 !important;
+}
+.dialog-wrapper .dialog-container.data-v-f625f98d {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 11;
+}
+.dialog-wrapper .dialog-main.data-v-f625f98d {
+  background-color: initial !important;
+  flex-direction: row;
+  height: 7.2rem;
+  width: 7.2rem;
+}
+.dialog-wrapper .button.data-v-f625f98d {
+  align-items: center;
+  background-color: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-style: normal;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  line-height: 0.64rem;
+  text-align: center;
+  width: 4.266666666666667rem;
+}
+.dialog-wrapper .close__img.data-v-f625f98d {
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.dialog-wrapper .close-box.data-v-f625f98d {
+  position: absolute;
+  right: 1.1066666666666667rem;
+  top: 4rem;
+}

@@ -1,0 +1,22 @@
+<view class="{{['_div','ai-financial-report-container','data-v-14bd2474',i]}}" style="{{j}}">
+    <view class="_div ai-title data-v-14bd2474">
+        <image class="_img ai-title-logo data-v-14bd2474" mode="aspectFit" src="https://st.gtimg.com/design/690c78a659215c944e0ee8aba996402f.png"></image>
+    </view>
+    <view class="_div ai-content-container data-v-14bd2474">
+        <view catchtap="{{b}}" class="_div ai-search-container data-v-14bd2474">
+            <image class="_img ai-search-icon data-v-14bd2474" mode="aspectFit" src="{{a}}"></image>
+            <view class="_div ai-search-text data-v-14bd2474">搜索关注公司，查看财报速递</view>
+        </view>
+        <view class="_div ai-content data-v-14bd2474" wx:for="{{c}}" wx:key="c">
+            <stock-search-item bind:__l="__l" class="data-v-14bd2474" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></stock-search-item>
+        </view>
+        <load-more bind:__l="__l" binddoLoadmore="{{e}}" class="data-v-14bd2474" uI="14bd2474-1" uP="{{f}}" wx:if="{{d}}"></load-more>
+        <view class="_div ai-financial-no-container data-v-14bd2474" wx:if="{{g}}">
+            <view class="_div ai-financial-no-tip-container data-v-14bd2474">
+                <image class="_img ai-financial-no-img data-v-14bd2474" src="{{h}}"></image>
+                <view class="_div ai-financial-no-tip data-v-14bd2474">暂无相关数据</view>
+            </view>
+        </view>
+    </view>
+    <input class="temp-focus data-v-14bd2474" ref="tempFocus"></input>
+</view>

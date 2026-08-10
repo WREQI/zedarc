@@ -1,0 +1,15 @@
+<view
+  catchtap="{{g}}"
+  class="{{['_div','basket-overviewlite-wrapper','data-v-89117483',d,e,f]}}"
+  ref="basket-overviewlite-wrapper"
+>
+  <basket-header
+    bind:__l="__l"
+    bindbasketFooterClick="{{b}}"
+    bindheaderTitleClick="{{a}}"
+    class="data-v-89117483"
+    uI="89117483-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></basket-header>
+</view>

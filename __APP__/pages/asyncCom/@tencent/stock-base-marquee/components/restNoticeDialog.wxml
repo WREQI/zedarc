@@ -1,0 +1,27 @@
+<view
+  bindtap="{{h}}"
+  class="{{['_div','data-v-cdde7bc1','bulletin_bot_dialog_bg',g]}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{f}}" class="_div bot_dialog_con data-v-cdde7bc1">
+    <view class="_div titlebg data-v-cdde7bc1">
+      <view class="_div title data-v-cdde7bc1">{{b}}</view>
+      <view bindtap="{{c}}" class="_div closebg data-v-cdde7bc1"></view>
+    </view>
+    <view class="_div contenttt data-v-cdde7bc1">
+      <market-swiper
+        bind:__l="__l"
+        class="data-v-cdde7bc1"
+        uI="cdde7bc1-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></market-swiper>
+      <view
+        bindtap="{{e}}"
+        class="_div rest-notice-adv-slot-wrapper data-v-cdde7bc1"
+      >
+        <slot></slot>
+      </view>
+    </view>
+  </view>
+</view>

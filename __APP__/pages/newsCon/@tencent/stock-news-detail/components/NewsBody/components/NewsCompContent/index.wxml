@@ -1,0 +1,21 @@
+<view class="_div">
+  <news-content-normal
+    bind:__l="__l"
+    class="r"
+    uI="3a9add32-0"
+    uP="{{d}}"
+    uR="newsContentNormal"
+    uS="{{['txvplayer']}}"
+    wx:if="{{a}}"
+  >
+    <view slot="txvplayer">
+      <slot name="txvplayer" wx:if="{{b}}"></slot>
+    </view>
+  </news-content-normal>
+  <news-content-flash
+    bind:__l="__l"
+    uI="3a9add32-1"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></news-content-flash>
+</view>

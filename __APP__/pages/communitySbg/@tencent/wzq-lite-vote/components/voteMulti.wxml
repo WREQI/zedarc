@@ -1,0 +1,69 @@
+<view class="_div vote-multi data-v-fac5ab54">
+  <vote-title
+    bind:__l="__l"
+    bindupdateList="{{a}}"
+    class="data-v-fac5ab54"
+    uI="fac5ab54-0"
+    uP="{{b}}"
+    uS="{{['votetitledesc']}}"
+    wx:if="{{b}}"
+  >
+    <view slot="votetitledesc">
+      <slot name="votedesccontainer"></slot>
+    </view>
+  </vote-title>
+  <view class="_div vote-content data-v-fac5ab54">
+    <view
+      catchtap="{{item.o}}"
+      class="{{['_div','data-v-fac5ab54','vote-item']}}"
+      wx:for="{{c}}"
+      wx:key="n"
+    >
+      <view class="{{['_div','data-v-fac5ab54','no-vote',d,e]}}">
+        <view class="_div name data-v-fac5ab54">{{item.a}}</view>
+        <view class="_div check-wrap data-v-fac5ab54">
+          <vote-check-box
+            bind:__l="__l"
+            class="data-v-fac5ab54"
+            uI="{{item.b}}"
+            uP="{{item.c}}"
+            wx:if="{{item.c}}"
+          ></vote-check-box>
+        </view>
+      </view>
+      <view class="{{['_div','data-v-fac5ab54','vote-chosen',h,i]}}">
+        <view
+          class="{{['_div','data-v-fac5ab54','rate',item.d]}}"
+          style="{{'width:'+item.e}}"
+        >
+          <view class="{{['_div','data-v-fac5ab54','slide',f,g]}}"></view>
+        </view>
+        <view class="_div vote-wrap data-v-fac5ab54">
+          <view
+            class="{{['_div','data-v-fac5ab54','chosen']}}"
+            wx:if="{{item.f}}"
+          >
+            <view class="{{['_div','data-v-fac5ab54','sign',item.g]}}"></view>
+            <view class="{{['_div','data-v-fac5ab54','name',item.i]}}"
+              >已选「{{item.h}}」</view
+            >
+          </view>
+          <view class="{{['_div','data-v-fac5ab54','name',item.k]}}" wx:else
+            >{{item.j}}</view
+          >
+          <view class="_div right data-v-fac5ab54">
+            <view class="_div count data-v-fac5ab54">{{item.l}}票</view>
+            <view class="_div dot data-v-fac5ab54">•</view>
+            <view class="_div rate-num data-v-fac5ab54">{{item.m}}%</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{n}}"
+    class="{{['_div','data-v-fac5ab54','vote-btn',k,l,m]}}"
+    wx:if="{{j}}"
+    >投票</view
+  >
+</view>

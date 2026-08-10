@@ -1,0 +1,18 @@
+<scroll-view class="profile-scroll-area" scrollIntoView="{{j}}" scrollY="true" showScrollbar="{{false}}">
+    <view wx:for="{{a}}" wx:key="m">
+        <view class="profile-wrapper flex-row" id="{{item.f}}">
+            <label bindtap="{{item.c}}" class="{{['profile-item','flex-1',item.b&&'primary-color']}}">{{item.a}}</label>
+            <label bindtap="{{item.e}}" class="{{['icon',item.d]}}"></label>
+        </view>
+        <view class="profile-wrapper-input flex-row" hidden="{{!item.j}}">
+            <view class="profile-input flex-1 flex-row">
+                <input alwaysEmbed="{{true}}" bindblur="{{item.g}}" bindinput="{{item.h}}" class="profile-input" cursorSpacing="20" maxlength="{{c}}" placeholder="{{d}}" ref="otherInput" type="{{b}}" value="{{e}}" wx:if="{{r0}}"></input>
+                <label class="{{['profile-content-length',g&&'disInputable']}}">{{f}}</label>
+            </view>
+            <label bindtap="{{item.i}}" class="{{['profile-confirm',i&&'isSubmitable']}}">{{h}}</label>
+        </view>
+        <view class="fs-24 align-c info-text" wx:if="{{item.k}}">
+            <rich-text nodes="{{item.l}}"></rich-text>
+        </view>
+    </view>
+</scroll-view>

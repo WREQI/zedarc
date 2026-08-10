@@ -1,0 +1,45 @@
+<template name="definition-select">
+  <view catch:tap="onDefinitionMaskTap" class="mask-container">
+    <block wx:for="{{displayDefinitionList}}" wx:for-item="list" wx:key="title">
+      <view class="mask-title">{{list.title}}</view>
+      <view class="mask-item-container mask-item-container-scrollable">
+        <view
+          bind:tap="onDefinitionSelect"
+          class="mask-item {{item.selected?'mask-item-selected':''}} {{item.name==='dolby'?'dolby-item':''}}"
+          data-item="{{item.name}}"
+          wx:for="{{list.list}}"
+          wx:key="resolution"
+        >
+          <view
+            class="mask-item-text mask-item-main-text {{item.selected?'mask-item-selected':''}}"
+            style="padding-top: 16px"
+            wx:if="{{!item.formatName}}"
+          >
+            {{item.resolution}}
+          </view>
+          <view
+            class="mask-item-text mask-item-main-text {{item.selected?'mask-item-selected':''}}"
+            style="padding-top: 18px; line-height: 34px"
+            wx:else
+          >
+            <template is="{{item.icon}}" data></template>
+          </view>
+          <view
+            class="mask-item-text mask-item-sub-text {{item.selected?'mask-item-selected':''}}"
+          >
+            {{item.displayName}}
+          </view>
+          <view
+            class="mask-item-text mask-item-bottom-text definition-vip-text {{!item.limited?'hide':''}}"
+          >
+            VIP尊享
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+<import src="./hdr-option-icon.wxml"></import>
+<import src="./dolby-option-icon.wxml"></import>
+<import src="./hdr-option-icon-selected.wxml"></import>
+<import src="./dolby-option-icon-selected.wxml"></import>

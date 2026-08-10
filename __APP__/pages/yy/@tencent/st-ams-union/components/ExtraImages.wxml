@@ -1,0 +1,25 @@
+<view class="_div data-v-94fb6cc4">
+  <view class="_div pre-image data-v-94fb6cc4" wx:if="{{a}}">
+    <image
+      class="_img data-v-94fb6cc4"
+      mode="widthFix"
+      src="{{b}}"
+      style="width: 100%"
+    ></image>
+  </view>
+  <view class="_div data-v-94fb6cc4" wx:else>
+    <view
+      class="_div ams-image-container extra-image data-v-94fb6cc4"
+      wx:for="{{c}}"
+      wx:for-item="extra"
+      wx:key="b"
+    >
+      <image
+        class="_img data-v-94fb6cc4"
+        mode="widthFix"
+        src="{{extra.a}}"
+        style="width: 100%"
+      ></image>
+    </view>
+  </view>
+</view>

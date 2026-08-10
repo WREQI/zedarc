@@ -1,0 +1,95 @@
+<view class="_div indicator-setting-container data-v-5e561c53">
+  <view class="_div indicator-outer data-v-5e561c53">
+    <view class="_div indicator-title data-v-5e561c53">主图指标</view>
+    <view class="_div main-indicator data-v-5e561c53">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','data-v-5e561c53','indicator-item',item.c]}}"
+        wx:for="{{a}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+  <view class="_div avarage-line-title data-v-5e561c53" wx:if="{{b}}"
+    >MA均线</view
+  >
+  <block wx:if="{{c}}">
+    <scroll-view
+      class="scroll-ma data-v-5e561c53"
+      scrollX="{{true}}"
+      wx:if="{{d}}"
+    >
+      <view class="_div avarage-line-choice data-v-5e561c53">
+        <label
+          bindtap="{{item.g}}"
+          class="{{['_span','data-v-5e561c53','ma-item',item.f]}}"
+          style="{{'color:'+item.c+';'+'background:'+item.d+';'+'border-color:'+item.e}}"
+          wx:for="{{e}}"
+          wx:key="b"
+          >MA{{item.a}}</label
+        >
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <view
+      catchtouchend="{{j}}"
+      catchtouchmove="{{i}}"
+      catchtouchstart="{{h}}"
+      class="_div scroll-ma data-v-5e561c53"
+      wx:if="{{f}}"
+    >
+      <view class="_div avarage-line-choice data-v-5e561c53">
+        <label
+          catchtouchend="{{item.i}}"
+          catchtouchstart="{{item.h}}"
+          class="{{['_span','data-v-5e561c53','ma-item',item.g]}}"
+          data-index="{{item.c}}"
+          style="{{'color:'+item.d+';'+'background:'+item.e+';'+'border-color:'+item.f}}"
+          wx:for="{{g}}"
+          wx:key="b"
+          >MA{{item.a}}</label
+        >
+      </view>
+    </view>
+  </block>
+  <view class="_div ma-count data-v-5e561c53" wx:if="{{k}}">
+    <view catchtap="{{n}}" class="_div check-outer data-v-5e561c53">
+      <circle-check-vue
+        bind:__l="__l"
+        class="data-v-5e561c53"
+        uI="5e561c53-0"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></circle-check-vue>
+      <label class="{{['_span','data-v-5e561c53',m]}}">显示</label>
+    </view>
+    <view
+      bindtouchend="{{r}}"
+      bindtouchstart="{{q}}"
+      class="_div slider-bar-block data-v-5e561c53"
+    >
+      <slider-bar
+        bind:__l="__l"
+        bindvalueChange="{{o}}"
+        class="data-v-5e561c53"
+        uI="5e561c53-1"
+        uP="{{p}}"
+        wx:if="{{p}}"
+      ></slider-bar>
+    </view>
+  </view>
+  <view class="_div split-line-two data-v-5e561c53"></view>
+  <view class="_div side-pic data-v-5e561c53">
+    <view class="_div sidepic-titlt data-v-5e561c53">副图数量</view>
+    <view class="_div count-choice data-v-5e561c53">
+      <view catchtap="{{t}}" class="{{['_div','data-v-5e561c53','gene',s]}}"
+        >1</view
+      >
+      <view catchtap="{{w}}" class="{{['_div','data-v-5e561c53','gene',v]}}"
+        >2</view
+      >
+    </view>
+  </view>
+</view>

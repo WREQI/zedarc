@@ -1,0 +1,117 @@
+<view
+  class="{{['_div','finance-sub-mod','no-select','performance-trends','data-v-629c73d9',E]}}"
+>
+  <view class="_div mod-finance-title block-layout data-v-629c73d9"
+    >业绩趋势</view
+  >
+  <view class="_div item-sub-tab-zxg data-v-629c73d9" wx:if="{{a}}">
+    <view
+      catchtap="{{item.d}}"
+      class="{{['_div','data-v-629c73d9','sub-tab',item.b,c]}}"
+      wx:for="{{b}}"
+      wx:key="c"
+    >
+      <view class="_div t-text data-v-629c73d9">{{item.a}}</view>
+    </view>
+  </view>
+  <view class="_div sub-line data-v-629c73d9">
+    <view class="_div sub-select-content data-v-629c73d9">
+      <view class="_div arrow-text-wrapper data-v-629c73d9">
+        <view class="_div arrow-text data-v-629c73d9" id="ylycSelectbtn"
+          >{{d}}</view
+        >
+        <image
+          class="_img select-arrow data-v-629c73d9"
+          src="{{f}}"
+          wx:if="{{e}}"
+        ></image>
+        <view catchtap="{{g}}" class="_div fake-btn data-v-629c73d9"></view>
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-629c73d9',s]}}" wx:if="{{h}}">
+    <view class="_div data-v-629c73d9">
+      <f2
+        bind:__l="__l"
+        bindonInit="{{n}}"
+        bindtouchend="{{o}}"
+        bindtouchmove="{{q}}"
+        bindtouchstart="{{p}}"
+        class="r data-v-629c73d9"
+        uI="629c73d9-0"
+        uP="{{r}}"
+        uR="hytrendChart"
+        uS="{{['d']}}"
+        wx:if="{{r}}"
+      >
+        <view
+          class="{{['_div','data-v-629c73d9','f2-tooltip',l]}}"
+          wx:if="{{i}}"
+        >
+          <view class="_div f2-tooltip-inner data-v-629c73d9">
+            <view class="_div f2-tooltip-title data-v-629c73d9">{{j}}</view>
+            <view
+              class="_div f2-tooltip-value data-v-629c73d9"
+              wx:for="{{k}}"
+              wx:key="c"
+            >
+              <label class="_span f2-tooltip-subtitle data-v-629c73d9"
+                >{{item.a}}</label
+              >
+              <label class="_span f2-tooltip-after data-v-629c73d9"
+                >{{item.b}}</label
+              >
+            </view>
+          </view>
+        </view>
+      </f2>
+    </view>
+  </view>
+  <view class="_div no-data-content data-v-629c73d9" wx:else>暂无图表数据</view>
+  <view class="_div chart-bottom-content data-v-629c73d9" wx:if="{{t}}">
+    <view class="_div chart-time-content data-v-629c73d9" wx:if="{{v}}">
+      <label
+        class="_span chart-time-item data-v-629c73d9"
+        wx:for="{{w}}"
+        wx:for-item="dt"
+        wx:key="b"
+        >{{dt.a}}</label
+      >
+    </view>
+    <view class="_div chart-range-content data-v-629c73d9">
+      <range-slider
+        bind:__l="__l"
+        bindrangeChange="{{y}}"
+        class="r data-v-629c73d9"
+        uI="629c73d9-1"
+        uR="rangeSlider"
+      ></range-slider>
+    </view>
+    <view class="_div chart-legend-content data-v-629c73d9">
+      <view
+        class="_div chart-legend-item data-v-629c73d9"
+        wx:for="{{z}}"
+        wx:key="d"
+      >
+        <label
+          class="{{['_span','data-v-629c73d9','chart-legend-icon',item.a]}}"
+          style="{{'background-color:'+item.b}}"
+        ></label>
+        <label class="_span chart-legend-title data-v-629c73d9"
+          >{{item.c}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <root-portal class="data-v-629c73d9" enable="{{true}}" wx:if="{{A}}">
+    <select-plate
+      bind:__l="__l"
+      bindchangeTab="{{C}}"
+      class="r data-v-629c73d9"
+      uI="629c73d9-2"
+      uP="{{D}}"
+      uR="ylycSelect"
+      wx:if="{{D}}"
+    ></select-plate>
+  </root-portal>
+</view>

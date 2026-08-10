@@ -1,0 +1,18 @@
+<view bindtap="{{b}}" class="_div chance-wrap mock-column data-v-b7acb993">
+  <view class="_div title data-v-b7acb993">模拟练手零风险</view>
+  <view class="_div main data-v-b7acb993">
+    <image
+      alt=""
+      class="_img main-img data-v-b7acb993"
+      src="https://st.gtimg.com/design/93d411c9699ff12c022989e3173eb4d4.png"
+      wx:if="{{a}}"
+    ></image>
+    <image
+      alt=""
+      class="_img main-img data-v-b7acb993"
+      src="https://st.gtimg.com/design/80914927be563c46078359045dde8be2.png"
+      wx:else
+    ></image>
+  </view>
+  <view class="_div bottom-btn data-v-b7acb993">前往模拟炒股</view>
+</view>

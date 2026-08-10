@@ -1,0 +1,170 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r" id="global-wrap" uI="f391a202-0" uP="{{aX}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{aX}}">
+    <apply-wrap bind:__l="__l" uI="f391a202-1,f391a202-0" uS="{{['d']}}">
+        <view class="{{['container',aV]}}">
+            <digital-human bind:__l="__l" class="r" uI="f391a202-2,f391a202-1" uP="{{d}}" uR="digitalHumanRef" wx:if="{{b}}"></digital-human>
+            <view class="{{[al,am]}}">
+                <progress-bar bind:__l="__l" uI="f391a202-3,f391a202-1" uP="{{e}}" wx:if="{{e}}"></progress-bar>
+                <pre-review-modify-card bind:__l="__l" uI="f391a202-4,f391a202-1" uP="{{g}}" wx:if="{{f}}"></pre-review-modify-card>
+                <block wx:if="{{h}}">
+                    <view class="gap"></view>
+                    <view bindtap="{{l}}" class="content-container mobile-number flex-center">
+                        <view class="text-color-1 label">手机号</view>
+                        <view class="text-color-1 value" wx:if="{{i}}">{{j}}</view>
+                        <view class="text-color-5 value" wx:else>请输入本人手机号码</view>
+                        <button borderRadius catchtap="{{k}}" class="sms-button fs-24" size="mini">获取验证码</button>
+                    </view>
+                    <view class="gap"></view>
+                </block>
+                <view class="idcard-info-container idcard-info-container-top" wx:if="{{m}}">
+                    <view class="top-tip">
+                        <label class="text-color-4 fs-24">请确认身份信息，若有误请手动修改</label>
+                    </view>
+                    <view bindtap="{{r}}" class="{{['info-item',q&&'border-bottom']}}">
+                        <view class="item-name">身份证信息</view>
+                        <view class="{{['item-detail','idinfo-item-detail',o&&'idinfo-fail-item-detail']}}">{{n}}</view>
+                        <view class="{{['icon',p]}}"></view>
+                    </view>
+                </view>
+                <view class="{{['content-container',D&&'content-container-hasinfo']}}" hidden="{{!C}}">
+                    <view class="top-tip text-color-4 fs-24">
+                        <label class="icon-shield"></label>
+                        <label>根据监管要求，证券开户需提供本人身份证信息进行合规验证，以保障您的账户安全。</label>
+                    </view>
+                    <view class="{{[y&&'border-bottom wrap-hasinfo']}}">
+                        <view class="wrap flex-row">
+                            <idcard-photo bind:__l="__l" bindchangeIdcardStatus="{{card.i}}" bindchangeShowIdcard="{{card.h}}" bindcheck="{{card.c}}" bindfirstStatusChange="{{card.f}}" bindmanualStatusChange="{{card.g}}" bindmanualUploadFail="{{card.j}}" bindocr="{{card.d}}" bindonIdCardPhotoClick="{{card.e}}" class="photo r-i-f" uI="{{card.k}}" uP="{{card.l}}" uR="idcardPhotoRefs" wx:for="{{s}}" wx:for-item="card" wx:key="b"></idcard-photo>
+                        </view>
+                        <view class="red fail-msg" wx:if="{{t}}">
+                            <view wx:for="{{v}}" wx:for-item="msg" wx:key="b">* {{msg.a}}</view>
+                        </view>
+                        <view class="red fail-msg" wx:if="{{w}}">
+                            <view wx:for="{{x}}" wx:for-item="msg" wx:key="b">* {{msg.a}}</view>
+                        </view>
+                    </view>
+                    <quick-import bind:__l="__l" bindimportCard="{{A}}" bindupdateVideoId="{{B}}" uI="f391a202-6,f391a202-1" wx:if="{{z}}"></quick-import>
+                </view>
+                <view wx:if="{{E}}">
+                    <view class="content-container">
+                        <view class="example-container">
+                            <view class="example-text">拍摄提示</view>
+                            <view class="example-picture"></view>
+                        </view>
+                        <view class="bottom-tip">
+                            <view class="tip-container">
+                                <label class="order">1.</label>
+                                <view class="flex-1">
+                                    <view>本人有效的二代身份证<label class="focus">原件</label>
+                                    </view>
+                                    <view>(请勿使用复印件、彩印件、临时身份证)</view>
+                                </view>
+                            </view>
+                            <view class="tip-container">
+                                <label class="order">2.</label>
+                                <view class="flex-1">请在纯色背景下拍摄<label class="focus">边框完整、照片清晰，无反光无遮挡</label>身份证照片（<label class="focus">请勿手持</label>身份证拍照）</view>
+                            </view>
+                        </view>
+                    </view>
+                    <view style="height:100px"></view>
+                    <view class="bottom-text" wx:if="{{F}}">
+                        <rich-text nodes="{{G}}"></rich-text>
+                    </view>
+                    <foot-print bind:__l="__l" class="foot" uI="f391a202-7,f391a202-1" wx:else></foot-print>
+                </view>
+                <view wx:else>
+                    <view class="idcard-info-container idcard-info-container-bottom">
+                        <view class="info-item first-info-item border-bottom">
+                            <view class="item-name">姓名</view>
+                            <input alwaysEmbed="{{true}}" bindblur="{{J}}" bindfocus="{{I}}" bindinput="{{L}}" class="item-detail" cursorSpacing="80" maxlength="{{H}}" placeholder="请输入本人姓名" placeholderClass="item-detail-placeholder" type="text" value="{{K}}"></input>
+                        </view>
+                        <view class="info-item border-bottom">
+                            <view class="item-name">身份证号码</view>
+                            <input alwaysEmbed="{{true}}" bindblur="{{N}}" bindfocus="{{M}}" bindinput="{{P}}" class="item-detail" cursorSpacing="80" maxlength="18" placeholder="请输入身份证号码" placeholderClass="item-detail-placeholder" type="idcard" value="{{O}}"></input>
+                        </view>
+                        <view class="info-item border-bottom" wx:if="{{Q}}">
+                            <view class="flex item-name-wrapper">
+                                <view class="item-name">证件有效期</view>
+                            </view>
+                            <view class="item-detail flex">
+                                <view bindtap="{{T}}">
+                                    <label wx:if="{{R}}">开始日期</label>
+                                    <label wx:else>{{S}}</label>
+                                </view>
+                                <label class="item-detail-date-text">至</label>
+                                <view bindtap="{{X}}">
+                                    <label wx:if="{{U}}">截止日期</label>
+                                    <label wx:elif="{{V}}">长期</label>
+                                    <label wx:else>{{W}}</label>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="info-item border-bottom" wx:if="{{Y}}">
+                            <view class="item-name">证件地址</view>
+                            <view class="item-detail item-detail-two">
+                                <textarea autoHeight bindfocus="{{aa}}" bindinput="{{ac}}" class="item-detail-addr" cursorSpacing="80" id="idAddrInputId" maxlength="{{Z}}" placeholder="请输入身份证证件地址" placeholderClass="item-detail-placeholder" type="text" value="{{ab}}" wx:if="{{r0}}"></textarea>
+                            </view>
+                        </view>
+                        <view class="info-item border-bottom" wx:if="{{ad}}">
+                            <view class="item-name">签证机关</view>
+                            <view class="item-detail item-detail-two">
+                                <textarea autoHeight bindfocus="{{af}}" bindinput="{{ah}}" class="item-detail-addr" cursorSpacing="80" id="idAddrInputId" maxlength="{{ae}}" placeholder="请输入身份证签发机关" placeholderClass="item-detail-placeholder" type="text" value="{{ag}}" wx:if="{{r0}}"></textarea>
+                            </view>
+                        </view>
+                        <view class="info-item border-bottom" wx:if="{{ai}}">
+                            <view class="item-name">性别</view>
+                            <view class="item-detail text-color-5">{{aj}}</view>
+                        </view>
+                        <view class="info-item border-bottom" wx:if="{{ak}}">
+                            <view class="item-name">国籍</view>
+                            <view class="item-detail text-color-5">中国</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <step-buttons bind:__l="__l" bindclickNext="{{an}}" uI="f391a202-8,f391a202-1" uP="{{ao}}" wx:if="{{ao}}"></step-buttons>
+            <date-picker bind:__l="__l" bindchange="{{aq}}" bindclose="{{ar}}" uI="f391a202-9,f391a202-1" uP="{{as}}" wx:if="{{ap}}"></date-picker>
+            <date-picker bind:__l="__l" bindchange="{{ay}}" bindclose="{{az}}" uI="f391a202-10,f391a202-1" uP="{{aA}}" uS="{{['footer']}}" wx:if="{{at}}">
+                <view bindtap="{{ax}}" slot="footer">
+                    <checkbox-group bindchange="{{aw}}" class="fs-24 id-term-container flex-center">
+                        <view class="{{[av]}}"></view>
+                        <label class="text-color-1 id-term-tip fs-26">身份证有效期为长期有效</label>
+                    </checkbox-group>
+                </view>
+            </date-picker>
+            <mp-dialog bind:__l="__l" bindconfirm="{{aD}}" uI="f391a202-11,f391a202-1" uP="{{aE}}" uS="{{['d']}}" wx:if="{{aE}}">
+                <view class="mp-dialog__message id-fail-dialog">
+                    <image class="example-picture"></image>
+                    <view class="fail-text">
+                        <view wx:for="{{aB}}" wx:for-item="msg" wx:key="c">
+                            <label wx:if="{{aC}}">{{msg.a}}.</label>{{msg.b}}</view>
+                    </view>
+                </view>
+            </mp-dialog>
+            <mp-dialog bind:__l="__l" id="mp-dialog" uI="f391a202-12,f391a202-1" uP="{{aF}}" wx:if="{{aF}}"></mp-dialog>
+            <profile-change-mobile bind:__l="__l" bindclose="{{aH}}" class="r" uI="f391a202-13,f391a202-1" uP="{{aI}}" uR="changeMobileActionSheet" wx:if="{{aI}}"></profile-change-mobile>
+            <mp-popup bind:__l="__l" uI="f391a202-14,f391a202-1" uP="{{aP}}" uS="{{['d']}}" wx:if="{{aP}}">
+                <view class="privacy-title text-color-1 flex border-bottom">
+                    <broker-logo bind:__l="__l" class="broker-icon" uI="f391a202-15,f391a202-14"></broker-logo>
+                    <view>{{aJ}}申请使用您的银行卡和身份证信息用于证券开户</view>
+                </view>
+                <view class="privacy-container text-color-2 fs-28">为了帮助你更快捷完成开户，我们将通过<label bindtap="{{aK}}" class="link">《个人信息授权书》</label>授权，帮助你快速获取你在财付通支付科技有限公司绑定的身份证影像正反面信息。此信息仅用于开户流程使用。点击“同意并授权”按钮代表你自主选择使用已经留存在财付通公司的银行卡信息、身份证证件副本传输（转移）至{{aL}}公司，且确认此银行卡为你本人银行卡、身份证证件副本为你最新的真实有效的证件图片，并同意{{aM}}公司通过财付通公司收集该信息。</view>
+                <view class="privacy-top-tip text-color-4 fs-24 border-top flex">
+                    <label class="icon-shield"></label>
+                    <label>根据监管要求，证券开户需提供本人身份证信息进行合规验证，以保障您的账户安全。</label>
+                </view>
+                <view class="privacy-button-container flex-center">
+                    <view bindtap="{{aN}}" class="button refuse-button">不同意</view>
+                    <view bindtap="{{aO}}" class="button confirm-button">同意并授权</view>
+                </view>
+            </mp-popup>
+            <mp-dialog bind:__l="__l" uI="f391a202-16,f391a202-1" uP="{{aU}}" uS="{{['d','btns']}}" wx:if="{{aU}}">
+                <view class="privacy-container text-color-1 fs-30">您已经开通{{aQ}}账户，您可前往绑定账户或者开立其它券商证券账户。</view>
+                <view class="action-button-container" slot="btns">
+                    <button bindtap="{{aR}}" class="action-button">去绑定账户</button>
+                    <button bindtap="{{aS}}" class="action-button">其它券商开户</button>
+                    <button bindtap="{{aT}}" class="action-button cancel-button">取消</button>
+                </view>
+            </mp-dialog>
+        </view>
+    </apply-wrap>
+</global-wrap>

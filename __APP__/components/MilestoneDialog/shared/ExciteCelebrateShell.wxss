@@ -1,0 +1,107 @@
+@import "/app.wxss";
+@-webkit-keyframes exciteCelebrateFadeIn-37e9b8da {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes exciteCelebrateFadeIn-37e9b8da {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes exciteCelebrateFadeOut-37e9b8da {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes exciteCelebrateFadeOut-37e9b8da {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.excite-celebrate-shell.data-v-37e9b8da {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.excite-celebrate-shell--closing.data-v-37e9b8da {
+  animation: exciteCelebrateFadeOut-37e9b8da 0.16667s ease-out forwards;
+}
+.excite-celebrate-shell__confetti.data-v-37e9b8da {
+  animation: exciteCelebrateFadeIn-37e9b8da 0ms ease-out 0.33333s forwards;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.excite-celebrate-shell__confetti-img.data-v-37e9b8da {
+  height: 100%;
+  width: 100%;
+}
+.excite-celebrate-shell__content.data-v-37e9b8da {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.excite-celebrate-shell__title.data-v-37e9b8da {
+  animation: exciteCelebrateFadeIn-37e9b8da 0.16667s ease-out 0.33333s forwards;
+  color: #fff;
+  font-size: 0.693333rem;
+  font-weight: 600;
+  height: 0.973333rem;
+  line-height: 0.973333rem;
+  opacity: 0;
+  text-align: center;
+}
+.excite-celebrate-shell__subtitle.data-v-37e9b8da {
+  animation: exciteCelebrateFadeIn-37e9b8da 0.33333s ease-out 0.5s forwards;
+  color: #fff;
+  font-size: 0.426667rem;
+  font-weight: 400;
+  height: 0.586667rem;
+  line-height: 0.586667rem;
+  margin-top: 0.426667rem;
+  opacity: 0;
+  text-align: center;
+}
+.excite-celebrate-shell__body.data-v-37e9b8da {
+  animation: exciteCelebrateFadeIn-37e9b8da 0.33333s ease-out 0.83333s forwards;
+  opacity: 0;
+  padding-top: 0.853333rem;
+  position: relative;
+  width: 100%;
+}
+.excite-celebrate-shell__footer.data-v-37e9b8da {
+  animation: exciteCelebrateFadeIn-37e9b8da 0.16667s ease-out 1.16767s forwards;
+  margin-top: 0.853333rem;
+  opacity: 0;
+}

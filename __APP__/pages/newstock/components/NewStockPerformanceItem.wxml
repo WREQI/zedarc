@@ -1,0 +1,107 @@
+<view class="newstock-performance-item data-v-234bcbaf">
+  <view class="recent-tab data-v-234bcbaf" wx:if="{{a}}"
+    >{{b}}<label class="data-v-234bcbaf">(近6个月)</label>
+  </view>
+  <view class="recent-module data-v-234bcbaf" wx:if="{{c}}">
+    <view class="flex data-v-234bcbaf">
+      <view class="flex-1 module data-v-234bcbaf">
+        <view class="module-text data-v-234bcbaf">{{d}}只</view>{{e}}</view
+      >
+      <view class="flex-1 module data-v-234bcbaf">
+        <view class="module-text data-v-234bcbaf">{{f}}</view>{{g}}</view
+      >
+    </view>
+    <view class="flex data-v-234bcbaf">
+      <view class="flex-1 module data-v-234bcbaf">
+        <view class="module-text data-v-234bcbaf">{{h}}%</view>{{i}}</view
+      >
+      <view class="flex-1 module data-v-234bcbaf">
+        <view class="module-text data-v-234bcbaf">
+          <value-color
+            bind:__l="__l"
+            class="data-v-234bcbaf"
+            uI="234bcbaf-0"
+            uP="{{k}}"
+            uS="{{['d']}}"
+            wx:if="{{k}}"
+            >{{j}}</value-color
+          > </view
+        >{{l}}</view
+      >
+    </view>
+  </view>
+  <view class="recent-tab recent-tab1 data-v-234bcbaf">近期上市股票</view>
+  <view
+    class="newstock-performance-item-list-header flex-between border--bottom data-v-234bcbaf"
+  >
+    <view class="flex-1 align-l data-v-234bcbaf">股票名称</view>
+    <view class="flex-1 align-c data-v-234bcbaf">上市时间</view>
+    <view class="flex-1 align-c data-v-234bcbaf" wx:if="{{m}}">{{n}}</view>
+    <view class="flex-1 align-r data-v-234bcbaf">{{o}}</view>
+  </view>
+  <view class="flex-center data-v-234bcbaf" wx:if="{{p}}">
+    <loading
+      bind:__l="__l"
+      class="data-v-234bcbaf"
+      uI="234bcbaf-1"
+      uP="{{q}}"
+      wx:if="{{q}}"
+    ></loading>
+  </view>
+  <view class="newstock-performance-item-lists data-v-234bcbaf">
+    <view
+      bindtap="{{item.q}}"
+      class="list-item flex-between border--bottom data-v-234bcbaf"
+      data-stat="trade.playnew.newstock.show_details"
+      wx:for="{{r}}"
+      wx:key="p"
+    >
+      <view class="flex-1 align-l data-v-234bcbaf">
+        <view class="stock-name data-v-234bcbaf">{{item.a}}</view>
+        <label class="stock-code data-v-234bcbaf">{{item.b}}{{item.c}}</label>
+      </view>
+      <view class="flex-1 align-c tabular-nums data-v-234bcbaf"
+        >{{item.d}}</view
+      >
+      <view class="flex-1 align-r tabular-nums data-v-234bcbaf" wx:if="{{s}}">
+        <value-color
+          bind:__l="__l"
+          class="data-v-234bcbaf"
+          uI="{{item.f}}"
+          uP="{{item.g}}"
+          uS="{{['d']}}"
+          wx:if="{{item.g}}"
+          >{{item.e}}</value-color
+        >
+      </view>
+      <view class="flex-1 align-c tabular-nums data-v-234bcbaf" wx:if="{{t}}"
+        >{{item.h}}%</view
+      >
+      <view class="flex-1 align-r tabular-nums data-v-234bcbaf" wx:if="{{v}}">
+        <value-color
+          bind:__l="__l"
+          class="data-v-234bcbaf"
+          uI="{{item.j}}"
+          uP="{{item.k}}"
+          uS="{{['d']}}"
+          wx:if="{{item.k}}"
+          >{{item.i}}</value-color
+        >
+      </view>
+      <view class="flex-1 align-c tabular-nums data-v-234bcbaf" wx:if="{{w}}"
+        >{{item.l}}%</view
+      >
+      <view class="flex-1 align-r tabular-nums data-v-234bcbaf" wx:if="{{x}}">
+        <value-color
+          bind:__l="__l"
+          class="data-v-234bcbaf"
+          uI="{{item.n}}"
+          uP="{{item.o}}"
+          uS="{{['d']}}"
+          wx:if="{{item.o}}"
+          >{{item.m}}</value-color
+        >
+      </view>
+    </view>
+  </view>
+</view>

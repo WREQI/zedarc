@@ -1,0 +1,43 @@
+<view
+  bindtouchmove="{{e}}"
+  class="{{['_div','data-v-6f78b3ed','subscribe-qrcode',d]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div subscribe-qrcode-inner data-v-6f78b3ed">
+    <view class="_div subscribe-title data-v-6f78b3ed">
+      <view class="_div title-logo data-v-6f78b3ed"></view>
+      <view class="_div title-text main-title data-v-6f78b3ed">关注公众号</view>
+      <view class="_div title-text subs-title data-v-6f78b3ed">{{b}}</view>
+    </view>
+    <view class="_div qrcode data-v-6f78b3ed">
+      <image
+        class="_img qrcode-img data-v-6f78b3ed"
+        showMenuByLongpress="{{true}}"
+        src="https://st.gtimg.com/design/e9132fa30a9ba9233c5dff5a97e5c0a9.jpeg"
+      ></image>
+    </view>
+    <view class="_div bottom-tips data-v-6f78b3ed">
+      <view class="_div row tips data-v-6f78b3ed"
+        >长按二维码，关注腾讯自选股微信版</view
+      >
+      <view class="_div row platform-name data-v-6f78b3ed"
+        >腾讯官方证券服务平台</view
+      >
+      <view class="_div row supporter data-v-6f78b3ed"
+        >证券服务由证券公司提供</view
+      >
+    </view>
+    <view
+      bindtap="{{c}}"
+      class="_div close layout layout-align-center-center data-v-6f78b3ed"
+    >
+      <view class="_div icon-close-wrapper data-v-6f78b3ed">
+        <image
+          class="_img close-img data-v-6f78b3ed"
+          src="https://st.gtimg.com/design/539c370fc8728457518c3ea584e3a688.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+  <view class="_div layer data-v-6f78b3ed"></view>
+</view>

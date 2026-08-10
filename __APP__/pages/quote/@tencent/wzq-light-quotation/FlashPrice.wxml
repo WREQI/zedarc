@@ -1,0 +1,7 @@
+<view
+  catchtap="{{d}}"
+  class="{{['_div','value-transition','data-v-4f309d54',b,c]}}"
+>
+  <slot wx:if="{{$slots.d}}"></slot>
+  <block wx:else>{{a}}</block>
+</view>

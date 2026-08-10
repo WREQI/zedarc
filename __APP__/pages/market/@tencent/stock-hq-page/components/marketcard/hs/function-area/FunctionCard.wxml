@@ -1,0 +1,21 @@
+<view
+  catchtap="{{h}}"
+  class="{{['_div','data-v-6d0649f6','function-card-wrapper',f,g]}}"
+>
+  <view class="_div card-icon-wrapper data-v-6d0649f6">
+    <image class="_img card-icon data-v-6d0649f6" src="{{a}}"></image>
+    <image
+      class="_img badge-icon data-v-6d0649f6"
+      src="{{c}}"
+      wx:if="{{b}}"
+    ></image>
+  </view>
+  <label class="_span card-title data-v-6d0649f6">{{d}}</label>
+  <qianji-red-point-placeholder
+    bind:__l="__l"
+    class="redpoint-wrapper data-v-6d0649f6"
+    uI="6d0649f6-0"
+    uP="{{e}}"
+    wx:if="{{e}}"
+  ></qianji-red-point-placeholder>
+</view>

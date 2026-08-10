@@ -1,0 +1,7 @@
+<template name="stop-btn">
+  <image
+    class="stop-btn ctrl-btn {{isFullscreen?'fullscreen':''}}"
+    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiByeD0iNCIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg=="
+    style="transform: scale(0.8)"
+  ></image>
+</template>

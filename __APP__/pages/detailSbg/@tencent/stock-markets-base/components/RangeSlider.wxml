@@ -1,0 +1,22 @@
+<view
+  catchtouchmove="{{j}}"
+  class="_div range-slider-content data-v-420d60e2"
+  ref="sliderContent"
+>
+  <view
+    class="_div range-slider-block data-v-420d60e2"
+    ref="sliderBlock"
+    style="{{'left:'+c}}"
+  >
+    <view catchtouchmove="{{b}}" class="_div fake-btn data-v-420d60e2"></view>
+  </view>
+  <view class="_div range-slider-bg data-v-420d60e2">
+    <view
+      class="{{['_div','range-slider-select','data-v-420d60e2',d&&'classic']}}"
+      style="{{'left:'+e+';'+'width:'+f}}"
+    ></view>
+  </view>
+  <view class="_div range-slider-block data-v-420d60e2" style="{{'left:'+i}}">
+    <view catchtouchmove="{{h}}" class="_div fake-btn data-v-420d60e2"></view>
+  </view>
+</view>

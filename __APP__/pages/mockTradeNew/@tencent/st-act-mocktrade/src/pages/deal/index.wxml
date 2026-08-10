@@ -1,0 +1,228 @@
+<view bindtap="{{bB}}" class="_div trade-wrapper scroll-view data-v-d44e8f16" ref="tradeWrapper">
+    <view class="_div data-v-d44e8f16">
+        <search bind:__l="__l" bindgoStock="{{c}}" bindinited="{{b}}" class="r data-v-d44e8f16" data-c-h="{{!d}}" uI="d44e8f16-0" uP="{{e}}" uR="searchRef" wx:if="{{e}}"></search>
+        <view class="_div bubble-container data-v-d44e8f16" wx:if="{{f}}">
+            <view class="_div bubble data-v-d44e8f16">点击搜索股票</view>
+        </view>
+        <view class="_div stock-wrapper data-v-d44e8f16" wx:if="{{g}}">
+            <view class="_div stock-info data-v-d44e8f16" wx:if="{{h}}">
+                <label bindtap="{{j}}" class="_span stock-name data-v-d44e8f16" id="stock-name">{{i}}</label>
+                <label class="_span stock-code data-v-d44e8f16">{{k}}.{{l}}</label>
+                <label class="{{['_span','stock-tag','data-v-d44e8f16',n&&'closed']}}">{{m}}</label>
+                <image bindtap="{{o}}" class="_img stock-tag--search data-v-d44e8f16" src="https://st.gtimg.com/design/c9f75d7c07827d2679675fa3b507898c.png"></image>
+            </view>
+            <view class="_div stock-limit data-v-d44e8f16" wx:if="{{p}}">
+                <view class="_div stock-limit-wrapper data-v-d44e8f16">
+                    <view class="_div stock-price data-v-d44e8f16">
+                        <label bindtap="{{t}}" class="_span stock-price__main data-v-d44e8f16" data-price="{{s}}" style="{{'color:'+r}}">{{q}}</label>
+                        <view class="_div stock-price--detail data-v-d44e8f16">
+                            <label class="_span stock-price__sub data-v-d44e8f16" style="{{'color:'+w}}">{{v}}</label>
+                            <label class="_span stock-price__sub data-v-d44e8f16" style="{{'color:'+y}}">{{x}}</label>
+                        </view>
+                    </view>
+                    <view class="_div stock-state data-v-d44e8f16">
+                        <view class="_div stock-state-item data-v-d44e8f16" wx:if="{{z}}">
+                            <label class="_span stock-state--title data-v-d44e8f16">涨停：</label>
+                            <label bindtap="{{D}}" class="_span stock-state--content data-v-d44e8f16" data-price="{{C}}" style="{{'color:'+B}}">{{A}}</label>
+                        </view>
+                        <view class="_div stock-state-item data-v-d44e8f16" wx:if="{{E}}">
+                            <label class="_span stock-state--title data-v-d44e8f16">跌停：</label>
+                            <label bindtap="{{I}}" class="_span stock-state--content data-v-d44e8f16" data-price="{{H}}" style="{{'color:'+G}}">{{F}}</label>
+                        </view>
+                    </view>
+                    <view bindtap="{{K}}" class="_div stock-mins data-v-d44e8f16">
+                        <label class="_span stock-mins-btn data-v-d44e8f16" id="stock-mins-btn">分时图</label>
+                        <image class="_img stock-mins-arrow data-v-d44e8f16" src="{{J}}"></image>
+                    </view>
+                </view>
+                <view class="_div mins-wrapper data-v-d44e8f16">
+                    <slot name="mins-chart"></slot>
+                </view>
+            </view>
+            <view class="{{['_div','trade-main','data-v-d44e8f16',ad&&'disabled']}}">
+                <view class="_div trade-item data-v-d44e8f16">
+                    <label class="_span trade-item--title data-v-d44e8f16">{{M}}</label>
+                    <view class="_div trade-item--switch data-v-d44e8f16">
+                        <image bindtap="{{N}}" class="_img trade-item--switch__down data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/1777554253e544500c721228ae6a4ddb.png"></image>
+                        <view class="_div trade-item--input--container data-v-d44e8f16">
+                            <input bindblur="{{O}}" bindinput="{{S}}" bindtap="{{Q}}" class="trade-item--input data-v-d44e8f16" editable="{{P}}" keyboardType="numeric" ref="tradePriceInput" value="{{R}}"></input>
+                        </view>
+                        <image bindtap="{{T}}" class="_img trade-item--switch__up data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/05c9a63a06fe4dd1bcd1b0822027b5e4.png"></image>
+                    </view>
+                    <image bindtap="{{U}}" class="_img trade-item--icon data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/e8b58bd7f0615c397b842f630a1bdc19.png"></image>
+                </view>
+                <view class="_div trade-item data-v-d44e8f16">
+                    <label class="_span trade-item--title data-v-d44e8f16">数量</label>
+                    <view class="_div trade-item--switch data-v-d44e8f16">
+                        <image bindtap="{{V}}" class="_img trade-item--switch__down data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/1777554253e544500c721228ae6a4ddb.png"></image>
+                        <view class="_div trade-item--input--container data-v-d44e8f16">
+                            <input bindblur="{{W}}" bindinput="{{aa}}" bindtap="{{Y}}" class="trade-item--input data-v-d44e8f16" editable="{{X}}" keyboardType="numeric" ref="tradeNumberInput" value="{{Z}}"></input>
+                        </view>
+                        <image bindtap="{{ab}}" class="_img trade-item--switch__up data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/05c9a63a06fe4dd1bcd1b0822027b5e4.png"></image>
+                    </view>
+                    <image bindtap="{{ac}}" class="_img trade-item--icon data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/dc6c127b027267c693352816d0e532f2.png"></image>
+                </view>
+            </view>
+            <view class="_div asset-info data-v-d44e8f16" wx:if="{{ae}}">
+                <view class="_div asset-info--row data-v-d44e8f16">
+                    <label class="_span asset-info--item-title data-v-d44e8f16">订单金额</label>
+                    <label class="_span asset-info--item-subtitle data-v-d44e8f16">{{af}}元</label>
+                </view>
+                <view class="_div asset-info--row data-v-d44e8f16">
+                    <view class="_div asset-info--item data-v-d44e8f16">
+                        <label class="_span asset-info--item-title data-v-d44e8f16">最大可买</label>
+                        <label bindtap="{{ai}}" class="_span asset-info--item-subtitle buy data-v-d44e8f16" data-number="{{ah}}">{{ag}}股</label>
+                    </view>
+                    <view class="_div asset-info--item last data-v-d44e8f16">
+                        <label class="_span asset-info--item-title data-v-d44e8f16">最大可卖</label>
+                        <label bindtap="{{al}}" class="_span asset-info--item-subtitle sell data-v-d44e8f16" data-number="{{ak}}">{{aj}}股</label>
+                    </view>
+                </view>
+            </view>
+            <view class="{{['_div','trade-op','data-v-d44e8f16',ao&&'disabled']}}">
+                <view bindtap="{{am}}" class="_div trade-btn buy buy-btn data-v-d44e8f16">
+                    <label class="_span trade-btn--text data-v-d44e8f16">模拟买入</label>
+                </view>
+                <view bindtap="{{an}}" class="_div trade-btn sell data-v-d44e8f16">
+                    <label class="_span trade-btn--text data-v-d44e8f16">模拟卖出</label>
+                </view>
+            </view>
+            <view class="_div trade-warn data-v-d44e8f16">
+                <label class="_span trade-warn--text data-v-d44e8f16">{{ap}}</label>
+            </view>
+        </view>
+        <view class="_div stock-recommend data-v-d44e8f16" wx:if="{{aq}}">
+            <stock-recommend bind:__l="__l" bindgoStock="{{ar}}" class="data-v-d44e8f16" uI="d44e8f16-1" uP="{{as}}" wx:if="{{as}}"></stock-recommend>
+        </view>
+        <view class="_div stock-range data-v-d44e8f16" wx:if="{{at}}">
+            <view class="_div stock-range--title data-v-d44e8f16">
+                <label class="_span stock-range--title-item data-v-d44e8f16">买盘五档</label>
+                <label class="_span stock-range--title-item data-v-d44e8f16">卖盘五档</label>
+            </view>
+            <view class="_div stock-range--line data-v-d44e8f16" ref="rangeLine">
+                <view class="_div stock-range--line-bg data-v-d44e8f16">
+                    <view class="_div stock-range--line-item left data-v-d44e8f16" style="{{'width:'+av}}"></view>
+                    <view class="_div stock-range--line-item right data-v-d44e8f16" style="{{'width:'+aw}}"></view>
+                </view>
+                <label class="_span stock-range--line-text data-v-d44e8f16">{{ax}}</label>
+                <label class="_span stock-range--line-text data-v-d44e8f16">{{ay}}</label>
+            </view>
+            <view class="_div stock-range--table data-v-d44e8f16">
+                <view class="_div stock-range--table-item data-v-d44e8f16">
+                    <view class="_div stock-range--table-td data-v-d44e8f16" wx:for="{{az}}" wx:for-item="trans" wx:key="f">
+                        <label class="_span stock-range--table-order data-v-d44e8f16">{{trans.a}}</label>
+                        <label bindtap="{{trans.d}}" class="_span stock-range--table-price data-v-d44e8f16" data-price="{{trans.c}}" style="{{'color:'+aA}}">{{trans.b}}</label>
+                        <label class="_span stock-range--table-count data-v-d44e8f16">{{trans.e}}</label>
+                    </view>
+                </view>
+                <view class="_div stock-range--table-item data-v-d44e8f16">
+                    <view class="_div stock-range--table-td data-v-d44e8f16" wx:for="{{aB}}" wx:for-item="trans" wx:key="f">
+                        <label class="_span stock-range--table-order data-v-d44e8f16">{{trans.a}}</label>
+                        <label bindtap="{{trans.d}}" class="_span stock-range--table-price data-v-d44e8f16" data-price="{{trans.c}}" style="{{'color:'+aC}}">{{trans.b}}</label>
+                        <label class="_span stock-range--table-count data-v-d44e8f16">{{trans.e}}</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="_div stock-tip data-v-d44e8f16" hidden="{{!aE}}">
+            <label class="_span stock-tip--text data-v-d44e8f16">{{aD}}</label>
+        </view>
+        <view animationType="fade" class="_div dialog-wrapper data-v-d44e8f16" supportedOrientations="{{aJ}}" wx:if="{{aF}}">
+            <view class="_div dialog-container data-v-d44e8f16">
+                <view bindtap="{{aG}}" class="_div dialog-mask data-v-d44e8f16"></view>
+                <view class="{{['_div','dialog-tradetype','data-v-d44e8f16',aI]}}">
+                    <label bindtap="{{item.d}}" class="{{['_span','dialog-tradetype-item','data-v-d44e8f16',item.c&&'active']}}" wx:for="{{aH}}" wx:key="b">{{item.a}}</label>
+                    <image class="_img dialog-triangle data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/f981c52abbdcdcadc936608c9a04c810.png"></image>
+                </view>
+            </view>
+        </view>
+        <view animationType="fade" class="_div dialog-wrapper data-v-d44e8f16" supportedOrientations="{{aO}}" wx:if="{{aK}}">
+            <view class="_div dialog-container data-v-d44e8f16">
+                <view bindtap="{{aL}}" class="_div dialog-mask data-v-d44e8f16"></view>
+                <view class="{{['_div','dialog-numtype','data-v-d44e8f16',aN]}}">
+                    <view class="_div numtype-box data-v-d44e8f16">
+                        <view class="_div dialog-numtype--part data-v-d44e8f16" wx:for="{{aM}}" wx:for-item="map" wx:key="c">
+                            <view bindtap="{{item.d}}" class="_div dialog-numtype-item data-v-d44e8f16" wx:for="{{map.a}}" wx:key="c">
+                                <label class="{{['_span','dialog-numtype-item--text','data-v-d44e8f16',map.b]}}">{{item.a}}</label>
+                                <label class="_span dialog-numtype-item--text bold data-v-d44e8f16">{{item.b}}</label>
+                            </view>
+                        </view>
+                    </view>
+                    <image class="_img dialog-triangle data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/f981c52abbdcdcadc936608c9a04c810.png"></image>
+                </view>
+            </view>
+        </view>
+        <view animationType="fade" class="_div dialog-wrapper data-v-d44e8f16" supportedOrientations="{{bh}}" wx:if="{{aP}}">
+            <view class="_div dialog-container data-v-d44e8f16">
+                <view bindtap="{{aQ}}" class="_div dialog-mask data-v-d44e8f16"></view>
+                <view class="_div dialog-main trade-modal data-v-d44e8f16">
+                    <label class="_span dialog-title data-v-d44e8f16">模拟{{aR}}股票</label>
+                    <view class="_div dialog-content data-v-d44e8f16">
+                        <view class="_div dialog-content--line data-v-d44e8f16">
+                            <label class="_span dialog-content--line-title data-v-d44e8f16">名称：</label>
+                            <label class="_span dialog-content--line-desc data-v-d44e8f16">{{aS}}</label>
+                        </view>
+                        <view class="_div dialog-content--line data-v-d44e8f16">
+                            <label class="_span dialog-content--line-title data-v-d44e8f16">价格：</label>
+                            <label class="_span dialog-content--line-desc data-v-d44e8f16">{{aT}}元/股</label>
+                        </view>
+                        <view class="_div dialog-content--line data-v-d44e8f16">
+                            <label class="_span dialog-content--line-title data-v-d44e8f16">股数：</label>
+                            <label class="_span dialog-content--line-desc data-v-d44e8f16">{{aU}}股</label>
+                        </view>
+                        <view class="_div dialog-content--line data-v-d44e8f16">
+                            <label class="_span dialog-content--line-title data-v-d44e8f16">总价：</label>
+                            <label class="_span dialog-content--line-desc data-v-d44e8f16">{{aV}}元</label>
+                        </view>
+                    </view>
+                    <view class="_div dialog-content--warn margin-bottom-10 data-v-d44e8f16" wx:if="{{aW}}">
+                        <label class="_span dialog-content--warn-text red data-v-d44e8f16">盘后交易时，委托价为收盘价才可成交</label>
+                    </view>
+                    <view class="_div dialog-content--warn margin-bottom-10 data-v-d44e8f16" wx:if="{{aX}}">
+                        <label class="_span dialog-content--warn-text red data-v-d44e8f16">{{aY}}</label>
+                    </view>
+                    <view class="_div dialog-content--warn margin-bottom-30 data-v-d44e8f16" wx:if="{{aZ}}">
+                        <label class="_span dialog-content--warn-text data-v-d44e8f16">模拟交易功能不收取任何手续费</label>
+                    </view>
+                    <view class="_div dialog-content--warn margin-bottom-30 data-v-d44e8f16">
+                        <view bindtap="{{bb}}" class="_div dialog-content--warn-addstock data-v-d44e8f16">
+                            <image class="_img dialog-content--warn-checkbox data-v-d44e8f16" src="https://st.gtimg.com/design/eecde3b5e0548b8810cd2641816c00ed.png" wx:if="{{ba}}"></image>
+                            <image class="_img dialog-content--warn-checkbox data-v-d44e8f16" src="https://st.gtimg.com/design/7d0344b4c318ff4925e38bb4141847cf.png" wx:else></image>
+                            <label class="_span dialog-content--warn-text data-v-d44e8f16">模拟委托加自选</label>
+                        </view>
+                    </view>
+                    <view class="_div dialog-footer data-v-d44e8f16">
+                        <view bindtap="{{bc}}" class="_div dialog-btn right-border last data-v-d44e8f16">
+                            <label class="_span dialog-btn--text data-v-d44e8f16">取消</label>
+                        </view>
+                        <view bindtap="{{bg}}" class="_div dialog-btn last data-v-d44e8f16">
+                            <label class="{{['_span','dialog-btn--text','data-v-d44e8f16',bf]}}">{{bd}}{{be}}</label>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view animationType="fade" bindrequestClose="{{bl}}" class="_div dialog-wrapper data-v-d44e8f16" supportedOrientations="{{bk}}" wx:if="{{bi}}">
+            <view class="_div dialog-container data-v-d44e8f16">
+                <view class="_div dialog-mask data-v-d44e8f16"></view>
+                <view class="_div dialog-main first-modal data-v-d44e8f16">
+                    <image class="_img dialog-img data-v-d44e8f16" src="https://wzq.gtimg.com/resource/images/fb34fa9f60e25faaa650c673275ef468.png"></image>
+                    <label class="_span dialog-title data-v-d44e8f16">恭喜获得</label>
+                    <label class="_span dialog-subtitle data-v-d44e8f16">模拟炒股资金</label>
+                    <label class="_span dialog-content big data-v-d44e8f16">1,000,000.00</label>
+                    <view class="_div dialog-footer data-v-d44e8f16">
+                        <view bindtap="{{bj}}" class="_div dialog-btn radius last data-v-d44e8f16">
+                            <label class="_span dialog-btn--text data-v-d44e8f16">我知道了</label>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <info-modal bind:__l="__l" bindclose="{{br}}" class="data-v-d44e8f16" uI="d44e8f16-2" uP="{{bs}}" uS="{{['d']}}" wx:if="{{bm}}">
+            <block wx:if="{{bn}}">资金不足，交易可用资金相差{{bo}}元（含预估手续费{{bp}}元），当前最大可买{{bq}}股</block>
+        </info-modal>
+        <error-modal bind:__l="__l" bindhideMsg="{{bt}}" class="data-v-d44e8f16" uI="d44e8f16-3" uP="{{bv}}" wx:if="{{bv}}"></error-modal>
+        <error-modal bind:__l="__l" bindhideMsg="{{bw}}" class="data-v-d44e8f16" uI="d44e8f16-4" uP="{{bx}}" wx:if="{{bx}}"></error-modal>
+        <task-log bind:__l="__l" bindcloseLog="{{bz}}" class="data-v-d44e8f16" uI="d44e8f16-5" uP="{{bA}}" wx:if="{{by}}"></task-log>
+    </view>
+</view>

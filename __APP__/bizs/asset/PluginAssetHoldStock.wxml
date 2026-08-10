@@ -1,0 +1,52 @@
+<plugin-asset-component-wrap
+  bind:__l="__l"
+  class="r data-v-a3c078ac"
+  uI="a3c078ac-0"
+  uR="pluginAssetComWrapRef"
+  uS="{{['d']}}"
+>
+  <view class="container data-v-a3c078ac">
+    <view class="empty-container data-v-a3c078ac" wx:if="{{a}}">
+      <empty
+        bind:__l="__l"
+        class="data-v-a3c078ac"
+        uI="a3c078ac-1,a3c078ac-0"
+        uP="{{c}}"
+        uS="{{['other']}}"
+        wx:if="{{c}}"
+      >
+        <label
+          bindtap="{{b}}"
+          class="enter-pwd-container data-v-a3c078ac"
+          slot="other"
+        >
+          <label class="enter-pwd-text data-v-a3c078ac">查看</label>
+          <label
+            class="icon icon-arrow-right enter-pwd-arrow data-v-a3c078ac"
+          ></label>
+        </label>
+      </empty>
+    </view>
+    <view class="empty-container data-v-a3c078ac" wx:elif="{{d}}">
+      <empty
+        bind:__l="__l"
+        class="data-v-a3c078ac"
+        uI="a3c078ac-2,a3c078ac-0"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></empty>
+    </view>
+    <choose-list
+      bindjumpStockDetail="{{m}}"
+      bindrefresh="{{k}}"
+      bindsort="{{l}}"
+      class="data-v-a3c078ac"
+      containerHeight="{{g}}"
+      isCurrent="{{h}}"
+      skin="{{j}}"
+      stockList="{{f}}"
+      tab="{{i}}"
+      wx:else
+    ></choose-list>
+  </view>
+</plugin-asset-component-wrap>

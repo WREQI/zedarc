@@ -1,0 +1,44 @@
+<page-meta class="data-v-42933776" rootFontSize="{{a}}"></page-meta>
+<view class="_div home-container data-v-42933776" data-st-theme="{{j}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-42933776"
+    uI="42933776-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-42933776"
+    uI="42933776-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div status-wrapper data-v-42933776" wx:if="{{c}}">
+    <st-status
+      bind:__l="__l"
+      class="data-v-42933776"
+      uI="42933776-2"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></st-status>
+  </view>
+  <home-v2
+    bind:__l="__l"
+    bindloaded="{{i}}"
+    class="r data-v-42933776"
+    uI="42933776-3"
+    uR="homeRef"
+    uS="{{['plugin']}}"
+  >
+    <view slot="{{v0.d}}" wx:for="{{e}}" wx:for-item="v0" wx:key="c">
+      <trade-message
+        bind:__l="__l"
+        bindpullRefresh="{{g}}"
+        bindstyleChange="{{f}}"
+        class="data-v-42933776"
+        uI="{{v0.a}}"
+        uP="{{v0.b}}"
+        wx:if="{{v0.b}}"
+      ></trade-message>
+    </view>
+  </home-v2>
+</view>

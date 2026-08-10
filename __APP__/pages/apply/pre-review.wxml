@@ -1,0 +1,79 @@
+<page-meta class="data-v-ae18426d" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-ae18426d"
+  id="global-wrap"
+  uI="ae18426d-0"
+  uP="{{h}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-ae18426d"
+    uI="ae18426d-1,ae18426d-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-prereview data-v-ae18426d">
+      <view class="page-apply-prereview__body data-v-ae18426d">
+        <view class="prereview-banner data-v-ae18426d">
+          <image
+            alt="提示"
+            class="prereview-banner__icon data-v-ae18426d"
+            src="https://st.gtimg.com/pcm/mqunvkxz_59c9d2575a0bc30ce5c2dba6604e62b9.svg"
+          ></image>
+          <view class="prereview-banner__text data-v-ae18426d">
+            <view class="prereview-banner__title data-v-ae18426d"
+              >您有{{b}}项资料可能不符合审核标准</view
+            >
+            <view class="prereview-banner__desc data-v-ae18426d"
+              >改完后提交，可缩短审核时长，提高通过率。</view
+            >
+          </view>
+        </view>
+        <view class="page-apply-prereview__cards data-v-ae18426d">
+          <view
+            class="prereview-card data-v-ae18426d"
+            wx:for="{{c}}"
+            wx:for-item="group"
+            wx:key="f"
+          >
+            <view class="prereview-card__header data-v-ae18426d">
+              <view class="prereview-card__title data-v-ae18426d"
+                >{{group.a}}</view
+              >
+              <view class="prereview-card__badge data-v-ae18426d"
+                >{{group.b}}项</view
+              >
+            </view>
+            <view class="prereview-card__tips data-v-ae18426d">
+              <view
+                class="prereview-card__tip data-v-ae18426d"
+                wx:for="{{group.c}}"
+                wx:for-item="tip"
+                wx:key="b"
+                >• {{tip.a}}</view
+              >
+            </view>
+            <id-card-photo-swiper
+              bind:__l="__l"
+              class="prereview-card__photos data-v-ae18426d"
+              uI="{{group.e}}"
+              wx:if="{{group.d}}"
+            ></id-card-photo-swiper>
+          </view>
+        </view>
+      </view>
+      <step-buttons
+        bind:__l="__l"
+        bindclickNext="{{e}}"
+        bindclickPrev="{{d}}"
+        class="data-v-ae18426d"
+        uI="ae18426d-3,ae18426d-1"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></step-buttons>
+    </view>
+  </apply-wrap>
+</global-wrap>

@@ -1,0 +1,30 @@
+<view class="{{['_div','data-v-553fc000','list-search',m,n]}}">
+  <view class="_div box-top data-v-553fc000" wx:if="{{a}}">
+    <view class="_div title data-v-553fc000">{{b}}</view>
+    <image
+      bindtap="{{d}}"
+      class="_img rubbish data-v-553fc000"
+      src="https://st.gtimg.com/design/8f312259572cb682b7c59d7c51a73a6d.png"
+      wx:if="{{c}}"
+    ></image>
+  </view>
+  <view class="{{['_div','data-v-553fc000','stock-list',f]}}">
+    <item-search
+      bind:__l="__l"
+      bindjumpToDetail="{{item.b}}"
+      class="data-v-553fc000"
+      uI="{{item.c}}"
+      uP="{{item.d}}"
+      wx:for="{{e}}"
+      wx:key="a"
+    ></item-search>
+  </view>
+  <view
+    catchtap="{{l}}"
+    class="{{['_div','data-v-553fc000','sear-result-open',k]}}"
+    wx:if="{{g}}"
+  >
+    <view class="_div data-v-553fc000">{{h}}</view>
+    <view class="{{['_div','data-v-553fc000','more-arrow',i,j]}}"></view>
+  </view>
+</view>

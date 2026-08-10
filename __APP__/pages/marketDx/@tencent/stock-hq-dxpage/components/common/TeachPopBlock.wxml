@@ -1,0 +1,28 @@
+<view class="_div teach-pop-wrapper data-v-e32100d1">
+  <view
+    bindtap="{{k}}"
+    catchtouchmove="{{j}}"
+    class="{{['_div','data-v-e32100d1','mask-wrapper',i]}}"
+  >
+    <view
+      catchtap="{{h}}"
+      class="{{['_div','data-v-e32100d1','pop-content',f,g]}}"
+    >
+      <view class="_div pop-title data-v-e32100d1">
+        <view class="_div data-v-e32100d1">{{a}}</view>
+        <view catchtap="{{b}}" class="_div top-close data-v-e32100d1"></view>
+      </view>
+      <view class="_div pop-list data-v-e32100d1">
+        <view class="_div list-item data-v-e32100d1" wx:for="{{c}}" wx:key="d">
+          <view class="_div list-item-title data-v-e32100d1">{{item.a}}</view>
+          <view class="_div list-item-context data-v-e32100d1">{{item.b}}</view>
+          <view
+            class="_div list-item-spec data-v-e32100d1"
+            wx:if="{{item.c}}"
+          ></view>
+        </view>
+      </view>
+      <view class="_div pop-tips data-v-e32100d1" wx:if="{{d}}">{{e}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="_div stock-history-wrapper data-v-06906577">
+  <stock-history-block
+    bind:__l="__l"
+    bindclickItem="{{item.e}}"
+    bindtoggleAdd="{{item.d}}"
+    class="history-wrapper listRef r-i-f data-v-06906577"
+    id="{{item.b}}"
+    uI="{{item.f}}"
+    uP="{{item.g}}"
+    uR="listRef"
+    wx:for="{{a}}"
+    wx:key="c"
+  ></stock-history-block>
+  <empty-show
+    bind:__l="__l"
+    class="data-v-06906577"
+    uI="06906577-1"
+    wx:if="{{b}}"
+  ></empty-show>
+</view>

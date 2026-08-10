@@ -1,0 +1,86 @@
+<view class="_div data-v-e25ab432" wx:if="{{a}}">
+  <view class="{{['_div','pj-list','data-v-e25ab432',d]}}" wx:if="{{b}}">
+    <view class="_div pj-title data-v-e25ab432">
+      <label class="_span data-v-e25ab432">机构</label>
+      <label class="_span data-v-e25ab432">评级变动</label>
+      <label class="_span data-v-e25ab432">时间</label>
+    </view>
+    <view
+      class="_div pj-li data-v-e25ab432"
+      wx:for="{{c}}"
+      wx:for-item="v"
+      wx:key="d"
+    >
+      <label class="_span pj-li-1 data-v-e25ab432">{{v.a}}</label>
+      <label class="_span pj-li-2 data-v-e25ab432">{{v.b}}</label>
+      <label class="_span pj-li-3 data-v-e25ab432">{{v.c}}</label>
+    </view>
+  </view>
+  <view class="{{['_div','chart','data-v-e25ab432',M]}}" wx:if="{{e}}">
+    <view class="_div chart-main data-v-e25ab432">
+      <view class="_div chart-main-title data-v-e25ab432">机构评级</view>
+      <view class="{{['_div','data-v-e25ab432','chart-main-level',K]}}">
+        <label
+          bindtap="{{k}}"
+          class="_span rec rec-1 data-v-e25ab432"
+          style="{{'width:'+j}}"
+          wx:if="{{f}}"
+        >
+          <view class="{{['_i','data-v-e25ab432','rec-i',i]}}">{{g}}{{h}}</view>
+        </label>
+        <label
+          bindtap="{{q}}"
+          class="_span rec rec-2 data-v-e25ab432"
+          style="{{'width:'+p}}"
+          wx:if="{{l}}"
+        >
+          <view class="{{['_i','data-v-e25ab432','rec-i',o]}}">{{m}}{{n}}</view>
+        </label>
+        <label
+          bindtap="{{x}}"
+          class="_span rec rec-3 data-v-e25ab432"
+          style="{{'width:'+w}}"
+          wx:if="{{r}}"
+        >
+          <view class="{{['_i','data-v-e25ab432','rec-i',v]}}">{{s}}{{t}}</view>
+        </label>
+        <label
+          bindtap="{{D}}"
+          class="_span rec rec-4 data-v-e25ab432"
+          style="{{'width:'+C}}"
+          wx:if="{{y}}"
+        >
+          <view class="{{['_i','data-v-e25ab432','rec-i',B]}}">{{z}}{{A}}</view>
+        </label>
+        <label
+          bindtap="{{J}}"
+          class="_span rec rec-5 data-v-e25ab432"
+          style="{{'width:'+I}}"
+          wx:if="{{E}}"
+        >
+          <view class="{{['_i','data-v-e25ab432','rec-i',H]}}">{{F}}{{G}}</view>
+        </label>
+      </view>
+    </view>
+    <view class="_div chart-label data-v-e25ab432">
+      <view class="_div stock-rating-time data-v-e25ab432">{{L}}</view>
+      <view class="_div chart-label-list data-v-e25ab432">
+        <label class="_span chart-label-item chart-label-1 data-v-e25ab432"
+          >卖出</label
+        >
+        <label class="_span chart-label-item chart-label-2 data-v-e25ab432"
+          >减持</label
+        >
+        <label class="_span chart-label-item chart-label-3 data-v-e25ab432"
+          >中性</label
+        >
+        <label class="_span chart-label-item chart-label-4 data-v-e25ab432"
+          >增持</label
+        >
+        <label class="_span chart-label-item chart-label-5 data-v-e25ab432"
+          >买入</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

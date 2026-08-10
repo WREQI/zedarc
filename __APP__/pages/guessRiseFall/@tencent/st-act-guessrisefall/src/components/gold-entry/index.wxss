@@ -1,0 +1,95 @@
+.gold-entry.data-v-a9aaeb12 {
+  opacity: 0;
+  transform: translateY(0.13333333333333333rem);
+  transition: opacity 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out,
+    -webkit-transform 0.3s ease-out;
+  width: 100%;
+}
+.gold-entry--fade-in.data-v-a9aaeb12 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gold-entry__content.data-v-a9aaeb12 {
+  background: #fff;
+  border: 0.013333333333333334rem solid hsla(218, 5%, 68%, 0.12);
+  border-radius: 0.21333333333333335rem;
+  box-shadow: 0 0.08rem 0.08rem rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.gold-entry__left.data-v-a9aaeb12 {
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.gold-entry__avatar.data-v-a9aaeb12 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+.gold-entry__img-box.data-v-a9aaeb12 {
+  border-radius: 1.3333333333333333rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8rem;
+  overflow: hidden;
+  width: 0.8rem;
+}
+.gold-entry__img.data-v-a9aaeb12 {
+  display: block;
+  width: 0.8rem;
+}
+.gold-entry__gold.data-v-a9aaeb12 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  margin-left: 0.26666666666666666rem;
+}
+.gold-entry__gold-num.data-v-a9aaeb12 {
+  color: #323a4d;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+}
+.gold-entry__division.data-v-a9aaeb12 {
+  box-sizing: border-box;
+  font-size: 0.30666666666666664rem;
+  margin: 0 0.24rem;
+  padding-top: 0.08rem;
+}
+.gold-entry__amount.data-v-a9aaeb12 {
+  box-sizing: border-box;
+  color: #98a0b3;
+  font-size: 0.32rem;
+  font-weight: 400;
+  padding-top: 0.13333333333333333rem;
+}
+.gold-entry__action.data-v-a9aaeb12 {
+  height: 100%;
+  justify-content: flex-end;
+}
+.gold-entry__action.data-v-a9aaeb12,
+.gold-entry__btn.data-v-a9aaeb12 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.gold-entry__btn.data-v-a9aaeb12 {
+  background-image: linear-gradient(270deg, #e63535, #ef5350);
+  border-radius: 0.37333333333333335rem;
+  color: #fff;
+  font-size: 0.3466666666666667rem;
+  font-weight: 500;
+  height: 0.8rem;
+  justify-content: center;
+  width: 1.8666666666666667rem;
+}

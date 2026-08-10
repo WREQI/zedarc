@@ -1,0 +1,47 @@
+<view
+  catchtouchmove="{{n}}"
+  class="{{['_div','mask-wrapper','data-v-b6556351',m]}}"
+>
+  <view class="{{['_div','popup-wrapper','data-v-b6556351',k,l]}}">
+    <view class="_div popup-title data-v-b6556351" wx:if="{{a}}">{{b}}</view>
+    <scroll-view
+      bindtouchstart="{{d}}"
+      catchtouchmove="{{e}}"
+      class="content-area data-v-b6556351"
+      ref="scrollView"
+      scrollY="{{true}}"
+    >
+      <view class="_div json_content data-v-b6556351" wx:for="{{c}}" wx:key="j">
+        <view
+          class="_div title data-v-b6556351"
+          key="{{item.c}}"
+          wx:if="{{item.a}}"
+          >{{item.b}}</view
+        >
+        <view
+          class="_div text data-v-b6556351"
+          key="{{item.f}}"
+          wx:if="{{item.d}}"
+          >{{item.e}}</view
+        >
+        <view
+          class="_div subText data-v-b6556351"
+          key="{{item.i}}"
+          wx:if="{{item.g}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </scroll-view>
+    <view class="_div button-area data-v-b6556351">
+      <view
+        bindtap="{{h}}"
+        class="_div button button-more data-v-b6556351"
+        wx:if="{{f}}"
+        >{{g}}</view
+      >
+      <view bindtap="{{j}}" class="_div button button-ok data-v-b6556351"
+        >{{i}}</view
+      >
+    </view>
+  </view>
+</view>

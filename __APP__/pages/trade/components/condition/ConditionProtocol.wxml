@@ -1,0 +1,29 @@
+<view class="data-v-d29d77dc">
+  <mp-dialog
+    bind:__l="__l"
+    class="condition-risk-dialog data-v-d29d77dc"
+    id="condition-order-risk-dialog"
+    uI="d29d77dc-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{d}}"
+  >
+    <view class="condition-risk-tips data-v-d29d77dc"
+      >为了更好地提供相关功能服务，请你阅读并同意以下风险提示说明</view
+    >
+    <view capture-bind:tap="{{c}}" class="condition-risk-tips data-v-d29d77dc">
+      <st-checkbox
+        bind:__l="__l"
+        class="item-checkbox data-v-d29d77dc"
+        uI="d29d77dc-1,d29d77dc-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></st-checkbox
+      >我已阅读并同意<view
+        bindtap="{{b}}"
+        class="condition-risk-link data-v-d29d77dc"
+        >《智能条件单风险揭示说明》</view
+      >
+    </view>
+  </mp-dialog>
+</view>

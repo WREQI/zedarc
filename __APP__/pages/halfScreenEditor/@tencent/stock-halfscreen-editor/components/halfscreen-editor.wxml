@@ -1,0 +1,166 @@
+<view
+  class="{{['_div','halfscreen-container','data-v-112ea49a',as]}}"
+  data-st-theme="{{at}}"
+>
+  <view
+    catchmousedown="{{b}}"
+    catchtap="{{a}}"
+    catchtouchmove="{{c}}"
+    class="_div prevent-scroll data-v-112ea49a"
+  ></view>
+  <view class="{{['_div','data-v-112ea49a','halfscreen-content',aq,ar]}}">
+    <view class="_div input-container data-v-112ea49a">
+      <image
+        alt=""
+        catchtap="{{e}}"
+        class="_img input-header data-v-112ea49a"
+        src="{{d}}"
+      ></image>
+      <view class="_div half-input-area data-v-112ea49a">
+        <textarea
+          autoHeight
+          adjustPosition="{{false}}"
+          autofocus="{{true}}"
+          bindblur="{{m}}"
+          bindfocus="{{l}}"
+          bindinput="{{n}}"
+          class="{{['data-v-112ea49a','half-input-box','mp-input']}}"
+          cursor="{{h}}"
+          disableDefaultPadding="true"
+          focus="{{j}}"
+          holdKeyboard="{{true}}"
+          maxlength="{{k}}"
+          placeholder="{{i}}"
+          placeholderStyle="color:#98A0B3;font-size:16px;line-height:22px;"
+          ref="editorInputRef"
+          showConfirmBar="{{false}}"
+          value="{{g}}"
+          wx:if="{{f}}"
+        ></textarea>
+        <block wx:else>
+          <textarea
+            bindblur="{{s}}"
+            bindfocus="{{r}}"
+            bindinput="{{t}}"
+            class="half-input-box data-v-112ea49a"
+            maxlength="{{q}}"
+            placeholder="{{p}}"
+            placeholderStyle="color:#98A0B3;font-size:16px;line-height:22px;"
+            ref="editorInputRef"
+            style="{{'opacity:'+o}}"
+            value="{{v}}"
+            wx:if="{{r0}}"
+          ></textarea>
+        </block>
+        <thumb-image-view
+          bind:__l="__l"
+          binddelPicture="{{x}}"
+          bindonBlankArea="{{y}}"
+          class="data-v-112ea49a"
+          uI="112ea49a-0"
+          uP="{{z}}"
+          wx:if="{{w}}"
+        ></thumb-image-view>
+      </view>
+    </view>
+    <handle-transfer
+      bind:__l="__l"
+      binddataReady="{{B}}"
+      class="transfer-container data-v-112ea49a"
+      uI="112ea49a-1"
+      uP="{{C}}"
+      wx:if="{{A}}"
+    ></handle-transfer>
+    <view
+      catchmousedown="{{aj}}"
+      catchtouchstart="{{ai}}"
+      class="_div function-container data-v-112ea49a"
+    >
+      <view class="_div function-left-2 data-v-112ea49a" wx:if="{{D}}">
+        <view
+          catchmousedown="{{G}}"
+          catchtouchstart="{{F}}"
+          class="{{['_div','data-v-112ea49a','function-icon',E]}}"
+        ></view>
+        <view
+          catchmousedown="{{I}}"
+          catchtouchstart="{{H}}"
+          class="_div function-icon album data-v-112ea49a"
+        ></view>
+        <view
+          catchmousedown="{{K}}"
+          catchtouchstart="{{J}}"
+          class="_div function-icon at data-v-112ea49a"
+        ></view>
+        <view
+          catchmousedown="{{S}}"
+          catchtouchstart="{{R}}"
+          class="_div turn-container data-v-112ea49a"
+          data-type="turn-container"
+          wx:if="{{L}}"
+        >
+          <view
+            catchmousedown="{{O}}"
+            catchtouchstart="{{N}}"
+            class="{{['_div','data-v-112ea49a','check-btn',M]}}"
+            data-type="turn-container"
+          ></view>
+          <view
+            catchmousedown="{{Q}}"
+            catchtouchstart="{{P}}"
+            class="_div turn-text data-v-112ea49a"
+            data-type="turn-container"
+            >同时转发至股友圈</view
+          >
+        </view>
+      </view>
+      <view class="_div function-left-1 data-v-112ea49a" wx:else>
+        <view
+          catchmousedown="{{V}}"
+          catchtouchstart="{{U}}"
+          class="{{['_div','data-v-112ea49a','function-icon',T]}}"
+        ></view>
+        <view
+          catchmousedown="{{X}}"
+          catchtouchstart="{{W}}"
+          class="_div function-icon album data-v-112ea49a"
+        ></view>
+        <view
+          catchmousedown="{{Z}}"
+          catchtouchstart="{{Y}}"
+          class="_div function-icon stock data-v-112ea49a"
+        ></view>
+        <view
+          catchmousedown="{{ab}}"
+          catchtouchstart="{{aa}}"
+          class="_div function-icon at data-v-112ea49a"
+        ></view>
+        <view
+          catchmousedown="{{ad}}"
+          catchtouchstart="{{ac}}"
+          class="_div function-icon topic data-v-112ea49a"
+        ></view>
+      </view>
+      <view class="_div function-right data-v-112ea49a">
+        <view
+          catchmousedown="{{ah}}"
+          catchtouchstart="{{ag}}"
+          class="{{['_div','data-v-112ea49a','confirm-btn',ae,af]}}"
+          data-type="confirm-btn"
+          >发送</view
+        >
+      </view>
+    </view>
+    <view class="{{['_div','data-v-112ea49a',ao]}}" style="{{'height:'+ap}}">
+      <emoji-panel
+        bind:__l="__l"
+        bindselectEmoji="{{al}}"
+        bindselectGif="{{am}}"
+        class="data-v-112ea49a"
+        uI="112ea49a-2"
+        uP="{{an}}"
+        wx:if="{{ak}}"
+      ></emoji-panel>
+    </view>
+  </view>
+</view>

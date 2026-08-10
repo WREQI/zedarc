@@ -1,0 +1,118 @@
+<view
+  class="_div stage row layout-align-end-space-between data-v-7a5646d1"
+  wx:if="{{a}}"
+>
+  <view class="_div layout-align-center-center flex center data-v-7a5646d1">
+    <view
+      class="_div layout-align-center-center rank-top-wrapper data-v-7a5646d1"
+      wx:if="{{b}}"
+    >
+      <view
+        class="_div prize2-hdimg-box layout-align-center-center data-v-7a5646d1"
+      >
+        <image
+          class="_img prize2-hdimg-border data-v-7a5646d1"
+          src="https://wzq.gtimg.com/resources/mocktrade/2_headimg.png"
+        ></image>
+        <image
+          class="_img prize-hdimg__img prize-hdimg__img2 data-v-7a5646d1"
+          src="{{c}}"
+        ></image>
+      </view>
+      <view
+        class="_div layout-align-center-center stage-prize stage-prize-2 data-v-7a5646d1"
+      >
+        <view
+          class="_div img-num img-num-2 row layout-align-center-center data-v-7a5646d1"
+        ></view>
+        <label class="_span username data-v-7a5646d1" numberOfLines="1"
+          >{{d}}</label
+        >
+        <view class="_div row prize-text red data-v-7a5646d1">
+          <label class="{{['_span','profit','data-v-7a5646d1',f]}}"
+            >{{e}}</label
+          >
+          <label class="{{['_span','profit-sign','data-v-7a5646d1',g]}}"
+            >%</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div layout-align-center-center flex center data-v-7a5646d1">
+    <view
+      class="_div layout-align-center-center rank-top-wrapper data-v-7a5646d1"
+      wx:if="{{h}}"
+    >
+      <view
+        class="_div prize1-hdimg-box layout-align-center-center data-v-7a5646d1"
+      >
+        <image
+          class="_img prize1-hdimg-border data-v-7a5646d1"
+          src="https://wzq.gtimg.com/resources/mocktrade/1_headimg.png"
+        ></image>
+        <image
+          class="_img prize-hdimg__img1 data-v-7a5646d1"
+          src="{{i}}"
+        ></image>
+      </view>
+      <view
+        class="_div layout-align-center-center stage-prize stage-prize-1 data-v-7a5646d1"
+      >
+        <view
+          class="_div img-num img-num-1 row layout-align-center-center data-v-7a5646d1"
+        ></view>
+        <label class="_span username data-v-7a5646d1" numberOfLines="1"
+          >{{j}}</label
+        >
+        <view class="_div row prize-text data-v-7a5646d1">
+          <label class="{{['_span','profit','data-v-7a5646d1',l]}}"
+            >{{k}}</label
+          >
+          <label class="{{['_span','profit-sign','data-v-7a5646d1',m]}}"
+            >%</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div layout-align-center-center flex center data-v-7a5646d1">
+    <view
+      class="_div layout-align-center-center rank-top-wrapper data-v-7a5646d1"
+      wx:if="{{n}}"
+    >
+      <view
+        class="_div prize3-hdimg-box layout-align-center-center data-v-7a5646d1"
+      >
+        <image
+          class="_img prize3-hdimg-border data-v-7a5646d1"
+          src="https://wzq.gtimg.com/resources/mocktrade/3_headimg.png"
+        ></image>
+        <image
+          class="_img prize-hdimg__img prize-hdimg__img3 data-v-7a5646d1"
+          src="{{o}}"
+        ></image>
+      </view>
+      <view
+        class="_div layout-align-center-center stage-prize stage-prize-3 data-v-7a5646d1"
+      >
+        <view
+          class="_div img-num img-num-3 row layout-align-center-center data-v-7a5646d1"
+        ></view>
+        <label
+          class="_span username ellipsis-text data-v-7a5646d1"
+          numberOfLines="1"
+          >{{p}}</label
+        >
+        <view class="_div row prize-text data-v-7a5646d1">
+          <label class="{{['_span','profit','data-v-7a5646d1',r]}}"
+            >{{q}}</label
+          >
+          <label class="{{['_span','profit-sign','data-v-7a5646d1',s]}}"
+            >%</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

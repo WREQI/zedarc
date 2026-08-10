@@ -1,0 +1,11 @@
+<view class="{{['_div','component-detail-stock-list','data-v-f5876ba9',d]}}">
+  <list
+    bind:__l="__l"
+    bindclick="{{b}}"
+    class="data-v-f5876ba9"
+    uI="f5876ba9-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></list>
+  <empty bind:__l="__l" class="data-v-f5876ba9" uI="f5876ba9-1" wx:else></empty>
+</view>

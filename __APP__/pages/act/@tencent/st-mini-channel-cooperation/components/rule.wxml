@@ -1,0 +1,18 @@
+<view class="_div rule-wrapper data-v-e666dae2">
+  <view class="_div rule-title data-v-e666dae2">参与流程</view>
+  <image
+    class="_img rule-img flow data-v-e666dae2"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <view class="_div rule-title bank data-v-e666dae2">活动主办银行</view>
+  <image
+    class="_img rule-img bank data-v-e666dae2"
+    src="{{d}}"
+    wx:if="{{c}}"
+  ></image>
+  <view class="_div rule-title data-v-e666dae2">活动规则</view>
+  <view class="_div rule-text data-v-e666dae2" wx:if="{{e}}">
+    <rich-text class="data-v-e666dae2" nodes="{{f}}"></rich-text>
+  </view>
+</view>

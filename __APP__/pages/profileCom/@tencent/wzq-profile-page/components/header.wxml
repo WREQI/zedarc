@@ -1,0 +1,16 @@
+<view class="_div profile-top-bar-wrapper data-v-9767aea8">
+  <view class="_div welcome-text data-v-9767aea8">{{a}}欢迎你</view>
+  <view bindtap="{{c}}" class="_div kefu-warpper data-v-9767aea8" wx:if="{{b}}">
+    <view class="_div image data-v-9767aea8"></view>
+  </view>
+  <view bindtap="{{f}}" class="_div message-box-warpper data-v-9767aea8">
+    <qianji-red-point-placeholder
+      bind:__l="__l"
+      class="{{['profile-redpoint','data-v-9767aea8',d]}}"
+      uI="9767aea8-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></qianji-red-point-placeholder>
+    <view class="_div image data-v-9767aea8"></view>
+  </view>
+</view>

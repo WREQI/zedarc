@@ -1,0 +1,66 @@
+<view class="_div sentiment-bar data-v-1695fe85">
+  <view class="_div sentiment-bar__header data-v-1695fe85">
+    <view class="_div sentiment-bar__title data-v-1695fe85">{{a}} {{b}}</view>
+    <view class="_div sentiment-bar__desc data-v-1695fe85">{{c}}</view>
+  </view>
+  <view class="_div sentiment-bar__chart data-v-1695fe85">
+    <view class="_div sentiment-bar__progress data-v-1695fe85">
+      <view
+        class="_div sentiment-bar__bar-wrapper sentiment-bar__bar-wrapper--bullish data-v-1695fe85"
+        style="{{'width:'+d}}"
+      >
+        <view
+          class="_div sentiment-bar__bar sentiment-bar__bar--bullish data-v-1695fe85"
+        ></view>
+      </view>
+      <view
+        class="_div sentiment-bar__bar-wrapper sentiment-bar__bar-wrapper--neutral data-v-1695fe85"
+        style="{{'width:'+e}}"
+      >
+        <view
+          class="_div sentiment-bar__bar sentiment-bar__bar--neutral data-v-1695fe85"
+        ></view>
+      </view>
+      <view
+        class="_div sentiment-bar__bar-wrapper sentiment-bar__bar-wrapper--bearish data-v-1695fe85"
+        style="{{'width:'+f}}"
+      >
+        <view
+          class="_div sentiment-bar__bar sentiment-bar__bar--bearish data-v-1695fe85"
+        ></view>
+      </view>
+    </view>
+    <view class="_div sentiment-bar__labels data-v-1695fe85">
+      <view
+        class="_div sentiment-bar__label-wrapper sentiment-bar__label-wrapper--bullish data-v-1695fe85"
+        style="{{'width:'+i}}"
+        wx:if="{{g}}"
+      >
+        <view
+          class="_div sentiment-bar__label sentiment-bar__label--bullish data-v-1695fe85"
+          >{{h}}%看多</view
+        >
+      </view>
+      <view
+        class="_div sentiment-bar__label-wrapper sentiment-bar__label-wrapper--neutral data-v-1695fe85"
+        style="{{'width:'+l}}"
+        wx:if="{{j}}"
+      >
+        <view
+          class="_div sentiment-bar__label sentiment-bar__label--neutral data-v-1695fe85"
+          >{{k}}%观望</view
+        >
+      </view>
+      <view
+        class="_div sentiment-bar__label-wrapper sentiment-bar__label-wrapper--bearish data-v-1695fe85"
+        style="{{'width:'+o}}"
+        wx:if="{{m}}"
+      >
+        <view
+          class="_div sentiment-bar__label sentiment-bar__label--bearish data-v-1695fe85"
+          >{{n}}%看空</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

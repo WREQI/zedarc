@@ -1,0 +1,28 @@
+<view
+  catchtap="{{k}}"
+  class="{{['_div','data-v-de3dcdfe','stock-container',j]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div left data-v-de3dcdfe">
+    <view
+      class="_div stock-icon data-v-de3dcdfe"
+      style="{{'background-image:'+c}}"
+      wx:if="{{b}}"
+    ></view>
+    <label class="_span stock-n data-v-de3dcdfe">{{d}}</label>
+  </view>
+  <view class="_div right data-v-de3dcdfe">
+    <label class="{{['_span','stock-zdf','data-v-de3dcdfe',f]}}">{{e}}</label>
+    <view
+      catchtap="{{i}}"
+      class="{{['_div','item-right','data-v-de3dcdfe',h]}}"
+    >
+      <view
+        alt=""
+        class="_div add-icon added data-v-de3dcdfe"
+        wx:if="{{g}}"
+      ></view>
+      <view alt="" class="_div add-icon add data-v-de3dcdfe" wx:else></view>
+    </view>
+  </view>
+</view>

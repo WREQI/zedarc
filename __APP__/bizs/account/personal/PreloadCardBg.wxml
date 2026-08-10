@@ -1,0 +1,9 @@
+<view class="preload-card-bg data-v-3b0e5d99">
+  <label
+    class="data-v-3b0e5d99"
+    style="{{'background-image:'+url.b}}"
+    wx:for="{{a}}"
+    wx:for-item="url"
+    wx:key="a"
+  ></label>
+</view>

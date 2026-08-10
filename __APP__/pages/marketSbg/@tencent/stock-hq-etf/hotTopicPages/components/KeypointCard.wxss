@@ -1,0 +1,98 @@
+.keypoint-card.data-v-fbbd98f5 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  min-height: 4.08rem;
+  padding: 1.2rem 0.32rem 0.32rem;
+  position: relative;
+}
+.keypoint-card__title.data-v-fbbd98f5 {
+  color: var(--color-heavygray);
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4rem;
+  font-weight: 500;
+  left: 0.32rem;
+  line-height: 0.56rem;
+  position: absolute;
+  top: 0.32rem;
+  white-space: nowrap;
+}
+.keypoint-card__item.data-v-fbbd98f5 {
+  min-height: 1.12rem;
+  padding-left: 0.96rem;
+  position: relative;
+}
+.keypoint-card__item + .keypoint-card__item.data-v-fbbd98f5 {
+  margin-top: 0.32rem;
+}
+.keypoint-card__tag.data-v-fbbd98f5 {
+  align-items: center;
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  color: var(--color-red);
+  display: -webkit-flex;
+  display: flex;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.37333333333333335rem;
+  justify-content: center;
+  left: 0;
+  line-height: 0.37333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+  position: absolute;
+  top: 0.09333333333333334rem;
+  white-space: nowrap;
+  width: 0.7466666666666667rem;
+}
+.keypoint-card__tag--news.data-v-fbbd98f5 {
+  color: #e63535;
+  position: relative;
+  position: absolute;
+}
+.keypoint-card__tag--news.data-v-fbbd98f5:after {
+  border: 1px solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  display: block;
+  height: 200%;
+  left: 0;
+  margin-left: -0.006666666666666667rem;
+  margin-top: -0.006666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0 0;
+  width: 200%;
+  z-index: 1;
+}
+.keypoint-card__tag--affect.data-v-fbbd98f5 {
+  color: var(--color-orange);
+  position: relative;
+  position: absolute;
+}
+.keypoint-card__tag--affect.data-v-fbbd98f5:after {
+  border: 1px solid rgba(255, 137, 30, 0.4);
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  display: block;
+  height: 200%;
+  left: 0;
+  margin-left: -0.006666666666666667rem;
+  margin-top: -0.006666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0 0;
+  width: 200%;
+  z-index: 1;
+}
+.keypoint-card__text.data-v-fbbd98f5 {
+  color: var(--color-midgray);
+  font-family: xcxfont, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  min-height: 1.12rem;
+  word-break: break-word;
+}

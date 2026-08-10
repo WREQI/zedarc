@@ -1,0 +1,22 @@
+<view class="stock-search-wrapper">
+    <view class="flex-between">
+        <view class="smt-input flex flex-1">
+            <input bindblur="{{d}}" bindinput="{{c}}" bindkeyboardheightchange="{{b}}" class="flex-1" data-stat="trade.trade.search" maxlength="30" placeholder="请输入交易股票名称/代码/首字母" ref="smbinput" type="text" value="{{a}}"></input>
+        </view>
+        <view bindtap="{{f}}" class="smb-cancel primary-color" wx:if="{{e}}">取消</view>
+    </view>
+    <slot name="hot-stock" wx:if="{{g}}"></slot>
+    <view class="search-result-wrapper">
+        <view wx:if="{{h}}">
+            <block wx:if="{{i}}">
+                <search-result-list bind:__l="__l" bindclick="{{l}}" bindonAddStock="{{m}}" uI="795f192c-0" uP="{{n}}" uS="{{['label']}}" wx:if="{{j}}">
+                    <view class="title text-color-1 flex-between border--top" slot="label">
+                        <label class="sub-title">股票查询记录</label>
+                        <label bindtap="{{k}}" class="icon icon-rubbish"></label>
+                    </view>
+                </search-result-list>
+            </block>
+        </view>
+        <search-result-list bind:__l="__l" bindclick="{{o}}" bindonAddStock="{{p}}" uI="795f192c-1" uP="{{q||''}}" wx:else></search-result-list>
+    </view>
+</view>

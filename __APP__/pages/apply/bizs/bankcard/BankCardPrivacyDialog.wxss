@@ -1,0 +1,73 @@
+@import "/app.wxss";
+.privacy-dialog.data-v-91617622 .mp-popup {
+  border-radius: 0.213333rem;
+}
+.privacy-container.data-v-91617622 {
+  line-height: 0.56rem;
+  margin: 0.426667rem 0.32rem;
+  max-height: 5.866667rem;
+  overflow-y: scroll;
+  text-align: justify;
+}
+.privacy-container.data-v-91617622::-webkit-scrollbar {
+  display: none;
+}
+.privacy-title.data-v-91617622 {
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.586667rem;
+  margin: 0 0.32rem;
+  padding: 0.853333rem 0 0.426667rem;
+}
+.privacy-title .broker-icon.data-v-91617622 {
+  -webkit-box-flex: 0;
+  flex: 0 0 1.066667rem;
+  height: 1.066667rem;
+  margin-right: 0.32rem;
+}
+.top-tip.data-v-91617622 {
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.48rem;
+  padding: 0.426667rem 0.32rem;
+}
+.top-tip .icon-shield.data-v-91617622 {
+  -webkit-box-flex: 0;
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_\ security.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  flex: 0 0 0.266667rem;
+  height: 0.333333rem;
+  margin-right: 0.133333rem;
+  transform: translateY(0.053333rem);
+}
+.button-container.data-v-91617622 {
+  padding: 0 0.64rem 0.32rem;
+  text-align: center;
+}
+.button-container .button.data-v-91617622 {
+  -webkit-box-flex: 1;
+  border-radius: 0.106667rem;
+  flex: 1;
+  font-family: PingFang SC;
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.button-container .confirm-button.data-v-91617622 {
+  background-color: var(--color-primary);
+  border: 0.026667rem solid var(--color-primary);
+  color: var(--fill-2);
+  margin-left: 0.16rem;
+}
+.button-container .refuse-button.data-v-91617622 {
+  border: 0.026667rem solid var(--color-primary);
+  color: var(--color-primary);
+  margin-right: 0.16rem;
+}

@@ -1,0 +1,10 @@
+<view class="_div">
+  <incremental-model-view
+    bind:__l="__l"
+    bindlinkClick="{{a}}"
+    bindquoteLinkClick="{{b}}"
+    uI="2e57edc5-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></incremental-model-view>
+</view>

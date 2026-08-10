@@ -1,0 +1,8 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<hq-page bind:__l="__l" uI="f73dece2-0"></hq-page>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="f73dece2-1"
+  uP="{{b}}"
+  wx:if="{{b}}"
+></stock-privacy-dialog>

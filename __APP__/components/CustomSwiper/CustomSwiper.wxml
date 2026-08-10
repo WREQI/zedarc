@@ -1,0 +1,12 @@
+<view class="custom-swiper-wrapper data-v-93a2ff84">
+  <view class="custom-swiper-container data-v-93a2ff84" style="{{c}}">
+    <view
+      class="custom-swiper-item data-v-93a2ff84"
+      style="{{b}}"
+      wx:for="{{a}}"
+      wx:key="c"
+    >
+      <slot name="{{item.a}}"></slot>
+    </view>
+  </view>
+</view>

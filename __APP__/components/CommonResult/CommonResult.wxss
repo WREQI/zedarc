@@ -1,0 +1,84 @@
+@import "/app.wxss";
+.common-result-container {
+  height: 100%;
+}
+.common-result-container .section-result {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  padding-top: 1.866667rem;
+  text-align: center;
+}
+.common-result-container .section-result .btn-wrapper {
+  padding: 0.8rem 0.4rem 0.4rem;
+}
+.common-result-container .section-result .btn-wrapper .btn {
+  margin-bottom: 0.4rem;
+}
+.common-result-container .section-result .result-title {
+  font-size: 0.453333rem;
+  font-weight: 500;
+  padding: 0.666667rem 0.4rem 0.4rem;
+}
+.common-result-container .section-result .result-desc {
+  font-size: 0.346667rem;
+  line-height: 0.48rem;
+  padding: 0 0.533333rem;
+}
+.common-result-container .section-result .btn-line {
+  padding: 0.8rem 0.4rem 0.4rem;
+}
+.common-result-container .section-result .btn-tips {
+  padding: 0 0.4rem 0.4rem;
+}
+.common-result-container .result-icon {
+  height: 1.866667rem;
+  margin: 0 auto;
+  position: relative;
+  width: 1.866667rem;
+}
+.common-result-container .icon-wrapper {
+  border: 0.04rem solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.common-result-container .icon-wrapper .icon {
+  font-size: inherit;
+}
+.common-result-container .result-suc .icon-wrapper {
+  border-color: var(--color-primary-1);
+  color: var(--color-primary-1);
+  font-size: 0.733333rem;
+}
+.common-result-container .result-inf .icon-wrapper,
+.common-result-container .result-suc .result-icon--sell .icon-wrapper {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+}
+.common-result-container .result-inf .icon-wrapper {
+  font-size: 1.12rem;
+}
+.common-result-container.common-result-container__simple-mode .section-result {
+  padding-top: 0.32rem;
+}
+.common-result-container.common-result-container__simple-mode .result-icon {
+  height: 1.56rem;
+  margin: 0 auto;
+  width: 1.56rem;
+}
+.common-result-container.common-result-container__simple-mode
+  .result-icon--buy {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/success-red.png);
+  background-size: 100%;
+}
+.common-result-container.common-result-container__simple-mode
+  .result-icon--sell {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/success-green.png);
+  background-size: 100%;
+}
+.common-result-container.common-result-container__simple-mode
+  .result-icon--warning {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/warning.png);
+  background-size: 100%;
+}

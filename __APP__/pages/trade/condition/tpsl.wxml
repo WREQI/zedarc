@@ -1,0 +1,398 @@
+<page-meta class="data-v-d9878b00" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-d9878b00"
+  id="global-wrap"
+  uI="d9878b00-0"
+  uP="{{be}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{be}}"
+>
+  <view class="cond-tpsl data-v-d9878b00">
+    <view class="cond-tpsl-search data-v-d9878b00" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-d9878b00"
+        uI="d9878b00-1,d9878b00-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <view class="data-v-d9878b00" hidden="{{!aL}}">
+      <view class="cond-tpsl-form data-v-d9878b00">
+        <view class="cond-tpsl-card tpsl-first-card data-v-d9878b00">
+          <condition-quote
+            bind:__l="__l"
+            bindnameClick="{{h}}"
+            bindsearch="{{g}}"
+            class="data-v-d9878b00"
+            uI="d9878b00-2,d9878b00-0"
+            uP="{{i}}"
+            uS="{{['label']}}"
+            wx:if="{{f}}"
+          >
+            <view class="data-v-d9878b00" slot="label">止盈止损</view>
+          </condition-quote>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-d9878b00"
+            uI="d9878b00-3,d9878b00-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-d9878b00" slot="left">
+              <view class="cond-trigger-line1 data-v-d9878b00">
+                <label class="data-v-d9878b00">基准价</label>
+                <label
+                  bindtap="{{j}}"
+                  class="icon icon-italic-info data-v-d9878b00"
+                ></label>
+              </view>
+            </view>
+            <view
+              class="{{['cond-tpsl-stepper','data-v-d9878b00',o]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindchange="{{l}}"
+                bindnext="{{m}}"
+                class="r data-v-d9878b00"
+                uI="d9878b00-4,d9878b00-3"
+                uP="{{n}}"
+                uR="basePriceStepper"
+                wx:if="{{n}}"
+              ></stepper>
+            </view>
+          </form-wrap>
+          <view
+            bindtap="{{r}}"
+            class="cond-tpsl-sub-line data-v-d9878b00"
+            wx:if="{{p}}"
+          >
+            <label class="label-text data-v-d9878b00">当前持仓成本：</label>
+            <label class="value-text data-v-d9878b00">{{q}}</label>
+          </view>
+          <form-wrap
+            bind:__l="__l"
+            class="cond-tpsl-tp-row data-v-d9878b00"
+            uI="d9878b00-5,d9878b00-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-d9878b00" slot="left">
+              <view class="cond-trigger-line1 data-v-d9878b00">
+                <label class="data-v-d9878b00">{{s}}</label>
+              </view>
+              <popup-trigger
+                bind:__l="__l"
+                bindclick="{{t}}"
+                class="data-v-d9878b00"
+                uI="d9878b00-6,d9878b00-5"
+                uP="{{v}}"
+                wx:if="{{v}}"
+              ></popup-trigger>
+            </view>
+            <view
+              class="{{['cond-tpsl-stepper','cond-up-step','data-v-d9878b00',F,G]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{A}}"
+                bindchange="{{y}}"
+                bindfocus="{{z}}"
+                bindnext="{{x}}"
+                class="r data-v-d9878b00"
+                uI="d9878b00-7,d9878b00-5"
+                uP="{{B}}"
+                uR="zyStepStepper"
+                wx:if="{{B}}"
+              ></stepper>
+              <view
+                class="{{['popover','tpsl','data-v-d9878b00',E]}}"
+                wx:if="{{C}}"
+                >{{D}}</view
+              >
+            </view>
+          </form-wrap>
+          <view class="cond-tpsl-smart data-v-d9878b00" wx:if="{{H}}">
+            <form-wrap
+              bind:__l="__l"
+              class="cond-tpsl-smart-switch-row data-v-d9878b00"
+              uI="d9878b00-8,d9878b00-0"
+              uS="{{['left','right']}}"
+            >
+              <view class="cond-tpsl-smart-title data-v-d9878b00" slot="left"
+                >智能止盈</view
+              >
+              <view
+                class="cond-tpsl-smart-switch-wrap data-v-d9878b00"
+                slot="right"
+              >
+                <switch
+                  bindchange="{{M}}"
+                  checked="{{J}}"
+                  class="{{['data-v-d9878b00','cond-tpsl-smart-switch',I]}}"
+                  color="{{K}}"
+                  disabled="{{L}}"
+                  style="{{'transform:'+'scale(0.75)'+';'+'transform-origin:'+'right center'}}"
+                ></switch>
+              </view>
+            </form-wrap>
+            <form-wrap
+              bind:__l="__l"
+              class="cond-tpsl-smart-form data-v-d9878b00"
+              uI="d9878b00-9,d9878b00-0"
+              uS="{{['left','right']}}"
+              wx:if="{{N}}"
+            >
+              <view class="cond-trigger-wrap data-v-d9878b00" slot="left">
+                <view class="cond-trigger-line1 data-v-d9878b00">
+                  <label class="data-v-d9878b00">最高点回落...止盈</label>
+                </view>
+              </view>
+              <view
+                class="{{['cond-tpsl-stepper','data-v-d9878b00',U]}}"
+                slot="right"
+              >
+                <stepper
+                  bind:__l="__l"
+                  bindblur="{{R}}"
+                  bindchange="{{P}}"
+                  bindfocus="{{Q}}"
+                  bindnext="{{S}}"
+                  class="r data-v-d9878b00"
+                  uI="d9878b00-10,d9878b00-9"
+                  uP="{{T}}"
+                  uR="zyPullbackStepper"
+                  wx:if="{{T}}"
+                ></stepper>
+              </view>
+            </form-wrap>
+          </view>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-d9878b00"
+            uI="d9878b00-11,d9878b00-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-d9878b00" slot="left">
+              <view class="cond-trigger-line1 data-v-d9878b00">
+                <label class="data-v-d9878b00">跌至...止损</label>
+              </view>
+              <popup-trigger
+                bind:__l="__l"
+                bindclick="{{V}}"
+                class="data-v-d9878b00"
+                uI="d9878b00-12,d9878b00-11"
+                uP="{{W}}"
+                wx:if="{{W}}"
+              ></popup-trigger>
+            </view>
+            <view
+              class="{{['cond-tpsl-stepper','cond-down-step','data-v-d9878b00',ag,ah]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{ab}}"
+                bindchange="{{Z}}"
+                bindfocus="{{aa}}"
+                bindnext="{{Y}}"
+                class="r data-v-d9878b00"
+                uI="d9878b00-13,d9878b00-11"
+                uP="{{ac}}"
+                uR="zsStepStepper"
+                wx:if="{{ac}}"
+              ></stepper>
+              <view
+                class="{{['popover','tpsl','data-v-d9878b00',af]}}"
+                wx:if="{{ad}}"
+                >{{ae}}</view
+              >
+            </view>
+          </form-wrap>
+        </view>
+        <view class="cond-tpsl-triggertips data-v-d9878b00"
+          >满足以上触发条件，系统将自动提交下列委托单</view
+        >
+        <view class="cond-tpsl-card last-card data-v-d9878b00">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-d9878b00"
+            uI="d9878b00-14,d9878b00-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-tpsl-simpleleft data-v-d9878b00" slot="left"
+              >委托价</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{ai}}"
+              class="data-v-d9878b00"
+              slot="right"
+              uI="d9878b00-15,d9878b00-14"
+              uP="{{aj}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view
+            class="cond-tpsl-form-withtips cond-tpsl-quatity-forscroll data-v-d9878b00"
+          >
+            <form-wrap
+              bind:__l="__l"
+              class="data-v-d9878b00"
+              uI="d9878b00-16,d9878b00-0"
+              uS="{{['left','right']}}"
+            >
+              <view class="cond-tpsl-simpleleft data-v-d9878b00" slot="left"
+                >每笔委托股数</view
+              >
+              <view
+                class="{{['cond-tpsl-stepper','cond-tpsl-quantity','data-v-d9878b00',ar]}}"
+                slot="right"
+              >
+                <stepper
+                  bind:__l="__l"
+                  bindblur="{{an}}"
+                  bindchange="{{al}}"
+                  bindfocus="{{am}}"
+                  class="r data-v-d9878b00"
+                  uI="d9878b00-17,d9878b00-16"
+                  uP="{{ao}}"
+                  uR="quatityStepper"
+                  wx:if="{{ao}}"
+                ></stepper>
+                <view
+                  class="popover popover-error-bg tpsl-amount-pop data-v-d9878b00"
+                  wx:if="{{ap}}"
+                  >{{aq}}</view
+                >
+              </view>
+            </form-wrap>
+            <view class="cond-tpsl-form-tips data-v-d9878b00" wx:if="{{as}}">
+              <block wx:if="{{at}}"
+                >持仓数量：<label class="data-v-d9878b00" wx:if="{{av}}"
+                  >--</label
+                >
+                <label bindtap="{{ay}}" class="num data-v-d9878b00" wx:else
+                  >{{aw}}{{ax}}</label
+                >
+                <label class="split-text data-v-d9878b00">｜</label> </block
+              >当前可卖：<label class="data-v-d9878b00" wx:if="{{az}}"
+                >--</label
+              >
+              <label bindtap="{{aC}}" class="num data-v-d9878b00" wx:else
+                >{{aA}}{{aB}}</label
+              >
+            </view>
+          </view>
+          <view class="cond-tpsl-form-withtips data-v-d9878b00">
+            <form-wrap
+              bind:__l="__l"
+              class="data-v-d9878b00"
+              uI="d9878b00-18,d9878b00-0"
+              uS="{{['left','right']}}"
+            >
+              <view class="cond-tpsl-simpleleft data-v-d9878b00" slot="left"
+                >订单有效期</view
+              >
+              <bottom-selector-trigger
+                bind:__l="__l"
+                bindclick="{{aD}}"
+                class="data-v-d9878b00"
+                slot="right"
+                uI="d9878b00-19,d9878b00-18"
+                uP="{{aE}}"
+              ></bottom-selector-trigger>
+            </form-wrap>
+            <view class="cond-tpsl-form-tips data-v-d9878b00">{{aF}}</view>
+          </view>
+        </view>
+        <view bindtap="{{aG}}" class="cond-tpsl-guide-btn data-v-d9878b00"
+          >查看止盈止损说明</view
+        >
+        <view class="cond-tpsl-risk data-v-d9878b00"
+          >风险提示：<view class="data-v-d9878b00"></view>
+          <view class="data-v-d9878b00" wx:if="{{aH}}"
+            >止盈止损条件单在截止时间前持续监控，是否成交取决于实际下单价格在交易所的撮合结果。当市场波动大、流动性不足等情形下，可能无法成交或无法完全成交。</view
+          >
+          <view
+            class="data-v-d9878b00"
+            wx:for="{{aI}}"
+            wx:for-item="text"
+            wx:key="b"
+            >{{text.a}}</view
+          >
+        </view>
+      </view>
+      <view class="cond-tpsl-btnwrap data-v-d9878b00">
+        <button
+          bindtap="{{aK}}"
+          class="cond-tpsl-btn data-v-d9878b00"
+          disabled="{{aJ}}"
+        >
+          保存设置
+        </button>
+      </view>
+    </view>
+    <search-result-with-hold
+      bind:__l="__l"
+      bindclickItem="{{aN}}"
+      class="data-v-d9878b00"
+      data-c-h="{{!aM}}"
+      uI="d9878b00-20,d9878b00-0"
+    ></search-result-with-hold>
+    <bottom-selector
+      bind:__l="__l"
+      bindchange="{{aO}}"
+      bindclose="{{aP}}"
+      class="data-v-d9878b00"
+      uI="d9878b00-21,d9878b00-0"
+      uP="{{aQ}}"
+      wx:if="{{aQ}}"
+    ></bottom-selector>
+    <popup-select
+      bind:__l="__l"
+      bindclick="{{aS}}"
+      bindmaskClick="{{aR}}"
+      class="data-v-d9878b00"
+      uI="d9878b00-22,d9878b00-0"
+      uP="{{aT}}"
+      wx:if="{{aT}}"
+    ></popup-select>
+    <condition-protocol
+      bind:__l="__l"
+      class="r data-v-d9878b00"
+      uI="d9878b00-23,d9878b00-0"
+      uR="condProtocol"
+    ></condition-protocol>
+    <mp-dialog
+      bind:__l="__l"
+      class="data-v-d9878b00"
+      id="mp-dialog"
+      uI="d9878b00-24,d9878b00-0"
+      uP="{{aV}}"
+      wx:if="{{aV}}"
+    ></mp-dialog>
+    <t-p-s-l-confirm
+      bind:__l="__l"
+      bindcancel="{{aX}}"
+      bindconfirm="{{aY}}"
+      class="data-v-d9878b00"
+      uI="d9878b00-25,d9878b00-0"
+      uP="{{aZ}}"
+      wx:if="{{aW}}"
+    ></t-p-s-l-confirm>
+    <cond-result
+      bind:__l="__l"
+      bindcancel="{{bb}}"
+      class="r data-v-d9878b00"
+      uI="d9878b00-26,d9878b00-0"
+      uP="{{bc}}"
+      uR="condResult"
+      wx:if="{{bc}}"
+    ></cond-result>
+  </view>
+</global-wrap>

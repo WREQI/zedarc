@@ -1,0 +1,66 @@
+@import "/app.wxss";
+.section-result {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  padding-top: 1.866667rem;
+  text-align: center;
+}
+.section-result .btn-wrapper {
+  padding: 0.8rem 0.4rem 0.4rem;
+}
+.section-result .btn-wrapper .btn {
+  margin-bottom: 0.4rem;
+}
+.section-result .btn-wrapper .btn.normal {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+.section-result .btn-wrapper .btn.normal button,
+.section-result .btn-wrapper .btn.normal button:after,
+.section-result .btn-wrapper .btn.normal:after {
+  border: none !important;
+}
+.section-result .common-result-container {
+  min-height: calc(100vh - env(safe-area-inset-bottom));
+}
+.section-result .result-title {
+  font-size: 0.453333rem;
+  font-weight: 500;
+  padding: 0.666667rem 0.4rem 0.4rem;
+}
+.section-result .result-desc {
+  font-size: 0.346667rem;
+  line-height: 0.48rem;
+  padding: 0 0.533333rem;
+}
+.section-result .btn-line {
+  padding: 0.8rem 0.4rem 0.4rem;
+}
+.section-result .btn-tips {
+  padding: 0 0.4rem 0.4rem;
+}
+.result-icon {
+  height: 1.866667rem;
+  margin: 0 auto;
+  position: relative;
+  width: 1.866667rem;
+}
+.icon-wrapper {
+  border: 0.04rem solid;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+.icon-wrapper .icon {
+  font-size: inherit;
+}
+.result-suc .icon-wrapper {
+  border-color: var(--color-primary-1);
+  color: var(--color-primary-1);
+  font-size: 0.733333rem;
+}
+.result-inf .icon-wrapper {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+  font-size: 1.12rem;
+}

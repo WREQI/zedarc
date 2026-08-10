@@ -1,0 +1,82 @@
+<view class="{{['_div','data-v-dc8caed0','video-list-container',s]}}">
+  <block wx:if="{{a}}">
+    <st-pull-refresh
+      bind:__l="__l"
+      bindpullDownRefresh="{{g}}"
+      class="r data-v-dc8caed0"
+      uI="dc8caed0-0"
+      uP="{{h}}"
+      uR="videoScroll"
+      uS="{{['d']}}"
+      wx:if="{{h}}"
+    >
+      <st-reach-bottom
+        bind:__l="__l"
+        class="r data-v-dc8caed0"
+        uI="dc8caed0-1,dc8caed0-0"
+        uP="{{e}}"
+        uR="reachBottom"
+        uS="{{['d']}}"
+        wx:if="{{e}}"
+      >
+        <view class="_div video-list-content data-v-dc8caed0">
+          <view class="_ul video-list-inner data-v-dc8caed0" wx:if="{{b}}">
+            <view class="_li data-v-dc8caed0" wx:for="{{c}}" wx:key="k">
+              <custom-video
+                bind:__l="__l"
+                binddataReport="{{item.g}}"
+                bindmuteChange="{{item.e}}"
+                bindnotify="{{item.h}}"
+                bindtapDetail="{{item.f}}"
+                class="r-i-f data-v-dc8caed0"
+                data-id="{{item.d}}"
+                key="{{item.c}}"
+                uI="{{item.i}}"
+                uP="{{item.j}}"
+                uR="{{item.b}}"
+                wx:if="{{item.j}}"
+              ></custom-video>
+            </view>
+          </view>
+        </view>
+      </st-reach-bottom>
+    </st-pull-refresh>
+  </block>
+  <block wx:else>
+    <scroll-view
+      bindrefresherrefresh="{{p}}"
+      bindscroll="{{q}}"
+      bindscrolltolower="{{r}}"
+      class="data-v-dc8caed0"
+      refresherDefaultStyle="{{o}}"
+      refresherEnabled="{{m}}"
+      refresherThreshold="100"
+      refresherTriggered="{{n}}"
+      scrollY="{{true}}"
+      style="{{'width:'+'100%'+';'+'height:'+l}}"
+      wx:if="{{i}}"
+    >
+      <view class="_div video-list-content data-v-dc8caed0">
+        <view class="_ul video-list-inner data-v-dc8caed0" wx:if="{{j}}">
+          <view class="_li data-v-dc8caed0" wx:for="{{k}}" wx:key="l">
+            <custom-video
+              bind:__l="__l"
+              binddataReport="{{item.g}}"
+              bindmuteChange="{{item.e}}"
+              bindnotify="{{item.h}}"
+              bindshowProfilePop="{{item.i}}"
+              bindtapDetail="{{item.f}}"
+              class="r-i-f data-v-dc8caed0"
+              data-id="{{item.d}}"
+              key="{{item.c}}"
+              uI="{{item.j}}"
+              uP="{{item.k}}"
+              uR="{{item.b}}"
+              wx:if="{{item.k}}"
+            ></custom-video>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+</view>

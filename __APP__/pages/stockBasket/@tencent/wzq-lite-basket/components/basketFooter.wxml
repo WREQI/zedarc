@@ -1,0 +1,22 @@
+<view
+  class="{{['_div','basket-footer-wrapper','data-v-63f35669',g,h]}}"
+  data-name="footer"
+>
+  <view
+    catchtap="{{c}}"
+    class="_div basket-footer-item data-v-63f35669"
+    wx:if="{{a}}"
+  >
+    <label class="_span desc data-v-63f35669">{{b}}</label>
+    <view class="_div right-arrow data-v-63f35669"></view>
+  </view>
+  <view
+    catchtap="{{f}}"
+    class="{{['_div','data-v-63f35669','basket-footer-item',e]}}"
+    wx:if="{{d}}"
+  >
+    <view class="_div mock-trade-icon data-v-63f35669"></view>
+    <label class="_span data-v-63f35669">一键模拟交易</label>
+    <view class="_div right-arrow data-v-63f35669"></view>
+  </view>
+</view>

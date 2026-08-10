@@ -1,0 +1,14 @@
+<view class="multi-broker-entry-container data-v-4308e120" wx:if="{{a}}">
+  <view class="entry-list data-v-4308e120">
+    <view class="entry-list-item data-v-4308e120" wx:for="{{b}}" wx:key="f">
+      <label class="separator data-v-4308e120" wx:if="{{item.a}}"></label>
+      <view class="red-dot data-v-4308e120" wx:if="{{item.b}}"></view>
+      <view
+        bindtap="{{item.e}}"
+        class="text data-v-4308e120"
+        data-stat="{{item.d}}"
+        >{{item.c}}</view
+      >
+    </view>
+  </view>
+</view>

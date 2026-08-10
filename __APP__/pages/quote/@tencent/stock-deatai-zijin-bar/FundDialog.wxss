@@ -1,0 +1,129 @@
+.message-dialog-container.data-v-c9a8bbf9 {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 99999;
+}
+.message-dialog-container .dialog-back.data-v-c9a8bbf9 {
+  background: var(--mask-2);
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.message-dialog.data-v-c9a8bbf9 {
+  background: var(--fill-2);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  margin-left: 0.16rem;
+  padding: 0 0.4rem;
+  position: fixed;
+  width: 9.2rem;
+}
+.message-dialog .dialog-jio.data-v-c9a8bbf9 {
+  background: var(--fill-2);
+  box-sizing: border-box;
+  height: 0.22666666666666666rem;
+  position: absolute;
+  right: 0.48rem;
+  transform: rotate(45deg);
+  width: 0.22666666666666666rem;
+}
+.message-dialog .maoboli-top.data-v-c9a8bbf9 {
+  border-top-left-radius: 0.10666666666666667rem;
+  border-top-right-radius: 0.10666666666666667rem;
+  top: 0;
+}
+.message-dialog .mao-boli-bottom.data-v-c9a8bbf9,
+.message-dialog .maoboli-top.data-v-c9a8bbf9 {
+  background: var(--fill-2);
+  filter: blur(0.013333333333333334rem);
+  height: 0.4266666666666667rem;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 9.2rem;
+  z-index: 1;
+}
+.message-dialog .mao-boli-bottom.data-v-c9a8bbf9 {
+  border-bottom-left-radius: 0.10666666666666667rem;
+  border-bottom-right-radius: 0.10666666666666667rem;
+  bottom: 0;
+}
+.message-dialog .dialog-content.data-v-c9a8bbf9 {
+  box-sizing: border-box;
+  color: var(--color-heavygray);
+  height: 100%;
+  max-height: 8.533333333333333rem;
+  overflow-y: scroll;
+  padding: 0.4266666666666667rem 0;
+  position: relative;
+  width: 100%;
+}
+.message-dialog .dialog-content .content-item.data-v-c9a8bbf9 {
+  border-top: 0.013333333333333334rem solid var(--border-light);
+  box-sizing: border-box;
+  padding: 0.32rem 0;
+}
+.message-dialog .dialog-content .content-item .item-title.data-v-c9a8bbf9 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.10666666666666667rem;
+  width: 100%;
+}
+.message-dialog
+  .dialog-content
+  .content-item
+  .item-title
+  .icon.data-v-c9a8bbf9 {
+  height: 0.5333333333333333rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.5333333333333333rem;
+}
+.message-dialog .dialog-content .content-item .item-desc.data-v-c9a8bbf9 {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  justify-content: space-between;
+  line-height: 0.56rem;
+}
+.message-dialog
+  .dialog-content
+  .content-item
+  .item-desc
+  .right.data-v-c9a8bbf9 {
+  height: 0.32rem;
+  width: 0.21333333333333335rem;
+}
+.message-dialog .dialog-content .content-item.data-v-c9a8bbf9:last-child {
+  padding-bottom: 0;
+}
+.message-dialog .dialog-content .content-item.data-v-c9a8bbf9:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.message-dialog .dialog-content.data-v-c9a8bbf9::-webkit-scrollbar {
+  display: none;
+}
+.message-dialog .go-detail.data-v-c9a8bbf9 {
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+}
+.message-dialog .go-detail .right-icon.data-v-c9a8bbf9 {
+  height: 0.32rem;
+  margin-left: 0.08rem;
+  width: 0.21333333333333335rem;
+}

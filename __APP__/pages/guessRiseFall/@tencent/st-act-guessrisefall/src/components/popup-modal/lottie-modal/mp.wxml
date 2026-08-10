@@ -1,0 +1,261 @@
+<view catchtouchmove="true" class="_div lottie-modal data-v-8f0bfb1b">
+  <view class="_div lottie-modal__scene data-v-8f0bfb1b">
+    <lottie-com
+      bind:__l="__l"
+      bindlottieReady="{{a}}"
+      class="data-v-8f0bfb1b"
+      data-c-h="{{!false}}"
+      uI="8f0bfb1b-0"
+    ></lottie-com>
+    <canvas
+      canvasId="dapan-lottie-animate"
+      class="lottie-modal__dapan-lottie data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!b}}"
+      style="width: 260px; height: 484px"
+      type="2d"
+    ></canvas>
+    <canvas
+      canvasId="dapan-fenwei-animate"
+      class="lottie-modal__dapan-fenwei data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!c}}"
+      style="width: 270px; height: 484px"
+      type="2d"
+    ></canvas>
+    <block wx:if="{{d}}">
+      <cover-view
+        class="lottie-modal__date lottie-modal__date--red data-v-8f0bfb1b"
+        >{{e}}</cover-view
+      >
+      <cover-view class="lottie-modal__date data-v-8f0bfb1b">{{f}}</cover-view>
+    </block>
+    <view
+      class="{{['_div','lottie-modal__result-label','data-v-8f0bfb1b',i]}}"
+      style="{{'background-image:'+j}}"
+      wx:if="{{g}}"
+      >{{h}}</view
+    >
+    <block wx:if="{{k}}">
+      <view
+        class="_div lottie-modal__reward-banner data-v-8f0bfb1b"
+        wx:if="{{l}}"
+      ></view>
+      <view class="_div lottie-modal__reward-box data-v-8f0bfb1b" wx:if="{{m}}">
+        <view class="_div lottie-modal__coin-icon data-v-8f0bfb1b"></view>
+        <view class="_div lottie-modal__reward-num data-v-8f0bfb1b">
+          <view class="_div lottie-modal__num data-v-8f0bfb1b">{{n}}</view>
+          <view class="_div lottie-modal__unit data-v-8f0bfb1b">{{o}}</view>
+        </view>
+        <view class="_div lottie-modal__reward-tip data-v-8f0bfb1b"></view>
+      </view>
+      <view
+        class="_div lottie-modal__reward-list data-v-8f0bfb1b"
+        wx:if="{{p}}"
+      >
+        <view class="_div lottie-modal__list-header data-v-8f0bfb1b">
+          <view class="_div lottie-modal__list-title data-v-8f0bfb1b"
+            >奖金明细</view
+          >
+          <view class="_div lottie-modal__list-subtitle data-v-8f0bfb1b"
+            >{{q}}</view
+          >
+        </view>
+        <cover-view class="{{['lottie-modal__list-body','data-v-8f0bfb1b',s]}}">
+          <cover-view
+            class="{{['lottie-modal__list-item','data-v-8f0bfb1b',item.f]}}"
+            wx:for="{{r}}"
+            wx:key="e"
+          >
+            <cover-view
+              class="lottie-modal__item-avatar data-v-8f0bfb1b"
+              style="{{'background-image:'+item.b}}"
+              wx:if="{{item.a}}"
+            ></cover-view>
+            <cover-view
+              class="lottie-modal__item-avatar data-v-8f0bfb1b"
+              wx:else
+            ></cover-view>
+            <cover-view class="lottie-modal__item-text-box data-v-8f0bfb1b">
+              <cover-view class="lottie-modal__item-text data-v-8f0bfb1b"
+                >{{item.c}}</cover-view
+              >
+            </cover-view>
+            <cover-view class="lottie-modal__item-coin data-v-8f0bfb1b"
+              >+{{item.d}}</cover-view
+            >
+          </cover-view>
+        </cover-view>
+      </view>
+    </block>
+    <block wx:elif="{{t}}">
+      <view
+        class="{{['_div','lottie-modal__reward-banner','lottie-modal__reward-banner--dapan','data-v-8f0bfb1b',w]}}"
+        wx:if="{{v}}"
+      ></view>
+      <view
+        class="_div lottie-modal__reward-box lottie-modal__reward-box--gegu data-v-8f0bfb1b"
+        wx:if="{{x}}"
+      >
+        <view class="_div lottie-modal__coin-icon data-v-8f0bfb1b"></view>
+        <view class="_div lottie-modal__reward-num data-v-8f0bfb1b">
+          <view class="_div lottie-modal__num data-v-8f0bfb1b">{{y}}</view>
+          <view class="_div lottie-modal__unit data-v-8f0bfb1b">{{z}}</view>
+        </view>
+        <view class="_div lottie-modal__reward-tip data-v-8f0bfb1b"></view>
+      </view>
+    </block>
+    <block wx:elif="{{A}}">
+      <view class="_div lottie-modal__error-box data-v-8f0bfb1b" wx:if="{{B}}">
+        <view class="_div lottie-modal__error-title data-v-8f0bfb1b"
+          >{{C}}</view
+        >
+        <view class="_div lottie-modal__error-tip data-v-8f0bfb1b">{{D}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="_div lottie-modal__scene data-v-8f0bfb1b">
+    <canvas
+      canvasId="gegu-lottie-animate"
+      class="lottie-modal__gegu-lottie data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!E}}"
+      style="width: 250px; height: 484px"
+      type="2d"
+    ></canvas>
+    <canvas
+      canvasId="gegu-fenwei-animate"
+      class="lottie-modal__gegu-fenwei data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!F}}"
+      style="width: 250px; height: 484px"
+      type="2d"
+    ></canvas>
+    <block wx:if="{{G}}">
+      <view
+        class="_div lottie-modal__date lottie-modal__date--red data-v-8f0bfb1b"
+        >{{H}}</view
+      >
+      <view class="_div lottie-modal__date data-v-8f0bfb1b">{{I}}</view>
+    </block>
+    <view class="_div lottie-modal__gegu-list data-v-8f0bfb1b" wx:if="{{J}}">
+      <view
+        class="_div lottie-modal__gegu-item data-v-8f0bfb1b"
+        style="{{'background-image:'+item.c}}"
+        wx:for="{{K}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+    <block wx:if="{{L}}">
+      <view
+        class="_div lottie-modal__gegu-reward-banner data-v-8f0bfb1b"
+        wx:if="{{M}}"
+      ></view>
+      <view
+        class="_div lottie-modal__gegu-reward-box data-v-8f0bfb1b"
+        wx:if="{{N}}"
+      >
+        <view class="_div lottie-modal__coin-icon data-v-8f0bfb1b"></view>
+        <view class="_div lottie-modal__reward-num data-v-8f0bfb1b">
+          <view class="_div lottie-modal__num data-v-8f0bfb1b">{{O}}</view>
+          <view class="_div lottie-modal__unit data-v-8f0bfb1b">{{P}}</view>
+        </view>
+        <view class="_div lottie-modal__reward-tip data-v-8f0bfb1b"></view>
+      </view>
+    </block>
+    <block wx:else>
+      <view
+        class="{{['_div','lottie-modal__error-box','lottie-modal__error-box--gegu','data-v-8f0bfb1b',T]}}"
+        wx:if="{{Q}}"
+      >
+        <view class="_div lottie-modal__error-title data-v-8f0bfb1b"
+          >{{R}}</view
+        >
+        <view class="_div lottie-modal__error-tip data-v-8f0bfb1b">{{S}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="_div lottie-modal__scene data-v-8f0bfb1b">
+    <canvas
+      canvasId="weekChampion-lottie-animate"
+      class="lottie-modal__week-lottie data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!U}}"
+      style="width: 224px; height: 392px"
+      type="2d"
+    ></canvas>
+    <canvas
+      canvasId="weekChampion-fenwei-animate"
+      class="lottie-modal__week-fenwei data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!V}}"
+      style="width: 224px; height: 392px"
+      type="2d"
+    ></canvas>
+    <view
+      class="_div lottie-modal__reward-banner lottie-modal__reward-banner--week data-v-8f0bfb1b"
+      wx:if="{{W}}"
+    ></view>
+    <view
+      class="_div lottie-modal__reward-box lottie-modal__reward-box--week data-v-8f0bfb1b"
+      wx:if="{{X}}"
+    >
+      <view class="_div lottie-modal__coin-icon data-v-8f0bfb1b"></view>
+      <view class="_div lottie-modal__reward-num data-v-8f0bfb1b">
+        <view class="_div lottie-modal__num data-v-8f0bfb1b">{{Y}}</view>
+        <view class="_div lottie-modal__unit data-v-8f0bfb1b">{{Z}}</view>
+      </view>
+      <view class="_div lottie-modal__reward-tip data-v-8f0bfb1b"></view>
+    </view>
+  </view>
+  <view class="_div lottie-modal__scene data-v-8f0bfb1b">
+    <canvas
+      canvasId="monthChampion-lottie-animate"
+      class="lottie-modal__month-lottie data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!aa}}"
+      style="width: 224px; height: 392px"
+      type="2d"
+    ></canvas>
+    <canvas
+      canvasId="monthChampion-fenwei-animate"
+      class="lottie-modal__month-fenwei data-v-8f0bfb1b"
+      disableScroll="{{true}}"
+      hidden="{{!ab}}"
+      style="width: 224px; height: 392px"
+      type="2d"
+    ></canvas>
+    <view
+      class="_div lottie-modal__reward-banner lottie-modal__reward-banner--month data-v-8f0bfb1b"
+      wx:if="{{ac}}"
+    ></view>
+    <view
+      class="_div lottie-modal__reward-box lottie-modal__reward-box--month data-v-8f0bfb1b"
+      wx:if="{{ad}}"
+    >
+      <view class="_div lottie-modal__coin-icon data-v-8f0bfb1b"></view>
+      <view
+        class="{{['_div','lottie-modal__reward-num','data-v-8f0bfb1b',ag]}}"
+      >
+        <view class="_div lottie-modal__num data-v-8f0bfb1b">{{ae}}</view>
+        <view class="_div lottie-modal__unit data-v-8f0bfb1b">{{af}}</view>
+      </view>
+      <view
+        class="_div lottie-modal__reward-tip data-v-8f0bfb1b"
+        wx:if="{{ah}}"
+      ></view>
+    </view>
+  </view>
+  <view
+    bindtap="{{ak}}"
+    class="_div lottie-modal__action-btn data-v-8f0bfb1b"
+    wx:if="{{ai}}"
+    >{{aj}}</view
+  >
+  <view
+    bindtap="{{am}}"
+    class="_div lottie-modal__close data-v-8f0bfb1b"
+    wx:if="{{al}}"
+  ></view>
+</view>

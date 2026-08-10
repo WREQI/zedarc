@@ -1,0 +1,27 @@
+<view class="_div subscribe-newsletter-container data-v-9f3333ec" wx:if="{{a}}">
+  <view class="_div subscribe-newsletter-title data-v-9f3333ec"
+    >想要抓住每日投资机会？让AI帮您跟踪👇🏻</view
+  >
+  <view class="_div subscribe-container data-v-9f3333ec">
+    <view class="_div subscribe-title data-v-9f3333ec">订阅AI盘前盘后简报</view>
+    <view class="_div subscribe-sub-title data-v-9f3333ec"
+      >每日推送盘前机会前瞻、盘后市场解读</view
+    >
+    <view class="_div subscribe-img-container data-v-9f3333ec">
+      <image
+        class="_img subscribe-img data-v-9f3333ec"
+        src="https://st.gtimg.com/design/518443bc9dbf4f5e55ddbd9299447679.png"
+      ></image>
+      <view class="_div subscribe-img-container-after data-v-9f3333ec"></view>
+    </view>
+    <view
+      bindtap="{{c}}"
+      class="_div subscribe-button data-v-9f3333ec"
+      wx:if="{{b}}"
+      >订阅AI简报</view
+    >
+    <view class="_div already-subscribe-button data-v-9f3333ec" wx:elif="{{d}}"
+      >已订阅AI简报</view
+    >
+  </view>
+</view>

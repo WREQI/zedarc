@@ -1,0 +1,299 @@
+<view class="{{['_div','data-v-0b5f4460','scroll-wapper',av]}}" ref="scroll">
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{am}}"
+    bindrefresherrefresh="{{ao}}"
+    bindrefresherrestore="{{an}}"
+    bindscroll="{{ap}}"
+    class="data-v-0b5f4460"
+    refresherEnabled="{{ak}}"
+    refresherThreshold="100"
+    refresherTriggered="{{al}}"
+    style="{{aj}}"
+  >
+    <view class="_div data-v-0b5f4460" wx:if="{{a}}">
+      <view class="_div mod-rank-zxg data-v-0b5f4460">
+        <view class="{{['_div','data-v-0b5f4460','basic-wrapper',v]}}">
+          <view class="_div board data-v-0b5f4460" wx:if="{{b}}">
+            <view class="_div kch-wrapper data-v-0b5f4460">
+              <view
+                class="_div index-wrapper less-three data-v-0b5f4460"
+                wx:if="{{c}}"
+              >
+                <view
+                  catchtap="{{kchindex.d}}"
+                  class="_div market-index-item data-v-0b5f4460"
+                  wx:for="{{d}}"
+                  wx:for-item="kchindex"
+                  wx:key="c"
+                >
+                  <market-index
+                    bind:__l="__l"
+                    class="data-v-0b5f4460"
+                    uI="{{kchindex.a}}"
+                    uP="{{kchindex.b}}"
+                    wx:if="{{kchindex.b}}"
+                  ></market-index>
+                </view>
+              </view>
+              <view class="_div index-wrapper data-v-0b5f4460" wx:if="{{e}}">
+                <swiper
+                  bindchange="{{h}}"
+                  class="market-index-slide data-v-0b5f4460"
+                  current="{{g}}"
+                  ref="marketIndex"
+                >
+                  <swiper-item
+                    class="market-index-row data-v-0b5f4460"
+                    wx:for="{{f}}"
+                    wx:for-item="group"
+                    wx:key="b"
+                  >
+                    <view
+                      catchtap="{{kchindex.d}}"
+                      class="_div market-index-item data-v-0b5f4460"
+                      wx:for="{{group.a}}"
+                      wx:for-item="kchindex"
+                      wx:key="c"
+                    >
+                      <market-index
+                        bind:__l="__l"
+                        class="data-v-0b5f4460"
+                        uI="{{kchindex.a}}"
+                        uP="{{kchindex.b}}"
+                        wx:if="{{kchindex.b}}"
+                      ></market-index>
+                    </view>
+                  </swiper-item>
+                </swiper>
+                <view class="_div index-dot data-v-0b5f4460" wx:if="{{i}}">
+                  <view
+                    class="{{['_div','data-v-0b5f4460','dot-item',list.b]}}"
+                    wx:for="{{j}}"
+                    wx:for-item="list"
+                    wx:key="a"
+                  ></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="_div bar-text bar-text2 data-v-0b5f4460" wx:if="{{k}}">
+            <view bindtap="{{m}}" class="_div bar-text-left data-v-0b5f4460"
+              >成交额 {{l}}<view
+                class="_div image-tip-amount data-v-0b5f4460"
+              ></view>
+            </view>
+            <view class="_div data-v-0b5f4460"
+              >较昨日放量<label class="{{['_span','data-v-0b5f4460',o]}}"
+                >{{n}}</label
+              >
+            </view>
+          </view>
+          <compare
+            bind:__l="__l"
+            class="data-v-0b5f4460"
+            uI="0b5f4460-2"
+            uP="{{t}}"
+            uS="{{['d']}}"
+            wx:if="{{t}}"
+          >
+            <view class="_div bar-text data-v-0b5f4460">
+              <view class="_div red data-v-0b5f4460">
+                <label class="_span data-v-0b5f4460">涨{{p}}家</label>
+                <label class="_span data-v-0b5f4460" wx:if="{{q}}"
+                  > ({{r}}只涨停)</label
+                >
+              </view>
+              <view class="_div green data-v-0b5f4460">跌{{s}}家</view>
+            </view>
+          </compare>
+        </view>
+        <view class="_div seperate-line data-v-0b5f4460"></view>
+        <view
+          catchtap="{{G}}"
+          class="_div title-wrapper data-v-0b5f4460"
+          wx:if="{{w}}"
+        >
+          <label class="_span title data-v-0b5f4460">打新日历</label>
+          <view class="{{['_div','data-v-0b5f4460','new-stock',F]}}">
+            <block wx:if="{{x}}">
+              <label class="_span stock-text data-v-0b5f4460" wx:if="{{y}}"
+                >今日{{z}}开始申购</label
+              >
+              <label class="_span stock-text data-v-0b5f4460" wx:else
+                >今日有{{A}}只{{B}}新股申购</label
+              >
+              <view catchtap="{{C}}" class="_div daxin data-v-0b5f4460"
+                >一键打新</view
+              >
+            </block>
+            <label class="_span stock-text data-v-0b5f4460" wx:elif="{{D}}"
+              >今日无{{E}}新股可申购</label
+            >
+          </view>
+        </view>
+        <view
+          catchtap="{{K}}"
+          class="_div title-wrapper data-v-0b5f4460"
+          wx:if="{{H}}"
+        >
+          <label class="_span title data-v-0b5f4460">玩转{{I}}</label>
+          <image class="_img icon-arrow data-v-0b5f4460" src="{{J}}"></image>
+        </view>
+        <view class="_div seperate-line data-v-0b5f4460" wx:if="{{L}}"></view>
+        <view class="_div data-v-0b5f4460" wx:if="{{M}}">
+          <kcb-etf-card
+            bind:__l="__l"
+            class="r data-v-0b5f4460"
+            uI="0b5f4460-3"
+            uP="{{O}}"
+            uR="kchetf"
+            wx:if="{{O}}"
+          ></kcb-etf-card>
+        </view>
+        <view class="_div seperate-line data-v-0b5f4460"></view>
+        <view class="_div title-wrapper data-v-0b5f4460">
+          <label class="_span title data-v-0b5f4460">股票排行</label>
+        </view>
+        <tabbar
+          bind:__l="__l"
+          bindstartSwiperScroll="{{R}}"
+          bindstopSwiperScroll="{{Q}}"
+          bindswitchTab="{{P}}"
+          class="stock-list-tabbar data-v-0b5f4460"
+          uI="0b5f4460-4"
+          uP="{{S}}"
+          wx:if="{{S}}"
+        ></tabbar>
+        <view class="_ul caption data-v-0b5f4460">
+          <view class="_li list-text data-v-0b5f4460">股票名称</view>
+          <view class="_li list-text data-v-0b5f4460">最新价</view>
+          <view class="_li list-text data-v-0b5f4460">{{T}}</view>
+        </view>
+        <view class="_div list-table font-numeric-tabular data-v-0b5f4460">
+          <view
+            catchtap="{{item.j}}"
+            class="_ul list data-v-0b5f4460"
+            wx:for="{{U}}"
+            wx:key="i"
+          >
+            <view class="_li identifier list-text list-item data-v-0b5f4460">
+              <view class="_div identifier-name data-v-0b5f4460"
+                >{{item.a}}</view
+              >
+              <view class="_div identifier-code-wrapper data-v-0b5f4460">
+                <market-icon
+                  bind:__l="__l"
+                  class="data-v-0b5f4460"
+                  uI="{{item.b}}"
+                  uP="{{item.c}}"
+                  wx:if="{{item.c}}"
+                ></market-icon>
+                <view class="_div identifier-code data-v-0b5f4460"
+                  >{{item.d}}</view
+                >
+              </view>
+            </view>
+            <view
+              class="{{['_li','data-v-0b5f4460',item.f,'list-text','list-item']}}"
+              >{{item.e}}</view
+            >
+            <view
+              class="{{['_li','data-v-0b5f4460',item.h,'list-text','list-item']}}"
+              >{{item.g}}</view
+            >
+          </view>
+        </view>
+        <block wx:if="{{V}}">
+          <view class="_div seperate-line data-v-0b5f4460"></view>
+          <view class="_div title-wrapper title-wrapper-fund data-v-0b5f4460">
+            <label class="_span title data-v-0b5f4460">{{W}}基金</label>
+            <view
+              catchtap="{{Y}}"
+              class="_i image-tip data-v-0b5f4460"
+              wx:if="{{X}}"
+            ></view>
+          </view>
+          <tabbar
+            bind:__l="__l"
+            bindswitchTab="{{aa}}"
+            class="stock-list-tabbar fund-list-tabbar data-v-0b5f4460"
+            uI="0b5f4460-6"
+            uP="{{ab}}"
+            wx:if="{{Z}}"
+          ></tabbar>
+          <view class="_ul caption data-v-0b5f4460">
+            <view
+              class="_li list-text data-v-0b5f4460"
+              wx:for="{{ac}}"
+              wx:key="b"
+              >{{item.a}}</view
+            >
+          </view>
+          <view class="_div list-table data-v-0b5f4460">
+            <view
+              catchtap="{{item.l}}"
+              class="_ul list data-v-0b5f4460"
+              wx:for="{{ad}}"
+              wx:key="k"
+            >
+              <view class="_li identifier list-text list-item data-v-0b5f4460">
+                <view
+                  class="_div identifier-name data-v-0b5f4460"
+                  style="{{'font-size:'+item.b}}"
+                  >{{item.a}}</view
+                >
+                <view class="_div identifier-code-wrapper data-v-0b5f4460">
+                  <market-icon
+                    bind:__l="__l"
+                    class="data-v-0b5f4460"
+                    uI="{{item.c}}"
+                    uP="{{item.d}}"
+                    wx:if="{{ae}}"
+                  ></market-icon>
+                  <market-icon
+                    bind:__l="__l"
+                    class="data-v-0b5f4460"
+                    uI="{{item.e}}"
+                    uP="{{item.f||''}}"
+                    wx:else
+                  ></market-icon>
+                  <view class="_div identifier-code data-v-0b5f4460"
+                    >{{item.g}}</view
+                  >
+                </view>
+              </view>
+              <view class="_li list-text list-item data-v-0b5f4460">
+                <view class="_div data-v-0b5f4460">{{item.h}}</view>
+              </view>
+              <view
+                class="{{['_li','data-v-0b5f4460',item.j,'list-text','list-item']}}"
+                >{{item.i}}</view
+              >
+            </view>
+          </view>
+          <view
+            catchtap="{{ai}}"
+            class="{{['_div','data-v-0b5f4460','more',ah]}}"
+            wx:if="{{af}}"
+            >查看更多<image
+              class="_img icon-arrow data-v-0b5f4460"
+              src="{{ag}}"
+            ></image>
+          </view>
+        </block>
+      </view>
+      <view class="_div place-holder data-v-0b5f4460"></view>
+    </view>
+  </scroll-view>
+  <root-portal class="data-v-0b5f4460" enable="{{true}}" wx:if="{{aq}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{as}}"
+      class="data-v-0b5f4460"
+      uI="0b5f4460-9"
+      uP="{{at}}"
+      wx:if="{{ar}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

@@ -1,0 +1,29 @@
+<view class="_div component-ai-strategy-detail data-v-fc4952e7" wx:if="{{a}}">
+  <view class="_div card-wrapper data-v-fc4952e7">
+    <view class="_div card-title-wrapper data-v-fc4952e7">
+      <view class="_div card-title flex-vcenter flex-between data-v-fc4952e7">
+        <view class="_div title-text data-v-fc4952e7">相关股票：{{b}}只</view>
+        <view class="_div title-ext data-v-fc4952e7" wx:if="{{c}}"
+          >{{d}}更新</view
+        >
+      </view>
+      <view class="_div card-summary data-v-fc4952e7">
+        <view class="_div summary-text data-v-fc4952e7">{{e}}</view>
+      </view>
+    </view>
+    <stock-list
+      bind:__l="__l"
+      bindclick="{{f}}"
+      class="data-v-fc4952e7"
+      uI="fc4952e7-0"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></stock-list>
+  </view>
+  <bottom-brand
+    bind:__l="__l"
+    class="data-v-fc4952e7"
+    uI="fc4952e7-1"
+    wx:if="{{h}}"
+  ></bottom-brand>
+</view>

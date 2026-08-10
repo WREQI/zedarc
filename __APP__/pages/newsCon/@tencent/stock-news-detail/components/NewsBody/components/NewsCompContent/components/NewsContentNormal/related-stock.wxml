@@ -1,0 +1,50 @@
+<view class="_div content-subject-optional data-v-63844d6e" wx:if="{{a}}">
+  <view class="_div content-title data-v-63844d6e">
+    <image alt="" class="_img title-img data-v-63844d6e" src="{{b}}"></image>
+    <label class="_span title-text data-v-63844d6e">相关行情</label>
+  </view>
+  <view class="_div subject-content data-v-63844d6e">
+    <view class="_div subject-title data-v-63844d6e">
+      <label class="_span item-left data-v-63844d6e">股票名称</label>
+      <label class="_span top-num data-v-63844d6e">股价</label>
+      <label class="_span top-num data-v-63844d6e">涨跌幅</label>
+      <view class="_div item-right data-v-63844d6e"></view>
+    </view>
+    <view class="_div subject-item data-v-63844d6e" wx:for="{{c}}" wx:key="o">
+      <view bindtap="{{item.f}}" class="_div item-left data-v-63844d6e">
+        <view class="_div item-left-top data-v-63844d6e">
+          <view
+            class="{{['_div','data-v-63844d6e','top-tag',item.b]}}"
+            wx:if="{{item.a}}"
+          ></view>
+          <label class="_span top-name data-v-63844d6e">{{item.c}}</label>
+        </view>
+        <view class="_div item-left-bottom data-v-63844d6e" wx:if="{{item.d}}">
+          <label
+            class="_span bom-item data-v-63844d6e"
+            wx:for="{{item.e}}"
+            wx:for-item="it"
+            wx:key="b"
+            >{{it.a}}</label
+          >
+        </view>
+      </view>
+      <label
+        bindtap="{{item.h}}"
+        class="{{['_span','top-num','font-numeric-tabular','data-v-63844d6e',item.i]}}"
+        >{{item.g}}</label
+      >
+      <label
+        bindtap="{{item.k}}"
+        class="{{['_span','top-num','font-numeric-tabular','data-v-63844d6e',item.l]}}"
+        >{{item.j}}</label
+      >
+      <view class="_div item-right data-v-63844d6e">
+        <view
+          bindtap="{{item.n}}"
+          class="{{['_div','data-v-63844d6e','item-right-img',item.m]}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+</view>

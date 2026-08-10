@@ -1,0 +1,34 @@
+<view class="video-wrap data-v-7baf993a">
+  <video
+    autoplay
+    bindended="{{f}}"
+    bindpause="{{d}}"
+    bindplay="{{c}}"
+    bindtap="{{e}}"
+    bindtimeupdate="{{g}}"
+    class="video data-v-7baf993a"
+    controls="{{false}}"
+    id="video"
+    muted="{{a}}"
+    playsinline="true"
+    poster="https://st.gtimg.com/image/mp-broker/digital-guide/cover.jpg"
+    ref="videoRef"
+    showCenterPlayBtn="{{false}}"
+    src="{{b}}"
+    webkitPlaysinline="true"
+    x5VideoPlayerType="h5-page"
+  ></video>
+  <view class="cover-start data-v-7baf993a" wx:if="{{h}}"></view>
+  <view class="logo-mask data-v-7baf993a"></view>
+  <view class="tips data-v-7baf993a">{{i}}</view>
+  <view class="tips-mask data-v-7baf993a"></view>
+  <view bindtap="{{k}}" class="{{['data-v-7baf993a',j]}}"></view>
+  <view bindtap="{{m}}" class="{{['data-v-7baf993a',l]}}"></view>
+  <view class="mask data-v-7baf993a" wx:if="{{n}}"></view>
+  <view
+    bindtap="{{p}}"
+    class="open-sound-tips flex-center data-v-7baf993a"
+    wx:if="{{o}}"
+    >打开声音体验更佳哦<label class="icon icon-close data-v-7baf993a"></label>
+  </view>
+</view>

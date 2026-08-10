@@ -1,0 +1,11 @@
+<view
+  class="{{['positions-list-container','^positions-list-container',e,f,g]}}"
+>
+  <positions-list-stock
+    bind:__l="__l"
+    uI="00f82902-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></positions-list-stock>
+  <empty bind:__l="__l" uI="00f82902-1" uP="{{d}}" wx:if="{{c}}"></empty>
+</view>

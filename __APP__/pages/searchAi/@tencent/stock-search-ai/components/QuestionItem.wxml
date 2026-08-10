@@ -1,0 +1,16 @@
+<view class="{{['_div','data-v-f414161e',c]}}">
+  <long-press-container
+    bind:__l="__l"
+    bindlongPress="{{b}}"
+    class="data-v-f414161e"
+    uI="f414161e-0"
+    uS="{{['longpresscontent']}}"
+  >
+    <view
+      class="_div userContentWrapper data-v-f414161e"
+      slot="longpresscontent"
+    >
+      <view class="_div userContent data-v-f414161e">{{a}}</view>
+    </view>
+  </long-press-container>
+</view>

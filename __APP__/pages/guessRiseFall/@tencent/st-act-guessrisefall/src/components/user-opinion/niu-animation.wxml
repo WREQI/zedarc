@@ -1,0 +1,20 @@
+<view
+  class="{{['_div','opinion-niu-animation','data-v-c4bcbe0a',g&&'opinion-niu-animation--selected',h&&'opinion-niu-animation--zooming']}}"
+>
+  <image
+    alt=""
+    class="_img opinion-niu-animation__static-icon data-v-c4bcbe0a"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <image
+    alt=""
+    class="_img opinion-niu-animation__static-icon opinion-niu-animation__static-icon--tap data-v-c4bcbe0a"
+    src="{{d}}"
+    wx:if="{{c}}"
+  ></image>
+  <view
+    class="{{['_div','opinion-niu-animation__number-static','data-v-c4bcbe0a',f&&'opinion-niu-animation__number-static--selected']}}"
+    >{{e}}</view
+  >
+</view>

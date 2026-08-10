@@ -1,0 +1,67 @@
+@import "/app.wxss";
+.debt-auto-order .page-container.data-v-1080ab71,
+.debt-auto-order.data-v-1080ab71 {
+  height: 100%;
+  min-height: calc(100vh - env(safe-area-inset-bottom));
+  width: 100%;
+}
+.debt-auto-order .page-container.data-v-1080ab71 {
+  box-sizing: border-box;
+  padding-bottom: 0.8rem;
+}
+.debt-auto-order .page-container .page-instruction.data-v-1080ab71 {
+  box-sizing: border-box;
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  padding: 0 0.4rem;
+  white-space: pre-wrap;
+  width: 100%;
+}
+.debt-auto-order .page-container .page-instruction .header.data-v-1080ab71 {
+  margin-bottom: 0.16rem;
+}
+.debt-auto-order
+  .condition-order-risk-dialog.data-v-1080ab71
+  .mp-dialog__header {
+  padding-top: 0.64rem;
+}
+.debt-auto-order
+  .condition-order-risk-dialog.data-v-1080ab71
+  .mp-dialog__title {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+}
+.debt-auto-order
+  .condition-order-risk-dialog.data-v-1080ab71
+  .mp-dialog__button {
+  height: 1.28rem;
+  line-height: 1.28rem;
+}
+.debt-auto-order .condition-order-risk-dialog .func-tips.data-v-1080ab71 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  padding: 0.426667rem 0.64rem 0.533333rem;
+}
+.debt-auto-order
+  .condition-order-risk-dialog
+  .func-tips
+  .inline-link.data-v-1080ab71 {
+  color: var(--color-link);
+  display: inline;
+}
+.debt-auto-order
+  .condition-order-risk-dialog
+  .func-tips.simple.data-v-1080ab71 {
+  color: var(--text-color-2);
+}
+.debt-auto-order
+  .condition-order-risk-dialog
+  .func-tips.simple
+  .inline-link.data-v-1080ab71 {
+  color: var(--text-color-1);
+  font-weight: 700;
+}

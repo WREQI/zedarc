@@ -1,0 +1,147 @@
+<view class="_div chance-wrap ai-column data-v-19a1de9a" wx:if="{{a}}">
+  <view class="{{['_div','head','data-v-19a1de9a',g,h]}}">
+    <view class="_div title data-v-19a1de9a">{{b}}</view>
+    <view class="_div subtitle data-v-19a1de9a" wx:if="{{c}}"
+      >DeepSeek+金融数据</view
+    >
+    <view bindtap="{{e}}" class="_div change data-v-19a1de9a" wx:if="{{d}}">
+      <image
+        alt=""
+        class="_img change-icon data-v-19a1de9a"
+        src="https://st.gtimg.com/design/123b7e8342b9e3616b5f49bbb5686c66.png"
+      ></image>
+      <label class="_span change-txt data-v-19a1de9a">换一换</label>
+    </view>
+    <view class="_div v2-tips data-v-19a1de9a" wx:if="{{f}}"
+      >如何选出第1只自选股？试试这样问我</view
+    >
+  </view>
+  <view class="{{['_div','content','data-v-19a1de9a',t]}}">
+    <view class="_div answer-list data-v-19a1de9a" wx:if="{{i}}">
+      <view class="_div answer data-v-19a1de9a" wx:for="{{j}}" wx:key="m">
+        <view bindtap="{{item.b}}" class="_div answer-text data-v-19a1de9a"
+          >{{item.a}}</view
+        >
+        <view class="_div answer-stock data-v-19a1de9a">
+          <view class="_div loading-area data-v-19a1de9a" wx:if="{{item.c}}">
+            <view class="_div quoteContentText data-v-19a1de9a">正在思考</view>
+            <view class="_div dot data-v-19a1de9a"></view>
+            <view class="_div dot data-v-19a1de9a"></view>
+            <view class="_div dot data-v-19a1de9a"></view>
+          </view>
+          <view class="_div desc data-v-19a1de9a">{{item.d}}</view>
+          <view class="_div list data-v-19a1de9a" wx:if="{{item.e}}">
+            <target-ver
+              bind:__l="__l"
+              bindaddStock="{{item.f}}"
+              bindviewStock="{{item.g}}"
+              class="data-v-19a1de9a"
+              uI="{{item.h}}"
+              uP="{{item.i}}"
+              wx:if="{{item.i}}"
+            ></target-ver>
+          </view>
+          <view class="_div desc data-v-19a1de9a" wx:if="{{item.j}}"
+            >{{item.k}}</view
+          >
+          <view
+            bindtap="{{item.l}}"
+            class="_div more data-v-19a1de9a"
+            wx:if="{{k}}"
+          >
+            <label class="_span more-text data-v-19a1de9a"
+              >查看完整AI解读</label
+            >
+            <image
+              alt=""
+              class="_img more-icon data-v-19a1de9a"
+              src="https://st.gtimg.com/design/0d4dea8fa34f5b3305cfec9d40e35bce.png"
+            ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div question-list data-v-19a1de9a" wx:if="{{l}}">
+      <view class="_div info data-v-19a1de9a" wx:if="{{m}}">
+        <view class="_div title data-v-19a1de9a">你可能还想问</view>
+        <view class="_div change data-v-19a1de9a">
+          <image
+            alt=""
+            class="_img change-icon data-v-19a1de9a"
+            src="https://st.gtimg.com/design/123b7e8342b9e3616b5f49bbb5686c66.png"
+          ></image>
+          <label bindtap="{{n}}" class="_span change-txt data-v-19a1de9a"
+            >换一换</label
+          >
+        </view>
+      </view>
+      <view class="_div list data-v-19a1de9a">
+        <view
+          bindtap="{{item.m}}"
+          class="_div list-item data-v-19a1de9a"
+          wx:for="{{o}}"
+          wx:key="l"
+        >
+          <view
+            class="_div newuser-question data-v-19a1de9a"
+            wx:if="{{item.a}}"
+          >
+            <view class="_div info data-v-19a1de9a">
+              <view class="_div text data-v-19a1de9a"
+                >{{item.b}} {{item.c}}</view
+              >
+              <view class="_div btn data-v-19a1de9a">去看看</view>
+            </view>
+            <image
+              alt=""
+              class="_img logo data-v-19a1de9a"
+              src="https://st.gtimg.com/design/e22cd2e4951c1426cb25f33b4c5e4c4e.png"
+            ></image>
+          </view>
+          <label
+            class="{{['_span','question','data-v-19a1de9a',item.i&&'opacity-anim-hide',item.j&&'opacity-anim-show',item.k&&'question-v2']}}"
+            wx:else
+          >
+            <block wx:if="{{item.d}}">
+              <image
+                alt=""
+                class="_img question-icon data-v-19a1de9a"
+                src="https://st.gtimg.com/design/edf1ad3d095dc800fb32cf30d62843ab.svg"
+              ></image>
+              <view class="_div question-text data-v-19a1de9a">
+                <image
+                  alt=""
+                  class="_img hot-icon data-v-19a1de9a"
+                  src="https://st.gtimg.com/design/b3d9fa6db08f6b10039577105fd65990.png"
+                  wx:if="{{item.e}}"
+                ></image
+                >{{item.f}}</view
+              >
+            </block>
+            <block wx:else>{{item.g}} {{item.h}}</block>
+          </label>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtap="{{s}}"
+      class="{{['_div','bottom','data-v-19a1de9a',r]}}"
+      wx:if="{{p}}"
+    >
+      <view class="_div bottom-tips data-v-19a1de9a" wx:if="{{q}}"
+        >实时行情专业AI，10万+人已使用</view
+      >
+      <block wx:else>
+        <label class="_span ai-text data-v-19a1de9a">问AI</label>
+        <label class="_span more-text data-v-19a1de9a"
+          >更多炒股问题，问我看看</label
+        >
+        <image
+          alt=""
+          class="_img more-icon data-v-19a1de9a"
+          src="https://st.gtimg.com/design/0d4dea8fa34f5b3305cfec9d40e35bce.png"
+        ></image>
+      </block>
+    </view>
+  </view>
+</view>

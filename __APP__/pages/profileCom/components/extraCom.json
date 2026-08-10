@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "protocol-update-banner": "../../account/components/protocolBanner",
+    "task": "../../asyncCom/@tencent/st-act-task/components/task/index",
+    "broker-action-sheet": "../../apply/components/BrokerActionSheet"
+  },
+  "componentPlaceholder": {
+    "protocol-update-banner": "view",
+    "task": "view",
+    "broker-action-sheet": "view"
+  }
+}

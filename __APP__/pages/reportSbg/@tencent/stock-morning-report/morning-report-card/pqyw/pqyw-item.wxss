@@ -1,0 +1,82 @@
+.onLongTouch.data-v-5a8f8023 {
+  opacity: 0.4;
+}
+.tag-container.data-v-5a8f8023 {
+  align-items: center;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0.32rem 0 0.3466666666666667rem;
+  min-height: 0.37333333333333335rem;
+}
+.mood-negative.data-v-5a8f8023,
+.mood-neutral.data-v-5a8f8023,
+.mood-positive.data-v-5a8f8023,
+.news-type.data-v-5a8f8023 {
+  align-items: center;
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding: 0.013333333333333334rem 0.10666666666666667rem;
+}
+.mood-negative .text.data-v-5a8f8023,
+.mood-neutral .text.data-v-5a8f8023,
+.mood-positive .text.data-v-5a8f8023,
+.news-type .text.data-v-5a8f8023 {
+  font-size: 0.26666666666666666rem !important;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.37333333333333335rem;
+}
+.mood-positive.data-v-5a8f8023 {
+  background-color: #e63535;
+}
+.mood-negative.data-v-5a8f8023 {
+  background-color: #1caa3c;
+}
+.mood-neutral.data-v-5a8f8023,
+.news-type.data-v-5a8f8023 {
+  background-color: var(--color-lightgray);
+}
+.news-type.data-v-5a8f8023 {
+  border-radius: 0.05333333333333334rem;
+}
+.news-type + .mood-negative.data-v-5a8f8023,
+.news-type + .mood-neutral.data-v-5a8f8023,
+.news-type + .mood-positive.data-v-5a8f8023 {
+  margin-left: 0.16rem;
+}
+.summary-container.data-v-5a8f8023 {
+  flex-direction: row;
+  text-align: justify;
+}
+.summary-container .icon-wrapper.data-v-5a8f8023 {
+  float: left;
+  height: 0.4533333333333333rem;
+  margin-right: 0.21333333333333335rem;
+  margin-top: 0.14666666666666667rem;
+  width: 0.4666666666666667rem;
+}
+.summary-container .summary-title-text.data-v-5a8f8023 {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  line-height: 0.7466666666666667rem;
+  text-align: justify;
+}
+.secondary-link.data-v-5a8f8023 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.8rem;
+  margin-top: 0.21333333333333335rem;
+}
+.secondary-link .img.data-v-5a8f8023 {
+  height: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.32rem;
+}

@@ -1,0 +1,43 @@
+<view class="_div list-container data-v-422d6cba" ref="listContainer">
+  <view
+    class="_div scroll-container data-v-422d6cba"
+    ref="basketSectionContainer"
+    wx:if="{{a}}"
+  >
+    <view
+      class="_div basket-section data-v-422d6cba"
+      id="{{basketData.d}}"
+      ref="basketSection"
+      wx:for="{{b}}"
+      wx:for-item="basketData"
+      wx:key="e"
+    >
+      <column-list-item
+        bind:__l="__l"
+        class="data-v-422d6cba"
+        uI="{{basketData.b}}"
+        uP="{{basketData.c}}"
+        wx:if="{{basketData.a}}"
+      ></column-list-item>
+      <view class="_div basket-placeholder data-v-422d6cba" wx:else>
+        <view class="_div header-title-wrapper data-v-422d6cba">
+          <view class="_div data-v-422d6cba">--</view>
+          <view class="_div right-arrow data-v-422d6cba"></view>
+        </view>
+        <view class="_div subtitle data-v-422d6cba">
+          <view class="_div title-key data-v-422d6cba">当日涨跌</view>
+          <view class="_div title-drop data-v-422d6cba">--</view>
+          <view class="_div title-key data-v-422d6cba">近一月涨跌</view>
+          <view class="_div title-drop data-v-422d6cba">--</view>
+        </view>
+        <view class="_div header-desc data-v-422d6cba">
+          <view class="_div data-v-422d6cba">--</view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div brand data-v-422d6cba"
+      style="{{'padding-bottom:'+c}}"
+    ></view>
+  </view>
+</view>

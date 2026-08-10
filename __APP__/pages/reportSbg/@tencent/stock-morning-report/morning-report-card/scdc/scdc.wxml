@@ -1,0 +1,46 @@
+<view class="_div scdc-wrapper data-v-79a31a1e">
+  <card-header
+    bind:__l="__l"
+    class="data-v-79a31a1e"
+    uI="79a31a1e-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></card-header>
+  <view class="_div scdc-content data-v-79a31a1e" wx:if="{{c}}">
+    <view class="_div data-v-79a31a1e" wx:for="{{d}}" wx:key="f">
+      <view class="_div scdc-item data-v-79a31a1e">
+        <view
+          class="_div jg-avatar data-v-79a31a1e"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view
+          catchtap="{{item.e}}"
+          class="_div jg-content data-v-79a31a1e"
+          hoverClass="onLongTouch"
+        >
+          <label class="_span data-v-79a31a1e">
+            <label class="_span name data-v-79a31a1e">{{item.b}}：</label
+            >{{item.c}}<label
+              class="_span video-tag data-v-79a31a1e"
+              wx:if="{{item.d}}"
+            >
+              <image
+                class="_img live data-v-79a31a1e"
+                src="https://st.gtimg.com/design/17d860a221e01213d8ca8aa3736ba551.gif"
+              ></image
+              >直播</label
+            >
+          </label>
+          <view class="_div trangle data-v-79a31a1e"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image-link-item
+    bind:__l="__l"
+    class="data-v-79a31a1e"
+    uI="79a31a1e-1"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></image-link-item>
+</view>

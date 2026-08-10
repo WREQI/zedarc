@@ -1,0 +1,125 @@
+.container {
+  background: #f5f6fa;
+  height: auto;
+  padding: 0.32rem 0.32rem 2.24rem;
+}
+.container .error-status {
+  padding-top: 3.3333333333333335rem;
+}
+.container .list {
+  background: #fff;
+  border-radius: 0.21333333333333335rem;
+}
+.container .list .calendar-item {
+  padding: 0 0.32rem;
+}
+.container .list .calendar-item .content {
+  align-items: center;
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.5333333333333333rem 0;
+}
+.container .list .calendar-item .content.last {
+  border-bottom: none;
+}
+.container .list .calendar-item .content .left {
+  flex: 1;
+}
+.container .list .calendar-item .content .left .title {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.16rem;
+}
+.container .list .calendar-item .content .left .title .title-color {
+  border-radius: 0.13333333333333333rem;
+  display: inline-block;
+  height: 0.16rem;
+  margin-right: 0.21333333333333335rem;
+  width: 0.16rem;
+}
+.container .list .calendar-item .content .left .title .title-color.COLOR_RED {
+  background: #e63535;
+}
+.container .list .calendar-item .content .left .title .title-color.COLOR_BLUE {
+  background: #3077ec;
+}
+.container
+  .list
+  .calendar-item
+  .content
+  .left
+  .title
+  .title-color.COLOR_ORANGE {
+  background: #ff891e;
+}
+.container .list .calendar-item .content .left .title .title-color.COLOR_GREEN {
+  background: #1caa3c;
+}
+.container .list .calendar-item .content .left .title .title-val {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-style: normal;
+  font-weight: 500;
+}
+.container .list .calendar-item .content .left .subtitle {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 0.37333333333333335rem;
+}
+.container .list .calendar-item .content .left .subtitle .subtitle-img {
+  display: inline-block;
+  margin-left: 0.10666666666666667rem;
+  margin-right: 0.16rem;
+}
+.container
+  .list
+  .calendar-item
+  .content
+  .left
+  .subtitle
+  .subtitle-img
+  .head-img {
+  border: 0.013333333333333334rem solid #fff;
+  border-radius: 0.10666666666666667rem;
+  height: 0.4266666666666667rem;
+  margin-left: -0.10666666666666667rem;
+  width: 0.4266666666666667rem;
+}
+.container .list .calendar-item .content .left .subtitle .subtitle-num {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+}
+.container .list .calendar-item .content .right {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.container .list .calendar-item .content .right .status-ok {
+  color: #98a0b3;
+  font-size: 0.37333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+}
+.container .list .calendar-item .content .right .status-no {
+  align-items: center;
+  background: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0.16rem 0.32rem;
+}
+.container .list .calendar-item .content .right .right-img {
+  display: inline-block;
+  height: 0.4266666666666667rem;
+  margin-left: 0.4266666666666667rem;
+  width: 0.4266666666666667rem;
+}

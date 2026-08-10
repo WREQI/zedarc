@@ -1,0 +1,53 @@
+<view catchtap="{{z}}" class="_div mod-item-header data-v-efcb78fd">
+  <avator-card
+    bind:__l="__l"
+    bindtapPerson="{{a}}"
+    bindtapStock="{{b}}"
+    class="data-v-efcb78fd"
+    uI="efcb78fd-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></avator-card>
+  <view class="{{['_div','data-v-efcb78fd',y]}}">
+    <view
+      catchtap="{{g}}"
+      class="_div tag-right-content data-v-efcb78fd"
+      wx:if="{{d}}"
+    >
+      <view class="{{['_i','data-v-efcb78fd',e]}}"></view>{{f}}</view
+    >
+    <show-label
+      bind:__l="__l"
+      class="data-v-efcb78fd"
+      uI="efcb78fd-1"
+      uP="{{i}}"
+      wx:if="{{h}}"
+    ></show-label>
+    <handle-follow
+      bind:__l="__l"
+      bindtapFollow="{{k}}"
+      bindtoast="{{l}}"
+      class="data-v-efcb78fd"
+      uI="efcb78fd-2"
+      uP="{{m}}"
+      wx:if="{{j}}"
+    ></handle-follow>
+    <view
+      catchtap="{{p}}"
+      class="{{['_div','data-v-efcb78fd','look-oneself',o]}}"
+      wx:if="{{n}}"
+    ></view>
+    <handle-more
+      bind:__l="__l"
+      bindonHandleTurn="{{w}}"
+      bindtapDeleteItem="{{t}}"
+      bindtapIllegal="{{s}}"
+      bindtapMore="{{r}}"
+      bindtoast="{{v}}"
+      class="data-v-efcb78fd"
+      uI="efcb78fd-3"
+      uP="{{x}}"
+      wx:if="{{q}}"
+    ></handle-more>
+  </view>
+</view>

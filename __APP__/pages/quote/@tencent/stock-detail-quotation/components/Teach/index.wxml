@@ -1,0 +1,67 @@
+<view
+  class="{{['_div','mask-wrapper','data-v-76697b77',g&&'skin-black']}}"
+  ref="maskWrapper"
+>
+  <view class="_div popup-wrapper data-v-76697b77">
+    <scroll-view
+      bindtouchstart="{{b}}"
+      catchtouchmove="{{c}}"
+      class="content-area data-v-76697b77"
+      ref="scrollView"
+      scrollY="{{true}}"
+    >
+      <view class="_div json_container data-v-76697b77">
+        <view
+          class="_div json_content data-v-76697b77"
+          wx:for="{{a}}"
+          wx:key="o"
+        >
+          <view
+            class="{{['_div','title','data-v-76697b77',item.d&&'simple-title']}}"
+            key="{{item.c}}"
+            wx:if="{{item.a}}"
+            >{{item.b}}</view
+          >
+          <view
+            class="_div text data-v-76697b77"
+            key="{{item.g}}"
+            wx:if="{{item.e}}"
+            >{{item.f}}</view
+          >
+          <view
+            class="_div ltgb-wrapper data-v-76697b77"
+            key="{{item.k}}"
+            wx:if="{{item.h}}"
+          >
+            <view class="_div ltgb-group data-v-76697b77">
+              <view class="_div ltgb-title data-v-76697b77">披露值</view>
+              <view class="_div ltgb-text data-v-76697b77">{{item.i}}</view>
+            </view>
+            <view class="_div ltgb-group data-v-76697b77">
+              <view class="_div ltgb-title data-v-76697b77">调整值</view>
+              <view class="_div ltgb-text data-v-76697b77">{{item.j}}</view>
+            </view>
+          </view>
+          <view
+            bindtap="{{item.n}}"
+            class="_div feedback data-v-76697b77"
+            key="{{item.m}}"
+            wx:if="{{item.l}}"
+            >问题反馈与建议 ></view
+          >
+        </view>
+      </view>
+    </scroll-view>
+    <view class="_div button-area data-v-76697b77">
+      <view
+        bindtap="{{e}}"
+        class="_div button-more data-v-76697b77"
+        wx:if="{{d}}"
+        >更多指标说明</view
+      >
+      <view bindtap="{{f}}" class="_div button-ok data-v-76697b77"
+        >我知道了</view
+      >
+    </view>
+  </view>
+</view>

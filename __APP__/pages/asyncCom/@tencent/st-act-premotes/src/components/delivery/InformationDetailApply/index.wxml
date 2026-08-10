@@ -1,0 +1,25 @@
+<view
+  bindtap="{{f}}"
+  class="_div information-detail-apply data-v-063f67e2"
+  wx:if="{{a}}"
+>
+  <image
+    alt="图标"
+    class="_img information-detail-apply__icon data-v-063f67e2"
+    src="{{c}}"
+    wx:if="{{b}}"
+  ></image>
+  <view class="_div information-detail-apply__title data-v-063f67e2"
+    >{{d}}</view
+  >
+  <view class="_div information-detail-apply__action data-v-063f67e2">
+    <label class="_span information-detail-apply__action-text data-v-063f67e2"
+      >{{e}}</label
+    >
+    <image
+      alt="箭头图标"
+      class="_img information-detail-apply__share-icon data-v-063f67e2"
+      src="https://st.gtimg.com/pcm/mknhhpe4_9176d32983e11899d735f5a602f86bb0.png"
+    ></image>
+  </view>
+</view>

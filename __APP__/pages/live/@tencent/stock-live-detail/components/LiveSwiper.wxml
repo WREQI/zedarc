@@ -1,0 +1,102 @@
+<view class="{{['_div','list-wrapper',t,v]}}" wx:if="{{a}}">
+  <scroll-view
+    bindrefresherpulling="{{p}}"
+    bindrefresherrefresh="{{q}}"
+    bindrefresherrestore="{{r}}"
+    bindscrolltolower="{{s}}"
+    refresherDefaultStyle="{{o}}"
+    refresherEnabled="{{true}}"
+    refresherTriggered="{{n}}"
+    scrollY="{{true}}"
+    style="height: 100%"
+  >
+    <view class="{{['_div','mp-list-container',m]}}">
+      <live-swiper-live
+        bind:__l="__l"
+        bindmanageSelfStock="{{d}}"
+        bindshowNewsDetail="{{c}}"
+        uI="4d89940f-0"
+        uP="{{e}}"
+        wx:if="{{b}}"
+      ></live-swiper-live>
+      <live-swiper-chat
+        bind:__l="__l"
+        bindmanageSelfStock="{{g}}"
+        uI="4d89940f-1"
+        uP="{{h}}"
+        wx:elif="{{f}}"
+      ></live-swiper-chat>
+      <live-swiper-news
+        bind:__l="__l"
+        bindshowNewsDetail="{{j}}"
+        uI="4d89940f-2"
+        uP="{{k}}"
+        wx:elif="{{i}}"
+      ></live-swiper-news>
+      <view class="_div tail-container" wx:if="{{l}}">
+        <view class="_div divider-border"></view>
+        <view class="_div logo_wrap">
+          <view class="_div zxg_logo"></view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<live-scroll-wrapper
+  bind:__l="__l"
+  bindbeforeScrollStart="{{N}}"
+  bindscroll="{{L}}"
+  bindscrollEnd="{{M}}"
+  class="{{['r','list-wrapper',K]}}"
+  uI="4d89940f-3"
+  uP="{{O||''}}"
+  uR="scroll"
+  uS="{{['d']}}"
+  wx:else
+>
+  <refresh-list
+    bind:__l="__l"
+    uI="4d89940f-4,4d89940f-3"
+    uP="{{I}}"
+    uS="{{['d']}}"
+    wx:if="{{I}}"
+  >
+    <st-reach-bottom
+      bind:__l="__l"
+      uI="4d89940f-5,4d89940f-4"
+      uP="{{H}}"
+      uS="{{['d']}}"
+      wx:if="{{H}}"
+    >
+      <live-swiper-live
+        bind:__l="__l"
+        bindmanageSelfStock="{{y}}"
+        bindshowNewsDetail="{{x}}"
+        uI="4d89940f-6,4d89940f-5"
+        uP="{{z}}"
+        wx:if="{{w}}"
+      ></live-swiper-live>
+      <live-swiper-chat
+        bind:__l="__l"
+        bindmanageSelfStock="{{B}}"
+        uI="4d89940f-7,4d89940f-5"
+        uP="{{C}}"
+        wx:elif="{{A}}"
+      ></live-swiper-chat>
+      <live-swiper-news
+        bind:__l="__l"
+        bindshowNewsDetail="{{D}}"
+        uI="4d89940f-8,4d89940f-5"
+        uP="{{E||''}}"
+        wx:else
+      ></live-swiper-news>
+      <view class="_div tail-container" wx:if="{{F}}">
+        <view class="_div divider-border"></view>
+        <view class="_div logo_wrap">
+          <view class="_div zxg_logo"></view>
+        </view>
+      </view>
+      <view class="_div" style="height: 100px" wx:if="{{G}}"></view>
+    </st-reach-bottom>
+  </refresh-list>
+</live-scroll-wrapper>

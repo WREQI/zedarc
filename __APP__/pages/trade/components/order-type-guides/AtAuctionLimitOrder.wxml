@@ -1,0 +1,38 @@
+<guide-layout bind:__l="__l" uI="5c04a924-0" uS="{{['d']}}">
+  <section-card
+    bind:__l="__l"
+    uI="5c04a924-1,5c04a924-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">交易时间</view>
+    <view slot="content"
+      >适用于集合竞价时段（9:00:00-9:15:00、16:00:00-16:10:00）</view
+    >
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="5c04a924-2,5c04a924-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">成交价格</view>
+    <view slot="content"
+      >投资者需指定价格进行交易，系统只会在该价格或更优的价格（对于买方来说更低的价格，对于卖方来说更高的价格）上进行撮合成交。</view
+    >
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="5c04a924-3,5c04a924-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">订单价格</view>
+    <view slot="content">提交订单价格不得超出参考价的9倍或低于1/9</view>
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="5c04a924-4,5c04a924-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">注意事项</view>
+    <view slot="content">竞价限价盘不可用于持续交易时段，否则会导致废单</view>
+  </section-card>
+</guide-layout>

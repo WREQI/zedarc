@@ -1,0 +1,125 @@
+<page-meta class="data-v-bb5fdff9" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-bb5fdff9"
+  id="global-wrap"
+  uI="bb5fdff9-0"
+  uP="{{z}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{z}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-bb5fdff9"
+    uI="bb5fdff9-1,bb5fdff9-0"
+    uS="{{['d']}}"
+  >
+    <view class="{{['page-apply-facecheck','data-v-bb5fdff9',x]}}">
+      <block wx:if="{{b}}">
+        <digital-human
+          bind:__l="__l"
+          class="r data-v-bb5fdff9"
+          uI="bb5fdff9-2,bb5fdff9-1"
+          uP="{{e}}"
+          uR="digitalHumanRef"
+          wx:if="{{c}}"
+        ></digital-human>
+        <view class="{{['data-v-bb5fdff9',j]}}">
+          <progress-bar
+            bind:__l="__l"
+            class="data-v-bb5fdff9"
+            uI="bb5fdff9-3,bb5fdff9-1"
+            uP="{{f}}"
+            wx:if="{{f}}"
+          ></progress-bar>
+          <block wx:if="{{g}}">
+            <view class="facecheck-wrap data-v-bb5fdff9">
+              <view class="facecheck-logo-wrap data-v-bb5fdff9">
+                <view class="facecheck-logo data-v-bb5fdff9"></view>
+                <view class="facecheck-text data-v-bb5fdff9"
+                  >为确保开户为本人操作，即将进行人脸识别</view
+                >
+              </view>
+              <view class="icon-tip-list data-v-bb5fdff9">
+                <icon-tip
+                  bind:__l="__l"
+                  class="icon-tip data-v-bb5fdff9"
+                  uI="bb5fdff9-4,bb5fdff9-1"
+                ></icon-tip>
+              </view>
+            </view>
+            <view class="facecheck-info-wrap data-v-bb5fdff9">
+              <view class="facecheck-info data-v-bb5fdff9">
+                <view class="data-v-bb5fdff9">姓名</view>
+                <view class="data-v-bb5fdff9">{{h}}</view>
+              </view>
+              <view class="facecheck-info data-v-bb5fdff9">
+                <view class="data-v-bb5fdff9">身份证号码</view>
+                <view class="data-v-bb5fdff9">{{i}}</view>
+              </view>
+            </view>
+          </block>
+          <view class="banner align-c data-v-bb5fdff9" wx:else>
+            <view class="banner-tip data-v-bb5fdff9"
+              >为确保开户为本人操作，即将进行人脸识别</view
+            >
+            <image class="banner-pic data-v-bb5fdff9"></image>
+            <view class="icon-tip-list data-v-bb5fdff9">
+              <icon-tip
+                bind:__l="__l"
+                class="icon-tip data-v-bb5fdff9"
+                uI="bb5fdff9-5,bb5fdff9-1"
+              ></icon-tip>
+            </view>
+          </view>
+          <foot-print
+            bind:__l="__l"
+            class="foot data-v-bb5fdff9"
+            uI="bb5fdff9-6,bb5fdff9-1"
+          ></foot-print>
+          <view class="data-v-bb5fdff9" style="height: 120px"></view>
+        </view>
+        <step-buttons
+          bind:__l="__l"
+          bindclickNext="{{p}}"
+          bindmpLaunchError="{{r}}"
+          bindmpLaunchSuccess="{{q}}"
+          class="data-v-bb5fdff9"
+          uI="bb5fdff9-7,bb5fdff9-1"
+          uP="{{s}}"
+          uS="{{['d']}}"
+          wx:if="{{s}}"
+        >
+          <view class="protocol-container fs-24 data-v-bb5fdff9" wx:if="{{k}}">
+            <sign-protocol
+              bind:__l="__l"
+              bindprotocolCheck="{{n}}"
+              class="r data-v-bb5fdff9"
+              uI="bb5fdff9-8,bb5fdff9-7"
+              uP="{{o}}"
+              uR="SignProtocol"
+              wx:if="{{l}}"
+            ></sign-protocol>
+          </view>
+        </step-buttons>
+      </block>
+      <mp-exit-dialog
+        bind:__l="__l"
+        bindinput="{{t}}"
+        class="data-v-bb5fdff9"
+        uI="bb5fdff9-9,bb5fdff9-1"
+        uP="{{v}}"
+        wx:if="{{v}}"
+      ></mp-exit-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-bb5fdff9"
+        id="mp-dialog"
+        uI="bb5fdff9-10,bb5fdff9-1"
+        uP="{{w}}"
+        wx:if="{{w}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

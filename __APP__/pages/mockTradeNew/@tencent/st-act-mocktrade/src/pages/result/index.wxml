@@ -1,0 +1,73 @@
+<view class="_div result-wrapper data-v-3e0fa429">
+  <view class="_div result-panel data-v-3e0fa429">
+    <view class="_div result-icon data-v-3e0fa429">
+      <image
+        class="_img result-icon--img data-v-3e0fa429"
+        src="https://wzq.gtimg.com/resource/images/79ef41b4dff4ce9e13b31feaa7917909.png"
+      ></image>
+    </view>
+    <view class="_div result-header data-v-3e0fa429">
+      <label class="_span result-header--text data-v-3e0fa429" wx:if="{{a}}"
+        >模拟{{b}}委托已提交，等待成交</label
+      >
+      <label class="_span result-header--text data-v-3e0fa429" wx:else
+        >模拟{{c}}委托已提交，等待开市交易</label
+      >
+    </view>
+    <view class="_div result-body data-v-3e0fa429">
+      <label
+        class="_span result-body--text data-v-3e0fa429"
+        wx:if="{{d}}"
+      ></label>
+      <label class="_span result-body--text data-v-3e0fa429" wx:elif="{{e}}"
+        >开市时间: 09点30分</label
+      >
+      <label class="_span result-body--text data-v-3e0fa429" wx:elif="{{f}}"
+        >开市时间: 13点00分</label
+      >
+      <label class="_span result-body--text data-v-3e0fa429" wx:elif="{{g}}"
+        >开市时间: {{h}}</label
+      >
+    </view>
+    <view class="_div result-footer data-v-3e0fa429">
+      <view bindtap="{{i}}" class="_div result-btn data-v-3e0fa429">
+        <label class="_span result-btn--text data-v-3e0fa429"
+          >查看模拟资产</label
+        >
+      </view>
+    </view>
+    <view class="_div result-footer result-footer--real data-v-3e0fa429">
+      <view bindtap="{{j}}" class="_div result-btn data-v-3e0fa429">
+        <label class="_span result-btn--text data-v-3e0fa429">去实盘</label>
+      </view>
+    </view>
+  </view>
+  <reward
+    bind:__l="__l"
+    class="data-v-3e0fa429"
+    uI="3e0fa429-0"
+    uP="{{l}}"
+    wx:if="{{k}}"
+  ></reward>
+  <popup-card
+    bind:__l="__l"
+    bindclose="{{n}}"
+    class="data-v-3e0fa429"
+    uI="3e0fa429-1"
+    uP="{{o}}"
+    wx:if="{{m}}"
+  ></popup-card>
+  <task-log
+    bind:__l="__l"
+    bindcloseLog="{{q}}"
+    class="data-v-3e0fa429"
+    uI="3e0fa429-2"
+    uP="{{r}}"
+    wx:if="{{p}}"
+  ></task-log>
+  <view class="_div err-toast data-v-3e0fa429" wx:if="{{s}}">
+    <view class="_div con-text data-v-3e0fa429">
+      <label class="_span text data-v-3e0fa429">{{t}}</label>
+    </view>
+  </view>
+</view>

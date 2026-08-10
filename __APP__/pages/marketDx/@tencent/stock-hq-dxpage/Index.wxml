@@ -1,0 +1,94 @@
+<view class="{{['_div','data-v-2ee508bb','page-wrapper',Q,R]}}">
+  <market-tabbar
+    bind:__l="__l"
+    bindupdateMarketTab="{{b}}"
+    class="r data-v-2ee508bb"
+    uI="2ee508bb-0"
+    uP="{{c}}"
+    uR="marketTabbar"
+    wx:if="{{c}}"
+  ></market-tabbar>
+  <performance-bar-mp
+    bind:__l="__l"
+    class="data-v-2ee508bb"
+    uI="2ee508bb-1"
+    uP="{{e}}"
+    wx:if="{{d}}"
+  ></performance-bar-mp>
+  <performance-bar
+    bind:__l="__l"
+    class="data-v-2ee508bb"
+    uI="2ee508bb-2"
+    uP="{{g}}"
+    wx:if="{{f}}"
+  ></performance-bar>
+  <performance-bar
+    bind:__l="__l"
+    class="data-v-2ee508bb"
+    uI="2ee508bb-3"
+    uP="{{i}}"
+    wx:if="{{h}}"
+  ></performance-bar>
+  <view class="{{['_div','content-wrapper','data-v-2ee508bb',I,J]}}">
+    <view class="_div data-v-2ee508bb" wx:if="{{j}}">
+      <hs-page
+        bind:__l="__l"
+        bindcheckBtnShow="{{o}}"
+        bindcheckShowPopup="{{m}}"
+        bindgetPerformData="{{r}}"
+        bindgetPosition="{{l}}"
+        bindhandleShare="{{n}}"
+        bindloadFinished="{{p}}"
+        bindshowTeachPop="{{s}}"
+        bindupdateCategoryTab="{{q}}"
+        bindupdateShareData="{{t}}"
+        class="r data-v-2ee508bb"
+        uI="2ee508bb-4"
+        uP="{{v}}"
+        uR="hspage"
+        wx:if="{{v}}"
+      ></hs-page>
+    </view>
+    <view class="_div data-v-2ee508bb" wx:if="{{w}}">
+      <hk-page
+        bind:__l="__l"
+        bindcheckShowPopup="{{y}}"
+        bindgetPerformData="{{A}}"
+        bindgetPosition="{{x}}"
+        bindhandleShare="{{z}}"
+        class="data-v-2ee508bb"
+        uI="2ee508bb-5"
+        uP="{{B}}"
+        wx:if="{{B}}"
+      ></hk-page>
+    </view>
+    <view class="_div data-v-2ee508bb" wx:if="{{C}}">
+      <us-page
+        bind:__l="__l"
+        bindcheckShowPopup="{{E}}"
+        bindgetPerformData="{{G}}"
+        bindgetPosition="{{D}}"
+        bindhandleShare="{{F}}"
+        class="data-v-2ee508bb"
+        uI="2ee508bb-6"
+        uP="{{H}}"
+        wx:if="{{H}}"
+      ></us-page>
+    </view>
+  </view>
+  <view class="_div loading-text data-v-2ee508bb" wx:if="{{K}}">加载中...</view>
+  <view
+    class="{{['_div','zxg-logo','data-v-2ee508bb',M]}}"
+    wx:if="{{L}}"
+  ></view>
+  <view class="_div teach-wrapper data-v-2ee508bb" wx:if="{{N}}">
+    <teach-pop-block
+      bind:__l="__l"
+      bindclosePop="{{O}}"
+      class="data-v-2ee508bb"
+      uI="2ee508bb-7"
+      uP="{{P}}"
+      wx:if="{{P}}"
+    ></teach-pop-block>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.market-headlines-container {
+  background-color: #f5f6fa;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.market-headlines-container .news-item {
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem;
+  margin: 0.32rem 0.32rem 0;
+}
+.market-headlines-container .news-item .bottom {
+  padding-bottom: 0.32rem;
+}
+.market-headlines-container .logo_wrap {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding-bottom: calc(0.64rem + env(safe-area-inset-bottom));
+  padding-top: 0.64rem;
+}
+.market-headlines-container .logo_wrap .zxg_logo {
+  background-image: url(https://st.gtimg.com/design/114b3ab0b5052774e13de00c771146a1.png);
+  background-size: cover;
+  height: 0.5066666666666667rem;
+  width: 2.5733333333333333rem;
+}

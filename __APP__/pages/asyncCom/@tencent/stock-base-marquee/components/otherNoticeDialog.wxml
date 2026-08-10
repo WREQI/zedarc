@@ -1,0 +1,18 @@
+<view
+  bindtap="{{f}}"
+  catchtouchmove="{{g}}"
+  class="_div bulletin_bot_dialog_bg data-v-572428a6"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{e}}" class="_div bot_dialog_con data-v-572428a6">
+    <view class="_div titlebg data-v-572428a6">
+      <view class="_div title data-v-572428a6">{{b}}</view>
+      <view bindtap="{{c}}" class="_div closebg data-v-572428a6"></view>
+    </view>
+    <view class="_div contenttt data-v-572428a6">
+      <view class="_div content data-v-572428a6">
+        <rich-text class="data-v-572428a6" nodes="{{d}}"></rich-text>
+      </view>
+    </view>
+  </view>
+</view>

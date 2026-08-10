@@ -1,0 +1,251 @@
+@import "/app.wxss";
+@-webkit-keyframes lotteryFadeIn-63d39197 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lotteryFadeIn-63d39197 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes lotteryFadeOut-63d39197 {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes lotteryFadeOut-63d39197 {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.lottery-reward-dialog.data-v-63d39197 {
+  bottom: 0;
+  left: 0;
+  pointer-events: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.lottery-reward-dialog--closing.data-v-63d39197 {
+  animation: lotteryFadeOut-63d39197 167ms ease-out forwards;
+}
+.lottery-reward-dialog--flying
+  .lottery-reward-dialog__card-wrapper.data-v-63d39197 {
+  will-change: transform;
+}
+.lottery-reward-dialog--flying .lottery-reward-dialog__single.data-v-63d39197,
+.lottery-reward-dialog--flying
+  .lottery-reward-dialog__swiper-wrapper.data-v-63d39197 {
+  opacity: 0;
+  transition: opacity 0.16s ease-in 80ms;
+}
+.lottery-reward-dialog--flying .lottery-reward-dialog__buttons.data-v-63d39197,
+.lottery-reward-dialog--flying .lottery-reward-dialog__confetti.data-v-63d39197,
+.lottery-reward-dialog--flying .lottery-reward-dialog__subtitle.data-v-63d39197,
+.lottery-reward-dialog--flying .lottery-reward-dialog__title.data-v-63d39197 {
+  opacity: 0 !important;
+  pointer-events: none;
+  transition: opacity 0.15s ease-out;
+}
+.lottery-reward-dialog--share-active
+  .lottery-reward-dialog__confetti.data-v-63d39197,
+.lottery-reward-dialog--share-active
+  .lottery-reward-dialog__exposure.data-v-63d39197 {
+  visibility: hidden;
+}
+.lottery-reward-dialog__confetti.data-v-63d39197 {
+  animation: lotteryFadeIn-63d39197 333ms ease-out 333ms forwards;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1002;
+}
+.lottery-reward-dialog__confetti-img.data-v-63d39197 {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.lottery-reward-dialog__exposure.data-v-63d39197 {
+  -webkit-box-pack: center;
+  bottom: 0;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1001;
+}
+.lottery-reward-dialog__content.data-v-63d39197,
+.lottery-reward-dialog__exposure.data-v-63d39197 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.lottery-reward-dialog__content.data-v-63d39197 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+.lottery-reward-dialog__title.data-v-63d39197 {
+  animation: lotteryFadeIn-63d39197 333ms ease-out 333ms forwards;
+  color: #fff;
+  font-size: 0.693333rem;
+  font-weight: 700;
+  line-height: 0.96rem;
+  opacity: 0;
+  text-align: center;
+}
+.lottery-reward-dialog__subtitle.data-v-63d39197 {
+  animation: lotteryFadeIn-63d39197 333ms ease-out 0.5s forwards;
+  color: hsla(0, 0%, 100%, 0.85);
+  font-size: 0.426667rem;
+  font-weight: 400;
+  line-height: 0.586667rem;
+  margin-top: 0.32rem;
+  opacity: 0;
+  text-align: center;
+}
+.lottery-reward-dialog__card-wrapper.data-v-63d39197 {
+  animation: lotteryFadeIn-63d39197 333ms ease-out 833ms forwards;
+  margin-top: 0.853333rem;
+  opacity: 0;
+  position: relative;
+  transform-origin: center center;
+  transition: -webkit-transform 0.32s ease-in-out;
+  transition: transform 0.32s ease-in-out;
+  transition: transform 0.32s ease-in-out, -webkit-transform 0.32s ease-in-out;
+  width: 100%;
+}
+.lottery-reward-dialog__single.data-v-63d39197 {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.lottery-reward-dialog__swiper-wrapper.data-v-63d39197 {
+  position: relative;
+}
+.lottery-reward-dialog__fly-dot.data-v-63d39197 {
+  background-color: var(--color-red);
+  border-radius: 50%;
+  height: 5.066667rem;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 2.32rem;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease-in 0.12s;
+  width: 5.066667rem;
+}
+.lottery-reward-dialog--flying .lottery-reward-dialog__fly-dot.data-v-63d39197 {
+  opacity: 1;
+}
+.lottery-reward-dialog__swiper.data-v-63d39197 {
+  height: 4.64rem;
+  width: 10rem;
+}
+.lottery-reward-dialog__swiper-item.data-v-63d39197 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.lottery-reward-dialog__card-inner.data-v-63d39197 {
+  will-change: transform;
+}
+.lottery-reward-dialog__indicator.data-v-63d39197 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.426667rem;
+}
+.lottery-reward-dialog__indicator-dot.data-v-63d39197 {
+  background-color: hsla(0, 0%, 100%, 0.35);
+  border-radius: 0.4rem;
+  height: 0.08rem;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  width: 0.16rem;
+}
+.lottery-reward-dialog__indicator-dot.data-v-63d39197:not(:first-child) {
+  margin-left: 0.106667rem;
+}
+.lottery-reward-dialog__indicator-dot--active.data-v-63d39197 {
+  background-color: hsla(0, 0%, 100%, 0.85);
+  width: 0.32rem;
+}
+.lottery-reward-dialog__buttons.data-v-63d39197 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  animation: lotteryFadeIn-63d39197 167ms ease-out 1167ms forwards;
+  flex-direction: column;
+  margin-top: 0.933333rem;
+  opacity: 0;
+}
+.lottery-reward-dialog__btn.data-v-63d39197,
+.lottery-reward-dialog__buttons.data-v-63d39197 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.lottery-reward-dialog__btn.data-v-63d39197 {
+  -webkit-box-pack: center;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 0.32rem;
+  width: 5.013333rem;
+}
+.lottery-reward-dialog__btn.data-v-63d39197:active {
+  opacity: 0.85;
+}
+.lottery-reward-dialog__btn.data-v-63d39197:first-child {
+  margin-top: 0;
+}
+.lottery-reward-dialog__btn--primary.data-v-63d39197 {
+  background-color: var(--color-primary-1);
+  color: #fff;
+}
+.lottery-reward-dialog__btn--ghost.data-v-63d39197 {
+  background-color: initial;
+  border: 0.026667rem solid hsla(0, 0%, 100%, 0.45);
+  color: hsla(0, 0%, 100%, 0.85);
+}

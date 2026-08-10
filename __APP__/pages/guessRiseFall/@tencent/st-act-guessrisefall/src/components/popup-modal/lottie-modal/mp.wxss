@@ -1,0 +1,453 @@
+.lottie-modal.data-v-8f0bfb1b {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.lottie-modal .slide-fade-enter-active.data-v-8f0bfb1b {
+  transition: all 1.5s ease;
+}
+.lottie-modal .slide-fade-leave-active.data-v-8f0bfb1b {
+  transition: all 0.3s ease;
+}
+.lottie-modal .slide-fade-enter.data-v-8f0bfb1b,
+.lottie-modal .slide-fade-leave-to.data-v-8f0bfb1b {
+  opacity: 0;
+}
+@-webkit-keyframes slide-fade-enter-8f0bfb1b {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-fade-enter-8f0bfb1b {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-fade-leave-8f0bfb1b {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes slide-fade-leave-8f0bfb1b {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.lottie-modal__scene.data-v-8f0bfb1b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 13.066666666666666rem;
+  justify-content: center;
+  position: absolute;
+  width: 7.466666666666667rem;
+  z-index: 99;
+}
+.lottie-modal__date.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  color: #fff;
+  font-size: 0.48rem;
+  height: 0.5866666666666667rem;
+  left: 0.7466666666666667rem;
+  letter-spacing: 0;
+  line-height: 0.5866666666666667rem;
+  position: absolute;
+  text-align: center;
+  top: 3.04rem;
+  width: 5.04rem;
+  z-index: 101;
+}
+.lottie-modal__date--red.data-v-8f0bfb1b {
+  color: #ed0000;
+  left: 0.7866666666666666rem;
+  top: 3.066666666666667rem;
+}
+.lottie-modal__result-label.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  background: url(https://st.gtimg.com/design/3aec2cf90a03c8d3632663785fa1997e.png)
+    0 0 no-repeat;
+  background-size: 6.133333333333334rem 1.7066666666666668rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.64rem;
+  height: 1.7066666666666668rem;
+  left: 0.76rem;
+  letter-spacing: 0;
+  line-height: 1.7066666666666668rem;
+  padding-left: 1.8rem;
+  position: absolute;
+  text-align: left;
+  top: 4.306666666666667rem;
+  width: 6.133333333333334rem;
+  z-index: 100;
+}
+.lottie-modal__result-label--active.data-v-8f0bfb1b {
+  top: 5.333333333333333rem;
+}
+.lottie-modal__reward-banner.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  background: url(https://st.gtimg.com/design/0a403d6db59211f6b32d262591c607b7.png)
+    center 0 no-repeat;
+  background-size: cover;
+  height: 0.7466666666666667rem;
+  left: 50%;
+  position: absolute;
+  top: 6.16rem;
+  transform: translate(-50%);
+  width: 5.88rem;
+  z-index: 101;
+}
+.lottie-modal__reward-banner--dapan.data-v-8f0bfb1b {
+  top: 7.6rem;
+}
+.lottie-modal__reward-banner--error.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/bc23db02ad9ef7b27a74f221b552f90a.png)
+    center 0 no-repeat;
+  background-size: cover;
+}
+.lottie-modal__reward-banner--month.data-v-8f0bfb1b,
+.lottie-modal__reward-banner--week.data-v-8f0bfb1b {
+  top: 8.04rem;
+}
+.lottie-modal__reward-box.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  height: 2.1333333333333333rem;
+  left: 0;
+  position: absolute;
+  top: 6.88rem;
+  width: 7.466666666666667rem;
+  z-index: 103;
+}
+.lottie-modal__reward-box--gegu.data-v-8f0bfb1b {
+  top: 8.133333333333333rem;
+}
+.lottie-modal__reward-box--month.data-v-8f0bfb1b,
+.lottie-modal__reward-box--week.data-v-8f0bfb1b {
+  top: 8.653333333333334rem;
+}
+.lottie-modal__coin-icon.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/cf49595dfffef70468233fe1c87ae7cd.png)
+    0 0 no-repeat;
+  background-size: cover;
+  height: 2.1333333333333333rem;
+  left: 1.0666666666666667rem;
+  position: absolute;
+  top: 0;
+  width: 2.1333333333333333rem;
+}
+.lottie-modal__reward-num.data-v-8f0bfb1b {
+  align-items: baseline;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.6933333333333334rem;
+  left: 3.1333333333333333rem;
+  min-width: 3.3066666666666666rem;
+  position: absolute;
+  top: 0.48rem;
+}
+.lottie-modal__reward-num--cash.data-v-8f0bfb1b {
+  top: 0.72rem;
+}
+.lottie-modal__num.data-v-8f0bfb1b {
+  color: #ffe4af;
+  font-size: 0.8533333333333334rem;
+  height: 0.6933333333333334rem;
+  letter-spacing: 0;
+  line-height: 0.6933333333333334rem;
+}
+.lottie-modal__unit.data-v-8f0bfb1b {
+  color: #fff;
+  font-family: PingFangSC-Medium;
+  font-size: 0.32rem;
+  font-weight: 700;
+  height: 0.37333333333333335rem;
+  letter-spacing: 0;
+  line-height: 0.37333333333333335rem;
+}
+.lottie-modal__reward-tip.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/eff46ed4362bc9d2f891e13659edf84b.png)
+    0 0 no-repeat;
+  background-size: cover;
+  height: 0.4266666666666667rem;
+  left: 3rem;
+  position: absolute;
+  top: 1.32rem;
+  width: 3.4rem;
+}
+.lottie-modal__reward-list.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  box-sizing: border-box;
+  height: 2.7733333333333334rem;
+  left: 0.52rem;
+  padding: 0 0 0.10666666666666667rem;
+  position: absolute;
+  top: 9.106666666666667rem;
+  width: 6.933333333333334rem;
+  z-index: 104;
+}
+.lottie-modal__list-header.data-v-8f0bfb1b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.44rem;
+  width: 100%;
+}
+.lottie-modal__list-title.data-v-8f0bfb1b {
+  color: #fff;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.32rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  margin-left: 0.21333333333333335rem;
+}
+.lottie-modal__list-subtitle.data-v-8f0bfb1b {
+  color: #fff;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.26666666666666666rem;
+  height: 0.26666666666666666rem;
+  line-height: 0.26666666666666666rem;
+  margin-left: 0.10666666666666667rem;
+  opacity: 0.8;
+}
+.lottie-modal__list-body.data-v-8f0bfb1b {
+  box-sizing: border-box;
+  height: 2.56rem;
+  left: 0;
+  overflow: hidden;
+  padding: 0 0.21333333333333335rem;
+  position: absolute;
+  top: 0.49333333333333335rem;
+  width: 6.933333333333334rem;
+}
+.lottie-modal__list-body--scroll.data-v-8f0bfb1b {
+  overflow-y: scroll;
+}
+.lottie-modal__list-body--scroll.data-v-8f0bfb1b::-webkit-scrollbar {
+  border-radius: 0.06666666666666667rem;
+  height: 0.06666666666666667rem;
+  width: 0.06666666666666667rem;
+}
+.lottie-modal__list-body--scroll.data-v-8f0bfb1b::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #ccc;
+  border-radius: 0.06666666666666667rem;
+}
+.lottie-modal__list-item.data-v-8f0bfb1b {
+  align-items: center;
+  border-bottom: 0.013333333333333334rem solid rgba(233, 235, 240, 0.3);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8533333333333334rem;
+  justify-content: space-between;
+  width: 5.733333333333333rem;
+}
+.lottie-modal__list-item--last.data-v-8f0bfb1b {
+  border-bottom: none;
+}
+.lottie-modal__item-avatar.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/7b530b32cb2584e74647247547bbb325.png)
+    0 0 no-repeat;
+  background-size: cover;
+  border-radius: 0.26666666666666666rem;
+  height: 0.5333333333333333rem;
+  margin-right: 0.32rem;
+  width: 0.5333333333333333rem;
+}
+.lottie-modal__item-text-box.data-v-8f0bfb1b {
+  flex: 2;
+  height: 0.8533333333333334rem;
+}
+.lottie-modal__item-text.data-v-8f0bfb1b {
+  color: #fff;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.32rem;
+  font-weight: 600;
+  height: 0.8533333333333334rem;
+  letter-spacing: 0;
+  line-height: 0.8533333333333334rem;
+}
+.lottie-modal__item-coin.data-v-8f0bfb1b {
+  color: #ffe4af;
+  flex: 1;
+  font-family: Helvetica;
+  font-size: 0.32rem;
+  height: 0.3333333333333333rem;
+  letter-spacing: 0;
+  line-height: 0.3333333333333333rem;
+  padding-right: 0.13333333333333333rem;
+  text-align: right;
+  text-shadow: 0 0.02666666666666667rem 0.05333333333333334rem
+    hsla(0, 0%, 100%, 0.5);
+}
+.lottie-modal__error-box.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  height: 1.44rem;
+  left: 0;
+  position: absolute;
+  top: 7.866666666666666rem;
+  width: 7.466666666666667rem;
+}
+.lottie-modal__error-box--gegu.data-v-8f0bfb1b {
+  top: 9.466666666666667rem;
+}
+.lottie-modal__error-box--short.data-v-8f0bfb1b {
+  top: 8.4rem;
+}
+.lottie-modal__error-title.data-v-8f0bfb1b {
+  color: #fff;
+  font-size: 0.56rem;
+  font-weight: 700;
+  height: 0.56rem;
+  letter-spacing: 0;
+  line-height: 0.56rem;
+  margin-bottom: 0.24rem;
+  text-align: center;
+  width: 100%;
+}
+.lottie-modal__error-tip.data-v-8f0bfb1b {
+  color: #fff;
+  font-family: SourceHanSansCN-Normal;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 1.44rem;
+  letter-spacing: 0;
+  line-height: 0.48rem;
+  margin-left: 0.4rem;
+  text-align: center;
+  width: 6.666666666666667rem;
+}
+.data-v-8f0bfb1b .lottie-modal__dapan-lottie {
+  position: absolute;
+  z-index: 100;
+}
+.lottie-modal__dapan-fenwei.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 101;
+}
+.data-v-8f0bfb1b .lottie-modal__gegu-lottie {
+  position: absolute;
+  z-index: 100;
+}
+.lottie-modal__gegu-fenwei.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 101;
+}
+.lottie-modal__gegu-list.data-v-8f0bfb1b {
+  align-items: center;
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 4.493333333333333rem;
+  justify-content: center;
+  left: 1.6533333333333333rem;
+  position: absolute;
+  top: 4.173333333333333rem;
+}
+.lottie-modal__gegu-item.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/3aec2cf90a03c8d3632663785fa1997e.png)
+    0 0 no-repeat;
+  background-size: 4.066666666666666rem 1.0666666666666667rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.37333333333333335rem;
+  font-weight: 600;
+  height: 1.0666666666666667rem;
+  letter-spacing: 0;
+  line-height: 1.0666666666666667rem;
+  margin-bottom: 0.05333333333333334rem;
+  padding-left: 1.3066666666666666rem;
+  text-align: left;
+  width: 100%;
+}
+.lottie-modal__gegu-reward-banner.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/0a403d6db59211f6b32d262591c607b7.png)
+    center 0 no-repeat;
+  background-size: cover;
+  height: 0.7466666666666667rem;
+  left: 50%;
+  top: 8.746666666666666rem;
+  transform: translate(-50%);
+  width: 5.88rem;
+  z-index: 101;
+}
+.lottie-modal__gegu-reward-banner.data-v-8f0bfb1b,
+.lottie-modal__gegu-reward-box.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  position: absolute;
+}
+.lottie-modal__gegu-reward-box.data-v-8f0bfb1b {
+  height: 2.1333333333333333rem;
+  left: 0;
+  top: 9.28rem;
+  width: 7.466666666666667rem;
+  z-index: 103;
+}
+.lottie-modal__week-lottie.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 100;
+}
+.lottie-modal__week-fenwei.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 101;
+}
+.lottie-modal__month-lottie.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 100;
+}
+.lottie-modal__month-fenwei.data-v-8f0bfb1b {
+  position: absolute;
+  z-index: 101;
+}
+.lottie-modal__action-btn.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/773c526c8552a4f19eb2717287b261d6.png);
+  background-size: cover;
+  border-radius: 0.8266666666666667rem;
+  color: #fff;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 1.6533333333333333rem;
+  left: 50%;
+  line-height: 1.3333333333333333rem;
+  text-align: center;
+  top: 13.973333333333333rem;
+  transform: translate(-50%);
+  width: 6.4rem;
+  z-index: 100;
+}
+.lottie-modal__action-btn.data-v-8f0bfb1b,
+.lottie-modal__close.data-v-8f0bfb1b {
+  animation: slide-fade-enter-8f0bfb1b 1.5s forwards;
+  position: absolute;
+}
+.lottie-modal__close.data-v-8f0bfb1b {
+  background: url(https://st.gtimg.com/design/eba633bb593942796dcdb0f815070e1a.png)
+    0 0 no-repeat;
+  background-size: cover;
+  border-radius: 0.28rem;
+  height: 0.56rem;
+  right: 1.2666666666666666rem;
+  top: 1.3333333333333333rem;
+  width: 0.56rem;
+  z-index: 200;
+}

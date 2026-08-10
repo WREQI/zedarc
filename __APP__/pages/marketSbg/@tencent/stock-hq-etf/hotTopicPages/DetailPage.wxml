@@ -1,0 +1,125 @@
+<view class="_div hot-topic-detail-page data-v-a14226bd" data-st-theme="{{S}}">
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    class="data-v-a14226bd"
+    uI="a14226bd-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="_div status-card data-v-a14226bd" wx:if="{{d}}">加载中...</view>
+  <no-data
+    bind:__l="__l"
+    class="hot-topic-detail-page__status data-v-a14226bd"
+    uI="a14226bd-1"
+    uS="{{['d']}}"
+    wx:elif="{{e}}"
+    >暂无相关数据</no-data
+  >
+  <block wx:else>
+    <image
+      alt=""
+      class="_img hot-topic-detail-page__bg data-v-a14226bd"
+      src="{{f}}"
+    ></image>
+    <view class="{{['_div','data-v-a14226bd','page-hero',m]}}">
+      <view bindtap="{{j}}" class="_div page-header data-v-a14226bd">
+        <view class="_h1 page-header__title data-v-a14226bd">{{g}}</view>
+        <view class="{{['_div','data-v-a14226bd','page-header__ratio',i]}}"
+          >{{h}}</view
+        >
+      </view>
+      <view class="_p page-desc data-v-a14226bd" wx:if="{{k}}">{{l}}</view>
+    </view>
+    <view class="_div flow-stack data-v-a14226bd">
+      <view class="_div flow-stack__item data-v-a14226bd" wx:if="{{n}}">
+        <keypoint-card
+          bind:__l="__l"
+          class="data-v-a14226bd"
+          uI="a14226bd-2"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></keypoint-card>
+      </view>
+      <view class="_div flow-stack__item data-v-a14226bd" wx:if="{{p}}">
+        <opinion-card
+          bind:__l="__l"
+          bindshowRule="{{q}}"
+          bindtoggle="{{r}}"
+          class="data-v-a14226bd"
+          uI="a14226bd-3"
+          uP="{{s}}"
+          wx:if="{{s}}"
+        ></opinion-card>
+      </view>
+      <view class="_div flow-stack__item data-v-a14226bd" wx:if="{{t}}">
+        <etf-invest-card
+          bind:__l="__l"
+          bindbuy="{{x}}"
+          bindgoDetail="{{w}}"
+          bindgoMore="{{z}}"
+          bindrankItemClick="{{A}}"
+          bindtoggle="{{y}}"
+          bindtoggleWatchlist="{{v}}"
+          class="data-v-a14226bd"
+          uI="a14226bd-4"
+          uP="{{B}}"
+          wx:if="{{B}}"
+        ></etf-invest-card>
+      </view>
+      <view class="_div footer-bar__risk-tips data-v-a14226bd"
+        >内容仅供参考，不构成投资建议。</view
+      >
+      <trust-footer
+        bind:__l="__l"
+        class="data-v-a14226bd"
+        uI="a14226bd-5"
+        wx:if="{{C}}"
+      ></trust-footer>
+    </view>
+    <semi-mask
+      bind:__l="__l"
+      bindcloseSemimask="{{G}}"
+      class="opinion-rule-sheet-modal-wrap r data-v-a14226bd"
+      uI="a14226bd-6"
+      uP="{{H}}"
+      uR="opinionRuleSheetRef"
+      uS="{{['d']}}"
+      wx:if="{{D}}"
+    >
+      <opinion-rule-sheet
+        bind:__l="__l"
+        bindclose="{{E}}"
+        class="data-v-a14226bd"
+        uI="a14226bd-7,a14226bd-6"
+      ></opinion-rule-sheet>
+    </semi-mask>
+  </block>
+  <footer-bar
+    bind:__l="__l"
+    bindask="{{J}}"
+    bindshare="{{K}}"
+    class="data-v-a14226bd"
+    uI="a14226bd-8"
+    uP="{{L}}"
+    wx:if="{{I}}"
+  ></footer-bar>
+  <root-portal class="data-v-a14226bd" enable="{{true}}" wx:if="{{M}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{N}}"
+      class="data-v-a14226bd"
+      uI="a14226bd-9"
+      uP="{{O}}"
+      wx:if="{{O}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{Q}}"
+    class="data-v-a14226bd"
+    uI="a14226bd-10"
+    uP="{{R}}"
+    wx:elif="{{P}}"
+  ></half-screen-ai-entry>
+</view>

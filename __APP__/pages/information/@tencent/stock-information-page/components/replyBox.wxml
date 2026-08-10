@@ -1,0 +1,13 @@
+<view class="{{['_div','mod-replyBox','reply','data-v-0ba4f3b5',f&&'isNewsDetail']}}">
+    <block wx:if="{{a}}">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <block wx:else>
+            <view bindtap="{{e}}" class="{{['_div','replyBox_footNew','data-v-0ba4f3b5',d]}}">
+                <view class="_div inline icon-noComment data-v-0ba4f3b5" wx:if="{{b}}"></view>
+                <view class="_div inline icon data-v-0ba4f3b5" wx:else></view>
+                <view class="_div inline data-v-0ba4f3b5">{{c}}</view>
+            </view>
+            <input class="my-input data-v-0ba4f3b5" ref="myInput"></input>
+        </block>
+    </block>
+</view>

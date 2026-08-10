@@ -1,0 +1,80 @@
+<view
+  catchtap="{{z}}"
+  class="{{['_div','data-v-941d98dd','item-search-inner','item-search',x,y]}}"
+>
+  <view class="{{['_div','data-v-941d98dd',c]}}" wx:if="{{a}}">{{b}}</view>
+  <view class="_div row-a data-v-941d98dd">
+    <view class="_div stock-col data-v-941d98dd">
+      <highlight-text
+        bind:__l="__l"
+        class="stock-name data-v-941d98dd"
+        uI="941d98dd-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></highlight-text>
+      <view class="_div etf-hold-percent data-v-941d98dd" wx:if="{{e}}"
+        >{{f}}%</view
+      >
+    </view>
+    <view class="_div stock-col data-v-941d98dd">
+      <view class="_div tag-wrapper data-v-941d98dd">
+        <view class="{{['_i','data-v-941d98dd',g]}}"></view>
+        <highlight-text
+          bind:__l="__l"
+          class="scode-code data-v-941d98dd"
+          uI="941d98dd-1"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></highlight-text>
+        <view class="_div stock-label label-gray data-v-941d98dd" wx:if="{{i}}">
+          <label class="_span stock-label-text data-v-941d98dd">退市</label>
+        </view>
+        <view
+          class="_div stock-label label-gray data-v-941d98dd"
+          wx:elif="{{j}}"
+        >
+          <label class="_span stock-label-text data-v-941d98dd">已切换</label>
+        </view>
+        <view class="_div stock-label label-gray data-v-941d98dd" wx:if="{{k}}">
+          <label class="_span stock-label-text data-v-941d98dd">场外</label>
+        </view>
+        <block wx:else>
+          <view
+            class="{{['_div','data-v-941d98dd','stock-label',label.c]}}"
+            wx:for="{{l}}"
+            wx:for-item="label"
+            wx:key="b"
+          >
+            <label class="_span stock-label-text data-v-941d98dd"
+              >{{label.a}}</label
+            >
+          </view>
+        </block>
+        <view class="_div former-name-box data-v-941d98dd" wx:if="{{m}}">
+          <label class="_span former-name-label data-v-941d98dd"
+            >｜曾用名:</label
+          >
+          <highlight-text
+            bind:__l="__l"
+            class="former-name-text data-v-941d98dd"
+            uI="941d98dd-2"
+            uP="{{n}}"
+            wx:if="{{n}}"
+          ></highlight-text>
+        </view>
+      </view>
+      <view class="_div scode-code data-v-941d98dd" wx:if="{{o}}"
+        >投资占比</view
+      >
+    </view>
+  </view>
+  <view class="{{['_div','data-v-941d98dd',r]}}" wx:if="{{p}}">{{q}}</view>
+  <view
+    class="{{['_div','data-v-941d98dd',w&&'row-b-margin-left']}}"
+    wx:if="{{s}}"
+  >
+    <view class="_div row-b data-v-941d98dd" wx:if="{{t}}">
+      <image alt="" class="_img css-added data-v-941d98dd" src="{{v}}"></image>
+    </view>
+  </view>
+</view>

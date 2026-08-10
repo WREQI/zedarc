@@ -1,0 +1,23 @@
+<view
+  catchtap="{{k}}"
+  class="{{['_div','data-v-07e0349c','etfbar-container-wrap',i,j]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div etfbar-container data-v-07e0349c">
+    <label class="_span etf-title data-v-07e0349c" wx:if="{{b}}">{{c}}</label>
+    <view class="_div etf-list data-v-07e0349c" wx:if="{{d}}">
+      <e-t-f-bar-item
+        bind:__l="__l"
+        bindtoggleAddFav="{{e}}"
+        class="data-v-07e0349c"
+        uI="07e0349c-0"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></e-t-f-bar-item>
+    </view>
+  </view>
+  <view catchtap="{{h}}" class="_div etf-buy-btn data-v-07e0349c" wx:if="{{g}}">
+    <label class="_span data-v-07e0349c">买一笔</label>
+  </view>
+</view>
+<view class="_div module-blank data-v-07e0349c" wx:else></view>

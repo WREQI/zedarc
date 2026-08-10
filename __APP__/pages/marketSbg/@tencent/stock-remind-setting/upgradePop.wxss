@@ -1,0 +1,78 @@
+.stock-remind-setting .pop-mask.data-v-fb5fb477 {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.stock-remind-setting .pop-content-wrap.data-v-fb5fb477 {
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  bottom: 0;
+  left: 0;
+  min-height: 8.213333333333333rem;
+  overflow: hidden;
+  padding-bottom: calc(0.26666666666666666rem + env(safe-area-inset-bottom));
+  position: fixed;
+  right: 0;
+  z-index: 5000;
+}
+.stock-remind-setting .pop-content-wrap .nav-bar.data-v-fb5fb477 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3866666666666667rem;
+  justify-content: center;
+}
+.stock-remind-setting .pop-content-wrap .nav-bar .title.data-v-fb5fb477 {
+  color: var(--color-heavygray);
+  font-size: 0.48rem;
+  font-weight: 500;
+  line-height: 0.6666666666666666rem;
+}
+.stock-remind-setting
+  .pop-content-wrap
+  .nav-bar
+  .close-container.data-v-fb5fb477 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.2rem;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0.13333333333333333rem;
+  width: 2rem;
+}
+.stock-remind-setting
+  .pop-content-wrap
+  .nav-bar
+  .close-container
+  .close-btn.data-v-fb5fb477 {
+  height: 0.26666666666666666rem;
+  margin-right: 0.32rem;
+  width: 0.26666666666666666rem;
+}
+.stock-remind-setting .pop-content-wrap .remind-save-btn.data-v-fb5fb477 {
+  background-color: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  line-height: 0.5866666666666667rem;
+  margin: 0.4266666666666667rem 0.32rem 0;
+  padding: 0.29333333333333333rem 0.5333333333333333rem;
+  text-align: center;
+}
+.stock-remind-setting
+  .pop-content-wrap
+  .remind-save-btn.profession.data-v-fb5fb477 {
+  background-color: #3077ec;
+}
+.stock-remind-setting .pop-content-wrap .setting-tips.data-v-fb5fb477 {
+  color: #4774b3;
+  font-size: 0.37333333333333335rem;
+  margin-top: 0.4266666666666667rem;
+}

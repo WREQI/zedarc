@@ -1,0 +1,16 @@
+<view class="_div panel-area data-v-0d54f8bb">
+  <view class="{{['_div','data-v-0d54f8bb',c]}}">
+    <view
+      catchtap="{{item.d}}"
+      class="{{['_div','data-v-0d54f8bb',b,item.b]}}"
+      data-name="{{item.c}}"
+      wx:for="{{a}}"
+      wx:key="a"
+    ></view>
+  </view>
+  <view
+    catchtap="{{d}}"
+    class="_div delete_btn data-v-0d54f8bb"
+    data-name="del"
+  ></view>
+</view>

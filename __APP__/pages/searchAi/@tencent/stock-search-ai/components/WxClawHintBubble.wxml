@@ -1,0 +1,15 @@
+<view catchtap="{{d}}" class="_div wx-claw-hint-bubble data-v-f9aeef27">
+  <view
+    class="{{['_div','wx-claw-hint-bubble__arrow','data-v-f9aeef27',a&&'wx-claw-hint-bubble__arrow--xcx']}}"
+    style="{{b}}"
+  ></view>
+  <view class="_div wx-claw-hint-bubble__content data-v-f9aeef27">
+    <label class="_span wx-claw-hint-bubble__text data-v-f9aeef27"
+      >现在支持绑定到微信啦～</label
+    >
+    <view
+      catchtap="{{c}}"
+      class="_div wx-claw-hint-bubble__close data-v-f9aeef27"
+    ></view>
+  </view>
+</view>

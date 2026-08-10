@@ -1,0 +1,66 @@
+<view class="{{['_div','data-v-e18c9d77','stock-item',p]}}" wx:if="{{a}}">
+  <title-block
+    bind:__l="__l"
+    class="{{['data-v-e18c9d77',e]}}"
+    uI="e18c9d77-0"
+    uP="{{f}}"
+    uS="{{['d']}}"
+    wx:if="{{b}}"
+  >
+    <view
+      bindtap="{{d}}"
+      class="_div stock-item-title-right title-jjfx data-v-e18c9d77"
+      wx:if="{{c}}"
+    >
+      <label class="_span stock-item-title-right-text data-v-e18c9d77"
+        >了解抢权配售</label
+      >
+      <image
+        class="_img stock-item-title-right-tip data-v-e18c9d77"
+        src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+      ></image>
+    </view>
+  </title-block>
+  <view class="{{['_div','data-v-e18c9d77',j]}}" wx:if="{{g}}">
+    <view class="{{['_div','data-v-e18c9d77',i]}}">
+      <view class="_div data-v-e18c9d77" wx:for="{{h}}" wx:key="f">
+        <stock-item-card
+          bind:__l="__l"
+          bindshowTeachPop="{{item.b}}"
+          class="data-v-e18c9d77"
+          key="{{item.a}}"
+          uI="{{item.c}}"
+          uP="{{item.d}}"
+          wx:if="{{item.d}}"
+        ></stock-item-card>
+        <view class="_div spec-line data-v-e18c9d77" wx:if="{{item.e}}"></view>
+      </view>
+    </view>
+  </view>
+  <block wx:else>
+    <stock-item-title
+      bind:__l="__l"
+      bindshowTeachPop="{{l}}"
+      class="stock-item-list-title data-v-e18c9d77"
+      uI="e18c9d77-2"
+      uP="{{m}}"
+      wx:if="{{k}}"
+    ></stock-item-title>
+    <block wx:if="{{n}}">
+      <view class="_div data-v-e18c9d77" wx:for="{{o}}" wx:key="e">
+        <stock-item-cell
+          bind:__l="__l"
+          class="data-v-e18c9d77"
+          key="{{item.a}}"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></stock-item-cell>
+        <view
+          class="_div spec-line-else data-v-e18c9d77"
+          wx:if="{{item.d}}"
+        ></view>
+      </view>
+    </block>
+  </block>
+</view>

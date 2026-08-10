@@ -1,0 +1,19 @@
+<view
+  class="{{['_div','data-v-f4b9004b','close-monitoring-pop-wrapper',e]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div pop-mask data-v-f4b9004b"></view>
+  <view class="_div popup-container data-v-f4b9004b">
+    <view class="_div txt align-center data-v-f4b9004b"
+      >是否关闭自选智能盯盘</view
+    >
+    <view
+      class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-f4b9004b"
+    >
+      <view catchtap="{{b}}" class="_div btn cancel data-v-f4b9004b">取消</view>
+      <view catchtap="{{d}}" class="{{['_div','data-v-f4b9004b','btn','ok',c]}}"
+        >确定</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,75 @@
+@import "/app.wxss";
+.bio-protocol-container.data-v-35690106 {
+  padding: 0.426667rem 0.32rem;
+}
+.bio-protocol-container .bio-protocol-header.data-v-35690106 {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.bio-protocol-container .bio-protocol-title.data-v-35690106 {
+  color: #262e40;
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+}
+[data-theme="dark"]
+  .bio-protocol-container
+  .bio-protocol-title.data-v-35690106 {
+  color: #f0f1f5;
+}
+.bio-protocol-container .bio-protocol-back.data-v-35690106 {
+  background-image: url(https://st.gtimg.com/design/712ecf9d6721d370b6f7d3327bed514c.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.bio-protocol-container .bio-protocol-closebg.data-v-35690106 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.bio-protocol-container .bio-protocol-content.data-v-35690106 {
+  color: #475166;
+  font-size: 0.426667rem;
+  line-height: 0.64rem;
+  margin-top: 0.746667rem;
+}
+[data-theme="dark"]
+  .bio-protocol-container
+  .bio-protocol-content.data-v-35690106 {
+  color: #a7b0c4;
+}
+.bio-protocol-button-container.data-v-35690106 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.64rem;
+}
+.bio-protocol-button-container .bio-protocol-cancel-button.data-v-35690106,
+.bio-protocol-button-container .bio-protocol-confirm-button.data-v-35690106 {
+  -webkit-box-flex: 1;
+  border: 0.026667rem solid var(--color-primary-1);
+  border-radius: 0.106667rem;
+  flex: 1;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 1.12rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.bio-protocol-button-container .bio-protocol-cancel-button.data-v-35690106 {
+  color: var(--color-primary-1);
+}
+.bio-protocol-button-container .bio-protocol-confirm-button.data-v-35690106 {
+  background-color: var(--color-primary-1);
+  color: #fff;
+  margin-left: 0.32rem;
+}

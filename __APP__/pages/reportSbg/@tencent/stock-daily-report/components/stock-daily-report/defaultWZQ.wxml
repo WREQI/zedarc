@@ -1,0 +1,402 @@
+<view
+  bindtap="{{be}}"
+  class="{{['_div','data-v-45405124','daily-container',bd]}}"
+  ref="container"
+>
+  <root-portal class="data-v-45405124" enable="{{true}}" wx:if="{{a}}">
+    <view
+      class="{{['_div','daily-tabs-fixed','flex','flex-align-center','flex-justify-between','data-v-45405124',f]}}"
+      data-st-theme="{{g}}"
+      ref="tabs2"
+    >
+      <tab
+        bind:__l="__l"
+        bindstatReport="{{b}}"
+        bindsubscribe="{{d}}"
+        bindtriggerFold="{{c}}"
+        class="data-v-45405124"
+        uI="45405124-0"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></tab>
+    </view>
+  </root-portal>
+  <view class="_div list-wrapper data-v-45405124" ref="listWrapper">
+    <view
+      class="_div list-content data-v-45405124"
+      ref="listContent"
+      wx:if="{{h}}"
+    >
+      <view
+        class="_div daily-tabs flex flex-align-center flex-justify-between data-v-45405124"
+        id="tabs"
+        ref="tabs"
+      >
+        <tab
+          bind:__l="__l"
+          bindstatReport="{{i}}"
+          bindsubscribe="{{k}}"
+          bindtriggerFold="{{j}}"
+          class="data-v-45405124"
+          uI="45405124-1"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></tab>
+      </view>
+      <view
+        class="{{['_div','base-content','module-sshq','data-v-45405124',A]}}"
+        id="sshq"
+        ref="sshq"
+        wx:if="{{m}}"
+      >
+        <base-date
+          bind:__l="__l"
+          class="data-v-45405124"
+          uI="45405124-2"
+          uP="{{n}}"
+          wx:if="{{n}}"
+        ></base-date>
+        <view
+          class="_div header-guide data-v-45405124"
+          id="headerGuide"
+          ref="headerGuide"
+        >
+          <view class="_div data-v-45405124">
+            <view class="_div header-guide-text data-v-45405124">{{o}}</view>
+            <view class="_div header-guide-sub data-v-45405124">
+              <image
+                alt=""
+                class="_img daily-img data-v-45405124"
+                src="https://st.gtimg.com/design/1cee3b3d300ce80a9930b49ee6afc979.png"
+              ></image>
+              <label class="_span data-v-45405124">解读沪深港美大势</label>
+            </view>
+          </view>
+          <view class="_div header-guide-right data-v-45405124">
+            <subscribe-btn
+              bind:__l="__l"
+              bindsubscribe="{{q}}"
+              class="r data-v-45405124"
+              uI="45405124-3"
+              uP="{{r}}"
+              uR="subscribeBtn"
+              wx:if="{{r}}"
+            ></subscribe-btn>
+            <view class="_div header-guide-count data-v-45405124"
+              >已有{{s}}万人订阅</view
+            >
+          </view>
+        </view>
+        <view class="_div sshq-content data-v-45405124" wx:if="{{t}}">
+          <sshq
+            bind:__l="__l"
+            bindgotoHq="{{v}}"
+            class="data-v-45405124"
+            uI="45405124-4"
+            uP="{{w}}"
+            wx:if="{{w}}"
+          ></sshq>
+          <guess-rise-fall-mod
+            bind:__l="__l"
+            bindczdReport="{{x}}"
+            bindshowMyToast="{{y}}"
+            class="daily-czd-wrap data-v-45405124"
+            uI="45405124-5"
+            uP="{{z}}"
+            wx:if="{{z}}"
+          ></guess-rise-fall-mod>
+        </view>
+      </view>
+      <view
+        class="_div base-content module-agsp data-v-45405124"
+        id="agsp"
+        ref="agsp"
+        wx:if="{{B}}"
+      >
+        <noon-report
+          bind:__l="__l"
+          bindhandleTriggerAgspDetail="{{D}}"
+          class="r data-v-45405124"
+          uI="45405124-6"
+          uP="{{E}}"
+          uR="agspContent"
+          wx:if="{{E}}"
+        ></noon-report>
+        <related-stock
+          bind:__l="__l"
+          class="related-stock r data-v-45405124"
+          uI="45405124-7"
+          uP="{{G}}"
+          uR="relatedStockRef"
+          wx:if="{{G}}"
+        ></related-stock>
+      </view>
+      <view
+        class="_div base-content module-zxfx zxfx data-v-45405124"
+        id="zxfx"
+        ref="zxfx"
+        wx:if="{{H}}"
+      >
+        <base-title
+          bind:__l="__l"
+          class="data-v-45405124"
+          uI="45405124-8"
+          uP="{{I}}"
+          wx:if="{{I}}"
+        ></base-title>
+        <view class="_div content content-red data-v-45405124">
+          <view class="_div com-gpdt data-v-45405124">
+            <view class="_div zxfx-flex data-v-45405124" wx:if="{{J}}">
+              <view class="_div no-stock data-v-45405124">
+                <view bindtap="{{K}}" class="_div btn data-v-45405124"
+                  >添加自选股</view
+                >
+                <view class="_div info data-v-45405124"
+                  >跟踪自选新闻动态与风险分析</view
+                >
+              </view>
+            </view>
+            <block wx:elif="{{L}}">
+              <zxfxpm-list
+                bind:__l="__l"
+                bindstatReport="{{N}}"
+                class="data-v-45405124"
+                uI="45405124-9"
+                uP="{{O}}"
+                wx:if="{{M}}"
+              ></zxfxpm-list>
+              <zxgpdt-list
+                bind:__l="__l"
+                bindviewStockDetail="{{P}}"
+                class="data-v-45405124"
+                uI="45405124-10"
+                uP="{{Q}}"
+                wx:if="{{Q}}"
+              ></zxgpdt-list>
+            </block>
+          </view>
+          <view class="_div com-zxfx data-v-45405124" wx:if="{{R}}">
+            <view class="_div zxfx-flex data-v-45405124" wx:if="{{S}}">
+              <view
+                class="_div sub-title flex flex-justify-between flex-align-center data-v-45405124"
+              >
+                <view class="_div sub-title-desc data-v-45405124"
+                  >我的自选风险分析</view
+                >
+                <view
+                  bindtap="{{T}}"
+                  class="_div sub-title-right data-v-45405124"
+                  >查看更多</view
+                >
+              </view>
+              <view class="_div zx-summary data-v-45405124" wx:if="{{U}}">
+                <view class="_div data-v-45405124">{{V}}</view>
+              </view>
+              <zxfxfx-list
+                bind:__l="__l"
+                bindchangeZXFXItemRisk="{{X}}"
+                bindviewStockDetail="{{Y}}"
+                class="data-v-45405124"
+                uI="45405124-11"
+                uP="{{Z}}"
+                wx:if="{{W}}"
+              ></zxfxfx-list>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        class="_div base-content data-v-45405124"
+        id="zjdx"
+        ref="zjdx"
+        wx:if="{{aa}}"
+      >
+        <zjrd
+          bind:__l="__l"
+          bindgotoStrategy="{{ad}}"
+          bindonFundPlateClick="{{ab}}"
+          bindstatReport="{{ae}}"
+          bindviewStockDetail="{{ac}}"
+          class="data-v-45405124"
+          uI="45405124-12"
+          uP="{{af}}"
+          wx:if="{{af}}"
+        ></zjrd>
+      </view>
+      <view
+        class="_div base-content module-tcrd data-v-45405124"
+        id="tcrd"
+        ref="tcrd"
+        wx:if="{{ag}}"
+      >
+        <tcrd-list
+          bind:__l="__l"
+          bindstatReport="{{ai}}"
+          bindviewStockDetail="{{ah}}"
+          class="data-v-45405124"
+          uI="45405124-13"
+          uP="{{aj}}"
+          wx:if="{{aj}}"
+        ></tcrd-list>
+      </view>
+      <view
+        class="_div base-content data-v-45405124"
+        id="rmzb"
+        ref="rmzb"
+        wx:if="{{ak}}"
+      >
+        <base-title
+          bind:__l="__l"
+          class="data-v-45405124"
+          uI="45405124-14"
+          uP="{{al}}"
+          wx:if="{{al}}"
+        ></base-title>
+        <live-card
+          bind:__l="__l"
+          bindreserve="{{an}}"
+          bindtapLiveCard="{{am}}"
+          class="rmzb-content-live data-v-45405124"
+          style="margin-bottom: 0"
+          uI="45405124-15"
+          uP="{{ao}}"
+          wx:if="{{ao}}"
+        ></live-card>
+        <subscribe-wx-msg-bar
+          bind:__l="__l"
+          bindcloseSubscribeBar="{{ar}}"
+          bindonSubscribe="{{aq}}"
+          class="rmzb-content-subscribe data-v-45405124"
+          uI="45405124-16"
+          uP="{{as}}"
+          wx:if="{{ap}}"
+        ></subscribe-wx-msg-bar>
+      </view>
+      <view
+        class="_div base-content module-sqry data-v-45405124"
+        id="sqry"
+        ref="sqry"
+        wx:if="{{at}}"
+      >
+        <sqry-list
+          bind:__l="__l"
+          bindstatBrowReport="{{ay}}"
+          bindstatReport="{{ax}}"
+          bindviewCommentDetail="{{aw}}"
+          bindviewStockDetail="{{av}}"
+          class="data-v-45405124"
+          uI="45405124-17"
+          uP="{{az}}"
+          wx:if="{{az}}"
+        ></sqry-list>
+      </view>
+      <view
+        class="_div base-content module-gznhg data-v-45405124"
+        id="gznhg"
+        ref="gznhg"
+        wx:if="{{aA}}"
+      >
+        <guo-zhai
+          bind:__l="__l"
+          class="data-v-45405124"
+          uI="45405124-18"
+          uP="{{aB}}"
+          wx:if="{{aB}}"
+        ></guo-zhai>
+      </view>
+      <view
+        class="_div base-content module-jryw data-v-45405124"
+        id="jryw"
+        ref="jryw"
+        wx:if="{{aC}}"
+      >
+        <normal-content
+          bind:__l="__l"
+          bindonContentClick="{{aF}}"
+          class="r data-v-45405124"
+          uI="45405124-19"
+          uP="{{aG}}"
+          uR="jrywContent"
+          wx:if="{{aD}}"
+        ></normal-content>
+        <view
+          class="_div jryw-check-all sub-title flex flex-align-center flex-justify-center data-v-45405124"
+          wx:if="{{aH}}"
+        >
+          <view bindtap="{{aI}}" class="_div sub-title-right data-v-45405124"
+            >查看全部要闻</view
+          >
+        </view>
+      </view>
+      <view
+        class="_div base-content module-hsyp data-v-45405124"
+        id="hsyp"
+        ref="hsyp"
+        wx:if="{{aJ}}"
+      >
+        <normal-content
+          bind:__l="__l"
+          bindonContentClick="{{aM}}"
+          class="r data-v-45405124"
+          uI="45405124-20"
+          uP="{{aN}}"
+          uR="hsypContent"
+          wx:if="{{aK}}"
+        ></normal-content>
+      </view>
+      <view
+        class="_div module-sqpl data-v-45405124"
+        id="sqpl"
+        ref="sqpl"
+        wx:if="{{aO}}"
+      >
+        <view class="_div item-title new-comments-title-wrap data-v-45405124">
+          <label class="_span item-title-span data-v-45405124">最新评论</label>
+          <view bindtap="{{aP}}" class="_div item-title-button data-v-45405124"
+            >写评论</view
+          >
+        </view>
+        <stock-list
+          bind:__l="__l"
+          bindonPutComment="{{aR}}"
+          bindshowProfilePop="{{aS}}"
+          class="r data-v-45405124"
+          uI="45405124-21"
+          uP="{{aT}}"
+          uR="comment"
+          wx:if="{{aT}}"
+        ></stock-list>
+        <view
+          catchtap="{{aU}}"
+          class="{{['_div','data-v-45405124','list-bottom-bar']}}"
+        >
+          <label class="_span text data-v-45405124">全部讨论</label>
+          <view class="_div icon data-v-45405124"></view>
+        </view>
+      </view>
+      <half-editor
+        bind:__l="__l"
+        bindonHide="{{aX}}"
+        class="r data-v-45405124"
+        uI="45405124-22"
+        uP="{{aY}}"
+        uR="halfEditor"
+        wx:if="{{aV}}"
+      ></half-editor>
+      <view class="_div module-footer data-v-45405124">
+        <view class="_p info data-v-45405124" wx:for="{{aZ}}" wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <follow-guide
+    bind:__l="__l"
+    bindcancel="{{ba}}"
+    bindconfirm="{{bb}}"
+    class="data-v-45405124"
+    uI="45405124-23"
+    uP="{{bc}}"
+    wx:if="{{bc}}"
+  ></follow-guide>
+</view>

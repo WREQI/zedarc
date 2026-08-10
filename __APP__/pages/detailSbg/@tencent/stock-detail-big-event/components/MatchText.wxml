@@ -1,0 +1,25 @@
+<view class="_div data-v-89f67de2">
+  <view class="_div match-text data-v-89f67de2" wx:if="{{a}}"
+    >{{b}}<label
+      bindtap="{{e}}"
+      class="_span highlight data-v-89f67de2"
+      wx:if="{{c}}"
+      >{{d}}</label
+    >{{f}}<skip-deatil
+      bind:__l="__l"
+      class="data-v-89f67de2"
+      uI="89f67de2-0"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></skip-deatil>
+  </view>
+  <view class="_div match-text data-v-89f67de2" wx:else
+    >{{i}}<skip-deatil
+      bind:__l="__l"
+      class="data-v-89f67de2"
+      uI="89f67de2-1"
+      uP="{{k}}"
+      wx:if="{{j}}"
+    ></skip-deatil>
+  </view>
+</view>

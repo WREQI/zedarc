@@ -1,0 +1,64 @@
+<view class="_div menu-box data-v-09b75a3d">
+  <view
+    class="{{['_div','scroll-area','data-v-09b75a3d',o&&'scroll-area-black']}}"
+  >
+    <view
+      catchtap="{{c}}"
+      class="{{['_div','data-v-09b75a3d','menu-content',b]}}"
+      wx:if="{{a}}"
+    >
+      <label class="_span icon icon-draw data-v-09b75a3d"></label>
+      <label class="_span icon-text data-v-09b75a3d">画线工具</label>
+    </view>
+    <view
+      catchtap="{{f}}"
+      class="{{['_div','data-v-09b75a3d','menu-content',e]}}"
+      wx:if="{{d}}"
+    >
+      <label class="_span icon icon-chip data-v-09b75a3d"></label>
+      <label class="_span icon-text data-v-09b75a3d">筹码分布</label>
+    </view>
+    <view
+      catchtap="{{i}}"
+      class="{{['_div','data-v-09b75a3d','menu-content',h&&'curr']}}"
+      wx:if="{{g}}"
+    >
+      <label class="_span icon icon-area data-v-09b75a3d"></label>
+      <label class="_span icon-text data-v-09b75a3d">区间统计</label>
+    </view>
+    <view class="_div item-wrapper data-v-09b75a3d" wx:if="{{j}}">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','item','data-v-09b75a3d',item.c&&'curr']}}"
+        wx:for="{{k}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+    <view class="_div line data-v-09b75a3d" wx:if="{{l}}"></view>
+    <view class="_div item-wrapper data-v-09b75a3d">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','item','data-v-09b75a3d',item.c&&'curr']}}"
+        wx:for="{{m}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+    <view class="_div line data-v-09b75a3d"></view>
+    <view class="_div item-wrapper data-v-09b75a3d">
+      <view
+        bindtap="{{item.e}}"
+        class="{{['_div','item','data-v-09b75a3d',item.d&&'curr']}}"
+        wx:for="{{n}}"
+        wx:key="c"
+      >
+        <view class="_div rally-content data-v-09b75a3d" wx:if="{{item.a}}">
+          <view class="_div data-v-09b75a3d">反弹指数</view>
+          <view class="_div sub-text data-v-09b75a3d">（择时秘技）</view>
+        </view>
+        <block wx:else>{{item.b}}</block>
+      </view>
+    </view>
+  </view>
+</view>

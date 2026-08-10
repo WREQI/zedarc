@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hover-wrapper": "./morning-report-card/component/HoverWrapper",
+    "follow-guide": "./morning-report-card/component/followGuide",
+    "speech-control-panel": "./morning-report-card/speech/SpeechControlPanel",
+    "news-brief-content": "./morning-report-card/content",
+    "news-brief-header": "./morning-report-card/header",
+    "half-screen-ai-entry": "../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry"
+  },
+  "componentPlaceholder": { "half-screen-ai-entry": "view" }
+}

@@ -1,0 +1,103 @@
+<view class="_div data-v-596c3425">
+  <view
+    catchtap="{{j}}"
+    catchtouchmove="{{i}}"
+    class="_div magic-nine-mask-wrapper data-v-596c3425"
+    wx:if="{{a}}"
+  >
+    <view catchtap="{{h}}" class="_div magic-nine-popup data-v-596c3425">
+      <image
+        catchtap="{{b}}"
+        class="_img magic-nine-close data-v-596c3425"
+        src="https://st.gtimg.com/design/01a158c30bdf5b12e614d1d6d15de8e1.svg"
+      ></image>
+      <image class="_img magic-nine-image data-v-596c3425" src="{{c}}"></image>
+      <view class="_div magic-nine-right data-v-596c3425">
+        <view class="_div magic-nine-title-wrapper data-v-596c3425">
+          <view class="_div magic-nine-title data-v-596c3425">神奇九转</view>
+          <view class="_div magic-nine-tag data-v-596c3425">中短线</view>
+          <view class="_div magic-nine-tag data-v-596c3425">技术面</view>
+          <view class="_div magic-nine-tag data-v-596c3425">回测胜率80%</view>
+        </view>
+        <view class="_div magic-nine-intro data-v-596c3425"
+          >发现个股拐点，把握投资机会</view
+        >
+        <view bindtap="{{e}}" class="_div magic-nine-tip data-v-596c3425">
+          <label class="_span data-v-596c3425">查看使用攻略</label>
+          <image
+            class="_img magic-nine-tip-arrow data-v-596c3425"
+            src="{{d}}"
+          ></image>
+        </view>
+        <image
+          bindtap="{{g}}"
+          class="_img magic-nine-button data-v-596c3425"
+          src="{{f}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+  <modal
+    bind:__l="__l"
+    bindonRight="{{l}}"
+    class="data-v-596c3425"
+    uI="596c3425-0"
+    uP="{{m}}"
+    uS="{{['d']}}"
+    wx:if="{{k}}"
+  >
+    <view class="_div notice-modal-content data-v-596c3425"
+      >此工具服务由合作券商提供。指标基于历史数据，过往表现并不代表未来趋势，接受本服务的投资者，请注意投资风险，据此操作，风险自担。</view
+    >
+  </modal>
+  <modal
+    bind:__l="__l"
+    bindonLeft="{{r}}"
+    bindonRight="{{s}}"
+    class="data-v-596c3425"
+    uI="596c3425-1"
+    uP="{{t}}"
+    uS="{{['d']}}"
+    wx:if="{{n}}"
+  >
+    <view class="_div trade-line-modal-content data-v-596c3425">
+      <view class="_div content data-v-596c3425">
+        <view class="_div tag tag-warn data-v-596c3425"></view>
+        <view class="_div text data-v-596c3425"
+          >蓝色信号：预警信号，注意短期震荡</view
+        >
+      </view>
+      <view class="_div content data-v-596c3425">
+        <view class="_div tag tag-rise data-v-596c3425"></view>
+        <view class="_div text data-v-596c3425"
+          >红色信号：关注信号，发现操作机会</view
+        >
+      </view>
+      <view class="_div content data-v-596c3425">
+        <view class="_div tag tag-drop data-v-596c3425"></view>
+        <view class="_div text data-v-596c3425"
+          >绿色信号：观望信号，警惕规避风险</view
+        >
+      </view>
+      <view class="_div content data-v-596c3425">
+        <view class="_div image-wrapper data-v-596c3425">
+          <image class="_img image data-v-596c3425" src="{{o}}"></image>
+        </view>
+        <view class="_div text data-v-596c3425"
+          >关注期K线全红，<view class="bold drop data-v-596c3425"
+            >涨幅{{p}}0</view
+          >时空心</view
+        >
+      </view>
+      <view class="_div content data-v-596c3425">
+        <view class="_div image-wrapper data-v-596c3425">
+          <image class="_img image data-v-596c3425" src="{{q}}"></image>
+        </view>
+        <view class="_div text data-v-596c3425"
+          >观望期K线全绿，<view class="bold rise data-v-596c3425">涨幅>0</view
+          >时空心</view
+        >
+      </view>
+    </view>
+  </modal>
+</view>

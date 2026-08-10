@@ -1,0 +1,77 @@
+<view class="text-selection-overlay-mp data-v-4d6ba669" wx:if="{{a}}">
+  <view
+    class="text-selection-overlay-mp__highlight data-v-4d6ba669"
+    style="{{'left:'+rect.b+';'+'top:'+rect.c+';'+'width:'+rect.d+';'+'height:'+rect.e}}"
+    wx:for="{{b}}"
+    wx:for-item="rect"
+    wx:key="a"
+  ></view>
+  <view
+    catchtouchcancel="{{h}}"
+    catchtouchend="{{g}}"
+    catchtouchmove="{{f}}"
+    catchtouchstart="{{e}}"
+    class="text-selection-overlay-mp__handle text-selection-overlay-mp__handle--left data-v-4d6ba669"
+    style="{{d}}"
+    wx:if="{{c}}"
+  >
+    <view class="text-selection-overlay-mp__handle-icon data-v-4d6ba669"></view>
+  </view>
+  <view
+    catchtouchcancel="{{n}}"
+    catchtouchend="{{m}}"
+    catchtouchmove="{{l}}"
+    catchtouchstart="{{k}}"
+    class="text-selection-overlay-mp__handle text-selection-overlay-mp__handle--right data-v-4d6ba669"
+    style="{{j}}"
+    wx:if="{{i}}"
+  >
+    <view class="text-selection-overlay-mp__handle-icon data-v-4d6ba669"></view>
+  </view>
+  <view
+    catchtap="{{s}}"
+    class="text-selection-overlay-mp__menu data-v-4d6ba669"
+    style="{{r}}"
+    wx:if="{{o}}"
+  >
+    <view class="text-selection-overlay-mp__menu-content data-v-4d6ba669">
+      <view
+        class="text-selection-overlay-mp__menu-item data-v-4d6ba669"
+        wx:for="{{p}}"
+        wx:key="g"
+      >
+        <button
+          catchtouchend="{{item.d}}"
+          class="text-selection-overlay-mp__menu-cell text-selection-overlay-mp__menu-share-btn data-v-4d6ba669"
+          data-share-text="{{item.c}}"
+          hoverClass="none"
+          openType="share"
+          plain="true"
+          wx:if="{{item.a}}"
+        >
+          <text class="text-selection-overlay-mp__menu-label data-v-4d6ba669"
+            >{{item.b}}</text
+          >
+        </button>
+        <view
+          catchtouchend="{{item.f}}"
+          class="text-selection-overlay-mp__menu-cell data-v-4d6ba669"
+          wx:else
+        >
+          <text class="text-selection-overlay-mp__menu-label data-v-4d6ba669"
+            >{{item.e}}</text
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      class="text-selection-overlay-mp__menu-arrow data-v-4d6ba669"
+      style="{{q}}"
+    ></view>
+  </view>
+  <view
+    bindtouchstart="{{v}}"
+    class="text-selection-overlay-mp__dismiss-mask data-v-4d6ba669"
+    wx:if="{{t}}"
+  ></view>
+</view>

@@ -1,0 +1,42 @@
+<view catchtap="{{w}}" class="_div mod-show-comment-item data-v-ca1a8be2">
+  <short-content
+    bind:__l="__l"
+    bindinitShowMore="{{s}}"
+    bindtapImage="{{t}}"
+    class="data-v-ca1a8be2"
+    uI="ca1a8be2-0"
+    uP="{{v}}"
+    uS="{{['start']}}"
+    wx:if="{{v}}"
+  >
+    <label class="{{['_span','data-v-ca1a8be2','start',r]}}" slot="start">
+      <label
+        catchtap="{{e}}"
+        class="{{['_span','data-v-ca1a8be2','b',c,d]}}"
+        wx:if="{{a}}"
+        >{{b}}</label
+      >
+      <label class="{{['_span','user-mark','data-v-ca1a8be2',h]}}" wx:if="{{f}}"
+        >{{g}}</label
+      >
+      <block wx:if="{{i}}">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <block wx:else>
+          <label class="_span reply data-v-ca1a8be2">回复</label>
+          <label
+            catchtap="{{n}}"
+            class="{{['_span','data-v-ca1a8be2','b',l,m]}}"
+            wx:if="{{j}}"
+            >{{k}}</label
+          >
+          <label
+            class="{{['_span','user-mark','data-v-ca1a8be2',q]}}"
+            wx:if="{{o}}"
+            >{{p}}</label
+          >
+        </block>
+      </block>
+      <label class="_span maohao data-v-ca1a8be2">:</label>
+    </label>
+  </short-content>
+</view>

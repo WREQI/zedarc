@@ -1,0 +1,19 @@
+<view class="_div editor-page data-v-8638400b" wx:if="{{a}}">
+  <view catchtap="{{b}}" class="_div mask data-v-8638400b"></view>
+  <view
+    bindtap="{{j}}"
+    class="{{['_div','data-v-8638400b','editor-wrap',g]}}"
+    style="{{'top:'+h+';'+'left:'+0+';'+'right:'+0+';'+'bottom:'+0+';'+'padding-top:'+i}}"
+  >
+    <main-element
+      bind:__l="__l"
+      bindcloseEditor="{{c}}"
+      bindcommitComment="{{d}}"
+      bindeditorFocus="{{e}}"
+      class="data-v-8638400b"
+      uI="8638400b-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></main-element>
+  </view>
+</view>

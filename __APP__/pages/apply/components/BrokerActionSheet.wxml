@@ -1,0 +1,111 @@
+<view
+  bindtap="{{o}}"
+  class="{{['_div','select-broker-sheet-wrapper','data-v-14643a9d',n]}}"
+>
+  <view catchtap="{{m}}" class="_div action-sheet data-v-14643a9d">
+    <view class="_div sheet-header data-v-14643a9d">
+      <label
+        bindtap="{{b}}"
+        class="_span left-arrow data-v-14643a9d"
+        wx:if="{{a}}"
+      ></label>
+      <label
+        bindtap="{{c}}"
+        class="_span icon-close-bg data-v-14643a9d"
+      ></label>
+      <label class="_span title data-v-14643a9d">{{d}}</label>
+    </view>
+    <view class="_div first-menu menu data-v-14643a9d" wx:if="{{e}}">
+      <view
+        catchtap="{{item.e}}"
+        class="_div menu-item data-v-14643a9d"
+        wx:for="{{f}}"
+        wx:key="d"
+      >
+        <view class="_div menu-item-left text data-v-14643a9d">{{item.a}}</view>
+        <view
+          class="_div menu-item-right text disable data-v-14643a9d"
+          wx:if="{{item.b}}"
+          >{{item.c}}</view
+        >
+        <view
+          class="_div menu-item-right right-arrow-icon data-v-14643a9d"
+          wx:else
+        ></view>
+      </view>
+    </view>
+    <view class="_div second-menu menu open data-v-14643a9d" wx:if="{{g}}">
+      <view
+        catchtap="{{item.g}}"
+        class="_div menu-item data-v-14643a9d"
+        wx:for="{{h}}"
+        wx:key="f"
+      >
+        <view class="_div menu-item-left data-v-14643a9d">
+          <broker-logo
+            bind:__l="__l"
+            class="broker-logo data-v-14643a9d"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></broker-logo>
+          <view class="_div menu-item-left-vertical data-v-14643a9d">
+            <view class="_div text data-v-14643a9d">
+              <label class="_span data-v-14643a9d">{{item.c}}</label>
+              <label
+                class="_span state-maintain data-v-14643a9d"
+                wx:if="{{item.d}}"
+                >(维护中)</label
+              >
+            </view>
+            <view class="_div desc data-v-14643a9d">{{item.e}}</view>
+          </view>
+        </view>
+        <view class="_div menu-item-right data-v-14643a9d">
+          <view class="_div right-arrow-icon data-v-14643a9d"></view>
+        </view>
+      </view>
+      <view class="_div more-desc data-v-14643a9d" wx:if="{{i}}"
+        >更多券商合作接入中，敬请期待</view
+      >
+    </view>
+    <view class="_div second-menu menu data-v-14643a9d" wx:if="{{j}}">
+      <view
+        catchtap="{{item.h}}"
+        class="_div menu-item data-v-14643a9d"
+        wx:for="{{k}}"
+        wx:key="g"
+      >
+        <view class="_div menu-item-left data-v-14643a9d">
+          <broker-logo
+            bind:__l="__l"
+            class="broker-logo data-v-14643a9d"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></broker-logo>
+          <view class="_div menu-item-left-vertical data-v-14643a9d">
+            <view class="_div text data-v-14643a9d">
+              <label class="_span data-v-14643a9d">{{item.c}}</label>
+              <label
+                class="_span state-maintain data-v-14643a9d"
+                wx:if="{{item.d}}"
+                >(维护中)</label
+              >
+            </view>
+          </view>
+          <view class="_div current-label data-v-14643a9d" wx:if="{{item.e}}"
+            >当前使用</view
+          >
+        </view>
+        <view class="_div menu-item-right data-v-14643a9d">
+          <label class="_span data-v-14643a9d" wx:if="{{item.f}}"></label>
+          <view
+            class="_div right-arrow-icon data-v-14643a9d"
+            wx:if="{{l}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

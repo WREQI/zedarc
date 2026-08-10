@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "other-source": "../otherSource/index",
+    "handle-oper": "../handleOper/index",
+    "item-header": "../itemHeader/index",
+    "long-content": "../longContent/index",
+    "short-content": "../shortContent/index",
+    "item-image": "../itemImage/index",
+    "show-comment": "../showComment/index",
+    "show-turn": "../showTurn/index",
+    "show-box": "../showBox/index",
+    "item-hq-mins": "../itemHqMins/index",
+    "stock-bar": "../relatedStocks/stockBar",
+    "basket-tag": "../../../../../stockBasket/@tencent/wzq-lite-basket/components/basketTag"
+  },
+  "componentPlaceholder": { "basket-tag": "view" }
+}

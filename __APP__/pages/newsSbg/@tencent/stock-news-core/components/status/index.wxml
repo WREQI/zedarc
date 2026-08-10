@@ -1,0 +1,37 @@
+<view bindtap="{{k}}" class="_div news-status data-v-6f4ca8ec" wx:if="{{a}}">
+  <view
+    class="_div news-status__loading flex-center data-v-6f4ca8ec"
+    wx:if="{{b}}"
+  >
+    <view
+      class="_div news-status__dot news-status__dot-1 data-v-6f4ca8ec"
+    ></view>
+    <view
+      class="_div news-status__dot news-status__dot-2 data-v-6f4ca8ec"
+    ></view>
+    <view
+      class="_div news-status__dot news-status__dot-3 data-v-6f4ca8ec"
+    ></view>
+  </view>
+  <view class="_div news-status__network data-v-6f4ca8ec" wx:elif="{{c}}">
+    <image
+      alt=""
+      class="_img news-status__network-img data-v-6f4ca8ec"
+      src="{{d}}"
+    ></image>
+    <view class="_div data-v-6f4ca8ec">{{e}}</view>
+  </view>
+  <view class="_div news-status__error data-v-6f4ca8ec" wx:elif="{{f}}">
+    <image
+      alt=""
+      class="_img news-status__error-img data-v-6f4ca8ec"
+      src="{{h}}"
+      wx:if="{{g}}"
+    ></image>
+    <view
+      class="{{['_div','news-status__error-img','data-v-6f4ca8ec',i]}}"
+      wx:else
+    ></view>
+    <view class="_div news-status__error-text data-v-6f4ca8ec">{{j}}</view>
+  </view>
+</view>

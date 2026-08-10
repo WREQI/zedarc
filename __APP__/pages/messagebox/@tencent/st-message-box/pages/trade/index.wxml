@@ -1,0 +1,12 @@
+<view class="_div trade-message-wrapper data-v-5c5fdf5f">
+  <slot name="plugin"></slot>
+  <empty
+    bind:__l="__l"
+    class="data-v-5c5fdf5f"
+    data-c-h="{{!b}}"
+    style="{{'height:'+c}}"
+    uI="5c5fdf5f-0"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></empty>
+</view>

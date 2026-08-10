@@ -1,0 +1,4 @@
+exports.REGEXP = {
+  NEEDLOGIN: /^510010\d\d$/,
+  NEED_TRADE_SESSION: /^51088820$/,
+};

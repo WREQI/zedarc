@@ -1,0 +1,77 @@
+<view class="_div market-analysis data-v-0fac1ded" wx:if="{{a}}">
+  <view
+    class="_div title-wrapper layout-row layout-align-space-between data-v-0fac1ded"
+  >
+    <view class="_div title-box data-v-0fac1ded"
+      >大盘分析<view
+        catchtap="{{b}}"
+        class="_i image-tip data-v-0fac1ded"
+      ></view>
+    </view>
+    <view
+      catchtap="{{k}}"
+      class="_div layout-row amount flex-1 layout-align-end data-v-0fac1ded"
+      wx:if="{{c}}"
+    >
+      <view class="_div data-v-0fac1ded">
+        <label class="_span data-v-0fac1ded">成交额</label>
+        <label class="_span num data-v-0fac1ded">{{d}}</label>
+        <label class="_span divider data-v-0fac1ded">|</label>
+        <label class="_span data-v-0fac1ded">{{e}}</label>
+        <label
+          class="{{['_span','data-v-0fac1ded',h]}}"
+          style="font-weight: 600"
+          >{{f}}{{g}}</label
+        >
+      </view>
+      <label class="_span data-v-0fac1ded" wx:if="{{i}}">></label>
+      <image
+        class="_img icon-arrow data-v-0fac1ded"
+        src="{{j}}"
+        wx:else
+      ></image>
+    </view>
+    <view
+      catchtap="{{p}}"
+      class="_div layout-row amount flex-1 layout-align-end-center data-v-0fac1ded"
+      wx:else
+    >
+      <label
+        class="_span amount-text data-v-0fac1ded"
+        style="padding-right: 4px"
+        >等待开盘</label
+      >
+      <view
+        class="_div countdown-container layout-align-space-between layout-row layout-align-end-center data-v-0fac1ded"
+      >
+        <view class="_div countdown-item data-v-0fac1ded">{{l}}</view>
+        <label class="_span data-v-0fac1ded">:</label>
+        <view class="_div countdown-item data-v-0fac1ded">{{m}}</view>
+      </view>
+      <label class="_span data-v-0fac1ded" wx:if="{{n}}">></label>
+      <image
+        class="_img icon-arrow data-v-0fac1ded"
+        src="{{o}}"
+        wx:else
+      ></image>
+    </view>
+  </view>
+  <view class="_div chart-wrapper data-v-0fac1ded">
+    <view catchtap="{{v}}" class="_div ups-downs-dsb data-v-0fac1ded">
+      <up-down
+        bind:__l="__l"
+        class="r data-v-0fac1ded"
+        uI="0fac1ded-0"
+        uP="{{r}}"
+        uR="upDown"
+        wx:if="{{r}}"
+      ></up-down>
+      <view
+        class="_div layout-row layout-align-space-between ups-downs-text data-v-0fac1ded"
+      >
+        <label class="_span value-up data-v-0fac1ded">涨{{s}}家</label>
+        <label class="_span value-down data-v-0fac1ded">跌{{t}}家</label>
+      </view>
+    </view>
+  </view>
+</view>

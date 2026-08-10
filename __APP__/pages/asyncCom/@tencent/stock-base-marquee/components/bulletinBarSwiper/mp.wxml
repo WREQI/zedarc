@@ -1,0 +1,23 @@
+<view class="_div bar-swiper-wrapper data-v-482c950e">
+  <swiper
+    autoplay="{{true}}"
+    bindchange="{{c}}"
+    circular="{{true}}"
+    class="swiper-container data-v-482c950e"
+    interval="{{3000}}"
+    vertical="{{true}}"
+  >
+    <swiper-item
+      bindtap="{{item.e}}"
+      class="swiper-item data-v-482c950e"
+      wx:for="{{a}}"
+      wx:key="d"
+    >
+      <view class="{{['_div','data-v-482c950e','text',b]}}">{{item.a}}</view>
+      <view
+        class="{{['_div','data-v-482c950e','right_icon',item.c]}}"
+        wx:if="{{item.b}}"
+      ></view>
+    </swiper-item>
+  </swiper>
+</view>

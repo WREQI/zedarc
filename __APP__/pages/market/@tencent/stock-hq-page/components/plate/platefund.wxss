@@ -1,0 +1,94 @@
+.layout.data-v-a602f571 {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-a602f571,
+.layout-align-start-center.data-v-a602f571 {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-a602f571 {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-a602f571 {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-a602f571 {
+  justify-content: flex-start;
+}
+.layout-column.data-v-a602f571 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-a602f571 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-a602f571 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.platefund-wrapper.data-v-a602f571 {
+  background-color: var(--fill-2);
+}
+.title-wrapper.data-v-a602f571 {
+  font-weight: 600;
+  height: 1.0933333333333333rem;
+  justify-content: space-between;
+  margin-bottom: -0.37333333333333335rem;
+  padding: 0 0.4rem;
+  position: relative;
+  text-decoration: none;
+}
+.title-wrapper .title-box.data-v-a602f571,
+.title-wrapper.data-v-a602f571 {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+}
+.title-wrapper .title-box.data-v-a602f571 {
+  flex-direction: row;
+  font-size: 0.4rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 0.56rem;
+}
+.title-wrapper .title-box .image-tip.data-v-a602f571 {
+  background: url(https://st.gtimg.com/design/199f80b6989595dba300b568c9d5686b.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.3466666666666667rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.3466666666666667rem;
+  z-index: 10;
+}
+.title-wrapper .date-range.data-v-a602f571 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.title-wrapper .date-range .divider.data-v-a602f571 {
+  background-color: var(--border-heavy);
+  height: 0.3466666666666667rem;
+  margin: 0 0.21333333333333335rem;
+  width: 0.013333333333333334rem;
+}
+.title-wrapper .date-range .title.data-v-a602f571 {
+  color: var(--color-lightgray-2);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+}
+.title-wrapper .date-range .actived.data-v-a602f571 {
+  color: var(--color-blue);
+  font-size: 0.32rem;
+  font-weight: 600;
+  line-height: 0.4533333333333333rem;
+}

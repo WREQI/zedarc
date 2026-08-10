@@ -1,0 +1,47 @@
+<view
+  catchtouchmove="{{n}}"
+  class="{{['_div','mask-wrapper','data-v-ca9b625d',m]}}"
+>
+  <view class="{{['_div','popup-wrapper','data-v-ca9b625d',k,l]}}">
+    <view class="_div popup-title data-v-ca9b625d" wx:if="{{a}}">{{b}}</view>
+    <scroll-view
+      bindtouchstart="{{d}}"
+      catchtouchmove="{{e}}"
+      class="content-area data-v-ca9b625d"
+      ref="scrollView"
+      scrollY="{{true}}"
+    >
+      <view class="_div json_content data-v-ca9b625d" wx:for="{{c}}" wx:key="j">
+        <view
+          class="_div title data-v-ca9b625d"
+          key="{{item.c}}"
+          wx:if="{{item.a}}"
+          >{{item.b}}</view
+        >
+        <view
+          class="_div text data-v-ca9b625d"
+          key="{{item.f}}"
+          wx:if="{{item.d}}"
+          >{{item.e}}</view
+        >
+        <view
+          class="_div subText data-v-ca9b625d"
+          key="{{item.i}}"
+          wx:if="{{item.g}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </scroll-view>
+    <view class="_div button-area data-v-ca9b625d">
+      <view
+        bindtap="{{h}}"
+        class="_div button button-more data-v-ca9b625d"
+        wx:if="{{f}}"
+        >{{g}}</view
+      >
+      <view bindtap="{{j}}" class="_div button button-ok data-v-ca9b625d"
+        >{{i}}</view
+      >
+    </view>
+  </view>
+</view>

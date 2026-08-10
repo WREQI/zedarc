@@ -1,0 +1,61 @@
+<view class="_div comp-block data-v-577327e9" ref="compNE" wx:if="{{a}}">
+  <view
+    bindtap="{{item.o}}"
+    class="_div item data-v-577327e9"
+    wx:for="{{b}}"
+    wx:key="n"
+  >
+    <view class="_div time-area data-v-577327e9">
+      <view class="_div date data-v-577327e9">{{item.a}}</view>
+      <view class="_div year data-v-577327e9" wx:if="{{item.b}}"
+        >{{item.c}}</view
+      >
+    </view>
+    <view class="_div shape-area data-v-577327e9">
+      <view class="_div circle data-v-577327e9"></view>
+      <view class="_div line data-v-577327e9" wx:if="{{item.d}}"></view>
+    </view>
+    <view class="_div content-area data-v-577327e9">
+      <view class="_div item-title data-v-577327e9">{{item.e}}</view>
+      <label
+        class="_span matter data-v-577327e9"
+        wx:for="{{item.f}}"
+        wx:for-item="subitem"
+        wx:key="b"
+        >{{subitem.a}}</label
+      >
+      <view class="_div ne-load-more data-v-577327e9" wx:if="{{item.g}}">
+        <view class="_div data-v-577327e9" wx:if="{{item.h}}">
+          <label catchtap="{{item.i}}" class="_span data-v-577327e9"
+            >展开更多<image
+              alt=""
+              class="_img data-v-577327e9"
+              src="https://st.gtimg.com/design/6ba52d389d2cace415895acfc29f74fb.png"
+            ></image>
+          </label>
+        </view>
+        <view class="_div data-v-577327e9" wx:if="{{item.j}}">
+          <label
+            catchtap="{{item.l}}"
+            class="_span data-v-577327e9"
+            wx:if="{{item.k}}"
+            >继续展开<image
+              alt=""
+              class="_img data-v-577327e9"
+              src="https://st.gtimg.com/design/6ba52d389d2cace415895acfc29f74fb.png"
+            ></image>
+          </label>
+          <label
+            catchtap="{{item.m}}"
+            class="_span btn-fold-all data-v-577327e9"
+            >全部收起<image
+              alt=""
+              class="_img data-v-577327e9"
+              src="https://st.gtimg.com/design/5eb8b1a2fcb2896281a18a8a9116ad53.png"
+            ></image>
+          </label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

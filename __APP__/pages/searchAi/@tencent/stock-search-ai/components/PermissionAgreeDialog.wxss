@@ -1,0 +1,261 @@
+.fade-enter-active.data-v-4a8f2447 {
+  animation: dialog-fadein-4a8f2447 0.4s;
+  animation-fill-mode: forwards;
+}
+.fade-leave-active.data-v-4a8f2447 {
+  animation: dialog-fadeout-4a8f2447 0.4s;
+  animation-fill-mode: forwards;
+}
+.slide-enter-active.data-v-4a8f2447 {
+  animation: dialog-slidein-4a8f2447 0.4s;
+  animation-fill-mode: forwards;
+}
+.slide-outer-active.data-v-4a8f2447 {
+  animation: dialog-slideout-4a8f2447 0.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes dialog-fadein-4a8f2447 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dialog-fadein-4a8f2447 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes dialog-slidein-4a8f2447 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes dialog-slidein-4a8f2447 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes dialog-fadeout-4a8f2447 {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dialog-fadeout-4a8f2447 {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes dialog-slideout-4a8f2447 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes dialog-slideout-4a8f2447 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+.dialog-backdrop.data-v-4a8f2447 {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.dialog-body.data-v-4a8f2447 {
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  position: fixed;
+  right: 0;
+}
+.permission-title.data-v-4a8f2447 {
+  color: #262e40;
+  font-size: 0.48rem;
+  font-weight: 600;
+  margin-top: 0.4266666666666667rem;
+  text-align: center;
+  width: 100%;
+}
+.permission-content.data-v-4a8f2447 {
+  color: #475166;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-top: 0.4266666666666667rem;
+  text-align: justify;
+}
+.divider-line.data-v-4a8f2447 {
+  background-color: #e9ebf0;
+  height: 0.013333333333333334rem;
+  margin-bottom: 0.32rem;
+  margin-top: 0.32rem;
+  width: 100%;
+}
+.permission-beian-text.data-v-4a8f2447,
+.permission-sub-content.data-v-4a8f2447 {
+  color: #7a8499;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.56rem;
+}
+.permission-beian-link.data-v-4a8f2447 {
+  color: #4774b3;
+  line-height: 0.56rem;
+}
+.permission-agree-line.data-v-4a8f2447 {
+  margin-top: 0.32rem;
+  position: relative;
+}
+.permission-agree-pop.data-v-4a8f2447 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: -0.13333333333333333rem;
+  position: absolute;
+  top: -0.8666666666666667rem;
+}
+.permission-agree-pop-text-line.data-v-4a8f2447 {
+  align-items: center;
+  background: #3077ec;
+  border-radius: 0.05333333333333334rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.32rem;
+  padding: 0.13333333333333333rem 0.21333333333333335rem;
+}
+.permission-agree-pop-text-line.android .text.data-v-4a8f2447 {
+  margin-top: 0.05333333333333334rem;
+}
+.permission-agree-pop-close-icon.data-v-4a8f2447 {
+  height: 0.21333333333333335rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.21333333333333335rem;
+}
+.permission-agree-pop-arrow.data-v-4a8f2447 {
+  border-left: 0.18666666666666668rem solid transparent;
+  border-right: 0.18666666666666668rem solid transparent;
+  border-top: 0.18666666666666668rem solid #3077ec;
+  height: 0;
+  margin-left: 0.10666666666666667rem;
+  margin-top: -0.02666666666666667rem;
+  width: 0;
+}
+.permission-agree-line-inner.data-v-4a8f2447 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.permission-agree-text.data-v-4a8f2447 {
+  color: #475166;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.56rem;
+}
+.permission-agree-link.data-v-4a8f2447 {
+  color: #4774b3;
+  font-size: 0.37333333333333335rem;
+}
+.permission-btn-line.data-v-4a8f2447 {
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 1.12rem;
+  margin-top: 0.32rem;
+}
+.permission-btn-item.data-v-4a8f2447 {
+  flex: 1;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  padding-bottom: 0.29333333333333333rem;
+  padding-top: 0.29333333333333333rem;
+  text-align: center;
+}
+.permission-btn-item-left.data-v-4a8f2447 {
+  border: 0.02666666666666667rem solid #3077ec;
+  border-radius: 0.10666666666666667rem;
+  color: #3077ec;
+  margin-right: 0.16rem;
+}
+.permission-btn-item-right.data-v-4a8f2447 {
+  background: #3077ec;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  margin-left: 0.16rem;
+}
+.select_icon.data-v-4a8f2447 {
+  height: 0.4533333333333333rem;
+  margin-right: 0.16rem;
+  margin-top: 0.05333333333333334rem;
+  padding: 0;
+  width: 0.4533333333333333rem;
+}
+.skin-black .dialog-backdrop.data-v-4a8f2447,
+.skin-panda .dialog-backdrop.data-v-4a8f2447 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.skin-black .dialog-body.data-v-4a8f2447,
+.skin-panda .dialog-body.data-v-4a8f2447 {
+  background-color: #12161f;
+}
+.skin-black .permission-title.data-v-4a8f2447,
+.skin-panda .permission-title.data-v-4a8f2447 {
+  color: #f0f1f5;
+}
+.skin-black .permission-content.data-v-4a8f2447,
+.skin-panda .permission-content.data-v-4a8f2447 {
+  color: #a7b0c4;
+}
+.skin-black .permission-beian-text.data-v-4a8f2447,
+.skin-black .permission-sub-content.data-v-4a8f2447,
+.skin-panda .permission-beian-text.data-v-4a8f2447,
+.skin-panda .permission-sub-content.data-v-4a8f2447 {
+  color: #7d88a1;
+}
+.skin-black .permission-agree-text.data-v-4a8f2447,
+.skin-panda .permission-agree-text.data-v-4a8f2447 {
+  color: #a7b0c4;
+}
+.skin-black .divider-line.data-v-4a8f2447,
+.skin-panda .divider-line.data-v-4a8f2447 {
+  background-color: #262e40;
+}
+.light .permission-agree-pop-text-line.data-v-4a8f2447 {
+  background: rgba(71, 81, 102, 0.8);
+}
+.light .permission-agree-pop-arrow.data-v-4a8f2447 {
+  border-top: 0.18666666666666668rem solid #475166cc;
+}
+.light .permission-btn-item-left.data-v-4a8f2447 {
+  border: 0.02666666666666667rem solid #e63535;
+  color: #e63535;
+}
+.light .permission-btn-item-right.data-v-4a8f2447 {
+  background: #e63535;
+}

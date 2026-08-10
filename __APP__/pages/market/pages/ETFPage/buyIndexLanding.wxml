@@ -1,0 +1,16 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<buy-index-landing-page
+  bind:__l="__l"
+  class="r"
+  uI="0ed04c9f-0"
+  uP="{{c}}"
+  uR="buyIndexLandingPageRef"
+  wx:if="{{c}}"
+></buy-index-landing-page>
+<mp-privacy-dialog bind:__l="__l" uI="0ed04c9f-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="0ed04c9f-2"
+  uP="{{d}}"
+  wx:if="{{d}}"
+></stock-privacy-dialog>

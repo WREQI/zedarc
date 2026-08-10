@@ -1,0 +1,36 @@
+<view>
+  <cond-action-sheet-base
+    bind:__l="__l"
+    bindcancel="{{e}}"
+    bindconfirm="{{f}}"
+    data-c-h="{{!d}}"
+    uI="5aab37a4-0"
+    uP="{{g}}"
+    uS="{{['content']}}"
+    wx:if="{{g}}"
+  >
+    <view slot="content">
+      <invest-detail
+        bind:__l="__l"
+        uI="5aab37a4-1,5aab37a4-0"
+        uP="{{b}}"
+        wx:if="{{a}}"
+      ></invest-detail>
+      <price-detail
+        bind:__l="__l"
+        uI="5aab37a4-2,5aab37a4-0"
+        uP="{{c||''}}"
+        wx:else
+      ></price-detail>
+    </view>
+  </cond-action-sheet-base>
+  <cond-result
+    bind:__l="__l"
+    bindcancel="{{i}}"
+    class="r"
+    uI="5aab37a4-3"
+    uP="{{j}}"
+    uR="condResult"
+    wx:if="{{j}}"
+  ></cond-result>
+</view>

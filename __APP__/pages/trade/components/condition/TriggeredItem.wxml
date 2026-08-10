@@ -1,0 +1,27 @@
+<condition-card
+  bind:__l="__l"
+  bindclick="{{d}}"
+  class="data-v-2b2a399a"
+  uI="2b2a399a-0"
+  uP="{{e}}"
+  uS="{{['header','content']}}"
+  wx:if="{{e}}"
+>
+  <condition-detail-header
+    bind:__l="__l"
+    bindnameClick="{{a}}"
+    class="data-v-2b2a399a"
+    slot="header"
+    uI="2b2a399a-1,2b2a399a-0"
+    uP="{{b}}"
+  ></condition-detail-header>
+  <view class="cond-detail-body data-v-2b2a399a" slot="content">
+    <triggered-body
+      bind:__l="__l"
+      class="data-v-2b2a399a"
+      uI="2b2a399a-2,2b2a399a-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></triggered-body>
+  </view>
+</condition-card>

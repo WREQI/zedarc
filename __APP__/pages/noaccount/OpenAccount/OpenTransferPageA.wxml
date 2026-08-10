@@ -1,0 +1,49 @@
+<view class="progress-bg data-v-b77003d0" style="{{j}}">
+  <image class="banner data-v-b77003d0" src="{{a}}"></image>
+  <view class="progress-steps data-v-b77003d0">
+    <view class="indent data-v-b77003d0">
+      <view class="progress-title data-v-b77003d0">{{b}}</view>
+      <view class="progress-step step1 data-v-b77003d0">
+        <view class="progress-step-title data-v-b77003d0">
+          <image
+            class="progress-step-title-num data-v-b77003d0"
+            src="https://wzq.gtimg.com/image/broker/apply/mpopen/step-1.png"
+          ></image>
+          <text class="progress-step-title-text data-v-b77003d0">{{c}}</text>
+        </view>
+        <view class="progress-img-wrap data-v-b77003d0">
+          <image
+            class="progress-step-img data-v-b77003d0"
+            src="https://wzq.gtimg.com/image/broker/apply/mpopen/step-img-1.png"
+          ></image>
+        </view>
+      </view>
+      <view class="progress-step step2 data-v-b77003d0">
+        <view class="progress-step-title data-v-b77003d0">
+          <image
+            class="progress-step-title-num data-v-b77003d0"
+            src="https://wzq.gtimg.com/image/broker/apply/mpopen/step-2.png"
+          ></image>
+          <text class="progress-step-title-text data-v-b77003d0">{{d}}</text>
+        </view>
+        <view class="progress-img-wrap data-v-b77003d0">
+          <image class="progress-step-img data-v-b77003d0" src="{{e}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="data-v-b77003d0">
+      <view class="data-v-b77003d0" style="position: relative">
+        <button class="btn-express data-v-b77003d0">{{f}}</button>
+        <permission-and-open-chat-button
+          bind:__l="__l"
+          bindclick="{{g}}"
+          class="data-v-b77003d0"
+          uI="b77003d0-0"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></permission-and-open-chat-button>
+      </view>
+      <view bindtap="{{i}}" class="back-link data-v-b77003d0">返回首页</view>
+    </view>
+  </view>
+</view>

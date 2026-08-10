@@ -1,0 +1,111 @@
+.page-container.data-v-b8dc8431 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-container .zxg-logo.data-v-b8dc8431 {
+  background-image: url(https://st.gtimg.com/design/aa65870c4a9bbd7ba311225f19e33525.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 24.267vmin 4.8vmin;
+  height: 17.6vmin;
+  width: 100%;
+}
+#update-container.data-v-b8dc8431 {
+  height: calc(100vh - 1.1733333333333333rem);
+  overflow: scroll;
+  overscroll-behavior: none;
+}
+.update-container.data-v-b8dc8431 {
+  background-color: var(--fill-1);
+  min-height: 100vh;
+}
+.update-container .update-refresh-container.data-v-b8dc8431 {
+  padding-bottom: 0.4rem;
+  position: relative;
+}
+.update-container .record-container.data-v-b8dc8431 {
+  min-height: calc(100vh - 2.2133333333333334rem);
+  padding: 0.013333333333333334rem 0.32rem;
+  width: calc(100vw - 0.64rem);
+}
+.update-container .top-date-wrapper.data-v-b8dc8431 {
+  align-items: center;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.update-container .top-date-wrapper .top-date-text.data-v-b8dc8431 {
+  color: var(--text-color-1);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  margin-left: 0.64rem;
+}
+.update-container .top-date-wrapper .top-date-arrow.data-v-b8dc8431 {
+  background-image: url(https://st.gtimg.com/design/23015d3241bea2771026fd718daf510b.svg);
+  background-size: cover;
+  height: 0.16rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.26666666666666666rem;
+}
+.update-container .date-wrapper.data-v-b8dc8431 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.5333333333333333rem;
+}
+.update-container .date-wrapper .date-text.data-v-b8dc8431 {
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  margin-left: 0.32rem;
+}
+.update-container .date-wrapper .date-arrow.data-v-b8dc8431 {
+  background-image: url(https://st.gtimg.com/design/23015d3241bea2771026fd718daf510b.svg);
+  background-size: cover;
+  height: 0.16rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.26666666666666666rem;
+}
+.update-container .data-wrapper-hide.data-v-b8dc8431 {
+  height: 1.1733333333333333rem;
+  margin-top: 0;
+  opacity: 0;
+}
+.update-container .empty.data-v-b8dc8431 {
+  margin: 6.666666666666667rem auto 6rem;
+  width: 3.7333333333333334rem;
+}
+.update-container .empty .empty-logo.data-v-b8dc8431 {
+  background-image: url(https://st.gtimg.com/design/741bdbcc7ad2746defbeb037d1a95566.svg);
+  background-size: cover;
+  height: 1.6rem;
+  margin: 0 auto;
+  width: 1.3333333333333333rem;
+}
+.update-container .empty .net-error.data-v-b8dc8431 {
+  color: var(--color-lightgray-2);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  margin-top: 0.32rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.update-container .empty .refresh-btn.data-v-b8dc8431 {
+  border: 0.02666666666666667rem solid var(--color-red);
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-red);
+  font-size: 0.32rem;
+  font-weight: 600;
+  margin: 0.5333333333333333rem auto 0;
+  padding: 0.14666666666666667rem 0;
+  text-align: center;
+  width: 1.7333333333333334rem;
+}

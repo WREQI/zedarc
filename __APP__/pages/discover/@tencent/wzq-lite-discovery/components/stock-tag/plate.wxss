@@ -1,0 +1,163 @@
+.plate-list-wrapper.data-v-a67b56d5 {
+  background-color: var(--fill-1);
+  border-radius: 0.21333333333333335rem;
+  margin: 0;
+  padding: 0.32rem 0.32rem 0;
+}
+.plate-name.data-v-a67b56d5 {
+  color: var(--color-lightgray-1);
+  width: 3.6rem;
+  z-index: 1;
+}
+.plate-header.data-v-a67b56d5 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 1.2rem;
+  justify-content: space-between;
+}
+.plate-header .name.data-v-a67b56d5 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-style: Medium;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.5866666666666667rem;
+}
+.plate-header .price-container.data-v-a67b56d5 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4533333333333333rem;
+}
+.plate-header .price-container .title.data-v-a67b56d5 {
+  color: var(--color-midgray-1);
+  font-size: 0.32rem;
+  letter-spacing: 0;
+  line-height: 0.4533333333333333rem;
+  margin-right: 0.05333333333333334rem;
+}
+.plate-header .price-container .zdf.data-v-a67b56d5 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.plate-header .price-container .zdf.up.data-v-a67b56d5 {
+  color: var(--color-red);
+}
+.plate-header .price-container .zdf.down.data-v-a67b56d5 {
+  color: var(--color-green);
+}
+.sep-line.data-v-a67b56d5 {
+  background-color: #dcdfe6;
+  height: 0.013333333333333334rem;
+  margin: 0.26666666666666666rem 0;
+}
+.plate-stocks-header.data-v-a67b56d5 {
+  color: var(--color-lightgray-1);
+  font-size: 0.32rem;
+  height: 0.56rem;
+  line-height: 0.4rem;
+}
+.plate-body.data-v-a67b56d5,
+.plate-stocks-header.data-v-a67b56d5 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.plate-body.data-v-a67b56d5 {
+  height: 1.0666666666666667rem;
+}
+.plate-body .plate-name.data-v-a67b56d5 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.plate-body .plate-name .icon.data-v-a67b56d5 {
+  flex-shrink: 0;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  object-fit: cover;
+  width: 0.37333333333333335rem;
+}
+.plate-body .plate-name .name.data-v-a67b56d5 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.plate-body .sortable-captions.data-v-a67b56d5 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+}
+.plate-body .sortable-captions .sortable-row.data-v-a67b56d5 {
+  align-items: center;
+}
+.plate-body .sortable-captions .sortable-row .row-th.data-v-a67b56d5 {
+  color: #7a8499;
+}
+.plate-body .sortable-captions .sortable-row .row-th.up.data-v-a67b56d5 {
+  color: var(--color-red);
+}
+.plate-body .sortable-captions .sortable-row .row-th.down.data-v-a67b56d5 {
+  color: var(--color-green);
+}
+.plate-footer.data-v-a67b56d5 {
+  align-items: center;
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.32rem;
+  height: 0.4533333333333333rem;
+  line-height: 1;
+  padding: 0.18666666666666668rem 0 0.21333333333333335rem;
+}
+.plate-footer .arrow.data-v-a67b56d5 {
+  background-color: var(--color-lightgray-2);
+  height: 0.32rem;
+  mask-image: url(https://st.gtimg.com/design/800d37b312607026e3bc114e4bea9eeb.svg);
+  mask-size: 100% 100%;
+  width: 0.32rem;
+}
+.sortable-captions.data-v-a67b56d5 {
+  overflow: hidden;
+  width: calc(100% - 3.6rem);
+}
+.sortable-captions .sortable-row.data-v-a67b56d5 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.sortable-captions .sortable-row .row-th.data-v-a67b56d5 {
+  color: var(--color-lightgray-1);
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sortable-captions .sortable-row .row-th.flex-1.data-v-a67b56d5,
+.sortable-captions .sortable-row .row-th.last.data-v-a67b56d5 {
+  flex: 1;
+}
+.sortable-captions
+  .sortable-row
+  .row-th.column2-last.add-margin-left.data-v-a67b56d5 {
+  margin-left: 0.26666666666666666rem;
+}
+.sortable-captions.h5.data-v-a67b56d5::-webkit-scrollbar {
+  display: none;
+}

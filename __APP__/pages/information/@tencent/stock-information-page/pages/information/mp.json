@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "my-choose-list": "../../components/choose/MyChooseList",
+    "yao-wen-list": "../../components/yaoWen/YaoWenList",
+    "video-list": "../../components/video/index",
+    "current-day-list": "../../components/currentDay/CurrentDayList",
+    "tab": "../../components/Tab/mp/index",
+    "recom-spliter": "../../components/RecomSpliter",
+    "community-list": "../../components/CommunityList",
+    "h-k-stocks-list": "../../components/HKStocksList",
+    "yaowen-feedback-dialog": "../../components/yaoWen/yaowenFeedbackDialog",
+    "profile-pop": "../../../../../newsSbg/@tencent/stock-sq/src/source/profilePop/index",
+    "nav-button": "../../../stock-news-community-list/components/comment/navButton"
+  },
+  "componentPlaceholder": { "profile-pop": "view" }
+}

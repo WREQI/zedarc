@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabbar": "./components/tabs/mp",
+    "market-card": "./components/marketcard/index",
+    "chy-kch": "./components/chykch/index",
+    "plate": "./components/plate/index",
+    "etf-pop-com": "../../../marketSbg/@tencent/stock-hq-etf/components/EtfPopCom",
+    "bond-rank": "./pages/BondRankPage",
+    "e-t-f-union-page": "./pages/ETFUnionPage",
+    "wzq-info-modal": "./node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal"
+  },
+  "componentPlaceholder": { "etf-pop-com": "view" }
+}

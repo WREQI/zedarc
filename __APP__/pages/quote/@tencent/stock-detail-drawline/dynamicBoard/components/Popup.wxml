@@ -1,0 +1,38 @@
+<view class="_div data-v-2b145971">
+  <root-portal class="data-v-2b145971" enable="{{true}}" wx:if="{{a}}">
+    <view
+      catchtap="{{h}}"
+      catchtouchmove="{{i}}"
+      class="{{['_div','data-v-2b145971','popup',g]}}"
+    >
+      <view catchtap="{{f}}" class="_div popup-container data-v-2b145971">
+        <view class="_div popup-title data-v-2b145971" wx:if="{{b}}"
+          >{{c}}</view
+        >
+        <slot></slot>
+        <view class="_div btns data-v-2b145971">
+          <view catchtap="{{d}}" class="_div btn cancel data-v-2b145971"
+            >取消</view
+          >
+          <view catchtap="{{e}}" class="_div btn ok data-v-2b145971">确定</view>
+        </view>
+      </view>
+    </view>
+  </root-portal>
+  <view
+    catchtap="{{p}}"
+    class="{{['_div','data-v-2b145971','popup',o]}}"
+    wx:else
+  >
+    <view catchtap="{{n}}" class="_div popup-container data-v-2b145971">
+      <view class="_div popup-title data-v-2b145971" wx:if="{{j}}">{{k}}</view>
+      <slot></slot>
+      <view class="_div btns data-v-2b145971">
+        <view catchtap="{{l}}" class="_div btn cancel data-v-2b145971"
+          >取消</view
+        >
+        <view catchtap="{{m}}" class="_div btn ok data-v-2b145971">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

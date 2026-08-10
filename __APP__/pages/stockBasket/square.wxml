@@ -1,0 +1,50 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div stock-basket-wrapper">
+  <mp-privacy-dialog bind:__l="__l" uI="1c7dec2b-0"></mp-privacy-dialog>
+  <stock-privacy-dialog bind:__l="__l" uI="1c7dec2b-1"></stock-privacy-dialog>
+  <scroll-view class="bacsket-list" scrollY="{{true}}">
+    <view class="_div scroll-container" wx:if="{{b}}">
+      <view
+        class="_div basket-section"
+        wx:for="{{c}}"
+        wx:for-item="basketData"
+        wx:key="d"
+      >
+        <basket-overview
+          bind:__l="__l"
+          bindheaderToggleClick="{{basketData.a}}"
+          uI="{{basketData.b}}"
+          uP="{{basketData.c}}"
+          wx:if="{{basketData.c}}"
+        ></basket-overview>
+      </view>
+      <view
+        class="_div brand"
+        style="{{'padding-bottom:'+e}}"
+        wx:if="{{d}}"
+      ></view>
+    </view>
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{g}}"
+      uI="1c7dec2b-3"
+      uP="{{h}}"
+      wx:elif="{{f}}"
+    ></st-status>
+  </scroll-view>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{i}}"
+    uI="1c7dec2b-4"
+    uP="{{j}}"
+    wx:if="{{j}}"
+  ></privacy-policy-modal>
+  <basket-guide-modal
+    bind:__l="__l"
+    bindclose="{{l}}"
+    bindconfirm="{{k}}"
+    uI="1c7dec2b-5"
+    uP="{{m}}"
+    wx:if="{{m}}"
+  ></basket-guide-modal>
+</view>

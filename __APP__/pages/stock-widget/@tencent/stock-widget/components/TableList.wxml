@@ -1,0 +1,68 @@
+<view class="_div data-v-0a770a77">
+  <view class="_div charts-body data-v-0a770a77">
+    <view
+      class="{{['_div','data-v-0a770a77',b]}}"
+      style="{{'background-image:'+c}}"
+      >{{a}}</view
+    >
+    <view class="_div body-table data-v-0a770a77">
+      <view class="_div table-thead data-v-0a770a77">
+        <label
+          class="{{['_span','data-v-0a770a77',th.b]}}"
+          wx:for="{{d}}"
+          wx:for-item="th"
+          wx:key="c"
+          >{{th.a}}</label
+        >
+      </view>
+      <view class="_div table-tbody data-v-0a770a77" wx:if="{{e}}">
+        <view
+          catchtap="{{it.f}}"
+          class="_div tbody-tr data-v-0a770a77"
+          wx:for="{{f}}"
+          wx:for-item="it"
+          wx:key="e"
+        >
+          <view
+            class="_div data-v-0a770a77"
+            wx:for="{{it.a}}"
+            wx:for-item="cloumeKey"
+            wx:key="h"
+          >
+            <view
+              class="_div tbody-tr-name data-v-0a770a77"
+              wx:if="{{cloumeKey.a}}"
+            >
+              <label class="_span stock-name data-v-0a770a77"
+                >{{cloumeKey.b}}</label
+              >
+              <view class="_div stock-symbol data-v-0a770a77">
+                <view
+                  class="{{['_i','stock-market','data-v-0a770a77',cloumeKey.c]}}"
+                ></view>
+                <label class="_span stock-code data-v-0a770a77"
+                  >{{cloumeKey.d}}</label
+                >
+              </view>
+            </view>
+            <label
+              class="{{['_span','data-v-0a770a77',cloumeKey.g]}}"
+              wx:elif="{{cloumeKey.e}}"
+              >{{cloumeKey.f}}</label
+            >
+          </view>
+          <label class="_span data-v-0a770a77">
+            <add-fav
+              bind:__l="__l"
+              bindreport="{{it.b}}"
+              class="data-v-0a770a77"
+              uI="{{it.c}}"
+              uP="{{it.d}}"
+              wx:if="{{it.d}}"
+            ></add-fav>
+          </label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

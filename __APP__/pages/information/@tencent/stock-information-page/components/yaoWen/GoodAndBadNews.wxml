@@ -1,0 +1,43 @@
+<view class="_div good-bad-wrap data-v-b094ecf4" ref="goodBadWrap">
+  <view
+    bindtap="{{item.r}}"
+    class="{{['_div','data-v-b094ecf4','card-item',item.p]}}"
+    ref="GoodAndBadNews"
+    wx:for="{{a}}"
+    wx:key="q"
+  >
+    <image
+      alt="今日机会"
+      class="_img card-tag data-v-b094ecf4"
+      src="{{item.b}}"
+      wx:if="{{item.a}}"
+    ></image>
+    <image
+      alt="今日风险"
+      class="_img card-tag data-v-b094ecf4"
+      src="{{item.d}}"
+      wx:if="{{item.c}}"
+    ></image>
+    <view class="_div title-wrap data-v-b094ecf4">
+      <label class="_span item-title data-v-b094ecf4" numberOfLines="2"
+        >{{item.e}}</label
+      >
+    </view>
+    <view class="_div sublist-item data-v-b094ecf4" wx:if="{{item.f}}">
+      <label class="_span sub-main data-v-b094ecf4">{{item.g}}</label>
+      <label class="{{['_span','data-v-b094ecf4','sub-desc',item.i]}}"
+        >{{item.h}}</label
+      >
+    </view>
+    <view class="_div sublist-item data-v-b094ecf4" wx:if="{{item.j}}">
+      <label class="_span sub-main data-v-b094ecf4">{{item.k}}</label>
+      <label class="{{['_span','data-v-b094ecf4','sub-desc',item.m]}}"
+        >{{item.l}}</label
+      >
+    </view>
+    <view class="_div sublist-item last data-v-b094ecf4" wx:if="{{item.n}}">
+      <label class="_span sub-main data-v-b094ecf4">成分股</label>
+      <label class="_span sub-desc data-v-b094ecf4">{{item.o}}只</label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<view class="_div expert-detail-content data-v-0c3f7bfd">
+  <ai-expert-info-card
+    bind:__l="__l"
+    bindfollowClick="{{a}}"
+    class="expert-detail-content__info data-v-0c3f7bfd"
+    uI="0c3f7bfd-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></ai-expert-info-card>
+  <view class="_div expert-detail-content__divider data-v-0c3f7bfd"></view>
+  <opinion-banner
+    bind:__l="__l"
+    class="data-v-0c3f7bfd"
+    uI="0c3f7bfd-1"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></opinion-banner>
+  <view
+    class="_div expert-detail-content__section data-v-0c3f7bfd"
+    wx:for="{{e}}"
+    wx:for-item="section"
+    wx:key="h"
+  >
+    <view class="_div expert-detail-content__section-title data-v-0c3f7bfd"
+      >{{section.a}}</view
+    >
+    <metrics-card
+      bind:__l="__l"
+      class="data-v-0c3f7bfd"
+      uI="{{section.c}}"
+      uP="{{section.d}}"
+      wx:if="{{section.b}}"
+    ></metrics-card>
+    <markdown-renderer
+      bind:__l="__l"
+      class="expert-detail-content__paragraph data-v-0c3f7bfd"
+      uI="{{section.f}}"
+      uP="{{section.g}}"
+      wx:if="{{section.e}}"
+    ></markdown-renderer>
+  </view>
+  <view class="_div expert-detail-content__bottom data-v-0c3f7bfd"></view>
+</view>

@@ -1,0 +1,38 @@
+<view bindtap="{{j}}" class="_div t0-premium-rank-item data-v-fb278c97">
+  <view class="_div rank-item data-v-fb278c97">
+    <view class="_div rank-left data-v-fb278c97">
+      <view class="_div rank-detail-name data-v-fb278c97">{{a}}</view>
+      <view class="_div rank-detail-symbol data-v-fb278c97">
+        <image
+          alt="市场图标"
+          class="_img market-icon data-v-fb278c97"
+          src="{{b}}"
+        ></image>
+        <view class="_div stock-code data-v-fb278c97">{{c}}</view>
+        <view class="_div tag-list data-v-fb278c97" wx:if="{{d}}">
+          <view
+            class="_div stock-tag data-v-fb278c97"
+            wx:for="{{e}}"
+            wx:for-item="tag"
+            wx:key="b"
+            >{{tag.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div rank-right-block data-v-fb278c97">
+      <view class="_div rank-middle data-v-fb278c97">
+        <view class="{{['_div','data-v-fb278c97','num',g]}}">{{f}}</view>
+      </view>
+      <view class="_div rank-right data-v-fb278c97">
+        <view class="_div num data-v-fb278c97">
+          <block wx:if="{{h}}"
+            >低于<label class="_span num--rise data-v-fb278c97">{{i}}%</label
+            >时间</block
+          >
+          <block wx:else>--</block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

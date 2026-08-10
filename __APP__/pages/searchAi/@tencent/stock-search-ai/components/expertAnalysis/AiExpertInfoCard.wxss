@@ -1,0 +1,149 @@
+.ai-expert-info-card.data-v-7cb9caf8 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.ai-expert-info-card--bordered.data-v-7cb9caf8 {
+  border-bottom: 0.013333333333333334rem solid
+    var(--border-light-divider, #e9ebf0);
+  padding-bottom: 0.32rem;
+}
+.ai-expert-info-card__main.data-v-7cb9caf8 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+.ai-expert-info-card__avatar.data-v-7cb9caf8 {
+  background-color: var(--border-light-divider, #e9ebf0);
+  border-radius: 0.16rem;
+  flex-shrink: 0;
+  height: 0.96rem;
+  overflow: hidden;
+  position: relative;
+  width: 0.96rem;
+}
+.ai-expert-info-card__avatar-img.data-v-7cb9caf8 {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.ai-expert-info-card__avatar-mask.data-v-7cb9caf8 {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.16rem;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.ai-expert-info-card__detail.data-v-7cb9caf8 {
+  flex: 1;
+  margin-left: 0.21333333333333335rem;
+  min-width: 0;
+}
+.ai-expert-info-card__name-row.data-v-7cb9caf8 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.ai-expert-info-card__name.data-v-7cb9caf8 {
+  color: var(--color-heavygray, #262e40);
+  flex-shrink: 0;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+}
+.ai-expert-info-card__field-tag.data-v-7cb9caf8 {
+  align-items: center;
+  background-color: var(--border-light-divider, #e9ebf0);
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 0.37333333333333335rem;
+  justify-content: center;
+  margin-left: 0.21333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+}
+.ai-expert-info-card__field-tag-icon.data-v-7cb9caf8 {
+  flex-shrink: 0;
+  height: 0.26666666666666666rem;
+  margin-right: 0.06666666666666667rem;
+  object-fit: contain;
+  width: 0.26666666666666666rem;
+}
+.ai-expert-info-card__field-tag-text.data-v-7cb9caf8 {
+  color: var(--color-heavygray, #262e40);
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  white-space: nowrap;
+}
+.ai-expert-info-card__tags.data-v-7cb9caf8 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.05333333333333334rem;
+  overflow: hidden;
+}
+.ai-expert-info-card__tag-item.data-v-7cb9caf8 {
+  align-items: center;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+.ai-expert-info-card__tag-text.data-v-7cb9caf8 {
+  color: var(--color-lightgray, #7a8499);
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  white-space: nowrap;
+}
+.ai-expert-info-card__tag-divider.data-v-7cb9caf8 {
+  background-color: var(--color-lightgray-2, #98a0b3);
+  display: inline-block;
+  flex-shrink: 0;
+  height: 0.32rem;
+  margin: 0 0.10666666666666667rem;
+  width: 0.013333333333333334rem;
+}
+.ai-expert-info-card__follow.data-v-7cb9caf8 {
+  align-items: center;
+  border: 0.02666666666666667rem solid var(--color-red, #e63535);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  height: 0.7466666666666667rem;
+  justify-content: center;
+  margin-left: 0.21333333333333335rem;
+  width: 1.44rem;
+}
+.ai-expert-info-card__follow--active.data-v-7cb9caf8 {
+  border-color: var(--border-heavy-divider, #dcdfe6);
+}
+.ai-expert-info-card__follow--active
+  .ai-expert-info-card__follow-text.data-v-7cb9caf8 {
+  color: var(--color-lightgray, #7a8499);
+}
+.ai-expert-info-card__follow-icon.data-v-7cb9caf8 {
+  height: 0.32rem;
+  margin-right: 0.05333333333333334rem;
+  width: 0.32rem;
+}
+.ai-expert-info-card__follow-text.data-v-7cb9caf8 {
+  color: var(--color-red, #e63535);
+  font-size: 0.32rem;
+  font-weight: 500;
+  line-height: 0.4533333333333333rem;
+}

@@ -1,0 +1,69 @@
+<view
+  class="{{['permission-unlock-card','data-v-8c638c87',t]}}"
+  style="{{'background-image:'+v}}"
+>
+  <image
+    alt=""
+    class="permission-unlock-card__corner-badge data-v-8c638c87"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <view
+    class="permission-unlock-card__linkage-mask data-v-8c638c87"
+    wx:if="{{c}}"
+  ></view>
+  <view class="permission-unlock-card__content data-v-8c638c87">
+    <view class="permission-unlock-card__tag-row data-v-8c638c87">
+      <image
+        alt=""
+        class="permission-unlock-card__tag-logo data-v-8c638c87"
+        src="{{e}}"
+        wx:if="{{d}}"
+      ></image>
+      <label class="permission-unlock-card__tag-name data-v-8c638c87"
+        >{{f}}</label
+      >
+    </view>
+    <view
+      catchtap="{{o}}"
+      class="permission-unlock-card__quote data-v-8c638c87"
+      wx:if="{{g}}"
+    >
+      <view class="permission-unlock-card__quote-label data-v-8c638c87"
+        >今日{{h}}</view
+      >
+      <view
+        class="{{['permission-unlock-card__quote-price','data-v-8c638c87',j]}}"
+        >{{i}}</view
+      >
+      <view class="permission-unlock-card__quote-change-row data-v-8c638c87">
+        <label
+          class="{{['permission-unlock-card__quote-change','data-v-8c638c87',l]}}"
+          >{{k}}</label
+        >
+        <label
+          class="{{['permission-unlock-card__quote-change','data-v-8c638c87',n]}}"
+          >{{m}}</label
+        >
+      </view>
+    </view>
+    <view
+      class="permission-unlock-card__description data-v-8c638c87"
+      wx:elif="{{p}}"
+    >
+      <view class="permission-unlock-card__description-label data-v-8c638c87"
+        >交易范围：</view
+      >
+      <view class="data-v-8c638c87">{{q}}</view>
+    </view>
+    <view class="permission-unlock-card__tips data-v-8c638c87" wx:if="{{r}}">
+      <label
+        class="permission-unlock-card__tip data-v-8c638c87"
+        wx:for="{{s}}"
+        wx:for-item="tip"
+        wx:key="b"
+        >{{tip.a}}</label
+      >
+    </view>
+  </view>
+</view>

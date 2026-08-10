@@ -1,0 +1,29 @@
+<view class="_div target-price data-v-97e24fb8" wx:if="{{a}}">
+  <view class="_div title data-v-97e24fb8">目标价</view>
+  <view class="_div price-describe data-v-97e24fb8">{{b}}</view>
+  <view
+    class="_div price-chart-container data-v-97e24fb8"
+    id="priceChart-container"
+  >
+    <f2
+      bind:__l="__l"
+      bindonInit="{{c}}"
+      bindtouchend="{{d}}"
+      bindtouchmove="{{f}}"
+      bindtouchstart="{{e}}"
+      class="data-v-97e24fb8"
+      uI="97e24fb8-0"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></f2>
+    <view
+      class="{{['_ul','canvas-toolTip','data-v-97e24fb8',j]}}"
+      wx:if="{{h}}"
+    >
+      <view class="_li tips-item data-v-97e24fb8" wx:for="{{i}}" wx:key="c">
+        <label class="_span data-v-97e24fb8">{{item.a}}</label>
+        <label class="_span data-v-97e24fb8">{{item.b}}</label>
+      </view>
+    </view>
+  </view>
+</view>

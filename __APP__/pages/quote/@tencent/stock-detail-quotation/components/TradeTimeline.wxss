@@ -1,0 +1,93 @@
+.trade-timeline-mask-wrapper.data-v-3315c0d0 {
+  background-color: var(--fill-mask);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2000;
+}
+.trade-timeline-mask-wrapper .trade-timeline-popup.data-v-3315c0d0 {
+  align-items: center;
+  background-color: var(--fill-content-layer);
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-top.data-v-3315c0d0 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem 0.4rem 0;
+  width: 100%;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-top
+  .trade-timeline-title.data-v-3315c0d0 {
+  color: var(--color-heavygray);
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.6666666666666666rem;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-top
+  .trade-timeline-close.data-v-3315c0d0 {
+  height: 0.32rem;
+  padding: 0.26666666666666666rem;
+  position: absolute;
+  right: 0.13333333333333333rem;
+  width: 0.32rem;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.data-v-3315c0d0 {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0.4266666666666667rem 0;
+  width: 100%;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.kechuang.data-v-3315c0d0 {
+  background-image: url(https://st.gtimg.com/design/6128ea38b13b685738212e0253cbd205.png);
+  height: 13rem;
+}
+.trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.hs.data-v-3315c0d0 {
+  background-image: url(https://st.gtimg.com/design/ad6be54452eb8310e47734966b68cc92.png);
+  height: 11.546666666666667rem;
+}
+[data-st-theme="black"]
+  .trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.kechuang.data-v-3315c0d0,
+[data-st-theme="dark"]
+  .trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.kechuang.data-v-3315c0d0 {
+  background-image: url(https://st.gtimg.com/design/a432bb2f5958b492048b630138941477.png);
+}
+[data-st-theme="black"]
+  .trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.hs.data-v-3315c0d0,
+[data-st-theme="dark"]
+  .trade-timeline-mask-wrapper
+  .trade-timeline-popup
+  .trade-timeline-image.hs.data-v-3315c0d0 {
+  background-image: url(https://st.gtimg.com/design/58f4dec8a2f9f9a8f03f9f8170ad143e.png);
+  height: 11.546666666666667rem;
+}

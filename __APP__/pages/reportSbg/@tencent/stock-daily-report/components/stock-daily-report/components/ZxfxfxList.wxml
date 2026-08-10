@@ -1,0 +1,48 @@
+<view class="{{['_div','daily-component-module-zxfx','data-v-44749387',b]}}">
+  <view class="_div fxfx-list data-v-44749387">
+    <view
+      catchtap="{{item.m}}"
+      class="_div list-item data-v-44749387"
+      wx:for="{{a}}"
+      wx:key="l"
+    >
+      <view
+        class="{{['_div','data-v-44749387','list-item-left','item-wrap',item.d]}}"
+      >
+        <view class="_div stockname data-v-44749387">{{item.a}}</view>
+        <view class="{{['_div','data-v-44749387','stockzdf',item.c]}}"
+          >{{item.b}}</view
+        >
+      </view>
+      <view catchtap="{{item.k}}" class="_div list-item-right data-v-44749387">
+        <view class="_div title data-v-44749387">
+          <label class="_span risk-num data-v-44749387" wx:if="{{item.e}}"
+            >{{item.f}}</label
+          >个风险变动项<view
+            class="_div folder data-v-44749387"
+            wx:if="{{item.g}}"
+          ></view>
+        </view>
+        <view
+          class="{{['_div','risk-tags','data-v-44749387',item.j&&'cssfolderRisk']}}"
+          wx:if="{{item.h}}"
+        >
+          <view
+            class="_div tag-item data-v-44749387"
+            wx:for="{{item.i}}"
+            wx:for-item="tag"
+            wx:key="d"
+          >
+            <view class="_div tag-text data-v-44749387">{{tag.a}}</view>
+            <view class="_div tag-new data-v-44749387" wx:if="{{tag.b}}"
+              >新</view
+            >
+            <view class="_div tag-new plr8 data-v-44749387" wx:if="{{tag.c}}"
+              >加重</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<view
+  bindtap="{{k}}"
+  class="{{['_div','investment-page','flex-grow','data-v-18a13435',i&&'nav-padding']}}"
+  data-st-theme="{{j}}"
+  data-test-id="long-term-investment-page"
+>
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    class="data-v-18a13435"
+    uI="18a13435-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="_div investment-page__loading data-v-18a13435" wx:if="{{d}}"
+    >加载中...</view
+  >
+  <no-data
+    bind:__l="__l"
+    class="investment-page__empty data-v-18a13435"
+    uI="18a13435-1"
+    uS="{{['d']}}"
+    wx:elif="{{e}}"
+    >暂无相关数据</no-data
+  >
+  <view class="_div fund-panel__list data-v-18a13435" wx:else>
+    <view class="_div data-v-18a13435" wx:for="{{f}}" wx:key="f">
+      <view
+        class="_div fund-panel__divider data-v-18a13435"
+        wx:if="{{item.a}}"
+      ></view>
+      <view class="_div fund-card data-v-18a13435">
+        <view
+          bindtap="{{item.b}}"
+          class="_div fund-card__buy-button data-v-18a13435"
+        >
+          <view class="_div fund-card__buy-text data-v-18a13435">买入</view>
+        </view>
+        <etf-invest-header
+          bind:__l="__l"
+          class="fund-card__hot-topic-header data-v-18a13435"
+          uI="{{item.c}}"
+          uP="{{item.d}}"
+          wx:if="{{item.d}}"
+        ></etf-invest-header>
+        <view class="_div fund-card__highlight data-v-18a13435">
+          <view class="_div fund-card__highlight-badge data-v-18a13435">
+            <view class="_div fund-card__highlight-badge-text data-v-18a13435"
+              >产品亮点</view
+            >
+          </view>
+          <view class="_div fund-card__highlight-text data-v-18a13435"
+            >{{item.e}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div loading-tips data-v-18a13435" wx:if="{{g}}"
+      >加载中...</view
+    >
+  </view>
+  <trust-footer
+    bind:__l="__l"
+    class="data-v-18a13435"
+    uI="18a13435-3"
+    wx:if="{{h}}"
+  ></trust-footer>
+</view>

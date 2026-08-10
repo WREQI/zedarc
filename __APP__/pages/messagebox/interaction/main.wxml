@@ -1,0 +1,20 @@
+<page-meta class="data-v-afe56542" rootFontSize="{{a}}"></page-meta>
+<view class="_div interaction-container data-v-afe56542">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-afe56542"
+    uI="afe56542-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-afe56542"
+    uI="afe56542-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <interaction
+    bind:__l="__l"
+    class="data-v-afe56542"
+    uI="afe56542-2"
+  ></interaction>
+</view>

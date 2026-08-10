@@ -1,0 +1,43 @@
+@import "/app.wxss";
+.dot-container {
+  transform: translate(-50%, -50%);
+}
+.shine-dot {
+  height: 4px;
+  position: relative;
+  width: 4px;
+}
+.dot-inner,
+.shine-dot {
+  border-radius: 50%;
+  display: block;
+}
+.dot-inner {
+  animation: vabDot 2.5s ease-in-out infinite;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@-webkit-keyframes vabDot {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+@keyframes vabDot {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}

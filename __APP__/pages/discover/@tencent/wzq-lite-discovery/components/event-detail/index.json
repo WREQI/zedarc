@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "danmaku": "./danmaku",
+    "news": "./news",
+    "eventinfo": "./eventinfo",
+    "com-list": "../../../../../commentSbg/@tencent/wzq-lite-comment/pages/discovery-event/index",
+    "half-screen-ai-entry": "../../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "search-ai-bar": "../../../../../searchAi/@tencent/stock-ai-common-bar/components/stock-search-ai-bar/index",
+    "market-coditions": "./market-coditions"
+  },
+  "componentPlaceholder": {
+    "com-list": "view",
+    "half-screen-ai-entry": "view",
+    "search-ai-bar": "view"
+  }
+}

@@ -1,0 +1,16 @@
+@import "/app.wxss";
+.condition-list-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.condition-list-wrapper .cond-swiper {
+  -webkit-box-flex: 1;
+  flex: 1;
+  width: 100%;
+}

@@ -1,0 +1,18 @@
+<page-meta class="data-v-f919c1f9" rootFontSize="{{a}}"></page-meta>
+<view class="_div page data-v-f919c1f9" data-st-theme="{{b}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f919c1f9"
+    uI="f919c1f9-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f919c1f9"
+    uI="f919c1f9-1"
+  ></stock-privacy-dialog>
+  <account-history
+    bind:__l="__l"
+    class="account-history data-v-f919c1f9"
+    uI="f919c1f9-2"
+  ></account-history>
+</view>

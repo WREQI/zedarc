@@ -1,0 +1,30 @@
+@import "/app.wxss";
+.support-bank .bank-list.data-v-f8df294b {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.support-bank .item.data-v-f8df294b {
+  font-size: 0.4rem;
+  font-weight: 400;
+  line-height: 0.64rem;
+  margin-bottom: 0.32rem;
+  width: 50%;
+}
+.support-bank .bank-logo.data-v-f8df294b {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4rem;
+  width: 0.4rem;
+}
+.support-bank .bank-name.data-v-f8df294b {
+  margin-left: 0.133333rem;
+}

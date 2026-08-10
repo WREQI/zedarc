@@ -1,0 +1,69 @@
+<view class="_div dealer-list data-v-de44205d" style="{{h}}">
+  <view class="_div data-v-de44205d" wx:if="{{a}}">
+    <view
+      class="_div dealer-list-item data-v-de44205d"
+      wx:for="{{b}}"
+      wx:key="g"
+    >
+      <view class="_div dealer-icon data-v-de44205d">
+        <image
+          alt=""
+          class="_img icon data-v-de44205d"
+          src="{{item.a}}"
+        ></image>
+      </view>
+      <view class="_div dealer-info data-v-de44205d">
+        <view class="_div name data-v-de44205d"
+          >{{item.b}}<label
+            class="_span maintain data-v-de44205d"
+            wx:if="{{item.c}}"
+            >(维护中)</label
+          >
+        </view>
+        <view class="_div desc data-v-de44205d">{{item.d}}</view>
+        <view class="_div label data-v-de44205d">
+          <view
+            class="{{['_div','label-item','data-v-de44205d',c]}}"
+            wx:for="{{item.e}}"
+            wx:for-item="each"
+            wx:key="b"
+            >{{each.a}}</view
+          >
+        </view>
+      </view>
+      <view
+        bindtap="{{item.f}}"
+        class="{{['_div','toapply-btn','data-v-de44205d',e]}}"
+        >{{d}}</view
+      >
+    </view>
+  </view>
+  <view class="_div data-v-de44205d" wx:if="{{f}}">
+    <view
+      bindtap="{{item.f}}"
+      class="_div dealer-list-item dealer-list-item-guiding-height data-v-de44205d"
+      wx:for="{{g}}"
+      wx:key="e"
+    >
+      <view class="_div dealer-icon data-v-de44205d">
+        <image
+          alt=""
+          class="_img icon data-v-de44205d"
+          src="{{item.a}}"
+        ></image>
+      </view>
+      <view class="_div dealer-info data-v-de44205d">
+        <view class="_div name data-v-de44205d"
+          >{{item.b}}<label
+            class="_span maintain data-v-de44205d"
+            wx:if="{{item.c}}"
+            >(维护中)</label
+          >
+        </view>
+        <view class="_div desc data-v-de44205d">{{item.d}}</view>
+      </view>
+      <view class="_div toapply-icon data-v-de44205d"></view>
+    </view>
+  </view>
+  <view class="_div dealer-list-more data-v-de44205d">更多券商接入中</view>
+</view>

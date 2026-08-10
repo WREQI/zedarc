@@ -1,0 +1,22 @@
+<page-meta class="data-v-689a9206" rootFontSize="{{a}}"></page-meta>
+<view class="_div mp-container data-v-689a9206">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-689a9206"
+    uI="689a9206-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-689a9206"
+    uI="689a9206-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <share-page
+    bind:__l="__l"
+    class="data-v-689a9206"
+    uI="689a9206-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></share-page>
+</view>

@@ -1,0 +1,50 @@
+<view class="_div data-v-62b78143">
+  <view class="_div headline-container data-v-62b78143">
+    <view class="_div logo-container data-v-62b78143">
+      <view class="_div headline-logo-title data-v-62b78143"></view>
+      <image
+        alt=""
+        class="_img headline-logo data-v-62b78143"
+        src="{{a}}"
+      ></image>
+    </view>
+    <view class="_div headline-item-container data-v-62b78143">
+      <view
+        bindtap="{{news.l}}"
+        class="_div headline-item data-v-62b78143"
+        wx:for="{{b}}"
+        wx:for-item="news"
+        wx:key="m"
+      >
+        <image
+          alt=""
+          class="_img headline-num data-v-62b78143"
+          src="{{news.b}}"
+          wx:if="{{news.a}}"
+        ></image>
+        <view class="_div headline-intro data-v-62b78143">
+          <label class="{{['_span','data-v-62b78143','headline-title',news.d]}}"
+            >{{news.c}}</label
+          >
+          <view class="_div news-info data-v-62b78143">
+            <view class="_div news-info-text source data-v-62b78143"
+              >{{news.e}}</view
+            >
+            <view class="_div news-info-text data-v-62b78143" wx:if="{{news.f}}"
+              >{{news.g}}评</view
+            >
+            <view class="_div news-info-text data-v-62b78143" wx:if="{{news.h}}"
+              >{{news.i}}</view
+            >
+            <view
+              class="_div news-read-count data-v-62b78143"
+              wx:if="{{news.j}}"
+              >{{news.k}}万阅读</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div divide data-v-62b78143"></view>
+</view>

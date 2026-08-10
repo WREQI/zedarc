@@ -1,0 +1,82 @@
+<view class="{{['_div','data-v-dd63f554','list-search',x,y]}}">
+  <view class="_div box-top data-v-dd63f554" wx:if="{{a}}">
+    <view class="_div title data-v-dd63f554">{{b}}</view>
+    <image
+      bindtap="{{d}}"
+      class="_img rubbish data-v-dd63f554"
+      src="https://st.gtimg.com/design/8f312259572cb682b7c59d7c51a73a6d.png"
+      wx:if="{{c}}"
+    ></image>
+  </view>
+  <view class="{{['_div','data-v-dd63f554','stock-list',n]}}">
+    <block wx:if="{{e}}">
+      <item-info
+        bind:__l="__l"
+        bindreportSearchBrow="{{item.b}}"
+        class="data-v-dd63f554"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{f}}"
+        wx:key="a"
+      ></item-info>
+    </block>
+    <block wx:elif="{{g}}">
+      <item-a-i
+        bind:__l="__l"
+        bindjumpToDetail="{{item.b}}"
+        class="data-v-dd63f554"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{h}}"
+        wx:key="a"
+      ></item-a-i>
+    </block>
+    <block wx:elif="{{i}}">
+      <item-func
+        bind:__l="__l"
+        bindjumpToDetail="{{item.b}}"
+        bindshowMore="{{item.c}}"
+        class="data-v-dd63f554"
+        uI="{{item.d}}"
+        uP="{{item.e}}"
+        wx:for="{{j}}"
+        wx:key="a"
+      ></item-func>
+    </block>
+    <block wx:elif="{{k}}">
+      <item-manager
+        bind:__l="__l"
+        class="data-v-dd63f554"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:for="{{l}}"
+        wx:key="a"
+      ></item-manager>
+    </block>
+    <block wx:else>
+      <item-search
+        bind:__l="__l"
+        bindaddUserStock="{{item.c}}"
+        bindjumpToDetail="{{item.b}}"
+        class="data-v-dd63f554"
+        uI="{{item.d}}"
+        uP="{{item.e}}"
+        wx:for="{{m}}"
+        wx:key="a"
+      ></item-search>
+    </block>
+  </view>
+  <view bindtap="{{p}}" class="_div correct-tips data-v-dd63f554" wx:if="{{o}}">
+    <label class="_span data-v-dd63f554">仍没有意向结果？</label>
+    <label class="_span toaics data-v-dd63f554">点此反馈</label>
+    <label class="_span aiicon data-v-dd63f554"></label>
+  </view>
+  <view
+    catchtap="{{w}}"
+    class="{{['_div','data-v-dd63f554','sear-result-open',v]}}"
+    wx:elif="{{q}}"
+  >
+    <view class="_div data-v-dd63f554">{{r}}</view>
+    <view class="{{['_div','data-v-dd63f554','more-arrow',s,t]}}"></view>
+  </view>
+</view>

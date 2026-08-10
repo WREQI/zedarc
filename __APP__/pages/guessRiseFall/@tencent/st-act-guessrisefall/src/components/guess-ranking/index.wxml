@@ -1,0 +1,204 @@
+<view class="_div guess-ranking data-v-35245244" wx:if="{{a}}">
+  <view class="_div guess-ranking__header data-v-35245244">
+    <view class="_div guess-ranking__title data-v-35245244">竞猜榜单</view>
+    <view
+      bindtap="{{d}}"
+      class="_div guess-ranking__history-btn data-v-35245244"
+    >
+      <label class="_span guess-ranking__history-text data-v-35245244"
+        >历史战绩</label
+      >
+      <label class="_span guess-ranking__history-icon data-v-35245244">
+        <st-icon
+          bind:__l="__l"
+          class="data-v-35245244"
+          uI="35245244-0"
+          uP="{{c}}"
+          wx:if="{{b}}"
+        ></st-icon>
+        <image
+          class="guess-ranking__arrow-img data-v-35245244"
+          src="https://st.gtimg.com/design/31265f18bf3626b55ae4ee67765dc3b7.png"
+          wx:else
+        ></image>
+      </label>
+    </view>
+  </view>
+  <view class="_div guess-ranking__table data-v-35245244" wx:if="{{e}}">
+    <view class="_div guess-ranking__table-head data-v-35245244">
+      <view
+        class="_div guess-ranking__rank-num guess-ranking__rank-num--label data-v-35245244"
+        >序号</view
+      >
+      <view
+        class="_div guess-ranking__nickname guess-ranking__nickname--label data-v-35245244"
+        >昵称</view
+      >
+      <view class="_div guess-ranking__stats data-v-35245244">
+        <view
+          class="_div guess-ranking__stat-item guess-ranking__stat-item--total guess-ranking__stat-item--label data-v-35245244"
+          >累计猜对</view
+        >
+        <view
+          class="_div guess-ranking__stat-item guess-ranking__stat-item--streak guess-ranking__stat-item--label data-v-35245244"
+          >本月连对</view
+        >
+        <view
+          class="_div guess-ranking__stat-item guess-ranking__stat-item--rate guess-ranking__stat-item--label data-v-35245244"
+          >胜率</view
+        >
+      </view>
+    </view>
+    <view
+      class="_div guess-ranking__row guess-ranking__row--mine data-v-35245244"
+    >
+      <view class="_div guess-ranking__row-border data-v-35245244"></view>
+      <view
+        class="{{['_div','guess-ranking__rank-num','data-v-35245244',h&&'guess-ranking__rank-num--small']}}"
+        wx:if="{{f}}"
+        >{{g}}</view
+      >
+      <view
+        class="{{['_div','guess-ranking__rank-num','data-v-35245244',i&&'guess-ranking__rank-num--small']}}"
+        wx:else
+        >---</view
+      >
+      <view class="_div guess-ranking__avatar data-v-35245244" wx:if="{{j}}">
+        <image
+          alt=""
+          class="guess-ranking__avatar-img data-v-35245244"
+          src="{{k}}"
+        ></image>
+      </view>
+      <view class="_div guess-ranking__avatar data-v-35245244" wx:else>
+        <image
+          alt=""
+          class="guess-ranking__avatar-img--default data-v-35245244"
+          src="https://wzq.gtimg.com/image/activity/guessRiseFall/head.png"
+          wx:if="{{l}}"
+        ></image>
+      </view>
+      <view class="_div guess-ranking__info data-v-35245244">
+        <view class="_div guess-ranking__nickname data-v-35245244" wx:if="{{m}}"
+          >{{n}}</view
+        >
+        <view class="_div guess-ranking__nickname data-v-35245244" wx:if="{{o}}"
+          >微信用户</view
+        >
+        <view
+          class="_div guess-ranking__nickname data-v-35245244"
+          wx:if="{{p}}"
+        >
+          <view
+            bindtap="{{q}}"
+            class="_div guess-ranking__auth-link data-v-35245244"
+            >点击授权</view
+          >
+        </view>
+        <view class="_div guess-ranking__stats data-v-35245244">
+          <view
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--total guess-ranking__stat-item--bold data-v-35245244"
+            >{{r}}<label class="_span guess-ranking__stat-unit data-v-35245244"
+              >次</label
+            >
+          </view>
+          <view
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--streak guess-ranking__stat-item--bold data-v-35245244"
+            >{{s}}<label class="_span guess-ranking__stat-unit data-v-35245244"
+              >次</label
+            >
+          </view>
+          <view
+            bindtap="{{v}}"
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--rate guess-ranking__stat-item--bold data-v-35245244"
+            >{{t}}<label class="_span guess-ranking__stat-unit data-v-35245244"
+              >%</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div guess-ranking__row data-v-35245244"
+      wx:for="{{w}}"
+      wx:for-item="performance"
+      wx:key="g"
+    >
+      <view class="_div guess-ranking__rank-num data-v-35245244"
+        >{{performance.a}}</view
+      >
+      <view class="_div guess-ranking__avatar data-v-35245244">
+        <image
+          class="_img guess-ranking__avatar-img data-v-35245244"
+          src="{{performance.b}}"
+        ></image>
+      </view>
+      <view class="_div guess-ranking__info data-v-35245244">
+        <view class="_div guess-ranking__nickname data-v-35245244"
+          >{{performance.c}}</view
+        >
+        <view class="_div guess-ranking__stats data-v-35245244">
+          <view
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--total guess-ranking__stat-item--bold data-v-35245244"
+            >{{performance.d}}<label
+              class="_span guess-ranking__stat-unit data-v-35245244"
+              >次</label
+            >
+          </view>
+          <view
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--streak guess-ranking__stat-item--bold data-v-35245244"
+            >{{performance.e}}<label
+              class="_span guess-ranking__stat-unit data-v-35245244"
+              >次</label
+            >
+          </view>
+          <view
+            class="_div guess-ranking__stat-item guess-ranking__stat-item--rate guess-ranking__stat-item--bold data-v-35245244"
+            >{{performance.f}}<label
+              class="_span guess-ranking__stat-unit data-v-35245244"
+              >%</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="{{x}}" class="_div guess-ranking__view-more data-v-35245244"
+      >查看更多榜单</view
+    >
+  </view>
+</view>
+<view class="_div guess-ranking data-v-35245244" wx:else>
+  <view
+    class="_div guess-ranking__header guess-ranking__header--empty data-v-35245244"
+  >
+    <view class="_div guess-ranking__title data-v-35245244">竞猜榜单</view>
+    <view
+      bindtap="{{A}}"
+      class="_div guess-ranking__history-btn data-v-35245244"
+    >
+      <label class="_span guess-ranking__history-text data-v-35245244"
+        >历史战绩</label
+      >
+      <label class="_span guess-ranking__history-icon data-v-35245244">
+        <st-icon
+          bind:__l="__l"
+          class="data-v-35245244"
+          uI="35245244-1"
+          uP="{{z}}"
+          wx:if="{{y}}"
+        ></st-icon>
+        <image
+          class="guess-ranking__arrow-img data-v-35245244"
+          src="https://st.gtimg.com/design/31265f18bf3626b55ae4ee67765dc3b7.png"
+          wx:else
+        ></image>
+      </label>
+    </view>
+  </view>
+  <view class="_div guess-ranking__empty data-v-35245244">
+    <view class="_div guess-ranking__empty-icon data-v-35245244"></view>
+    <view class="_div guess-ranking__empty-text data-v-35245244"
+      >{{B}}月新赛季，快来猜涨跌吧</view
+    >
+  </view>
+</view>

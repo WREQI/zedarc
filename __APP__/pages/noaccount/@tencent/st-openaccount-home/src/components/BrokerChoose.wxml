@@ -1,0 +1,22 @@
+<view bindtap="{{k}}" class="_div broker-choose data-v-aa40f2b7">
+  <view class="{{['_div','broker-logo','data-v-aa40f2b7',d]}}">
+    <image
+      alt=""
+      class="{{['_img','broker-logo-icon','data-v-aa40f2b7',b,c]}}"
+      src="{{a}}"
+    ></image>
+  </view>
+  <label class="_span broker-name data-v-aa40f2b7"
+    >{{e}}<label class="_span state-maintain data-v-aa40f2b7" wx:if="{{f}}"
+      >(维护中)</label
+    >
+  </label>
+  <view class="_div line data-v-aa40f2b7"></view>
+  <view class="_p broker-desc data-v-aa40f2b7">{{g}}</view>
+  <view class="_div broker-choose-right data-v-aa40f2b7">
+    <view
+      class="{{['_div','arrow-pic','data-v-aa40f2b7',i,j]}}"
+      wx:if="{{h}}"
+    ></view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<view class="_div md-remind-item data-v-5245c595" wx:if="{{a}}">
+  <view class="_div stock-info-box data-v-5245c595">
+    <view class="_div info-wrap data-v-5245c595">
+      <view bindtap="{{e}}" class="_div top-part data-v-5245c595">
+        <view class="_div stock-name data-v-5245c595">{{b}}</view>
+        <view class="_div stock-icon data-v-5245c595">
+          <market-icon
+            bind:__l="__l"
+            class="data-v-5245c595"
+            uI="5245c595-0"
+            uP="{{c}}"
+            wx:if="{{c}}"
+          ></market-icon>
+        </view>
+        <view class="_div stock-scode data-v-5245c595">{{d}}</view>
+      </view>
+      <view
+        class="{{['_div','data-v-5245c595','bottom-part',h]}}"
+        wx:if="{{f}}"
+      >
+        <label class="_span data-v-5245c595">{{g}}%</label>
+      </view>
+      <view class="{{['_div','data-v-5245c595','bottom-part',k]}}" wx:else>
+        <label class="_span data-v-5245c595">{{i}}</label>
+        <label class="_span zdf data-v-5245c595">{{j}}%</label>
+      </view>
+    </view>
+    <view class="_div edit-del-btn data-v-5245c595">
+      <label bindtap="{{l}}" class="_span edit-del-single-btn data-v-5245c595"
+        >编辑</label
+      >
+      <label
+        bindtap="{{m}}"
+        class="_span edit-del-single-btn del-btn data-v-5245c595"
+        >删除</label
+      >
+    </view>
+  </view>
+  <view class="_div remind-settings-box data-v-5245c595">
+    <view class="_div setting-item data-v-5245c595" wx:if="{{n}}">
+      <view class="_div setting-label data-v-5245c595">年化收益率涨到</view>
+      <view class="_div setting-value up data-v-5245c595">{{o}}%</view>
+    </view>
+    <block wx:elif="{{p}}">
+      <view class="_div data-v-5245c595" wx:for="{{q}}" wx:key="e">
+        <view class="_div setting-item data-v-5245c595" wx:if="{{item.a}}">
+          <view class="_div setting-label data-v-5245c595">{{item.b}}</view>
+          <view class="_div setting-value data-v-5245c595"
+            >{{item.c}}{{item.d}}</view
+          >
+        </view>
+      </view>
+      <view class="_div setting-item data-v-5245c595" wx:if="{{r}}">
+        <view class="_div setting-label data-v-5245c595">基金净值更新提醒</view>
+        <view class="_div setting-value data-v-5245c595">{{s}}</view>
+      </view>
+      <view class="_div setting-item data-v-5245c595" wx:if="{{t}}">
+        <view class="_div setting-label data-v-5245c595">重要异动提醒</view>
+        <view class="_div setting-value data-v-5245c595">{{v}}</view>
+      </view>
+    </block>
+    <view class="_div setting-item data-v-5245c595" wx:if="{{w}}">
+      <view class="_div setting-label data-v-5245c595">未设置提醒项</view>
+    </view>
+  </view>
+</view>

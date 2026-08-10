@@ -1,0 +1,51 @@
+@import "/app.wxss";
+.bottom-selector-body.data-v-f30f4722 {
+  background-color: var(--fill-2);
+  padding: 0 0.32rem 0.4rem;
+}
+.bottom-selector-body .date-picker-view.data-v-f30f4722 {
+  height: 6.293333rem;
+  position: relative;
+}
+.bottom-selector-body .date-picker-view.data-v-f30f4722:before {
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  content: "";
+  height: 1.173333rem;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 0.586667rem);
+  width: 100%;
+}
+[data-theme="dark"]
+  .bottom-selector-body
+  .date-picker-view.data-v-f30f4722:before {
+  background-color: #171d28;
+}
+.bottom-selector-body .date-picker-view .item.data-v-f30f4722 {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 1.173333rem;
+}
+[data-theme="dark"]
+  .bottom-selector-body
+  .date-picker-view
+  .item.unselected.data-v-f30f4722 {
+  color: #7d88a1;
+}
+.bottom-selector-body.data-v-f30f4722 .indicator-class:after,
+.bottom-selector-body.data-v-f30f4722 .indicator-class:before {
+  border: none;
+}
+.bottom-selector-body .confirm-btn.data-v-f30f4722 {
+  background-color: var(--color-buy) !important;
+  color: #fff;
+  font-size: 0.48rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  margin-top: 0.32rem;
+  padding: 0;
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "no-data": "./components/NoData",
+    "f2": "./components/f2-fit/f2",
+    "select-plate": "../wzq-detail-finance/components/SelectPlate",
+    "new-select-plate": "../stock-markets-base/components/SelectPlate",
+    "range-slider": "../stock-markets-base/components/RangeSlider",
+    "wzq-info-modal": "./node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "etf-tip-modal": "./etf/TipsInfo",
+    "gzfx": "./components/Gzfx",
+    "yzlfx": "./components/Yzlfx"
+  }
+}

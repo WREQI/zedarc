@@ -1,0 +1,58 @@
+<view class="_div kcb-etf-card data-v-e8242dcd">
+  <view
+    class="_div etf-card-title layout-row layout-align-space-between data-v-e8242dcd"
+  >
+    <view class="_div title-box data-v-e8242dcd">
+      <view class="_div data-v-e8242dcd">科创板ETF</view>
+      <view catchtap="{{a}}" class="_i image-tip data-v-e8242dcd"></view>
+    </view>
+    <view class="_div title-right data-v-e8242dcd">
+      <view class="_div tip-guide data-v-e8242dcd"
+        >通过ETF买科创板，无50万门槛</view
+      >
+    </view>
+  </view>
+  <view class="_div plate-item-row layout-row data-v-e8242dcd" wx:if="{{b}}">
+    <view
+      class="_div plate-item layout-column flex data-v-e8242dcd"
+      wx:for="{{c}}"
+      wx:key="l"
+    >
+      <view
+        catchtap="{{item.k}}"
+        class="_div data-v-e8242dcd"
+        wx:if="{{item.a}}"
+      >
+        <view
+          class="_div plate-name data-v-e8242dcd"
+          style="{{'font-size:'+item.c}}"
+          >{{item.b}}</view
+        >
+        <view
+          class="{{['_div','plate-quote','data-v-e8242dcd',item.f]}}"
+          wx:if="{{item.d}}"
+          >{{item.e}}%</view
+        >
+        <view
+          class="{{['_div','data-v-e8242dcd','plate-feature-stock','layout-column','layout-align-space-between','h5-or-wzq-feature-stock']}}"
+        >
+          <view
+            class="_div plate-stock-label data-v-e8242dcd"
+            wx:if="{{item.g}}"
+          >
+            <label
+              class="{{['_span','data-v-e8242dcd','plate-label-item',label.c]}}"
+              wx:for="{{item.h}}"
+              wx:for-item="label"
+              wx:key="b"
+              >{{label.a}}</label
+            >
+          </view>
+          <view class="_div data-v-e8242dcd" wx:elif="{{item.i}}"
+            >规模{{item.j}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

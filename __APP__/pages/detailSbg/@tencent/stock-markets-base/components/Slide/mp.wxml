@@ -1,0 +1,29 @@
+<view class="_div slider-content data-v-535470b8" style="{{q}}">
+  <image
+    bindtap="{{b}}"
+    class="_img reduce data-v-535470b8"
+    src="https://st.gtimg.com/design/7df3cb9bc35562b0f8e7a7d2dcda2efc.png"
+    wx:if="{{a}}"
+  ></image>
+  <view class="_div min data-v-535470b8" wx:if="{{c}}">{{d}}</view>
+  <view class="_div slide-count data-v-535470b8">
+    <slider
+      activeColor="{{f}}"
+      backgroundColor="{{e}}"
+      bindchange="{{l}}"
+      blockSize="{{h}}"
+      class="slide-set data-v-535470b8"
+      max="{{j}}"
+      min="{{i}}"
+      showValue="{{k}}"
+      value="{{g}}"
+    ></slider>
+  </view>
+  <view class="_div max data-v-535470b8" wx:if="{{m}}">{{n}}</view>
+  <image
+    bindtap="{{p}}"
+    class="_img add data-v-535470b8"
+    src="https://st.gtimg.com/design/6c8e050afb5c35442e6f79653d0eecbf.png"
+    wx:if="{{o}}"
+  ></image>
+</view>

@@ -1,0 +1,88 @@
+<view class="_div comp-block comp-co data-v-377be398">
+  <view class="_div ff-title data-v-377be398">主力资金</view>
+  <view class="_div fold-content data-v-377be398" wx:if="{{a}}">
+    <view class="_p brief data-v-377be398" wx:if="{{b}}"
+      >{{c}}<view catchtap="{{d}}" class="_i data-v-377be398"></view>
+    </view>
+  </view>
+  <view class="_div chart-wrapper data-v-377be398" wx:if="{{e}}">
+    <view class="_div chart-legend data-v-377be398">
+      <label class="_span data-v-377be398">主力净流入 ({{f}})</label>
+      <label class="_span chart-legend-text data-v-377be398"
+        >主力净流出 ({{g}})</label
+      >
+      <label class="_span data-v-377be398">占比 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{i}}"
+      class="data-v-377be398"
+      uI="377be398-0"
+      uP="{{j}}"
+      wx:if="{{h}}"
+    ></f2>
+  </view>
+  <block wx:if="{{k}}">
+    <view class="_div ff-title data-v-377be398">北向资金</view>
+    <view class="_div fold-content data-v-377be398" wx:if="{{l}}">
+      <view class="_p brief data-v-377be398" wx:if="{{m}}"
+        >{{n}}<view catchtap="{{o}}" class="_i data-v-377be398"></view>
+      </view>
+    </view>
+    <view class="_div chart-wrapper data-v-377be398" wx:if="{{p}}">
+      <view class="_div chart-title-lgt data-v-377be398">
+        <view class="_div data-v-377be398">持仓股数 ({{q}})</view>
+        <view class="_div data-v-377be398">持股比例</view>
+      </view>
+      <view class="_div lgt-graph flex-1 data-v-377be398">
+        <view
+          bindtouchend="{{t}}"
+          bindtouchmove="{{s}}"
+          bindtouchstart="{{r}}"
+          class="_div fake-chart data-v-377be398"
+        ></view>
+        <f2
+          bind:__l="__l"
+          bindonInit="{{x}}"
+          class="r data-v-377be398"
+          uI="377be398-1"
+          uP="{{y}}"
+          uR="stockNorthBound"
+          wx:if="{{v}}"
+        ></f2>
+        <view
+          class="{{['_div','tooltip','flex-1','layout-column','layout-align-space-between','data-v-377be398',G]}}"
+          id="lgttooltip"
+          wx:if="{{z}}"
+        >
+          <view class="_div item flex-row flex-1 data-v-377be398">
+            <label class="_span label data-v-377be398">时间</label>
+            <label class="_span value data-v-377be398">{{A}}</label>
+          </view>
+          <view class="_div item flex-row flex-1 data-v-377be398">
+            <label class="_span label data-v-377be398">持股比例</label>
+            <label class="_span value data-v-377be398">{{B}}</label>
+          </view>
+          <view class="_div item flex-row flex-1 data-v-377be398">
+            <label class="_span label data-v-377be398">持股股数</label>
+            <label class="_span value data-v-377be398">{{C}}</label>
+          </view>
+          <view class="_div item flex-row flex-1 data-v-377be398">
+            <label class="_span label data-v-377be398">净流入/出额</label>
+            <label class="{{['_span','value','data-v-377be398',E]}}"
+              >{{D}}</label
+            >
+          </view>
+          <view class="_div item flex-row flex-1 data-v-377be398">
+            <label class="_span label data-v-377be398">收盘价</label>
+            <label class="_span value data-v-377be398">{{F}}</label>
+          </view>
+        </view>
+      </view>
+      <view class="_div chart-legend-lgt data-v-377be398">
+        <label class="_span data-v-377be398">持仓股数</label>
+        <label class="_span data-v-377be398">持股比例</label>
+      </view>
+    </view>
+  </block>
+</view>

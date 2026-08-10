@@ -1,0 +1,11 @@
+<view class="_div check-detail data-v-8e96c067">
+  <label catchtap="{{b}}" class="_span data-v-8e96c067" wx:if="{{a}}"
+    >【查看详情】</label
+  >
+  <label bindtap="{{d}}" class="_span data-v-8e96c067" wx:if="{{c}}"
+    >【查看公告】</label
+  >
+  <label bindtap="{{f}}" class="_span data-v-8e96c067" wx:if="{{e}}"
+    >【查看研报】</label
+  >
+</view>

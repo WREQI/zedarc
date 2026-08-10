@@ -1,0 +1,39 @@
+@import "/app.wxss";
+.custom-navbar.data-v-9ce1f510 {
+  background: transparent;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1001;
+}
+.custom-navbar .navbar-content.data-v-9ce1f510 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.173333rem;
+  padding: 0 0.346667rem;
+}
+.custom-navbar .back-icon.data-v-9ce1f510 {
+  background-color: #0a1428;
+  height: 0.533333rem;
+  mask-image: url(https://st.gtimg.com/image/strategy/ai/arrow.svg);
+  mask-size: 100% 100%;
+  transform: rotate(270deg);
+  width: 0.533333rem;
+}
+[data-theme="dark"] .custom-navbar .back-icon.data-v-9ce1f510 {
+  background-color: #dcdfe6;
+}
+.custom-navbar .navbar-title.data-v-9ce1f510 {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 600;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  white-space: nowrap;
+}

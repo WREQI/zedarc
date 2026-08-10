@@ -1,0 +1,47 @@
+<view
+  class="{{['trade-page-container','data-v-f18a6d2a',p,q]}}"
+  data-theme="{{r}}"
+>
+  <st-status
+    bind:__l="__l"
+    bindhandleError="{{b}}"
+    class="data-v-f18a6d2a"
+    uI="f18a6d2a-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></st-status>
+  <no-account
+    bind:__l="__l"
+    bindtoApply="{{e}}"
+    bindtoBind="{{f}}"
+    class="data-v-f18a6d2a"
+    uI="f18a6d2a-1"
+    uP="{{g}}"
+    wx:if="{{d}}"
+  ></no-account>
+  <apply-survey
+    bind:__l="__l"
+    class="r data-v-f18a6d2a"
+    uI="f18a6d2a-2"
+    uR="applySurvey"
+    wx:if="{{h}}"
+  ></apply-survey>
+  <custom-modal
+    bind:__l="__l"
+    class="modal-container data-v-f18a6d2a"
+    uI="f18a6d2a-3"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <view class="title data-v-f18a6d2a" slot="title">{{k}}</view>
+    <view class="content data-v-f18a6d2a" slot="content">{{l}}</view>
+    <view class="btn-group border-top-1 data-v-f18a6d2a" slot="btn-group">
+      <view catchtap="{{n}}" class="cancel-btn data-v-f18a6d2a" wx:if="{{m}}"
+        >取消</view
+      >
+      <view catchtap="{{o}}" class="confirm-btn border-left-1 data-v-f18a6d2a"
+        >确定</view
+      >
+    </view>
+  </custom-modal>
+</view>

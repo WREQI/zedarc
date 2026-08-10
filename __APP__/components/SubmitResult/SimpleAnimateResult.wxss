@@ -1,0 +1,330 @@
+@import "/app.wxss";
+.close-bg {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+}
+.back-bg,
+.close-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.back-bg {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-back.svg);
+}
+.broker-logo-icon-header {
+  height: 0.4rem;
+  margin-right: 0.16rem;
+  width: 0.4rem;
+}
+.broker-fundaccount {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 0.613333rem;
+}
+.trade-setting {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-setting.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.simple-result {
+  height: 8.773333rem;
+}
+.simple-result .btn {
+  margin: 0;
+}
+.simple-result.simple-result__simple-mode .simple-result--header {
+  background-color: var(--fill-2);
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 500;
+  height: 1.466667rem;
+  line-height: 0.666667rem;
+  padding: 0 0.32rem;
+}
+.simple-result.simple-result__simple-mode .simple-result--body {
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  padding-top: 2.386667rem;
+  position: relative;
+}
+.simple-result.simple-result__simple-mode .simple-result--body__fail,
+.simple-result.simple-result__simple-mode .simple-result--body__succ {
+  padding-top: 3.813333rem;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--icon {
+  border-radius: 50%;
+  height: 1.866667rem;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 2.013333rem;
+  transform: translate(-50%) scale(0.8);
+  transform-origin: 0;
+  width: 1.866667rem;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--icon
+  .simple-result-succ-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/success-green.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 100%;
+  width: 0;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--icon
+  .simple-result-fail-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/fail-icon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 0;
+  width: 100%;
+}
+[data-theme="dark"]
+  .simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--icon
+  .simple-result-succ-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/succ-dark-v3.png);
+}
+[data-theme="dark"]
+  .simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--icon
+  .simple-result-fail-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/notify/fail-dark-v3.png);
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--text {
+  font-size: 0.48rem;
+  font-weight: 500;
+  left: 50%;
+  line-height: 0.56rem;
+  position: absolute;
+  top: 4.306667rem;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-status--text.condition {
+  font-weight: 400;
+  white-space: nowrap;
+}
+@media screen and (min-width: 800px) {
+  .simple-result.simple-result__simple-mode
+    .simple-result--body
+    .simple-result-status--icon {
+    top: 2.666667rem;
+  }
+  .simple-result.simple-result__simple-mode
+    .simple-result--body
+    .simple-result-status--text {
+    top: 4.96rem;
+  }
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .success-circle-bg {
+  background-color: rgba(28, 170, 60, 0.05);
+}
+.simple-result.simple-result__simple-mode .simple-result--body .fail-circle-bg {
+  background-color: rgba(230, 53, 53, 0.05);
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .default-circle-bg {
+  background-color: rgba(152, 160, 179, 0.05);
+}
+[data-theme="dark"]
+  .simple-result.simple-result__simple-mode
+  .simple-result--body.success-circle-bg {
+  background-color: #131d20;
+}
+[data-theme="dark"]
+  .simple-result.simple-result__simple-mode
+  .simple-result--body.fail-circle-bg {
+  background-color: #1d1820;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-loading-placeholder {
+  height: 3.52rem;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other {
+  opacity: 0;
+  position: relative;
+  transform: translateY(1.213333rem);
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-tips {
+  box-sizing: border-box;
+  line-height: 1.2;
+  padding: 0 0.32rem;
+  position: absolute;
+  top: 0.053333rem;
+  width: 100%;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn {
+  padding: 1.466667rem 0.4rem 0.066667rem;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .buy {
+  background: var(--color-buy);
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .sell {
+  background: var(--color-sell);
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .buy,
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .sell {
+  color: #fff;
+  font-size: 0.426667rem;
+  font-weight: 500;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .buy:after,
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result-other
+  .simple-result-btn
+  .sell:after {
+  display: none;
+}
+.simple-result.simple-result__simple-mode
+  .simple-result--body
+  .simple-result--caidai {
+  background-image: url(https://st.gtimg.com/image/mp-broker/simple/caidai-new.gif);
+  background-position: center -1.333333rem;
+  background-size: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -1.466667rem;
+}
+.simple-result-loading-container {
+  border-radius: 50%;
+  height: 2.4rem;
+  left: 50%;
+  position: absolute;
+  top: 1.746667rem;
+  transform: translate(-50%);
+  width: 2.4rem;
+}
+.simple-result-loading-container.grey {
+  background: #98a0b3;
+}
+.simple-result-loading-container .loading {
+  animation: an1 1s linear infinite;
+  background-color: initial;
+  border-radius: 50%;
+  height: 2.453333rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.453333rem;
+}
+.simple-result-loading-container .circle-1 {
+  clip: rect(0, 1.226667rem, 2.453333rem, 0);
+}
+.simple-result-loading-container .circle-1,
+.simple-result-loading-container .circle-2 {
+  background-color: var(--fill-2);
+  border-radius: 50%;
+  height: 2.453333rem;
+  position: absolute;
+  transform: rotate(0);
+  width: 2.453333rem;
+}
+.simple-result-loading-container .circle-2 {
+  clip: rect(0, 2.453333rem, 2.453333rem, 1.226667rem);
+  animation: an2 1s linear infinite;
+  transform: rotate(60deg);
+  transition: all 0.3s;
+}
+.simple-result-loading-container .circle-3 {
+  background-color: var(--fill-2);
+  border-radius: 50%;
+  height: 2.186667rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.186667rem;
+}
+@-webkit-keyframes an1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+@keyframes an1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+@-webkit-keyframes an2 {
+  0% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(160deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}
+@keyframes an2 {
+  0% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(160deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}

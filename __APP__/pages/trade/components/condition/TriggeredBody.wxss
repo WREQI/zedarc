@@ -1,0 +1,102 @@
+@import "/app.wxss";
+.cond-detail-row.data-v-1e5b3403 {
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.586667rem;
+}
+.cond-detail-row .cond-detail-row-left.data-v-1e5b3403 {
+  color: var(--text-color-4);
+  flex-shrink: 0;
+  font-size: 0.373333rem;
+  font-weight: 400;
+}
+.cond-detail-row .cond-detail-row-right.data-v-1e5b3403 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  margin-left: 0.32rem;
+  text-align: right;
+}
+.cond-triggered-action.data-v-1e5b3403 {
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.32rem;
+}
+.cond-triggered-action .cond-triggered-actiontxt.data-v-1e5b3403 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.cond-triggered-action .cond-triggered-arrow.data-v-1e5b3403 {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+}
+.cond-order-succ .cond-order-desc.data-v-1e5b3403 {
+  color: var(--color-green);
+}
+.cond-order-fail .cond-order-desc.data-v-1e5b3403 {
+  color: var(--color-red);
+}
+.cond-order-fail.data-v-1e5b3403 .cond-detail-row {
+  -webkit-box-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cond-order-unknow .cond-order-desc.data-v-1e5b3403 {
+  color: var(--color-orange);
+}
+.cond-orderinfo .line.data-v-1e5b3403 {
+  color: #98a0b3;
+  margin: 0 0.213333rem;
+}
+.cond-trigger-body.data-v-1e5b3403 .cond-detail-row {
+  margin-bottom: 0.32rem;
+}
+.cond-trigger-body.data-v-1e5b3403 .cond-detail-row.last {
+  margin-bottom: 0;
+}
+.cond-detail-row-right--ellipsis.data-v-1e5b3403 .cond-detail-row-right {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow: hidden;
+}
+.cond-tel.data-v-1e5b3403 {
+  color: #576b95;
+  margin-left: 0.106667rem;
+}
+.cond-tel.tel-block.data-v-1e5b3403 {
+  display: block;
+}
+.cond-order-desc--ellipsis.data-v-1e5b3403 {
+  -webkit-box-flex: 1;
+  -webkit-box-pack: end;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  overflow: hidden;
+  width: 100%;
+}
+.cond-order-desc--ellipsis .cond-order-desc.data-v-1e5b3403 {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

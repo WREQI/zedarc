@@ -1,0 +1,24 @@
+<view class="{{['st-steps',c]}}">
+  <view class="{{['st-steps-item',item.h]}}" wx:for="{{a}}" wx:key="g">
+    <view class="st-steps-item-tail"></view>
+    <view class="st-steps-item-icon">
+      <slot name="icon" wx:if="{{$slots.icon}}"></slot>
+      <block wx:else>
+        <label class="st-steps-icon" wx:if="{{b}}"></label>
+        <label
+          class="{{['st-steps-icon','icon',item.b]}}"
+          wx:elif="{{item.a}}"
+        ></label>
+        <label class="st-steps-icon" wx:else>{{item.c}}</label>
+      </block>
+    </view>
+    <view class="st-steps-item-content">
+      <view class="st-steps-item-title">
+        <rich-text nodes="{{item.d}}"></rich-text>
+      </view>
+      <view class="st-steps-item-description" wx:if="{{item.e}}"
+        >{{item.f}}</view
+      >
+    </view>
+  </view>
+</view>

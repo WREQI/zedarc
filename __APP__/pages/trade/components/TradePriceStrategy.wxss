@@ -1,0 +1,50 @@
+@import "/app.wxss";
+.price-strategy-overlay .price-strategy-popup {
+  background: var(--fill-2);
+  border-radius: 0.106667rem;
+  padding: 0 0.4rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 4.666667rem;
+  width: 2.4rem;
+}
+.price-strategy-overlay .price-strategy-popup .strategy-item {
+  border-radius: 0;
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  padding: 0.4rem 0;
+  text-align: center;
+}
+.price-strategy-overlay .price-strategy-popup .strategy-item.primary-color {
+  font-weight: 500;
+}
+[data-theme="dark"]
+  .price-strategy-overlay
+  .price-strategy-popup
+  .border--bottom:after,
+[data-theme="dark"]
+  .price-strategy-overlay
+  .price-strategy-popup
+  .border--top:before {
+  border-color: var(--border-color-1);
+}
+.price-strategy-overlay .triangle:before {
+  border: 0.24rem solid transparent;
+  border-bottom: 0.24rem solid var(--fill-2);
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0.24rem;
+  top: -0.426667rem;
+  width: 0;
+}
+[data-theme="dark"] .price-strategy-overlay .triangle:before {
+  border-bottom-color: #262e40;
+}
+.price-strategy-overlay .triangle.left:before {
+  left: 0.106667rem;
+  right: auto;
+}

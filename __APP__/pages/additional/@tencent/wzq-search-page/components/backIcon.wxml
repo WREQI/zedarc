@@ -1,0 +1,20 @@
+<view class="_div data-v-5b246434">
+  <image
+    ariaLabel="back-home-icon"
+    ariaRole="返回首页"
+    catchtap="{{c}}"
+    class="_img back-icon data-v-5b246434"
+    src="https://st.gtimg.com/design/073be223eb1bf32879c6b3acd6ff5e68.png"
+    style="{{'padding-top:'+b}}"
+    wx:if="{{a}}"
+  ></image>
+  <image
+    ariaLabel="back-icon"
+    ariaRole="返回按钮"
+    catchtap="{{f}}"
+    class="_img back-icon data-v-5b246434"
+    src="https://st.gtimg.com/design/2de309bd00716133dd871f1b24307783.png"
+    style="{{'padding-top:'+e}}"
+    wx:if="{{d}}"
+  ></image>
+</view>

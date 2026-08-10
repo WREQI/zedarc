@@ -1,0 +1,43 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{h}}"
+  bindmaskClick="{{g}}"
+  class="data-v-31ea0800"
+  uI="31ea0800-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{i}}"
+>
+  <view
+    class="{{['content-wrap','data-v-31ea0800',f&&'content-wrap__simple-mode']}}"
+  >
+    <view class="content-wrap-detail data-v-31ea0800">
+      <view class="desc data-v-31ea0800">业务类型</view>
+      <view class="btn-list data-v-31ea0800">
+        <label
+          bindtap="{{item.d}}"
+          class="{{['btn-item','data-v-31ea0800',item.c]}}"
+          wx:for="{{a}}"
+          wx:key="b"
+          >{{item.a}}</label
+        >
+      </view>
+    </view>
+    <view class="button-wrap flex flex-v data-v-31ea0800">
+      <button bindtap="{{b}}" class="cancel-btn flex-1 data-v-31ea0800">
+        取消
+      </button>
+      <button bindtap="{{c}}" class="confirm-btn flex-1 data-v-31ea0800">
+        确定
+      </button>
+    </view>
+    <view
+      bindtap="{{e}}"
+      class="deduction-btn fs-28 data-v-31ea0800"
+      wx:if="{{d}}"
+    >
+      <label class="data-v-31ea0800">统计手续费</label>
+      <label class="icon icon-arrow-right data-v-31ea0800"></label>
+    </view>
+  </view>
+</action-sheet>

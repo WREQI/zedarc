@@ -1,0 +1,92 @@
+.layout.data-v-16347bb0 {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-16347bb0,
+.layout-align-start-center.data-v-16347bb0 {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-16347bb0 {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-16347bb0 {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-16347bb0 {
+  justify-content: flex-start;
+}
+.layout-column.data-v-16347bb0 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-16347bb0 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-16347bb0 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.plate-card.data-v-16347bb0 {
+  background-color: var(--fill-2);
+}
+.plate-card .seperate-line.data-v-16347bb0 {
+  background-color: var(--border-seprator);
+  height: 0.16rem;
+  width: 100%;
+}
+.plate-card .tabbar-wrapper.data-v-16347bb0 {
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.rise-fall-rate-label.data-v-16347bb0 {
+  font-size: 0.013333333333333334rem;
+  padding: 0.12rem 0 0.12rem 0.4rem;
+}
+.rise-fall-rate-label .label.data-v-16347bb0 {
+  background-color: var(--color-card);
+  border-radius: 0.10666666666666667rem;
+  color: var(--text-color-2);
+  display: inline-block;
+  font-size: 0.32rem;
+  letter-spacing: 0;
+  line-height: 0.72rem;
+  margin-right: 0.21333333333333335rem;
+  padding: 0 0.26666666666666666rem;
+  text-align: center;
+}
+.rise-fall-rate-label .label.active.data-v-16347bb0 {
+  background: var(--color-card3);
+  color: var(--color-primary-1);
+}
+.sys-ios .rise-fall-rate-label .label.active.data-v-16347bb0 {
+  font-weight: 600 !important;
+}
+.sys-android .rise-fall-rate-label .label.active.data-v-16347bb0 {
+  -webkit-text-stroke-width: 0.005333333333333334rem !important;
+  font-weight: unset !important;
+}
+.plate-item-row.data-v-16347bb0 {
+  position: relative;
+}
+.plate-item-row.data-v-16347bb0:after {
+  background-color: var(--border-light);
+  bottom: 0;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 0.013333333333333334rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.plate-item-row.data-v-16347bb0:last-child:after {
+  display: none;
+}

@@ -1,0 +1,45 @@
+<view class="_div yy-snackbar-wrapper">
+  <view class="_div yy-snackbar" wx:if="{{a}}">
+    <view class="_div yy-snackbar-left">
+      <slot
+        name="yy-snackbar-logo"
+        wx:if="{{$slots['yy-snackbar-logo']}}"
+      ></slot>
+      <block wx:else>
+        <icon
+          bind:__l="__l"
+          class="yy-snackbar-logo"
+          uI="374a32e8-0"
+          uP="{{c}}"
+          wx:if="{{b}}"
+        ></icon>
+      </block>
+      <view class="_div">
+        <slot name="yy-snackbar-text"></slot>
+      </view>
+    </view>
+    <view class="_div yy-snackbar-right">
+      <button-self
+        bind:__l="__l"
+        bindclick="{{e}}"
+        class="yy-snackbar-btn"
+        uI="374a32e8-1"
+        uP="{{f}}"
+        uS="{{['d']}}"
+        wx:if="{{d}}"
+      >
+        <slot
+          name="yy-snackbar-btn-text"
+          wx:if="{{$slots['yy-snackbar-btn-text']}}"
+        ></slot>
+        <block wx:else>查看</block>
+      </button-self>
+      <view catchtap="{{g}}" class="_div yy-snackbar-close">
+        <image
+          class="_img snackbar-close-img"
+          src="https://wzq.gtimg.com/resource/images/801d9f219d0065d36bbd75fa79e1c052.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

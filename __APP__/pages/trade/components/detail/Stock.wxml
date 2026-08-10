@@ -1,0 +1,166 @@
+<view class="trade-detail-container">
+  <view
+    bindtap="{{h}}"
+    class="flex-between base-info border--bottom"
+    wx:if="{{a}}"
+  >
+    <view class="flex-center">
+      <label class="{{['stock-name','text-color-1',c]}}">{{b}}</label>
+      <label class="text-color-4 fs-24">{{d}}{{e}}</label>
+      <label class="trade-tag" wx:if="{{f}}">{{g}}</label>
+    </view>
+    <view class="base-info--link flex-center primary-color">
+      <label class="fs-28">查看个股详情</label>
+      <label class="fs-32 icon icon-arrow-right"></label>
+    </view>
+  </view>
+  <view class="{{['steps-wraper',j]}}">
+    <st-steps
+      bind:__l="__l"
+      uI="36e23d3a-0"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></st-steps>
+  </view>
+  <view class="section section-detail">
+    <view class="{{['detail-order-num','hk',q]}}" wx:if="{{k}}">
+      <view class="{{['left','flex-1','flex-column-between',o]}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">股东账户</label>
+          <label class="{{['value','text-color-1',n]}}">{{l}}{{m}}</label>
+        </view>
+      </view>
+      <view class="right flex-1 flex-column-between">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">订单类型</label>
+          <label class="value text-color-1 fs-28">{{p}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="detail-order-num flex">
+      <view class="{{['left','flex-1','flex-column-between',t]}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">委托单价</label>
+          <label class="value text-color-1 fs-28">{{r}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">委托数量</label>
+          <label class="value text-color-1 fs-28">{{s}}</label>
+        </view>
+      </view>
+      <view class="right flex-1 flex-column-between" wx:if="{{v}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24 avg-price flex-center"
+            >成交均价<label
+              catchtap="{{w}}"
+              class="tip-icon icon icon-italic-info"
+            ></label>
+          </label>
+          <label class="value text-color-1 fs-28">{{x}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">成交数量</label>
+          <label class="value text-color-1 fs-28">{{y}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="detail-total flex-between border--top" wx:if="{{z}}">
+      <label class="title text-color-1 fs-30">委托金额</label>
+      <label class="value text-color-1" wx:if="{{A}}">{{B}}</label>
+      <label class="value text-color-1" wx:else>{{C}}</label>
+    </view>
+  </view>
+  <view class="section section-fees" wx:if="{{D}}">
+    <view class="row row-main fee fee-total flex-between border--bottom">
+      <view class="flex-center">
+        <label class="title text-color-1 fs-30 bold">交收金额</label>
+      </view>
+      <label class="value text-color-1" wx:if="{{E}}">{{F}}</label>
+      <label class="value text-color-1 fs-28 smaller" wx:else
+        >券商结算后展示</label
+      >
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-28 bold">证券成交金额</label>
+      <label class="value text-color-1 fs-28 bold" wx:if="{{G}}">{{H}}</label>
+      <label class="value text-color-1 fs-28 bold" wx:else>待结算</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-28 fee-sum-text bold flex-center"
+        >合计费用{{I}}<label
+          catchtap="{{K}}"
+          class="tip-icon icon icon-italic-info bold"
+          wx:if="{{J}}"
+        ></label>
+      </label>
+      <label class="value text-color-1 fs-28 bold" wx:if="{{L}}">{{M}}</label>
+      <label class="value text-color-1 fs-28 bold" wx:else>待结算</label>
+    </view>
+    <view class="fee">
+      <view class="row flex-between">
+        <label class="title text-color-5 fs-24">- 佣金</label>
+        <label class="value text-color-5 fs-24" wx:if="{{N}}">{{O}}</label>
+        <label class="value text-color-5 fs-28" wx:else>待结算</label>
+      </view>
+      <view class="rate-detail-container" wx:if="{{P}}">
+        <label class="title text-color-5 fs-24 rate-detail-text">{{Q}}</label>
+        <view></view>
+        <label class="title text-color-5 fs-24 rate-detail-text">{{R}}</label>
+      </view>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-5 fs-24">- 印花税</label>
+      <label class="value text-color-5 fs-24" wx:if="{{S}}">{{T}}</label>
+      <label class="value text-color-5 fs-28" wx:else>待结算</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-5 fs-24">- 其他</label>
+      <label class="value text-color-5 fs-24" wx:if="{{U}}">{{V}}</label>
+      <label class="value text-color-5 fs-28" wx:else>待结算</label>
+    </view>
+    <view class="row fee flex-between" wx:if="{{W}}">
+      <label class="title text-color-5 fs-24">{{X}}汇率</label>
+      <label class="value text-color-1 fs-28" wx:if="{{Y}}">{{Z}}</label>
+      <label class="value text-color-1 fs-28" wx:else>{{aa}}</label>
+    </view>
+  </view>
+  <view class="fees-tips text-color-5 fs-24 align-c" wx:if="{{ab}}">
+    <view wx:if="{{ac}}"
+      >费用信息为估算，券商清结算后会更新实际数据，一般t+1日9点前</view
+    >
+    <view class="multi-line" wx:else
+      >费用信息为估算，券商清算交收后会更新实际数据，港股通交收时间规则为T+2，一般在下三个交易日9点前更新</view
+    >
+  </view>
+  <view class="block-button flex" wx:if="{{ad}}">
+    <button
+      bindtap="{{ah}}"
+      class="flex-1"
+      disabled="{{ag}}"
+      type="primary"
+      wx:if="{{ae}}"
+    >
+      {{af}}
+    </button>
+  </view>
+  <view class="section section-tips" wx:if="{{ai}}">
+    <view class="tip-title text-color-4">委托无效常见原因</view>
+    <view class="tip-content text-color-4" wx:if="{{aj}}"
+      >1、沪市股东卡未指定：你已在其他券商开满3个沪市股东卡，需联系券商客服办理指定<view
+      ></view
+      >2、股东卡注销：你当前券商账户绑定的股东卡已注销，需联系券商绑定正常的股东卡<view
+      ></view
+      >3、价格不符合规则：买入价不可超过涨停价、实时卖1价+2%或+0.1，卖出价不可低于跌停价、实时买1价-2%或-0.1<view
+      ></view>如需查询具体原因和办理业务可拨打电话联系券商客服：{{ak}}</view
+    >
+    <view class="tip-content text-color-4" wx:else
+      >1、港股交易时间问题：委托买卖和撤单需要在指定的交易时间段内<view
+      ></view
+      >2、港股委托订单类型和交易时间不匹配：如港股市场集合竞价期间只能使用竞价限价盘，连续竞价期间只能使用增强限价盘，碎股卖出需要使用碎股盘交易<view
+      ></view
+      >3、港股委托价格问题：不符合港股最小委托价格单位，或委托价格超过上下限（连续竞价时段买入委托价需小于卖一价加9个单位且大于买一价减24个单位，卖出委托价需小于卖一价加24个单位且大于买一价减9个单位）<view
+      ></view>4、港股委托数量问题：不符合港股最小委托数量单位<view
+      ></view>如需查询具体原因和办理业务可拨打电话联系券商客服：{{al}}</view
+    >
+  </view>
+</view>

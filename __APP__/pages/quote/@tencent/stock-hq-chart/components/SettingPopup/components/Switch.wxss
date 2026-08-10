@@ -1,0 +1,33 @@
+.st-switch.data-v-1b981cc5 {
+  background-color: var(--light-color-5);
+  border: 0.013333333333333334rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  box-sizing: initial;
+  height: 1em;
+  position: relative;
+  transition: background-color 0.3s;
+  width: 1.68em;
+}
+.st-switch__node.data-v-1b981cc5 {
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 0.013333333333333334rem rgba(0, 0, 0, 0.05),
+    0 0 0.02666666666666667rem rgba(0, 0, 0, 0.1),
+    0 0 0.04rem rgba(0, 0, 0, 0.05);
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: 0.3s;
+  width: 1em;
+  z-index: 1;
+}
+.st-switch--on.data-v-1b981cc5 {
+  background-color: var(--color-blue);
+}
+.st-switch--on .st-switch__node.data-v-1b981cc5 {
+  transform: translate(0.68em);
+}
+.st-switch--disabled.data-v-1b981cc5 {
+  opacity: 0.4;
+}

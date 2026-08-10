@@ -1,0 +1,6 @@
+<view class="_div message-count-status data-v-8e2de1d7">
+  <label class="_span red-point-com data-v-8e2de1d7" wx:if="{{a}}"></label>
+  <label class="_span red-point-num-com data-v-8e2de1d7" wx:elif="{{b}}"
+    >{{c}}</label
+  >
+</view>

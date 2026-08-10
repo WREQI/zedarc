@@ -1,0 +1,42 @@
+<protocol
+  bind:__l="__l"
+  class="flex flex-column data-v-97932b15"
+  uI="97932b15-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{i}}"
+>
+  <view class="ft ft-wrapper data-v-97932b15">
+    <view class="protocol-items data-v-97932b15" wx:if="{{a}}">
+      <view class="flex-vcenter data-v-97932b15">
+        <view
+          bindtap="{{b}}"
+          class="item data-v-97932b15"
+          data-link="common_more_notice_of_quity"
+          >《证券投资基金投资人权益须知》</view
+        >
+        <view
+          bindtap="{{c}}"
+          class="item data-v-97932b15"
+          data-link="common_more_disclaimer"
+          >《免责声明》</view
+        >
+      </view>
+    </view>
+    <view class="multiple-btn-wrapper data-v-97932b15" wx:if="{{d}}">
+      <button bindtap="{{e}}" class="flex-1 data-v-97932b15">放弃交易</button>
+      <button bindtap="{{f}}" class="flex-2 data-v-97932b15" type="primary">
+        我已知悉风险并同意
+      </button>
+    </view>
+    <view class="flex-center btns-group data-v-97932b15" wx:if="{{g}}">
+      <button
+        bindtap="{{h}}"
+        class="flex-1 btn-col-sub btn-bar data-v-97932b15"
+        type="primary"
+      >
+        确定
+      </button>
+    </view>
+  </view>
+</protocol>

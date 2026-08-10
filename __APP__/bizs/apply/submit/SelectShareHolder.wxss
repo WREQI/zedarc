@@ -1,0 +1,65 @@
+@import "/app.wxss";
+.notice {
+  line-height: 0.48rem;
+  padding: 0.266667rem 0.4rem;
+}
+.card {
+  background-color: var(--fill-2);
+  padding: 0.4rem 0.533333rem;
+}
+.card .title {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+}
+.card .title .icon.market {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 0.48rem;
+  margin-right: 0.213333rem;
+  width: 0.48rem;
+}
+.card .title .icon.market.icon-checkbox-rect {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-checkbox-rect.svg);
+}
+.card .title .icon.market.icon-checked-rect {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-checked-rect.svg);
+}
+.card .share-holder-item {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.4rem;
+}
+.card .share-holder-item .code {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 0.586667rem;
+}
+.card .share-holder-item .icon {
+  font-size: 0.48rem;
+  height: 0.48rem;
+  margin-right: 0.16rem;
+  width: 0.48rem;
+}
+.card .share-holder-item .icon-check-box {
+  color: var(--text-color-5);
+}
+.card .share-holder-item .icon-checked {
+  color: var(--color-primary);
+}
+.card + .card {
+  margin-top: 0.16rem;
+}
+.remind {
+  line-height: 0.48rem;
+  padding: 0.4rem;
+  text-align: justify;
+}
+.foot {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}

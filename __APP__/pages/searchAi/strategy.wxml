@@ -1,0 +1,24 @@
+<page-meta class="data-v-8dabb965" rootFontSize="{{a}}"></page-meta>
+<view class="_div page-ai-strategy data-v-8dabb965" data-st-theme="{{g}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8dabb965"
+    uI="8dabb965-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8dabb965"
+    uI="8dabb965-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <ai-strategy
+    bind:__l="__l"
+    bindclick="{{d}}"
+    binderror="{{e}}"
+    class="data-v-8dabb965"
+    uI="8dabb965-2"
+    uP="{{f}}"
+    wx:if="{{c}}"
+  ></ai-strategy>
+</view>

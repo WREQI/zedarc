@@ -1,0 +1,29 @@
+<view class="_div data-v-f9f8cfbf">
+  <view
+    bindtap="{{item.h}}"
+    class="_div ai-gudan-container data-v-f9f8cfbf"
+    wx:for="{{a}}"
+    wx:key="i"
+  >
+    <view class="_div title-line-container data-v-f9f8cfbf">
+      <view class="_div title data-v-f9f8cfbf">{{item.a}}</view>
+      <view class="_div total data-v-f9f8cfbf"
+        >{{item.b}}只股票<image
+          class="_img inicon data-v-f9f8cfbf"
+          src="https://st.gtimg.com/design/b629d6d793221959b9713275738eb073.svg"
+        ></image>
+      </view>
+    </view>
+    <view class="_div sub-title-container data-v-f9f8cfbf"
+      >当日涨跌<label
+        class="{{['_span','today-rank','data-v-f9f8cfbf',item.d]}}"
+        >{{item.c}}</label
+      >近一月涨跌<label
+        class="{{['_span','three-day-rank','data-v-f9f8cfbf',item.f]}}"
+        >{{item.e}}</label
+      >
+    </view>
+    <view class="_div line data-v-f9f8cfbf"></view>
+    <view class="_div desc data-v-f9f8cfbf">{{item.g}}</view>
+  </view>
+</view>

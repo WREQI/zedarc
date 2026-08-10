@@ -1,0 +1,19 @@
+<view class="_div double-column-container data-v-7382ff5e">
+  <span-item
+    bind:__l="__l"
+    bindshowTeachPop="{{a}}"
+    class="double-column-container-left data-v-7382ff5e"
+    uI="7382ff5e-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></span-item>
+  <view class="_div separator data-v-7382ff5e"></view>
+  <span-item
+    bind:__l="__l"
+    bindshowTeachPop="{{c}}"
+    class="double-column-container-right data-v-7382ff5e"
+    uI="7382ff5e-1"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></span-item>
+</view>

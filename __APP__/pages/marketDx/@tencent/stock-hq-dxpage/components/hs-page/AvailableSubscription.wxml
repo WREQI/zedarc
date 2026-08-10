@@ -1,0 +1,17 @@
+<view class="{{['_div','available-subscription-wrapper','data-v-764e3285',e]}}">
+  <category-content
+    bind:__l="__l"
+    bindshowTeachPop="{{b}}"
+    class="data-v-764e3285"
+    uI="764e3285-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></category-content>
+  <no-data-block
+    bind:__l="__l"
+    class="data-v-764e3285"
+    uI="764e3285-1"
+    uP="{{d||''}}"
+    wx:else
+  ></no-data-block>
+</view>

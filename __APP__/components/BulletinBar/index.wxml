@@ -1,0 +1,34 @@
+<view
+  class="{{['bar-cont','^bar-cont','data-v-b8d016e0',o&&'bar-cont-radius']}}"
+>
+  <view
+    class="{{['tips-sync','flex-between','btmline-gray','data-v-b8d016e0',n&&'loop-mst']}}"
+  >
+    <view
+      bindtap="{{g}}"
+      class="{{['flex-1','flex-vcenter','data-v-b8d016e0',d&&'outer-cont',e&&'marquee',f&&'no-animate']}}"
+      ref="outer"
+    >
+      <label
+        class="{{['inner-block','data-v-b8d016e0',a&&'stop',b&&'no-animate']}}"
+        ref="inner"
+        style="{{'animation-duration:'+c}}"
+      >
+        <slot></slot>
+      </label>
+    </view>
+    <view
+      bindtap="{{i}}"
+      class="bulletin-arrow-right data-v-b8d016e0"
+      wx:if="{{h}}"
+    ></view>
+    <label
+      bindtap="{{k}}"
+      class="bulletin-close data-v-b8d016e0"
+      wx:if="{{j}}"
+    ></label>
+    <label bindtap="{{m}}" class="bulletin-close-text data-v-b8d016e0" wx:else
+      >{{l}}</label
+    >
+  </view>
+</view>

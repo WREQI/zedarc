@@ -1,0 +1,15 @@
+<mp-action-sheet bind:__l="__l" bindinput="{{m}}" class="{{['apply-profile-text__container','plugin-component-action-sheet','data-v-f35ededf',l&&'isUnSubmitable']}}" uI="f35ededf-0" uP="{{n}}" uS="{{['d']}}" wx:if="{{n}}">
+    <view class="actionsheet-content-container data-v-f35ededf" ref="contentContainer">
+        <input holdKeyboard alwaysEmbed="{{true}}" bindblur="{{e}}" bindinput="{{g}}" class="profile-input data-v-f35ededf" cursorSpacing="105" focus="{{d}}" id="profileTextInputId" maxlength="{{b}}" placeholder="{{c}}" placeholderClass="input-placeholder" type="{{a}}" value="{{f}}" wx:if="{{r0}}"></input>
+        <view class="company-tips data-v-f35ededf" wx:if="{{h}}">
+            <view class="fs-24 text-color-5 tips data-v-f35ededf" wx:if="{{i}}">提示：学校不少于4个字</view>
+            <block wx:else>
+                <view class="fs-24 orange data-v-f35ededf">示例：腾讯科技（深圳）有限公司</view>
+                <view class="fs-24 text-color-5 tips data-v-f35ededf">提示：需填写工作单位全称，不能填写科技公司、大学等无法判断具体工作单位的名称，<label class="red data-v-f35ededf">未按要求将无法通过审核</label>
+                </view>
+            </block>
+        </view>
+        <view class="fs-24 warn warn-tip data-v-f35ededf" wx:if="{{j}}">{{k}}</view>
+        <view class="bottom-wrap data-v-f35ededf"></view>
+    </view>
+</mp-action-sheet>

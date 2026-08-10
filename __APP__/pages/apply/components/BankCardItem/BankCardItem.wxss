@@ -1,0 +1,306 @@
+@import "/app.wxss";
+.bank-card-item_container.data-v-9cced1da {
+  border-radius: 0.053333rem;
+  color: #fff;
+  height: 2.8rem;
+  margin-top: 0.266667rem;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+}
+.bank-card-item_container .bank-card-item_bg-logo.data-v-9cced1da {
+  font-size: 3.466667rem;
+  height: 3.466667rem;
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.466667rem;
+}
+.bank-card-item_container .bank-card-item_bank-select.data-v-9cced1da {
+  background-color: initial;
+  display: inline-block;
+  height: 0.64rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  width: 0.64rem;
+  z-index: 3;
+}
+.bank-card-item_container.disabled.data-v-9cced1da {
+  background-color: #cecece;
+}
+.bank-card-item_container.disabled .bank-card-item_bank-select.data-v-9cced1da {
+  height: 1.6rem;
+  right: 0.213333rem;
+  top: 0.133333rem;
+  width: 1.6rem;
+}
+.bank-card-item_container.disabled
+  .bank-card-item_bank-select
+  .bank-card-item_unsupport.data-v-9cced1da {
+  background: url(https://st.gtimg.com/design/eb08021674c821bb737d214f321cf6b9.png)
+    no-repeat;
+  background-size: 100%auto;
+  display: block;
+  font-size: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.bank-card-item_container .bank-card-item_bk-name.data-v-9cced1da {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0.4rem;
+  position: absolute;
+  top: 0.4rem;
+}
+.bank-card-item_container .bank-card-item_bk-name .bank-logo.data-v-9cced1da {
+  display: inline-block;
+  height: 0.933333rem;
+  width: 0.933333rem;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title.data-v-9cced1da {
+  display: inline-block;
+  font-weight: lighter;
+  padding-left: 0.213333rem;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title
+  .title-bank.data-v-9cced1da {
+  margin-bottom: 0.106667rem;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title
+  .title-bank
+  .bank-name.data-v-9cced1da {
+  font-size: 0.4rem;
+  font-weight: 500;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title
+  .title-bank
+  .bank-desc.data-v-9cced1da {
+  background: -webkit-radial-gradient(
+    13.74%0,
+    56.26% 114.29%,
+    #fff8e3 0,
+    #ffe8a2 100%
+  );
+  background: radial-gradient(56.26% 114.29%at 13.74%0, #fff8e3, #ffe8a2);
+  border-radius: 0.053333rem;
+  color: #461c04;
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.373333rem;
+  margin-left: 0.106667rem;
+  padding: 0 0.106667rem;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title
+  .title-card.data-v-9cced1da {
+  font-size: 0.32rem;
+  font-weight: 400;
+}
+.bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-logo.data-v-9cced1da {
+  font-size: 0.933333rem;
+  height: 0.933333rem;
+  width: 0.933333rem;
+}
+.bank-card-item_container .bank-card-item_bank-num.data-v-9cced1da {
+  bottom: 0.4rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
+.bank-card-item_container .bank-card-item_bank-num .mask.data-v-9cced1da {
+  font-size: 0.533333rem;
+  margin-right: 0.266667rem;
+}
+.bank-card-item_container .bank-card-item_bank-num .num.data-v-9cced1da {
+  font-size: 0.64rem;
+}
+.bank-card-item_container .bank-card-item_last-chosen.data-v-9cced1da {
+  background: rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 0.053333rem;
+  bottom: 0;
+  font-size: 0.293333rem;
+  font-weight: 600;
+  line-height: 0.373333rem;
+  padding: 0.053333rem 0.16rem;
+  position: absolute;
+  right: 0;
+}
+.bank-card-item_container.act-bob.data-v-9cced1da,
+.bank-card-item_container.act-boc.data-v-9cced1da,
+.bank-card-item_container.act-citic.data-v-9cced1da,
+.bank-card-item_container.act-cmb.data-v-9cced1da,
+.bank-card-item_container.act-dgcb.data-v-9cced1da,
+.bank-card-item_container.act-gdb.data-v-9cced1da,
+.bank-card-item_container.act-hxb.data-v-9cced1da,
+.bank-card-item_container.act-icbc.data-v-9cced1da,
+.bank-card-item_container.act-njcb.data-v-9cced1da {
+  background: #da3f3f;
+}
+.bank-card-item_container.act-bosh.data-v-9cced1da,
+.bank-card-item_container.act-ccb.data-v-9cced1da,
+.bank-card-item_container.act-cib.data-v-9cced1da,
+.bank-card-item_container.act-cmbc.data-v-9cced1da,
+.bank-card-item_container.act-comm.data-v-9cced1da,
+.bank-card-item_container.act-spdb.data-v-9cced1da,
+.bank-card-item_container.act-tjb.data-v-9cced1da {
+  background: #2e83e0;
+}
+.bank-card-item_container.act-abc.data-v-9cced1da,
+.bank-card-item_container.act-psbc.data-v-9cced1da {
+  background: #289e85;
+}
+.bank-card-item_container.act-nbcb.data-v-9cced1da,
+.bank-card-item_container.act-pab.data-v-9cced1da {
+  background: #ed883d;
+}
+.bank-card-item_container.act-ceb.data-v-9cced1da {
+  background: #8b37a4;
+}
+.bank-card-item_container.act-bog.data-v-9cced1da {
+  background: #d82321;
+}
+.bank-card-item_container.act-boj.data-v-9cced1da {
+  background: #0268b8;
+}
+.bank-card-item_container.act-bjbank.data-v-9cced1da {
+  background: #e50012;
+}
+.bank-card-item_container .float-l.data-v-9cced1da {
+  float: left;
+}
+.bank-card-item_container .block.data-v-9cced1da {
+  display: block;
+}
+.bank-card-item_container .flex.data-v-9cced1da {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.bank-card-item_container .flex-direction-column.data-v-9cced1da {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+.data-v-9cced1da .st-checkbox-wrapper {
+  border: 0.04rem solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  position: absolute;
+}
+.checkbox-selected.data-v-9cced1da .st-checkbox-wrapper,
+.data-v-9cced1da .st-checkbox-wrapper.checkbox-selected {
+  background-color: #fff;
+}
+.checkbox-selected.data-v-9cced1da .st-checkbox-wrapper .icon-check,
+.data-v-9cced1da .st-checkbox-wrapper.checkbox-selected .icon-check {
+  color: rgba(0, 0, 0, 0.5);
+}
+.data-v-9cced1da .st-checkbox-wrapper .st-checkbox,
+.data-v-9cced1da .st-checkbox-wrapper .st-checkbox-inner {
+  height: 0.64rem;
+  line-height: 0.64rem;
+  width: 0.64rem;
+}
+.data-v-9cced1da .st-checkbox-wrapper .st-checkbox-inner {
+  background-color: initial !important;
+  border-color: transparent;
+  border-radius: 50%;
+}
+.data-v-9cced1da .st-checkbox-wrapper .icon-check {
+  font-size: 0.32rem;
+  height: 0.64rem;
+  width: 0.64rem;
+}
+[data-simple="true"] .bank-card-item_container.data-v-9cced1da {
+  border-radius: 0.213333rem;
+  height: 2.933333rem;
+  margin-top: 0.16rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bk-name.data-v-9cced1da {
+  left: 0.48rem;
+  top: 0.506667rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-logo.data-v-9cced1da {
+  height: 0.8rem;
+  position: relative;
+  top: -0.026667rem;
+  width: 0.8rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bk-name
+  .bank-card-item_bk-title
+  .title-bank.data-v-9cced1da {
+  font-size: 0.426667rem;
+  margin-bottom: 0.16rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bank-select.data-v-9cced1da {
+  height: 0.56rem;
+  width: 0.56rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bank-num.data-v-9cced1da {
+  bottom: 0.64rem;
+  font-weight: 500;
+  left: 4.213333rem;
+}
+[data-simple="true"]
+  .bank-card-item_container
+  .bank-card-item_bank-num
+  .mask.data-v-9cced1da {
+  font-size: 0.613333rem;
+  position: relative;
+  top: 0.106667rem;
+}
+[data-simple="true"]
+  .bank-card-item_container.data-v-9cced1da
+  .st-checkbox-wrapper
+  .icon-check,
+[data-simple="true"]
+  .bank-card-item_container.data-v-9cced1da
+  .st-checkbox-wrapper
+  .st-checkbox {
+  height: 0.48rem;
+  width: 0.48rem;
+}
+[data-simple="true"]
+  .bank-card-item_container.data-v-9cced1da
+  .st-checkbox-wrapper
+  .icon-check:before,
+[data-simple="true"]
+  .bank-card-item_container.data-v-9cced1da
+  .st-checkbox-wrapper
+  .st-checkbox:before {
+  display: block;
+  line-height: 0.48rem;
+}
+[data-simple="true"] .bank-card-item_container .num.data-v-9cced1da {
+  font-family: FontWest;
+}

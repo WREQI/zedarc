@@ -1,0 +1,58 @@
+<view class="{{['_div','mingxi-content-wrapper','data-v-c05fb2b2',o]}}">
+  <view class="_div item wrapper-title data-v-c05fb2b2">
+    <view class="_div time data-v-c05fb2b2">时间</view>
+    <view class="_div price data-v-c05fb2b2">成交价</view>
+    <view class="_div amount data-v-c05fb2b2">成交量</view>
+  </view>
+  <scroll-view
+    bindscroll="{{f}}"
+    bindscrolltolower="{{g}}"
+    class="scroll-list-content data-v-c05fb2b2"
+    scrollY="true"
+    style="{{'height:'+e}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div item data-v-c05fb2b2" wx:for="{{b}}" wx:key="h">
+      <view class="_div time data-v-c05fb2b2">{{item.a}}</view>
+      <view class="{{['_div','price','data-v-c05fb2b2',item.c]}}"
+        >{{item.b}}</view
+      >
+      <view class="{{['_div','amount','data-v-c05fb2b2',item.g]}}"
+        >{{item.d}}<label class="{{['_span','data-v-c05fb2b2',item.f]}}"
+          >{{item.e}}</label
+        >
+      </view>
+    </view>
+    <view class="_div no-data data-v-c05fb2b2" wx:if="{{c}}">暂无明细数据</view>
+    <view class="_div no-data no-more-data data-v-c05fb2b2" wx:elif="{{d}}"
+      >没有更多了</view
+    >
+  </scroll-view>
+  <st-reach-bottom
+    bind:__l="__l"
+    bindscroll="{{m}}"
+    class="scroll-list-content r data-v-c05fb2b2"
+    style="{{'height:'+l}}"
+    uI="c05fb2b2-0"
+    uP="{{n||''}}"
+    uR="listWrapper"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="_div item data-v-c05fb2b2" wx:for="{{h}}" wx:key="h">
+      <view class="_div time data-v-c05fb2b2">{{item.a}}</view>
+      <view class="{{['_div','price','data-v-c05fb2b2',item.c]}}"
+        >{{item.b}}</view
+      >
+      <view class="{{['_div','amount','data-v-c05fb2b2',item.g]}}"
+        >{{item.d}}<label class="{{['_span','data-v-c05fb2b2',item.f]}}"
+          >{{item.e}}</label
+        >
+      </view>
+    </view>
+    <view class="_div no-data data-v-c05fb2b2" wx:if="{{i}}">暂无明细数据</view>
+    <view class="_div no-data no-more-data data-v-c05fb2b2" wx:elif="{{j}}"
+      >没有更多了</view
+    >
+  </st-reach-bottom>
+</view>

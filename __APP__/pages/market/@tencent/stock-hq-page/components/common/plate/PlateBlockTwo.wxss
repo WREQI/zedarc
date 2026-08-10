@@ -1,0 +1,95 @@
+.layout.data-v-e74676c6 {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-e74676c6,
+.layout-align-start-center.data-v-e74676c6 {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-e74676c6 {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-e74676c6 {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-e74676c6 {
+  justify-content: flex-start;
+}
+.layout-column.data-v-e74676c6 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-e74676c6 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-e74676c6 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.color-rise.data-v-e74676c6 {
+  color: var(--color-rise) !important;
+}
+.color-drop.data-v-e74676c6 {
+  color: var(--color-drop) !important;
+}
+.color-equal.data-v-e74676c6 {
+  color: var(--color-equal) !important;
+}
+.color-rise-bg.data-v-e74676c6 {
+  background-color: var(--color-rise);
+}
+.color-drop-bg.data-v-e74676c6 {
+  background-color: var(--color-drop);
+}
+.plate-item.data-v-e74676c6 {
+  color: inherit;
+  font-size: 0.37333333333333335rem;
+  height: 2.7066666666666666rem;
+  overflow: hidden;
+  padding: 0 0.21333333333333335rem;
+  position: relative;
+  text-decoration: none;
+}
+.plate-item.data-v-e74676c6:after {
+  background-color: var(--border-light);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.013333333333333334rem;
+}
+.plate-item.data-v-e74676c6:last-child:after {
+  display: none;
+}
+.plate-item .plate-name.data-v-e74676c6 {
+  color: var(--text-color-1);
+  font-weight: 500;
+  line-height: 0.52rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.plate-item .item-wrapper.data-v-e74676c6 {
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-bottom: 0.10666666666666667rem;
+}
+.plate-item .item-wrapper.data-v-e74676c6:last-child {
+  margin-bottom: 0;
+}
+.plate-item .item-wrapper .item-name.data-v-e74676c6 {
+  color: var(--text-color-4);
+  margin-right: 0.32rem;
+}
+.plate-item .item-wrapper .item-normal.data-v-e74676c6 {
+  color: var(--text-color-5);
+}

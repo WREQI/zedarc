@@ -1,0 +1,28 @@
+<view class="_div data-v-2399833d" ref="deliveryglobalcurtainadv">
+  <view class="_div delivery-global-curtain-adv data-v-2399833d" wx:if="{{a}}">
+    <view
+      catchtap="{{l}}"
+      class="{{['_div','pop-adv','adv-pic','data-v-2399833d',j&&'adv-popup-visible',k&&'unadv-popup-visible']}}"
+      wx:if="{{b}}"
+    >
+      <view class="_div pop-cnt-adv data-v-2399833d">
+        <image
+          binderror="{{g}}"
+          bindload="{{f}}"
+          catchtap="{{e}}"
+          class="pop-adv-img adv-animate data-v-2399833d"
+          mode="widthFix"
+          showMenuByLongpress="true"
+          src="{{d}}"
+          wx:if="{{c}}"
+        ></image>
+        <view
+          catchtap="{{i}}"
+          class="_div adv-close-bg3 adv-close-animate data-v-2399833d"
+          wx:if="{{h}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div pop-adv-mask data-v-2399833d"></view>
+  </view>
+</view>

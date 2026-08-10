@@ -1,0 +1,56 @@
+<view
+  class="{{['_div','agreement','data-v-9925b981',q&&'agreement--shaking',r&&'agreement--zhongjin']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div agreement__content data-v-9925b981">
+    <view
+      bindtap="{{d}}"
+      class="{{['_div','agreement__checkbox','data-v-9925b981',c&&'agreement__checkbox--checked']}}"
+    >
+      <view
+        class="_div agreement__checkmark data-v-9925b981"
+        wx:if="{{b}}"
+      ></view>
+    </view>
+    <view class="_div agreement__text data-v-9925b981">
+      <block wx:if="{{e}}"
+        >我已阅读并同意签署<label
+          catchtap="{{f}}"
+          class="_span agreement__link data-v-9925b981"
+          >《用户协议》</label
+        >
+        <label catchtap="{{g}}" class="_span agreement__link data-v-9925b981"
+          >《隐私政策》</label
+        >
+      </block>
+      <block wx:else
+        >同意并签署<label
+          catchtap="{{h}}"
+          class="_span agreement__link data-v-9925b981"
+          >《活动规则》</label
+        >、<label catchtap="{{i}}" class="_span agreement__link data-v-9925b981"
+          >《营销活动通用规则》</label
+        >、<label catchtap="{{j}}" class="_span agreement__link data-v-9925b981"
+          >《风险揭示书》</label
+        >
+        <label
+          catchtap="{{l}}"
+          class="_span agreement__link data-v-9925b981"
+          wx:if="{{k}}"
+          >、《知情同意书》</label
+        >及<label
+          catchtap="{{n}}"
+          class="_span agreement__link data-v-9925b981"
+          wx:if="{{m}}"
+          >《实盘赛规则》</label
+        >
+        <label
+          catchtap="{{p}}"
+          class="_span agreement__link data-v-9925b981"
+          wx:if="{{o}}"
+          >《实盘大赛活动规则》</label
+        >
+      </block>
+    </view>
+  </view>
+</view>

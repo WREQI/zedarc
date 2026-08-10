@@ -1,0 +1,56 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{k}}"
+  bindinput="{{j}}"
+  class="data-v-183e4562"
+  uI="183e4562-0"
+  uP="{{l}}"
+  uS="{{['d']}}"
+  wx:if="{{l}}"
+>
+  <tabbar
+    bind:__l="__l"
+    bindchange="{{b}}"
+    bindinput="{{a}}"
+    class="func-guide-tab data-v-183e4562"
+    uI="183e4562-1,183e4562-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></tabbar>
+  <limit-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-2,183e4562-0"
+    wx:if="{{d}}"
+  ></limit-order>
+  <price-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-3,183e4562-0"
+    wx:if="{{e}}"
+  ></price-order>
+  <invest-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-4,183e4562-0"
+    wx:if="{{f}}"
+  ></invest-order>
+  <enhanced-limit-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-5,183e4562-0"
+    wx:if="{{g}}"
+  ></enhanced-limit-order>
+  <at-auction-limit-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-6,183e4562-0"
+    wx:if="{{h}}"
+  ></at-auction-limit-order>
+  <odd-order
+    bind:__l="__l"
+    class="data-v-183e4562"
+    uI="183e4562-7,183e4562-0"
+    wx:if="{{i}}"
+  ></odd-order>
+</action-sheet>

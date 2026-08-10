@@ -1,0 +1,80 @@
+<view class="_div data-v-2b1ec240" style="{{'height:'+P}}" wx:if="{{a}}">
+  <view class="_div pc-qrcode-guide-wrapper data-v-2b1ec240" wx:if="{{b}}">
+    <view class="_div guide-content data-v-2b1ec240">
+      <view class="_div qrcode-img data-v-2b1ec240"></view>
+      <view class="_div guide-text data-v-2b1ec240"
+        >手机微信扫码打开腾讯微证券小程序<view class="data-v-2b1ec240"></view
+        >查看全部交易通知</view
+      >
+    </view>
+  </view>
+  <zhaoshang-broker-message
+    bindloaded="{{e}}"
+    bindpullRefresh="{{g}}"
+    bindstyleChange="{{f}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{d}}"
+    wx:elif="{{c}}"
+  ></zhaoshang-broker-message>
+  <hualin-broker-message
+    bindloaded="{{j}}"
+    bindpullRefresh="{{l}}"
+    bindstyleChange="{{k}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{i}}"
+    wx:elif="{{h}}"
+  ></hualin-broker-message>
+  <guangfa-broker-message
+    bindloaded="{{o}}"
+    bindpullRefresh="{{q}}"
+    bindstyleChange="{{p}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{n}}"
+    wx:elif="{{m}}"
+  ></guangfa-broker-message>
+  <guoxin-broker-message
+    bindloaded="{{t}}"
+    bindpullRefresh="{{w}}"
+    bindstyleChange="{{v}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{s}}"
+    wx:elif="{{r}}"
+  ></guoxin-broker-message>
+  <guojin-broker-message
+    bindloaded="{{z}}"
+    bindpullRefresh="{{B}}"
+    bindstyleChange="{{A}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{y}}"
+    wx:elif="{{x}}"
+  ></guojin-broker-message>
+  <zhongjincaifu-broker-message
+    bindloaded="{{E}}"
+    bindpullRefresh="{{G}}"
+    bindstyleChange="{{F}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{D}}"
+    wx:elif="{{C}}"
+  ></zhongjincaifu-broker-message>
+  <zhongxinjiantou-broker-message
+    bindloaded="{{J}}"
+    bindpullRefresh="{{L}}"
+    bindstyleChange="{{K}}"
+    class="plugin-warpper data-v-2b1ec240"
+    containerHeight="{{I}}"
+    wx:elif="{{H}}"
+  ></zhongxinjiantou-broker-message>
+  <st-status
+    bind:__l="__l"
+    class="data-v-2b1ec240"
+    uI="2b1ec240-0"
+    uP="{{N}}"
+    wx:elif="{{M}}"
+  ></st-status>
+  <loading-place-holder
+    bind:__l="__l"
+    class="data-v-2b1ec240"
+    uI="2b1ec240-1"
+    wx:if="{{O}}"
+  ></loading-place-holder>
+</view>

@@ -1,0 +1,35 @@
+<view class="_div wx-open-weapp data-v-8b43dc32" wx:if="{{a}}">
+  <weixin-open-launch-weapp
+    bind:__l="__l"
+    class="wx-open-weapp data-v-8b43dc32"
+    id="{{c}}"
+    uI="8b43dc32-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{b}}"
+  >
+    <view class="data-v-8b43dc32" type="text/wxtag-template">
+      <style>
+        * {
+          -webkit-tap-highlight-color: transparent !important;
+        }
+        .btn {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          filter: alpha(opacity: 0);
+        }
+      </style>
+      <div class="btn">打开小程序</div>
+    </view>
+  </weixin-open-launch-weapp>
+  <view
+    bindtap="{{f}}"
+    class="_div wx-open-weapp data-v-8b43dc32"
+    wx:elif="{{e}}"
+  ></view>
+  <slot></slot>
+</view>

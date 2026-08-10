@@ -1,0 +1,27 @@
+<view
+  catchtap="{{o}}"
+  class="{{['_div','basket-overview-wrapper','data-v-e9166c78',j,k,l,m,n]}}"
+  ref="basket-overview-wrapper"
+>
+  <basket-header
+    bind:__l="__l"
+    bindbasketToggleClick="{{b}}"
+    bindheaderTitleClick="{{a}}"
+    class="data-v-e9166c78"
+    uI="e9166c78-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></basket-header>
+  <basket-stock-list
+    bind:__l="__l"
+    bindbasketFooterClick="{{e}}"
+    bindgoToChoosePage="{{h}}"
+    bindgoToMockTrade="{{g}}"
+    bindgoToStockDetail="{{d}}"
+    bindtableToggleClick="{{f}}"
+    class="data-v-e9166c78"
+    uI="e9166c78-1"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></basket-stock-list>
+</view>

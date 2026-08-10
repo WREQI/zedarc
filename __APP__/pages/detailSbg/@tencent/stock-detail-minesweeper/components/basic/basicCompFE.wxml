@@ -1,0 +1,16 @@
+<view class="_div comp-block data-v-21c23b20">
+  <view class="_div chart-wrapper data-v-21c23b20" wx:if="{{a}}">
+    <view class="_div chart-legend data-v-21c23b20">
+      <label class="_span data-v-21c23b20">财务费用 ({{b}})</label>
+      <label class="_span data-v-21c23b20">占息税前利润比率 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{d}}"
+      class="data-v-21c23b20"
+      uI="21c23b20-0"
+      uP="{{e}}"
+      wx:if="{{c}}"
+    ></f2>
+  </view>
+</view>

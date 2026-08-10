@@ -1,0 +1,152 @@
+.timeline-container.data-v-67397223 {
+  background: var(--fill-2);
+  width: 100%;
+}
+.event-item.data-v-67397223 {
+  display: -webkit-flex;
+  display: flex;
+}
+.event-item .event-time.data-v-67397223 {
+  margin-top: 0.13333333333333333rem;
+  width: 1.5466666666666666rem;
+}
+.event-item .event-time .date.data-v-67397223 {
+  color: var(--text-color-3);
+  font-size: 0.32rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  margin: 0 auto;
+  text-align: right;
+  width: 1.0933333333333333rem;
+}
+.event-item .event-time .year.data-v-67397223 {
+  color: var(--text-color-3);
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  line-height: 0.37333333333333335rem;
+  margin: 0 auto;
+  text-align: right;
+  width: 1.0933333333333333rem;
+}
+.line-bar.data-v-67397223 {
+  flex-wrap: wrap;
+  margin-right: 0.26666666666666666rem;
+  margin-top: 0.14666666666666667rem;
+}
+.line-bar .today-edge.data-v-67397223,
+.line-bar.data-v-67397223 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  width: 0.32rem;
+}
+.line-bar .today-edge.data-v-67397223 {
+  align-items: center;
+  background: var(--fill-2);
+  border: 0.013333333333333334rem solid var(--color-primary-1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 0.32rem;
+}
+.line-bar .today-edge .today-core.data-v-67397223 {
+  background: var(--color-primary-1);
+  border: 0.013333333333333334rem solid var(--color-primary-1);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 0.10666666666666667rem;
+  width: 0.10666666666666667rem;
+}
+.line-bar .cicle-edge.data-v-67397223 {
+  align-items: center;
+  background: var(--fill-2);
+  border: 0.013333333333333334rem solid var(--text-color-4);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.32rem;
+  justify-content: center;
+  width: 0.32rem;
+}
+.line-bar .cicle-edge .cicle-core.data-v-67397223 {
+  background: var(--text-color-4);
+  border: 0.013333333333333334rem solid var(--text-color-4);
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 0.10666666666666667rem;
+  width: 0.10666666666666667rem;
+}
+.line-bar .line.data-v-67397223 {
+  background: var(--color-lightgray-2);
+  height: 100%;
+  width: 0.013333333333333334rem;
+}
+.event-item:first-child .line-bar .cicle-edge.data-v-67397223 {
+  border: 0.013333333333333334rem solid var(--color-orange);
+}
+.event-item:first-child .line-bar .cicle-edge .cicle-core.data-v-67397223 {
+  background: var(--color-orange);
+  border: 0.013333333333333334rem solid var(--color-orange);
+}
+.event-item:last-child .line-bar .line.data-v-67397223 {
+  display: none;
+}
+.event-detail.data-v-67397223 {
+  flex: 1;
+  margin-right: 0.3333333333333333rem;
+}
+.event-detail .detail-title.data-v-67397223 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.10666666666666667rem;
+  width: 100%;
+}
+.event-detail .detail-title .text.data-v-67397223 {
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.event-detail .detail-title .text .text-right.data-v-67397223 {
+  border: 0.10666666666666667rem solid transparent;
+  border-left: 0.14666666666666667rem solid var(--text-color-2);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 0;
+  margin-left: 0.10666666666666667rem;
+  width: 0;
+}
+.event-detail .detail-title .more-event.data-v-67397223 {
+  color: var(--text-color-3);
+  font-size: 0.32rem;
+  font-weight: 400;
+}
+.event-detail .detail-title .more-event .icon.data-v-67397223 {
+  height: 0.21333333333333335rem;
+  transform: rotateX(0);
+  width: 0.25333333333333335rem;
+}
+.event-detail .detail-title .more-event .icon.data-v-67397223,
+.event-detail .detail-title .more-event .open.data-v-67397223 {
+  transition: -webkit-transform 0.15s linear;
+  transition: transform 0.15s linear;
+  transition: transform 0.15s linear, -webkit-transform 0.15s linear;
+}
+.event-detail .detail-title .more-event .open.data-v-67397223 {
+  transform: rotateX(180deg);
+}
+.event-detail .detail-des.data-v-67397223 {
+  padding-bottom: 0.64rem;
+}
+.event-detail .detail-des .single-desc.data-v-67397223 {
+  color: var(--text-color-2);
+  font-size: 0.37333333333333335rem;
+  line-height: 0.56rem;
+  width: 100%;
+}

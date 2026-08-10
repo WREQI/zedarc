@@ -1,0 +1,22 @@
+<page-meta class="data-v-63b9723d" rootFontSize="{{a}}"></page-meta>
+<view class="_div indicator-container data-v-63b9723d" data-st-theme="{{d}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-63b9723d"
+    uI="63b9723d-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-63b9723d"
+    uI="63b9723d-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <indicator-setting
+    bind:__l="__l"
+    class="data-v-63b9723d"
+    uI="63b9723d-2"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></indicator-setting>
+</view>

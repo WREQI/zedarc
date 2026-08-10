@@ -1,0 +1,10 @@
+.broker-logo-icon {
+  display: inline-block;
+}
+.broker-logo-icon.not-colorful {
+  filter: grayscale(100%) opacity(0.5);
+}
+.broker-logo-icon .broker-logo-img {
+  height: 100%;
+  width: 100%;
+}

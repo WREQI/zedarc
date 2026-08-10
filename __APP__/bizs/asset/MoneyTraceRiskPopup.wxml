@@ -1,0 +1,20 @@
+<view class="data-v-f596120e">
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{g}}"
+    class="{{['trace-risk-popup','data-v-f596120e',f]}}"
+    uI="f596120e-0"
+    uP="{{h}}"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <view
+      class="{{['trace-risk-detail-wrap','data-v-f596120e',e&&'no-tab-bar']}}"
+    >
+      <view class="trace-risk-content data-v-f596120e">{{b}}</view>
+      <view bindtap="{{d}}" class="confirm-btn data-v-f596120e"
+        >我已知悉{{c}}</view
+      >
+    </view>
+  </action-sheet>
+</view>

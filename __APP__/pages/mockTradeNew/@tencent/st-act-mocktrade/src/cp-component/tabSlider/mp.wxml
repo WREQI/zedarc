@@ -1,0 +1,18 @@
+<view class="_div data-v-bdc6fdf4">
+  <view class="_div tab-web-bar data-v-bdc6fdf4">
+    <view
+      bindtap="{{item.d}}"
+      class="{{['_div','tab-bar-item','data-v-bdc6fdf4',item.c]}}"
+      wx:for="{{a}}"
+      wx:key="b"
+      >{{item.a}}</view
+    >
+  </view>
+  <view class="_div tab-line data-v-bdc6fdf4" style="{{'margin-left:'+d}}">
+    <view
+      class="_div tab-line-slider data-v-bdc6fdf4"
+      ref="slider"
+      style="{{'transition:'+b+';'+'transform:'+c}}"
+    ></view>
+  </view>
+</view>

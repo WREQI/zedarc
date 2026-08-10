@@ -1,0 +1,22 @@
+<view class="authority-bottom">
+  <view class="box-button-account">
+    <view bindtap="{{b}}" class="change-button" wx:if="{{a}}"
+      >切换证券账户</view
+    >
+    <view bindtap="{{c}}" class="change-button">解除绑定账户</view>
+  </view>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{f}}"
+    class="action-sheet-change-account"
+    uI="475a7507-0"
+    uP="{{g}}"
+    uS="{{['d']}}"
+    wx:if="{{g}}"
+  >
+    <view class="unbind-sheet-detail">{{d}}</view>
+    <view bindtap="{{e}}" class="unbind-sheet-text border--top border--bottom"
+      >解除绑定</view
+    >
+  </action-sheet>
+</view>

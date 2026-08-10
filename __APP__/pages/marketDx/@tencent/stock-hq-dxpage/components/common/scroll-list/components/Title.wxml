@@ -1,0 +1,22 @@
+<view class="_div grid-columns data-v-da9377ce" wx:if="{{a}}">
+  <view
+    class="{{['_div','data-v-da9377ce','column-item',item.i]}}"
+    wx:for="{{b}}"
+    wx:key="h"
+  >
+    <view
+      catchtap="{{item.g}}"
+      class="{{['_div','data-v-da9377ce','column-item-wrapper',item.f]}}"
+      ref="{{item.e}}"
+    >
+      <view class="{{['_div','data-v-da9377ce','item-text',item.b]}}"
+        >{{item.a}}</view
+      >
+      <image
+        class="_img item-icon data-v-da9377ce"
+        src="{{item.d}}"
+        wx:if="{{item.c}}"
+      ></image>
+    </view>
+  </view>
+</view>

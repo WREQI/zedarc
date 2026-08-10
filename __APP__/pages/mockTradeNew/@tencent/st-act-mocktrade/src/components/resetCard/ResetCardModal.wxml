@@ -1,0 +1,70 @@
+<view class="{{['_div','reset-card-modal','data-v-91478b37',k]}}" wx:if="{{a}}">
+  <view
+    bindtap="{{b}}"
+    class="_div reset-card-modal__mask data-v-91478b37"
+  ></view>
+  <view class="_div reset-card-modal__content data-v-91478b37">
+    <view class="_div reset-card-modal__header data-v-91478b37">
+      <label class="_span reset-card-modal__title data-v-91478b37"
+        >重置账户</label
+      >
+      <view
+        bindtap="{{c}}"
+        class="_div reset-card-modal__close data-v-91478b37"
+      >
+        <image
+          alt="关闭"
+          class="_img reset-card-modal__close-icon data-v-91478b37"
+          src="https://st.gtimg.com/design/5173670b63aae0cc2955fc9184664963.png"
+        ></image>
+      </view>
+    </view>
+    <view class="{{['_div','reset-card-modal__card','data-v-91478b37',i,j]}}">
+      <view class="_div reset-card-modal__card-top data-v-91478b37">
+        <view class="_div reset-card-modal__card-left data-v-91478b37">
+          <view class="_div reset-card-modal__card-title data-v-91478b37"
+            >重置卡（单次）</view
+          >
+          <view class="_div reset-card-modal__card-expire data-v-91478b37">
+            <label class="_span reset-card-modal__card-tag data-v-91478b37"
+              >限时赠送</label
+            >
+            <label class="_span reset-card-modal__card-date data-v-91478b37"
+              >有效期至{{d}}</label
+            >
+          </view>
+        </view>
+        <view class="_div reset-card-modal__card-right data-v-91478b37">
+          <button
+            bindtap="{{g}}"
+            class="{{['reset-card-modal__use-btn','data-v-91478b37',f]}}"
+            wx:if="{{e}}"
+          >
+            使用
+          </button>
+          <label
+            class="_span reset-card-modal__used-text data-v-91478b37"
+            wx:else
+            >已使用</label
+          >
+        </view>
+      </view>
+      <view class="_div reset-card-modal__card-divider data-v-91478b37"></view>
+      <view class="_div reset-card-modal__rules data-v-91478b37">
+        <view
+          class="_div reset-card-modal__rule-item data-v-91478b37"
+          wx:for="{{h}}"
+          wx:for-item="rule"
+          wx:key="b"
+        >
+          <label
+            class="_span reset-card-modal__rule-dot data-v-91478b37"
+          ></label>
+          <label class="_span reset-card-modal__rule-text data-v-91478b37"
+            >{{rule.a}}</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

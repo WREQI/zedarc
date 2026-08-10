@@ -1,0 +1,42 @@
+<page-meta class="data-v-e7badb50" rootFontSize="{{a}}"></page-meta>
+<view
+  class="{{['detail-page-rotate','data-v-e7badb50',r&&'skin-black',s&&'padding-bottom']}}"
+  data-st-theme="{{q}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e7badb50"
+    uI="e7badb50-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e7badb50"
+    uI="e7badb50-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <mini-quotation
+    bind:__l="__l"
+    bindcloseLandscape="{{g}}"
+    bindonInitData="{{e}}"
+    bindonUpdateData="{{f}}"
+    class="r data-v-e7badb50"
+    uI="e7badb50-2"
+    uP="{{h}}"
+    uR="quotation"
+    wx:if="{{c}}"
+  ></mini-quotation>
+  <chart-wrapper
+    bind:__l="__l"
+    bindcloseLandscape="{{n}}"
+    bindgetExtraInfo="{{k}}"
+    bindgetMarketState="{{j}}"
+    bindgetUSPanData="{{l}}"
+    bindgetZDP="{{m}}"
+    bindswitchChart="{{o}}"
+    class="data-v-e7badb50"
+    uI="e7badb50-3"
+    uP="{{p}}"
+    wx:if="{{i}}"
+  ></chart-wrapper>
+</view>

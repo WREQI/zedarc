@@ -1,0 +1,67 @@
+<view
+  catchtap="{{p}}"
+  class="{{['_div','chart-setting-popup','data-v-d3a81667',o&&'black-theme']}}"
+>
+  <view
+    bindtouchmove="{{a}}"
+    catchtap="{{b}}"
+    class="{{['_div','data-v-d3a81667','background-mask']}}"
+  ></view>
+  <view
+    catchtap="{{n}}"
+    catchtouchmove="{{m}}"
+    class="{{['_div','data-v-d3a81667','popup-content',l]}}"
+  >
+    <view class="_div setting-title data-v-d3a81667">
+      <view class="_ul tab-container data-v-d3a81667">
+        <view
+          bindtap="{{item.d}}"
+          class="{{['_li','data-v-d3a81667','tab-item',item.b]}}"
+          wx:for="{{c}}"
+          wx:key="c"
+          >{{item.a}}</view
+        >
+      </view>
+      <label catchtap="{{d}}" class="_span close-Region data-v-d3a81667">
+        <image
+          class="_img close data-v-d3a81667"
+          src="https://st.gtimg.com/design/a630c61e7e3a3434c5bd12c549773987.png"
+        ></image>
+      </label>
+    </view>
+    <view class="_div setting-content data-v-d3a81667">
+      <swiper
+        bindchange="{{k}}"
+        class="swiper-height data-v-d3a81667"
+        current="{{j}}"
+        duration="{{250}}"
+        ref="swiper"
+      >
+        <swiper-item class="slide-content-one data-v-d3a81667">
+          <mins-setting
+            bind:__l="__l"
+            bindchange="{{e}}"
+            class="data-v-d3a81667"
+            uI="d3a81667-0"
+            uP="{{f}}"
+            wx:if="{{f}}"
+          ></mins-setting>
+        </swiper-item>
+        <swiper-item
+          class="slide-content-two data-v-d3a81667"
+          data-direction="right"
+        >
+          <kline-setting
+            bind:__l="__l"
+            bindchange="{{g}}"
+            bindjumpIndicatorSetting="{{h}}"
+            class="data-v-d3a81667"
+            uI="d3a81667-1"
+            uP="{{i}}"
+            wx:if="{{i}}"
+          ></kline-setting>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

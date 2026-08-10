@@ -1,0 +1,93 @@
+@import "/app.wxss";
+.page-apply-setpwd.data-v-a949230c {
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+  overflow: hidden;
+}
+.page-apply-setpwd .section-content.data-v-a949230c {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-sizing: border-box;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 1;
+}
+.page-apply-setpwd .section-content .label-text.data-v-a949230c {
+  margin-top: 0.666667rem;
+}
+.page-apply-setpwd .section-content .password-box.data-v-a949230c {
+  top: 1.733333rem;
+}
+.page-apply-setpwd
+  .section-content
+  .pwd-container
+  .confirm-container.data-v-a949230c,
+.page-apply-setpwd
+  .section-content
+  .pwd-container
+  .set-container.data-v-a949230c {
+  height: 3.333333rem;
+}
+.page-apply-setpwd .section-content.data-v-a949230c .prev-button-pure {
+  margin: 0;
+}
+.page-apply-setpwd .pwd-container.data-v-a949230c {
+  transition: 0.5s;
+  width: 200%;
+}
+.page-apply-setpwd .pwd-container .confirm-container.data-v-a949230c,
+.page-apply-setpwd .pwd-container .set-container.data-v-a949230c {
+  height: 7.733333rem;
+  position: relative;
+  width: 50%;
+}
+.page-apply-setpwd .pwd-container.container-animate.data-v-a949230c {
+  transform: translate(-50%);
+}
+@media screen and (max-height: 700px) {
+  .page-apply-setpwd .section-content .label-text.data-v-a949230c {
+    margin-top: 0.4rem;
+  }
+  .page-apply-setpwd .section-content .password-box.data-v-a949230c {
+    top: 1.066667rem;
+  }
+  .page-apply-setpwd
+    .section-content
+    .password-box.data-v-a949230c
+    .st-password-input__security {
+    height: 1.066667rem;
+  }
+  .page-apply-setpwd
+    .section-content
+    .pwd-container
+    .confirm-container.data-v-a949230c,
+  .page-apply-setpwd
+    .section-content
+    .pwd-container
+    .set-container.data-v-a949230c {
+    height: 2.266667rem;
+  }
+  .page-apply-setpwd
+    .keyboard-layout-digital-human.data-v-a949230c
+    .st-number-key {
+    height: 1.066667rem;
+    line-height: 1.066667rem;
+  }
+}
+.page-apply-setpwd .password-box.data-v-a949230c {
+  left: 0;
+  padding: 0 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 4.693333rem;
+}
+.page-apply-setpwd .label-text.data-v-a949230c {
+  margin-top: 3.466667rem;
+}
+.data-v-a949230c .prev-button-pure {
+  margin-top: -0.6rem;
+  z-index: 100;
+}

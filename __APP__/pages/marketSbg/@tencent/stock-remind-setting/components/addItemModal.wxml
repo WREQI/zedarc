@@ -1,0 +1,26 @@
+<view
+  bindtap="{{f}}"
+  catchtouchmove="{{e}}"
+  class="_div semi-modal data-v-84641357"
+>
+  <view catchtap="{{d}}" class="_div modal-content data-v-84641357">
+    <view class="_div modal-header data-v-84641357">
+      <view class="_div title data-v-84641357">{{a}}</view>
+      <view bindtap="{{b}}" class="_div close-icon data-v-84641357"></view>
+    </view>
+    <view class="_div item-container data-v-84641357">
+      <view
+        bindtap="{{item.e}}"
+        class="{{['_div','option-item','data-v-84641357',item.d&&'option-item--disabled']}}"
+        wx:for="{{c}}"
+        wx:key="c"
+      >
+        <label class="_span data-v-84641357">{{item.a}}</label>
+        <label
+          class="_span check-icon data-v-84641357"
+          wx:if="{{item.b}}"
+        ></label>
+      </view>
+    </view>
+  </view>
+</view>

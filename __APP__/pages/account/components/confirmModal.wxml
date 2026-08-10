@@ -1,0 +1,53 @@
+<view class="{{['site-popup','data-v-b4eaa1a8',g]}}">
+  <view class="site-popup-item data-v-b4eaa1a8">
+    <view
+      class="st-popup st-popup_mask st-modal data-v-b4eaa1a8"
+      id="modal_1"
+      style="z-index: 100"
+    >
+      <view class="st-popup-container st-popup-center data-v-b4eaa1a8">
+        <view class="st-popup-content data-v-b4eaa1a8">
+          <view class="st-modal-main data-v-b4eaa1a8">
+            <label
+              class="_span st-modal-close data-v-b4eaa1a8"
+              style="display: none"
+            >
+              <view class="_i st-close data-v-b4eaa1a8"></view>
+            </label>
+            <view class="st-modal-confirm data-v-b4eaa1a8">
+              <view class="st-modal-title data-v-b4eaa1a8">
+                <slot name="title" wx:if="{{$slots.title}}"></slot>
+                <block wx:else>{{a}}</block>
+              </view>
+              <slot name="title"></slot>
+              <view class="st-modal-content data-v-b4eaa1a8">
+                <slot name="content" wx:if="{{$slots.content}}"></slot>
+                <block wx:else>{{b}}</block>
+              </view>
+              <view class="st-modal-btns data-v-b4eaa1a8">
+                <label
+                  bindtap="{{d}}"
+                  class="st-modal-btn border-top-1px border-right-1px st-button st-button-default data-v-b4eaa1a8"
+                  role="button"
+                >
+                  <label class="_span st-button__text data-v-b4eaa1a8"
+                    >{{c}}</label
+                  >
+                </label>
+                <label
+                  bindtap="{{f}}"
+                  class="st-modal-btn border-top-1px st-button st-button-default st-modal-btn_highlight data-v-b4eaa1a8"
+                  role="button"
+                >
+                  <label class="_span st-button__text data-v-b4eaa1a8"
+                    >{{e}}</label
+                  >
+                </label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

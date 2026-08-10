@@ -1,0 +1,21 @@
+<view class="empty-bankcard-tip-container data-v-546a52ee">
+  <view class="icon data-v-546a52ee" wx:if="{{a}}"></view>
+  <view class="title data-v-546a52ee">{{b}}</view>
+  <view class="content data-v-546a52ee">
+    <view class="{{['data-v-546a52ee','desc',f&&'align-c']}}">
+      <label class="data-v-546a52ee">请绑定银行卡，恢复{{c}}功能</label>
+      <label class="data-v-546a52ee" wx:if="{{d}}"
+        >。可按以下步骤在{{e}}APP添加银行卡：</label
+      >
+    </view>
+    <view class="detail-step data-v-546a52ee" wx:if="{{g}}">
+      <view class="data-v-546a52ee" wx:for="{{h}}" wx:for-item="text" wx:key="c"
+        >{{text.a}}. {{text.b}}</view
+      >
+    </view>
+  </view>
+  <button bindtap="{{j}}" class="btn data-v-546a52ee" wx:if="{{i}}">
+    添加银行卡
+  </button>
+  <button bindtap="{{k}}" class="btn data-v-546a52ee" wx:else>联系券商</button>
+</view>

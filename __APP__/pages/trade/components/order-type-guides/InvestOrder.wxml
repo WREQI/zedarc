@@ -1,0 +1,29 @@
+<guide-layout
+  bind:__l="__l"
+  class="data-v-60861c7e"
+  uI="60861c7e-0"
+  uS="{{['d']}}"
+>
+  <section-card
+    bind:__l="__l"
+    class="data-v-60861c7e"
+    uI="60861c7e-1,60861c7e-0"
+    uS="{{['title','content']}}"
+  >
+    <view class="data-v-60861c7e" slot="title">定期定投</view>
+    <view class="data-v-60861c7e" slot="content"
+      >定期定投不仅是一个拉长周期的稳健投资方式，也是在拿不准入场时机时，分批建仓的手段。
+      投资者可按一定的周期，将资金分批投入到市场中。系统会根据设定的周期，在到达下单时间时向市场委托下单。为更好的控制风险，ETF更适合作为定投标的。<view
+        class="intro-bg data-v-60861c7e"
+      ></view>
+      <view class="paragraphs data-v-60861c7e">
+        <view class="data-v-60861c7e">示例：</view>用户预设按每周三
+        10:00触发，每次投资2000元。当每周三上午10:00（以服务器时间为准），系统就会用2000元除以当时的市场价格，并向下去整计算出委托的数量，向市场下买单。</view
+      >
+      <view class="paragraphs data-v-60861c7e">
+        <view class="data-v-60861c7e">高级设置说明：</view
+        >定期定投为防止价格上涨的买入拉高成本价，或价格过低担心退市等风险，定投提供了“价格区间”的高级设置。设置了价格取件后，当触发时价格超过区间上限或下限时，当次不委托。</view
+      >
+    </view>
+  </section-card>
+</guide-layout>

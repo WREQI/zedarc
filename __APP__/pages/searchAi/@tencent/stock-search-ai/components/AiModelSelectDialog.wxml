@@ -1,0 +1,54 @@
+<view
+  catchtap="{{p}}"
+  class="{{['_div','data-v-ddd65fb3','ai-model-select-dialog',m,n,o]}}"
+>
+  <view class="_div triangle data-v-ddd65fb3" style="{{a}}"></view>
+  <view catchtap="{{l}}" class="_div dialog-body data-v-ddd65fb3">
+    <view catchtap="{{d}}" class="_div model-item-wrapper data-v-ddd65fb3">
+      <view class="_div model-item data-v-ddd65fb3">
+        <view class="_div model-item__header data-v-ddd65fb3">
+          <label class="_span model-name data-v-ddd65fb3">Hy3</label>
+          <label class="_span model-tag data-v-ddd65fb3">新升级</label>
+        </view>
+        <label class="_span model-desc data-v-ddd65fb3"
+          >全能模型，适用大部分场景</label
+        >
+      </view>
+      <image
+        class="_img checked data-v-ddd65fb3"
+        src="{{c}}"
+        wx:if="{{b}}"
+      ></image>
+    </view>
+    <view class="_div divide-line data-v-ddd65fb3"></view>
+    <view catchtap="{{g}}" class="_div model-item-wrapper data-v-ddd65fb3">
+      <view class="_div model-item data-v-ddd65fb3">
+        <label class="_span model-name data-v-ddd65fb3">DeepSeek</label>
+        <label class="_span model-desc data-v-ddd65fb3"
+          >擅长深度推理与理解，兼具高效</label
+        >
+      </view>
+      <image
+        class="_img checked data-v-ddd65fb3"
+        src="{{f}}"
+        wx:if="{{e}}"
+      ></image>
+    </view>
+    <view class="_div data-v-ddd65fb3" wx:if="{{h}}">
+      <view class="_div divide-line data-v-ddd65fb3"></view>
+      <view catchtap="{{k}}" class="_div model-item-wrapper data-v-ddd65fb3">
+        <view class="_div model-item data-v-ddd65fb3">
+          <label class="_span model-name data-v-ddd65fb3">深海Agent</label>
+          <label class="_span model-desc data-v-ddd65fb3"
+            >基于MCP打造多 Agent 投资助手，利用一手信息提供问题的精确回答</label
+          >
+        </view>
+        <image
+          class="_img checked data-v-ddd65fb3"
+          src="{{j}}"
+          wx:if="{{i}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

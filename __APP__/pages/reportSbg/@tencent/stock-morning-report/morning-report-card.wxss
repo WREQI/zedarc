@@ -1,0 +1,90 @@
+.morning-report-card-wrapper.data-v-357473b1 {
+  background-color: var(--fill-background);
+  background-image: url(https://st.gtimg.com/design/62e20e2afae11ca5f5eed7fccaa9b0fc.png);
+  background-repeat: no-repeat;
+  background-size: 100% 9.6rem;
+  user-select: none;
+}
+[data-st-theme="black"] .morning-report-card-wrapper.data-v-357473b1,
+[data-st-theme="dark"] .morning-report-card-wrapper.data-v-357473b1 {
+  background-image: url(https://st.gtimg.com/design/a38815d9fa94205842576b4cb43e5fdd.png);
+}
+.morning-report-card-wrapper.oem.data-v-357473b1 {
+  background-image: none;
+  padding-top: 0.5333333333333333rem;
+}
+.morning-report-card-wrapper.translucent-bar.data-v-357473b1 {
+  padding-top: 2.3466666666666667rem;
+}
+.morning-report-card-wrapper .newsreport-pop.data-v-357473b1 {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100vw;
+  z-index: 999;
+}
+.morning-report-card-wrapper .newsreport-pop .container.data-v-357473b1 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.morning-report-card-wrapper .newsreport-pop .close-wrapper.data-v-357473b1 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8533333333333334rem;
+  justify-content: flex-end;
+  width: 7.786666666666667rem;
+}
+.morning-report-card-wrapper
+  .newsreport-pop
+  .close-wrapper
+  .close-img.data-v-357473b1 {
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.morning-report-card-wrapper .newsreport-pop .bg-img-wrapper.data-v-357473b1 {
+  align-items: flex-end;
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 9.173333333333334rem;
+  justify-content: center;
+  position: relative;
+  width: 7.2rem;
+}
+.morning-report-card-wrapper
+  .newsreport-pop
+  .bg-img-wrapper
+  .bg-img.data-v-357473b1 {
+  height: 9.173333333333334rem;
+  left: 0;
+  top: 0;
+  width: 7.2rem;
+}
+.morning-report-card-wrapper
+  .newsreport-pop
+  .bg-img-wrapper
+  .confirm-btn.data-v-357473b1 {
+  height: 1.1733333333333333rem;
+  margin-bottom: 0.7466666666666667rem;
+  position: absolute;
+  width: 6.133333333333334rem;
+}
+.morning-report-card-wrapper .morning-popup-visible.data-v-357473b1 {
+  visibility: visible;
+}
+.morning-report-card-wrapper
+  .morning-popup-visible
+  .bg-img-wrapper.data-v-357473b1 {
+  animation: fadeIn 0.7s cubic-bezier(0.4, 0, 0, 1.5) forwards;
+}

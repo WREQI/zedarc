@@ -1,0 +1,187 @@
+<view class="{{['_div','basket-stocklist-wrapper','data-v-06e6acd7',A,B]}}">
+  <view class="_div data-v-06e6acd7" wx:if="{{a}}">
+    <view
+      class="_div fake-stock-header-wrapper data-v-06e6acd7"
+      hidden="{{!f}}"
+      style="{{'top:'+g}}"
+    >
+      <view class="_div fake-stock-header data-v-06e6acd7">
+        <view class="_div stock-header data-v-06e6acd7">
+          <view class="_div stock-name data-v-06e6acd7">
+            <view class="_div stock-name-text data-v-06e6acd7">股票</view>
+            <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{b}}"></view>
+          </view>
+          <view class="_div sortable-captions data-v-06e6acd7">
+            <view
+              bindtouchend="{{events.onTouchend}}"
+              bindtouchmove="{{events.onTouchmove}}"
+              bindtouchstart="{{events.onTouchstart}}"
+              bindtransitionend="{{events.onTransitionEnd}}"
+              class="_div fake-sortable-row sortable-row data-v-06e6acd7"
+              data-fieldslen="{{d}}"
+            >
+              <view
+                class="{{['_div','data-v-06e6acd7','row-th']}}"
+                data-maxlen="{{field.e}}"
+                style="{{'width:'+field.f+';'+'padding-right:'+field.g}}"
+                wx:for="{{c}}"
+                wx:for-item="field"
+                wx:key="d"
+              >
+                <sort-toggle
+                  bind:__l="__l"
+                  bindsort="{{field.a}}"
+                  class="data-v-06e6acd7"
+                  uI="{{field.b}}"
+                  uP="{{field.c}}"
+                  wx:if="{{field.c}}"
+                ></sort-toggle>
+              </view>
+            </view>
+          </view>
+          <view class="_div action-column-placeholder fake data-v-06e6acd7">
+            <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{e}}"></view>
+            <view class="_div add-wrapper data-v-06e6acd7"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div stock-table data-v-06e6acd7">
+      <view class="_div stock-header data-v-06e6acd7">
+        <view class="_div stock-name data-v-06e6acd7">
+          <view class="_div stock-name-text data-v-06e6acd7">股票</view>
+          <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{h}}"></view>
+        </view>
+        <view class="_div sortable-captions data-v-06e6acd7">
+          <view
+            bindtouchend="{{events.onTouchend}}"
+            bindtouchmove="{{events.onTouchmove}}"
+            bindtouchstart="{{events.onTouchstart}}"
+            bindtransitionend="{{events.onTransitionEnd}}"
+            class="_div real-sortable-row sortable-row data-v-06e6acd7"
+            style="{{'transform:'+j+';'+'transition:'+k}}"
+          >
+            <view
+              class="{{['_div','data-v-06e6acd7','row-th']}}"
+              data-maxlen="{{field.e}}"
+              style="{{'width:'+field.f+';'+'padding-right:'+field.g}}"
+              wx:for="{{i}}"
+              wx:for-item="field"
+              wx:key="d"
+            >
+              <sort-toggle
+                bind:__l="__l"
+                bindsort="{{field.a}}"
+                class="data-v-06e6acd7"
+                uI="{{field.b}}"
+                uP="{{field.c}}"
+                wx:if="{{field.c}}"
+              ></sort-toggle>
+            </view>
+          </view>
+        </view>
+        <view class="_div action-column-placeholder real data-v-06e6acd7">
+          <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{l}}"></view>
+          <view class="_div add-wrapper data-v-06e6acd7"></view>
+        </view>
+      </view>
+      <view class="_div stock-body data-v-06e6acd7">
+        <view class="_div name-column data-v-06e6acd7">
+          <view
+            catchtap="{{rowData.g}}"
+            class="_div stock-wrapper data-v-06e6acd7"
+            wx:for="{{m}}"
+            wx:for-item="rowData"
+            wx:key="f"
+          >
+            <view class="_div stock-inner-wrapper data-v-06e6acd7">
+              <view
+                class="{{['_div','stock-name','data-v-06e6acd7',rowData.b]}}"
+                data-len="{{rowData.c}}"
+                >{{rowData.a}}</view
+              >
+              <view class="_div stock-symbol data-v-06e6acd7">
+                <image
+                  class="_img market-icon data-v-06e6acd7"
+                  src="{{rowData.d}}"
+                ></image>
+                <view class="_div stock-code data-v-06e6acd7"
+                  >{{rowData.e}}</view
+                >
+              </view>
+            </view>
+            <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{n}}"></view>
+          </view>
+        </view>
+        <view
+          bindtouchend="{{events.onTouchend}}"
+          bindtouchmove="{{events.onTouchmove}}"
+          bindtouchstart="{{events.onTouchstart}}"
+          bindtransitionend="{{events.onTransitionEnd}}"
+          class="_div data-column data-v-06e6acd7"
+          data-fieldslen="{{r}}"
+        >
+          <view
+            class="_div data-inner-wrapper data-v-06e6acd7"
+            style="{{'transform:'+p+';'+'transition:'+q}}"
+          >
+            <view
+              catchtap="{{rowData.c}}"
+              class="_div data-column-tr data-v-06e6acd7"
+              wx:for="{{o}}"
+              wx:for-item="rowData"
+              wx:key="b"
+            >
+              <view
+                class="{{['_div','data-v-06e6acd7','column-td',field.c]}}"
+                data-maxlen="{{field.d}}"
+                style="{{'width:'+field.e+';'+'padding-right:'+field.f+';'+'font-size:'+field.g}}"
+                wx:for="{{rowData.a}}"
+                wx:for-item="field"
+                wx:key="b"
+                >{{field.a}}</view
+              >
+            </view>
+          </view>
+        </view>
+        <view class="_div action-column data-v-06e6acd7" wx:if="{{s}}">
+          <view
+            catchtap="{{rowData.e}}"
+            class="_div add-wrapper data-v-06e6acd7"
+            wx:for="{{t}}"
+            wx:for-item="rowData"
+            wx:key="d"
+          >
+            <view class="_div gradient-bg data-v-06e6acd7" wx:if="{{v}}"></view>
+            <view class="_div action-icon-wrapper data-v-06e6acd7">
+              <image
+                alt="已添加"
+                class="_img added-icon data-v-06e6acd7"
+                src="{{rowData.b}}"
+                wx:if="{{rowData.a}}"
+              ></image>
+              <image
+                alt="添加自选"
+                class="_img add-icon data-v-06e6acd7"
+                src="{{rowData.c}}"
+                wx:else
+              ></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        catchtap="{{z}}"
+        class="_div fold-wrapper data-v-06e6acd7"
+        wx:if="{{w}}"
+      >
+        <view class="_div desc data-v-06e6acd7">{{x}}</view>
+        <view class="{{['_div','right-arrow','data-v-06e6acd7',y]}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="_div empty-wrapper data-v-06e6acd7" wx:else>
+    <view class="_div empty-icon data-v-06e6acd7"></view>
+    <label class="_span data-v-06e6acd7">暂无符合策略的股票</label>
+  </view>
+</view>

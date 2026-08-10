@@ -1,0 +1,29 @@
+<view
+  class="{{['_div','data-v-0d1b6df3','click-left','stock-content',m,n]}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{f}}" class="_div click-left stock-left data-v-0d1b6df3">
+    <view
+      class="{{['_div','data-v-0d1b6df3','click-left','stock-tag']}}"
+      style="{{'background-image:'+b}}"
+    ></view>
+    <label class="_span click-left stock-name data-v-0d1b6df3">{{c}}</label>
+    <block wx:if="{{d}}">
+      <view class="_div click-left stock-divider data-v-0d1b6df3"></view>
+      <label class="_span click-left stock-bk data-v-0d1b6df3">{{e}}</label>
+      <view class="_div click-left indicator data-v-0d1b6df3"></view>
+    </block>
+  </view>
+  <view class="{{['_div','click-left','stock-hq','data-v-0d1b6df3',j]}}">
+    <label class="_span click-left stock-price data-v-0d1b6df3" wx:if="{{g}}"
+      >{{h}}</label
+    >
+    <label class="_span click-left rise-persent data-v-0d1b6df3">{{i}}</label>
+  </view>
+  <view bindtap="{{l}}" class="_div click-add add-self-stock data-v-0d1b6df3">
+    <image
+      class="_img click-add add-self-img data-v-0d1b6df3"
+      src="{{k}}"
+    ></image>
+  </view>
+</view>

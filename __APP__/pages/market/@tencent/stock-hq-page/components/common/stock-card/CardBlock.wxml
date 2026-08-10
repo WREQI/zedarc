@@ -1,0 +1,7 @@
+<view catchtap="{{g}}" class="{{['_div','data-v-7dc3a6e7','card-wrapper',f]}}">
+  <view class="{{['_div','data-v-7dc3a6e7','card-name',b]}}">{{a}}</view>
+  <view class="{{['_div','data-v-7dc3a6e7','card-zdf',e]}}" wx:if="{{c}}"
+    >{{d}}%</view
+  >
+  <slot name="card-bottom"></slot>
+</view>

@@ -1,0 +1,73 @@
+<action-sheet
+  bind:__l="__l"
+  bindinput="{{f}}"
+  class="action-sheet data-v-06befa24"
+  uI="06befa24-0"
+  uP="{{g}}"
+  uS="{{['d']}}"
+  wx:if="{{g}}"
+>
+  <view class="{{['_div','action-sheet-container','data-v-06befa24',c,d,e]}}">
+    <view
+      class="_div sheet-item broker data-v-06befa24"
+      wx:for="{{a}}"
+      wx:for-item="broker"
+      wx:key="l"
+    >
+      <view class="_div sheet-item-left data-v-06befa24">
+        <view class="_div broker-logo data-v-06befa24">
+          <image
+            alt=""
+            class="_img logo-icon-img data-v-06befa24"
+            src="{{broker.a}}"
+          ></image>
+        </view>
+      </view>
+      <view class="_div sheet-item-mid data-v-06befa24">
+        <view class="_div broker-info data-v-06befa24">
+          <view class="_div broker-title data-v-06befa24">
+            <label class="_span broker-name data-v-06befa24"
+              >{{broker.b}}</label
+            >
+            <label
+              class="_span state-maintain data-v-06befa24"
+              wx:if="{{broker.c}}"
+              >(维护中)</label
+            >
+          </view>
+          <view class="_div broker-desc data-v-06befa24">{{broker.d}}</view>
+          <view
+            class="_ul sheet-intro t-20 data-v-06befa24"
+            wx:if="{{broker.e}}"
+          >
+            <view
+              class="_li sheet-intro-item data-v-06befa24"
+              wx:for="{{broker.f}}"
+              wx:key="b"
+              >{{item.a}}</view
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div sheet-item-right data-v-06befa24">
+        <label
+          catchtap="{{broker.h}}"
+          class="_span sheet-button data-v-06befa24"
+          wx:if="{{broker.g}}"
+          >立即前往</label
+        >
+        <label
+          catchtap="{{broker.k}}"
+          class="{{['_span','sheet-button','data-v-06befa24',broker.j]}}"
+          wx:elif="{{b}}"
+          >{{broker.i}}</label
+        >
+      </view>
+    </view>
+    <view class="_div sheet-item more data-v-06befa24">
+      <label class="_span sheet-desc data-v-06befa24"
+        >更多券商接入中，敬请期待</label
+      >
+    </view>
+  </view>
+</action-sheet>

@@ -1,0 +1,147 @@
+<view class="_div speech-half-container data-v-a7236487" wx:if="{{a}}">
+  <view
+    catchtap="{{N}}"
+    catchtouchmove="{{O}}"
+    class="{{['_div','data-v-a7236487','speech-half-mask',L]}}"
+    style="{{M}}"
+  >
+    <view catchtap="{{K}}" class="_div speech-half-panel data-v-a7236487">
+      <view
+        catchtap="{{b}}"
+        class="_div speech-half-close data-v-a7236487"
+      ></view>
+      <view class="_div speech-half-content data-v-a7236487">
+        <image
+          alt=""
+          class="_img speech-half-slogan data-v-a7236487"
+          src="https://st.gtimg.com/design/87dc28dad6b02c322673806fb8c1d18e.png"
+        ></image>
+        <view class="_div speech-half-tabs data-v-a7236487">
+          <view
+            catchtap="{{tab.d}}"
+            class="{{['_div','data-v-a7236487','speech-half-tab',tab.c]}}"
+            wx:for="{{c}}"
+            wx:for-item="tab"
+            wx:key="b"
+            >{{tab.a}}</view
+          >
+        </view>
+        <view class="_div speech-half-title-wrap data-v-a7236487">
+          <view class="{{['_div','data-v-a7236487','speech-half-title',e]}}"
+            >{{d}}</view
+          >
+        </view>
+        <view
+          catchmousedown="{{m}}"
+          catchtouchcancel="{{l}}"
+          catchtouchend="{{k}}"
+          catchtouchmove="{{j}}"
+          catchtouchstart="{{i}}"
+          class="{{['_div','data-v-a7236487','speech-half-progress',h]}}"
+          key="{{g}}"
+          ref="progressBarRef"
+        >
+          <view class="_div speech-half-progress-track data-v-a7236487">
+            <view
+              class="_div speech-half-progress-current data-v-a7236487"
+              style="{{'width:'+f}}"
+            ></view>
+          </view>
+        </view>
+        <view class="_div speech-half-time data-v-a7236487">
+          <label class="_span data-v-a7236487">{{n}}</label>
+          <label class="_span data-v-a7236487">{{o}}</label>
+        </view>
+        <view class="_div speech-half-controls data-v-a7236487">
+          <view
+            catchtap="{{p}}"
+            class="_div speech-half-icon setting data-v-a7236487"
+          ></view>
+          <view
+            catchtap="{{r}}"
+            class="{{['_div','data-v-a7236487','speech-half-icon','rewind',q]}}"
+          >
+            <label class="_span seek-num data-v-a7236487">15</label>
+          </view>
+          <view
+            class="_div speech-half-play loading data-v-a7236487"
+            wx:if="{{s}}"
+          >
+            <view
+              class="_div speech-half-play-loading-ring data-v-a7236487"
+            ></view>
+            <view
+              class="_div speech-half-play-loading-icon data-v-a7236487"
+            ></view>
+          </view>
+          <view
+            catchtap="{{v}}"
+            class="{{['_div','data-v-a7236487','speech-half-play',t]}}"
+            wx:else
+          ></view>
+          <view
+            catchtap="{{x}}"
+            class="{{['_div','data-v-a7236487','speech-half-icon','forward',w]}}"
+          >
+            <label class="_span seek-num data-v-a7236487">15</label>
+          </view>
+          <view
+            catchtap="{{z}}"
+            class="{{['_div','data-v-a7236487','speech-half-icon like',y]}}"
+          ></view>
+        </view>
+        <view
+          bindmousedown="{{B}}"
+          bindmouseleave="{{D}}"
+          bindmouseup="{{C}}"
+          catchcontextmenu="{{I}}"
+          catchselectstart="{{J}}"
+          catchtouchcancel="{{H}}"
+          catchtouchend="{{G}}"
+          catchtouchmove="{{F}}"
+          catchtouchstart="{{E}}"
+          class="{{['_div','data-v-a7236487','speech-half-action',A]}}"
+        >
+          <label class="_span speech-half-mic data-v-a7236487"></label>
+          <label class="_span speech-half-action-text data-v-a7236487"
+            >按住和主播互动</label
+          >
+        </view>
+        <view class="_div speech-half-action-tips data-v-a7236487"
+          >音频由腾讯混元大模型生成</view
+        >
+      </view>
+    </view>
+  </view>
+  <speech-speed-setting
+    bind:__l="__l"
+    bindrateChange="{{Q}}"
+    bindupdateVisible="{{P}}"
+    bindvoiceOpen="{{R}}"
+    class="data-v-a7236487"
+    uI="a7236487-0"
+    uP="{{S}}"
+    wx:if="{{S}}"
+  ></speech-speed-setting>
+  <speech-voice-setting
+    bind:__l="__l"
+    bindmodeChange="{{U}}"
+    bindupdateVisible="{{T}}"
+    bindvoiceChange="{{V}}"
+    bindvoicePreview="{{W}}"
+    class="data-v-a7236487"
+    uI="a7236487-1"
+    uP="{{X}}"
+    wx:if="{{X}}"
+  ></speech-voice-setting>
+  <voice-modal
+    bind:__l="__l"
+    bindrecognizeCancel="{{aa}}"
+    bindrecognizeEnd="{{Z}}"
+    class="r data-v-a7236487"
+    uI="a7236487-2"
+    uP="{{ab}}"
+    uR="voiceModalRef"
+    wx:if="{{ab}}"
+  ></voice-modal>
+</view>

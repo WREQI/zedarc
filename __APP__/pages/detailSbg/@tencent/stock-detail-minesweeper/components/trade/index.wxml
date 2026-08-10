@@ -1,0 +1,43 @@
+<view class="_div ms-block data-v-6d1e6710" wx:if="{{a}}">
+  <view class="_div title data-v-6d1e6710">交易面</view>
+  <fold-bar
+    bind:__l="__l"
+    bindfoldChange="{{item.q}}"
+    class="{{['r-i-f','data-v-6d1e6710',item.p]}}"
+    uI="{{item.r}}"
+    uP="{{item.s}}"
+    uR="{{item.o}}"
+    uS="{{['d']}}"
+    wx:for="{{b}}"
+    wx:key="n"
+  >
+    <trade-comp-l-s
+      bind:__l="__l"
+      class="data-v-6d1e6710"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:if="{{item.a}}"
+    ></trade-comp-l-s>
+    <trade-comp-c-o
+      bind:__l="__l"
+      class="data-v-6d1e6710"
+      uI="{{item.e}}"
+      uP="{{item.f}}"
+      wx:elif="{{item.d}}"
+    ></trade-comp-c-o>
+    <trade-comp-t-e-c-h
+      bind:__l="__l"
+      class="data-v-6d1e6710"
+      uI="{{item.h}}"
+      uP="{{item.i}}"
+      wx:elif="{{item.g}}"
+    ></trade-comp-t-e-c-h>
+    <trade-comp-d-l
+      bind:__l="__l"
+      class="data-v-6d1e6710"
+      uI="{{item.k}}"
+      uP="{{item.l}}"
+      wx:elif="{{item.j}}"
+    ></trade-comp-d-l>
+  </fold-bar>
+</view>

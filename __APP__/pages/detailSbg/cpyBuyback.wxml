@@ -1,0 +1,23 @@
+<page-meta class="data-v-32ccadac" rootFontSize="{{a}}"></page-meta>
+<view class="_div cpyBuyback-container data-v-32ccadac">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-32ccadac"
+    uI="32ccadac-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-32ccadac"
+    uI="32ccadac-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <cpy-buyback
+    bind:__l="__l"
+    class="data-v-32ccadac"
+    uI="32ccadac-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></cpy-buyback>
+  <view class="_div zxg-logo data-v-32ccadac"></view>
+</view>

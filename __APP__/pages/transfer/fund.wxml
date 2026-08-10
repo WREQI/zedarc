@@ -1,0 +1,62 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="34f2c1e6-0"
+  uP="{{n}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{n}}"
+>
+  <view class="transfer-fund-container">
+    <common-bulletin-bar
+      bind:__l="__l"
+      uI="34f2c1e6-1,34f2c1e6-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></common-bulletin-bar>
+    <block wx:if="{{c}}">
+      <view class="segments-wrapper">
+        <st-segment
+          bind:__l="__l"
+          bindinput="{{d}}"
+          uI="34f2c1e6-2,34f2c1e6-0"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></st-segment>
+      </view>
+      <transfer-in
+        bind:__l="__l"
+        bindshowEmptyCard="{{h}}"
+        class="r"
+        uI="34f2c1e6-3,34f2c1e6-0"
+        uR="in"
+        wx:if="{{f}}"
+      ></transfer-in>
+      <transfer-out
+        bind:__l="__l"
+        bindshowEmptyCard="{{j}}"
+        class="r"
+        uI="34f2c1e6-4,34f2c1e6-0"
+        uR="out"
+        wx:else
+      ></transfer-out>
+    </block>
+    <view class="empty-tip-container" wx:else>
+      <empty-bankcard-tip
+        bind:__l="__l"
+        uI="34f2c1e6-5,34f2c1e6-0"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></empty-bankcard-tip>
+    </view>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="34f2c1e6-6,34f2c1e6-0"
+      uP="{{l}}"
+      wx:if="{{l}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

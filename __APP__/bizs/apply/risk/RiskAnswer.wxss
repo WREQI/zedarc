@@ -1,0 +1,56 @@
+@import "/app.wxss";
+.comp__risk-answer {
+  padding: 0 0.4rem;
+  width: 9.2rem;
+}
+.comp__risk-answer .risk-title {
+  font-size: 0.4rem;
+  padding-bottom: 0.266667rem;
+  text-align: center;
+}
+.comp__risk-answer .answer-group,
+.comp__risk-answer .risk-title {
+  color: var(--text-color-1);
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  line-height: 0.6rem;
+}
+.comp__risk-answer .answer-group {
+  font-size: 0.373333rem;
+  padding-bottom: 0.16rem;
+}
+.comp__risk-answer .answer-detail {
+  color: var(--text-color-1);
+  font-family: PingFangSC-Regular;
+  font-size: 0.346667rem;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  padding-bottom: 0.4rem;
+}
+.comp__risk-answer .answer-detail .answer-detail-title {
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  padding-bottom: 0.16rem;
+}
+.comp__risk-answer .answer-detail .answer-detail-content {
+  -webkit-box-pack: justify;
+  align-content: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.16rem;
+}
+.comp__risk-answer .answer-detail .answer-detail-content .selected {
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+.comp__risk-answer .answer-detail .answer-detail-content .answer-detail-radio {
+  padding-left: 0.2rem;
+}
+.comp__risk-answer
+  .answer-detail
+  .answer-detail-content
+  .answer-detail-empty-radio {
+  padding-left: 0.6rem;
+}

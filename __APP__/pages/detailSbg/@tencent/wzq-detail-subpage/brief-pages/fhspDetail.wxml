@@ -1,0 +1,84 @@
+<view
+  class="{{['_div','fhsp-wrapper','data-v-fe30d424',h&&'wzq',i&&'no-logo']}}"
+>
+  <view class="_div fhsp-wrapper-all data-v-fe30d424">
+    <view class="_div fhsp-content data-v-fe30d424" wx:if="{{a}}">
+      <block wx:if="{{b}}">
+        <view class="_div fh-title data-v-fe30d424">
+          <view class="_div fh-title-item data-v-fe30d424">公告日期</view>
+          <view class="_div fh-title-item data-v-fe30d424" style="flex: 1"
+            >方案</view
+          >
+          <view class="_div fh-title-item text-right data-v-fe30d424"
+            >除权日</view
+          >
+        </view>
+        <view
+          class="_div fh-content data-v-fe30d424"
+          wx:for="{{c}}"
+          wx:for-item="val"
+          wx:key="d"
+        >
+          <view class="_div content-row data-v-fe30d424">
+            <view class="_div row-item data-v-fe30d424">{{val.a}}</view>
+            <view
+              class="_div row-item data-v-fe30d424"
+              style="flex: 1; white-space: unset"
+              >{{val.b}}</view
+            >
+            <view class="_div row-item text-right data-v-fe30d424"
+              >{{val.c}}</view
+            >
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="_div fh-title data-v-fe30d424">
+          <view class="_div fh-title-item data-v-fe30d424">除权日期</view>
+          <view class="_div fh-title-item text-right data-v-fe30d424"
+            >方案</view
+          >
+        </view>
+        <view
+          class="_div fh-content data-v-fe30d424"
+          wx:for="{{d}}"
+          wx:for-item="val"
+          wx:key="c"
+        >
+          <view class="_div content-row data-v-fe30d424">
+            <view class="_div row-item data-v-fe30d424">{{val.a}}</view>
+            <view
+              class="_div row-item text-right data-v-fe30d424"
+              style="flex: 1; white-space: unset"
+              >{{val.b}}</view
+            >
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="_div fhsp-content data-v-fe30d424" wx:if="{{e}}">
+      <view class="_div fh-title data-v-fe30d424">
+        <view class="_div fh-title-item col-3 data-v-fe30d424">基金发放日</view>
+        <view class="_div fh-title-item col-3 data-v-fe30d424">权益登记日</view>
+        <view class="_div fh-title-item col-3 text-right data-v-fe30d424"
+          >基金分红(元)</view
+        >
+      </view>
+      <view
+        class="_div fh-content data-v-fe30d424"
+        wx:for="{{f}}"
+        wx:for-item="val"
+        wx:key="d"
+      >
+        <view class="_div content-row data-v-fe30d424">
+          <view class="_div row-item col-3 data-v-fe30d424">{{val.a}}</view>
+          <view class="_div row-item col-3 data-v-fe30d424">{{val.b}}</view>
+          <view class="_div row-item text-right data-v-fe30d424"
+            >{{val.c}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div zxg-logo data-v-fe30d424" wx:if="{{g}}"></view>
+  </view>
+</view>

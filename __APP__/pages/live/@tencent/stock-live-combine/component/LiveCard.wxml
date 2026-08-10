@@ -1,0 +1,111 @@
+<view class="{{['_div','live-card-container','data-v-f8fac6ac',P,Q,R]}}">
+  <view bindtap="{{C}}" class="_div data-v-f8fac6ac">
+    <view class="_div status-bar data-v-f8fac6ac" wx:if="{{a}}">
+      <view class="_div tag-img data-v-f8fac6ac">
+        <label class="_span tag-name data-v-f8fac6ac">专题</label>
+      </view>
+      <view class="_div time-duration data-v-f8fac6ac">共{{b}}场直播></view>
+    </view>
+    <view class="_div status-bar data-v-f8fac6ac" wx:else>
+      <view
+        catchtap="{{f}}"
+        class="_div status-label booked data-v-f8fac6ac"
+        wx:if="{{c}}"
+      >
+        <view class="_div booked-icon data-v-f8fac6ac"></view>
+        <label class="{{['_span','data-v-f8fac6ac',d,e]}}">已预约</label>
+      </view>
+      <view
+        catchtap="{{j}}"
+        class="_div status-label book data-v-f8fac6ac"
+        wx:elif="{{g}}"
+      >
+        <view class="_div book-icon data-v-f8fac6ac"></view>
+        <label class="{{['_span','data-v-f8fac6ac',h,i]}}">预约</label>
+      </view>
+      <view class="_div status-label living data-v-f8fac6ac" wx:elif="{{k}}">
+        <view class="_div living-icon data-v-f8fac6ac"></view>
+        <label class="{{['_span','data-v-f8fac6ac',l,m]}}">直播中</label>
+      </view>
+      <view class="_div status-label playback data-v-f8fac6ac" wx:elif="{{n}}">
+        <view class="_div playback-icon data-v-f8fac6ac"></view>
+        <label class="{{['_span','data-v-f8fac6ac',o,p]}}">回放</label>
+      </view>
+      <view class="_div time-duration data-v-f8fac6ac">{{q}}</view>
+    </view>
+    <view class="{{['_div','live-title','data-v-f8fac6ac',s]}}">{{r}}</view>
+    <view class="_div live-box-mac data-v-f8fac6ac" wx:if="{{t}}">
+      <image class="_img live-poster-bg data-v-f8fac6ac" src="{{v}}"></image>
+      <view class="{{['_div','data-v-f8fac6ac','live-img-box','box-mac',y]}}">
+        <image class="_img live-poster data-v-f8fac6ac" src="{{w}}"></image>
+        <view class="_div mask-box data-v-f8fac6ac">
+          <view class="_div live-play-btn data-v-f8fac6ac" wx:if="{{x}}">
+            <image
+              class="_img play-btn-icon data-v-f8fac6ac"
+              src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+            ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="{{['_div','data-v-f8fac6ac','live-img-box',B]}}" wx:else>
+      <image class="_img live-poster data-v-f8fac6ac" src="{{z}}"></image>
+      <view class="_div mask-box data-v-f8fac6ac">
+        <view class="_div live-play-btn data-v-f8fac6ac" wx:if="{{A}}">
+          <image
+            class="_img play-btn-icon data-v-f8fac6ac"
+            src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div bottom-section data-v-f8fac6ac">
+    <view
+      class="_div interested-people-container data-v-f8fac6ac"
+      wx:if="{{D}}"
+    >
+      <view class="_div interested-people-avatars data-v-f8fac6ac">
+        <view
+          class="{{['_div','avatars-wrap','data-v-f8fac6ac',url.c&&'no-frist']}}"
+          wx:for="{{E}}"
+          wx:for-item="url"
+          wx:key="d"
+        >
+          <image
+            class="_img avatars-img data-v-f8fac6ac"
+            src="{{url.b}}"
+            wx:if="{{url.a}}"
+          ></image>
+        </view>
+        <view class="_div interested-people-text data-v-f8fac6ac"
+          >{{F}}人{{G}}</view
+        >
+      </view>
+    </view>
+    <view
+      class="_div interested-people-container data-v-f8fac6ac"
+      wx:elif="{{H}}"
+    >
+      <view
+        bindtap="{{J}}"
+        class="_div interested-people-avatars data-v-f8fac6ac"
+      >
+        <view class="_div avatars-wrap data-v-f8fac6ac">
+          <image class="_img avatars-img data-v-f8fac6ac" src="{{I}}"></image>
+        </view>
+      </view>
+      <view class="_div media-name data-v-f8fac6ac">{{K}}</view>
+      <view class="_div interested-people-text data-v-f8fac6ac"
+        >{{L}}人{{M}}</view
+      >
+    </view>
+    <view
+      class="_div interested-people-container data-v-f8fac6ac"
+      wx:else
+    ></view>
+    <view bindtap="{{O}}" class="_div share-wrap data-v-f8fac6ac" wx:if="{{N}}">
+      <view class="_div share-icon data-v-f8fac6ac"></view>转发</view
+    >
+  </view>
+</view>

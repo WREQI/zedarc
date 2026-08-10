@@ -1,0 +1,30 @@
+<view class="_div dialog-wrapper data-v-6e03e355">
+  <view class="_div dialog-container data-v-6e03e355">
+    <view class="_div dialog-mask dialog-mask-prize data-v-6e03e355"></view>
+    <view class="_div prize-modal popupcard-modal data-v-6e03e355">
+      <view class="_div box data-v-6e03e355">
+        <view bindtap="{{b}}" class="_div gift-box data-v-6e03e355">
+          <image
+            class="_img box__img data-v-6e03e355"
+            resizeMode="cover"
+            src="https://wzq.gtimg.com/image/mp-weapp/assets/bg_jinju.png"
+            wx:if="{{a}}"
+          ></image>
+          <image
+            class="_img box__img data-v-6e03e355"
+            resizeMode="cover"
+            src="https://wzq.gtimg.com/resources/mocktrade/bg_jinju_wzq.png"
+            wx:else
+          ></image>
+        </view>
+      </view>
+      <view class="_div close-box data-v-6e03e355">
+        <image
+          bindtap="{{c}}"
+          class="_img close__img data-v-6e03e355"
+          src="https://wzq.gtimg.com/resources/mocktrade/close.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

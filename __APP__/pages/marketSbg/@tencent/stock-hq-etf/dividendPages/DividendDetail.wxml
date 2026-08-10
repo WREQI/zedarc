@@ -1,0 +1,208 @@
+<view
+  class="{{['_div','dividend-detail-page-wrapper','data-v-9a4848f9',ab&&'mp']}}"
+>
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    bindlayout="{{c}}"
+    class="data-v-9a4848f9"
+    uI="9a4848f9-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="{{['_div','data-v-9a4848f9','header-wrapper']}}" style="{{e}}">
+    <view class="_div header-title data-v-9a4848f9"></view>
+    <view class="_div header-sub data-v-9a4848f9"
+      >红利ETF，聚焦稳健投资，带来稳稳的幸福</view
+    >
+  </view>
+  <view class="_div content-wrapper data-v-9a4848f9">
+    <view class="_div module-card module-good data-v-9a4848f9">
+      <view class="_div module-title data-v-9a4848f9">好在哪儿？</view>
+      <view class="_div tag-row data-v-9a4848f9" wx:for="{{f}}" wx:key="c">
+        <view class="_div info-tag info-tag--red data-v-9a4848f9"
+          >{{item.a}}</view
+        >
+        <view class="_div tag-text data-v-9a4848f9">{{item.b}}</view>
+      </view>
+      <dividend-compare-card
+        bind:__l="__l"
+        class="compare-card data-v-9a4848f9"
+        uI="9a4848f9-1"
+      ></dividend-compare-card>
+    </view>
+    <view class="_div module-card module-worth data-v-9a4848f9" wx:if="{{g}}">
+      <view class="_div module-title data-v-9a4848f9">现在值得关注吗？</view>
+      <view class="_div tag-row data-v-9a4848f9" wx:for="{{h}}" wx:key="c">
+        <view class="_div info-tag data-v-9a4848f9">{{item.a}}</view>
+        <view class="_div tag-text data-v-9a4848f9">{{item.b}}</view>
+      </view>
+      <view class="_div module-tip data-v-9a4848f9"
+        >内容由自选股问元宝模型生成，不构成投资建议。</view
+      >
+    </view>
+    <view
+      class="_div module-card module-worth module-worth--failed data-v-9a4848f9"
+      wx:elif="{{i}}"
+    >
+      <view class="_div module-title data-v-9a4848f9">现在值得关注吗？</view>
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{j}}"
+        class="data-v-9a4848f9"
+        uI="9a4848f9-2"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></st-status>
+    </view>
+    <view
+      class="_div module-card module-select module-select--loading data-v-9a4848f9"
+      wx:if="{{l}}"
+    >
+      <view class="_div module-title data-v-9a4848f9">精选ETF</view>
+      <view class="_div select-stock-placeholder data-v-9a4848f9"></view>
+    </view>
+    <view
+      class="_div module-card module-select module-select--failed data-v-9a4848f9"
+      wx:elif="{{m}}"
+    >
+      <view class="_div module-title data-v-9a4848f9">精选ETF</view>
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{n}}"
+        class="data-v-9a4848f9"
+        uI="9a4848f9-3"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></st-status>
+    </view>
+    <view
+      class="_div module-card module-select data-v-9a4848f9"
+      wx:elif="{{p}}"
+    >
+      <view class="_div module-title data-v-9a4848f9">精选ETF</view>
+      <view bindtap="{{J}}" class="_div select-stock data-v-9a4848f9">
+        <view class="_div select-stock-head data-v-9a4848f9">
+          <st-mini-mins
+            bind:__l="__l"
+            class="select-stock-chart data-v-9a4848f9"
+            uI="9a4848f9-4"
+            uP="{{q}}"
+            wx:if="{{q}}"
+          ></st-mini-mins>
+          <view class="_div select-stock-info data-v-9a4848f9">
+            <view class="_div select-stock-title data-v-9a4848f9">
+              <label class="_span select-stock-name data-v-9a4848f9"
+                >{{r}}</label
+              >
+              <image
+                catchtap="{{w}}"
+                class="{{['_img','data-v-9a4848f9','select-stock-fav',t]}}"
+                src="{{v}}"
+                wx:if="{{s}}"
+              ></image>
+            </view>
+            <view class="_div select-stock-data data-v-9a4848f9">
+              <view class="_div data-item data-v-9a4848f9">
+                <view class="{{['_div','data-v-9a4848f9','data-num',y]}}"
+                  >{{x}}</view
+                >
+                <view class="_div data-desc data-v-9a4848f9">近1年涨幅</view>
+              </view>
+              <view class="_div data-item data-v-9a4848f9" wx:if="{{z}}">
+                <view class="_div data-num data-v-9a4848f9">{{A}}</view>
+                <view
+                  catchtap="{{B}}"
+                  class="_div data-desc dividend-rate-desc data-v-9a4848f9"
+                  >股息率<label class="_span info-icon data-v-9a4848f9"></label>
+                </view>
+              </view>
+              <view class="_div data-item data-v-9a4848f9">
+                <view class="_div data-num data-v-9a4848f9">{{C}}元</view>
+                <view class="_div data-desc data-v-9a4848f9">买一笔仅需</view>
+              </view>
+              <view
+                class="_div data-item data-item--placeholder data-v-9a4848f9"
+                wx:if="{{D}}"
+              ></view>
+            </view>
+          </view>
+        </view>
+        <view class="_div select-stock-feature data-v-9a4848f9" wx:if="{{E}}">
+          <label class="_span feature-tag data-v-9a4848f9">产品亮点</label>
+          <label class="_span feature-text data-v-9a4848f9">{{F}}</label>
+        </view>
+        <view class="_div select-stock-btns data-v-9a4848f9">
+          <view
+            catchtap="{{H}}"
+            class="_div btn btn-plain data-v-9a4848f9"
+            wx:if="{{G}}"
+            >开启定投</view
+          >
+          <view catchtap="{{I}}" class="_div btn btn-primary data-v-9a4848f9"
+            >立即买入</view
+          >
+        </view>
+      </view>
+    </view>
+    <dividend-more-block
+      bind:__l="__l"
+      bindopenTip="{{K}}"
+      class="data-v-9a4848f9"
+      uI="9a4848f9-5"
+    ></dividend-more-block>
+  </view>
+  <view class="_div bottom-wrapper data-v-9a4848f9"
+    >内容仅供参考，不构成投资建议。<trust-footer
+      bind:__l="__l"
+      class="data-v-9a4848f9"
+      uI="9a4848f9-6"
+      wx:if="{{L}}"
+    ></trust-footer>
+  </view>
+  <teach-pop
+    bind:__l="__l"
+    bindcloseTeachPop="{{M}}"
+    class="data-v-9a4848f9"
+    uI="9a4848f9-7"
+    uP="{{N}}"
+    wx:if="{{N}}"
+  ></teach-pop>
+  <footer-bar
+    bind:__l="__l"
+    bindask="{{O}}"
+    bindshare="{{P}}"
+    class="data-v-9a4848f9"
+    uI="9a4848f9-8"
+    uP="{{Q}}"
+    wx:if="{{Q}}"
+  ></footer-bar>
+  <root-portal class="data-v-9a4848f9" enable="{{true}}" wx:if="{{R}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{S}}"
+      class="data-v-9a4848f9"
+      uI="9a4848f9-9"
+      uP="{{T}}"
+      wx:if="{{T}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{V}}"
+    class="data-v-9a4848f9"
+    uI="9a4848f9-10"
+    uP="{{W}}"
+    wx:elif="{{U}}"
+  ></half-screen-ai-entry>
+  <root-portal class="data-v-9a4848f9" enable="{{true}}" wx:if="{{X}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{Z}}"
+      class="data-v-9a4848f9"
+      uI="9a4848f9-11"
+      uP="{{aa}}"
+      wx:if="{{Y}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

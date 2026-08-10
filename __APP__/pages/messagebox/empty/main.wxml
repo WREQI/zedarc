@@ -1,0 +1,16 @@
+<page-meta class="data-v-2a43a0fe" rootFontSize="{{a}}"></page-meta>
+<view class="_div empty-container data-v-2a43a0fe">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-2a43a0fe"
+    uI="2a43a0fe-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-2a43a0fe"
+    uI="2a43a0fe-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <empty bind:__l="__l" class="data-v-2a43a0fe" uI="2a43a0fe-2"></empty>
+</view>

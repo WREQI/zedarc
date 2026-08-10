@@ -1,0 +1,41 @@
+<view
+  catchtap="{{z}}"
+  class="{{['_div','quotation-bar','data-v-4398fe44',x&&'higher',y&&'lite']}}"
+  ref="bar"
+>
+  <view class="{{['_div','first-line','data-v-4398fe44',m&&'small-font']}}">
+    <view class="_div block-area data-v-4398fe44" ref="block1">
+      <view class="_div title data-v-4398fe44">最新</view>
+      <view bindtap="{{c}}" class="{{['_div','text','data-v-4398fe44',b]}}"
+        >{{a}}</view
+      >
+      <view class="{{['_div','text','data-v-4398fe44',e]}}">{{d}}</view>
+      <view class="{{['_div','text','data-v-4398fe44',g]}}">{{f}}%</view>
+    </view>
+    <view class="_div block-area data-v-4398fe44" ref="block2" wx:if="{{h}}">
+      <view class="_div title data-v-4398fe44">涨停</view>
+      <view bindtap="{{j}}" class="_div text color-rise data-v-4398fe44"
+        >{{i}}</view
+      >
+      <view class="_div title title-margin data-v-4398fe44">跌停</view>
+      <view bindtap="{{l}}" class="_div text color-drop data-v-4398fe44"
+        >{{k}}</view
+      >
+    </view>
+  </view>
+  <view class="_div second-line data-v-4398fe44" wx:if="{{n}}">
+    <view class="_div block-area data-v-4398fe44">
+      <view class="_div text data-v-4398fe44">{{o}}</view>
+      <view class="_div text text-margin data-v-4398fe44" wx:if="{{p}}"
+        >{{q}}</view
+      >
+    </view>
+    <view class="_div block-area data-v-4398fe44">
+      <view class="_div text data-v-4398fe44" wx:if="{{r}}">{{s}}</view>
+      <block wx:elif="{{t}}">
+        <view class="_div tag data-v-4398fe44">{{v}}</view>
+        <view class="_div tag data-v-4398fe44">{{w}}</view>
+      </block>
+    </view>
+  </view>
+</view>

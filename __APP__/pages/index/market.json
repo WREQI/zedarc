@@ -1,0 +1,19 @@
+{
+  "enablePullDownRefresh": false,
+  "disableScroll": true,
+  "navigationStyle": "custom",
+  "componentPlaceholder": {
+    "market": "view",
+    "basket-guide-modal": "view",
+    "privacy-policy-modal": "view"
+  },
+  "usingComponents": {
+    "market": "../market/components/hqPage",
+    "top-bar": "./topbar/index",
+    "privacy-policy-modal": "../indexSbg/@tencent/wzq-privacy-policy-modal/PrivacyPolicyModal",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index"
+  }
+}

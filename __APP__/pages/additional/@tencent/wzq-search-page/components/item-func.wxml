@@ -1,0 +1,13 @@
+<view catchtap="{{c}}" class="_div func-item data-v-60032e8c">
+  <view
+    class="_i func-item-icon data-v-60032e8c"
+    style="{{'background-image:'+a}}"
+  ></view>
+  <highlight-text
+    bind:__l="__l"
+    class="func-item-title data-v-60032e8c"
+    uI="60032e8c-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></highlight-text>
+</view>

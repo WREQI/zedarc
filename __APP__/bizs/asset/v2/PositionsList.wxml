@@ -1,0 +1,55 @@
+<view class="{{['positions-list-container',x]}}">
+  <block wx:if="{{a}}">
+    <positions-list-stock
+      bind:__l="__l"
+      bindjumpQuote="{{c}}"
+      bindsetBubbleTips="{{d}}"
+      uI="42ba242b-0"
+      uP="{{e}}"
+      wx:if="{{b}}"
+    ></positions-list-stock>
+    <positions-allocate-debt
+      bind:__l="__l"
+      uI="42ba242b-1"
+      uP="{{g}}"
+      wx:if="{{f}}"
+    ></positions-allocate-debt>
+    <positions-list-delisted
+      bind:__l="__l"
+      binddisplayDelistedInfo="{{j}}"
+      bindshowDelistedInfo="{{i}}"
+      uI="42ba242b-2"
+      uP="{{k}}"
+      wx:if="{{h}}"
+    ></positions-list-delisted>
+    <bubble-tip
+      bind:__l="__l"
+      bindclose="{{n}}"
+      class="ggt-bubble-tip"
+      style="{{'top:'+m}}"
+      uI="42ba242b-3"
+      uP="{{o}}"
+      wx:if="{{l}}"
+    ></bubble-tip>
+  </block>
+  <positions-list-financial
+    bind:__l="__l"
+    uI="42ba242b-4"
+    uP="{{q}}"
+    wx:if="{{p}}"
+  ></positions-list-financial>
+  <positions-list-cash
+    bind:__l="__l"
+    uI="42ba242b-5"
+    uP="{{s}}"
+    wx:if="{{r}}"
+  ></positions-list-cash>
+  <view
+    class="{{['empty-block',v&&'border--bottom-c1',item.d&&'last']}}"
+    wx:for="{{t}}"
+    wx:key="c"
+  >
+    <view class="{{['title',item.b]}}">{{item.a}}</view>
+  </view>
+  <preload-drawer bind:__l="__l" uI="42ba242b-6" wx:if="{{w}}"></preload-drawer>
+</view>

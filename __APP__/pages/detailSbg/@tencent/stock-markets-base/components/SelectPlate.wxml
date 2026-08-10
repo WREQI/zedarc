@@ -1,0 +1,67 @@
+<view class="{{['_div','data-v-ccadeeaa',x,y]}}">
+  <view
+    bindtap="{{w}}"
+    catchtouchmove="{{v}}"
+    class="{{['_div','mask-wrapper','data-v-ccadeeaa',r,s]}}"
+    hidden="{{!q}}"
+    style="{{'opacity:'+t}}"
+  >
+    <view
+      catchtap="{{p}}"
+      class="_div popup-wrapper data-v-ccadeeaa"
+      id="popup"
+      ref="popup"
+      style="{{'top:'+n+';'+'left:'+o}}"
+    >
+      <view class="_div triangle-up data-v-ccadeeaa" hidden="{{!a}}"></view>
+      <scroll-view
+        bindtouchstart="{{f}}"
+        catchtouchmove="{{g}}"
+        class="option-wrapper data-v-ccadeeaa"
+        ref="popupScroll"
+        scrollY="{{true}}"
+        wx:if="{{b}}"
+      >
+        <view class="{{['_div','data-v-ccadeeaa',e]}}" ref="popupScrollInner">
+          <view class="_div data-v-ccadeeaa" wx:for="{{c}}" wx:key="g">
+            <view
+              bindtap="{{item.d}}"
+              class="{{['_div','item','data-v-ccadeeaa',item.c,d]}}"
+              key="{{item.b}}"
+              >{{item.a}}</view
+            >
+            <view
+              class="_div seperate-line data-v-ccadeeaa"
+              hidden="{{!item.e}}"
+              key="{{item.f}}"
+            ></view>
+          </view>
+        </view>
+      </scroll-view>
+      <view
+        bindtouchstart="{{k}}"
+        catchtouchmove="{{l}}"
+        class="_div option-wrapper data-v-ccadeeaa"
+        ref="popupScroll"
+        wx:else
+      >
+        <view class="{{['_div','data-v-ccadeeaa',j]}}" ref="popupScrollInner">
+          <view class="_div data-v-ccadeeaa" wx:for="{{h}}" wx:key="g">
+            <view
+              bindtap="{{item.d}}"
+              class="{{['_div','item','data-v-ccadeeaa',item.c,i]}}"
+              key="{{item.b}}"
+              >{{item.a}}</view
+            >
+            <view
+              class="_div seperate-line data-v-ccadeeaa"
+              hidden="{{!item.e}}"
+              key="{{item.f}}"
+            ></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div triangle-down data-v-ccadeeaa" hidden="{{!m}}"></view>
+    </view>
+  </view>
+</view>

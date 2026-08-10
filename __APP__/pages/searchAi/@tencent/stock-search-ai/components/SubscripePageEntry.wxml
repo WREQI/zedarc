@@ -1,0 +1,28 @@
+<view
+  class="{{['_div','data-v-7301552e','subscripe-page-entry',d]}}"
+  wx:if="{{a}}"
+>
+  <scroll-view-x-wrapper
+    bind:__l="__l"
+    class="data-v-7301552e"
+    style="width: 100%"
+    uI="7301552e-0"
+    uS="{{['d']}}"
+  >
+    <view class="_div subscript-page data-v-7301552e">
+      <view bindtap="{{c}}" class="_div subscript-page-item data-v-7301552e">
+        <image
+          class="_img subscript-page-item-icon data-v-7301552e"
+          src="https://st.gtimg.com/design/343c65fb4c36a21089e9e1e752ddf1c4.svg"
+        ></image>
+        <label class="_span subscript-page-item-title data-v-7301552e"
+          >微信股市情报</label
+        >
+        <view
+          class="_div subscript-page-item-unread-message data-v-7301552e"
+          wx:if="{{b}}"
+        ></view>
+      </view>
+    </view>
+  </scroll-view-x-wrapper>
+</view>

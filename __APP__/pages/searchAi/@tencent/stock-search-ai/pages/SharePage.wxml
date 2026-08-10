@@ -1,0 +1,66 @@
+<view class="{{['_div','data-v-3de01010','ai-share-page-container',p]}}">
+  <view class="_div navTitle data-v-3de01010" wx:if="{{a}}">
+    <view class="_div navTitleWrapper data-v-3de01010" style="{{e}}">
+      <view class="_div navTitleCenter data-v-3de01010">问元宝</view>
+      <view
+        catchtap="{{c}}"
+        class="_div home-icon data-v-3de01010"
+        wx:if="{{b}}"
+      ></view>
+      <view
+        bindtap="{{d}}"
+        class="_div navTitleBack data-v-3de01010"
+        wx:else
+      ></view>
+    </view>
+  </view>
+  <view class="_div mainContent data-v-3de01010">
+    <scroll-view-wrapper
+      bind:__l="__l"
+      class="data-v-3de01010"
+      style="height: 100%"
+      uI="3de01010-0"
+      uS="{{['d']}}"
+      wx:if="{{f}}"
+    >
+      <view class="_div contentItemAlignRight contentItem data-v-3de01010">
+        <question-item
+          bind:__l="__l"
+          bindlongPress="{{g}}"
+          class="data-v-3de01010"
+          uI="3de01010-1,3de01010-0"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></question-item>
+      </view>
+      <view class="_div contentItemAlignLeft contentItem data-v-3de01010">
+        <answer-item
+          bind:__l="__l"
+          bindonQuoteClick="{{i}}"
+          class="data-v-3de01010"
+          uI="3de01010-2,3de01010-0"
+          uP="{{j}}"
+          wx:if="{{j}}"
+        ></answer-item>
+      </view>
+      <view class="_div data-v-3de01010" style="height: 38px"></view>
+    </scroll-view-wrapper>
+    <share-answer-invalid
+      bind:__l="__l"
+      class="data-v-3de01010"
+      uI="3de01010-3"
+      wx:elif="{{k}}"
+    ></share-answer-invalid>
+  </view>
+  <view class="_div bottomContent data-v-3de01010">
+    <view bindtap="{{m}}" class="_div bottomButton data-v-3de01010">{{l}}</view>
+  </view>
+  <link-jump-guide
+    bind:__l="__l"
+    bindlinkGuideClose="{{n}}"
+    class="data-v-3de01010"
+    uI="3de01010-4"
+    uP="{{o}}"
+    wx:if="{{o}}"
+  ></link-jump-guide>
+</view>

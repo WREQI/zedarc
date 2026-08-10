@@ -1,0 +1,104 @@
+<view
+  bindanimationend="{{J}}"
+  class="{{['_div','data-v-563737ff','dual-answer-container',H,I]}}"
+>
+  <view class="_div dual-answer-hint data-v-563737ff">
+    <view class="_div hint-main data-v-563737ff"
+      >- 选择你喜欢的答案，让我更懂你 -</view
+    >
+  </view>
+  <view class="_div dual-answer-swiper data-v-563737ff" ref="swiperRef">
+    <view class="_div dual-answer-track data-v-563737ff">
+      <view class="_div dual-answer-card data-v-563737ff" ref="card1">
+        <view class="_div answer-card data-v-563737ff">
+          <view class="_div answer-card__title data-v-563737ff">
+            <label class="_span data-v-563737ff">回答</label>
+            <image
+              alt=""
+              class="_img answer-card__title-icon data-v-563737ff"
+              src="https://st.gtimg.com/design/090194af8140ed2cb9ab5f525dc76a8e.png"
+            ></image>
+          </view>
+          <view class="_div answer-card__content data-v-563737ff">
+            <answer-item
+              bind:__l="__l"
+              bindcancelCai="{{d}}"
+              bindcancelZan="{{b}}"
+              bindchangeToNewSession="{{h}}"
+              bindclickCai="{{c}}"
+              bindclickZan="{{a}}"
+              bindfunctionItemFinish="{{j}}"
+              bindkeepWzqPos="{{g}}"
+              bindonQuoteClick="{{f}}"
+              bindrequestPermissionDialog="{{l}}"
+              bindselectMbti="{{k}}"
+              bindshare="{{e}}"
+              bindshowDisclaimer="{{i}}"
+              bindxianPinChangeModel="{{m}}"
+              class="data-v-563737ff"
+              uI="563737ff-0"
+              uP="{{n}}"
+              wx:if="{{n}}"
+            ></answer-item>
+          </view>
+          <view class="_div answer-card__footer data-v-563737ff">
+            <view
+              bindtap="{{p}}"
+              class="_div answer-card__btn answer-card__btn--left data-v-563737ff"
+              wx:if="{{o}}"
+            >
+              <label class="_span answer-card__btn-text data-v-563737ff"
+                >👍我更喜欢这个回答</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div dual-answer-card data-v-563737ff" ref="card2">
+        <view class="_div answer-card data-v-563737ff">
+          <view class="_div answer-card__title data-v-563737ff">
+            <label class="_span data-v-563737ff">回答</label>
+            <image
+              alt=""
+              class="_img answer-card__title-icon data-v-563737ff"
+              src="https://st.gtimg.com/design/81f4eef739f3be1c28ec4a9719289069.png"
+            ></image>
+          </view>
+          <view class="_div answer-card__content data-v-563737ff">
+            <answer-item
+              bind:__l="__l"
+              bindcancelCai="{{t}}"
+              bindcancelZan="{{r}}"
+              bindchangeToNewSession="{{y}}"
+              bindclickCai="{{s}}"
+              bindclickZan="{{q}}"
+              bindfunctionItemFinish="{{A}}"
+              bindkeepWzqPos="{{x}}"
+              bindonQuoteClick="{{w}}"
+              bindrequestPermissionDialog="{{C}}"
+              bindselectMbti="{{B}}"
+              bindshare="{{v}}"
+              bindshowDisclaimer="{{z}}"
+              bindxianPinChangeModel="{{D}}"
+              class="data-v-563737ff"
+              uI="563737ff-1"
+              uP="{{E}}"
+              wx:if="{{E}}"
+            ></answer-item>
+          </view>
+          <view class="_div answer-card__footer data-v-563737ff">
+            <view
+              bindtap="{{G}}"
+              class="_div answer-card__btn answer-card__btn--right data-v-563737ff"
+              wx:if="{{F}}"
+            >
+              <label class="_span answer-card__btn-text data-v-563737ff"
+                >👍我更喜欢这个回答</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','data-v-ae31fc72','pop-action-wrapper',g]}}"
+  style="{{h}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','pop-action','data-v-ae31fc72',f&&'reverse']}}">
+    <label
+      class="{{['arrow-btm','data-v-ae31fc72',b&&'arrow-btm-right']}}"
+    ></label>
+    <view catchtap="{{c}}" class="_div menu-item flex-1 data-v-ae31fc72">
+      <label class="_span text data-v-ae31fc72">复制</label>
+    </view>
+    <view
+      catchtap="{{e}}"
+      class="_div menu-item flex-1 data-v-ae31fc72"
+      wx:if="{{d}}"
+    >
+      <label class="_span text data-v-ae31fc72">重新输入</label>
+    </view>
+  </view>
+</view>

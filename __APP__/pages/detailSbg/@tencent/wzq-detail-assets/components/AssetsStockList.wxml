@@ -1,0 +1,56 @@
+<view class="{{['_div','data-v-c2f4dfe3',j]}}">
+  <view class="_div stock-list-wrapper data-v-c2f4dfe3">
+    <view class="_div tab-list-title-wrapper data-v-c2f4dfe3">
+      <label class="_span data-v-c2f4dfe3">重仓{{a}}</label>
+    </view>
+    <view class="_div stock-list-total data-v-c2f4dfe3" wx:if="{{b}}">
+      <view class="_div stock-list-inner data-v-c2f4dfe3">
+        <label class="_span icon-percent data-v-c2f4dfe3"></label>
+        <label class="_span data-v-c2f4dfe3">重仓{{c}}占比总计</label>
+      </view>
+      <view class="_div stock-inner-after data-v-c2f4dfe3">{{d}}%</view>
+    </view>
+    <view class="_div stock-list-title data-v-c2f4dfe3">
+      <view class="_div stock-list-row data-v-c2f4dfe3">
+        <view class="_div stock-name data-v-c2f4dfe3">{{e}}名称</view>
+        <view class="_div stock-zdf data-v-c2f4dfe3" wx:if="{{f}}">涨跌幅</view>
+        <view class="_div stock-ratio data-v-c2f4dfe3">{{g}}</view>
+      </view>
+    </view>
+    <view class="_div stock-list-content data-v-c2f4dfe3">
+      <view
+        bindtap="{{stock.l}}"
+        class="_div stock-list-row data-v-c2f4dfe3"
+        wx:for="{{h}}"
+        wx:for-item="stock"
+        wx:key="k"
+      >
+        <view class="_div stock-name data-v-c2f4dfe3">
+          <view
+            class="{{['_div','big-name','data-v-c2f4dfe3',stock.b&&'small-font']}}"
+            >{{stock.a}}</view
+          >
+          <view
+            class="_div stock-code code-mp data-v-c2f4dfe3"
+            wx:if="{{stock.c}}"
+          >
+            <market-icon
+              bind:__l="__l"
+              class="data-v-c2f4dfe3"
+              uI="{{stock.e}}"
+              uP="{{stock.f}}"
+              wx:if="{{stock.d}}"
+            ></market-icon>
+            <view class="_div code-name data-v-c2f4dfe3">{{stock.g}}</view>
+          </view>
+        </view>
+        <view
+          class="{{['_div','stock-zdf','data-v-c2f4dfe3',stock.i]}}"
+          wx:if="{{i}}"
+          >{{stock.h}}</view
+        >
+        <view class="_div stock-ratio data-v-c2f4dfe3">{{stock.j}}</view>
+      </view>
+    </view>
+  </view>
+</view>

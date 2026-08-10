@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f2": "../../stock-union-f2/f2MP",
+    "valuation-index": "./valuation-index/mp",
+    "wzq-info-modal": "../../../../quote/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "etf-tip-modal": "../../wzq-detail-brief/etf/TipsInfo"
+  },
+  "componentPlaceholder": { "wzq-info-modal": "view" }
+}

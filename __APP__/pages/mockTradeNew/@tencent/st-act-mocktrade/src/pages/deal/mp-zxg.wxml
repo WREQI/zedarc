@@ -1,0 +1,21 @@
+<view class="_div mp-zxg-container data-v-46975f98">
+  <index
+    bind:__l="__l"
+    bindminsToggle="{{b}}"
+    class="data-v-46975f98"
+    uI="46975f98-0"
+    uS="{{['mins-chart']}}"
+  >
+    <view slot="{{v0.g}}" wx:for="{{a}}" wx:for-item="v0" wx:key="f">
+      <mins
+        bind:__l="__l"
+        class="r data-v-46975f98"
+        data-c-h="{{!v0.c}}"
+        uI="{{v0.d}}"
+        uP="{{v0.e}}"
+        uR="minsComponent"
+        wx:if="{{v0.a}}"
+      ></mins>
+    </view>
+  </index>
+</view>

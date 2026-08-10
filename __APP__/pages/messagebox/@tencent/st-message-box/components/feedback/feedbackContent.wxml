@@ -1,0 +1,25 @@
+<view class="_div feedback-content feedback-content-new data-v-e8654ce2">
+  <message-empty
+    bind:__l="__l"
+    class="data-v-e8654ce2"
+    uI="e8654ce2-0"
+    wx:if="{{a}}"
+  ></message-empty>
+  <block wx:else>
+    <feedback-item
+      bind:__l="__l"
+      class="data-v-e8654ce2"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:for="{{b}}"
+      wx:key="a"
+    ></feedback-item>
+    <view class="_div tx-logo data-v-e8654ce2">
+      <image
+        alt=""
+        class="_img logo-icon data-v-e8654ce2"
+        src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+      ></image>
+    </view>
+  </block>
+</view>

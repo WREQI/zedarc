@@ -1,0 +1,116 @@
+<view
+  class="_div funds-container margin_div data-v-704b4a1b"
+  data-card="margin"
+  wx:if="{{a}}"
+>
+  <view class="_div funds-title data-v-704b4a1b">
+    <label class="_span data-v-704b4a1b">融资融券</label>
+    <image
+      alt=""
+      bindtap="{{b}}"
+      class="_img funds-icon-info data-v-704b4a1b"
+      lazyLoad="{{true}}"
+      src="https://st.gtimg.com/design/a495b29720e9bab1eaea87f780be63aa.png"
+    ></image>
+  </view>
+  <view class="_div funds-trend-chart data-v-704b4a1b">
+    <view class="_div update-time data-v-704b4a1b">
+      <label class="_span data-v-704b4a1b">{{c}} 更新</label>
+    </view>
+    <view class="_div summary-text data-v-704b4a1b" wx:if="{{d}}">{{e}}</view>
+    <view
+      class="_div chart-desc flex flex-pack-justify data-v-704b4a1b"
+      wx:if="{{f}}"
+    >
+      <view class="_div desc-item data-v-704b4a1b">融资融券差额</view>
+      <view class="_div data-v-704b4a1b"></view>
+    </view>
+    <view
+      class="_div chart-desc flex flex-pack-justify data-v-704b4a1b"
+      wx:else
+    >
+      <view class="_div desc-item data-v-704b4a1b">融资余额</view>
+      <view class="_div desc-item data-v-704b4a1b">融券余额</view>
+    </view>
+    <view class="_div chart data-v-704b4a1b" id="margin-percent">
+      <f2
+        bind:__l="__l"
+        bindonInit="{{h}}"
+        class="data-v-704b4a1b"
+        uI="704b4a1b-0"
+        uP="{{i}}"
+        wx:if="{{g}}"
+      ></f2>
+      <f2
+        bind:__l="__l"
+        bindonInit="{{k}}"
+        class="data-v-704b4a1b"
+        uI="704b4a1b-1"
+        uP="{{l}}"
+        wx:if="{{j}}"
+      ></f2>
+      <view class="{{['_div','tooltip','data-v-704b4a1b',w]}}" hidden="{{!v}}">
+        <view class="_div item data-v-704b4a1b">
+          <view class="_div label data-v-704b4a1b">时间</view>
+          <view class="_div value data-v-704b4a1b">{{m}}</view>
+        </view>
+        <view class="_div item data-v-704b4a1b">
+          <view class="_div label data-v-704b4a1b">融资余额</view>
+          <view class="_div value data-v-704b4a1b">{{n}}</view>
+        </view>
+        <view class="_div item data-v-704b4a1b">
+          <view class="_div label data-v-704b4a1b">融券余额</view>
+          <view class="_div value data-v-704b4a1b">{{o}}</view>
+        </view>
+        <view class="_div item data-v-704b4a1b">
+          <view class="_div label data-v-704b4a1b">融资净买入</view>
+          <view class="_div value data-v-704b4a1b" style="{{'color:'+q}}"
+            >{{p}}</view
+          >
+        </view>
+        <view class="_div item data-v-704b4a1b" wx:if="{{r}}">
+          <view class="_div label data-v-704b4a1b">融资融券差额</view>
+          <view class="_div value data-v-704b4a1b" style="{{'color:'+t}}"
+            >{{s}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div funds-trend-chart-labels data-v-704b4a1b">
+      <view
+        class="{{['_div','label-item-group','data-v-704b4a1b',x&&'disable']}}"
+      >
+        <view class="_div label-item data-v-704b4a1b">
+          <view class="_div label-item-line line-blue data-v-704b4a1b"></view>
+          <view class="_div label-item-text data-v-704b4a1b">融资余额</view>
+        </view>
+        <view class="_div label-item data-v-704b4a1b">
+          <view class="_div label-item-line line-orange data-v-704b4a1b"></view>
+          <view class="_div label-item-text data-v-704b4a1b">融券余额</view>
+        </view>
+      </view>
+      <view class="_div label-item-group data-v-704b4a1b">
+        <view class="_div label-item data-v-704b4a1b">
+          <view class="_div rect bg-red data-v-704b4a1b"></view>
+          <view class="_div label-item-text data-v-704b4a1b">融资净买入</view>
+        </view>
+        <view class="_div label-item data-v-704b4a1b">
+          <view class="_div rect bg-green data-v-704b4a1b"></view>
+          <view class="_div label-item-text data-v-704b4a1b">融资净卖出</view>
+        </view>
+      </view>
+      <view
+        bindtap="{{z}}"
+        class="_div label-item data-v-704b4a1b"
+        id="margin-radio"
+      >
+        <view
+          class="{{['_div','label-item-radio','radio-checked-blue','data-v-704b4a1b',y]}}"
+        ></view>
+        <view class="_div label-item-text data-v-704b4a1b"
+          >仅看融资融券差额</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

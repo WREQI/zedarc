@@ -1,0 +1,117 @@
+<view
+  class="{{['_div','mod-finance','data-v-a0304d74',s&&'bg-white',t&&'skin-black',v&&'mod-finance-pro']}}"
+>
+  <profit-forcast
+    bind:__l="__l"
+    bindshowModal="{{b}}"
+    class="data-v-a0304d74"
+    uI="a0304d74-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></profit-forcast>
+  <performance-trends
+    bind:__l="__l"
+    class="r data-v-a0304d74"
+    uI="a0304d74-1"
+    uP="{{f}}"
+    uR="performanceTrends"
+    wx:if="{{d}}"
+  ></performance-trends>
+  <view class="_div finance-sub-mod zyzb p-b-0 data-v-a0304d74" wx:if="{{g}}">
+    <view class="_div mod-finance-title block-layout black data-v-a0304d74">
+      <view class="_div detail-tips-wrapper data-v-a0304d74">
+        <view class="_div detail-tips-left data-v-a0304d74">主要指标{{h}}</view>
+        <view class="_div detail-tips-right data-v-a0304d74">({{i}})</view>
+      </view>
+    </view>
+    <view class="_div zb-list-wrapper data-v-a0304d74">
+      <view
+        class="_div zb-list-item data-v-a0304d74"
+        wx:for="{{j}}"
+        wx:for-item="val"
+        wx:key="e"
+      >
+        <view
+          class="{{['_div','data-v-a0304d74','finance-list','block-layout',val.d]}}"
+        >
+          <view class="_div gray data-v-a0304d74"
+            >{{val.a}}<label
+              class="_span sup-zxg data-v-a0304d74"
+              wx:if="{{val.b}}"
+              >TTM</label
+            >
+          </view>
+          <view class="_div num-black small-num data-v-a0304d74"
+            >{{val.c}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-a0304d74" wx:if="{{k}}">
+    <view
+      catchtap="{{t.e}}"
+      class="{{['_div','data-v-a0304d74','finance-sub-mod',t.c&&'nohsFin',t.d&&'no-border']}}"
+      wx:for="{{l}}"
+      wx:for-item="t"
+      wx:key="b"
+    >
+      <view class="_div data-v-a0304d74" wx:for="{{t.a}}" wx:key="j">
+        <view
+          class="{{['_div','data-v-a0304d74','mod-finance-title','block-layout','black',item.d]}}"
+          wx:if="{{item.a}}"
+        >
+          <view class="_div detail-tips-wrapper data-v-a0304d74">
+            <view class="_div detail-tips-left data-v-a0304d74"
+              >{{item.b}}</view
+            >
+            <view class="_div detail-tips-right data-v-a0304d74"
+              >({{item.c}})</view
+            >
+          </view>
+          <view class="_div arrow-zxg data-v-a0304d74"></view>
+        </view>
+        <view
+          class="{{['_div','data-v-a0304d74','finance-list','block-layout',item.i]}}"
+          wx:else
+        >
+          <view class="_p gray data-v-a0304d74"
+            >{{item.e}}<label
+              class="_span sub-content data-v-a0304d74"
+              wx:if="{{item.f}}"
+              >{{item.g}}</label
+            >
+          </view>
+          <view class="_p num-black data-v-a0304d74">{{item.h}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div announcement-container data-v-a0304d74" wx:if="{{m}}">
+    <announcement
+      bind:__l="__l"
+      class="data-v-a0304d74"
+      uI="a0304d74-2"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></announcement>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-a0304d74"
+    uI="a0304d74-3"
+    uS="{{['d']}}"
+    wx:if="{{o}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无数据</block>
+  </no-data>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{q}}"
+    class="st-status data-v-a0304d74"
+    uI="a0304d74-4"
+    uP="{{r}}"
+    wx:elif="{{p}}"
+  ></status>
+</view>

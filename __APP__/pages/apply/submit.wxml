@@ -1,0 +1,211 @@
+<page-meta class="data-v-a57383b7" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-a57383b7"
+  id="global-wrap"
+  uI="a57383b7-0"
+  uP="{{ag}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{ag}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-a57383b7"
+    uI="a57383b7-1,a57383b7-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-submit data-v-a57383b7">
+      <block wx:if="{{b}}">
+        <select-share-holder
+          bind:__l="__l"
+          class="data-v-a57383b7"
+          uI="a57383b7-2,a57383b7-1"
+          uP="{{c}}"
+          wx:if="{{c}}"
+        ></select-share-holder>
+      </block>
+      <block wx:else>
+        <digital-human
+          bind:__l="__l"
+          class="r data-v-a57383b7"
+          uI="a57383b7-3,a57383b7-1"
+          uP="{{f}}"
+          uR="digitalHumanRef"
+          wx:if="{{d}}"
+        ></digital-human>
+        <view class="{{['data-v-a57383b7',V]}}">
+          <progress-bar
+            bind:__l="__l"
+            class="data-v-a57383b7"
+            uI="a57383b7-4,a57383b7-1"
+            uP="{{g}}"
+            wx:if="{{g}}"
+          ></progress-bar>
+          <view
+            class="content-container align-c bg-color text-color-1 data-v-a57383b7"
+          >
+            <view
+              class="icon icon-friend blue avatar-ico data-v-a57383b7"
+            ></view>
+            <view class="fs-32 open-tip-title data-v-a57383b7"
+              >将为你开立以下证券账户</view
+            >
+            <view class="open-account-group data-v-a57383b7">
+              <label bindtap="{{j}}" class="market-item data-v-a57383b7">
+                <label
+                  catchtap="{{i}}"
+                  class="{{['icon','open-checkbox','data-v-a57383b7',h]}}"
+                ></label>
+                <label class="fs-28 market-text data-v-a57383b7">沪市A股</label>
+              </label>
+              <label bindtap="{{m}}" class="market-item data-v-a57383b7">
+                <label
+                  catchtap="{{l}}"
+                  class="{{['icon','open-checkbox','data-v-a57383b7',k]}}"
+                ></label>
+                <label class="fs-28 market-text data-v-a57383b7">深市A股</label>
+              </label>
+            </view>
+          </view>
+          <questionnaire-bar
+            bind:__l="__l"
+            bindshowQuestionnaire="{{o}}"
+            class="data-v-a57383b7"
+            uI="a57383b7-5,a57383b7-1"
+            wx:if="{{n}}"
+          ></questionnaire-bar>
+          <view class="protocol-container fs-24 text-color-2 data-v-a57383b7">
+            <checkbox-group bindchange="{{s}}" class="fs-24 data-v-a57383b7">
+              <checkbox
+                checked="{{q}}"
+                class="protocol-checkbox data-v-a57383b7"
+                color="{{p}}"
+              ></checkbox>
+              <label
+                bindtap="{{r}}"
+                class="text-color-2 protocol-tip data-v-a57383b7"
+                >请确认：</label
+              >
+            </checkbox-group>
+            <view class="protocol-list-outer data-v-a57383b7">
+              <view bindtap="{{U}}" class="protocol-list data-v-a57383b7">
+                <block wx:if="{{t}}">
+                  <view
+                    class="list-item data-v-a57383b7"
+                    wx:for="{{v}}"
+                    wx:for-item="tip"
+                    wx:key="b"
+                    >{{tip.a}}</view
+                  >
+                </block>
+                <view class="list-item data-v-a57383b7" wx:if="{{w}}">
+                  <sign-protocol
+                    bind:__l="__l"
+                    bindprotocolCheck="{{y}}"
+                    class="r data-v-a57383b7"
+                    uI="a57383b7-6,a57383b7-1"
+                    uP="{{z}}"
+                    uR="commissionProtocol"
+                    wx:if="{{z}}"
+                  ></sign-protocol>
+                </view>
+                <view class="list-item data-v-a57383b7" wx:if="{{A}}">
+                  <sign-protocol
+                    bind:__l="__l"
+                    bindprotocolCheck="{{C}}"
+                    class="r data-v-a57383b7"
+                    uI="a57383b7-7,a57383b7-1"
+                    uP="{{D}}"
+                    uR="firstProtocol"
+                    wx:if="{{D}}"
+                  ></sign-protocol>
+                </view>
+                <view class="list-item data-v-a57383b7" wx:if="{{E}}">
+                  <confirmation-bar
+                    bind:__l="__l"
+                    bindcheck="{{G}}"
+                    bindshowConfirmation="{{F}}"
+                    class="data-v-a57383b7"
+                    uI="a57383b7-8,a57383b7-1"
+                    uP="{{H}}"
+                    wx:if="{{H}}"
+                  ></confirmation-bar>
+                </view>
+                <view class="list-item data-v-a57383b7" wx:if="{{I}}"
+                  >{{J}}</view
+                >
+                <view class="list-item data-v-a57383b7" wx:if="{{K}}"
+                  >开通TA账户</view
+                >
+                <view class="list-item data-v-a57383b7" wx:if="{{L}}">
+                  <sign-protocol
+                    bind:__l="__l"
+                    bindprotocolCheck="{{N}}"
+                    class="r data-v-a57383b7"
+                    uI="a57383b7-9,a57383b7-1"
+                    uP="{{O}}"
+                    uR="secondProtocol"
+                    wx:if="{{O}}"
+                  ></sign-protocol>
+                </view>
+                <view class="list-item data-v-a57383b7" wx:if="{{P}}">
+                  <label catchtap="{{R}}" class="link data-v-a57383b7"
+                    >{{Q}}</label
+                  >
+                </view>
+                <block wx:if="{{S}}">
+                  <view
+                    class="list-item data-v-a57383b7"
+                    wx:for="{{T}}"
+                    wx:for-item="tip"
+                    wx:key="b"
+                    >{{tip.a}}</view
+                  >
+                </block>
+              </view>
+            </view>
+          </view>
+          <foot-print
+            bind:__l="__l"
+            class="foot data-v-a57383b7"
+            uI="a57383b7-10,a57383b7-1"
+          ></foot-print>
+          <view class="data-v-a57383b7" style="height: 120px"></view>
+        </view>
+        <step-buttons
+          bind:__l="__l"
+          bindclickNext="{{W}}"
+          class="data-v-a57383b7"
+          uI="a57383b7-11,a57383b7-1"
+          uP="{{X}}"
+          wx:if="{{X}}"
+        ></step-buttons>
+        <one-click-transcription
+          bind:__l="__l"
+          bindclose="{{Z}}"
+          bindconfirm="{{aa}}"
+          class="data-v-a57383b7"
+          uI="a57383b7-12,a57383b7-1"
+          uP="{{ab}}"
+          wx:if="{{Y}}"
+        ></one-click-transcription>
+        <mp-dialog
+          bind:__l="__l"
+          class="data-v-a57383b7"
+          id="mp-dialog"
+          uI="a57383b7-13,a57383b7-1"
+          uP="{{ac}}"
+          wx:if="{{ac}}"
+        ></mp-dialog>
+      </block>
+      <commission-explain-dialog
+        bind:__l="__l"
+        bindclose="{{ae}}"
+        class="data-v-a57383b7"
+        uI="a57383b7-14,a57383b7-1"
+        wx:if="{{ad}}"
+      ></commission-explain-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

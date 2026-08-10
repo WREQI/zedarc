@@ -1,0 +1,150 @@
+<view class="_div data-v-4ec20f43">
+  <view
+    bindtap="{{b}}"
+    class="_div dialog-backdrop fade-enter-active data-v-4ec20f43"
+    wx:if="{{a}}"
+  ></view>
+  <view class="{{['_div','data-v-4ec20f43',i]}}">
+    <scroll-view
+      scrollY
+      class="{{['data-v-4ec20f43','dialog-body',h]}}"
+      enhanced="{{true}}"
+      showScrollbar="{{false}}"
+      wx:if="{{c}}"
+    >
+      <view class="_div quote-title data-v-4ec20f43"
+        >AI引用来源<image
+          bindtap="{{d}}"
+          class="_img close-pos data-v-4ec20f43"
+          src="https://st.gtimg.com/design/a934aa5445cfa475927453b15ce9f15e.svg"
+        ></image>
+      </view>
+      <view
+        bindtap="{{item.v}}"
+        class="_div list-item data-v-4ec20f43"
+        wx:for="{{e}}"
+        wx:key="t"
+      >
+        <view class="_div stock-item-container data-v-4ec20f43" wx:if="{{f}}">
+          <view class="_div stock-information-container data-v-4ec20f43">
+            <view class="_div stock-information-name data-v-4ec20f43">
+              <view class="_div stock-title data-v-4ec20f43">检索标的</view>
+              <view class="_div stock-name-contanier data-v-4ec20f43">
+                <view class="_div stock-name data-v-4ec20f43">{{item.a}}</view>
+                <view class="_div stock-number-container data-v-4ec20f43">
+                  <image
+                    alt=""
+                    class="_img stock-icon data-v-4ec20f43"
+                    src="{{item.b}}"
+                  ></image>
+                  <view class="_div stock-number data-v-4ec20f43"
+                    >{{item.c}}</view
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div stock-information-indicator data-v-4ec20f43">
+              <view class="_div stock-title data-v-4ec20f43">检索指标</view>
+              <view
+                class="_div stock-information-indicator-name data-v-4ec20f43"
+              >
+                <view class="_div text-content data-v-4ec20f43"
+                  >{{item.d}}</view
+                >
+              </view>
+            </view>
+          </view>
+          <view class="_div link-jump-from data-v-4ec20f43">
+            <view class="_div link-name-container data-v-4ec20f43">
+              <image
+                class="_img link-img data-v-4ec20f43"
+                src="https://st.gtimg.com/design/d47c0f815bb60c49c799fe0ff174b029.png"
+              ></image>
+              <label class="_span link-name data-v-4ec20f43"
+                >腾讯金融数据库</label
+              >
+              <label class="_span data-v-4ec20f43">检索时间：{{item.e}}</label>
+            </view>
+            <view class="{{['_div','data-v-4ec20f43','link-square',item.g]}}"
+              >{{item.f}}</view
+            >
+          </view>
+        </view>
+        <view class="_div link-jump-container data-v-4ec20f43" wx:elif="{{g}}">
+          <view class="_div link-jump-title data-v-4ec20f43">{{item.h}}</view>
+          <view class="_div link-jump-from data-v-4ec20f43">
+            <view class="_div link-name-container data-v-4ec20f43">
+              <image
+                class="_img link-img data-v-4ec20f43"
+                src="{{item.i}}"
+              ></image>
+              <label class="_span link-name data-v-4ec20f43">{{item.j}}</label>
+              <label class="_span data-v-4ec20f43">{{item.k}}</label>
+            </view>
+            <view class="{{['_div','data-v-4ec20f43','link-square',item.m]}}"
+              >{{item.l}}</view
+            >
+          </view>
+        </view>
+        <view class="_div link-jump-container data-v-4ec20f43" wx:else>
+          <view class="_div link-jump-title data-v-4ec20f43">{{item.n}}</view>
+          <view class="_div link-jump-from data-v-4ec20f43">
+            <view class="_div link-name-container data-v-4ec20f43">
+              <image
+                class="_img link-img data-v-4ec20f43"
+                src="{{item.o}}"
+              ></image>
+              <label class="_span link-name data-v-4ec20f43">{{item.p}}</label>
+              <label class="_span data-v-4ec20f43">{{item.q}}</label>
+            </view>
+            <view class="{{['_div','data-v-4ec20f43','link-square',item.s]}}"
+              >{{item.r}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="_div copy-toast data-v-4ec20f43" wx:if="{{j}}">
+    <image
+      alt=""
+      class="_img copy-img data-v-4ec20f43"
+      src="https://st.gtimg.com/design/57b504d5346955a8aca9c45104f8898c.svg"
+    ></image>
+    <view class="_div data-v-4ec20f43">已复制链接</view>
+    <view class="_div data-v-4ec20f43">请前往浏览器打开</view>
+  </view>
+  <view
+    class="{{['_div','warning-dialog-backdrop','data-v-4ec20f43',q]}}"
+    wx:if="{{k}}"
+  >
+    <view catchtap="{{p}}" class="_div warning-dialog data-v-4ec20f43">
+      <view class="_div warning-content data-v-4ec20f43">
+        <view class="_div warning-title data-v-4ec20f43"
+          >你即将打开第三方网站</view
+        >
+        <view class="_div warning-message data-v-4ec20f43"
+          >我们不对第三方网站的内容负责，请您谨慎访问，保障好自己的信息和财产安全</view
+        >
+        <view bindtap="{{m}}" class="_div warning-checkbox data-v-4ec20f43">
+          <image
+            alt=""
+            class="_img check-icon data-v-4ec20f43"
+            src="{{l}}"
+          ></image>
+          <label class="checkbox-label data-v-4ec20f43" for="dontShowAgain"
+            >不再提示</label
+          >
+        </view>
+      </view>
+      <view class="_div warning-buttons data-v-4ec20f43">
+        <view bindtap="{{n}}" class="_div btn cancel-btn data-v-4ec20f43"
+          >取消</view
+        >
+        <view bindtap="{{o}}" class="_div btn continue-btn data-v-4ec20f43"
+          >继续访问</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

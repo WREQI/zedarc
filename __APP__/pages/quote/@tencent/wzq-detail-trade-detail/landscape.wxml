@@ -1,0 +1,92 @@
+<view class="_div wrapper data-v-2d534a21">
+  <view
+    class="{{['_div','wudang-wrapper','data-v-2d534a21',f&&'fold',g&&'h5-wudang-wrapper']}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div bar-area data-v-2d534a21">
+      <view class="_div data-v-2d534a21">买</view>
+      <view class="{{['_div','bar-body','data-v-2d534a21',c&&'bg-equal']}}">
+        <view class="_div bg-buy data-v-2d534a21" style="{{'width:'+b}}"></view>
+      </view>
+      <view class="_div data-v-2d534a21">卖</view>
+    </view>
+    <view class="_div list-area data-v-2d534a21">
+      <flash-price
+        bind:__l="__l"
+        class="item data-v-2d534a21"
+        uI="{{i.b}}"
+        uP="{{i.c}}"
+        wx:for="{{d}}"
+        wx:for-item="i"
+        wx:key="a"
+      ></flash-price>
+      <view class="_div separate-line data-v-2d534a21"></view>
+      <flash-price
+        bind:__l="__l"
+        class="item data-v-2d534a21"
+        uI="{{i.b}}"
+        uP="{{i.c}}"
+        wx:for="{{e}}"
+        wx:for-item="i"
+        wx:key="a"
+      ></flash-price>
+    </view>
+  </view>
+  <view class="_div switch data-v-2d534a21" wx:if="{{h}}">
+    <view class="_div text data-v-2d534a21">分时成交</view>
+  </view>
+  <view bindtap="{{k}}" class="_div switch data-v-2d534a21" wx:else>
+    <view class="_div text data-v-2d534a21">{{i}}</view>
+    <image
+      class="{{['_img','triangle','data-v-2d534a21',j&&'reverse']}}"
+      src="https://st.gtimg.com/design/351d96dd310cf05765f184b1df012c50.svg"
+    ></image>
+  </view>
+  <view
+    class="{{['_div','mingxi-wrapper','data-v-2d534a21',w&&'expand',x&&'no-fiveTab']}}"
+  >
+    <scroll-view
+      bindscroll="{{o}}"
+      bindscrolltolower="{{p}}"
+      class="scroll-list data-v-2d534a21"
+      scrollY="true"
+      wx:if="{{l}}"
+    >
+      <view class="_div item data-v-2d534a21" wx:for="{{m}}" wx:key="f">
+        <view class="_div time data-v-2d534a21">{{item.a}}</view>
+        <view class="_div price data-v-2d534a21">{{item.b}}</view>
+        <view class="_div amount data-v-2d534a21"
+          >{{item.c}}<label class="{{['_span','data-v-2d534a21',item.e]}}"
+            >{{item.d}}</label
+          >
+        </view>
+      </view>
+      <view class="_div no-data data-v-2d534a21" wx:if="{{n}}"
+        >暂无明细数据</view
+      >
+    </scroll-view>
+    <st-reach-bottom
+      bind:__l="__l"
+      bindscroll="{{t}}"
+      class="scroll-list r data-v-2d534a21"
+      uI="2d534a21-2"
+      uP="{{v||''}}"
+      uR="listWrapper"
+      uS="{{['d']}}"
+      wx:else
+    >
+      <view class="_div item data-v-2d534a21" wx:for="{{q}}" wx:key="f">
+        <view class="_div time data-v-2d534a21">{{item.a}}</view>
+        <view class="_div price data-v-2d534a21">{{item.b}}</view>
+        <view class="_div amount data-v-2d534a21"
+          >{{item.c}}<label class="{{['_span','data-v-2d534a21',item.e]}}"
+            >{{item.d}}</label
+          >
+        </view>
+      </view>
+      <view class="_div no-data data-v-2d534a21" wx:if="{{r}}"
+        >暂无明细数据</view
+      >
+    </st-reach-bottom>
+  </view>
+</view>

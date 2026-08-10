@@ -1,0 +1,88 @@
+<view class="trade-detail-container">
+  <view bindtap="{{d}}" class="flex-between base-info border--bottom">
+    <view class="flex-center">
+      <label class="text-color-1 fs-32">{{a}}</label>
+      <label class="text-color-4 fs-24">{{b}}{{c}}</label>
+    </view>
+    <view class="base-info--link">
+      <label class="fs-28">查看个股详情</label>
+      <label class="fs-32 icon icon-arrow-right"></label>
+    </view>
+  </view>
+  <view class="steps-wraper border--bottom">
+    <st-steps
+      bind:__l="__l"
+      uI="a20814da-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></st-steps>
+  </view>
+  <view class="section section-detail">
+    <view class="detail-order-num flex">
+      <view class="{{['left','flex-1','flex-column-between',h]}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">委托单价</label>
+          <label class="value text-color-1 fs-28">{{f}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">委托数量</label>
+          <label class="value text-color-1 fs-28">{{g}}</label>
+        </view>
+      </view>
+      <view class="right flex-1 flex-column-between" wx:if="{{i}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24 avg-price flex-center"
+            >成交均价<label
+              catchtap="{{j}}"
+              class="tip-icon icon icon-italic-info"
+            ></label>
+          </label>
+          <label class="value text-color-1 fs-28">{{k}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">成交数量</label>
+          <label class="value text-color-1 fs-28">{{l}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="detail-total flex-between border--top" wx:if="{{m}}">
+      <label class="title text-color-1 fs-30">申购金额</label>
+      <label class="value text-color-1">{{n}}</label>
+    </view>
+  </view>
+  <view class="section section-fees" wx:if="{{o}}">
+    <view class="row row-main fee fee-total flex-between border--bottom">
+      <view class="flex-center">
+        <label class="title text-color-4 fs-24">申购金额</label>
+      </view>
+      <label class="value text-color-1">{{p}}</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">股票流水</label>
+      <label class="value text-color-1 fs-28">{{q}}</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">佣金费用</label>
+      <label class="value text-color-1 fs-28" wx:if="{{r}}">0.00元</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">印花税</label>
+      <label class="value text-color-1 fs-28">0.00元</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">其他费用</label>
+      <label class="value text-color-1 fs-28">0.00元</label>
+    </view>
+  </view>
+  <view class="block-button flex" wx:if="{{s}}">
+    <button
+      bindtap="{{x}}"
+      class="flex-1"
+      disabled="{{w}}"
+      type="primary"
+      wx:if="{{t}}"
+    >
+      {{v}}
+    </button>
+  </view>
+</view>

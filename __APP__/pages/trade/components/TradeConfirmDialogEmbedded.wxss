@@ -1,0 +1,130 @@
+@import "/app.wxss";
+.trade-confirm--container {
+  background: var(--fill-2);
+  padding-top: 0.4rem;
+}
+.trade-confirm--container .trade-stock-confirm-body {
+  padding: 0 0.4rem;
+}
+.trade-confirm--container .trade-stock-confirm-body .flex-between {
+  color: var(--text-color-1);
+  font-weight: 400;
+  line-height: 0.586667rem;
+  padding-bottom: 0.28rem;
+  text-align: right;
+}
+.trade-confirm--container .trade-stock-confirm-body .flex-between .label {
+  color: var(--text-color-4);
+  font-size: 0.4rem;
+  line-height: 0.586667rem;
+  text-align: left;
+}
+.trade-confirm--container .trade-stock-confirm-body .flex-between .value {
+  font-size: 0.4rem;
+  line-height: 0.586667rem;
+}
+.trade-confirm--container .trade-stock-confirm-body .flex-between .buy {
+  color: var(--color-buy);
+}
+.trade-confirm--container .trade-stock-confirm-body .flex-between .sell {
+  color: var(--color-sell);
+}
+.trade-confirm--container .trade-stock-confirm-body .trade-confirm-footer {
+  padding: 0.106667rem 0 0.266667rem;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer.trade-confirm-footer-withtips {
+  padding-top: 0;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .simple-price-tip-after-footer {
+  font-size: 0.373333rem;
+  height: 0.4rem;
+  padding: 0.24rem 0 0.506667rem;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .simple-price-tip-after-footer
+  .icon-error-tips {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-warning.svg);
+  background-repeat: no-repeat;
+  background-size: 98% 98%;
+  height: 0.346667rem;
+  margin-right: 0.106667rem;
+  width: 0.346667rem;
+}
+.trade-confirm--container .trade-stock-confirm-body .trade-confirm-footer .buy {
+  background: var(--color-buy);
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .sell {
+  background: var(--color-sell);
+}
+.trade-confirm--container .trade-stock-confirm-body .trade-confirm-footer .buy,
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .sell {
+  color: #fff;
+  font-size: 0.426667rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .buy:after,
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .sell:after {
+  display: none;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .submit-btn-loading[disabled] {
+  opacity: 0.5;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .submit-btn-loading[disabled].buy {
+  background: var(--color-buy) !important;
+}
+.trade-confirm--container
+  .trade-stock-confirm-body
+  .trade-confirm-footer
+  .submit-btn-loading[disabled].sell {
+  background: var(--color-sell) !important;
+}
+.trade-confirm--container.trade-confirm--container-simple {
+  padding-top: 0.48rem;
+}
+.trade-confirm--container.trade-confirm--container-simple
+  .trade-stock-confirm-body {
+  padding: 0 0.32rem;
+}
+.trade-confirm--container.trade-confirm--container-simple .flex-between {
+  padding-bottom: 0.346667rem;
+}
+.trade-confirm--container.trade-confirm--container-simple .flex-between .label,
+.trade-confirm--container.trade-confirm--container-simple .flex-between .value {
+  font-size: 0.373333rem;
+  line-height: 0.613333rem;
+}
+.trade-confirm--container.trade-confirm--container-simple
+  .trade-confirm-footer {
+  padding: 0.266667rem 0 0.213333rem;
+}
+.trade-confirm--container.trade-confirm--container-simple
+  .trade-confirm-footer
+  .simple-price-tip-after-footer {
+  padding: 0.293333rem 0 0.506667rem;
+}

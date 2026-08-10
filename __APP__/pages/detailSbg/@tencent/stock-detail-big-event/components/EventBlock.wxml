@@ -1,0 +1,7 @@
+<view class="_div event-block data-v-deaef585">
+  <view class="_div block-item data-v-deaef585" wx:for="{{a}}" wx:key="c">
+    <view class="_div item-text data-v-deaef585">{{item.a}}</view>
+    <view class="_div item-time data-v-deaef585">{{item.b}}</view>
+    <view class="_div item-line data-v-deaef585"></view>
+  </view>
+</view>

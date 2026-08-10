@@ -1,0 +1,60 @@
+<view class="_div us-etf-block data-v-ef8cbe3c">
+  <view class="_div title data-v-ef8cbe3c">
+    <view class="_div data-v-ef8cbe3c">相关美股ETF</view>
+  </view>
+  <block wx:if="{{a}}">
+    <view class="_div etf-caption data-v-ef8cbe3c">
+      <view class="_div etf-caption__name data-v-ef8cbe3c">基金名称</view>
+      <view
+        catchtap="{{col.e}}"
+        class="_div etf-caption__sort data-v-ef8cbe3c"
+        wx:for="{{b}}"
+        wx:for-item="col"
+        wx:key="d"
+        >{{col.a}}<view class="_div trend data-v-ef8cbe3c">
+          <label class="{{['_span','data-v-ef8cbe3c','up',col.b]}}"></label>
+          <label class="{{['_span','data-v-ef8cbe3c','down',col.c]}}"></label>
+        </view>
+      </view>
+    </view>
+    <view class="_ul etf-list data-v-ef8cbe3c">
+      <view
+        catchtap="{{item.f}}"
+        class="_li etf-list__item data-v-ef8cbe3c"
+        wx:for="{{c}}"
+        wx:key="e"
+      >
+        <view class="_div etf-list__name data-v-ef8cbe3c">
+          <view
+            class="_div name-text data-v-ef8cbe3c"
+            style="{{'font-size:'+item.b}}"
+            >{{item.a}}</view
+          >
+          <view class="_div code-text data-v-ef8cbe3c">
+            <image
+              alt=""
+              class="_img market-icon data-v-ef8cbe3c"
+              src="https://wzq.tenpay.com/resources/mp-files/portfolio/icon/us.svg"
+            ></image
+            >{{item.c}}</view
+          >
+        </view>
+        <view
+          class="_div etf-list__value data-v-ef8cbe3c"
+          wx:for="{{item.d}}"
+          wx:for-item="col"
+          wx:key="f"
+        >
+          <view class="_div data-v-ef8cbe3c" wx:if="{{col.a}}">{{col.b}}</view>
+          <view class="{{['_div','data-v-ef8cbe3c',col.e]}}" wx:if="{{col.c}}"
+            >{{col.d}}%</view
+          >
+        </view>
+      </view>
+    </view>
+    <view catchtap="{{e}}" class="_div etf-more data-v-ef8cbe3c" wx:if="{{d}}">
+      <view class="_div etf-more__text data-v-ef8cbe3c">点击查看更多ETF</view>
+      <view class="_div etf-more__arrow data-v-ef8cbe3c"></view>
+    </view>
+  </block>
+</view>

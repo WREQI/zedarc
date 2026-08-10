@@ -1,0 +1,59 @@
+<view class="_div data-v-bbc008f5">
+    <popup bind:__l="__l" bindinput="{{i}}" class="r data-v-bbc008f5" uI="bbc008f5-0" uP="{{j}}" uR="delstockpop" uS="{{['d']}}" wx:if="{{j}}">
+        <view class="_div popup-container del-popup-container data-v-bbc008f5">
+            <view class="_div txt align-center light data-v-bbc008f5" wx:if="{{a}}">确认从所有分组中删除已选股票？</view>
+            <block wx:if="{{b}}">
+                <view class="_div txt align-center data-v-bbc008f5">确认从该分组中删除已选股票？</view>
+                <view class="_div checktxt align-center data-v-bbc008f5">
+                    <checkbox bind:__l="__l" bindinput="{{c}}" class="delcheck data-v-bbc008f5" uI="bbc008f5-1,bbc008f5-0" uP="{{d}}" wx:if="{{d}}"></checkbox>其他分组内也同时删除<view catchtap="{{e}}" class="_div hover data-v-bbc008f5"></view>
+                </view>
+            </block>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-bbc008f5">
+                <view catchtap="{{f}}" class="_div btn cancel data-v-bbc008f5">取消</view>
+                <view catchtap="{{g}}" class="_div btn ok data-v-bbc008f5">确定</view>
+            </view>
+        </view>
+    </popup>
+    <popup bind:__l="__l" bindinput="{{q}}" class="r data-v-bbc008f5" uI="bbc008f5-2" uP="{{r}}" uR="delpop" uS="{{['d']}}" wx:if="{{r}}">
+        <view class="_div popup-container del-popup-container data-v-bbc008f5">
+            <view class="_div txt align-center data-v-bbc008f5">确认删除该分组及分组内所有股票？</view>
+            <view class="_div checktxt align-center data-v-bbc008f5">
+                <checkbox bind:__l="__l" bindinput="{{k}}" class="delcheck data-v-bbc008f5" uI="bbc008f5-3,bbc008f5-2" uP="{{l}}" wx:if="{{l}}"></checkbox>其他分组内也同时删除<view catchtap="{{m}}" class="_div hover data-v-bbc008f5"></view>
+            </view>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-bbc008f5">
+                <view catchtap="{{n}}" class="_div btn cancel data-v-bbc008f5">取消</view>
+                <view catchtap="{{o}}" class="_div btn ok data-v-bbc008f5">确定</view>
+            </view>
+        </view>
+    </popup>
+    <popup bind:__l="__l" bindinput="{{A}}" class="r data-v-bbc008f5" uI="bbc008f5-4" uP="{{B}}" uR="addpop" uS="{{['d']}}" wx:if="{{B}}">
+        <view class="_div popup-container add-popup-container data-v-bbc008f5">
+            <view class="_div txt align-center data-v-bbc008f5">请输入分组名称</view>
+            <view class="_div input data-v-bbc008f5">
+                <input bindinput="{{v}}" class="data-v-bbc008f5" maxLength="{{s}}" placeholder="{{t}}" placeholderClass="placeholder" ref="addGroupInput" value="{{w}}"></input>
+            </view>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-bbc008f5">
+                <view catchtap="{{x}}" class="_div btn cancel data-v-bbc008f5">取消</view>
+                <view catchtap="{{y}}" class="_div btn ok data-v-bbc008f5">确定</view>
+            </view>
+        </view>
+    </popup>
+    <popup bind:__l="__l" bindinput="{{J}}" class="r data-v-bbc008f5" uI="bbc008f5-5" uP="{{K}}" uR="movepop" uS="{{['d']}}" wx:if="{{K}}">
+        <view class="_div popup-container move-popup-container data-v-bbc008f5">
+            <view class="_div txt align-center border-bottom-1px data-v-bbc008f5">{{C}}</view>
+            <view class="_div groupul data-v-bbc008f5">
+                <view class="_div groupli border-bottom-1px data-v-bbc008f5" wx:for="{{D}}" wx:for-item="v" wx:key="j">
+                    <checkbox bind:__l="__l" class="movegroupcheck data-v-bbc008f5" uI="{{v.b}}" uP="{{v.c}}" wx:if="{{v.a}}"></checkbox>
+                    <checkbox bind:__l="__l" class="movegroupcheck disable-icon data-v-bbc008f5" uI="{{v.e}}" uP="{{v.f}}" wx:if="{{v.d}}"></checkbox>{{v.g}}<label class="_span added data-v-bbc008f5" wx:if="{{v.h}}">已添加</label>
+                    <view catchtap="{{v.i}}" class="_div hover data-v-bbc008f5"></view>
+                </view>
+                <view catchtap="{{F}}" class="_div groupli addgroup align-center data-v-bbc008f5">
+                    <label class="_span icon add-icon data-v-bbc008f5"></label>添加分组{{E}}</view>
+            </view>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-bbc008f5">
+                <view catchtap="{{G}}" class="_div btn cancel data-v-bbc008f5">取消</view>
+                <view catchtap="{{H}}" class="_div btn ok data-v-bbc008f5">确定</view>
+            </view>
+        </view>
+    </popup>
+</view>

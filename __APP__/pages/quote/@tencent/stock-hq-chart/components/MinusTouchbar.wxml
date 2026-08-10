@@ -1,0 +1,45 @@
+<view class="{{['_div','data-v-e42fcac0','touch-bar','mins-bar']}}">
+  <block wx:if="{{a}}">
+    <view class="_div auction auction1 data-v-e42fcac0">{{b}}</view>
+    <view class="_div auction auction2 data-v-e42fcac0"
+      >价<label class="_span corner data-v-e42fcac0">竞</label>:<label
+        class="{{['_span','data-v-e42fcac0',d]}}"
+        >{{c}}</label
+      >
+    </view>
+    <view class="_div auction auction3 data-v-e42fcac0"
+      >幅:<label class="{{['_span','data-v-e42fcac0',f]}}">{{e}}</label>
+    </view>
+    <view class="_div auction auction4 data-v-e42fcac0"
+      >量<label class="_span corner data-v-e42fcac0">匹配</label>: {{g}}</view
+    >
+    <view class="_div auction auction5 data-v-e42fcac0"
+      >量<label class="_span corner data-v-e42fcac0">未配</label>:<label
+        class="{{['_span','data-v-e42fcac0',i]}}"
+        >{{h}}</label
+      >
+    </view>
+  </block>
+  <block wx:else>
+    <view class="_div block block1 data-v-e42fcac0">{{j}}</view>
+    <view class="_div block block2 data-v-e42fcac0"
+      >价:<label class="{{['_span','content','data-v-e42fcac0',l]}}"
+        >{{k}}</label
+      >
+    </view>
+    <view class="_div block block3 data-v-e42fcac0"
+      >幅:<label class="{{['_span','content','data-v-e42fcac0',n]}}"
+        >{{m}}</label
+      >
+    </view>
+    <view class="_div block block4 data-v-e42fcac0"
+      >额:<label class="{{['_span','content','data-v-e42fcac0',p]}}"
+        >{{o}}</label
+      >
+    </view>
+    <view class="_div block block5 data-v-e42fcac0" wx:if="{{q}}"
+      >量<label class="_span corner data-v-e42fcac0" wx:if="{{r}}">{{s}}</label
+      >:<label class="_span content data-v-e42fcac0">{{t}}</label>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,72 @@
+<page-meta class="data-v-bea87391" rootFontSize="{{a}}"></page-meta>
+<view class="{{['site-popup','data-v-bea87391',f]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-bea87391"
+    uI="bea87391-0"
+  ></mp-privacy-dialog>
+  <view class="site-popup-item data-v-bea87391">
+    <view
+      class="st-popup st-popup_mask st-modal data-v-bea87391"
+      id="modal_1"
+      style="z-index: 100"
+    >
+      <view class="st-popup-container st-popup-center data-v-bea87391">
+        <view class="st-popup-content data-v-bea87391">
+          <view class="st-modal-main data-v-bea87391">
+            <label
+              class="_span st-modal-close data-v-bea87391"
+              style="display: none"
+            >
+              <view class="_i st-close data-v-bea87391"></view>
+            </label>
+            <view class="st-modal-confirm data-v-bea87391">
+              <view
+                class="st-modal-content data-v-bea87391"
+                style="color: rgb(103, 109, 121)"
+              >
+                <view class="popup-protocol data-v-bea87391">
+                  <view class="popup-protocol__hd data-v-bea87391"
+                    >欢迎使用腾讯微证券服务，请先阅读并同意以下协议：</view
+                  >
+                  <view class="popup-protocol__bd data-v-bea87391">
+                    <block wx:if="{{b}}">
+                      <view
+                        bindtap="{{item.d}}"
+                        class="popup-protocol__item data-v-bea87391"
+                        data-url="{{item.c}}"
+                        wx:for="{{c}}"
+                        wx:key="b"
+                        >《{{item.a}}》</view
+                      >
+                    </block>
+                  </view>
+                </view>
+              </view>
+              <view class="st-modal-btns data-v-bea87391">
+                <label
+                  bindtap="{{d}}"
+                  class="st-modal-btn border-top-1px border-right-1px st-button st-button-default data-v-bea87391"
+                  role="button"
+                >
+                  <label class="_span st-button__text data-v-bea87391"
+                    >取消</label
+                  >
+                </label>
+                <label
+                  bindtap="{{e}}"
+                  class="st-modal-btn border-top-1px st-button st-button-default st-modal-btn_highlight data-v-bea87391"
+                  role="button"
+                >
+                  <label class="_span st-button__text data-v-bea87391"
+                    >已阅读并同意</label
+                  >
+                </label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+.stock-tag-container.data-v-d94165f5 {
+  display: -webkit-flex;
+  display: flex;
+}
+.stock-tag-container .stock-tag.data-v-d94165f5 {
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 0.05333333333333334rem;
+  color: var(--fill-1);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5866666666666667rem;
+  overflow: hidden;
+  padding: 0 0.21333333333333335rem;
+}
+.stock-tag-container .stock-tag .name.data-v-d94165f5 {
+  color: var(--color-midgray-1);
+  font-size: 0.32rem;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.stock-tag-container .stock-tag .zdf.data-v-d94165f5 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-left: 0.10666666666666667rem;
+  text-align: left;
+}
+.stock-tag-container .stock-tag .zdf.up.data-v-d94165f5 {
+  color: #e63535;
+}
+.stock-tag-container .stock-tag .zdf.down.data-v-d94165f5 {
+  color: #1caa3c;
+}

@@ -1,0 +1,95 @@
+<view class="_div data-v-c6078028" wx:if="{{a}}">
+  <jgpj-card
+    bind:__l="__l"
+    bindhasData="{{c}}"
+    class="data-v-c6078028"
+    uI="c6078028-0"
+    uP="{{d}}"
+    wx:if="{{b}}"
+  ></jgpj-card>
+  <ylyc-card
+    bind:__l="__l"
+    bindhasData="{{f}}"
+    class="data-v-c6078028"
+    uI="c6078028-1"
+    uP="{{g}}"
+    wx:if="{{e}}"
+  ></ylyc-card>
+  <yjqs-card
+    bind:__l="__l"
+    class="data-v-c6078028"
+    uI="c6078028-2"
+    uP="{{i}}"
+    wx:if="{{h}}"
+  ></yjqs-card>
+</view>
+<view
+  class="{{['_div','data-v-c6078028','functionPluginBg',G]}}"
+  data-st-theme="{{H}}"
+  wx:elif="{{j}}"
+>
+  <view
+    bindtap="{{o}}"
+    class="_div title-container data-v-c6078028"
+    wx:if="{{k}}"
+  >
+    <view
+      class="_div stock_header_line functionItemBg functionItemTitleMargin data-v-c6078028"
+      >{{l}}({{m}})-{{n}}</view
+    >
+    <view class="_div spec-line-small data-v-c6078028"></view>
+  </view>
+  <view class="_div data-v-c6078028" wx:if="{{p}}">
+    <answer-item-jg-rate
+      bind:__l="__l"
+      class="functionItemBg data-v-c6078028"
+      uI="c6078028-3"
+      uP="{{r}}"
+      wx:if="{{q}}"
+    ></answer-item-jg-rate>
+    <answer-item-performance-trends
+      bind:__l="__l"
+      bindperformanceCanvasClick="{{t}}"
+      class="functionItemBg data-v-c6078028"
+      uI="c6078028-4"
+      uP="{{v}}"
+      wx:elif="{{s}}"
+    ></answer-item-performance-trends>
+  </view>
+  <view class="_div data-v-c6078028" wx:elif="{{w}}">
+    <answer-item-profit-forcast
+      bind:__l="__l"
+      bindylycCanvasClick="{{y}}"
+      class="data-v-c6078028"
+      uI="c6078028-5"
+      uP="{{z}}"
+      wx:if="{{x}}"
+    ></answer-item-profit-forcast>
+    <answer-item-performance-trends
+      bind:__l="__l"
+      bindperformanceCanvasClick="{{B}}"
+      class="functionItemBg data-v-c6078028"
+      uI="c6078028-6"
+      uP="{{C}}"
+      wx:elif="{{A}}"
+    ></answer-item-performance-trends>
+  </view>
+  <view
+    bindtap="{{F}}"
+    class="_div bottom-detail-container data-v-c6078028"
+    wx:if="{{D}}"
+  >
+    <image
+      bindtap="{{E}}"
+      class="_img bottom-detail-container-image data-v-c6078028"
+      src="https://st.gtimg.com/design/bbfb1333e95658b17a8897c4beb85f2d.png"
+    ></image>
+    <view class="_div bottom-detail-container-text data-v-c6078028"
+      >点击查看详情</view
+    >
+  </view>
+  <view
+    class="_div bottom-detail-container-none data-v-c6078028"
+    wx:else
+  ></view>
+</view>

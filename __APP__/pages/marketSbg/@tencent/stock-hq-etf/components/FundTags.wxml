@@ -1,0 +1,10 @@
+<view class="_div fund-tags data-v-0e27ee48">
+  <view
+    class="_div fund-tags__item data-v-0e27ee48"
+    wx:for="{{a}}"
+    wx:for-item="tag"
+    wx:key="b"
+  >
+    <view class="_div fund-tags__item-text data-v-0e27ee48">{{tag.a}}</view>
+  </view>
+</view>

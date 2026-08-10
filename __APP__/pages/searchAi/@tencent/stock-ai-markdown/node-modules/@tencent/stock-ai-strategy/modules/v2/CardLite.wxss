@@ -1,0 +1,112 @@
+.flex.data-v-49525b2b {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-1.data-v-49525b2b {
+  flex: 1;
+}
+.flex-vcenter.data-v-49525b2b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-center.data-v-49525b2b,
+.flex-hcenter.data-v-49525b2b {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.flex-center.data-v-49525b2b {
+  align-items: center;
+}
+.flex-between.data-v-49525b2b {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-start.data-v-49525b2b {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.flex-end.data-v-49525b2b {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.align-r.data-v-49525b2b {
+  text-align: right;
+}
+.align-l.data-v-49525b2b {
+  text-align: left;
+}
+.red.data-v-49525b2b {
+  color: var(--color-red) !important;
+}
+.green.data-v-49525b2b {
+  color: var(--color-green) !important;
+}
+.component-ai-strategy-card.data-v-49525b2b {
+  background: #f5f6fa;
+  border-radius: 0.21333333333333335rem;
+}
+.component-ai-strategy-card .card-title.data-v-49525b2b {
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  padding: 0.32rem;
+  position: relative;
+}
+.component-ai-strategy-card .card-title .title-text.data-v-49525b2b {
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+}
+.component-ai-strategy-card
+  .card-title
+  .title-text
+  .sub-title-text.data-v-49525b2b {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  font-weight: 400;
+  margin-left: 0.21333333333333335rem;
+}
+.component-ai-strategy-card .card-title .change.data-v-49525b2b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  right: 0.32rem;
+}
+.component-ai-strategy-card .card-title .change .change-icon.data-v-49525b2b {
+  height: 0.32rem;
+  margin-right: 0.05333333333333334rem;
+  width: 0.32rem;
+}
+.component-ai-strategy-card .card-title .change .change-txt.data-v-49525b2b {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.component-ai-strategy-card .card-content.data-v-49525b2b {
+  overflow: hidden;
+}
+.component-ai-strategy-card .card-content .all-add-btn.data-v-49525b2b {
+  background: rgba(230, 53, 53, 0.1);
+  border-radius: 0.10666666666666667rem;
+  color: #e63535;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  margin: 0.10666666666666667rem auto 0.32rem;
+  padding: 0.21333333333333335rem 0;
+  text-align: center;
+  width: 8.08rem;
+}
+.component-ai-strategy-card .card-content .all-add-btn.added.data-v-49525b2b {
+  background: #fff;
+  color: #262e40;
+}

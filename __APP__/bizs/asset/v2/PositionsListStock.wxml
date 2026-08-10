@@ -1,0 +1,139 @@
+<view
+  class="{{['stock-list-container','stock-list--stock',q&&'border--bottom-c1']}}"
+>
+  <scroll-view bindscroll="{{l}}" class="scroll-wrap" scrollX="true">
+    <view class="stock-list-content">
+      <list-header
+        bind:__l="__l"
+        bindsort="{{a}}"
+        uI="7ca9e0db-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></list-header>
+      <view class="stock-list-body">
+        <view
+          bindtap="{{item.ae}}"
+          bindtouchend="{{item.ag}}"
+          bindtouchstart="{{item.af}}"
+          class="{{['stock-list-item',k,item.ac]}}"
+          style="{{item.ad}}"
+          wx:for="{{c}}"
+          wx:key="ab"
+        >
+          <view
+            class="{{['long-press-base','long-press-placeholder',item.a&&'long-press-placeholder--active']}}"
+          ></view>
+          <view
+            bindtouchcancel="{{item.d}}"
+            bindtouchend="{{item.e}}"
+            bindtouchmove="{{item.c}}"
+            bindtouchstart="{{item.b}}"
+            class="long-press-base long-press-mask"
+          ></view>
+          <view class="{{['mock-border-bottom',item.f]}}"></view>
+          <view catchtap="{{item.D}}" class="col-item col-a cell">
+            <view
+              class="{{['long-press-base','long-press-base-a','long-press-placeholder',item.g&&'long-press-placeholder--active']}}"
+            ></view>
+            <view
+              bindtouchcancel="{{item.j}}"
+              bindtouchend="{{item.k}}"
+              bindtouchmove="{{item.i}}"
+              bindtouchstart="{{item.h}}"
+              class="long-press-base long-press-base-a long-press-mask"
+            ></view>
+            <view class="cell-hide" key="{{item.l}}" wx:if="{{d}}">***</view>
+            <view class="cell-name" wx:else>
+              <view class="{{['title',item.n]}}">
+                <label>{{item.m}}</label>
+              </view>
+              <view class="subtitle">
+                <market-label
+                  bind:__l="__l"
+                  class="stock-market"
+                  uI="{{item.o}}"
+                  uP="{{item.p}}"
+                  wx:if="{{item.p}}"
+                ></market-label
+                >{{item.q}}</view
+              >
+            </view>
+            <view
+              catchtap="{{item.t}}"
+              class="item-extra"
+              data-stat="TRADE.ASSET.RATIONEDSHARES"
+              wx:if="{{item.r}}"
+            >
+              <view class="item-extra-content flex-center">
+                <view class="allotment-icon flex-center">配股</view>
+                <label class="allotment-text flex-1">{{item.s}}</label>
+                <view class="icon icon-arrow-right-new"></view>
+              </view>
+            </view>
+            <view catchtap="{{item.x}}" class="item-extra" wx:if="{{item.v}}">
+              <view class="item-extra-content flex-center">
+                <view class="band-assistant-icon flex-center">AI波段宝</view>
+                <label class="allotment-text band-assist-text flex-1"
+                  >{{item.w}}</label
+                >
+                <view class="icon icon-arrow-right-new"></view>
+              </view>
+            </view>
+            <position-drawer
+              bind:__l="__l"
+              bindjumpQuote="{{item.A}}"
+              bindshare="{{item.z}}"
+              uI="{{item.B}}"
+              uP="{{item.C}}"
+              wx:if="{{item.y}}"
+            ></position-drawer>
+          </view>
+          <view class="col-item col-b cell" wx:if="{{e}}">
+            <view class="{{['title',item.F]}}">{{item.E}}</view>
+            <view class="{{['subtitle',item.I]}}">{{item.G}}{{item.H}}</view>
+          </view>
+          <view class="col-item col-b cell cell-hide" wx:else>***</view>
+          <view class="col-item col-c cell" wx:if="{{f}}">
+            <view class="{{['title',item.L]}}">{{item.J}}{{item.K}}</view>
+            <view class="{{['subtitle',item.O]}}">{{item.M}}{{item.N}}</view>
+          </view>
+          <view class="col-item col-c cell cell-hide" wx:else>***</view>
+          <view class="col-item col-d cell" wx:if="{{item.P}}">
+            <view class="title fs-28">除权除息中</view>
+            <view class="lighter-equa subtitle fs-22">清算后重新计算</view>
+          </view>
+          <view class="col-item col-d cell" wx:elif="{{g}}">
+            <view class="{{['title',item.R]}}">{{item.Q}}</view>
+            <view class="{{['lighter-equa','subtitle',item.T]}}"
+              >{{item.S}}</view
+            >
+          </view>
+          <view class="col-item col-d cell cell-hide" wx:else>***</view>
+          <view class="col-item col-e cell" wx:if="{{h}}">
+            <view class="{{['title',item.V]}}">{{item.U}}</view>
+            <view class="{{['subtitle',item.X]}}">{{item.W}}</view>
+          </view>
+          <view class="col-item col-e cell cell-hide" wx:else>***</view>
+          <view class="col-item col-f cell" wx:if="{{i}}">
+            <view class="title">{{item.Y}}</view>
+          </view>
+          <view class="col-item col-f cell cell-hide" wx:else>***</view>
+          <view class="col-item col-g cell" wx:if="{{j}}">
+            <view class="title">{{item.Z}}</view>
+            <view class="subtitle">{{item.aa}}</view>
+          </view>
+          <view class="col-item col-g cell cell-hide" wx:else>***</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="stock-list-body-gradient" wx:if="{{m}}"></view>
+  <bubble-tip
+    bind:__l="__l"
+    bindclose="{{o}}"
+    class="stock-bubble-tips"
+    uI="7ca9e0db-3"
+    uP="{{p}}"
+    wx:if="{{n}}"
+  ></bubble-tip>
+</view>

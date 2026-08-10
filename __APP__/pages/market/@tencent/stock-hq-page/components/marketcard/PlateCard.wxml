@@ -1,0 +1,76 @@
+<view class="_div plate-card data-v-8a595aab">
+  <view
+    catchtap="{{h}}"
+    class="_div plate-card-title layout-row layout-align-space-between data-v-8a595aab"
+    data-stat="{{g}}"
+    ref="title"
+    wx:if="{{a}}"
+  >
+    <view class="_div title-box data-v-8a595aab"
+      >{{b}}<view
+        catchtap="{{d}}"
+        class="_i image-tip data-v-8a595aab"
+        wx:if="{{c}}"
+      ></view>
+    </view>
+    <view class="_div title-right data-v-8a595aab">
+      <view class="_div tip-guide data-v-8a595aab" wx:if="{{e}}">
+        <view class="_div data-v-8a595aab">点击查看更多ETF</view>
+        <view class="_div tab-red-dot data-v-8a595aab"></view>
+      </view>
+      <label class="_span data-v-8a595aab" wx:if="{{f}}">></label>
+      <image
+        class="_img icon-arrow data-v-8a595aab"
+        src="https://st.gtimg.com/design/3afd22e51e88b4813e453d3a7772242f.svg"
+        wx:else
+      ></image>
+    </view>
+  </view>
+  <view
+    class="_div plate-card-title layout-row layout-align-space-between data-v-8a595aab"
+    wx:else
+    >{{i}}</view
+  >
+  <slot></slot>
+  <view
+    class="_div plate-item-row layout-row data-v-8a595aab"
+    wx:for="{{j}}"
+    wx:for-item="row"
+    wx:key="b"
+  >
+    <view
+      catchtap="{{item.n}}"
+      class="_div plate-item layout-column flex data-v-8a595aab"
+      tag="div"
+      wx:for="{{row.a}}"
+      wx:key="m"
+    >
+      <view
+        class="_div plate-name data-v-8a595aab"
+        style="{{'font-size:'+item.b}}"
+        >{{item.a}}</view
+      >
+      <view
+        class="{{['_div','data-v-8a595aab','plate-quote',item.e]}}"
+        wx:if="{{item.c}}"
+        >{{item.d}}%</view
+      >
+      <view
+        class="{{['_div','data-v-8a595aab','plate-price',item.g]}}"
+        wx:if="{{k}}"
+        >{{item.f}}</view
+      >
+      <view
+        class="{{['_div','data-v-8a595aab','plate-feature-stock','layout-column','layout-align-space-between',item.l]}}"
+        wx:else
+      >
+        <view class="_div plate-stock-name ellipsis-text data-v-8a595aab"
+          >{{item.h}}</view
+        >
+        <view class="{{['_div','data-v-8a595aab','plate-stock-quote',item.k]}}"
+          >{{item.i}} {{item.j}}%</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

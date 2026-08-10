@@ -1,0 +1,88 @@
+<view class="_div wx-news-container data-v-64b46f36">
+  <scroll-view
+    bindrefresherpulling="{{v}}"
+    bindrefresherrefresh="{{q}}"
+    bindscroll="{{s}}"
+    bindscrolltolower="{{r}}"
+    bindscrolltoupper="{{t}}"
+    class="wx-tops data-v-64b46f36"
+    id="wxTops"
+    ref="wxTopsScrollViewRef"
+    refresherEnabled="{{true}}"
+    refresherThreshold="16"
+    refresherTriggered="{{o}}"
+    scrollIntoView="{{p}}"
+    scrollWithAnimation="{{true}}"
+    scrollY="{{true}}"
+  >
+    <view class="_div min-height data-v-64b46f36" id="wxTopsContentId">
+      <weixin-tops-content
+        bind:__l="__l"
+        bindloadMoreFail="{{f}}"
+        bindloadMoreSuccess="{{e}}"
+        bindrefreshFail="{{d}}"
+        bindrefreshSuccess="{{c}}"
+        bindshowWxTopTips="{{g}}"
+        class="r data-v-64b46f36"
+        data-c-h="{{!b}}"
+        uI="64b46f36-0"
+        uP="{{h}}"
+        uR="contentRef"
+        wx:if="{{h}}"
+      ></weixin-tops-content>
+      <view class="_div brand data-v-64b46f36" wx:if="{{i}}"></view>
+      <view class="_div status-container data-v-64b46f36" wx:if="{{j}}">
+        <st-status
+          bind:__l="__l"
+          bindhandleError="{{k}}"
+          class="data-v-64b46f36"
+          uI="64b46f36-1"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></st-status>
+      </view>
+      <view
+        class="_div target data-v-64b46f36"
+        id="locattarget"
+        style="{{'top:'+n}}"
+        wx:if="{{m}}"
+      ></view>
+    </view>
+  </scroll-view>
+  <view
+    class="_div nav-bar data-v-64b46f36"
+    id="navBar"
+    style="{{'padding-top:'+B+';'+'background-color:'+C}}"
+  >
+    <view class="_div btn data-v-64b46f36" wx:if="{{w}}"></view>
+    <view catchtap="{{y}}" class="_div btn data-v-64b46f36" wx:elif="{{x}}">
+      <view class="{{['_div','data-v-64b46f36','right-arrow','left']}}"></view>
+    </view>
+    <view catchtap="{{z}}" class="_div btn home data-v-64b46f36" wx:else>
+      <image
+        class="_img home-icon data-v-64b46f36"
+        src="https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png"
+      ></image>
+    </view>
+    <label class="_span title data-v-64b46f36" style="{{'opacity:'+A}}"
+      >投资TOP榜</label
+    >
+    <view class="_div btn data-v-64b46f36"></view>
+  </view>
+  <view
+    catchtap="{{H}}"
+    catchtouchmove="{{G}}"
+    class="_div tool-tips-wrapper data-v-64b46f36"
+    wx:if="{{D}}"
+  >
+    <view catchtap="{{F}}" class="_div tool-tips data-v-64b46f36">
+      <view class="_div title-container data-v-64b46f36">
+        <view class="_div data-v-64b46f36">榜单规则说明</view>
+        <view catchtap="{{E}}" class="_div close-button data-v-64b46f36"></view>
+      </view>
+      <view class="_div tips-info data-v-64b46f36"
+        >交易时间每2小时扫描一次，通过大数据分析，识别出微信热门财经文章的讨论主题及其热度。</view
+      >
+    </view>
+  </view>
+</view>

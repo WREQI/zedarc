@@ -1,0 +1,173 @@
+<view class="{{['data-v-a7d45db2',B,'history-list-comp',C]}}">
+  <view class="{{['history-new-listheader','data-v-a7d45db2',d]}}">
+    <view class="history-new-name border--bottom data-v-a7d45db2">
+      <view class="history-new-col1 ^history-new-col1 data-v-a7d45db2"
+        >类型/状态</view
+      >
+      <view class="history-new-col2 ^history-new-col1 data-v-a7d45db2"
+        >名称/代码</view
+      >
+      <view class="history-new-col3 ^history-new-col1 data-v-a7d45db2"
+        >数量/价格</view
+      >
+      <view class="history-new-col4 ^history-new-col1 data-v-a7d45db2"
+        >委托时间</view
+      >
+    </view>
+    <view
+      class="fixed-time-row history-month-row data-v-a7d45db2"
+      wx:if="{{a}}"
+    >
+      <month-row
+        bind:__l="__l"
+        bindfilterTime="{{b}}"
+        class="data-v-a7d45db2"
+        uI="a7d45db2-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></month-row>
+    </view>
+  </view>
+  <st-pull-and-pagination
+    bind:__l="__l"
+    bindrefresh="{{y}}"
+    bindscroll="{{w}}"
+    bindscrolltolower="{{x}}"
+    bindtopChange="{{z}}"
+    class="r data-v-a7d45db2"
+    uI="a7d45db2-1"
+    uP="{{A}}"
+    uR="tradeHistoryPull"
+    uS="{{['d']}}"
+    wx:if="{{A}}"
+  >
+    <view
+      class="fixed-time-row history-month-row border--bottom pulling-month data-v-a7d45db2"
+      wx:if="{{e}}"
+    >
+      <month-row
+        bind:__l="__l"
+        bindfilterTime="{{f}}"
+        class="data-v-a7d45db2"
+        uI="a7d45db2-2,a7d45db2-1"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></month-row>
+    </view>
+    <view class="record-loading data-v-a7d45db2" wx:if="{{h}}">
+      <status
+        bind:__l="__l"
+        class="status-comp data-v-a7d45db2"
+        uI="a7d45db2-3,a7d45db2-1"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></status>
+    </view>
+    <view class="empty data-v-a7d45db2" wx:elif="{{j}}">
+      <status
+        bind:__l="__l"
+        class="status-comp data-v-a7d45db2"
+        uI="a7d45db2-4,a7d45db2-1"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></status>
+    </view>
+    <view class="empty data-v-a7d45db2" wx:elif="{{l}}">
+      <status
+        bind:__l="__l"
+        bindhandleError="{{m}}"
+        class="status-comp data-v-a7d45db2"
+        uI="a7d45db2-5,a7d45db2-1"
+        uP="{{n}}"
+        wx:if="{{n}}"
+      ></status>
+    </view>
+    <view class="history-new-listbody data-v-a7d45db2" wx:else>
+      <view
+        class="history-month-set data-v-a7d45db2"
+        wx:for="{{o}}"
+        wx:for-item="month"
+        wx:key="f"
+      >
+        <view class="history-month-row data-v-a7d45db2" wx:if="{{month.a}}">
+          <month-row
+            bind:__l="__l"
+            bindfilterTime="{{month.b}}"
+            class="data-v-a7d45db2"
+            uI="{{month.c}}"
+            uP="{{month.d}}"
+            wx:if="{{month.d}}"
+          ></month-row>
+        </view>
+        <block wx:for="{{month.e}}" wx:key="s">
+          <view
+            class="{{['history-expandwrap','data-v-a7d45db2',item.l,item.m,item.n]}}"
+            wx:if="{{item.a}}"
+          >
+            <view
+              class="divider border--top data-v-a7d45db2"
+              wx:if="{{item.b}}"
+            ></view>
+            <history-item
+              bind:__l="__l"
+              bindclick="{{item.d}}"
+              class="data-v-a7d45db2"
+              key="{{item.c}}"
+              uI="{{item.e}}"
+              uP="{{item.f}}"
+              wx:if="{{item.f}}"
+            ></history-item>
+            <block wx:if="{{item.g}}">
+              <history-item
+                bind:__l="__l"
+                bindclick="{{expandItem.b}}"
+                class="data-v-a7d45db2"
+                uI="{{expandItem.c}}"
+                uP="{{expandItem.d}}"
+                wx:for="{{item.h}}"
+                wx:for-item="expandItem"
+                wx:key="a"
+              ></history-item>
+            </block>
+            <view bindtap="{{item.k}}" class="tips data-v-a7d45db2"
+              >{{item.i}}{{item.j}}条记录<label
+                class="icon icon-arrow-down data-v-a7d45db2"
+              ></label>
+            </view>
+          </view>
+          <view
+            class="history-normalwrap data-v-a7d45db2"
+            key="{{item.r}}"
+            wx:else
+          >
+            <history-item
+              bind:__l="__l"
+              bindclick="{{item.o}}"
+              class="data-v-a7d45db2"
+              uI="{{item.p}}"
+              uP="{{item.q}}"
+              wx:if="{{item.q}}"
+            ></history-item>
+          </view>
+        </block>
+      </view>
+      <status
+        bind:__l="__l"
+        class="status-comp data-v-a7d45db2"
+        uI="a7d45db2-10,a7d45db2-1"
+        uP="{{q}}"
+        wx:if="{{p}}"
+      ></status>
+      <view class="error-in-scrollview data-v-a7d45db2" wx:if="{{r}}">
+        <status
+          bind:__l="__l"
+          bindhandleError="{{s}}"
+          class="status-comp data-v-a7d45db2"
+          uI="a7d45db2-11,a7d45db2-1"
+          uP="{{t}}"
+          wx:if="{{t}}"
+        ></status>
+      </view>
+    </view>
+  </st-pull-and-pagination>
+</view>

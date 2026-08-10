@@ -1,0 +1,22 @@
+<view
+  class="_div history-mins-container"
+  style="{{'width:'+j+';'+'height:'+k}}"
+>
+  <mins
+    bind:__l="__l"
+    bindgetInitData="{{d}}"
+    bindonTouchCancle="{{c}}"
+    bindonTouchMove="{{b}}"
+    uI="7ec6f578-0"
+    uP="{{e}}"
+    wx:if="{{a}}"
+  ></mins>
+  <no-data bind:__l="__l" uI="7ec6f578-1" wx:if="{{f}}"></no-data>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{h}}"
+    uI="7ec6f578-2"
+    uP="{{i}}"
+    wx:if="{{g}}"
+  ></status>
+</view>

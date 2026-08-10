@@ -1,0 +1,79 @@
+<view class="_div fund-card__item data-v-7d41ecae" data-test-id="t0-fund-card">
+  <view class="_div fund-card__head data-v-7d41ecae" ref="headRef">
+    <view
+      catchtap="{{c}}"
+      class="{{['_div','fund-card__name','data-v-7d41ecae',b&&'fund-card__name--premium']}}"
+      data-test-id="t0-fund-name"
+      >{{a}}</view
+    >
+    <fund-tags
+      bind:__l="__l"
+      class="fund-card__tags data-v-7d41ecae"
+      uI="7d41ecae-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></fund-tags>
+  </view>
+  <view
+    class="_div fund-card__metrics fund-card__metrics--clip data-v-7d41ecae"
+  >
+    <view
+      catchtap="{{f}}"
+      class="_div buy-btn t0-fund-card__buy-btn data-v-7d41ecae"
+      data-test-id="t0-fund-buy"
+      wx:if="{{e}}"
+    >
+      <view class="_div buy-btn__text data-v-7d41ecae">买入</view>
+    </view>
+    <view
+      catchtap="{{i}}"
+      class="_div spark data-v-7d41ecae"
+      data-test-id="t0-fund-spark"
+    >
+      <st-mini-mins
+        bind:__l="__l"
+        class="spark__chart data-v-7d41ecae"
+        uI="7d41ecae-1"
+        uP="{{h}}"
+        wx:if="{{g}}"
+      ></st-mini-mins>
+    </view>
+    <view
+      catchtap="{{l}}"
+      class="_div metric metric--a data-v-7d41ecae"
+      data-test-id="t0-fund-metric-zdf"
+    >
+      <view class="{{['_div','metric__value','data-v-7d41ecae',k]}}"
+        >{{j}}</view
+      >
+      <view class="_div metric__label data-v-7d41ecae">涨跌幅</view>
+    </view>
+    <view
+      catchtap="{{r}}"
+      class="{{['_div','metric','metric--c','data-v-7d41ecae',q&&'metric--c--premium']}}"
+      data-test-id="t0-fund-metric-extra"
+    >
+      <view class="_div metric__row data-v-7d41ecae">
+        <view class="_div metric__inner data-v-7d41ecae">
+          <view class="{{['_div','metric__value','data-v-7d41ecae',n]}}"
+            >{{m}}</view
+          >
+        </view>
+      </view>
+      <view
+        class="{{['_div','metric__label','data-v-7d41ecae',p&&'metric__label--premium']}}"
+        >{{o}}</view
+      >
+    </view>
+    <view
+      catchtap="{{t}}"
+      class="_div fund-card__premium-explain data-v-7d41ecae"
+      data-test-id="t0-premium-explain"
+      wx:if="{{s}}"
+    >
+      <view class="_div fund-card__premium-explain-text data-v-7d41ecae"
+        >查看详情</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,93 @@
+<view class="_div perfect-forcast data-v-56bac6f2" wx:if="{{a}}">
+  <view class="_div title-container data-v-56bac6f2">
+    <view class="_div title-text data-v-56bac6f2">盈利预测</view>
+    <view class="_div title-tab data-v-56bac6f2">
+      <label
+        bindtap="{{d}}"
+        class="{{['_span','data-v-56bac6f2','tab-item',c]}}"
+        wx:if="{{b}}"
+        >净利润</label
+      >
+      <label
+        bindtap="{{g}}"
+        class="{{['_span','data-v-56bac6f2','tab-item',f]}}"
+        wx:if="{{e}}"
+        >净利润增速</label
+      >
+    </view>
+  </view>
+  <view class="_div sub-title data-v-56bac6f2">{{h}}</view>
+  <view
+    class="_div perfect-chart-container data-v-56bac6f2"
+    id="perfectChart-container"
+    wx:if="{{i}}"
+  >
+    <f2
+      bind:__l="__l"
+      bindonInit="{{j}}"
+      bindtouchend="{{k}}"
+      bindtouchmove="{{m}}"
+      bindtouchstart="{{l}}"
+      class="data-v-56bac6f2"
+      uI="56bac6f2-0"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></f2>
+    <view
+      class="{{['_ul','canvas-toolTip','data-v-56bac6f2',q]}}"
+      wx:if="{{o}}"
+    >
+      <view class="_li tips-item data-v-56bac6f2" wx:for="{{p}}" wx:key="c">
+        <label class="_span data-v-56bac6f2">{{item.a}}</label>
+        <label class="_span data-v-56bac6f2">{{item.b}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div forcecast-indicators data-v-56bac6f2">
+    <view class="_div list-title data-v-56bac6f2">
+      <view class="_div item-title data-v-56bac6f2">预测指标</view>
+      <view class="_div detail data-v-56bac6f2">每股收益</view>
+      <view class="_div detail data-v-56bac6f2">净利润</view>
+      <view class="_div detail data-v-56bac6f2">净利润同比</view>
+      <view class="_div detail data-v-56bac6f2">营业收入</view>
+      <view class="_div detail data-v-56bac6f2">营业收入同比</view>
+      <view class="_div detail data-v-56bac6f2">预测机构家数</view>
+    </view>
+    <view
+      bindtouchcancel="{{CustomScroll.touchend}}"
+      bindtouchend="{{CustomScroll.touchend}}"
+      bindtouchstart="{{CustomScroll.touchstart}}"
+      catchtouchmove="{{CustomScroll.touchmove}}"
+      change:scrollOptions="{{CustomScroll.setup}}"
+      class="_div indicators-list-wrapper data-v-56bac6f2"
+      scrollOptions="{{t}}"
+    >
+      <view class="_ul indicators-list data-v-56bac6f2">
+        <view class="_li list-item data-v-56bac6f2" wx:for="{{r}}" wx:key="h">
+          <view class="_div item-title data-v-56bac6f2">{{item.a}}真实值</view>
+          <view class="_div detail data-v-56bac6f2">{{item.b}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.c}}亿</view>
+          <view class="_div detail data-v-56bac6f2">{{item.d}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.e}}亿</view>
+          <view class="_div detail data-v-56bac6f2">{{item.f}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.g}}</view>
+        </view>
+        <view class="_li list-item data-v-56bac6f2" wx:for="{{s}}" wx:key="h">
+          <view class="_div item-title data-v-56bac6f2"
+            >{{item.a}}年预测值</view
+          >
+          <view class="_div detail data-v-56bac6f2">{{item.b}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.c}}亿</view>
+          <view class="_div detail data-v-56bac6f2">{{item.d}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.e}}亿</view>
+          <view class="_div detail data-v-56bac6f2">{{item.f}}</view>
+          <view class="_div detail data-v-56bac6f2">{{item.g}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div forcecast-split data-v-56bac6f2"></view>
+  <view class="_div update-time data-v-56bac6f2" wx:if="{{v}}"
+    >数据时间：{{w}}</view
+  >
+</view>

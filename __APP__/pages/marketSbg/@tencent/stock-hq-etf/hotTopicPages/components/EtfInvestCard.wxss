@@ -1,0 +1,219 @@
+.etf-invest-card.data-v-99a5c613 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  min-height: 7.066666666666666rem;
+  overflow: hidden;
+  position: relative;
+}
+.etf-invest-card--single.data-v-99a5c613 {
+  min-height: 5.066666666666666rem;
+  padding-bottom: 0.4266666666666667rem;
+}
+.etf-invest-card__title.data-v-99a5c613 {
+  color: var(--color-heavygray);
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4rem;
+  font-weight: 500;
+  left: 0.32rem;
+  line-height: 0.56rem;
+  position: absolute;
+  top: 0.32rem;
+  white-space: nowrap;
+}
+.etf-invest-card__hotspot.data-v-99a5c613 {
+  cursor: pointer;
+  margin-top: 1.12rem;
+  overflow: hidden;
+}
+.etf-invest-card__logo.data-v-99a5c613 {
+  align-items: flex-end;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6266666666666667rem;
+  justify-content: center;
+  left: 0.32rem;
+  overflow: hidden;
+  position: absolute;
+  top: 1.3066666666666666rem;
+  width: 1.6266666666666667rem;
+}
+.etf-invest-card__logo-chart.data-v-99a5c613 {
+  display: block;
+  flex-shrink: 0;
+  transform: translateY(0.05333333333333334rem) scale(1.03, 1.06);
+  transform-origin: left bottom;
+}
+.etf-invest-card__name-wrap.data-v-99a5c613 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  left: 2.2666666666666666rem;
+  min-height: 0.5866666666666667rem;
+  position: absolute;
+  top: 1.2rem;
+}
+.etf-invest-card__name.data-v-99a5c613 {
+  color: var(--color-heavygray);
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  max-width: 5.933333333333334rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-invest-card__watchlist.data-v-99a5c613 {
+  cursor: pointer;
+  height: 0.5333333333333333rem;
+  left: 8.506666666666666rem;
+  object-fit: cover;
+  position: absolute;
+  top: 1.2266666666666666rem;
+  width: 0.5333333333333333rem;
+}
+.etf-invest-card__watchlist--disabled.data-v-99a5c613 {
+  opacity: 0.6;
+}
+.etf-invest-card__metric.data-v-99a5c613 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 1.0933333333333333rem;
+  position: absolute;
+  top: 1.9466666666666668rem;
+}
+.etf-invest-card__metric--ratio.data-v-99a5c613 {
+  left: 2.2666666666666666rem;
+  max-width: 1.4133333333333333rem;
+}
+.etf-invest-card__metric--relevance.data-v-99a5c613 {
+  left: 4.426666666666667rem;
+  max-width: 1.6rem;
+}
+.etf-invest-card__metric--price.data-v-99a5c613 {
+  left: 6.773333333333333rem;
+  max-width: 1.6rem;
+}
+.etf-invest-card__metric-value.data-v-99a5c613 {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+  white-space: nowrap;
+}
+.etf-invest-card__metric-value.ratio-rise.data-v-99a5c613 {
+  color: var(--color-red);
+}
+.etf-invest-card__metric-value.ratio-drop.data-v-99a5c613 {
+  color: var(--color-drop);
+}
+.etf-invest-card__metric-value.ratio-equal.data-v-99a5c613 {
+  color: var(--color-lightgray);
+}
+.etf-invest-card__metric-label.data-v-99a5c613 {
+  color: var(--color-lightgray);
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+  white-space: nowrap;
+}
+.etf-invest-card__flow.data-v-99a5c613 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.32rem;
+  width: 8.72rem;
+}
+.etf-invest-card__history.data-v-99a5c613 {
+  color: var(--color-midgray);
+  flex-wrap: wrap;
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-left: 0.32rem;
+  margin-top: 2.24rem;
+  width: 8.72rem;
+}
+.etf-invest-card__history-tip.data-v-99a5c613 {
+  color: var(--color-lightgray);
+}
+.etf-invest-card__buy.data-v-99a5c613 {
+  background: rgba(230, 53, 53, 0.1);
+  border: 0;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  color: #e63535;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.96rem;
+  justify-content: center;
+  line-height: 0.5333333333333333rem;
+  margin-top: 0.32rem;
+  padding: 0.21333333333333335rem 0.32rem;
+  white-space: nowrap;
+  width: 8.72rem;
+}
+.etf-invest-card__buy.data-v-99a5c613,
+.etf-invest-card__more.data-v-99a5c613 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+}
+.etf-invest-card__more.data-v-99a5c613 {
+  align-self: center;
+  background: transparent;
+  border: 0;
+  flex-direction: row;
+  margin-bottom: 0.4266666666666667rem;
+  margin-top: 0.4266666666666667rem;
+  min-height: 0.4533333333333333rem;
+  padding: 0;
+}
+.etf-invest-card__more--collapse.data-v-99a5c613 {
+  margin: 0.21333333333333335rem auto 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.etf-invest-card__more-text.data-v-99a5c613 {
+  color: var(--color-lightgray);
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  white-space: nowrap;
+}
+.etf-invest-card__more-icon.data-v-99a5c613 {
+  flex-shrink: 0;
+  height: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+  object-fit: cover;
+  width: 0.32rem;
+}
+.etf-invest-card__more-icon--up.data-v-99a5c613 {
+  transform: rotate(180deg);
+}
+.etf-invest-card__divider.data-v-99a5c613 {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  margin-top: 0.5333333333333333rem;
+  width: 8.72rem;
+}
+.etf-invest-card__list-placeholder.data-v-99a5c613 {
+  box-sizing: border-box;
+  margin-left: -0.32rem;
+  margin-top: 0.5333333333333333rem;
+  padding-bottom: 0.32rem;
+  position: relative;
+}

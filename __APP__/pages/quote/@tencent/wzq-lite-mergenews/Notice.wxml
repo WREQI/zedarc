@@ -1,0 +1,48 @@
+<view class="_div mod-notices-zxg data-v-250b6e63">
+  <view class="_div data-v-250b6e63" wx:if="{{a}}">
+    <view bindtap="{{b}}" class="_div bigevent-title data-v-250b6e63">
+      <label class="_span text data-v-250b6e63">大事提醒</label>
+      <image
+        class="_img right-icon data-v-250b6e63"
+        src="https://st.gtimg.com/design/5cf17a591694b7bb4f5c7cad77e6f084.png"
+      ></image>
+    </view>
+    <timeline
+      bind:__l="__l"
+      class="data-v-250b6e63"
+      uI="250b6e63-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></timeline>
+  </view>
+  <view class="_ul notices-list data-v-250b6e63" wx:if="{{d}}">
+    <view class="_div auto-test data-v-250b6e63">notice-list</view>
+    <view
+      catchtap="{{item.f}}"
+      class="_li list-li data-v-250b6e63"
+      wx:for="{{e}}"
+      wx:key="e"
+    >
+      <view class="_p notices-title data-v-250b6e63">{{item.a}}</view>
+      <view class="_p source-info data-v-250b6e63">
+        <image
+          catchtap="{{item.c}}"
+          class="_img source-icon data-v-250b6e63"
+          src="https://st.gtimg.com/design/4fef763d9c267ca9417413e1da073d8e.png"
+          wx:if="{{item.b}}"
+        ></image>
+        <label class="_span time-right data-v-250b6e63">{{item.d}}</label>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-250b6e63"
+    uI="250b6e63-1"
+    uS="{{['d']}}"
+    wx:if="{{f}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无公告数据</block>
+  </no-data>
+</view>

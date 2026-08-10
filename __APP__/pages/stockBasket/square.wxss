@@ -1,0 +1,23 @@
+.stock-basket-wrapper {
+  background-color: #f5f6fa;
+  height: 100vh;
+}
+.stock-basket-wrapper .bacsket-list {
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100vw;
+}
+.stock-basket-wrapper .bacsket-list .scroll-container {
+  margin-top: 0.32rem;
+}
+.stock-basket-wrapper .bacsket-list .scroll-container .brand {
+  background-image: url(https://st.gtimg.com/design/aa65870c4a9bbd7ba311225f19e33525.png);
+  background-position: center 0.32rem;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 1.12rem;
+  width: 100%;
+}
+.basket-section {
+  margin-bottom: 0.32rem;
+}

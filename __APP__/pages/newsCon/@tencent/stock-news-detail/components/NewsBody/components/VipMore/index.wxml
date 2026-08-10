@@ -1,0 +1,24 @@
+<view class="{{['_div','vip-box',l]}}" ref="vipBox" wx:if="{{a}}">
+  <view class="{{['_div','vip-shadow',b]}}"></view>
+  <view class="_div vip-text" wx:if="{{c}}"
+    >剩余<label class="_span more-num">{{d}}%</label>的精彩内容</view
+  >
+  <view class="_div btn-box">
+    <view bindtap="{{g}}" class="_div vip-btn" wx:if="{{e}}">{{f}}</view>
+  </view>
+  <view class="{{['_div','button-wrapper',k]}}" wx:if="{{h}}">
+    <view class="_div vip-desc">
+      <view class="_div goods-icon"></view>
+      <view class="_div goods-name">VIP资讯</view>
+      <view class="_div goods-txt">限时免费</view>
+    </view>
+    <view bindtap="{{j}}" class="_div vip-desc all" wx:if="{{i}}">
+      <view class="_div all-text">全部VIP限免文章</view>
+      <image
+        alt=""
+        class="_img all-arrow"
+        src="https://st.gtimg.com/design/0302f89dd0d5eb15b425897fa9a19684.png"
+      ></image>
+    </view>
+  </view>
+</view>

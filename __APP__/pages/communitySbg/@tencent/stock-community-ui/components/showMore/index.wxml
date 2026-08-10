@@ -1,0 +1,22 @@
+<view
+  class="{{['_div','data-v-bfbc051f','mod-show-more',k,l]}}"
+  hidden="{{!m}}"
+  ref="showMore"
+>
+  <view class="_i shadow-box data-v-bfbc051f" wx:if="{{a}}"> </view>
+  <label
+    catchtap="{{e}}"
+    class="{{['_span','data-v-bfbc051f','text',f]}}"
+    wx:if="{{b}}"
+  >
+    <label class="_span dian data-v-bfbc051f" style="{{'color:'+c}}">...</label>
+    <label class="_span fold-text data-v-bfbc051f">{{d}}</label>
+  </label>
+  <label
+    catchtap="{{i}}"
+    class="{{['_span','data-v-bfbc051f','text',j]}}"
+    wx:if="{{g}}"
+  >
+    <label class="_span data-v-bfbc051f">{{h}}</label>
+  </label>
+</view>

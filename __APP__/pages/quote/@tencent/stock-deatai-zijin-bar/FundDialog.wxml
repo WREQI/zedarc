@@ -1,0 +1,33 @@
+<view
+  catchtap="{{e}}"
+  class="_div message-dialog-container data-v-c9a8bbf9"
+  ref="fundbar"
+>
+  <view catchtap="{{a}}" class="_div dialog-back data-v-c9a8bbf9"></view>
+  <view class="_div message-dialog data-v-c9a8bbf9" style="{{d}}">
+    <view class="_div maoboli-top data-v-c9a8bbf9"></view>
+    <label class="_span dialog-jio data-v-c9a8bbf9" style="{{b}}"></label>
+    <view class="_div dialog-content data-v-c9a8bbf9" ref="eventcontainer">
+      <view class="_div content-item data-v-c9a8bbf9" wx:for="{{c}}" wx:key="g">
+        <view class="_div item-title data-v-c9a8bbf9">
+          <image class="_img icon data-v-c9a8bbf9" src="{{item.a}}"></image
+          >{{item.b}}</view
+        >
+        <view catchtap="{{item.f}}" class="_div item-desc data-v-c9a8bbf9">
+          <view class="_div data-v-c9a8bbf9"
+            >{{item.c}}<label
+              class="_span data-v-c9a8bbf9"
+              style="{{'color:'+item.e}}"
+              >{{item.d}}</label
+            >
+          </view>
+          <image
+            class="_img right data-v-c9a8bbf9"
+            src="https://st.gtimg.com/design/3fe44381024b80e922291fd285cdbe04.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div mao-boli-bottom data-v-c9a8bbf9"></view>
+  </view>
+</view>

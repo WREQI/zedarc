@@ -1,0 +1,108 @@
+<view class="_div video-card-mod news-box data-v-9dfcabf6" wx:if="{{a}}">
+  <view
+    class="_div video-card-container container-padding data-v-9dfcabf6"
+    wx:if="{{b}}"
+  >
+    <view class="_div top-source data-v-9dfcabf6" wx:if="{{c}}"
+      >来自微信视频号</view
+    >
+    <view bindtap="{{e}}" class="_div title-box data-v-9dfcabf6">
+      <label class="_span title data-v-9dfcabf6">{{d}}</label>
+    </view>
+    <view bindtap="{{L}}" class="_div img-box data-v-9dfcabf6">
+      <view class="_div data-v-9dfcabf6" wx:if="{{f}}">
+        <view
+          class="_div video-mask video-poster data-v-9dfcabf6"
+          wx:if="{{g}}"
+        >
+          <image
+            class="_img video-mask-img data-v-9dfcabf6"
+            src="{{h}}"
+          ></image>
+        </view>
+        <view class="_div video-mask data-v-9dfcabf6">
+          <image
+            class="_img video-mask-img data-v-9dfcabf6"
+            src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/mask-c.png"
+          ></image>
+        </view>
+        <view class="_div video-box2 data-v-9dfcabf6" wx:if="{{i}}">
+          <view class="_div play-button data-v-9dfcabf6">
+            <image
+              class="_img play-icon-v data-v-9dfcabf6"
+              src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+            ></image>
+          </view>
+        </view>
+        <view class="_div video-info data-v-9dfcabf6" wx:if="{{j}}">
+          <block wx:if="{{k}}">
+            <label class="_span video-info-item data-v-9dfcabf6"
+              >{{l}}{{m}}</label
+            >
+            <view
+              class="_div vertical-line data-v-9dfcabf6"
+              style="{{'width:'+'1px'}}"
+            ></view>
+          </block>
+          <label class="_span video-info-item data-v-9dfcabf6">{{n}}</label>
+        </view>
+      </view>
+      <video-player
+        bind:__l="__l"
+        bindonDurationChange="{{v}}"
+        bindonPlayStatusChange="{{t}}"
+        bindplayClick="{{s}}"
+        class="r data-v-9dfcabf6"
+        key="{{r}}"
+        uI="9dfcabf6-0"
+        uP="{{w}}"
+        uR="{{q}}"
+        wx:if="{{o}}"
+      ></video-player>
+      <txv-video
+        autoplay="{{false}}"
+        bindended="{{E}}"
+        binderror="{{H}}"
+        bindpause="{{D}}"
+        bindplay="{{C}}"
+        bindstatechange="{{F}}"
+        bindtimeupdate="{{G}}"
+        class="data-v-9dfcabf6"
+        controls="{{false}}"
+        height="100%"
+        isHiddenStop="{{true}}"
+        isNeedMutex="{{true}}"
+        muted="{{B}}"
+        playerid="{{z}}"
+        poster="{{A}}"
+        showFullscreenBtn="{{false}}"
+        vid="{{y}}"
+        width="auto"
+        wx:if="{{x}}"
+      ></txv-video>
+      <view
+        catchtap="{{K}}"
+        class="_div custom-voice-box data-v-9dfcabf6"
+        hidden="{{!J}}"
+      >
+        <view class="_div custom-voice-inner data-v-9dfcabf6">
+          <view class="{{['_i','data-v-9dfcabf6','icon',I]}}"></view>
+        </view>
+      </view>
+    </view>
+    <class-bar
+      bind:__l="__l"
+      bindbarClick="{{N}}"
+      class="data-v-9dfcabf6"
+      uI="9dfcabf6-1"
+      uP="{{O}}"
+      wx:if="{{M}}"
+    ></class-bar>
+    <view class="_div source-box data-v-9dfcabf6" wx:if="{{P}}">
+      <label class="_span source-item data-v-9dfcabf6">{{Q}}</label>
+      <label class="_span source-item data-v-9dfcabf6" wx:if="{{R}}"
+        >{{S}}评</label
+      >
+    </view>
+  </view>
+</view>

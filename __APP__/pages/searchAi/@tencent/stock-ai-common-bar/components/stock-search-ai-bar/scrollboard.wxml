@@ -1,0 +1,10 @@
+<view class="_div ai-bar-scroll-container data-v-86a44a02" wx:if="{{a}}">
+  <view
+    catchtap="{{item.d}}"
+    class="_div scroll-item data-v-86a44a02"
+    style="{{item.c}}"
+    wx:for="{{b}}"
+    wx:key="b"
+    >{{item.a}}</view
+  >
+</view>

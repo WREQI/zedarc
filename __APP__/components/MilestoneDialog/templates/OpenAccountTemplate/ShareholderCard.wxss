@@ -1,0 +1,147 @@
+@import "/app.wxss";
+@-webkit-keyframes cardEnterFront-e91a2d06 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%) translateY(-0.573333rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%) translateY(0);
+  }
+}
+@keyframes cardEnterFront-e91a2d06 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%) translateY(-0.573333rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%) translateY(0);
+  }
+}
+@-webkit-keyframes cardEnterBackFade-e91a2d06 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes cardEnterBackFade-e91a2d06 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cardEnterBackRotate-e91a2d06 {
+  0% {
+    transform: translate(-50%) rotate(7deg);
+  }
+  to {
+    transform: translate(-50%) rotate(0);
+  }
+}
+@keyframes cardEnterBackRotate-e91a2d06 {
+  0% {
+    transform: translate(-50%) rotate(7deg);
+  }
+  to {
+    transform: translate(-50%) rotate(0);
+  }
+}
+@-webkit-keyframes cardHideFront-e91a2d06 {
+  0%,
+  99% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes cardHideFront-e91a2d06 {
+  0%,
+  99% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.stock-card.data-v-e91a2d06 {
+  border-radius: 0.2rem;
+  height: 3.813333rem;
+  left: 50%;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(-50%);
+  width: 6.8rem;
+}
+.stock-card--back.data-v-e91a2d06 {
+  top: 0.573333rem;
+  transform-origin: bottom right;
+  z-index: 1;
+}
+.stock-card--front.data-v-e91a2d06 {
+  top: 1.373333rem;
+  z-index: 2;
+}
+.stock-card--hidden.data-v-e91a2d06 {
+  opacity: 0;
+  pointer-events: none;
+}
+.stock-card--hidden.stock-card--front.data-v-e91a2d06 {
+  animation: cardHideFront-e91a2d06 0.15s linear forwards;
+}
+.stock-card--entering.stock-card--front.data-v-e91a2d06 {
+  animation: cardEnterFront-e91a2d06 267ms linear forwards;
+}
+.stock-card--entering-rotate.stock-card--back.data-v-e91a2d06 {
+  animation: cardEnterBackFade-e91a2d06 0.2s linear forwards,
+    cardEnterBackRotate-e91a2d06 333ms linear 67ms forwards;
+}
+.stock-card--visible.data-v-e91a2d06 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%);
+  transition: top 267ms linear, box-shadow 267ms linear;
+}
+.stock-card--visible.stock-card--front.data-v-e91a2d06 {
+  box-shadow: 0 0.133333rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+.stock-card__bg.data-v-e91a2d06 {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.stock-card__title.data-v-e91a2d06 {
+  color: #000;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  left: 0.386667rem;
+  line-height: 0.386667rem;
+  position: absolute;
+  top: 0.386667rem;
+}
+.stock-card__account.data-v-e91a2d06 {
+  top: 0.92rem;
+}
+.stock-card__account.data-v-e91a2d06,
+.stock-card__name.data-v-e91a2d06 {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.32rem;
+  font-weight: 400;
+  left: 0.386667rem;
+  letter-spacing: 0.009733rem;
+  line-height: 0.386667rem;
+  position: absolute;
+}
+.stock-card__name.data-v-e91a2d06 {
+  top: 2.973333rem;
+}

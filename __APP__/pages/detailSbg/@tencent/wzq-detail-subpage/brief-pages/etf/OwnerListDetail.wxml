@@ -1,0 +1,54 @@
+<view
+  class="{{['_div','owner-list-wrapper','data-v-a2a74a5d',k&&'wzq',l&&'no-logo']}}"
+>
+  <view class="_div owner-list-block data-v-a2a74a5d">
+    <view class="_div owner-block-title data-v-a2a74a5d">
+      <label class="_span owner-left-title data-v-a2a74a5d">前十大持有人</label>
+      <label class="_span icon-tips data-v-a2a74a5d"></label>
+      <view
+        catchtap="{{b}}"
+        class="_div select-btn data-v-a2a74a5d"
+        id="ownerSelectbtn"
+      >
+        <view class="_div select-text data-v-a2a74a5d">{{a}}</view>
+        <view class="_div btn-arrow data-v-a2a74a5d"></view>
+      </view>
+    </view>
+    <view class="_div owner-block-content data-v-a2a74a5d">
+      <view class="_div owner-block-desc data-v-a2a74a5d" wx:if="{{c}}"
+        >{{d}}</view
+      >
+      <view class="_div owner-list-content data-v-a2a74a5d">
+        <view class="_div owner-block-row title data-v-a2a74a5d">
+          <view class="_div owner-block-inner data-v-a2a74a5d">股东名称</view>
+          <view class="_div owner-block-after data-v-a2a74a5d"
+            >持有份额/占比</view
+          >
+        </view>
+        <view
+          class="_div owner-block-row data-v-a2a74a5d"
+          wx:for="{{e}}"
+          wx:key="d"
+        >
+          <view class="_div owner-block-inner data-v-a2a74a5d">{{item.a}}</view>
+          <view class="_div owner-block-after data-v-a2a74a5d">
+            <label class="_span data-v-a2a74a5d">{{item.b}}</label>
+            <label class="_span percent data-v-a2a74a5d">{{item.c}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <root-portal class="data-v-a2a74a5d" enable="{{true}}" wx:if="{{f}}">
+    <select-plate
+      bind:__l="__l"
+      bindchangeTab="{{h}}"
+      class="r data-v-a2a74a5d"
+      uI="a2a74a5d-0"
+      uP="{{i}}"
+      uR="selectPlate"
+      wx:if="{{i}}"
+    ></select-plate>
+  </root-portal>
+  <view class="_div zxg-logo data-v-a2a74a5d" wx:if="{{j}}"></view>
+</view>

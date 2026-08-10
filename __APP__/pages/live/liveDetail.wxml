@@ -1,0 +1,77 @@
+<page-meta class="data-v-3de29bd1" rootFontSize="{{a}}"></page-meta>
+<view
+  class="{{['data-v-3de29bd1','live-detail-container',D]}}"
+  data-st-theme="{{E}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3de29bd1"
+    uI="3de29bd1-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3de29bd1"
+    uI="3de29bd1-1"
+  ></stock-privacy-dialog>
+  <live-detail
+    bind:__l="__l"
+    binddataReport="{{i}}"
+    bindexplore="{{j}}"
+    bindloadData="{{h}}"
+    bindshowEditor="{{e}}"
+    bindshowProfilePop="{{k}}"
+    bindshowToast="{{g}}"
+    bindtabChange="{{f}}"
+    class="r data-v-3de29bd1"
+    key="{{d}}"
+    uI="3de29bd1-2"
+    uP="{{l}}"
+    uR="liveDetail"
+    wx:if="{{b}}"
+  ></live-detail>
+  <view
+    bindtouchend="{{s}}"
+    bindtouchmove="{{r}}"
+    bindtouchstart="{{q}}"
+    catchtap="{{p}}"
+    class="_div live-nav-button data-v-3de29bd1"
+    ref="popButton"
+    style="{{'left:'+n+';'+'top:'+o}}"
+    wx:if="{{m}}"
+  >
+    <image
+      class="_img editor-icon data-v-3de29bd1"
+      src="https://st.gtimg.com/design/502a4a91ac4f2a5f43cdc4f6c9482f55.svg"
+    ></image>
+    <label class="_span data-v-3de29bd1">互动</label>
+    <view class="_div shaidan-guide data-v-3de29bd1">聊想法</view>
+  </view>
+  <editor-m-p
+    bind:__l="__l"
+    bindcloseEditor="{{w}}"
+    bindcommitComment="{{v}}"
+    class="r data-v-3de29bd1"
+    uI="3de29bd1-3"
+    uP="{{x}}"
+    uR="editor"
+    wx:if="{{x}}"
+  ></editor-m-p>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{y}}"
+    class="data-v-3de29bd1"
+    uI="3de29bd1-4"
+    uP="{{z}}"
+    wx:if="{{z}}"
+  ></privacy-policy-modal>
+  <block wx:if="{{A}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{B}}"
+      class="data-v-3de29bd1"
+      uI="3de29bd1-5"
+      uP="{{C}}"
+      wx:if="{{C}}"
+    ></profile-pop>
+  </block>
+</view>

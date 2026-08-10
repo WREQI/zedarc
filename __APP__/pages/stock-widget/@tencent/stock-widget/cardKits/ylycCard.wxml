@@ -1,0 +1,28 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','data-v-c8edcef1','card-wrapper',h]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div content-wrapper data-v-c8edcef1">
+    <view class="_div title-container data-v-c8edcef1" wx:if="{{b}}">
+      <view class="_div stock_header_line data-v-c8edcef1"
+        >{{c}}({{d}})-盈利预测</view
+      >
+      <view class="_div spec-line-small data-v-c8edcef1"></view>
+    </view>
+    <profit-forcast
+      bind:__l="__l"
+      bindshowModule="{{f}}"
+      class="data-v-c8edcef1"
+      uI="c8edcef1-0"
+      uP="{{g}}"
+      wx:if="{{e}}"
+    ></profit-forcast>
+  </view>
+  <view class="_div bottom-detail-container data-v-c8edcef1">
+    <view class="_div bottom-detail-container-image data-v-c8edcef1"></view>
+    <view class="_div bottom-detail-container-text data-v-c8edcef1"
+      >点击查看详情</view
+    >
+  </view>
+</view>

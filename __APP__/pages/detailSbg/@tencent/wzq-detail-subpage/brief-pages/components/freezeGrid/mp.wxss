@@ -1,0 +1,105 @@
+.no-data.data-v-de76055d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+}
+.gdtj-list.data-v-de76055d {
+  overflow: hidden;
+}
+.gdtj-list .scroll-block.data-v-de76055d {
+  height: 0.9333333333333333rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.04rem;
+}
+.gdtj-list .no-scroll.data-v-de76055d {
+  background-color: #fff;
+  flex-shrink: 0;
+  width: 45%;
+  z-index: 3;
+}
+.gdtj-list .horizontal-scroll.data-v-de76055d {
+  flex: 1;
+}
+.gdtj-list .horizontal-scroll.data-v-de76055d::-webkit-scrollbar {
+  display: none;
+}
+.gdtj-list .horizontal-scroll .column.data-v-de76055d {
+  justify-content: flex-end;
+  width: 2.2rem;
+}
+.gdtj-list .horizontal-scroll .column.samllFont.data-v-de76055d {
+  font-size: 0.32rem;
+}
+.gdtj-list .caption.data-v-de76055d {
+  background-color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  left: 0;
+  margin: 0 0.72rem;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 1.28rem;
+  z-index: 100;
+}
+.gdtj-list .caption.t-0.data-v-de76055d {
+  top: 0.96rem;
+}
+.gdtj-list .caption .item.data-v-de76055d {
+  align-items: center;
+  color: #7a8499;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  height: 0.9333333333333333rem;
+}
+.gdtj-list .caption .item .column.data-v-de76055d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+}
+.gdtj-list .caption .item .column.data-v-de76055d:last-child {
+  padding-right: 0.37333333333333335rem;
+}
+.gdtj-list .list.data-v-de76055d {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.8666666666666667rem;
+  overflow: hidden;
+}
+.gdtj-list .list .item.data-v-de76055d {
+  color: #262e40;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 0.9333333333333333rem;
+  line-height: 0.4666666666666667rem;
+  margin-bottom: 0.32rem;
+  width: 100%;
+}
+.gdtj-list .list .item .column.data-v-de76055d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+}
+.gdtj-list .list .item .identifier.data-v-de76055d {
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.gdtj-list .list .item .identifier .identifier-name.data-v-de76055d {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}

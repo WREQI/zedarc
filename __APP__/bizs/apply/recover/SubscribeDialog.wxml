@@ -1,0 +1,16 @@
+<view class="data-v-01aefb73">
+  <overlay
+    bind:__l="__l"
+    class="data-v-01aefb73"
+    uI="01aefb73-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{d}}"
+  >
+    <view class="subscribe_container data-v-01aefb73">
+      <image bindtap="{{a}}" class="close-btn data-v-01aefb73"></image>
+      <image class="subscribe-bg data-v-01aefb73" src="{{b}}"></image>
+      <image class="subscribe-qrcode-png data-v-01aefb73" src="{{c}}"></image>
+    </view>
+  </overlay>
+</view>

@@ -1,0 +1,17 @@
+<view class="_div container data-v-7173d8a8">
+  <view class="_div container-left data-v-7173d8a8">
+    <view bindtap="{{a}}" class="_div title data-v-7173d8a8"
+      >查看关联板块详情</view
+    >
+  </view>
+  <view bindtap="{{c}}" class="_div container-right data-v-7173d8a8">
+    <view class="_div new-market-icon data-v-7173d8a8">
+      <image
+        class="_img market-icon-img data-v-7173d8a8"
+        src="https://wzq.tenpay.com/resources/mp-files/portfolio/icon/pt.svg"
+      ></image>
+    </view>
+    <view class="_div right-text data-v-7173d8a8">{{b}}</view>
+    <view class="_div right-arrow data-v-7173d8a8"></view>
+  </view>
+</view>

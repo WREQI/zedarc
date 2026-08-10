@@ -1,0 +1,103 @@
+<view class="{{['_div','data-v-29b53112','dividend-block-wrapper',z]}}">
+  <view class="_div dividend-block data-v-29b53112">
+    <view bindtap="{{c}}" class="_div header data-v-29b53112">
+      <view class="_div left-wrapper data-v-29b53112">
+        <view class="_div title data-v-29b53112">
+          <view class="_div main-title data-v-29b53112">
+            <image
+              alt="享红利"
+              class="_img title-img data-v-29b53112"
+              src="{{a}}"
+            ></image>
+          </view>
+          <view class="_div sub-title data-v-29b53112">{{b}}</view>
+        </view>
+      </view>
+      <view class="_div right-wrapper data-v-29b53112">
+        <view class="_div right-arrow-icon data-v-29b53112"></view>
+      </view>
+    </view>
+    <view class="_div content-wrapper data-v-29b53112">
+      <view class="_div card data-v-29b53112">
+        <dividend-compare-card
+          bind:__l="__l"
+          class="data-v-29b53112"
+          uI="29b53112-0"
+        ></dividend-compare-card>
+        <view
+          bindtap="{{r}}"
+          class="_div stock-item data-v-29b53112"
+          wx:if="{{d}}"
+        >
+          <view class="_div stock-left data-v-29b53112">
+            <view class="_div stock-name data-v-29b53112">{{e}}</view>
+            <view class="_div stock-detail data-v-29b53112">
+              <image
+                class="_img market-icon data-v-29b53112"
+                src="{{f}}"
+              ></image>
+              <view class="_div stock-code data-v-29b53112">{{g}}</view>
+              <view class="_div tag-list data-v-29b53112" wx:if="{{h}}">
+                <view class="_div stock-tag data-v-29b53112">{{i}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="_div stock-right-block data-v-29b53112">
+            <block wx:if="{{j}}">
+              <view class="_div stock-middle data-v-29b53112">
+                <view class="_div num data-v-29b53112">{{k}}</view>
+                <view class="_div desc dividend-rate-desc data-v-29b53112"
+                  >股息率<view
+                    catchtap="{{l}}"
+                    class="_div dividend-rate-info-wrap data-v-29b53112"
+                  >
+                    <image
+                      class="_img dividend-rate-info data-v-29b53112"
+                      src="https://st.gtimg.com/design/118acead4d4d3bd0a356abf70d2b4020.png"
+                    ></image>
+                  </view>
+                </view>
+              </view>
+              <view class="_div stock-right data-v-29b53112">
+                <view class="{{['_div','data-v-29b53112','num',n]}}"
+                  >{{m}}</view
+                >
+                <view class="_div desc data-v-29b53112">近1年涨幅</view>
+              </view>
+            </block>
+            <block wx:else>
+              <view class="_div stock-middle data-v-29b53112">
+                <view class="{{['_div','data-v-29b53112','num',p]}}"
+                  >{{o}}</view
+                >
+                <view class="_div desc data-v-29b53112">近1年涨幅</view>
+              </view>
+              <view class="_div stock-right data-v-29b53112">
+                <view class="_div num data-v-29b53112">{{q}}元</view>
+                <view class="_div desc data-v-29b53112">买一笔仅需</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <teach-pop
+    bind:__l="__l"
+    bindcloseTeachPop="{{s}}"
+    class="data-v-29b53112"
+    uI="29b53112-1"
+    uP="{{t}}"
+    wx:if="{{t}}"
+  ></teach-pop>
+  <root-portal class="data-v-29b53112" enable="{{true}}" wx:if="{{v}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{x}}"
+      class="data-v-29b53112"
+      uI="29b53112-2"
+      uP="{{y}}"
+      wx:if="{{w}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

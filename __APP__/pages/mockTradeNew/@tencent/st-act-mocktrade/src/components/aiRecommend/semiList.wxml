@@ -1,0 +1,103 @@
+<semi-mask
+  bind:__l="__l"
+  bindcloseSemimask="{{o}}"
+  class="semi-list-mask r data-v-d2347389"
+  uI="d2347389-0"
+  uR="semimask"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div header data-v-d2347389">
+    <view class="_div title data-v-d2347389">问AI选股结果</view>
+    <view bindtap="{{b}}" class="_div close-btn data-v-d2347389">
+      <image
+        alt="close"
+        class="_img close-btn-img data-v-d2347389"
+        src="https://st.gtimg.com/design/4cc4653db51dc4df382dfd38fcd329c1.svg"
+      ></image>
+    </view>
+  </view>
+  <view class="_div desc data-v-d2347389">
+    <view class="_div name data-v-d2347389">股票名称</view>
+    <view bindtap="{{f}}" class="_div new-price data-v-d2347389">
+      <view class="{{['_div','text','data-v-d2347389',c&&'active']}}"
+        >最新价</view
+      >
+      <view class="_div status data-v-d2347389">
+        <view
+          class="{{['_div','status-up','data-v-d2347389',d&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','status-down','data-v-d2347389',e&&'active']}}"
+        ></view>
+      </view>
+    </view>
+    <view bindtap="{{j}}" class="_div zdf data-v-d2347389">
+      <view class="{{['_div','text','data-v-d2347389',g&&'active']}}"
+        >涨跌幅</view
+      >
+      <view class="_div status data-v-d2347389">
+        <view
+          class="{{['_div','status-up','data-v-d2347389',h&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','status-down','data-v-d2347389',i&&'active']}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div action data-v-d2347389"></view>
+  </view>
+  <view class="_div stock-list data-v-d2347389" ref="stockListRef">
+    <view
+      class="_div stock-item data-v-d2347389"
+      wx:for="{{k}}"
+      wx:for-item="stock"
+      wx:key="m"
+    >
+      <view class="_div stock-info data-v-d2347389">
+        <view class="_div stock-name data-v-d2347389">{{stock.a}}</view>
+        <view class="_div stock-code data-v-d2347389">
+          <image
+            class="_img market-tag data-v-d2347389"
+            src="https://st.gtimg.com/design/95528a2dbca6d75baf0a66c04e5a6f26.png"
+            wx:if="{{stock.b}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-d2347389"
+            src="https://st.gtimg.com/design/8f4f82d3e55abc281b1b831b7733b4b0.png"
+            wx:elif="{{stock.c}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-d2347389"
+            src="https://st.gtimg.com/design/e37828734c8a659dde7b08b766c168c8.png"
+            wx:elif="{{stock.d}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-d2347389"
+            src="https://st.gtimg.com/design/fafeae0f37922e3e19b1a72bb0bbe2f8.png"
+            wx:elif="{{stock.e}}"
+          ></image>
+          <label class="_span code data-v-d2347389">{{stock.f}}</label>
+        </view>
+      </view>
+      <view class="_div name-price-group data-v-d2347389">
+        <view class="_div value data-v-d2347389">{{stock.g}}</view>
+      </view>
+      <view class="_div zdf-info data-v-d2347389">
+        <view class="{{['_div','data-v-d2347389','value',stock.i]}}"
+          >{{stock.h}}</view
+        >
+      </view>
+      <view
+        bindtap="{{stock.l}}"
+        class="{{['_div','action-btn','data-v-d2347389',stock.k&&'disabled',l&&'lite-mode']}}"
+        >{{stock.j}}</view
+      >
+    </view>
+  </view>
+  <view class="_div new-user-tip data-v-d2347389" wx:if="{{m}}">
+    <view class="_div new-user-tip-text data-v-d2347389"
+      >已为你准备好1,000,000元练手金，零成本体验模拟炒股</view
+    >
+  </view>
+</semi-mask>

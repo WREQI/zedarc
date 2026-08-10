@@ -1,0 +1,74 @@
+<view
+  class="_div newstock-purchase-container data-v-e79fd235"
+  ref="chooseIndex"
+>
+  <view class="_div newstock-purchase-content data-v-e79fd235">
+    <view class="_div tab-header data-v-e79fd235">
+      <view class="_div tab-header-content data-v-e79fd235">
+        <view
+          catchtap="{{tab.e}}"
+          class="{{['_div','tab-item','data-v-e79fd235',tab.d]}}"
+          wx:for="{{a}}"
+          wx:for-item="tab"
+          wx:key="c"
+        >
+          <view class="_div data-v-e79fd235">{{tab.a}}</view>
+          <view class="_div indi-cot data-v-e79fd235" wx:if="{{tab.b}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-e79fd235" wx:if="{{b}}">
+      <stock-purchase-list
+        bind:__l="__l"
+        binddisable="{{f}}"
+        bindenable="{{g}}"
+        bindfinishPullDown="{{i}}"
+        bindshowTips="{{h}}"
+        class="r data-v-e79fd235"
+        key="{{e}}"
+        uI="e79fd235-0"
+        uP="{{j}}"
+        uR="purchaselist"
+        wx:if="{{c}}"
+      ></stock-purchase-list>
+      <stock-purchase-list
+        bind:__l="__l"
+        binddidSHowDailyAnination="{{p}}"
+        binddisable="{{m}}"
+        bindenable="{{n}}"
+        bindfinishPullDown="{{q}}"
+        bindshowTips="{{o}}"
+        class="r data-v-e79fd235"
+        key="{{1}}"
+        uI="e79fd235-1"
+        uP="{{r}}"
+        uR="purchaselist"
+        wx:if="{{k}}"
+      ></stock-purchase-list>
+      <stock-purchase-list
+        bind:__l="__l"
+        binddisable="{{v}}"
+        bindenable="{{w}}"
+        bindfinishPullDown="{{y}}"
+        bindshowTips="{{x}}"
+        class="r data-v-e79fd235"
+        key="{{2}}"
+        uI="e79fd235-2"
+        uP="{{z}}"
+        uR="purchaselist"
+        wx:if="{{s}}"
+      ></stock-purchase-list>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-e79fd235"></view>
+  <view class="_div teach-wrapper data-v-e79fd235" wx:if="{{A}}">
+    <teach-pop-block
+      bind:__l="__l"
+      bindclosePop="{{B}}"
+      class="data-v-e79fd235"
+      uI="e79fd235-3"
+      uP="{{C}}"
+      wx:if="{{C}}"
+    ></teach-pop-block>
+  </view>
+</view>

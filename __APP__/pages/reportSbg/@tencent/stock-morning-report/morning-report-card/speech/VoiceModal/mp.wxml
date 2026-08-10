@@ -1,0 +1,32 @@
+<view class="{{['_div','data-v-0c5b64c5','voice-modal',l]}}" wx:if="{{a}}">
+  <view class="_div voice-modal-mask data-v-0c5b64c5"></view>
+  <view class="_div voice-modal-top data-v-0c5b64c5">
+    <view
+      class="{{['_div','data-v-0c5b64c5','pop-container',g,h]}}"
+      wx:if="{{b}}"
+    >
+      <view class="_div pop-container-body data-v-0c5b64c5">
+        <label class="_span cancel-zone-tips-text data-v-0c5b64c5" wx:if="{{c}}"
+          >...</label
+        >
+        <view class="_div voice-text-wrapper data-v-0c5b64c5" wx:elif="{{d}}">
+          <label class="_span voice-text data-v-0c5b64c5"
+            >{{e}}<label class="_span voice-text-loading data-v-0c5b64c5"
+              >...</label
+            >
+          </label>
+        </view>
+        <view class="{{['_div','data-v-0c5b64c5','wave-img',f]}}"></view>
+      </view>
+      <view class="_div pop-container-triangle data-v-0c5b64c5"></view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-0c5b64c5',k,'voice-modal-bottom-container']}}">
+    <view class="_div tip-text data-v-0c5b64c5">{{i}}</view>
+    <view class="{{['_div','data-v-0c5b64c5','voice-modal-bottom',j]}}">
+      <view class="_div voice-modal-recording data-v-0c5b64c5">
+        <view class="_div recording-icon data-v-0c5b64c5"></view>
+      </view>
+    </view>
+  </view>
+</view>

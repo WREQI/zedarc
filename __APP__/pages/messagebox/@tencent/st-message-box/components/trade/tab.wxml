@@ -1,0 +1,13 @@
+<view class="{{['_div','data-v-a0234076','trade-message-tab-wrapper',c]}}">
+  <view
+    bindtap="{{item.f}}"
+    class="{{['_div','data-v-a0234076','trade-item',item.e,b]}}"
+    wx:for="{{a}}"
+    wx:key="d"
+    >{{item.a}}<label
+      class="_span red-point-num data-v-a0234076"
+      wx:if="{{item.b}}"
+      >{{item.c}}</label
+    >
+  </view>
+</view>

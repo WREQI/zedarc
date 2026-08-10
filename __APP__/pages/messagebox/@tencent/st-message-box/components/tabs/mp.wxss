@@ -1,0 +1,83 @@
+.tabbar-top-wrapper.data-v-3e57e40d {
+  align-items: center;
+  background-color: var(--fill-2);
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 0.4266666666666667rem;
+}
+.tabbar-top-wrapper .title-wrapper.data-v-3e57e40d {
+  align-items: center;
+  background: linear-gradient(270deg, #fff 30%, #fff);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8rem;
+  justify-content: flex-end;
+  padding-left: 0.16rem;
+  position: absolute;
+  right: 0.64rem;
+}
+.tabbar-top-wrapper .title-wrapper .title-arrow.data-v-3e57e40d {
+  height: 0.32rem;
+  width: 0.32rem;
+}
+.tabbar-wrapper.data-v-3e57e40d {
+  box-sizing: border-box;
+  height: 1.1733333333333333rem;
+  white-space: nowrap;
+}
+.tabbar-wrapper .tab.data-v-3e57e40d,
+.tabbar-wrapper .tabbar-container.data-v-3e57e40d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+.tabbar-wrapper .tab.data-v-3e57e40d {
+  color: var(--color-midgray-1);
+  font-size: 0.4rem;
+  margin: 0 0.5333333333333333rem;
+  position: relative;
+}
+.tabbar-wrapper .tab.data-v-3e57e40d:first-child {
+  margin-left: 0;
+}
+.tabbar-wrapper .tab.main.data-v-3e57e40d:last-child {
+  padding-right: 0;
+}
+.tabbar-wrapper .tab.select-tab.data-v-3e57e40d {
+  color: var(--color-heavygray);
+  font-weight: 500;
+  position: relative;
+}
+.tabbar-wrapper .tab.select-tab.data-v-3e57e40d:after {
+  background-color: var(--color-red);
+  border-radius: 0.04rem;
+  bottom: 0.18666666666666668rem;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.tabbar-wrapper .tab .notify.data-v-3e57e40d {
+  background: #e63535;
+  border-radius: 0.6666666666666666rem;
+  color: #fff;
+  font-size: 0.32rem;
+  font-weight: 500;
+  height: 0.4266666666666667rem;
+  line-height: 0.4533333333333333rem;
+  padding: 0 0.13333333333333333rem;
+  position: absolute;
+  right: -0.21333333333333335rem;
+  text-align: center;
+  top: -0.21333333333333335rem;
+}
+.tabbar-wrapper .tab .notify.single-num.data-v-3e57e40d {
+  border-radius: 50%;
+  height: 0.4266666666666667rem;
+  padding: 0;
+  width: 0.4266666666666667rem;
+}

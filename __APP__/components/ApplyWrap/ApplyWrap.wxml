@@ -1,0 +1,6 @@
+<view class="apply-container-root">
+  <slot wx:if="{{a}}"></slot>
+  <view class="loading" wx:else>
+    <loading bind:__l="__l" uI="7a3c3550-0"></loading>
+  </view>
+</view>

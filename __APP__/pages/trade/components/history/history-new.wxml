@@ -1,0 +1,31 @@
+<view class="history-new history-common data-v-339bbbcd">
+    <view class="history-new-tabs data-v-339bbbcd">
+        <tabbar bind:__l="__l" bindchange="{{a}}" class="no-border data-v-339bbbcd" uI="339bbbcd-0" uP="{{b}}" wx:if="{{b}}"></tabbar>
+        <view bindtap="{{c}}" class="icon icon-search data-v-339bbbcd"></view>
+    </view>
+    <swiper bindchange="{{o}}" class="trade-record-swiper data-v-339bbbcd" current="{{n}}" duration="300">
+        <swiper-item class="data-v-339bbbcd" key="orderlist">
+            <view class="history-class-filter data-v-339bbbcd">
+                <view bindtap="{{f}}" class="history-class-trigger data-v-339bbbcd">
+                    <label class="data-v-339bbbcd">{{d}}</label>
+                    <view class="divider data-v-339bbbcd"></view>
+                    <image class="trigger-icon data-v-339bbbcd" src="{{e}}"></image>
+                </view>
+            </view>
+            <history-list bind:__l="__l" class="r data-v-339bbbcd" key="orderhistorylist" uI="339bbbcd-1" uP="{{h}}" uR="historyOrderRef" wx:if="{{h}}"></history-list>
+        </swiper-item>
+        <swiper-item class="data-v-339bbbcd" key="finishlist">
+            <view class="history-class-filter data-v-339bbbcd">
+                <view bindtap="{{k}}" class="history-class-trigger data-v-339bbbcd">
+                    <label class="data-v-339bbbcd">{{i}}</label>
+                    <view class="divider data-v-339bbbcd"></view>
+                    <image class="trigger-icon data-v-339bbbcd" src="{{j}}"></image>
+                </view>
+            </view>
+            <history-list bind:__l="__l" class="r data-v-339bbbcd" key="completehistorylist" uI="339bbbcd-2" uP="{{m}}" uR="historyCompleteRef" wx:if="{{m}}"></history-list>
+        </swiper-item>
+    </swiper>
+    <type-selector bind:__l="__l" bindclose="{{q}}" bindconfirm="{{p}}" class="data-v-339bbbcd" uI="339bbbcd-3" uP="{{r}}" wx:if="{{r}}"></type-selector>
+    <custom-picker bind:__l="__l" bindclose="{{s}}" bindconfirm="{{t}}" class="data-v-339bbbcd" uI="339bbbcd-4" uP="{{v}}" wx:if="{{v}}"></custom-picker>
+    <input class="temp-input data-v-339bbbcd" id="history-tempInput" ref="tempInput"></input>
+</view>

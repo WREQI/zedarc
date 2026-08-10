@@ -1,0 +1,48 @@
+<view class="{{['_div','data-v-43149120','mod-handle-view-oper','oper-box',p,q]}}" wx:if="{{a}}">
+    <view class="_div view-box data-v-43149120" wx:if="{{b}}">
+        <label class="_span data-v-43149120">阅读量{{c}}</label>
+    </view>
+    <view class="_div data-v-43149120" wx:else></view>
+    <view class="{{['_div','data-v-43149120',o]}}">
+        <view catchtap="{{h}}" class="_div op data-v-43149120" ref="commentButton" wx:if="{{d}}">
+            <view class="_div text data-v-43149120">
+                <image class="{{['_img','data-v-43149120','icon']}}" src="https://st.gtimg.com/design/92cb2857c2e041369772badeb8c6dea9.png"></image>
+                <label class="_span data-v-43149120" wx:if="{{e}}">{{f}}</label>
+                <label class="_span data-v-43149120" wx:else>{{g}}</label>
+            </view>
+        </view>
+        <view catchtap="{{n}}" class="_div op like-box data-v-43149120" wx:if="{{i}}">
+            <view class="_div text data-v-43149120">
+                <image class="{{['_img','data-v-43149120','icon']}}" src="https://st.gtimg.com/design/81c2c30091235b3ec917dec21ee9d6f7.png" wx:if="{{j}}"></image>
+                <image class="{{['_img','data-v-43149120','icon']}}" src="https://st.gtimg.com/design/4d14dc8a1c7abad38ec1b27e5438c37d.png" wx:else></image>
+                <label class="_span data-v-43149120" wx:if="{{k}}">{{l}}</label>
+                <label class="_span data-v-43149120" wx:else>{{m}}</label>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="{{['_div','data-v-43149120','mod-handle-view-oper','oper-box']}}" wx:elif="{{r}}">
+    <view class="_div view-box data-v-43149120" wx:if="{{s}}">
+        <label class="_span data-v-43149120">阅读 {{t}}</label>
+    </view>
+    <view class="{{['_div','data-v-43149120',I]}}">
+        <view catchtap="{{x}}" class="_div op data-v-43149120" ref="turn" wx:if="{{v}}">
+            <view class="_div text data-v-43149120">
+                <view class="_i sq-icon-zhuanfa data-v-43149120"></view>
+                <label class="_span data-v-43149120">{{w}}</label>
+            </view>
+        </view>
+        <view catchtap="{{C}}" class="_div op data-v-43149120" ref="commentButton" wx:if="{{y}}">
+            <view class="_div text data-v-43149120">
+                <view class="_i sq-icon-pinglun data-v-43149120"></view>
+                <label class="_span data-v-43149120" wx:if="{{z}}">{{A}}</label>
+                <label class="_span data-v-43149120" wx:else>{{B}}</label>
+            </view>
+        </view>
+        <view catchtap="{{H}}" class="_div op like-box data-v-43149120" wx:if="{{D}}">
+            <niu-animation-m-p bind:__l="__l" class="niuAnimation r data-v-43149120" uI="43149120-0" uP="{{G}}" uR="niu" wx:if="{{E}}"></niu-animation-m-p>
+        </view>
+    </view>
+    <handle-more bind:__l="__l" bindonHandleTurn="{{O}}" bindtapDeleteItem="{{M}}" bindtapIllegal="{{L}}" bindtapMore="{{N}}" class="r data-v-43149120" uI="43149120-1" uP="{{P}}" uR="handleMore" wx:if="{{J}}"></handle-more>
+    <input class="fake-input data-v-43149120" ref="fakeInput" type="text"></input>
+</view>

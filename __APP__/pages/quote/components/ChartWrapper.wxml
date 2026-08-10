@@ -1,0 +1,43 @@
+<view
+  class="{{['_div','chart-wrapper','data-v-562c701d',t&&'skin-black',v&&'chart-wrapper-landscape']}}"
+>
+  <composition
+    bind:__l="__l"
+    bindcloseLandscape="{{m}}"
+    bindgetExtraInfo="{{g}}"
+    bindgetIntroduce="{{j}}"
+    bindgetMarketState="{{f}}"
+    bindgetUSPanData="{{h}}"
+    bindgetZDP="{{i}}"
+    bindmoveChartTop="{{d}}"
+    bindonBarTap="{{o}}"
+    bindonTipTap="{{n}}"
+    bindopenLandscape="{{l}}"
+    bindswitchChart="{{k}}"
+    bindupdateSetting="{{e}}"
+    class="r data-v-562c701d"
+    uI="562c701d-0"
+    uP="{{p}}"
+    uR="composition"
+    uS="{{['redBag']}}"
+    wx:if="{{a}}"
+  >
+    <view slot="{{v0.e}}" wx:for="{{b}}" wx:for-item="v0" wx:key="d">
+      <redbag-animate
+        bind:__l="__l"
+        class="data-v-562c701d"
+        uI="{{v0.b}}"
+        uP="{{v0.c}}"
+        wx:if="{{v0.a}}"
+      ></redbag-animate>
+    </view>
+  </composition>
+  <tool-box
+    bind:__l="__l"
+    class="r data-v-562c701d"
+    uI="562c701d-2"
+    uP="{{s}}"
+    uR="toolBox"
+    wx:if="{{q}}"
+  ></tool-box>
+</view>

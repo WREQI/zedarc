@@ -1,0 +1,33 @@
+<card-v1
+  bind:__l="__l"
+  bindclick="{{d}}"
+  bindstar="{{e}}"
+  bindview="{{c}}"
+  class="r"
+  uI="5f1dc1f2-0"
+  uP="{{f}}"
+  uR="cardv1"
+  wx:if="{{a}}"
+></card-v1>
+<card-v2-lite
+  bind:__l="__l"
+  bindclick="{{j}}"
+  bindstar="{{k}}"
+  bindview="{{i}}"
+  class="r"
+  uI="5f1dc1f2-1"
+  uP="{{l}}"
+  uR="cardv2"
+  wx:elif="{{g}}"
+></card-v2-lite>
+<card-v2
+  bind:__l="__l"
+  bindclick="{{o}}"
+  bindstar="{{p}}"
+  bindview="{{n}}"
+  class="r"
+  uI="5f1dc1f2-2"
+  uP="{{q||''}}"
+  uR="cardv2"
+  wx:else
+></card-v2>

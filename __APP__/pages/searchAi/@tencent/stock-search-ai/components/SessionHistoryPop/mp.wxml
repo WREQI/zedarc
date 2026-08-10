@@ -1,0 +1,24 @@
+<view class="_div data-v-110a8277">
+    <view catchtap="{{f}}" catchtouchmove="{{e}}" class="_div st-popup data-v-110a8277" wx:if="{{a}}">
+        <view catchtap="{{d}}" class="_div popup-container del-popup-container data-v-110a8277">
+            <view class="_div txt align-center data-v-110a8277">确认删除</view>
+            <view class="_div txt align-center light data-v-110a8277">删除后将无法恢复，请确认后再操作</view>
+            <view class="_div btns data-v-110a8277">
+                <view catchtap="{{b}}" class="_div btn cancel data-v-110a8277">取消</view>
+                <view catchtap="{{c}}" class="_div btn ok data-v-110a8277">确定删除</view>
+            </view>
+        </view>
+    </view>
+    <view catchtap="{{n}}" class="_div st-popup data-v-110a8277" wx:if="{{g}}">
+        <view catchtap="{{m}}" class="_div popup-container rename-popup-container data-v-110a8277">
+            <view class="_div txt align-center data-v-110a8277">请输入对话名称</view>
+            <view class="_div input data-v-110a8277">
+                <input adjustPosition="{{false}}" bindinput="{{j}}" class="st-input-item data-v-110a8277" focus="{{true}}" maxLength="{{120}}" placeholder="{{h}}" ref="renameSessionInput" type="text" value="{{i}}"></input>
+            </view>
+            <view class="_div btns data-v-110a8277">
+                <view catchtap="{{k}}" class="_div btn cancel data-v-110a8277">取消</view>
+                <view catchtap="{{l}}" class="_div btn ok data-v-110a8277">确定</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,33 @@
+<view class="_div mod-otherSource data-v-92b6c649" wx:if="{{a}}">
+  <view
+    catchtap="{{g}}"
+    class="{{['_div','data-v-92b6c649','source_others',f]}}"
+    wx:if="{{b}}"
+  >
+    <view
+      class="{{['_div','source_inline','source_others_op','data-v-92b6c649',d]}}"
+      wx:if="{{c}}"
+    ></view>
+    <view class="_div source_inline source_others_text data-v-92b6c649"
+      >{{e}}</view
+    >
+  </view>
+  <view
+    catchtap="{{k}}"
+    class="_div source_others data-v-92b6c649"
+    wx:elif="{{h}}"
+  >
+    <view class="_div source_inline source_others_op data-v-92b6c649">
+      <base-image
+        bind:__l="__l"
+        class="source_others_op data-v-92b6c649"
+        uI="92b6c649-0"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></base-image>
+    </view>
+    <view class="_div source_inline source_others_text data-v-92b6c649"
+      >{{j}}</view
+    >
+  </view>
+</view>

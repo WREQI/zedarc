@@ -1,0 +1,35 @@
+<view class="{{['trade-result',p]}}" wx:if="{{a}}">
+  <view class="trade-result--header flex-between fs-32" wx:if="{{b}}">
+    <view class="flex-1"></view>
+    <view class="flex-2 align-c flex-center">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo-icon-header flex-vcenter"
+        uI="407931b4-0"
+      ></broker-logo>
+      <label class="broker-fundaccount">{{c}} {{d}}</label>
+    </view>
+    <view bindtap="{{e}}" class="flex-1 flex-end">
+      <view class="close-bg"></view>
+    </view>
+  </view>
+  <view class="result-wrapper flex-column flex-center">
+    <view class="{{[f]}}"></view>
+    <block wx:if="{{g}}">
+      <view class="result-title text-color-1">{{h}}</view>
+      <view class="result-desc text-color-5">{{i}}</view>
+    </block>
+    <block wx:else>
+      <view class="result-title text-color-1">{{j}}</view>
+      <view class="result-desc text-color-5">{{k}}</view>
+      <button
+        bindtap="{{o}}"
+        class="{{['btn',m]}}"
+        disabled="{{n}}"
+        type="primary"
+      >
+        {{l}}
+      </button>
+    </block>
+  </view>
+</view>

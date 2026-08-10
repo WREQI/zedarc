@@ -1,0 +1,17 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<landscape
+  bind:__l="__l"
+  class="r"
+  data-st-theme="{{c}}"
+  uI="befbd748-0"
+  uP="{{d}}"
+  uR="landscape"
+  wx:if="{{d}}"
+></landscape>
+<mp-privacy-dialog bind:__l="__l" uI="befbd748-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="befbd748-2"
+  uP="{{e}}"
+  wx:if="{{e}}"
+></stock-privacy-dialog>

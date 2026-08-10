@@ -1,0 +1,83 @@
+<view class="_div hswc-quote-wrapper data-v-900d21cb">
+  <view class="_div hswc-quote-wrapper-content data-v-900d21cb">
+    <view class="_div hswc-quote-header data-v-900d21cb">全球指数</view>
+    <view class="_div hswc-quote-item-title data-v-900d21cb">
+      <view class="_div hswc-quote-item-title-left data-v-900d21cb"
+        >指数名称</view
+      >
+      <view class="_div hswc-quote-item-title-mid data-v-900d21cb">最新价</view>
+      <view class="_div hswc-quote-item-title-right data-v-900d21cb"
+        >涨跌幅</view
+      >
+    </view>
+    <view class="_div data-v-900d21cb" wx:for="{{a}}" wx:key="l">
+      <view
+        bindtap="{{item.k}}"
+        class="_div hswc-quote-item data-v-900d21cb"
+        style="{{'background-color:'+item.j}}"
+        wx:if="{{item.a}}"
+      >
+        <view
+          class="_div hswc-quote-item-left data-v-900d21cb"
+          style="{{'color:'+item.d}}"
+          wx:if="{{item.b}}"
+          >{{item.c}}</view
+        >
+        <view
+          class="_div hswc-quote-item-mid data-v-900d21cb"
+          wx:if="{{item.e}}"
+          >{{item.f}}</view
+        >
+        <view
+          class="{{['_div','data-v-900d21cb','hswc-quote-item-right',item.i]}}"
+          wx:if="{{item.g}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div hswc-quote-wrapper-content other-asset data-v-900d21cb">
+    <view class="_div hswc-quote-header data-v-900d21cb">其他资产</view>
+    <view class="_div hswc-quote-item-title data-v-900d21cb">
+      <view class="_div hswc-quote-item-title-left data-v-900d21cb">名称</view>
+      <view class="_div hswc-quote-item-title-mid data-v-900d21cb">最新价</view>
+      <view class="_div hswc-quote-item-title-right data-v-900d21cb"
+        >涨跌幅</view
+      >
+    </view>
+    <view class="_div data-v-900d21cb" wx:for="{{b}}" wx:key="l">
+      <view
+        bindtap="{{item.k}}"
+        class="_div hswc-quote-item data-v-900d21cb"
+        style="{{'background-color:'+item.j}}"
+        wx:if="{{item.a}}"
+      >
+        <view
+          class="_div hswc-quote-item-left data-v-900d21cb"
+          style="{{'color:'+item.d}}"
+          wx:if="{{item.b}}"
+          >{{item.c}}</view
+        >
+        <view
+          class="_div hswc-quote-item-mid data-v-900d21cb"
+          wx:if="{{item.e}}"
+          >{{item.f}}</view
+        >
+        <view
+          class="{{['_div','data-v-900d21cb','hswc-quote-item-right',item.i]}}"
+          wx:if="{{item.g}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <empty
+    bind:__l="__l"
+    class="data-v-900d21cb"
+    uI="900d21cb-0"
+    wx:if="{{c}}"
+  ></empty>
+  <view class="_div hswc-quote-tip data-v-900d21cb"
+    >行情数据实时更新，可点击查看详情</view
+  >
+</view>

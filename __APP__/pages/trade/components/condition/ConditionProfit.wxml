@@ -1,0 +1,23 @@
+<view
+  class="{{['cond-profit-wrap','^cond-profit-wrap','data-v-ce8fa94f',h&&'hide-fund']}}"
+>
+  <view class="content-wrap days data-v-ce8fa94f">
+    <view class="title data-v-ce8fa94f">运行天数</view>
+    <view class="value data-v-ce8fa94f">{{a}}</view>
+  </view>
+  <view class="content-wrap transaction data-v-ce8fa94f">
+    <view class="title data-v-ce8fa94f">成交笔数</view>
+    <view class="value data-v-ce8fa94f">{{b}}</view>
+  </view>
+  <view class="content-wrap profit data-v-ce8fa94f">
+    <view class="title data-v-ce8fa94f"
+      >累计收益<label
+        catchtap="{{d}}"
+        class="income-tips icon icon-italic-info data-v-ce8fa94f"
+        wx:if="{{c}}"
+      ></label>
+    </view>
+    <view class="{{['data-v-ce8fa94f','value',g]}}" wx:if="{{e}}">{{f}}</view>
+    <view class="value data-v-ce8fa94f" wx:else>***</view>
+  </view>
+</view>

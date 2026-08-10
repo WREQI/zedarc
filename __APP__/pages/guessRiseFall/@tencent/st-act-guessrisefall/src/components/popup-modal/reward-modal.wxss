@@ -1,0 +1,387 @@
+.reward-modal.data-v-77310ab3 {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+.reward-modal__mask.data-v-77310ab3 {
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.4;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.reward-modal__box.data-v-77310ab3 {
+  height: 9.333333333333334rem;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  width: 7.226666666666667rem;
+}
+.reward-modal__content.data-v-77310ab3 {
+  background-color: #fff;
+  background-image: url(https://st.gtimg.com/design/3cdf686c4ebaa14a3ba037722b80f547.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 7.2rem 3.973333333333333rem;
+  border-radius: 0.16rem;
+  max-height: 7.12rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 7.2rem;
+}
+.reward-modal__title.data-v-77310ab3 {
+  color: #000;
+  font-family: PingFangSC-Medium;
+  font-size: 0.56rem;
+  font-weight: 700;
+  height: 0.64rem;
+  letter-spacing: 0;
+  line-height: 0.64rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.7466666666666667rem;
+  text-align: center;
+  width: 100%;
+}
+.reward-modal__title--hb.data-v-77310ab3 {
+  margin-bottom: 1.3733333333333333rem;
+}
+.reward-modal__tip-img.data-v-77310ab3 {
+  background-color: #fff;
+  background-image: url(https://st.gtimg.com/design/9a3f8e81f481d72f1a7f47d81a311a58.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 1.1733333333333333rem;
+  line-height: 1.2533333333333334rem;
+  margin: 0 auto;
+  width: 6.133333333333334rem;
+}
+.reward-modal__tip-img.data-v-77310ab3,
+.reward-modal__tip-img.data-v-77310ab3 .reward-num {
+  color: #e63535;
+  font-family: Helvetica-Bold;
+  font-size: 0.6133333333333333rem;
+  font-weight: 900;
+}
+.reward-modal__coin-box.data-v-77310ab3 {
+  align-items: baseline;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1466666666666667rem;
+  justify-content: center;
+  margin-bottom: 0.13333333333333333rem;
+  width: 100%;
+}
+.reward-modal__coin-box--active.data-v-77310ab3 {
+  margin-bottom: 1.3866666666666667rem;
+}
+.reward-modal__coin-box.data-v-77310ab3 .reward-num {
+  color: #d12828;
+  font-family: Helvetica-Bold;
+  font-size: 1.4666666666666666rem;
+  font-weight: 700;
+  height: 1.1466666666666667rem;
+  letter-spacing: 0;
+  line-height: 1.1466666666666667rem;
+  text-align: center;
+}
+.reward-modal__coin-box.data-v-77310ab3 .reward-unit {
+  color: #7a8499;
+  font-family: PingFangSC-Medium;
+  font-size: 0.32rem;
+  font-weight: 700;
+  height: 0.37333333333333335rem;
+  letter-spacing: 0;
+  line-height: 0.37333333333333335rem;
+}
+.reward-modal__num.data-v-77310ab3 {
+  color: #d12828;
+  font-family: Helvetica-Bold;
+  font-size: 1.4666666666666666rem;
+  font-weight: 700;
+  height: 1.1466666666666667rem;
+  letter-spacing: 0;
+  line-height: 1.1466666666666667rem;
+  text-align: center;
+}
+.reward-modal__unit.data-v-77310ab3 {
+  color: #7a8499;
+  font-family: PingFangSC-Medium;
+  font-size: 0.32rem;
+  font-weight: 700;
+  height: 0.37333333333333335rem;
+  letter-spacing: 0;
+  line-height: 0.37333333333333335rem;
+}
+.reward-modal__tip.data-v-77310ab3 {
+  background-image: linear-gradient(90deg, #f4d18f, #e6c47b);
+  border-radius: 0.08rem;
+  color: #fff;
+  font-family: PingFangSC-Regular;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.36rem;
+  letter-spacing: 0;
+  line-height: 0.36rem;
+  margin: 0 auto 0.8933333333333333rem;
+  text-align: center;
+  width: 1.92rem;
+}
+.reward-modal__footer.data-v-77310ab3 {
+  height: 3.1466666666666665rem;
+  width: 100%;
+}
+.reward-modal__memo.data-v-77310ab3 {
+  color: #7a8499;
+  font-family: PingFangSC-Regular;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.5333333333333333rem;
+  letter-spacing: 0;
+  line-height: 0.5333333333333333rem;
+  margin: 0.6533333333333333rem 0 0.30666666666666664rem;
+  text-align: center;
+  width: 7.2rem;
+}
+.reward-modal__btn.data-v-77310ab3 {
+  background-image: linear-gradient(270deg, #e63535, #ef5350);
+  border-radius: 0.5866666666666667rem;
+  color: #fff;
+  cursor: pointer;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  margin: 0 auto;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  width: 6.133333333333334rem;
+}
+.reward-modal__btn.data-v-77310ab3:active {
+  opacity: 0.9;
+}
+.reward-modal__reward-wrapper.data-v-77310ab3 {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+.reward-modal__reward-body.data-v-77310ab3 {
+  color: #fff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+}
+.reward-modal__reward-lottie.data-v-77310ab3 {
+  height: 6.693333333333333rem;
+  left: 0;
+  position: absolute;
+  top: -0.68rem;
+  width: 8rem;
+  z-index: 1;
+}
+.reward-modal__reward-image.data-v-77310ab3 {
+  background-image: url(https://st.gtimg.com/design/1eb5f15a77b906bdd253303e8020d245.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 3.52rem;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 4rem;
+}
+.reward-modal__reward-amount.data-v-77310ab3 {
+  align-items: baseline;
+  color: #332313;
+  font-size: 0.96rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.96rem;
+  margin-top: 0.56rem;
+  text-align: center;
+}
+.reward-modal__reward-amount.data-v-77310ab3 .reward-unit {
+  color: #332313;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.36rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.54rem;
+  margin-left: 0.08rem;
+}
+.reward-modal__reward-tips.data-v-77310ab3 {
+  font-size: 0.48rem;
+  line-height: 0.72rem;
+  margin-top: 0.8533333333333334rem;
+  text-align: center;
+}
+.reward-modal__reward-desc.data-v-77310ab3 {
+  align-items: center;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-family: TencentSansW7;
+  font-size: 0.64rem;
+  justify-content: center;
+  letter-spacing: -0.012799999999999999rem;
+  line-height: 0.88rem;
+  text-align: center;
+}
+.reward-modal__reward-desc.data-v-77310ab3 .reward-main {
+  font-family: TencentSansW7;
+}
+.reward-modal__reward-btns.data-v-77310ab3 {
+  text-align: center;
+}
+.reward-modal__reward-btn--withdraw.data-v-77310ab3 {
+  background: radial-gradient(
+    189.32% 141.42%at 0 0,
+    #ff7e75,
+    #f93636 52.6%,
+    #ee1818
+  );
+  border: 0.02666666666666667rem solid #ff8f88;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.06),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+  margin: 0.6666666666666666rem auto 0;
+}
+.reward-modal__reward-btn--continue.data-v-77310ab3,
+.reward-modal__reward-btn--withdraw.data-v-77310ab3 {
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.4266666666666667rem;
+  height: 1.1733333333333333rem;
+  line-height: 1.12rem;
+  width: 4.8533333333333335rem;
+}
+.reward-modal__reward-btn--continue.data-v-77310ab3 {
+  border: 0.02666666666666667rem solid #fff;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.12),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.16);
+  margin: 0.32rem auto 0;
+}
+.reward-modal__reward-btn--new.data-v-77310ab3 {
+  background: radial-gradient(
+    370.34% 135.22%at 0 0,
+    #fffaef,
+    #fff2d4 18.23%,
+    #f5dfac 44.11%,
+    #ffcc81 86.25%
+  );
+  border: 0.02666666666666667rem solid #fff8e5;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.06),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  color: #461c04;
+  cursor: pointer;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 1.1733333333333333rem;
+  line-height: 1.12rem;
+  margin: 0.5333333333333333rem auto 0.32rem;
+  text-align: center;
+  width: 5.333333333333333rem;
+}
+.reward-modal__reward-new-text.data-v-77310ab3 {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: DFP King Gothic GB;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.48rem;
+  text-align: center;
+}
+.reward-modal__reward-close.data-v-77310ab3 {
+  height: 0.64rem;
+  position: absolute;
+  right: 0.13333333333333333rem;
+  top: -0.96rem;
+  width: 0.64rem;
+  z-index: 9;
+}
+.reward-modal__error-wrap.data-v-77310ab3 {
+  background: linear-gradient(
+      180deg,
+      rgba(238, 24, 24, 0.1),
+      rgba(238, 24, 24, 0.06) 7.5%,
+      rgba(238, 24, 24, 0) 20.56%
+    ),
+    #fff;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  padding-top: 0.64rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+}
+.reward-modal__error-close.data-v-77310ab3 {
+  height: 0.64rem;
+  position: absolute;
+  right: -0.32rem;
+  top: -0.8533333333333334rem;
+  width: 0.64rem;
+}
+.reward-modal__error-title.data-v-77310ab3 {
+  color: #000;
+  font-family: TencentSans-W7;
+  font-size: 0.5333333333333333rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.8rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.reward-modal__error-subtitle.data-v-77310ab3 {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.56rem;
+}
+.reward-modal__error-subtitle--untitle.data-v-77310ab3 {
+  color: #000;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.64rem;
+  margin-top: 0.5333333333333333rem;
+}
+.reward-modal__error-btn.data-v-77310ab3 {
+  background: radial-gradient(
+    100% 189.16%at 0 0,
+    #ff7e75,
+    #f93636 52.6%,
+    #ee1818
+  );
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.06),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.4266666666666667rem;
+  margin: 0.4266666666666667rem auto 0.5333333333333333rem;
+  padding: 0.26666666666666666rem 0;
+  width: 6.933333333333334rem;
+}

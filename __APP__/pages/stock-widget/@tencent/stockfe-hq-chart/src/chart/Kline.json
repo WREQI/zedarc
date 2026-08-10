@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "kline": "../../../../../quote/@tencent/stock-kline/kline",
+    "no-data": "../components/NoData",
+    "selector": "../components/Selector"
+  },
+  "componentPlaceholder": { "kline": "view" }
+}

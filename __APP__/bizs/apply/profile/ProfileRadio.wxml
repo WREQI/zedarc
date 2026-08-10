@@ -1,0 +1,26 @@
+<mp-action-sheet bind:__l="__l" bindinput="{{j}}" class="{{['apply-profile-radio__container','plugin-component-action-sheet','data-v-657d225a',h&&'unsubmitable',i&&'hide-confirm']}}" uI="657d225a-0" uP="{{k}}" uS="{{['d']}}" wx:if="{{k}}">
+    <view class="actionsheet-content-container data-v-657d225a" ref="contentContainer">
+        <radio-group bindchange="{{c}}" class="{{['data-v-657d225a',b]}}">
+            <label class="{{['data-v-657d225a',one.t&&'border--bottom']}}" hidden="{{!one.r}}" wx:for="{{a}}" wx:for-item="one" wx:key="s">
+                <view class="radio-item flex flex-row data-v-657d225a">
+                    <view class="{{['data-v-657d225a',one.b]}}">{{one.a}}</view>
+                    <view class="empty-radio data-v-657d225a" wx:if="{{one.c}}"></view>
+                    <radio checked="{{one.f}}" class="data-v-657d225a" color="{{one.d}}" size="28" value="{{one.e}}" wx:else></radio>
+                </view>
+                <input alwaysEmbed="{{true}}" bindblur="{{one.k}}" bindinput="{{one.m}}" class="profile-input data-v-657d225a" cursorSpacing="20" maxlength="{{one.i}}" placeholder="{{one.j}}" ref="otherInput" type="{{one.h}}" value="{{one.l}}" wx:if="{{one.g}}"></input>
+                <view class="fs-24 align-c info-text data-v-657d225a" wx:if="{{one.n}}">
+                    <rich-text class="data-v-657d225a" nodes="{{one.o}}"></rich-text>
+                </view>
+                <view class="fs-22 align-c info-text data-v-657d225a" wx:if="{{one.p}}">
+                    <rich-text class="data-v-657d225a" nodes="{{one.q}}"></rich-text>
+                </view>
+            </label>
+        </radio-group>
+        <view class="fs-24 align-c info-text data-v-657d225a" wx:if="{{d}}">
+            <rich-text class="data-v-657d225a" nodes="{{e}}"></rich-text>
+        </view>
+        <view class="fs-22 align-c info-text data-v-657d225a" wx:if="{{f}}">
+            <rich-text class="data-v-657d225a" nodes="{{g}}"></rich-text>
+        </view>
+    </view>
+</mp-action-sheet>

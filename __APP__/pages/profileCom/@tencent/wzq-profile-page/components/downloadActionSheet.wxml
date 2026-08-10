@@ -1,0 +1,26 @@
+<view class="_div download-action-sheet-wrapper data-v-29bad076">
+  <view class="_div download-action-sheet__action-sheet data-v-29bad076">
+    <view class="_div download-action-sheet__header data-v-29bad076">
+      <view class="_div sheet-title data-v-29bad076">下载腾讯自选股App</view>
+      <view bindtap="{{a}}" class="_div close-btn data-v-29bad076"></view>
+    </view>
+    <view class="_div download-action-sheet__content data-v-29bad076">
+      <view class="_div sub-title data-v-29bad076"
+        >下载链接已复制，请前往浏览器粘贴打开</view
+      >
+      <view
+        class="_div download-action-sheet__content__img__wrapper data-v-29bad076"
+      >
+        <image
+          class="_img download-action-sheet__content__img data-v-29bad076"
+          src="{{b}}"
+        ></image>
+      </view>
+      <view
+        bindtap="{{d}}"
+        class="{{['_div','download-action-sheet__content__btn','data-v-29bad076',c&&'simple-mode']}}"
+        >我知道了</view
+      >
+    </view>
+  </view>
+</view>

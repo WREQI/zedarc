@@ -1,0 +1,46 @@
+@import "/app.wxss";
+.empty-bankcard-tip-container .icon.data-v-546a52ee {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/no-bankcard.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 2.08rem;
+  margin: 0 auto;
+  width: 1.706667rem;
+}
+[data-theme="dark"] .empty-bankcard-tip-container .icon.data-v-546a52ee {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/no-bankcard-black.png);
+}
+.empty-bankcard-tip-container .icon + .title.data-v-546a52ee {
+  margin-top: 0.48rem;
+}
+.empty-bankcard-tip-container .title.data-v-546a52ee {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 600 !important;
+  line-height: 0.586667rem;
+  text-align: center;
+}
+.empty-bankcard-tip-container .content.data-v-546a52ee {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  margin-top: 0.426667rem;
+  text-align: justify;
+}
+.empty-bankcard-tip-container .content .detail-step.data-v-546a52ee {
+  margin-top: 0.213333rem;
+}
+.empty-bankcard-tip-container .btn.data-v-546a52ee {
+  background-color: initial;
+  border: 0.026667rem solid var(--color-primary-1);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--color-primary-1);
+  font-size: 0.426667rem;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.12rem;
+  margin-top: 0.533333rem;
+  width: 4.2rem;
+}

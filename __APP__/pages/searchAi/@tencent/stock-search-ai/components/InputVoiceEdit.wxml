@@ -1,0 +1,90 @@
+<view
+  bindtouchmove="{{x}}"
+  bindtouchstart="{{y}}"
+  class="{{['_div','data-v-0491b8bb','voice-modal',w]}}"
+>
+  <view
+    class="{{['_div','data-v-0491b8bb','voice-modal-top',t]}}"
+    style="{{v}}"
+  >
+    <view
+      bindtap="{{d}}"
+      class="_div voice-text-container data-v-0491b8bb"
+      ref="inputRef"
+      wx:if="{{a}}"
+    >
+      <view class="_div voice-text-container-body data-v-0491b8bb">
+        <view class="_div voice-text-edit voice-text-edit-h5 data-v-0491b8bb"
+          >{{b}}</view
+        >
+        <image class="_img wave-img data-v-0491b8bb" src="{{c}}"></image>
+      </view>
+    </view>
+    <view
+      class="_div voice-text-container data-v-0491b8bb"
+      ref="realInputContainer"
+      wx:else
+    >
+      <view class="_div voice-text-container-body data-v-0491b8bb">
+        <textarea
+          adjustPosition="{{false}}"
+          autoHeight="{{true}}"
+          bindblur="{{g}}"
+          bindconfirm="{{i}}"
+          bindfocus="{{f}}"
+          bindinput="{{k}}"
+          bindkeyboardheightchange="{{h}}"
+          class="voice-text-edit data-v-0491b8bb"
+          confirmType="done"
+          disableDefaultPadding="{{true}}"
+          focus="{{true}}"
+          holdKeyboard="true"
+          maxlength="140"
+          placeholder="请输入您想了解的金融问题"
+          placeholderClass="voice-text-placeholder"
+          type="text"
+          value="{{j}}"
+          wx:if="{{e}}"
+        ></textarea>
+        <block wx:else>
+          <textarea
+            autofocus
+            bindblur="{{m}}"
+            bindinput="{{p}}"
+            bindkeydown="{{n}}"
+            class="{{['data-v-0491b8bb','voice-text-edit',l]}}"
+            maxlength="140"
+            placeholder="请输入您想了解的金融问题"
+            ref="inputRef"
+            rows="2"
+            value="{{o}}"
+            wx:if="{{r0}}"
+          ></textarea>
+        </block>
+        <image class="_img wave-img data-v-0491b8bb" src="{{q}}"></image>
+      </view>
+      <view
+        class="_div voice-text-container-triangle pop-container-triangle data-v-0491b8bb"
+      ></view>
+    </view>
+    <view
+      catchtap="{{r}}"
+      class="_div cancel-zone-btn-wrapper data-v-0491b8bb"
+      ref="cancelZoneBtnWrapper"
+    >
+      <view class="_div cancel-zone-btn data-v-0491b8bb">
+        <view class="_div cancel-zone-icon data-v-0491b8bb"></view>
+        <label class="_span cancel-zone-text data-v-0491b8bb">取消</label>
+      </view>
+    </view>
+    <view
+      catchtap="{{s}}"
+      class="_div confirm-zone-btn-wrapper data-v-0491b8bb"
+      ref="confirmZoneBtnWrapper"
+    >
+      <view class="_div confirm-zone-btn data-v-0491b8bb">
+        <view class="_div confirm-zone-icon data-v-0491b8bb"></view>
+      </view>
+    </view>
+  </view>
+</view>

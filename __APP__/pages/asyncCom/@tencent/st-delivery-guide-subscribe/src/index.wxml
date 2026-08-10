@@ -1,0 +1,70 @@
+<view class="_div data-v-1b7a1d37" ref="deliveryguideaddstock">
+  <view class="_div delivery-guide-addstock data-v-1b7a1d37" wx:if="{{a}}">
+    <view
+      catchtap="{{p}}"
+      class="{{['_div','pop-adv','adv-pic','data-v-1b7a1d37',n&&'adv-popup-visible',o&&'unadv-popup-visible']}}"
+    >
+      <view class="_div pop-cnt-adv data-v-1b7a1d37">
+        <view class="_div pop-adv-img adv-animate data-v-1b7a1d37">
+          <view class="_div delivery-guide-addstock-container data-v-1b7a1d37">
+            <view class="_div delivery-guide-addstock-title data-v-1b7a1d37"
+              >设置成功</view
+            >
+            <view
+              class="_div delivery-guide-addstock-subtitle data-v-1b7a1d37"
+              wx:if="{{b}}"
+              >{{c}}</view
+            >
+            <view
+              class="_div delivery-guide-addstock-bg data-v-1b7a1d37"
+              style="{{'background-image:'+e}}"
+              wx:if="{{d}}"
+            ></view>
+            <view
+              catchtap="{{i}}"
+              class="_div delivery-guide-addstock-tips data-v-1b7a1d37"
+              wx:if="{{f}}"
+            >
+              <view
+                class="_div delivery-guide-addstock-tips-checked data-v-1b7a1d37"
+                wx:if="{{g}}"
+              ></view>
+              <view
+                class="_div delivery-guide-addstock-tips-unchecked data-v-1b7a1d37"
+                wx:if="{{h}}"
+              ></view>
+              <view
+                class="_div delivery-guide-addstock-tips-text data-v-1b7a1d37"
+                >30日内不再提示</view
+              >
+            </view>
+            <view
+              class="_div delivery-guide-addstock-line data-v-1b7a1d37"
+            ></view>
+            <view class="_div delivery-guide-addstock-btn data-v-1b7a1d37">
+              <view
+                catchtap="{{j}}"
+                class="_div delivery-guide-addstock-cancel data-v-1b7a1d37"
+                >取消</view
+              >
+              <view
+                class="_div delivery-guide-addstock-vline data-v-1b7a1d37"
+              ></view>
+              <view
+                catchtap="{{k}}"
+                class="_div delivery-guide-addstock-confirm data-v-1b7a1d37"
+                >立即关注</view
+              >
+            </view>
+          </view>
+        </view>
+        <view
+          catchtap="{{m}}"
+          class="_div adv-close-bg3 adv-close-animate data-v-1b7a1d37"
+          wx:if="{{l}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div pop-adv-mask data-v-1b7a1d37"></view>
+  </view>
+</view>

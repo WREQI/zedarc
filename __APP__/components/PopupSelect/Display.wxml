@@ -1,0 +1,10 @@
+<view
+  bindtap="{{d}}"
+  class="{{['data-v-47242ec4','popup-display','^popup-display',c]}}"
+>
+  <label class="popup-display-text data-v-47242ec4">{{a}}</label>
+  <label
+    class="text-color-1 icon icon-triangle triangle-down ^triangle-down data-v-47242ec4"
+    wx:if="{{b}}"
+  ></label>
+</view>

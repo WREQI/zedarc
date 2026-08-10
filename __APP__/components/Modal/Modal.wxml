@@ -1,0 +1,27 @@
+<view class="modal-container data-v-f0345352" hidden="{{!h}}">
+  <view class="modal-mask data-v-f0345352"></view>
+  <view class="modal-box data-v-f0345352">
+    <view class="modal-title t-36 data-v-f0345352" wx:if="{{a}}">{{b}}</view>
+    <slot wx:if="{{$slots.d}}"></slot>
+    <view class="modal-content data-v-f0345352" wx:else>
+      <view class="modal-content-text data-v-f0345352">{{c}}</view>
+    </view>
+    <view class="modal-buttons data-v-f0345352">
+      <slot name="btns" wx:if="{{$slots.btns}}"></slot>
+      <block wx:else>
+        <view
+          bindtap="{{e}}"
+          class="modal-button-item modal-button-cancel border-right data-v-f0345352"
+          wx:if="i_showCancelButton"
+          >{{d}}</view
+        >
+        <view
+          bindtap="{{g}}"
+          class="modal-button-item modal-button-confirm data-v-f0345352"
+          wx:if="i_showConfirmButton"
+          >{{f}}</view
+        >
+      </block>
+    </view>
+  </view>
+</view>

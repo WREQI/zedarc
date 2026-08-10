@@ -1,0 +1,38 @@
+.black .status-bar-wrapper .status-text.data-v-0bdd5b91,
+.panda .status-bar-wrapper .status-text.data-v-0bdd5b91 {
+  color: #69738c;
+}
+.title-wrapper.data-v-0bdd5b91 {
+  height: 0.6533333333333333rem;
+}
+.content-wrapper.data-v-0bdd5b91 {
+  max-height: 6.826666666666667rem;
+  overflow: hidden;
+}
+.status-bar-wrapper.data-v-0bdd5b91 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.0666666666666667rem;
+  justify-content: center;
+}
+.status-bar-wrapper .status-text.data-v-0bdd5b91 {
+  color: var(--color-lightgray-2);
+  font-size: 0.37333333333333335rem;
+  margin-right: 0.10666666666666667rem;
+}
+.status-bar-wrapper .status-arrow.data-v-0bdd5b91 {
+  height: 0.21333333333333335rem;
+  transform-origin: center center;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  width: 0.32rem;
+}
+.status-bar-wrapper .status-arrow-up.data-v-0bdd5b91 {
+  transform: rotate(180deg);
+}
+.status-bar-wrapper .status-arrow-down.data-v-0bdd5b91 {
+  transform: rotate(0);
+}

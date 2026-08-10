@@ -1,0 +1,11 @@
+<view class="_div guide-wrap" wx:if="{{a}}">
+  <view class="_div guide-box">
+    <view class="_div title">提醒已设置</view>
+    <view class="_div desc">暂未关注公众号，无法接受提醒</view>
+    <view class="_div img"></view>
+    <view class="_div guide-buttons">
+      <view bindtap="{{b}}" class="_div button cancel">取消</view>
+      <view bindtap="{{c}}" class="_div button">立即关注</view>
+    </view>
+  </view>
+</view>

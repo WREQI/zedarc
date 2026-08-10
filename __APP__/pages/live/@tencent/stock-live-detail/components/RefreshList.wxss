@@ -1,0 +1,57 @@
+.component-refresh-list {
+  flex: 1;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 1.9733333333333334rem);
+}
+.component-refresh-list .st-pull-refresh__head {
+  text-align: center;
+}
+.component-refresh-list .st-pull-refresh__head span {
+  color: #b8becc;
+  font-size: 0.3466666666666667rem;
+  line-height: 0.88rem;
+}
+.component-refresh-list .refresh-wrapper {
+  flex: 1;
+}
+.component-refresh-list .refresh-box {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 0.26666666666666666rem;
+  padding-top: 0.26666666666666666rem;
+}
+.component-refresh-list .refresh-box .ul-refresh-text {
+  color: #b8becc;
+  text-align: center;
+}
+.component-refresh-list .refresh-box .ul-refresh-text.android {
+  color: #666d75;
+}
+.component-refresh-list .refresh-box .spinner-animation {
+  height: 0.48rem;
+  margin-right: 0.10666666666666667rem;
+  margin-top: -0.02666666666666667rem;
+  width: 0.48rem;
+}
+.component-refresh-list .refresh-box .loading-spinner.android {
+  margin-left: 0.64rem;
+}
+.component-refresh-list .refresh-box .arrow-animation {
+  height: 0.48rem;
+  margin-right: 0.10666666666666667rem;
+  margin-top: -0.02666666666666667rem;
+  width: 0.29333333333333333rem;
+}
+.component-refresh-list .refresh-box .arrow-animation.arrow-animation__android {
+  margin-left: 0.64rem;
+}
+.component-refresh-list .refresh-box .refresh-icon {
+  height: 0.48rem;
+  width: 0.29333333333333333rem;
+}
+.component-refresh-list .refresh-box .loading-icon {
+  height: 0.48rem;
+  width: 0.48rem;
+}

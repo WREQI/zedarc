@@ -1,0 +1,8 @@
+<view class="_div etf-info-wrapper data-v-c847da2c">
+  <view class="_div title data-v-c847da2c">{{a}}</view>
+  <view class="_div label data-v-c847da2c">
+    <view class="_div label-item data-v-c847da2c" wx:for="{{b}}" wx:key="b"
+      >{{item.a}}</view
+    >
+  </view>
+</view>

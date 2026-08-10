@@ -1,0 +1,17 @@
+<view class="_div morning-image-link-wrapper data-v-cb15c38f" id="imgLink">
+  <view
+    catchtap="{{e}}"
+    class="_div morning-image-link data-v-cb15c38f"
+    wx:if="{{a}}"
+  >
+    <image
+      alt=""
+      class="_img img-border-radius _img data-v-cb15c38f"
+      mode="widthFix"
+      src="{{b}}"
+    ></image>
+    <label class="_span image-desc-link data-v-cb15c38f" wx:if="{{c}}"
+      >{{d}}</label
+    >
+  </view>
+</view>

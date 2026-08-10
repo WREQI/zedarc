@@ -1,0 +1,24 @@
+<page-meta class="data-v-bf2df985" rootFontSize="{{a}}"></page-meta>
+<view class="_div hq-detail-ranklist data-v-bf2df985" data-st-theme="{{g}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-bf2df985"
+    uI="bf2df985-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-bf2df985"
+    uI="bf2df985-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <rank-detail
+    bind:__l="__l"
+    bindchangeSort="{{e}}"
+    class="r data-v-bf2df985"
+    uI="bf2df985-2"
+    uP="{{f}}"
+    uR="rankDetail"
+    wx:if="{{c}}"
+  ></rank-detail>
+</view>

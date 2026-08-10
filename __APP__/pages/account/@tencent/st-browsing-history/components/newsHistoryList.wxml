@@ -1,0 +1,16 @@
+<view class="_div stock-history-wrapper data-v-77c5bd33">
+  <news-history-block
+    bind:__l="__l"
+    class="history-wrapper data-v-77c5bd33"
+    uI="{{item.b}}"
+    uP="{{item.c}}"
+    wx:for="{{a}}"
+    wx:key="a"
+  ></news-history-block>
+  <empty-show
+    bind:__l="__l"
+    class="data-v-77c5bd33"
+    uI="77c5bd33-1"
+    wx:if="{{b}}"
+  ></empty-show>
+</view>

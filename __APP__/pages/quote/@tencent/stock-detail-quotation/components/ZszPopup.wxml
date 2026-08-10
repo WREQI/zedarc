@@ -1,0 +1,62 @@
+<view
+  bindtap="{{w}}"
+  catchtouchmove="{{v}}"
+  class="{{['_div','mask-wrapper','data-v-f015138e',s&&'skin-black']}}"
+  style="{{'display:'+t}}"
+>
+  <view
+    catchtap="{{r}}"
+    class="_div popup-wrapper data-v-f015138e"
+    style="{{'top:'+p+';'+'left:'+q}}"
+  >
+    <view class="_div triangle-up data-v-f015138e"></view>
+    <view class="{{['_div','content-wrapper','data-v-f015138e',o]}}">
+      <view class="_div header-line data-v-f015138e">
+        <view class="_div empty-tip data-v-f015138e"></view>
+        <view class="{{['_div','title-tip','data-v-f015138e',a]}}"
+          >币种/汇率</view
+        >
+        <view class="_div title-info data-v-f015138e" wx:if="{{b}}">
+          <view class="_div title data-v-f015138e">{{c}}</view>
+          <view class="_div sub-title data-v-f015138e">{{d}}</view>
+        </view>
+        <view class="_div title-info data-v-f015138e">
+          <view class="_div title data-v-f015138e" wx:if="{{e}}">{{f}}</view>
+          <view class="{{['_div','sub-title','data-v-f015138e',h]}}"
+            >{{g}}</view
+          >
+        </view>
+      </view>
+      <view
+        class="{{['_div','currency-info','data-v-f015138e',item.g&&'current']}}"
+        wx:for="{{i}}"
+        wx:key="f"
+      >
+        <image class="_img flag data-v-f015138e" src="{{item.a}}"></image>
+        <view class="_div unit-info data-v-f015138e">
+          <view class="_div unit data-v-f015138e">{{item.b}}</view>
+          <view class="_div ratio data-v-f015138e">{{item.c}}</view>
+        </view>
+        <view class="_div mid data-v-f015138e" wx:if="{{j}}">
+          <view class="_div zsz data-v-f015138e">{{item.d}}</view>
+        </view>
+        <view class="{{['_div','right','data-v-f015138e',k]}}">
+          <view class="_div zsz data-v-f015138e">{{item.e}}</view>
+        </view>
+      </view>
+      <view class="_div currency-tip data-v-f015138e"
+        >根据实时人民币汇率计算，可能和实际值有所差异</view
+      >
+      <view class="_div aibar-wrapper data-v-f015138e" wx:if="{{l}}">
+        <search-ai-bar
+          bind:__l="__l"
+          bindonClickAiDialog="{{m}}"
+          class="data-v-f015138e"
+          uI="f015138e-0"
+          uP="{{n}}"
+          wx:if="{{n}}"
+        ></search-ai-bar>
+      </view>
+    </view>
+  </view>
+</view>

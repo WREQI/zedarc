@@ -1,0 +1,18 @@
+<view class="_div mod-show-modal data-v-655587c3">
+  <view class="_div shadow data-v-655587c3"></view>
+  <view class="_div modal-wrap data-v-655587c3">
+    <view class="_div content-wrap data-v-655587c3">
+      <view class="_div title data-v-655587c3" wx:if="{{a}}">{{b}}</view>
+      <view class="_div content data-v-655587c3" wx:if="{{c}}">{{d}}</view>
+      <slot></slot>
+    </view>
+    <view class="_div btn-wrap data-v-655587c3">
+      <view catchtap="{{f}}" class="_div cancel btn data-v-655587c3"
+        >{{e}}</view
+      >
+      <view catchtap="{{h}}" class="_div confirm btn data-v-655587c3"
+        >{{g}}</view
+      >
+    </view>
+  </view>
+</view>

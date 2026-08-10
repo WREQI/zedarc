@@ -1,0 +1,25 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navigate-to-app": "./components/navigateToApp",
+    "subscribe-tips-dialog": "./components/SubscribeTipsDialog",
+    "reverse-more-live-dialog": "./components/ReverseMoreLiveDialog",
+    "time-counter": "./components/timeCounter",
+    "down-load": "./components/DownLoad",
+    "live-to-app": "./components/LiveToApp",
+    "multi-streams": "./components/MultiStreams",
+    "qrcode": "./components/SubscribeQrcode",
+    "live-player-m-p": "./components/uni-live-player/LivePlayerMp",
+    "live-swiper-item": "./components/LiveSwiper",
+    "live-scroll-wrapper": "./components/LiveScrollWrapper",
+    "related-stock": "./components/related-stock/index",
+    "news-status": "../../../newsSbg/@tencent/stock-news-core/components/status/index",
+    "half-screen-ai-entry": "../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "search-ai-bar": "../../../searchAi/@tencent/stock-ai-common-bar/components/stock-search-ai-bar/index"
+  },
+  "componentPlaceholder": {
+    "news-status": "view",
+    "half-screen-ai-entry": "view",
+    "search-ai-bar": "view"
+  }
+}

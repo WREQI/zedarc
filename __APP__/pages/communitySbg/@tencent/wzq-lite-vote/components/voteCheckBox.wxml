@@ -1,0 +1,6 @@
+<view class="{{['_div','vote-checkbox','data-v-51c4b287',f&&'vote-checkbox-checked']}}">
+    <input bindinput="{{b}}" checked="{{a}}" class="vote-checkbox-input data-v-51c4b287" type="checkbox"></input>
+    <view class="{{['_div','data-v-51c4b287','vote-checkbox-inner',e]}}">
+        <image class="_img vote-checkbox-check data-v-51c4b287" mode="widthFix" src="{{d}}" wx:if="{{c}}"></image>
+    </view>
+</view>

@@ -1,0 +1,95 @@
+<view class="_div global-market-swiper-section data-v-5e704c44">
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{b}}"
+    class="{{['data-v-5e704c44',a]}}"
+    uI="5e704c44-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></tabbar>
+  <view class="_div index-filter__content data-v-5e704c44" wx:if="{{d}}">
+    <view class="_div index-filter__row data-v-5e704c44">
+      <view
+        bindtap="{{f}}"
+        class="_div index-filter__checkbox-icon data-v-5e704c44"
+        style="{{'background-image:'+e}}"
+      ></view>
+      <view bindtap="{{g}}" class="_div index-filter__label data-v-5e704c44"
+        >指数过滤</view
+      >
+      <view bindtap="{{h}}" class="_div index-filter__arrow data-v-5e704c44">
+        <image
+          class="_img index-filter__arrow-icon data-v-5e704c44"
+          src="https://st.gtimg.com/pcm/mq4q1exn_4bfb1b082ab26e60592e4a08abf8552a.svg"
+        ></image>
+      </view>
+    </view>
+  </view>
+  <swiper
+    autoplay="{{false}}"
+    bindchange="{{m}}"
+    circular="{{false}}"
+    class="global-market-swiper-section__swiper data-v-5e704c44"
+    current="{{j}}"
+    duration="{{300}}"
+    options="{{k}}"
+    ref="swiperRoot"
+    style="{{l}}"
+  >
+    <swiper-item
+      class="data-v-5e704c44"
+      wx:for="{{i}}"
+      wx:for-item="market"
+      wx:key="e"
+    >
+      <view
+        class="{{['_div','data-v-5e704c44','global-market-swiper-section__slide',market.d]}}"
+      >
+        <block wx:if="{{market.a}}">
+          <global-market-rank-item
+            bind:__l="__l"
+            bindbuyEtf="{{fund.c}}"
+            class="data-v-5e704c44"
+            data-test-id="{{fund.b}}"
+            uI="{{fund.d}}"
+            uP="{{fund.e}}"
+            wx:for="{{market.b}}"
+            wx:for-item="fund"
+            wx:key="a"
+          ></global-market-rank-item>
+        </block>
+        <block wx:else>
+          <view
+            class="_div market-fund-card data-v-5e704c44"
+            wx:for="{{market.c}}"
+            wx:for-item="fund"
+            wx:key="e"
+          >
+            <global-fund-card
+              bind:__l="__l"
+              bindbuyEtf="{{fund.a}}"
+              class="data-v-5e704c44"
+              uI="{{fund.b}}"
+              uP="{{fund.c}}"
+              wx:if="{{fund.c}}"
+            ></global-fund-card>
+            <view
+              class="_div market-fund-card__divider data-v-5e704c44"
+              wx:if="{{fund.d}}"
+            ></view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+  <root-portal class="data-v-5e704c44" enable="{{true}}" wx:if="{{n}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{o}}"
+      class="data-v-5e704c44"
+      uI="5e704c44-3"
+      uP="{{p}}"
+      wx:if="{{p}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

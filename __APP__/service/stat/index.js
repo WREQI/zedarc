@@ -1,0 +1,1 @@
+require("./mp-weixin.js");

@@ -1,0 +1,10 @@
+<view class="_div basket-header-wrapper" ref="basket-header-wrapper">
+  <basket-header
+    bind:__l="__l"
+    bindbasketFooterClick="{{b}}"
+    bindheaderTitleClick="{{a}}"
+    uI="eccc15cc-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></basket-header>
+</view>

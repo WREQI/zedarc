@@ -1,0 +1,16 @@
+<view
+  class="{{['footprint',c&&'fixed',d&&'colorful',e&&'fixedv2',f&&'calcSafeArea',g&&'calcNav']}}"
+>
+  <slot name="before"></slot>
+  <view class="flex-center">
+    <broker-logo
+      bind:__l="__l"
+      class="server-broker-logo"
+      uI="a2ce9fc4-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></broker-logo
+    >{{b}}提供证券服务<label class="ipv6 border--surround">IPV6</label>
+  </view>
+  <slot name="after"></slot>
+</view>

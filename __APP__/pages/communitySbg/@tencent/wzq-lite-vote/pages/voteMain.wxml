@@ -1,0 +1,34 @@
+<view
+  class="{{['_div','data-v-e8ccdf13','vote-main',i]}}"
+  name="winAccount"
+  wx:if="{{a}}"
+>
+  <vote-multi
+    bind:__l="__l"
+    bindpickVote="{{d}}"
+    bindupdateList="{{c}}"
+    class="data-v-e8ccdf13"
+    uI="e8ccdf13-0"
+    uP="{{e}}"
+    uS="{{['votedesccontainer']}}"
+    wx:if="{{b}}"
+  >
+    <view slot="votedesccontainer">
+      <slot name="votedesc"></slot>
+    </view>
+  </vote-multi>
+  <vote-two
+    bind:__l="__l"
+    bindpickVote="{{g}}"
+    bindupdateList="{{f}}"
+    class="data-v-e8ccdf13"
+    uI="e8ccdf13-1"
+    uP="{{h||''}}"
+    uS="{{['votedesccontainer']}}"
+    wx:else
+  >
+    <view slot="votedesccontainer">
+      <slot name="votedesc"></slot>
+    </view>
+  </vote-two>
+</view>

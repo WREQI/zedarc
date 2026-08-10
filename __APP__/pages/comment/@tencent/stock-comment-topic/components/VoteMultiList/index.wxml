@@ -1,0 +1,13 @@
+<view class="_div vote-item-content data-v-230bdc0f">
+  <view class="_div vote-items data-v-230bdc0f" wx:for="{{a}}" wx:key="d">
+    <vote-item
+      bind:__l="__l"
+      bindpickVote="{{item.a}}"
+      class="data-v-230bdc0f"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:if="{{item.c}}"
+    ></vote-item>
+  </view>
+  <view class="{{['_div','data-v-230bdc0f','logo',c]}}" wx:if="{{b}}"></view>
+</view>

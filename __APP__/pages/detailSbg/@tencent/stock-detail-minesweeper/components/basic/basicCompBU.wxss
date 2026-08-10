@@ -1,0 +1,76 @@
+.ff-title.data-v-54c17f45 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  padding-bottom: 0.32rem;
+}
+.sys-ios .ff-title.data-v-54c17f45 {
+  font-weight: 500 !important;
+}
+.sys-android .ff-title.data-v-54c17f45 {
+  -webkit-text-stroke-width: 0.002666666666666667rem !important;
+  font-weight: unset !important;
+}
+.fold-content .brief.data-v-54c17f45 {
+  color: var(--color-heavygray);
+  display: inline-block;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5866666666666667rem;
+}
+.fold-content .brief ._i.data-v-54c17f45,
+.fold-content .brief i.data-v-54c17f45 {
+  background-image: url(https://st.gtimg.com/design/95b777c9dfe6a2097ad94909f255b44a.png);
+  background-position: 0.12rem 0.12rem;
+  background-repeat: no-repeat;
+  background-size: 0.3466666666666667rem 0.3466666666666667rem;
+  display: inline-block;
+  height: 0.5866666666666667rem;
+  left: -0.12rem;
+  position: relative;
+  top: 0.17333333333333334rem;
+  width: 0.5866666666666667rem;
+}
+.chart-wrapper.data-v-54c17f45 {
+  display: block;
+  width: 100%;
+}
+.chart-wrapper .noneProfitChart.data-v-54c17f45,
+.chart-wrapper .profitChart.data-v-54c17f45 {
+  height: 100%;
+  width: 100%;
+}
+.chart-wrapper .chart-legend.data-v-54c17f45 {
+  color: var(--color-midgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  padding: 0.32rem 0;
+}
+.chart-wrapper .chart-legend ._span.data-v-54c17f45,
+.chart-wrapper .chart-legend span.data-v-54c17f45 {
+  padding-left: 0.4266666666666667rem;
+  position: relative;
+}
+.chart-wrapper .chart-legend ._span.data-v-54c17f45:before,
+.chart-wrapper .chart-legend span.data-v-54c17f45:before {
+  content: "";
+  height: 0.08rem;
+  left: 0;
+  margin-top: -0.04rem;
+  position: absolute;
+  top: 50%;
+  width: 0.26666666666666666rem;
+}
+.chart-wrapper .chart-legend ._span.data-v-54c17f45:first-child,
+.chart-wrapper .chart-legend span.data-v-54c17f45:first-child {
+  margin-right: 0.32rem;
+}
+.chart-wrapper .chart-legend ._span.data-v-54c17f45:first-child:before,
+.chart-wrapper .chart-legend span.data-v-54c17f45:first-child:before {
+  background: var(--color-blue);
+}
+.chart-wrapper .chart-legend ._span.data-v-54c17f45:last-child:before,
+.chart-wrapper .chart-legend span.data-v-54c17f45:last-child:before {
+  background: var(--color-orange);
+}

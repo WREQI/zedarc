@@ -1,0 +1,155 @@
+<view class="_div information-index data-v-6895b61a">
+  <view class="_div information-content data-v-6895b61a">
+    <view class="_div fixed-nav data-v-6895b61a" ref="nav" style="{{g}}">
+      <tab
+        bind:__l="__l"
+        bindselect="{{b}}"
+        class="r data-v-6895b61a"
+        uI="6895b61a-0"
+        uP="{{c}}"
+        uR="tab-bar"
+        wx:if="{{c}}"
+      ></tab>
+      <view class="_div options-area data-v-6895b61a">
+        <view bindtap="{{d}}" class="_div optionsbtn data-v-6895b61a"></view>
+        <view
+          bindtap="{{f}}"
+          class="_div refresh-btn data-v-6895b61a"
+          wx:if="{{e}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div fixed-bar-date data-v-6895b61a" wx:if="{{h}}">{{i}}</view>
+    <view
+      class="{{['_div','data-v-6895b61a',k&&'ceiling',l&&'no-ceiling']}}"
+      style="{{m}}"
+      wx:if="{{j}}"
+    >
+      <recom-spliter
+        bind:__l="__l"
+        class="data-v-6895b61a"
+        uI="6895b61a-1"
+      ></recom-spliter>
+    </view>
+    <swiper
+      bindchange="{{q}}"
+      class="swiper-cont data-v-6895b61a"
+      current="{{o}}"
+      duration="250"
+      ref="mySwiper"
+      style="{{'height:'+p}}"
+    >
+      <swiper-item
+        class="swiper-slide data-v-6895b61a"
+        wx:for="{{n}}"
+        wx:for-item="tab"
+        wx:key="Y"
+      >
+        <my-choose-list
+          bind:__l="__l"
+          bindonMpScroll="{{tab.e}}"
+          bindopen="{{tab.d}}"
+          class="list0 r-i-f data-v-6895b61a"
+          data-ready="{{tab.c}}"
+          uI="{{tab.f}}"
+          uP="{{tab.g}}"
+          uR="stock_guanzhu_v2"
+          wx:if="{{tab.a}}"
+        ></my-choose-list>
+        <yao-wen-list
+          bind:__l="__l"
+          bindchangeYaowenShow="{{tab.o}}"
+          bindgetYaowenFeedbackDataList="{{tab.n}}"
+          bindonMpScroll="{{tab.p}}"
+          bindopen="{{tab.k}}"
+          bindshowYaowenCeiling="{{tab.l}}"
+          bindshowYaowenFeedbackDialog="{{tab.m}}"
+          class="list1 r-i-f data-v-6895b61a"
+          data-ready="{{tab.j}}"
+          uI="{{tab.q}}"
+          uP="{{tab.r}}"
+          uR="stock_yaowen_v2"
+          wx:if="{{tab.h}}"
+        ></yao-wen-list>
+        <current-day-list
+          bind:__l="__l"
+          bindonMpScroll="{{tab.y}}"
+          bindopen="{{tab.w}}"
+          bindupdateCurrentTime="{{tab.x}}"
+          class="list3 r-i-f data-v-6895b61a"
+          data-ready="{{tab.v}}"
+          uI="{{tab.z}}"
+          uP="{{tab.A}}"
+          uR="stock_yd"
+          wx:if="{{tab.s}}"
+        ></current-day-list>
+        <community-list
+          bind:__l="__l"
+          bindgoEdit="{{tab.D}}"
+          bindonMpScroll="{{tab.F}}"
+          bindonPutComment="{{tab.E}}"
+          bindshowProfilePop="{{tab.G}}"
+          class="r-i-f data-v-6895b61a"
+          uI="{{tab.H}}"
+          uP="{{tab.I}}"
+          uR="stock_shequ_v2"
+          wx:if="{{tab.B}}"
+        ></community-list>
+        <video-list
+          bind:__l="__l"
+          bindonMpScroll="{{tab.N}}"
+          bindshowProfilePop="{{tab.O}}"
+          bindshowVideoCeiling="{{tab.M}}"
+          bindtapDetail="{{tab.L}}"
+          class="list2 r-i-f data-v-6895b61a"
+          uI="{{tab.P}}"
+          uP="{{tab.Q}}"
+          uR="stock_video_v2"
+          wx:if="{{tab.J}}"
+        ></video-list>
+        <h-k-stocks-list
+          bind:__l="__l"
+          bindonMpScroll="{{tab.V}}"
+          bindopen="{{tab.U}}"
+          class="r-i-f data-v-6895b61a"
+          data-ready="{{tab.T}}"
+          uI="{{tab.W}}"
+          uP="{{tab.X}}"
+          uR="stock_ggsc_v2"
+          wx:if="{{tab.R}}"
+        ></h-k-stocks-list>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view catchtap="{{v}}" class="_div dialog data-v-6895b61a" wx:if="{{r}}">
+    <yaowen-feedback-dialog
+      bind:__l="__l"
+      bindonConfirm="{{t}}"
+      bindonHide="{{s}}"
+      class="data-v-6895b61a"
+      uI="6895b61a-8"
+    ></yaowen-feedback-dialog>
+  </view>
+  <block wx:if="{{w}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{x}}"
+      class="data-v-6895b61a"
+      uI="6895b61a-9"
+      uP="{{y}}"
+      wx:if="{{y}}"
+    ></profile-pop>
+  </block>
+  <block wx:if="{{z}}">
+    <nav-button
+      bind:__l="__l"
+      bindgoEdit="{{B}}"
+      bindshowProfilePop="{{C}}"
+      class="r data-v-6895b61a"
+      uI="6895b61a-10"
+      uP="{{D}}"
+      uR="navBtn"
+      wx:if="{{D}}"
+    ></nav-button>
+  </block>
+</view>

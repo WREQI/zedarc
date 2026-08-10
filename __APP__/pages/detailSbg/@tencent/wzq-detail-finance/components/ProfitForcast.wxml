@@ -1,0 +1,108 @@
+<view
+  class="{{['_div','finance-sub-mod','profit-forcast','data-v-09289865',G]}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div mod-finance-title block-layout data-v-09289865"
+    wx:if="{{b}}"
+    >盈利预测<view bindtap="{{c}}" class="_div teach-text data-v-09289865"
+      >盈利预测与财务数据差异说明<image
+        class="_img icon data-v-09289865"
+        lazyLoad="{{true}}"
+        src="https://st.gtimg.com/design/a495b29720e9bab1eaea87f780be63aa.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div item-sub-tab-zxg ylycTabContent data-v-09289865">
+    <view
+      catchtap="{{item.d}}"
+      class="{{['_div','data-v-09289865','sub-tab',e,item.b]}}"
+      wx:for="{{d}}"
+      wx:key="c"
+    >
+      <view class="_div sub-tab-inner data-v-09289865">
+        <view class="_div t-text data-v-09289865">{{item.a}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div ylyc-content-desc data-v-09289865" wx:if="{{f}}">
+    <view class="_div ylyc-content-source data-v-09289865"
+      >数据来源: {{g}}名分析师</view
+    >
+    <view class="_div ylyc-content-unit data-v-09289865">单位: {{h}}</view>
+  </view>
+  <view class="_div ylycCanvas-wrapper data-v-09289865" wx:if="{{i}}">
+    <f2
+      bind:__l="__l"
+      bindonInit="{{o}}"
+      bindtouchend="{{p}}"
+      bindtouchmove="{{r}}"
+      bindtouchstart="{{q}}"
+      class="r data-v-09289865"
+      uI="09289865-0"
+      uP="{{s}}"
+      uR="ylycCanvas"
+      uS="{{['d']}}"
+      wx:if="{{s}}"
+    >
+      <view class="{{['_div','data-v-09289865','f2-tooltip',m]}}" wx:if="{{j}}">
+        <view class="_div f2-tooltip-inner data-v-09289865">
+          <view class="_div f2-tooltip-title data-v-09289865">{{k}}</view>
+          <view
+            class="_div f2-tooltip-value data-v-09289865"
+            wx:for="{{l}}"
+            wx:key="c"
+          >
+            <label class="_span f2-tooltip-subtitle data-v-09289865"
+              >{{item.a}}</label
+            >
+            <label class="_span f2-tooltip-after data-v-09289865"
+              >{{item.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </f2>
+  </view>
+  <view class="_div no-data-content data-v-09289865" wx:else>暂无数据</view>
+  <view class="_div chart-legend-content data-v-09289865" wx:if="{{t}}">
+    <view
+      class="_div chart-legend-item data-v-09289865"
+      wx:for="{{v}}"
+      wx:key="d"
+    >
+      <label
+        class="{{['_span','data-v-09289865','chart-legend-icon',item.a]}}"
+        style="{{'background-color:'+item.b}}"
+      ></label>
+      <label class="_span chart-legend-title data-v-09289865">{{item.c}}</label>
+    </view>
+  </view>
+  <valuation-index
+    bind:__l="__l"
+    class="data-v-09289865"
+    uI="09289865-1"
+    uP="{{x}}"
+    wx:if="{{w}}"
+  ></valuation-index>
+  <root-portal class="data-v-09289865" enable="{{true}}" wx:if="{{y}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{A}}"
+      class="data-v-09289865"
+      uI="09289865-2"
+      uP="{{B}}"
+      wx:if="{{z}}"
+    ></wzq-info-modal>
+  </root-portal>
+  <root-portal class="data-v-09289865" enable="{{true}}" wx:if="{{C}}">
+    <etf-tip-modal
+      bind:__l="__l"
+      bindclose="{{E}}"
+      class="data-v-09289865"
+      uI="09289865-3"
+      uP="{{F}}"
+      wx:if="{{D}}"
+    ></etf-tip-modal>
+  </root-portal>
+</view>

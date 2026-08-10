@@ -1,0 +1,104 @@
+@import "/app.wxss";
+.trade-tool-option {
+  background-color: var(--fill-2);
+  overflow-y: auto;
+  padding: 0.28rem 0.4rem 0;
+}
+.trade-tool-option .item-wrapper {
+  flex-wrap: wrap;
+}
+.trade-tool-option .item {
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  height: 1.68rem;
+  margin-bottom: 0.32rem;
+  padding: 0.32rem;
+  width: 4.44rem;
+}
+[data-theme="dark"] .trade-tool-option .item {
+  background-color: #171d28;
+}
+.trade-tool-option .item .icon-left {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.533333rem;
+  margin-right: 0.266667rem;
+  width: 0.533333rem;
+}
+.trade-tool-option .item .item-right {
+  color: var(--text-color-1);
+  text-align: left;
+}
+.trade-tool-option .item .item-right .title {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.trade-tool-option .item .item-right .link-arrow {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/arrow-bold.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.32rem;
+  width: 0.32rem;
+}
+[data-theme="dark"] .trade-tool-option .item .item-right .link-arrow {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/arrow-bold-dark.png);
+}
+.trade-tool-option .item .item-right .desc {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 3rem;
+}
+[data-theme="dark"] .trade-tool-option .item .item-right .desc {
+  color: #7d88a1;
+}
+.trade-tool-option .item .icon-grid-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/grid-cond.png);
+}
+.trade-tool-option .item .icon-invest-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/invest-cond.png);
+}
+.trade-tool-option .item .icon-price-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/price-cond.png);
+}
+.trade-tool-option .item .icon-tpsl-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/tpsl-cond.png);
+}
+.trade-tool-option .item .icon-limitup-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/limitup-cond.png);
+}
+.trade-tool-option .item .icon-openingsell-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/openingsell-cond.png);
+}
+.trade-tool-option--simple {
+  padding: 0.28rem 0.32rem 0;
+}
+.trade-tool-option--simple .item {
+  width: 4.52rem;
+}
+.trade-tool-option--simple .item .icon-grid-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/grid-cond-simple.png);
+}
+.trade-tool-option--simple .item .icon-invest-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/invest-cond-simple.png);
+}
+.trade-tool-option--simple .item .icon-price-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/price-cond-simple.png);
+}
+.trade-tool-option--simple .item .icon-tpsl-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/tpsl-cond-simple.png);
+}
+.trade-tool-option--simple .item .icon-limitup-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/limitup-cond-simple.png);
+}
+.trade-tool-option--simple .item .icon-openingsell-cond {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/openingsell-cond-simple.png);
+}

@@ -1,0 +1,49 @@
+<view class="_div info-wrapper data-v-83f94b2b">
+  <view class="_div tab-bar data-v-83f94b2b" ref="tabs">
+    <view
+      class="_div data-v-83f94b2b"
+      wx:for="{{a}}"
+      wx:for-item="val"
+      wx:key="e"
+    >
+      <view
+        catchtap="{{val.d}}"
+        class="{{['_div','data-v-83f94b2b','tab-button',val.c]}}"
+        wx:if="{{val.a}}"
+        >{{val.b}}</view
+      >
+    </view>
+  </view>
+  <view class="_div tab-loading data-v-83f94b2b" wx:if="{{b}}">加载中...</view>
+  <news
+    bind:__l="__l"
+    bindloaded="{{f}}"
+    bindrecordScroollTop="{{g}}"
+    class="r data-v-83f94b2b"
+    data-c-h="{{!e}}"
+    uI="83f94b2b-0"
+    uP="{{h}}"
+    uR="news"
+    wx:if="{{c}}"
+  ></news>
+  <notice
+    bind:__l="__l"
+    bindloaded="{{l}}"
+    class="r data-v-83f94b2b"
+    data-c-h="{{!k}}"
+    uI="83f94b2b-1"
+    uP="{{m}}"
+    uR="notice"
+    wx:if="{{i}}"
+  ></notice>
+  <report
+    bind:__l="__l"
+    bindloaded="{{q}}"
+    class="r data-v-83f94b2b"
+    data-c-h="{{!p}}"
+    uI="83f94b2b-2"
+    uP="{{r}}"
+    uR="report"
+    wx:if="{{n}}"
+  ></report>
+</view>

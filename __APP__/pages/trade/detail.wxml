@@ -1,0 +1,49 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="53a7ddef-0"
+  uP="{{l}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{l}}"
+>
+  <view class="trade-detail-container">
+    <stock
+      bind:__l="__l"
+      class="r"
+      uI="53a7ddef-1,53a7ddef-0"
+      uR="detail"
+      wx:if="{{b}}"
+    ></stock>
+    <debt
+      bind:__l="__l"
+      class="r"
+      uI="53a7ddef-2,53a7ddef-0"
+      uR="detail"
+      wx:elif="{{d}}"
+    ></debt>
+    <allot
+      bind:__l="__l"
+      class="r"
+      uI="53a7ddef-3,53a7ddef-0"
+      uR="detail"
+      wx:elif="{{f}}"
+    ></allot>
+    <allocate-debt
+      bind:__l="__l"
+      class="r"
+      uI="53a7ddef-4,53a7ddef-0"
+      uR="detail"
+      wx:elif="{{h}}"
+    ></allocate-debt>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="53a7ddef-5,53a7ddef-0"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

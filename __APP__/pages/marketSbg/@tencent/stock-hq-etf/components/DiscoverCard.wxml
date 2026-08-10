@@ -1,0 +1,61 @@
+<view class="{{['_div','data-v-4f4e3d67','discover-card-wrapper',g]}}">
+  <view class="_div card data-v-4f4e3d67">
+    <view class="_div card-header data-v-4f4e3d67">
+      <view class="_div header-icon data-v-4f4e3d67" wx:if="{{a}}">
+        <image class="_img header-icon-img data-v-4f4e3d67" src="{{b}}"></image>
+      </view>
+      <view
+        bindtap="{{e}}"
+        class="_div header-text data-v-4f4e3d67"
+        wx:if="{{c}}"
+        >{{d}}<label class="_span right-arrow-icon data-v-4f4e3d67"></label>
+      </view>
+    </view>
+    <view class="_div card-content data-v-4f4e3d67">
+      <view class="_div list-wrapper data-v-4f4e3d67">
+        <view
+          bindtap="{{stock.k}}"
+          class="_div rank-item padding-bw data-v-4f4e3d67"
+          wx:for="{{f}}"
+          wx:for-item="stock"
+          wx:key="j"
+        >
+          <view class="_div rank-left data-v-4f4e3d67">
+            <view class="_div rank-detail-name data-v-4f4e3d67"
+              >{{stock.a}}</view
+            >
+            <view class="_div rank-detail-symbol data-v-4f4e3d67">
+              <image
+                class="_img market-icon data-v-4f4e3d67"
+                src="{{stock.b}}"
+              ></image>
+              <view class="_div stock-code data-v-4f4e3d67">{{stock.c}}</view>
+              <view class="_div tag-list data-v-4f4e3d67" wx:if="{{stock.d}}">
+                <view
+                  class="_div stock-tag data-v-4f4e3d67"
+                  wx:for="{{stock.e}}"
+                  wx:key="b"
+                  >{{item.a}}</view
+                >
+              </view>
+            </view>
+          </view>
+          <view class="_div rank-right-block data-v-4f4e3d67">
+            <view class="_div rank-middle data-v-4f4e3d67">
+              <view class="{{['_div','num','data-v-4f4e3d67',stock.g]}}"
+                >{{stock.f}}</view
+              >
+              <view class="_div desc data-v-4f4e3d67">涨跌幅</view>
+            </view>
+            <view class="_div rank-right data-v-4f4e3d67">
+              <view class="{{['_div','num','data-v-4f4e3d67',stock.i]}}"
+                >{{stock.h}}</view
+              >
+              <view class="_div desc data-v-4f4e3d67">近1月涨跌幅</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

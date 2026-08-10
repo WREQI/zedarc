@@ -1,0 +1,77 @@
+<view class="_div common-bar data-v-ffa6d5e3">
+  <view class="_div ai-entry data-v-ffa6d5e3" hidden="{{!f}}">
+    <ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{b}}"
+      bindonHideAiEntry="{{d}}"
+      bindonShowAiEntry="{{c}}"
+      class="data-v-ffa6d5e3"
+      uI="ffa6d5e3-0"
+      uP="{{e}}"
+      wx:if="{{a}}"
+    ></ai-bar>
+  </view>
+  <view bindtap="{{j}}" class="_div reply-box data-v-ffa6d5e3" wx:if="{{g}}">
+    <view
+      class="_div bar-icon forbid-comment-icon data-v-ffa6d5e3"
+      wx:if="{{h}}"
+    ></view>
+    <view
+      class="_div bar-icon allow-comment-icon data-v-ffa6d5e3"
+      wx:else
+    ></view>
+    <view class="_div comment-placeholder data-v-ffa6d5e3">{{i}}</view>
+  </view>
+  <view bindtap="{{p}}" class="_div btn-box data-v-ffa6d5e3" wx:if="{{k}}">
+    <view
+      class="_div bar-icon forbid-icon data-v-ffa6d5e3"
+      wx:if="{{l}}"
+    ></view>
+    <view
+      class="_div bar-icon edit-icon data-v-ffa6d5e3"
+      wx:elif="{{m}}"
+    ></view>
+    <view class="_div bar-icon comment-icon data-v-ffa6d5e3" wx:else></view>
+    <view class="{{['_div','data-v-ffa6d5e3','bar-text',o]}}">{{n}}</view>
+  </view>
+  <button
+    bindtap="{{z}}"
+    class="btn-box data-v-ffa6d5e3"
+    hoverClass="none"
+    openType="share"
+    wx:if="{{q}}"
+  >
+    <view
+      bindanimationiteration="{{w}}"
+      class="{{['_div','data-v-ffa6d5e3',v]}}"
+    >
+      <view
+        class="_div bar-icon share-icon data-v-ffa6d5e3"
+        wx:if="{{r}}"
+      ></view>
+      <view
+        class="_div bar-icon wx-icon data-v-ffa6d5e3"
+        wx:elif="{{s}}"
+      ></view>
+      <view
+        class="_div bar-icon pyq-icon data-v-ffa6d5e3"
+        wx:elif="{{t}}"
+      ></view>
+    </view>
+    <view class="_div hot-area data-v-ffa6d5e3" wx:if="{{x}}">
+      <view class="_div hot-icon data-v-ffa6d5e3"></view>
+      <view class="_div hot-text data-v-ffa6d5e3">99+</view>
+    </view>
+    <view class="_div bar-text data-v-ffa6d5e3" wx:else>{{y}}</view>
+  </button>
+  <root-portal class="data-v-ffa6d5e3" enable="{{true}}" wx:if="{{A}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{B}}"
+      class="data-v-ffa6d5e3"
+      uI="ffa6d5e3-1"
+      uP="{{C}}"
+      wx:if="{{C}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+</view>

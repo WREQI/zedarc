@@ -1,0 +1,91 @@
+<view class="trade-detail-container">
+  <view bindtap="{{g}}" class="flex-between base-info border--bottom">
+    <view class="flex-center">
+      <label class="text-color-1 fs-32">{{a}}</label>
+      <label class="text-color-4 fs-24">{{b}}{{c}}</label>
+      <label class="trade-tag" wx:if="{{d}}">{{e}}</label>
+    </view>
+    <view class="primary-color flex-center" wx:if="{{f}}">
+      <label class="fs-28">查看详情</label>
+      <label class="fs-32 icon icon-arrow-right"></label>
+    </view>
+  </view>
+  <view class="steps-wraper border--bottom">
+    <st-steps
+      bind:__l="__l"
+      uI="0ca8d056-0"
+      uP="{{h}}"
+      wx:if="{{h}}"
+    ></st-steps>
+  </view>
+  <view class="section section-detail">
+    <view class="detail-order-num flex" wx:if="{{i}}">
+      <view class="{{['left','flex-1','flex-column-between',l]}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">委托金额</label>
+          <label class="value text-color-1 fs-28">{{j}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">委托利率</label>
+          <label class="value text-color-1 fs-28">{{k}}</label>
+        </view>
+      </view>
+      <view class="right flex-1 flex-column-between" wx:if="{{m}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">成交金额</label>
+          <label class="value text-color-1 fs-28">{{n}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">成交利率</label>
+          <label class="value text-color-1 fs-28">{{o}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="detail-total flex-between border--top" wx:if="{{p}}">
+      <label class="title text-color-1 fs-30">委托金额</label>
+      <label class="value text-color-1">{{q}}</label>
+    </view>
+  </view>
+  <view class="section section-fees" wx:if="{{r}}">
+    <view class="row row-main fee fee-total flex-between border--bottom">
+      <view class="flex-center">
+        <label class="title text-color-1 fs-30">本息（含扣费）</label>
+      </view>
+      <label class="value text-color-1" wx:if="{{s}}">{{t}}</label>
+      <label class="value text-color-1 fs-28 smaller" wx:elif="{{v}}">--</label>
+      <label class="value text-color-1 fs-28 smaller" wx:else>{{w}}</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">到期收益（未扣费用）</label>
+      <label class="value text-color-1 fs-28" wx:if="{{x}}">{{y}}</label>
+      <label class="value text-color-1 fs-28" wx:else>待结算</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">交易费用</label>
+      <label class="value text-color-1 fs-28" wx:if="{{z}}">{{A}}</label>
+      <label class="value text-color-1 fs-28" wx:else>待结算</label>
+    </view>
+    <view class="row fee flex-between">
+      <label class="title text-color-4 fs-24">到期收益</label>
+      <label class="value text-color-1 fs-28" wx:if="{{B}}">{{C}}</label>
+      <label class="value text-color-1 fs-28" wx:else>待结算</label>
+    </view>
+  </view>
+  <view class="block-button flex" wx:if="{{D}}">
+    <button
+      bindtap="{{H}}"
+      class="flex-1"
+      disabled="{{G}}"
+      type="primary"
+      wx:if="{{E}}"
+    >
+      {{F}}
+    </button>
+  </view>
+  <view class="section section-tips" wx:if="{{I}}">
+    <view class="tip-title text-color-4">为什么会出现委托无效？</view>
+    <view class="tip-content text-color-4"
+      >证券开户当天交易权限未生效（监管要求需下一交易日方可交易）</view
+    >
+  </view>
+</view>

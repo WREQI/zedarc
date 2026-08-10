@@ -1,0 +1,23 @@
+<page-meta class="data-v-5dd8e442" rootFontSize="{{a}}"></page-meta>
+<view class="_div setting-container data-v-5dd8e442">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5dd8e442"
+    uI="5dd8e442-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5dd8e442"
+    uI="5dd8e442-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div set-item data-v-5dd8e442">
+    <view class="_div text data-v-5dd8e442">公众号个股热门问题推荐</view>
+    <view bindtap="{{d}}" class="_div switch-box data-v-5dd8e442">
+      <view class="{{['_div','data-v-5dd8e442','switch',c]}}">
+        <view class="_div switch-block data-v-5dd8e442"></view>
+      </view>
+    </view>
+  </view>
+</view>

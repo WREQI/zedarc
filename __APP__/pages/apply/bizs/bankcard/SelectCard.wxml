@@ -1,0 +1,86 @@
+<view class="page-apply-bindcard data-v-9256e628">
+  <view class="bindcard-header-wrap data-v-9256e628">
+    <view class="bindcard-title-wrap data-v-9256e628">
+      <view class="title data-v-9256e628">完善账户信息</view>
+      <view bindtap="{{a}}" class="support-banks link data-v-9256e628">
+        <label class="data-v-9256e628">支持的银行</label>
+        <label class="icon icon-italic-info link data-v-9256e628"></label>
+      </view>
+    </view>
+    <view class="bindcard-tips-wrap text-color-4 data-v-9256e628">
+      <label class="icon icon-security data-v-9256e628"></label>
+      <view class="bindcard-tips data-v-9256e628"
+        >《证券法》规定，需用本人银行卡开通资金存管，资金仅在本人证券账户和资金存管卡间流转，保障您的资金安全。</view
+      >
+    </view>
+    <view class="bindcard-tips-wrap data-v-9256e628" wx:if="{{b}}">
+      <label class="icon icon-ruletips data-v-9256e628"></label>
+      <view class="bindcard-tips data-v-9256e628"
+        >{{c}}<label
+          bindtap="{{f}}"
+          class="more-rules data-v-9256e628"
+          wx:if="{{d}}"
+          >{{e}}<label class="icon icon-arrow-right data-v-9256e628"></label>
+        </label>
+      </view>
+    </view>
+  </view>
+  <view class="content-container data-v-9256e628">
+    <view class="cardlist-container data-v-9256e628">
+      <bank-card-item
+        bind:__l="__l"
+        bindclick="{{card.b}}"
+        class="data-v-9256e628"
+        uI="{{card.c}}"
+        uP="{{card.d}}"
+        wx:for="{{g}}"
+        wx:for-item="card"
+        wx:key="a"
+      ></bank-card-item>
+    </view>
+    <view bindtap="{{h}}" class="add-card-button data-v-9256e628">
+      <view class="icon icon-add add-card-icon data-v-9256e628"></view>
+      <label class="data-v-9256e628">添加新的银行卡</label>
+    </view>
+  </view>
+  <step-buttons
+    bind:__l="__l"
+    class="data-v-9256e628"
+    uI="9256e628-1"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></step-buttons>
+  <block wx:if="{{j}}">
+    <bank-auth-popup
+      bind:__l="__l"
+      bindauthSuccess="{{l}}"
+      bindinput="{{k}}"
+      class="data-v-9256e628"
+      uI="9256e628-2"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></bank-auth-popup>
+  </block>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{q}}"
+    class="data-v-9256e628"
+    uI="9256e628-3"
+    uP="{{r}}"
+    uS="{{['d']}}"
+    wx:if="{{r}}"
+  >
+    <view class="{{['rule-sheet','data-v-9256e628',p]}}" wx:if="{{n}}">
+      <view class="rule-sheet-item data-v-9256e628" wx:for="{{o}}" wx:key="c">
+        <view class="rule-sheet-item-title data-v-9256e628">{{item.a}}</view>
+        <view
+          class="rule-sheet-item-content data-v-9256e628"
+          wx:for="{{item.b}}"
+          wx:for-item="each"
+          wx:key="b"
+          >{{each.a}}</view
+        >
+      </view>
+    </view>
+  </action-sheet>
+</view>

@@ -1,0 +1,112 @@
+<view class="_div mod-show-turn data-v-019565d2">
+  <view
+    class="{{['_div','turn-log','data-v-019565d2',f&&'disabled']}}"
+    ref="turnLog"
+    wx:if="{{a}}"
+  >
+    <block wx:if="{{item.a}}" wx:for="{{b}}">
+      <short-content
+        bind:__l="__l"
+        class="data-v-019565d2"
+        uI="{{item.i}}"
+        uP="{{item.j}}"
+        uS="{{['start']}}"
+        wx:if="{{item.j}}"
+      >
+        <label class="_span turn-name-box data-v-019565d2" slot="start">
+          <view class="_i icon-zhuanfa sq-icon-zhuanfa data-v-019565d2"></view>
+          <label
+            catchtap="{{item.c}}"
+            class="_span b data-v-019565d2"
+            data-personid="{{item.d}}"
+            >{{item.b}}</label
+          >
+          <block wx:if="{{item.e}}">
+            <slot wx:if="{{$slots.d}}"></slot>
+            <block wx:else>
+              <label class="_span reply data-v-019565d2">回复</label>
+              <label
+                catchtap="{{item.g}}"
+                class="_span b data-v-019565d2"
+                data-personid="{{item.h}}"
+                >{{item.f}}</label
+              >
+            </block>
+          </block>
+          <label class="_span data-v-019565d2">:</label>
+        </label>
+      </short-content>
+    </block>
+    <show-more
+      bind:__l="__l"
+      bindmounted="{{d}}"
+      class="r data-v-019565d2"
+      uI="019565d2-1"
+      uP="{{e}}"
+      uR="showMore"
+      wx:if="{{e}}"
+    ></show-more>
+  </view>
+  <view catchtap="{{B}}" class="_div turn-info data-v-019565d2" wx:if="{{g}}">
+    <view class="_div avator-wrap data-v-019565d2">
+      <avator-card
+        bind:__l="__l"
+        bindtapPerson="{{h}}"
+        class="data-v-019565d2"
+        uI="019565d2-2"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></avator-card>
+    </view>
+    <view class="_div content-box data-v-019565d2">
+      <view class="_div source_content short data-v-019565d2" wx:if="{{j}}">
+        <short-content
+          bind:__l="__l"
+          bindtapContent="{{m}}"
+          bindtapDetail="{{k}}"
+          bindtoggleShow="{{l}}"
+          class="data-v-019565d2"
+          uI="019565d2-3"
+          uP="{{n}}"
+          wx:if="{{n}}"
+        ></short-content>
+      </view>
+      <view class="_div source_content long data-v-019565d2" wx:if="{{o}}">
+        <long-content
+          bind:__l="__l"
+          bindtapDetail="{{p}}"
+          bindtoggleShow="{{q}}"
+          class="data-v-019565d2"
+          uI="019565d2-4"
+          uP="{{r}}"
+          wx:if="{{r}}"
+        ></long-content>
+      </view>
+      <item-image
+        bind:__l="__l"
+        bindtapImage="{{s}}"
+        class="data-v-019565d2"
+        uI="019565d2-5"
+        uP="{{t}}"
+        wx:if="{{t}}"
+      ></item-image>
+      <other-source
+        bind:__l="__l"
+        bindgoSharePage="{{w}}"
+        bindtapOtherSource="{{x}}"
+        class="data-v-019565d2"
+        uI="019565d2-6"
+        uP="{{y}}"
+        wx:if="{{v}}"
+      ></other-source>
+      <show-turn-num
+        bind:__l="__l"
+        class="data-v-019565d2"
+        uI="019565d2-7"
+        uP="{{A}}"
+        wx:if="{{z}}"
+      ></show-turn-num>
+    </view>
+  </view>
+  <view class="_div removed data-v-019565d2" wx:if="{{C}}">{{D}}</view>
+</view>

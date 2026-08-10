@@ -1,0 +1,64 @@
+<view class="_div tab-container data-v-c7737244">
+  <base-date
+    bind:__l="__l"
+    class="tab-date data-v-c7737244"
+    uI="c7737244-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></base-date>
+  <scroll-view
+    class="{{['component-tab','data-v-c7737244',e,f,g]}}"
+    scrollIntoView="{{h}}"
+    scrollWithAnimation="{{true}}"
+    scrollX="true"
+  >
+    <view
+      bindtap="{{tab.h}}"
+      class="{{['_div','data-v-c7737244','tab-item',tab.g,d]}}"
+      id="{{tab.e}}"
+      wx:for="{{c}}"
+      wx:for-item="tab"
+      wx:key="f"
+    >
+      <view class="_div tab-text data-v-c7737244">
+        <label class="_span data-v-c7737244">{{tab.a}}</label>
+        <view class="_div tab-tooltip data-v-c7737244" wx:if="{{tab.b}}"
+          >{{tab.c}}</view
+        >
+        <view class="_div tab-dot data-v-c7737244" wx:if="{{tab.d}}"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="{{['_div','subscribe-box','data-v-c7737244',l]}}" wx:if="{{i}}">
+    <subscribe-btn
+      bind:__l="__l"
+      bindsubscribe="{{j}}"
+      class="data-v-c7737244"
+      uI="c7737244-1"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></subscribe-btn>
+  </view>
+  <view class="_div brief-dir data-v-c7737244" wx:elif="{{m}}">
+    <image
+      alt=""
+      bindtap="{{o}}"
+      class="_img check-img data-v-c7737244"
+      hidden="{{!n}}"
+      src="https://st.gtimg.com/design/114d770f3fe3f1970c4cb02f625e012d.png"
+    ></image>
+    <image
+      alt=""
+      bindtap="{{q}}"
+      class="_img check-img data-v-c7737244"
+      hidden="{{!p}}"
+      src="https://st.gtimg.com/design/4c7958dc7e594f1130e60baa38e80aad.png"
+    ></image>
+    <label bindtap="{{s}}" class="{{['_span','data-v-c7737244',r]}}"
+      >看大纲</label
+    >
+    <view class="_div brief-tips-box data-v-c7737244" wx:if="{{t}}"
+      >大纲模式更清爽，点击切换详情版</view
+    >
+  </view>
+</view>

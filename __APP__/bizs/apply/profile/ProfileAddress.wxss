@@ -1,0 +1,169 @@
+@import "/app.wxss";
+.profile-input.data-v-ce12d3fd {
+  appearance: none;
+  background-color: var(--fill-1);
+  border: 0;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  height: 1.173333rem;
+  line-height: 0.666667rem;
+  outline: none;
+  padding: 0 0.266667rem;
+  text-align: left;
+  width: 100%;
+}
+.profile-input.data-v-ce12d3fd::-webkit-input-placeholder {
+  color: var(--text-color-5);
+  line-height: 1.173333rem;
+}
+.profile-input.data-v-ce12d3fd::placeholder {
+  color: var(--text-color-5);
+  line-height: 1.173333rem;
+}
+.profile-input.data-v-ce12d3fd:disabled {
+  background-color: var(--fill-2);
+  color: #bbb;
+}
+.input-placeholder.data-v-ce12d3fd {
+  color: var(--text-color-5);
+}
+.apply-profile-addr__container.data-v-ce12d3fd .st-action-sheet-content {
+  max-height: 6.933333rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.apply-profile-addr__container .actionsheet-content-container.data-v-ce12d3fd {
+  padding: 0.266667rem 0.24rem 0.666667rem;
+}
+.apply-profile-addr__container .mb-100.data-v-ce12d3fd {
+  margin-bottom: 1.333333rem;
+}
+.apply-profile-addr__container .triangle.data-v-ce12d3fd {
+  border-bottom: 0.16rem solid transparent;
+  border-left: 0.16rem solid var(--text-color-1);
+  border-top: 0.16rem solid transparent;
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
+.apply-profile-addr__container .profile-input.data-v-ce12d3fd {
+  box-sizing: border-box;
+  height: 1.173333rem;
+  padding: 0 0.933333rem 0 0.266667rem;
+}
+.apply-profile-addr__container .area-textarea-container.data-v-ce12d3fd {
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  padding: 0.266667rem 0.933333rem 0.266667rem 0.266667rem;
+  position: relative;
+  width: 100%;
+}
+.apply-profile-addr__container .area-textarea.data-v-ce12d3fd {
+  background-color: var(--fill-1);
+  border: 0;
+  box-sizing: initial;
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  height: 0.426667rem;
+  text-align: left;
+  width: 100%;
+}
+.apply-profile-addr__container .street-cell.data-v-ce12d3fd {
+  position: relative;
+}
+.apply-profile-addr__container .street-cell.data-v-ce12d3fd .st-cell {
+  padding-top: 0 !important;
+}
+.apply-profile-addr__container .street-cell .street-textarea.data-v-ce12d3fd {
+  background-color: var(--fill-1);
+  border: 0;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  height: 1.786667rem;
+  line-height: 0.613333rem;
+  outline: none;
+  padding: 0.32rem 0.933333rem 0.32rem 0.266667rem;
+  text-align: left;
+  width: 100%;
+}
+.apply-profile-addr__container .street-cell .icon-clear.data-v-ce12d3fd {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/clear_btn.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.426667rem 0.426667rem;
+  height: 0.8rem;
+  position: absolute;
+  right: 0.133333rem;
+  width: 0.8rem;
+}
+.apply-profile-addr__container .street-cell .suggestion_list.data-v-ce12d3fd {
+  left: 0.4rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 1.28rem;
+  z-index: 9;
+}
+.apply-profile-addr__container .warn-tip.data-v-ce12d3fd {
+  line-height: 0.453333rem;
+  padding: 0 0.4rem 0.266667rem;
+  text-align: left;
+}
+.apply-profile-addr__container .btn-import-address.data-v-ce12d3fd {
+  display: block;
+  margin-top: 0.4rem;
+}
+.apply-profile-addr__container .weixin-import-addr.data-v-ce12d3fd {
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--text-color-2);
+  font-size: 0.32rem;
+  font-weight: 600;
+  height: 0.746667rem;
+  line-height: 0.48rem;
+  margin: 0.533333rem auto 0.4rem;
+  padding: 0.133333rem 0.106667rem 0.133333rem 0.213333rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.apply-profile-addr__container
+  .weixin-import-addr
+  .wechat-icon.data-v-ce12d3fd {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/wechat_icon.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 0.44rem;
+  margin-right: 0.133333rem;
+  width: 0.533333rem;
+}
+.apply-profile-addr__container .address-tips.data-v-ce12d3fd {
+  line-height: 0.453333rem;
+  padding: 0 0.4rem;
+  text-align: left;
+}
+.apply-profile-addr__container .address-tips .tips.data-v-ce12d3fd {
+  margin-top: 0.106667rem;
+}
+.isUnSubmitable.data-v-ce12d3fd .st-action-sheet-confirm {
+  color: var(--text-color-5) !important;
+}
+.data-v-ce12d3fd .mp-dialog__message {
+  padding: 1.013333rem 0.933333rem;
+}
+.street-error.data-v-ce12d3fd {
+  border: 0.026667rem solid var(--color-red);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+}

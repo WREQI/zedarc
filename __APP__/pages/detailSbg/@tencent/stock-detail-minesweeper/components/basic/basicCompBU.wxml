@@ -1,0 +1,42 @@
+<view class="_div comp-block data-v-54c17f45">
+  <view class="_div ff-title data-v-54c17f45">营业外收入</view>
+  <view class="_div fold-content data-v-54c17f45" wx:if="{{a}}">
+    <view class="_p brief data-v-54c17f45" wx:if="{{b}}"
+      >{{c}}<view catchtap="{{d}}" class="_i data-v-54c17f45"></view>
+    </view>
+  </view>
+  <view class="_div chart-wrapper data-v-54c17f45" wx:if="{{e}}">
+    <view class="_div chart-legend data-v-54c17f45">
+      <label class="_span data-v-54c17f45">营业外收入 ({{f}})</label>
+      <label class="_span data-v-54c17f45">占利润总额比率 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{h}}"
+      class="data-v-54c17f45"
+      uI="54c17f45-0"
+      uP="{{i}}"
+      wx:if="{{g}}"
+    ></f2>
+  </view>
+  <view class="_div ff-title data-v-54c17f45">营业利润</view>
+  <view class="_div fold-content data-v-54c17f45" wx:if="{{j}}">
+    <view class="_p brief data-v-54c17f45" wx:if="{{k}}"
+      >{{l}}<view catchtap="{{m}}" class="_i data-v-54c17f45"></view>
+    </view>
+  </view>
+  <view class="_div chart-wrapper data-v-54c17f45" wx:if="{{n}}">
+    <view class="_div chart-legend data-v-54c17f45">
+      <label class="_span data-v-54c17f45">营业利润 ({{o}})</label>
+      <label class="_span data-v-54c17f45">占息税前利润比率 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{q}}"
+      class="data-v-54c17f45"
+      uI="54c17f45-1"
+      uP="{{r}}"
+      wx:if="{{p}}"
+    ></f2>
+  </view>
+</view>

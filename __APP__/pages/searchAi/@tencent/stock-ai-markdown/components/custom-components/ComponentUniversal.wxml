@@ -1,0 +1,84 @@
+<ai-card-stock-day-kline
+  bind:__l="__l"
+  uI="186fa9f8-0"
+  uP="{{b}}"
+  wx:if="{{a}}"
+></ai-card-stock-day-kline>
+<ai-card-profit-forecast
+  bind:__l="__l"
+  uI="186fa9f8-1"
+  uP="{{d}}"
+  wx:elif="{{c}}"
+></ai-card-profit-forecast>
+<ai-card-c-ai-gudan
+  bind:__l="__l"
+  uI="186fa9f8-2"
+  uP="{{f}}"
+  wx:elif="{{e}}"
+></ai-card-c-ai-gudan>
+<ai-card-c-ai-strategy
+  bind:__l="__l"
+  uI="186fa9f8-3"
+  uP="{{h}}"
+  wx:elif="{{g}}"
+></ai-card-c-ai-strategy>
+<ai-card-c-ai-marketing
+  bind:__l="__l"
+  uI="186fa9f8-4"
+  uP="{{j}}"
+  wx:elif="{{i}}"
+></ai-card-c-ai-marketing>
+<ai-card-c-ai-general-watchlist
+  bind:__l="__l"
+  uI="186fa9f8-5"
+  uP="{{l}}"
+  wx:elif="{{k}}"
+></ai-card-c-ai-general-watchlist>
+<ai-card-c-ai-sub-agent-aics-button
+  bind:__l="__l"
+  uI="186fa9f8-6"
+  uP="{{n}}"
+  wx:elif="{{m}}"
+></ai-card-c-ai-sub-agent-aics-button>
+<ai-card-c-ai-news
+  bind:__l="__l"
+  uI="186fa9f8-7"
+  uP="{{p}}"
+  wx:elif="{{o}}"
+></ai-card-c-ai-news>
+<ai-card-c-ai-subscribe-report
+  bind:__l="__l"
+  uI="186fa9f8-8"
+  uP="{{r}}"
+  wx:elif="{{q}}"
+></ai-card-c-ai-subscribe-report>
+<ai-card-c-ai-market-sentiment
+  bind:__l="__l"
+  uI="186fa9f8-9"
+  uP="{{t}}"
+  wx:elif="{{s}}"
+></ai-card-c-ai-market-sentiment>
+<ai-card-c-ai-divergent-opinions
+  bind:__l="__l"
+  uI="186fa9f8-10"
+  uP="{{w}}"
+  wx:elif="{{v}}"
+></ai-card-c-ai-divergent-opinions>
+<ai-card-c-ai-gzh-info
+  bind:__l="__l"
+  uI="186fa9f8-11"
+  uP="{{y}}"
+  wx:elif="{{x}}"
+></ai-card-c-ai-gzh-info>
+<ai-card-c-ai-related-quotes
+  bind:__l="__l"
+  uI="186fa9f8-12"
+  uP="{{A}}"
+  wx:elif="{{z}}"
+></ai-card-c-ai-related-quotes>
+<ai-card-c-ai-plate-info
+  bind:__l="__l"
+  uI="186fa9f8-13"
+  uP="{{C}}"
+  wx:elif="{{B}}"
+></ai-card-c-ai-plate-info>

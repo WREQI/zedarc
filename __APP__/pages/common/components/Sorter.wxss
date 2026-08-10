@@ -1,0 +1,44 @@
+@import "/app.wxss";
+.component-list-sorter.data-v-3c332f6f {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.106667rem;
+}
+.component-list-sorter .d-arrow.data-v-3c332f6f,
+.component-list-sorter .u-arrow.data-v-3c332f6f {
+  border-width: 3px;
+  display: block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.component-list-sorter .u-arrow.data-v-3c332f6f {
+  border-color: transparent transparent var(--text-color-4) transparent;
+  border-style: dashed dashed solid;
+  margin-bottom: 0.053333rem;
+}
+.component-list-sorter .d-arrow.data-v-3c332f6f {
+  border-color: var(--text-color-4) transparent transparent transparent;
+  border-style: solid dashed dashed;
+}
+.component-list-sorter .u-arrow-light.data-v-3c332f6f {
+  border-color: transparent transparent var(--color-primary-1) transparent;
+}
+.component-list-sorter .d-arrow-light.data-v-3c332f6f {
+  border-color: var(--color-primary-1) transparent transparent transparent;
+}
+.component-list-sorter.component-list-sorter__simple-mode
+  .u-arrow-light.data-v-3c332f6f {
+  border-color: transparent transparent var(--text-color-1) transparent;
+}
+.component-list-sorter.component-list-sorter__simple-mode
+  .d-arrow-light.data-v-3c332f6f {
+  border-color: var(--text-color-1) transparent transparent transparent;
+}

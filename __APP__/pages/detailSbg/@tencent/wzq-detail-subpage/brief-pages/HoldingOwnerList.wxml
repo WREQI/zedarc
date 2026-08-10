@@ -1,0 +1,36 @@
+<view class="_div mod-gdtj-zxg data-v-7557b66f">
+  <view class="{{['_div','list-block','data-v-7557b66f',i&&'t-0']}}">
+    <view class="_div list-block-header data-v-7557b66f">
+      <view class="_div list-block-select data-v-7557b66f">
+        <label class="_span list-select-name data-v-7557b66f">股东类型:</label>
+        <label catchtap="{{b}}" class="_span list-select-val data-v-7557b66f">
+          <view class="_div arrow-text data-v-7557b66f" id="gdSelectbtn"
+            >{{a}}</view
+          >
+          <image
+            class="_img select-arrow data-v-7557b66f"
+            src="https://st.gtimg.com/design/42b008a1728d8eab0870af0985bc21d0.png"
+          ></image>
+        </label>
+        <root-portal class="data-v-7557b66f" enable="{{true}}" wx:if="{{c}}">
+          <select-plate
+            bind:__l="__l"
+            bindchangeTab="{{e}}"
+            class="r data-v-7557b66f"
+            uI="7557b66f-0"
+            uP="{{f}}"
+            uR="selectPlateGd"
+            wx:if="{{f}}"
+          ></select-plate>
+        </root-portal>
+      </view>
+    </view>
+    <freez-grid
+      bind:__l="__l"
+      class="data-v-7557b66f"
+      uI="7557b66f-1"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></freez-grid>
+  </view>
+</view>

@@ -1,0 +1,63 @@
+<page-meta class="data-v-3fc6d9f8" rootFontSize="{{a}}"></page-meta>
+<view class="_div protocol-container data-v-3fc6d9f8">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3fc6d9f8"
+    uI="3fc6d9f8-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3fc6d9f8"
+    uI="3fc6d9f8-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div page-update data-v-3fc6d9f8">
+    <view class="_div subtitle border-bottom-1px data-v-3fc6d9f8"
+      >腾讯自选股小程序协议更新公告</view
+    >
+    <view class="_div content data-v-3fc6d9f8"
+      >腾讯自选股小程序更新了<label
+        class="_span data-v-3fc6d9f8"
+        wx:for="{{c}}"
+        wx:key="b"
+        >《{{item.a}}》</label
+      >协议文本，现公示如下。 根据相关法规，本公告自 {{d}}起，将持续展示 7
+      日，请您详细查阅知悉并确认是否接受下述相关协议内容的变更。</view
+    >
+    <view class="_div listtitle data-v-3fc6d9f8">相关协议：</view>
+    <view class="_div list data-v-3fc6d9f8">
+      <view
+        bindtap="{{item.c}}"
+        class="_div item data-v-3fc6d9f8"
+        wx:for="{{e}}"
+        wx:key="b"
+        >《{{item.a}}》</view
+      >
+    </view>
+    <view class="_div date-title data-v-3fc6d9f8">公告公示日期</view>
+    <view class="_div date data-v-3fc6d9f8">{{f}}</view>
+  </view>
+  <view class="_div text-box data-v-3fc6d9f8">
+    <view class="_div tip-title data-v-3fc6d9f8">温馨提示</view>
+    <view class="_div tip-text data-v-3fc6d9f8"
+      >请你点击“同意并继续”开始我们的服务，我们将以业界领先的信息安全技术，全力保护你的信息安全。</view
+    >
+    <view class="_div tip-text data-v-3fc6d9f8"
+      >如你仍不同意，我们将为你提供”仅浏览“模式，当你在使用过程中触发收集个人信息的功能时，我们会再次征求你的同意。</view
+    >
+  </view>
+  <view class="_div modal-buttons data-v-3fc6d9f8">
+    <view catchtap="{{g}}" class="_div modal-button data-v-3fc6d9f8"
+      >不同意</view
+    >
+    <button
+      catchtap="{{h}}"
+      class="{{['data-v-3fc6d9f8','modal-button','active']}}"
+      id="agree-btn"
+      openType="agreePrivacyAuthorization"
+    >
+      同意并继续
+    </button>
+  </view>
+</view>

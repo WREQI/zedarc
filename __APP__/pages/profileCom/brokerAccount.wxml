@@ -1,0 +1,167 @@
+<page-meta class="data-v-55f1c729" rootFontSize="{{a}}"></page-meta>
+<view
+  class="_div broker-account-wrapper data-v-55f1c729"
+  data-st-theme="{{o}}"
+  data-theme="{{p}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-55f1c729"
+    uI="55f1c729-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-55f1c729"
+    uI="55f1c729-1"
+  ></stock-privacy-dialog>
+  <view class="_div broker-account-list data-v-55f1c729">
+    <view class="_div title-tips data-v-55f1c729" wx:if="{{b}}">开户中</view>
+    <view
+      class="_div verifying-item card-item data-v-55f1c729"
+      itemId="{{item.h}}"
+      wx:for="{{c}}"
+      wx:key="g"
+    >
+      <block wx:if="{{item.a}}">
+        <broker-unbind-card
+          bind:__l="__l"
+          class="data-v-55f1c729"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></broker-unbind-card>
+      </block>
+      <block wx:else>
+        <broker-unbind-card
+          bind:__l="__l"
+          bindclickDetailBtn="{{item.d}}"
+          class="data-v-55f1c729"
+          uI="{{item.e}}"
+          uP="{{item.f}}"
+          wx:if="{{item.f}}"
+        ></broker-unbind-card>
+      </block>
+    </view>
+    <view
+      class="_div fail-item card-item data-v-55f1c729"
+      itemId="{{item.h}}"
+      wx:for="{{d}}"
+      wx:key="g"
+    >
+      <block wx:if="{{item.a}}">
+        <broker-unbind-card
+          bind:__l="__l"
+          class="data-v-55f1c729"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></broker-unbind-card>
+      </block>
+      <block wx:else>
+        <broker-unbind-card
+          bind:__l="__l"
+          bindclickDetailBtn="{{item.d}}"
+          class="data-v-55f1c729"
+          uI="{{item.e}}"
+          uP="{{item.f}}"
+          wx:if="{{item.f}}"
+        ></broker-unbind-card>
+      </block>
+    </view>
+    <view
+      class="_div applying-item card-item data-v-55f1c729"
+      itemId="{{item.h}}"
+      wx:for="{{e}}"
+      wx:key="g"
+    >
+      <block wx:if="{{item.a}}">
+        <broker-unbind-card
+          bind:__l="__l"
+          class="data-v-55f1c729"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></broker-unbind-card>
+      </block>
+      <block wx:else>
+        <broker-unbind-card
+          bind:__l="__l"
+          bindclickDetailBtn="{{item.d}}"
+          class="data-v-55f1c729"
+          uI="{{item.e}}"
+          uP="{{item.f}}"
+          wx:if="{{item.f}}"
+        ></broker-unbind-card>
+      </block>
+    </view>
+    <view class="_div title-tips data-v-55f1c729" wx:if="{{f}}"
+      >全部可用账户({{g}})</view
+    >
+    <view
+      class="_div binding-item card-item data-v-55f1c729"
+      itemId="{{item.k}}"
+      wx:for="{{h}}"
+      wx:key="j"
+    >
+      <block wx:if="{{item.a}}">
+        <broker-unbind-card
+          bind:__l="__l"
+          class="data-v-55f1c729"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></broker-unbind-card>
+      </block>
+      <block wx:elif="{{item.d}}">
+        <broker-unbind-card
+          bind:__l="__l"
+          bindclickDetailBtn="{{item.e}}"
+          class="data-v-55f1c729"
+          uI="{{item.f}}"
+          uP="{{item.g}}"
+          wx:if="{{item.g}}"
+        ></broker-unbind-card>
+      </block>
+      <block wx:else>
+        <broker-asset-card
+          bind:__l="__l"
+          class="data-v-55f1c729"
+          uI="{{item.h}}"
+          uP="{{item.i}}"
+          wx:if="{{item.i}}"
+        ></broker-asset-card>
+      </block>
+    </view>
+    <view
+      class="_div add-item data-v-55f1c729"
+      itemId="add-card"
+      key="add-card"
+    >
+      <add-broker-account-card
+        bind:__l="__l"
+        bindclick="{{i}}"
+        class="last-card data-v-55f1c729"
+        uI="55f1c729-11"
+      ></add-broker-account-card>
+    </view>
+    <account-broker-sheet
+      bind:__l="__l"
+      bindclose="{{k}}"
+      class="data-v-55f1c729"
+      data-c-h="{{!j}}"
+      uI="55f1c729-12"
+      uP="{{l}}"
+      wx:if="{{l}}"
+    ></account-broker-sheet>
+    <account-broker-password
+      bind:__l="__l"
+      class="data-v-55f1c729"
+      uI="55f1c729-13"
+      uP="{{n}}"
+      wx:if="{{m}}"
+    ></account-broker-password>
+  </view>
+  <view class="_div tx-logo data-v-55f1c729">
+    <view class="_div logo-img data-v-55f1c729"></view>
+  </view>
+</view>

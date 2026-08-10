@@ -1,0 +1,87 @@
+<page-meta class="data-v-9fba5541" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-9fba5541"
+  id="global-wrap"
+  uI="9fba5541-0"
+  uP="{{z}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{z}}"
+>
+  <view class="cs data-v-9fba5541">
+    <view class="cs__title data-v-9fba5541">现价/成本展示设置</view>
+    <radio-group
+      bindchange="{{e}}"
+      class="{{['data-v-9fba5541','cs__options',d]}}"
+    >
+      <view
+        bindtap="{{item.e}}"
+        class="cs__option data-v-9fba5541"
+        wx:for="{{b}}"
+        wx:key="d"
+      >
+        <radio
+          checked="{{item.b}}"
+          class="cs__radio data-v-9fba5541"
+          color="{{c}}"
+          size="{{36}}"
+          value="{{item.a}}"
+        ></radio>
+        <view class="cs__opt-txt data-v-9fba5541">{{item.c}}</view>
+      </view>
+    </radio-group>
+    <view class="cs__preview data-v-9fba5541">
+      <view class="cs__pv-header border--bottom data-v-9fba5541">
+        <view class="cs__pv-title data-v-9fba5541">预览效果</view>
+      </view>
+      <view class="cs__th data-v-9fba5541">
+        <image
+          class="cs__th-ind data-v-9fba5541"
+          src="https://st.gtimg.com/pcm/mkwipfgb_22a51461b462acdc826747d844213a22.svg"
+        ></image>
+        <text class="cs__th-txt data-v-9fba5541">证券/代码</text>
+        <text class="cs__th-txt cs__th-txt--r data-v-9fba5541">现价/成本</text>
+        <text class="cs__th-txt cs__th-txt--r data-v-9fba5541">今日盈亏</text>
+        <text class="cs__th-txt cs__th-txt--r w-168 data-v-9fba5541"
+          >持仓盈亏</text
+        >
+      </view>
+      <view class="cs__row data-v-9fba5541">
+        <view class="cs__info data-v-9fba5541">
+          <text class="{{['cs__name','data-v-9fba5541',g]}}">{{f}}</text>
+          <view class="cs__code-wrap data-v-9fba5541">
+            <image
+              class="cs__mkt-tag data-v-9fba5541"
+              src="https://st.gtimg.com/pcm/mkwipfib_33fe46b0631dda1e54778583a2413aa6.svg"
+            ></image>
+            <text class="cs__code data-v-9fba5541">{{h}}</text>
+          </view>
+        </view>
+        <view class="cs__col data-v-9fba5541">
+          <text class="{{['cs__val-main','data-v-9fba5541',j]}}">${{i}}</text>
+          <text class="cs__val-sub data-v-9fba5541">{{k}}{{l}}</text>
+        </view>
+        <view class="cs__col data-v-9fba5541">
+          <text class="{{['cs__val-main','data-v-9fba5541',n,o]}}">{{m}}</text>
+          <text class="{{['cs__val-sub','data-v-9fba5541',q]}}">{{p}}</text>
+        </view>
+        <view class="cs__col w-168 data-v-9fba5541">
+          <text class="{{['cs__val-main','data-v-9fba5541',s,t]}}">{{r}}</text>
+          <text class="{{['cs__val-sub','data-v-9fba5541',w]}}">{{v}}</text>
+        </view>
+      </view>
+      <view class="cs__divider data-v-9fba5541"></view>
+      <view class="cs__tip data-v-9fba5541">{{x}}</view>
+    </view>
+    <view class="cs__disclaimer data-v-9fba5541">
+      <view class="cs__disclaimer-txt data-v-9fba5541">温馨提示：</view>
+      <view class="cs__disclaimer-txt data-v-9fba5541"
+        >港股通采取"港币报价、人民币结算"模式。</view
+      >
+      <view class="cs__disclaimer-txt data-v-9fba5541"
+        >汇率转换数据仅供参考，实际成本及盈亏以中国结算的最终清结算数据为准。</view
+      >
+    </view>
+  </view>
+</global-wrap>

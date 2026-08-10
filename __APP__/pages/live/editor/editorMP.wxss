@@ -1,0 +1,63 @@
+.editor-page.data-v-8638400b {
+  height: 100vh;
+}
+.editor-page .mask.data-v-8638400b {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+}
+.editor-page .editor-wrap.data-v-8638400b {
+  position: fixed;
+  z-index: 102;
+}
+.editor-page .editor-wrap.fade-enter-active.data-v-8638400b {
+  animation: dialog-slidein-8638400b 0.4s;
+  animation-fill-mode: forwards;
+}
+.editor-page .editor-wrap.fade-leave-active.data-v-8638400b {
+  animation: dialog-slideout-8638400b 0.4s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes dialog-slidein-8638400b {
+  0% {
+    background: transparent;
+    transform: translateY(100%);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+  }
+}
+@keyframes dialog-slidein-8638400b {
+  0% {
+    background: transparent;
+    transform: translateY(100%);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes dialog-slideout-8638400b {
+  0% {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+  }
+  to {
+    background: transparent;
+    transform: translateY(100%);
+  }
+}
+@keyframes dialog-slideout-8638400b {
+  0% {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+  }
+  to {
+    background: transparent;
+    transform: translateY(100%);
+  }
+}

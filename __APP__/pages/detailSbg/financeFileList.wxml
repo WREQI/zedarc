@@ -1,0 +1,24 @@
+<page-meta class="data-v-95e7acb0" rootFontSize="{{a}}"></page-meta>
+<view class="_div finance-mod-container data-v-95e7acb0" data-st-theme="{{f}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-95e7acb0"
+    uI="95e7acb0-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-95e7acb0"
+    uI="95e7acb0-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <announcement-list
+    bind:__l="__l"
+    class="r data-v-95e7acb0"
+    uI="95e7acb0-2"
+    uP="{{e}}"
+    uR="list"
+    wx:if="{{c}}"
+  ></announcement-list>
+  <view class="_div zxg-logo data-v-95e7acb0"></view>
+</view>

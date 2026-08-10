@@ -1,0 +1,28 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{e}}"
+  class="cond-result data-v-3936a79d"
+  uI="3936a79d-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <simple-animate-result
+    bind:__l="__l"
+    bindbuttonClick="{{c}}"
+    bindtradeResultVisibleChange="{{b}}"
+    class="r data-v-3936a79d"
+    uI="3936a79d-1,3936a79d-0"
+    uP="{{d}}"
+    uR="simleAnimResult"
+    uS="{{['footer']}}"
+    wx:if="{{d}}"
+  >
+    <broker-footer
+      bind:__l="__l"
+      class="data-v-3936a79d"
+      slot="footer"
+      uI="3936a79d-2,3936a79d-1"
+    ></broker-footer>
+  </simple-animate-result>
+</action-sheet>

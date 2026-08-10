@@ -1,0 +1,9 @@
+<view
+  bindtap="{{f}}"
+  class="{{['_div','yy-button',c,d]}}"
+  disabled="{{b}}"
+  style="{{e}}"
+>
+  <slot wx:if="{{$slots.d}}"></slot>
+  <block wx:else>{{a}}</block>
+</view>

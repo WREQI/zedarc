@@ -1,0 +1,46 @@
+<view
+  bindtap="{{q}}"
+  catchtouchmove="{{p}}"
+  class="{{['_div','mask-wrapper','data-v-9b7b10bb',n&&'skin-dark']}}"
+  hidden="{{!m}}"
+  style="{{'opacity:'+o}}"
+>
+  <view
+    class="{{['_div','popup-wrapper','data-v-9b7b10bb',i&&'popup-wrapper-landscape']}}"
+    id="popup"
+    ref="popup"
+    style="{{'top:'+j+';'+'left:'+k+';'+'height:'+l}}"
+  >
+    <image
+      class="_img triangle-up triangle-right data-v-9b7b10bb"
+      hidden="{{!a}}"
+      src="{{b}}"
+    ></image>
+    <view
+      bindtouchstart="{{e}}"
+      catchtouchmove="{{f}}"
+      class="_div option-wrapper data-v-9b7b10bb"
+      ref="popupScroll"
+    >
+      <view class="{{['_div','data-v-9b7b10bb',d]}}" ref="popupScrollInner">
+        <view class="_div data-v-9b7b10bb" wx:for="{{c}}">
+          <view
+            catchtap="{{item.d}}"
+            class="{{['_div','item','data-v-9b7b10bb',item.c&&'item-selected']}}"
+            key="{{item.b}}"
+            >{{item.a}}</view
+          >
+          <view
+            class="_div seperate-line data-v-9b7b10bb"
+            key="{{item.e}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <image
+      class="_img triangle-down triangle-right data-v-9b7b10bb"
+      hidden="{{!g}}"
+      src="{{h}}"
+    ></image>
+  </view>
+</view>

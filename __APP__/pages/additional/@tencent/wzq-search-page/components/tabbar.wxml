@@ -1,0 +1,10 @@
+<view class="{{['_div','data-v-e1e23493',b,c]}}">
+  <view
+    bindtap="{{tab.d}}"
+    class="{{['_div','data-v-e1e23493','tab',tab.c]}}"
+    wx:for="{{a}}"
+    wx:for-item="tab"
+    wx:key="b"
+    >{{tab.a}}</view
+  >
+</view>

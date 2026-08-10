@@ -1,0 +1,26 @@
+<view
+  catchtap="{{e}}"
+  class="{{['_div','setting-tip-bubble','data-v-2f10bf77',d&&'setting-tip-bubble--dark']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div setting-tip-bubble__content data-v-2f10bf77">
+    <view class="_div setting-tip-bubble__text data-v-2f10bf77">
+      <view
+        class="_div setting-tip-bubble__line data-v-2f10bf77"
+        wx:for="{{b}}"
+        wx:for-item="line"
+        wx:key="b"
+        >{{line.a}}</view
+      >
+    </view>
+    <view
+      catchtap="{{c}}"
+      class="_div setting-tip-bubble__close data-v-2f10bf77"
+    >
+      <label
+        class="_span setting-tip-bubble__close-icon data-v-2f10bf77"
+      ></label>
+    </view>
+  </view>
+  <view class="_div setting-tip-bubble__arrow data-v-2f10bf77"></view>
+</view>

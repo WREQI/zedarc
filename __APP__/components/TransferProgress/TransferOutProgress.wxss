@@ -1,0 +1,41 @@
+@import "/app.wxss";
+.transfer-out-progress.data-v-dfa0c547 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+[data-theme="dark"] .transfer-out-progress.data-v-dfa0c547 {
+  background-color: var(--fill-2);
+}
+.transfer-out-progress .state-item.data-v-dfa0c547 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  border-bottom: 0.013333rem solid var(--text-color-7);
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  height: 1.093333rem;
+  justify-content: space-between;
+  line-height: 1.093333rem;
+  margin: 0 0.32rem;
+}
+.transfer-out-progress .state-item .text.data-v-dfa0c547 {
+  font-size: 0.32rem;
+  line-height: 0.373333rem;
+}
+.transfer-out-progress .state-item .text.date.data-v-dfa0c547 {
+  text-align: right;
+}
+.transfer-out-progress .state-item.data-v-dfa0c547:last-child {
+  border-bottom: none;
+}

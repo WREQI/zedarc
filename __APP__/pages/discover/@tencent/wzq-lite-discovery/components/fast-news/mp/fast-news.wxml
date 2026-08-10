@@ -1,0 +1,33 @@
+<scroll-view
+  bindrefresherrefresh="{{i}}"
+  bindscroll="{{k}}"
+  bindscrolltolower="{{j}}"
+  class="fast-news data-v-13945647"
+  refresherEnabled="{{true}}"
+  refresherThreshold="100"
+  refresherTriggered="{{h}}"
+  scrollY="{{true}}"
+>
+  <view class="_div data-v-13945647">
+    <fast-news-content
+      bind:__l="__l"
+      bindrefreshFail="{{c}}"
+      bindrefreshSuccess="{{b}}"
+      class="r data-v-13945647"
+      uI="13945647-0"
+      uP="{{d}}"
+      uR="contentRef"
+      wx:if="{{d}}"
+    ></fast-news-content>
+    <view class="_div status-container data-v-13945647" wx:if="{{e}}">
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{f}}"
+        class="data-v-13945647"
+        uI="13945647-1"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></st-status>
+    </view>
+  </view>
+</scroll-view>

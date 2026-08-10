@@ -1,0 +1,46 @@
+<page-meta class="data-v-0dae30e5" rootFontSize="{{a}}"></page-meta>
+<view
+  class="_div national-debt-container data-v-0dae30e5"
+  data-st-theme="{{l}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-0dae30e5"
+    uI="0dae30e5-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-0dae30e5"
+    uI="0dae30e5-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div global_bubble_holder data-v-0dae30e5"></view>
+  <national-debt-index
+    bind:__l="__l"
+    bindonClickAccount="{{e}}"
+    bindonClickTrade="{{d}}"
+    bindsubscribe="{{f}}"
+    class="r data-v-0dae30e5"
+    uI="0dae30e5-2"
+    uP="{{g}}"
+    uR="nationalDebtContent"
+    wx:if="{{g}}"
+  ></national-debt-index>
+  <follow-guide
+    bind:__l="__l"
+    bindclose="{{h}}"
+    class="data-v-0dae30e5"
+    uI="0dae30e5-3"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></follow-guide>
+  <mp-bubble
+    bind:__l="__l"
+    class="data-v-0dae30e5"
+    data-c-h="{{!j}}"
+    uI="0dae30e5-4"
+    uP="{{k}}"
+    wx:if="{{k}}"
+  ></mp-bubble>
+</view>

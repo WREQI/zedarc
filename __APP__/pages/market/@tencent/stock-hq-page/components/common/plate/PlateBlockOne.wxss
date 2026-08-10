@@ -1,0 +1,96 @@
+.layout.data-v-590d2bd0 {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-590d2bd0,
+.layout-align-start-center.data-v-590d2bd0 {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-590d2bd0 {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-590d2bd0 {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-590d2bd0 {
+  justify-content: flex-start;
+}
+.layout-column.data-v-590d2bd0 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-590d2bd0 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-590d2bd0 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.color-rise.data-v-590d2bd0 {
+  color: var(--color-rise) !important;
+}
+.color-drop.data-v-590d2bd0 {
+  color: var(--color-drop) !important;
+}
+.color-equal.data-v-590d2bd0 {
+  color: var(--color-equal) !important;
+}
+.color-rise-bg.data-v-590d2bd0 {
+  background-color: var(--color-rise);
+}
+.color-drop-bg.data-v-590d2bd0 {
+  background-color: var(--color-drop);
+}
+.plate-item.data-v-590d2bd0 {
+  border-right: 0.013333333333333334rem solid var(--border-light);
+  color: inherit;
+  font-size: 0.37333333333333335rem;
+  height: 2.7066666666666666rem;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 0.21333333333333335rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+.plate-item-wzq-hs.data-v-590d2bd0 {
+  height: 2rem;
+}
+.plate-item.data-v-590d2bd0:last-child:after {
+  display: none;
+}
+.plate-item-with-short-divider.data-v-590d2bd0:after {
+  height: calc(100% - 0.72rem);
+}
+.plate-item .plate-name.data-v-590d2bd0 {
+  color: var(--text-color-1);
+  font-weight: 500;
+  line-height: 0.52rem;
+}
+.plate-item .plate-quote.data-v-590d2bd0 {
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+}
+.plate-item .plate-desc.data-v-590d2bd0 {
+  line-height: 0.41333333333333333rem;
+}
+.plate-item .plate-desc.data-v-590d2bd0,
+.plate-item .plate-feature-stock.data-v-590d2bd0 {
+  color: var(--text-color-4);
+  font-size: 0.29333333333333333rem;
+}
+.plate-item .plate-feature-stock .plate-stock-name.data-v-590d2bd0,
+.plate-item .plate-feature-stock .plate-stock-quote.data-v-590d2bd0 {
+  line-height: 0.41333333333333333rem;
+}
+.plate-item .plate-feature-stock .price.data-v-590d2bd0 {
+  margin-right: 0.21333333333333335rem;
+}

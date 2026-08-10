@@ -1,0 +1,58 @@
+<view class="{{['smartbox','^smartbox','data-v-d0123a66',h]}}">
+  <slot name="label"></slot>
+  <view class="{{['data-v-d0123a66',g]}}">
+    <view
+      bindtap="{{item.j}}"
+      class="{{['flex','text-color-1','item-wrap','^item-wrap','data-v-d0123a66',e,f]}}"
+      wx:for="{{a}}"
+      wx:key="i"
+    >
+      <view class="stock-info data-v-d0123a66">
+        <view class="name text-color-1 ^name data-v-d0123a66">
+          <block wx:if="{{b}}">
+            <label
+              class="{{['data-v-d0123a66',clip.b]}}"
+              wx:for="{{item.a}}"
+              wx:for-item="clip"
+              wx:key="c"
+              >{{clip.a}}</label
+            >
+          </block>
+          <label class="data-v-d0123a66" wx:else>{{item.b}}</label>
+        </view>
+        <view
+          class="code text-color-4 two-line flex-vcenter ^code data-v-d0123a66"
+        >
+          <market-label
+            bind:__l="__l"
+            class="stock-mkt data-v-d0123a66"
+            uI="{{item.c}}"
+            uP="{{item.d}}"
+            wx:if="{{item.d}}"
+          ></market-label>
+          <block wx:if="{{c}}">
+            <label
+              class="{{['data-v-d0123a66',clip.b]}}"
+              wx:for="{{item.e}}"
+              wx:for-item="clip"
+              wx:key="c"
+              >{{clip.a}}</label
+            >
+          </block>
+          <label class="data-v-d0123a66" wx:else>{{item.f}}</label>
+        </view>
+      </view>
+      <block wx:if="{{d}}">
+        <view
+          class="icon icon-created data-v-d0123a66"
+          wx:if="{{item.g}}"
+        ></view>
+        <view
+          catchtap="{{item.h}}"
+          class="icon icon-create data-v-d0123a66"
+          wx:else
+        ></view>
+      </block>
+    </view>
+  </view>
+</view>

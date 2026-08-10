@@ -1,0 +1,83 @@
+.wiki-bar.data-v-cdbca69f {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin-bottom: 0.28rem;
+  padding-bottom: 0.18666666666666668rem;
+  position: relative;
+}
+.wiki-bar.skin-black.data-v-cdbca69f:after {
+  border-bottom: 0.013333333333333334rem solid #262e40;
+}
+.wiki-bar.data-v-cdbca69f:after {
+  border-bottom: 0.013333333333333334rem solid var(--border-light);
+  bottom: 0;
+  content: "";
+  position: absolute;
+  transform-origin: 0 100%;
+  width: 100%;
+}
+.wiki-bar .wiki-key-hs.data-v-cdbca69f {
+  color: var(--color-lightgray-1);
+  font-size: 0.37333333333333335rem;
+  line-height: 0.6933333333333334rem;
+}
+.wiki-bar .wiki-key.data-v-cdbca69f {
+  color: var(--color-blue);
+  font-size: 0.3466666666666667rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 0.6933333333333334rem;
+  white-space: nowrap;
+}
+.wiki-bar .wiki-detail.data-v-cdbca69f {
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 0.36rem;
+}
+.wiki-bar .wiki-detail .right-wrap.data-v-cdbca69f,
+.wiki-bar .wiki-detail.data-v-cdbca69f {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.wiki-bar .wiki-detail.rank .wiki-title.data-v-cdbca69f {
+  width: 3.92rem;
+}
+.wiki-bar .wiki-detail .wiki-image.data-v-cdbca69f {
+  height: 0.5333333333333333rem;
+}
+.wiki-bar .wiki-detail .wiki-image.auto-width.data-v-cdbca69f {
+  width: 0;
+}
+.wiki-bar .wiki-detail .wiki-title.data-v-cdbca69f {
+  color: var(--color-midgray);
+  font-size: 0.3466666666666667rem;
+  line-height: 0.6933333333333334rem;
+  margin-left: 0.10666666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 5.8933333333333335rem;
+}
+.wiki-bar .wiki-detail-hs .wiki-title.data-v-cdbca69f {
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+}
+.wiki-bar .icon-wiki.data-v-cdbca69f {
+  background: url(https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.2rem;
+  margin: 0-0.10666666666666667rem -0.05333333333333334rem 0;
+  width: 0.2rem;
+}
+.wiki-bar-hs.data-v-cdbca69f {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.wiki-bar-hs.data-v-cdbca69f:after {
+  border-bottom: none !important;
+}

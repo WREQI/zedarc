@@ -1,0 +1,25 @@
+<view class="_div finish-content data-v-26a8b664">
+  <image
+    alt=""
+    class="_img finish-img data-v-26a8b664"
+    src="https://st.gtimg.com/design/b3b21744345f5d5cc70e4e6f2c4d945f.png"
+    wx:if="{{a}}"
+  ></image>
+  <image
+    alt=""
+    class="_img finish-img data-v-26a8b664"
+    src="https://st.gtimg.com/design/38db1e36c2aaf8353813ffde8c3f54d8.png"
+    wx:else
+  ></image>
+  <view class="_div finish-desc data-v-26a8b664">模拟买入委托{{b}}</view>
+  <view class="_div finish-tips data-v-26a8b664" wx:if="{{c}}">{{d}}</view>
+  <view class="_div finish-tips data-v-26a8b664" wx:else
+    >买入{{e}}股「{{f}}」的委托已提交</view
+  >
+  <view bindtap="{{h}}" class="_div finish-button data-v-26a8b664" wx:if="{{g}}"
+    >返回模拟交易</view
+  >
+  <view bindtap="{{j}}" class="_div finish-button data-v-26a8b664" wx:if="{{i}}"
+    >开启价格提醒</view
+  >
+</view>

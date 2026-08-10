@@ -1,0 +1,32 @@
+<view class="_div open-transfer">
+  <block wx:if="{{a}}">
+    <open-transfer-page-a
+      bind:__l="__l"
+      uI="68022064-0"
+      uP="{{c}}"
+      wx:if="{{b}}"
+    ></open-transfer-page-a>
+    <open-transfer-page-b
+      bind:__l="__l"
+      bindinit="{{e}}"
+      uI="68022064-1"
+      uP="{{f}}"
+      wx:elif="{{d}}"
+    ></open-transfer-page-b>
+    <block wx:elif="{{g}}">
+      <broker-plugin
+        bind:__l="__l"
+        bindready="{{i}}"
+        uI="68022064-2"
+        wx:if="{{h}}"
+      ></broker-plugin>
+      <trade-page
+        bind:__l="__l"
+        bindinit="{{j}}"
+        uI="68022064-3"
+        uP="{{k||''}}"
+        wx:else
+      ></trade-page>
+    </block>
+  </block>
+</view>

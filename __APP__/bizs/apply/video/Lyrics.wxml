@@ -1,0 +1,17 @@
+<view class="{{['component-lyrics','^component-lyrics','data-v-a5f0609b',d]}}">
+  <view
+    class="{{['lyric-text-wrapper','^lyric-text-wrapper','data-v-a5f0609b',c]}}"
+    wx:for="{{a}}"
+    wx:for-item="word"
+    wx:key="d"
+  >
+    <view
+      class="{{['lyric-text','^lyric-text','data-v-a5f0609b',word.b]}}"
+      wx:if="{{b}}"
+      >{{word.a}}</view
+    >
+    <view class="lyric-text ^lyric-text data-v-a5f0609b" wx:else
+      >{{word.c}}</view
+    >
+  </view>
+</view>

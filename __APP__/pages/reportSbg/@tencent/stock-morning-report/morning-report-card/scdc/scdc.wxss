@@ -1,0 +1,81 @@
+.scdc-wrapper.data-v-79a31a1e {
+  margin: 0.64rem 0.32rem 0;
+}
+.scdc-wrapper .scdc-content.data-v-79a31a1e {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  overflow: hidden;
+  padding-bottom: 0.32rem;
+}
+.scdc-wrapper .onLongTouch.data-v-79a31a1e {
+  opacity: 0.4;
+}
+.scdc-wrapper .scdc-item.data-v-79a31a1e {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4266666666666667rem 0.32rem 0.10666666666666667rem;
+}
+.scdc-wrapper .scdc-item .jg-avatar.data-v-79a31a1e {
+  background-size: cover;
+  border-radius: 0.32rem;
+  height: 0.64rem;
+  margin-left: 0.05333333333333334rem;
+  margin-top: 0.12rem;
+  width: 0.64rem;
+}
+.scdc-wrapper .scdc-item .jg-content.data-v-79a31a1e {
+  background-color: var(--color-card);
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-heavygray);
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-left: 0.22666666666666666rem;
+  padding: 0.16rem 0.26666666666666666rem;
+  position: relative;
+  text-align: justify;
+}
+.scdc-wrapper .scdc-item .jg-content .trangle.data-v-79a31a1e {
+  background-image: url(https://st.gtimg.com/design/b6bb6862d19a4b466f71eed06b87e064.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.24rem 0.21333333333333335rem;
+  height: 0.21333333333333335rem;
+  left: -0.12rem;
+  position: absolute;
+  top: 0.3333333333333333rem;
+  width: 0.24rem;
+}
+[data-st-theme="black"]
+  .scdc-wrapper
+  .scdc-item
+  .jg-content
+  .trangle.data-v-79a31a1e,
+[data-st-theme="dark"]
+  .scdc-wrapper
+  .scdc-item
+  .jg-content
+  .trangle.data-v-79a31a1e {
+  background-image: url(https://st.gtimg.com/design/a74d8c0dba5b638e512d6fe578b8cbc7.png);
+}
+.scdc-wrapper .scdc-item .jg-content .name.data-v-79a31a1e {
+  font-weight: 600;
+}
+.scdc-wrapper .scdc-item .jg-content .video-tag.data-v-79a31a1e {
+  align-items: center;
+  color: #e63535;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.4533333333333333rem;
+}
+.scdc-wrapper .scdc-item .jg-content .video-tag .live.data-v-79a31a1e {
+  height: 0.32rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.36rem;
+}

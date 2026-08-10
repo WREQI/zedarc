@@ -1,0 +1,54 @@
+.speech-entry.data-v-5a054355 {
+  width: 100%;
+}
+.speech-entry .speech-card.data-v-5a054355 {
+  align-items: center;
+  background: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  padding: 0.21333333333333335rem 0.32rem;
+  width: 100%;
+}
+.speech-entry .speech-card__icon.data-v-5a054355 {
+  height: 0.8rem;
+  object-fit: cover;
+  width: 0.8rem;
+}
+.speech-entry .speech-card__title.data-v-5a054355 {
+  color: var(--color-heavygray);
+  flex: 1;
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin-left: 0.32rem;
+}
+.speech-entry .speech-card__action.data-v-5a054355 {
+  background-image: url(https://st.gtimg.com/design/20835cf7302463ef089e4dfadfca0006.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex-shrink: 0;
+  height: 0.64rem;
+  margin-left: 0.21333333333333335rem;
+  width: 0.64rem;
+}
+[data-st-theme="black"] .speech-entry .speech-card__action.data-v-5a054355,
+[data-st-theme="dark"] .speech-entry .speech-card__action.data-v-5a054355 {
+  background-image: url(https://st.gtimg.com/design/88e0d55ec807860807f20fd79b65bcc1.png);
+}
+.speech-entry .speech-card--playing .speech-card__action.data-v-5a054355 {
+  background-image: url(https://st.gtimg.com/design/7d4c4c93d18a298cf604b309f424f200.svg);
+}
+[data-st-theme="black"]
+  .speech-entry
+  .speech-card--playing
+  .speech-card__action.data-v-5a054355,
+[data-st-theme="dark"]
+  .speech-entry
+  .speech-card--playing
+  .speech-card__action.data-v-5a054355 {
+  background-image: url(https://st.gtimg.com/design/98aee2cb07a19e7378e4a5378adb2201.png);
+}

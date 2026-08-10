@@ -1,0 +1,250 @@
+<page-meta class="data-v-61e92ebe" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-61e92ebe"
+  id="global-wrap"
+  uI="61e92ebe-0"
+  uP="{{av}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{av}}"
+>
+  <view class="{{['cond-content-container','data-v-61e92ebe',V&&'mp']}}">
+    <view class="cond-search data-v-61e92ebe" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-61e92ebe"
+        uI="61e92ebe-1,61e92ebe-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <search-result
+      bind:__l="__l"
+      bindclick="{{g}}"
+      class="data-v-61e92ebe"
+      data-c-h="{{!f}}"
+      uI="61e92ebe-2,61e92ebe-0"
+    ></search-result>
+    <view
+      class="{{['condition-form','condition-form__simple-mode','data-v-61e92ebe',U,'has-tips']}}"
+      hidden="{{!T}}"
+    >
+      <view class="{{['condition-quote-wrapper','data-v-61e92ebe',l&&'mp']}}">
+        <condition-quote
+          bind:__l="__l"
+          bindnameClick="{{j}}"
+          bindsearch="{{i}}"
+          class="data-v-61e92ebe"
+          uI="61e92ebe-3,61e92ebe-0"
+          uP="{{k}}"
+          uS="{{['label']}}"
+          wx:if="{{h}}"
+        >
+          <view class="data-v-61e92ebe" slot="label">开板卖出</view>
+        </condition-quote>
+      </view>
+      <form-wrap
+        bind:__l="__l"
+        class="trigger-open-selling-form auto-width data-v-61e92ebe"
+        uI="61e92ebe-4,61e92ebe-0"
+        uS="{{['left','right']}}"
+      >
+        <view class="flex-hcenter flex-column data-v-61e92ebe" slot="left">
+          <view class="flex-vcenter data-v-61e92ebe">触发条件</view>
+        </view>
+        <bottom-selector-trigger
+          bind:__l="__l"
+          bindclick="{{m}}"
+          class="data-v-61e92ebe"
+          slot="right"
+          uI="61e92ebe-5,61e92ebe-4"
+          uP="{{n}}"
+        ></bottom-selector-trigger>
+      </form-wrap>
+      <form-wrap
+        bind:__l="__l"
+        class="trigger-open-selling-form data-v-61e92ebe"
+        uI="61e92ebe-6,61e92ebe-0"
+        uS="{{['left','right']}}"
+        wx:if="{{o}}"
+      >
+        <view bindtap="{{q}}" class="data-v-61e92ebe" slot="left"
+          >{{p}}<label
+            class="text-color-1 icon icon-triangle triangle-down data-v-61e92ebe"
+          ></label>
+        </view>
+        <view class="{{['data-v-61e92ebe',y,z]}}" slot="right">
+          <stepper
+            bind:__l="__l"
+            bindblur="{{v}}"
+            bindchange="{{s}}"
+            bindfocus="{{t}}"
+            bindnext="{{w}}"
+            class="r data-v-61e92ebe"
+            uI="61e92ebe-7,61e92ebe-6"
+            uP="{{x}}"
+            uR="downToStepStepper"
+            wx:if="{{x}}"
+          ></stepper>
+        </view>
+      </form-wrap>
+      <view class="tips-bar flex-vcenter data-v-61e92ebe"
+        >满足以上触发条件，系统将自动提交以下委托单</view
+      >
+      <view class="bottom-wrapper data-v-61e92ebe">
+        <view class="input-gap data-v-61e92ebe">
+          <form-wrap
+            bind:__l="__l"
+            class="order-price-type-form opening-sell-form auto-width data-v-61e92ebe"
+            uI="61e92ebe-8,61e92ebe-0"
+            uS="{{['left','right']}}"
+          >
+            <view slot="left">委托价</view>
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{A}}"
+              class="data-v-61e92ebe"
+              slot="right"
+              uI="61e92ebe-9,61e92ebe-8"
+              uP="{{B}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+        </view>
+        <view class="input-gap data-v-61e92ebe">
+          <form-wrap
+            bind:__l="__l"
+            class="opening-sell-form data-v-61e92ebe"
+            uI="61e92ebe-10,61e92ebe-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="data-v-61e92ebe" slot="left">卖出数量</view>
+            <view class="{{['data-v-61e92ebe',H]}}" slot="right">
+              <stepper
+                bind:__l="__l"
+                bindblur="{{F}}"
+                bindchange="{{D}}"
+                bindfocus="{{E}}"
+                class="r data-v-61e92ebe"
+                key="quantity"
+                uI="61e92ebe-11,61e92ebe-10"
+                uP="{{G}}"
+                uR="quantityStepStepper"
+                wx:if="{{G}}"
+              ></stepper>
+            </view>
+          </form-wrap>
+          <view bindtap="{{K}}" class="avaliable-money data-v-61e92ebe"
+            >当前可卖：<label class="num data-v-61e92ebe">{{I}}{{J}}</label>
+          </view>
+        </view>
+        <view class="time-form data-v-61e92ebe">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-61e92ebe"
+            uI="61e92ebe-12,61e92ebe-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="module-title title data-v-61e92ebe" slot="left"
+              >订单有效期</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{L}}"
+              class="data-v-61e92ebe"
+              slot="right"
+              uI="61e92ebe-13,61e92ebe-12"
+              uP="{{M}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view class="cond-form-tips data-v-61e92ebe">{{N}}</view>
+        </view>
+      </view>
+      <view bindtap="{{O}}" class="cond-guide-btn data-v-61e92ebe"
+        >查看开板卖出说明</view
+      >
+      <view class="cond-risk-tips data-v-61e92ebe" wx:if="{{P}}">
+        <block wx:if="{{Q}}"
+          >规则提示：<view class="data-v-61e92ebe"></view>
+          <view class="data-v-61e92ebe">{{R}}</view>
+          <view class="data-v-61e92ebe"></view> </block
+        >风险提示：<view class="data-v-61e92ebe"></view>
+        <view
+          class="data-v-61e92ebe"
+          wx:for="{{S}}"
+          wx:for-item="text"
+          wx:key="b"
+          >{{text.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="cond-btnwrap data-v-61e92ebe" hidden="{{!Y}}">
+    <button bindtap="{{X}}" class="submit-btn data-v-61e92ebe" disabled="{{W}}">
+      保存设置
+    </button>
+  </view>
+  <bottom-selector
+    bind:__l="__l"
+    bindchange="{{Z}}"
+    bindclose="{{aa}}"
+    class="data-v-61e92ebe"
+    uI="61e92ebe-14,61e92ebe-0"
+    uP="{{ab}}"
+    wx:if="{{ab}}"
+  ></bottom-selector>
+  <condition-protocol
+    bind:__l="__l"
+    class="r data-v-61e92ebe"
+    uI="61e92ebe-15,61e92ebe-0"
+    uR="condProtocol"
+  ></condition-protocol>
+  <condition-confirm
+    bind:__l="__l"
+    bindcancel="{{ae}}"
+    bindconfirm="{{af}}"
+    class="data-v-61e92ebe"
+    uI="61e92ebe-16,61e92ebe-0"
+    uP="{{ag}}"
+    wx:if="{{ad}}"
+  ></condition-confirm>
+  <cond-result
+    bind:__l="__l"
+    bindcancel="{{ai}}"
+    class="r data-v-61e92ebe"
+    uI="61e92ebe-17,61e92ebe-0"
+    uP="{{aj}}"
+    uR="condResult"
+    wx:if="{{aj}}"
+  ></cond-result>
+  <selector-popup
+    bind:__l="__l"
+    bindchange="{{am}}"
+    bindclose="{{al}}"
+    bindinput="{{ak}}"
+    class="data-v-61e92ebe"
+    uI="61e92ebe-18,61e92ebe-0"
+    uP="{{an}}"
+    wx:if="{{an}}"
+  ></selector-popup>
+  <selector-popup
+    bind:__l="__l"
+    bindchange="{{aq}}"
+    bindclose="{{ap}}"
+    bindinput="{{ao}}"
+    class="data-v-61e92ebe"
+    uI="61e92ebe-19,61e92ebe-0"
+    uP="{{ar}}"
+    wx:if="{{ar}}"
+  ></selector-popup>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-61e92ebe"
+    id="mp-dialog"
+    uI="61e92ebe-20,61e92ebe-0"
+    uP="{{as}}"
+    wx:if="{{as}}"
+  ></mp-dialog>
+</global-wrap>

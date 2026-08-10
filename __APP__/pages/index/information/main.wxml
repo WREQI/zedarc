@@ -1,0 +1,46 @@
+<page-meta class="data-v-e5e1da00" rootFontSize="{{a}}"></page-meta>
+<view class="{{['container','data-v-e5e1da00',q]}}" data-st-theme="{{r}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e5e1da00"
+    uI="e5e1da00-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e5e1da00"
+    uI="e5e1da00-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <top-bar
+    bind:__l="__l"
+    bindgetBarHeight="{{d}}"
+    bindgetTitleHeight="{{e}}"
+    class="top-bar r data-v-e5e1da00"
+    uI="e5e1da00-2"
+    uP="{{f}}"
+    uR="topBar"
+    wx:if="{{f}}"
+  ></top-bar>
+  <view class="_div data-v-e5e1da00" wx:if="{{g}}">
+    <information
+      bind:__l="__l"
+      bindonMpScroll="{{k}}"
+      bindpageInit="{{l}}"
+      bindvideoShareClick="{{j}}"
+      class="r data-v-e5e1da00"
+      uI="e5e1da00-3"
+      uP="{{m}}"
+      uR="information"
+      wx:if="{{h}}"
+    ></information>
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{o}}"
+      class="information-status data-v-e5e1da00"
+      uI="e5e1da00-4"
+      uP="{{p}}"
+      wx:if="{{n}}"
+    ></st-status>
+  </view>
+</view>

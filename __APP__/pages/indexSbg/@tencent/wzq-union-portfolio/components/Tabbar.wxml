@@ -1,0 +1,22 @@
+<scroll-view
+  scrollX
+  class="{{['tabbar','tabbar-mp','tabbar-nopadding','data-v-e689352c',b]}}"
+  id="tabbar-scroll-view"
+  ref="tabbar-scroll-view"
+  scrollIntoView="{{c}}"
+  scrollWithAnimation="{{true}}"
+>
+  <view
+    bindtap="{{tab.g}}"
+    class="{{['_div','cont','tab','data-v-e689352c',tab.f]}}"
+    id="{{tab.c}}"
+    ref="{{tab.d}}"
+    wx:for="{{a}}"
+    wx:for-item="tab"
+    wx:key="e"
+    >{{tab.a}}<view
+      class="_div redPoint data-v-e689352c"
+      wx:if="{{tab.b}}"
+    ></view>
+  </view>
+</scroll-view>

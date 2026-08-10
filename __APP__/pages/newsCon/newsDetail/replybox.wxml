@@ -1,0 +1,33 @@
+<view class="{{['_div','data-v-56d10bef','mod-replyBox','reply',y,z,A]}}">
+    <block wx:if="{{a}}">
+        <view bindtap="{{d}}" class="_div replyBox_footNew data-v-56d10bef">
+            <view class="_div inline icon-noComment data-v-56d10bef" wx:if="{{b}}"></view>
+            <view class="_div inline icon data-v-56d10bef" wx:else></view>
+            <view class="_div inline comment data-v-56d10bef">{{c}}</view>
+        </view>
+        <input class="my-input data-v-56d10bef" ref="myInput"></input>
+        <view bindtap="{{i}}" class="_div btn-box comment-btn switch-btn data-v-56d10bef" wx:if="{{e}}">
+            <view class="_i icon-pinglun data-v-56d10bef" wx:if="{{f}}"></view>
+            <view class="_i img-zixun data-v-56d10bef" wx:elif="{{g}}"></view>
+            <label class="_span data-v-56d10bef">{{h}}</label>
+        </view>
+        <button bindtap="{{p}}" class="btn-box share-btn share-icon yy-reply-box-share data-v-56d10bef" hoverClass="none" openType="share" wx:if="{{j}}">
+            <view class="_div rb-share-img icon icon-share data-v-56d10bef" wx:if="{{k}}"></view>
+            <view class="{{['_div','data-v-56d10bef',m]}}" wx:elif="{{l}}"></view>
+            <view class="_div hot-area data-v-56d10bef" wx:if="{{n}}">
+                <view class="_div icon data-v-56d10bef"></view>
+                <label class="_span text data-v-56d10bef">99+</label>
+            </view>
+            <label class="_span data-v-56d10bef" wx:else>{{o}}</label>
+        </button>
+        <view bindtap="{{x}}" class="_div btn-box share-btn share-icon yy-reply-box-share data-v-56d10bef" hoverClass="none" openType="share" wx:if="{{q}}">
+            <view class="_div rb-share-img icon icon-share data-v-56d10bef" wx:if="{{r}}"></view>
+            <view class="{{['_div','data-v-56d10bef',t]}}" wx:elif="{{s}}"></view>
+            <view class="_div hot-area data-v-56d10bef" wx:if="{{v}}">
+                <view class="_div icon data-v-56d10bef"></view>
+                <label class="_span text data-v-56d10bef">99+</label>
+            </view>
+            <view class="_div data-v-56d10bef" wx:else>{{w}}</view>
+        </view>
+    </block>
+</view>

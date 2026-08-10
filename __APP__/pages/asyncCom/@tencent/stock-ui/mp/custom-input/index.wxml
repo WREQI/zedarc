@@ -1,0 +1,58 @@
+<view class="{{['_div','fake-input-container',B,C,D]}}">
+  <view class="_div fake-input-placeholder" wx:if="{{a}}">
+    <label class="_span">{{b}}</label>
+  </view>
+  <view
+    bindtap="{{d}}"
+    catchtouchmove="{{e}}"
+    class="_div mask"
+    hidden="{{!c}}"
+  ></view>
+  <view
+    bindtap="{{m}}"
+    bindtouchend="{{o}}"
+    catchtouchmove="{{n}}"
+    class="{{['_div','fake-input',l]}}"
+    ref="inputRef"
+  >
+    <label class="_span magnifying-glass" wx:if="{{f}}">
+      <text class="cursor" wx:if="{{g}}"></text>
+      <view class="_div" wx:for="{{h}}" wx:for-item="i" wx:key="g">
+        <text class="{{['cursor',i.b]}}" wx:if="{{i.a}}"></text>
+        <label class="_span" data-index="{{i.d}}">{{i.c}}</label>
+        <label class="{{['_span','cursor',i.f]}}" wx:if="{{i.e}}"></label>
+      </view>
+    </label>
+    <label class="_span js-value input-value">
+      <text class="cursor" wx:if="{{i}}"></text>
+      <view class="_div" wx:for="{{j}}" wx:for-item="i" wx:key="g">
+        <text class="{{['cursor',i.b]}}" wx:if="{{i.a}}"></text>
+        <label class="_span" data-index="{{i.d}}" style="{{'color:'+k}}"
+          >{{i.c}}</label
+        >
+        <label class="{{['_span','cursor',i.f]}}" wx:if="{{i.e}}"></label>
+      </view>
+    </label>
+  </view>
+  <number-keyboard
+    bind:__l="__l"
+    bindbuy="{{v}}"
+    bindclear="{{r}}"
+    bindclose="{{s}}"
+    binddelete="{{q}}"
+    bindinput="{{p}}"
+    bindminus="{{x}}"
+    bindnext="{{t}}"
+    bindplus="{{y}}"
+    bindsave="{{z}}"
+    bindsell="{{w}}"
+    uI="650073ba-0"
+    uP="{{A}}"
+    uS="{{['keyboard-top']}}"
+    wx:if="{{A}}"
+  >
+    <view slot="keyboard-top">
+      <slot name="number-keyboard-top"></slot>
+    </view>
+  </number-keyboard>
+</view>

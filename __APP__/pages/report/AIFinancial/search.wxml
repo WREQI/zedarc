@@ -1,0 +1,21 @@
+<page-meta class="data-v-60647581" rootFontSize="{{a}}"></page-meta>
+<view class="financial-report-wrapper data-v-60647581">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-60647581"
+    uI="60647581-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-60647581"
+    uI="60647581-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <a-i-financial-report-search-list
+    bind:__l="__l"
+    class="r data-v-60647581"
+    uI="60647581-2"
+    uR="searchList"
+  ></a-i-financial-report-search-list>
+</view>

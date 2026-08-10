@@ -1,0 +1,16 @@
+<view class="_div bulletin-bar-wrapper data-v-b576b0cd">
+  <view class="_div bulletin-bar-content data-v-b576b0cd">
+    <view bindtap="{{b}}" class="_div bulletin-bar-text data-v-b576b0cd">
+      <label class="_span data-v-b576b0cd">{{a}}</label>
+      <image
+        alt=""
+        class="_img bulletin-bar-arrow data-v-b576b0cd"
+        src="https://st.gtimg.com/design/758700aee7f117b7a3f14e2e8e916873.png"
+      ></image>
+    </view>
+    <view
+      bindtap="{{c}}"
+      class="_div bulletin-bar-close data-v-b576b0cd"
+    ></view>
+  </view>
+</view>

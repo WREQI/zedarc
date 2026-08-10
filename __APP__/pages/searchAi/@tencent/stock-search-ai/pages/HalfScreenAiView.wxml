@@ -1,0 +1,339 @@
+<view
+  class="{{['_div','search-ai-container','data-v-97243180',bh&&'mp',bi&&'wzq',bj&&'app',bk&&'share-result',bl&&'black']}}"
+  style="{{bm}}"
+>
+  <view class="_div navTitle data-v-97243180" ref="navTitle">
+    <view class="_div navTitleWrapper data-v-97243180">
+      <view catchtap="{{f}}" class="_div navTitleCenter data-v-97243180">
+        <view class="_div navTitleExpert data-v-97243180" wx:if="{{a}}"
+          >AI专家团</view
+        >
+        <view class="_div navTitleExpert data-v-97243180" wx:elif="{{b}}"
+          >AI解读</view
+        >
+        <view class="_div navTitleImage data-v-97243180" wx:else>问元宝</view>
+        <image
+          class="{{['_img','data-v-97243180','navTitleTriangle',d]}}"
+          src="{{e}}"
+          wx:if="{{c}}"
+        ></image>
+      </view>
+      <view bindtap="{{g}}" class="_div navTileCloseContainer data-v-97243180">
+        <image
+          class="_img navTitleCloseBtn data-v-97243180"
+          src="https://st.gtimg.com/design/798dea9c08a885e63d82f756d7490320.png"
+        ></image>
+      </view>
+    </view>
+    <view
+      catchtap="{{j}}"
+      class="{{['_div','data-v-97243180','navTitlePrevQuestion',h,i]}}"
+    >
+      <view class="_div prevQuestionIcon data-v-97243180"></view>
+      <label class="_span prevQuestionText data-v-97243180"
+        >定位到上一个问题</label
+      >
+    </view>
+  </view>
+  <view
+    bindtouchstart="{{N}}"
+    class="{{['_div','data-v-97243180','mainContent',K,L]}}"
+    ref="mainContent"
+    style="{{'padding-bottom:'+M}}"
+  >
+    <first-guide-item
+      bind:__l="__l"
+      bindclickNewUserQue="{{l}}"
+      class="data-v-97243180"
+      uI="97243180-0"
+      uP="{{m}}"
+      wx:if="{{k}}"
+    ></first-guide-item>
+    <answer-list-view
+      bind:__l="__l"
+      bindcontentTouch="{{C}}"
+      bindhistoryPinEnd="{{G}}"
+      bindscroll="{{D}}"
+      bindscrollDirection="{{E}}"
+      bindscrollEnd="{{F}}"
+      class="r data-v-97243180"
+      style="height: 100%"
+      uI="97243180-1"
+      uP="{{H||''}}"
+      uR="answerlist"
+      uS="{{['d']}}"
+      wx:else
+    >
+      <ai-expert-detail-card
+        bind:__l="__l"
+        class="data-v-97243180"
+        uI="97243180-2,97243180-1"
+        uP="{{o}}"
+        wx:if="{{n}}"
+      ></ai-expert-detail-card>
+      <ai-reading-detail-card
+        bind:__l="__l"
+        bindshowDisclaimer="{{q}}"
+        class="data-v-97243180"
+        uI="97243180-3,97243180-1"
+        uP="{{r}}"
+        wx:if="{{p}}"
+      ></ai-reading-detail-card>
+      <view class="_div session_time data-v-97243180" wx:if="{{s}}">
+        <view class="_div session_time_arrow data-v-97243180"></view
+        >历史对话<view class="_div session_time_arrow data-v-97243180"></view>
+      </view>
+      <view
+        class="{{['_div','data-v-97243180',w,item.O]}}"
+        id="{{item.M}}"
+        style="{{x}}"
+        wx:for="{{t}}"
+        wx:key="N"
+      >
+        <view class="_div session_time data-v-97243180" wx:if="{{item.a}}"
+          >{{item.b}} 内容由 AI 生成</view
+        >
+        <view class="_div contentItemAlignRight contentItem data-v-97243180">
+          <question-item
+            bind:__l="__l"
+            bindlongPress="{{item.d}}"
+            class="data-v-97243180"
+            id="{{item.c}}"
+            uI="{{item.e}}"
+            uP="{{item.f}}"
+            wx:if="{{item.f}}"
+          ></question-item>
+        </view>
+        <view class="_div contentItemAlignLeft contentItem data-v-97243180">
+          <answer-item
+            bind:__l="__l"
+            bindcancelCai="{{item.l}}"
+            bindcancelZan="{{item.k}}"
+            bindchangeToNewSession="{{item.s}}"
+            bindcheckContent="{{item.o}}"
+            bindclickCai="{{item.j}}"
+            bindclickZan="{{item.i}}"
+            binddisableOuterAutoScroll="{{item.t}}"
+            bindonQuoteClick="{{item.r}}"
+            bindrequestPermissionDialog="{{item.p}}"
+            bindselectMbti="{{item.n}}"
+            bindshare="{{item.m}}"
+            bindshowDisclaimer="{{item.h}}"
+            bindxianPinChangeModel="{{item.q}}"
+            class="data-v-97243180"
+            id="{{item.g}}"
+            uI="{{item.v}}"
+            uP="{{item.w}}"
+            wx:if="{{item.w}}"
+          ></answer-item>
+        </view>
+        <block wx:if="{{v}}">
+          <view
+            class="_div data-v-97243180"
+            style="height: 24px"
+            wx:if="{{item.x}}"
+          ></view>
+        </block>
+        <view
+          class="_div contentItemAlignLeft contentItem data-v-97243180"
+          wx:if="{{item.y}}"
+        >
+          <emotion-boost-guide
+            bind:__l="__l"
+            bindtoggleAdded="{{item.z}}"
+            class="data-v-97243180"
+            uI="{{item.A}}"
+            uP="{{item.B}}"
+            wx:if="{{item.B}}"
+          ></emotion-boost-guide>
+        </view>
+        <view
+          class="_div contentItemAlignLeft contentItem data-v-97243180"
+          wx:if="{{item.C}}"
+        >
+          <follow-on-item
+            bind:__l="__l"
+            bindtapGuessQuestion="{{item.D}}"
+            bindtapNewUserGuessQuestion="{{item.E}}"
+            class="data-v-97243180"
+            uI="{{item.F}}"
+            uP="{{item.G}}"
+            wx:if="{{item.G}}"
+          ></follow-on-item>
+        </view>
+        <thirteen-anniversary-task
+          bind:__l="__l"
+          bindgrowthAiTaskDone="{{item.J}}"
+          bindgrowthAiTaskShow="{{item.I}}"
+          class="data-v-97243180"
+          uI="{{item.K}}"
+          uP="{{item.L}}"
+          wx:if="{{item.H}}"
+        ></thirteen-anniversary-task>
+      </view>
+      <preset-question-welcome-card
+        bind:__l="__l"
+        bindclickPresetQuestion="{{z}}"
+        class="welcome-card-in-list data-v-97243180"
+        uI="97243180-9,97243180-1"
+        uP="{{A}}"
+        wx:if="{{y}}"
+      ></preset-question-welcome-card>
+    </answer-list-view>
+    <session-history-loading
+      bind:__l="__l"
+      class="data-v-97243180"
+      uI="97243180-10"
+      uP="{{J}}"
+      wx:if="{{I}}"
+    ></session-history-loading>
+  </view>
+  <view
+    catchtap="{{R}}"
+    class="_div backToBottomButton data-v-97243180"
+    style="{{'bottom:'+Q}}"
+    wx:if="{{O}}"
+  >
+    <view class="_div backToBottomIcon data-v-97243180">
+      <view class="_div loadingCircle data-v-97243180" wx:if="{{P}}"></view>
+    </view>
+  </view>
+  <view class="_div bottomBar data-v-97243180" wx:if="{{S}}">
+    <view
+      class="{{['_div','data-v-97243180',U&&'wzq-input',V&&'app-input',W&&'harmony-app-input',X&&'ios',Y&&'without-safe-area']}}"
+      ref="inputHolder"
+      wx:if="{{T}}"
+    ></view>
+    <input-view
+      bind:__l="__l"
+      bindchooseModel="{{ak}}"
+      bindcontainerHeightChange="{{an}}"
+      bindeditVoice="{{al}}"
+      bindexpandChange="{{ah}}"
+      bindhideMenu="{{am}}"
+      bindinputChangeAiModel="{{ad}}"
+      bindinputChangeAiThinking="{{ae}}"
+      bindkeyboardHeightChange="{{af}}"
+      bindkeyboardShowingChange="{{ag}}"
+      bindonFocus="{{aj}}"
+      bindonHasInputContent="{{ac}}"
+      bindonSend="{{aa}}"
+      bindonSendEmpty="{{ab}}"
+      bindonStopAnswer="{{ai}}"
+      class="r data-v-97243180"
+      uI="97243180-11"
+      uP="{{ao}}"
+      uR="inputRef"
+      wx:if="{{ao}}"
+    ></input-view>
+  </view>
+  <share-answer-invalid
+    bind:__l="__l"
+    class="data-v-97243180"
+    uI="97243180-12"
+    wx:if="{{ap}}"
+  ></share-answer-invalid>
+  <old-permission-dialog
+    bind:__l="__l"
+    binddismissOldPermissionDialog="{{ar}}"
+    class="oldPermissionDialog data-v-97243180"
+    uI="97243180-13"
+    uP="{{as}}"
+    wx:if="{{aq}}"
+  ></old-permission-dialog>
+  <dis-like-select-dialog
+    bind:__l="__l"
+    bindcancelFeedback="{{av}}"
+    bindsubmitComplaint="{{ax}}"
+    bindsubmitUnlike="{{aw}}"
+    class="disLikeDialog data-v-97243180"
+    uI="97243180-14"
+    uP="{{ay}}"
+    wx:if="{{at}}"
+  ></dis-like-select-dialog>
+  <disclaimers
+    bind:__l="__l"
+    bindonHide="{{aA}}"
+    class="data-v-97243180"
+    uI="97243180-15"
+    uP="{{aB}}"
+    wx:if="{{az}}"
+  ></disclaimers>
+  <permission-agree-dialog
+    bind:__l="__l"
+    bindagreeProtocal="{{aD}}"
+    binddenyProtocal="{{aE}}"
+    class="permissionDialog data-v-97243180"
+    uI="97243180-16"
+    uP="{{aF}}"
+    wx:if="{{aC}}"
+  ></permission-agree-dialog>
+  <link-jump-guide
+    bind:__l="__l"
+    bindlinkGuideClose="{{aG}}"
+    class="data-v-97243180"
+    uI="97243180-17"
+    uP="{{aH}}"
+    wx:if="{{aH}}"
+  ></link-jump-guide>
+  <full-screen-feed-back
+    bind:__l="__l"
+    bindcloseFullScreenComplaint="{{aJ}}"
+    bindsubmitFullScreenComplaint="{{aK}}"
+    class="fullScreenFeedback data-v-97243180"
+    uI="97243180-18"
+    uP="{{aL}}"
+    wx:if="{{aI}}"
+  ></full-screen-feed-back>
+  <common-selector
+    bind:__l="__l"
+    bindchangeTab="{{aO}}"
+    class="r data-v-97243180"
+    uI="97243180-19"
+    uP="{{aP}}"
+    uR="commonSelector"
+    wx:if="{{aM}}"
+  ></common-selector>
+  <ai-model-select-dialog
+    bind:__l="__l"
+    bindchooseModel="{{aS}}"
+    bindcloseDialog="{{aR}}"
+    class="data-v-97243180"
+    uI="97243180-20"
+    uP="{{aT}}"
+    wx:if="{{aQ}}"
+  ></ai-model-select-dialog>
+  <ai-model-select-guide
+    bind:__l="__l"
+    bindcloseGuide="{{aV}}"
+    class="data-v-97243180"
+    uI="97243180-21"
+    uP="{{aW}}"
+    wx:if="{{aU}}"
+  ></ai-model-select-guide>
+  <question-item-long-press-menu
+    bind:__l="__l"
+    bindhideMenu="{{aY}}"
+    bindtapMeunu="{{aZ}}"
+    class="data-v-97243180"
+    uI="97243180-22"
+    uP="{{ba}}"
+    wx:if="{{aX}}"
+  ></question-item-long-press-menu>
+  <thirteen-anniversary-back-pop
+    bind:__l="__l"
+    class="data-v-97243180"
+    uI="97243180-23"
+    uP="{{bc}}"
+    wx:if="{{bb}}"
+  ></thirteen-anniversary-back-pop>
+  <input-voice-edit
+    bind:__l="__l"
+    bindonSendQuestion="{{bf}}"
+    bindonVoiceEditFinish="{{be}}"
+    class="data-v-97243180"
+    uI="97243180-24"
+    uP="{{bg}}"
+    wx:if="{{bd}}"
+  ></input-voice-edit>
+</view>

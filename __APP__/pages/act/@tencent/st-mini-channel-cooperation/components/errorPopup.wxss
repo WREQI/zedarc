@@ -1,0 +1,100 @@
+@font-face {
+  font-family: TencentSansW7;
+  font-style: normal;
+  src: url(https://st.gtimg.com/files/a6404740_icRpOLEsa7R.ttf)
+    format("truetype");
+}
+.error-popup-overlay.data-v-eed573cc {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.error-popup-wrap.data-v-eed573cc {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.error-popup-wrap .content-wrapper.data-v-eed573cc {
+  margin: 0 auto;
+  max-width: 8rem;
+}
+.error-popup-content.data-v-eed573cc {
+  background: linear-gradient(
+      180deg,
+      rgba(238, 24, 24, 0.1),
+      rgba(238, 24, 24, 0.06) 7.5%,
+      rgba(238, 24, 24, 0) 20.56%
+    ),
+    #fff;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  width: 8rem;
+}
+.error-popup-content .close.data-v-eed573cc {
+  height: 0.64rem;
+  position: absolute;
+  right: -0.32rem;
+  top: -0.8533333333333334rem;
+  width: 0.64rem;
+}
+.error-popup-content .popup-img.data-v-eed573cc {
+  line-height: 0;
+  margin-bottom: 0.10666666666666667rem;
+}
+.error-popup-content .popup-img .custom-img.data-v-eed573cc {
+  height: 2.3466666666666667rem;
+  width: 8rem;
+}
+.error-popup-content .popup-img .img-error.data-v-eed573cc,
+.error-popup-content .popup-img .img-ineligibility.data-v-eed573cc,
+.error-popup-content .popup-img .img-received.data-v-eed573cc {
+  background: url(https://st.gtimg.com/design/f0897bd16ceb5da9ae5feb5d93dfa83f.png)
+    no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 2.3466666666666667rem;
+  width: 8rem;
+}
+.error-popup-content .popup-title.data-v-eed573cc {
+  color: #000;
+  font-size: 0.5333333333333333rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.8rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.error-popup-content .popup-title.w7.data-v-eed573cc {
+  font-family: TencentSansW7;
+  font-weight: 500;
+}
+.error-popup-content .popup-subtitle.data-v-eed573cc {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.56rem;
+  padding: 0 0.5333333333333333rem;
+}
+.error-popup-content .popup-btn.data-v-eed573cc {
+  background: #ee1818;
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.06),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+  color: #fff;
+  font-size: 0.4266666666666667rem;
+  margin: 0.4266666666666667rem auto 0.5333333333333333rem;
+  padding: 0.26666666666666666rem 0;
+  width: 6.933333333333334rem;
+}

@@ -1,0 +1,48 @@
+<view class="_div data-v-a8f70200" wx:if="{{a}}">
+  <view bindtap="{{c}}" class="{{['_div','data-v-a8f70200',b]}}"></view>
+  <view class="{{['_div','ams-modal-container','data-v-a8f70200',q]}}">
+    <view class="_div ams-modal-content data-v-a8f70200">
+      <view class="_div ams-modal-title data-v-a8f70200">{{d}}</view>
+      <image
+        bindtap="{{e}}"
+        class="_img ams-modal-close data-v-a8f70200"
+        src="https://st.gtimg.com/design/8b52ecc73296765de7d1869c9299fd9d.png"
+      ></image>
+      <view class="_div ams-modal-subtitle data-v-a8f70200" wx:if="{{f}}">
+        <rich-text class="data-v-a8f70200" nodes="{{g}}"></rich-text>
+      </view>
+      <image
+        class="_img ams-modal-illustration data-v-a8f70200"
+        src="{{h}}"
+      ></image>
+      <view class="_div ams-modal-button-box data-v-a8f70200">
+        <button bindtap="{{j}}" class="ams-modal-button data-v-a8f70200">
+          {{i}}
+        </button>
+        <image
+          bindtap="{{l}}"
+          class="_img ams-button-gif data-v-a8f70200"
+          src="https://st.gtimg.com/design/bea148804ba9dc8526e5b32b8a9925aa.gif"
+          wx:if="{{k}}"
+        ></image>
+      </view>
+      <view class="_div logo-text data-v-a8f70200" wx:if="{{m}}">
+        <label class="_span data-v-a8f70200"
+          >{{n}}提供证券服务，腾讯微证券提供技术服务</label
+        >
+      </view>
+      <view
+        bindtap="{{p}}"
+        class="_div ams-modal-footer data-v-a8f70200"
+        wx:if="{{o}}"
+      >
+        <label class="_span ams-modal-hint data-v-a8f70200"
+          >想快速导入自选股？试试</label
+        >
+        <label class="_span ams-modal-action data-v-a8f70200"
+          >『截图批量导入』</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="data-v-3024ce60">
+  <view bindtap="{{a}}" class="close-img data-v-3024ce60"></view>
+  <view class="suggestion_wrap data-v-3024ce60">
+    <view
+      catchtap="{{item.d}}"
+      class="flex-column flex-center suggestion_item data-v-3024ce60"
+      wx:for="{{b}}"
+      wx:key="c"
+    >
+      <view class="title text-color-1 data-v-3024ce60">
+        <label
+          class="{{['data-v-3024ce60',clip.b]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="clip"
+          wx:key="c"
+          >{{clip.a}}</label
+        >
+      </view>
+      <view class="address text-color-5 data-v-3024ce60">{{item.b}}</view>
+    </view>
+  </view>
+</view>

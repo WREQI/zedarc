@@ -1,0 +1,130 @@
+<view class="{{['_div','data-v-3edd5420','mod-item-wrap',aa,ab,ac]}}">
+  <view catchtap="{{b}}" class="_div selection data-v-3edd5420" wx:if="{{a}}">
+    <view class="_div title data-v-3edd5420">精选互动</view>
+    <view class="_div right-box data-v-3edd5420">
+      <view class="_div text data-v-3edd5420">查看全部</view>
+      <view class="_div arrow data-v-3edd5420"></view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-3edd5420','selection-date',f]}}" wx:if="{{c}}">
+    <view class="_div month data-v-3edd5420">{{d}}</view>
+    <view class="_div day data-v-3edd5420">{{e}}</view>
+  </view>
+  <view
+    class="{{['_div','data-v-3edd5420','mod-list-item',X,Y]}}"
+    data-comid="{{Z}}"
+  >
+    <item-header
+      bind:__l="__l"
+      bindhandleHeader="{{h}}"
+      bindtapDetail="{{g}}"
+      class="data-v-3edd5420"
+      uI="3edd5420-0"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></item-header>
+    <view catchtap="{{E}}" class="_div content-box data-v-3edd5420">
+      <view class="_div source_content data-v-3edd5420">
+        <short-content
+          bind:__l="__l"
+          bindtapContent="{{n}}"
+          bindtapDetail="{{l}}"
+          bindtapImage="{{k}}"
+          bindtoggleShow="{{m}}"
+          class="data-v-3edd5420"
+          uI="3edd5420-1"
+          uP="{{o}}"
+          wx:if="{{j}}"
+        ></short-content>
+        <long-content
+          bind:__l="__l"
+          bindtapDetail="{{q}}"
+          bindtoggleShow="{{r}}"
+          class="data-v-3edd5420"
+          uI="3edd5420-2"
+          uP="{{s}}"
+          wx:if="{{p}}"
+        ></long-content>
+      </view>
+      <item-image
+        bind:__l="__l"
+        bindtapImage="{{v}}"
+        class="data-v-3edd5420"
+        uI="3edd5420-3"
+        uP="{{w}}"
+        wx:if="{{t}}"
+      ></item-image>
+      <item-hq-mins
+        bind:__l="__l"
+        bindtapDetail="{{y}}"
+        class="data-v-3edd5420"
+        uI="3edd5420-4"
+        uP="{{z}}"
+        wx:if="{{x}}"
+      ></item-hq-mins>
+      <other-source
+        bind:__l="__l"
+        bindgoSharePage="{{B}}"
+        bindtapOtherSource="{{C}}"
+        class="data-v-3edd5420"
+        uI="3edd5420-5"
+        uP="{{D}}"
+        wx:if="{{A}}"
+      ></other-source>
+    </view>
+    <show-turn
+      bind:__l="__l"
+      bindtapTurnContent="{{G}}"
+      class="show-turn data-v-3edd5420"
+      uI="3edd5420-6"
+      uP="{{H}}"
+      wx:if="{{F}}"
+    ></show-turn>
+    <view class="_div related-stock-container data-v-3edd5420" wx:if="{{I}}">
+      <stock-bar
+        bind:__l="__l"
+        bindaddstock="{{stock.c}}"
+        bindexpose="{{stock.e}}"
+        bindgodetail="{{stock.b}}"
+        bindremovestock="{{stock.d}}"
+        class="data-v-3edd5420"
+        uI="{{stock.f}}"
+        uP="{{stock.g}}"
+        wx:for="{{J}}"
+        wx:for-item="stock"
+        wx:key="a"
+      ></stock-bar>
+    </view>
+    <show-box
+      bind:__l="__l"
+      bindcommentReport="{{L}}"
+      bindtapShowBox="{{K}}"
+      class="data-v-3edd5420"
+      uI="3edd5420-8"
+      uP="{{M}}"
+      wx:if="{{M}}"
+    ></show-box>
+    <view class="_div com-yb-disclaimer data-v-3edd5420" wx:if="{{N}}"
+      >{{O}}</view
+    >
+    <handle-oper
+      bind:__l="__l"
+      bindonHandleOper="{{P}}"
+      class="data-v-3edd5420"
+      uI="3edd5420-9"
+      uP="{{Q}}"
+      wx:if="{{Q}}"
+    ></handle-oper>
+    <show-comment
+      bind:__l="__l"
+      bindtapCommentItem="{{S}}"
+      bindtapDetail="{{U}}"
+      bindtapImage="{{T}}"
+      bindtapPerson="{{V}}"
+      class="data-v-3edd5420"
+      uI="3edd5420-10"
+      uP="{{W}}"
+      wx:if="{{R}}"
+    ></show-comment>
+  </view>
+</view>

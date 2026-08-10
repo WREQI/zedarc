@@ -1,0 +1,19 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div">
+  <mp-privacy-dialog bind:__l="__l" uI="c39e6e1a-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="c39e6e1a-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <ams bind:__l="__l" uI="c39e6e1a-2" uP="{{c}}" wx:if="{{c}}"></ams>
+  <block wx:if="{{d}}">
+    <preload-plugin
+      bind:__l="__l"
+      uI="c39e6e1a-3"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></preload-plugin>
+  </block>
+</view>

@@ -1,0 +1,140 @@
+<view class="{{['_div','mod-brief-fund','data-v-0e348ea9',s&&'skin-black']}}">
+  <block wx:if="{{a}}">
+    <view class="_div fund-info data-v-0e348ea9" wx:if="{{b}}">
+      <view bindtap="{{d}}" class="_div title-wrapper data-v-0e348ea9">
+        <label class="_span data-v-0e348ea9">基本信息</label>
+        <view class="_i ficon ficon-arrow data-v-0e348ea9" wx:if="{{c}}"></view>
+      </view>
+      <view class="_div info-grid data-v-0e348ea9">
+        <view
+          class="_div info-item data-v-0e348ea9"
+          wx:for="{{e}}"
+          wx:for-item="title"
+          wx:key="i"
+        >
+          <view class="_div info-title data-v-0e348ea9">{{title.a}}</view>
+          <view
+            bindtap="{{title.g}}"
+            class="_div info-index data-v-0e348ea9"
+            wx:if="{{title.b}}"
+          >
+            <block wx:if="{{title.c}}">
+              <label class="_span text data-v-0e348ea9">{{title.d}}</label>
+              <image
+                class="_img triangle data-v-0e348ea9"
+                src="https://st.gtimg.com/design/c7cf55384bb059431b60e5f1a2ab115f.svg"
+                wx:if="{{title.e}}"
+              ></image>
+              <image
+                class="_img triangle data-v-0e348ea9"
+                src="https://st.gtimg.com/design/0f2fffbfcc2c8460ef58a2dffc38577d.svg"
+                wx:if="{{title.f}}"
+              ></image>
+            </block>
+            <block wx:else>--</block>
+          </view>
+          <view class="_div info-content data-v-0e348ea9" wx:else
+            >{{title.h}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div fund-manager data-v-0e348ea9" wx:if="{{f}}">
+      <view bindtap="{{h}}" class="_div title-wrapper data-v-0e348ea9">
+        <label class="_span data-v-0e348ea9">基金经理</label>
+        <view class="_i ficon ficon-arrow data-v-0e348ea9" wx:if="{{g}}"></view>
+      </view>
+      <view
+        bindtap="{{item.k}}"
+        class="_div item data-v-0e348ea9"
+        wx:for="{{i}}"
+        wx:key="j"
+      >
+        <image
+          class="_img img data-v-0e348ea9"
+          src="{{item.b}}"
+          wx:if="{{item.a}}"
+        ></image>
+        <view class="_div img defaultAvatar data-v-0e348ea9" wx:else
+          >{{item.c}}</view
+        >
+        <view class="_div manager-other data-v-0e348ea9">
+          <view class="_div manager-basic data-v-0e348ea9">
+            <label class="_span name data-v-0e348ea9">{{item.d}}</label>
+            <view class="_div right data-v-0e348ea9">
+              <label class="_span text data-v-0e348ea9">累计从业</label>
+              <label class="_span text data-v-0e348ea9">{{item.e}}</label>
+              <label class="_span text v-line data-v-0e348ea9"></label>
+              <label class="_span text data-v-0e348ea9">任期回报</label>
+              <label class="{{['_span','text','data-v-0e348ea9',item.g]}}"
+                >{{item.f}}</label
+              >
+            </view>
+          </view>
+          <view class="_div manager-describe data-v-0e348ea9">
+            <view class="_div describe-text data-v-0e348ea9">{{item.h}}</view>
+          </view>
+          <view class="_div h-line data-v-0e348ea9" wx:if="{{item.i}}"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div fund-dividend data-v-0e348ea9" wx:if="{{j}}">
+      <view bindtap="{{l}}" class="_div title-wrapper data-v-0e348ea9">
+        <label class="_span data-v-0e348ea9">基金分红</label>
+        <view class="_i ficon ficon-arrow data-v-0e348ea9" wx:if="{{k}}"></view>
+      </view>
+      <view class="_div fund-list data-v-0e348ea9">
+        <view class="_div fund-list-td data-v-0e348ea9">
+          <label class="_span fund-rank-time data-v-0e348ea9">权益登记日</label>
+          <label class="_span fund-rank-rate data-v-0e348ea9">分红详情</label>
+          <label class="_span fund-rank-rank data-v-0e348ea9">派息日</label>
+        </view>
+        <view
+          class="_div fund-list-td fund-list-body data-v-0e348ea9"
+          wx:for="{{m}}"
+          wx:key="d"
+        >
+          <label class="_span fund-rank-time data-v-0e348ea9">{{item.a}}</label>
+          <label class="_span fund-rank-rate data-v-0e348ea9"
+            >10派{{item.b}}元</label
+          >
+          <label class="_span fund-rank-rank data-v-0e348ea9">{{item.c}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div fund-split data-v-0e348ea9" wx:if="{{n}}">
+      <view bindtap="{{p}}" class="_div title-wrapper data-v-0e348ea9">
+        <label class="_span data-v-0e348ea9">基金拆分</label>
+        <view class="_i ficon ficon-arrow data-v-0e348ea9" wx:if="{{o}}"></view>
+      </view>
+      <view class="_div fund-list data-v-0e348ea9">
+        <view class="_div fund-list-td data-v-0e348ea9">
+          <label class="_span fund-rank-time data-v-0e348ea9">时间</label>
+          <label class="_span fund-rank-rate data-v-0e348ea9">份额折算</label>
+          <label class="_span fund-rank-rank data-v-0e348ea9">拆分日</label>
+        </view>
+        <view
+          class="_div fund-list-td fund-list-body data-v-0e348ea9"
+          wx:for="{{q}}"
+          wx:key="d"
+        >
+          <label class="_span fund-rank-time data-v-0e348ea9">{{item.a}}</label>
+          <label class="_span fund-rank-rate data-v-0e348ea9"
+            >1:{{item.b}}</label
+          >
+          <label class="_span fund-rank-rank data-v-0e348ea9">{{item.c}}</label>
+        </view>
+      </view>
+    </view>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-0e348ea9"
+    uI="0e348ea9-0"
+    uS="{{['d']}}"
+    wx:elif="{{r}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无简况数据</block>
+  </no-data>
+</view>

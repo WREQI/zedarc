@@ -1,0 +1,44 @@
+<view
+  class="{{['lottery-reward-card','data-v-ddad3f6d',j]}}"
+  style="{{'background-image:'+k}}"
+>
+  <view class="lottery-reward-card__inner data-v-ddad3f6d">
+    <view class="lottery-reward-card__header data-v-ddad3f6d">
+      <stock-logo
+        bind:__l="__l"
+        class="lottery-reward-card__market data-v-ddad3f6d"
+        uI="ddad3f6d-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></stock-logo>
+      <label class="lottery-reward-card__name data-v-ddad3f6d">{{b}}</label>
+    </view>
+    <view
+      class="{{['lottery-reward-card__data','data-v-ddad3f6d',e&&'lottery-reward-card__data--show-button']}}"
+    >
+      <view class="lottery-reward-card__data-col data-v-ddad3f6d">
+        <label class="lottery-reward-card__data-value data-v-ddad3f6d"
+          >{{c}}</label
+        >
+        <label class="lottery-reward-card__data-label data-v-ddad3f6d"
+          >股票价格</label
+        >
+      </view>
+      <view class="lottery-reward-card__data-col data-v-ddad3f6d">
+        <label class="lottery-reward-card__data-value data-v-ddad3f6d"
+          >{{d}}</label
+        >
+        <label class="lottery-reward-card__data-label data-v-ddad3f6d"
+          >中签数量</label
+        >
+      </view>
+    </view>
+    <view class="lottery-reward-card__date data-v-ddad3f6d">{{f}}</view>
+    <view
+      catchtap="{{i}}"
+      class="lottery-reward-card__btn data-v-ddad3f6d"
+      wx:if="{{g}}"
+      >{{h}}</view
+    >
+  </view>
+</view>

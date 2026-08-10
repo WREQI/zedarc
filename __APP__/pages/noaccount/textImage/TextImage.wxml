@@ -1,0 +1,19 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div open-transfer">
+  <mp-privacy-dialog bind:__l="__l" uI="2e41d05f-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="2e41d05f-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <block wx:if="{{c}}">
+    <open-transfer-page-b
+      bind:__l="__l"
+      bindinit="{{d}}"
+      uI="2e41d05f-2"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></open-transfer-page-b>
+  </block>
+</view>

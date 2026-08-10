@@ -1,0 +1,418 @@
+<view class="{{['_div','data-v-a47ad0da','hot-post',E]}}" wx:if="{{a}}">
+  <block wx:if="{{b}}">
+    <tabs
+      bind:__l="__l"
+      bindselect="{{e}}"
+      class="{{['data-v-a47ad0da','swiper-tabs']}}"
+      uI="a47ad0da-0"
+      uP="{{f}}"
+      uS="{{['d']}}"
+      wx:if="{{f}}"
+    >
+      <tab
+        bind:__l="__l"
+        class="data-v-a47ad0da"
+        uI="{{v0.j}}"
+        uP="{{v0.k}}"
+        uS="{{['d']}}"
+        wx:for="{{c}}"
+        wx:for-item="v0"
+        wx:key="i"
+      >
+        <view
+          class="{{['_div','tab-wrap','data-v-a47ad0da',v0.f&&'last']}}"
+          wx:if="{{d}}"
+        >
+          <image
+            class="{{['_img','data-v-a47ad0da','tab-icon',v0.b]}}"
+            src="{{v0.a}}"
+          ></image>
+          <image
+            class="{{['_img','data-v-a47ad0da','tab-icon','red',v0.d]}}"
+            src="{{v0.c}}"
+          ></image>
+          <view class="{{['_div','data-v-a47ad0da','tab-line',v0.e]}}"></view>
+        </view>
+        <view class="{{['_div','data-v-a47ad0da','tab-wrap2',v0.h]}}" wx:else
+          >{{v0.g}}</view
+        >
+      </tab>
+    </tabs>
+  </block>
+  <block wx:else>
+    <view class="_div swiper-tabs-mp data-v-a47ad0da" wx:if="{{g}}">
+      <view
+        bindtap="{{v0.e}}"
+        class="{{['_div','data-v-a47ad0da','tab-wrap2',v0.d]}}"
+        name="{{v0.b}}"
+        wx:for="{{h}}"
+        wx:for-item="v0"
+        wx:key="c"
+        >{{v0.a}}</view
+      >
+    </view>
+  </block>
+  <view class="_div fake-bubble data-v-a47ad0da" wx:if="{{i}}"></view>
+  <view
+    catchtap="{{n}}"
+    class="_div content-tips data-v-a47ad0da"
+    wx:if="{{j}}"
+  >
+    <label class="_span text data-v-a47ad0da">{{k}}</label>
+    <image
+      alt=""
+      class="_img arrow-right data-v-a47ad0da"
+      src="{{m}}"
+      wx:if="{{l}}"
+    ></image>
+  </view>
+  <image
+    class="{{['_img','data-v-a47ad0da','dynamic-ip',p]}}"
+    src="{{o}}"
+  ></image>
+  <block wx:if="{{q}}">
+    <st-slide
+      bind:__l="__l"
+      bindchange="{{x}}"
+      bindscroll="{{v}}"
+      bindscrollEnd="{{w}}"
+      class="hot-swiper r data-v-a47ad0da"
+      uI="a47ad0da-2"
+      uP="{{y}}"
+      uR="mySwiper"
+      uS="{{['d']}}"
+      wx:if="{{y}}"
+    >
+      <st-slide-item
+        bind:__l="__l"
+        class="{{['data-v-a47ad0da','swiper-slide',s]}}"
+        uI="{{n.Q}}"
+        uS="{{['d']}}"
+        wx:for="{{r}}"
+        wx:for-item="n"
+        wx:key="P"
+      >
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.c,n.d]}}"
+          wx:if="{{n.a}}"
+        >
+          <view
+            catchtap="{{v1.j}}"
+            class="_div item-box subject data-v-a47ad0da"
+            wx:for="{{n.b}}"
+            wx:for-item="v1"
+            wx:key="i"
+          >
+            <view
+              class="{{['_div','data-v-a47ad0da','item-bg']}}"
+              wx:if="{{v1.a}}"
+            ></view>
+            <image
+              class="_img order data-v-a47ad0da"
+              src="{{v1.c}}"
+              wx:if="{{v1.b}}"
+            ></image>
+            <label class="_span title data-v-a47ad0da" wx:if="{{v1.d}}"
+              >{{v1.e}}</label
+            >
+            <view
+              class="{{['_div','data-v-a47ad0da','label',v1.h]}}"
+              wx:if="{{v1.f}}"
+            >
+              <label class="_span text data-v-a47ad0da">{{v1.g}}</label>
+            </view>
+          </view>
+        </view>
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.g,n.h]}}"
+          wx:if="{{n.e}}"
+        >
+          <view
+            catchtap="{{v1.o}}"
+            class="_div item-box data-v-a47ad0da"
+            wx:for="{{n.f}}"
+            wx:for-item="v1"
+            wx:key="n"
+          >
+            <view class="_div topic-content-wrap data-v-a47ad0da">
+              <image
+                class="_img order data-v-a47ad0da"
+                src="{{v1.b}}"
+                wx:if="{{v1.a}}"
+              ></image>
+              <label class="_span title data-v-a47ad0da" wx:if="{{v1.c}}"
+                >#{{v1.d}}</label
+              >
+            </view>
+            <block wx:if="{{v1.e}}">
+              <view
+                class="_div topic-related-stock-wrap info-wrap data-v-a47ad0da"
+                wx:if="{{v1.f}}"
+              >
+                <view
+                  class="_div topic-related-stock data-v-a47ad0da"
+                  wx:for="{{v1.g}}"
+                  wx:for-item="v2"
+                  wx:key="f"
+                >
+                  <label
+                    class="_span name line data-v-a47ad0da"
+                    wx:if="{{v2.a}}"
+                    >{{v2.b}}</label
+                  >
+                  <label class="_span name data-v-a47ad0da">{{v2.c}}</label>
+                  <label class="{{['_span','zdf','data-v-a47ad0da',v2.e]}}"
+                    >{{v2.d}}%</label
+                  >
+                </view>
+              </view>
+              <view
+                class="_div related-count-wrap info-wrap data-v-a47ad0da"
+                wx:else
+              >
+                <label class="_span text data-v-a47ad0da" wx:if="{{v1.h}}"
+                  >{{v1.i}}次阅读</label
+                >
+                <label class="_span text point data-v-a47ad0da" wx:if="{{v1.j}}"
+                  >{{v1.k}}</label
+                >
+                <label class="_span text data-v-a47ad0da" wx:if="{{v1.l}}"
+                  >{{v1.m}}条讨论</label
+                >
+              </view>
+            </block>
+          </view>
+        </view>
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.N,n.O,'card-wrap']}}"
+          wx:if="{{n.i}}"
+        >
+          <view class="_div hot-stock-card data-v-a47ad0da" wx:if="{{n.j}}">
+            <view class="_div ht-group-1 data-v-a47ad0da">
+              <view
+                catchtap="{{n.n}}"
+                class="{{['_div','ht-1-1','ht-item','data-v-a47ad0da',n.m]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.k}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.l}}%</label>
+              </view>
+              <view
+                catchtap="{{n.r}}"
+                class="{{['_div','ht-1-2','ht-item','data-v-a47ad0da',n.q]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.o}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.p}}%</label>
+              </view>
+              <view
+                catchtap="{{n.w}}"
+                class="{{['_div','ht-1-3','ht-item','data-v-a47ad0da',n.v]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.s}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.t}}%</label>
+              </view>
+            </view>
+            <view class="_div ht-group-2 data-v-a47ad0da">
+              <view
+                catchtap="{{n.A}}"
+                class="{{['_div','ht-2-1','ht-item','data-v-a47ad0da',n.z]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.x}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.y}}%</label>
+              </view>
+              <view
+                catchtap="{{n.E}}"
+                class="{{['_div','ht-2-2','ht-item','data-v-a47ad0da',n.D]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.B}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.C}}%</label>
+              </view>
+              <view
+                catchtap="{{n.I}}"
+                class="{{['_div','ht-2-3','ht-item','data-v-a47ad0da',n.H]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.F}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.G}}%</label>
+              </view>
+              <view
+                catchtap="{{n.M}}"
+                class="{{['_div','ht-2-4','ht-item','data-v-a47ad0da',n.L]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.J}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.K}}%</label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </st-slide-item>
+    </st-slide>
+  </block>
+  <block wx:else>
+    <swiper
+      bindchange="{{D}}"
+      class="hot-swiper hot-swiper-mp data-v-a47ad0da"
+      current="{{C}}"
+      indicatorDots="{{true}}"
+      ref="mySwiper"
+      wx:if="{{z}}"
+    >
+      <swiper-item
+        class="{{['data-v-a47ad0da',B]}}"
+        wx:for="{{A}}"
+        wx:for-item="n"
+        wx:key="P"
+      >
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.c,n.d]}}"
+          wx:if="{{n.a}}"
+        >
+          <view
+            catchtap="{{v1.j}}"
+            class="_div item-box subject data-v-a47ad0da"
+            wx:for="{{n.b}}"
+            wx:for-item="v1"
+            wx:key="i"
+          >
+            <view
+              class="{{['_div','data-v-a47ad0da','item-bg']}}"
+              wx:if="{{v1.a}}"
+            ></view>
+            <image
+              class="_img order data-v-a47ad0da"
+              src="{{v1.c}}"
+              wx:if="{{v1.b}}"
+            ></image>
+            <label class="_span title data-v-a47ad0da" wx:if="{{v1.d}}"
+              >{{v1.e}}</label
+            >
+            <view
+              class="{{['_div','data-v-a47ad0da','label',v1.h]}}"
+              wx:if="{{v1.f}}"
+            >
+              <label class="_span text data-v-a47ad0da">{{v1.g}}</label>
+            </view>
+          </view>
+        </view>
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.g,n.h]}}"
+          wx:if="{{n.e}}"
+        >
+          <view
+            catchtap="{{v1.o}}"
+            class="_div item-box data-v-a47ad0da"
+            wx:for="{{n.f}}"
+            wx:for-item="v1"
+            wx:key="n"
+          >
+            <view class="_div topic-content-wrap data-v-a47ad0da">
+              <image
+                class="_img order data-v-a47ad0da"
+                src="{{v1.b}}"
+                wx:if="{{v1.a}}"
+              ></image>
+              <label class="_span title data-v-a47ad0da" wx:if="{{v1.c}}"
+                >#{{v1.d}}</label
+              >
+            </view>
+            <block wx:if="{{v1.e}}">
+              <view
+                class="_div topic-related-stock-wrap info-wrap data-v-a47ad0da"
+                wx:if="{{v1.f}}"
+              >
+                <view
+                  class="_div topic-related-stock data-v-a47ad0da"
+                  wx:for="{{v1.g}}"
+                  wx:for-item="v2"
+                  wx:key="f"
+                >
+                  <label
+                    class="_span name line data-v-a47ad0da"
+                    wx:if="{{v2.a}}"
+                    >{{v2.b}}</label
+                  >
+                  <label class="_span name data-v-a47ad0da">{{v2.c}}</label>
+                  <label class="{{['_span','zdf','data-v-a47ad0da',v2.e]}}"
+                    >{{v2.d}}%</label
+                  >
+                </view>
+              </view>
+              <view
+                class="_div related-count-wrap info-wrap data-v-a47ad0da"
+                wx:else
+              >
+                <label class="_span text data-v-a47ad0da" wx:if="{{v1.h}}"
+                  >{{v1.i}}次阅读</label
+                >
+                <label class="_span text point data-v-a47ad0da" wx:if="{{v1.j}}"
+                  >{{v1.k}}</label
+                >
+                <label class="_span text data-v-a47ad0da" wx:if="{{v1.l}}"
+                  >{{v1.m}}条讨论</label
+                >
+              </view>
+            </block>
+          </view>
+        </view>
+        <view
+          class="{{['_div','data-v-a47ad0da','slide-wrap',n.N,n.O,'card-wrap']}}"
+          wx:if="{{n.i}}"
+        >
+          <view class="_div hot-stock-card data-v-a47ad0da" wx:if="{{n.j}}">
+            <view class="_div ht-group-1 data-v-a47ad0da">
+              <view
+                catchtap="{{n.n}}"
+                class="{{['_div','ht-1-1','ht-item','data-v-a47ad0da',n.m]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.k}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.l}}%</label>
+              </view>
+              <view
+                catchtap="{{n.r}}"
+                class="{{['_div','ht-1-2','ht-item','data-v-a47ad0da',n.q]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.o}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.p}}%</label>
+              </view>
+              <view
+                catchtap="{{n.w}}"
+                class="{{['_div','ht-1-3','ht-item','data-v-a47ad0da',n.v]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.s}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.t}}%</label>
+              </view>
+            </view>
+            <view class="_div ht-group-2 data-v-a47ad0da">
+              <view
+                catchtap="{{n.A}}"
+                class="{{['_div','ht-2-1','ht-item','data-v-a47ad0da',n.z]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.x}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.y}}%</label>
+              </view>
+              <view
+                catchtap="{{n.E}}"
+                class="{{['_div','ht-2-2','ht-item','data-v-a47ad0da',n.D]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.B}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.C}}%</label>
+              </view>
+              <view
+                catchtap="{{n.I}}"
+                class="{{['_div','ht-2-3','ht-item','data-v-a47ad0da',n.H]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.F}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.G}}%</label>
+              </view>
+              <view
+                catchtap="{{n.M}}"
+                class="{{['_div','ht-2-4','ht-item','data-v-a47ad0da',n.L]}}"
+              >
+                <label class="_span ht-name data-v-a47ad0da">{{n.J}}</label>
+                <label class="_span ht-price data-v-a47ad0da">{{n.K}}%</label>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </block>
+</view>

@@ -1,0 +1,66 @@
+<view class="_div mingxi-content-wrapper data-v-9277a7e1">
+  <view class="_div item wrapper-title data-v-9277a7e1">
+    <view class="_div time data-v-9277a7e1">时间</view>
+    <view class="_div price data-v-9277a7e1">成交价</view>
+    <view class="_div amount data-v-9277a7e1">成交量</view>
+  </view>
+  <scroll-view
+    bindscroll="{{g}}"
+    bindscrolltolower="{{h}}"
+    class="scroll-list-content data-v-9277a7e1"
+    scrollY="true"
+    style="{{'height:'+f}}"
+    wx:if="{{a}}"
+  >
+    <view
+      class="{{['_div','item','data-v-9277a7e1',c&&'showMoreCenter']}}"
+      wx:for="{{b}}"
+      wx:key="h"
+    >
+      <view class="_div time data-v-9277a7e1">{{item.a}}</view>
+      <view class="{{['_div','price','data-v-9277a7e1',item.c]}}"
+        >{{item.b}}</view
+      >
+      <view class="{{['_div','amount','data-v-9277a7e1',item.g]}}"
+        >{{item.d}}<label class="{{['_span','data-v-9277a7e1',item.f]}}"
+          >{{item.e}}</label
+        >
+      </view>
+    </view>
+    <view class="_div no-data data-v-9277a7e1" wx:if="{{d}}">暂无明细数据</view>
+    <view class="_div no-data no-more-data data-v-9277a7e1" wx:elif="{{e}}"
+      >没有更多了</view
+    >
+  </scroll-view>
+  <st-reach-bottom
+    bind:__l="__l"
+    bindscroll="{{o}}"
+    class="scroll-list-content r data-v-9277a7e1"
+    style="{{'height:'+n}}"
+    uI="9277a7e1-0"
+    uP="{{p||''}}"
+    uR="listWrapper"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view
+      class="{{['_div','item','data-v-9277a7e1',j&&'showMoreCenter']}}"
+      wx:for="{{i}}"
+      wx:key="h"
+    >
+      <view class="_div time data-v-9277a7e1">{{item.a}}</view>
+      <view class="{{['_div','price','data-v-9277a7e1',item.c]}}"
+        >{{item.b}}</view
+      >
+      <view class="{{['_div','amount','data-v-9277a7e1',item.g]}}"
+        >{{item.d}}<label class="{{['_span','data-v-9277a7e1',item.f]}}"
+          >{{item.e}}</label
+        >
+      </view>
+    </view>
+    <view class="_div no-data data-v-9277a7e1" wx:if="{{k}}">暂无明细数据</view>
+    <view class="_div no-data no-more-data data-v-9277a7e1" wx:elif="{{l}}"
+      >没有更多了</view
+    >
+  </st-reach-bottom>
+</view>

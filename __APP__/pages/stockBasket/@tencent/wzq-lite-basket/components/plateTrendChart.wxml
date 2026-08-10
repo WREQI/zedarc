@@ -1,0 +1,110 @@
+<view class="{{['_div','container','data-v-67404266',D]}}">
+  <view class="_div chart-title data-v-67404266">累计收益走势</view>
+  <view class="_div recent-earnings data-v-67404266" wx:if="{{a}}">
+    <view class="_div plate-trend-chart-labels data-v-67404266">
+      <view class="_div label-item-group data-v-67404266">
+        <view class="_div label-box data-v-67404266">
+          <view class="_div label-item data-v-67404266">
+            <view class="_div label-item-line line-blue data-v-67404266"></view>
+            <view class="_div label-item-text data-v-67404266">{{b}}</view>
+          </view>
+          <view
+            class="{{['_div','data-v-67404266','label-text','recent-earnings-text',e]}}"
+            wx:if="{{c}}"
+            >{{d}}%</view
+          >
+        </view>
+        <view
+          class="_div label-item-last label-box data-v-67404266"
+          wx:if="{{f}}"
+        >
+          <view class="_div label-item data-v-67404266">
+            <view
+              class="_div label-item-line line-orange data-v-67404266"
+            ></view>
+            <view class="_div label-item-text data-v-67404266">{{g}}</view>
+          </view>
+          <view
+            class="{{['_div','data-v-67404266','label-text','recent-earnings-text',j]}}"
+            wx:if="{{h}}"
+            >{{i}}%</view
+          >
+        </view>
+        <view
+          class="_div label-item label-item-last data-v-67404266"
+          wx:if="{{k}}"
+        >
+          <view class="_div label-item-line line-gray data-v-67404266"></view>
+          <view class="_div label-item-text data-v-67404266">成立前</view>
+        </view>
+        <view
+          bindtap="{{l}}"
+          class="_div label-item label-item-last data-v-67404266"
+        >
+          <view class="_div label-item-circle data-v-67404266"></view>
+          <view class="_div label-item-text data-v-67404266">成立日</view>
+          <view class="_div info-icon data-v-67404266"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div tooltip-labels data-v-67404266" wx:else>
+    <view class="_div label-item data-v-67404266">
+      <view class="_div data-v-67404266">
+        <view class="_div label-item-date data-v-67404266">{{m}}</view>
+        <view class="_div label-item-date data-v-67404266">{{n}}</view>
+      </view>
+    </view>
+    <view class="_div label-item-last data-v-67404266">
+      <view class="_div label-item data-v-67404266">
+        <view
+          class="{{['_div','data-v-67404266','label-item-round',o]}}"
+        ></view>
+        <view class="_div label-item-tooltip data-v-67404266" wx:if="{{p}}"
+          >{{q}}</view
+        >
+        <view class="_div label-item-tooltip data-v-67404266" wx:else
+          >本股单</view
+        >
+      </view>
+      <label
+        class="{{['_span','data-v-67404266','tooltip-number','recent-earnings-text',s]}}"
+        >{{r}}</label
+      >
+    </view>
+    <view class="_div label-item-last data-v-67404266" wx:if="{{t}}">
+      <view class="_div label-item data-v-67404266">
+        <view class="_div label-item-round line-orange data-v-67404266"></view>
+        <view class="_div label-item-tooltip data-v-67404266">{{v}}</view>
+      </view>
+      <label
+        class="{{['_span','data-v-67404266','tooltip-number','recent-earnings-text',x]}}"
+        >{{w}}</label
+      >
+    </view>
+    <view class="_div label-item label-item-last data-v-67404266">
+      <view class="_div label-item-circle data-v-67404266"></view>
+      <view class="_div label-item-tooltip data-v-67404266">成立日</view>
+      <view class="_div info-icon data-v-67404266"></view>
+    </view>
+  </view>
+  <f2
+    bind:__l="__l"
+    bindgetBase64="{{A}}"
+    bindonInit="{{z}}"
+    class="r data-v-67404266"
+    uI="67404266-0"
+    uP="{{B}}"
+    uR="plateTrendRef"
+    wx:if="{{B}}"
+  ></f2>
+  <view class="_div range-choose-wrapper data-v-67404266">
+    <view
+      bindtap="{{item.d}}"
+      class="{{['_div','data-v-67404266','range-choose-item',item.c]}}"
+      wx:for="{{C}}"
+      wx:key="b"
+      >{{item.a}}</view
+    >
+  </view>
+</view>

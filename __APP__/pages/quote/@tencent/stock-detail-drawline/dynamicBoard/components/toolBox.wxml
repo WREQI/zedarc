@@ -1,0 +1,124 @@
+<view
+  class="{{['_div','data-v-83437a9c','tool-bar-container',y]}}"
+  ref="tool-bar-container"
+  style="{{'left:'+z+';'+'top:'+A}}"
+>
+  <view class="_div tool-bar-inner data-v-83437a9c">
+    <view
+      bindtouchend="{{c}}"
+      bindtouchmove="{{b}}"
+      bindtouchstart="{{a}}"
+      class="_div tool-icon-content data-v-83437a9c"
+    >
+      <label class="_span tool-icon tool-icon-move data-v-83437a9c"></label>
+    </view>
+    <view class="_div tool-icon-content color-content data-v-83437a9c">
+      <view class="_div color-content-border data-v-83437a9c">
+        <label
+          catchtap="{{e}}"
+          class="_span color-content-inner data-v-83437a9c"
+          style="{{'background-color:'+d}}"
+        ></label>
+      </view>
+      <view class="_div tool-popup-inner data-v-83437a9c" wx:if="{{f}}">
+        <view
+          catchtap="{{color.d}}"
+          class="{{['_div','data-v-83437a9c','tool-icon-content']}}"
+          wx:for="{{g}}"
+          wx:for-item="color"
+          wx:key="c"
+        >
+          <view
+            class="{{['_div','color-border','data-v-83437a9c',color.b&&'active']}}"
+          >
+            <label
+              class="{{['_span','data-v-83437a9c','color-content-inner']}}"
+              style="{{'background-color:'+color.a}}"
+            ></label>
+          </view>
+        </view>
+        <view class="_div popover-arrow data-v-83437a9c"></view>
+      </view>
+    </view>
+    <view class="_div tool-icon-content data-v-83437a9c">
+      <view
+        catchtap="{{k}}"
+        class="_div tool-icon tool-icon-lines data-v-83437a9c"
+      >
+        <view
+          catchtap="{{j}}"
+          class="_div tool-popup-inner data-v-83437a9c"
+          wx:if="{{h}}"
+        >
+          <view
+            catchtap="{{weight.d}}"
+            class="_div tool-icon-content data-v-83437a9c"
+            wx:for="{{i}}"
+            wx:for-item="weight"
+            wx:key="c"
+          >
+            <view
+              class="{{['_div','color-border','data-v-83437a9c',weight.b&&'active']}}"
+            >
+              <label
+                class="{{['_span','data-v-83437a9c','tool-icon','tool-icon-weight',weight.a]}}"
+              ></label>
+            </view>
+          </view>
+          <view class="_div popover-arrow data-v-83437a9c"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div tool-icon-content data-v-83437a9c" wx:if="{{l}}">
+      <view
+        catchtap="{{p}}"
+        class="_div tool-icon tool-icon-font data-v-83437a9c"
+      >
+        <view
+          catchtap="{{o}}"
+          class="_div tool-popup-inner data-v-83437a9c"
+          wx:if="{{m}}"
+        >
+          <view
+            catchtap="{{font.d}}"
+            class="_div item-content flex-center data-v-83437a9c"
+            wx:for="{{n}}"
+            wx:for-item="font"
+            wx:key="c"
+          >
+            <view class="{{['_div','data-v-83437a9c','tool-icon-content']}}">
+              <view
+                class="{{['_div','color-border','data-v-83437a9c',font.b&&'active']}}"
+              >
+                <label class="_span data-v-83437a9c">{{font.a}}</label>
+              </view>
+            </view>
+          </view>
+          <view class="_div popover-arrow data-v-83437a9c"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div tool-icon-content data-v-83437a9c">
+      <label
+        catchtap="{{r}}"
+        class="{{['_span','data-v-83437a9c','tool-icon',q]}}"
+      ></label>
+    </view>
+    <view class="_div tool-icon-content data-v-83437a9c">
+      <label
+        catchtap="{{t}}"
+        class="{{['_span','data-v-83437a9c','tool-icon',s]}}"
+      ></label>
+    </view>
+    <view class="_div tool-icon-content data-v-83437a9c">
+      <label
+        catchtap="{{v}}"
+        class="_span tool-icon tool-icon-del data-v-83437a9c"
+      ></label>
+    </view>
+  </view>
+  <view catchtap="{{x}}" class="_div tips-modal data-v-83437a9c" wx:if="{{w}}">
+    <view class="_div tips-inner data-v-83437a9c">图形编辑器</view>
+    <view class="_div tips-arrow data-v-83437a9c"></view>
+  </view>
+</view>

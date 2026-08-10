@@ -1,0 +1,48 @@
+.current-day .li-date-circle.data-v-14be881e {
+  background-color: var(--border-heavy-divider2);
+  border-radius: 0.09333333333333334rem;
+  display: inline-block;
+  height: 0.18666666666666668rem;
+  margin: 0 0.4rem;
+  width: 0.18666666666666668rem;
+}
+.li-date.data-v-14be881e {
+  color: var(--color-lightgray);
+  font-size: 0.37333333333333335rem;
+  padding: 0 0.5066666666666667rem 0.08rem 0;
+}
+.item-container.data-v-14be881e {
+  border-left: 0.013333333333333334rem solid var(--border-light-divider);
+  font-size: 0.4rem;
+  margin-left: 0.48rem;
+  padding: 0 0.48rem 0.48rem 0.5333333333333333rem;
+}
+.item-container .title.data-v-14be881e {
+  color: var(--color-heavygray);
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-bottom: 0.08rem;
+}
+.item-container .content.data-v-14be881e {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: var(--color-lightgray);
+  display: -webkit-box;
+  font-size: 0.37333333333333335rem;
+  line-height: 1.64;
+  overflow: hidden;
+  text-align: justify;
+  word-break: break-all;
+}
+.item-container .content.red.data-v-14be881e,
+.item-container .title.red.data-v-14be881e {
+  color: var(--color-red);
+}
+.item-container .content.notitle.data-v-14be881e,
+.item-container .title.notitle.data-v-14be881e {
+  color: var(--color-lightgray);
+}
+.li-date-box.data-v-14be881e {
+  line-height: 1.5;
+}

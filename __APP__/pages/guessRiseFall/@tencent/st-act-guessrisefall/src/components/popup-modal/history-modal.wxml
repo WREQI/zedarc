@@ -1,0 +1,50 @@
+<view class="_div history-modal-wrapper data-v-b8e00ca8">
+  <view
+    bindtap="{{c}}"
+    catchtouchmove="{{b}}"
+    class="_div history-modal__mask data-v-b8e00ca8"
+    wx:if="{{a}}"
+  ></view>
+  <view
+    class="{{['_div','history-modal','data-v-b8e00ca8',h&&'history-modal--show']}}"
+    wx:if="{{d}}"
+  >
+    <view class="history-modal__header data-v-b8e00ca8">
+      <view class="_div history-modal__title data-v-b8e00ca8">全部奖励</view>
+      <view
+        bindtap="{{e}}"
+        class="_div history-modal__close data-v-b8e00ca8"
+      ></view>
+    </view>
+    <view class="_div history-modal__body data-v-b8e00ca8">
+      <view class="_div history-modal__list data-v-b8e00ca8" wx:if="{{f}}">
+        <view class="_ul data-v-b8e00ca8">
+          <view
+            class="_li history-modal__item data-v-b8e00ca8"
+            wx:for="{{g}}"
+            wx:key="e"
+          >
+            <view class="_div history-modal__item-label data-v-b8e00ca8"
+              >{{item.a}}</view
+            >
+            <view class="_div history-modal__item-content data-v-b8e00ca8">
+              <reward-core
+                bind:__l="__l"
+                class="history-modal__reward data-v-b8e00ca8"
+                uI="{{item.b}}"
+                uP="{{item.c}}"
+                wx:if="{{item.c}}"
+              ></reward-core>
+              <view class="_div history-modal__time data-v-b8e00ca8"
+                >{{item.d}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div history-modal__empty data-v-b8e00ca8" wx:else
+        >暂时没有红包记录哦～</view
+      >
+    </view>
+  </view>
+</view>

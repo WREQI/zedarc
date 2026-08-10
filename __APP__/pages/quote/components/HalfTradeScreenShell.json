@@ -1,0 +1,22 @@
+{
+  "component": true,
+  "usingComponents": {
+    "half-screen-trade": "../@tencent/half-screen-trade/dist/mp/HalfScreenTrade",
+    "zhaoshang-embedded": "plugin://zhaoshang-trade/TradeStockEmbedded",
+    "hualin-embedded": "plugin://hualin-trade/TradeStockEmbedded",
+    "guoxin-embedded": "plugin://guoxin-trade/TradeStockEmbedded",
+    "guojin-embedded": "plugin://guojin-trade/TradeStockEmbedded",
+    "zhongjincaifu-embedded": "plugin://zhongjincaifu-trade/TradeStockEmbedded",
+    "guangfa-embedded": "plugin://guangfa-trade/TradeStockEmbedded",
+    "zhongxinjiantou-embedded": "plugin://zhongxinjiantou-trade/TradeStockEmbedded"
+  },
+  "componentPlaceholder": {
+    "zhaoshang-embedded": "view",
+    "hualin-embedded": "view",
+    "guoxin-embedded": "view",
+    "guojin-embedded": "view",
+    "zhongjincaifu-embedded": "view",
+    "guangfa-embedded": "view",
+    "zhongxinjiantou-embedded": "view"
+  }
+}

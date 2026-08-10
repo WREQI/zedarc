@@ -1,0 +1,70 @@
+@import "/app.wxss";
+.history-item.data-v-a2faaea0 {
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--fill-2);
+  border-radius: 0.213333rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 1.706667rem;
+  padding: 0 0.32rem;
+}
+.history-item .line1.data-v-a2faaea0 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.533333rem;
+}
+.history-item .line1.data-v-a2faaea0,
+.history-item .line1.data-v-a2faaea0 .adapt-font-size {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.history-item .line2.data-v-a2faaea0 {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  margin-top: 0.106667rem;
+}
+.history-item .action-0-1.data-v-a2faaea0,
+.history-item .action-0-23.data-v-a2faaea0,
+.history-item .action-0-40.data-v-a2faaea0,
+.history-item .action-0-42.data-v-a2faaea0,
+.history-item .action-2-1.data-v-a2faaea0,
+.history-item .action-2-23.data-v-a2faaea0,
+.history-item .action-2-40.data-v-a2faaea0,
+.history-item .action-2-42.data-v-a2faaea0 {
+  color: #e63535;
+}
+.history-item .action-0-2.data-v-a2faaea0,
+.history-item .action-0-24.data-v-a2faaea0,
+.history-item .action-0-41.data-v-a2faaea0,
+.history-item .action-0-43.data-v-a2faaea0,
+.history-item .action-2-2.data-v-a2faaea0,
+.history-item .action-2-24.data-v-a2faaea0,
+.history-item .action-2-41.data-v-a2faaea0,
+.history-item .action-2-43.data-v-a2faaea0 {
+  color: #1caa3c;
+}
+.history-item.history-simpleitem .action-0-1.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-23.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-40.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-42.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-1.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-23.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-40.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-42.data-v-a2faaea0 {
+  color: var(--color-buy);
+}
+.history-item.history-simpleitem .action-0-2.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-24.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-41.data-v-a2faaea0,
+.history-item.history-simpleitem .action-0-43.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-2.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-24.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-41.data-v-a2faaea0,
+.history-item.history-simpleitem .action-2-43.data-v-a2faaea0 {
+  color: var(--color-sell);
+}

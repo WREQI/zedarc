@@ -1,0 +1,76 @@
+<condition-card
+  bind:__l="__l"
+  bindclick="{{q}}"
+  class="data-v-dbce5049"
+  uI="dbce5049-0"
+  uP="{{r}}"
+  uS="{{['header','content']}}"
+  wx:if="{{r}}"
+>
+  <condition-detail-header
+    bind:__l="__l"
+    bindnameClick="{{a}}"
+    class="data-v-dbce5049"
+    slot="header"
+    uI="dbce5049-1,dbce5049-0"
+    uP="{{b}}"
+  ></condition-detail-header>
+  <view class="cond-detail-body data-v-dbce5049" slot="content">
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-2,dbce5049-0"
+      uP="{{d}}"
+      wx:if="{{c}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-3,dbce5049-0"
+      uP="{{k}}"
+      uS="{{['right']}}"
+      wx:if="{{k}}"
+    >
+      <view slot="right">
+        <view class="flex-vcenter data-v-dbce5049" wx:if="{{e}}"
+          >{{f}}<view class="cond-baseprice-tag data-v-dbce5049" wx:if="{{g}}">
+            <label class="cond-baseprice-text data-v-dbce5049">{{h}}</label>
+            <label class="{{['cond-baseprice-value','data-v-dbce5049',j]}}"
+              >{{i}}</label
+            >
+            <label class="data-v-dbce5049"></label>
+          </view>
+        </view>
+        <view class="data-v-dbce5049" wx:else></view>
+      </view>
+    </condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-4,dbce5049-0"
+      uP="{{l}}"
+      wx:if="{{l}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-5,dbce5049-0"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-6,dbce5049-0"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-dbce5049"
+      uI="dbce5049-7,dbce5049-0"
+      uP="{{p}}"
+      wx:if="{{o}}"
+    ></condition-detail-row>
+  </view>
+</condition-card>

@@ -1,0 +1,41 @@
+<page-meta class="data-v-3588f16e" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-3588f16e" id="global-wrap" uI="3588f16e-0" uP="{{K}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{K}}">
+    <apply-wrap bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-1,3588f16e-0" uS="{{['d']}}">
+        <view class="container flex-column data-v-3588f16e" style="{{'min-height:'+I}}">
+            <progress-bar bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-2,3588f16e-1" uP="{{b}}" wx:if="{{b}}"></progress-bar>
+            <view class="input-area flex-1 data-v-3588f16e" wx:if="{{c}}">
+                <view class="input-content-wrap data-v-3588f16e">
+                    <view class="tip-text flex-column data-v-3588f16e">
+                        <label class="title text-color-1 data-v-3588f16e">手机号验证</label>
+                        <label class="sub-title text-color-4 data-v-3588f16e">手机号用于查询开户进度，接收开户结果短信通知</label>
+                    </view>
+                    <st-cell-group bind:__l="__l" class="form-container data-v-3588f16e" uI="3588f16e-3,3588f16e-1" uS="{{['d']}}">
+                        <st-cell bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-4,3588f16e-3" uS="{{['extra','d']}}">
+                            <input bindfocus="{{f}}" bindinput="{{h}}" class="data-v-3588f16e" disabled="{{e}}" maxlength="11" placeholder="请输入本人手机号码" type="text" value="{{g}}" wx:if="{{d}}"></input>
+                            <input bindblur="{{k}}" bindfocus="{{j}}" bindinput="{{m}}" class="data-v-3588f16e" disabled="{{i}}" id="phoneTextInputId" maxlength="11" placeholder="请输入本人手机号码" type="number" value="{{l}}" wx:else></input>
+                            <view slot="extra">
+                                <view bindtap="{{o}}" class="icon icon-close text-color-4 fs-24 data-v-3588f16e" wx:if="{{n}}"></view>
+                            </view>
+                        </st-cell>
+                        <st-cell bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-5,3588f16e-3" uS="{{['extra','d']}}">
+                            <input bindblur="{{s}}" bindfocus="{{r}}" bindinput="{{v}}" class="data-v-3588f16e" disabled="{{q}}" id="smsCodeTextInputId" maxlength="{{p}}" placeholder="请输入短信验证码" type="number" value="{{t}}"></input>
+                            <button bindtap="{{y}}" class="sms-button fs-24 data-v-3588f16e" disabled="{{x}}" size="mini" slot="extra">{{w}}</button>
+                        </st-cell>
+                    </st-cell-group>
+                    <block wx:if="{{z}}">
+                        <sign-protocol bind:__l="__l" bindprotocolCheck="{{B}}" class="protocol-container r data-v-3588f16e" uI="3588f16e-6,3588f16e-1" uP="{{C}}" uR="SignProtocol" wx:if="{{C}}"></sign-protocol>
+                    </block>
+                </view>
+                <view class="foot data-v-3588f16e">
+                    <view class="bottom-text data-v-3588f16e" wx:if="{{D}}">
+                        <rich-text class="data-v-3588f16e" nodes="{{E}}"></rich-text>
+                    </view>
+                    <foot-print bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-7,3588f16e-1" wx:else></foot-print>
+                </view>
+                <step-buttons bind:__l="__l" bindclickNext="{{F}}" class="data-v-3588f16e" uI="3588f16e-8,3588f16e-1" uP="{{G}}" wx:if="{{G}}"></step-buttons>
+            </view>
+            <certificate bind:__l="__l" class="data-v-3588f16e" uI="3588f16e-9,3588f16e-1" wx:else></certificate>
+            <mp-dialog bind:__l="__l" class="data-v-3588f16e" id="mp-dialog" uI="3588f16e-10,3588f16e-1" uP="{{H}}" wx:if="{{H}}"></mp-dialog>
+        </view>
+    </apply-wrap>
+</global-wrap>

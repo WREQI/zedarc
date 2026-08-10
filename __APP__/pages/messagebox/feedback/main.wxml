@@ -1,0 +1,16 @@
+<page-meta class="data-v-fd7b2331" rootFontSize="{{a}}"></page-meta>
+<view class="_div plat-container data-v-fd7b2331">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-fd7b2331"
+    uI="fd7b2331-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-fd7b2331"
+    uI="fd7b2331-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <feedback bind:__l="__l" class="data-v-fd7b2331" uI="fd7b2331-2"></feedback>
+</view>

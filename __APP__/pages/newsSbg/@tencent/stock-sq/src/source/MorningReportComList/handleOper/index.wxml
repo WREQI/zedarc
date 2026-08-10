@@ -1,0 +1,17 @@
+<view class="_div mod-handle-view-oper oper-box data-v-c056d3a7" wx:if="{{a}}">
+  <view class="{{['_div','data-v-c056d3a7',g]}}">
+    <view
+      catchtap="{{f}}"
+      class="_div op like-box data-v-c056d3a7"
+      wx:if="{{b}}"
+    >
+      <view class="_div mod-like-box data-v-c056d3a7">
+        <view class="_div sq-icon-hongniu data-v-c056d3a7" wx:if="{{c}}"></view>
+        <view class="_div sq-icon-niu data-v-c056d3a7" wx:else></view>
+        <label class="{{['_span','data-v-c056d3a7',e&&'selected']}}"
+          >{{d}}</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

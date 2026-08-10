@@ -1,0 +1,75 @@
+.stock-detail-fund.data-v-efb746c0 .stock-list .no-scroll {
+  width: 36%;
+}
+.stock-detail-fund.data-v-efb746c0 .stock-list .horizontal-scroll {
+  overflow-x: hidden;
+  width: 64%;
+}
+.stock-detail-fund.data-v-efb746c0 .stock-list .horizontal-scroll .column {
+  width: 32%;
+}
+.stock-detail-fund.data-v-efb746c0
+  .stock-list
+  .horizontal-scroll
+  .column:last-child {
+  width: 36%;
+}
+.stock-detail-fund.data-v-efb746c0 .stock-list .list .item {
+  font-size: 0.4rem;
+}
+.stock-detail-fund.data-v-efb746c0 .stock-list .caption .item .sort:after {
+  bottom: -0.06666666666666667rem !important;
+}
+.fund-content.data-v-efb746c0 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.fund-content--inner-first .fund-content__inner.data-v-efb746c0 {
+  order: 1;
+}
+.fund-content--inner-first .fund-content__divider.data-v-efb746c0 {
+  order: 2;
+}
+.fund-content--inner-first .fund-content__outer.data-v-efb746c0 {
+  order: 3;
+}
+.fund-block.data-v-efb746c0 {
+  background: var(--fill-content-layer);
+  padding-bottom: 0.32rem;
+}
+.fund-block.nopadding.data-v-efb746c0 {
+  padding-bottom: 0;
+}
+.fund-block .block-line.data-v-efb746c0 {
+  background: var(--border-heavy-divider);
+  height: 0.013333333333333334rem;
+  margin: 0.32rem 0 0.18666666666666668rem;
+  width: 100%;
+}
+.fund-block .title.data-v-efb746c0 {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.4rem;
+  font-weight: 500;
+  height: 0.96rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+}
+.fund-block .title .icon.data-v-efb746c0 {
+  background: url(https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png);
+  background-size: cover;
+  height: 0.3466666666666667rem;
+  width: 0.21333333333333335rem;
+}
+.fund-block .warning-info.data-v-efb746c0 {
+  background-color: var(--fill-background);
+  color: var(--color-lightgray-2);
+  font-size: 0.32rem;
+  line-height: 0.56rem;
+  padding: 0.5333333333333333rem 0.4rem;
+  text-align: justify;
+}

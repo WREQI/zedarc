@@ -1,0 +1,44 @@
+<view
+  class="{{['_div','etf-teach-block','data-v-644145a2',p&&'lite']}}"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{d}}"
+    class="{{['_div','teach-block-title','data-v-644145a2',c]}}"
+  >
+    <view class="_div title-text data-v-644145a2">ETF轻松学</view>
+    <view class="_div title-jump data-v-644145a2" wx:if="{{b}}"></view>
+  </view>
+  <view class="{{['_div','teach-block-content','data-v-644145a2',o]}}">
+    <view
+      catchtap="{{h}}"
+      class="_div live-wrapper data-v-644145a2"
+      wx:if="{{e}}"
+    >
+      <view class="_div live-teach-title data-v-644145a2">{{f}}</view>
+      <view class="_div live-pic data-v-644145a2">
+        <image class="_img live-image-item data-v-644145a2" src="{{g}}"></image>
+        <view class="_div pic-btn data-v-644145a2"></view>
+      </view>
+    </view>
+    <view catchtap="{{n}}" class="_div topic-wrapper data-v-644145a2" wx:else>
+      <view class="_div topic-teach-title data-v-644145a2">
+        <view class="_div topic-top data-v-644145a2">{{i}}</view>
+        <view class="_div topic-info data-v-644145a2">
+          <view class="_div info-block data-v-644145a2">{{j}}</view>
+          <view class="_div info-block data-v-644145a2">{{k}}</view>
+          <view class="_div info-block info-tag data-v-644145a2" wx:if="{{l}}"
+            >合集</view
+          >
+        </view>
+      </view>
+      <view class="_div topic-pic data-v-644145a2">
+        <image
+          class="_img course-image-item data-v-644145a2"
+          src="{{m}}"
+        ></image>
+        <view class="_div pic-btn topic-btn data-v-644145a2"></view>
+      </view>
+    </view>
+  </view>
+</view>

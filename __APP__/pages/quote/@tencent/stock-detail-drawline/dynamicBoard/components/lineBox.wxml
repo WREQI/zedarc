@@ -1,0 +1,59 @@
+<view
+  class="{{['_div','data-v-dba523ef','line-box-container',g]}}"
+  ref="lineBox"
+>
+  <view class="_div line-box-menu data-v-dba523ef">
+    <label catchtap="{{a}}" class="_span button data-v-dba523ef">完成</label>
+    <view
+      catchtap="{{item.j}}"
+      class="_div button-content data-v-dba523ef"
+      wx:for="{{b}}"
+      wx:key="i"
+    >
+      <view
+        class="_div tool-icon-popover data-v-dba523ef"
+        style="{{'background-image:'+item.a}}"
+      ></view>
+      <label
+        class="{{['_span','data-v-dba523ef','tool-icon',item.b]}}"
+        style="{{'background-image:'+item.c}}"
+      ></label>
+      <label class="_span button-text data-v-dba523ef">{{item.d}}</label>
+      <view class="_div sub-popover-menu data-v-dba523ef" wx:if="{{item.e}}">
+        <view
+          catchtap="{{sub.d}}"
+          class="_div sub-content-item data-v-dba523ef"
+          wx:for="{{item.f}}"
+          wx:for-item="sub"
+          wx:key="c"
+        >
+          <label
+            class="_span tool-icon tool-icon-pop data-v-dba523ef"
+            style="{{'background-image:'+sub.a}}"
+          ></label>
+          <label class="_span sub-text data-v-dba523ef">{{sub.b}}</label>
+        </view>
+        <view class="_div popover-arrow data-v-dba523ef"></view>
+      </view>
+      <view
+        catchtap="{{item.h}}"
+        class="_div tips-modal data-v-dba523ef"
+        hidden="{{!item.g}}"
+      >
+        <view class="_div tips-inner data-v-dba523ef"
+          >新增一键删除和使用帮助</view
+        >
+        <view class="_div tips-arrow data-v-dba523ef"></view>
+      </view>
+    </view>
+  </view>
+  <popup
+    bind:__l="__l"
+    bindcancel="{{e}}"
+    bindconfirm="{{d}}"
+    class="data-v-dba523ef"
+    uI="dba523ef-0"
+    uP="{{f}}"
+    wx:if="{{c}}"
+  ></popup>
+</view>

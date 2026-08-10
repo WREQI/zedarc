@@ -1,0 +1,22 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{e}}"
+  class="filter-popup-wrap data-v-dd27a11a"
+  uI="dd27a11a-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <view class="{{['filter-popup','data-v-dd27a11a',b,c]}}" style="{{d}}">
+    <view
+      bindtap="{{item.d}}"
+      class="popup-item-outer data-v-dd27a11a"
+      wx:for="{{a}}"
+      wx:key="c"
+    >
+      <view class="{{['popup-item','border--bottom','data-v-dd27a11a',item.b]}}"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+</popup>

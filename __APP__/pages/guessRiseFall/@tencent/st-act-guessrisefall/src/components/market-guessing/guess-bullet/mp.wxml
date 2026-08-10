@@ -1,0 +1,30 @@
+<view class="_div guess-bullet data-v-9b335bd4" id="bullet" wx:if="{{a}}">
+  <view
+    class="_div guess-bullet__scroll data-v-9b335bd4"
+    id="content"
+    style="{{'left:'+d}}"
+  >
+    <view
+      class="_div guess-bullet__track data-v-9b335bd4"
+      wx:for="{{b}}"
+      wx:for-item="track"
+      wx:key="b"
+    >
+      <view
+        bindtap="{{item.d}}"
+        class="_div guess-bullet__item data-v-9b335bd4"
+        style="{{'background-image:'+c}}"
+        wx:for="{{track.a}}"
+        wx:key="c"
+      >
+        <view class="_div guess-bullet__avatar data-v-9b335bd4">
+          <view
+            class="_div guess-bullet__avatar-img data-v-9b335bd4"
+            style="{{'background-image:'+item.a}}"
+          ></view>
+        </view>
+        <view class="_div guess-bullet__text data-v-9b335bd4">{{item.b}}</view>
+      </view>
+    </view>
+  </view>
+</view>

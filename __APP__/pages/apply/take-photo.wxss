@@ -1,0 +1,189 @@
+@import "/app.wxss";
+.take-photo.data-v-dec9466c {
+  height: 100vh;
+}
+.take-photo .tips.data-v-dec9466c {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 0.373333rem;
+  font-style: normal;
+  font-weight: 400;
+  left: 0;
+  line-height: 0.533333rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 1.16rem;
+  z-index: 1;
+}
+.take-photo .tips .side.data-v-dec9466c {
+  color: hsla(0, 0%, 100%, 0.8);
+}
+.take-photo .collision-status.data-v-dec9466c {
+  font-size: 0.373333rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 2.173333rem;
+  z-index: 1;
+}
+.take-photo .collision-status-success.data-v-dec9466c {
+  background: rgba(0, 0, 0, 0.23);
+  border-radius: 0.106667rem;
+  color: #1caa3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  padding: 0.16rem;
+}
+.take-photo .collision-status-success-icon.data-v-dec9466c {
+  height: 0.373333rem;
+  margin-right: 0.106667rem;
+  width: 0.373333rem;
+}
+.take-photo .collision-status-success-icon image.data-v-dec9466c {
+  height: 100%;
+  width: 100%;
+}
+.take-photo .collision-status-fail.data-v-dec9466c {
+  background: rgba(0, 0, 0, 0.23);
+  border-radius: 0.106667rem;
+  color: #ff891e;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  padding: 0.16rem;
+}
+.take-photo .collision-status-fail-icon.data-v-dec9466c {
+  height: 0.373333rem;
+  margin-right: 0.106667rem;
+  width: 0.373333rem;
+}
+.take-photo .collision-status-fail-icon image.data-v-dec9466c {
+  height: 100%;
+  width: 100%;
+}
+.take-photo .camera.data-v-dec9466c {
+  height: 12.306667rem;
+  width: 100%;
+}
+.take-photo .box-canvas.data-v-dec9466c {
+  height: 12.306667rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.take-photo .mask.data-v-dec9466c {
+  background-size: 100% 12.306667rem;
+  height: 12.306667rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.take-photo .mask-front.data-v-dec9466c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/idcard/mask-front.png);
+}
+.take-photo .mask-back.data-v-dec9466c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/idcard/mask-back.png);
+}
+.take-photo .mask-top.data-v-dec9466c {
+  background: rgba(0, 0, 0, 0.7);
+  height: 3.28rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.take-photo .mask-bottom.data-v-dec9466c {
+  background: rgba(0, 0, 0, 0.7);
+  height: 3.333333rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 8.96rem;
+}
+.take-photo .bg.data-v-dec9466c {
+  height: 5.786667rem;
+  left: 0.4rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 3.24rem;
+  width: 9.2rem;
+}
+.take-photo .example-container.data-v-dec9466c {
+  background-color: rgba(0, 0, 0, 0.85);
+  box-sizing: border-box;
+  height: 3.04rem;
+  padding: 0.32rem 0.853333rem;
+  width: 100%;
+}
+.take-photo .example-container-tips.data-v-dec9466c {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.take-photo .example-container-bg.data-v-dec9466c {
+  height: 2.4rem;
+  width: 8.28rem;
+}
+.take-photo .action-container.data-v-dec9466c {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #000;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: calc(100vh - 12.306667rem - 3.04rem);
+  justify-content: space-between;
+  padding: 0.426667rem 0.853333rem;
+  width: 100%;
+}
+.take-photo
+  .action-container.action-container-disabled
+  .button.data-v-dec9466c {
+  opacity: 0.2;
+}
+.take-photo .action-container .cancel.data-v-dec9466c {
+  color: #fff;
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 1.226667rem;
+  line-height: 1.226667rem;
+  width: 1.226667rem;
+}
+.take-photo .action-container .button.data-v-dec9466c {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 1.866667rem;
+  position: relative;
+  width: 1.866667rem;
+}
+.take-photo .action-container .button .outer.data-v-dec9466c {
+  background-color: #000;
+  height: 1.413333rem;
+  width: 1.413333rem;
+}
+.take-photo .action-container .button .inner.data-v-dec9466c,
+.take-photo .action-container .button .outer.data-v-dec9466c {
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.take-photo .action-container .button .inner.data-v-dec9466c {
+  background-color: #fff;
+  height: 1.333333rem;
+  width: 1.333333rem;
+}
+.take-photo .action-container .placeholder.data-v-dec9466c {
+  height: 1.226667rem;
+  width: 1.226667rem;
+}

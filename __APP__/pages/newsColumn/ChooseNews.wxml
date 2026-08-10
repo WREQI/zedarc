@@ -1,0 +1,40 @@
+<page-meta class="data-v-27406909" rootFontSize="{{a}}"></page-meta>
+<view class="{{['_div','data-v-27406909','choose-news-container',k]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-27406909"
+    uI="27406909-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-27406909"
+    uI="27406909-1"
+  ></stock-privacy-dialog>
+  <view class="_div status-wrapper data-v-27406909" wx:if="{{b}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{c}}"
+      class="data-v-27406909"
+      uI="27406909-2"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></st-status>
+  </view>
+  <index
+    bind:__l="__l"
+    binddataReady="{{g}}"
+    binddataReport="{{h}}"
+    class="r data-v-27406909"
+    data-c-h="{{!f}}"
+    uI="27406909-3"
+    uR="detail"
+  ></index>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{i}}"
+    class="data-v-27406909"
+    uI="27406909-4"
+    uP="{{j}}"
+    wx:if="{{j}}"
+  ></privacy-policy-modal>
+</view>

@@ -1,0 +1,87 @@
+.yy-activity-task-guide.data-v-a337a96a {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+.yy-activity-task-guide .guide-mask.data-v-a337a96a {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.yy-activity-task-guide .guide-image-container.data-v-a337a96a {
+  position: absolute;
+  z-index: 1;
+}
+.yy-activity-task-guide .guide-image.data-v-a337a96a {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0.21333333333333335rem;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.yy-activity-task-guide .guide-image-light.data-v-a337a96a {
+  display: block;
+}
+.yy-activity-task-guide .guide-image-dark.data-v-a337a96a {
+  display: none;
+}
+.yy-activity-task-guide .guide-button.data-v-a337a96a {
+  align-items: center;
+  background: radial-gradient(
+    143.29% 100%at 50%0,
+    #459bff,
+    #1869ed 52.6%,
+    #0d52d8
+  );
+  border: 0.02rem solid #1058e3;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  line-height: 1.1733333333333333rem;
+  position: absolute;
+  width: 6.666666666666667rem;
+  z-index: 2;
+}
+.yy-activity-task-guide .guide-button.guide-button-lite.data-v-a337a96a {
+  background: radial-gradient(
+    143.29% 100%at 50%0,
+    #ff8180,
+    #fb5353 52.6%,
+    #f72727
+  );
+  border: 0.02rem solid #ff2828;
+}
+[data-st-theme="black"]
+  .yy-activity-task-guide
+  .guide-image-light.data-v-a337a96a,
+[data-st-theme="dark"]
+  .yy-activity-task-guide
+  .guide-image-light.data-v-a337a96a,
+html.black .yy-activity-task-guide .guide-image-light.data-v-a337a96a {
+  display: none;
+}
+[data-st-theme="black"]
+  .yy-activity-task-guide
+  .guide-image-dark.data-v-a337a96a,
+[data-st-theme="dark"]
+  .yy-activity-task-guide
+  .guide-image-dark.data-v-a337a96a,
+html.black .yy-activity-task-guide .guide-image-dark.data-v-a337a96a {
+  display: block;
+}

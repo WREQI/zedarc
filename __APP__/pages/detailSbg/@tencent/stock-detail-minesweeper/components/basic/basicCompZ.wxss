@@ -1,0 +1,57 @@
+.z-bar.data-v-6144f919 {
+  background: linear-gradient(270deg, #27c5ff, #3077ec);
+  display: block;
+  height: 0.32rem;
+  margin-bottom: 0.7466666666666667rem;
+  margin-top: 1.12rem;
+  position: relative;
+  width: 100%;
+}
+.z-bar .z-label.data-v-6144f919 {
+  background: var(--color-blue);
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-white);
+  font-size: 0.24rem;
+  font-weight: 500;
+  padding: 0.10666666666666667rem 0.14666666666666667rem;
+  position: absolute;
+  top: -0.64rem;
+}
+.z-bar .z-label.data-v-6144f919:after {
+  background: var(--color-blue);
+  bottom: -0.05333333333333334rem;
+  content: "";
+  height: 0.10666666666666667rem;
+  left: 50%;
+  margin-left: -0.05333333333333334rem;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 0.10666666666666667rem;
+}
+.z-bar .z-label.special.data-v-6144f919 {
+  font-family: PingFangSC-Medium, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+}
+.z-bar .range.data-v-6144f919 {
+  color: var(--color-midgray-1);
+}
+.z-bar .range.data-v-6144f919,
+.z-bar .range.data-v-6144f919:after {
+  border-right: 0.02666666666666667rem dashed var(--color-midgray-1);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+.z-bar .range.data-v-6144f919:after {
+  content: "";
+  right: -0.006666666666666667rem;
+}
+.z-bar .range ._i.data-v-6144f919,
+.z-bar .range i.data-v-6144f919 {
+  font-size: 0.26666666666666666rem;
+  font-style: normal;
+  left: -0.26666666666666666rem;
+  position: absolute;
+  top: 0.4266666666666667rem;
+}

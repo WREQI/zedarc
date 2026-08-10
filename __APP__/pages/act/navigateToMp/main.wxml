@@ -1,0 +1,9 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="container">
+  <mp-privacy-dialog bind:__l="__l" uI="0d92519e-0"></mp-privacy-dialog>
+  <view class="mp-logo">
+    <image alt="" class="_img mp-logo-img" src="{{b}}"></image>
+  </view>
+  <view class="mp-title">{{c}}</view>
+  <view bindtap="{{e}}" class="mp-btn">{{d}}</view>
+</view>

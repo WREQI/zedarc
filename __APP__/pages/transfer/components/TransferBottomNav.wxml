@@ -1,0 +1,5 @@
+<view class="{{['transfer-bottom-nav',f&&'transfer-bottom-navbar-mp']}}">
+  <label bindtap="{{b}}" class="nav-text link" wx:if="{{a}}">出入金记录</label>
+  <label bindtap="{{d}}" class="nav-text link" wx:if="{{c}}">更换银行卡</label>
+  <label bindtap="{{e}}" class="nav-text link">转账帮助</label>
+</view>

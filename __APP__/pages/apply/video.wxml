@@ -1,0 +1,270 @@
+<page-meta class="data-v-ef8b168d" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-ef8b168d"
+  id="global-wrap"
+  uI="ef8b168d-0"
+  uP="{{V}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{V}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-ef8b168d"
+    uI="ef8b168d-1,ef8b168d-0"
+    uS="{{['d']}}"
+  >
+    <view class="{{['page-apply-video','data-v-ef8b168d',T]}}">
+      <view class="status-unset data-v-ef8b168d" wx:if="{{b}}">
+        <digital-human
+          bind:__l="__l"
+          class="r data-v-ef8b168d"
+          uI="ef8b168d-2,ef8b168d-1"
+          uP="{{e}}"
+          uR="digitalHumanRef"
+          wx:if="{{c}}"
+        ></digital-human>
+        <view class="{{['data-v-ef8b168d',i]}}">
+          <progress-bar
+            bind:__l="__l"
+            class="data-v-ef8b168d"
+            uI="ef8b168d-3,ef8b168d-1"
+            uP="{{f}}"
+            wx:if="{{f}}"
+          ></progress-bar>
+          <pre-review-modify-card
+            bind:__l="__l"
+            class="data-v-ef8b168d"
+            uI="ef8b168d-4,ef8b168d-1"
+            uP="{{h}}"
+            wx:if="{{g}}"
+          ></pre-review-modify-card>
+          <view class="page-apply-video--body data-v-ef8b168d">
+            <view class="body-title text-color-1 data-v-ef8b168d"
+              >即将进行视频认证<label class="small-text data-v-ef8b168d"
+                >（仅需15s）</label
+              >
+            </view>
+            <view class="body-subtitle text-color-4 fs-24 flex data-v-ef8b168d">
+              <label class="icon-shield data-v-ef8b168d"></label
+              >监管部门要求：为防他人冒用信息，需本人录制视频确认开户意愿，保障您的账户安全。</view
+            >
+            <view class="body-card text-color-2 gap data-v-ef8b168d">
+              <view class="data-v-ef8b168d">
+                <view class="title text-color-1 data-v-ef8b168d">露出全脸</view>
+                <view class="subtilte data-v-ef8b168d">
+                  <label class="dot data-v-ef8b168d">·</label>
+                  <label class="primary-color data-v-ef8b168d">请勿</label
+                  >佩戴帽子，口罩遮挡面部</view
+                >
+                <view class="subtilte data-v-ef8b168d">
+                  <label class="dot data-v-ef8b168d">·</label>保持光线<label
+                    class="primary-color data-v-ef8b168d"
+                    >充足</label
+                  >，环境<label class="primary-color data-v-ef8b168d"
+                    >安静</label
+                  >
+                </view>
+              </view>
+              <view class="img-wrapper img-wrapper-face data-v-ef8b168d"></view>
+            </view>
+            <view class="body-card text-color-2 data-v-ef8b168d">
+              <view class="data-v-ef8b168d">
+                <view class="title text-color-1 data-v-ef8b168d"
+                  >语音清晰，回答正确</view
+                >
+                <view class="subtilte data-v-ef8b168d">
+                  <label class="dot data-v-ef8b168d">·</label>
+                  <label class="primary-color data-v-ef8b168d">请勿</label
+                  >佩戴耳机</view
+                >
+                <view class="subtilte data-v-ef8b168d">
+                  <label class="dot data-v-ef8b168d">·</label
+                  >请将音量调大到<label class="primary-color data-v-ef8b168d"
+                    >50%以上</label
+                  >
+                </view>
+              </view>
+              <view
+                class="img-wrapper img-wrapper-volume data-v-ef8b168d"
+              ></view>
+            </view>
+          </view>
+          <foot-print
+            bind:__l="__l"
+            class="foot data-v-ef8b168d"
+            uI="ef8b168d-5,ef8b168d-1"
+          ></foot-print>
+        </view>
+        <step-buttons
+          bind:__l="__l"
+          bindclickNext="{{j}}"
+          bindmpLaunchError="{{l}}"
+          bindmpLaunchSuccess="{{k}}"
+          class="data-v-ef8b168d"
+          uI="ef8b168d-6,ef8b168d-1"
+          uP="{{m}}"
+          wx:if="{{m}}"
+        ></step-buttons>
+      </view>
+      <view class="status-preview data-v-ef8b168d" wx:elif="{{n}}">
+        <view class="scroll-container data-v-ef8b168d">
+          <progress-bar
+            bind:__l="__l"
+            class="data-v-ef8b168d"
+            uI="ef8b168d-7,ef8b168d-1"
+            uP="{{o}}"
+            wx:if="{{o}}"
+          ></progress-bar>
+          <view class="preview-container data-v-ef8b168d">
+            <video
+              autoplay="{{false}}"
+              binderror="{{s}}"
+              class="preview-video data-v-ef8b168d"
+              controls="{{true}}"
+              customCache="{{false}}"
+              enableProgressGesture="{{false}}"
+              objectFit="contain"
+              playBtnPosition="center"
+              poster="{{r}}"
+              preload="auto"
+              referrerPolicy="origin"
+              showCenterPlayBtn="{{true}}"
+              showFullscreenBtn="{{false}}"
+              showPlayBtn="{{true}}"
+              showProgress="{{false}}"
+              src="{{q}}"
+              wx:if="{{p}}"
+            ></video>
+            <view class="preview-video data-v-ef8b168d" wx:else></view>
+            <view class="result-tips data-v-ef8b168d">
+              <view class="label text-color-4 data-v-ef8b168d"
+                >拍摄完成请确认：</view
+              >
+              <view class="text text-color-1 data-v-ef8b168d"
+                >1.面部拍摄完整 2.视频画面清晰 3.声音回答清晰</view
+              >
+            </view>
+            <mp-launcher
+              bind:__l="__l"
+              binderror="{{w}}"
+              bindlaunch="{{v}}"
+              class="preview-button-wrap data-v-ef8b168d"
+              uI="ef8b168d-8,ef8b168d-1"
+              uP="{{x}}"
+              uS="{{['d']}}"
+              wx:if="{{x}}"
+            >
+              <label bindtap="{{t}}" class="preview-button data-v-ef8b168d"
+                >重新录制</label
+              >
+            </mp-launcher>
+          </view>
+        </view>
+        <step-buttons
+          bind:__l="__l"
+          bindclickNext="{{y}}"
+          class="data-v-ef8b168d"
+          uI="ef8b168d-9,ef8b168d-1"
+          uP="{{z}}"
+          wx:if="{{z}}"
+        ></step-buttons>
+      </view>
+      <mp-exit-dialog
+        bind:__l="__l"
+        bindinput="{{A}}"
+        class="data-v-ef8b168d"
+        uI="ef8b168d-10,ef8b168d-1"
+        uP="{{B}}"
+        wx:if="{{B}}"
+      ></mp-exit-dialog>
+      <mp-video
+        bind:__l="__l"
+        bindcaptured="{{D}}"
+        bindfaceDetectFail="{{E}}"
+        bindstat="{{C}}"
+        class="data-v-ef8b168d"
+        uI="ef8b168d-11,ef8b168d-1"
+        uP="{{F}}"
+        wx:if="{{F}}"
+      ></mp-video>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-ef8b168d"
+        uI="ef8b168d-12,ef8b168d-1"
+        uP="{{L}}"
+        uS="{{['d']}}"
+        wx:if="{{L}}"
+      >
+        <view class="mp-dialog-custom data-v-ef8b168d">
+          <slot wx:if="{{$slots.d}}"></slot>
+          <view class="mp-dialog__message align-l data-v-ef8b168d" wx:else>
+            <label class="mp-dialog__message-text data-v-ef8b168d">
+              <rich-text class="data-v-ef8b168d" nodes="{{G}}"></rich-text>
+            </label>
+          </view>
+          <view class="mp-dialog__footer border--top data-v-ef8b168d">
+            <mp-launcher
+              bind:__l="__l"
+              binderror="{{J}}"
+              bindlaunch="{{I}}"
+              class="mp-dialog__button data-v-ef8b168d"
+              uI="ef8b168d-13,ef8b168d-12"
+              uP="{{K}}"
+              uS="{{['d']}}"
+              wx:if="{{K}}"
+            >
+              <button bindtap="{{H}}" class="record-button data-v-ef8b168d">
+                重新录制
+              </button>
+            </mp-launcher>
+          </view>
+        </view>
+      </mp-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-ef8b168d"
+        id="check-fail"
+        uI="ef8b168d-14,ef8b168d-1"
+        uP="{{R}}"
+        uS="{{['btns']}}"
+        wx:if="{{R}}"
+      >
+        <view
+          class="mp-dialog__footer flex border--top mp-dialog-custom data-v-ef8b168d"
+          slot="btns"
+        >
+          <button
+            bindtap="{{M}}"
+            class="mp-dialog__button mp-dialog__cancel border--right flex-1 data-v-ef8b168d"
+          >
+            取消
+          </button>
+          <mp-launcher
+            bind:__l="__l"
+            binderror="{{P}}"
+            bindlaunch="{{O}}"
+            class="mp-dialog__button mp-dialog__confirm flex-1 data-v-ef8b168d"
+            uI="ef8b168d-15,ef8b168d-14"
+            uP="{{Q}}"
+            uS="{{['d']}}"
+            wx:if="{{Q}}"
+          >
+            <button bindtap="{{N}}" class="record-button data-v-ef8b168d">
+              重新录制
+            </button>
+          </mp-launcher>
+        </view>
+      </mp-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-ef8b168d"
+        id="mp-dialog"
+        uI="ef8b168d-16,ef8b168d-1"
+        uP="{{S}}"
+        wx:if="{{S}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

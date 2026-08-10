@@ -1,0 +1,90 @@
+<view class="{{['_div','data-v-c32e4500',r,s,t]}}" wx:if="{{a}}">
+  <view class="{{['_div','data-v-c32e4500',q]}}">
+    <view class="_div brief-tit data-v-c32e4500" wx:if="{{b}}">产品竞争力</view>
+    <view class="_div hydb-tabs-bk data-v-c32e4500">
+      <view class="{{['_div','data-v-c32e4500',g,h]}}">
+        <scroll-view
+          scrollX
+          class="data-v-c32e4500"
+          scrollLeft="{{e}}"
+          wx:if="{{c}}"
+        >
+          <view class="_div hydb-tabs-scroll2 data-v-c32e4500">
+            <label
+              bindtap="{{tab.d}}"
+              class="{{['_span','tab-span','data-v-c32e4500',tab.c&&'active']}}"
+              wx:for="{{d}}"
+              wx:for-item="tab"
+              wx:key="b"
+              >{{tab.a}}</label
+            >
+          </view>
+        </scroll-view>
+        <view
+          class="_div hydb-tabs-scroll data-v-c32e4500"
+          ref="hydbScroll"
+          wx:else
+        >
+          <label
+            bindtap="{{tab.d}}"
+            class="{{['_span','tab-span','data-v-c32e4500',tab.c&&'active']}}"
+            wx:for="{{f}}"
+            wx:for-item="tab"
+            wx:key="b"
+            >{{tab.a}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div error data-v-c32e4500" wx:if="{{i}}">
+      <view class="_div errorImg data-v-c32e4500"></view>
+      <view class="_div data-v-c32e4500">暂无数据</view>
+    </view>
+    <view class="{{['_div','data-v-c32e4500',p]}}" wx:else>
+      <view class="{{['_div','data-v-c32e4500',n]}}">
+        <view class="_div industry data-v-c32e4500"
+          >所属行业:<label class="_span whiteFont data-v-c32e4500">{{j}}</label>
+        </view>
+        <view class="_div rank data-v-c32e4500"
+          >排行：<label class="_span whiteFont data-v-c32e4500">{{k}}</label>
+        </view>
+        <view class="_div source data-v-c32e4500" wx:if="{{l}}">({{m}})</view>
+      </view>
+      <label class="_span data-v-c32e4500" wx:for="{{o}}" wx:key="s">
+        <view class="_div list data-v-c32e4500" wx:if="{{item.a}}">
+          <view
+            class="_div rank data-v-c32e4500"
+            style="{{'color:'+item.c+';'+'font-weight:'+item.d}}"
+            >{{item.b}}</view
+          >
+          <view
+            class="{{['_div','data-v-c32e4500','name',item.l]}}"
+            style="{{'color:'+item.m+';'+'font-weight:'+item.n}}"
+          >
+            <label
+              catchtap="{{item.i}}"
+              class="_span data-v-c32e4500"
+              style="{{'color:'+item.g+';'+'font-weight:'+item.h}}"
+              wx:if="{{item.e}}"
+              >{{item.f}}</label
+            >
+            <label class="_span data-v-c32e4500" wx:if="{{item.j}}"
+              >{{item.k}}</label
+            >
+          </view>
+          <view class="_div rect data-v-c32e4500">
+            <view
+              class="{{['_div','data-v-c32e4500',item.o]}}"
+              style="{{'width:'+item.p}}"
+            ></view>
+          </view>
+          <view class="_div value data-v-c32e4500"
+            >{{item.q}}<label class="_span data-v-c32e4500" wx:if="{{item.r}}"
+              >%</label
+            >
+          </view>
+        </view>
+      </label>
+    </view>
+  </view>
+</view>

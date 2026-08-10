@@ -1,0 +1,30 @@
+<page-meta class="data-v-fdd1bf04" rootFontSize="{{a}}"></page-meta>
+<view class="_div fast-news data-v-fdd1bf04">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-fdd1bf04"
+    uI="fdd1bf04-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-fdd1bf04"
+    uI="fdd1bf04-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <fast-news
+    bind:__l="__l"
+    class="data-v-fdd1bf04"
+    uI="fdd1bf04-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></fast-news>
+  <view class="_div share-wrapper data-v-fdd1bf04">
+    <canvas
+      class="shareWidget data-v-fdd1bf04"
+      id="myCanvas"
+      style="{{'width:'+'222px'+';'+'height:'+'177.6px'}}"
+      type="2d"
+    ></canvas>
+  </view>
+</view>

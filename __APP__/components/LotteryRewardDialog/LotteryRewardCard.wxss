@@ -1,0 +1,99 @@
+@import "/app.wxss";
+.lottery-reward-card.data-v-ddad3f6d {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.266667rem;
+  box-sizing: border-box;
+  height: 4.64rem;
+  overflow: hidden;
+  position: relative;
+  width: 8.346667rem;
+}
+.lottery-reward-card__inner.data-v-ddad3f6d {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.426667rem;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.lottery-reward-card__header.data-v-ddad3f6d {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.56rem;
+}
+.lottery-reward-card__market.data-v-ddad3f6d {
+  font-size: 0.266667rem;
+  margin-right: 0.106667rem;
+}
+.lottery-reward-card__name.data-v-ddad3f6d {
+  color: #262e40;
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+  max-width: 4.266667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lottery-reward-card__data.data-v-ddad3f6d {
+  -webkit-box-align: center;
+  -webkit-box-flex: 1;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  margin-bottom: 0.266667rem;
+}
+.lottery-reward-card__data--show-button.data-v-ddad3f6d {
+  margin: 0.266667rem 0 0.24rem;
+}
+.lottery-reward-card__data-col.data-v-ddad3f6d {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.lottery-reward-card__data-col.data-v-ddad3f6d:not(:first-child) {
+  margin-left: 0.853333rem;
+}
+.lottery-reward-card__data-value.data-v-ddad3f6d {
+  color: #262e40;
+  font-size: 0.453333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+}
+.lottery-reward-card__data-label.data-v-ddad3f6d {
+  color: #262e40;
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.lottery-reward-card__date.data-v-ddad3f6d {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.lottery-reward-card__btn.data-v-ddad3f6d {
+  background-color: var(--color-primary-1);
+  border-radius: 0.106667rem;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.746667rem;
+  margin-top: 0.32rem;
+  padding: 0 0.213333rem;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: fit-content;
+}

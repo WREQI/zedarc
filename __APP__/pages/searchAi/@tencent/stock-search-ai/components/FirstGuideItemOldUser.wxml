@@ -1,0 +1,30 @@
+<view
+  class="{{['_div','data-v-b511b6c8','welcome-old-user-container',d,e,f]}}"
+  style="{{g}}"
+>
+  <view
+    class="{{['_div','welcome-old-user-text','data-v-b511b6c8',a&&'animate-in']}}"
+    >Hi, 我能帮你做点什么?</view
+  >
+  <view
+    bindtap="{{item.j}}"
+    class="{{['_div','question-item','data-v-b511b6c8',c,item.i]}}"
+    wx:for="{{b}}"
+    wx:key="h"
+  >
+    <view class="_div question-text data-v-b511b6c8">{{item.a}}</view>
+    <view class="_div question-heat data-v-b511b6c8" wx:if="{{item.b}}">
+      <view
+        class="_div question-heat-icon question-heat-icon-like data-v-b511b6c8"
+      ></view>
+      <label class="_span data-v-b511b6c8">你关注的股票</label>
+    </view>
+    <view class="_div question-heat data-v-b511b6c8" wx:else>
+      <view
+        class="{{['_div','question-heat-icon','data-v-b511b6c8',item.c&&'question-heat-icon-hot',item.d&&'question-heat-icon-trend']}}"
+      ></view>
+      <label class="_span data-v-b511b6c8" wx:if="{{item.e}}">{{item.f}}</label>
+      <label class="_span data-v-b511b6c8" wx:else>{{item.g}}</label>
+    </view>
+  </view>
+</view>

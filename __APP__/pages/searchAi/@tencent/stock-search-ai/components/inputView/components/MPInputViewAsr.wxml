@@ -1,0 +1,151 @@
+<view
+  class="{{['_div','data-v-ca492e32','mp-input-container',ar,as,at,av,aw]}}"
+>
+  <subscripe-page-entry
+    bind:__l="__l"
+    class="data-v-ca492e32"
+    uI="ca492e32-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></subscripe-page-entry>
+  <view
+    bindtap="{{d}}"
+    catchtouchmove="{{e}}"
+    class="_div expand-overlay data-v-ca492e32"
+    wx:if="{{c}}"
+  ></view>
+  <view class="{{['_div','data-v-ca492e32','input-box-outer',ab]}}">
+    <textarea
+      adjustPosition="{{false}}"
+      autoHeight="{{n}}"
+      bindblur="{{q}}"
+      bindconfirm="{{t}}"
+      bindfocus="{{p}}"
+      bindinput="{{r}}"
+      bindkeyboardheightchange="{{s}}"
+      bindlinechange="{{v}}"
+      class="{{['data-v-ca492e32','input-box',g,h,i]}}"
+      confirmType="send"
+      cursor="{{l}}"
+      disableDefaultPadding="{{true}}"
+      disabled="{{f}}"
+      focus="{{k}}"
+      holdKeyboard="true"
+      id="inputBox"
+      maxlength="{{o}}"
+      placeholder="{{m}}"
+      placeholderClass="inputbox-placeholder"
+      ref="inputBox"
+      showConfirmBar="{{false}}"
+      style="{{j}}"
+      value="{{w}}"
+      wx:if="{{r0}}"
+    ></textarea>
+    <view
+      catchtouchcancel="{{A}}"
+      catchtouchend="{{z}}"
+      catchtouchmove="{{B}}"
+      catchtouchstart="{{y}}"
+      class="_div input-touch-mask data-v-ca492e32"
+      wx:if="{{x}}"
+    ></view>
+    <view
+      catchtap="{{F}}"
+      class="{{['_div','data-v-ca492e32','input-expand-btn',E]}}"
+    >
+      <image
+        alt="{{D}}"
+        class="_img input-expand-icon data-v-ca492e32"
+        src="{{C}}"
+      ></image>
+    </view>
+    <view
+      bindmousedown="{{K}}"
+      bindmouseleave="{{M}}"
+      bindmouseup="{{L}}"
+      catchcontextmenu="{{R}}"
+      catchtouchcancel="{{P}}"
+      catchtouchend="{{O}}"
+      catchtouchmove="{{Q}}"
+      catchtouchstart="{{N}}"
+      class="{{['_div','data-v-ca492e32','input-audio',H,I,J]}}"
+      wx:if="{{G}}"
+      >按住 说话</view
+    >
+    <view
+      class="_div data-v-ca492e32"
+      style="margin-left: auto; position: relative; z-index: 5"
+      wx:if="{{S}}"
+    >
+      <view
+        catchtap="{{U}}"
+        class="_div send-btn data-v-ca492e32"
+        wx:if="{{T}}"
+      ></view>
+      <view
+        catchtap="{{W}}"
+        class="_div switch-audio data-v-ca492e32"
+        wx:elif="{{V}}"
+      ></view>
+      <view
+        catchtap="{{Y}}"
+        class="_div switch-input data-v-ca492e32"
+        wx:if="{{X}}"
+      ></view>
+      <view
+        catchtap="{{aa}}"
+        class="_div 'stop-answer' data-v-ca492e32"
+        wx:if="{{Z}}"
+      ></view>
+    </view>
+  </view>
+  <view class="_div input-box-sub-container data-v-ca492e32" wx:if="{{ac}}">
+    <view
+      class="{{['_div','data-v-ca492e32','input-box-sub-deep-text-ds']}}"
+      wx:if="{{ad}}"
+    ></view>
+    <view
+      bindtap="{{ah}}"
+      class="{{['_div','data-v-ca492e32','input-box-sub-deep-text',ag]}}"
+      wx:else
+    >
+      <image
+        class="_img input-box-sub-deep-logo data-v-ca492e32"
+        src="{{ae}}"
+      ></image>
+      <view class="{{['_div','data-v-ca492e32','input-box-sub-deep-font',af]}}"
+        >深度思考</view
+      >
+    </view>
+    <view class="_div data-v-ca492e32" style="margin-left: auto">
+      <view
+        catchtap="{{aj}}"
+        class="_div stop-answer data-v-ca492e32"
+        wx:if="{{ai}}"
+      ></view>
+      <view
+        catchtap="{{al}}"
+        class="_div send-btn data-v-ca492e32"
+        wx:elif="{{ak}}"
+      ></view>
+      <view
+        catchtap="{{am}}"
+        class="_div switch-audio data-v-ca492e32"
+        wx:else
+      ></view>
+    </view>
+  </view>
+  <audio-modal
+    bind:__l="__l"
+    class="r data-v-ca492e32"
+    uI="ca492e32-1"
+    uP="{{ao}}"
+    uR="voiceModalRef"
+    wx:if="{{ao}}"
+  ></audio-modal>
+  <view class="_div safe-area-bottom data-v-ca492e32" wx:if="{{ap}}"></view>
+  <view
+    class="_div container-bottom-padding data-v-ca492e32"
+    style="{{'padding-bottom:'+aq}}"
+  ></view>
+</view>

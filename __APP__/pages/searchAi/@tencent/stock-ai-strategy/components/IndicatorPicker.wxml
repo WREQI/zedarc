@@ -1,0 +1,77 @@
+<view class="_div component-indicator-picker data-v-e4a941c7">
+  <action-sheet
+    bind:__l="__l"
+    bindcancel="{{g}}"
+    bindinput="{{h}}"
+    class="action-sheet data-v-e4a941c7"
+    uI="e4a941c7-0"
+    uP="{{i}}"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div action-sheet-container data-v-e4a941c7" wx:if="{{b}}">
+      <view
+        class="_div indicator-item data-v-e4a941c7"
+        wx:for="{{c}}"
+        wx:for-item="indicator"
+        wx:key="k"
+      >
+        <view class="_div flex-vcenter flex-between data-v-e4a941c7">
+          <view class="_div indicator-summary flex-vcenter data-v-e4a941c7">
+            <view class="_div data-v-e4a941c7">{{indicator.a}}：</view>
+            <view
+              class="_div summary-value data-v-e4a941c7"
+              wx:if="{{indicator.b}}"
+              >{{indicator.c}}{{indicator.d}}</view
+            >
+          </view>
+        </view>
+        <view class="_div data-v-e4a941c7" wx:if="{{indicator.e}}">
+          <range-slider
+            bind:__l="__l"
+            bindchange="{{indicator.f}}"
+            class="data-v-e4a941c7"
+            uI="{{indicator.g}}"
+            uP="{{indicator.h}}"
+            wx:if="{{indicator.h}}"
+          ></range-slider>
+        </view>
+        <view
+          class="_div factor-list data-v-e4a941c7"
+          wx:elif="{{indicator.i}}"
+        >
+          <view
+            class="_div flex data-v-e4a941c7"
+            wx:for="{{indicator.j}}"
+            wx:for-item="row"
+            wx:key="b"
+          >
+            <view
+              bindtap="{{factor.f}}"
+              class="{{['_div','factor-item','data-v-e4a941c7',factor.c,factor.d,factor.e]}}"
+              wx:for="{{row.a}}"
+              wx:for-item="factor"
+              wx:key="b"
+              >{{factor.a}}</view
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div option-btns flex-vcenter data-v-e4a941c7">
+        <view
+          bindtap="{{d}}"
+          class="_div btn btn-cancel flex-center data-v-e4a941c7"
+        >
+          <view class="_div btn-text data-v-e4a941c7">取消</view>
+        </view>
+        <view
+          bindtap="{{f}}"
+          class="_div btn btn-confirm flex-center data-v-e4a941c7"
+        >
+          <view class="_div btn-text data-v-e4a941c7">确定</view>
+          <view class="_div btn-text-ext data-v-e4a941c7">（共{{e}}只）</view>
+        </view>
+      </view>
+    </view>
+  </action-sheet>
+</view>

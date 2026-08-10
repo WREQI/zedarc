@@ -1,0 +1,11 @@
+<view catchtap="{{g}}" class="_div sort-toggle data-v-15c72add">
+  <view
+    class="{{['_div','data-v-15c72add','sort-toggle-name',b]}}"
+    style="{{'font-size:'+c}}"
+    >{{a}}</view
+  >
+  <label class="_span sort-toggle-arrow data-v-15c72add" wx:if="{{d}}">
+    <view class="{{['_i','up','data-v-15c72add',e&&'activated']}}"></view>
+    <view class="{{['_i','down','data-v-15c72add',f&&'activated']}}"></view>
+  </label>
+</view>

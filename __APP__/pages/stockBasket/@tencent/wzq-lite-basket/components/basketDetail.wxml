@@ -1,0 +1,14 @@
+<view class="_div basket-detail-wrapper data-v-76becf00">
+  <basket-scrollable-stock-list
+    bind:__l="__l"
+    bindgoToStockDetail="{{b}}"
+    bindsortToggle="{{e}}"
+    bindtableToggleClick="{{d}}"
+    bindtoggleFoldClick="{{c}}"
+    class="r data-v-76becf00"
+    uI="76becf00-0"
+    uP="{{f}}"
+    uR="scollList"
+    wx:if="{{f}}"
+  ></basket-scrollable-stock-list>
+</view>

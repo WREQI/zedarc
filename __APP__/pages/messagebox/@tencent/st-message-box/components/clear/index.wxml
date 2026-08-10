@@ -1,0 +1,10 @@
+<view class="_div message-top-clear data-v-da573338">
+  <view class="_div text data-v-da573338">全部消息</view>
+  <view
+    bindtap="{{c}}"
+    class="{{['_div','icon','data-v-da573338',a&&'icon-blue',b&&'icon-lite']}}"
+  ></view>
+  <view bindtap="{{f}}" class="{{['_div','text-clear','data-v-da573338',d,e]}}"
+    >清除未读</view
+  >
+</view>

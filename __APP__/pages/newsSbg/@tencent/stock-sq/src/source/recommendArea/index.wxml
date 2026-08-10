@@ -1,0 +1,40 @@
+<view class="{{['_div','data-v-72c00df7','recommend-people',j]}}" wx:if="{{a}}">
+  <view class="{{['_div','data-v-72c00df7','title-area',e,f]}}">
+    <view catchtap="{{b}}" class="_div title-left data-v-72c00df7">
+      <label class="_span title-text data-v-72c00df7">股友推荐</label>
+      <label class="_span more-icon data-v-72c00df7"></label>
+    </view>
+    <view
+      catchtap="{{d}}"
+      class="_div title-right data-v-72c00df7"
+      wx:if="{{c}}"
+    >
+      <view class="_div title-text data-v-72c00df7">换一批</view>
+      <view class="_div refresh-icon data-v-72c00df7"></view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-72c00df7','people-group']}}">
+    <view
+      class="_div people-real data-v-72c00df7"
+      wx:for="{{g}}"
+      wx:for-item="people"
+      wx:key="f"
+    >
+      <recommend-item
+        bind:__l="__l"
+        bindrecommendFollow="{{people.c}}"
+        bindtapPerson="{{people.b}}"
+        bindtoggleCheck="{{people.a}}"
+        class="data-v-72c00df7"
+        uI="{{people.d}}"
+        uP="{{people.e}}"
+        wx:if="{{people.e}}"
+      ></recommend-item>
+    </view>
+  </view>
+  <view class="_div batch-wrap data-v-72c00df7" wx:if="{{h}}">
+    <view catchtap="{{i}}" class="_div batch-btn data-v-72c00df7"
+      >一键关注</view
+    >
+  </view>
+</view>

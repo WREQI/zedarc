@@ -1,0 +1,54 @@
+<view
+  catchtap="{{x}}"
+  class="{{['_div','stock-chart-panel','data-v-b1cf3c2d',w&&'skin-black']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div header-wrapper data-v-b1cf3c2d">
+    <view class="_div top-section data-v-b1cf3c2d">
+      <label class="_span left-wrapper data-v-b1cf3c2d">{{b}}</label>
+      <label class="_span right-wrapper data-v-b1cf3c2d">{{c}}</label>
+    </view>
+    <view class="_div bottom-section data-v-b1cf3c2d">
+      <view class="_div price-section data-v-b1cf3c2d" wx:if="{{d}}">
+        <label class="{{['_span','number','data-v-b1cf3c2d',g]}}" wx:if="{{e}}"
+          >{{f}}</label
+        >
+        <label class="{{['_span','number','data-v-b1cf3c2d',j]}}" wx:if="{{h}}"
+          >{{i}}</label
+        >
+        <label class="{{['_span','number','data-v-b1cf3c2d',m]}}" wx:if="{{k}}"
+          >{{l}}%</label
+        >
+      </view>
+      <label class="_span us-market-time data-v-b1cf3c2d" wx:if="{{n}}"
+        >美东时间</label
+      >
+    </view>
+  </view>
+  <view
+    class="_div chart-wrapper data-v-b1cf3c2d"
+    style="{{'min-height:'+q+';'+'margin-left:'+r}}"
+  >
+    <composition
+      bind:__l="__l"
+      class="r data-v-b1cf3c2d"
+      uI="b1cf3c2d-0"
+      uP="{{p}}"
+      uR="composition"
+      wx:if="{{p}}"
+    ></composition>
+  </view>
+  <view class="_div divider data-v-b1cf3c2d"></view>
+  <view class="_div footer-section data-v-b1cf3c2d">
+    <view catchtap="{{v}}" class="_div to-detail-label data-v-b1cf3c2d">
+      <view class="_div mock-trade-icon data-v-b1cf3c2d" wx:if="{{s}}"></view>
+      <label class="_span data-v-b1cf3c2d">{{t}}</label>
+      <image
+        alt=""
+        class="_img to-detail-arrow data-v-b1cf3c2d"
+        src="https://st.gtimg.com/design/f19953b5d288fa3371c53a4fe19ca2c2.png"
+      ></image>
+    </view>
+  </view>
+</view>
+<view class="_div loading-placeholder data-v-b1cf3c2d" wx:else></view>

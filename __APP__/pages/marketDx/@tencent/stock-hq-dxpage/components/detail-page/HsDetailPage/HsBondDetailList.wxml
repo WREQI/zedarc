@@ -1,0 +1,66 @@
+<view class="{{['_div','hs-bond-detail-list','data-v-c0e3b133',j,k]}}">
+  <view class="_div data-v-c0e3b133">
+    <top-header
+      bind:__l="__l"
+      class="data-v-c0e3b133"
+      uI="c0e3b133-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></top-header>
+    <view class="{{['_div','data-v-c0e3b133',c]}}">
+      <view
+        class="_div data-v-c0e3b133"
+        wx:for="{{b}}"
+        wx:for-item="ui"
+        wx:key="i"
+      >
+        <view class="_div data-v-c0e3b133" wx:if="{{ui.a}}">
+          <double-column-item
+            bind:__l="__l"
+            bindshowTeachPop="{{ui.b}}"
+            class="data-v-c0e3b133"
+            uI="{{ui.c}}"
+            uP="{{ui.d}}"
+            wx:if="{{ui.d}}"
+          ></double-column-item>
+        </view>
+        <view class="_div data-v-c0e3b133" wx:if="{{ui.e}}">
+          <more-single-column-item
+            bind:__l="__l"
+            class="data-v-c0e3b133"
+            uI="{{ui.f}}"
+            uP="{{ui.g}}"
+            wx:if="{{ui.g}}"
+          ></more-single-column-item>
+        </view>
+        <view
+          class="_div separator-line data-v-c0e3b133"
+          wx:if="{{ui.h}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-c0e3b133" wx:if="{{d}}"></view>
+  <view
+    class="{{['_div','data-v-c0e3b133','pur-button-wrapper']}}"
+    wx:if="{{e}}"
+  >
+    <purchase-button
+      bind:__l="__l"
+      class="data-v-c0e3b133"
+      uI="c0e3b133-3"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></purchase-button>
+  </view>
+  <view class="_div teach-wrapper data-v-c0e3b133" wx:if="{{g}}">
+    <teach-pop-block
+      bind:__l="__l"
+      bindclosePop="{{h}}"
+      class="data-v-c0e3b133"
+      uI="c0e3b133-4"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></teach-pop-block>
+  </view>
+</view>

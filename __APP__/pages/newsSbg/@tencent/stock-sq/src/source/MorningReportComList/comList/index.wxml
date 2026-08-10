@@ -1,0 +1,35 @@
+<view class="_div mod-newsComList-list data-v-09584f0d">
+  <no-network
+    bind:__l="__l"
+    bindclickReload="{{b}}"
+    class="data-v-09584f0d"
+    data-c-h="{{!a}}"
+    uI="09584f0d-0"
+  ></no-network>
+  <block wx:if="{{c}}">
+    <com-item
+      bind:__l="__l"
+      bindonHandleTapItem="{{item.b}}"
+      class="data-v-09584f0d"
+      uI="{{item.c}}"
+      uP="{{item.d}}"
+      wx:for="{{d}}"
+      wx:key="a"
+    ></com-item>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-09584f0d"
+    uI="09584f0d-2"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></no-data>
+  <load-more
+    bind:__l="__l"
+    binddoLoadmore="{{h}}"
+    class="data-v-09584f0d"
+    uI="09584f0d-3"
+    uP="{{i}}"
+    wx:if="{{g}}"
+  ></load-more>
+</view>

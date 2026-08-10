@@ -1,0 +1,289 @@
+<page-meta class="data-v-d71f6440" rootFontSize="{{a}}"></page-meta>
+<view class="_div container data-v-d71f6440">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d71f6440"
+    uI="d71f6440-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d71f6440"
+    uI="d71f6440-1"
+  ></stock-privacy-dialog>
+  <view
+    class="{{['_div','data-v-d71f6440','auto-adapt','scroll-content']}}"
+    wx:if="{{b}}"
+  >
+    <view class="{{['_div','data-v-d71f6440','stock-watch-list-container',N]}}">
+      <view class="_div data-v-d71f6440" id="watchlistTopContainer">
+        <view class="_div header-container data-v-d71f6440">
+          <image
+            alt=""
+            class="_img header-img data-v-d71f6440"
+            mode="aspectFill"
+            src="{{d}}"
+            wx:if="{{c}}"
+          ></image>
+          <image
+            alt=""
+            class="_img header-img data-v-d71f6440"
+            mode="aspectFit"
+            src="https://st.gtimg.com/design/854b38667d4de8bdc68ef22ba0af1997.png"
+            wx:if="{{e}}"
+          ></image>
+          <view class="_div overlay data-v-d71f6440"></view>
+          <view class="_div header-text data-v-d71f6440">
+            <view class="_div header-desc-container data-v-d71f6440">
+              <view class="_div header-text-title data-v-d71f6440">{{f}}</view>
+              <view class="_div header-text-desc data-v-d71f6440">
+                <view class="_div desc data-v-d71f6440">{{g}}</view>
+                <view class="_div desc-icon data-v-d71f6440">
+                  <image
+                    catchtap="{{h}}"
+                    class="_img header-icon r-small data-v-d71f6440"
+                    src="https://st.gtimg.com/design/c57d78345600d8e77bd86d9e339c707a.png"
+                  ></image>
+                </view>
+              </view>
+            </view>
+            <view class="_div header-text-extra data-v-d71f6440" wx:if="{{i}}">
+              <view class="_div change-percent data-v-d71f6440" wx:if="{{j}}">
+                <label class="_span rise-title data-v-d71f6440">今日涨跌</label>
+                <label class="{{['_span','data-v-d71f6440','rise-value',l]}}"
+                  >{{k}}</label
+                >
+              </view>
+              <view
+                class="_div change-percent-month data-v-d71f6440"
+                wx:if="{{m}}"
+              >
+                <label class="_span rise-title data-v-d71f6440"
+                  >近一月涨跌</label
+                >
+                <label class="{{['_span','data-v-d71f6440','rise-value',o]}}"
+                  >{{n}}</label
+                >
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-d71f6440" id="stockWatchChart"></view>
+        <view class="_div chart-area data-v-d71f6440" wx:if="{{p}}">
+          <plate-trend-chart
+            bind:__l="__l"
+            bindchangeRange="{{r}}"
+            bindshowChartModal="{{s}}"
+            class="r data-v-d71f6440"
+            uI="d71f6440-2"
+            uP="{{t}}"
+            uR="plateTrendChart"
+            wx:if="{{t}}"
+          ></plate-trend-chart>
+        </view>
+        <view class="_div data-v-d71f6440">
+          <update-history-bar
+            bind:__l="__l"
+            class="data-v-d71f6440"
+            uI="d71f6440-3"
+            uP="{{v}}"
+            wx:if="{{v}}"
+          ></update-history-bar>
+        </view>
+      </view>
+      <view class="_div data-v-d71f6440" id="stockWatchList"></view>
+      <view
+        class="_div stock-watch-list data-v-d71f6440"
+        id="stockWatchListDetail"
+      >
+        <basket-detail
+          bind:__l="__l"
+          class="data-v-d71f6440"
+          uI="d71f6440-4"
+          uP="{{w}}"
+          wx:if="{{w}}"
+        ></basket-detail>
+      </view>
+      <view
+        class="_div relevance-plate data-v-d71f6440"
+        id="relevancePlate"
+        wx:if="{{x}}"
+      >
+        <relevance-plate
+          bind:__l="__l"
+          class="data-v-d71f6440"
+          uI="d71f6440-5"
+          uP="{{y}}"
+          wx:if="{{y}}"
+        ></relevance-plate>
+      </view>
+      <related-hot-news
+        bind:__l="__l"
+        class="data-v-d71f6440"
+        uI="d71f6440-6"
+        uP="{{A}}"
+        wx:if="{{z}}"
+      ></related-hot-news>
+      <view
+        class="_div community-scope data-v-d71f6440"
+        id="communityWrap"
+        ref="communityWrap"
+        wx:if="{{B}}"
+      >
+        <view class="_div item-title new-comments-title-wrap data-v-d71f6440">
+          <label class="_span item-title-span data-v-d71f6440">最新评论</label>
+          <view bindtap="{{C}}" class="_div item-title-button data-v-d71f6440"
+            >写评论</view
+          >
+        </view>
+        <stock-basket-list
+          bind:__l="__l"
+          bindcheckUserAgreementStatus="{{K}}"
+          bindcommentMore="{{H}}"
+          bindgetCommentCount="{{F}}"
+          bindgetCommentUpdate="{{I}}"
+          bindonPutComment="{{G}}"
+          bindsuccessHanlde="{{J}}"
+          class="r data-v-d71f6440"
+          uI="d71f6440-7"
+          uP="{{L}}"
+          uR="newsCommentList"
+          wx:if="{{D}}"
+        ></stock-basket-list>
+      </view>
+      <view class="_div brand data-v-d71f6440" wx:if="{{M}}"></view>
+    </view>
+    <basket-bar
+      bind:__l="__l"
+      bindoperateBasketSuccess="{{Q}}"
+      bindtapComment="{{T}}"
+      bindtapShare="{{S}}"
+      bindtapSubscribe="{{R}}"
+      class="r data-v-d71f6440"
+      uI="d71f6440-8"
+      uP="{{U}}"
+      uR="basketBar"
+      wx:if="{{O}}"
+    ></basket-bar>
+    <privacy-policy-modal
+      bind:__l="__l"
+      bindinput="{{V}}"
+      class="data-v-d71f6440"
+      uI="d71f6440-9"
+      uP="{{W}}"
+      wx:if="{{W}}"
+    ></privacy-policy-modal>
+    <weixin-setting-guide
+      bind:__l="__l"
+      bindclose="{{X}}"
+      class="data-v-d71f6440"
+      uI="d71f6440-10"
+      uP="{{Y}}"
+      wx:if="{{Y}}"
+    ></weixin-setting-guide>
+    <weixin-setting-guide
+      bind:__l="__l"
+      bindclose="{{Z}}"
+      class="data-v-d71f6440"
+      uI="d71f6440-11"
+      uP="{{aa}}"
+      wx:if="{{aa}}"
+    ></weixin-setting-guide>
+  </view>
+  <st-status
+    bind:__l="__l"
+    class="data-v-d71f6440"
+    uI="d71f6440-12"
+    uP="{{ac}}"
+    wx:elif="{{ab}}"
+  ></st-status>
+  <st-status
+    bind:__l="__l"
+    bindhandleError="{{ae}}"
+    class="data-v-d71f6440"
+    uI="d71f6440-13"
+    uP="{{af}}"
+    wx:elif="{{ad}}"
+  ></st-status>
+  <view
+    class="_div nav-bar data-v-d71f6440"
+    id="navBar"
+    style="{{'padding-top:'+an+';'+'background-color:'+ao}}"
+  >
+    <view class="_div btn data-v-d71f6440" wx:if="{{ag}}"></view>
+    <view catchtap="{{aj}}" class="_div btn data-v-d71f6440" wx:elif="{{ah}}">
+      <view
+        class="{{['_div','data-v-d71f6440','right-arrow','left',ai]}}"
+      ></view>
+    </view>
+    <view catchtap="{{ak}}" class="_div btn home data-v-d71f6440" wx:else>
+      <image
+        class="_img home-icon data-v-d71f6440"
+        src="https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png"
+      ></image>
+    </view>
+    <label class="_span title data-v-d71f6440" style="{{'opacity:'+am}}"
+      >{{al}}</label
+    >
+    <view class="_div btn data-v-d71f6440"></view>
+  </view>
+  <layer-modal
+    bind:__l="__l"
+    bindclose="{{as}}"
+    class="tips-modal data-v-d71f6440"
+    uI="d71f6440-14"
+    uP="{{at}}"
+    uS="{{['d']}}"
+    wx:if="{{at}}"
+  >
+    <scroll-view
+      class="{{['data-v-d71f6440','modal-content-text']}}"
+      scrollY="true"
+    >
+      <label class="_span desc data-v-d71f6440">{{ap}}</label>
+      <view class="_div info data-v-d71f6440" wx:if="{{aq}}">
+        <view class="_div title data-v-d71f6440">详细描述</view>
+        <text
+          decode
+          class="info-item data-v-d71f6440"
+          wx:for="{{ar}}"
+          wx:key="b"
+          >{{item.a}}</text
+        >
+      </view>
+    </scroll-view>
+  </layer-modal>
+  <layer-modal
+    bind:__l="__l"
+    bindclose="{{ax}}"
+    class="data-v-d71f6440"
+    uI="d71f6440-15"
+    uP="{{ay}}"
+    uS="{{['d']}}"
+    wx:if="{{av}}"
+  >
+    <plate-trend-chart-modal-content
+      bind:__l="__l"
+      class="data-v-d71f6440"
+      uI="d71f6440-16,d71f6440-15"
+      uP="{{aw}}"
+      wx:if="{{aw}}"
+    ></plate-trend-chart-modal-content>
+  </layer-modal>
+  <basket-guide-modal
+    bind:__l="__l"
+    bindclose="{{aA}}"
+    bindconfirm="{{az}}"
+    class="data-v-d71f6440"
+    uI="d71f6440-17"
+    uP="{{aB}}"
+    wx:if="{{aB}}"
+  ></basket-guide-modal>
+  <view class="_div share-wrapper data-v-d71f6440">
+    <canvas
+      class="shareWidget data-v-d71f6440"
+      id="myCanvas"
+      style="{{'width:'+'222px'+';'+'height:'+'177.6px'}}"
+      type="2d"
+    ></canvas>
+  </view>
+</view>

@@ -1,0 +1,142 @@
+<view class="_div mbti-container data-v-30ac6a19">
+  <view class="_div card data-v-30ac6a19" wx:if="{{a}}">
+    <view class="_div title data-v-30ac6a19"
+      >你可以告诉我你的MBTI，让我来帮你分析你适合什么风格的投资策略～</view
+    >
+    <view class="_div button-group data-v-30ac6a19">
+      <view bindtap="{{b}}" class="_div btn btn-primary data-v-30ac6a19"
+        >知道自己的MBTI</view
+      >
+      <view bindtap="{{c}}" class="_div btn btn-secondary data-v-30ac6a19"
+        >不知道自己的MBTI</view
+      >
+    </view>
+  </view>
+  <view class="_div data-v-30ac6a19" wx:if="{{d}}">
+    <view class="_div card text-card data-v-30ac6a19">
+      <view class="_div title data-v-30ac6a19"
+        >你可以告诉我你的MBTI，让我来帮你分析你适合什么风格的投资策略～</view
+      >
+    </view>
+    <view class="_div card data-v-30ac6a19">
+      <view class="_div progress-bar data-v-30ac6a19">
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',e&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-line','data-v-30ac6a19',f&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',g&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-line','data-v-30ac6a19',h&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',i&&'active']}}"
+        ></view>
+      </view>
+      <view class="_div question-card data-v-30ac6a19" wx:if="{{j}}">
+        <view class="_div title data-v-30ac6a19"
+          >你是E人（外向型）还是I人（内向型）？</view
+        >
+        <view class="_div button-group data-v-30ac6a19">
+          <view bindtap="{{k}}" class="_div btn btn-choice data-v-30ac6a19"
+            >我是 E 人</view
+          >
+          <view bindtap="{{l}}" class="_div btn btn-choice data-v-30ac6a19"
+            >我是 I 人</view
+          >
+        </view>
+        <view bindtap="{{m}}" class="_div btn btn-back data-v-30ac6a19"
+          >返回上一步</view
+        >
+      </view>
+      <view class="_div question-card data-v-30ac6a19" wx:elif="{{n}}">
+        <view class="_div title data-v-30ac6a19"
+          >你是J人（计划型）还是P人（应变型）？</view
+        >
+        <view class="_div button-group data-v-30ac6a19">
+          <view bindtap="{{o}}" class="_div btn btn-choice data-v-30ac6a19"
+            >我是 P 人</view
+          >
+          <view bindtap="{{p}}" class="_div btn btn-choice data-v-30ac6a19"
+            >我是 J 人</view
+          >
+        </view>
+        <view bindtap="{{q}}" class="_div btn btn-back data-v-30ac6a19"
+          >返回上一步</view
+        >
+      </view>
+      <view class="_div question-card data-v-30ac6a19" wx:elif="{{r}}">
+        <view class="_div title data-v-30ac6a19">请点击选择你的MBTI</view>
+        <view class="_div mbti-options-group data-v-30ac6a19">
+          <view
+            bindtap="{{type.d}}"
+            class="{{['_div','mbti-option-card','data-v-30ac6a19',type.e]}}"
+            wx:for="{{s}}"
+            wx:for-item="type"
+            wx:key="c"
+          >
+            <image
+              alt="{{type.b}}"
+              class="_img mbti-option-image data-v-30ac6a19"
+              src="{{type.a}}"
+            ></image>
+          </view>
+        </view>
+        <view bindtap="{{t}}" class="_div btn btn-back data-v-30ac6a19"
+          >返回上一步</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-30ac6a19" wx:elif="{{v}}">
+    <view class="_div card text-card data-v-30ac6a19">
+      <view class="_div title data-v-30ac6a19"
+        >你可以告诉我你的MBTI，让我来帮你分析你适合什么风格的投资策略～</view
+      >
+    </view>
+    <view class="_div card data-v-30ac6a19">
+      <view class="_div progress-bar data-v-30ac6a19">
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',w&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-line','data-v-30ac6a19',x&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',y&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-line','data-v-30ac6a19',z&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',A&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-line','data-v-30ac6a19',B&&'active']}}"
+        ></view>
+        <view
+          class="{{['_div','progress-dot','data-v-30ac6a19',C&&'active']}}"
+        ></view>
+      </view>
+      <view class="_div question-card data-v-30ac6a19" wx:if="{{D}}">
+        <view class="_div title data-v-30ac6a19">{{E}}</view>
+        <view class="_div button-group data-v-30ac6a19">
+          <view
+            bindtap="{{option.c}}"
+            class="_div btn btn-choice data-v-30ac6a19"
+            wx:for="{{F}}"
+            wx:for-item="option"
+            wx:key="b"
+            >{{option.a}}</view
+          >
+        </view>
+        <view bindtap="{{G}}" class="_div btn btn-back data-v-30ac6a19"
+          >返回上一步</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view
+  catchtouchmove="{{f}}"
+  class="_div modal-container-mp data-v-bccd0697"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{b}}" class="_div dialog-back data-v-bccd0697"></view>
+  <view class="_div dialog-main data-v-bccd0697">
+    <view class="_div dialog-title data-v-bccd0697">{{c}}</view>
+    <view class="_div dialog-content data-v-bccd0697">{{d}}</view>
+    <view catchtap="{{e}}" class="_div dialog-confirm data-v-bccd0697"
+      >我知道了</view
+    >
+  </view>
+</view>

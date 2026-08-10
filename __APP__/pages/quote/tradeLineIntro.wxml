@@ -1,0 +1,92 @@
+<page-meta class="data-v-09ee6ffa" rootFontSize="{{a}}"></page-meta>
+<view class="_div intro-page data-v-09ee6ffa">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-09ee6ffa"
+    uI="09ee6ffa-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-09ee6ffa"
+    uI="09ee6ffa-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <image class="_img image data-v-09ee6ffa" mode="widthFix" src="{{c}}"></image>
+  <view bindtap="{{d}}" class="_div top-button data-v-09ee6ffa">立即领取</view>
+  <view class="_div content-wrapper data-v-09ee6ffa">
+    <view class="_div title-general data-v-09ee6ffa">· 操盘线</view>
+    <view class="_div text data-v-09ee6ffa">
+      <view class="bold data-v-09ee6ffa">行业领先的波段识别系统，</view
+      >基于人工智能算法，通过量价关系、技术形态、资金流向等多维度判断股票趋势，帮助您把握机会，规避风险。</view
+    >
+    <image
+      class="_img image image-general data-v-09ee6ffa"
+      mode="widthFix"
+      src="{{e}}"
+    ></image>
+    <view class="_div text data-v-09ee6ffa">
+      <view class="bold data-v-09ee6ffa">波段信号：</view
+      >红色信号代表关注机会；绿色信号代表规避风险；蓝色信号代表短期震荡。</view
+    >
+  </view>
+  <view class="_div content-wrapper data-v-09ee6ffa">
+    <view class="_div title-center data-v-09ee6ffa">
+      <image class="_img title-icon data-v-09ee6ffa" src="{{f}}"></image>
+      <label class="_span title-text data-v-09ee6ffa">经典案例</label>
+      <image class="_img title-icon data-v-09ee6ffa" src="{{g}}"></image>
+    </view>
+    <view class="_div text data-v-09ee6ffa"
+      >XX长虹于2023/03/22触发关注信号，9个交易日累计涨幅高达<view
+        class="bold rise data-v-09ee6ffa"
+        >61.02%</view
+      >
+    </view>
+    <image
+      class="_img image image-rise data-v-09ee6ffa"
+      mode="widthFix"
+      src="{{h}}"
+    ></image>
+    <view class="_div text data-v-09ee6ffa"
+      >XX高科于2023/03/28触发观望信号，5个交易日累计跌幅<view
+        class="bold drop data-v-09ee6ffa"
+        >14.42%</view
+      >
+    </view>
+    <image
+      class="_img image image-drop data-v-09ee6ffa"
+      mode="widthFix"
+      src="{{i}}"
+    ></image>
+  </view>
+  <view class="_div content-wrapper data-v-09ee6ffa">
+    <view class="_div title-center data-v-09ee6ffa">
+      <image class="_img title-icon data-v-09ee6ffa" src="{{j}}"></image>
+      <label class="_span title-text data-v-09ee6ffa">如何使用</label>
+      <image class="_img title-icon data-v-09ee6ffa" src="{{k}}"></image>
+    </view>
+    <view class="_div text data-v-09ee6ffa"
+      >股票k线下方的决策锦囊，点击操盘线即可打开使用</view
+    >
+    <image
+      class="_img image image-usage data-v-09ee6ffa"
+      mode="widthFix"
+      src="{{l}}"
+    ></image>
+    <view class="_div sub-text data-v-09ee6ffa"
+      >支撑压力位：黄色为第一支撑压力位，蓝色为第二支撑压力位；上涨趋势中，曲线表示上升过程中的支撑位；下跌趋势中，曲线表示下跌过程中的压力位</view
+    >
+  </view>
+  <view class="_div disclaimer data-v-09ee6ffa"
+    >免责声明：<view class="data-v-09ee6ffa"></view
+    >操盘线所提供的指标均基于历史数据，过往表现不代表未来趋势，接受本服务的投资者，请注意投资风险。投资者据此操作，风险请自担。<view
+      class="data-v-09ee6ffa"
+    ></view
+    >另备内容仅作为指标的使用演示，不构成投资建议。华林证券不对据此操作产生的盈亏承担任何责任，不承担由此产生的任何责任及损失等。</view
+  >
+  <view class="_div buttom-bar data-v-09ee6ffa">
+    <view bindtap="{{m}}" class="_div bottom-button data-v-09ee6ffa"
+      >立即开户领取</view
+    >
+  </view>
+</view>

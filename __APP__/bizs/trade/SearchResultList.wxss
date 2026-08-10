@@ -1,0 +1,81 @@
+@import "/app.wxss";
+.smartbox.data-v-d0123a66 {
+  background: var(--fill-2);
+}
+.smartbox .color-primary.data-v-d0123a66 {
+  color: var(--color-primary);
+}
+.smartbox .item-wrap.data-v-d0123a66 {
+  box-sizing: border-box;
+  font-size: 0.426667rem;
+  height: 1.28rem;
+  margin: 0 0.4rem;
+  padding: 0.213333rem 0;
+  position: relative;
+}
+.smartbox .item-wrap.two-line.data-v-d0123a66 {
+  height: 1.6rem;
+}
+.smartbox .item-wrap .stock-info.data-v-d0123a66 {
+  -webkit-box-flex: 1;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+.smartbox .item-wrap .name.data-v-d0123a66 {
+  color: #262e40;
+  font-size: 0.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.smartbox .item-wrap .code.data-v-d0123a66 {
+  font-size: 0.266667rem;
+  margin-top: 0.16rem;
+}
+.smartbox .item-wrap .code.two-line.data-v-d0123a66 {
+  font-size: 0.293333rem;
+}
+.smartbox .item-wrap .code .icon.data-v-d0123a66 {
+  margin-right: 0.106667rem;
+}
+.smartbox .item-wrap .stock-mkt.data-v-d0123a66 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0.266667rem;
+  padding-right: 0.106667rem;
+  width: 0.373333rem;
+}
+.smartbox .item-wrap .stock-mkt.absolute.data-v-d0123a66 {
+  display: block;
+  left: -0.4rem;
+  position: absolute;
+  top: 0.32rem;
+}
+.smartbox .item-wrap .stock-mkt.inline.data-v-d0123a66 {
+  display: inline-block;
+  margin-right: 0.133333rem;
+}
+.smartbox .item-wrap.data-v-d0123a66:last-child:after {
+  border: none;
+}
+.smartbox .item-wrap .icon-create.data-v-d0123a66,
+.smartbox .item-wrap .icon-created.data-v-d0123a66 {
+  font-size: 0.613333rem;
+}
+.smartbox .item-wrap .icon-created.data-v-d0123a66 {
+  color: #98a0b3;
+}
+.smartbox .item-wrap .icon-create.data-v-d0123a66 {
+  color: var(--color-primary-1);
+}
+.smartbox.smartbox__simple-mode {
+  border-radius: 0.213333rem;
+}
+.smartbox.smartbox__simple-mode .item-wrap {
+  height: auto;
+  padding: 0.346667rem 0;
+}
+.smartbox.smartbox__simple-mode .item-wrap .stock-mkt {
+  padding-right: 0.106667rem;
+}

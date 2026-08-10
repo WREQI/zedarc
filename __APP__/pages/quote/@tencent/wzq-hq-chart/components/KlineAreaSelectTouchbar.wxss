@@ -1,0 +1,74 @@
+.touch-bar.data-v-742a319d {
+  align-items: center;
+  background-color: var(--fill-content-layer);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  justify-content: space-between;
+  padding: 0 0.4rem 0.06666666666666667rem 0.8rem;
+  top: -0.13333333333333333rem;
+}
+.touch-bar .color-rise.data-v-742a319d {
+  color: var(--color-red) !important;
+}
+.touch-bar .color-drop.data-v-742a319d {
+  color: var(--color-green) !important;
+}
+.touch-bar .color-equal.data-v-742a319d {
+  color: var(--color-ping) !important;
+}
+.touch-bar .at-row.data-v-742a319d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+.touch-bar .at-row.data-v-742a319d:nth-child(2n) {
+  margin-top: 0.13333333333333333rem;
+}
+.touch-bar .at-row .at-row-title.data-v-742a319d {
+  color: var(--color-lightgray);
+  font-size: 0.26666666666666666rem;
+  min-width: 0.48rem;
+  white-space: nowrap;
+}
+.touch-bar .at-row .at-row-content.data-v-742a319d {
+  color: var(--color-heavygray);
+  flex: 1;
+  font-size: 0.26666666666666666rem;
+  min-width: 1.2rem;
+  padding-left: 0.10666666666666667rem;
+  white-space: nowrap;
+}
+.touch-bar .timeSpan.data-v-742a319d {
+  width: 2.933333333333333rem;
+}
+.touch-bar .mTimeSpan.data-v-742a319d,
+.touch-bar .timeSpan.data-v-742a319d {
+  color: var(--color-lightgray);
+  font-size: 0.26666666666666666rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.touch-bar .area-rise-content.data-v-742a319d {
+  align-items: center;
+  background-color: var(--color-card);
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-midgray);
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.16rem 0.13333333333333333rem;
+  width: 2.4rem;
+}
+.touch-bar .area-rise-content .title.data-v-742a319d {
+  font-size: 0.26666666666666666rem;
+}
+.touch-bar .area-rise-content .content.data-v-742a319d {
+  flex: 1;
+  font-size: 0.29333333333333333rem;
+  font-weight: 600;
+  text-align: right;
+}

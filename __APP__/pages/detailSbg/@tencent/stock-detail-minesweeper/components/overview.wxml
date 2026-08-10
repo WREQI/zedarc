@@ -1,0 +1,93 @@
+<view class="_div overview-wrapper data-v-d3762352">
+  <view class="_div ms-block data-v-d3762352">
+    <view class="{{['_div','overview-tip','data-v-d3762352',f]}}">
+      <label class="_span data-v-d3762352">最近更新{{a}}</label>
+      <label
+        catchtap="{{e}}"
+        class="_span right-tip data-v-d3762352"
+        wx:if="{{b}}"
+      >
+        <block wx:if="{{c}}"
+          >您的<view class="num-sp data-v-d3762352">{{d}}</view
+          >只自选有中高风险项</block
+        >
+        <block wx:else>您的自选暂未扫出风险股票</block>
+        <image
+          alt=""
+          class="_img arrow-right data-v-d3762352"
+          src="https://st.gtimg.com/design/5cf17a591694b7bb4f5c7cad77e6f084.png"
+        ></image>
+      </label>
+    </view>
+    <view class="_div overview-chart data-v-d3762352">
+      <view class="_div chart-group data-v-d3762352">
+        <view class="{{['_div','c-info','data-v-d3762352',j]}}">
+          <label class="{{['_span','data-v-d3762352',h]}}">{{g}}</label>
+          <label bindtap="{{i}}" class="_span brief data-v-d3762352"
+            >总风险项</label
+          >
+        </view>
+        <view
+          class="{{['_div','data-v-d3762352','c-mask',k]}}"
+          style="{{l}}"
+        ></view>
+        <view class="_div overview-chart-wrapper data-v-d3762352">
+          <f2
+            bind:__l="__l"
+            bindonInit="{{m}}"
+            class="data-v-d3762352"
+            uI="d3762352-0"
+            uP="{{n}}"
+            wx:if="{{n}}"
+          ></f2>
+        </view>
+      </view>
+      <view class="_div c-tags data-v-d3762352" wx:if="{{o}}">
+        <label
+          bindtap="{{item.e}}"
+          class="{{['_span','data-v-d3762352',item.d]}}"
+          wx:for="{{p}}"
+          wx:key="c"
+        >
+          <view class="_i risk-tag-num data-v-d3762352">{{item.a}}</view>
+          <view class="{{['_i','risk-tag-name','data-v-d3762352',q]}}"
+            >{{item.b}}</view
+          >
+          <view class="_i risk-tag-img data-v-d3762352"></view>
+        </label>
+      </view>
+    </view>
+    <view class="_div no-risk data-v-d3762352" wx:if="{{r}}"
+      >近期暂未发现风险项</view
+    >
+    <block wx:else>
+      <view class="_div overview-line data-v-d3762352"></view>
+      <view
+        class="{{['_div','overview-tags','data-v-d3762352',t&&'flash',item.c&&'hide']}}"
+        wx:for="{{s}}"
+        wx:key="d"
+      >
+        <view class="_div tags-label data-v-d3762352">{{item.a}}</view>
+        <view class="_div tags-list data-v-d3762352">
+          <view
+            catchtap="{{item.h}}"
+            class="{{['_div','tags-item','data-v-d3762352',item.b,item.c,item.d,item.e]}}"
+            hidden="{{!item.g}}"
+            wx:for="{{item.b}}"
+            wx:key="f"
+          >
+            <label class="_span tag-name data-v-d3762352">{{item.a}}</label>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view catchtap="{{A}}" class="_div gap-line data-v-d3762352">
+    <view class="_div data-v-d3762352"
+      >共计扫描了{{v}}个风险项<label class="_span data-v-d3762352" wx:if="{{w}}"
+        >，{{x}}个指标</label
+      >
+    </view>
+    <label class="{{['_span','data-v-d3762352',z]}}">{{y}}全部</label>
+  </view>
+</view>

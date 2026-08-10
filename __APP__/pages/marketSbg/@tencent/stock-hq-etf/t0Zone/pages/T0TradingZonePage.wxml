@@ -1,0 +1,141 @@
+<view
+  class="{{['_div','data-v-6b86c8da','t0-zone',D]}}"
+  data-st-theme="{{E}}"
+  data-test-id="t0-zone-page"
+>
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    class="data-v-6b86c8da"
+    uI="6b86c8da-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="_div t0-zone__bg data-v-6b86c8da"></view>
+  <view class="_div t0-zone__cognition data-v-6b86c8da">
+    <view class="_div t0-zone__title data-v-6b86c8da">T+0 交易</view>
+    <view class="_div t0-zone__subtitle data-v-6b86c8da"
+      >相对股票/基金，T+0 ETF支持当天买卖，赚了就能落袋</view
+    >
+    <view class="_div trade-clock data-v-6b86c8da">
+      <image
+        alt="价格走势背景"
+        class="_img trade-clock__bar-red data-v-6b86c8da"
+        src="{{d}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div t0-zone__body data-v-6b86c8da">
+    <block wx:if="{{e}}">
+      <view class="_div t0-zone__rank data-v-6b86c8da">
+        <t0-rank-list
+          bind:__l="__l"
+          class="data-v-6b86c8da"
+          key="rank-list"
+          uI="6b86c8da-1"
+          uP="{{f}}"
+          wx:if="{{f}}"
+        ></t0-rank-list>
+      </view>
+      <view
+        class="{{['_div','data-v-6b86c8da','t0-zone__strategy',s.g]}}"
+        wx:for="{{g}}"
+        wx:for-item="s"
+        wx:key="f"
+      >
+        <t0-strategy-block
+          bind:__l="__l"
+          bindfundBuy="{{s.b}}"
+          bindmethodOpen="{{s.a}}"
+          bindpremiumExplain="{{s.c}}"
+          class="data-v-6b86c8da"
+          uI="{{s.d}}"
+          uP="{{s.e}}"
+          wx:if="{{s.e}}"
+        ></t0-strategy-block>
+      </view>
+    </block>
+    <block wx:else>
+      <view
+        class="_div t0-zone__strategy data-v-6b86c8da"
+        wx:for="{{h}}"
+        wx:for-item="s"
+        wx:key="f"
+      >
+        <t0-strategy-block
+          bind:__l="__l"
+          bindfundBuy="{{s.b}}"
+          bindmethodOpen="{{s.a}}"
+          bindpremiumExplain="{{s.c}}"
+          class="data-v-6b86c8da"
+          uI="{{s.d}}"
+          uP="{{s.e}}"
+          wx:if="{{s.e}}"
+        ></t0-strategy-block>
+      </view>
+      <view class="{{['_div','data-v-6b86c8da','t0-zone__rank',j]}}">
+        <t0-rank-list
+          bind:__l="__l"
+          class="data-v-6b86c8da"
+          key="rank-list"
+          uI="6b86c8da-4"
+          uP="{{i}}"
+          wx:if="{{i}}"
+        ></t0-rank-list>
+      </view>
+    </block>
+    <trust-footer
+      bind:__l="__l"
+      class="data-v-6b86c8da"
+      uI="6b86c8da-5"
+      wx:if="{{k}}"
+    ></trust-footer>
+  </view>
+  <footer-bar
+    bind:__l="__l"
+    bindask="{{l}}"
+    bindshare="{{m}}"
+    class="data-v-6b86c8da"
+    uI="6b86c8da-6"
+    uP="{{n}}"
+    wx:if="{{n}}"
+  ></footer-bar>
+  <semi-mask
+    bind:__l="__l"
+    bindcloseSemimask="{{t}}"
+    catchtouchmove="{{s}}"
+    class="r data-v-6b86c8da"
+    uI="6b86c8da-7"
+    uP="{{v}}"
+    uR="methodSheetRef"
+    uS="{{['d']}}"
+    wx:if="{{o}}"
+  >
+    <practice-method-sheet
+      bind:__l="__l"
+      bindclose="{{p}}"
+      class="data-v-6b86c8da"
+      uI="6b86c8da-8,6b86c8da-7"
+      uP="{{q}}"
+      wx:if="{{q}}"
+    ></practice-method-sheet>
+  </semi-mask>
+  <root-portal class="data-v-6b86c8da" enable="{{true}}" wx:if="{{w}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{y}}"
+      class="data-v-6b86c8da"
+      uI="6b86c8da-9"
+      uP="{{z}}"
+      wx:if="{{x}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{B}}"
+    class="data-v-6b86c8da"
+    uI="6b86c8da-10"
+    uP="{{C}}"
+    wx:elif="{{A}}"
+  ></half-screen-ai-entry>
+</view>

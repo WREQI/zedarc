@@ -1,0 +1,128 @@
+<view class="{{['_div','data-v-67a51642','more-block',h]}}">
+  <view catchtap="{{a}}" class="_div more-header data-v-67a51642">
+    <view class="_div more-title data-v-67a51642">更多红利ETF</view>
+    <view class="_div more-arrow data-v-67a51642"></view>
+  </view>
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{b}}"
+    class="data-v-67a51642"
+    uI="67a51642-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></tabbar>
+  <swiper
+    bindchange="{{g}}"
+    class="rank-swiper data-v-67a51642"
+    current="{{e}}"
+    duration="{{250}}"
+    ref="rankSwiper"
+    style="{{'height:'+f}}"
+  >
+    <swiper-item
+      class="swiper-item data-v-67a51642"
+      wx:for="{{d}}"
+      wx:for-item="listItem"
+      wx:key="q"
+    >
+      <view
+        class="{{['_div','data-v-67a51642','ranktop-wrapper',listItem.p]}}"
+        ref="{{listItem.o}}"
+      >
+        <block wx:if="{{listItem.a}}">
+          <view class="_div rank-head data-v-67a51642">
+            <view class="_div rank-left data-v-67a51642">
+              <image
+                bindtap="{{listItem.c}}"
+                class="_img index-filter-btn data-v-67a51642"
+                src="{{listItem.b}}"
+              ></image>
+              <label
+                bindtap="{{listItem.d}}"
+                class="_span filter-text data-v-67a51642"
+                >指数过滤</label
+              >
+              <label
+                catchtap="{{listItem.e}}"
+                class="_span filter-info data-v-67a51642"
+              >
+                <image
+                  class="_img filter-info-img data-v-67a51642"
+                  src="https://st.gtimg.com/design/118acead4d4d3bd0a356abf70d2b4020.png"
+                ></image>
+              </label>
+            </view>
+            <view
+              class="_div rank-middle data-v-67a51642"
+              wx:if="{{listItem.f}}"
+              >{{listItem.g}}</view
+            >
+            <view class="_div rank-right data-v-67a51642">近1年涨幅</view>
+          </view>
+          <view class="_div rank-body data-v-67a51642">
+            <view
+              bindtap="{{stock.l}}"
+              class="_div rank-item data-v-67a51642"
+              wx:for="{{listItem.h}}"
+              wx:for-item="stock"
+              wx:key="k"
+            >
+              <view class="_div rank-row data-v-67a51642">
+                <view class="_div rank-left data-v-67a51642">
+                  <view class="_div rank-name data-v-67a51642"
+                    >{{stock.a}}</view
+                  >
+                  <view class="_div rank-symbol data-v-67a51642">
+                    <image
+                      class="_img market-icon data-v-67a51642"
+                      src="https://wzq.tenpay.com/resources/mp-files/portfolio/icon/cnjj.svg"
+                    ></image>
+                    <view class="_div stock-code data-v-67a51642"
+                      >{{stock.b}}</view
+                    >
+                    <view
+                      class="_div stock-tag data-v-67a51642"
+                      wx:if="{{stock.c}}"
+                      >{{stock.d}}</view
+                    >
+                  </view>
+                </view>
+                <view
+                  class="_div rank-middle data-v-67a51642"
+                  wx:if="{{listItem.i}}"
+                  >{{stock.e}}</view
+                >
+                <view
+                  class="{{['_div','data-v-67a51642','rank-right',stock.g]}}"
+                  >{{stock.f}}</view
+                >
+              </view>
+              <view class="_div rank-desc data-v-67a51642" wx:if="{{stock.h}}"
+                >--</view
+              >
+              <view class="_div rank-desc data-v-67a51642" wx:elif="{{stock.i}}"
+                >{{stock.j}}</view
+              >
+            </view>
+          </view>
+        </block>
+        <view class="_div empty-tips data-v-67a51642" wx:elif="{{listItem.j}}">
+          <st-status
+            bind:__l="__l"
+            bindhandleError="{{listItem.l}}"
+            class="data-v-67a51642"
+            uI="{{listItem.m}}"
+            uP="{{listItem.n}}"
+            wx:if="{{listItem.k}}"
+          ></st-status>
+          <block wx:else>
+            <label class="_span empty-img data-v-67a51642"></label>
+            <label class="_span empty-tips-text data-v-67a51642"
+              >暂无相关ETF</label
+            >
+          </block>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

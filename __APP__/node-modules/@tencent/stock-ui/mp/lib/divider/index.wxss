@@ -1,0 +1,71 @@
+@import "/app.wxss";
+.st-divider {
+  background: #98a0b3;
+  background: var(--text-color-5);
+}
+.st-divider,
+.st-divider-vertical {
+  display: inline-block;
+  height: 0.9em;
+  margin: 0 0.106667rem;
+  position: relative;
+  top: -0.06em;
+  vertical-align: middle;
+  width: 0.013333rem;
+}
+.st-divider-horizontal {
+  clear: both;
+  display: block;
+  height: 0.013333rem;
+  margin: 0.32rem 0;
+  width: 100%;
+}
+.st-divider-horizontal.st-divider-with-text,
+.st-divider-horizontal.st-divider-with-text-left,
+.st-divider-horizontal.st-divider-with-text-right {
+  background: transparent;
+  color: #98a0b3;
+  color: var(--text-color-5);
+  display: table;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  margin: 0.426667rem 0;
+  text-align: center;
+  white-space: nowrap;
+}
+.st-divider-horizontal.st-divider-with-text-left:after,
+.st-divider-horizontal.st-divider-with-text-left:before,
+.st-divider-horizontal.st-divider-with-text-right:after,
+.st-divider-horizontal.st-divider-with-text-right:before,
+.st-divider-horizontal.st-divider-with-text:after,
+.st-divider-horizontal.st-divider-with-text:before {
+  border-top: 0.013333rem solid #e5e5e5;
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 50%;
+  transform: translateY(25%) scaleY(0.5);
+  width: 50%;
+}
+.st-divider-horizontal.st-divider-with-text-left .st-divider-inner-text,
+.st-divider-horizontal.st-divider-with-text-right .st-divider-inner-text {
+  display: inline-block;
+  padding: 0 0.266667rem;
+}
+.st-divider-horizontal.st-divider-with-text-left:before {
+  top: 50%;
+  width: 5%;
+}
+.st-divider-horizontal.st-divider-with-text-left:after,
+.st-divider-horizontal.st-divider-with-text-right:before {
+  top: 50%;
+  width: 95%;
+}
+.st-divider-horizontal.st-divider-with-text-right:after {
+  top: 50%;
+  width: 5%;
+}
+.st-divider-inner-text {
+  display: inline-block;
+  padding: 0 0.64rem;
+}

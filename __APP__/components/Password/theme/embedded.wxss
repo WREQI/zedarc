@@ -1,0 +1,194 @@
+@import "/app.wxss";
+.password-component--embeded,
+.password-component--embeded-wrap .mp-popup {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+}
+.password-component--embeded {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  height: 11.893333rem;
+  transform: translateZ(0);
+  transition: all 0.3s ease-out;
+}
+.password-component--embeded.password-iniframe {
+  transform: translateZ(0);
+  transition: all 0s ease-out;
+}
+.password-component--embeded .title-wrap {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0.426667rem 0.4rem 0.64rem;
+}
+.password-component--embeded .title-wrap,
+.password-component--embeded .title-wrap .title-wrap-center {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.password-component--embeded .title-wrap .title-wrap-center .broker-logo {
+  height: 0.533333rem;
+  padding-right: 0.213333rem;
+  width: 0.533333rem;
+}
+.password-component--embeded
+  .title-wrap
+  .title-wrap-center
+  .broker-logo
+  .server-broker-logo {
+  height: 0.533333rem;
+  position: absolute;
+  width: 0.533333rem;
+}
+.password-component--embeded
+  .title-wrap
+  .title-wrap-center
+  .broker-logo
+  .server-broker-logo
+  .broker-logo-icon {
+  position: absolute;
+}
+.password-component--embeded .title-wrap .title-wrap-center .broker-name {
+  font-size: 0.426667rem;
+  font-weight: 400;
+  line-height: 0.613333rem;
+}
+.password-component--embeded .title-wrap .close-bg {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.password-component--embeded .content-wrap {
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+  padding-bottom: 0.426667rem;
+  text-align: center;
+}
+.password-component--embeded .st-password-input {
+  padding: 0 1.106667rem;
+}
+.password-component--embeded .st-password-input .st-password-input__security {
+  border: none;
+  height: 1.12rem;
+}
+.password-component--embeded .st-password-input .st-password-inpu__item {
+  background-color: var(--fill-1);
+  border: none;
+  border-radius: 0.106667rem;
+  height: 1.12rem;
+  margin-right: 0.213333rem;
+  width: 1.12rem;
+}
+.password-component--embeded
+  .st-password-input
+  .st-password-inpu__item:last-child {
+  margin-right: 0;
+}
+.password-component--embeded .actions {
+  color: #576b95;
+  font-size: 0.32rem;
+  font-weight: 500;
+  line-height: 0.453333rem;
+  padding: 0.266667rem 1.106667rem 0;
+  text-align: right;
+}
+.password-component--embeded .notice {
+  color: var(--color-red);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+  padding: 0.346667rem 1.106667rem 0;
+  text-align: center;
+  white-space: pre-line;
+}
+.password-component--embeded .phone {
+  color: #576b95;
+}
+.password-component--embeded .st-number-key--gray {
+  background-color: var(--fill-1);
+}
+.password-component--embeded .st-number-key {
+  border-right: 1px solid var(--fill-1);
+  border-top: 1px solid var(--fill-1);
+  font-size: 0.666667rem;
+}
+.password-component--embeded .st-number-keyboard {
+  padding-bottom: 0;
+}
+.lock-tips {
+  height: 10.213333rem;
+  padding: 0 0.64rem;
+}
+.lock-tips .icon-pwd-lock {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-pwd-lock.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.173333rem;
+  width: 1.173333rem;
+}
+.lock-tips .title {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+  padding: 0.413333rem 0 0.426667rem;
+  text-align: center;
+}
+.lock-tips .tips-content {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  text-align: justify;
+  white-space: pre-line;
+}
+.lock-tips .btn-wrap {
+  margin: 0.533333rem 0;
+  width: 100%;
+}
+.lock-tips .btn-wrap .btn {
+  -webkit-box-flex: 1;
+  background-color: var(--fill-2);
+  border-width: 1px !important;
+  color: var(--text-color-1);
+  flex: 1;
+  font-size: 0.426667rem;
+  font-weight: 600;
+  line-height: 1.173333rem;
+  max-width: 4.2rem;
+  padding: 0;
+  text-align: center;
+}
+.lock-tips .btn-wrap .btn + button {
+  margin-left: 0.32rem;
+}
+.lock-tips .btn-wrap .call-broker {
+  border: 1.333333rem solid var(--color-primary);
+  box-sizing: border-box;
+  color: var(--color-primary);
+}
+.password-simple .lock-tips .btn-wrap .call-broker {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+.lock-tips .btn-wrap .reset-pwd {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+.password-simple .lock-tips .btn-wrap .reset-pwd {
+  background-color: var(--color-red);
+}
+.password-simple .call-broker {
+  border-color: var(--color-red);
+  color: var(--color-red);
+}
+.password-simple .reset-pwd {
+  background-color: var(--color-red);
+}
+.pwd-left-action {
+  text-align: left;
+}

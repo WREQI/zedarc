@@ -1,0 +1,87 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="28b494a9-0"
+  uP="{{z}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{z}}"
+>
+  <view class="{{['debt-index',x]}}">
+    <view class="placeholder" wx:if="{{b}}"></view>
+    <view class="header">
+      <view class="px-30 top-value flex-around">
+        <view class="col-l align-c">
+          <view class="text-color-1 fs-28 title">到期收益</view>
+          <view class="text-color-1 fs-36 value">{{c}}</view>
+        </view>
+        <view class="col-r align-c">
+          <view class="text-color-1 fs-28 title">持有市值</view>
+          <view class="text-color-1 fs-36 value">{{d}}</view>
+        </view>
+        <view class="col-l align-c">
+          <view class="text-color-1 fs-28 title">可用资金</view>
+          <view class="text-color-1 fs-36 value">{{e}}</view>
+        </view>
+      </view>
+      <auto-order-entry
+        bind:__l="__l"
+        class="r"
+        uI="28b494a9-1,28b494a9-0"
+        uP="{{h}}"
+        uR="autoOrderEntry"
+        wx:if="{{f}}"
+      ></auto-order-entry>
+    </view>
+    <view class="content">
+      <view class="{{['segment-wrapper',l]}}">
+        <st-segment
+          bind:__l="__l"
+          bindinput="{{i}}"
+          uI="28b494a9-2,28b494a9-0"
+          uP="{{j}}"
+          wx:if="{{j}}"
+        ></st-segment>
+        <view bindtap="{{k}}" class="tips-icon"></view>
+      </view>
+      <debt-list
+        bind:__l="__l"
+        uI="28b494a9-3,28b494a9-0"
+        uP="{{n}}"
+        wx:if="{{m}}"
+      ></debt-list>
+      <debt-order-list
+        bind:__l="__l"
+        bindrevoke="{{p}}"
+        uI="28b494a9-4,28b494a9-0"
+        uP="{{q}}"
+        wx:elif="{{o}}"
+      ></debt-order-list>
+    </view>
+    <action-sheet
+      bind:__l="__l"
+      bindinput="{{t}}"
+      uI="28b494a9-5,28b494a9-0"
+      uP="{{v}}"
+      uS="{{['d']}}"
+      wx:if="{{v}}"
+    >
+      <debt-tips-sheet
+        bind:__l="__l"
+        bindcloseDebtTipsSheet="{{r}}"
+        uI="28b494a9-6,28b494a9-5"
+        uP="{{s}}"
+        wx:if="{{s}}"
+      ></debt-tips-sheet>
+    </action-sheet>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="28b494a9-7,28b494a9-0"
+      uP="{{w}}"
+      wx:if="{{w}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

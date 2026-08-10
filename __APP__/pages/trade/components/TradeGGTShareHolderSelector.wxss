@@ -1,0 +1,360 @@
+@import "/app.wxss";
+.component-secucard-selector {
+  height: 100%;
+  position: relative;
+}
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.component-secucard-selector .loading-status .loading-icon {
+  animation: circle 0.75s linear infinite;
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/loading.svg);
+  background-size: 100% 100%;
+  height: 0.426667rem;
+  width: 0.426667rem;
+}
+[data-theme="dark"] .component-secucard-selector .loading-status .loading-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/loading-dark.png);
+}
+.component-secucard-selector .refresh-btn {
+  color: #4774b3;
+}
+.component-secucard-selector.simple.wrap-block .popover-tip {
+  right: 0;
+  top: -1.226667rem;
+}
+.component-secucard-selector.simple.wrap-inline
+  .secucard-dropdown
+  .dropdown-desc {
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+}
+.component-secucard-selector.simple.wrap-inline
+  .secucard-dropdown
+  .dropdown-entry {
+  color: #576b95;
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+  margin-top: 0.053333rem;
+}
+.component-secucard-selector.simple.wrap-inline
+  .secucard-dropdown
+  .dropdown-label
+  .type {
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+}
+.component-secucard-selector.simple.wrap-inline
+  .secucard-dropdown
+  .dropdown-label
+  .code {
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+  margin-top: 0.053333rem;
+}
+.component-secucard-selector.simple
+  .secucard-dropdown
+  .dropdown-content
+  .dropdown-item {
+  font-size: 0.32rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  padding: 0;
+}
+[data-theme="dark"]
+  .component-secucard-selector.simple
+  .secucard-dropdown
+  .dropdown-content
+  .dropdown-item:after {
+  border-color: var(--border-color-1);
+}
+.component-secucard-selector.wrap-block {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.component-secucard-selector.wrap-block .popover-tip {
+  right: 0;
+}
+.component-secucard-selector.wrap-block .popover-tip:before {
+  right: 0.293333rem;
+}
+.component-secucard-selector.wrap-inline .loading-status .loading-icon {
+  height: 0.533333rem;
+  width: 0.533333rem;
+}
+.component-secucard-selector.wrap-inline .refresh-btn {
+  margin-left: 0.453333rem;
+  margin-top: 0.32rem;
+}
+.component-secucard-selector.wrap-inline .popover-tip {
+  top: -1.333333rem;
+  white-space: pre;
+  z-index: 2;
+}
+.component-secucard-selector.wrap-inline .popover-tip:before {
+  left: 0.293333rem;
+}
+.component-secucard-selector .popover-tip {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.053333rem;
+  height: 1.013333rem;
+  padding: 0 0.32rem;
+  position: absolute;
+  top: -1.066667rem;
+}
+.component-secucard-selector .popover-tip:before {
+  border: 0.186667rem solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 0;
+}
+.component-secucard-selector .popover-tip .tip-text {
+  color: #fff;
+  font-size: 0.426667rem;
+  margin-right: 0.213333rem;
+}
+.component-secucard-selector .popover-tip .icon-close {
+  color: #fff;
+  font-size: 0.32rem;
+}
+.component-secucard-selector .secucard-label {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.component-secucard-selector
+  .secucard-label
+  .fundaccount-wrapper
+  .broker-logo-icon {
+  height: 0.4rem;
+  margin-right: 0.16rem;
+  width: 0.4rem;
+}
+.component-secucard-selector .secucard-label .fundaccount-wrapper .fundaccount {
+  line-height: 0.426667rem;
+}
+.component-secucard-selector .secucard-dropdown {
+  position: relative;
+}
+.component-secucard-selector .secucard-dropdown .dropdown-entry {
+  color: #4774b3;
+  font-weight: 500;
+}
+.component-secucard-selector .secucard-dropdown .dropdown-mask {
+  background: transparent;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block .dropdown-arrow {
+  color: var(--text-color-5);
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block .dropdown-label {
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--text-color-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  line-height: 0.56rem;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-block
+  .dropdown-label
+  .type {
+  margin-right: 0.08rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block .dropdown-desc {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.56rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block .dropdown-entry {
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  margin-left: 0.106667rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-block .triangle {
+  right: 0.426667rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-inline {
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-label
+  .type {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-label
+  .code {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-inline .dropdown-desc {
+  color: var(--text-color-5);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-arrow {
+  color: var(--text-color-1);
+  margin-left: -0.053333rem;
+  margin-top: 0.106667rem;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-value {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-content {
+  bottom: 1.173333rem;
+  left: 0;
+}
+.component-secucard-selector
+  .secucard-dropdown.dropdown-inline
+  .dropdown-entry {
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-top: 0.026667rem;
+}
+.component-secucard-selector .secucard-dropdown.dropdown-inline .triangle {
+  left: 0.426667rem;
+}
+.component-secucard-selector .secucard-dropdown .dropdown-bar {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+}
+.component-secucard-selector .secucard-dropdown .icon-triangle {
+  font-size: 0.266667rem;
+  transform: scale(0.5);
+}
+.component-secucard-selector .secucard-dropdown .dropdown-content {
+  background-color: #fff;
+  border-radius: 0.106667rem;
+  bottom: 0.8rem;
+  box-shadow: 0 0.053333rem 0.68rem rgba(0, 0, 0, 0.16);
+  padding: 0 0.32rem;
+  position: absolute;
+  right: 0;
+  width: -webkit-fit-content;
+  width: fit-content;
+  z-index: 5;
+}
+.component-secucard-selector .secucard-dropdown .dropdown-content :after {
+  border-width: 1px !important;
+}
+[data-theme="dark"]
+  .component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content {
+  background-color: #262e40;
+  border-color: #262e40;
+  box-shadow: none;
+}
+.component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content
+  .dropdown-item {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  padding: 0 0.293333rem;
+  text-align: center;
+  white-space: nowrap;
+}
+[data-theme="dark"]
+  .component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content
+  .dropdown-item:after {
+  border-color: var(--border-color-1);
+}
+.component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content
+  .dropdown-item.active {
+  font-weight: 500;
+}
+.component-secucard-selector .secucard-dropdown .dropdown-content .triangle {
+  border-color: var(--border-color-2) transparent transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 0;
+  bottom: -12px;
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: 10;
+}
+.component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content
+  .triangle:before {
+  border-color: #fff transparent transparent;
+  border-style: solid;
+  border-width: 12px 12px 0;
+  bottom: 2px;
+  content: "";
+  height: 0;
+  left: -12px;
+  position: absolute;
+  width: 0;
+}
+[data-theme="dark"]
+  .component-secucard-selector
+  .secucard-dropdown
+  .dropdown-content
+  .triangle:before {
+  border-color: #262e40 transparent transparent;
+}
+.component-secucard-selector .bar-block {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}

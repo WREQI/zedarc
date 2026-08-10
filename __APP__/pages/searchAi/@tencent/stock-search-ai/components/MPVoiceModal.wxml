@@ -1,0 +1,44 @@
+<view class="{{['_div','data-v-b85bd0e7','voice-modal',p,q]}}" wx:if="{{a}}">
+  <view class="_div voice-modal-mask data-v-b85bd0e7"></view>
+  <view class="_div voice-modal-top data-v-b85bd0e7">
+    <view
+      class="{{['_div','data-v-b85bd0e7','pop-container',g,h]}}"
+      wx:if="{{b}}"
+    >
+      <view class="_div pop-container-body data-v-b85bd0e7">
+        <view class="_div voice-text-wrapper data-v-b85bd0e7" wx:if="{{c}}">
+          <label class="{{['_span','data-v-b85bd0e7','voice-text']}}"
+            >{{d}}<label class="_span voice-text-loading data-v-b85bd0e7"
+              >...</label
+            >
+          </label>
+        </view>
+        <label class="_span cancel-zone-tips-text data-v-b85bd0e7" wx:if="{{e}}"
+          >...</label
+        >
+        <image class="_img wave-img data-v-b85bd0e7" src="{{f}}"></image>
+      </view>
+      <view class="_div pop-container-triangle data-v-b85bd0e7"></view>
+    </view>
+    <view class="_div cancel-zone-btn-wrapper data-v-b85bd0e7">
+      <view class="_div cancel-zone-btn-text data-v-b85bd0e7">{{i}}</view>
+      <view class="{{['_div','data-v-b85bd0e7','cancel-zone-btn',j]}}">
+        <view class="_div cancel-zone-icon data-v-b85bd0e7"></view>
+      </view>
+    </view>
+    <view class="_div translate-zone-btn-wrapper data-v-b85bd0e7">
+      <view class="_div translate-zone-btn-text data-v-b85bd0e7">{{k}}</view>
+      <view class="{{['_div','data-v-b85bd0e7','translate-zone-btn',l]}}">
+        <label class="_span translate-zone-icon data-v-b85bd0e7">文</label>
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-b85bd0e7',o,'voice-modal-bottom-container']}}">
+    <view class="_div tip-text data-v-b85bd0e7">{{m}}</view>
+    <view class="{{['_div','data-v-b85bd0e7','voice-modal-bottom',n]}}">
+      <view class="_div voice-modal-recording data-v-b85bd0e7">
+        <view class="_div recording-icon data-v-b85bd0e7"></view>
+      </view>
+    </view>
+  </view>
+</view>

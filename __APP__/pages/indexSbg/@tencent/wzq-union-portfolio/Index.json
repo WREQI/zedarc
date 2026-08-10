@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabbar": "./components/Tabbar",
+    "basket-list": "./components/BasketList",
+    "portfolio-list": "./components/PortfolioList/mp",
+    "group-pop": "../../../asyncCom/@tencent/wzq-portfolio-sbg/components/batch/GroupPop",
+    "choose-recommend": "./node-modules/@tencent/st-choose-recommend/components/recommend/index",
+    "monitoring-remind-pop": "../../../asyncCom/@tencent/stock-monitoring-remind/components/MonitoringRemindPop",
+    "close-monitoring-pop": "../../../asyncCom/@tencent/stock-monitoring-remind/components/CloseMonitoringPop"
+  },
+  "componentPlaceholder": {
+    "group-pop": "view",
+    "monitoring-remind-pop": "view",
+    "close-monitoring-pop": "view"
+  }
+}

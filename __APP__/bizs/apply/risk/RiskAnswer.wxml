@@ -1,0 +1,26 @@
+<view class="comp__risk-answer flex-column">
+  <view class="risk-title">客户风险承受能力问卷</view>
+  <view wx:for="{{a}}" wx:key="g">
+    <view class="answer-group" wx:if="{{item.a}}">{{item.b}}</view>
+    <view class="answer-detail">
+      <view class="answer-detail-title">{{item.c}}. {{item.d}}{{item.e}}:</view>
+      <view
+        class="answer-detail-content"
+        wx:for="{{item.f}}"
+        wx:for-item="answerItem"
+        wx:key="f"
+      >
+        <view class="{{[answerItem.c]}}"
+          >{{answerItem.a}}. {{answerItem.b}}</view
+        >
+        <radio
+          checked="{{answerItem.e}}"
+          class="answer-detail-radio"
+          color="#7A8499"
+          wx:if="{{answerItem.d}}"
+        ></radio>
+        <view class="answer-detail-empty-radio" wx:else></view>
+      </view>
+    </view>
+  </view>
+</view>

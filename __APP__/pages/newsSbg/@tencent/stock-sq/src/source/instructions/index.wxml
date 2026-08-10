@@ -1,0 +1,12 @@
+<view class="_div mod-instructions data-v-9c8832c0">
+  <label class="_span data-v-9c8832c0"
+    >声明：社区功能及服务由腾讯自选股社区提供，请您遵守腾讯自选股</label
+  >
+  <label
+    catchtap="{{item.c}}"
+    class="_span link data-v-9c8832c0"
+    wx:for="{{a}}"
+    wx:key="b"
+    >{{item.a}}</label
+  >
+</view>

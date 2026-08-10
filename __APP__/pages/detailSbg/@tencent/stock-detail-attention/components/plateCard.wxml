@@ -1,0 +1,66 @@
+<view class="_div plate-card-wrapper data-v-3b11a6bf">
+  <view class="_div data-v-3b11a6bf" wx:if="{{a}}">
+    <view
+      class="_div plate-list-item data-v-3b11a6bf"
+      wx:for="{{b}}"
+      wx:key="v"
+    >
+      <view class="_div plate-info data-v-3b11a6bf" wx:if="{{item.a}}">
+        <view bindtap="{{item.i}}" class="_div basic-block data-v-3b11a6bf">
+          <view class="_div info-title data-v-3b11a6bf">
+            <view class="_div info-name data-v-3b11a6bf">{{item.b}}</view>
+            <view class="{{['_div','info-zdf','data-v-3b11a6bf',item.e]}}">
+              <label class="_span data-v-3b11a6bf">{{item.c}}</label>
+              <label class="_span zdf-mar data-v-3b11a6bf">{{item.d}}%</label>
+            </view>
+          </view>
+          <view
+            class="{{['_div','info-tag','data-v-3b11a6bf',item.h]}}"
+            wx:if="{{item.f}}"
+          >
+            <label
+              class="_span tag-item data-v-3b11a6bf"
+              wx:for="{{item.g}}"
+              wx:for-item="tag"
+              wx:key="c"
+            >
+              <label
+                class="{{['_span','data-v-3b11a6bf',ct.c]}}"
+                wx:for="{{tag.a}}"
+                wx:for-item="ct"
+                wx:key="b"
+                >{{ct.a}}</label
+              >
+              <view
+                class="_div tag-line data-v-3b11a6bf"
+                wx:if="{{tag.b}}"
+              ></view>
+            </label>
+          </view>
+        </view>
+        <view class="_div basic-graph data-v-3b11a6bf" wx:if="{{item.j}}">
+          <f2
+            bind:__l="__l"
+            bindonInit="{{item.l}}"
+            class="r-i-f data-v-3b11a6bf"
+            uI="{{item.m}}"
+            uP="{{item.n}}"
+            uR="plateChart"
+            wx:if="{{item.n}}"
+          ></f2>
+          <compare
+            bind:__l="__l"
+            class="compare-line data-v-3b11a6bf"
+            uI="{{item.p}}"
+            uP="{{item.q}}"
+            wx:if="{{item.o}}"
+          ></compare>
+        </view>
+      </view>
+      <view class="_div plate-brief data-v-3b11a6bf" wx:if="{{item.r}}"
+        >{{item.s}}</view
+      >
+      <view class="_div list-line data-v-3b11a6bf" wx:if="{{item.t}}"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="_div event-container data-v-ec19cb7d">
+  <tab
+    bind:__l="__l"
+    bindonChange="{{a}}"
+    class="tab-position data-v-ec19cb7d"
+    uI="ec19cb7d-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></tab>
+  <timeline
+    bind:__l="__l"
+    class="data-v-ec19cb7d"
+    uI="ec19cb7d-1"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></timeline>
+  <empty
+    bind:__l="__l"
+    class="data-v-ec19cb7d"
+    uI="ec19cb7d-2"
+    wx:if="{{e}}"
+  ></empty>
+  <loading
+    bind:__l="__l"
+    class="data-v-ec19cb7d"
+    uI="ec19cb7d-3"
+    wx:if="{{f}}"
+  ></loading>
+</view>

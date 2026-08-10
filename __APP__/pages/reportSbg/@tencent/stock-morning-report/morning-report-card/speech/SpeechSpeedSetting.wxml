@@ -1,0 +1,90 @@
+<view
+  catchtap="{{q}}"
+  catchtouchmove="{{r}}"
+  class="{{['_div','data-v-9e4aea91','setting-dialog-mask',o]}}"
+  style="{{p}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{n}}" class="_div setting-dialog-panel data-v-9e4aea91">
+    <view class="_div setting-dialog-header data-v-9e4aea91">
+      <view class="_div setting-dialog-title data-v-9e4aea91">播放设置</view>
+      <view
+        catchtap="{{b}}"
+        class="_div setting-dialog-close data-v-9e4aea91"
+      ></view>
+    </view>
+    <view class="_div setting-dialog-card data-v-9e4aea91">
+      <view class="_div setting-dialog-card-header data-v-9e4aea91">
+        <label class="_span setting-dialog-card-title data-v-9e4aea91"
+          >倍速播放</label
+        >
+        <label class="_span setting-dialog-current-rate data-v-9e4aea91"
+          >{{c}}</label
+        >
+      </view>
+      <view class="_div setting-dialog-rate-labels data-v-9e4aea91">
+        <view
+          class="_div setting-dialog-rate-label-cell data-v-9e4aea91"
+          wx:for="{{d}}"
+          wx:for-item="tick"
+          wx:key="e"
+        >
+          <label
+            catchtap="{{tick.d}}"
+            class="{{['_span','data-v-9e4aea91','setting-dialog-rate-label',tick.c]}}"
+            wx:if="{{tick.a}}"
+            >{{tick.b}}</label
+          >
+        </view>
+      </view>
+      <view
+        bindtouchcancel="{{i}}"
+        bindtouchend="{{h}}"
+        bindtouchstart="{{f}}"
+        catchtouchmove="{{g}}"
+        class="_div setting-dialog-rate-ruler data-v-9e4aea91"
+        ref="rulerRef"
+      >
+        <view
+          catchtap="{{tick.d}}"
+          class="_div setting-dialog-rate-tick-wrap data-v-9e4aea91"
+          wx:for="{{e}}"
+          wx:for-item="tick"
+          wx:key="c"
+        >
+          <view
+            class="{{['_div','data-v-9e4aea91','setting-dialog-rate-tick',tick.a,tick.b]}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view catchtap="{{m}}" class="_div setting-dialog-card data-v-9e4aea91">
+      <view class="_div setting-dialog-card-title data-v-9e4aea91"
+        >播客音色</view
+      >
+      <view class="_div setting-dialog-voice data-v-9e4aea91">
+        <label class="_span setting-dialog-voice-mode data-v-9e4aea91"
+          >{{j}}</label
+        >
+        <view class="_div setting-dialog-voice-current data-v-9e4aea91">
+          <view class="_div setting-dialog-voice-avatars data-v-9e4aea91">
+            <image
+              alt=""
+              class="_img setting-dialog-voice-avatar data-v-9e4aea91"
+              src="{{voice.b}}"
+              wx:for="{{k}}"
+              wx:for-item="voice"
+              wx:key="a"
+            ></image>
+          </view>
+          <label class="_span setting-dialog-voice-name data-v-9e4aea91"
+            >{{l}}</label
+          >
+          <label
+            class="_span setting-dialog-voice-arrow data-v-9e4aea91"
+          ></label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

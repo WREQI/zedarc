@@ -1,0 +1,16 @@
+<view class="_div component-time-counter data-v-cf9cd42a">
+  <view class="_div flex data-v-cf9cd42a">
+    <block wx:if="{{a}}">
+      <label class="_span time-text data-v-cf9cd42a">{{b}}</label>
+      <label class="_span time-unit data-v-cf9cd42a">天</label>
+    </block>
+    <label class="_span time-text data-v-cf9cd42a">{{c}}</label>
+    <label class="_span time-unit data-v-cf9cd42a">时</label>
+    <label class="_span time-text data-v-cf9cd42a">{{d}}</label>
+    <label class="_span time-unit data-v-cf9cd42a">分</label>
+    <block wx:if="{{e}}">
+      <label class="_span time-text data-v-cf9cd42a">{{f}}</label>
+      <label class="_span time-unit data-v-cf9cd42a">秒</label>
+    </block>
+  </view>
+</view>

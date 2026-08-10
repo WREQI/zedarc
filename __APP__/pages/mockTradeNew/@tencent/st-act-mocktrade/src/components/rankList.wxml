@@ -1,0 +1,54 @@
+<view class="_div rank-list-wrapper data-v-e487da62">
+  <view class="_div rank-list data-v-e487da62" wx:if="{{a}}">
+    <view class="_div rank-list--head row data-v-e487da62">
+      <label class="_span rank-row-a rank-myself__order data-v-e487da62"
+        >排名</label
+      >
+      <label class="_span rank-row-b data-v-e487da62">用户</label>
+      <label class="_span rank-row-c data-v-e487da62">{{b}}</label>
+    </view>
+    <view
+      class="{{['_div','rank-list--item','row','border-bottom-1px','data-v-e487da62',rankItem.h]}}"
+      style="{{'border-bottom-width:'+d}}"
+      wx:for="{{c}}"
+      wx:for-item="rankItem"
+      wx:key="i"
+    >
+      <label class="_span rank-row-a rank-myself__order data-v-e487da62"
+        >{{rankItem.a}}</label
+      >
+      <view class="_div rank-row-b rank-myself__info row data-v-e487da62">
+        <image
+          class="_img rank-myself__hdimg data-v-e487da62"
+          src="{{rankItem.b}}"
+        ></image>
+        <label
+          class="_span rank-myself__name data-v-e487da62"
+          wx:if="{{rankItem.c}}"
+          >{{rankItem.d}}</label
+        >
+        <label class="_span rank-myself__name data-v-e487da62" wx:else
+          >****</label
+        >
+      </view>
+      <view
+        class="_div rank-row-c row rank-myself__percent font-numeric-tabular data-v-e487da62"
+      >
+        <label
+          class="{{['_span','rank-myself--text','data-v-e487da62',rankItem.f]}}"
+          >{{rankItem.e}}</label
+        >
+        <label class="{{['_span','data-v-e487da62',rankItem.g]}}">%</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div rank-empty data-v-e487da62" key="oo" wx:else>
+    <empty-tips
+      bind:__l="__l"
+      class="data-v-e487da62"
+      uI="e487da62-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></empty-tips>
+  </view>
+</view>

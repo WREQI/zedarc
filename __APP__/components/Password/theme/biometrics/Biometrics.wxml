@@ -1,0 +1,71 @@
+<view class="bio-component--embeded-wrap data-v-19f849cc">
+  <popup
+    bind:__l="__l"
+    class="data-v-19f849cc"
+    uI="19f849cc-0"
+    uP="{{r}}"
+    uS="{{['d']}}"
+    wx:if="{{r}}"
+  >
+    <view class="{{['bio-component--embeded','data-v-19f849cc',p,q]}}">
+      <view class="bio-title-wrap data-v-19f849cc">
+        <view class="data-v-19f849cc"></view>
+        <view class="bio-title-wrap-center data-v-19f849cc">
+          <view class="bio-broker-logo data-v-19f849cc">
+            <broker-logo
+              bind:__l="__l"
+              class="bio-server-broker-logo data-v-19f849cc"
+              uI="19f849cc-1,19f849cc-0"
+            ></broker-logo>
+          </view>
+          <view class="bio-broker-name data-v-19f849cc">{{a}} {{b}}</view>
+        </view>
+        <view class="data-v-19f849cc">
+          <view
+            bindtap="{{d}}"
+            class="bio-close-bg data-v-19f849cc"
+            wx:if="{{c}}"
+          ></view>
+        </view>
+      </view>
+      <view bindtap="{{i}}" class="bio-body data-v-19f849cc" wx:if="{{e}}">
+        <image class="bio-login-icon data-v-19f849cc" src="{{f}}"></image>
+        <view class="bio-login-text data-v-19f849cc">{{g}}</view>
+        <view class="bio-login-tips data-v-19f849cc">{{h}}</view>
+      </view>
+      <view bindtap="{{m}}" class="bio-body data-v-19f849cc" wx:if="{{j}}">
+        <image
+          class="bio-login-icon-finger data-v-19f849cc"
+          src="{{k}}"
+        ></image>
+        <view class="bio-login-text-finger data-v-19f849cc"
+          >{{l}}<label class="icon icon-arrow data-v-19f849cc"></label>
+        </view>
+      </view>
+      <view bindtap="{{o}}" class="bio-switch data-v-19f849cc" wx:if="{{n}}"
+        >切换为交易密码验证</view
+      >
+    </view>
+  </popup>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-19f849cc"
+    id="mp-dialog"
+    uI="19f849cc-2"
+    uP="{{s}}"
+    wx:if="{{s}}"
+  ></mp-dialog>
+  <image class="data-v-19f849cc" hidden="{{!false}}" src="{{t}}"></image>
+  <image
+    class="data-v-19f849cc"
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/trade/half-close.png"
+  ></image>
+  <place-holder
+    bind:__l="__l"
+    bindmounted="{{w}}"
+    class="data-v-19f849cc"
+    uI="19f849cc-3"
+    wx:if="{{v}}"
+  ></place-holder>
+</view>

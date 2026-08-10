@@ -1,0 +1,30 @@
+<view class="{{['_div','group-wrap','data-v-8e377b2b',q&&'simple-mode']}}">
+    <popup bind:__l="__l" class="add-group-popup r data-v-8e377b2b" uI="8e377b2b-0" uP="{{i}}" uR="addpop" uS="{{['d']}}" wx:if="{{i}}">
+        <view class="_div popup-container add-popup-container data-v-8e377b2b">
+            <view class="_div txt align-center data-v-8e377b2b">请输入分组名称</view>
+            <view class="_div input data-v-8e377b2b" ref="groupInput">
+                <input bindinput="{{d}}" class="st-input data-v-8e377b2b" focus="{{c}}" maxLength="{{a}}" placeholder="{{b}}" placeholderClass="placeholder" ref="addGroupInput" value="{{e}}"></input>
+            </view>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-8e377b2b">
+                <view bindtap="{{f}}" class="_div btn st-button cancel data-v-8e377b2b">取消</view>
+                <view bindtap="{{g}}" class="_div btn st-button ok data-v-8e377b2b">确定</view>
+            </view>
+        </view>
+    </popup>
+    <popup bind:__l="__l" class="r data-v-8e377b2b" uI="8e377b2b-1" uP="{{p}}" uR="movepop" uS="{{['d']}}" wx:if="{{p}}">
+        <view class="_div popup-container move-popup-container data-v-8e377b2b">
+            <view class="_div txt align-center border-bottom-1px data-v-8e377b2b">{{j}}</view>
+            <view class="_div groupul data-v-8e377b2b">
+                <view bindtap="{{v.e}}" class="_div groupli border-bottom-1px data-v-8e377b2b" wx:for="{{k}}" wx:for-item="v" wx:key="d">
+                    <view class="_div movegroupcheck disable-icon data-v-8e377b2b" wx:if="{{v.a}}"></view>
+                    <view class="{{['_div','movegroupcheck','data-v-8e377b2b',v.b&&'checked']}}" wx:else></view>{{v.c}}</view>
+                <view bindtap="{{l}}" class="_div groupli addgroup align-center data-v-8e377b2b">
+                    <label class="_span icon add-icon data-v-8e377b2b"></label>添加分组</view>
+            </view>
+            <view class="_div btns layout layout-align-center-center border-top-1px border-right-1px data-v-8e377b2b">
+                <view bindtap="{{m}}" class="_div btn st-button cancel data-v-8e377b2b">取消</view>
+                <view bindtap="{{n}}" class="_div btn st-button ok data-v-8e377b2b">确定</view>
+            </view>
+        </view>
+    </popup>
+</view>

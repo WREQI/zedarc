@@ -1,0 +1,20 @@
+<view class="_div">
+  <quote-component
+    bind:__l="__l"
+    uI="ac6074ea-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></quote-component>
+  <toggle-component
+    bind:__l="__l"
+    uI="ac6074ea-1"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></toggle-component>
+  <component-universal
+    bind:__l="__l"
+    uI="ac6074ea-2"
+    uP="{{f}}"
+    wx:elif="{{e}}"
+  ></component-universal>
+</view>

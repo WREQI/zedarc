@@ -1,0 +1,61 @@
+<view class="_div">
+  <view class="_div mod-ms" ref="minesweeperOuter">
+    <view class="_p loading" wx:if="{{a}}">加载中...</view>
+    <block wx:elif="{{b}}">
+      <view class="_div" ref="general">
+        <overview
+          bind:__l="__l"
+          bindfoldChange="{{d}}"
+          bindshowGoTop="{{c}}"
+          uI="42e9dfce-0"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></overview>
+      </view>
+      <view class="_div" wx:if="{{f}}">
+        <news
+          bind:__l="__l"
+          bindfoldChange="{{h}}"
+          class="r"
+          uI="42e9dfce-1"
+          uP="{{i}}"
+          uR="news"
+          wx:if="{{i}}"
+        ></news>
+      </view>
+      <view class="_div" wx:if="{{j}}">
+        <basic
+          bind:__l="__l"
+          bindfoldChange="{{l}}"
+          class="r"
+          uI="42e9dfce-2"
+          uP="{{m}}"
+          uR="basic"
+          wx:if="{{m}}"
+        ></basic>
+      </view>
+      <view class="_div" wx:if="{{n}}">
+        <trade
+          bind:__l="__l"
+          bindfoldChange="{{p}}"
+          class="r"
+          uI="42e9dfce-3"
+          uP="{{q}}"
+          uR="trade"
+          wx:if="{{q}}"
+        ></trade>
+      </view>
+      <view class="_p warning-info"
+        >本页面信息基于证券公开市场信息汇总或者证券投资品种历史数据产生，指标构建维度同样具有局限性，不代表证券品种走势，仅供投资者参考，投资者需依赖自身独立判断进行投资决策。腾讯微证券并不承担相关责任。市场有风险，投资需谨慎。<label
+          catchtap="{{r}}"
+          class="_span feedback"
+          >问题反馈与建议</label
+        >
+      </view>
+    </block>
+    <view class="_div error-block" wx:elif="{{s}}">
+      <view class="_p error-pic"></view>
+      <view class="_p error-txt">{{t}}</view>
+    </view>
+  </view>
+</view>

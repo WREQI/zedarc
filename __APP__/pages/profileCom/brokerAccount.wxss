@@ -1,0 +1,52 @@
+.broker-account-wrapper.data-v-55f1c729 {
+  background: var(--fill-background);
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: calc(1.8933333333333333rem + env(safe-area-inset-bottom));
+  position: relative;
+}
+.broker-account-wrapper .broker-account-list.data-v-55f1c729 {
+  min-height: 100%;
+  padding: 0 0.32rem;
+}
+.broker-account-wrapper .broker-account-list .title-tips.data-v-55f1c729 {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  padding: 0.5333333333333333rem 0 0.32rem 0.32rem;
+}
+.broker-account-wrapper
+  .broker-account-list
+  .title-tips.data-v-55f1c729:not(:first-of-type) {
+  margin-top: 0.5333333333333333rem;
+  padding: 0 0 0.32rem 0.32rem;
+}
+.broker-account-wrapper
+  .broker-account-list
+  .card-item.data-v-55f1c729:not(:first-of-type) {
+  margin-bottom: 0.32rem;
+}
+.broker-account-wrapper .tx-logo.data-v-55f1c729 {
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  height: 1.8933333333333333rem;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.broker-account-wrapper .tx-logo .logo-img.data-v-55f1c729 {
+  background-image: url(https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png);
+  background-size: 100% 100%;
+  bottom: 0.64rem;
+  height: 0.4266666666666667rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 2.506666666666667rem;
+}
+.broker-account-wrapper[data-st-theme="dark"]
+  .tx-logo
+  .logo-img.data-v-55f1c729 {
+  background-image: url(https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png);
+}

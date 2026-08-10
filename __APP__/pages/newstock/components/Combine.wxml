@@ -1,0 +1,29 @@
+<view class="{{['scroll-container','data-v-ac23004d',e&&'with-nav']}}">
+  <quota-info
+    bind:__l="__l"
+    class="data-v-ac23004d"
+    uI="ac23004d-0"
+    uP="{{c}}"
+    uS="{{['extra']}}"
+    wx:if="{{c}}"
+  >
+    <view
+      class="profit-unit-avg flex-between data-v-ac23004d"
+      slot="extra"
+      wx:if="{{a}}"
+    >
+      <view class="desc fs-26 data-v-ac23004d">近6个月普通新股</view>
+      <view class="avg-profit fs-26 data-v-ac23004d">
+        <label class="data-v-ac23004d">平均每签获利</label>
+        <label class="rise data-v-ac23004d">{{b}}</label>
+      </view>
+    </view>
+  </quota-info>
+  <purchase-list
+    bind:__l="__l"
+    class="data-v-ac23004d"
+    uI="ac23004d-1"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></purchase-list>
+</view>

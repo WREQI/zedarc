@@ -1,0 +1,4 @@
+<view class="bind-bottom-nav">
+  <label bindtap="{{c}}" class="nav-text link" wx:if="{{a}}">找回{{b}}</label>
+  <label bindtap="{{d}}" class="nav-text link">忘记密码</label>
+</view>

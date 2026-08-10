@@ -1,0 +1,58 @@
+@import "/app.wxss";
+.condition-risk-dialog.data-v-d29d77dc .mp-popup {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.426667rem 0.32rem 0.613333rem;
+  top: unset !important;
+  transform: translateZ(0);
+  width: 100%;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__header {
+  padding: 0;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__header,
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__title {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__footer:before {
+  border-top: none;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__button {
+  border-radius: 0.106667rem;
+  font-size: 0.426667rem;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__cancel {
+  border: 0.026667rem solid var(--color-primary) !important;
+  color: var(--color-primary);
+  margin-right: 0.32rem;
+}
+.condition-risk-dialog.data-v-d29d77dc .mp-popup .mp-dialog__confirm {
+  background: var(--color-primary);
+  color: #fff;
+}
+.condition-risk-dialog .condition-risk-tips.data-v-d29d77dc {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 0.64rem;
+  margin-bottom: 0.426667rem;
+  margin-top: 0.426667rem;
+  padding: 0;
+}
+.condition-risk-dialog
+  .condition-risk-tips
+  .condition-risk-link.data-v-d29d77dc {
+  color: var(--color-link) !important;
+  display: inline;
+  font-weight: 700;
+}
+.condition-risk-dialog .item-checkbox.data-v-d29d77dc {
+  margin-right: 0.133333rem;
+}

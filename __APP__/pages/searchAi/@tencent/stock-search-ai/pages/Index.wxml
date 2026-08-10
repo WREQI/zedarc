@@ -1,0 +1,418 @@
+<view
+  class="{{['_div','data-v-9e84eae6','search-ai-container',bl,bm,bn,bo,bp,bq]}}"
+>
+  <view class="_div navTitle data-v-9e84eae6" ref="navTitle" style="{{p}}">
+    <view class="_div navTitleContainer data-v-9e84eae6" style="{{o}}">
+      <view class="_div navTitleWrapper data-v-9e84eae6">
+        <view catchtap="{{c}}" class="_div navTitleCenter data-v-9e84eae6">
+          <view class="_div navTitleImage data-v-9e84eae6">问元宝</view>
+          <image
+            class="{{['_img','data-v-9e84eae6','navTitleTriangle',a]}}"
+            src="{{b}}"
+          ></image>
+        </view>
+        <view class="_div naviTitleLeft data-v-9e84eae6">
+          <block wx:if="{{d}}">
+            <image
+              catchtap="{{f}}"
+              class="_img home-icon data-v-9e84eae6"
+              src="https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png"
+              wx:if="{{e}}"
+            ></image>
+            <image
+              bindtap="{{i}}"
+              class="_img navTitleBack data-v-9e84eae6"
+              src="{{h}}"
+              wx:elif="{{g}}"
+            ></image>
+          </block>
+          <view
+            bindtap="{{j}}"
+            class="_div navTitleHistory data-v-9e84eae6"
+          ></view>
+        </view>
+      </view>
+      <weixin-claw-hint-bubble
+        bind:__l="__l"
+        bindclose="{{l}}"
+        class="data-v-9e84eae6"
+        uI="9e84eae6-0"
+        wx:if="{{k}}"
+      ></weixin-claw-hint-bubble>
+      <view
+        catchtap="{{n}}"
+        class="{{['_div','data-v-9e84eae6','navTitlePrevQuestion',m]}}"
+      >
+        <view class="_div prevQuestionIcon data-v-9e84eae6"></view>
+        <label class="_span prevQuestionText data-v-9e84eae6"
+          >定位到上一个问题</label
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    bindtouchstart="{{J}}"
+    class="_div mainContent data-v-9e84eae6"
+    style="{{'padding-bottom:'+I}}"
+  >
+    <view
+      class="_div contentItemAlignLeft contentItem data-v-9e84eae6"
+      wx:if="{{q}}"
+    >
+      <first-guide-item-old-user
+        bind:__l="__l"
+        bindclickNewUserQue="{{s}}"
+        bindquickQuestionClick="{{t}}"
+        class="r data-v-9e84eae6"
+        uI="9e84eae6-1"
+        uP="{{v}}"
+        uR="firstGuideItem"
+        wx:if="{{v}}"
+      ></first-guide-item-old-user>
+    </view>
+    <answer-list-view
+      bind:__l="__l"
+      bindcontentTouch="{{A}}"
+      bindhistoryPinEnd="{{E}}"
+      bindscroll="{{B}}"
+      bindscrollDirection="{{C}}"
+      bindscrollEnd="{{D}}"
+      class="r data-v-9e84eae6"
+      style="height: 100%"
+      uI="9e84eae6-2"
+      uP="{{F||''}}"
+      uR="answerlistview"
+      uS="{{['d']}}"
+      wx:else
+    >
+      <view
+        class="{{['_div','data-v-9e84eae6',x,item.aJ]}}"
+        id="{{item.aH}}"
+        style="{{y}}"
+        wx:for="{{w}}"
+        wx:key="aI"
+      >
+        <view class="_div session_time data-v-9e84eae6" wx:if="{{item.a}}"
+          >{{item.b}} 内容由 AI 生成</view
+        >
+        <view class="_div contentItemAlignRight contentItem data-v-9e84eae6">
+          <question-item
+            bind:__l="__l"
+            bindlongPress="{{item.d}}"
+            class="data-v-9e84eae6"
+            id="{{item.c}}"
+            uI="{{item.e}}"
+            uP="{{item.f}}"
+            wx:if="{{item.f}}"
+          ></question-item>
+        </view>
+        <view
+          class="_div contentItemAlignLeft contentItem data-v-9e84eae6"
+          wx:if="{{item.g}}"
+        >
+          <dual-answer-item
+            bind:__l="__l"
+            bindbothFinish="{{item.k}}"
+            bindcancelCai="{{item.p}}"
+            bindcancelZan="{{item.o}}"
+            bindchangeToNewSession="{{item.t}}"
+            bindclickCai="{{item.n}}"
+            bindclickZan="{{item.m}}"
+            bindcollapseDone="{{item.j}}"
+            bindcontentChange="{{item.l}}"
+            binddenyAnswer="{{item.A}}"
+            bindfunctionItemFinish="{{item.w}}"
+            bindkeepWzqPos="{{item.s}}"
+            bindonQuoteClick="{{item.r}}"
+            bindprefer="{{item.i}}"
+            bindrequestPermissionDialog="{{item.y}}"
+            bindselectMbti="{{item.x}}"
+            bindshare="{{item.q}}"
+            bindshowDisclaimer="{{item.v}}"
+            bindxianPinChangeModel="{{item.z}}"
+            class="r-i-f data-v-9e84eae6"
+            uI="{{item.B}}"
+            uP="{{item.C}}"
+            uR="dualAnswerRef"
+            wx:if="{{item.C}}"
+          ></dual-answer-item>
+        </view>
+        <transition
+          bind:__l="__l"
+          class="data-v-9e84eae6"
+          uI="{{item.W}}"
+          uP="{{item.X}}"
+          uS="{{['d']}}"
+          wx:if="{{item.D}}"
+        >
+          <view class="_div contentItemAlignLeft contentItem data-v-9e84eae6">
+            <answer-item
+              bind:__l="__l"
+              bindcancelCai="{{item.J}}"
+              bindcancelZan="{{item.I}}"
+              bindchangeToNewSession="{{item.S}}"
+              bindcheckContent="{{item.N}}"
+              bindclickCai="{{item.H}}"
+              bindclickZan="{{item.G}}"
+              binddisableOuterAutoScroll="{{item.T}}"
+              bindfunctionItemFinish="{{item.K}}"
+              bindkeepWzqPos="{{item.R}}"
+              bindonQuoteClick="{{item.Q}}"
+              bindrequestPermissionDialog="{{item.O}}"
+              bindselectMbti="{{item.M}}"
+              bindshare="{{item.L}}"
+              bindshowDisclaimer="{{item.F}}"
+              bindxianPinChangeModel="{{item.P}}"
+              class="data-v-9e84eae6"
+              id="{{item.E}}"
+              uI="{{item.U}}"
+              uP="{{item.V}}"
+              wx:if="{{item.V}}"
+            ></answer-item>
+          </view>
+        </transition>
+        <view
+          class="_div contentItemAlignLeft contentItem data-v-9e84eae6"
+          wx:elif="{{item.Y}}"
+        >
+          <answer-item
+            bind:__l="__l"
+            bindcancelCai="{{item.ae}}"
+            bindcancelZan="{{item.ad}}"
+            bindchangeToNewSession="{{item.an}}"
+            bindcheckContent="{{item.ai}}"
+            bindclickCai="{{item.ac}}"
+            bindclickZan="{{item.ab}}"
+            binddisableOuterAutoScroll="{{item.ao}}"
+            bindfunctionItemFinish="{{item.af}}"
+            bindkeepWzqPos="{{item.am}}"
+            bindonQuoteClick="{{item.al}}"
+            bindrequestPermissionDialog="{{item.aj}}"
+            bindselectMbti="{{item.ah}}"
+            bindshare="{{item.ag}}"
+            bindshowDisclaimer="{{item.aa}}"
+            bindxianPinChangeModel="{{item.ak}}"
+            class="data-v-9e84eae6"
+            id="{{item.Z}}"
+            uI="{{item.ap}}"
+            uP="{{item.aq}}"
+            wx:if="{{item.aq}}"
+          ></answer-item>
+        </view>
+        <view
+          class="_div thirteenYear-share-bar data-v-9e84eae6"
+          wx:if="{{item.ar}}"
+        >
+          <share-bar
+            bind:__l="__l"
+            bindshowBackpop="{{item.as}}"
+            class="data-v-9e84eae6"
+            uI="{{item.at}}"
+            uP="{{item.av}}"
+            wx:if="{{item.av}}"
+          ></share-bar>
+        </view>
+        <view
+          class="_div contentItemAlignLeft contentItem data-v-9e84eae6"
+          wx:elif="{{item.aw}}"
+        >
+          <follow-on-item
+            bind:__l="__l"
+            bindtapGuessQuestion="{{item.ax}}"
+            bindtapMbtiGuessQuestion="{{item.az}}"
+            bindtapNewUserGuessQuestion="{{item.ay}}"
+            class="data-v-9e84eae6"
+            uI="{{item.aA}}"
+            uP="{{item.aB}}"
+            wx:if="{{item.aB}}"
+          ></follow-on-item>
+        </view>
+        <thirteen-anniversary-task
+          bind:__l="__l"
+          bindgrowthAiTaskDone="{{item.aE}}"
+          bindgrowthAiTaskShow="{{item.aD}}"
+          class="data-v-9e84eae6"
+          uI="{{item.aF}}"
+          uP="{{item.aG}}"
+          wx:if="{{item.aC}}"
+        ></thirteen-anniversary-task>
+      </view>
+    </answer-list-view>
+    <session-history-loading
+      bind:__l="__l"
+      class="data-v-9e84eae6"
+      uI="9e84eae6-11"
+      uP="{{H}}"
+      wx:if="{{G}}"
+    ></session-history-loading>
+  </view>
+  <view
+    catchtap="{{N}}"
+    class="_div backToBottomButton data-v-9e84eae6"
+    style="{{'bottom:'+M}}"
+    wx:if="{{K}}"
+  >
+    <view class="_div backToBottomIcon data-v-9e84eae6">
+      <view class="_div loadingCircle data-v-9e84eae6" wx:if="{{L}}"></view>
+    </view>
+  </view>
+  <view
+    bindtap="{{P}}"
+    catchtouchmove="{{Q}}"
+    class="_div input-expand-overlay data-v-9e84eae6"
+    wx:if="{{O}}"
+  ></view>
+  <view class="_div bottomBar data-v-9e84eae6">
+    <view
+      class="_div quick-input-placeholder data-v-9e84eae6"
+      wx:if="{{R}}"
+    ></view>
+    <view
+      class="{{['_div','data-v-9e84eae6',T&&'wzq-input',U&&'app-input',V&&'harmony-app-input',W&&'ios']}}"
+      ref="inputHolder"
+      wx:if="{{S}}"
+    ></view>
+    <input-view
+      bind:__l="__l"
+      bindchooseModel="{{aj}}"
+      bindcontainerHeightChange="{{an}}"
+      bindeditVoice="{{ai}}"
+      bindexpandChange="{{am}}"
+      bindhideMenu="{{ak}}"
+      bindinputChangeAiModel="{{ae}}"
+      bindinputChangeAiThinking="{{af}}"
+      bindkeyboardHeightChange="{{Z}}"
+      bindkeyboardShowingChange="{{Y}}"
+      bindonFocus="{{ah}}"
+      bindonHasInputContent="{{ad}}"
+      bindonSend="{{ab}}"
+      bindonSendEmpty="{{ac}}"
+      bindonStopAnswer="{{ag}}"
+      bindquickQuestionClick="{{aa}}"
+      bindrequestKeyboard="{{al}}"
+      class="r data-v-9e84eae6"
+      uI="9e84eae6-12"
+      uP="{{ao}}"
+      uR="inputRef"
+      wx:if="{{ao}}"
+    ></input-view>
+  </view>
+  <old-permission-dialog
+    bind:__l="__l"
+    binddismissOldPermissionDialog="{{aq}}"
+    class="oldPermissionDialog data-v-9e84eae6"
+    uI="9e84eae6-13"
+    uP="{{ar}}"
+    wx:if="{{ap}}"
+  ></old-permission-dialog>
+  <dis-like-select-dialog
+    bind:__l="__l"
+    bindcancelFeedback="{{at}}"
+    bindsubmitComplaint="{{aw}}"
+    bindsubmitUnlike="{{av}}"
+    class="disLikeDialog data-v-9e84eae6"
+    uI="9e84eae6-14"
+    uP="{{ax}}"
+    wx:if="{{as}}"
+  ></dis-like-select-dialog>
+  <permission-agree-dialog
+    bind:__l="__l"
+    bindagreeProtocal="{{ay}}"
+    binddenyProtocal="{{az}}"
+    class="permissionDialog data-v-9e84eae6"
+    uI="9e84eae6-15"
+    uP="{{aA}}"
+    wx:if="{{aA}}"
+  ></permission-agree-dialog>
+  <link-jump-guide
+    bind:__l="__l"
+    bindlinkGuideClose="{{aB}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-16"
+    uP="{{aC}}"
+    wx:if="{{aC}}"
+  ></link-jump-guide>
+  <full-screen-feed-back
+    bind:__l="__l"
+    bindcloseFullScreenComplaint="{{aE}}"
+    bindsubmitFullScreenComplaint="{{aF}}"
+    class="fullScreenFeedback data-v-9e84eae6"
+    uI="9e84eae6-17"
+    uP="{{aG}}"
+    wx:if="{{aD}}"
+  ></full-screen-feed-back>
+  <ai-model-select-dialog
+    bind:__l="__l"
+    bindchooseModel="{{aJ}}"
+    bindcloseDialog="{{aI}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-18"
+    uP="{{aK}}"
+    wx:if="{{aH}}"
+  ></ai-model-select-dialog>
+  <ai-model-select-guide
+    bind:__l="__l"
+    bindcloseGuide="{{aM}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-19"
+    uP="{{aN}}"
+    wx:if="{{aL}}"
+  ></ai-model-select-guide>
+  <question-item-long-press-menu
+    bind:__l="__l"
+    bindhideMenu="{{aP}}"
+    bindtapMeunu="{{aQ}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-20"
+    uP="{{aR}}"
+    wx:if="{{aO}}"
+  ></question-item-long-press-menu>
+  <input-voice-edit
+    bind:__l="__l"
+    bindonSendQuestion="{{aV}}"
+    bindonVoiceEditFinish="{{aU}}"
+    class="r data-v-9e84eae6"
+    uI="9e84eae6-21"
+    uP="{{aW}}"
+    uR="InputVoiceEditRef"
+    wx:if="{{aS}}"
+  ></input-voice-edit>
+  <back-pop
+    bind:__l="__l"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-22"
+    uP="{{aX}}"
+    wx:if="{{aX}}"
+  ></back-pop>
+  <weixin-claw-bind-dialog
+    bind:__l="__l"
+    bindbindSuccess="{{aZ}}"
+    bindclose="{{aY}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-23"
+    uP="{{ba}}"
+    wx:if="{{ba}}"
+  ></weixin-claw-bind-dialog>
+  <weixin-claw-unbind-dialog
+    bind:__l="__l"
+    bindclose="{{bb}}"
+    bindconfirm="{{bc}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-24"
+    uP="{{bd}}"
+    wx:if="{{bd}}"
+  ></weixin-claw-unbind-dialog>
+  <session-history-drawer
+    bind:__l="__l"
+    bindagreeProtocal="{{bf}}"
+    bindbindingWxClaw="{{bi}}"
+    bindjumpSessionCreate="{{bh}}"
+    bindjumpSessionDatail="{{bg}}"
+    bindonDrawerClose="{{be}}"
+    bindunbindingWxClaw="{{bj}}"
+    class="data-v-9e84eae6"
+    uI="9e84eae6-25"
+    uP="{{bk}}"
+    wx:if="{{bk}}"
+  ></session-history-drawer>
+</view>

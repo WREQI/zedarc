@@ -1,0 +1,13 @@
+<view
+  class="{{['_div','fixed-wrapper','data-v-b543c9c3',e&&'hidden-position']}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{d}}" class="_div content-container data-v-b543c9c3">
+    <image alt="top" class="_img top-image data-v-b543c9c3" src="{{b}}"></image>
+    <image
+      alt="bottom"
+      class="_img bottom-image data-v-b543c9c3"
+      src="{{c}}"
+    ></image>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<page-meta class="data-v-0a82c0e3" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-0a82c0e3" id="global-wrap" uI="0a82c0e3-0" uP="{{x}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{x}}">
+    <view class="ts-bind-phone account-common-form data-v-0a82c0e3">
+        <view bindtap="{{c}}" class="account-top-tip data-v-0a82c0e3">填写{{b}}账户资料，登录微证券</view>
+        <st-cell-group bind:__l="__l" class="data-v-0a82c0e3" uI="0a82c0e3-1,0a82c0e3-0" uP="{{p}}" uS="{{['d']}}" wx:if="{{p}}">
+            <st-cell bind:__l="__l" class="data-v-0a82c0e3" uI="0a82c0e3-2,0a82c0e3-1" uP="{{f}}" uS="{{['d']}}" wx:if="{{f}}">
+                <input bindinput="{{e}}" class="form-input data-v-0a82c0e3" maxlength="11" placeholder="请输入本人手机号码" placeholderClass="input-placeholder" type="number" value="{{d}}"></input>
+            </st-cell>
+            <st-cell bind:__l="__l" class="data-v-0a82c0e3" uI="0a82c0e3-3,0a82c0e3-1" uP="{{o}}" uS="{{['extra','d']}}" wx:if="{{o}}">
+                <input bindinput="{{k}}" class="form-input data-v-0a82c0e3" disabled="{{i}}" maxlength="{{h}}" placeholder="{{g}}" placeholderClass="input-placeholder" ref="bindCodeInput" type="number" value="{{j}}"></input>
+                <button bindtap="{{n}}" class="sms-button data-v-0a82c0e3" disabled="{{m}}" size="mini" slot="extra" type="primary">{{l}}</button>
+            </st-cell>
+        </st-cell-group>
+        <view class="submit-wrapper data-v-0a82c0e3">
+            <button bindtap="{{q}}" class="submit-button data-v-0a82c0e3" type="primary">下一步</button>
+        </view>
+        <view class="fs-32 text-color-4 align-c data-v-0a82c0e3" wx:if="{{r}}">{{s}}</view>
+        <server-broker bind:__l="__l" class="data-v-0a82c0e3" uI="0a82c0e3-4,0a82c0e3-0" uP="{{t}}" wx:if="{{t}}"></server-broker>
+        <mp-dialog bind:__l="__l" class="data-v-0a82c0e3" id="mp-dialog" uI="0a82c0e3-5,0a82c0e3-0" uP="{{v}}" wx:if="{{v}}"></mp-dialog>
+    </view>
+</global-wrap>

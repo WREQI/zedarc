@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hot-skeleton": "./comment/hotSubjects",
+    "feeds-topic": "../../../../newsSbg/@tencent/stock-sq/src/source/feedsTopic/index",
+    "feeds-pk": "../../../../newsSbg/@tencent/stock-sq/src/source/feedsPk/index",
+    "square-list": "../../../../newsSbg/@tencent/stock-sq/src/source/SquareList/index",
+    "supporter": "./Supporter"
+  },
+  "componentPlaceholder": {
+    "feeds-topic": "view",
+    "feeds-pk": "view",
+    "square-list": "view"
+  }
+}

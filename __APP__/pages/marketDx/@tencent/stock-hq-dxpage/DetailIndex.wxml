@@ -1,0 +1,33 @@
+<view class="_div hangqingxinzhai-detail-container data-v-1483e3b0">
+  <view class="_div hangqingxinzhai-detail-list data-v-1483e3b0">
+    <hs-stock-detail-list
+      bind:__l="__l"
+      class="r data-v-1483e3b0"
+      uI="1483e3b0-0"
+      uP="{{c}}"
+      uR="stockdetailpage"
+      wx:if="{{a}}"
+    ></hs-stock-detail-list>
+    <hs-bond-detail-list
+      bind:__l="__l"
+      class="data-v-1483e3b0"
+      uI="1483e3b0-1"
+      uP="{{e}}"
+      wx:if="{{d}}"
+    ></hs-bond-detail-list>
+    <hk-detail-list
+      bind:__l="__l"
+      class="data-v-1483e3b0"
+      uI="1483e3b0-2"
+      uP="{{g}}"
+      wx:if="{{f}}"
+    ></hk-detail-list>
+    <us-detail-list
+      bind:__l="__l"
+      class="data-v-1483e3b0"
+      uI="1483e3b0-3"
+      uP="{{i}}"
+      wx:if="{{h}}"
+    ></us-detail-list>
+  </view>
+</view>

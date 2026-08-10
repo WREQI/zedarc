@@ -1,0 +1,14 @@
+<view class="{{['snac-bar','data-v-a2747001',g&&'simple_mode']}}" wx:if="{{a}}">
+  <slot name="before"></slot>
+  <view class="snac-bar-content data-v-a2747001">
+    <view class="snac-bar-content-coin data-v-a2747001"></view>
+    <view class="snac-bar-content-text data-v-a2747001"
+      >{{b}}<label class="data-v-a2747001">{{c}}</label>
+    </view>
+    <view bindtap="{{e}}" class="snac-bar-content-btn data-v-a2747001"
+      >{{d}}</view
+    >
+    <view bindtap="{{f}}" class="snac-bar-content-close data-v-a2747001"></view>
+  </view>
+  <slot name="after"></slot>
+</view>

@@ -1,0 +1,31 @@
+@import "/app.wxss";
+.pre-review-modify-card.data-v-6d218fcb {
+  background-color: var(--fill-2);
+  border-radius: 0.213333rem;
+  box-sizing: border-box;
+  margin: 0.32rem;
+  padding: 0.32rem;
+}
+.pre-review-modify-card__title.data-v-6d218fcb {
+  color: var(--color-orange);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.pre-review-modify-card__tips.data-v-6d218fcb {
+  margin-top: 0.16rem;
+}
+.pre-review-modify-card__tip.data-v-6d218fcb {
+  color: var(--text-color-2);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  white-space: pre-line;
+  word-break: break-word;
+}
+.pre-review-modify-card__tip + .pre-review-modify-card__tip.data-v-6d218fcb {
+  margin-top: 0.106667rem;
+}
+.pre-review-modify-card__photos.data-v-6d218fcb {
+  margin-top: 0.32rem;
+}

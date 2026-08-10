@@ -1,0 +1,73 @@
+.calendar-wrapper.data-v-b7cf0c51 {
+  height: auto;
+  margin: auto;
+  width: 9.36rem;
+}
+.calendar-wrapper .split-line.data-v-b7cf0c51 {
+  background-color: var(--border-light);
+  height: 0.013333333333333334rem;
+  margin-top: 0.16rem;
+  width: 100%;
+}
+.calendar-wrapper .calendar-row.data-v-b7cf0c51 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.calendar-wrapper
+  .calendar-row.calendar-row-header
+  .calendar-item.data-v-b7cf0c51 {
+  color: var(--color-lightgray-2);
+  font-size: 0.37333333333333335rem;
+  height: 0.8533333333333334rem;
+}
+.calendar-wrapper .calendar-row .calendar-item.data-v-b7cf0c51 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.8533333333333334rem;
+  margin-top: 0.37333333333333335rem;
+  position: relative;
+  text-align: center;
+  width: 0.9333333333333333rem;
+}
+.calendar-wrapper
+  .calendar-row
+  .calendar-item.blue
+  .date-label.rest.data-v-b7cf0c51 {
+  color: #3077ec;
+}
+.calendar-wrapper .calendar-row .date-number.data-v-b7cf0c51 {
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+}
+.calendar-wrapper .calendar-row .date-holiday.data-v-b7cf0c51 {
+  bottom: -0.16rem;
+  color: var(--color-lightgray-2);
+  display: inline-block;
+  font-size: 0.26666666666666666rem;
+  height: 0.26666666666666666rem;
+  left: 50%;
+  line-height: 0.26666666666666666rem;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.calendar-wrapper .calendar-row .date-label.data-v-b7cf0c51 {
+  color: var(--color-heavygray);
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.26666666666666666rem;
+  line-height: 0.26666666666666666rem;
+  position: absolute;
+  right: -0.3333333333333333rem;
+  top: 60%;
+  transform: translateY(-100%);
+}
+.calendar-wrapper .calendar-row .date-label.rest.data-v-b7cf0c51 {
+  color: #e63535;
+}
+.calendar-wrapper .calendar-row .date-label.half.data-v-b7cf0c51 {
+  color: #ff891e;
+}

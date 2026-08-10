@@ -1,0 +1,36 @@
+<view class="_div top-bar-container data-v-ea205448">
+  <view
+    class="_div safe-area-padding-top data-v-ea205448"
+    style="{{'height:'+a}}"
+  ></view>
+  <view
+    class="_div content-container data-v-ea205448"
+    style="{{'padding-top:'+i}}"
+  >
+    <view class="_div title-content data-v-ea205448">
+      <image
+        ariaLabel="back-home-icon"
+        ariaRole="返回首页"
+        catchtap="{{d}}"
+        class="_img back-icon data-v-ea205448"
+        src="{{c}}"
+        wx:if="{{b}}"
+      ></image>
+      <image
+        ariaLabel="back-icon"
+        ariaRole="返回按钮"
+        catchtap="{{g}}"
+        class="_img back-icon data-v-ea205448"
+        src="{{f}}"
+        wx:if="{{e}}"
+      ></image>
+      <view class="_div title-center data-v-ea205448">
+        <label class="_span name data-v-ea205448">消息盒子</label>
+        <view class="_div clearbg data-v-ea205448">
+          <view bindtap="{{h}}" class="_div clear data-v-ea205448"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div hold-space data-v-ea205448"></view>
+</view>

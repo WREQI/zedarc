@@ -1,0 +1,10 @@
+<view class="_div button-text-multiline data-v-958567f5" wx:if="{{a}}">
+  <view
+    class="_div button-text-line data-v-958567f5"
+    wx:for="{{b}}"
+    wx:for-item="line"
+    wx:key="b"
+    >{{line.a}}</view
+  >
+</view>
+<label class="_span data-v-958567f5" wx:else>{{c}}</label>

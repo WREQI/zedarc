@@ -1,0 +1,46 @@
+<view class="{{['_div','sortable-captions','data-v-8aee3046',r]}}">
+  <view
+    class="_div portfolio-caption-stock-title data-v-8aee3046"
+    id="{{l}}"
+    wx:if="{{a}}"
+  >
+    <view bindtap="{{d}}" class="_div filter-title data-v-8aee3046" id="{{c}}"
+      >{{b}}</view
+    >
+    <view
+      bindtap="{{h}}"
+      class="{{['_div','data-v-8aee3046','filter-icon',f,g]}}"
+      wx:if="{{e}}"
+    ></view>
+    <view
+      bindtap="{{k}}"
+      class="{{['_div','data-v-8aee3046','monitoring-remind-entry',j,'add-touch']}}"
+      wx:if="{{i}}"
+    ></view>
+  </view>
+  <view bindtap="{{m}}" class="_div order-reset data-v-8aee3046" wx:else>
+    <image
+      class="_img reset-icon data-v-8aee3046"
+      src="https://st.gtimg.com/design/71eff13ed975d0ae7a744c0f22c75a87.png"
+    ></image>
+    <label class="_span reset-text data-v-8aee3046">恢复默认</label>
+  </view>
+  <view class="_div caption-group data-v-8aee3046">
+    <caption-item
+      bind:__l="__l"
+      bindsort="{{n}}"
+      class="data-v-8aee3046"
+      uI="8aee3046-0"
+      uP="{{o}}"
+      wx:if="{{o}}"
+    ></caption-item>
+    <caption-item
+      bind:__l="__l"
+      bindsort="{{p}}"
+      class="data-v-8aee3046"
+      uI="8aee3046-1"
+      uP="{{q}}"
+      wx:if="{{q}}"
+    ></caption-item>
+  </view>
+</view>

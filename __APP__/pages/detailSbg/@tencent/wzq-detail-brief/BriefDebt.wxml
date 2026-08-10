@@ -1,0 +1,48 @@
+<view class="{{['_div','mod-brief-debt','data-v-e6a97050',l&&'skin-black']}}">
+  <view class="_div brif-debt-content data-v-e6a97050" wx:if="{{a}}">
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">债券代码</view>
+      <view class="_div content data-v-e6a97050">{{b}}</view>
+    </view>
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">债券简称</view>
+      <view class="_div content data-v-e6a97050">{{c}}</view>
+    </view>
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">债券全称</view>
+      <view class="_div content data-v-e6a97050">{{d}}</view>
+    </view>
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">交易市场</view>
+      <view class="_div content data-v-e6a97050">{{e}}</view>
+    </view>
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">债券品种</view>
+      <view class="_div content data-v-e6a97050">{{f}}</view>
+    </view>
+    <view class="_div info-item data-v-e6a97050">
+      <view class="_div title data-v-e6a97050">期  限</view>
+      <view class="_div content data-v-e6a97050">{{g}}</view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-e6a97050"
+    uI="e6a97050-0"
+    uS="{{['d']}}"
+    wx:if="{{h}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无简况数据</block>
+  </no-data>
+  <view class="_div error-status data-v-e6a97050" wx:if="{{i}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{j}}"
+      class="data-v-e6a97050"
+      uI="e6a97050-1"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></st-status>
+  </view>
+</view>

@@ -1,0 +1,107 @@
+<view
+  class="_div stock-financial-container data-v-76fac537"
+  id="screenShotElement"
+  wx:if="{{a}}"
+>
+  <view class="_div stock-info-container data-v-76fac537">
+    <view class="_div stock-title-container data-v-76fac537">
+      <view class="_div stock-left data-v-76fac537">
+        <image
+          class="_img stock-logo data-v-76fac537"
+          src="{{c}}"
+          wx:if="{{b}}"
+        ></image>
+        <view class="_div stock-name data-v-76fac537">{{d}}</view>
+      </view>
+      <view class="_div stock-right data-v-76fac537">
+        <view class="_div stock-price data-v-76fac537" style="{{'color:'+f}}"
+          >{{e}}</view
+        >
+        <view class="_div stock-zdf data-v-76fac537" style="{{'color:'+h}}"
+          >{{g}}</view
+        >
+      </view>
+    </view>
+    <view
+      class="_div stock-lightspot-container data-v-76fac537"
+      wx:for="{{i}}"
+      wx:key="j"
+    >
+      <view class="_div stock-lightspot-item borderStyle data-v-76fac537">
+        <view class="_div stock-lightspot-left data-v-76fac537">
+          <label
+            class="_span stock-lightspot-tag data-v-76fac537"
+            style="{{'top:'+j}}"
+            >要点{{item.a}}</label
+          >{{item.b}}</view
+        >
+        <image
+          class="_img stock-forcast-flag data-v-76fac537"
+          src="{{item.d}}"
+          wx:if="{{item.c}}"
+        ></image>
+      </view>
+      <view
+        class="_div stock-lightspot-extra data-v-76fac537"
+        wx:if="{{item.e}}"
+      >
+        <view class="_div stock-lightspot-extra-income data-v-76fac537"
+          >营收</view
+        >
+        <view
+          class="_div stock-lightspot-extra-income-percent data-v-76fac537"
+          style="{{'color:'+item.g}}"
+          >{{item.f}}</view
+        >
+        <view class="_div stock-lightspot-extra-net data-v-76fac537"
+          >净利润</view
+        >
+        <view
+          class="_div stock-lightspot-extra-net-percent data-v-76fac537"
+          style="{{'color:'+item.i}}"
+          >{{item.h}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div stock-overview-container data-v-76fac537">
+    <view class="_div stock-overview-title-container data-v-76fac537">
+      <view class="_div stock-overview-title data-v-76fac537">业绩概览</view>
+      <image
+        class="_img stock-overview-subtitle data-v-76fac537"
+        src="https://st.gtimg.com/design/d86a9345a5660c76b4437cadf9430fd5.png"
+      ></image>
+    </view>
+    <view class="_div stock-overview-summary data-v-76fac537" wx:if="{{k}}"
+      >{{l}}</view
+    >
+    <view class="_div seperator-line data-v-76fac537"></view>
+    <view class="_div stock-overview-yyzsr data-v-76fac537" wx:if="{{m}}">
+      <stock-income
+        bind:__l="__l"
+        class="data-v-76fac537"
+        uI="76fac537-0"
+        uP="{{n}}"
+        wx:if="{{n}}"
+      ></stock-income>
+    </view>
+    <view class="_div stock-overview-jlr data-v-76fac537" wx:if="{{o}}">
+      <stock-income
+        bind:__l="__l"
+        class="data-v-76fac537"
+        uI="76fac537-1"
+        uP="{{p}}"
+        wx:if="{{p}}"
+      ></stock-income>
+    </view>
+    <view class="_div stock-overview-forcast data-v-76fac537" wx:if="{{q}}">
+      <stock-forcast
+        bind:__l="__l"
+        class="data-v-76fac537"
+        uI="76fac537-2"
+        uP="{{r}}"
+        wx:if="{{r}}"
+      ></stock-forcast>
+    </view>
+  </view>
+</view>

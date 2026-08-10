@@ -1,0 +1,43 @@
+<view class="_div container data-v-9b42a375">
+  <view class="_div seperate data-v-9b42a375" wx:if="{{a}}"></view>
+  <view
+    bindtap="{{bondInfo.n}}"
+    class="{{['_div','data-v-9b42a375',c&&'animation']}}"
+    wx:for="{{b}}"
+    wx:for-item="bondInfo"
+    wx:key="m"
+  >
+    <view
+      class="{{['_div','wrapper','data-v-9b42a375',bondInfo.l&&'wrapper-classic']}}"
+      wx:if="{{bondInfo.a}}"
+    >
+      <view class="_div block data-v-9b42a375">
+        <view
+          class="{{['_div','title','data-v-9b42a375',bondInfo.c&&'title-classic']}}"
+          >{{bondInfo.b}}</view
+        >
+        <view class="{{['_div','text','data-v-9b42a375',bondInfo.e]}}"
+          >{{bondInfo.d}}</view
+        >
+        <view class="{{['_div','text','data-v-9b42a375',bondInfo.g]}}"
+          >{{bondInfo.f}}%</view
+        >
+      </view>
+      <view class="_div block right data-v-9b42a375">
+        <view
+          class="{{['_div','title','data-v-9b42a375',bondInfo.h&&'title-classic']}}"
+          >转股溢价率</view
+        >
+        <view class="{{['_div','text','data-v-9b42a375',bondInfo.j]}}"
+          >{{bondInfo.i}}%</view
+        >
+        <image
+          class="_img arrow data-v-9b42a375"
+          lazyLoad="{{true}}"
+          src="https://st.gtimg.com/design/f73e3187fa829a7f886400cca980b402.png"
+          wx:if="{{bondInfo.k}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

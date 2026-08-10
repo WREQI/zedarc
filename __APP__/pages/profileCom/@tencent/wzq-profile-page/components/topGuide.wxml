@@ -1,0 +1,31 @@
+<view class="_div bottom-guide-wrapper data-v-8bf2f7a1">
+  <view class="_div zhiding-image-bg data-v-8bf2f7a1" wx:if="{{a}}">
+    <view class="_div zhiding-image-logo data-v-8bf2f7a1"></view>
+    <image
+      class="_img zhiding-image-logo-img data-v-8bf2f7a1"
+      showMenuByLongpress="{{true}}"
+      src="{{b}}"
+    ></image>
+  </view>
+  <view
+    bindtap="{{e}}"
+    class="_div download-guide-wrapper data-v-8bf2f7a1"
+    wx:elif="{{c}}"
+  >
+    <view class="_div logo-img data-v-8bf2f7a1"></view>
+    <view class="_div guild-text data-v-8bf2f7a1"
+      >解锁专业深度，畅享完整体验<view class="data-v-8bf2f7a1"></view>
+      <label class="_span data-v-8bf2f7a1">立即下载「腾讯自选股App」</label>
+    </view>
+    <view class="{{['_div','btn','data-v-8bf2f7a1',d&&'simple']}}"
+      >下载App</view
+    >
+  </view>
+  <download-action-sheet
+    bind:__l="__l"
+    bindclose="{{g}}"
+    class="data-v-8bf2f7a1"
+    uI="8bf2f7a1-0"
+    wx:if="{{f}}"
+  ></download-action-sheet>
+</view>

@@ -1,0 +1,87 @@
+@import "/app.wxss";
+.preload-icon-wrap {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.preload-icon-wrap .icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 0.533333rem;
+  width: 0.533333rem;
+}
+.preload-icon-wrap .icon:before {
+  content: "";
+}
+.preload-icon-wrap .icon.icon-hq {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/hq.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-hq {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/hq.png);
+}
+.preload-icon-wrap .icon.icon-quote {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/quote.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-quote {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/quote.png);
+}
+.preload-icon-wrap .icon.icon-buy {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/buy.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-buy {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/buy.png);
+}
+.preload-icon-wrap .icon.icon-sell {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/sell.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-sell {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/sell.png);
+}
+.preload-icon-wrap .icon.icon-analysis {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/analysis.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-analysis {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/analysis.png);
+}
+.preload-icon-wrap .icon.icon-condition-order {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/condition-order.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-condition-order {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/condition-order.png);
+}
+.preload-icon-wrap .icon.icon-trade {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/trade.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-trade {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/trade.png);
+}
+.preload-icon-wrap .icon.icon-detail {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/detail.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-detail {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/detail.png);
+}
+.preload-icon-wrap .icon.icon-setting {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/setting.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-setting {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/setting.png);
+}
+.preload-icon-wrap .icon.icon-share {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/share.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-share {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/share.png);
+}
+.preload-icon-wrap .icon.icon-repo {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/repo.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-repo {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/repo.png);
+}
+.preload-icon-wrap .icon.icon-currency {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/light/currency.png);
+}
+[data-theme="dark"] .preload-icon-wrap .icon.icon-currency {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/position-drawer/dark/currency.png);
+}

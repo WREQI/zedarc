@@ -1,0 +1,33 @@
+<common-status-item
+  bind:__l="__l"
+  class="data-v-9bcfac7f"
+  uI="9bcfac7f-0"
+  uP="{{n}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="visit-status-item data-v-9bcfac7f" wx:if="{{b}}">
+    <view class="visit-tips data-v-9bcfac7f">
+      <block wx:if="{{c}}">
+        <view class="data-v-9bcfac7f" wx:if="{{d}}"
+          >客服正在给您来电，请注意接听</view
+        >
+        <view class="data-v-9bcfac7f" wx:else>
+          <view class="data-v-9bcfac7f"
+            >请注意接听【{{e}}】<label class="tel data-v-9bcfac7f">{{f}}</label
+            >来电，配合完成开户回访，回访未通过将无法开立证券账户；</view
+          >
+          <view class="queue data-v-9bcfac7f" wx:if="{{g}}">{{h}}</view>
+        </view>
+      </block>
+      <view class="data-v-9bcfac7f" wx:if="{{i}}"
+        >如需使用账户，可拨打【{{j}}】客服电话<label class="tel data-v-9bcfac7f"
+          >{{k}}</label
+        >咨询。</view
+      >
+    </view>
+    <view bindtap="{{m}}" class="button data-v-9bcfac7f" wx:if="{{l}}"
+      >一键拨打</view
+    >
+  </view>
+</common-status-item>

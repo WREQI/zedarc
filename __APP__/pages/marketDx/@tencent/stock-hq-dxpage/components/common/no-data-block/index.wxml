@@ -1,0 +1,16 @@
+<view class="_div no-data-block-wrapper data-v-c2c7babe" wx:if="{{a}}">
+  <account-opened-block
+    bind:__l="__l"
+    class="account-opened-wrapper data-v-c2c7babe"
+    uI="c2c7babe-0"
+    uP="{{c}}"
+    wx:if="{{b}}"
+  ></account-opened-block>
+  <no-account-opened-block
+    bind:__l="__l"
+    class="data-v-c2c7babe"
+    uI="c2c7babe-1"
+    uP="{{d||''}}"
+    wx:else
+  ></no-account-opened-block>
+</view>

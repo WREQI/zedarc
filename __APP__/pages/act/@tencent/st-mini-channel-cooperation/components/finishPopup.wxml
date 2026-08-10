@@ -1,0 +1,23 @@
+<view
+  catchtouchmove="{{f}}"
+  class="_div finish-popup-overlay data-v-f88c85cf"
+  wx:if="{{a}}"
+>
+  <view class="_div finish-popup-wrapper data-v-f88c85cf">
+    <view class="_div finish-popup-content data-v-f88c85cf">
+      <image
+        class="_img content-icon data-v-f88c85cf"
+        src="https://st.gtimg.com/design/0632d8705634c30345e82586dd598825.png"
+      ></image>
+      <view class="_div content-title data-v-f88c85cf">活动已结束</view>
+      <view class="_div content-extend data-v-f88c85cf" wx:if="{{b}}">
+        <view class="_div content-extend-title data-v-f88c85cf">{{c}}</view>
+        <image
+          bindtap="{{e}}"
+          class="_img content-extend-banner data-v-f88c85cf"
+          src="{{d}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

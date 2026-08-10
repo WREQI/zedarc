@@ -1,0 +1,8 @@
+<view class="_div compare-wrapper data-v-59b13fd7" wx:if="{{a}}">
+  <image
+    class="_img compare-img data-v-59b13fd7"
+    mode="scaleToFill"
+    src="{{b}}"
+  ></image>
+  <slot></slot>
+</view>

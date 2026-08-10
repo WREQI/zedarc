@@ -1,0 +1,15 @@
+<view
+  bindtap="{{c}}"
+  class="_div bulletin-wrapper data-v-f078907f"
+  wx:if="{{a}}"
+>
+  <view class="_div left data-v-f078907f">
+    <view class="_div bulletin-icon pic-bg data-v-f078907f"></view>
+    <view class="_div bulletin-text data-v-f078907f"
+      >ETF用股票账户交易，无印花税且部分支持T+0</view
+    >
+  </view>
+  <view catchtap="{{b}}" class="_div right data-v-f078907f">
+    <view class="_div close-btn pic-bg data-v-f078907f"></view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="_div pull-bottom-wrapper data-v-7b8eb595">
+  <view class="_div more data-v-7b8eb595">
+    <block wx:if="{{a}}">
+      <slot wx:if="{{$slots.d}}"></slot>
+      <block wx:else>上拉加载更多</block>
+    </block>
+    <block wx:if="{{b}}">
+      <slot name="loadAll" wx:if="{{$slots.loadAll}}"></slot>
+      <block wx:else>已无更多数据</block>
+    </block>
+  </view>
+</view>

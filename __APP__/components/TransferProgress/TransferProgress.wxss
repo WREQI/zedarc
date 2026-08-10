@@ -1,0 +1,539 @@
+@import "/app.wxss";
+@-webkit-keyframes dash-draw-985d6255 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 0.853333rem);
+  }
+}
+@keyframes dash-draw-985d6255 {
+  0% {
+    width: 0;
+  }
+  to {
+    width: calc(100% - 0.853333rem);
+  }
+}
+@-webkit-keyframes dash-color-to-dark-985d6255 {
+  0% {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #1caa3c,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #1caa3c 0,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+  to {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #12161f,
+      #12161f 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #12161f 0,
+      #12161f 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+}
+@keyframes dash-color-to-dark-985d6255 {
+  0% {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #1caa3c,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #1caa3c 0,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+  to {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #12161f,
+      #12161f 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #12161f 0,
+      #12161f 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+}
+@-webkit-keyframes dash-color-to-light-985d6255 {
+  0% {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #1caa3c,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #1caa3c 0,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+  to {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #dcdfe6,
+      #dcdfe6 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #dcdfe6 0,
+      #dcdfe6 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+}
+@keyframes dash-color-to-light-985d6255 {
+  0% {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #1caa3c,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #1caa3c 0,
+      #1caa3c 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+  to {
+    background: -webkit-repeating-linear-gradient(
+      left,
+      #dcdfe6,
+      #dcdfe6 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background: repeating-linear-gradient(
+      90deg,
+      #dcdfe6 0,
+      #dcdfe6 0.04rem,
+      transparent 0,
+      transparent 0.08rem
+    );
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 0.026667rem;
+  }
+}
+@-webkit-keyframes node-info-fade-in-985d6255 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes node-info-fade-in-985d6255 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.transfer-progress.data-v-985d6255 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.transfer-progress .state-item .item-inner.data-v-985d6255 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  width: 1.706667rem;
+}
+.transfer-progress .state-item .node-info.data-v-985d6255 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.transfer-progress .state-item .node-info.animate-fade-in.data-v-985d6255 {
+  animation: node-info-fade-in-985d6255 0.05s ease-out var(--info-delay, 0s)
+    forwards;
+  opacity: 0;
+}
+.transfer-progress
+  .state-item
+  .node-info.animate-fade-in-event.data-v-985d6255 {
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+.transfer-progress
+  .state-item
+  .node-info.animate-fade-in-event.show-node.data-v-985d6255 {
+  opacity: 1;
+}
+.transfer-progress .state-item .ico.data-v-985d6255 {
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.transfer-progress .state-item .ico.in.data-v-985d6255,
+.transfer-progress .state-item .ico.out.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_out.png);
+}
+[data-theme="dark"] .transfer-progress .state-item .ico.in.data-v-985d6255,
+[data-theme="dark"] .transfer-progress .state-item .ico.out.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_out-dark.png);
+}
+.transfer-progress .state-item .ico.pending.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_pending.png);
+}
+[data-theme="dark"]
+  .transfer-progress
+  .state-item
+  .ico.pending.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_pending-dark.png);
+}
+.transfer-progress .state-item .ico.pending-enhance.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_pending_enhance.png);
+}
+.transfer-progress .state-item .ico.success.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_success.png);
+}
+.transfer-progress .state-item .ico.fail.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_fail.png);
+}
+.transfer-progress .state-item .ico.cancel.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_cancel.png);
+}
+.transfer-progress .state-item .ico.ok.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_ok.png);
+}
+[data-theme="dark"] .transfer-progress .state-item .ico.ok.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_ok-dark.png);
+}
+.transfer-progress .state-item .ico.delisted.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/delisted.png);
+}
+[data-theme="dark"]
+  .transfer-progress
+  .state-item
+  .ico.delisted.data-v-985d6255 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/delisted-dark.png);
+}
+.transfer-progress .state-item .money.data-v-985d6255,
+.transfer-progress .state-item .text.data-v-985d6255 {
+  color: var(--text-color-1);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.transfer-progress .state-item .pending-enhance.data-v-985d6255 {
+  color: var(--color-green);
+}
+.transfer-progress .state-item .money.data-v-985d6255 {
+  color: var(--text-color-1);
+  font-size: 0.266667rem;
+  line-height: 0.373333rem;
+}
+.transfer-progress .state-item .text.data-v-985d6255 {
+  margin-top: 0.266667rem;
+}
+.transfer-progress .state-item .money.data-v-985d6255 {
+  margin-top: 0.106667rem;
+}
+.transfer-progress .state-item .date.data-v-985d6255,
+.transfer-progress .state-item .time.data-v-985d6255 {
+  color: var(--text-color-5);
+  font-size: 0.266667rem;
+  line-height: 0.373333rem;
+  white-space: nowrap;
+}
+.transfer-progress .state-item .date.data-v-985d6255 {
+  margin-top: 0.16rem;
+}
+.transfer-progress .state-item + .state-item-plugin.data-v-985d6255:before {
+  top: 0 !important;
+}
+.transfer-progress .state-item + .state-item.data-v-985d6255 {
+  -webkit-box-flex: 1;
+  flex: 1;
+  position: relative;
+  text-align: right;
+}
+.transfer-progress .state-item + .state-item.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #c9d0dc,
+    #c9d0dc 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #c9d0dc 0,
+    #c9d0dc 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  content: "";
+  font-size: 0.266667rem;
+  height: 0.56rem;
+  left: -0.426667rem;
+  line-height: 0.373333rem;
+  position: absolute;
+  text-align: center;
+  top: -0.24rem;
+  width: calc(100% - 0.853333rem);
+}
+[data-theme="dark"]
+  .transfer-progress
+  .state-item
+  + .state-item.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #262e40,
+    #262e40 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #262e40 0,
+    #262e40 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+}
+.transfer-progress .state-item + .state-item.current.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #12161f,
+    #12161f 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #12161f 0,
+    #12161f 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+}
+[data-theme="dark"]
+  .transfer-progress
+  .state-item
+  + .state-item.current.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #dcdfe6,
+    #dcdfe6 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #dcdfe6 0,
+    #dcdfe6 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+}
+.transfer-progress
+  .state-item
+  + .state-item.current.progress-text.data-v-985d6255:before {
+  content: "处理中";
+}
+.transfer-progress .state-item + .state-item.finish.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #12161f,
+    #12161f 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #12161f 0,
+    #12161f 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+}
+[data-theme="dark"]
+  .transfer-progress
+  .state-item
+  + .state-item.finish.data-v-985d6255:before {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #dcdfe6,
+    #dcdfe6 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #dcdfe6 0,
+    #dcdfe6 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+}
+.transfer-progress .state-item.special-text-color .date.data-v-985d6255,
+.transfer-progress .state-item.special-text-color .time.data-v-985d6255 {
+  color: var(--text-color-1);
+}
+.transfer-progress.animated
+  .state-item
+  + .state-item.animate-line.data-v-985d6255:before {
+  animation: dash-draw-985d6255 0.67s ease-out var(--line-delay, 0s) forwards,
+    dash-color-to-dark-985d6255 1s ease-out calc(var(--line-delay, 0s) + 0.67s)
+      forwards;
+  background: -webkit-repeating-linear-gradient(
+    left,
+    #1caa3c,
+    #1caa3c 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #1caa3c 0,
+    #1caa3c 0.04rem,
+    transparent 0,
+    transparent 0.08rem
+  );
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 0.026667rem;
+  overflow: hidden;
+  width: 0;
+}
+[data-theme="dark"]
+  .transfer-progress.animated
+  .state-item
+  + .state-item.animate-line.data-v-985d6255:before {
+  animation: dash-draw-985d6255 0.67s ease-out var(--line-delay, 0s) forwards,
+    dash-color-to-light-985d6255 1s ease-out calc(var(--line-delay, 0s) + 0.67s)
+      forwards;
+}
+.transfer-progress.animated .line-animation-trigger.data-v-985d6255 {
+  animation: line-trigger-animation-985d6255 0s linear forwards;
+  height: 0;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+}
+@-webkit-keyframes line-trigger-animation-985d6255 {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes line-trigger-animation-985d6255 {
+  to {
+    opacity: 1;
+  }
+}
+.transfer-progress.tip .date.data-v-985d6255 {
+  margin-top: 0.106667rem;
+}
+.transfer-progress.detail .state-item .text.pending.data-v-985d6255 {
+  color: var(--text-color-5);
+}
+.transfer-progress.detail .state-item .text.success.data-v-985d6255 {
+  color: var(--color-green);
+}
+.transfer-progress.detail .state-item .text.fail.data-v-985d6255 {
+  color: var(--color-red);
+}
+.transfer-progress.detail .state-item .text.cancel.data-v-985d6255 {
+  color: var(--color-orange);
+}
+.transfer-progress.delisted .state-item .text.pending.data-v-985d6255 {
+  color: var(--text-color-5);
+}

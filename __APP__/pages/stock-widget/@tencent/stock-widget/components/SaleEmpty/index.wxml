@@ -1,0 +1,59 @@
+<view class="{{['_div','saleEmpty-container','data-v-13d76a3c',s,t]}}">
+  <view class="_div widget chart-title data-v-13d76a3c" wx:if="{{a}}">
+    <view class="_div title-text data-v-13d76a3c">{{b}}卖空比例</view>
+    <view class="_div sub-title data-v-13d76a3c" wx:if="{{c}}">{{d}}更新</view>
+  </view>
+  <view class="_div chart-title data-v-13d76a3c" wx:else>卖空比例</view>
+  <view class="_div chart-outer data-v-13d76a3c">
+    <f2
+      bind:__l="__l"
+      bindonInit="{{j}}"
+      bindtouchend="{{k}}"
+      bindtouchmove="{{m}}"
+      bindtouchstart="{{l}}"
+      class="data-v-13d76a3c"
+      uI="13d76a3c-0"
+      uP="{{n}}"
+      uS="{{['d']}}"
+      wx:if="{{e}}"
+    >
+      <view class="{{['_div','data-v-13d76a3c','f2-tooltip',i]}}" wx:if="{{f}}">
+        <view class="_div f2-tooltip-inner data-v-13d76a3c">
+          <view class="_div f2-tooltip-title data-v-13d76a3c">{{g}}</view>
+          <view
+            class="_div f2-tooltip-value data-v-13d76a3c"
+            wx:for="{{h}}"
+            wx:key="c"
+          >
+            <label class="_span f2-tooltip-subtitle data-v-13d76a3c"
+              >{{item.a}}</label
+            >
+            <label class="{{['_span','data-v-13d76a3c','f2-tooltip-after']}}"
+              >{{item.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </f2>
+    <view class="_div slider data-v-13d76a3c" wx:if="{{o}}">
+      <range-slider
+        bind:__l="__l"
+        bindhadInit="{{r}}"
+        bindrangeChange="{{q}}"
+        class="r data-v-13d76a3c"
+        uI="13d76a3c-1"
+        uR="rangeSliderEmpty"
+      ></range-slider>
+    </view>
+    <view class="_div bottom-bar data-v-13d76a3c">
+      <view class="_div pureIn data-v-13d76a3c">
+        <label class="_span label data-v-13d76a3c"></label>
+        <label class="_span text data-v-13d76a3c">卖空比例</label>
+      </view>
+      <view class="_div price data-v-13d76a3c">
+        <label class="_span label data-v-13d76a3c"></label>
+        <label class="_span text data-v-13d76a3c">收盘价</label>
+      </view>
+    </view>
+  </view>
+</view>

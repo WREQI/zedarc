@@ -1,0 +1,89 @@
+<view class="{{['_div','data-v-f0c78ee4',j&&'skin-black']}}" wx:if="{{a}}">
+  <view class="{{['_div','data-v-f0c78ee4','brief-block','ssbk',i]}}">
+    <view class="_div item-title-zxg data-v-f0c78ee4" wx:if="{{b}}">
+      <view class="_div detail-tips-wrapper data-v-f0c78ee4"
+        >所属板块<view
+          catchtap="{{c}}"
+          class="_div image-tip data-v-f0c78ee4"
+        ></view>
+      </view>
+    </view>
+    <view
+      bindtouchmove="{{h}}"
+      bindtouchstart="{{g}}"
+      class="{{['_div','data-v-f0c78ee4',f]}}"
+      ref="popupScroll"
+    >
+      <view
+        class="_div item-block one-column data-v-f0c78ee4"
+        wx:for="{{d}}"
+        wx:for-item="val"
+        wx:key="q"
+      >
+        <view class="_div data-v-f0c78ee4" wx:if="{{val.a}}">
+          <view
+            catchtap="{{val.e}}"
+            class="{{['_div','fold','data-v-f0c78ee4',val.d]}}"
+            wx:if="{{val.b}}"
+            >{{val.c}}</view
+          >
+          <view class="{{['_div','data-v-f0c78ee4','item-label',val.g]}}"
+            >{{val.f}}</view
+          >
+          <view class="_div item-value data-v-f0c78ee4" hidden="{{!val.l}}">
+            <view
+              class="{{['_div','data-v-f0c78ee4',val.j]}}"
+              style="{{val.k}}"
+            >
+              <view
+                class="_div stock-item-container data-v-f0c78ee4"
+                wx:for="{{val.h}}"
+                wx:for-item="vals"
+                wx:key="k"
+              >
+                <view
+                  class="_div stock-item-tag data-v-f0c78ee4"
+                  wx:if="{{vals.a}}"
+                  >{{vals.b}}</view
+                >
+                <label
+                  catchtap="{{vals.j}}"
+                  class="{{['_span','stock-item','data-v-f0c78ee4',vals.h,val.i]}}"
+                  style="{{vals.i}}"
+                >
+                  <view class="_div stock-item-left data-v-f0c78ee4">
+                    <view
+                      class="{{['_div','stock-item-name','data-v-f0c78ee4',vals.d]}}"
+                      >{{vals.c}}</view
+                    >
+                    <view
+                      class="_div stock-item-level data-v-f0c78ee4"
+                      wx:if="{{vals.e}}"
+                      >{{vals.f}}</view
+                    >
+                  </view>
+                  <label class="_span stock-item-percent data-v-f0c78ee4"
+                    >{{vals.g}}</label
+                  >
+                </label>
+              </view>
+            </view>
+          </view>
+          <view
+            class="{{['_div','data-v-f0c78ee4',val.n]}}"
+            wx:if="{{val.m}}"
+          ></view>
+        </view>
+        <view
+          class="_div layout flex-align-base data-v-f0c78ee4"
+          wx:elif="{{e}}"
+        >
+          <view class="{{['_div','data-v-f0c78ee4','item-label',val.p]}}"
+            >{{val.o}}</view
+          >
+          <view class="_div item-value data-v-f0c78ee4">暂无数据</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

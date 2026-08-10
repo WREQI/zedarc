@@ -1,0 +1,180 @@
+<view class="_div trade-content data-v-cba2456e">
+  <view class="_div stock-info data-v-cba2456e">
+    <view class="_div stock-name-row data-v-cba2456e">
+      <view class="_div stock-name data-v-cba2456e">{{a}}</view>
+      <view class="_div stock-code data-v-cba2456e">{{b}}.{{c}}</view>
+      <view
+        class="{{['_div','trading-status','data-v-cba2456e',e&&'trading-status-open']}}"
+      >
+        <view class="_div trading-status-text data-v-cba2456e">{{d}}</view>
+      </view>
+    </view>
+    <view class="_div price-info data-v-cba2456e">
+      <view class="{{['_div','current-price','data-v-cba2456e',g&&'full']}}"
+        >{{f}}</view
+      >
+      <view class="_div price-change data-v-cba2456e">
+        <view class="{{['_div','change-amount','data-v-cba2456e',i&&'full']}}"
+          >{{h}}</view
+        >
+        <view class="{{['_div','change-percent','data-v-cba2456e',k&&'full']}}"
+          >{{j}}</view
+        >
+      </view>
+      <view class="_div price-limits data-v-cba2456e">
+        <view class="_div limit-up data-v-cba2456e">
+          <view class="_div label data-v-cba2456e">涨停</view>
+          <view bindtap="{{m}}" class="_div value clickable data-v-cba2456e"
+            >{{l}}</view
+          >
+        </view>
+        <view class="_div limit-down data-v-cba2456e">
+          <view class="_div label data-v-cba2456e">跌停</view>
+          <view bindtap="{{o}}" class="_div value clickable data-v-cba2456e"
+            >{{n}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div trade-form data-v-cba2456e">
+    <view
+      bindtap="{{q}}"
+      class="_div dialog-tradetype-mask data-v-cba2456e"
+      wx:if="{{p}}"
+    ></view>
+    <view class="_div input-row data-v-cba2456e">
+      <view bindtap="{{x}}" class="_div label-with-dropdown data-v-cba2456e">
+        <label class="_span label data-v-cba2456e">{{r}}</label>
+        <view class="_div label-icon data-v-cba2456e"></view>
+        <view
+          catchtap="{{w}}"
+          class="_div dialog-tradetype data-v-cba2456e"
+          wx:if="{{s}}"
+        >
+          <label
+            catchtap="{{item.d}}"
+            class="{{['_span','dialog-tradetype-item','data-v-cba2456e',item.c&&'active',v&&'lite-mode']}}"
+            wx:for="{{t}}"
+            wx:key="b"
+            >{{item.a}}</label
+          >
+        </view>
+      </view>
+      <view class="_div input-controls data-v-cba2456e">
+        <view bindtap="{{y}}" class="_div control-btn minus data-v-cba2456e">
+          <view class="_div control-btn-img data-v-cba2456e"></view>
+        </view>
+        <view
+          class="{{['_div','tips-bubble','data-v-cba2456e',B&&'tips-bubble-error']}}"
+          wx:if="{{z}}"
+        >
+          <view class="_div bubble-content data-v-cba2456e">
+            <view class="_div bubble-content-text data-v-cba2456e">{{A}}</view>
+          </view>
+          <view class="_div bubble-arrow data-v-cba2456e"></view>
+        </view>
+        <editable-input
+          bind:__l="__l"
+          bindblur="{{F}}"
+          bindfocus="{{E}}"
+          bindinput="{{D}}"
+          class="input-value r data-v-cba2456e"
+          uI="cba2456e-0"
+          uP="{{G}}"
+          uR="priceInputRef"
+          wx:if="{{G}}"
+        ></editable-input>
+        <view bindtap="{{H}}" class="_div control-btn plus data-v-cba2456e">
+          <view class="_div control-btn-img data-v-cba2456e"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div input-row data-v-cba2456e">
+      <label class="_span label data-v-cba2456e">数 量</label>
+      <view class="_div input-controls data-v-cba2456e">
+        <view bindtap="{{I}}" class="_div control-btn minus data-v-cba2456e">
+          <view class="_div control-btn-img data-v-cba2456e"></view>
+        </view>
+        <view class="_div tips-bubble data-v-cba2456e" wx:if="{{J}}">
+          <view class="_div bubble-content data-v-cba2456e">
+            <view class="_div bubble-content-text data-v-cba2456e">{{K}}</view>
+          </view>
+          <view class="_div bubble-arrow data-v-cba2456e"></view>
+        </view>
+        <editable-input
+          bind:__l="__l"
+          bindblur="{{O}}"
+          bindfocus="{{N}}"
+          bindinput="{{M}}"
+          class="input-value r data-v-cba2456e"
+          uI="cba2456e-1"
+          uP="{{P}}"
+          uR="quantityInputRef"
+          wx:if="{{P}}"
+        ></editable-input>
+        <view bindtap="{{Q}}" class="_div control-btn plus data-v-cba2456e">
+          <view class="_div control-btn-img data-v-cba2456e"></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div quick-select data-v-cba2456e">
+      <view class="_div max-buy data-v-cba2456e"
+        >最大可买<label
+          class="{{['_span','highlight','data-v-cba2456e',S&&'lite-mode']}}"
+          >{{R}}股</label
+        >
+      </view>
+      <view class="_div position-buttons data-v-cba2456e">
+        <view bindtap="{{T}}" class="_div position-btn data-v-cba2456e"
+          >全仓</view
+        >
+        <view bindtap="{{U}}" class="_div position-btn data-v-cba2456e"
+          >半仓</view
+        >
+        <view bindtap="{{V}}" class="_div position-btn data-v-cba2456e"
+          >1/4</view
+        >
+      </view>
+    </view>
+    <view class="_div order-amount data-v-cba2456e">
+      <view class="_div label data-v-cba2456e">订单金额</view>
+      <view class="_div available-funds data-v-cba2456e"
+        >（可用资金 {{W}} 元）</view
+      >
+      <view class="{{['_div','total-amount','data-v-cba2456e',Y&&'small']}}"
+        >{{X}} 元</view
+      >
+    </view>
+    <view class="_div btn-wrapper data-v-cba2456e" wx:if="{{Z}}">
+      <view bindtap="{{aa}}" class="_div buy-button data-v-cba2456e"
+        >模拟买入</view
+      >
+      <view class="_div tip-bubble data-v-cba2456e" wx:if="{{ab}}">
+        <view class="_div bubble-content data-v-cba2456e">
+          <view class="_div bubble-content-text data-v-cba2456e"
+            >送你1,000,000元练手金！</view
+          >
+          <image
+            bindtap="{{ac}}"
+            class="_img bubble-close data-v-cba2456e"
+            src="https://st.gtimg.com/design/48d8c91402ab709e6a934dda52b78777.png"
+          ></image>
+        </view>
+        <view class="_div bubble-arrow data-v-cba2456e"></view>
+      </view>
+    </view>
+  </view>
+  <number-keyboard
+    bind:__l="__l"
+    bindclear="{{af}}"
+    bindclose="{{ah}}"
+    bindconfirm="{{ag}}"
+    binddelete="{{ae}}"
+    bindinput="{{ad}}"
+    class="data-v-cba2456e"
+    uI="cba2456e-2"
+    uP="{{ai}}"
+    wx:if="{{ai}}"
+  ></number-keyboard>
+</view>

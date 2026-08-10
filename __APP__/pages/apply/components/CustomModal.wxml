@@ -1,0 +1,7 @@
+<view catchtap="{{a}}" class="modal-container data-v-597c09c6">
+  <view class="modal-content data-v-597c09c6">
+    <slot name="title"></slot>
+    <slot name="content"></slot>
+    <slot name="btn-group"></slot>
+  </view>
+</view>

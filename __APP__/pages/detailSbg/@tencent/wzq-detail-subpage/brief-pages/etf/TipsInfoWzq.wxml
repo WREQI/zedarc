@@ -1,0 +1,82 @@
+<view class="_div data-v-681aa6ac">
+  <st-modal
+    bind:__l="__l"
+    bindconfirm="{{f}}"
+    class="data-v-681aa6ac"
+    uI="681aa6ac-0"
+    uP="{{g}}"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div modal-dialog-box data-v-681aa6ac" hidden="{{!b}}">
+      <view class="_div modal-content data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">T+0</view
+        >当天买入后允许当天卖出，没有次数限制。部分ETF（如跨境ETF）支持T+0交易，对比
+        A 股 T+1 交易制度：当天买入后次日才能卖出，交易更自由。</view
+      >
+      <view class="_div modal-content mt-32 data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">运作费率</view
+        >运作费用包括基金管理费、托管费、销售服务费，从基金资产中每日计提，每个工作日公告的基金净值已扣除相应费用，无需投资者在每笔交易中另行支付。运作费用详情信息请参考基金招募说明书。</view
+      >
+    </view>
+    <view class="_div modal-dialog-box data-v-681aa6ac" hidden="{{!c}}">
+      <view class="_div modal-content data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">收益率</view
+        >基金收益率是反映投资者在该基金上的投资回报，通过该基金收益率和沪深300进行对比，可以了解该基金的收益表现。</view
+      >
+      <view class="_div modal-content mt-32 data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">最大回撤率</view
+        >最大回撤率是用来衡量基金风险的指标，帮助我们了解可能面临的最大亏损。最大回撤率越小，表明基金的风险控制能力越强，投资者可能遭受的损失也越小。</view
+      >
+      <view class="_div small-tip data-v-681aa6ac"
+        >举个例子：近一年
+        ，基金A涨幅为+25%，沪深300涨幅为-12%，该基金业绩表现比沪深300有超额收益37%。该基金同期最大回撤为13%，投资者需要能够承受最大亏损预期为13%。</view
+      >
+    </view>
+    <view class="_div modal-dialog-box data-v-681aa6ac" hidden="{{!d}}">
+      <view class="_div modal-content data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">机构投资者</view
+        >更倾向于配置宽基ETF，因为它们符合机构投资者对流动性和规模的要求。</view
+      >
+      <view class="_div modal-content mt-32 light-divider data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">个人投资者</view
+        >更偏好行业主题ETF，因为它们弹性更大。个人投资者的增加有助于提升ETF的流动性，可以增加交易活跃度，从而可能对股价产生正面影响。</view
+      >
+      <view class="_div small-tip data-v-681aa6ac"
+        >ETF持有人结构的变化通过影响市场流动性和投资者行为，间接对股价产生影响。</view
+      >
+    </view>
+    <view class="_div modal-dialog-box data-v-681aa6ac" hidden="{{!e}}">
+      <view class="_div modal-content light-divider data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">ETF的申购赎回机制</view
+        >当ETF的市场价高于其净值时，套利者可申购ETF在场内卖出获利。相反，当ETF的市场价低于其净值时，套利者可场内购买ETF并赎回，在场内卖出获利。</view
+      >
+      <view class="_div small-tip data-v-681aa6ac"
+        >一般情况下，跨境ETF因基金公司外汇额度限制而限购，限购期往往会有较大的溢折率产生。我们可以通过查看ETF申购、赎回状态、限购金额来综合分析。</view
+      >
+      <view class="_div modal-content mt-32 light-divider data-v-681aa6ac">
+        <view class="_div modal-title data-v-681aa6ac">ETF费用问题</view>
+        <view class="_div modal-sub-title data-v-681aa6ac">
+          <label class="_span data-v-681aa6ac">新发认购费：</label
+          >仅在ETF新发上市有认购时收取，上市后的交易过程不收取该费用。</view
+        >
+        <view class="_div modal-sub-title data-v-681aa6ac">
+          <label class="_span data-v-681aa6ac">管理费：</label
+          >用于基金管理人管理和运营，一般为0.5%左右，对比场外基金约便宜一半。</view
+        >
+        <view class="_div modal-sub-title data-v-681aa6ac">
+          <label class="_span data-v-681aa6ac">托管费：</label
+          >ETF获得托管机构提供服务支付的费用。</view
+        >
+        <view class="_div modal-sub-title data-v-681aa6ac">
+          <label class="_span data-v-681aa6ac">销售服务费：</label
+          >基金公司获得销售机构服务支持的费用。</view
+        >
+      </view>
+      <view class="_div small-tip data-v-681aa6ac"
+        >以上费用直接从基金资产中扣除，无需在交易中支付。ETF交易的佣金和股票交易一致，对比股票ETF免印花税
+        (万分之5)，可节约交易成本。</view
+      >
+    </view>
+  </st-modal>
+</view>

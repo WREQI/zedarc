@@ -1,0 +1,20 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hot-topic-nav-bar": "../hotTopicPages/components/HotTopicNavBar",
+    "teach-pop": "../components/TeachPop",
+    "dividend-more-block": "./components/DividendMoreBlock",
+    "dividend-compare-card": "./components/DividendCompareCard",
+    "footer-bar": "../hotTopicPages/components/FooterBar",
+    "half-screen-ai-entry": "../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "wzq-info-modal": "../node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "st-mini-mins": "../../../../asyncCom/@tencent/st-mini-mins/src/index",
+    "trust-footer": "../../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index",
+    "st-status": "../../../../../node-modules/@tencent/st-status/mp/index"
+  },
+  "componentPlaceholder": {
+    "half-screen-ai-entry": "view",
+    "st-mini-mins": "view",
+    "trust-footer": "view"
+  }
+}

@@ -1,0 +1,39 @@
+<action-sheet
+  bind:__l="__l"
+  bindmaskClick="{{j}}"
+  class="data-v-abd1ba32"
+  uI="abd1ba32-0"
+  uP="{{k}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div invest-cond-period data-v-abd1ba32">
+    <picker-view
+      immediateChange
+      bindchange="{{e}}"
+      class="date-picker-view data-v-abd1ba32"
+      indicatorClass="indicator-class"
+      indicatorStyle="{{c}}"
+      maskClass="mask-class"
+      value="{{d}}"
+    >
+      <picker-view-column class="data-v-abd1ba32" wx:for="{{b}}" wx:key="b">
+        <view
+          class="{{['_div','item','data-v-abd1ba32',colValue.c]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="colValue"
+          wx:key="b"
+          >{{colValue.a}}</view
+        >
+      </picker-view-column>
+    </picker-view>
+    <view class="_div button-wrap flex flex-v data-v-abd1ba32">
+      <button bindtap="{{g}}" class="cancel-btn flex-1 data-v-abd1ba32">
+        {{f}}
+      </button>
+      <button bindtap="{{i}}" class="confirm-btn flex-1 data-v-abd1ba32">
+        {{h}}
+      </button>
+    </view>
+  </view>
+</action-sheet>

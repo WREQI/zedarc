@@ -1,0 +1,137 @@
+@import "/app.wxss";
+@-webkit-keyframes skeleton-loading-9b0b5dd8 {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+@keyframes skeleton-loading-9b0b5dd8 {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+.trading-permission-panel.data-v-9b0b5dd8 {
+  background: var(--fill-2);
+  border: 0.013333rem solid var(--fill-2);
+  border-radius: 0.266667rem 0.266667rem 0 0;
+  box-shadow: 0-0.266667rem 0.533333rem -0.266667rem rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 0.413333rem 0 0.52rem;
+  position: relative;
+  z-index: 10;
+}
+[data-theme="dark"] .trading-permission-panel.data-v-9b0b5dd8 {
+  box-shadow: 0-0.266667rem 0.533333rem -0.266667rem rgba(0, 0, 0, 0.5);
+}
+.trading-permission-panel__header.data-v-9b0b5dd8 {
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.426667rem;
+  padding: 0 0.32rem;
+}
+.trading-permission-panel__title.data-v-9b0b5dd8 {
+  color: var(--text-color-1);
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+}
+.trading-permission-panel__view-all.data-v-9b0b5dd8 {
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.trading-permission-panel__view-all-text.data-v-9b0b5dd8 {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+}
+.trading-permission-panel__view-all-icon.data-v-9b0b5dd8 {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+}
+.trading-permission-panel__grid.data-v-9b0b5dd8 {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.trading-permission-panel__item.data-v-9b0b5dd8 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.533333rem;
+  width: 25%;
+}
+.trading-permission-panel__item.data-v-9b0b5dd8:nth-child(n + 5) {
+  margin-bottom: 0;
+}
+.trading-permission-panel__icon.data-v-9b0b5dd8 {
+  border: 0.026667rem solid rgba(229, 167, 60, 0.6);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: block;
+  height: 0.96rem;
+  margin-bottom: 0.16rem;
+  position: relative;
+  width: 0.96rem;
+}
+.trading-permission-panel__icon.data-v-9b0b5dd8:before {
+  background-image: var(--icon-url);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.533333rem 0.533333rem;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.trading-permission-panel__icon--lock.data-v-9b0b5dd8 {
+  border-color: rgba(229, 167, 60, 0.3);
+}
+.trading-permission-panel__icon--lock.data-v-9b0b5dd8:before {
+  opacity: 0.3;
+}
+.trading-permission-panel__icon
+  .trading-permission-panel__badge.data-v-9b0b5dd8 {
+  background: url(https://st.gtimg.com/design/b0e1811107f8c379bd3a6c054e72714c.png)
+    no-repeat;
+  background-color: var(--fill-2);
+  background-position: 50%;
+  background-size: 0.373333rem 0.373333rem;
+  bottom: 0;
+  height: 0.426667rem;
+  left: 0.666667rem;
+  position: absolute;
+  width: 0.373333rem;
+}
+.trading-permission-panel__label.data-v-9b0b5dd8 {
+  color: var(--text-color-1, #262e40);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  text-align: center;
+}
+.trading-permission-panel__label.text-small.data-v-9b0b5dd8 {
+  font-size: 0.32rem;
+}

@@ -1,0 +1,40 @@
+.chart-container.data-v-49f5f345 {
+  background-color: #fff;
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  bottom: 0;
+  left: 0;
+  min-height: calc(9.84rem + env(safe-area-inset-bottom));
+  position: fixed;
+  right: 0;
+  z-index: 99999;
+}
+.chart-container.need-animate.data-v-49f5f345 {
+  animation: comein-49f5f345 0.3s ease-in-out;
+}
+@-webkit-keyframes comein-49f5f345 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes comein-49f5f345 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.chart-wrapper.data-v-49f5f345 {
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  min-height: inherit;
+  overflow: hidden;
+  position: relative;
+}
+.chart-wrapper-skeleton.data-v-49f5f345 {
+  min-height: calc(9.84rem + env(safe-area-inset-bottom));
+}

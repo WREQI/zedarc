@@ -1,0 +1,90 @@
+.ds-search-bar.data-v-7659c7b3 {
+  --color-red: #e63535;
+  background-color: initial;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+}
+.ds-search-bar .input-wrap.data-v-7659c7b3,
+.ds-search-bar.data-v-7659c7b3 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.ds-search-bar .input-wrap.data-v-7659c7b3 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.10666666666666667rem;
+  flex: 1;
+  height: 0.8533333333333334rem;
+  overflow: hidden;
+}
+.ds-search-bar:not(.ds-search-bar--fake) .input-wrap.data-v-7659c7b3 {
+  background-color: var(--fill-background);
+  height: 0.8rem;
+}
+.ds-search-bar:not(.ds-search-bar--fake) .cancel-btn.data-v-7659c7b3 {
+  margin-left: 0.4266666666666667rem;
+}
+.ds-search-bar .search-icon-img.data-v-7659c7b3 {
+  flex-shrink: 0;
+  height: 0.4266666666666667rem;
+  margin-left: 0.21333333333333335rem;
+  width: 0.4266666666666667rem;
+}
+.ds-search-bar .input.data-v-7659c7b3 {
+  appearance: none;
+  background: transparent;
+  border: none;
+  caret-color: var(--color-red);
+  color: var(--color-heavygray);
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  height: 100%;
+  margin: 0;
+  min-width: 0;
+  outline: none;
+  padding: 0 0.13333333333333333rem;
+}
+.ds-search-bar .input.data-v-7659c7b3::-webkit-search-cancel-button {
+  display: none;
+}
+.ds-search-bar .input.data-v-7659c7b3::-webkit-input-placeholder {
+  color: var(--color-lightgray);
+  font-size: 0.37333333333333335rem;
+}
+.ds-search-bar .input.data-v-7659c7b3::placeholder {
+  color: var(--color-lightgray);
+  font-size: 0.37333333333333335rem;
+}
+.ds-search-bar .input--fake.data-v-7659c7b3 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  pointer-events: none;
+  user-select: none;
+}
+.ds-search-bar .placeholderStyle.data-v-7659c7b3 {
+  color: var(--color-lightgray);
+}
+.ds-search-bar .clear-btn.data-v-7659c7b3 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 0.16rem 0.21333333333333335rem;
+}
+.ds-search-bar .clear-icon.data-v-7659c7b3 {
+  height: 0.4rem;
+  width: 0.4rem;
+}
+.ds-search-bar .cancel-btn.data-v-7659c7b3 {
+  color: var(--color-red);
+  flex: none;
+  font-size: 0.37333333333333335rem;
+  margin-left: 0.32rem;
+  white-space: nowrap;
+}

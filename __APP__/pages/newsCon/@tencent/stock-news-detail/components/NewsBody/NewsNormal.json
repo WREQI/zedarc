@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "news-comp-event-source": "./components/NewsCompEventSource/index",
+    "news-content": "./components/NewsCompContent/index",
+    "news-comp-related-stock": "./components/NewsCompRelatedStock",
+    "speech": "./components/Speech/index",
+    "a-i-summary": "./components/AISummary/AISummary",
+    "a-i-reading": "./components/AISummary/AIReading",
+    "information-detail-apply": "../../../../../asyncCom/@tencent/st-act-premotes/src/components/delivery/InformationDetailApply/index"
+  },
+  "componentPlaceholder": { "information-detail-apply": "view" }
+}

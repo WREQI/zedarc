@@ -1,0 +1,76 @@
+<view
+  class="{{['data-v-2c6faf13',E&&'fixed',F&&'transparent','step-buttons-container']}}"
+  wx:if="{{a}}"
+>
+  <slot></slot>
+  <view
+    class="{{['data-v-2c6faf13','buttons-wrap',p&&'center',q&&'transparent']}}"
+    wx:if="{{b}}"
+  >
+    <button
+      catchtap="{{e}}"
+      class="prev-button data-v-2c6faf13"
+      id="apply-prev-btn"
+      wx:if="{{c}}"
+    >
+      {{d}}
+    </button>
+    <view class="next-button-wrap data-v-2c6faf13" wx:if="{{f}}">
+      <mp-launcher
+        bind:__l="__l"
+        binderror="{{n}}"
+        bindlaunch="{{m}}"
+        class="data-v-2c6faf13"
+        uI="2c6faf13-0"
+        uP="{{o}}"
+        uS="{{['d']}}"
+        wx:if="{{o}}"
+      >
+        <button
+          catchtap="{{l}}"
+          class="{{['next-button','data-v-2c6faf13',i]}}"
+          disabled="{{j}}"
+          id="apply-next-btn"
+          loading="{{k}}"
+          type="primary"
+        >
+          <label class="safe-icon data-v-2c6faf13" wx:if="{{g}}"></label>{{h}}
+        </button>
+      </mp-launcher>
+    </view>
+  </view>
+  <view
+    class="{{['data-v-2c6faf13','buttons-wrap','pure-mode',C&&'center',D&&'transparent']}}"
+    wx:else
+  >
+    <view
+      catchtap="{{s}}"
+      class="prev-button-pure ^prev-button-pure data-v-2c6faf13"
+      id="apply-prev-btn"
+      wx:if="{{r}}"
+      >返回上一步</view
+    >
+    <view class="next-button-pure-wrap data-v-2c6faf13" wx:if="{{t}}">
+      <mp-launcher
+        bind:__l="__l"
+        binderror="{{A}}"
+        bindlaunch="{{z}}"
+        class="data-v-2c6faf13"
+        uI="2c6faf13-1"
+        uP="{{B}}"
+        uS="{{['d']}}"
+        wx:if="{{B}}"
+      >
+        <view
+          catchtap="{{y}}"
+          class="next-button-pure data-v-2c6faf13"
+          disabled="{{w}}"
+          id="apply-next-btn"
+          loading="{{x}}"
+          type="primary"
+          >{{v}}</view
+        >
+      </mp-launcher>
+    </view>
+  </view>
+</view>

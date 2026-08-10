@@ -1,0 +1,40 @@
+@import "/app.wxss";
+.container.data-v-79cf935f {
+  padding: 0.426667rem 0.32rem;
+}
+.container .title.data-v-79cf935f {
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+}
+.container .content.data-v-79cf935f {
+  font-size: 0.426667rem;
+  line-height: 0.64rem;
+  margin-top: 0.746667rem;
+}
+.button-container.data-v-79cf935f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.64rem;
+}
+.button-container .cancel-button.data-v-79cf935f,
+.button-container .confirm-button.data-v-79cf935f {
+  -webkit-box-flex: 1;
+  border: 0.026667rem solid var(--color-primary-1);
+  border-radius: 0.106667rem;
+  flex: 1;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 1.12rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.button-container .cancel-button.data-v-79cf935f {
+  color: var(--color-primary-1);
+}
+.button-container .confirm-button.data-v-79cf935f {
+  background-color: var(--color-primary-1);
+  color: #fff;
+  margin-left: 0.32rem;
+}

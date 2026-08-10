@@ -1,0 +1,105 @@
+<label
+  catchtap="{{w}}"
+  class="{{['_span','data-v-7acbd3a7',x]}}"
+  ref="showContent"
+  style="{{y}}"
+>
+  <view class="_div mod-real-content data-v-7acbd3a7">
+    <slot name="start"></slot>
+    <block wx:for="{{a}}" wx:for-item="pItem">
+      <block wx:for="{{pItem.a}}" wx:for-item="iContent">
+        <label
+          catchtap="{{iContent.d}}"
+          class="{{['_span','link','data-v-7acbd3a7',iContent.e]}}"
+          wx:if="{{iContent.a}}"
+        >
+          <view
+            class="_i sq-icon-gegu data-v-7acbd3a7"
+            wx:if="{{iContent.b}}"
+          ></view
+          >{{iContent.c}}</label
+        >
+        <label
+          class="{{['_span','data-v-7acbd3a7',iContent.g]}}"
+          data-name="{{iContent.h}}"
+          wx:elif="{{iContent.f}}"
+        ></label>
+        <label
+          catchtap="{{iContent.l}}"
+          class="{{['_span','link','data-v-7acbd3a7',iContent.k]}}"
+          wx:elif="{{iContent.i}}"
+        >
+          <view class="_i sq-icon-huati data-v-7acbd3a7"></view
+          >{{iContent.j}}</label
+        >
+        <label
+          catchtap="{{iContent.p}}"
+          class="{{['_span','link','data-v-7acbd3a7',iContent.o]}}"
+          wx:elif="{{iContent.m}}"
+        >
+          <view class="_i sq-icon-xuangu data-v-7acbd3a7"></view
+          >{{iContent.n}}</label
+        >
+        <label
+          catchtap="{{iContent.t}}"
+          class="{{['_span','link','data-v-7acbd3a7',iContent.s]}}"
+          wx:elif="{{iContent.q}}"
+        >
+          <view class="_i sq-icon-at data-v-7acbd3a7"></view
+          >{{iContent.r}}</label
+        >
+        <label
+          catchtap="{{iContent.y}}"
+          class="{{['_span','data-v-7acbd3a7',iContent.x]}}"
+          wx:elif="{{iContent.v}}"
+        >
+          <view class="_i sq-icon-zhibo data-v-7acbd3a7"></view
+          >{{iContent.w}}</label
+        >
+        <item-cmp
+          bind:__l="__l"
+          bindtapHyper="{{iContent.A}}"
+          class="link data-v-7acbd3a7"
+          uI="{{iContent.B}}"
+          uP="{{iContent.C}}"
+          wx:elif="{{iContent.z}}"
+        ></item-cmp>
+        <view class="data-v-7acbd3a7" wx:elif="{{iContent.D}}"></view>
+        <label
+          class="{{['_span','data-v-7acbd3a7',iContent.G]}}"
+          wx:elif="{{iContent.E}}"
+          >{{iContent.F}}</label
+        >
+      </block>
+    </block>
+  </view>
+  <show-more
+    bind:__l="__l"
+    bindmounted="{{d}}"
+    bindtoggleShow="{{e}}"
+    class="r data-v-7acbd3a7"
+    uI="7acbd3a7-1"
+    uP="{{f}}"
+    uR="showMore"
+    wx:if="{{b}}"
+  ></show-more>
+  <view class="{{['_div','data-v-7acbd3a7','show-more',n,o]}}" wx:if="{{g}}">
+    <view class="_i shadow-box data-v-7acbd3a7" wx:if="{{h}}"> </view>
+    <label catchtap="{{k}}" class="_span text data-v-7acbd3a7" wx:if="{{i}}">
+      <label class="_span dian data-v-7acbd3a7">...</label>
+      <label class="_span fold-text data-v-7acbd3a7">{{j}}</label>
+    </label>
+    <label catchtap="{{m}}" class="_span text data-v-7acbd3a7" wx:else>
+      <label class="_span data-v-7acbd3a7">{{l}}</label>
+    </label>
+  </view>
+  <label
+    catchtap="{{v}}"
+    class="{{['_span','data-v-7acbd3a7',r]}}"
+    data-images="{{s}}"
+    data-index="{{0}}"
+    data-urls="{{t}}"
+    wx:if="{{p}}"
+    >{{q}}</label
+  >
+</label>

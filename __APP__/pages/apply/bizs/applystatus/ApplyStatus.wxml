@@ -1,0 +1,126 @@
+<view
+  class="{{['data-v-f819dda9','apply-status','bg-color',G&&'with-nav']}}"
+  style="{{'height:'+H}}"
+>
+  <digital-human
+    bind:__l="__l"
+    class="r data-v-f819dda9"
+    uI="f819dda9-0"
+    uP="{{c}}"
+    uR="digitalHumanRef"
+    wx:if="{{a}}"
+  ></digital-human>
+  <view class="{{[A,'content-container','flex-column','data-v-f819dda9']}}">
+    <common-bulletin-bar
+      bind:__l="__l"
+      class="data-v-f819dda9"
+      uI="f819dda9-1"
+      uP="{{e}}"
+      wx:if="{{d}}"
+    ></common-bulletin-bar>
+    <progress-bar-wrapper
+      bind:__l="__l"
+      class="data-v-f819dda9"
+      uI="f819dda9-2"
+    ></progress-bar-wrapper>
+    <view class="scroll-area data-v-f819dda9">
+      <view
+        class="{{['mini-height','flex-column','data-v-f819dda9',p&&'mini-height-xcx',q&&'no-multiple-entry',r&&'no-opertips',s&&'all-bottom-show']}}"
+      >
+        <view class="apply-status-card flex-column data-v-f819dda9">
+          <visit-status-item
+            bind:__l="__l"
+            class="data-v-f819dda9"
+            uI="f819dda9-3"
+          ></visit-status-item>
+          <data-status-item
+            bind:__l="__l"
+            bindonRecoverClick="{{f}}"
+            bindupdateVideoId="{{g}}"
+            class="data-v-f819dda9"
+            uI="f819dda9-4"
+          ></data-status-item>
+          <bankcard-status-item
+            bind:__l="__l"
+            bindonConfirm="{{h}}"
+            bindupdateVideoId="{{i}}"
+            class="data-v-f819dda9"
+            uI="f819dda9-5"
+          ></bankcard-status-item>
+          <account-status-item
+            bind:__l="__l"
+            bindonRecoverClick="{{j}}"
+            class="data-v-f819dda9"
+            uI="f819dda9-6"
+          ></account-status-item>
+        </view>
+        <subscribe-official-account
+          bind:__l="__l"
+          bindonSubscribeClick="{{l}}"
+          class="data-v-f819dda9"
+          uI="f819dda9-7"
+          wx:if="{{k}}"
+        ></subscribe-official-account>
+        <view class="button-container data-v-f819dda9" wx:if="{{m}}">
+          <button
+            borderRadius
+            bindtap="{{o}}"
+            class="data-v-f819dda9"
+            type="primary"
+          >
+            {{n}}
+          </button>
+        </view>
+      </view>
+      <view class="bottom-container flex-column data-v-f819dda9">
+        <view
+          class="align-c fs-24 text-color-2 opertip-txt data-v-f819dda9"
+          wx:if="{{t}}"
+          >{{v}}</view
+        >
+        <block wx:if="{{w}}">
+          <multi-broker-entry
+            bind:__l="__l"
+            class="data-v-f819dda9"
+            uI="f819dda9-8"
+            uP="{{x}}"
+            wx:if="{{x}}"
+          ></multi-broker-entry>
+        </block>
+      </view>
+    </view>
+    <view class="bottom-text data-v-f819dda9" wx:if="{{y}}">
+      <rich-text class="data-v-f819dda9" nodes="{{z}}"></rich-text>
+    </view>
+    <foot-print
+      bind:__l="__l"
+      class="foot data-v-f819dda9"
+      uI="f819dda9-9"
+      wx:else
+    ></foot-print>
+  </view>
+  <subscribe-dialog
+    bind:__l="__l"
+    bindclose="{{B}}"
+    class="data-v-f819dda9"
+    uI="f819dda9-10"
+    uP="{{C}}"
+    wx:if="{{C}}"
+  ></subscribe-dialog>
+  <subscribe-popup
+    bind:__l="__l"
+    bindinput="{{D}}"
+    class="data-v-f819dda9"
+    uI="f819dda9-11"
+    uP="{{E}}"
+    wx:if="{{E}}"
+  ></subscribe-popup>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-f819dda9"
+    id="mp-dialog"
+    uI="f819dda9-12"
+    uP="{{F}}"
+    wx:if="{{F}}"
+  ></mp-dialog>
+</view>

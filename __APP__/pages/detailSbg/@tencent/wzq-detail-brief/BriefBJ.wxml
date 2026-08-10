@@ -1,0 +1,134 @@
+<view
+  class="{{['_div','mod-brief-bj','data-v-abaaf907',s&&'skin-black',t&&'brief-bj-lite']}}"
+>
+  <view class="_div brife-bj-content data-v-abaaf907" wx:if="{{a}}">
+    <view class="_div brief-block data-v-abaaf907" wx:if="{{b}}">
+      <view class="_div item-wrapper data-v-abaaf907" wx:for="{{c}}" wx:key="j">
+        <block wx:if="{{item.a}}">
+          <view class="_div item-wrapper-p data-v-abaaf907">{{item.b}}</view>
+          <view class="_div item-wrapper-longtext data-v-abaaf907">
+            <view
+              bindtap="{{item.e}}"
+              class="{{['_div','item-wrapper-val','black','data-v-abaaf907',item.d&&'show-fiveLine']}}"
+              >{{item.c}}</view
+            >
+            <view
+              bindtap="{{item.i}}"
+              class="_div tip-text data-v-abaaf907"
+              wx:if="{{item.f}}"
+            >
+              <label class="_span tip-text-left data-v-abaaf907"
+                >{{item.g}}</label
+              >
+              <view class="{{['data-v-abaaf907','arrow',item.h]}}"></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="_div separate-line data-v-abaaf907" wx:if="{{d}}"></view>
+    <view class="_div brief-block data-v-abaaf907" wx:if="{{e}}">
+      <view catchtap="{{j}}" class="_div title-wrapper data-v-abaaf907">
+        <view class="_div title-wrapper-left data-v-abaaf907">
+          <view class="_div data-v-abaaf907">股本结构</view>
+          <view
+            class="_div title-wrapper-left-text data-v-abaaf907"
+            wx:if="{{f}}"
+            >（{{g}}）</view
+          >
+        </view>
+        <view class="_div title-wrapper-right data-v-abaaf907">
+          <view
+            class="_div title-wrapper-right-text data-v-abaaf907"
+            wx:if="{{h}}"
+            >{{i}}</view
+          >
+          <view class="_div arrow-zxg data-v-abaaf907"></view>
+        </view>
+      </view>
+      <view
+        class="_div item-wrapper item-wrapper-between data-v-abaaf907"
+        wx:for="{{k}}"
+        wx:key="c"
+      >
+        <view class="_div item-wrapper-p data-v-abaaf907">{{item.a}}</view>
+        <view class="_div item-wrapper-val-right black data-v-abaaf907"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+    <view class="_div separate-line data-v-abaaf907" wx:if="{{l}}"></view>
+    <view class="_div brief-block data-v-abaaf907" wx:if="{{m}}">
+      <view class="_div title-wrapper data-v-abaaf907">分红配送</view>
+      <view
+        class="_div list-item list-item-color list-item-business data-v-abaaf907"
+      >
+        <view
+          class="_div list-item-div list-item-business-div div-title data-v-abaaf907"
+          >公告日期</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-abaaf907"
+          >方案</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-abaaf907"
+          >除权派息日</view
+        >
+      </view>
+      <view
+        class="_div list-item list-item-business black data-v-abaaf907"
+        wx:for="{{n}}"
+        wx:key="p"
+      >
+        <view class="_div list-item-div list-item-business-div data-v-abaaf907"
+          >{{item.a}}</view
+        >
+        <view class="_div list-item-div list-item-business-div data-v-abaaf907">
+          <view class="_div data-v-abaaf907"
+            >10<label class="_span data-v-abaaf907" wx:if="{{item.b}}"
+              >派{{item.c}}～{{item.d}}</label
+            >
+            <label class="_span data-v-abaaf907" wx:elif="{{item.e}}"
+              >派{{item.f}}</label
+            >
+            <label class="_span data-v-abaaf907" wx:elif="{{item.g}}"
+              >派{{item.h}}</label
+            >
+            <label class="_span data-v-abaaf907" wx:if="{{item.i}}"
+              >送{{item.j}}</label
+            >
+            <label class="_span data-v-abaaf907" wx:if="{{item.k}}"
+              >转{{item.l}}</label
+            >
+            <label class="_span data-v-abaaf907" wx:if="{{item.m}}"
+              >赠{{item.n}}</label
+            >
+          </view>
+        </view>
+        <view class="_div list-item-div list-item-business-div data-v-abaaf907"
+          >{{item.o}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-abaaf907" wx:elif="{{o}}">
+    <no-data
+      bind:__l="__l"
+      class="data-v-abaaf907"
+      uI="abaaf907-0"
+      uS="{{['d']}}"
+    >
+      <slot wx:if="{{$slots.d}}"></slot>
+      <block wx:else>暂无简况数据</block>
+    </no-data>
+  </view>
+  <view class="_div error-status data-v-abaaf907" wx:if="{{p}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{q}}"
+      class="data-v-abaaf907"
+      uI="abaaf907-1"
+      uP="{{r}}"
+      wx:if="{{r}}"
+    ></st-status>
+  </view>
+</view>

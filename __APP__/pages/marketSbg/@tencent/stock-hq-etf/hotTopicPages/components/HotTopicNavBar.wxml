@@ -1,0 +1,30 @@
+<navigation
+  bind:__l="__l"
+  bindback="{{c}}"
+  class="r data-v-ce817551"
+  uI="ce817551-0"
+  uP="{{d}}"
+  uR="appNavigationRef"
+  wx:if="{{a}}"
+></navigation>
+<view class="_div hot-topic-nav-bar data-v-ce817551" wx:elif="{{e}}">
+  <view
+    class="_div hot-topic-nav-bar__title-layer data-v-ce817551"
+    style="{{i}}"
+  >
+    <view
+      class="_div hot-topic-nav-bar__safe-area data-v-ce817551"
+      style="{{f}}"
+    ></view>
+    <view class="_div hot-topic-nav-bar__content data-v-ce817551" style="{{h}}">
+      <view class="_div hot-topic-nav-bar__title data-v-ce817551">{{g}}</view>
+    </view>
+  </view>
+  <image
+    ariaLabel="back-icon"
+    catchtap="{{l}}"
+    class="_img hot-topic-nav-bar__back data-v-ce817551"
+    src="{{k}}"
+    style="{{j}}"
+  ></image>
+</view>

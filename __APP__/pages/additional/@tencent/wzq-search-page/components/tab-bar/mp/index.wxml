@@ -1,0 +1,13 @@
+<view class="_div tabbar-top-wrapper data-v-dc5cf251">
+  <view class="_div tabbar-wrapper data-v-dc5cf251">
+    <view
+      bindtap="{{rank.e}}"
+      class="{{['_div','tab','data-v-dc5cf251',rank.d]}}"
+      id="{{rank.b}}"
+      wx:for="{{a}}"
+      wx:for-item="rank"
+      wx:key="c"
+      >{{rank.a}}</view
+    >
+  </view>
+</view>

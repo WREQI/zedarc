@@ -1,0 +1,20 @@
+<view class="_div span-container data-v-85c1ceb9">
+  <view class="{{['_div','span-wrapper','data-v-85c1ceb9',k]}}">
+    <label
+      catchtap="{{d}}"
+      class="{{['_span','data-v-85c1ceb9','left-span',c]}}"
+    >
+      <label class="_span name data-v-85c1ceb9">{{a}}</label>
+      <image
+        class="_img tip data-v-85c1ceb9"
+        src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+        wx:if="{{b}}"
+      ></image>
+    </label>
+    <label
+      catchtap="{{j}}"
+      class="{{['_span','data-v-85c1ceb9','right-span',f,g,h,i]}}"
+      >{{e}}</label
+    >
+  </view>
+</view>

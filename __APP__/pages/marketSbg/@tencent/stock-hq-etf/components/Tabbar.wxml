@@ -1,0 +1,22 @@
+<tabs
+  bind:__l="__l"
+  bindselect="{{e}}"
+  class="{{['tabbar-wrapper','data-v-48f3955d',c,d]}}"
+  uI="48f3955d-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <tab
+    bind:__l="__l"
+    class="{{['tab','data-v-48f3955d',rank.d,b]}}"
+    id="{{rank.b}}"
+    uI="{{rank.e}}"
+    uP="{{rank.f}}"
+    uS="{{['d']}}"
+    wx:for="{{a}}"
+    wx:for-item="rank"
+    wx:key="c"
+    >{{rank.a}}</tab
+  >
+</tabs>

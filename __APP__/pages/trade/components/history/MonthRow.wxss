@@ -1,0 +1,30 @@
+@import "/app.wxss";
+.history-new-time.data-v-ae607a6d {
+  -webkit-box-pack: justify;
+  height: 1.173333rem;
+  justify-content: space-between;
+  padding: 0 0.32rem;
+}
+.history-new-time .history-timefilter.data-v-ae607a6d,
+.history-new-time.data-v-ae607a6d {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.history-new-time .history-timefilter.data-v-ae607a6d {
+  color: var(--text-color-1);
+}
+.history-new-time .history-timefilter .icon.data-v-ae607a6d {
+  font-size: 0.32rem;
+  transform: scale(0.6);
+}
+.history-new-time .history-timetxt.data-v-ae607a6d {
+  font-size: 0.373333rem;
+  margin-right: 0.106667rem;
+}
+.history-new-time .history-total.data-v-ae607a6d {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+}

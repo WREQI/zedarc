@@ -1,0 +1,44 @@
+<view class="{{['success-icon','data-v-dcc7a258',l&&'animate',m&&'mp-mode']}}">
+  <block wx:if="{{a}}">
+    <canvas
+      class="success-canvas data-v-dcc7a258"
+      hidden="{{!b}}"
+      id="{{c}}"
+      style="{{'width:'+d+';'+'height:'+e}}"
+      type="2d"
+      wx:if="{{r0}}"
+    ></canvas>
+    <image
+      class="success-fallback-img data-v-dcc7a258"
+      mode="aspectFit"
+      src="{{g}}"
+      wx:if="{{f}}"
+    ></image>
+  </block>
+  <block wx:else>
+    <svg
+      bind:__l="__l"
+      class="data-v-dcc7a258"
+      uI="dcc7a258-0"
+      uP="{{k}}"
+      uS="{{['d']}}"
+      wx:if="{{k}}"
+    >
+      <path
+        bind:__l="__l"
+        class="circle data-v-dcc7a258"
+        uI="dcc7a258-1,dcc7a258-0"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></path>
+      <path
+        bind:__l="__l"
+        bindanimationend="{{i}}"
+        class="check data-v-dcc7a258"
+        uI="dcc7a258-2,dcc7a258-0"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></path>
+    </svg>
+  </block>
+</view>

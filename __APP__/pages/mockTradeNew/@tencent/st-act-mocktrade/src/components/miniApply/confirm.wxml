@@ -1,0 +1,72 @@
+<view class="_div confirm-content data-v-c2a83a3e">
+  <view class="_div trade-details data-v-c2a83a3e">
+    <view class="_div detail-item data-v-c2a83a3e">
+      <view class="_div label data-v-c2a83a3e">名称</view>
+      <view class="_div value data-v-c2a83a3e">{{a}}</view>
+    </view>
+    <view class="_div detail-item data-v-c2a83a3e">
+      <view class="_div label data-v-c2a83a3e">代码</view>
+      <view class="_div value data-v-c2a83a3e">{{b}}</view>
+    </view>
+    <view class="_div detail-item data-v-c2a83a3e">
+      <view class="_div label data-v-c2a83a3e">方向</view>
+      <view class="_div value data-v-c2a83a3e">买入</view>
+    </view>
+    <view
+      class="{{['_div','detail-item','total','data-v-c2a83a3e',d&&'lite-mode']}}"
+    >
+      <view class="_div label data-v-c2a83a3e">价格</view>
+      <view class="_div value data-v-c2a83a3e">{{c}} 元</view>
+    </view>
+    <view
+      class="{{['_div','detail-item','total','data-v-c2a83a3e',f&&'lite-mode']}}"
+    >
+      <view class="_div label data-v-c2a83a3e">数量</view>
+      <view class="_div value data-v-c2a83a3e">{{e}} 股</view>
+    </view>
+    <view class="_div detail-item data-v-c2a83a3e">
+      <view class="_div label data-v-c2a83a3e">金额</view>
+      <view class="_div value data-v-c2a83a3e">{{g}} 元</view>
+    </view>
+  </view>
+  <view class="_div order-tips data-v-c2a83a3e" wx:if="{{h}}">
+    <image
+      alt=""
+      class="_img order-tips-icon data-v-c2a83a3e"
+      src="https://st.gtimg.com/design/881f1106344a94066de1c4e691edc2ac.svg"
+    ></image>
+    <view class="_div order-tips-text data-v-c2a83a3e"
+      >委托{{i}}，交易可能无效</view
+    >
+  </view>
+  <view class="_div fee-tip data-v-c2a83a3e" wx:if="{{j}}"
+    >模拟交易需收取手续费，其中佣金费率根据万2.5计算</view
+  >
+  <view class="_div charge-tips data-v-c2a83a3e" wx:else
+    >模拟交易功能不收取任何手续费</view
+  >
+  <view bindtap="{{m}}" class="_div add-stock data-v-c2a83a3e">
+    <image
+      alt=""
+      class="_img add-stock-icon data-v-c2a83a3e"
+      src="https://st.gtimg.com/design/7ca374e6ba370fea0238ebd3264d45ec.svg"
+      wx:if="{{k}}"
+    ></image>
+    <image
+      alt=""
+      class="_img add-stock-icon data-v-c2a83a3e"
+      src="https://st.gtimg.com/design/cdd0b7502aec7f2d5b42d3bda017a8d9.svg"
+      wx:elif="{{l}}"
+    ></image>
+    <image
+      alt=""
+      class="_img add-stock-icon data-v-c2a83a3e"
+      src="https://st.gtimg.com/design/2b68ed9026a02afcc743210fd74ca6b1.svg"
+      wx:else
+    ></image>
+    <view class="_div data-v-c2a83a3e">模拟委托加自选</view>
+  </view>
+  <view bindtap="{{n}}" class="_div confirm-button data-v-c2a83a3e"
+    >确认买入</view
+  >
+</view>

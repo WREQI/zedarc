@@ -1,0 +1,89 @@
+<view
+  class="_div chip-info-content data-v-eb9bb28a"
+  ref="chipInfoContent"
+  style="{{x}}"
+>
+  <view class="_div chip-info-header data-v-eb9bb28a" wx:if="{{a}}">
+    <view class="_div legend-item data-v-eb9bb28a">
+      <view class="_i i-color color-drop data-v-eb9bb28a"></view>
+      <label class="_span data-v-eb9bb28a">套牢</label>
+    </view>
+    <view class="_div legend-item data-v-eb9bb28a">
+      <view class="_i i-color color-rise data-v-eb9bb28a"></view>
+      <label class="_span data-v-eb9bb28a">获利</label>
+    </view>
+    <view class="_div legend-item data-v-eb9bb28a">
+      <view class="_i i-color color-avg data-v-eb9bb28a"></view>
+      <label class="_span data-v-eb9bb28a">平均</label>
+    </view>
+  </view>
+  <view class="_div chip-info-header flexStart data-v-eb9bb28a" wx:if="{{b}}">
+    <view class="_div currentTpis data-v-eb9bb28a">
+      <label
+        class="{{['_span','data-v-eb9bb28a',e&&'miniFont']}}"
+        ref="crossTips"
+        >{{c}}处获利:{{d}}%</label
+      >
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-eb9bb28a','chip-info-body',s]}}"
+    ref="scrollContent"
+  >
+    <view class="_ul data-v-eb9bb28a">
+      <view class="_li chip-info-item data-v-eb9bb28a" wx:if="{{f}}">
+        <label
+          class="{{['_span','data-v-eb9bb28a',i&&'miniFont']}}"
+          ref="crossTips"
+          >{{g}}处获利:{{h}}%</label
+        >
+      </view>
+      <view class="_li chip-info-item data-v-eb9bb28a">
+        <view class="_div shrink chip-item-title data-v-eb9bb28a"
+          >获利比例</view
+        >
+        <view
+          class="_div profitPercent data-v-eb9bb28a"
+          style="{{'width:'+'70px'}}"
+        >
+          <view class="_div rise data-v-eb9bb28a" style="{{'width:'+j}}"></view>
+          <label class="_span rise-text data-v-eb9bb28a">{{k}}</label>
+        </view>
+      </view>
+      <view class="_li chip-info-item data-v-eb9bb28a">
+        <view class="_div chip-item-title data-v-eb9bb28a">平均成本</view>
+        <view class="_div weight data-v-eb9bb28a">{{l}}</view>
+      </view>
+      <view class="_li chip-info-item data-v-eb9bb28a">
+        <view class="_div chip-type-switch data-v-eb9bb28a">
+          <view
+            catchtap="{{n}}"
+            class="{{['_div','data-v-eb9bb28a','chip-switch-item',m]}}"
+            >90%筹码</view
+          >
+          <view
+            catchtap="{{p}}"
+            class="{{['_div','data-v-eb9bb28a','chip-switch-item',o]}}"
+            >70%筹码</view
+          >
+        </view>
+      </view>
+      <view class="_li chip-info-item data-v-eb9bb28a">
+        <label class="_span data-v-eb9bb28a">价格:{{q}}</label>
+      </view>
+      <view class="_li chip-info-item data-v-eb9bb28a" ref="lastItem">
+        <label class="_span data-v-eb9bb28a">集中度:{{r}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div chip-info-footer data-v-eb9bb28a" ref="footer">
+    <label class="_span data-v-eb9bb28a">{{t}}</label>
+    <label catchtap="{{w}}" class="_span btn-chip-content data-v-eb9bb28a">
+      <block wx:if="{{v}}">说明</block>
+      <image
+        class="_img btn-chip data-v-eb9bb28a"
+        src="https://st.gtimg.com/design/95b777c9dfe6a2097ad94909f255b44a.png"
+      ></image>
+    </label>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+<view
+  bindtap="{{l}}"
+  class="{{['_div','data-v-36abe562','wx-news-content',k]}}"
+  id="wx-news-content"
+>
+  <view class="_div data-v-36abe562" style="{{'height:'+a}}"></view>
+  <view class="_div header-container data-v-36abe562" wx:if="{{b}}">
+    <view class="_div title data-v-36abe562">投资TOP榜</view>
+    <view class="_div title-desc-container data-v-36abe562">
+      <view class="_div data-v-36abe562">每2小时扫描微信热门投资事件</view>
+      <view catchtap="{{c}}" class="_div tooltips data-v-36abe562"></view>
+    </view>
+  </view>
+  <view class="_div data-v-36abe562" id="{{item.g}}" wx:for="{{d}}" wx:key="h">
+    <weixin-newsitem-top-lct
+      bind:__l="__l"
+      bindlongPress="{{item.a}}"
+      class="data-v-36abe562"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:if="{{e}}"
+    ></weixin-newsitem-top-lct>
+    <weixin-newsitem-top
+      bind:__l="__l"
+      bindlongPress="{{item.d}}"
+      class="data-v-36abe562"
+      uI="{{item.e}}"
+      uP="{{item.f||''}}"
+      wx:else
+    ></weixin-newsitem-top>
+  </view>
+  <share-button
+    bind:__l="__l"
+    bindonClickShare="{{g}}"
+    class="data-v-36abe562"
+    uI="36abe562-2"
+    uP="{{h}}"
+    wx:if="{{f}}"
+  ></share-button>
+  <image
+    catchtap="{{j}}"
+    class="_img share-guide data-v-36abe562"
+    src="https://st.gtimg.com/design/8589f05295b067da69ac09d55e68f6d2.png"
+    wx:if="{{i}}"
+  ></image>
+</view>

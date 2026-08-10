@@ -1,0 +1,22 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mins": "./Mins",
+    "five-mins": "./FiveMins",
+    "kline": "./Kline",
+    "mins-bar": "../../../@tencent/stock-hq-chart/components/MinusTouchbar",
+    "kline-bar": "../../../@tencent/stock-hq-chart/components/KlineTouchbar",
+    "selector": "../components/Selector",
+    "mins-indicator-bar": "../../../@tencent/stock-hq-chart/components/MinsIndicatorBar",
+    "indicator-bar": "../../../@tencent/stock-hq-chart/components/IndicatorBar",
+    "setting-popup": "../../../@tencent/stock-hq-chart/components/SettingPopup/modal",
+    "setting-tip-bubble": "../../../@tencent/stock-hq-chart/components/SettingPopup/components/SettingTipBubble",
+    "handicap": "../../../@tencent/wzq-detail-trade-detail/components/Handicap",
+    "trade-detail": "../components/TradeDetail",
+    "big-deal": "../components/BigDeal",
+    "area-selectbar": "../../../@tencent/wzq-hq-chart/components/KlineAreaSelectTouchbar",
+    "draw-board": "../../../@tencent/stock-detail-drawline/dynamicBoard/index",
+    "fq-bubble": "../../../@tencent/stock-hq-chart/components/SettingPopup/FqBubble",
+    "fq-switch-dialog": "../../../@tencent/stock-hq-chart/components/SettingPopup/FqSwitchDialog"
+  }
+}

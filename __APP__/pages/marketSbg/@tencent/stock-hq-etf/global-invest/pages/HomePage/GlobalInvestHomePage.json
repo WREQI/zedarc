@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "trust-footer": "../../../../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index",
+    "hot-topic-nav-bar": "../../../hotTopicPages/components/HotTopicNavBar",
+    "footer-bar": "../../../hotTopicPages/components/FooterBar",
+    "etf-invest-header": "../../../components/EtfInvestHeader",
+    "hotspot-visual": "../../components/HotspotVisual",
+    "global-market-swiper-section": "../../components/GlobalMarketSwiperSection",
+    "half-screen-ai-entry": "../../../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "no-data": "../../../../../../detailSbg/@tencent/stock-markets-base/components/NoData"
+  },
+  "componentPlaceholder": {
+    "trust-footer": "view",
+    "half-screen-ai-entry": "view",
+    "no-data": "view"
+  }
+}

@@ -1,0 +1,47 @@
+<view class="{{['_div','data-v-b6bb83bc',n&&'bottom-spliter']}}" wx:if="{{a}}">
+  <view
+    catchtap="{{d}}"
+    class="_div title-wrapper data-v-b6bb83bc"
+    wx:if="{{b}}"
+  >
+    <label class="_span title data-v-b6bb83bc">打新日历</label>
+    <view class="_div stock-wrapper data-v-b6bb83bc">
+      <label class="_span data-v-b6bb83bc">{{c}}</label>
+    </view>
+  </view>
+  <view catchtap="{{m}}" class="_div new-title-wrapper data-v-b6bb83bc" wx:else>
+    <view class="_div new-icon-wrapper data-v-b6bb83bc">
+      <view class="_div new-icon-img data-v-b6bb83bc">
+        <view class="_i new-icon-img-outer data-v-b6bb83bc"></view>
+        <view class="_i new-icon-img-inner data-v-b6bb83bc"></view>
+      </view>
+      <view class="_div new-icon-text data-v-b6bb83bc">打新日历</view>
+    </view>
+    <view class="_div seprate-line data-v-b6bb83bc"></view>
+    <view
+      catchtap="{{k}}"
+      class="{{['_div','data-v-b6bb83bc','new-stock-wrapper',j]}}"
+    >
+      <view class="_div new-stock data-v-b6bb83bc">
+        <view class="_div new-stock-num data-v-b6bb83bc">{{e}}</view>
+        <view class="_div new-stock-text data-v-b6bb83bc">新股</view>
+      </view>
+      <view catchtap="{{g}}" class="_div new-stock data-v-b6bb83bc">
+        <view class="_div new-stock-num data-v-b6bb83bc">{{f}}</view>
+        <view class="_div new-stock-text data-v-b6bb83bc">新债</view>
+      </view>
+      <view catchtap="{{i}}" class="_div new-stock data-v-b6bb83bc">
+        <view class="_div new-stock-num data-v-b6bb83bc">{{h}}</view>
+        <view class="_div new-stock-text data-v-b6bb83bc">公布</view>
+      </view>
+    </view>
+    <view class="_div new-button-wrapper data-v-b6bb83bc">
+      <view class="_div new-button-container data-v-b6bb83bc">
+        <button catchtap="{{l}}" class="new-button data-v-b6bb83bc">
+          一键打新
+        </button>
+        <view class="_div bubble-guide data-v-b6bb83bc"></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view class="_div interaction-item data-v-b36d45e3" id="{{r}}">
+  <view class="{{['_div','data-v-b36d45e3','head-wrap',c,d,e]}}">
+    <image
+      alt="head-img"
+      catchtap="{{b}}"
+      class="_img head-img data-v-b36d45e3"
+      mode="aspectFill"
+      src="{{a}}"
+    ></image>
+  </view>
+  <view catchtap="{{q}}" class="_div comment-content-container data-v-b36d45e3">
+    <view class="_div comment-content data-v-b36d45e3">
+      <label class="_span user-name data-v-b36d45e3">{{f}}</label>
+      <label class="{{['_span','data-v-b36d45e3','reply-container',j]}}">
+        <label class="_span reply-name data-v-b36d45e3" wx:if="{{g}}"
+          >{{h}}</label
+        >
+        <label class="_span reply-message data-v-b36d45e3">{{i}}</label>
+      </label>
+      <label class="_span com-yb-disclaimer data-v-b36d45e3" wx:if="{{k}}"
+        >{{l}}</label
+      >
+      <label class="_span comment-date data-v-b36d45e3">{{m}}</label>
+    </view>
+    <view class="_div comment-source data-v-b36d45e3">
+      <image
+        alt="head-img"
+        class="_img srouce-img data-v-b36d45e3"
+        mode="aspectFill"
+        src="{{o}}"
+        wx:if="{{n}}"
+      ></image>
+      <label class="_span source-content data-v-b36d45e3" wx:else>{{p}}</label>
+    </view>
+  </view>
+</view>

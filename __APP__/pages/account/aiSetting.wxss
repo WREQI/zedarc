@@ -1,0 +1,69 @@
+.setting-container.data-v-5dd8e442 {
+  background-color: #f5f6fa;
+  height: 100%;
+}
+.setting-container .set-item.data-v-5dd8e442 {
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 0.013333333333333334rem solid #edeff3;
+  border-top: 0.013333333333333334rem solid #edeff3;
+  color: #262e40;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4533333333333333rem;
+  height: 0.9866666666666667rem;
+  line-height: 0.9866666666666667rem;
+  padding: 0.26666666666666666rem 0.4rem;
+}
+.setting-container .set-item .icon-arrow.data-v-5dd8e442 {
+  color: #98a0b3;
+  font-size: 0.48rem;
+  margin-right: 0.4rem;
+}
+.setting-container .set-item .text.data-v-5dd8e442 {
+  flex: 1;
+}
+.setting-container .set-item .switch-box.data-v-5dd8e442 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 0.9866666666666667rem;
+  justify-content: center;
+}
+.setting-container .set-item .switch.data-v-5dd8e442 {
+  border: 0.013333333333333334rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.7733333333333333rem;
+  box-sizing: border-box;
+  height: 0.8266666666666667rem;
+  position: relative;
+  width: 1.3333333333333333rem;
+}
+.setting-container .set-item .switch .switch-block.data-v-5dd8e442 {
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 0.013333333333333334rem rgba(0, 0, 0, 0.05),
+    0 0 0.02666666666666667rem rgba(0, 0, 0, 0.1),
+    0 0 0.04rem rgba(0, 0, 0, 0.05);
+  height: 0.7733333333333333rem;
+  left: 0;
+  position: absolute;
+  width: 0.7733333333333333rem;
+}
+.setting-container .set-item .switch.on.data-v-5dd8e442 {
+  background-color: #e63535;
+  border: none;
+}
+.setting-container .set-item .switch.on .switch-block.data-v-5dd8e442 {
+  left: unset;
+  right: 0.02666666666666667rem;
+  top: 0.02666666666666667rem;
+}
+.setting-container .protocol-text.data-v-5dd8e442 {
+  color: #7a8499;
+  font-size: 0.3466666666666667rem;
+  margin: 0.32rem 0;
+  padding-left: 0.4rem;
+}
+.setting-container .link.data-v-5dd8e442 {
+  color: #262e40;
+}

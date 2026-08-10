@@ -1,0 +1,248 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="43f83ff6-0"
+  uP="{{U}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{U}}"
+>
+  <apply-wrap bind:__l="__l" uI="43f83ff6-1,43f83ff6-0" uS="{{['d']}}">
+    <view class="page-apply-profile">
+      <digital-human
+        bind:__l="__l"
+        class="r"
+        uI="43f83ff6-2,43f83ff6-1"
+        uP="{{d}}"
+        uR="digitalHumanRef"
+        wx:if="{{b}}"
+      ></digital-human>
+      <view class="{{['content-container',o]}}">
+        <progress-bar
+          bind:__l="__l"
+          uI="43f83ff6-3,43f83ff6-1"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></progress-bar>
+        <pre-review-modify-card
+          bind:__l="__l"
+          uI="43f83ff6-4,43f83ff6-1"
+          uP="{{g}}"
+          wx:if="{{f}}"
+        ></pre-review-modify-card>
+        <view class="tip-text text-color-4 fs-24">
+          <label class="icon-shield"></label
+          >监管部门要求：请提供以下真实信息用于证券开户</view
+        >
+        <view class="form-container">
+          <st-cell-group
+            bind:__l="__l"
+            uI="43f83ff6-5,43f83ff6-1"
+            uS="{{['d']}}"
+          >
+            <view hidden="{{!item.s}}" wx:for="{{h}}" wx:key="t">
+              <st-cell
+                bind:__l="__l"
+                class="{{[item.d&&'last-cell',item.e&&'label-red','flex-vcenter']}}"
+                uI="{{item.f}}"
+                uP="{{item.g}}"
+                uS="{{['d']}}"
+                wx:if="{{item.g}}"
+              >
+                <view class="cell-value-wrap">
+                  <view bindtap="{{item.c}}" class="{{['text-right',item.b]}}"
+                    >{{item.a}}</view
+                  >
+                </view>
+              </st-cell>
+              <view class="bottom-slot flex-center" wx:if="{{item.h}}">
+                <view bindtap="{{item.k}}" class="checkbox-wrapper flex-center">
+                  <label class="{{['icon',item.i]}}"></label>
+                  <label class="{{['fs-28',item.j&&'isSame']}}"
+                    >与证件地址相同</label
+                  >
+                </view>
+              </view>
+              <view class="bottom-slot flex-center" wx:if="{{item.l}}">
+                <view bindtap="{{item.o}}" class="checkbox-wrapper flex-center">
+                  <label class="{{['icon',item.m]}}"></label>
+                  <label class="{{['fs-28',item.n&&'isSame']}}"
+                    >与联系地址相同</label
+                  >
+                </view>
+              </view>
+              <view
+                class="address-border border--bottom"
+                wx:if="{{item.p}}"
+              ></view>
+              <view class="fs-24 warn warn-tip" wx:if="{{item.q}}"
+                >{{item.r}}</view
+              >
+            </view>
+            <block wx:if="{{i}}">
+              <view class="gap"></view>
+              <view class="tip-text text-color-2 fs-28"
+                >以下为选填信息（可不填写）</view
+              >
+            </block>
+            <view hidden="{{!item.s}}" wx:for="{{j}}" wx:key="t">
+              <st-cell
+                bind:__l="__l"
+                class="{{[item.d&&'last-cell',item.e&&'label-red','flex-vcenter']}}"
+                uI="{{item.f}}"
+                uP="{{item.g}}"
+                uS="{{['d']}}"
+                wx:if="{{item.g}}"
+              >
+                <view class="cell-value-wrap">
+                  <view bindtap="{{item.c}}" class="{{['text-right',item.b]}}"
+                    >{{item.a}}</view
+                  >
+                </view>
+              </st-cell>
+              <view class="bottom-slot flex-center" wx:if="{{item.h}}">
+                <view bindtap="{{item.k}}" class="checkbox-wrapper flex-center">
+                  <label class="{{['icon',item.i]}}"></label>
+                  <label class="{{['fs-28',item.j&&'isSame']}}"
+                    >与证件地址相同</label
+                  >
+                </view>
+              </view>
+              <view class="bottom-slot flex-center" wx:if="{{item.l}}">
+                <view bindtap="{{item.o}}" class="checkbox-wrapper flex-center">
+                  <label class="{{['icon',item.m]}}"></label>
+                  <label class="{{['fs-28',item.n&&'isSame']}}"
+                    >与联系地址相同</label
+                  >
+                </view>
+              </view>
+              <view
+                class="address-border border--bottom"
+                wx:if="{{item.p}}"
+              ></view>
+              <view class="fs-24 warn warn-tip" wx:if="{{item.q}}"
+                >{{item.r}}</view
+              >
+            </view>
+          </st-cell-group>
+          <block wx:if="{{k}}">
+            <sign-protocol
+              bind:__l="__l"
+              bindprotocolCheck="{{m}}"
+              class="r"
+              uI="43f83ff6-8,43f83ff6-1"
+              uP="{{n}}"
+              uR="SignProtocol"
+              wx:if="{{n}}"
+            ></sign-protocol>
+          </block>
+          <foot-print
+            bind:__l="__l"
+            class="foot"
+            uI="43f83ff6-9,43f83ff6-1"
+          ></foot-print>
+        </view>
+        <view style="height: 120px"></view>
+      </view>
+      <step-buttons
+        bind:__l="__l"
+        bindclickNext="{{q}}"
+        uI="43f83ff6-10,43f83ff6-1"
+        uP="{{r}}"
+        wx:if="{{p}}"
+      ></step-buttons>
+      <profile-radio
+        bind:__l="__l"
+        bindclose="{{t}}"
+        class="r"
+        uI="43f83ff6-11,43f83ff6-1"
+        uP="{{v}}"
+        uR="radioActionSheet"
+        wx:if="{{v}}"
+      ></profile-radio>
+      <profile-select
+        bind:__l="__l"
+        bindclose="{{y}}"
+        class="r"
+        uI="43f83ff6-12,43f83ff6-1"
+        uP="{{z}}"
+        uR="multiRadioActionSheet"
+        wx:if="{{w}}"
+      ></profile-select>
+      <profile-text
+        bind:__l="__l"
+        bindclose="{{B}}"
+        class="r"
+        uI="43f83ff6-13,43f83ff6-1"
+        uP="{{C}}"
+        uR="textActionSheet"
+        wx:if="{{C}}"
+      ></profile-text>
+      <profile-change-mobile
+        bind:__l="__l"
+        bindclose="{{E}}"
+        class="r"
+        uI="43f83ff6-14,43f83ff6-1"
+        uP="{{F}}"
+        uR="changeMobileActionSheet"
+        wx:if="{{F}}"
+      ></profile-change-mobile>
+      <profile-check
+        bind:__l="__l"
+        bindclose="{{H}}"
+        class="r"
+        uI="43f83ff6-15,43f83ff6-1"
+        uP="{{I}}"
+        uR="checkActionSheet"
+        wx:if="{{I}}"
+      ></profile-check>
+      <profile-address
+        bind:__l="__l"
+        bindclose="{{K}}"
+        class="r"
+        uI="43f83ff6-16,43f83ff6-1"
+        uP="{{L}}"
+        uR="addressActionSheet"
+        wx:if="{{L}}"
+      ></profile-address>
+      <mp-dialog
+        bind:__l="__l"
+        id="mp-dialog"
+        uI="43f83ff6-17,43f83ff6-1"
+        uP="{{M}}"
+        wx:if="{{M}}"
+      ></mp-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        bindconfirm="{{N}}"
+        class="protocols"
+        uI="43f83ff6-18,43f83ff6-1"
+        uP="{{O}}"
+        uS="{{['d']}}"
+        wx:if="{{O}}"
+      >
+        <view class="explain-dialog dialog-center text-color-1">
+          <view>请确定您填写的联系地址</view>
+          <view class="strong">真实、准确、完整、有效</view>
+        </view>
+      </mp-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        bindcancel="{{R}}"
+        bindconfirm="{{Q}}"
+        class="protocols"
+        uI="43f83ff6-19,43f83ff6-1"
+        uP="{{S}}"
+        uS="{{['d']}}"
+        wx:if="{{S}}"
+      >
+        <view class="explain-dialog text-color-1">
+          <view>请确认您填写的联系地址真实、完整、有效。</view>
+          <view>联系地址：<label class="red">{{P}}</label> </view>
+        </view>
+      </mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

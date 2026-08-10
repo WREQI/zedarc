@@ -1,0 +1,337 @@
+<page-meta class="data-v-28083d2c" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-28083d2c"
+  id="global-wrap"
+  uI="28083d2c-0"
+  uP="{{aT}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{aT}}"
+>
+  <view class="cond-content-container data-v-28083d2c">
+    <view class="cond-search data-v-28083d2c" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-28083d2c"
+        uI="28083d2c-1,28083d2c-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <search-result
+      bind:__l="__l"
+      bindclick="{{g}}"
+      class="data-v-28083d2c"
+      data-c-h="{{!f}}"
+      uI="28083d2c-2,28083d2c-0"
+    ></search-result>
+    <view
+      class="{{['invest-condition-form','invest-condition-form__simple-mode','data-v-28083d2c',aq,ar]}}"
+      hidden="{{!ap}}"
+    >
+      <view class="{{['condition-quote-wrapper','data-v-28083d2c',l&&'mp']}}">
+        <condition-quote
+          bind:__l="__l"
+          bindnameClick="{{j}}"
+          bindsearch="{{i}}"
+          class="data-v-28083d2c"
+          uI="28083d2c-3,28083d2c-0"
+          uP="{{k}}"
+          uS="{{['label']}}"
+          wx:if="{{h}}"
+        >
+          <view class="data-v-28083d2c" slot="label">定期定投</view>
+        </condition-quote>
+      </view>
+      <view
+        class="{{['invest-form-wrap','data-v-28083d2c',r&&'border-top-no-radius']}}"
+      >
+        <view class="invest-item-wrap data-v-28083d2c">
+          <view class="flex-between data-v-28083d2c">
+            <view class="title data-v-28083d2c">定投周期</view>
+            <view bindtap="{{n}}" class="desc data-v-28083d2c"
+              >{{m}}<label class="icon icon-arrow data-v-28083d2c"></label>
+            </view>
+          </view>
+          <view class="tips data-v-28083d2c">{{o}}</view>
+        </view>
+        <view class="invest-item-wrap flex-between data-v-28083d2c">
+          <view class="title data-v-28083d2c">委托时间</view>
+          <view bindtap="{{q}}" class="desc data-v-28083d2c"
+            >{{p}}<label class="icon icon-arrow data-v-28083d2c"></label>
+          </view>
+        </view>
+      </view>
+      <view class="tips-bar flex-vcenter data-v-28083d2c"
+        >满足触发条件，系统将自动提交以下委托单</view
+      >
+      <view class="invest-form-wrap pd-24 data-v-28083d2c">
+        <view class="invest-item-wrap flex-between mb-27 data-v-28083d2c">
+          <view class="title data-v-28083d2c">委托价</view>
+          <bottom-selector-trigger
+            bind:__l="__l"
+            bindclick="{{s}}"
+            class="data-v-28083d2c"
+            uI="28083d2c-4,28083d2c-0"
+            uP="{{t}}"
+            wx:if="{{t}}"
+          ></bottom-selector-trigger>
+        </view>
+        <form-wrap
+          bind:__l="__l"
+          class="trigger-price-form input-amount-or-invest r data-v-28083d2c"
+          uI="28083d2c-5,28083d2c-0"
+          uR="inputAmountOrInvestRef"
+          uS="{{['left','right']}}"
+        >
+          <view
+            bindtap="{{w}}"
+            class="invest-num-item data-v-28083d2c"
+            slot="left"
+            >{{v}}<label
+              class="text-color-1 icon icon-triangle triangle-down data-v-28083d2c"
+            ></label>
+          </view>
+          <view slot="right">
+            <block wx:if="{{x}}">
+              <pop-over
+                bind:__l="__l"
+                class="{{['data-v-28083d2c',C]}}"
+                uI="28083d2c-6,28083d2c-5"
+                uP="{{D}}"
+                uS="{{['d']}}"
+                wx:if="{{D}}"
+              >
+                <stepper
+                  bind:__l="__l"
+                  bindblur="{{A}}"
+                  bindchange="{{y}}"
+                  bindfocus="{{z}}"
+                  class="data-v-28083d2c"
+                  key="maxAmount"
+                  uI="28083d2c-7,28083d2c-6"
+                  uP="{{B}}"
+                  wx:if="{{B}}"
+                ></stepper>
+              </pop-over>
+            </block>
+            <block wx:else>
+              <pop-over
+                bind:__l="__l"
+                class="{{['data-v-28083d2c',I]}}"
+                uI="28083d2c-8,28083d2c-5"
+                uP="{{J}}"
+                uS="{{['d']}}"
+                wx:if="{{J}}"
+              >
+                <stepper
+                  bind:__l="__l"
+                  bindblur="{{G}}"
+                  bindchange="{{E}}"
+                  bindfocus="{{F}}"
+                  class="data-v-28083d2c"
+                  key="investQuantity"
+                  uI="28083d2c-9,28083d2c-8"
+                  uP="{{H}}"
+                  wx:if="{{H}}"
+                ></stepper>
+              </pop-over>
+            </block>
+          </view>
+        </form-wrap>
+        <view class="avaliable-money data-v-28083d2c" wx:if="{{L}}"
+          >可用现金：<label class="{{['data-v-28083d2c',N]}}">{{M}}元</label>
+        </view>
+        <view class="time-form border-bottom data-v-28083d2c">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-28083d2c"
+            uI="28083d2c-10,28083d2c-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="module-title title data-v-28083d2c" slot="left"
+              >订单有效期</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{O}}"
+              class="data-v-28083d2c"
+              slot="right"
+              uI="28083d2c-11,28083d2c-10"
+              uP="{{P}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view class="cond-invest-form-tips data-v-28083d2c">{{Q}}</view>
+        </view>
+        <view
+          bindtap="{{S}}"
+          class="high-setting-item-wrap flex-between data-v-28083d2c"
+        >
+          <view class="title data-v-28083d2c">高级设置</view>
+          <label class="{{['icon','data-v-28083d2c',R]}}"></label>
+        </view>
+        <view class="{{['data-v-28083d2c',ak&&'high-setting-hidden']}}">
+          <view
+            class="flex-between invest-item-wrap-high-setting data-v-28083d2c"
+          >
+            <view class="high-setting-title-wrap data-v-28083d2c">
+              <view class="main-title data-v-28083d2c">价格区间</view>
+            </view>
+            <switch
+              bindchange="{{W}}"
+              checked="{{U}}"
+              class="{{['data-v-28083d2c',T&&'close']}}"
+              color="{{V}}"
+              style="{{'transform:'+'scale(0.75)'+';'+'transform-origin:'+'right center'}}"
+            ></switch>
+          </view>
+          <view class="high-setting-desc data-v-28083d2c"
+            >若触发时价格超出区间则当期不委托</view
+          >
+          <block wx:if="{{X}}">
+            <form-wrap
+              bind:__l="__l"
+              class="trigger-price-form input-upper-limit r data-v-28083d2c"
+              uI="28083d2c-12,28083d2c-0"
+              uR="inputUpperLimitRef"
+              uS="{{['left','right']}}"
+            >
+              <view slot="left">区间上限</view>
+              <stepper
+                bind:__l="__l"
+                bindblur="{{aa}}"
+                bindchange="{{Y}}"
+                bindfocus="{{Z}}"
+                class="data-v-28083d2c"
+                key="upperLimit"
+                slot="right"
+                uI="28083d2c-13,28083d2c-12"
+                uP="{{ab}}"
+              ></stepper>
+            </form-wrap>
+            <view class="trigger-pice-form-lower data-v-28083d2c">
+              <form-wrap
+                bind:__l="__l"
+                class="trigger-price-form input-lower-limit r data-v-28083d2c"
+                uI="28083d2c-14,28083d2c-0"
+                uR="inputLowerLimitRef"
+                uS="{{['left','right']}}"
+              >
+                <view slot="left">区间下限</view>
+                <pop-over
+                  bind:__l="__l"
+                  class="{{['data-v-28083d2c',ah]}}"
+                  slot="right"
+                  uI="28083d2c-15,28083d2c-14"
+                  uP="{{ai}}"
+                  uS="{{['d']}}"
+                >
+                  <stepper
+                    bind:__l="__l"
+                    bindblur="{{af}}"
+                    bindchange="{{ad}}"
+                    bindfocus="{{ae}}"
+                    class="data-v-28083d2c"
+                    key="lowerLimit"
+                    uI="28083d2c-16,28083d2c-15"
+                    uP="{{ag}}"
+                    wx:if="{{ag}}"
+                  ></stepper>
+                </pop-over>
+              </form-wrap>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="cond-risk-tips data-v-28083d2c" wx:if="{{al}}"
+        >风险提示：<view class="data-v-28083d2c"></view>
+        <view
+          class="data-v-28083d2c"
+          wx:for="{{am}}"
+          wx:for-item="text"
+          wx:key="b"
+          >{{text.a}}</view
+        >
+      </view>
+      <view
+        class="{{['bottom-placeholder','data-v-28083d2c',ao&&'mp']}}"
+        wx:if="{{an}}"
+      ></view>
+    </view>
+  </view>
+  <view class="cond-btnwrap data-v-28083d2c" hidden="{{!av}}">
+    <button
+      bindtap="{{at}}"
+      class="invest-submit-btn data-v-28083d2c"
+      disabled="{{as}}"
+    >
+      保存设置
+    </button>
+  </view>
+  <invest-condition-period-popup
+    bind:__l="__l"
+    bindchange="{{ay}}"
+    bindclose="{{ax}}"
+    bindinput="{{aw}}"
+    class="data-v-28083d2c"
+    uI="28083d2c-17,28083d2c-0"
+    uP="{{az}}"
+    wx:if="{{az}}"
+  ></invest-condition-period-popup>
+  <invest-condition-time-popup
+    bind:__l="__l"
+    bindchange="{{aC}}"
+    bindclose="{{aB}}"
+    bindinput="{{aA}}"
+    class="data-v-28083d2c"
+    uI="28083d2c-18,28083d2c-0"
+    uP="{{aD}}"
+    wx:if="{{aD}}"
+  ></invest-condition-time-popup>
+  <invest-condition-num-or-amount-popup
+    bind:__l="__l"
+    bindchange="{{aG}}"
+    bindclose="{{aF}}"
+    bindinput="{{aE}}"
+    class="data-v-28083d2c"
+    uI="28083d2c-19,28083d2c-0"
+    uP="{{aH}}"
+    wx:if="{{aH}}"
+  ></invest-condition-num-or-amount-popup>
+  <bottom-selector
+    bind:__l="__l"
+    bindchange="{{aI}}"
+    bindclose="{{aJ}}"
+    class="data-v-28083d2c"
+    uI="28083d2c-20,28083d2c-0"
+    uP="{{aK}}"
+    wx:if="{{aK}}"
+  ></bottom-selector>
+  <condition-protocol
+    bind:__l="__l"
+    class="r data-v-28083d2c"
+    uI="28083d2c-21,28083d2c-0"
+    uR="condProtocol"
+  ></condition-protocol>
+  <condition-confirm
+    bind:__l="__l"
+    bindclose="{{aP}}"
+    bindconfirm="{{aO}}"
+    class="r data-v-28083d2c"
+    uI="28083d2c-22,28083d2c-0"
+    uP="{{aQ}}"
+    uR="condConfirm"
+    wx:if="{{aM}}"
+  ></condition-confirm>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-28083d2c"
+    id="mp-dialog"
+    uI="28083d2c-23,28083d2c-0"
+    uP="{{aR}}"
+    wx:if="{{aR}}"
+  ></mp-dialog>
+</global-wrap>

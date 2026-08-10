@@ -1,0 +1,56 @@
+<view class="panel-wrapper data-v-4ea32808">
+  <block wx:if="{{a}}">
+    <view
+      class="{{['stock-list-condition','data-v-4ea32808',e]}}"
+      wx:if="{{b}}"
+    >
+      <view class="data-v-4ea32808">
+        <view class="stock-list-body data-v-4ea32808">
+          <cond-list-item
+            bind:__l="__l"
+            class="data-v-4ea32808"
+            uI="{{item.b}}"
+            uP="{{item.c}}"
+            wx:for="{{c}}"
+            wx:key="a"
+          ></cond-list-item>
+        </view>
+      </view>
+      <view class="history-append history-append-nobutton data-v-4ea32808">
+        <view bindtap="{{d}}" class="history-link flex-center data-v-4ea32808">
+          <label class="history-link-text data-v-4ea32808"
+            >查看全部条件单</label
+          >
+          <label class="icon icon-weekly-arrow-right data-v-4ea32808"></label>
+        </view>
+      </view>
+    </view>
+    <empty
+      bind:__l="__l"
+      class="data-v-4ea32808"
+      uI="4ea32808-1"
+      uP="{{g||''}}"
+      uS="{{['other']}}"
+      wx:else
+    >
+      <view
+        bindtap="{{f}}"
+        class="history-link flex-center no-entry data-v-4ea32808"
+        slot="other"
+      >
+        <label class="history-link-text data-v-4ea32808">查看全部条件单</label>
+        <label class="icon icon-weekly-arrow-right data-v-4ea32808"></label>
+      </view>
+    </empty>
+  </block>
+  <view class="status-wrapper data-v-4ea32808" wx:else>
+    <status
+      bind:__l="__l"
+      bindhandleError="{{h}}"
+      class="data-v-4ea32808"
+      uI="4ea32808-2"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></status>
+  </view>
+</view>

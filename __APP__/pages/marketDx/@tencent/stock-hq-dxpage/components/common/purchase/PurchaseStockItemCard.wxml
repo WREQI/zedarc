@@ -1,0 +1,128 @@
+<view
+  catchtap="{{N}}"
+  class="{{['_div','data-v-f3636e9a','card-item-wrapper',L,M]}}"
+>
+  <view class="{{['_div','data-v-f3636e9a','stock-name-wrapper',e]}}">
+    <view class="_div stock-name-left data-v-f3636e9a">
+      <view class="_div stock-name data-v-f3636e9a">{{a}}</view>
+      <market-icon
+        bind:__l="__l"
+        class="stock-tag data-v-f3636e9a"
+        uI="f3636e9a-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></market-icon>
+      <view class="{{['_div','data-v-f3636e9a','stock-code',d]}}">{{c}}</view>
+    </view>
+    <label class="_span stock-name-icon-arrow data-v-f3636e9a"></label>
+  </view>
+  <view
+    class="{{['_div','data-v-f3636e9a','detail-wrapper-stock',v]}}"
+    wx:if="{{f}}"
+  >
+    <view class="_div detail-row data-v-f3636e9a">
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a">发行价</view>
+        <view
+          catchtap="{{j}}"
+          class="{{['_div','detail-row-item-num','data-v-f3636e9a',i]}}"
+        >
+          <view class="_div data-v-f3636e9a">{{g}}</view>
+          <view class="_div data-v-f3636e9a">
+            <image
+              class="_img desc-tip data-v-f3636e9a"
+              src="https://st.gtimg.com/design/40b2dcfe6a4924fd7e8194b40248a8f2.png"
+              wx:if="{{h}}"
+            ></image>
+            <image
+              class="_img desc-tip data-v-f3636e9a"
+              src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+              wx:else
+            ></image>
+          </view>
+        </view>
+      </view>
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a"
+          >发行市盈率</view
+        >
+        <view
+          catchtap="{{n}}"
+          class="{{['_div','detail-row-item-num','data-v-f3636e9a',m]}}"
+        >
+          <view class="_div data-v-f3636e9a">{{k}}</view>
+          <view class="_div data-v-f3636e9a">
+            <image
+              class="_img desc-tip data-v-f3636e9a"
+              src="https://st.gtimg.com/design/40b2dcfe6a4924fd7e8194b40248a8f2.png"
+              wx:if="{{l}}"
+            ></image>
+            <image
+              class="_img desc-tip data-v-f3636e9a"
+              src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+              wx:else
+            ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div detail-row data-v-f3636e9a">
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a">申购上限</view>
+        <view class="_div detail-row-item-num data-v-f3636e9a"
+          >{{o}}<label class="_span data-v-f3636e9a" wx:if="{{p}}">万股</label>
+        </view>
+      </view>
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a"
+          >行业市盈率</view
+        >
+        <view class="_div detail-row-item-num data-v-f3636e9a">{{q}}</view>
+      </view>
+    </view>
+    <view class="_div detail-row data-v-f3636e9a">
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a">发行总数</view>
+        <view class="_div detail-row-item-num data-v-f3636e9a"
+          >{{r}}<label class="_span data-v-f3636e9a" wx:if="{{s}}">万股</label>
+        </view>
+      </view>
+      <view class="_div detail-row-item data-v-f3636e9a">
+        <view class="_div detail-row-item-desc data-v-f3636e9a">所属行业</view>
+        <view class="_div detail-row-item-num data-v-f3636e9a">{{t}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div detail-wrapper data-v-f3636e9a" wx:else>
+    <view class="_div detail-info data-v-f3636e9a">
+      <view class="_div detail-num data-v-f3636e9a">{{w}}</view>
+      <view class="{{['_div','data-v-f3636e9a','detail-desc',y]}}">{{x}}</view>
+    </view>
+    <view class="_div detail-info data-v-f3636e9a">
+      <view class="_div detail-num data-v-f3636e9a">{{z}}</view>
+      <view catchtap="{{D}}" class="_div detail-desc-wrapper data-v-f3636e9a">
+        <label class="{{['_span','data-v-f3636e9a','detail-desc',B]}}"
+          >{{A}}</label
+        >
+        <image
+          class="_img desc-tip data-v-f3636e9a"
+          src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+          wx:if="{{C}}"
+        ></image>
+      </view>
+    </view>
+    <view class="_div detail-info data-v-f3636e9a">
+      <view class="{{['_div','data-v-f3636e9a','detail-num',F,G]}}">{{E}}</view>
+      <view catchtap="{{K}}" class="_div detail-desc-wrapper data-v-f3636e9a">
+        <label class="{{['_span','data-v-f3636e9a','detail-desc',I]}}"
+          >{{H}}</label
+        >
+        <image
+          class="_img desc-tip data-v-f3636e9a"
+          src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+          wx:if="{{J}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

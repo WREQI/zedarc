@@ -1,0 +1,123 @@
+.history-modal-wrapper.data-v-b8e00ca8 {
+  position: relative;
+  z-index: 999;
+}
+.history-modal.data-v-b8e00ca8 {
+  background: #fff;
+  border-radius: 0.16rem 0.16rem 0 0;
+  bottom: -14.48rem;
+  height: 14.48rem;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: 999;
+}
+.history-modal--show.data-v-b8e00ca8 {
+  bottom: 0;
+  opacity: 1;
+}
+.history-modal__mask.data-v-b8e00ca8 {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.history-modal__header.data-v-b8e00ca8 {
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(238, 24, 24, 0.1),
+    rgba(238, 24, 24, 0.06) 26%,
+    rgba(238, 24, 24, 0)
+  );
+  border-bottom: 0.013333333333333334rem solid rgba(0, 0, 0, 0.1);
+  color: #000;
+  display: -webkit-flex;
+  display: flex;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.48rem;
+  font-weight: 700;
+  height: 1.52rem;
+  justify-content: center;
+  line-height: 1.52rem;
+  position: relative;
+  text-align: center;
+}
+.history-modal__title.data-v-b8e00ca8 {
+  font-size: 0.48rem;
+  font-weight: 700;
+}
+.history-modal__close.data-v-b8e00ca8 {
+  background: url(https://st.gtimg.com/design/79bb32a9cb104097ca74c1d46ee9f7cb.png)
+    no-repeat 50%/100%;
+  height: 0.32rem;
+  position: absolute;
+  right: 0.4rem;
+  width: 0.32rem;
+}
+.history-modal__body.data-v-b8e00ca8 {
+  height: 12.96rem;
+  overflow: hidden;
+}
+.history-modal__list.data-v-b8e00ca8 {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow: auto;
+}
+.history-modal__item.data-v-b8e00ca8 {
+  border-bottom: 0.013333333333333334rem solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  color: #000;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.92rem;
+  margin: 0 0.4rem;
+  padding: 0.37333333333333335rem 0;
+}
+.history-modal__item-label.data-v-b8e00ca8 {
+  flex: 1;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  text-align: left;
+}
+.history-modal__item-content.data-v-b8e00ca8 {
+  text-align: right;
+}
+.history-modal__reward.data-v-b8e00ca8 {
+  align-items: center;
+  color: #000;
+  display: -webkit-flex;
+  display: flex;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 0.64rem;
+  justify-content: flex-end;
+  line-height: 0.64rem;
+}
+.history-modal__time.data-v-b8e00ca8 {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: DFP King Gothic GB;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.48rem;
+  line-height: 0.48rem;
+}
+.history-modal__empty.data-v-b8e00ca8 {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: DFP King Gothic GB;
+  font-size: 0.4266666666666667rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  margin: 0.4rem auto 0;
+  text-align: center;
+}

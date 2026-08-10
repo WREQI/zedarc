@@ -1,0 +1,47 @@
+<page-meta class="data-v-d9719ca6" rootFontSize="{{a}}"></page-meta>
+<view class="_div main-container data-v-d9719ca6" data-st-theme="{{j}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d9719ca6"
+    uI="d9719ca6-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-d9719ca6"
+    uI="d9719ca6-1"
+  ></stock-privacy-dialog>
+  <main-index
+    bind:__l="__l"
+    bindjumpToTradeFunc="{{c}}"
+    class="r data-v-d9719ca6"
+    uI="d9719ca6-2"
+    uP="{{d}}"
+    uR="main"
+    wx:if="{{d}}"
+  ></main-index>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{e}}"
+    class="data-v-d9719ca6"
+    uI="d9719ca6-3"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></privacy-policy-modal>
+  <view class="delivery-guide-addstock data-v-d9719ca6">
+    <delivery-guide-subscribe
+      bind:__l="__l"
+      class="data-v-d9719ca6"
+      uI="d9719ca6-4"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></delivery-guide-subscribe>
+  </view>
+  <task bind:__l="__l" class="data-v-d9719ca6" uI="d9719ca6-5"></task>
+  <thirteen-anniversary-task
+    bind:__l="__l"
+    class="data-v-d9719ca6"
+    uI="d9719ca6-6"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></thirteen-anniversary-task>
+</view>

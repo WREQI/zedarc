@@ -1,0 +1,87 @@
+<view
+  class="{{['_div','mod-czd-container','data-v-ffde76f3',J]}}"
+  wx:if="{{a}}"
+>
+  <block wx:if="{{b}}">
+    <view class="_div info-wrap data-v-ffde76f3">
+      <view class="_div title data-v-ffde76f3">
+        <view class="{{['_div','data-v-ffde76f3',d]}}">{{c}}</view>
+      </view>
+      <view class="_div tips-line data-v-ffde76f3" wx:if="{{e}}">
+        <view class="_div data-v-ffde76f3" wx:if="{{f}}">
+          <block wx:if="{{g}}">
+            <label class="_span text data-v-ffde76f3">{{h}}</label>
+            <label class="_span time data-v-ffde76f3">
+              <label class="_span time data-v-ffde76f3">{{i}}:</label>
+              <label class="_span time data-v-ffde76f3">{{j}}:</label>
+              <label class="_span time data-v-ffde76f3">{{k}}</label>
+            </label>
+          </block>
+        </view>
+        <view class="_div tips-line data-v-ffde76f3" wx:else>
+          <label class="_span text data-v-ffde76f3">{{l}}</label>
+          <label catchtap="{{m}}" class="_span link data-v-ffde76f3"
+            >猜更多</label
+          >
+        </view>
+      </view>
+      <view class="_div tips-line data-v-ffde76f3" wx:else>
+        <label class="_span text data-v-ffde76f3"
+          >按<label catchtap="{{n}}" class="_span link data-v-ffde76f3"
+            >活动规则</label
+          >不可竞猜</label
+        >
+        <label catchtap="{{p}}" class="_span link data-v-ffde76f3">{{o}}</label>
+      </view>
+    </view>
+    <view class="_div chart-wrap data-v-ffde76f3">
+      <view class="_div area-shadow data-v-ffde76f3">
+        <view class="{{['_div','rise-box','data-v-ffde76f3',q]}}"></view>
+        <view class="{{['_div','fall-box','data-v-ffde76f3',r]}}"></view>
+        <view class="_div mask-box data-v-ffde76f3"></view>
+      </view>
+      <view class="_div area data-v-ffde76f3">
+        <view
+          catchtap="{{w}}"
+          class="{{['_div','rise-box','data-v-ffde76f3',t,v]}}"
+        >
+          <view class="_div rise-text data-v-ffde76f3">{{s}}</view>
+        </view>
+        <view
+          catchtap="{{A}}"
+          class="{{['_div','fall-box','data-v-ffde76f3',y,z]}}"
+        >
+          <view class="_div fall-text data-v-ffde76f3">{{x}}</view>
+        </view>
+      </view>
+      <view class="{{['_div','rise-icon-box','data-v-ffde76f3',B]}}">
+        <view class="_div icon-visible data-v-ffde76f3"></view>
+        <view class="_div icon-shadow data-v-ffde76f3"></view>
+      </view>
+      <view class="{{['_div','fall-icon-box','data-v-ffde76f3',C]}}">
+        <view class="_div icon-visible data-v-ffde76f3"></view>
+        <view class="_div icon-shadow data-v-ffde76f3"></view>
+      </view>
+    </view>
+    <show-model
+      bind:__l="__l"
+      bindtapCancelBtn="{{G}}"
+      bindtapConfirmBtn="{{H}}"
+      class="data-v-ffde76f3"
+      uI="ffde76f3-0"
+      uP="{{I}}"
+      uS="{{['d']}}"
+      wx:if="{{D}}"
+    >
+      <label class="_span data-v-ffde76f3"
+        >我同意接受<label
+          catchtap="{{E}}"
+          class="_span protocol data-v-ffde76f3"
+          >《营销活动通用规则》</label
+        >及<label catchtap="{{F}}" class="_span protocol data-v-ffde76f3"
+          >《腾讯自选股微信版猜涨跌领红包活动规则》</label
+        >
+      </label>
+    </show-model>
+  </block>
+</view>

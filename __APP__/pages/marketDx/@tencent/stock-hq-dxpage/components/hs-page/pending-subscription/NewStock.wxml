@@ -1,0 +1,38 @@
+<view class="_div data-v-0bdd5b91">
+  <title-block
+    bind:__l="__l"
+    class="data-v-0bdd5b91"
+    uI="0bdd5b91-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></title-block>
+  <purchase-stock-item-title
+    bind:__l="__l"
+    bindshowTeachPop="{{b}}"
+    class="title-wrapper data-v-0bdd5b91"
+    uI="0bdd5b91-1"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></purchase-stock-item-title>
+  <view class="{{['_div','data-v-0bdd5b91',e]}}">
+    <purchase-stock-item-cell
+      bind:__l="__l"
+      class="data-v-0bdd5b91"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:for="{{d}}"
+      wx:key="a"
+    ></purchase-stock-item-cell>
+  </view>
+  <view
+    bindtap="{{i}}"
+    class="_div status-bar-wrapper data-v-0bdd5b91"
+    wx:if="{{f}}"
+  >
+    <label class="_span status-text data-v-0bdd5b91">{{g}}</label>
+    <image
+      class="{{['_img','data-v-0bdd5b91','status-arrow',h]}}"
+      src="https://st.gtimg.com/design/514edb6ec8bd162de590d2ed4e27bf3f.png"
+    ></image>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view class="_div account-card-setting data-v-a41bb250">
+  <view class="{{['_div','account-card-img','data-v-a41bb250',a]}}"></view>
+  <view class="_div account-card-title data-v-a41bb250">微信小程序账户卡</view>
+  <view class="_div account-card-desc data-v-a41bb250">
+    <view class="_div account-card-desctxt data-v-a41bb250"
+      >在微信发现页快速查看资产和盈亏</view
+    >
+    <view class="_div account-card-desctxt data-v-a41bb250"
+      >开启后在「微信 - 发现 - 小程序 - 账户」中使用</view
+    >
+  </view>
+  <view class="_div account-card-btnwrap data-v-a41bb250">
+    <button
+      bindtap="{{f}}"
+      class="{{['data-v-a41bb250','account-card-btn',c,d]}}"
+      disabled="{{e}}"
+    >
+      {{b}}
+    </button>
+  </view>
+</view>

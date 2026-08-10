@@ -1,0 +1,27 @@
+<view class="_div flex-list data-v-7cf98876">
+  <view class="_div summary-container data-v-7cf98876">
+    <label class="_span summary data-v-7cf98876" ref="summaryRef" wx:if="{{a}}">
+      <rich-text class="data-v-7cf98876" nodes="{{b}}"></rich-text>
+    </label>
+    <rich-text
+      class="data-v-7cf98876"
+      nodes="{{d}}"
+      ref="summaryRef"
+      space="{{'nbsp'}}"
+      wx:if="{{c}}"
+    ></rich-text>
+  </view>
+  <view class="_div detail-container data-v-7cf98876" hidden="{{!f}}">
+    <view class="_div detail-item data-v-7cf98876" wx:for="{{e}}" wx:key="e">
+      <label class="_span data-v-7cf98876" ref="contentRefs" wx:if="{{item.a}}">
+        <rich-text class="data-v-7cf98876" nodes="{{item.b}}"></rich-text>
+      </label>
+      <rich-text
+        class="data-v-7cf98876"
+        nodes="{{item.d}}"
+        space="{{'nbsp'}}"
+        wx:if="{{item.c}}"
+      ></rich-text>
+    </view>
+  </view>
+</view>

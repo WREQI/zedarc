@@ -1,0 +1,23 @@
+<page-meta class="data-v-a3cb3488" rootFontSize="{{a}}"></page-meta>
+<view class="_div gshg-container data-v-a3cb3488">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a3cb3488"
+    uI="a3cb3488-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a3cb3488"
+    uI="a3cb3488-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <detail
+    bind:__l="__l"
+    class="r data-v-a3cb3488"
+    uI="a3cb3488-2"
+    uP="{{d}}"
+    uR="detail"
+    wx:if="{{d}}"
+  ></detail>
+</view>

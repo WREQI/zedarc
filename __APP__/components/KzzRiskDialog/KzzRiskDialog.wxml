@@ -1,0 +1,17 @@
+<view>
+  <mp-dialog
+    bind:__l="__l"
+    id="{{c}}"
+    uI="2e02f5b8-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{d}}"
+  >
+    <view class="mp-dialog__message">
+      <view class="risk-title align-c">可转债停止交易和转股风险</view>
+      <view class="risk-text"
+        >根据公告披露，{{a}}收市后，{{b}}将停止转股并被强制赎回后退市。因赎回价格可能与市场价格存在较大差异并导致投资损失，请提前关注公司公告的日期时间，并在最后交易日前卖出或转股日前转股。请投资者注意投资风险，详情以公司公告为准</view
+      >
+    </view>
+  </mp-dialog>
+</view>

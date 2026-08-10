@@ -1,0 +1,52 @@
+<view class="_div mod-directory-container data-v-985867d1">
+  <view bindtap="{{c}}" class="{{['_div','nav-btn','data-v-985867d1',b]}}">
+    <view class="_div icon-container data-v-985867d1">
+      <view
+        class="_div row data-v-985867d1"
+        wx:for="{{a}}"
+        wx:for-item="i"
+        wx:key="a"
+      >
+        <view class="_div dot data-v-985867d1"></view>
+        <view class="_div line data-v-985867d1"></view>
+      </view>
+    </view>
+    <view class="_div text data-v-985867d1">目录</view>
+  </view>
+  <view class="_div content-wrap data-v-985867d1">
+    <transition
+      bind:__l="__l"
+      class="data-v-985867d1"
+      uI="985867d1-0"
+      uP="{{g}}"
+      uS="{{['d']}}"
+      wx:if="{{g}}"
+    >
+      <view
+        bindtap="{{f}}"
+        catchtouchmove="{{e}}"
+        class="_div mask data-v-985867d1"
+        wx:if="{{d}}"
+      ></view>
+    </transition>
+    <transition
+      bind:__l="__l"
+      class="data-v-985867d1"
+      uI="985867d1-1"
+      uP="{{j}}"
+      uS="{{['d']}}"
+      wx:if="{{j}}"
+    >
+      <view class="_div content-box data-v-985867d1" wx:if="{{h}}">
+        <view class="_div title data-v-985867d1">专题</view>
+        <view
+          bindtap="{{item.c}}"
+          class="_div section-title data-v-985867d1"
+          wx:for="{{i}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+    </transition>
+  </view>
+</view>

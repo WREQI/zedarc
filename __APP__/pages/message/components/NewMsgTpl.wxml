@@ -1,0 +1,24 @@
+<view bindtap="{{l}}" class="box-item data-v-e42309a4">
+  <view class="{{['data-v-e42309a4','box-item-content',h]}}">
+    <view class="{{['data-v-e42309a4','header',c]}}">
+      <view class="title data-v-e42309a4">{{a}}</view>
+      <view class="time data-v-e42309a4">{{b}}</view>
+    </view>
+    <view class="first data-v-e42309a4" wx:if="{{d}}">{{e}}</view>
+    <view class="kv-content data-v-e42309a4" wx:if="{{f}}">
+      <view
+        class="{{['data-v-e42309a4','kv-item',item.d]}}"
+        wx:for="{{g}}"
+        wx:key="c"
+      >
+        <view class="key-txt data-v-e42309a4">{{item.a}}</view>
+        <view class="value-txt data-v-e42309a4">{{item.b}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="box-item-line data-v-e42309a4" wx:if="{{i}}"></view>
+  <view class="box-item-button data-v-e42309a4" wx:if="{{j}}">
+    <label class="button-text data-v-e42309a4">{{k}}</label>
+    <label class="icon icon-arrow-right right-arrow data-v-e42309a4"></label>
+  </view>
+</view>

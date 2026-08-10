@@ -1,0 +1,61 @@
+<view class="{{['_div','data-v-fa44983f','content-wrapper',D]}}">
+  <caption-bar
+    bind:__l="__l"
+    bindmonitoringRemindClick="{{e}}"
+    bindshowFilterPopup="{{d}}"
+    bindsort="{{c}}"
+    class="r data-v-fa44983f"
+    uI="fa44983f-0"
+    uP="{{f}}"
+    uR="captionBar"
+    wx:if="{{a}}"
+  ></caption-bar>
+  <view
+    class="{{['_div','data-v-fa44983f','dynamic-height-wrapper',y]}}"
+    style="{{z}}"
+  >
+    <scroll-view
+      scrollY
+      bindrefresherpulling="{{t}}"
+      bindrefresherrefresh="{{w}}"
+      bindrefresherrestore="{{v}}"
+      bindscroll="{{r}}"
+      bindscrolltolower="{{s}}"
+      class="{{['stock-scroll-list','data-v-fa44983f',m]}}"
+      lowerThreshold="{{200}}"
+      refresherDefaultStyle="{{p}}"
+      refresherEnabled="{{o}}"
+      refresherThreshold="100"
+      refresherTriggered="{{q}}"
+      style="{{n}}"
+    >
+      <render-list
+        bind:__l="__l"
+        bindcalculateCardHeight="{{j}}"
+        bindshowPolicyModal="{{i}}"
+        bindsort="{{k}}"
+        class="data-v-fa44983f"
+        uI="fa44983f-1"
+        uP="{{l}}"
+        uS="{{['after-stock-list']}}"
+        wx:if="{{g}}"
+      >
+        <view slot="after-stock-list">
+          <slot name="after-stock-list"></slot>
+        </view>
+      </render-list>
+    </scroll-view>
+    <view class="_div portfolio-mask data-v-fa44983f" hidden="{{!x}}"></view>
+  </view>
+  <root-portal class="data-v-fa44983f" enable="{{true}}">
+    <select-plate
+      bind:__l="__l"
+      bindclose="{{B}}"
+      bindselect="{{A}}"
+      class="data-v-fa44983f"
+      uI="fa44983f-2"
+      uP="{{C}}"
+      wx:if="{{C}}"
+    ></select-plate>
+  </root-portal>
+</view>

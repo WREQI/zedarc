@@ -1,0 +1,46 @@
+<mp-dialog
+  bind:__l="__l"
+  class="privacy-dialog data-v-91617622"
+  uI="91617622-0"
+  uP="{{g}}"
+  uS="{{['d']}}"
+  wx:if="{{g}}"
+>
+  <view class="privacy-title text-color-1 flex border-bottom data-v-91617622">
+    <broker-logo
+      bind:__l="__l"
+      class="broker-icon data-v-91617622"
+      uI="91617622-1,91617622-0"
+    ></broker-logo>
+    <view class="data-v-91617622"
+      >{{a}}申请使用您的银行卡和身份证信息用于证券开户</view
+    >
+  </view>
+  <view class="privacy-container text-color-2 fs-28 data-v-91617622"
+    >为了帮助你更快捷完成开户，我们将通过<label
+      bindtap="{{b}}"
+      class="link data-v-91617622"
+      >《个人信息授权书》</label
+    >授权，帮助你快速获取你在财付通支付科技有限公司绑定的银行卡信息，身份证影像正反面信息。此信息仅用于开户流程使用。点击“同意并授权”按钮代表你自主选择使用已经留存在财付通公司的银行卡信息、身份证证件副本传输（转移）至{{c}}公司，且确认此银行卡为你本人银行卡、身份证证件副本为你最新的真实有效的证件图片，并同意{{d}}公司通过财付通公司收集该信息。</view
+  >
+  <view class="top-tip text-color-4 fs-24 border-top flex data-v-91617622">
+    <label class="icon-shield data-v-91617622"></label>
+    <label class="data-v-91617622"
+      >根据监管要求，证券开户需提供本人身份证信息进行合规验证，以保障您的账户安全。</label
+    >
+  </view>
+  <view class="button-container flex-center data-v-91617622">
+    <view
+      bindtap="{{e}}"
+      class="button refuse-button data-v-91617622"
+      data-stat="trade.apply.idcard.privacy_dialog.refuse"
+      >不同意</view
+    >
+    <view
+      bindtap="{{f}}"
+      class="button confirm-button data-v-91617622"
+      data-stat="trade.apply.idcard.privacy_dialog.confirm"
+      >同意并授权</view
+    >
+  </view>
+</mp-dialog>

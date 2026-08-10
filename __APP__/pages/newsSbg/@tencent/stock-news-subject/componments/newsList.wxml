@@ -1,0 +1,71 @@
+<view class="_div news-list-content data-v-11e572b2">
+  <view
+    class="_div news-list-title data-v-11e572b2"
+    ref="sectionList"
+    wx:for="{{a}}"
+    wx:key="s"
+  >
+    <view class="_div section_name data-v-11e572b2" wx:if="{{item.a}}">
+      <label class="_span line data-v-11e572b2"></label>{{item.b}}</view
+    >
+    <block wx:if="{{item.c}}">
+      <view
+        class="_div newslist data-v-11e572b2"
+        wx:for="{{item.d}}"
+        wx:for-item="list"
+        wx:key="n"
+      >
+        <video-card
+          bind:__l="__l"
+          bindtapDetail="{{list.b}}"
+          class="data-v-11e572b2"
+          uI="{{list.c}}"
+          uP="{{list.d}}"
+          wx:if="{{list.a}}"
+        ></video-card>
+        <news-event-item
+          bind:__l="__l"
+          bindcreateEventItem="{{list.f}}"
+          binditemBrow="{{list.h}}"
+          bindtapDetail="{{list.g}}"
+          class="news-item-com data-v-11e572b2"
+          uI="{{list.i}}"
+          uP="{{list.j}}"
+          wx:elif="{{list.e}}"
+        ></news-event-item>
+        <news-item
+          bind:__l="__l"
+          bindtapDetail="{{list.k}}"
+          class="news-item-com data-v-11e572b2"
+          uI="{{list.l}}"
+          uP="{{list.m||''}}"
+          wx:else
+        ></news-item>
+      </view>
+    </block>
+    <viewport-module
+      bind:__l="__l"
+      bindwzqKeepPos="{{item.j}}"
+      class="{{['r-i-f','data-v-11e572b2',item.h&&'limit-max-width']}}"
+      data-win-type="{{item.i}}"
+      uI="{{item.k}}"
+      uP="{{item.l}}"
+      uR="{{item.g}}"
+      wx:if="{{item.e}}"
+    ></viewport-module>
+    <view
+      class="{{['_div','vote-wrap','data-v-11e572b2',item.r&&'limit-max-width']}}"
+      name="winAccount"
+      wx:if="{{item.m}}"
+    >
+      <vote-main
+        bind:__l="__l"
+        bindpickVote="{{item.o}}"
+        class="data-v-11e572b2"
+        uI="{{item.p}}"
+        uP="{{item.q}}"
+        wx:if="{{item.n}}"
+      ></vote-main>
+    </view>
+  </view>
+</view>

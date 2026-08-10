@@ -1,0 +1,74 @@
+<view
+  class="{{['_div','finance-sub-mod','announcement-container','data-v-149d8017',k]}}"
+>
+  <view
+    catchtap="{{e}}"
+    class="_div mod-finance-title block-layout data-v-149d8017"
+  >
+    <view class="_div detail-tips-wrapper data-v-149d8017">
+      <view class="_div title-content data-v-149d8017">{{a}}</view>
+      <view class="_div detail-tips-right data-v-149d8017" wx:if="{{b}}"
+        >({{c}})</view
+      >
+    </view>
+    <view class="_div arrow-zxg data-v-149d8017" wx:if="{{d}}"></view>
+  </view>
+  <view class="_div cbzy-content data-v-149d8017" wx:if="{{f}}">
+    <cbzy-content
+      bind:__l="__l"
+      class="data-v-149d8017"
+      uI="149d8017-0"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></cbzy-content>
+  </view>
+  <view class="_div flie-list-content data-v-149d8017" wx:if="{{h}}">
+    <view
+      bindtap="{{item.e}}"
+      class="_div flie-list-item data-v-149d8017"
+      wx:for="{{i}}"
+      wx:key="d"
+    >
+      <view class="_div file-list-title data-v-149d8017">{{item.a}}</view>
+      <view class="_div file-list-desc data-v-149d8017">
+        <view class="_div file-source-content data-v-149d8017">{{item.b}}</view>
+        <view class="_div file-time-content data-v-149d8017">{{item.c}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div table data-v-149d8017" wx:else>
+    <view class="_div table-title data-v-149d8017">
+      <view class="_div table-line-cell data-v-149d8017">年份</view>
+      <view class="_div table-line-cell data-v-149d8017">
+        <view class="_div data-v-149d8017">一季报</view>
+        <view class="_div data-v-149d8017">中报</view>
+        <view class="_div data-v-149d8017">三季报</view>
+        <view class="_div data-v-149d8017">年报</view>
+      </view>
+    </view>
+    <view
+      class="_div table-title data-v-149d8017"
+      wx:for="{{j}}"
+      wx:for-item="year"
+      wx:key="c"
+    >
+      <view class="_div table-line-cell data-v-149d8017">{{year.a}}</view>
+      <view class="_div table-line-cell data-v-149d8017">
+        <view
+          class="_div table-content data-v-149d8017"
+          wx:for="{{year.b}}"
+          wx:key="c"
+        >
+          <image
+            alt=""
+            bindtap="{{item.b}}"
+            class="_img pdf-img data-v-149d8017"
+            src="https://st.gtimg.com/design/195f5af30fc220ff2144ac68c9c78ac0.png"
+            wx:if="{{item.a}}"
+          ></image>
+          <label class="_span data-v-149d8017" wx:else>未披露</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

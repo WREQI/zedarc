@@ -1,0 +1,100 @@
+<page-meta class="data-v-a949230c" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-a949230c"
+  id="global-wrap"
+  uI="a949230c-0"
+  uP="{{y}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{y}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-a949230c"
+    uI="a949230c-1,a949230c-0"
+    uS="{{['d']}}"
+  >
+    <view catchtap="{{w}}" class="page-apply-setpwd data-v-a949230c">
+      <digital-human
+        bind:__l="__l"
+        class="r data-v-a949230c"
+        uI="a949230c-2,a949230c-1"
+        uP="{{d}}"
+        uR="digitalHumanRef"
+        wx:if="{{b}}"
+      ></digital-human>
+      <view class="{{['data-v-a949230c',p]}}">
+        <progress-bar
+          bind:__l="__l"
+          class="data-v-a949230c"
+          uI="a949230c-3,a949230c-1"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></progress-bar>
+        <view
+          class="{{['pwd-container','flex','flex-row','data-v-a949230c',n&&'container-animate']}}"
+        >
+          <view class="set-container data-v-a949230c">
+            <view class="align-c label-text fs-32 data-v-a949230c">
+              <label class="text-color-1 data-v-a949230c">请输入6位股票</label>
+              <label class="red data-v-a949230c">{{f}}</label>
+            </view>
+            <view class="password-box data-v-a949230c">
+              <st-password-input
+                bind:__l="__l"
+                bindcomplete="{{g}}"
+                bindfocus="{{h}}"
+                class="data-v-a949230c"
+                uI="a949230c-4,a949230c-1"
+                uP="{{i}}"
+                wx:if="{{i}}"
+              ></st-password-input>
+            </view>
+          </view>
+          <view class="confirm-container data-v-a949230c">
+            <view class="align-c label-text fs-32 data-v-a949230c">
+              <label class="text-color-1 data-v-a949230c">再次输入股票</label>
+              <label class="red data-v-a949230c">{{j}}</label>
+            </view>
+            <view class="password-box data-v-a949230c">
+              <st-password-input
+                bind:__l="__l"
+                bindcomplete="{{k}}"
+                bindfocus="{{l}}"
+                class="data-v-a949230c"
+                uI="a949230c-5,a949230c-1"
+                uP="{{m}}"
+                wx:if="{{m}}"
+              ></st-password-input>
+            </view>
+          </view>
+        </view>
+        <step-buttons
+          bind:__l="__l"
+          class="data-v-a949230c"
+          uI="a949230c-6,a949230c-1"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></step-buttons>
+      </view>
+      <st-number-keyboard
+        bind:__l="__l"
+        binddelete="{{s}}"
+        bindinput="{{r}}"
+        class="{{['keyboard-layout','data-v-a949230c',q]}}"
+        uI="a949230c-7,a949230c-1"
+        uP="{{t}}"
+        wx:if="{{t}}"
+      ></st-number-keyboard>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-a949230c"
+        id="mp-dialog"
+        uI="a949230c-8,a949230c-1"
+        uP="{{v}}"
+        wx:if="{{v}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

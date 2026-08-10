@@ -1,0 +1,10 @@
+<view catchtap="{{g}}" class="_div stock-bar data-v-d9557c5b">
+  <image class="_img stock-tag data-v-d9557c5b" src="{{a}}"></image>
+  <view class="_div stock-name data-v-d9557c5b">{{b}}</view>
+  <view class="{{['_div','stock-ratio','data-v-d9557c5b',d]}}">{{c}}</view>
+  <image
+    catchtap="{{e}}"
+    class="_img button-icon data-v-d9557c5b"
+    src="{{f}}"
+  ></image>
+</view>

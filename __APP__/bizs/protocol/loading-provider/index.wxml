@@ -1,0 +1,18 @@
+<view class="data-v-d47d2072">
+  <view class="^loading-wrapper loading-wrapper data-v-d47d2072" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <loading
+        bind:__l="__l"
+        class="data-v-d47d2072"
+        uI="d47d2072-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></loading>
+      <label class="loading-tip data-v-d47d2072">正在拉取协议...</label>
+    </block>
+    <label class="data-v-d47d2072" wx:if="{{d}}">{{e}}</label>
+  </view>
+  <view class="data-v-d47d2072" style="{{f}}">
+    <slot></slot>
+  </view>
+</view>

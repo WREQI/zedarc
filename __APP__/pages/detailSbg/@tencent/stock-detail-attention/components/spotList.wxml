@@ -1,0 +1,53 @@
+<view class="_div component-spot-list data-v-81ee10fe">
+  <view class="_div spot-list data-v-81ee10fe" wx:if="{{a}}">
+    <view
+      class="_div spot-item flex flex-justify-between data-v-81ee10fe"
+      wx:for="{{b}}"
+      wx:for-item="spot"
+      wx:key="n"
+    >
+      <view
+        class="{{['_div','item-line','data-v-81ee10fe',spot.a,spot.b]}}"
+        wx:if="{{c}}"
+      ></view>
+      <view class="{{['_div','data-v-81ee10fe','spot-order',spot.c]}}"></view>
+      <view class="{{['_div','data-v-81ee10fe','spot-detail',spot.m]}}">
+        <view class="_div spot-meta data-v-81ee10fe">
+          <view class="_div spot-time data-v-81ee10fe">{{spot.d}}</view>
+          <view class="_div spot-title data-v-81ee10fe">{{spot.e}}</view>
+        </view>
+        <view class="_div spot-news data-v-81ee10fe" wx:if="{{spot.f}}">
+          <view
+            bindtap="{{spot.j}}"
+            class="{{['_div','data-v-81ee10fe','news-summary flex-vcenter',spot.i]}}"
+          >
+            <view class="_div summary-text data-v-81ee10fe"
+              >相关新闻{{spot.g}}条</view
+            >
+            <view
+              class="_div arrow arrow-down data-v-81ee10fe"
+              wx:if="{{spot.h}}"
+            ></view>
+            <view class="_div arrow arrow-up data-v-81ee10fe" wx:else></view>
+          </view>
+          <view class="_div data-v-81ee10fe" wx:if="{{spot.k}}">
+            <view
+              bindtap="{{news.d}}"
+              class="_div news-item data-v-81ee10fe"
+              wx:for="{{spot.l}}"
+              wx:for-item="news"
+              wx:key="c"
+            >
+              <view class="_div news-title data-v-81ee10fe">{{news.a}}</view>
+              <view class="_div news-source data-v-81ee10fe">{{news.b}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div spot-empty data-v-81ee10fe" wx:else>
+    <view class="_div empty-logo data-v-81ee10fe"></view>
+    <view class="_div empty-text data-v-81ee10fe">暂无热点</view>
+  </view>
+</view>

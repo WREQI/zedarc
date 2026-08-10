@@ -1,0 +1,21 @@
+<view
+  bindtouchend="{{h}}"
+  bindtouchmove="{{g}}"
+  bindtouchstart="{{f}}"
+  class="_div cont data-v-0e22c852"
+>
+  <view
+    class="{{['_div','tab','data-v-0e22c852',c&&'selected']}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div notify data-v-0e22c852" wx:if="{{b}}"></view>
+    <slot></slot>
+  </view>
+  <view
+    bindtap="{{e}}"
+    class="{{['_div','tab','data-v-0e22c852',d&&'selected']}}"
+    wx:else
+  >
+    <slot></slot>
+  </view>
+</view>

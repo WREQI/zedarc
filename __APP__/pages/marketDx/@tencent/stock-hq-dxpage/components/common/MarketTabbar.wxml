@@ -1,0 +1,35 @@
+<view class="_div market-wrapper data-v-b1f8255e">
+  <view class="{{['_div','data-v-b1f8255e','market-container',e]}}">
+    <view class="_div left-part data-v-b1f8255e">
+      <tabs
+        bind:__l="__l"
+        bindselect="{{b}}"
+        class="market-item-wrapper data-v-b1f8255e"
+        uI="b1f8255e-0"
+        uP="{{c}}"
+        uS="{{['d']}}"
+        wx:if="{{c}}"
+      >
+        <tab
+          bind:__l="__l"
+          class="tab-item r-i-f data-v-b1f8255e"
+          uI="{{tab.e}}"
+          uP="{{tab.f}}"
+          uR="{{tab.c}}"
+          uS="{{['d']}}"
+          wx:for="{{a}}"
+          wx:for-item="tab"
+          wx:key="d"
+          >{{tab.a}}</tab
+        >
+      </tabs>
+    </view>
+    <view bindtap="{{d}}" class="_div right-part data-v-b1f8255e">
+      <image
+        class="_img icon-cap data-v-b1f8255e"
+        src="https://st.gtimg.com/design/2c0f5fbfad40dbf9203d8d72becfc795.png"
+      ></image>
+      <label class="_span daxin-strategy data-v-b1f8255e">打新攻略</label>
+    </view>
+  </view>
+</view>

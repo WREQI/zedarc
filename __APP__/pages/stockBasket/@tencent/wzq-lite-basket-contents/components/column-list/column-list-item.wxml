@@ -1,0 +1,10 @@
+<view class="_div column-list-item" ref="column-list-item">
+  <basket-overview-lite
+    bind:__l="__l"
+    bindheaderTitleClick="{{a}}"
+    class="lite-wrapper"
+    uI="9a56a64c-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></basket-overview-lite>
+</view>

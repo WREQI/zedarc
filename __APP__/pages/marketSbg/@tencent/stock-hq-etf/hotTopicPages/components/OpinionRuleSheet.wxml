@@ -1,0 +1,39 @@
+<view class="opinion-rule-sheet-modal data-v-41b6c3ef">
+  <view class="opinion-rule-sheet-modal__header data-v-41b6c3ef">
+    <view class="_h2 opinion-rule-sheet-modal__title data-v-41b6c3ef"
+      >观点生成规则</view
+    >
+    <view
+      ariaLabel="关闭弹板"
+      bindtap="{{a}}"
+      class="_div opinion-rule-sheet-modal__close data-v-41b6c3ef"
+    >
+      <label
+        class="_span opinion-rule-sheet-modal__close-icon data-v-41b6c3ef"
+      ></label>
+    </view>
+  </view>
+  <scroll-view
+    catchtouchmove="{{c}}"
+    class="opinion-rule-sheet-modal__scroll data-v-41b6c3ef"
+    scrollY="{{true}}"
+    wx:if="{{b}}"
+  >
+    <opinion-rule-body
+      bind:__l="__l"
+      class="data-v-41b6c3ef"
+      uI="41b6c3ef-0"
+    ></opinion-rule-body>
+  </scroll-view>
+  <view
+    catchtouchmove="{{d}}"
+    class="_div opinion-rule-sheet-modal__scroll data-v-41b6c3ef"
+    wx:else
+  >
+    <opinion-rule-body
+      bind:__l="__l"
+      class="data-v-41b6c3ef"
+      uI="41b6c3ef-1"
+    ></opinion-rule-body>
+  </view>
+</view>

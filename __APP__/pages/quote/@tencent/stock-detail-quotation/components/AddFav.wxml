@@ -1,0 +1,37 @@
+<view class="{{['_div','data-v-21ffbd24',n&&'skin-black']}}" wx:if="{{a}}">
+  <block wx:if="{{b}}">
+    <view catchtap="{{d}}" class="_div hasAdd data-v-21ffbd24" wx:if="{{c}}">
+      <view class="_div icon data-v-21ffbd24"></view>
+      <view class="_div text data-v-21ffbd24">已添加</view>
+    </view>
+    <view catchtap="{{e}}" class="_div add data-v-21ffbd24" wx:else>
+      <view class="_div icon data-v-21ffbd24"></view>
+      <view class="_div text data-v-21ffbd24">添加自选</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view bindtap="{{g}}" class="_div add-btn data-v-21ffbd24" wx:if="{{f}}"
+      >已添加</view
+    >
+    <view bindtap="{{j}}" class="_div add-btn active data-v-21ffbd24" wx:else
+      >+ 自选<bubble-tip
+        bind:__l="__l"
+        class="zs-bk-bubble-tip data-v-21ffbd24"
+        uI="21ffbd24-0"
+        uP="{{i}}"
+        uS="{{['d']}}"
+        wx:if="{{i}}"
+        >{{h}}</bubble-tip
+      >
+    </view>
+  </block>
+  <batch
+    bind:__l="__l"
+    bindfinish="{{l}}"
+    class="data-v-21ffbd24"
+    data-c-h="{{!k}}"
+    uI="21ffbd24-1"
+    uP="{{m}}"
+    wx:if="{{m}}"
+  ></batch>
+</view>

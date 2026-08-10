@@ -1,0 +1,26 @@
+<view bindtap="{{d}}" class="_div rule-wrap data-v-d3650acd">
+  <view class="_div content data-v-d3650acd">
+    <view class="_div title data-v-d3650acd"
+      >活动规则<image
+        class="_img close data-v-d3650acd"
+        src="https://st.gtimg.com/design/2d58010992dcb911ed9d49692618650f.png"
+      ></image>
+    </view>
+    <view catchtap="{{c}}" class="_div rule data-v-d3650acd">
+      <view class="_div rule-item data-v-d3650acd" wx:for="{{a}}" wx:key="d">
+        <view class="_div name data-v-d3650acd">{{item.a}}</view>
+        <rich-text
+          class="info data-v-d3650acd"
+          nodes="{{item.b}}"
+          wx:if="{{b}}"
+        ></rich-text>
+        <view class="_div info data-v-d3650acd" wx:else>
+          <rich-text class="data-v-d3650acd" nodes="{{item.c}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <view class="_div rule-tips data-v-d3650acd"
+      >榜单数据每5分钟更新一次，仅展示客观数据，排行不构成投资建议。</view
+    >
+  </view>
+</view>

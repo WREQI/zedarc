@@ -1,0 +1,105 @@
+<view class="{{['_div','data-v-de1d6358','mod-rank',n,o,p]}}">
+  <block wx:if="{{a}}">
+    <view class="_div caption data-v-de1d6358">
+      <view class="_div table-name data-v-de1d6358">股票</view>
+      <view
+        catchtap="{{colName.e}}"
+        class="_div table-sort order data-v-de1d6358"
+        wx:for="{{b}}"
+        wx:for-item="colName"
+        wx:key="d"
+        >{{colName.a}}<view class="_div trend data-v-de1d6358">
+          <label class="{{['_span','data-v-de1d6358','up',colName.b]}}"></label>
+          <label
+            class="{{['_span','data-v-de1d6358','down',colName.c]}}"
+          ></label>
+        </view>
+      </view>
+    </view>
+    <view class="{{['_ul','rank-list','data-v-de1d6358',g&&'-us']}}">
+      <view
+        catchtap="{{item.k}}"
+        class="{{['_li','data-v-de1d6358','list-block']}}"
+        wx:for="{{c}}"
+        wx:key="j"
+      >
+        <view class="{{['_div','data-v-de1d6358',item.a]}}"></view>
+        <view class="_div col-name data-v-de1d6358">
+          <view class="_div name data-v-de1d6358">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-de1d6358"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{d}}"
+            ></market-icon>
+            <view
+              class="_div stock-name data-v-de1d6358"
+              style="{{'font-size:'+item.e}}"
+              >{{item.d}}</view
+            >
+          </view>
+          <view class="{{['_div','data-v-de1d6358','code',f]}}">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-de1d6358"
+              uI="{{item.f}}"
+              uP="{{item.g}}"
+              wx:if="{{e}}"
+            ></market-icon
+            >{{item.h}}</view
+          >
+        </view>
+        <view
+          class="_div col-number data-v-de1d6358"
+          wx:for="{{item.i}}"
+          wx:for-item="colName"
+          wx:key="j"
+        >
+          <view class="_div data-v-de1d6358" wx:if="{{colName.a}}"
+            >{{colName.b}}</view
+          >
+          <view
+            class="{{['_div','data-v-de1d6358',colName.e]}}"
+            wx:if="{{colName.c}}"
+            >{{colName.d}}%</view
+          >
+          <view class="_div data-v-de1d6358" wx:if="{{colName.f}}"
+            >{{colName.g}}%</view
+          >
+          <view class="_div data-v-de1d6358" wx:if="{{colName.h}}"
+            >{{colName.i}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      catchtap="{{i}}"
+      class="_div checkmore-text data-v-de1d6358"
+      wx:if="{{h}}"
+    >
+      <view class="_div jump-text data-v-de1d6358">点击查看更多股票</view>
+      <view class="_div jump-arrow data-v-de1d6358"></view>
+    </view>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-de1d6358"
+    uI="de1d6358-2"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无数据</block>
+  </no-data>
+  <view class="_div error-status data-v-de1d6358" wx:if="{{k}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{l}}"
+      class="data-v-de1d6358"
+      uI="de1d6358-3"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></st-status>
+  </view>
+</view>

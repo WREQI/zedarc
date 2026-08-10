@@ -1,0 +1,77 @@
+<view
+  bindtouchend="{{B}}"
+  bindtouchmove="{{C}}"
+  class="_div stock-news-container"
+>
+  <block wx:if="{{a}}">
+    <news-prospect
+      bind:__l="__l"
+      uI="7b98afdc-0"
+      uP="{{c}}"
+      wx:if="{{b}}"
+    ></news-prospect>
+    <news-normal
+      bind:__l="__l"
+      class="r"
+      uI="7b98afdc-1"
+      uP="{{g}}"
+      uR="newsNormal"
+      uS="{{['txvplayer']}}"
+      wx:elif="{{d}}"
+    >
+      <view slot="txvplayer">
+        <slot name="txvplayer" wx:if="{{e}}"></slot>
+      </view>
+    </news-normal>
+    <news-report
+      bind:__l="__l"
+      uI="7b98afdc-2"
+      uP="{{i}}"
+      wx:elif="{{h}}"
+    ></news-report>
+    <news-weixin
+      bind:__l="__l"
+      uI="7b98afdc-3"
+      uP="{{k}}"
+      wx:elif="{{j}}"
+    ></news-weixin>
+    <translate
+      bind:__l="__l"
+      bindonTranslateChange="{{n}}"
+      class="r"
+      uI="7b98afdc-4"
+      uP="{{o}}"
+      uR="translate"
+      wx:if="{{l}}"
+    ></translate>
+  </block>
+  <news-status
+    bind:__l="__l"
+    bindretry="{{q}}"
+    uI="7b98afdc-5"
+    uP="{{r}}"
+    wx:if="{{p}}"
+  ></news-status>
+  <view class="_div emptyNews" wx:elif="{{s}}">
+    <view class="_div emptyImg"></view>
+    <view class="_div">本篇内容已下线，请关注更多精彩内容</view>
+  </view>
+  <text-selection-overlay
+    bind:__l="__l"
+    bindselect="{{w}}"
+    class="r"
+    uI="7b98afdc-6"
+    uP="{{x}}"
+    uR="textSelectionOverlay"
+    wx:if="{{t}}"
+  ></text-selection-overlay>
+  <root-portal enable="{{true}}" wx:if="{{y}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{z}}"
+      uI="7b98afdc-7"
+      uP="{{A}}"
+      wx:if="{{A}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+</view>

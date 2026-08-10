@@ -1,0 +1,50 @@
+<view class="_div video-card-mod news-box data-v-e869484f">
+  <view bindtap="{{s}}" class="_div video-card-container data-v-e869484f">
+    <view class="{{['_div','title-box','data-v-e869484f',b]}}">
+      <label class="_span title data-v-e869484f">{{a}}</label>
+    </view>
+    <view class="_div data-v-e869484f" id="img-box">
+      <view class="_div img-bg data-v-e869484f">
+        <image class="_img data-v-e869484f" src="{{c}}"></image>
+      </view>
+      <view class="_div video-mask data-v-e869484f">
+        <image
+          class="_img data-v-e869484f"
+          src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/mask-c.png"
+        ></image>
+      </view>
+      <view class="_div video-box2 data-v-e869484f" wx:if="{{d}}">
+        <view class="_div play-button data-v-e869484f">
+          <image
+            class="_img play-btn-icon data-v-e869484f"
+            src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div video-info data-v-e869484f" wx:if="{{e}}">
+        <block wx:if="{{f}}">
+          <label class="_span video-info-item data-v-e869484f"
+            >{{g}}{{h}}</label
+          >
+          <view
+            class="_div vertical-line data-v-e869484f"
+            style="{{'width:'+'1px'}}"
+          ></view>
+        </block>
+        <label class="_span video-info-item data-v-e869484f">{{i}}</label>
+      </view>
+      <view class="_div live-info data-v-e869484f" wx:if="{{j}}">
+        <view
+          class="{{['_div','data-v-e869484f','live-status-dot',k,l,m]}}"
+        ></view>
+        <label class="_span live-status-text data-v-e869484f">{{n}}{{o}}</label>
+      </view>
+    </view>
+    <view class="_div source-box data-v-e869484f">
+      <label class="_span source-item data-v-e869484f">{{p}}</label>
+      <label class="_span source-item data-v-e869484f" wx:if="{{q}}"
+        >{{r}}评</label
+      >
+    </view>
+  </view>
+</view>

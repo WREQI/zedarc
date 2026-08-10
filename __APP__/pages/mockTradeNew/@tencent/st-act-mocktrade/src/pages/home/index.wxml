@@ -1,0 +1,1066 @@
+<view
+  class="{{['_div','data-v-bf5b9ce6','asset-wrapper','scroll-view','height100',ck,cl,cm,cn]}}"
+  data-st-theme="{{co}}"
+>
+  <view class="_div flex height100 data-v-bf5b9ce6">
+    <view
+      class="_div top-img top-img-dark data-v-bf5b9ce6"
+      wx:if="{{a}}"
+    ></view>
+    <view class="_div top-img data-v-bf5b9ce6" wx:else></view>
+    <view bindtap="{{b}}" class="_div top-trade data-v-bf5b9ce6">去实战</view>
+    <bulletin-bar
+      bind:__l="__l"
+      bindclose="{{e}}"
+      bindtextClick="{{f}}"
+      class="data-v-bf5b9ce6"
+      key="{{d}}"
+      uI="bf5b9ce6-0"
+      uP="{{g}}"
+      wx:if="{{c}}"
+    ></bulletin-bar>
+    <view
+      class="{{['_div','flow-layout','data-v-bf5b9ce6',aY&&'flow-layout-newuser']}}"
+    >
+      <view class="{{['_div','asset-desc','data-v-bf5b9ce6',l]}}" wx:if="{{h}}">
+        <image
+          alt=""
+          class="_img asset-desc-img data-v-bf5b9ce6"
+          src="https://st.gtimg.com/design/4f530f7bc1a673fd787cb897aeddd3b3.png"
+          wx:if="{{i}}"
+        ></image>
+        <image
+          alt=""
+          class="_img asset-desc-img data-v-bf5b9ce6"
+          src="https://st.gtimg.com/design/c53d04d61b2a33d2add42ffe14834323.png"
+          wx:else
+        ></image>
+        <view
+          bindtap="{{k}}"
+          class="_div asset-onlogin data-v-bf5b9ce6"
+          wx:if="{{j}}"
+          >登录后体验</view
+        >
+      </view>
+      <view class="_div asset-board data-v-bf5b9ce6" wx:if="{{m}}">
+        <new-user-stock
+          bind:__l="__l"
+          bindstockClick="{{o}}"
+          class="data-v-bf5b9ce6"
+          uI="bf5b9ce6-1"
+          uP="{{p}}"
+          wx:if="{{n}}"
+        ></new-user-stock>
+        <view
+          class="{{['_div','asset-overview','data-v-bf5b9ce6',K]}}"
+          key="k"
+          wx:if="{{q}}"
+        >
+          <view class="_div asset-showy data-v-bf5b9ce6">
+            <view class="_div layout-align-space-between row data-v-bf5b9ce6">
+              <label class="_span asset-showy--title data-v-bf5b9ce6"
+                >今日盈亏</label
+              >
+              <view
+                class="_div asset-showy--actions row layout-align-center-center data-v-bf5b9ce6"
+              >
+                <reset-card-entry
+                  bind:__l="__l"
+                  bindbrow="{{s}}"
+                  bindclick="{{t}}"
+                  class="data-v-bf5b9ce6"
+                  uI="bf5b9ce6-2"
+                  uP="{{v}}"
+                  wx:if="{{r}}"
+                ></reset-card-entry>
+                <view
+                  bindtap="{{y}}"
+                  class="{{['_div','share','row','layout-align-center-center','data-v-bf5b9ce6',x]}}"
+                  wx:if="{{w}}"
+                >
+                  <image
+                    class="_img ico_share data-v-bf5b9ce6"
+                    src="https://st.gtimg.com/design/858ed423789dbf500a4303660e11ca8f.png"
+                  ></image>
+                  <label class="_span share-txt data-v-bf5b9ce6">分享</label>
+                </view>
+              </view>
+            </view>
+            <view class="_div asset-showy--main data-v-bf5b9ce6">
+              <view class="_div asset-showy--main--today data-v-bf5b9ce6">
+                <label
+                  class="{{['_span','asset-showy--main--today__big','data-v-bf5b9ce6',A]}}"
+                  style="{{'color:'+B}}"
+                  >{{z}}</label
+                >
+              </view>
+              <view class="_div asset-showy--main--all data-v-bf5b9ce6">
+                <view class="_div asset-showy--main--all-mount data-v-bf5b9ce6">
+                  <label
+                    class="_span asset-showy--main--all--title data-v-bf5b9ce6"
+                    >累计盈亏</label
+                  >
+                  <label
+                    class="{{['_span','asset-showy--main--all--content','data-v-bf5b9ce6',D]}}"
+                    style="{{'color:'+E}}"
+                    >{{C}}</label
+                  >
+                </view>
+                <view class="_div asset-showy--main--all-rate data-v-bf5b9ce6">
+                  <label
+                    class="_span asset-showy--main--all--title data-v-bf5b9ce6"
+                    >累计收益</label
+                  >
+                  <label
+                    class="_span asset-showy--main--all--content data-v-bf5b9ce6"
+                    style="{{'color:'+G}}"
+                    >{{F}}%</label
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="_div asset-sum data-v-bf5b9ce6" key="oo" wx:if="{{H}}">
+            <view class="_div asset-sum--item left data-v-bf5b9ce6">
+              <label class="_span asset-sum--item--title data-v-bf5b9ce6"
+                >当前可用资金</label
+              >
+              <label class="_span asset-sum--item--num data-v-bf5b9ce6"
+                >{{I}}</label
+              >
+            </view>
+            <view class="_div asset-sum--item right data-v-bf5b9ce6">
+              <label class="_span asset-sum--item--title data-v-bf5b9ce6"
+                >总资产</label
+              >
+              <label class="_span asset-sum--item--num data-v-bf5b9ce6"
+                >{{J}}</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <ai-recommend
+        bind:__l="__l"
+        bindloadMore="{{N}}"
+        class="ai-recommend-wrap r data-v-bf5b9ce6"
+        uI="bf5b9ce6-3"
+        uR="aiRecommendRef"
+        wx:if="{{L}}"
+      ></ai-recommend>
+      <new-user-recommend
+        bind:__l="__l"
+        bindshowMiniApply="{{P}}"
+        class="data-v-bf5b9ce6"
+        uI="bf5b9ce6-4"
+        uP="{{Q}}"
+        wx:if="{{O}}"
+      ></new-user-recommend>
+      <view
+        class="{{['_div','asset-main','data-v-bf5b9ce6',aL&&'asset-main-empty']}}"
+        wx:if="{{R}}"
+      >
+        <tab-host
+          bind:__l="__l"
+          bindsetSwiperindex="{{aK}}"
+          class="tab-wrapper data-v-bf5b9ce6"
+          style="{{'padding-bottom:'+aJ}}"
+          uI="bf5b9ce6-5"
+          uS="{{['d']}}"
+        >
+          <tab-view
+            bind:__l="__l"
+            class="data-v-bf5b9ce6"
+            uI="bf5b9ce6-6,bf5b9ce6-5"
+            uP="{{U}}"
+            uS="{{['d']}}"
+            wx:if="{{U}}"
+          >
+            <tab-slider
+              bind:__l="__l"
+              bindtapTab="{{S}}"
+              class="tab-slider-wrap data-v-bf5b9ce6"
+              uI="bf5b9ce6-7,bf5b9ce6-6"
+              uP="{{T}}"
+              wx:if="{{T}}"
+            ></tab-slider>
+          </tab-view>
+          <swiper
+            needAnimation
+            bindchange="{{aG}}"
+            binddragging="{{aH}}"
+            binddropped="{{aI}}"
+            class="tab-swiper asset-main-h5 data-v-bf5b9ce6"
+            current="{{aE}}"
+            ref="homeSwiper"
+            style="{{'height:'+aF}}"
+          >
+            <swiper-item class="swiper-item data-v-bf5b9ce6">
+              <view class="_div scroll-view data-v-bf5b9ce6">
+                <view class="_div data-v-bf5b9ce6">
+                  <view
+                    class="_div position-container data-v-bf5b9ce6"
+                    wx:if="{{V}}"
+                  >
+                    <view
+                      class="{{['_div','position-container__fixed','data-v-bf5b9ce6',Y&&'position-fixed-folded',Z&&'position-fixed-expanded']}}"
+                    >
+                      <view
+                        class="_div position-container--row data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div position-container--row-item first head-pos-left data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="_span position-container--row-head data-v-bf5b9ce6"
+                            >股票/市值</label
+                          >
+                        </view>
+                      </view>
+                      <view
+                        bindtap="{{position.e}}"
+                        class="_div position-container--row first data-v-bf5b9ce6"
+                        wx:for="{{W}}"
+                        wx:for-item="position"
+                        wx:key="d"
+                      >
+                        <view
+                          class="_div position-container--row-item first pos-stock-name data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="{{['_span','data-v-bf5b9ce6','position-container--row-key',position.b]}}"
+                            style="{{'margin-top:'+X+';'+'margin-bottom:'+5}}"
+                            >{{position.a}}</label
+                          >
+                          <label
+                            class="_span position-container--row-value data-v-bf5b9ce6"
+                            >{{position.c}}</label
+                          >
+                        </view>
+                      </view>
+                    </view>
+                    <scroll-view
+                      scrollX
+                      bindtouchend="{{ad}}"
+                      bindtouchstart="{{ac}}"
+                      class="position-container__scroll data-v-bf5b9ce6"
+                      showsHorizontalScrollIndicator="{{false}}"
+                      wx:if="{{aa}}"
+                    >
+                      <view
+                        class="_div position-container--box data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div position-container--row data-v-bf5b9ce6"
+                        >
+                          <view
+                            class="_div position-container--row-item head-pos-first data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >最新/成本</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item head-pos-sec data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >持有/可卖</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item sub-bg right head-pos-third data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >今日盈亏</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item bg right last-pos head-pos-last data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >累计盈亏</label
+                            >
+                          </view>
+                        </view>
+                        <view
+                          bindtap="{{position.r}}"
+                          class="_div position-container--row data-v-bf5b9ce6"
+                          wx:for="{{ab}}"
+                          wx:for-item="position"
+                          wx:key="q"
+                        >
+                          <view
+                            class="_div position-container--row-item body-pos body-pos-first data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.b]}}"
+                              >{{position.a}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              >{{position.c}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item body-pos body-pos-sec data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.e]}}"
+                              >{{position.d}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              >{{position.f}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item sub-bg body-pos font-numeric-tabular body-pos-third data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.h]}}"
+                              style="{{'color:'+position.i}}"
+                              >{{position.g}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              style="{{'color:'+position.k}}"
+                              >{{position.j}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item bg body body-pos body-pos-last data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.m]}}"
+                              style="{{'color:'+position.n}}"
+                              >{{position.l}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              style="{{'color:'+position.p}}"
+                              >{{position.o}}</label
+                            >
+                          </view>
+                        </view>
+                      </view>
+                    </scroll-view>
+                    <scroll-view
+                      scrollX
+                      bindtouchend="{{ag}}"
+                      bindtouchstart="{{af}}"
+                      class="position-container__scroll position-scroll-folded data-v-bf5b9ce6"
+                      showsHorizontalScrollIndicator="{{false}}"
+                      wx:else
+                    >
+                      <view
+                        class="_div position-container--box data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div position-container--row data-v-bf5b9ce6"
+                        >
+                          <view
+                            class="_div position-container--row-item head-pos-first data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >最新/成本</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item head-pos-sec data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >持有/可卖</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item sub-bg right head-pos-third data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >今日盈亏</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item bg right last-pos head-pos-last data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="_span position-container--row-head data-v-bf5b9ce6"
+                              >累计盈亏</label
+                            >
+                          </view>
+                        </view>
+                        <view
+                          bindtap="{{position.r}}"
+                          class="_div position-container--row data-v-bf5b9ce6"
+                          wx:for="{{ae}}"
+                          wx:for-item="position"
+                          wx:key="q"
+                        >
+                          <view
+                            class="_div position-container--row-item body-pos body-pos-first data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.b]}}"
+                              >{{position.a}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              >{{position.c}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item body-pos body-pos-sec data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.e]}}"
+                              >{{position.d}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              >{{position.f}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item sub-bg body-pos font-numeric-tabular body-pos-third data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.h]}}"
+                              style="{{'color:'+position.i}}"
+                              >{{position.g}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              style="{{'color:'+position.k}}"
+                              >{{position.j}}</label
+                            >
+                          </view>
+                          <view
+                            class="_div position-container--row-item bg body body-pos body-pos-last data-v-bf5b9ce6"
+                          >
+                            <label
+                              class="{{['_span','position-container--row-key','big','data-v-bf5b9ce6',position.m]}}"
+                              style="{{'color:'+position.n}}"
+                              >{{position.l}}</label
+                            >
+                            <label
+                              class="_span position-container--row-value data-v-bf5b9ce6"
+                              style="{{'color:'+position.p}}"
+                              >{{position.o}}</label
+                            >
+                          </view>
+                        </view>
+                      </view>
+                    </scroll-view>
+                  </view>
+                  <view
+                    bindtap="{{al}}"
+                    class="_div position-fold data-v-bf5b9ce6"
+                    wx:if="{{ah}}"
+                  >
+                    <view class="_div text data-v-bf5b9ce6">{{ai}}</view>
+                    <view class="{{['_div','data-v-bf5b9ce6',aj,ak]}}"></view>
+                  </view>
+                  <view
+                    class="_div home-empty data-v-bf5b9ce6"
+                    key="kk"
+                    wx:if="{{am}}"
+                  >
+                    <empty-tips
+                      bind:__l="__l"
+                      class="data-v-bf5b9ce6"
+                      data-c-h="{{!an}}"
+                      uI="bf5b9ce6-8,bf5b9ce6-5"
+                      uP="{{ao}}"
+                      wx:if="{{ao}}"
+                    ></empty-tips>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item class="swiper-item data-v-bf5b9ce6">
+              <view class="_div scroll-view data-v-bf5b9ce6">
+                <view class="_div data-v-bf5b9ce6">
+                  <view
+                    class="_div entrust-container data-v-bf5b9ce6"
+                    wx:if="{{ap}}"
+                  >
+                    <view
+                      class="_div position-container--row head-entrust data-v-bf5b9ce6"
+                    >
+                      <view
+                        class="_div position-container--row-item head-entrust-first data-v-bf5b9ce6"
+                      >
+                        <label
+                          class="_span position-container--row-head data-v-bf5b9ce6"
+                          >交易</label
+                        >
+                      </view>
+                      <view
+                        class="_div position-container--row-item head-entrust-mid data-v-bf5b9ce6"
+                      >
+                        <label class="_span mid-head-item data-v-bf5b9ce6"
+                          >股票/代码</label
+                        >
+                        <label class="_span mid-head-item data-v-bf5b9ce6"
+                          >委托/现价</label
+                        >
+                        <label class="_span mid-head-item data-v-bf5b9ce6"
+                          >数量/成交</label
+                        >
+                      </view>
+                      <view
+                        class="_div position-container--row-item head-entrust-last data-v-bf5b9ce6"
+                      >
+                        <label
+                          class="_span position-container--row-head data-v-bf5b9ce6"
+                          >状态</label
+                        >
+                      </view>
+                    </view>
+                    <view
+                      class="{{['_div','position-container--row','body-entrust','data-v-bf5b9ce6',ar&&'lite-mode']}}"
+                      wx:for="{{aq}}"
+                      wx:for-item="order"
+                      wx:key="t"
+                    >
+                      <view
+                        bindtap="{{order.d}}"
+                        class="{{['_div','position-container--row-item','submid','body','item-first','data-v-bf5b9ce6',order.b&&'sell',order.c&&'buy']}}"
+                      >
+                        <view
+                          class="_div position-container--row-key data-v-bf5b9ce6"
+                        >
+                          <label class="_span data-v-bf5b9ce6">模拟</label>
+                          <label class="_span data-v-bf5b9ce6"
+                            >{{order.a}}</label
+                          >
+                        </view>
+                      </view>
+                      <view
+                        bindtap="{{order.l}}"
+                        class="_div position-container--row-item mid CN mid-entrust data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div position-container--row-item mid left CN mid-entrust-left data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="{{['_span','position-container--row-key','data-v-bf5b9ce6',order.f]}}"
+                            >{{order.e}}</label
+                          >
+                          <label
+                            class="_span position-container--row-value data-v-bf5b9ce6"
+                            >{{order.g}}</label
+                          >
+                        </view>
+                        <view
+                          class="_div position-container--row-item mid middle mid-entrust-mid data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="_span position-container--row-key big data-v-bf5b9ce6"
+                            >{{order.h}}</label
+                          >
+                          <label
+                            class="_span position-container--row-value data-v-bf5b9ce6"
+                            >{{order.i}}</label
+                          >
+                        </view>
+                        <view
+                          class="_div position-container--row-item mid right mid-entrust-right data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="_span position-container--row-key big data-v-bf5b9ce6"
+                            >{{order.j}}</label
+                          >
+                          <label
+                            class="_span position-container--row-value data-v-bf5b9ce6"
+                            >{{order.k}}</label
+                          >
+                        </view>
+                      </view>
+                      <view
+                        class="_div position-container--row-item body item-last CN data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div right data-v-bf5b9ce6"
+                          wx:if="{{order.m}}"
+                        >
+                          <view
+                            catchtap="{{order.p}}"
+                            class="{{['_div','position-container--row-btn','data-v-bf5b9ce6',order.o&&'disabled']}}"
+                          >
+                            <label
+                              class="_span position-container--row-btn--text data-v-bf5b9ce6"
+                              >{{order.n}}</label
+                            >
+                          </view>
+                        </view>
+                        <view
+                          bindtap="{{order.s}}"
+                          class="_div right data-v-bf5b9ce6"
+                          wx:else
+                        >
+                          <label
+                            class="_span position-container--row-key unbold data-v-bf5b9ce6"
+                            >{{order.q}}</label
+                          >
+                          <label
+                            class="_span position-container--row-value data-v-bf5b9ce6"
+                            >{{order.r}}</label
+                          >
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                  <view
+                    bindtap="{{ax}}"
+                    class="_div position-fold data-v-bf5b9ce6"
+                    wx:if="{{as}}"
+                  >
+                    <view class="_div text data-v-bf5b9ce6">{{at}}</view>
+                    <view class="{{['_div','data-v-bf5b9ce6',av,aw]}}"></view>
+                  </view>
+                  <view class="_div home-empty data-v-bf5b9ce6" wx:if="{{ay}}">
+                    <empty-tips
+                      bind:__l="__l"
+                      class="data-v-bf5b9ce6"
+                      uI="bf5b9ce6-9,bf5b9ce6-5"
+                      uP="{{az}}"
+                      wx:if="{{az}}"
+                    ></empty-tips>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+            <swiper-item class="swiper-item data-v-bf5b9ce6">
+              <view
+                bindscroll="{{aD}}"
+                class="_div scroll-view data-v-bf5b9ce6"
+                ref="historyScrollView"
+              >
+                <view
+                  class="_div history-container data-v-bf5b9ce6"
+                  ref="historyContainer"
+                >
+                  <view
+                    class="_div data-v-bf5b9ce6"
+                    style="background-color: transparent"
+                    wx:if="{{aA}}"
+                  >
+                    <view
+                      class="_div position-container--group data-v-bf5b9ce6"
+                      wx:for="{{aB}}"
+                      wx:for-item="month"
+                      wx:key="j"
+                    >
+                      <view
+                        bindtap="{{month.d}}"
+                        class="_div position-container--group-header data-v-bf5b9ce6"
+                      >
+                        <view
+                          class="_div position-container--group-header--title data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="_span position-container--group-header--title--text data-v-bf5b9ce6"
+                            >{{month.a}}</label
+                          >
+                        </view>
+                        <view
+                          class="_div position-container--group-header--sub data-v-bf5b9ce6"
+                        >
+                          <label
+                            class="_span position-container--group-header--sub--text data-v-bf5b9ce6"
+                            >{{month.b}}笔</label
+                          >
+                          <image
+                            class="_img position-container--group-header--sub--icon data-v-bf5b9ce6"
+                            src="https://wzq.gtimg.com/resource/images/a4af352d0d6388c25fea5e7c0aa9704b.png"
+                            wx:if="{{month.c}}"
+                          ></image>
+                          <image
+                            class="_img position-container--group-header--sub--icon data-v-bf5b9ce6"
+                            src="https://wzq.gtimg.com/resource/images/547e59741459360ffe38dc0261072017.png"
+                            wx:else
+                          ></image>
+                        </view>
+                      </view>
+                      <view class="_div data-v-bf5b9ce6" wx:if="{{month.e}}">
+                        <block wx:if="{{month.f}}">
+                          <view
+                            bindtap="{{order.t}}"
+                            class="{{['_div','position-container--row','position-container--row-history','history-fee-mode','data-v-bf5b9ce6',month.h&&'lite-mode']}}"
+                            wx:for="{{month.g}}"
+                            wx:for-item="order"
+                            wx:key="s"
+                          >
+                            <view class="_div history-type data-v-bf5b9ce6">
+                              <label
+                                class="{{['_span','history-type__text','data-v-bf5b9ce6',order.b&&'history-type__text--sell',order.c&&'history-type__text--buy']}}"
+                                >模拟{{order.a}}</label
+                              >
+                              <label
+                                class="_span history-type__date data-v-bf5b9ce6"
+                                >{{order.d}}</label
+                              >
+                            </view>
+                            <view class="_div history-stock data-v-bf5b9ce6">
+                              <label
+                                class="{{['_span','history-stock__name','data-v-bf5b9ce6',order.f]}}"
+                                >{{order.e}}</label
+                              >
+                              <label
+                                class="_span history-stock__code data-v-bf5b9ce6"
+                                >{{order.g}}.{{order.h}}</label
+                              >
+                            </view>
+                            <view class="_div history-volume data-v-bf5b9ce6">
+                              <label
+                                class="{{['_span','history-volume__number','data-v-bf5b9ce6',order.j]}}"
+                                >{{order.i}}股</label
+                              >
+                              <label
+                                class="_span history-volume__price data-v-bf5b9ce6"
+                                >{{order.k}}</label
+                              >
+                            </view>
+                            <view class="_div history-amount data-v-bf5b9ce6">
+                              <view
+                                class="_div history-amount__main data-v-bf5b9ce6"
+                              >
+                                <view
+                                  class="{{['_div','history-amount__value','settlement-amount','data-v-bf5b9ce6',order.m]}}"
+                                >
+                                  <view
+                                    class="_div settlement-amount__text data-v-bf5b9ce6"
+                                    >{{order.l}}</view
+                                  >
+                                </view>
+                                <label
+                                  class="_span history-amount__status data-v-bf5b9ce6"
+                                  wx:if="{{order.n}}"
+                                  >{{order.o}}</label
+                                >
+                              </view>
+                              <view
+                                catchtap="{{order.r}}"
+                                class="{{['_div','fee-tip-icon','data-v-bf5b9ce6',order.q&&'fee-tip-icon--placeholder']}}"
+                              >
+                                <image
+                                  alt=""
+                                  class="_img fee-tip-img data-v-bf5b9ce6"
+                                  src="https://st.gtimg.com/design/9c9cb3a00b510fc64a5ce36163f18a67.png"
+                                  wx:if="{{order.p}}"
+                                ></image>
+                              </view>
+                            </view>
+                          </view>
+                        </block>
+                        <block wx:else>
+                          <view
+                            bindtap="{{order.m}}"
+                            class="_div position-container--row position-container--row-history data-v-bf5b9ce6"
+                            wx:for="{{month.i}}"
+                            wx:for-item="order"
+                            wx:key="l"
+                          >
+                            <view
+                              class="_div position-container--row-item bg body first-history data-v-bf5b9ce6"
+                            >
+                              <view
+                                class="{{['_div','position-container-row--line','data-v-bf5b9ce6',order.b&&'sell',order.c&&'buy']}}"
+                              >
+                                <view
+                                  class="_div position-container--row-key data-v-bf5b9ce6"
+                                >
+                                  <label class="_span data-v-bf5b9ce6"
+                                    >模拟</label
+                                  >
+                                  <label class="_span data-v-bf5b9ce6"
+                                    >{{order.a}}</label
+                                  >
+                                </view>
+                              </view>
+                            </view>
+                            <view
+                              class="_div position-container--row-item mid-history CN data-v-bf5b9ce6"
+                            >
+                              <view
+                                class="_div position-container--row-item mid body left large data-v-bf5b9ce6"
+                              >
+                                <label
+                                  class="{{['_span','position-container--row-key','data-v-bf5b9ce6',order.e]}}"
+                                  >{{order.d}}</label
+                                >
+                                <label
+                                  class="_span position-container--row-value data-v-bf5b9ce6"
+                                  >{{order.f}}.{{order.g}}</label
+                                >
+                              </view>
+                              <view
+                                class="_div position-container--row-item mid body right large data-v-bf5b9ce6"
+                              >
+                                <label
+                                  class="_span position-container--row-key data-v-bf5b9ce6"
+                                  >{{order.h}}股</label
+                                >
+                                <label
+                                  class="_span position-container--row-value data-v-bf5b9ce6"
+                                  >{{order.i}}</label
+                                >
+                              </view>
+                            </view>
+                            <view
+                              class="_div position-container--row-item body last-history data-v-bf5b9ce6"
+                            >
+                              <label
+                                class="_span position-container--row-key data-v-bf5b9ce6"
+                                >{{order.j}}</label
+                              >
+                              <label
+                                class="_span position-container--row-value data-v-bf5b9ce6"
+                                >{{order.k}}</label
+                              >
+                            </view>
+                          </view>
+                        </block>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="_div home-empty data-v-bf5b9ce6" wx:else>
+                    <empty-tips
+                      bind:__l="__l"
+                      class="data-v-bf5b9ce6"
+                      uI="bf5b9ce6-10,bf5b9ce6-5"
+                      uP="{{aC}}"
+                      wx:if="{{aC}}"
+                    ></empty-tips>
+                  </view>
+                </view>
+              </view>
+            </swiper-item>
+          </swiper>
+        </tab-host>
+      </view>
+      <week-rank
+        bind:__l="__l"
+        bindpageInit="{{aN}}"
+        class="week-rank-outside data-v-bf5b9ce6"
+        uI="bf5b9ce6-11"
+        uP="{{aO}}"
+        wx:if="{{aM}}"
+      ></week-rank>
+      <view class="measure-view data-v-bf5b9ce6" style="{{'font-size:'+'28px'}}"
+        >{{aP}}</view
+      >
+      <view
+        bindtap="{{aU}}"
+        class="{{['_div','under-block','data-v-bf5b9ce6',aR,aS,aT]}}"
+        id="act-rule"
+        wx:if="{{aQ}}"
+        >活动规则</view
+      >
+      <view class="_div asset-unready data-v-bf5b9ce6" wx:if="{{aV}}">
+        <view class="_div asset-unready-text data-v-bf5b9ce6" wx:if="{{aW}}"
+          >数据加载中...</view
+        >
+        <view
+          bindtap="{{aX}}"
+          class="_div asset-unready-text data-v-bf5b9ce6"
+          wx:else
+          >页面异常，点击重试</view
+        >
+      </view>
+    </view>
+    <view class="_div asset-tips--container data-v-bf5b9ce6" wx:if="{{aZ}}">
+      <view class="_div asset-tips data-v-bf5b9ce6" wx:if="{{ba}}">
+        <view bindtap="{{bb}}" class="_div asset-tips--btn data-v-bf5b9ce6">
+          <label class="_span asset-tips--btn-text data-v-bf5b9ce6"
+            >立即登录</label
+          >
+        </view>
+        <label class="_span asset-tips--item data-v-bf5b9ce6"
+          >QQ/微信登录后，即可模拟交易练习</label
+        >
+      </view>
+    </view>
+    <mini-apply
+      bind:__l="__l"
+      bindairecommendData="{{be}}"
+      bindfinishOrder="{{bf}}"
+      class="r data-v-bf5b9ce6"
+      uI="bf5b9ce6-12"
+      uP="{{bg}}"
+      uR="miniApplyRef"
+      wx:if="{{bc}}"
+    ></mini-apply>
+    <ai-recommend-semi-list
+      bind:__l="__l"
+      bindairecommendData="{{bj}}"
+      class="r data-v-bf5b9ce6"
+      uI="bf5b9ce6-13"
+      uP="{{bk}}"
+      uR="aisemiList"
+      wx:if="{{bh}}"
+    ></ai-recommend-semi-list>
+    <view
+      class="{{['_div','asset-footer','asset-footer-h5','data-v-bf5b9ce6',br,bs]}}"
+      style="{{'padding-bottom:'+bt}}"
+      wx:if="{{bl}}"
+    >
+      <bubble
+        bind:__l="__l"
+        bindcloseBubble="{{bn}}"
+        class="data-v-bf5b9ce6"
+        uI="bf5b9ce6-14"
+        uP="{{bo}}"
+        wx:if="{{bm}}"
+      ></bubble>
+      <view
+        bindtap="{{bq}}"
+        class="_div asset-btn data-v-bf5b9ce6"
+        ref="assetFooter"
+        style="{{'background-color:'+bp}}"
+      >
+        <label class="_span asset-btn--text data-v-bf5b9ce6">模拟交易</label>
+      </view>
+    </view>
+    <canvas-view
+      bind:__l="__l"
+      bindonHideShare="{{bw}}"
+      bindshareCb="{{bx}}"
+      bindshowShareText="{{by}}"
+      class="canvas-view-outside data-v-bf5b9ce6"
+      uI="bf5b9ce6-15"
+      uP="{{bz}}"
+      wx:if="{{bv}}"
+    ></canvas-view>
+    <prize-modal
+      bind:__l="__l"
+      bindclose="{{bC}}"
+      bindopenPrizeModal="{{bB}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-16"
+      wx:if="{{bA}}"
+    ></prize-modal>
+    <view
+      animationType="fade"
+      bindrequestClose="{{bG}}"
+      class="_div dialog-wrapper data-v-bf5b9ce6"
+      supportedOrientations="{{bF}}"
+      wx:if="{{bD}}"
+    >
+      <view class="_div dialog-container data-v-bf5b9ce6">
+        <view class="_div dialog-mask data-v-bf5b9ce6"></view>
+        <view class="_div dialog-main first-modal data-v-bf5b9ce6">
+          <image
+            class="_img dialog-img data-v-bf5b9ce6"
+            src="https://wzq.gtimg.com/resource/images/fb34fa9f60e25faaa650c673275ef468.png"
+          ></image>
+          <label class="_span dialog-title data-v-bf5b9ce6">恭喜获得</label>
+          <label class="_span dialog-subtitle data-v-bf5b9ce6"
+            >模拟炒股资金</label
+          >
+          <label class="_span dialog-content big data-v-bf5b9ce6"
+            >1,000,000.00</label
+          >
+          <view class="_div dialog-footer data-v-bf5b9ce6">
+            <view
+              bindtap="{{bE}}"
+              class="_div dialog-btn radius last data-v-bf5b9ce6"
+            >
+              <label class="_span dialog-btn--text data-v-bf5b9ce6"
+                >我知道了</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <error-modal
+      bind:__l="__l"
+      bindhideMsg="{{bH}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-17"
+      uP="{{bI}}"
+      wx:if="{{bI}}"
+    ></error-modal>
+    <info-modal
+      bind:__l="__l"
+      bindclose="{{bK}}"
+      class="data-v-bf5b9ce6"
+      key="{{'bulletin-modal'}}"
+      uI="bf5b9ce6-18"
+      uP="{{bL}}"
+      uS="{{['d']}}"
+      wx:if="{{bL}}"
+      >{{bJ}}</info-modal
+    >
+    <info-modal
+      bind:__l="__l"
+      bindclose="{{bP}}"
+      class="data-v-bf5b9ce6"
+      key="{{'fee-detail-modal'}}"
+      uI="bf5b9ce6-19"
+      uP="{{bQ}}"
+      uS="{{['d']}}"
+      wx:if="{{bM}}"
+    >
+      <view class="_div fee-detail-line data-v-bf5b9ce6"
+        >交收金额：{{bN}}元，含手续费{{bO}}元</view
+      >
+      <view class="_div fee-detail-desc data-v-bf5b9ce6"
+        >手续费说明：计算包含佣金、过户费、印花税等交易费用，及股票红利差异税，其中佣金费率根据万分之2.5计算</view
+      >
+    </info-modal>
+    <week-reward-modal
+      bind:__l="__l"
+      bindclose="{{bS}}"
+      bindshare="{{bT}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-20"
+      uP="{{bU}}"
+      wx:if="{{bR}}"
+    ></week-reward-modal>
+    <task-log
+      bind:__l="__l"
+      bindcloseLog="{{bW}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-21"
+      uP="{{bX}}"
+      wx:if="{{bV}}"
+    ></task-log>
+    <snack-bar
+      bind:__l="__l"
+      bindclkBarBtn="{{ca}}"
+      class="{{['data-v-bf5b9ce6',bZ]}}"
+      uI="bf5b9ce6-22"
+      uP="{{cb}}"
+      wx:if="{{bY}}"
+    ></snack-bar>
+    <reset-card-modal
+      bind:__l="__l"
+      bindbrow="{{cc}}"
+      bindclose="{{cd}}"
+      binduse="{{ce}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-23"
+      uP="{{cf}}"
+      wx:if="{{cf}}"
+    ></reset-card-modal>
+    <reset-card-confirm
+      bind:__l="__l"
+      bindbrow="{{cg}}"
+      bindcancel="{{ch}}"
+      bindconfirm="{{ci}}"
+      class="data-v-bf5b9ce6"
+      uI="bf5b9ce6-24"
+      uP="{{cj}}"
+      wx:if="{{cj}}"
+    ></reset-card-confirm>
+  </view>
+</view>

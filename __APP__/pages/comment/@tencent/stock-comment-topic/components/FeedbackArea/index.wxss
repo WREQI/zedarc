@@ -1,0 +1,157 @@
+.topic-area.data-v-0e8fd151 {
+  position: relative;
+}
+.topic-area .mod-topicArea.data-v-0e8fd151 {
+  background-color: #f5f6fa;
+  background-color: initial;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+}
+.topic-area .mod-topicArea.wzq.data-v-0e8fd151 {
+  height: 3.3333333333333335rem;
+  padding-top: 0.4266666666666667rem;
+}
+.topic-area .mod-topicArea.mini.data-v-0e8fd151 {
+  height: 5.493333333333333rem;
+  padding-top: 2.56rem;
+}
+.topic-area .mod-topicArea .title-wrap.data-v-0e8fd151 {
+  background-color: initial;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.topic-area .mod-topicArea .title-wrap .title-text.data-v-0e8fd151 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #fff;
+  display: -webkit-box;
+  font-size: 0.5333333333333333rem;
+  font-weight: 600;
+  line-height: 0.8rem;
+  max-width: 7.04rem;
+  overflow: hidden;
+}
+.topic-area .mod-topicArea .title-wrap .topic-btn.data-v-0e8fd151 {
+  align-items: center;
+  border-bottom-left-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 0.6666666666666666rem;
+  justify-content: center;
+  padding: 0 0.16rem 0 0.29333333333333333rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0.06666666666666667rem;
+}
+.topic-area .mod-topicArea .title-wrap .topic-btn .arrow-right.data-v-0e8fd151 {
+  height: 0.4266666666666667rem;
+  width: 0.4266666666666667rem;
+}
+.topic-area .mod-topicArea .topic-wrap.data-v-0e8fd151 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+  position: relative;
+}
+.topic-area .mod-topicArea .topic-data.data-v-0e8fd151 {
+  align-items: center;
+  color: #f0f1f5;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  position: relative;
+  top: 0.25333333333333335rem;
+}
+.topic-area .mod-topicArea .topic-data .hot-tag.data-v-0e8fd151 {
+  background-color: #e63535;
+  border-radius: 0.05333333333333334rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.26666666666666666rem;
+  margin-right: 0.13333333333333333rem;
+  padding: 0.05333333333333334rem 0.10666666666666667rem;
+}
+.topic-area .topic-desc-wrap.data-v-0e8fd151 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  margin: 0 0.32rem;
+  overflow: hidden;
+  position: relative;
+  top: -0.32rem;
+  z-index: 1;
+}
+.topic-area .topic-desc-wrap .topic-desc-container.data-v-0e8fd151 {
+  margin: 0.32rem;
+  position: relative;
+}
+.topic-area .topic-desc-wrap .topic-desc-container .topic-desc.data-v-0e8fd151 {
+  background-color: var(--fill-content-layer);
+  color: var(--color-midgray);
+  font-weight: 400;
+  position: relative;
+  text-align: justify;
+}
+.topic-area .announcement-wrap.data-v-0e8fd151 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  margin: 0.32rem 0.32rem 0;
+  overflow: hidden;
+  padding: 0.32rem;
+  position: relative;
+  top: -0.32rem;
+  z-index: 1;
+}
+.topic-area .announcement-wrap .announcement-title.data-v-0e8fd151 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.topic-area .announcement-wrap .announcement-item.data-v-0e8fd151 {
+  color: var(--color-midgray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin: 0.05333333333333334rem 0;
+}
+.announcement-toggle.data-v-0e8fd151 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.21333333333333335rem;
+}
+.announcement-toggle .toggle-text.data-v-0e8fd151 {
+  color: #576b95;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-right: 0.10666666666666667rem;
+}
+.announcement-toggle .toggle-icon.data-v-0e8fd151 {
+  background-color: #576b95;
+  height: 0.22666666666666666rem;
+  mask-image: url(https://st.gtimg.com/design/cd41628924039703991105993f46fb55.svg);
+  mask-size: 100% 100%;
+  transform: rotate(90deg);
+  width: 0.22666666666666666rem;
+}
+.announcement-toggle.expanded .toggle-icon.data-v-0e8fd151 {
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,46 @@
+<view class="{{['_div','data-v-fa9bada6','scroll-wapper',m]}}" ref="scroll">
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{i}}"
+    bindrefresherrefresh="{{k}}"
+    bindrefresherrestore="{{j}}"
+    bindscroll="{{l}}"
+    class="data-v-fa9bada6"
+    refresherEnabled="{{g}}"
+    refresherThreshold="100"
+    refresherTriggered="{{h}}"
+    style="{{f}}"
+  >
+    <platefund
+      bind:__l="__l"
+      bindgotoNorthPlate="{{a}}"
+      class="data-v-fa9bada6"
+      uI="fa9bada6-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></platefund>
+    <view class="_div seperate-line data-v-fa9bada6"></view>
+    <plate-market-change
+      bind:__l="__l"
+      class="r data-v-fa9bada6"
+      uI="fa9bada6-1"
+      uP="{{d}}"
+      uR="plateChange"
+      wx:if="{{d}}"
+    ></plate-market-change>
+    <plate-container
+      bind:__l="__l"
+      class="data-v-fa9bada6"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:for="{{e}}"
+      wx:key="a"
+    ></plate-container>
+    <analysis-tutorial
+      bind:__l="__l"
+      class="data-v-fa9bada6"
+      uI="fa9bada6-3"
+    ></analysis-tutorial>
+    <view class="_div place-holder data-v-fa9bada6"></view>
+  </scroll-view>
+</view>

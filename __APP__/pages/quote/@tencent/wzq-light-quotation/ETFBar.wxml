@@ -1,0 +1,42 @@
+<view
+  class="{{['_div','etf-bar-outter','data-v-ecd33838',k&&'isLite']}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="{{['_div','seperate','data-v-ecd33838',b&&'seperate-classic']}}"
+  ></view>
+  <view
+    bindtap="{{j}}"
+    class="{{['_div','etf-bar-container','data-v-ecd33838',i]}}"
+  >
+    <view class="_div text-content data-v-ecd33838">
+      <view catchtap="{{c}}" class="_div title data-v-ecd33838"
+        >相关ETF<image
+          class="_img tip data-v-ecd33838"
+          lazyLoad="{{true}}"
+          src="https://st.gtimg.com/design/7e58c8307bb799b28471cc60a4cbced5.svg"
+        ></image>
+      </view>
+      <view class="_div sub-des data-v-ecd33838">
+        <view class="_div des-left data-v-ecd33838">
+          <label class="_span text data-v-ecd33838">{{d}}</label>
+          <label class="_span zd-percent data-v-ecd33838" style="{{'color:'+f}}"
+            >{{e}}%</label
+          >
+        </view>
+        <view class="_div des-right data-v-ecd33838"
+          >成份股占比<label
+            class="_span percent data-v-ecd33838"
+            style="{{'color:'+h}}"
+            >{{g}}%</label
+          >
+        </view>
+      </view>
+    </view>
+    <image
+      class="_img go-detail data-v-ecd33838"
+      lazyLoad="{{true}}"
+      src="https://st.gtimg.com/design/f73e3187fa829a7f886400cca980b402.png"
+    ></image>
+  </view>
+</view>

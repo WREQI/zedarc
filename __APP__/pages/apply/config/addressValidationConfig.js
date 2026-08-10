@@ -1,0 +1,36 @@
+require("../../../app.js"),
+  (exports.ADDRESS_VALIDATION_CONFIG = {
+    SPECIAL_CHARACTERS: [
+      "!",
+      "$",
+      "%",
+      "^",
+      "&",
+      "*",
+      "_",
+      "+",
+      "`",
+      "=",
+      "{",
+      "}",
+      "|",
+      ":",
+      '"',
+      "<",
+      ">",
+      "?",
+      "[",
+      "]",
+    ],
+    REQUIRED_KEYWORDS: ["层", "号", "栋", "幢", "室", "座", "队", "组"],
+    ADMINISTRATIVE_KEYWORDS: ["省", "市", "自治区"],
+    DETAILED_ADDRESS_MIN_LENGTH: 5,
+    FULL_ADDRESS_MIN_CHINESE_COUNT: 8,
+    CONSECUTIVE_REPEAT_THRESHOLD: 5,
+    ERROR_MESSAGES: {
+      MISSING_ADMINISTRATIVE:
+        '联系地址中未包含"省、市、自治区"字样，请补充完整',
+      GENERAL:
+        '请输入不少于8个汉字的完整准确且不包含空格和特殊字符的联系地址，需精确到"层、号、栋、幢、室、座、队、组"以及具体门牌号',
+    },
+  });

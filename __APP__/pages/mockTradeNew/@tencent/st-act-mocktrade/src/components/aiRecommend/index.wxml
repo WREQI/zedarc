@@ -1,0 +1,104 @@
+<view class="_div ai-recommend data-v-9bee33d2" wx:if="{{a}}">
+  <view class="_div title data-v-9bee33d2">问AI选股结果</view>
+  <block wx:if="{{b}}">
+    <view
+      class="_div stock-item data-v-9bee33d2"
+      wx:for="{{c}}"
+      wx:for-item="stock"
+      wx:key="m"
+    >
+      <view class="_div stock-info data-v-9bee33d2">
+        <view class="_div stock-name data-v-9bee33d2">{{stock.a}}</view>
+        <view class="_div stock-code data-v-9bee33d2">
+          <image
+            class="_img market-tag data-v-9bee33d2"
+            src="https://st.gtimg.com/design/95528a2dbca6d75baf0a66c04e5a6f26.png"
+            wx:if="{{stock.b}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-9bee33d2"
+            src="https://st.gtimg.com/design/8f4f82d3e55abc281b1b831b7733b4b0.png"
+            wx:elif="{{stock.c}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-9bee33d2"
+            src="https://st.gtimg.com/design/e37828734c8a659dde7b08b766c168c8.png"
+            wx:elif="{{stock.d}}"
+          ></image>
+          <image
+            class="_img market-tag data-v-9bee33d2"
+            src="https://st.gtimg.com/design/fafeae0f37922e3e19b1a72bb0bbe2f8.png"
+            wx:elif="{{stock.e}}"
+          ></image>
+          <label class="_span code data-v-9bee33d2">{{stock.f}}</label>
+        </view>
+      </view>
+      <view class="_div price-info data-v-9bee33d2">
+        <view class="_div price-item data-v-9bee33d2">
+          <view class="_div value data-v-9bee33d2">{{stock.g}}</view>
+          <view class="_div label data-v-9bee33d2">最新价</view>
+        </view>
+        <view class="_div price-item align-right data-v-9bee33d2">
+          <view class="{{['_div','value','data-v-9bee33d2',stock.i]}}"
+            >{{stock.h}}</view
+          >
+          <view class="_div label data-v-9bee33d2">涨跌幅</view>
+        </view>
+      </view>
+      <view
+        bindtap="{{stock.l}}"
+        class="{{['_div','action-btn','data-v-9bee33d2',d&&'lite-mode',stock.k&&'disabled']}}"
+        >{{stock.j}}</view
+      >
+    </view>
+  </block>
+  <block wx:else>
+    <view class="_div stock-block-wrap data-v-9bee33d2">
+      <view
+        bindtap="{{stock.i}}"
+        class="_div stock-item-block data-v-9bee33d2"
+        wx:for="{{e}}"
+        wx:for-item="stock"
+        wx:key="h"
+      >
+        <view class="_div stock-block-info data-v-9bee33d2">
+          <view class="_div stock-block-header data-v-9bee33d2">
+            <image
+              class="_img market-tag data-v-9bee33d2"
+              src="https://st.gtimg.com/design/95528a2dbca6d75baf0a66c04e5a6f26.png"
+              wx:if="{{stock.a}}"
+            ></image>
+            <image
+              class="_img market-tag data-v-9bee33d2"
+              src="https://st.gtimg.com/design/8f4f82d3e55abc281b1b831b7733b4b0.png"
+              wx:elif="{{stock.b}}"
+            ></image>
+            <image
+              class="_img market-tag data-v-9bee33d2"
+              src="https://st.gtimg.com/design/e37828734c8a659dde7b08b766c168c8.png"
+              wx:elif="{{stock.c}}"
+            ></image>
+            <image
+              class="_img market-tag data-v-9bee33d2"
+              src="https://st.gtimg.com/design/fafeae0f37922e3e19b1a72bb0bbe2f8.png"
+              wx:elif="{{stock.d}}"
+            ></image>
+            <view class="_div stock-block-name data-v-9bee33d2"
+              >{{stock.e}}</view
+            >
+          </view>
+          <view class="_div stock-block-price data-v-9bee33d2">
+            <view class="_div price-label data-v-9bee33d2">涨跌幅</view>
+            <view
+              class="{{['_div','price-value','data-v-9bee33d2',stock.g&&'up']}}"
+              >{{stock.f}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view bindtap="{{h}}" class="_div more-btn data-v-9bee33d2" wx:if="{{f}}"
+      >查看全部{{g}}只股票</view
+    >
+  </block>
+</view>

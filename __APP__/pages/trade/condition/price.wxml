@@ -1,0 +1,300 @@
+<page-meta class="data-v-3036c67f" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-3036c67f"
+  id="global-wrap"
+  uI="3036c67f-0"
+  uP="{{aH}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{aH}}"
+>
+  <view class="cond-content-container data-v-3036c67f">
+    <view class="cond-search data-v-3036c67f" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-3036c67f"
+        uI="3036c67f-1,3036c67f-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <search-result
+      bind:__l="__l"
+      bindclick="{{g}}"
+      class="data-v-3036c67f"
+      data-c-h="{{!f}}"
+      uI="3036c67f-2,3036c67f-0"
+    ></search-result>
+    <view
+      class="{{['condition-form','condition-form__simple-mode','data-v-3036c67f',am,an]}}"
+      hidden="{{!al}}"
+    >
+      <view class="{{['condition-quote-wrapper','data-v-3036c67f',m&&'mp']}}">
+        <condition-quote
+          bind:__l="__l"
+          bindclickDqj="{{k}}"
+          bindnameClick="{{j}}"
+          bindsearch="{{i}}"
+          class="data-v-3036c67f"
+          uI="3036c67f-3,3036c67f-0"
+          uP="{{l}}"
+          uS="{{['label']}}"
+          wx:if="{{h}}"
+        >
+          <view class="data-v-3036c67f" slot="label">价格条件</view>
+        </condition-quote>
+      </view>
+      <form-wrap
+        bind:__l="__l"
+        class="trigger-price-form data-v-3036c67f"
+        uI="3036c67f-4,3036c67f-0"
+        uS="{{['left','right']}}"
+      >
+        <view class="flex-hcenter flex-column data-v-3036c67f" slot="left">
+          <view class="flex-vcenter data-v-3036c67f">设置触发价</view>
+          <view class="placeholder data-v-3036c67f"></view>
+        </view>
+        <view slot="right">
+          <pop-over
+            bind:__l="__l"
+            class="{{['data-v-3036c67f',t]}}"
+            uI="3036c67f-5,3036c67f-4"
+            uP="{{v}}"
+            uS="{{['d']}}"
+            wx:if="{{v}}"
+          >
+            <stepper
+              bind:__l="__l"
+              bindblur="{{q}}"
+              bindchange="{{o}}"
+              bindfocus="{{p}}"
+              bindnext="{{r}}"
+              class="r data-v-3036c67f"
+              uI="3036c67f-6,3036c67f-5"
+              uP="{{s}}"
+              uR="triggerPriceStepperRef"
+              wx:if="{{s}}"
+            ></stepper>
+          </pop-over>
+          <view class="trigger-price-zdf data-v-3036c67f">
+            <label class="prefix data-v-3036c67f">{{w}}</label>{{x}}%</view
+          >
+        </view>
+      </form-wrap>
+      <view class="tips-bar flex-vcenter data-v-3036c67f"
+        >满足触发条件，系统将自动提交以下委托单</view
+      >
+      <view class="bottom-wrapper data-v-3036c67f">
+        <view class="type-gap data-v-3036c67f">
+          <form-wrap
+            bind:__l="__l"
+            class="way-form data-v-3036c67f"
+            uI="3036c67f-7,3036c67f-0"
+            uS="{{['left','right']}}"
+          >
+            <view slot="left">方向</view>
+            <view class="flex-end data-v-3036c67f" slot="right">
+              <view
+                bindtap="{{A}}"
+                class="{{['flex-center','entrust-type','entrust-type--buy','data-v-3036c67f',y,z]}}"
+                >买入</view
+              >
+              <view
+                bindtap="{{D}}"
+                class="{{['flex-center','entrust-type','entrust-type--sell','data-v-3036c67f',B,C]}}"
+                >卖出</view
+              >
+            </view>
+          </form-wrap>
+        </view>
+        <view class="input-gap data-v-3036c67f">
+          <form-wrap
+            bind:__l="__l"
+            class="price-form data-v-3036c67f"
+            uI="3036c67f-8,3036c67f-0"
+            uS="{{['left','right']}}"
+          >
+            <view slot="left">价格</view>
+            <pop-over
+              bind:__l="__l"
+              class="{{['data-v-3036c67f',K]}}"
+              slot="right"
+              uI="3036c67f-9,3036c67f-8"
+              uP="{{L}}"
+              uS="{{['d']}}"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{H}}"
+                bindchange="{{F}}"
+                bindfocus="{{G}}"
+                bindnext="{{I}}"
+                class="r data-v-3036c67f"
+                uI="3036c67f-10,3036c67f-9"
+                uP="{{J}}"
+                uR="priceStepperRef"
+                wx:if="{{J}}"
+              ></stepper>
+            </pop-over>
+          </form-wrap>
+        </view>
+        <view class="input-gap data-v-3036c67f">
+          <form-wrap
+            bind:__l="__l"
+            class="amount-form data-v-3036c67f"
+            uI="3036c67f-11,3036c67f-0"
+            uS="{{['left','right']}}"
+          >
+            <view slot="left">数量</view>
+            <pop-over
+              bind:__l="__l"
+              class="{{['data-v-3036c67f',R]}}"
+              slot="right"
+              uI="3036c67f-12,3036c67f-11"
+              uP="{{S}}"
+              uS="{{['d']}}"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{P}}"
+                bindchange="{{N}}"
+                bindfocus="{{O}}"
+                class="r data-v-3036c67f"
+                uI="3036c67f-13,3036c67f-12"
+                uP="{{Q}}"
+                uR="amountStepperRef"
+                wx:if="{{Q}}"
+              ></stepper>
+            </pop-over>
+          </form-wrap>
+        </view>
+        <block wx:if="{{T}}">
+          <view class="max-info flex-between data-v-3036c67f" wx:if="{{U}}">
+            <view class="data-v-3036c67f">
+              <label class="label data-v-3036c67f">现金可买：</label>
+              <label class="data-v-3036c67f" wx:if="{{V}}">--</label>
+              <label bindtap="{{Y}}" class="data-v-3036c67f" wx:else
+                >{{W}}{{X}}</label
+              >
+            </view>
+            <view class="flex data-v-3036c67f">
+              <view
+                bindtap="{{item.d}}"
+                class="{{[item.c,'quick-amount','border--surround','data-v-3036c67f']}}"
+                wx:for="{{Z}}"
+                wx:key="b"
+                >{{item.a}}</view
+              >
+            </view>
+          </view>
+          <view class="max-info flex-between data-v-3036c67f" wx:if="{{aa}}">
+            <view class="data-v-3036c67f">
+              <label class="label data-v-3036c67f">持仓可卖：</label>
+              <label class="data-v-3036c67f" wx:if="{{ab}}">--</label>
+              <label bindtap="{{ae}}" class="data-v-3036c67f" wx:else
+                >{{ac}}{{ad}}</label
+              >
+            </view>
+            <view class="flex data-v-3036c67f">
+              <view
+                bindtap="{{item.d}}"
+                class="{{[item.c,'quick-amount','border--surround','data-v-3036c67f']}}"
+                wx:for="{{af}}"
+                wx:key="b"
+                >{{item.a}}</view
+              >
+            </view>
+          </view>
+        </block>
+        <view class="time-form data-v-3036c67f">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3036c67f"
+            uI="3036c67f-14,3036c67f-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="module-title title data-v-3036c67f" slot="left"
+              >订单有效期</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{ag}}"
+              class="data-v-3036c67f"
+              slot="right"
+              uI="3036c67f-15,3036c67f-14"
+              uP="{{ah}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view class="cond-price-form-tips data-v-3036c67f">{{ai}}</view>
+        </view>
+      </view>
+      <view class="cond-risk-tips data-v-3036c67f" wx:if="{{aj}}"
+        >风险提示：<view class="data-v-3036c67f"></view>
+        <view
+          class="data-v-3036c67f"
+          wx:for="{{ak}}"
+          wx:for-item="text"
+          wx:key="b"
+          >{{text.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="cond-btnwrap data-v-3036c67f" hidden="{{!av}}">
+    <button
+      bindtap="{{aq}}"
+      class="buy data-v-3036c67f"
+      disabled="{{ap}}"
+      wx:if="{{ao}}"
+    >
+      保存设置
+    </button>
+    <button
+      bindtap="{{at}}"
+      class="sell data-v-3036c67f"
+      disabled="{{as}}"
+      wx:elif="{{ar}}"
+    >
+      保存设置
+    </button>
+    <button class="no-action data-v-3036c67f" disabled="{{true}}" wx:else>
+      保存设置
+    </button>
+  </view>
+  <bottom-selector
+    bind:__l="__l"
+    bindchange="{{aw}}"
+    bindclose="{{ax}}"
+    class="data-v-3036c67f"
+    uI="3036c67f-16,3036c67f-0"
+    uP="{{ay}}"
+    wx:if="{{ay}}"
+  ></bottom-selector>
+  <condition-protocol
+    bind:__l="__l"
+    class="r data-v-3036c67f"
+    uI="3036c67f-17,3036c67f-0"
+    uR="condProtocol"
+  ></condition-protocol>
+  <condition-confirm
+    bind:__l="__l"
+    bindclose="{{aD}}"
+    bindconfirm="{{aC}}"
+    class="r data-v-3036c67f"
+    uI="3036c67f-18,3036c67f-0"
+    uP="{{aE}}"
+    uR="condConfirm"
+    wx:if="{{aA}}"
+  ></condition-confirm>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-3036c67f"
+    id="mp-dialog"
+    uI="3036c67f-19,3036c67f-0"
+    uP="{{aF}}"
+    wx:if="{{aF}}"
+  ></mp-dialog>
+</global-wrap>

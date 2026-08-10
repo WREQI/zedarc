@@ -1,0 +1,50 @@
+<view class="_div component-ai-strategy-detail data-v-d2e64340">
+  <view class="_div card-wrapper indicator-card data-v-d2e64340">
+    <view class="_div card-title flex-vcenter flex-between data-v-d2e64340">
+      <view class="_div title-text data-v-d2e64340">选股条件</view>
+      <view
+        bindtap="{{b}}"
+        class="_div flex-vcenter data-v-d2e64340"
+        wx:if="{{a}}"
+      >
+        <view class="_div title-ext data-v-d2e64340">更换</view>
+        <view class="_div arrow-icon arrow-right data-v-d2e64340"></view>
+      </view>
+    </view>
+    <view class="_div condition-text data-v-d2e64340">{{c}}</view>
+  </view>
+  <view class="_div card-wrapper stock-card data-v-d2e64340" wx:if="{{d}}">
+    <view class="_div card-title-wrapper data-v-d2e64340">
+      <view class="_div card-title flex-vcenter flex-between data-v-d2e64340">
+        <view class="_div title-text data-v-d2e64340">相关股票：{{e}}只</view>
+        <view class="_div title-ext data-v-d2e64340" wx:if="{{f}}"
+          >{{g}}更新</view
+        >
+      </view>
+    </view>
+    <stock-list
+      bind:__l="__l"
+      bindclick="{{h}}"
+      class="data-v-d2e64340"
+      uI="d2e64340-0"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></stock-list>
+  </view>
+  <bottom-brand
+    bind:__l="__l"
+    class="data-v-d2e64340"
+    uI="d2e64340-1"
+    wx:if="{{j}}"
+  ></bottom-brand>
+  <indicator-picker
+    bind:__l="__l"
+    bindcancel="{{m}}"
+    bindchange="{{k}}"
+    bindconfirm="{{l}}"
+    class="data-v-d2e64340"
+    uI="d2e64340-2"
+    uP="{{n}}"
+    wx:if="{{n}}"
+  ></indicator-picker>
+</view>

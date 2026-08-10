@@ -1,0 +1,10 @@
+<view class="_div fd-wrapper data-v-163cac98">
+  <view class="_div fd-wrapper-item data-v-163cac98" wx:for="{{a}}" wx:key="f">
+    <view class="_div fd-title data-v-163cac98" key="{{item.b}}"
+      >{{item.a}}</view
+    >
+    <view class="_div fd-content data-v-163cac98" key="{{item.e}}"
+      >{{item.c}}<view catchtap="{{item.d}}" class="_i data-v-163cac98"></view>
+    </view>
+  </view>
+</view>

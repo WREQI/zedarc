@@ -1,0 +1,48 @@
+div.component-download {
+  background: #fff;
+  filter: alpha(opacity=99);
+  height: 1.4666666666666666rem;
+  padding: 0 0.4rem;
+  z-index: 100;
+}
+div.component-download .flex {
+  display: -webkit-flex;
+  display: flex;
+}
+div.component-download .flex-align-center {
+  align-items: center;
+}
+div.component-download .flex-justify-between {
+  justify-content: space-between;
+}
+div.component-download .download-bar {
+  height: 100%;
+}
+div.component-download .logo {
+  background: url(https://wzq.tenpay.com/resources/images/zxg_logo.png) 50%no-repeat;
+  background-size: contain;
+  height: 0.8rem;
+  margin-right: 0.21333333333333335rem;
+  width: 0.8rem;
+}
+div.component-download .brand-text {
+  color: #1c2029;
+  font-size: 0.4533333333333333rem;
+  margin-right: 0.21333333333333335rem;
+}
+div.component-download .title-text {
+  color: #606980;
+  font-size: 0.3466666666666667rem;
+  margin-top: 0.06666666666666667rem;
+}
+div.component-download .button {
+  background: #3077ec;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  width: 1.6rem;
+}

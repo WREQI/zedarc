@@ -1,0 +1,38 @@
+<view
+  catchtap="{{g}}"
+  class="_div daxin-calendar-wrapper data-v-b5a8c52a"
+  wx:if="{{a}}"
+>
+  <view class="_div has-daxin-wrapper data-v-b5a8c52a" wx:if="{{b}}">
+    <view class="_div left-wrapper data-v-b5a8c52a">
+      <view class="_div icon-daxin data-v-b5a8c52a"></view>
+    </view>
+    <view class="_div middle-wrapper data-v-b5a8c52a">
+      <view
+        catchtap="{{info.d}}"
+        class="{{['_div','data-v-b5a8c52a','info-wrapper',d]}}"
+        wx:for="{{c}}"
+        wx:for-item="info"
+        wx:key="c"
+      >
+        <view class="_div info-title data-v-b5a8c52a">{{info.a}}</view>
+        <view class="_div info-num data-v-b5a8c52a">{{info.b}}只</view>
+      </view>
+    </view>
+    <view class="_div right-wrapper data-v-b5a8c52a">
+      <view catchtap="{{f}}" class="_div daxin-button data-v-b5a8c52a"
+        >{{e}}</view
+      >
+    </view>
+  </view>
+  <view class="_div no-daxin-wrapper data-v-b5a8c52a" wx:else>
+    <view class="_div no-daxin-left-wrapper data-v-b5a8c52a">打新日历</view>
+    <view class="_div no-daxin-right-wrapper data-v-b5a8c52a">
+      <view class="_div desc data-v-b5a8c52a">今日无新股新债可申购</view>
+      <image
+        class="_img right-arrow data-v-b5a8c52a"
+        src="https://st.gtimg.com/design/71123212055745f606e1a1119c48116c.png"
+      ></image>
+    </view>
+  </view>
+</view>

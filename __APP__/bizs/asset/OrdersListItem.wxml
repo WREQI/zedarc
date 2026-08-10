@@ -1,0 +1,206 @@
+<view class="{{['order-list-body','data-v-bacf4dcf',h,i]}}">
+  <view
+    bindtap="{{item.aD}}"
+    class="{{['order-wrapper','data-v-bacf4dcf',g,item.aB,item.aC]}}"
+    wx:for="{{a}}"
+    wx:key="aE"
+  >
+    <view class="order-list data-v-bacf4dcf">
+      <view
+        bindtouchcancel="{{item.i}}"
+        bindtouchend="{{item.j}}"
+        bindtouchmove="{{item.h}}"
+        bindtouchstart="{{item.g}}"
+        catchtap="{{item.f}}"
+        class="col-item ^col-a col-a cell data-v-bacf4dcf"
+      >
+        <label class="text-color-1 data-v-bacf4dcf" wx:if="{{b}}">***</label>
+        <block wx:else>
+          <label class="{{['title','data-v-bacf4dcf',item.b,item.c]}}"
+            >{{item.a}}</label
+          >
+          <view
+            class="{{['subtitle','after-trade-label','data-v-bacf4dcf',item.e]}}"
+            wx:if="{{item.d}}"
+            >盘后</view
+          >
+        </block>
+      </view>
+      <view
+        bindtouchcancel="{{item.x}}"
+        bindtouchend="{{item.y}}"
+        bindtouchmove="{{item.w}}"
+        bindtouchstart="{{item.v}}"
+        catchtap="{{item.t}}"
+        class="col-item ^col-b col-b cell data-v-bacf4dcf"
+      >
+        <block wx:if="{{c}}">
+          <view class="{{['title','data-v-bacf4dcf',item.l]}}">{{item.k}}</view>
+          <label
+            class="subtitle flex-vcenter data-v-bacf4dcf"
+            wx:if="{{item.m}}"
+          >
+            <market-label
+              bind:__l="__l"
+              class="stock-market data-v-bacf4dcf"
+              uI="{{item.n}}"
+              uP="{{item.o}}"
+              wx:if="{{item.o}}"
+            ></market-label>
+            <label class="{{['code','data-v-bacf4dcf',item.q]}}"
+              >{{item.p}}</label
+            >
+          </label>
+          <label class="subtitle data-v-bacf4dcf" wx:else
+            >{{item.r}}{{item.s}}</label
+          >
+        </block>
+        <view class="text-color-1 data-v-bacf4dcf" wx:else>***</view>
+      </view>
+      <view
+        bindtouchcancel="{{item.F}}"
+        bindtouchend="{{item.G}}"
+        bindtouchmove="{{item.E}}"
+        bindtouchstart="{{item.D}}"
+        class="col-item ^col-c col-c align-r cell data-v-bacf4dcf"
+      >
+        <label class="text-color-1 data-v-bacf4dcf" wx:if="{{d}}">***</label>
+        <block wx:else>
+          <label class="{{['title','data-v-bacf4dcf',item.A]}}"
+            >{{item.z}}</label
+          >
+          <label class="subtitle data-v-bacf4dcf" wx:if="{{item.B}}"
+            >{{item.C}}</label
+          >
+        </block>
+      </view>
+      <view
+        bindtouchcancel="{{item.M}}"
+        bindtouchend="{{item.N}}"
+        bindtouchmove="{{item.L}}"
+        bindtouchstart="{{item.K}}"
+        class="col-item ^col-d col-d align-r cell data-v-bacf4dcf"
+      >
+        <label class="text-color-1 data-v-bacf4dcf" wx:if="{{e}}">***</label>
+        <block wx:else>
+          <label class="{{['title','data-v-bacf4dcf',item.I]}}"
+            >{{item.H}}</label
+          >
+          <label class="subtitle data-v-bacf4dcf">{{item.J}}</label>
+        </block>
+      </view>
+      <view
+        bindtouchcancel="{{item.ac}}"
+        bindtouchend="{{item.ad}}"
+        bindtouchmove="{{item.ab}}"
+        bindtouchstart="{{item.aa}}"
+        class="col-item ^col-e col-e align-r cell data-v-bacf4dcf"
+      >
+        <label class="text-color-1 data-v-bacf4dcf" wx:if="{{f}}">***</label>
+        <block wx:else>
+          <view class="title data-v-bacf4dcf">
+            <button
+              catchtap="{{item.R}}"
+              class="{{['btn','flex-center','data-v-bacf4dcf',item.Q&&'btn--disabled']}}"
+              wx:if="{{item.O}}"
+            >
+              {{item.P}}
+            </button>
+            <label
+              class="{{['flex-end','data-v-bacf4dcf',item.W,item.X]}}"
+              wx:if="{{item.S}}"
+            >
+              <label class="data-v-bacf4dcf"
+                >{{item.T}}<label
+                  catchtap="{{item.V}}"
+                  class="icon icon-italic-info abnormal-icon data-v-bacf4dcf"
+                  wx:if="{{item.U}}"
+                ></label>
+              </label>
+            </label>
+          </view>
+          <label class="subtitle data-v-bacf4dcf" hidden="{{!item.Z}}"
+            >{{item.Y}}</label
+          >
+        </block>
+      </view>
+    </view>
+    <view class="order-status-desc data-v-bacf4dcf" wx:if="{{item.ae}}">
+      <block wx:if="{{item.af}}">
+        <view
+          class="order-status-desc-item data-v-bacf4dcf"
+          key="status0"
+          wx:if="{{item.ag}}"
+          >撤单委托已提交,等待处理<label
+            catchtap="{{item.ah}}"
+            class="icon icon-italic-info ^icon-italic-info data-v-bacf4dcf"
+          ></label>
+        </view>
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status1"
+          wx:elif="{{item.ai}}"
+        >
+          <label
+            class="st-notify__icon order-notify-success data-v-bacf4dcf"
+          ></label
+          >成功{{item.aj}}{{item.ak}}, 剩余{{item.al}}继续{{item.am}}</view
+        >
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status2"
+          wx:elif="{{item.an}}"
+        >
+          <label
+            class="st-notify__icon order-notify-success data-v-bacf4dcf"
+          ></label
+          >成功{{item.ao}}{{item.ap}},已全部成交</view
+        >
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status7"
+          wx:elif="{{item.aq}}"
+        >
+          <label
+            class="st-notify__icon order-notify-success data-v-bacf4dcf"
+          ></label
+          >已撤销{{item.ar}},其余{{item.as}}已成交</view
+        >
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status8"
+          wx:elif="{{item.at}}"
+        >
+          <label
+            class="st-notify__icon order-notify-success data-v-bacf4dcf"
+          ></label
+          >{{item.av}}委托已全部撤销</view
+        >
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status9"
+          wx:elif="{{item.aw}}"
+          >委托无效</view
+        >
+        <view
+          class="flex-center order-status-desc-item data-v-bacf4dcf"
+          key="status3"
+          wx:elif="{{item.ax}}"
+          >{{item.ay}}未成交</view
+        >
+        <view
+          class="order-status-desc-item data-v-bacf4dcf"
+          key="status"
+          wx:else
+          >{{item.az}}</view
+        >
+      </block>
+      <view class="data-v-bacf4dcf" key="status" wx:else></view>
+    </view>
+    <view class="order-status-desc data-v-bacf4dcf" wx:if="{{item.aA}}">
+      <view class="order-status-desc-item data-v-bacf4dcf"
+        >配债已提交，待收盘清算后确认结果</view
+      >
+    </view>
+  </view>
+</view>

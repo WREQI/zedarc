@@ -1,0 +1,24 @@
+<page-meta class="data-v-88d0fc7b" rootFontSize="{{a}}"></page-meta>
+<view class="_div dzjy-container data-v-88d0fc7b" data-st-theme="{{f}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-88d0fc7b"
+    uI="88d0fc7b-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-88d0fc7b"
+    uI="88d0fc7b-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <da-zong-jiao-yi-detail
+    bind:__l="__l"
+    class="r data-v-88d0fc7b"
+    uI="88d0fc7b-2"
+    uP="{{e}}"
+    uR="dzjyDetail"
+    wx:if="{{c}}"
+  ></da-zong-jiao-yi-detail>
+  <view class="_div zxg-logo data-v-88d0fc7b"></view>
+</view>

@@ -1,0 +1,116 @@
+<view
+  class="{{['_div','brief-block','gzfx-container','data-v-367a7c9b',P&&'wzq',Q&&'skin-black']}}"
+>
+  <view class="_div item-title-zxg data-v-367a7c9b">
+    <view class="_div detail-tips-wrapper data-v-367a7c9b">估值分析</view>
+  </view>
+  <view class="_div gz-tab-wrapper data-v-367a7c9b">
+    <view
+      catchtap="{{b}}"
+      class="{{['_div','gz-tab-item','gz-tab-item-left','data-v-367a7c9b',a]}}"
+      >市盈率</view
+    >
+    <view
+      catchtap="{{d}}"
+      class="{{['_div','gz-tab-item','data-v-367a7c9b',c]}}"
+      >市净率</view
+    >
+  </view>
+  <view class="_div gz-desc-wrapper data-v-367a7c9b">
+    <view class="_div desc-line data-v-367a7c9b">
+      <view class="_div data-v-367a7c9b">当前{{e}}{{f}}</view>
+      <view class="_div pos-desc data-v-367a7c9b" wx:if="{{g}}"
+        >处于 {{h}} 分位</view
+      >
+      <view class="_div pos-desc data-v-367a7c9b" wx:if="{{i}}"
+        >处于 {{j}} 分位</view
+      >
+    </view>
+    <view class="_div select-btn data-v-367a7c9b" id="gzfxSelectbtn">
+      <view class="_div select-text data-v-367a7c9b">{{k}}</view>
+      <image class="_img btn-arrow data-v-367a7c9b" src="{{l}}"></image>
+      <view catchtap="{{m}}" class="_div fake-btn data-v-367a7c9b"></view>
+    </view>
+  </view>
+  <view
+    catchtouchmove="{{B}}"
+    catchtouchstart="{{A}}"
+    class="_div gz-chart data-v-367a7c9b"
+    wx:if="{{n}}"
+  >
+    <f2
+      bind:__l="__l"
+      bindonInit="{{v}}"
+      bindtouchend="{{w}}"
+      bindtouchmove="{{y}}"
+      bindtouchstart="{{x}}"
+      class="r data-v-367a7c9b"
+      uI="367a7c9b-0"
+      uP="{{z}}"
+      uR="gzfxChart"
+      uS="{{['d']}}"
+      wx:if="{{o}}"
+    >
+      <view class="{{['_div','data-v-367a7c9b','f2-tooltip',s]}}" wx:if="{{p}}">
+        <view class="_div f2-tooltip-inner data-v-367a7c9b">
+          <view class="_div f2-tooltip-title data-v-367a7c9b">{{q}}</view>
+          <view
+            class="_div f2-tooltip-value data-v-367a7c9b"
+            wx:for="{{r}}"
+            wx:key="c"
+          >
+            <label class="_span f2-tooltip-subtitle data-v-367a7c9b"
+              >{{item.a}}</label
+            >
+            <label class="_span f2-tooltip-after data-v-367a7c9b"
+              >{{item.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </f2>
+  </view>
+  <view
+    catchtouchmove="{{G}}"
+    class="_div gz-chart-range data-v-367a7c9b"
+    wx:if="{{C}}"
+  >
+    <range-slider
+      bind:__l="__l"
+      bindinit="{{F}}"
+      bindrangeChange="{{E}}"
+      class="r data-v-367a7c9b"
+      uI="367a7c9b-1"
+      uR="rangeSlider"
+    ></range-slider>
+  </view>
+  <view class="_div gz-chart-desc-wrapper data-v-367a7c9b" wx:if="{{H}}">
+    <view class="_div chart-desc-item data-v-367a7c9b">
+      <view class="_div item-color item-red data-v-367a7c9b"></view>
+      <view class="_div item-color item-red data-v-367a7c9b"></view>
+      <view class="_div item-text data-v-367a7c9b">70分位值</view>
+      <view class="_div num-color-red data-v-367a7c9b">{{I}}</view>
+    </view>
+    <view class="_div chart-desc-item data-v-367a7c9b">
+      <view class="_div item-color item-green data-v-367a7c9b"></view>
+      <view class="_div item-color item-green data-v-367a7c9b"></view>
+      <view class="_div item-text data-v-367a7c9b">30分位值</view>
+      <view class="_div num-color-green data-v-367a7c9b">{{J}}</view>
+    </view>
+    <view class="_div chart-desc-item data-v-367a7c9b">
+      <view class="_div item-color-ora data-v-367a7c9b"></view>
+      <view class="_div item-desc-text data-v-367a7c9b">{{K}}</view>
+    </view>
+  </view>
+  <root-portal class="data-v-367a7c9b" enable="{{true}}" wx:if="{{L}}">
+    <select-plate
+      bind:__l="__l"
+      bindchangeTab="{{N}}"
+      class="r data-v-367a7c9b"
+      uI="367a7c9b-2"
+      uP="{{O}}"
+      uR="selectPlateGz"
+      wx:if="{{O}}"
+    ></select-plate>
+  </root-portal>
+</view>

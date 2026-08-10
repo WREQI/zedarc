@@ -1,0 +1,68 @@
+.base-modal.data-v-1afb7bd9 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.base-modal__mask.data-v-1afb7bd9 {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.base-modal__wrapper.data-v-1afb7bd9 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.base-modal__content.data-v-1afb7bd9 {
+  position: relative;
+}
+.base-modal__close.data-v-1afb7bd9 {
+  cursor: pointer;
+}
+.base-modal__close--outer.data-v-1afb7bd9 {
+  height: 1.0666666666666667rem;
+  margin-bottom: 0.13333333333333333rem;
+  width: 100%;
+}
+.base-modal__close--inner.data-v-1afb7bd9,
+.base-modal__close--outer.data-v-1afb7bd9 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.base-modal__close--inner.data-v-1afb7bd9 {
+  box-sizing: border-box;
+  height: 1.2rem;
+  padding: 0.21333333333333335rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.base-modal__close--bottom.data-v-1afb7bd9 {
+  margin-top: 0.5333333333333333rem;
+}
+.base-modal__close-icon.data-v-1afb7bd9 {
+  display: block;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.base-modal__close-btn.data-v-1afb7bd9 {
+  background: url(https://st.gtimg.com/design/4d47005f568ae95477bccec3948af48d.png);
+  background-size: 100% 100%;
+  height: 0.76rem;
+  width: 0.76rem;
+}

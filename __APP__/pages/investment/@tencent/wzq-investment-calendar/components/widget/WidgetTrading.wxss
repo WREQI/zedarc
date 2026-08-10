@@ -1,0 +1,117 @@
+.widget-trading.data-v-14914d75 {
+  background-color: var(--color-card);
+  border-radius: 0.21333333333333335rem;
+  padding: 0.32rem 0.32rem 0;
+}
+.widget-trading__header.data-v-14914d75 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.32rem;
+}
+.widget-trading__title.data-v-14914d75 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+}
+.widget-trading__subscribe.data-v-14914d75 {
+  color: var(--color-link);
+  cursor: pointer;
+  font-size: 0.3466666666666667rem;
+  font-weight: 500;
+  line-height: 0.48rem;
+}
+.widget-trading__subscribe--subscribed.data-v-14914d75 {
+  opacity: 0.4;
+}
+.widget-trading__divider.data-v-14914d75 {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  margin-bottom: 0.32rem;
+}
+.widget-trading__table-header.data-v-14914d75 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.32rem;
+}
+.widget-trading__col.data-v-14914d75 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.widget-trading__col--name.data-v-14914d75 {
+  flex: 1;
+  text-align: left;
+}
+.widget-trading__col--date.data-v-14914d75 {
+  text-align: right;
+  width: 1.36rem;
+}
+.widget-trading__col--market.data-v-14914d75 {
+  text-align: right;
+  width: 3.3466666666666667rem;
+}
+.widget-trading__list.data-v-14914d75 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 0.32rem;
+}
+.widget-trading__item.data-v-14914d75 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+}
+.widget-trading__item-name.data-v-14914d75 {
+  color: var(--color-heavygray);
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.widget-trading__item-date.data-v-14914d75 {
+  width: 1.36rem;
+}
+.widget-trading__item-date.data-v-14914d75,
+.widget-trading__item-market.data-v-14914d75 {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  text-align: right;
+}
+.widget-trading__item-market.data-v-14914d75 {
+  width: 3.3466666666666667rem;
+}
+.widget-trading__footer-divider.data-v-14914d75 {
+  background-color: var(--border-heavy-divider);
+  height: 0.013333333333333334rem;
+  margin-top: 0.32rem;
+}
+.widget-trading__more.data-v-14914d75 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.05333333333333334rem;
+  padding: 0.21333333333333335rem 0;
+}
+.widget-trading__more-text.data-v-14914d75 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+}
+.widget-trading__more-icon.data-v-14914d75 {
+  background-color: var(--color-lightgray);
+  height: 0.32rem;
+  mask-image: url(https://st.gtimg.com/design/8c19e1936c5d1e6927c4725156adbaf3.svg);
+  mask-size: 100% 100%;
+  width: 0.32rem;
+}

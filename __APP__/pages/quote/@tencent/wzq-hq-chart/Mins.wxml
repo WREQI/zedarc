@@ -1,0 +1,37 @@
+<view class="_div mins-chart-container" style="{{'width:'+w+';'+'height:'+x}}">
+  <mins
+    bind:__l="__l"
+    binderror="{{l}}"
+    bindgetInitData="{{k}}"
+    bindonBarTap="{{g}}"
+    bindonChange="{{e}}"
+    bindonDoubleTap="{{j}}"
+    bindonPopup="{{f}}"
+    bindonTap="{{i}}"
+    bindonTipTap="{{h}}"
+    bindonTouchCancle="{{d}}"
+    bindonTouchMove="{{c}}"
+    class="r"
+    id="chart"
+    uI="9d06aa06-0"
+    uP="{{m}}"
+    uR="chart"
+    wx:if="{{a}}"
+  ></mins>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{o}}"
+    uI="9d06aa06-1"
+    uP="{{p}}"
+    wx:if="{{n}}"
+  ></status>
+  <no-data bind:__l="__l" uI="9d06aa06-2" uP="{{r}}" wx:if="{{q}}"></no-data>
+  <selector
+    bind:__l="__l"
+    class="r"
+    uI="9d06aa06-3"
+    uP="{{v}}"
+    uR="selector"
+    wx:if="{{s}}"
+  ></selector>
+</view>

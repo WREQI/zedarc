@@ -1,0 +1,61 @@
+<action-sheet
+  bind:__l="__l"
+  bindinput="{{n}}"
+  bindmaskClick="{{o}}"
+  class="date-picker-popup data-v-646a8ab1"
+  uI="646a8ab1-0"
+  uP="{{p}}"
+  uS="{{['d']}}"
+  wx:if="{{p}}"
+>
+  <view class="picker-container data-v-646a8ab1">
+    <view catchtap="{{a}}" class="data-v-646a8ab1">
+      <slot name="header"></slot>
+    </view>
+    <picker-view
+      bindchange="{{h}}"
+      class="{{['date-picker-view','data-v-646a8ab1',e&&'disabled']}}"
+      indicatorClass="indicator-class"
+      indicatorStyle="{{f}}"
+      maskClass="mask-class"
+      value="{{g}}"
+    >
+      <picker-view-column class="data-v-646a8ab1">
+        <view
+          class="{{['item','data-v-646a8ab1',item.c]}}"
+          wx:for="{{b}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </picker-view-column>
+      <picker-view-column class="data-v-646a8ab1">
+        <view
+          class="{{['item','data-v-646a8ab1',item.c]}}"
+          wx:for="{{c}}"
+          wx:key="b"
+          >{{item.a}}月</view
+        >
+      </picker-view-column>
+      <picker-view-column class="data-v-646a8ab1">
+        <view
+          class="{{['item','data-v-646a8ab1',item.c]}}"
+          wx:for="{{d}}"
+          wx:key="b"
+          >{{item.a}}日</view
+        >
+      </picker-view-column>
+    </picker-view>
+    <view class="disabled-mask data-v-646a8ab1" wx:if="{{i}}"></view>
+  </view>
+  <view catchtap="{{j}}" class="data-v-646a8ab1">
+    <slot name="footer"></slot>
+  </view>
+  <view class="button-wrap flex flex-v data-v-646a8ab1">
+    <button bindtap="{{k}}" class="cancel-btn flex-1 data-v-646a8ab1">
+      取消
+    </button>
+    <button bindtap="{{m}}" class="confirm-btn flex-1 data-v-646a8ab1">
+      {{l}}
+    </button>
+  </view>
+</action-sheet>

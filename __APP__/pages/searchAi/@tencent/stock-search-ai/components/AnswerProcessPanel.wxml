@@ -1,0 +1,136 @@
+<view class="{{['_div','data-v-7ebc4737','answer-process-panel',B]}}">
+  <view
+    class="_div answer-process-panel__leading-thinking data-v-7ebc4737"
+    wx:if="{{a}}"
+  >
+    <markdown-renderer
+      bind:__l="__l"
+      class="answer-process-panel__leading-text data-v-7ebc4737"
+      uI="7ebc4737-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></markdown-renderer>
+  </view>
+  <view class="_div answer-process-panel__card data-v-7ebc4737" wx:if="{{c}}">
+    <view
+      bindtap="{{h}}"
+      class="_div answer-process-panel__header data-v-7ebc4737"
+    >
+      <label
+        class="{{['_span','data-v-7ebc4737','answer-process-panel__title',e]}}"
+        >{{d}}</label
+      >
+      <image
+        alt="展开收起"
+        class="{{['_img','data-v-7ebc4737','answer-process-panel__status-icon',g]}}"
+        src="{{f}}"
+      ></image>
+    </view>
+    <view
+      class="_div answer-process-panel__body-frame data-v-7ebc4737"
+      hidden="{{!A}}"
+    >
+      <view
+        class="{{['_div','data-v-7ebc4737','answer-process-panel__body',z]}}"
+      >
+        <scroll-view
+          binddragend="{{r}}"
+          binddragging="{{q}}"
+          binddragstart="{{p}}"
+          bindscroll="{{n}}"
+          bindscrolltolower="{{o}}"
+          bounces="{{false}}"
+          class="answer-process-panel__body-content data-v-7ebc4737"
+          enhanced="{{true}}"
+          scrollAnchoring="{{false}}"
+          scrollIntoView="{{l}}"
+          scrollWithAnimation="{{m}}"
+          scrollY="{{true}}"
+          showScrollbar="{{false}}"
+          style="{{k}}"
+          wx:if="{{i}}"
+        >
+          <view
+            class="_div answer-process-panel__inner data-v-7ebc4737"
+            style="padding: 16px 0 10px"
+          >
+            <view
+              class="_div answer-process-panel__step data-v-7ebc4737"
+              wx:for="{{j}}"
+              wx:for-item="step"
+              wx:key="j"
+            >
+              <answer-process-thinking-block
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.b}}"
+                uP="{{step.c}}"
+                wx:if="{{step.a}}"
+              ></answer-process-thinking-block>
+              <answer-process-skill-tag
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.e}}"
+                uP="{{step.f}}"
+                wx:elif="{{step.d}}"
+              ></answer-process-skill-tag>
+              <answer-process-tool-tag
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.h}}"
+                uP="{{step.i}}"
+                wx:elif="{{step.g}}"
+              ></answer-process-tool-tag>
+            </view>
+            <view class="_div data-v-7ebc4737" id="answerProcessBottom1"></view>
+            <view class="_div data-v-7ebc4737" id="answerProcessBottom2"></view>
+          </view>
+        </scroll-view>
+        <view
+          bindscroll="{{v}}"
+          bindtouchend="{{y}}"
+          bindtouchmove="{{x}}"
+          bindtouchstart="{{w}}"
+          class="_div answer-process-panel__body-content data-v-7ebc4737"
+          ref="bodyContent"
+          style="{{t}}"
+          wx:else
+        >
+          <view
+            class="_div answer-process-panel__inner data-v-7ebc4737"
+            style="padding: 16px 0 10px"
+          >
+            <view
+              class="_div answer-process-panel__step data-v-7ebc4737"
+              wx:for="{{s}}"
+              wx:for-item="step"
+              wx:key="j"
+            >
+              <answer-process-thinking-block
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.b}}"
+                uP="{{step.c}}"
+                wx:if="{{step.a}}"
+              ></answer-process-thinking-block>
+              <answer-process-skill-tag
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.e}}"
+                uP="{{step.f}}"
+                wx:elif="{{step.d}}"
+              ></answer-process-skill-tag>
+              <answer-process-tool-tag
+                bind:__l="__l"
+                class="data-v-7ebc4737"
+                uI="{{step.h}}"
+                uP="{{step.i}}"
+                wx:elif="{{step.g}}"
+              ></answer-process-tool-tag>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

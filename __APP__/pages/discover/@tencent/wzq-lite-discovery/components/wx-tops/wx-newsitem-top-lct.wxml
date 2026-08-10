@@ -1,0 +1,25 @@
+<view
+  catchlongpress="{{e}}"
+  class="{{['_div','data-v-837b7878','wx-news-item-typetop']}}"
+>
+  <view
+    catchtap="{{item.e}}"
+    class="{{['_div','data-v-837b7878','part-up',item.d]}}"
+    wx:for="{{a}}"
+    wx:key="c"
+  >
+    <view class="_div part-up-left data-v-837b7878">
+      <view class="_div block-title data-v-837b7878">{{b}}</view>
+      <view class="_div title data-v-837b7878">{{item.a}}</view>
+    </view>
+    <view class="_div part-up-right data-v-837b7878">
+      <image
+        class="_img cover data-v-837b7878"
+        mode="aspectFill"
+        src="{{item.b}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div watch-line data-v-837b7878" id="{{c}}"></view>
+  <view class="_div on-long-press data-v-837b7878" wx:if="{{d}}"></view>
+</view>

@@ -1,0 +1,29 @@
+<protocol
+  bind:__l="__l"
+  class="flex flex-column"
+  uI="f91cf66a-0"
+  uP="{{e}}"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <view class="ft ft-wrapper">
+    <view class="protocol-items" wx:if="{{a}}">
+      <view class="flex-vcenter">
+        <view
+          bindtap="{{b}}"
+          class="item"
+          data-link="common_more_notice_of_quity"
+          >《证券投资基金投资人权益须知》</view
+        >
+        <view bindtap="{{c}}" class="item" data-link="common_more_disclaimer"
+          >《免责声明》</view
+        >
+      </view>
+    </view>
+    <view class="flex-center btns-group">
+      <button bindtap="{{d}}" class="flex-1 btn-col-sub btn-bar" type="primary">
+        确定
+      </button>
+    </view>
+  </view>
+</protocol>

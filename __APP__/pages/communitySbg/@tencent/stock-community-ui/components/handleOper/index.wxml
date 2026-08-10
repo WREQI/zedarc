@@ -1,0 +1,22 @@
+<view class="_div mod-handle-view-oper oper-box data-v-d2ac66da" wx:if="{{a}}">
+    <view class="_div view-box data-v-d2ac66da">
+        <label class="_span data-v-d2ac66da" wx:if="{{b}}">阅读量 {{c}}</label>
+    </view>
+    <view class="{{['_div','data-v-d2ac66da',o]}}">
+        <view catchtap="{{h}}" class="_div op data-v-d2ac66da" ref="commentButton" wx:if="{{d}}">
+            <view class="_div text data-v-d2ac66da">
+                <image class="_img sq-icon-pinglun data-v-d2ac66da"></image>
+                <label class="_span comment-value data-v-d2ac66da" wx:if="{{e}}">{{f}}</label>
+                <label class="_span comment-value data-v-d2ac66da" wx:else>{{g}}</label>
+            </view>
+        </view>
+        <view catchtap="{{n}}" class="_div op like-box data-v-d2ac66da" wx:if="{{i}}">
+            <view class="_div text data-v-d2ac66da">
+                <image class="_img icon data-v-d2ac66da" data-liked="{{j}}"></image>
+                <label class="_span like-value data-v-d2ac66da" wx:if="{{k}}">{{l}}</label>
+                <label class="_span like-value data-v-d2ac66da" wx:else>{{m}}</label>
+            </view>
+        </view>
+    </view>
+    <input class="fake-input data-v-d2ac66da" ref="fakeInput" type="text"></input>
+</view>

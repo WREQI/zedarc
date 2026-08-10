@@ -1,0 +1,315 @@
+.dividend-block-wrapper.data-v-29b53112 {
+  background-color: var(--fill-2);
+}
+[data-zdf="greenup"] .dividend-block-wrapper.data-v-29b53112 {
+  --color-rise: var(--color-green);
+  --color-drop: var(--color-red);
+}
+.dividend-block-wrapper.lite.data-v-29b53112 {
+  border-radius: 0.21333333333333335rem;
+  margin-bottom: 0.32rem;
+}
+.dividend-block-wrapper.lite .dividend-block .header.data-v-29b53112 {
+  padding: 0.4266666666666667rem 0.4rem;
+}
+.dividend-block-wrapper.lite
+  .dividend-block
+  .header
+  .right-arrow-icon.data-v-29b53112 {
+  background: url(https://st.gtimg.com/design/4db798796fdbac98c20c441114fc2133.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.26666666666666666rem;
+  width: 0.17333333333333334rem;
+}
+.dividend-block-wrapper.lite .dividend-block .content-wrapper.data-v-29b53112 {
+  padding: 0 0.32rem 0.4266666666666667rem;
+}
+.dividend-block-wrapper.pro .card.data-v-29b53112 {
+  border: 0.013333333333333334rem solid var(--border-heavy-divider);
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  padding: 0.4266666666666667rem 0.4rem;
+}
+.dividend-block-wrapper.pro .stock-item .tag-list .stock-tag.data-v-29b53112 {
+  color: var(--color-primary);
+  position: relative;
+}
+.dividend-block-wrapper.pro
+  .stock-item
+  .tag-list
+  .stock-tag.data-v-29b53112:after {
+  border: 1px solid #3077ec80;
+  border-radius: 0.02666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .dividend-block-wrapper.pro
+    .stock-item
+    .tag-list
+    .stock-tag.data-v-29b53112:after {
+    border-radius: 4px;
+    height: 200%;
+    transform: scale(0.5) translateZ(0);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .dividend-block-wrapper.pro
+    .stock-item
+    .tag-list
+    .stock-tag.data-v-29b53112:after {
+    border-radius: 6px;
+    height: 300%;
+    transform: scale(0.333) translateZ(0);
+    width: 300%;
+  }
+}
+.dividend-block-wrapper .dividend-block .header.data-v-29b53112 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.21333333333333335rem 0.4rem 0.32rem;
+}
+.dividend-block-wrapper .dividend-block .header .title.data-v-29b53112 {
+  align-items: flex-end;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4rem;
+  font-weight: 600;
+  line-height: 0.56rem;
+}
+.dividend-block-wrapper
+  .dividend-block
+  .header
+  .title
+  .main-title.data-v-29b53112 {
+  height: 0.5066666666666667rem;
+  width: 1.36rem;
+}
+.dividend-block-wrapper
+  .dividend-block
+  .header
+  .title
+  .main-title
+  .title-img.data-v-29b53112 {
+  height: 100%;
+  width: 100%;
+}
+.dividend-block-wrapper
+  .dividend-block
+  .header
+  .title
+  .sub-title.data-v-29b53112 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-left: 0.21333333333333335rem;
+}
+.dividend-block-wrapper
+  .dividend-block
+  .header
+  .right-arrow-icon.data-v-29b53112 {
+  background: url(https://st.gtimg.com/design/5c8d3517ec1225898294d85de0281be8.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.32rem;
+  width: 0.21333333333333335rem;
+}
+.dividend-block-wrapper .dividend-block .content-wrapper.data-v-29b53112 {
+  padding: 0 0.4rem 0.4266666666666667rem;
+}
+.dividend-block-wrapper .card.data-v-29b53112 {
+  background-color: var(--fill-content-layer);
+}
+.dividend-block-wrapper .stock-item.data-v-29b53112 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4266666666666667rem;
+}
+.dividend-block-wrapper .stock-item .stock-left.data-v-29b53112 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  text-align: left;
+}
+.dividend-block-wrapper .stock-item .stock-name.data-v-29b53112 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  margin-bottom: 0.05333333333333334rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.dividend-block-wrapper .stock-item .stock-detail.data-v-29b53112 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.4533333333333333rem;
+}
+.dividend-block-wrapper .stock-item .market-icon.data-v-29b53112 {
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.dividend-block-wrapper .stock-item .stock-code.data-v-29b53112 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+}
+.dividend-block-wrapper .stock-item .tag-list.data-v-29b53112 {
+  display: -webkit-flex;
+  display: flex;
+}
+.dividend-block-wrapper .stock-item .tag-list .stock-tag.data-v-29b53112 {
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--color-red);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  height: 0.38666666666666666rem;
+  justify-content: center;
+  line-height: 0.38666666666666666rem;
+  margin-left: 0.12rem;
+  padding: 0 0.10666666666666667rem;
+  position: relative;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+.dividend-block-wrapper .stock-item .tag-list .stock-tag.data-v-29b53112:after {
+  border: 1px solid #e63535;
+  border-radius: 0.02666666666666667rem;
+  box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .dividend-block-wrapper
+    .stock-item
+    .tag-list
+    .stock-tag.data-v-29b53112:after {
+    border-radius: 4px;
+    height: 200%;
+    transform: scale(0.5) translateZ(0);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  .dividend-block-wrapper
+    .stock-item
+    .tag-list
+    .stock-tag.data-v-29b53112:after {
+    border-radius: 6px;
+    height: 300%;
+    transform: scale(0.333) translateZ(0);
+    width: 300%;
+  }
+}
+.dividend-block-wrapper .stock-item .stock-right-block.data-v-29b53112 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.dividend-block-wrapper .stock-item .stock-middle.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right.data-v-29b53112 {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.37333333333333335rem;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+.dividend-block-wrapper .stock-item .stock-middle .num.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right .num.data-v-29b53112 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+  margin-bottom: 0.05333333333333334rem;
+}
+.dividend-block-wrapper .stock-item .stock-middle .num.rise.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right .num.rise.data-v-29b53112 {
+  color: var(--color-rise, var(--color-red));
+}
+.dividend-block-wrapper .stock-item .stock-middle .num.drop.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right .num.drop.data-v-29b53112 {
+  color: var(--color-drop, var(--color-green));
+}
+.dividend-block-wrapper .stock-item .stock-middle .num.equal.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right .num.equal.data-v-29b53112 {
+  color: var(--color-equal, var(--color-lightgray));
+}
+.dividend-block-wrapper .stock-item .stock-middle .desc.data-v-29b53112,
+.dividend-block-wrapper .stock-item .stock-right .desc.data-v-29b53112 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  margin-top: 0.013333333333333334rem;
+}
+.dividend-block-wrapper
+  .stock-item
+  .stock-middle
+  .desc
+  .dividend-rate-info-wrap.data-v-29b53112,
+.dividend-block-wrapper
+  .stock-item
+  .stock-right
+  .desc
+  .dividend-rate-info-wrap.data-v-29b53112 {
+  height: 0.32rem;
+}
+.dividend-block-wrapper
+  .stock-item
+  .stock-middle
+  .desc
+  .dividend-rate-info.data-v-29b53112,
+.dividend-block-wrapper
+  .stock-item
+  .stock-right
+  .desc
+  .dividend-rate-info.data-v-29b53112 {
+  height: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.32rem;
+}
+.dividend-block-wrapper .stock-item .stock-right.data-v-29b53112 {
+  margin-left: 0.6666666666666666rem;
+}
+.data-v-29b53112 .teach-pop-wrapper .pop-content {
+  height: 5.866666666666666rem;
+}
+.data-v-29b53112 .teach-pop-wrapper .content-bottom {
+  background: var(--color-blue);
+}

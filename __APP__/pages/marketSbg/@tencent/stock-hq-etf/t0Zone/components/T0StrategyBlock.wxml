@@ -1,0 +1,46 @@
+<view class="{{['_div','data-v-b7a2e3ef','fund-card',k]}}">
+  <view class="_div fund-card__tip data-v-b7a2e3ef">
+    <view class="_div strat-tip__title data-v-b7a2e3ef">{{a}}</view>
+    <image
+      alt="信息图标"
+      catchtap="{{b}}"
+      class="{{['_img','data-v-b7a2e3ef','strat-tip__icon','t0-strategy-block__i-icon']}}"
+      data-test-id="t0-method-open"
+      src="https://st.gtimg.com/pcm/mpuve6d9_9cf9599f3c1c733bea890d31a04a7cf4.svg"
+    ></image>
+    <view catchtap="{{d}}" class="_div strat-tip__desc data-v-b7a2e3ef"
+      >{{c}}</view
+    >
+  </view>
+  <view class="_div fund-card__body data-v-b7a2e3ef" wx:if="{{e}}">
+    <t0-premium-card
+      bind:__l="__l"
+      bindpremiumExplain="{{g}}"
+      class="data-v-b7a2e3ef"
+      uI="b7a2e3ef-0"
+      uP="{{h}}"
+      wx:if="{{f}}"
+    ></t0-premium-card>
+    <block wx:else>
+      <view
+        class="_div fund-card__row data-v-b7a2e3ef"
+        wx:for="{{i}}"
+        wx:key="e"
+      >
+        <t0-fund-card
+          bind:__l="__l"
+          bindfundBuy="{{item.a}}"
+          class="data-v-b7a2e3ef"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></t0-fund-card>
+        <view
+          class="_div fund-card__divider data-v-b7a2e3ef"
+          wx:if="{{item.d}}"
+        ></view>
+      </view>
+    </block>
+  </view>
+  <view class="_div fund-card__empty data-v-b7a2e3ef" wx:else>{{j}}</view>
+</view>

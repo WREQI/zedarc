@@ -1,0 +1,77 @@
+<view
+  class="{{['_div','subject-container','data-v-67949ce0',D&&'safeBottom']}}"
+>
+  <view
+    class="_div subject-inner-container data-v-67949ce0"
+    style="{{'margin-bottom:'+z}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div head data-v-67949ce0">
+      <view class="_div header-content data-v-67949ce0" wx:if="{{b}}">
+        <image class="_img header-mac data-v-67949ce0" src="{{c}}"></image>
+        <image class="_img main-img data-v-67949ce0" src="{{d}}"></image>
+      </view>
+      <image
+        class="{{['_img','header-img','data-v-67949ce0',e]}}"
+        src="{{f}}"
+        wx:else
+      ></image>
+      <view class="_div intro data-v-67949ce0" style="{{j}}" wx:if="{{g}}">
+        <label class="{{['_span','title','data-v-67949ce0',h]}}">摘要</label>
+        <label class="_span summary data-v-67949ce0">{{i}}</label>
+      </view>
+      <view class="_div collect-btn data-v-67949ce0" wx:if="{{k}}">
+        <collect
+          bind:__l="__l"
+          class="data-v-67949ce0"
+          uI="67949ce0-0"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></collect>
+      </view>
+    </view>
+    <news-list
+      bind:__l="__l"
+      bindtapDetail="{{n}}"
+      class="r data-v-67949ce0"
+      uI="67949ce0-1"
+      uP="{{o}}"
+      uR="newsList"
+      wx:if="{{o}}"
+    ></news-list>
+    <view class="_div bottom-img-wrap data-v-67949ce0">
+      <image class="_img tencent-logo-img data-v-67949ce0" src="{{p}}"></image>
+    </view>
+    <down-load
+      bind:__l="__l"
+      binddownLoad="{{r}}"
+      class="data-v-67949ce0"
+      uI="67949ce0-2"
+      uP="{{s}}"
+      wx:if="{{q}}"
+    ></down-load>
+    <task-pop
+      bind:__l="__l"
+      class="data-v-67949ce0"
+      uI="67949ce0-3"
+      uP="{{v}}"
+      wx:if="{{t}}"
+    ></task-pop>
+    <directory
+      bind:__l="__l"
+      bindscrolltoSection="{{x}}"
+      class="data-v-67949ce0"
+      uI="67949ce0-4"
+      uP="{{y}}"
+      wx:if="{{w}}"
+    ></directory>
+  </view>
+  <news-status
+    bind:__l="__l"
+    bindretry="{{B}}"
+    class="data-v-67949ce0"
+    uI="67949ce0-5"
+    uP="{{C}}"
+    wx:if="{{A}}"
+  ></news-status>
+</view>

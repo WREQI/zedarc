@@ -1,0 +1,29 @@
+<mp-dialog
+  bind:__l="__l"
+  bindclose="{{b}}"
+  class="support-bank data-v-f8df294b"
+  uI="f8df294b-0"
+  uP="{{c}}"
+  uS="{{['d']}}"
+  wx:if="{{c}}"
+>
+  <view class="mp-dialog__message bank-list data-v-f8df294b">
+    <view
+      class="item align-c flex-center data-v-f8df294b"
+      wx:for="{{a}}"
+      wx:for-item="bank"
+      wx:key="d"
+    >
+      <bank-logo
+        bind:__l="__l"
+        class="bank-logo data-v-f8df294b"
+        uI="{{bank.a}}"
+        uP="{{bank.b}}"
+        wx:if="{{bank.b}}"
+      ></bank-logo>
+      <label class="text bank-name text-color-6 data-v-f8df294b"
+        >{{bank.c}}</label
+      >
+    </view>
+  </view>
+</mp-dialog>

@@ -1,0 +1,123 @@
+<view
+  bindtransitionend="{{B}}"
+  class="{{['lottery-reward-dialog','data-v-63d39197',y&&'lottery-reward-dialog--closing',z&&'lottery-reward-dialog--flying',A&&'lottery-reward-dialog--share-active']}}"
+>
+  <overlay
+    bind:__l="__l"
+    class="data-v-63d39197"
+    uI="63d39197-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></overlay>
+  <view class="lottery-reward-dialog__confetti data-v-63d39197">
+    <image
+      alt=""
+      class="lottery-reward-dialog__confetti-img data-v-63d39197"
+      src="{{b}}"
+    ></image>
+  </view>
+  <excite-exposure
+    bind:__l="__l"
+    bindexposed="{{s}}"
+    class="lottery-reward-dialog__exposure data-v-63d39197"
+    uI="63d39197-1"
+    uS="{{['d']}}"
+  >
+    <view class="lottery-reward-dialog__content data-v-63d39197">
+      <view class="lottery-reward-dialog__title data-v-63d39197"
+        >恭喜您中签啦！</view
+      >
+      <view class="lottery-reward-dialog__subtitle data-v-63d39197">{{c}}</view>
+      <view
+        class="lottery-reward-dialog__card-wrapper data-v-63d39197"
+        style="{{p}}"
+      >
+        <view
+          class="lottery-reward-dialog__single data-v-63d39197"
+          wx:if="{{d}}"
+        >
+          <lottery-reward-card
+            bind:__l="__l"
+            bindgotoDetail="{{e}}"
+            class="data-v-63d39197"
+            uI="63d39197-2,63d39197-1"
+            uP="{{f}}"
+            wx:if="{{f}}"
+          ></lottery-reward-card>
+        </view>
+        <view
+          class="lottery-reward-dialog__swiper-wrapper data-v-63d39197"
+          wx:else
+        >
+          <swiper
+            autoplay="{{h}}"
+            bindanimationfinish="{{n}}"
+            bindchange="{{j}}"
+            bindtouchend="{{l}}"
+            bindtouchstart="{{k}}"
+            bindtransition="{{m}}"
+            circular="{{true}}"
+            class="lottery-reward-dialog__swiper data-v-63d39197"
+            current="{{i}}"
+            duration="{{300}}"
+            interval="{{2000}}"
+            nextMargin="62rpx"
+            previousMargin="62rpx"
+          >
+            <swiper-item
+              class="lottery-reward-dialog__swiper-item data-v-63d39197"
+              wx:for="{{g}}"
+              wx:for-item="it"
+              wx:key="e"
+            >
+              <view
+                class="lottery-reward-dialog__card-inner data-v-63d39197"
+                style="{{'transform:'+it.d}}"
+              >
+                <lottery-reward-card
+                  bind:__l="__l"
+                  bindgotoDetail="{{it.a}}"
+                  class="data-v-63d39197"
+                  uI="{{it.b}}"
+                  uP="{{it.c}}"
+                  wx:if="{{it.c}}"
+                ></lottery-reward-card>
+              </view>
+            </swiper-item>
+          </swiper>
+          <view class="lottery-reward-dialog__indicator data-v-63d39197">
+            <view
+              class="{{['lottery-reward-dialog__indicator-dot','data-v-63d39197',it.b&&'lottery-reward-dialog__indicator-dot--active']}}"
+              wx:for="{{o}}"
+              wx:for-item="it"
+              wx:key="a"
+            ></view>
+          </view>
+        </view>
+        <view class="lottery-reward-dialog__fly-dot data-v-63d39197"></view>
+      </view>
+      <view class="lottery-reward-dialog__buttons data-v-63d39197">
+        <view
+          catchtap="{{q}}"
+          class="lottery-reward-dialog__btn lottery-reward-dialog__btn--primary data-v-63d39197"
+          >我知道了</view
+        >
+        <view
+          catchtap="{{r}}"
+          class="lottery-reward-dialog__btn lottery-reward-dialog__btn--ghost data-v-63d39197"
+          >去分享</view
+        >
+      </view>
+    </view>
+  </excite-exposure>
+  <lottery-share-dialog
+    bind:__l="__l"
+    bindbackShare="{{v}}"
+    bindcloseAll="{{w}}"
+    class="r data-v-63d39197"
+    uI="63d39197-4"
+    uP="{{x}}"
+    uR="shareDialogRef"
+    wx:if="{{x}}"
+  ></lottery-share-dialog>
+</view>

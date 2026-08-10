@@ -1,0 +1,81 @@
+<view class="_div stock-panel data-v-5004bcc6">
+  <view class="_div stock-header data-v-5004bcc6" wx:if="{{a}}">
+    <view class="_div stock-header--title-list data-v-5004bcc6">
+      <view
+        bindtap="{{name.b}}"
+        class="{{['_div','stock-header--title','data-v-5004bcc6',name.c]}}"
+        wx:for="{{b}}"
+        wx:for-item="name"
+        wx:key="d"
+        >{{name.a}}</view
+      >
+    </view>
+    <image
+      bindtap="{{d}}"
+      class="_img stock-header--op data-v-5004bcc6"
+      src="https://wzq.gtimg.com/resource/images/6a15662b7ea8680049f0e2793643634d.png"
+      wx:if="{{c}}"
+    ></image>
+  </view>
+  <view class="_div stock-list data-v-5004bcc6" hidden="{{!f}}">
+    <view
+      bindtap="{{stock.l}}"
+      class="_div stock-item data-v-5004bcc6"
+      wx:for="{{e}}"
+      wx:for-item="stock"
+      wx:key="k"
+    >
+      <view class="_div stock-name data-v-5004bcc6">
+        <label class="_span stock-name--text data-v-5004bcc6"
+          >{{stock.a}}</label
+        >
+      </view>
+      <view class="_div stock-code data-v-5004bcc6" wx:if="{{stock.b}}">
+        <image
+          class="_img stock-market data-v-5004bcc6"
+          src="https://wzq.gtimg.com/resource/images/ac3e34a4063eff235a87ec0f0b35dbe9.png"
+          wx:if="{{stock.c}}"
+        ></image>
+        <image
+          class="_img stock-market data-v-5004bcc6"
+          src="https://wzq.gtimg.com/resource/images/366f6190119ec4ece3afcbe5353c85fa.png"
+          wx:elif="{{stock.d}}"
+        ></image>
+        <label class="_span stock-code--text data-v-5004bcc6"
+          >{{stock.e}}</label
+        >
+        <label class="_span stock-code--text highlight data-v-5004bcc6"
+          >{{stock.f}}</label
+        >
+        <label class="_span stock-code--text data-v-5004bcc6"
+          >{{stock.g}}</label
+        >
+      </view>
+      <view class="_div stock-code data-v-5004bcc6" wx:else>
+        <image
+          class="_img stock-market data-v-5004bcc6"
+          src="https://wzq.gtimg.com/resource/images/ac3e34a4063eff235a87ec0f0b35dbe9.png"
+          wx:if="{{stock.h}}"
+        ></image>
+        <image
+          class="_img stock-market data-v-5004bcc6"
+          src="https://wzq.gtimg.com/resource/images/366f6190119ec4ece3afcbe5353c85fa.png"
+          wx:if="{{stock.i}}"
+        ></image>
+        <label class="_span stock-code--text data-v-5004bcc6"
+          >{{stock.j}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-5004bcc6',i]}}" wx:if="{{g}}">
+    <label class="_span stock-empty--text data-v-5004bcc6" wx:if="{{h}}"
+      >抱歉，没有找到您想要查询的结果</label
+    >
+    <image
+      class="_img empty-img data-v-5004bcc6"
+      src="https://st.gtimg.com/design/e727cfc2fe87a468008eca882cc803d0.png"
+      wx:else
+    ></image>
+  </view>
+</view>

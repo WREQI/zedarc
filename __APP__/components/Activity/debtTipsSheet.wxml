@@ -1,0 +1,37 @@
+<view class="guozhai-tips-wrapper data-v-6dcc467a">
+  <view class="title text-color-1 fs-32 align-l data-v-6dcc467a"
+    >什么是通用回购</view
+  >
+  <view class="desc text-color-1 fs-32 align-l mb-40 data-v-6dcc467a"
+    >指的是不同机构/企业为了短期融资，将自己购买的国债作为抵押物，向股民融资的一种手段，交易通用回购的股民按照约定天数和年化收益率借钱出去，到期获得本金和利息。</view
+  >
+  <view class="title text-color-1 fs-32 align-l data-v-6dcc467a">重要提示</view>
+  <view alt="" class="{{['img-tips','mb-24','data-v-6dcc467a',a]}}"></view>
+  <view
+    class="desc text-color-1 fs-32 align-l mb-24 data-v-6dcc467a"
+    wx:if="{{b}}"
+    >起购门槛<label class="fw-600 data-v-6dcc467a">1000</label>元，<label
+      class="data-v-6dcc467a"
+      wx:if="{{c}}"
+      >当前已开启自动下单</label
+    >
+    <label bindtap="{{d}}" class="link data-v-6dcc467a" wx:else
+      >「开启自动下单」</label
+    >，收盘（15:00）后闲钱自动交易，躺赢收益。</view
+  >
+  <view class="desc text-color-1 fs-32 align-l mb-24 data-v-6dcc467a" wx:else
+    >起购门槛1000元，到期后本息自动到账，无需手动赎回。</view
+  >
+  <view class="desc text-color-1 fs-32 align-l mb-24 data-v-6dcc467a"
+    >通常在假期前2-3天交易，周末与节假日都能计算收益，到手利息更高；另外月未、季末、半年末、年末、节假日前期，收益率较高。</view
+  >
+  <image
+    alt=""
+    class="img img-eg mb-24 data-v-6dcc467a"
+    src="https://st.gtimg.com/design/0c23a67d4325ef73369f58698bf46b02.png"
+  ></image>
+  <view class="text-color-5 mb-40 data-v-6dcc467a">2023年国庆节收益示例</view>
+  <view bindtap="{{e}}" class="desc link fs-28 data-v-6dcc467a">
+    <label class="fw-600 data-v-6dcc467a">了解更多</label>
+  </view>
+</view>

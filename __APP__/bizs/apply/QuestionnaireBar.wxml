@@ -1,0 +1,21 @@
+<view catchtap="{{f}}" class="embedded-questionnaire data-v-9d89bcc3">
+  <view class="content flex-vcenter border--top data-v-9d89bcc3">
+    <view class="text data-v-9d89bcc3">{{a}}</view>
+    <view class="flex-vcenter data-v-9d89bcc3">
+      <st-loading
+        bind:__l="__l"
+        class="loading data-v-9d89bcc3"
+        uI="9d89bcc3-0"
+        uP="{{c}}"
+        wx:if="{{b}}"
+      ></st-loading>
+      <view class="icon-group flex-vcenter data-v-9d89bcc3" wx:else>
+        <view class="icon-wrapper flex-center data-v-9d89bcc3">
+          <label class="{{['icon','data-v-9d89bcc3',d]}}"></label>
+        </view>
+        <label class="text data-v-9d89bcc3">{{e}}</label>
+      </view>
+      <label class="icon icon-arrow-right data-v-9d89bcc3"></label>
+    </view>
+  </view>
+</view>

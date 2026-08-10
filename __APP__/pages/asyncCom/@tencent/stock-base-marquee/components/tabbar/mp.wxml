@@ -1,0 +1,20 @@
+<view class="_div tabbar-top-wrapper data-v-3d48eec0">
+  <scroll-view
+    scrollX
+    class="tabbar-wrapper data-v-3d48eec0"
+    scrollIntoView="{{c}}"
+    scrollLeft="{{b}}"
+  >
+    <view class="tabbar-container data-v-3d48eec0">
+      <view
+        bindtap="{{market.e}}"
+        class="{{['tab','data-v-3d48eec0',market.d]}}"
+        id="{{market.b}}"
+        wx:for="{{a}}"
+        wx:for-item="market"
+        wx:key="c"
+        >{{market.a}}</view
+      >
+    </view>
+  </scroll-view>
+</view>

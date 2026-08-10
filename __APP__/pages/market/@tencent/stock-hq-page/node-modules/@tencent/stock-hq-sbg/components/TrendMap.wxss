@@ -1,0 +1,106 @@
+.trendmap-wrapper.data-v-0bae4b55 {
+  padding: 0 0.4rem;
+}
+.tip-wrapper .tip-point.data-v-0bae4b55 {
+  background-color: #e63535;
+  border-radius: 100%;
+  height: 0.10666666666666667rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 0.10666666666666667rem;
+}
+.tip-wrapper .tip-point.down.data-v-0bae4b55 {
+  background-color: #1caa3c;
+}
+.tip-wrapper .tip-flag.data-v-0bae4b55 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.tip-wrapper .tip-flag .flag-line.data-v-0bae4b55 {
+  background-color: #e63535;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 0.013333333333333334rem;
+}
+.tip-wrapper .tip-flag .flag-box.data-v-0bae4b55 {
+  background-color: rgba(230, 53, 53, 0.1);
+  border: 0.013333333333333334rem solid #e63535;
+  box-sizing: border-box;
+  color: var(--fill-2);
+  color: #e63535;
+  font-size: 0.26666666666666666rem;
+  height: 0.9066666666666666rem;
+  line-height: 0.37333333333333335rem;
+  padding: 0.05333333333333334rem 0.05333333333333334rem 0.04rem
+    0.09333333333333334rem;
+  width: 1.4933333333333334rem;
+}
+.tip-wrapper .tip-flag .flag-name.data-v-0bae4b55 {
+  color: #12161f;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+[data-st-theme="black"] .tip-wrapper .tip-flag .flag-name.data-v-0bae4b55 {
+  color: #f0f1f5;
+}
+.tip-wrapper .tip-flag .flag-type.data-v-0bae4b55 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tip-wrapper .tip-flag.down .flag-line.data-v-0bae4b55 {
+  background-color: #1caa3c;
+}
+.tip-wrapper .tip-flag.down .flag-box.data-v-0bae4b55 {
+  background-color: rgba(28, 170, 60, 0.1);
+  border: 0.013333333333333334rem solid #1caa3c;
+  color: #1caa3c;
+}
+.dot-container.data-v-0bae4b55 {
+  transform: translate(-50%, -50%);
+}
+.shine-dot.data-v-0bae4b55 {
+  height: 4px;
+  position: relative;
+  width: 4px;
+}
+.dot-inner.data-v-0bae4b55,
+.shine-dot.data-v-0bae4b55 {
+  background-color: #3077ec;
+  border-radius: 50%;
+  display: block;
+}
+.dot-inner.data-v-0bae4b55 {
+  animation: vabDot-0bae4b55 2.5s ease-in-out infinite;
+  box-sizing: border-box;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@-webkit-keyframes vabDot-0bae4b55 {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}
+@keyframes vabDot-0bae4b55 {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0;
+    transform: scale(4);
+  }
+}

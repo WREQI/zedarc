@@ -1,0 +1,29 @@
+<view
+  bindtap="{{n}}"
+  class="{{['_div','data-v-cdbca69f','wiki-bar',l,m]}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','data-v-cdbca69f',b]}}">股票百科</view>
+  <view class="{{['_div','data-v-cdbca69f','wiki-detail',h,i]}}">
+    <view class="_div right-wrap data-v-cdbca69f">
+      <image
+        class="{{['_img','wiki-image','data-v-cdbca69f',d&&'auto-width']}}"
+        mode="heightFix"
+        src="{{e}}"
+        wx:if="{{c}}"
+      ></image>
+      <view class="_div wiki-title data-v-cdbca69f">{{f}}</view>
+    </view>
+    <view
+      class="{{['_i','data-v-cdbca69f','icon','icon-wiki']}}"
+      wx:if="{{g}}"
+    ></view>
+  </view>
+  <hot-talk
+    bind:__l="__l"
+    class="data-v-cdbca69f"
+    uI="cdbca69f-0"
+    uP="{{k}}"
+    wx:if="{{j}}"
+  ></hot-talk>
+</view>

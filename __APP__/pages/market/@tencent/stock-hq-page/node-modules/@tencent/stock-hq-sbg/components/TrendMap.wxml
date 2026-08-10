@@ -1,0 +1,52 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','data-v-0bae4b55','trendmap-wrapper']}}"
+>
+  <f2
+    bind:__l="__l"
+    bindcanvasInfo="{{g}}"
+    bindonInit="{{f}}"
+    class="data-v-0bae4b55"
+    uI="0bae4b55-0"
+    uP="{{h}}"
+    uS="{{['d']}}"
+    wx:if="{{h}}"
+  >
+    <view class="_div data-v-0bae4b55" wx:if="{{a}}">
+      <view
+        class="_div tip-wrapper data-v-0bae4b55"
+        style="{{'position:'+'absolute'+';'+'left:'+item.m+';'+'top:'+item.n}}"
+        wx:for="{{b}}"
+        wx:key="l"
+      >
+        <view class="{{['_div','data-v-0bae4b55','tip-point',item.a]}}"></view>
+        <view
+          class="{{['_div','data-v-0bae4b55','tip-flag',item.k]}}"
+          wx:if="{{item.b}}"
+        >
+          <view
+            catchtap="{{item.h}}"
+            class="_div flag-box data-v-0bae4b55"
+            style="{{'position:'+'absolute'+';'+'left:'+item.e+';'+'right:'+'0px'+';'+'top:'+item.f+';'+'bottom:'+item.g}}"
+          >
+            <view class="_div flag-name data-v-0bae4b55">{{item.c}}</view>
+            <view class="_div flag-type data-v-0bae4b55">{{item.d}}</view>
+          </view>
+          <view
+            class="_div flag-line data-v-0bae4b55"
+            style="{{'height:'+item.i+';'+'top:'+item.j}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div dot-container data-v-0bae4b55"
+      style="{{'position:'+'absolute'+';'+'left:'+d+';'+'top:'+e}}"
+      wx:if="{{c}}"
+    >
+      <view class="_div shine-dot data-v-0bae4b55">
+        <label class="_span dot-inner data-v-0bae4b55"></label>
+      </view>
+    </view>
+  </f2>
+</view>

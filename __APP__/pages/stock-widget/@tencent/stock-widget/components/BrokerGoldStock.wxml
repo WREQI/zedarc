@@ -1,0 +1,150 @@
+<view
+  class="{{['_div','data-v-5770f1a5','list-warpper','header-bg','small-style']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div module-header-wrap data-v-5770f1a5">
+    <view
+      class="_div gold-title data-v-5770f1a5"
+      ref="brokerGoldStockTitleRef"
+      wx:if="{{b}}"
+    >
+      <image
+        class="_img title-month-mp data-v-5770f1a5"
+        mode="heightFix"
+        src="{{c}}"
+      ></image>
+      <image
+        class="_img title-broker-mp data-v-5770f1a5"
+        mode="heightFix"
+        src="https://st.gtimg.com/design/f6d536e86b202f0f75d2a0832532c72a.png"
+      ></image>
+    </view>
+    <view
+      class="_div gold-title data-v-5770f1a5"
+      ref="brokerGoldStockTitleRef"
+      wx:else
+    >
+      <image class="_img title-month data-v-5770f1a5" src="{{d}}"></image>
+      <image
+        class="_img title-broker data-v-5770f1a5"
+        src="https://st.gtimg.com/design/d198f71d29c39a1e4d25a628685b640e.png"
+        wx:if="{{e}}"
+      ></image>
+      <image
+        class="_img title-broker data-v-5770f1a5"
+        src="https://st.gtimg.com/design/f6d536e86b202f0f75d2a0832532c72a.png"
+        wx:else
+      ></image>
+    </view>
+    <view class="_div subtitle-wrap data-v-5770f1a5"
+      >{{f}}<label
+        catchtap="{{h}}"
+        class="_span openaccount-text data-v-5770f1a5"
+        wx:if="{{g}}"
+        >立即开户</label
+      >
+      <image
+        catchtap="{{j}}"
+        class="_img openaccount-right data-v-5770f1a5"
+        src="https://st.gtimg.com/design/423c8e0a11c4f0a176b9cf163ad4ccab.png"
+        wx:if="{{i}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div module-content-wrap data-v-5770f1a5">
+    <view class="_div rank-list data-v-5770f1a5">
+      <view class="_div rank-top-stocks data-v-5770f1a5" wx:if="{{k}}">
+        <view class="_div rank-title-top-stocks data-v-5770f1a5">
+          <image
+            class="_img rank-title-top-stocks-text-img data-v-5770f1a5"
+            src="https://st.gtimg.com/design/e35e4b42c1c7373b566475d52600980d.png"
+          ></image>
+        </view>
+        <view class="_div rank-header data-v-5770f1a5">
+          <view class="_div header-text-1 data-v-5770f1a5">证券简称</view>
+          <view class="_div header-text-2 data-v-5770f1a5">推荐券商</view>
+        </view>
+        <view
+          catchtap="{{item.l}}"
+          class="_div rank-content data-v-5770f1a5"
+          id="{{item.k}}"
+          wx:for="{{l}}"
+          wx:key="m"
+        >
+          <view
+            class="_div content-1 data-v-5770f1a5"
+            style="{{'margin-right:'+item.e}}"
+          >
+            <view class="_div date-top-stocks data-v-5770f1a5">{{item.a}}</view>
+            <view class="_div content-1-stock-symbol data-v-5770f1a5">
+              <market-icon
+                bind:__l="__l"
+                class="marketicon data-v-5770f1a5"
+                uI="{{item.b}}"
+                uP="{{item.c}}"
+                wx:if="{{item.c}}"
+              ></market-icon>
+              <view class="_div code data-v-5770f1a5">{{item.d}}</view>
+            </view>
+          </view>
+          <view class="_div content-2 data-v-5770f1a5">
+            <label class="_span data-v-5770f1a5" style="font-weight: 600"
+              >{{item.f}}家推荐：</label
+            >{{item.g}}</view
+          >
+          <view class="_div content-4 data-v-5770f1a5">
+            <image
+              alt=""
+              catchtap="{{item.i}}"
+              class="_img add-btn data-v-5770f1a5"
+              src="https://st.gtimg.com/design/a7318465551c2abb63a69de41e99f164.png"
+              wx:if="{{item.h}}"
+            ></image>
+            <image
+              alt=""
+              catchtap="{{item.j}}"
+              class="_img add-btn data-v-5770f1a5"
+              src="https://st.gtimg.com/design/11e837753d7d22edd747c5a320fabc8d.png"
+              wx:else
+            ></image>
+          </view>
+        </view>
+      </view>
+      <view
+        class="_div rank-detail-stocks data-v-5770f1a5"
+        ref="rankDetailRef"
+        wx:if="{{m}}"
+      >
+        <view class="_div rank-title-detail-stocks data-v-5770f1a5">
+          <image
+            class="_img rank-title-detail-stocks-text-img data-v-5770f1a5"
+            src="https://st.gtimg.com/design/f92d2a7b8139d592d679f69c1a830f08.png"
+          ></image>
+        </view>
+        <view class="_div rank-header data-v-5770f1a5">
+          <view class="_div header-text-1-detail data-v-5770f1a5">券商</view>
+          <view class="_div header-text-2-detail data-v-5770f1a5"
+            >金股组合</view
+          >
+        </view>
+        <view
+          class="_div rank-content data-v-5770f1a5"
+          wx:for="{{n}}"
+          wx:key="c"
+        >
+          <view
+            class="_div content-1 data-v-5770f1a5"
+            style="{{'margin-right:'+'28px'}}"
+          >
+            <view class="_div date data-v-5770f1a5">{{item.a}}</view>
+          </view>
+          <view class="_div content-2-detail data-v-5770f1a5">{{item.b}}</view>
+        </view>
+      </view>
+      <view catchtap="{{q}}" class="_div rank-footer data-v-5770f1a5">
+        <label class="_span data-v-5770f1a5">{{o}}</label>
+        <view class="{{['_div','more','data-v-5770f1a5',p]}}"></view>
+      </view>
+    </view>
+  </view>
+</view>

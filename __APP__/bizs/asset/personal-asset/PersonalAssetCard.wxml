@@ -1,0 +1,169 @@
+<view class="{{['data-v-578a0b1c',J]}}">
+  <base-card
+    bind:__l="__l"
+    bindclick="{{d}}"
+    class="data-v-578a0b1c"
+    key="need-pwd"
+    uI="578a0b1c-0"
+    uP="{{e}}"
+    uS="{{['footer']}}"
+    wx:if="{{a}}"
+  >
+    <view
+      catchtap="{{c}}"
+      class="passwd-wrap border-top data-v-578a0b1c"
+      slot="footer"
+    >
+      <view class="passwd-tips data-v-578a0b1c">查看账户，请输入交易密码</view>
+      <view catchtap="{{b}}" class="passwd-btn data-v-578a0b1c">验证密码</view>
+    </view>
+  </base-card>
+  <base-card
+    bind:__l="__l"
+    bindclick="{{g}}"
+    class="data-v-578a0b1c"
+    key="total-money-empty"
+    uI="578a0b1c-1"
+    uP="{{h}}"
+    uS="{{['footer']}}"
+    wx:elif="{{f}}"
+  >
+    <view slot="footer">
+      <asset-title
+        bind:__l="__l"
+        class="fund-asset-title data-v-578a0b1c"
+        uI="578a0b1c-2,578a0b1c-1"
+      ></asset-title>
+      <asset-content-place-holder
+        bind:__l="__l"
+        class="data-v-578a0b1c"
+        uI="578a0b1c-3,578a0b1c-1"
+      ></asset-content-place-holder>
+    </view>
+  </base-card>
+  <base-card
+    bind:__l="__l"
+    bindclick="{{z}}"
+    class="data-v-578a0b1c"
+    key="show-asset-detail"
+    uI="578a0b1c-4"
+    uP="{{A}}"
+    uS="{{['eye','footer']}}"
+    wx:elif="{{i}}"
+  >
+    <view
+      catchtap="{{k}}"
+      class="{{['eye','data-v-578a0b1c',j]}}"
+      slot="eye"
+    ></view>
+    <view class="data-v-578a0b1c" slot="footer">
+      <asset-title
+        bind:__l="__l"
+        class="fund-asset-title data-v-578a0b1c"
+        uI="578a0b1c-5,578a0b1c-4"
+        uS="{{['icon']}}"
+      >
+        <view slot="icon">
+          <view
+            catchtap="{{n}}"
+            class="{{['asset-refresh','data-v-578a0b1c',m]}}"
+            wx:if="{{l}}"
+          ></view>
+        </view>
+      </asset-title>
+      <asset-content-place-holder
+        bind:__l="__l"
+        class="data-v-578a0b1c"
+        uI="578a0b1c-6,578a0b1c-4"
+        wx:if="{{o}}"
+      ></asset-content-place-holder>
+      <view class="content-detail data-v-578a0b1c" wx:else>
+        <view class="data-v-578a0b1c">
+          <adapt-font-size
+            bind:__l="__l"
+            class="total-money data-v-578a0b1c"
+            uI="578a0b1c-7,578a0b1c-4"
+            uP="{{q}}"
+            uS="{{['d']}}"
+            wx:if="{{q}}"
+          >
+            <view class="data-v-578a0b1c">{{p}}</view>
+          </adapt-font-size>
+        </view>
+        <view class="profit-area data-v-578a0b1c">
+          <value-color
+            bind:__l="__l"
+            class="data-v-578a0b1c"
+            uI="578a0b1c-8,578a0b1c-4"
+            uP="{{v}}"
+            uS="{{['d']}}"
+            wx:if="{{r}}"
+          >
+            <adapt-font-size
+              bind:__l="__l"
+              class="today-profit data-v-578a0b1c"
+              uI="578a0b1c-9,578a0b1c-8"
+              uP="{{t}}"
+              uS="{{['d']}}"
+              wx:if="{{t}}"
+              >{{s}}%</adapt-font-size
+            >
+          </value-color>
+          <value-color
+            bind:__l="__l"
+            class="profit-area-right data-v-578a0b1c"
+            uI="578a0b1c-10,578a0b1c-4"
+            uP="{{y}}"
+            uS="{{['d']}}"
+            wx:if="{{y}}"
+          >
+            <adapt-font-size
+              bind:__l="__l"
+              class="today-profit data-v-578a0b1c"
+              uI="578a0b1c-11,578a0b1c-10"
+              uP="{{x}}"
+              uS="{{['d']}}"
+              wx:if="{{x}}"
+              >{{w}}</adapt-font-size
+            >
+          </value-color>
+        </view>
+      </view>
+    </view>
+  </base-card>
+  <base-card
+    bind:__l="__l"
+    bindclick="{{G}}"
+    class="data-v-578a0b1c"
+    key="total-money-zero"
+    uI="578a0b1c-12"
+    uP="{{H}}"
+    uS="{{['eye','footer']}}"
+    wx:elif="{{B}}"
+  >
+    <view
+      catchtap="{{D}}"
+      class="{{['eye','data-v-578a0b1c',C]}}"
+      slot="eye"
+    ></view>
+    <view
+      catchtap="{{F}}"
+      class="transfer-wrap border-top data-v-578a0b1c"
+      slot="footer"
+    >
+      <view class="transfer-tips data-v-578a0b1c"
+        >机会需有准备，入金开启投资</view
+      >
+      <view catchtap="{{E}}" class="transfer-btn data-v-578a0b1c"
+        >存入资金</view
+      >
+    </view>
+  </base-card>
+  <base-card
+    bind:__l="__l"
+    class="data-v-578a0b1c"
+    uI="578a0b1c-13"
+    uP="{{I||''}}"
+    wx:else
+  ></base-card>
+</view>

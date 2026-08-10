@@ -1,0 +1,33 @@
+<view class="_div section border-top data-v-4a708e83" wx:if="{{a}}">
+  <view class="_div section-header data-v-4a708e83">相关行情</view>
+  <view class="_div basket-container data-v-4a708e83" wx:if="{{b}}">
+    <basket-overview
+      bind:__l="__l"
+      bindgoToBasketDetail="{{e}}"
+      bindgoToStockDetail="{{d}}"
+      bindheaderToggleClick="{{c}}"
+      class="basket-overview data-v-4a708e83"
+      uI="4a708e83-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></basket-overview>
+  </view>
+  <view class="_div stock-list-container data-v-4a708e83" wx:elif="{{g}}">
+    <stock-list
+      bind:__l="__l"
+      class="data-v-4a708e83"
+      uI="4a708e83-1"
+      uP="{{h}}"
+      wx:if="{{h}}"
+    ></stock-list>
+  </view>
+  <view class="_div stock-list-container data-v-4a708e83" wx:elif="{{i}}">
+    <plate
+      bind:__l="__l"
+      class="data-v-4a708e83"
+      uI="4a708e83-2"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></plate>
+  </view>
+</view>

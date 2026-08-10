@@ -1,0 +1,12 @@
+@import "/app.wxss";
+.loading {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}

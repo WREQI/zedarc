@@ -1,0 +1,71 @@
+<action-sheet
+  bind:__l="__l"
+  bindinput="{{e}}"
+  class="sheet data-v-7074e901"
+  uI="7074e901-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <view class="_div sheet-container data-v-7074e901">
+    <view
+      class="_div sheet-container-item data-v-7074e901"
+      wx:for="{{a}}"
+      wx:key="g"
+    >
+      <view class="_div sheet-container-item-img data-v-7074e901">
+        <image
+          alt=""
+          class="_img sheet-container-item-img-each data-v-7074e901"
+          src="{{item.a}}"
+        ></image>
+      </view>
+      <view class="_div sheet-container-item-main data-v-7074e901">
+        <view class="_div sheet-container-item-main-first data-v-7074e901">
+          <view
+            class="_div sheet-container-item-main-first-title data-v-7074e901"
+            >{{item.b}}</view
+          >
+          <view
+            class="_div sheet-container-item-main-first-label data-v-7074e901"
+            wx:if="{{item.c}}"
+          >
+            <label
+              class="_span sheet-intro-item data-v-7074e901"
+              wx:for="{{item.d}}"
+              wx:for-item="key"
+              wx:key="b"
+              >{{key.a}}</label
+            >
+          </view>
+        </view>
+        <view class="_div sheet-container-item-main-text data-v-7074e901">
+          <view class="_div data-v-7074e901" wx:if="{{item.e}}">
+            <view
+              class="_div data-v-7074e901"
+              wx:for="{{item.f}}"
+              wx:for-item="echo"
+              wx:key="b"
+            >
+              <view class="_div data-v-7074e901">
+                <rich-text
+                  class="data-v-7074e901"
+                  nodes="{{echo.a}}"
+                ></rich-text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zhanwei data-v-7074e901"></view>
+  <view
+    bindtap="{{d}}"
+    class="_div action-button data-v-7074e901"
+    size="mini"
+    type="primary"
+    wx:if="{{b}}"
+    >{{c}}</view
+  >
+</action-sheet>

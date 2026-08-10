@@ -1,0 +1,192 @@
+.player-mask.data-v-74eddbcd {
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 200;
+}
+.player-mask .poster.data-v-74eddbcd,
+.player-mask.data-v-74eddbcd {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.player-mask.show-mask.data-v-74eddbcd {
+  opacity: 1;
+}
+.player-mask.hide-mask.data-v-74eddbcd {
+  opacity: 0;
+}
+.player-mask .thumb_img.data-v-74eddbcd {
+  height: 100%;
+  width: 100%;
+}
+.player-mask .top-container.data-v-74eddbcd {
+  align-items: flex-end;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.4));
+  display: -webkit-flex;
+  display: flex;
+  height: 2.1333333333333333rem;
+  justify-content: space-between;
+  left: 0;
+  padding: 0 0.32rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.player-mask .top-container .back-btn.data-v-74eddbcd {
+  background-color: var(--color-white);
+  flex-shrink: 0;
+  height: 0.64rem;
+  margin: 0.32rem 0.16rem 0 0;
+  mask-image: url(https://st.gtimg.com/design/aa6639c153f19842749ea265489740ff.svg);
+  mask-size: 0.64rem 0.64rem;
+  width: 0.64rem;
+}
+.player-mask .top-container .title-container.data-v-74eddbcd {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  height: 1.0666666666666667rem;
+  margin-top: 0.10666666666666667rem;
+}
+.player-mask .top-container .title-container .title.data-v-74eddbcd {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--color-white);
+  display: -webkit-box;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  max-height: 1.0666666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.player-mask .btn.data-v-74eddbcd {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 1.0666666666666667rem;
+  left: 50%;
+  margin-left: -0.48rem;
+  margin-top: -0.48rem;
+  position: absolute;
+  top: 50%;
+  width: 1.0666666666666667rem;
+}
+.player-mask .btn.fullscreen-btn.data-v-74eddbcd {
+  height: 1.4666666666666666rem;
+  margin-left: -0.6666666666666666rem;
+  margin-top: -0.6666666666666666rem;
+  width: 1.4666666666666666rem;
+}
+.player-mask .btn.btn-play.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/e41f14d38c103d615f4d4f75332972ab.png);
+}
+.player-mask .btn.btn-pause.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/5a5427151d8bf68ff69ce77395eaf2e7.png);
+}
+.player-mask .bottom-container.data-v-74eddbcd {
+  align-items: flex-end;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), transparent);
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  height: 2.1333333333333333rem;
+  left: 0;
+  padding: 0 0.10666666666666667rem 0 0.32rem;
+  position: absolute;
+  right: 0;
+}
+.player-mask .bottom-container .live-info.data-v-74eddbcd {
+  left: 0.32rem;
+  position: absolute;
+}
+.player-mask .bottom-container .live-info.live.data-v-74eddbcd {
+  top: 1.3066666666666666rem;
+}
+.player-mask .bottom-container .live-info.review.data-v-74eddbcd {
+  top: 0.6133333333333333rem;
+}
+.player-mask .bottom-container .controls.data-v-74eddbcd {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.48rem;
+  justify-content: space-between;
+  margin-bottom: 0.32rem;
+  margin-right: 0.21333333333333335rem;
+  width: 100%;
+}
+.player-mask .bottom-container .controls.fullscreen-controls.data-v-74eddbcd {
+  height: 0.5333333333333333rem;
+  margin-bottom: 0.4266666666666667rem;
+}
+.player-mask .bottom-container .controls .slider-scale.data-v-74eddbcd {
+  flex: 1;
+  margin: 0 0.10666666666666667rem 0.02666666666666667rem;
+}
+.player-mask
+  .bottom-container
+  .controls
+  .slider-scale
+  .slide-set.data-v-74eddbcd {
+  margin: 0;
+}
+.player-mask
+  .bottom-container
+  .controls
+  .slider-scale
+  .slide-set.data-v-74eddbcd
+  .vue-slider-rail
+  .vue-slider-dot-handle {
+  border-color: #fff;
+}
+.player-mask .bottom-container .controls .play-progress.data-v-74eddbcd,
+.player-mask .bottom-container .controls .playable-duration.data-v-74eddbcd {
+  color: #fff;
+  flex: none;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  width: 0.96rem;
+}
+.player-mask .bottom-container .controls .play-progress.data-v-74eddbcd {
+  text-align: left;
+}
+.player-mask .bottom-container .controls .playable-duration.data-v-74eddbcd {
+  text-align: right;
+}
+.player-mask .bottom-container .controls .duration-100.data-v-74eddbcd {
+  width: 1.1733333333333333rem;
+}
+.player-mask .bottom-container .control-btn.data-v-74eddbcd {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.48rem 0.48rem;
+  flex-shrink: 0;
+  height: 0.48rem;
+  margin-bottom: 0.10666666666666667rem;
+  padding: 0.21333333333333335rem;
+  width: 0.48rem;
+}
+.player-mask .bottom-container .control-btn.fullscreen-btn.data-v-74eddbcd {
+  background-size: 0.5333333333333333rem 0.5333333333333333rem;
+  height: 0.5333333333333333rem;
+  margin-bottom: 0.21333333333333335rem;
+  width: 0.5333333333333333rem;
+}
+.player-mask .bottom-container .control-btn.full-screen.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/109e78c6f214ba7db4eb06d4481c6fca.png);
+}
+.player-mask .bottom-container .control-btn.exit-full-screen.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/62c906a581e7f8bc5f4517a6065d05e7.png);
+}
+.player-mask .bottom-container .control-btn.mute.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/bb11d399a4bf20094dfbd5f13604bcd3.png);
+}
+.player-mask .bottom-container .control-btn.sound.data-v-74eddbcd {
+  background-image: url(https://st.gtimg.com/design/9c38fbf2e91864ab0d48dcb2ad5bee37.png);
+}

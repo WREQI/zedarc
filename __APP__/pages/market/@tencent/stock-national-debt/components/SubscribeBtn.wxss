@@ -1,0 +1,102 @@
+.subscribe-btn.data-v-49181af7 {
+  align-items: center;
+  background: hsla(0, 0%, 100%, 0.6);
+  border: 0.013333333333333334rem solid #57bd69;
+  border-radius: 0.4266666666666667rem;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFangSC-Regular;
+  font-size: 0.32rem;
+  height: 0.7466666666666667rem;
+  justify-content: center;
+  width: 2.24rem;
+}
+.subscribe-btn.skin-black.data-v-49181af7 {
+  background: rgba(18, 22, 31, 0.6);
+}
+.subscribe-btn.subscribed.data-v-49181af7 {
+  border: 0.013333333333333334rem solid hsla(0, 0%, 100%, 0.1);
+  box-shadow: none;
+  color: var(--color-lightgray);
+}
+.subscribe-btn.subscribed .shake-img.data-v-49181af7 {
+  height: 0.24rem;
+  width: 0.29333333333333333rem;
+}
+.subscribe-btn .shake-img.data-v-49181af7 {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 3;
+  animation-name: shake-49181af7;
+  display: block;
+  height: 0.28rem;
+  margin-right: 0.10666666666666667rem;
+  transform-origin: center center;
+  width: 0.3466666666666667rem;
+}
+@-webkit-keyframes shake-49181af7 {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(0) scale(1.1);
+  }
+  30% {
+    transform: rotate(25deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(-25deg) scale(1);
+  }
+  60% {
+    transform: rotate(0) scale(1);
+  }
+  70% {
+    transform: rotate(15deg) scale(1);
+  }
+  80% {
+    transform: rotate(0) scale(1);
+  }
+  90% {
+    transform: rotate(-15deg) scale(1);
+  }
+  to {
+    transform: rotate(0) scale(1);
+  }
+}
+@keyframes shake-49181af7 {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  20% {
+    transform: rotate(0) scale(1.1);
+  }
+  30% {
+    transform: rotate(25deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(-25deg) scale(1);
+  }
+  60% {
+    transform: rotate(0) scale(1);
+  }
+  70% {
+    transform: rotate(15deg) scale(1);
+  }
+  80% {
+    transform: rotate(0) scale(1);
+  }
+  90% {
+    transform: rotate(-15deg) scale(1);
+  }
+  to {
+    transform: rotate(0) scale(1);
+  }
+}

@@ -1,0 +1,54 @@
+<view class="_div interaction-index data-v-5755a650">
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{b}}"
+    class="tab-bar r data-v-5755a650"
+    uI="5755a650-0"
+    uP="{{c}}"
+    uR="tabBar"
+    wx:if="{{c}}"
+  ></tabbar>
+  <swiper
+    bindchange="{{i}}"
+    class="interaction-swiper data-v-5755a650"
+    current="{{h}}"
+    duration="250"
+  >
+    <swiper-item class="data-v-5755a650">
+      <comment
+        bind:__l="__l"
+        class="data-v-5755a650"
+        uI="5755a650-1"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></comment>
+    </swiper-item>
+    <swiper-item class="data-v-5755a650">
+      <like
+        bind:__l="__l"
+        class="data-v-5755a650"
+        uI="5755a650-2"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></like>
+    </swiper-item>
+    <swiper-item class="data-v-5755a650">
+      <follow
+        bind:__l="__l"
+        class="data-v-5755a650"
+        uI="5755a650-3"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></follow>
+    </swiper-item>
+    <swiper-item class="data-v-5755a650">
+      <at
+        bind:__l="__l"
+        class="data-v-5755a650"
+        uI="5755a650-4"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></at>
+    </swiper-item>
+  </swiper>
+</view>

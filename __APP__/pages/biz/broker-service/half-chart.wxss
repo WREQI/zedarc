@@ -1,0 +1,83 @@
+@import "/app.wxss";
+[data-page="biz/broker-service/chart-embedded"]
+  .trade-container-root.data-v-9e6ecf9d {
+  min-height: auto;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+[data-page="biz/broker-service/chart-embedded"]
+  .trade-container-root
+  .mp-dialog__message.data-v-9e6ecf9d {
+  max-height: 2.8rem;
+}
+[data-page="biz/broker-service/chart-embedded"]
+  .trade-container-root[data-simple="true"].data-v-9e6ecf9d
+  .st-number-keyboard {
+  padding-bottom: 0;
+}
+.embedded-shadow.data-v-9e6ecf9d {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-shadow: 0-0.213333rem 0.213333rem hsla(0, 0%, 78%, 0.3);
+  overflow: hidden;
+}
+[data-theme="dark"] .embedded-shadow.data-v-9e6ecf9d {
+  box-shadow: 0-0.213333rem 0.48rem hsla(0, 0%, 100%, 0.11);
+}
+.half-chart.data-v-9e6ecf9d {
+  background-color: var(--fill-2);
+  position: relative;
+  width: 100%;
+}
+.half-chart__header.data-v-9e6ecf9d {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  background-color: var(--fill-2);
+  box-shadow: 0-0.266667rem 0.266667rem rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.52rem;
+  justify-content: center;
+  padding: 0 0.32rem;
+  position: relative;
+}
+[data-theme="dark"] .half-chart__header.data-v-9e6ecf9d {
+  box-shadow: 0-0.266667rem 0.266667rem hsla(0, 0%, 100%, 0.05);
+}
+.half-chart__header-title.data-v-9e6ecf9d {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+}
+.half-chart__close.data-v-9e6ecf9d {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.44rem;
+  width: 0.48rem;
+}
+.half-chart__chart.data-v-9e6ecf9d {
+  background-color: var(--fill-2);
+  margin-top: 0.48rem;
+  min-height: 7.253333rem;
+}
+.half-chart__disclaimer.data-v-9e6ecf9d {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 0.213333rem;
+}
+.half-chart__disclaimer-text.data-v-9e6ecf9d {
+  color: var(--text-color-5);
+  font-size: 0.266667rem;
+  line-height: 0.373333rem;
+  text-align: center;
+}

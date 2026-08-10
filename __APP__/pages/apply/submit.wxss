@@ -1,0 +1,180 @@
+@import "/app.wxss";
+.data-v-a57383b7 .page-apply-submit {
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+}
+.data-v-a57383b7 .page-apply-submit .section-content {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-sizing: border-box;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .section-content
+  .signprotocol-container
+  .mp-dialog {
+  top: 60% !important;
+}
+@media screen and (max-height: 700px) {
+  .data-v-a57383b7
+    .page-apply-submit
+    .section-content
+    .signprotocol-container
+    .mp-dialog
+    .protocol-list {
+    max-height: 4.666667rem;
+  }
+}
+.data-v-a57383b7 .page-apply-submit .content-container {
+  padding: 0.693333rem 0 1.12rem;
+}
+.data-v-a57383b7 .page-apply-submit .content-container .avatar-ico {
+  font-size: 1.333333rem;
+}
+.data-v-a57383b7 .page-apply-submit .content-container .open-tip-title {
+  margin: 0.48rem 0 0.426667rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .market-item:first-child {
+  margin-right: 1.24rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .open-checkbox {
+  font-size: 0.453333rem;
+  margin-right: 0.266667rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .open-checkbox.icon-check-box {
+  color: var(--text-color-7);
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .open-checkbox.icon-checked {
+  color: var(--color-primary);
+}
+.data-v-a57383b7 .page-apply-submit .content-container .open-tip-title {
+  color: var(--text-color-4);
+  font-size: 0.373333rem !important;
+}
+.data-v-a57383b7 .page-apply-submit .content-container .open-account-group,
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .market-item {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .market-item {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  height: 1.013333rem;
+  margin-right: 0;
+  width: 3.2rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .market-item:first-child {
+  margin-right: 0.666667rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .market-item
+  .market-text {
+  font-size: 0.426667rem !important;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .open-checkbox
+  ::v-deep
+  .st-checkbox
+  .st-checkbox-inner {
+  background: var(--fill-2);
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .content-container
+  .open-account-group
+  .open-checkbox
+  ::v-deep
+  .st-checkbox-checked
+  .st-checkbox-inner {
+  background: var(--color-green);
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container,
+.data-v-a57383b7 .page-apply-submit .submit-container {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container uni-button,
+.data-v-a57383b7 .page-apply-submit .submit-container uni-button {
+  font-size: 0.48rem;
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container {
+  margin-top: 0.4rem;
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container .protocol-checkbox {
+  transform: scale(0.7);
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container .protocol-tip {
+  vertical-align: middle;
+}
+.data-v-a57383b7 .page-apply-submit .protocol-container .protocol-list-outer {
+  line-height: 0.48rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .protocol-container
+  .protocol-list-outer
+  .protocol-list {
+  list-style: decimal;
+  padding-left: 0.586667rem;
+}
+.data-v-a57383b7
+  .page-apply-submit
+  .protocol-container
+  .protocol-list-outer
+  .protocol-list
+  .list-item {
+  display: list-item;
+  list-style-type: decimal;
+}
+.data-v-a57383b7 .page-apply-submit .submit-container {
+  margin-bottom: 0.613333rem;
+  margin-top: 0.613333rem;
+}
+.data-v-a57383b7 .footprint {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}

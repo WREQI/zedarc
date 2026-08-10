@@ -1,0 +1,28 @@
+.etf-item.data-v-d5b6b974 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.etf-item .etf-name.data-v-d5b6b974 {
+  color: var(--color-heavygray);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-item .etf-price.data-v-d5b6b974 {
+  margin: 0 0.18666666666666668rem;
+}
+.etf-item .etf-price.red.data-v-d5b6b974 {
+  color: #e63535;
+}
+.etf-item .etf-price.green.data-v-d5b6b974 {
+  color: #1caa3c;
+}
+.etf-item .etf-price.grey.data-v-d5b6b974 {
+  color: #7a8499;
+}
+.etf-item .addfav.data-v-d5b6b974 {
+  display: inline-block;
+}

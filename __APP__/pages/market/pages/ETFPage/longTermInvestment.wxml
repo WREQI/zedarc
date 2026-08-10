@@ -1,0 +1,21 @@
+<page-meta class="data-v-3034466d" rootFontSize="{{a}}"></page-meta>
+<view class="_div page-wrapper data-v-3034466d" data-st-theme="{{d}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3034466d"
+    uI="3034466d-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-3034466d"
+    uI="3034466d-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <long-term-investment-page
+    bind:__l="__l"
+    class="r data-v-3034466d"
+    uI="3034466d-2"
+    uR="longTermInvestmentPageRef"
+  ></long-term-investment-page>
+</view>

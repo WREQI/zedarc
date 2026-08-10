@@ -1,0 +1,88 @@
+@import "/app.wxss";
+.records-container .empty,
+.records-container .empty .container,
+.records-container .records-scroll-view {
+  height: calc(100vh - 0.96rem) !important;
+  height: calc(100vh - env(safe-area-inset-bottom) - 0.96rem) !important;
+}
+.records-container .records-scroll-view {
+  box-sizing: border-box;
+}
+.records-container .records-scroll-view .cond-list-item {
+  margin: 0 0.32rem 0.32rem;
+}
+.records-container .records-scroll-view .cond-list-item:first-of-type {
+  margin-top: 0.32rem;
+}
+.records-container .tabs-wrapper {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.173333rem;
+  justify-content: space-between;
+  padding: 0 0.32rem;
+}
+.records-container .tabs-wrapper .mp-tab {
+  -webkit-box-flex: 0;
+  flex: none;
+  font-size: 0.373333rem;
+  margin-right: 0.64rem;
+  text-align: left;
+}
+.records-container .create-entry {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.records-container .create-entry .create-line {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  margin-right: 0.32rem;
+}
+.records-container .create-entry .create-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/condition/cond_create.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 0.4rem;
+  margin-right: 0.106667rem;
+  padding: 0.04rem;
+  width: 0.4rem;
+}
+.records-container .create-entry .create-txt {
+  color: var(--color-primary-1);
+  font-size: 0.32rem;
+  margin-left: 0.066667rem;
+}
+.records-container .func-tab:after {
+  display: none;
+}
+.records-container .func-tab .mp-tab {
+  color: var(--text-color-4);
+}
+.records-container .func-tab .mp-tab--active {
+  color: var(--text-color-1) !important;
+}
+.records-container .create-button {
+  border-radius: 0.053333rem;
+  font-size: 0.346667rem;
+  height: 0.853333rem;
+  margin-top: 0.333333rem;
+  width: 2.666667rem;
+}
+.records-container__simple-mode .empty,
+.records-container__simple-mode .records-scroll-view {
+  height: calc(100vh - 1.173333rem) !important;
+  height: calc(100vh - env(safe-area-inset-bottom) - 1.173333rem) !important;
+}
+.records-container__simple-mode .create-entry .create-icon {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/condition/cond_create_simple.png);
+}
+.records-container .cond-list-placeholder {
+  height: 0.213333rem;
+}

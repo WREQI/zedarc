@@ -1,0 +1,48 @@
+<view class="_div etf-buy-index__fund-section data-v-fc8ccec8">
+  <view class="_div etf-buy-index__fund-section-bg data-v-fc8ccec8"></view>
+  <view class="_div etf-buy-index__fund-section-title data-v-fc8ccec8"
+    >新手入门首选</view
+  >
+  <view class="_div etf-buy-index__fund-cards data-v-fc8ccec8">
+    <view
+      class="_div etf-buy-index__fund-section-status data-v-fc8ccec8"
+      wx:if="{{a}}"
+      >加载中...</view
+    >
+    <view
+      class="_div etf-buy-index__fund-section-status data-v-fc8ccec8"
+      wx:elif="{{b}}"
+      >数据加载失败，请稍后重试</view
+    >
+    <block wx:else>
+      <view
+        class="_div etf-buy-index__fund-card-divider data-v-fc8ccec8"
+      ></view>
+      <buy-index-recommend-card
+        bind:__l="__l"
+        bindautoinvest="{{f}}"
+        bindbuy="{{e}}"
+        bindcardClick="{{g}}"
+        class="r data-v-fc8ccec8"
+        uI="fc8ccec8-0"
+        uP="{{h}}"
+        uR="conservativeCardRef"
+        wx:if="{{c}}"
+      ></buy-index-recommend-card>
+      <view
+        class="_div etf-buy-index__fund-card-divider data-v-fc8ccec8"
+      ></view>
+      <buy-index-recommend-card
+        bind:__l="__l"
+        bindautoinvest="{{l}}"
+        bindbuy="{{k}}"
+        bindcardClick="{{m}}"
+        class="r data-v-fc8ccec8"
+        uI="fc8ccec8-1"
+        uP="{{n}}"
+        uR="growthCardRef"
+        wx:if="{{i}}"
+      ></buy-index-recommend-card>
+    </block>
+  </view>
+</view>

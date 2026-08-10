@@ -1,0 +1,19 @@
+{
+  "component": true,
+  "usingComponents": {
+    "render-content": "./components/RenderContent",
+    "render-content-mp": "./components/RenderContentMp",
+    "plate-template": "./components/PlateTemplate",
+    "news-image": "./components/NewsImage",
+    "viewport-module": "../../../../../newsSbg/@tencent/stock-news-core/components/viewportModule",
+    "live": "./components/h5Live/index",
+    "mp-live": "./components/mpLive",
+    "subscribe-wx-msg-bar": "../../../../../live/@tencent/stock-live-detail/components/SubscribeWxMsgBar",
+    "live-card": "../../../../../live/@tencent/stock-live-combine/component/LiveCard"
+  },
+  "componentPlaceholder": {
+    "viewport-module": "view",
+    "subscribe-wx-msg-bar": "view",
+    "live-card": "view"
+  }
+}

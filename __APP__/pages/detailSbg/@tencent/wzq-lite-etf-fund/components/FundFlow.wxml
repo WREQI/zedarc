@@ -1,0 +1,73 @@
+<view class="{{['_div','fund-flow','data-v-bea67c93',s&&'lite',t&&'black']}}">
+  <view class="_div main-title data-v-bea67c93">
+    <view class="_div title data-v-bea67c93">
+      <label class="_span data-v-bea67c93">资金流向</label>
+      <image
+        bindtap="{{b}}"
+        class="_img icon data-v-bea67c93"
+        lazyLoad="{{true}}"
+        src="https://st.gtimg.com/design/a495b29720e9bab1eaea87f780be63aa.png"
+        wx:if="{{a}}"
+      ></image>
+    </view>
+    <label class="_span time data-v-bea67c93" wx:if="{{c}}">（{{d}}）</label>
+    <label class="_span time data-v-bea67c93" wx:else>{{e}}更新</label>
+  </view>
+  <view class="_div sub-content data-v-bea67c93"
+    >昨日净申购<label class="_span data-v-bea67c93" style="{{'color:'+g}}"
+      >{{f}}万份</label
+    >， {{h}}</view
+  >
+  <view class="_div chart-container data-v-bea67c93" id="fundflowetf">
+    <f2
+      bind:__l="__l"
+      bindonInit="{{i}}"
+      class="data-v-bea67c93"
+      uI="bea67c93-0"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></f2>
+    <view class="_div chart-choose data-v-bea67c93">
+      <view class="_div column data-v-bea67c93">
+        <view class="_div icon data-v-bea67c93">
+          <label class="_span up data-v-bea67c93"></label>
+          <label class="_span down data-v-bea67c93"></label> </view
+        >每日场外基金净申购</view
+      >
+      <view class="_div line data-v-bea67c93">
+        <label class="_span icon data-v-bea67c93"></label>收盘价</view
+      >
+    </view>
+    <view
+      class="{{['_ul','canvas-toolTip','data-v-bea67c93',p]}}"
+      wx:if="{{k}}"
+    >
+      <view class="_li li-item data-v-bea67c93">
+        <label class="_span time data-v-bea67c93">{{l}}</label>
+      </view>
+      <view class="_li li-item data-v-bea67c93">
+        <label class="_span name data-v-bea67c93">每日净申购</label>
+        <label class="_span value data-v-bea67c93" style="{{'color:'+n}}"
+          >{{m}}万份</label
+        >
+      </view>
+      <view class="_li li-item data-v-bea67c93">
+        <label class="_span name data-v-bea67c93">收盘价</label>
+        <label class="_span value data-v-bea67c93">{{o}}元</label>
+      </view>
+    </view>
+  </view>
+  <view bindtap="{{r}}" class="_div teach-bar data-v-bea67c93" wx:if="{{q}}">
+    <label class="_span title data-v-bea67c93">
+      <image
+        class="_img icon-maozi data-v-bea67c93"
+        src="https://st.gtimg.com/design/5ee89598558c51aeef152a2097765a7d.png"
+      ></image
+      >如何解读ETF资金流向</label
+    >
+    <image
+      class="_img go-right data-v-bea67c93"
+      src="https://st.gtimg.com/design/ded0eb2c76f0667322d63294687c4b8f.png"
+    ></image>
+  </view>
+</view>

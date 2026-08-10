@@ -1,0 +1,39 @@
+<view class="{{['trade-confirm--container',v]}}">
+  <view class="trade-stock-confirm-body">
+    <view class="trade-stock-confirm-info">
+      <view class="flex-between">
+        <label class="label">名称</label>
+        <label class="value">{{a}}</label>
+      </view>
+      <view class="flex-between">
+        <label class="label">代码</label>
+        <label class="value">{{b}}{{c}}</label>
+      </view>
+      <view class="flex-between">
+        <label class="label">方向</label>
+        <label class="value">{{d}}</label>
+      </view>
+      <view class="flex-between">
+        <label class="label">价格</label>
+        <label class="{{['value',g]}}">{{e}}{{f}}</label>
+      </view>
+      <view class="flex-between">
+        <label class="label">数量</label>
+        <label class="{{['value',j]}}">{{h}}{{i}}</label>
+      </view>
+      <view class="flex-between">
+        <label class="label">金额</label>
+        <label class="value">{{k}}{{l}}</label>
+      </view>
+    </view>
+    <view
+      class="{{['trade-confirm-footer',t&&'trade-confirm-footer-withtips']}}"
+    >
+      <view class="simple-price-tip-after-footer flex-center" wx:if="{{m}}">
+        <label class="icon icon-error-tips"></label>
+        <label class="orange">{{n}}</label>
+      </view>
+      <button bindtap="{{s}}" class="{{[q,r]}}" disabled="{{p}}">{{o}}</button>
+    </view>
+  </view>
+</view>

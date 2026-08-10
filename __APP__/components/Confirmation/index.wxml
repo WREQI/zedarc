@@ -1,0 +1,40 @@
+<matches
+  bind:__l="__l"
+  bindcancel="{{d}}"
+  bindconfirm="{{c}}"
+  class="{{['confirmation',b]}}"
+  uI="af8cb18e-0"
+  uP="{{e}}"
+  wx:if="{{a}}"
+></matches>
+<un-matches
+  bind:__l="__l"
+  bindcancel="{{i}}"
+  bindconfirm="{{h}}"
+  class="{{['confirmation',g]}}"
+  uI="af8cb18e-1"
+  uP="{{j}}"
+  wx:elif="{{f}}"
+></un-matches>
+<view wx:elif="{{k}}">
+  <view>
+    <matches
+      bind:__l="__l"
+      bindcancel="{{n}}"
+      bindconfirm="{{m}}"
+      class="{{['confirmation',l]}}"
+      uI="af8cb18e-2"
+      uP="{{o}}"
+      wx:if="{{o}}"
+    ></matches>
+    <un-matches
+      bind:__l="__l"
+      bindcancel="{{r}}"
+      bindconfirm="{{q}}"
+      class="{{['confirmation',p]}}"
+      uI="af8cb18e-3"
+      uP="{{s}}"
+      wx:if="{{s}}"
+    ></un-matches>
+  </view>
+</view>

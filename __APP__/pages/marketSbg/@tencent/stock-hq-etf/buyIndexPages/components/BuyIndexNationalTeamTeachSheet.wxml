@@ -1,0 +1,34 @@
+<view
+  bindtap="{{d}}"
+  catchtouchmove="{{c}}"
+  class="_div holding-ratio-modal data-v-a7cabce2"
+  wx:if="{{a}}"
+>
+  <view class="_div holding-ratio-modal__sheet data-v-a7cabce2">
+    <view class="_div holding-ratio-modal__header data-v-a7cabce2">
+      <view class="_div holding-ratio-modal__header-bar data-v-a7cabce2">
+        <view class="_div holding-ratio-modal__header-inner data-v-a7cabce2">
+          <view class="_div holding-ratio-modal__title data-v-a7cabce2"
+            >国家队持仓比例</view
+          >
+          <image
+            alt="极简版图标"
+            catchtap="{{b}}"
+            class="_img holding-ratio-modal__close-btn data-v-a7cabce2"
+            src="https://st.gtimg.com/pcm/mpuvkgsn_f3154aec0ea2fe2eb772304181644cda.svg"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div holding-ratio-modal__content data-v-a7cabce2">
+      <view class="_div holding-ratio-modal__description data-v-a7cabce2"
+        >指ETF前十大持有人中，中央汇金、证金公司、社保基金、养老保险基金、国新投资等国资背景机构（即"国家队"）所持份额，合计占基金总份额的比例。</view
+      >
+    </view>
+    <view class="_div holding-ratio-modal__footer data-v-a7cabce2">
+      <view class="_div holding-ratio-modal__footer-text data-v-a7cabce2"
+        >数据来自基金中报/年报，每半年披露一次。</view
+      >
+    </view>
+  </view>
+</view>

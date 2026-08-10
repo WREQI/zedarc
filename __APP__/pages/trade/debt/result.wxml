@@ -1,0 +1,37 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="13ed0f6b-0"
+  uP="{{k}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{k}}"
+>
+  <view hidden="{{!i}}">
+    <common-result
+      bind:__l="__l"
+      class="section-result"
+      uI="13ed0f6b-1,13ed0f6b-0"
+      uP="{{h}}"
+      uS="{{['d']}}"
+      wx:if="{{h}}"
+    >
+      <view>
+        <view class="result-title text-color-1">
+          <label wx:if="{{b}}">下单委托已提交</label>
+          <label wx:else>下单失败</label>
+        </view>
+        <view class="result-desc text-color-4">
+          <label wx:if="{{c}}">成交后，将{{d}}通知你</label>
+          <label wx:else>网络异常，请稍后重试</label>
+        </view>
+      </view>
+      <view class="btn-wrapper">
+        <button bindtap="{{f}}" class="btn" type="primary">{{e}}</button>
+        <button bindtap="{{g}}" class="btn normal">返回首页</button>
+      </view>
+    </common-result>
+  </view>
+</global-wrap>

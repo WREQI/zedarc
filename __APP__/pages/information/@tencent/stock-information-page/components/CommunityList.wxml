@@ -1,0 +1,14 @@
+<view class="_div community-index data-v-383fd3b1">
+  <news-community-list
+    bind:__l="__l"
+    bindgoEdit="{{b}}"
+    bindonMpScroll="{{c}}"
+    bindonPutComment="{{d}}"
+    bindshowProfilePop="{{e}}"
+    class="r data-v-383fd3b1"
+    uI="383fd3b1-0"
+    uP="{{f}}"
+    uR="squareRef"
+    wx:if="{{f}}"
+  ></news-community-list>
+</view>

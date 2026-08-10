@@ -1,0 +1,63 @@
+<view
+  bindtap="{{s}}"
+  class="{{['history-item','^history-item','flex-between','data-v-a2faaea0',q,r]}}"
+>
+  <view class="history-item-col1 ^history-item-col1 data-v-a2faaea0">
+    <view class="{{['line1','data-v-a2faaea0',e,f]}}">
+      <adapt-font-size
+        bind:__l="__l"
+        class="data-v-a2faaea0"
+        uI="a2faaea0-0"
+        uP="{{d}}"
+        uS="{{['d']}}"
+        wx:if="{{d}}"
+        >{{a}}<label class="data-v-a2faaea0" data-action="{{c}}" wx:if="{{b}}"
+          >盘后</label
+        >
+      </adapt-font-size>
+    </view>
+    <view class="line2 data-v-a2faaea0">
+      <adapt-font-size
+        bind:__l="__l"
+        class="data-v-a2faaea0"
+        uI="a2faaea0-1"
+        uP="{{h}}"
+        uS="{{['d']}}"
+        wx:if="{{h}}"
+        >{{g}}</adapt-font-size
+      >
+    </view>
+  </view>
+  <view class="history-item-col2 ^history-item-col2 data-v-a2faaea0">
+    <view class="line1 data-v-a2faaea0">
+      <adapt-font-size
+        bind:__l="__l"
+        class="data-v-a2faaea0"
+        uI="a2faaea0-2"
+        uP="{{j}}"
+        uS="{{['d']}}"
+        wx:if="{{j}}"
+        >{{i}}</adapt-font-size
+      >
+    </view>
+    <view class="line2 data-v-a2faaea0">{{k}}</view>
+  </view>
+  <view class="history-item-col3 ^history-item-col3 data-v-a2faaea0">
+    <view class="line1 data-v-a2faaea0">
+      <adapt-font-size
+        bind:__l="__l"
+        class="data-v-a2faaea0"
+        uI="a2faaea0-3"
+        uP="{{m}}"
+        uS="{{['d']}}"
+        wx:if="{{m}}"
+        >{{l}}</adapt-font-size
+      >
+    </view>
+    <view class="line2 data-v-a2faaea0">{{n}}</view>
+  </view>
+  <view class="history-item-col4 ^history-item-col4 data-v-a2faaea0">
+    <view class="line1 data-v-a2faaea0">{{o}}</view>
+    <view class="line2 data-v-a2faaea0">{{p}}</view>
+  </view>
+</view>

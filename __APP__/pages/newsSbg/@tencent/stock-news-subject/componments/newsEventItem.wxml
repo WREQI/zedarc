@@ -1,0 +1,58 @@
+<view catchtap="{{w}}" class="{{['_div','data-v-6ff7a629',v]}}" wx:if="{{a}}">
+  <view class="_div news-item-inner data-v-6ff7a629">
+    <view class="_div item-title data-v-6ff7a629">
+      <image
+        alt=""
+        class="_img tag-img img-bg data-v-6ff7a629"
+        src="{{c}}"
+        wx:if="{{b}}"
+      ></image>
+      <image
+        alt=""
+        class="_img tag-img img-bg data-v-6ff7a629"
+        src="{{e}}"
+        wx:if="{{d}}"
+      ></image>
+      <image
+        alt=""
+        class="_img tag-img img-bg data-v-6ff7a629"
+        src="{{g}}"
+        wx:if="{{f}}"
+      ></image>
+      <image
+        alt="视频专题"
+        class="_img tag-img img-bg data-v-6ff7a629"
+        src="{{i}}"
+        wx:if="{{h}}"
+      ></image>
+      <label class="_span tag-name data-v-6ff7a629" wx:if="{{j}}">限免</label>
+      <label class="_span tag-name vip-name data-v-6ff7a629" wx:if="{{k}}"
+        >VIP</label
+      >
+      <label class="_span tag-name vip-name data-v-6ff7a629" wx:if="{{l}}"
+        >直播</label
+      >
+      <label class="_span tag-name vip-name data-v-6ff7a629" wx:if="{{m}}"
+        >{{n}}</label
+      >{{o}}</view
+    >
+    <view class="_div source data-v-6ff7a629">
+      <label class="_span source-name data-v-6ff7a629">{{p}}</label>
+      <label class="_span time data-v-6ff7a629">{{q}}</label>
+    </view>
+  </view>
+  <view class="_div news-item-after data-v-6ff7a629">
+    <view class="_div media-content data-v-6ff7a629">
+      <image
+        binderror="{{s}}"
+        class="_img news-image data-v-6ff7a629"
+        src="{{r}}"
+      ></image>
+      <image
+        class="_img play-icon data-v-6ff7a629"
+        src="https://st.gtimg.com/image/course/play.png"
+        wx:if="{{t}}"
+      ></image>
+    </view>
+  </view>
+</view>

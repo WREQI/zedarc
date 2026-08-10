@@ -1,0 +1,31 @@
+<view bindtouchmove="{{aa}}" class="{{['_div','data-v-6bfcd28a','search-page-wrapper',Y,Z]}}" ref="searchWrap">
+    <view class="_div search-page data-v-6bfcd28a" id="search-page" ref="searchPage">
+        <view class="{{['_div','data-v-6bfcd28a','box-search',y,z]}}">
+            <view class="_div row-sear data-v-6bfcd28a">
+                <image class="_img search-icon-new data-v-6bfcd28a" src="https://st.gtimg.com/design/0183fe651d60a9934ae067e5e9211286.png"></image>
+                <input bindconfirm="{{e}}" bindinput="{{d}}" class="row-sear-input is-mp data-v-6bfcd28a" confirmType="search" focus="{{b}}" maxlength="100" placeholder="{{c}}" placeholderClass="placeholderStyle" placeholderStyle="color:#7A8499;" ref="searchBox" type="text" value="{{f}}" wx:if="{{a}}"></input>
+                <input bindconfirm="{{k}}" bindinput="{{j}}" class="row-sear-input data-v-6bfcd28a" confirmType="search" focus="{{h}}" maxlength="100" placeholder="{{i}}" placeholderClass="placeholderStyle" placeholderStyle="color:#7A8499;" ref="searchBox" type="text" value="{{l}}" wx:elif="{{g}}"></input>
+                <form action="." catchsubmit="{{s}}" class="input-form data-v-6bfcd28a" wx:else>
+                    <input bindconfirm="{{q}}" bindinput="{{p}}" bindkeyup="{{o}}" class="row-sear-input data-v-6bfcd28a" confirmType="search" focus="{{m}}" maxlength="100" placeholder="{{n}}" placeholderClass="placeholderStyle" placeholderStyle="color:#7A8499;" ref="searchBox" type="search" value="{{r}}"></input>
+                </form>
+                <view catchtap="{{v}}" class="{{['_div','data-v-6bfcd28a','wrap-box-close',t]}}">
+                    <view class="_div close-btn data-v-6bfcd28a"></view>
+                </view>
+            </view>
+            <view catchtap="{{x}}" class="{{['_div','data-v-6bfcd28a','btn-cancel',w]}}">取消</view>
+        </view>
+        <view class="{{['_div','data-v-6bfcd28a','box-searlist',X]}}">
+            <view bindtouchmove="{{I}}" bindtouchstart="{{H}}" class="_div list-wrapper data-v-6bfcd28a" wx:if="{{A}}">
+                <view class="_div data-v-6bfcd28a">
+                    <list-search bind:__l="__l" bindjumpToDetail="{{C}}" class="data-v-6bfcd28a" uI="6bfcd28a-0" uP="{{D}}" wx:if="{{B}}"></list-search>
+                    <list-search bind:__l="__l" bindjumpToDetail="{{F}}" class="data-v-6bfcd28a" uI="6bfcd28a-1" uP="{{G}}" wx:if="{{E}}"></list-search>
+                </view>
+            </view>
+            <view bindtouchmove="{{W}}" bindtouchstart="{{V}}" class="_div list-wrapper data-v-6bfcd28a" wx:else>
+                <list-search bind:__l="__l" bindclickMore="{{L}}" bindjumpToDetail="{{K}}" class="data-v-6bfcd28a" uI="6bfcd28a-2" uP="{{M}}" wx:if="{{J}}"></list-search>
+                <list-search bind:__l="__l" bindclickMore="{{O}}" bindjumpToDetail="{{P}}" class="data-v-6bfcd28a" uI="6bfcd28a-3" uP="{{Q}}" wx:if="{{N}}"></list-search>
+                <list-search bind:__l="__l" bindclickMore="{{S}}" bindjumpToDetail="{{T}}" class="data-v-6bfcd28a" uI="6bfcd28a-4" uP="{{U}}" wx:if="{{R}}"></list-search>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<view>
+  <view class="cell text-color-1" wx:if="{{a}}">***</view>
+  <view class="{{['cell',d]}}" wx:else>
+    <slot name="label"></slot>
+    <view class="fs-32 text-color-1">
+      <slot name="title"></slot>
+    </view>
+    <view class="fs-24 text-color-3" wx:if="{{b}}">
+      <slot name="subtitle"></slot>
+    </view>
+    <view class="fs-24 text-color-3" style="opacity: 0" wx:if="{{c}}">--</view>
+    <slot name="other"></slot>
+  </view>
+</view>

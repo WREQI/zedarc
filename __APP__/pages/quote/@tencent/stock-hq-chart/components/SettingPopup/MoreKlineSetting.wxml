@@ -1,0 +1,139 @@
+<view
+  class="{{['_div','kline-setting','data-v-3d237d88',t&&'kline-setting-black']}}"
+>
+  <view class="_div kline-main-chart data-v-3d237d88">
+    <view
+      class="{{['_div','kline-main-chart-bg','data-v-3d237d88',m]}}"
+      style="{{'height:'+n}}"
+    >
+      <view
+        class="_div kline-main-chart-zjzf data-v-3d237d88"
+        wx:if="{{a}}"
+      ></view>
+      <view
+        class="_div kline-main-chart-gap data-v-3d237d88"
+        style="{{'top:'+c+';'+'height:'+d}}"
+        wx:if="{{b}}"
+      ></view>
+      <view class="_div kline-main-chart-ds data-v-3d237d88" wx:if="{{e}}">
+        <label class="_span icon-circle l1 data-v-3d237d88"></label>
+        <label class="_span icon-circle l2 data-v-3d237d88"></label>
+        <label class="_span icon-circle l3 data-v-3d237d88"></label>
+        <label class="_span icon-circle l4 data-v-3d237d88"></label>
+      </view>
+      <view class="_div kline-main-chart-zxj data-v-3d237d88" wx:if="{{f}}">
+        <label class="_span main-zxj-text data-v-3d237d88">最新价</label>
+        <label class="_span main-text-line data-v-3d237d88"></label>
+      </view>
+      <view class="_div kline-main-chart-txj data-v-3d237d88" wx:if="{{g}}">
+        <label class="_span main-txj-text data-v-3d237d88"
+          >提醒价<image
+            class="icon-kline-tips data-v-3d237d88"
+            src="https://st.gtimg.com/design/26a4f837ef84eeda7d1f8999171def10.png"
+          ></image>
+        </label>
+        <label class="_span main-text-line data-v-3d237d88"></label>
+      </view>
+      <view
+        class="_div kline-main-chart-zx data-v-3d237d88"
+        style="{{'top:'+k}}"
+        wx:if="{{h}}"
+      >
+        <label
+          class="_span main-text-line data-v-3d237d88"
+          style="{{'top:'+i+';'+'height:'+j}}"
+        ></label>
+        <label class="_span main-zx-text data-v-3d237d88">加自选</label>
+      </view>
+      <block wx:if="{{l}}">
+        <view class="_div kline-chart-vertical-line data-v-3d237d88"></view>
+        <view class="_div kline-chart-horizontal-line data-v-3d237d88"></view>
+      </block>
+    </view>
+    <view class="_div kline-main-chart-tips data-v-3d237d88">
+      <view class="_div tips-inner data-v-3d237d88" wx:if="{{o}}"
+        >图表长按状态下，可查看 ”加自选记录、公司大事、至今涨幅“
+        等更多信息。</view
+      >
+    </view>
+  </view>
+  <view class="_div kline-setting-container data-v-3d237d88">
+    <view class="_div kline-setting-content data-v-3d237d88">
+      <view class="_div kline-setting-item k-set-content data-v-3d237d88">
+        <view class="_div kline-setting-item-title data-v-3d237d88"
+          >K线标注</view
+        >
+        <view class="_div kline-setting-item-content data-v-3d237d88">
+          <view
+            bindtap="{{item.d}}"
+            class="{{['_div','data-v-3d237d88','kline-mark-item',item.c&&'selected']}}"
+            wx:for="{{p}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+      <view class="_div kline-setting-item data-v-3d237d88">
+        <view class="_div kline-setting-item-title data-v-3d237d88"
+          >K线样式</view
+        >
+        <view class="_div kline-setting-item-content data-v-3d237d88">
+          <view
+            bindtap="{{item.g}}"
+            class="{{['_div','data-v-3d237d88','kline-style',item.f&&'selected']}}"
+            wx:for="{{q}}"
+            wx:key="e"
+          >
+            <block wx:if="{{item.a}}">
+              <image
+                class="kline-style-icon data-v-3d237d88"
+                src="https://st.gtimg.com/design/f4963a09db6cff5c823c7df67cdab90e.png"
+                wx:if="{{item.b}}"
+              ></image>
+              <image
+                class="kline-style-icon data-v-3d237d88"
+                src="https://st.gtimg.com/design/80ecb1596375458f25e58923915ebcd8.png"
+                wx:else
+              ></image>
+            </block>
+            <block wx:else>
+              <image
+                class="kline-style-icon data-v-3d237d88"
+                src="https://st.gtimg.com/design/54cc89f52f322496992b603dc707453e.png"
+                wx:if="{{item.c}}"
+              ></image>
+              <image
+                class="kline-style-icon data-v-3d237d88"
+                src="https://st.gtimg.com/design/7c6e083853fc11c03fba286f944546b6.png"
+                wx:else
+              ></image>
+            </block>
+            <label class="_span icon-kline-text data-v-3d237d88"
+              >{{item.d}}</label
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div kline-setting-item data-v-3d237d88">
+        <view class="_div kline-setting-item-title data-v-3d237d88"
+          >图表高度</view
+        >
+        <view
+          class="_div kline-setting-item-content slider-bar-item data-v-3d237d88"
+        >
+          <slider-bar
+            bind:__l="__l"
+            bindvalueChange="{{r}}"
+            class="data-v-3d237d88"
+            uI="3d237d88-0"
+            uP="{{s}}"
+            wx:if="{{s}}"
+          ></slider-bar>
+          <label class="_span kline-setting-defalut-text data-v-3d237d88"
+            >默认</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

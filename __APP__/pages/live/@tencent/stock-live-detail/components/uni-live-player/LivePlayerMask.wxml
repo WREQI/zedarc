@@ -1,0 +1,71 @@
+<view catchtap="{{O}}" class="{{['_div','data-v-74eddbcd','player-mask',N]}}">
+  <image class="_img poster data-v-74eddbcd" src="{{b}}" wx:if="{{a}}"></image>
+  <view class="_div top-container data-v-74eddbcd">
+    <view
+      catchtap="{{d}}"
+      class="{{['_div','data-v-74eddbcd','back-btn']}}"
+      hidden="{{!c}}"
+    ></view>
+    <view class="_div title-container data-v-74eddbcd">
+      <view class="_div title data-v-74eddbcd" wx:if="{{e}}">{{f}}</view>
+    </view>
+  </view>
+  <view
+    catchtap="{{i}}"
+    class="{{['_div','data-v-74eddbcd','btn',g,h]}}"
+  ></view>
+  <view class="_div bottom-container data-v-74eddbcd">
+    <live-info
+      bind:__l="__l"
+      class="{{['data-v-74eddbcd','live-info',j]}}"
+      uI="74eddbcd-0"
+      uP="{{k}}"
+      wx:if="{{k}}"
+    ></live-info>
+    <view class="_div controls data-v-74eddbcd" wx:if="{{l}}"></view>
+    <view class="{{['_div','data-v-74eddbcd','controls',G]}}" wx:else>
+      <view class="{{['_div','data-v-74eddbcd','play-progress',n]}}"
+        >{{m}}</view
+      >
+      <view
+        bindtouchend="{{C}}"
+        bindtouchstart="{{B}}"
+        catchtap="{{D}}"
+        class="_div slider-scale data-v-74eddbcd"
+      >
+        <slider
+          activeColor="{{q}}"
+          backgroundColor="{{p}}"
+          bindchange="{{x}}"
+          blockSize="{{s}}"
+          class="slide-set data-v-74eddbcd"
+          max="{{v}}"
+          min="{{t}}"
+          showValue="{{w}}"
+          value="{{r}}"
+          wx:if="{{o}}"
+        ></slider>
+        <vue-slider
+          bind:__l="__l"
+          bindchange="{{y}}"
+          binddragEnd="{{z}}"
+          class="slide-set data-v-74eddbcd"
+          uI="74eddbcd-1"
+          uP="{{A||''}}"
+          wx:else
+        ></vue-slider>
+      </view>
+      <view class="{{['_div','data-v-74eddbcd','playable-duration',F]}}"
+        >{{E}}</view
+      >
+    </view>
+    <view
+      catchtap="{{J}}"
+      class="{{['_div','data-v-74eddbcd','control-btn',H,I]}}"
+    ></view>
+    <view
+      catchtap="{{M}}"
+      class="{{['_div','data-v-74eddbcd','control-btn',K,L]}}"
+    ></view>
+  </view>
+</view>

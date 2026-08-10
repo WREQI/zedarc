@@ -1,0 +1,31 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view
+  class="_div account-index-container"
+  data-st-theme="{{h}}"
+  data-theme="{{i}}"
+>
+  <mp-privacy-dialog bind:__l="__l" uI="19e3f6da-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="19e3f6da-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div status-wrapper" wx:if="{{c}}">
+    <st-status
+      bind:__l="__l"
+      uI="19e3f6da-2"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></st-status>
+  </view>
+  <account-com
+    bind:__l="__l"
+    bindmounted="{{f}}"
+    class="r"
+    uI="19e3f6da-3"
+    uP="{{g}}"
+    uR="accountCom"
+    wx:if="{{g}}"
+  ></account-com>
+</view>

@@ -1,0 +1,37 @@
+<view
+  catchtap="{{j}}"
+  class="{{['_div','data-v-b7f80d42','block-title','layout-row','layout-align-space-between layout-align-center-center',i]}}"
+>
+  <view
+    class="_div left-part layout layout-align-center-center data-v-b7f80d42"
+  >
+    <slot name="name-left"></slot>
+    <label class="_span name data-v-b7f80d42">{{a}}</label>
+    <slot name="name-right" wx:if="{{$slots['name-right']}}"></slot>
+    <block wx:else>
+      <view
+        catchtap="{{c}}"
+        class="_div tip-wrapper data-v-b7f80d42"
+        wx:if="{{b}}"
+      >
+        <image
+          class="_img icon-tip data-v-b7f80d42"
+          src="https://st.gtimg.com/design/4db771fb9111aad97d3261877fd5e6e0.png"
+        ></image>
+      </view>
+    </block>
+  </view>
+  <view
+    class="_div right-part layout-row layout-align-center-center data-v-b7f80d42"
+    wx:if="{{d}}"
+  >
+    <view class="{{['_div','data-v-b7f80d42','text',h]}}" wx:if="{{e}}">
+      <label class="_span data-v-b7f80d42">{{f}}</label>
+      <label class="_span red-dot data-v-b7f80d42" wx:if="{{g}}"></label>
+    </view>
+    <image
+      class="_img icon-arrow data-v-b7f80d42"
+      src="https://st.gtimg.com/design/3afd22e51e88b4813e453d3a7772242f.svg"
+    ></image>
+  </view>
+</view>

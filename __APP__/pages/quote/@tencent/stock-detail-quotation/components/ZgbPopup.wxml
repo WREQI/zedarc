@@ -1,0 +1,51 @@
+<view
+  bindtap="{{o}}"
+  catchtouchmove="{{n}}"
+  class="{{['_div','mask-wrapper','data-v-a02560ad',l&&'skin-black']}}"
+  style="{{'display:'+m}}"
+>
+  <view
+    catchtap="{{k}}"
+    class="_div popup-wrapper data-v-a02560ad"
+    style="{{j}}"
+  >
+    <image
+      class="_img triangle-up data-v-a02560ad"
+      src="{{b}}"
+      style="{{c}}"
+      wx:if="{{a}}"
+    ></image>
+    <image
+      class="_img triangle-up data-v-a02560ad"
+      src="{{d}}"
+      style="{{e}}"
+      wx:else
+    ></image>
+    <view class="_div content-wrapper data-v-a02560ad">
+      <view class="_div row xszbg data-v-a02560ad">
+        <view class="_div left-content data-v-a02560ad">
+          <view class="_div title data-v-a02560ad">总股本 (稀释)</view>
+          <view class="_div sub-info data-v-a02560ad">普通股+隐含股本</view>
+        </view>
+        <view class="_div right-content data-v-a02560ad">{{f}}</view>
+      </view>
+      <view class="_div row zbg data-v-a02560ad">
+        <view class="_div left-content data-v-a02560ad">
+          <view class="_div title data-v-a02560ad">总股本 (基本)</view>
+          <view class="_div sub-info data-v-a02560ad">仅统计普通股</view>
+        </view>
+        <view class="_div right-content data-v-a02560ad">{{g}}</view>
+      </view>
+      <view class="_div ai-bar data-v-a02560ad">
+        <search-ai-bar
+          bind:__l="__l"
+          bindonClickAiDialog="{{h}}"
+          class="data-v-a02560ad"
+          uI="a02560ad-0"
+          uP="{{i}}"
+          wx:if="{{i}}"
+        ></search-ai-bar>
+      </view>
+    </view>
+  </view>
+</view>

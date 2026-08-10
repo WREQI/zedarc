@@ -1,0 +1,57 @@
+<view class="_div message-home-v2 data-v-1de7a322">
+  <view class="_div message-box-top-wrapper data-v-1de7a322" ref="top-wrapper">
+    <message-entry
+      bind:__l="__l"
+      bindclearAll="{{f}}"
+      bindclickEntry="{{e}}"
+      class="data-v-1de7a322"
+      uI="1de7a322-0"
+      uP="{{g}}"
+      uS="{{['trade-entry']}}"
+      wx:if="{{a}}"
+    >
+      <view slot="trade-entry">
+        <broker-tab
+          bind:__l="__l"
+          bindclick="{{c}}"
+          class="data-v-1de7a322"
+          uI="1de7a322-1,1de7a322-0"
+          uP="{{d}}"
+          wx:if="{{b}}"
+        ></broker-tab>
+      </view>
+    </message-entry>
+  </view>
+  <view class="_div message-box-new-home-content data-v-1de7a322" wx:if="{{h}}">
+    <message-trade
+      bind:__l="__l"
+      class="{{['data-v-1de7a322',j&&'hide-item']}}"
+      uI="1de7a322-2"
+      uP="{{k}}"
+      uS="{{['plugin']}}"
+      wx:if="{{k}}"
+    >
+      <view slot="{{v0.c}}" wx:for="{{i}}" wx:for-item="v0" wx:key="b">
+        <slot name="plugin"></slot>
+      </view>
+    </message-trade>
+    <message-ding-pan
+      bind:__l="__l"
+      class="data-v-1de7a322"
+      data-c-h="{{!l}}"
+      uI="1de7a322-3"
+    ></message-ding-pan>
+    <message-custom
+      bind:__l="__l"
+      class="data-v-1de7a322"
+      data-c-h="{{!m}}"
+      uI="1de7a322-4"
+    ></message-custom>
+    <message-interaction
+      bind:__l="__l"
+      class="data-v-1de7a322"
+      data-c-h="{{!n}}"
+      uI="1de7a322-5"
+    ></message-interaction>
+  </view>
+</view>

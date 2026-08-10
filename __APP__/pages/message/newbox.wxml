@@ -1,0 +1,56 @@
+<page-meta class="data-v-044e6774" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-044e6774"
+  id="global-wrap"
+  uI="044e6774-0"
+  uP="{{s}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{s}}"
+>
+  <view class="msg-box-container data-v-044e6774">
+    <view class="data-v-044e6774" wx:if="{{b}}">
+      <scroll-view
+        bindrefresherpulling="{{k}}"
+        bindrefresherrefresh="{{m}}"
+        bindrefresherrestore="{{l}}"
+        bindscroll="{{o}}"
+        bindscrolltolower="{{n}}"
+        class="scroll-view data-v-044e6774"
+        refresherEnabled="{{i}}"
+        refresherThreshold="100"
+        refresherTriggered="{{j}}"
+        scrollY="true"
+        style="{{'height:'+h}}"
+        wx:if="{{c}}"
+      >
+        <view class="msg-wrapper data-v-044e6774" wx:for="{{d}}" wx:key="c">
+          <new-msg-tpl
+            bind:__l="__l"
+            class="data-v-044e6774"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></new-msg-tpl>
+        </view>
+        <block wx:if="{{e}}">
+          <view class="tips-text data-v-044e6774" wx:if="{{f}}">{{g}}</view>
+        </block>
+      </scroll-view>
+      <view
+        class="empty-wrapper data-v-044e6774"
+        style="{{'height:'+q}}"
+        wx:else
+      >
+        <empty
+          bind:__l="__l"
+          class="empty data-v-044e6774"
+          uI="044e6774-2,044e6774-0"
+          uP="{{p}}"
+          wx:if="{{p}}"
+        ></empty>
+      </view>
+    </view>
+  </view>
+</global-wrap>

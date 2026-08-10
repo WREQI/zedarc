@@ -1,0 +1,45 @@
+@import "/app.wxss";
+.detail-account-wrap {
+  background: var(--fill-2);
+}
+.detail-account-wrap .account_name {
+  color: var(--text-color-5);
+  font-size: 0.373333rem;
+  font-style: normal;
+  padding: 0.48rem 0 0.266667rem;
+  text-align: center;
+}
+.detail-account-wrap .account_number {
+  color: var(--text-color-1);
+  font-size: 0.533333rem;
+  height: 0.666667rem;
+  line-height: 0.666667rem;
+  margin: 0 auto;
+  position: relative;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.detail-account-wrap .account_number .copy-btn {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/copy-icon.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.373333rem 0.373333rem;
+  height: 0.373333rem;
+  position: absolute;
+  right: -0.506667rem;
+  top: 0.146667rem;
+  width: 0.373333rem;
+}
+.detail-account-wrap .li-account {
+  padding: 0.613333rem 0 0.426667rem;
+}
+.detail-account-wrap .li-item {
+  font-size: 0.373333rem;
+}
+.detail-account-wrap .li-item .item-val {
+  margin-top: 0.093333rem;
+}
+.detail-account-wrap .item-attr {
+  font-size: 0.373333rem;
+  padding-bottom: 0.106667rem;
+}

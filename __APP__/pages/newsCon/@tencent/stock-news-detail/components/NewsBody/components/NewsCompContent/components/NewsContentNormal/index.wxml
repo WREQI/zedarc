@@ -1,0 +1,92 @@
+<view
+  class="{{['_div',M]}}"
+  id="news-text"
+  ref="content"
+  style="{{'height:'+N+';'+'margin:'+0}}"
+>
+  <render-template
+    bind:__l="__l"
+    class="r"
+    uI="2c5a07dc-0"
+    uP="{{c}}"
+    uR="renderTemplate"
+    uS="{{['txvplayer']}}"
+    wx:if="{{c}}"
+  >
+    <view slot="txvplayer">
+      <slot name="txvplayer" wx:if="{{a}}"></slot>
+    </view>
+  </render-template>
+  <view class="_div news-content-ai-entry" hidden="{{!j}}">
+    <news-ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{e}}"
+      bindonHideAiEntry="{{g}}"
+      bindonQuestionListChange="{{h}}"
+      bindonShowAiEntry="{{f}}"
+      uI="2c5a07dc-1"
+      uP="{{i}}"
+      wx:if="{{d}}"
+    ></news-ai-bar>
+  </view>
+  <view class="_div basket-title" wx:if="{{k}}">
+    <label class="_span title">相关股单</label>
+  </view>
+  <basket-overview
+    bind:__l="__l"
+    bindgoToBasketDetail="{{o}}"
+    bindgoToStockDetail="{{n}}"
+    bindheaderToggleClick="{{m}}"
+    class="basket-overview"
+    uI="2c5a07dc-2"
+    uP="{{p}}"
+    wx:if="{{l}}"
+  ></basket-overview>
+  <block wx:else>
+    <view class="_div related-stock-bar-anchor" id="related-stock-bar"></view>
+    <related-stock
+      bind:__l="__l"
+      uI="2c5a07dc-3"
+      uP="{{r}}"
+      wx:if="{{q}}"
+    ></related-stock>
+  </block>
+  <hq-tool bind:__l="__l" uI="2c5a07dc-4" uP="{{t}}" wx:if="{{s}}"></hq-tool>
+  <view bindtap="{{z}}" class="_div xg-info" wx:if="{{v}}">
+    <view class="_div xg-left">
+      <image class="_img xg-icon" src="{{w}}"></image>
+      <label class="_span xg-name">{{x}}</label>
+    </view>
+    <view class="_div xg-right">
+      <label class="_span">去看哪些股票命中了{{y}}</label>
+      <image
+        alt="arrow"
+        class="_img"
+        src="https://st.gtimg.com/design/efa97ae4d30fd84ca689d5fd913f7425.svg"
+      ></image>
+    </view>
+  </view>
+  <vip-more bind:__l="__l" uI="2c5a07dc-5" uP="{{B}}" wx:if="{{A}}"></vip-more>
+  <help-or-no-help
+    bind:__l="__l"
+    uI="2c5a07dc-6"
+    uP="{{D}}"
+    wx:if="{{C}}"
+  ></help-or-no-help>
+  <view class="{{['_div','footer-note',G]}}" wx:if="{{E}}">
+    <view class="_div">{{F}}</view>
+  </view>
+  <view class="{{['_div','footer-note',I]}}" wx:else>
+    <view class="_div" wx:for="{{H}}" wx:for-item="str" wx:key="b"
+      >{{str.a}}</view
+    >
+  </view>
+  <basket-guide-modal
+    bind:__l="__l"
+    bindclose="{{K}}"
+    bindconfirm="{{J}}"
+    uI="2c5a07dc-7"
+    uP="{{L}}"
+    wx:if="{{L}}"
+  ></basket-guide-modal>
+</view>

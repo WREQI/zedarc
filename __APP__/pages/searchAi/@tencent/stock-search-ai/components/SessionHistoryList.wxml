@@ -1,0 +1,142 @@
+<view class="_div session-history-container data-v-0e4c868a">
+  <view class="_div btn-news-session-row data-v-0e4c868a">
+    <view class="_div btn-news-session-wrapper data-v-0e4c868a" wx:if="{{a}}">
+      <view
+        catchtap="{{c}}"
+        class="_div btn-news-session layout-row-align-center data-v-0e4c868a"
+      >
+        <view class="_div btn-news-session-wx-claw-icon data-v-0e4c868a"></view>
+        <label class="_span data-v-0e4c868a">{{b}}</label>
+      </view>
+    </view>
+    <view
+      class="_div btn-news-session-wrapper data-v-0e4c868a"
+      id="btn-news-session"
+      ref="refNewSession"
+    >
+      <view
+        catchtap="{{d}}"
+        class="_div btn-news-session layout-row-align-center data-v-0e4c868a"
+      >
+        <view class="_div btn-news-session-icon data-v-0e4c868a"></view>
+        <label class="_span data-v-0e4c868a">新建对话</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{e}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refStick">
+      <image class="_img icon-stick data-v-0e4c868a" src="{{f}}"></image>
+      <label class="_span session-title data-v-0e4c868a">置顶</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindbeforeLongPress="{{item.d}}"
+      bindlongPress="{{item.e}}"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:for="{{g}}"
+      wx:key="b"
+    ></session-history-item>
+    <view class="_div stick-divide data-v-0e4c868a"></view>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{h}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refWxClaw">
+      <image
+        class="_img icon-stick data-v-0e4c868a"
+        src="https://st.gtimg.com/design/9258f6e1091654b60917a64709e20c3e.png"
+      ></image>
+      <label class="_span session-title data-v-0e4c868a">微信对话</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.d}}"
+      uP="{{item.e}}"
+      wx:for="{{i}}"
+      wx:key="b"
+    ></session-history-item>
+    <view class="_div stick-divide data-v-0e4c868a"></view>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{j}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refToday">
+      <label class="_span session-title data-v-0e4c868a">今天</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindbeforeLongPress="{{item.d}}"
+      bindlongPress="{{item.e}}"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:for="{{k}}"
+      wx:key="b"
+    ></session-history-item>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{l}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refWeek">
+      <label class="_span session-title data-v-0e4c868a">本周</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindbeforeLongPress="{{item.d}}"
+      bindlongPress="{{item.e}}"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:for="{{m}}"
+      wx:key="b"
+    ></session-history-item>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{n}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refMonth">
+      <label class="_span session-title data-v-0e4c868a">本月</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindbeforeLongPress="{{item.d}}"
+      bindlongPress="{{item.e}}"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:for="{{o}}"
+      wx:key="b"
+    ></session-history-item>
+  </view>
+  <view class="_div session-container-wrapper data-v-0e4c868a" wx:if="{{p}}">
+    <view class="_div sesstion-title-container data-v-0e4c868a" ref="refOther">
+      <label class="_span session-title data-v-0e4c868a">更早</label>
+    </view>
+    <session-history-item
+      bind:__l="__l"
+      bindbeforeLongPress="{{item.d}}"
+      bindlongPress="{{item.e}}"
+      bindsessionOperate="{{item.c}}"
+      class="data-v-0e4c868a"
+      id="{{item.a}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:for="{{q}}"
+      wx:key="b"
+    ></session-history-item>
+  </view>
+  <view
+    class="_div bottom-container-wrapper layout-row-align-center data-v-0e4c868a"
+  >
+    <view class="_div bottom-container layout-row-align-center data-v-0e4c868a">
+      <view class="_div line-divide data-v-0e4c868a"></view>
+      <label class="_span tips data-v-0e4c868a">{{r}}</label>
+      <view class="_div line-divide data-v-0e4c868a"></view>
+    </view>
+  </view>
+</view>

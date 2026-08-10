@@ -1,0 +1,20 @@
+<view
+  catchtap="{{d}}"
+  class="debt-auto-order-time-guide data-v-fee49b0f"
+  wx:if="{{a}}"
+>
+  <bubble-tip
+    bind:__l="__l"
+    bindclose="{{b}}"
+    class="data-v-fee49b0f"
+    uI="fee49b0f-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view class="debt-auto-order-time-guide__text data-v-fee49b0f">
+      <view class="data-v-fee49b0f">A股盘后延长至15:30，扫单时间</view>
+      <view class="data-v-fee49b0f">现已支持随心设，助力盘后交易</view>
+    </view>
+  </bubble-tip>
+</view>

@@ -1,0 +1,19 @@
+<view class="_div center-bubble-container data-v-158b9999" style="{{b}}">
+  <view class="_div center-bubble-content data-v-158b9999">
+    <label class="_span center-bubble-text data-v-158b9999">
+      <slot wx:if="{{$slots.d}}"></slot>
+      <block wx:else>个股详情页下方点击问元宝即可体验</block>
+    </label>
+    <label catchtap="{{a}}" class="_span center-bubble-close data-v-158b9999">
+      <label class="_span center-bubble-x data-v-158b9999">
+        <label
+          class="_span center-bubble-line center-bubble-line-1 data-v-158b9999"
+        ></label>
+        <label
+          class="_span center-bubble-line center-bubble-line-2 data-v-158b9999"
+        ></label>
+      </label>
+    </label>
+  </view>
+  <view class="_div center-bubble-arrow data-v-158b9999"></view>
+</view>

@@ -1,0 +1,18 @@
+<view class="_div mod-show-long-content data-v-c004da1d">
+  <view class="_div title data-v-c004da1d">
+    <slot name="title-start"></slot>{{a}}</view
+  >
+  <view class="_div long-content-box data-v-c004da1d" ref="longContentBox"
+    >{{b}}</view
+  >
+  <show-more
+    bind:__l="__l"
+    bindmounted="{{d}}"
+    bindtoggleShow="{{e}}"
+    class="r data-v-c004da1d"
+    uI="c004da1d-0"
+    uP="{{f}}"
+    uR="showMore"
+    wx:if="{{f}}"
+  ></show-more>
+</view>

@@ -1,0 +1,90 @@
+.fq-bubble.data-v-1c4b7dba {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  pointer-events: auto;
+  position: absolute;
+  z-index: 20;
+}
+.fq-bubble--left.data-v-1c4b7dba {
+  flex-direction: row;
+}
+.fq-bubble--right.data-v-1c4b7dba {
+  flex-direction: row-reverse;
+}
+.fq-bubble__arrow.data-v-1c4b7dba {
+  border-bottom: 0.10666666666666667rem solid transparent;
+  border-top: 0.10666666666666667rem solid transparent;
+  flex-shrink: 0;
+  height: 0;
+  width: 0;
+}
+.fq-bubble--left .fq-bubble__arrow.data-v-1c4b7dba {
+  border-right: 0.16rem solid rgba(0, 0, 0, 0.6);
+}
+.fq-bubble--right .fq-bubble__arrow.data-v-1c4b7dba {
+  border-left: 0.16rem solid rgba(0, 0, 0, 0.6);
+}
+.fq-bubble__content.data-v-1c4b7dba {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.21333333333333335rem;
+}
+.fq-bubble__text.data-v-1c4b7dba {
+  color: var(--color-white, #fff);
+  flex: 1;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+}
+.fq-bubble__line.data-v-1c4b7dba {
+  white-space: nowrap;
+}
+.fq-bubble__chevron.data-v-1c4b7dba {
+  border-right: 0.02666666666666667rem solid var(--color-white, #fff);
+  border-top: 0.02666666666666667rem solid var(--color-white, #fff);
+  display: inline-block;
+  height: 0.16rem;
+  margin-left: 0.05333333333333334rem;
+  transform: translateY(-0.013333333333333334rem) rotate(45deg);
+  vertical-align: middle;
+  width: 0.16rem;
+}
+.fq-bubble__close.data-v-1c4b7dba {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  height: 0.4266666666666667rem;
+  justify-content: center;
+  margin-left: 0.21333333333333335rem;
+  width: 0.4266666666666667rem;
+}
+.fq-bubble__close-icon.data-v-1c4b7dba {
+  display: block;
+  height: 0.32rem;
+  position: relative;
+  width: 0.32rem;
+}
+.fq-bubble__close-icon.data-v-1c4b7dba:after,
+.fq-bubble__close-icon.data-v-1c4b7dba:before {
+  background-color: var(--color-white, #fff);
+  border-radius: 0.013333333333333334rem;
+  content: "";
+  height: 0.02666666666666667rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 0.32rem;
+}
+.fq-bubble__close-icon.data-v-1c4b7dba:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.fq-bubble__close-icon.data-v-1c4b7dba:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

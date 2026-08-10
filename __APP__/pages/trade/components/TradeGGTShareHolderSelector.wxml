@@ -1,0 +1,52 @@
+<view class="{{['component-secucard-selector',y,z]}}">
+  <view class="secucard-label" wx:if="{{a}}">
+    <view class="fundaccount-wrapper flex" wx:if="{{b}}">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo-icon"
+        uI="11d4d7bf-0"
+      ></broker-logo>
+      <view class="fundaccount fs-24 text-color-4">{{c}} {{d}}</view>
+    </view>
+    <view wx:else>股东卡</view>
+  </view>
+  <view class="{{['secucard-dropdown','flex',q]}}" wx:if="{{e}}">
+    <view bindtap="{{j}}" class="{{['dropdown-bar',i]}}">
+      <view class="dropdown-label" wx:if="{{f}}">
+        <view class="type">{{g}}</view>
+        <view class="code">{{h}}</view>
+      </view>
+      <block wx:else>
+        <view class="dropdown-desc">港股通</view>
+        <view class="dropdown-entry">开通权限</view>
+      </block>
+    </view>
+    <block wx:if="{{k}}">
+      <view bindtap="{{m}}" class="dropdown-mask" wx:if="{{l}}"></view>
+      <view bindtap="{{n}}" class="dropdown-arrow icon icon-triangle"></view>
+      <view class="dropdown-content" wx:if="{{o}}">
+        <view class="triangle"></view>
+        <view
+          catchtap="{{item.e}}"
+          class="{{['dropdown-item','border--bottom',item.d]}}"
+          wx:for="{{p}}"
+          wx:key="c"
+          >{{item.a}} {{item.b}}</view
+        >
+      </view>
+    </block>
+  </view>
+  <view class="{{['secucard-dropdown','flex',v]}}" wx:elif="{{r}}">
+    <view class="{{['dropdown-bar',t]}}">
+      <view class="dropdown-desc">港股通</view>
+      <view bindtap="{{s}}" class="dropdown-entry">点击重试</view>
+    </view>
+  </view>
+  <view class="loading-status ^loading-status" wx:else>
+    <view class="loading-icon"></view>
+  </view>
+  <view class="popover-tip flex-vcenter" wx:if="{{w}}">
+    <view class="tip-text">请先开通港股通权限</view>
+    <view bindtap="{{x}}" class="icon icon-close"></view>
+  </view>
+</view>

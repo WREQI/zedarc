@@ -1,0 +1,90 @@
+<view
+  bindtap="{{E}}"
+  class="{{['_div','data-v-0b68d459','pop-content-container',A,'view-mode',B,C]}}"
+  style="{{'height:'+D}}"
+>
+  <view class="_div settings-wrap data-v-0b68d459">
+    <view class="_div section-title data-v-0b68d459" wx:if="{{a}}"
+      >事件提醒</view
+    >
+    <setting-event
+      bind:__l="__l"
+      bindhandleRemindClick="{{e}}"
+      bindupdateSmartData="{{d}}"
+      class="r data-v-0b68d459"
+      uI="0b68d459-0"
+      uP="{{f}}"
+      uR="settingEvent"
+      wx:if="{{b}}"
+    ></setting-event>
+    <view class="_div section-title data-v-0b68d459">自定义提醒</view>
+    <view class="_div edit-tip-container data-v-0b68d459" wx:if="{{g}}">
+      <bubble
+        bind:__l="__l"
+        bindclose="{{h}}"
+        class="edit-tip-bubble data-v-0b68d459"
+        uI="0b68d459-1"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></bubble>
+    </view>
+    <view class="_div group-item data-v-0b68d459" wx:if="{{j}}">
+      <setting-item
+        bind:__l="__l"
+        bindblur="{{item.m}}"
+        binddelete="{{item.p}}"
+        bindfocus="{{item.l}}"
+        bindinput="{{item.i}}"
+        bindlongpress="{{item.o}}"
+        bindminus="{{item.j}}"
+        bindplus="{{item.k}}"
+        bindtagClick="{{item.h}}"
+        bindtoggleChoose="{{item.n}}"
+        class="{{['r-i-f','data-v-0b68d459',item.e,item.f,item.g]}}"
+        id="{{item.b}}"
+        uI="{{item.q}}"
+        uP="{{item.r}}"
+        uR="{{item.d}}"
+        wx:for="{{k}}"
+        wx:key="c"
+      ></setting-item>
+      <event-item
+        bind:__l="__l"
+        binddelete="{{p}}"
+        bindlongpress="{{o}}"
+        bindtoggleChoose="{{n}}"
+        class="{{['data-v-0b68d459','last-item',m]}}"
+        uI="0b68d459-3"
+        uP="{{q}}"
+        wx:if="{{l}}"
+      ></event-item>
+    </view>
+    <view class="_div add-remind-entry-wrapper data-v-0b68d459" wx:if="{{r}}">
+      <view bindtap="{{s}}" class="_div add-remind-entry data-v-0b68d459">
+        <label class="_span add-icon data-v-0b68d459">+</label>
+        <label class="_span add-text data-v-0b68d459">添加提醒</label>
+        <label class="_span add-desc data-v-0b68d459"
+          >可设置更多涨跌价格和涨跌幅</label
+        >
+      </view>
+      <view class="_div add-tip-container data-v-0b68d459" wx:if="{{t}}">
+        <bubble
+          bind:__l="__l"
+          bindclose="{{v}}"
+          class="add-tip-bubble data-v-0b68d459"
+          uI="0b68d459-4"
+          uP="{{w}}"
+          wx:if="{{w}}"
+        ></bubble>
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-0b68d459','bottom-box',z]}}">
+    <view bindtap="{{x}}" class="_div list-entry data-v-0b68d459">
+      <label class="_span data-v-0b68d459">管理我的全部提醒</label>
+    </view>
+    <view class="{{['_div','data-v-0b68d459','logo-wrap']}}" wx:if="{{y}}">
+      <view class="_div zxg-logo data-v-0b68d459"></view>
+    </view>
+  </view>
+</view>

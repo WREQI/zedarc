@@ -1,0 +1,87 @@
+.color-equal.data-v-3b2d0a32 {
+  color: var(--color-equal) !important;
+}
+.color-rise.data-v-3b2d0a32 {
+  color: var(--color-rise) !important;
+}
+.color-drop.data-v-3b2d0a32 {
+  color: var(--color-drop) !important;
+}
+.top-bar-container.data-v-3b2d0a32 {
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.top-bar-container .safe-area-padding-top.data-v-3b2d0a32 {
+  height: env(safe-area-inset-top);
+  width: 100%;
+}
+.top-bar-container .content-container.data-v-3b2d0a32 {
+  background: var(--fill-2);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+.top-bar-container .hold-space.data-v-3b2d0a32 {
+  height: 1.1733333333333333rem;
+}
+.top-bar-container .title-content.data-v-3b2d0a32 {
+  align-items: center;
+  background: var(--fill-2);
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  padding-bottom: 0.05333333333333334rem;
+  position: relative;
+  width: 100%;
+}
+.top-bar-container .title-content .back-icon.data-v-3b2d0a32 {
+  height: 0.64rem;
+  left: 0.26666666666666666rem;
+  margin-top: -0.37333333333333335rem;
+  position: absolute;
+  top: 50%;
+  width: 0.64rem;
+}
+.top-bar-container .title-content .main-title.data-v-3b2d0a32 {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  height: 100%;
+  height: 0.6rem;
+  line-height: 0.48rem;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  width: 4.533333333333333rem;
+}
+.top-bar-container .title-content .sub-title-fix.data-v-3b2d0a32 {
+  align-items: center;
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.48rem;
+  justify-content: center;
+}
+.top-bar-container .title-content .sub-title-fix .status.data-v-3b2d0a32 {
+  margin-right: 0.16rem;
+}
+.top-bar-container .title-content .sub-title-scroll.data-v-3b2d0a32 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.48rem;
+  justify-content: center;
+}
+.top-bar-container .title-content .sub-title-scroll .price.data-v-3b2d0a32,
+.top-bar-container .title-content .sub-title-scroll .zde.data-v-3b2d0a32 {
+  margin-right: 0.16rem;
+}

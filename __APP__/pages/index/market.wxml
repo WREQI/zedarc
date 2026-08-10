@@ -1,0 +1,51 @@
+<page-meta class="data-v-14379b87" rootFontSize="{{a}}"></page-meta>
+<view class="_div market-index data-v-14379b87" data-st-theme="{{p}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-14379b87"
+    uI="14379b87-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-14379b87"
+    uI="14379b87-1"
+  ></stock-privacy-dialog>
+  <top-bar
+    bind:__l="__l"
+    bindgetBarHeight="{{c}}"
+    bindgetTitleHeight="{{d}}"
+    class="r data-v-14379b87"
+    uI="14379b87-2"
+    uP="{{e}}"
+    uR="topBar"
+    wx:if="{{e}}"
+  ></top-bar>
+  <view class="_div data-v-14379b87">
+    <market
+      bind:__l="__l"
+      bindonTabScroll="{{i}}"
+      bindpageInit="{{h}}"
+      class="market-wrapper r data-v-14379b87"
+      uI="14379b87-3"
+      uP="{{j}}"
+      uR="hq"
+      wx:if="{{f}}"
+    ></market>
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{l}}"
+      class="market-status data-v-14379b87"
+      uI="14379b87-4"
+      uP="{{m}}"
+      wx:if="{{k}}"
+    ></st-status>
+  </view>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{n}}"
+    class="data-v-14379b87"
+    uI="14379b87-5"
+    uP="{{o}}"
+    wx:if="{{o}}"
+  ></privacy-policy-modal>
+</view>

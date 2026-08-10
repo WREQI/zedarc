@@ -1,0 +1,20 @@
+<view class="{{['trade-tool-option','^trade-tool-option',d]}}">
+  <view class="flex-between item-wrapper" wx:if="{{a}}">
+    <view
+      bindtap="{{item.e}}"
+      class="item flex-vcenter"
+      wx:for="{{b}}"
+      wx:key="d"
+    >
+      <view class="{{['icon-left',item.a]}}"></view>
+      <view class="flex-column item-right">
+        <view class="flex-vcenter">
+          <label class="title">{{item.b}}</label>
+          <label class="icon link-arrow"></label>
+        </view>
+        <view class="desc">{{item.c}}</view>
+      </view>
+    </view>
+  </view>
+  <empty bind:__l="__l" uI="5eae82b6-0" uP="{{c||''}}" wx:else></empty>
+</view>

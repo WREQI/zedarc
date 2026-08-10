@@ -1,0 +1,34 @@
+<view class="_div dingpan-wrapper data-v-53e323ad">
+  <scroll-view
+    bindrefresherrefresh="{{g}}"
+    bindscroll="{{i}}"
+    bindscrolltolower="{{h}}"
+    class="message-dingpan data-v-53e323ad"
+    refresherEnabled="{{true}}"
+    refresherTriggered="{{f}}"
+    scrollY="{{true}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div content-wrapper data-v-53e323ad">
+      <dingpan-content
+        bind:__l="__l"
+        class="r data-v-53e323ad"
+        uI="53e323ad-0"
+        uP="{{d}}"
+        uR="contentRef"
+        wx:if="{{b}}"
+      ></dingpan-content>
+      <view class="_div tx-logo data-v-53e323ad">
+        <view
+          class="{{['_div','logo-img','data-v-53e323ad',e&&'classic']}}"
+        ></view>
+      </view>
+    </view>
+  </scroll-view>
+  <empty
+    bind:__l="__l"
+    class="empty data-v-53e323ad"
+    uI="53e323ad-1"
+    wx:else
+  ></empty>
+</view>

@@ -1,0 +1,24 @@
+<scroll-view
+  bindscroll="{{b}}"
+  bindscrolltolower="{{c}}"
+  bounces="{{d}}"
+  class="data-v-b99b99e0"
+  enhanced="{{true}}"
+  scrollY="{{true}}"
+  style="height: 100%"
+  wx:if="{{a}}"
+>
+  <slot></slot>
+</scroll-view>
+<st-scroll
+  bind:__l="__l"
+  bindscroll="{{f}}"
+  class="web-list r data-v-b99b99e0"
+  uI="b99b99e0-0"
+  uP="{{g||''}}"
+  uR="scrollh5"
+  uS="{{['d']}}"
+  wx:else
+>
+  <slot></slot>
+</st-scroll>

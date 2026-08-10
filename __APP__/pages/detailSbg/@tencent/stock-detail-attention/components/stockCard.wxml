@@ -1,0 +1,73 @@
+<view class="_div stock-card-wrapper data-v-45d5033c" wx:if="{{a}}">
+  <view class="_div list-caption data-v-45d5033c">
+    <view class="_div caption-name data-v-45d5033c">{{b}}</view>
+    <view class="_div caption-item data-v-45d5033c" wx:for="{{c}}" wx:key="b"
+      >{{item.a}}</view
+    >
+  </view>
+  <view class="_div list-content data-v-45d5033c">
+    <view
+      bindtap="{{item.r}}"
+      class="_div list-wrapper data-v-45d5033c"
+      wx:for="{{d}}"
+      wx:key="q"
+    >
+      <view class="_div list-item data-v-45d5033c">
+        <view class="_div left-block data-v-45d5033c">
+          <view class="_div stock-name data-v-45d5033c">{{item.a}}</view>
+          <view class="_div stock-code-wrapper data-v-45d5033c">
+            <market-icon
+              bind:__l="__l"
+              class="market-tag data-v-45d5033c"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.c}}"
+            ></market-icon>
+            <view class="_div stock-code data-v-45d5033c">{{item.d}}</view>
+            <view
+              class="{{['_div','desc-tag','tag-mar','data-v-45d5033c',item.g]}}"
+              wx:if="{{item.e}}"
+              >{{item.f}}</view
+            >
+          </view>
+        </view>
+        <view class="_div right-block data-v-45d5033c" wx:if="{{e}}"
+          >{{item.h}}</view
+        >
+        <view
+          class="{{['_div','data-v-45d5033c','right-block',item.j]}}"
+          wx:if="{{f}}"
+          >{{item.i}}</view
+        >
+        <view class="_div right-block data-v-45d5033c" wx:if="{{g}}"
+          >{{item.k}}</view
+        >
+        <view
+          class="{{['_div','data-v-45d5033c','right-block',item.m]}}"
+          wx:if="{{h}}"
+          >{{item.l}}</view
+        >
+      </view>
+      <view class="_div stock-tag data-v-45d5033c" wx:if="{{item.n}}">
+        <label
+          class="_span desc-tag data-v-45d5033c"
+          wx:for="{{item.o}}"
+          wx:for-item="tag"
+          wx:key="b"
+          >{{tag.a}}</label
+        >
+      </view>
+      <view class="_div list-line data-v-45d5033c" wx:if="{{item.p}}"></view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-45d5033c','open-account-tab',n]}}"
+    wx:if="{{i}}"
+  >
+    <view bindtap="{{l}}" class="_div count-text data-v-45d5033c">
+      <view class="_div data-v-45d5033c">{{j}}</view>
+      <view class="_div account-text-blue data-v-45d5033c">{{k}}</view>
+    </view>
+    <view bindtap="{{m}}" class="_div close-img data-v-45d5033c"></view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view bindtap="{{d}}" class="_div nav-button data-v-7473bf8b">
+    <image class="_img editor-image data-v-7473bf8b" src="{{'https://st.gtimg.com/design/0a951cf1b90cd01d90fe44032f4a7013.svg'}}"></image>
+    <label class="_span data-v-7473bf8b">发帖</label>
+    <input class="fake-input data-v-7473bf8b" ref="fakeInput"></input>
+    <view class="_div show-guide yy-task-community-tiezi data-v-7473bf8b"></view>
+    <view class="_div shaidan-guide data-v-7473bf8b" wx:if="{{a}}">{{b}}</view>
+    <view class="_div shaidan-guide data-v-7473bf8b" wx:elif="{{c}}">晒持仓</view>
+</view>

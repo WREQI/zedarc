@@ -1,0 +1,11 @@
+<view class="{{['_div','data-v-7659c7b3','ds-search-bar',i]}}">
+    <view bindtap="{{f}}" class="_div input-wrap data-v-7659c7b3">
+        <image alt="" class="_img search-icon-img data-v-7659c7b3" src="https://st.gtimg.com/design/0183fe651d60a9934ae067e5e9211286.png"></image>
+        <label class="_span input input--fake data-v-7659c7b3" wx:if="{{a}}">请搜索板块名称</label>
+        <input autofocus bindinput="{{c}}" class="input data-v-7659c7b3" maxlength="100" placeholder="请搜索板块名称" placeholderClass="placeholderStyle" ref="inputRef" type="search" value="{{b}}" wx:else></input>
+        <view catchtap="{{e}}" class="_div clear-btn data-v-7659c7b3" wx:if="{{d}}">
+            <image alt="" class="_img clear-icon data-v-7659c7b3" src="https://st.gtimg.com/design/c68d20ba53ae0b6e4f5b60c39dbe07b0.png"></image>
+        </view>
+    </view>
+    <label catchtap="{{h}}" class="_span cancel-btn data-v-7659c7b3" wx:if="{{g}}">取消</label>
+</view>

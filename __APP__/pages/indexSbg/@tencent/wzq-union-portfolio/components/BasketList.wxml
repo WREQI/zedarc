@@ -1,0 +1,89 @@
+<view class="{{['_div','data-v-dced071e','content-wrapper',C]}}">
+  <view class="_div basket-control-bar data-v-dced071e">
+    <view class="_div left-text data-v-dced071e">股单 ({{a}})</view>
+    <view
+      catchtap="{{c}}"
+      class="_div portfolio-basket-select-btn data-v-dced071e"
+    >
+      <view class="_div select-text data-v-dced071e">{{b}}</view>
+      <image
+        class="_img btn-arrow data-v-dced071e"
+        src="https://st.gtimg.com/design/df1efde8f3fc31f5c7e0ba0ede93cd6a.png"
+      ></image>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-dced071e','dynamic-height-wrapper',y]}}"
+    style="{{'background:'+z+';'+'height:'+A+';'+'overflow:'+B}}"
+  >
+    <scroll-view
+      scrollY
+      bindrefresherpulling="{{l}}"
+      bindrefresherrefresh="{{n}}"
+      bindrefresherrestore="{{m}}"
+      bindscroll="{{k}}"
+      class="stock-scroll-list-1000 scroll-view-content data-v-dced071e"
+      lowerThreshold="{{200}}"
+      refresherEnabled="{{true}}"
+      refresherThreshold="100"
+      refresherTriggered="{{j}}"
+      style="{{i}}"
+      wx:if="{{d}}"
+    >
+      <view
+        class="_div basket-wrapper data-v-dced071e"
+        id="portfolio-basket-wrapper"
+      >
+        <stock-basket
+          bind:__l="__l"
+          class="data-v-dced071e"
+          uI="{{basketData.b}}"
+          uP="{{basketData.c}}"
+          wx:for="{{e}}"
+          wx:for-item="basketData"
+          wx:key="a"
+        ></stock-basket>
+      </view>
+      <view
+        class="{{['_div','mp-list-placeholder','data-v-dced071e',g]}}"
+        wx:if="{{f}}"
+      ></view>
+      <dynamic-height-placeholder
+        bind:__l="__l"
+        class="data-v-dced071e"
+        uI="dced071e-1"
+        wx:if="{{h}}"
+      ></dynamic-height-placeholder>
+    </scroll-view>
+    <view class="_div empty-page data-v-dced071e" wx:else>
+      <empty
+        bind:__l="__l"
+        class="data-v-dced071e"
+        uI="dced071e-2"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></empty>
+    </view>
+    <root-portal class="data-v-dced071e" enable="{{true}}" wx:if="{{p}}">
+      <select-plate
+        bind:__l="__l"
+        bindclose="{{r}}"
+        bindselect="{{q}}"
+        class="data-v-dced071e"
+        uI="dced071e-3"
+        uP="{{s}}"
+        wx:if="{{s}}"
+      ></select-plate>
+    </root-portal>
+    <select-plate
+      bind:__l="__l"
+      bindclose="{{v}}"
+      bindselect="{{t}}"
+      class="data-v-dced071e"
+      uI="dced071e-4"
+      uP="{{w||''}}"
+      wx:else
+    ></select-plate>
+    <view class="_div portfolio-mask data-v-dced071e" hidden="{{!x}}"></view>
+  </view>
+</view>

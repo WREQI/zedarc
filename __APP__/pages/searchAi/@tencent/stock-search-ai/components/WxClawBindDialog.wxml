@@ -1,0 +1,55 @@
+<view bindtap="{{k}}" class="_div wx-claw-dialog data-v-8985aafd" wx:if="{{a}}">
+  <view class="_div wx-claw-dialog__mask data-v-8985aafd"></view>
+  <view catchtap="{{j}}" class="_div wx-claw-dialog__panel data-v-8985aafd">
+    <view class="_div wx-claw-dialog__header data-v-8985aafd">
+      <view class="_div wx-claw-dialog__title data-v-8985aafd">绑定到微信</view>
+      <view
+        bindtap="{{b}}"
+        class="_div wx-claw-dialog__close data-v-8985aafd"
+        type="button"
+      ></view>
+    </view>
+    <view class="_div wx-claw-dialog__desc data-v-8985aafd"
+      >绑定后可通过微信对话，随时随地向问元宝提问</view
+    >
+    <view class="_div wx-claw-dialog__guide data-v-8985aafd">{{c}}</view>
+    <view class="_div wx-claw-dialog__qrcode-wrap data-v-8985aafd">
+      <view class="_div wx-claw-dialog__loading data-v-8985aafd" wx:if="{{d}}">
+        <view class="_div wx-claw-dialog__spinner data-v-8985aafd"></view>
+      </view>
+      <view class="_div wx-claw-dialog__error data-v-8985aafd" wx:elif="{{e}}">
+        <view class="_div wx-claw-dialog__error-text data-v-8985aafd"
+          >加载失败</view
+        >
+        <view
+          bindtap="{{f}}"
+          class="_div wx-claw-dialog__refresh-btn data-v-8985aafd"
+          >重新获取</view
+        >
+      </view>
+      <block wx:else>
+        <image
+          alt="微信绑定二维码"
+          class="_img wx-claw-dialog__qrcode data-v-8985aafd"
+          src="{{g}}"
+        ></image>
+        <view
+          class="_div wx-claw-dialog__expired data-v-8985aafd"
+          wx:if="{{h}}"
+        >
+          <view class="_div wx-claw-dialog__expired-text data-v-8985aafd"
+            >二维码已过期</view
+          >
+          <view
+            bindtap="{{i}}"
+            class="_div wx-claw-dialog__refresh-btn data-v-8985aafd"
+            >点击刷新</view
+          >
+        </view>
+      </block>
+    </view>
+    <view class="_div wx-claw-dialog__tips data-v-8985aafd"
+      >为保障信息安全，请妥善保管该二维码</view
+    >
+  </view>
+</view>

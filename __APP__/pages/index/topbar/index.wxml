@@ -1,0 +1,44 @@
+<view class="_div top-bar-container data-v-1a86a5e7">
+  <view
+    class="_div safe-area-padding-top data-v-1a86a5e7"
+    style="{{'height:'+a}}"
+  ></view>
+  <view
+    class="{{['_div','data-v-1a86a5e7','big-title',d,e,f,g]}}"
+    wx:if="{{b}}"
+  >
+    <view class="_div title-content data-v-1a86a5e7">
+      <image
+        class="_img logo-icon data-v-1a86a5e7"
+        src="https://st.gtimg.com/design/81be415b3a98e6c1350a5e247e4224c6.png"
+      ></image>
+      <label bindlongpress="{{c}}" class="_span logo-text data-v-1a86a5e7"
+        >腾讯自选股</label
+      >
+    </view>
+  </view>
+  <view
+    class="{{['_div','search-bar-container','data-v-1a86a5e7',n]}}"
+    style="{{o}}"
+    wx:if="{{h}}"
+  >
+    <view catchtap="{{l}}" class="_div search-bar data-v-1a86a5e7">
+      <image
+        class="_img search-icon-new data-v-1a86a5e7"
+        src="https://st.gtimg.com/design/96ec55dbdac0cdd339acf96714cbcf5d.png"
+      ></image>
+      <view class="_div search-bar-placeholder data-v-1a86a5e7" style="{{k}}">
+        <block wx:if="{{i}}">{{j}}</block>
+        <block wx:else>搜索问元宝，投资问题有答案</block>
+      </view>
+    </view>
+    <view class="_div topbar-icon-wrapper data-v-1a86a5e7">
+      <view
+        catchtap="{{m}}"
+        class="_div topbar-icon-entry ai-entry data-v-1a86a5e7"
+      >
+        <view class="_div ai-entry-text data-v-1a86a5e7">问元宝</view>
+      </view>
+    </view>
+  </view>
+</view>

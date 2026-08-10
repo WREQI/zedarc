@@ -1,0 +1,123 @@
+@import "/app.wxss";
+.container .error-tip.data-v-09d06219,
+.container .submit-container.data-v-09d06219,
+.container > .tip-text.data-v-09d06219 {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.container .card-container .tip-text.data-v-09d06219 {
+  background-color: var(--fill-2);
+  line-height: 0.48rem;
+  margin: 0;
+  padding: 0.32rem 0.4rem;
+}
+.container .card-container .tip-text .icon-shield.data-v-09d06219 {
+  -webkit-box-flex: 0;
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_\ security.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  flex: 0 0 0.266667rem;
+  height: 0.333333rem;
+  margin-right: 0.133333rem;
+  position: relative;
+  top: 0.053333rem;
+}
+.container .support-banks.data-v-09d06219 {
+  font-family: PingFang SC;
+  font-size: 0.373333rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  margin-top: 0.373333rem;
+  text-align: center;
+}
+.container .support-banks .icon-italic-info.data-v-09d06219 {
+  font-size: 0.4rem;
+  margin-left: 0.106667rem;
+}
+.container .error-tip.data-v-09d06219,
+.container .tip-text.data-v-09d06219 {
+  margin-bottom: 0.266667rem;
+  margin-top: 0.4rem;
+}
+.container .import-card-container .import-card.data-v-09d06219 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  text-align: left;
+}
+.container .import-card-container .import-card .icon.data-v-09d06219 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/bankcard.svg);
+  background-repeat: no-repeat;
+  height: 0.4rem;
+  width: 0.506667rem;
+}
+.container .import-card-container .import-card .text.data-v-09d06219 {
+  font-size: 0.373333rem;
+  margin-left: 0.266667rem;
+}
+.container .form-container .sms-button.data-v-09d06219 {
+  line-height: 1.8;
+}
+.container .form-container .sms-button.data-v-09d06219:not([disabled]) {
+  background-color: var(--color-blue);
+  color: #fff;
+}
+.container .form-container.data-v-09d06219 .st-cell--title,
+.container .form-container.data-v-09d06219 .uni-input-wrapper,
+.container .import-card-container.data-v-09d06219 .st-cell--title,
+.container .import-card-container.data-v-09d06219 .uni-input-wrapper {
+  font-size: 0.4rem;
+}
+.container .form-container.data-v-09d06219 .st-cell,
+.container .import-card-container.data-v-09d06219 .st-cell {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.container .form-container .icon.data-v-09d06219,
+.container .import-card-container .icon.data-v-09d06219 {
+  color: var(--text-color-2);
+}
+.container .form-container .icon.icon-scan.data-v-09d06219,
+.container .import-card-container .icon.icon-scan.data-v-09d06219 {
+  font-size: 0.586667rem;
+}
+.container .form-container .icon.icon-arrow-right.data-v-09d06219,
+.container .import-card-container .icon.icon-arrow-right.data-v-09d06219 {
+  font-size: 0.533333rem;
+}
+.container .bank-orc-example .example-pic.data-v-09d06219 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/inuptcard_example.png);
+  background-size: 100%;
+  height: 3.2rem;
+  margin: 0.266667rem auto 0;
+  width: 4.44rem;
+}
+.container .bank-orc-example .example-desc.data-v-09d06219 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  justify-content: center;
+  line-height: 0.586667rem;
+  margin: 0.533333rem 0.266667rem;
+}
+.container .bank-orc-example .example-desc .dot.data-v-09d06219 {
+  border-radius: 50%;
+  color: var(--text-color-1);
+  display: inline-block;
+  height: 3px;
+  margin: 0 0.053333rem;
+  width: 3px;
+}
+.data-v-09d06219 .footprint {
+  padding-bottom: 1.653333rem;
+}

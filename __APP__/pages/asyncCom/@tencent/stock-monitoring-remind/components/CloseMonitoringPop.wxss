@@ -1,0 +1,89 @@
+.close-monitoring-pop-wrapper.data-v-f4b9004b {
+  --border-light-divider: #e9ebf0;
+  --fill-content-layer: #fff;
+  --color-heavygray: #262e40;
+  --color-blue: #3077ec;
+  --color-red: #e63535;
+}
+.close-monitoring-pop-wrapper.theme-black.data-v-f4b9004b {
+  --border-light-divider: #191e27;
+  --fill-content-layer: #12161f;
+  --color-heavygray: #f0f1f5;
+}
+.close-monitoring-pop-wrapper .pop-mask.data-v-f4b9004b {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+.border-top-1px.data-v-f4b9004b {
+  border-top: 0.013333333333333334rem solid var(--border-light-divider);
+}
+.border-right-1px.data-v-f4b9004b:after {
+  background-color: var(--border-light-divider);
+  bottom: 0;
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 0;
+  width: 0.013333333333333334rem;
+}
+.popup-container.data-v-f4b9004b {
+  background: var(--fill-content-layer, #fff);
+  border-radius: 0.21333333333333335rem;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8rem;
+  z-index: 1111;
+}
+.popup-container .txt.data-v-f4b9004b {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  padding: 0.8533333333333334rem 0.64rem;
+}
+.popup-container .btns.data-v-f4b9004b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4533333333333333rem;
+  height: 1.28rem;
+  position: relative;
+}
+.popup-container .btns .btn.data-v-f4b9004b {
+  border: none;
+  border-radius: 0 0 0.21333333333333335rem 0.21333333333333335rem;
+  font-weight: 500;
+  height: 100%;
+  line-height: 1.28rem;
+  text-align: center;
+  width: 100%;
+}
+.popup-container .btns .btn.ok.data-v-f4b9004b {
+  border-radius: 0 0 0.21333333333333335rem;
+  color: var(--color-blue);
+}
+.popup-container .btns .btn.ok.lite-style.data-v-f4b9004b {
+  color: var(--color-red);
+}
+.popup-container .btns .btn.cancel.data-v-f4b9004b {
+  border-radius: 0 0 0 0.21333333333333335rem;
+  color: var(--color-heavygray);
+}
+.align-center.data-v-f4b9004b {
+  text-align: center;
+}
+.layout.data-v-f4b9004b {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-f4b9004b {
+  align-items: center;
+  justify-content: center;
+}

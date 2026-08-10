@@ -1,0 +1,33 @@
+<view class="newstock-header data-v-2c2d47fb">
+  <view class="flex-end data-v-2c2d47fb">
+    <view class="right-top-contianer flex-around flex-vcenter data-v-2c2d47fb">
+      <label bindtap="{{a}}" class="item calendar fs-22 data-v-2c2d47fb"
+        >打新日历</label
+      >
+      <label class="divide-line data-v-2c2d47fb"></label>
+      <label bindtap="{{b}}" class="item help fs-22 data-v-2c2d47fb"
+        >打新攻略</label
+      >
+    </view>
+  </view>
+  <view class="tabs flex-1 data-v-2c2d47fb">
+    <view
+      bindtap="{{item.j}}"
+      class="{{['tab','data-v-2c2d47fb',item.h&&'checked',item.i&&'redpoint']}}"
+      wx:for="{{c}}"
+      wx:key="g"
+    >
+      <block wx:if="{{item.a}}">
+        <label class="data-v-2c2d47fb">{{item.b}}</label>
+        <bubble-tip
+          bind:__l="__l"
+          bindclose="{{item.d}}"
+          class="{{['bubble-tips','data-v-2c2d47fb',item.c]}}"
+          uI="{{item.e}}"
+          uP="{{item.f}}"
+          wx:if="{{item.f}}"
+        ></bubble-tip>
+      </block>
+    </view>
+  </view>
+</view>

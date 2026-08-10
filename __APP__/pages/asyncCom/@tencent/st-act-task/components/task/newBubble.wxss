@@ -1,0 +1,36 @@
+.coin-task-bubble.data-v-50d83708 {
+  position: fixed;
+  z-index: 101;
+}
+.coin-task-bubble-text.data-v-50d83708 {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  padding: 0.21333333333333335rem 0.32rem;
+  position: relative;
+}
+.coin-task-bubble-text .img-icon.data-v-50d83708 {
+  height: 0.5333333333333333rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.5333333333333333rem;
+}
+.coin-task-bubble-text .content.data-v-50d83708 {
+  display: inline-block;
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5333333333333333rem;
+  min-width: 1.3333333333333333rem;
+  white-space: nowrap;
+}
+.coin-task-bubble-arrow.data-v-50d83708 {
+  background-image: url(https://st.gtimg.com/design/bc7e807e32e653a1508c00caf1d7e787.svg);
+  background-size: 100%auto;
+  height: 0.18666666666666668rem;
+  position: relative;
+  width: 1.0133333333333334rem;
+}
+.coin-task-bubble-arrow.up.data-v-50d83708 {
+  transform: rotate(180deg);
+}

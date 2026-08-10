@@ -1,0 +1,50 @@
+.cont.data-v-5a06792e,
+.tab.data-v-5a06792e {
+  flex: 1;
+  flex-shrink: 0;
+  position: relative;
+}
+.cont .notify.data-v-5a06792e,
+.tab .notify.data-v-5a06792e {
+  background-image: url(https://st.gtimg.com/design/a54d96ed66c6a70ae58b35c606ab2f56.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem
+    0.21333333333333335rem 0;
+  color: #fff;
+  font-size: 0.13333333333333333rem;
+  height: 0.3466666666666667rem;
+  line-height: 0.3466666666666667rem;
+  position: absolute;
+  right: -0.72rem;
+  text-align: center;
+  top: 0.21333333333333335rem;
+  width: 0.6666666666666666rem;
+}
+.tab.data-v-5a06792e {
+  align-items: center;
+  color: #353535;
+  display: -webkit-flex;
+  display: flex;
+  flex: none;
+  font-size: 0.4rem;
+  margin-right: 0.8533333333333334rem;
+  padding: 0.06666666666666667rem 0 0.21333333333333335rem;
+}
+.tab.selected.data-v-5a06792e {
+  color: #262e40;
+  font-weight: 600;
+  position: relative;
+}
+.tab.selected.data-v-5a06792e:after {
+  background-color: #3077ec;
+  border-radius: 0.05333333333333334rem;
+  bottom: 0.05333333333333334rem;
+  box-sizing: border-box;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}

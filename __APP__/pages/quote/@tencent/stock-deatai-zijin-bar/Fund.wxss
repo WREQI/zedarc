@@ -1,0 +1,171 @@
+.message-bar.data-v-34727702 {
+  background: var(--fill-2);
+  box-sizing: border-box;
+  color: var(--color-heavygray);
+  height: 0.9333333333333333rem;
+  justify-content: space-between;
+  margin-bottom: 0.16rem;
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+  position: relative;
+  width: 100%;
+}
+.message-bar .onlyone.data-v-34727702,
+.message-bar.data-v-34727702 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+}
+.message-bar .onlyone.data-v-34727702 {
+  color: var(--color-lightgray-1);
+}
+.message-bar .onlyone .right.data-v-34727702 {
+  background-color: var(--color-icon);
+  height: 0.26666666666666666rem;
+  margin-left: 0.10666666666666667rem;
+  mask-image: url(https://st.gtimg.com/design/cd41628924039703991105993f46fb55.svg);
+  mask-size: 100% 100%;
+  width: 0.26666666666666666rem;
+}
+.message-bar .manyone.data-v-34727702 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.message-bar .manyone .right.data-v-34727702 {
+  background-color: var(--color-icon);
+  height: 0.26666666666666666rem;
+  mask-image: url(https://st.gtimg.com/design/cd41628924039703991105993f46fb55.svg);
+  mask-size: 100% 100%;
+  width: 0.26666666666666666rem;
+}
+.message-bar .manyone .split.data-v-34727702 {
+  background: var(--border-heavy);
+  display: inline-block;
+  height: 0.5066666666666667rem;
+  margin: 0 0.32rem;
+  width: 0.013333333333333334rem;
+}
+.message-bar .manyone .message-count.data-v-34727702 {
+  align-items: center;
+  background: var(--color-card3);
+  border-radius: 50%;
+  color: var(--color-blue);
+  display: inline-block;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  font-weight: 500;
+  height: 0.4266666666666667rem;
+  justify-content: center;
+  width: 0.4266666666666667rem;
+}
+.message-bar .message.data-v-34727702 {
+  box-sizing: border-box;
+  flex: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding-right: 0.24rem;
+  position: relative;
+}
+.message-bar .carousel-outer.data-v-34727702,
+.message-bar .oneline.data-v-34727702 {
+  height: 0.8533333333333334rem;
+  overflow: hidden;
+}
+.message-item.data-v-34727702 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.48rem;
+  margin-bottom: 0.26666666666666666rem;
+  margin-top: 0.21333333333333335rem;
+  width: 100%;
+}
+.message-item .tip.data-v-34727702 {
+  height: 0.5333333333333333rem;
+  width: 0.5333333333333333rem;
+}
+.message-item .content.data-v-34727702 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  height: 0.48rem;
+  justify-content: flex-start;
+  overflow: hidden;
+  padding-left: 0.16rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.message-item .content .split.data-v-34727702 {
+  background: var(--color-heavygray);
+  height: 0.32rem;
+  margin: 0 0.16rem;
+  width: 0.02666666666666667rem;
+}
+.message-item .content .count.data-v-34727702 {
+  color: var(--color-heavygray);
+  font-size: 0.32rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.message-item .content .count.color-rise.data-v-34727702 {
+  color: var(--color-rise);
+}
+.message-item .content .count.color-drop.data-v-34727702 {
+  color: var(--color-drop);
+}
+.message-item .content .count.color-ping.data-v-34727702 {
+  color: var(--color-ping);
+}
+.carousel-item.data-v-34727702 {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: carousel-34727702;
+  animation-timing-function: ease;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+@-webkit-keyframes carousel-34727702 {
+  0% {
+    top: 33px;
+  }
+  8% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+  }
+  92% {
+    top: 0;
+  }
+  to {
+    top: -35px;
+  }
+}
+@keyframes carousel-34727702 {
+  0% {
+    top: 33px;
+  }
+  8% {
+    top: 0;
+  }
+  50% {
+    top: 0;
+  }
+  92% {
+    top: 0;
+  }
+  to {
+    top: -35px;
+  }
+}
+.message-item.data-v-34727702:last-child {
+  margin-bottom: 0.21333333333333335rem;
+}

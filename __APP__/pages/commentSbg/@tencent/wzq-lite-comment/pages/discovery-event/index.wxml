@@ -1,0 +1,16 @@
+<view class="_div">
+  <com-list
+    bind:__l="__l"
+    bindonHandleTapList="{{b}}"
+    bindreloadData="{{a}}"
+    uI="14dc9d62-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></com-list>
+  <load-more
+    bind:__l="__l"
+    uI="14dc9d62-1"
+    uP="{{e}}"
+    wx:if="{{d}}"
+  ></load-more>
+</view>

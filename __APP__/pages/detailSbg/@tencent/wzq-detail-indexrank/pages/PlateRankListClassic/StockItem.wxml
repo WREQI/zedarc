@@ -1,0 +1,63 @@
+<view
+  catchtap="{{D}}"
+  class="{{[B&&'skin-black','_div','stock-item','data-v-4c34bef9']}}"
+  key="{{C}}"
+>
+  <view class="_div stock-name data-v-4c34bef9" wx:if="{{a}}">
+    <view class="_div data-v-4c34bef9">{{b}}</view>
+    <view class="{{['_div','data-v-4c34bef9','stock-code',i]}}" wx:if="{{c}}">
+      <market-icon
+        bind:__l="__l"
+        class="data-v-4c34bef9"
+        uI="4c34bef9-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></market-icon>
+      <view class="_div data-v-4c34bef9">{{e}}</view>
+      <label class="{{['_span','data-v-4c34bef9','desc-tag',h]}}" wx:if="{{f}}"
+        >{{g}}</label
+      >
+    </view>
+  </view>
+  <block wx:if="{{j}}">
+    <view class="_div stock-price tr data-v-4c34bef9">
+      <label class="_span data-v-4c34bef9">{{k}}</label>
+    </view>
+    <view class="{{['_div','stock-zde','tr','data-v-4c34bef9',m]}}">
+      <label class="_span data-v-4c34bef9">{{l}}</label>
+    </view>
+    <view class="{{['_div','stock-zdf','w200','tr','data-v-4c34bef9',o]}}">
+      <label class="_span data-v-4c34bef9">{{n}}</label>
+    </view>
+    <view class="{{['_div','stock-zde','tr','data-v-4c34bef9',q]}}">
+      <label class="_span data-v-4c34bef9">{{p}}</label>
+    </view>
+    <block wx:if="{{r}}">
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{s}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{t}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{v}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{w}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{x}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{y}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{z}}</label>
+      </view>
+      <view class="_div stock-ext tr data-v-4c34bef9">
+        <label class="_span data-v-4c34bef9">{{A}}</label>
+      </view>
+      <view class="_div tr place-hold data-v-4c34bef9"></view>
+    </block>
+  </block>
+</view>

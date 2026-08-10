@@ -1,0 +1,104 @@
+<view class="_div hq-rzrq-conatiner data-v-9dc3af60">
+  <view class="_div hq-rzrq-chart-content data-v-9dc3af60">
+    <view class="_div hq-rzrq-sub-title data-v-9dc3af60" wx:if="{{a}}"
+      >{{b}}</view
+    >
+    <view class="_div chart-desc data-v-9dc3af60" wx:if="{{c}}">
+      <view class="_div desc-item data-v-9dc3af60">融资融券差额 ({{d}}元)</view>
+      <view class="_div data-v-9dc3af60"></view>
+    </view>
+    <view class="_div chart-desc data-v-9dc3af60" wx:else>
+      <view class="_div desc-item data-v-9dc3af60">融资 ({{e}}元)</view>
+      <view class="_div desc-item data-v-9dc3af60">融券 ({{f}}元)</view>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{l}}"
+      catchtouchmove="{{m}}"
+      class="data-v-9dc3af60"
+      uI="9dc3af60-0"
+      uP="{{n}}"
+      uS="{{['d']}}"
+      wx:if="{{g}}"
+    >
+      <view class="{{['_div','data-v-9dc3af60','f2-tooltip',k]}}" wx:if="{{h}}">
+        <view class="_div f2-tooltip-inner data-v-9dc3af60">
+          <view class="_div f2-tooltip-title data-v-9dc3af60">{{i}}</view>
+          <view
+            class="_div f2-tooltip-value data-v-9dc3af60"
+            wx:for="{{j}}"
+            wx:key="c"
+          >
+            <label class="_span f2-tooltip-subtitle data-v-9dc3af60"
+              >{{item.a}}</label
+            >
+            <label class="{{['_span','data-v-9dc3af60','f2-tooltip-after']}}"
+              >{{item.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </f2>
+    <view class="_div funds-trend-chart-labels data-v-9dc3af60">
+      <view
+        class="{{['_div','label-item-group','data-v-9dc3af60',o&&'disable']}}"
+      >
+        <view class="_div label-item data-v-9dc3af60">
+          <view class="_div label-item-line line-blue data-v-9dc3af60"></view>
+          <view class="_div label-item-text data-v-9dc3af60">融资余额</view>
+        </view>
+        <view class="_div label-item data-v-9dc3af60">
+          <view class="_div label-item-line line-orange data-v-9dc3af60"></view>
+          <view class="_div label-item-text data-v-9dc3af60">融券余额</view>
+        </view>
+      </view>
+      <view
+        bindtap="{{r}}"
+        class="_div label-item check-text data-v-9dc3af60"
+        id="margin-radio"
+      >
+        <view class="{{['_div','label-item-radio','data-v-9dc3af60',q]}}">
+          <view class="_div checked-point data-v-9dc3af60" wx:if="{{p}}"></view>
+        </view>
+        <view class="_div label-item-text data-v-9dc3af60"
+          >仅看融资融券差额</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div hq-rzrq-list data-v-9dc3af60" wx:if="{{s}}">
+    <view class="_div hq-rzrq-list-title data-v-9dc3af60">
+      <view class="_div hq-rzrq-list-col col-1 data-v-9dc3af60">交易日期</view>
+      <view class="_div hq-rzrq-list-col col-2 data-v-9dc3af60">融资买入</view>
+      <view class="_div hq-rzrq-list-col col-3 data-v-9dc3af60"
+        >融资净买入</view
+      >
+      <view class="_div hq-rzrq-list-col col-4 data-v-9dc3af60"
+        >融资融券余额</view
+      >
+    </view>
+    <view class="_div hq-rzrq-list-content data-v-9dc3af60">
+      <view
+        class="_div hq-rzrq-list-row data-v-9dc3af60"
+        wx:for="{{t}}"
+        wx:key="e"
+      >
+        <view class="_div hq-rzrq-list-col col-1 data-v-9dc3af60"
+          >{{item.a}}</view
+        >
+        <view class="_div hq-rzrq-list-col col-2 data-v-9dc3af60"
+          >{{item.b}}</view
+        >
+        <view class="_div hq-rzrq-list-col col-3 data-v-9dc3af60"
+          >{{item.c}}</view
+        >
+        <view class="_div hq-rzrq-list-col col-4 data-v-9dc3af60"
+          >{{item.d}}</view
+        >
+      </view>
+    </view>
+    <view class="_div rzrq-no-data data-v-9dc3af60" wx:if="{{v}}"
+      >没有更多数据了</view
+    >
+  </view>
+</view>

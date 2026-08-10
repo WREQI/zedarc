@@ -1,0 +1,31 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="722a02fe-0"
+  uP="{{e}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <apply-wrap bind:__l="__l" uI="722a02fe-1,722a02fe-0" uS="{{['d']}}">
+    <apply-status
+      bind:__l="__l"
+      uI="722a02fe-2,722a02fe-1"
+      wx:if="{{b}}"
+    ></apply-status>
+    <old-progress
+      bind:__l="__l"
+      uI="722a02fe-3,722a02fe-1"
+      wx:else
+    ></old-progress>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="722a02fe-4,722a02fe-1"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></mp-dialog>
+  </apply-wrap>
+</global-wrap>

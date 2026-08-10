@@ -1,0 +1,90 @@
+<view
+  bindtap="{{x}}"
+  catchtouchmove="{{w}}"
+  class="{{['_div','mask-wrapper','data-v-7c644004',s&&'skin-dark']}}"
+  hidden="{{!t}}"
+  style="{{'opacity:'+v}}"
+>
+  <view
+    catchtap="{{r}}"
+    class="{{['_div','popup-wrapper','data-v-7c644004',o&&'popup-wrapper-landscape']}}"
+    id="popup"
+    ref="popup"
+    style="{{'top:'+p+';'+'left:'+q}}"
+  >
+    <image
+      class="{{['_img','triangle-up','data-v-7c644004',a]}}"
+      hidden="{{!c}}"
+      src="{{b}}"
+    ></image>
+    <view class="_div option-wrapper-container data-v-7c644004">
+      <view
+        class="{{['_div','data-v-7c644004','popup-item-title',f]}}"
+        wx:if="{{d}}"
+      >
+        <label class="_span data-v-7c644004">指标切换</label>
+        <image
+          catchtap="{{e}}"
+          class="_img icon-tip data-v-7c644004"
+          src="https://st.gtimg.com/image/kline/tip.png"
+        ></image>
+      </view>
+      <scroll-view
+        class="{{['option-wrapper','data-v-7c644004',j]}}"
+        ref="popupScroll"
+        scrollY="{{true}}"
+        style="{{'max-height:'+k}}"
+      >
+        <view class="{{['_div','data-v-7c644004',h,i]}}">
+          <view
+            bindtap="{{item.m}}"
+            class="{{['_div','item','data-v-7c644004',item.j&&'item-selected',item.k&&'no-border']}}"
+            wx:for="{{g}}"
+            wx:key="l"
+          >
+            <view class="_div macd-content data-v-7c644004" wx:if="{{item.a}}">
+              <block wx:if="{{item.b}}">
+                <view class="_div macd-left data-v-7c644004">MACD</view>
+                <view class="_div macd-line data-v-7c644004"></view>
+                <view
+                  catchtap="{{item.g}}"
+                  class="_div macd-right data-v-7c644004"
+                >
+                  <view
+                    catchtap="{{item.e}}"
+                    class="{{['_div','data-v-7c644004','macd-check-box',item.d&&'check']}}"
+                  >
+                    <image
+                      class="_img icon data-v-7c644004"
+                      hidden="{{!item.c}}"
+                      src="https://st.gtimg.com/design/e75c70bf7e14b9366fa268d858724904.png"
+                    ></image>
+                  </view>
+                  <view
+                    catchtap="{{item.f}}"
+                    class="_div macd-sub-text data-v-7c644004"
+                    >形态</view
+                  >
+                </view>
+              </block>
+              <block wx:else>MACD</block>
+            </view>
+            <view
+              class="_div rally-content data-v-7c644004"
+              wx:elif="{{item.h}}"
+            >
+              <view class="_div data-v-7c644004">反弹指数</view>
+              <view class="_div sub-text data-v-7c644004">（择时秘技）</view>
+            </view>
+            <block wx:else>{{item.i}}</block>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <image
+      class="{{['_img','triangle-down','data-v-7c644004',l]}}"
+      hidden="{{!n}}"
+      src="{{m}}"
+    ></image>
+  </view>
+</view>

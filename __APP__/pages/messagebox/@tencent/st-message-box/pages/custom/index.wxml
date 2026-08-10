@@ -1,0 +1,38 @@
+<view class="_div message-custom-wrapper data-v-02fc5416">
+  <message-empty
+    bind:__l="__l"
+    class="data-v-02fc5416"
+    uI="02fc5416-0"
+    wx:if="{{a}}"
+  ></message-empty>
+  <block wx:else>
+    <view class="_div data-v-02fc5416" wx:for="{{b}}" wx:key="d">
+      <custom-entry-item
+        bind:__l="__l"
+        bindclickCustomEntry="{{item.a}}"
+        class="data-v-02fc5416"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:if="{{item.c}}"
+      ></custom-entry-item>
+    </view>
+    <image
+      alt=""
+      class="_img logo-icon data-v-02fc5416"
+      src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+      wx:if="{{c}}"
+    ></image>
+    <image
+      alt=""
+      class="_img logo-icon pro data-v-02fc5416"
+      src="https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png"
+      wx:elif="{{d}}"
+    ></image>
+    <image
+      alt=""
+      class="_img logo-icon pro data-v-02fc5416"
+      src="https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png"
+      wx:else
+    ></image>
+  </block>
+</view>

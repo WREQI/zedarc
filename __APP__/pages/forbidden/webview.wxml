@@ -1,0 +1,89 @@
+<page-meta class="data-v-a2d4b581" rootFontSize="{{a}}"></page-meta>
+<view class="_div data-v-a2d4b581">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a2d4b581"
+    uI="a2d4b581-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a2d4b581"
+    uI="a2d4b581-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div forbidden-container data-v-a2d4b581" wx:if="{{c}}">
+    <view class="_div content data-v-a2d4b581">
+      <view class="_div instruction-text data-v-a2d4b581"
+        >抱歉，系统检测到您访问的链接未能正常打开，为了不耽误正常使用，您可参照以下操作步骤进行访问。</view
+      >
+      <view class="_div divider data-v-a2d4b581"></view>
+      <view class="_div steps-container data-v-a2d4b581">
+        <view class="_div step-item data-v-a2d4b581">
+          <view class="_div step-header data-v-a2d4b581">
+            <view class="_div step-number data-v-a2d4b581">
+              <label class="_span data-v-a2d4b581">1</label>
+            </view>
+            <view class="_div step-text data-v-a2d4b581"
+              >点击页面底部的 "去客服" 按钮</view
+            >
+          </view>
+        </view>
+        <view class="_div step-item data-v-a2d4b581">
+          <view class="_div step-header data-v-a2d4b581">
+            <view class="_div step-number data-v-a2d4b581">
+              <label class="_span data-v-a2d4b581">2</label>
+            </view>
+            <view class="_div step-text data-v-a2d4b581"
+              >进入客服对话页面，点击右下角引导内容</view
+            >
+          </view>
+          <image
+            alt="客服对话示例"
+            class="_img step-img chat-img data-v-a2d4b581"
+            src="https://st.gtimg.com/design/e7c8691ba25c898603cb492d9324bda4.png"
+          ></image>
+        </view>
+        <view class="_div step-item data-v-a2d4b581">
+          <view class="_div step-header data-v-a2d4b581">
+            <view class="_div step-number data-v-a2d4b581">
+              <label class="_span data-v-a2d4b581">3</label>
+            </view>
+            <view class="_div step-text data-v-a2d4b581"
+              >点击客服回复的链接，即可返回原页面继续操作</view
+            >
+          </view>
+          <image
+            alt="链接示例"
+            class="_img step-img link-img data-v-a2d4b581"
+            src="https://st.gtimg.com/design/88a94959cedcd1f31ce7099e5b925b33.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div bottom-button-container data-v-a2d4b581">
+      <button class="btn-customer-service data-v-a2d4b581">去客服</button>
+      <button
+        bindtap="{{e}}"
+        class="permission-openchat-button data-v-a2d4b581"
+        openType="contact"
+        sendMessageImg="https://st.gtimg.com/design/897e739bdb5e29c61ed0047c8816fad3.png"
+        sendMessagePath="{{d}}"
+        sendMessageTitle="腾讯微证券"
+        showMessageCard="true"
+      ></button>
+    </view>
+  </view>
+  <view class="_div forbidden-container data-v-a2d4b581" wx:elif="{{f}}">
+    <view class="_div default-page data-v-a2d4b581">
+      <image
+        alt=""
+        class="_img default-page-img data-v-a2d4b581"
+        src="https://st.gtimg.com/design/e391e9f72500e2077233ae467af6b6c7.svg"
+      ></image>
+      <view class="_div default-page-text data-v-a2d4b581"
+        >券商服务繁忙，请稍后再试</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<view class="_div plate-list-wrapper data-v-a67b56d5" wx:if="{{a}}">
+  <view class="_div plate-header data-v-a67b56d5">
+    <view class="_div name data-v-a67b56d5">{{b}}</view>
+    <view class="_div price-container data-v-a67b56d5">
+      <view class="_div title data-v-a67b56d5">当日涨跌</view>
+      <view class="{{['_div','data-v-a67b56d5','zdf',d]}}">{{c}}</view>
+    </view>
+  </view>
+  <view class="_div sep-line data-v-a67b56d5"></view>
+  <view class="_div plate-stocks-header data-v-a67b56d5">
+    <view class="_div plate-name data-v-a67b56d5">股票</view>
+    <view class="_div sortable-captions data-v-a67b56d5">
+      <view class="_div sortable-row data-v-a67b56d5">
+        <view class="_div row-th flex-1 data-v-a67b56d5">最新价</view>
+        <view
+          class="_div row-th flex-1 column2-last add-margin-left data-v-a67b56d5"
+          >涨跌幅</view
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{item.i}}"
+    class="_div plate-body data-v-a67b56d5"
+    wx:for="{{e}}"
+    wx:key="h"
+  >
+    <view class="_div plate-name data-v-a67b56d5">
+      <image
+        class="_img icon data-v-a67b56d5"
+        id="iconRef"
+        ref="iconRef"
+        src="{{item.b}}"
+        wx:if="{{item.a}}"
+      ></image>
+      <view class="_div name data-v-a67b56d5">{{item.c}}</view>
+    </view>
+    <view class="_div sortable-captions data-v-a67b56d5">
+      <view class="_div sortable-row data-v-a67b56d5">
+        <view class="{{['_div','data-v-a67b56d5','row-th','flex-1',item.e]}}"
+          >{{item.d}}</view
+        >
+        <view
+          class="{{['_div','data-v-a67b56d5','row-th','flex-1','column2-last','add-margin-left',item.g]}}"
+          >{{item.f}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view catchtap="{{g}}" class="_div plate-footer data-v-a67b56d5">
+    <view class="_div data-v-a67b56d5">{{f}}</view>
+    <view class="_div arrow data-v-a67b56d5"></view>
+  </view>
+</view>

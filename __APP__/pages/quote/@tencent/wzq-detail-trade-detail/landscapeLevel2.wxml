@@ -1,0 +1,36 @@
+<view class="_div wrapper data-v-c8b99ca4">
+  <view class="{{['_div','data-v-c8b99ca4','wraper-inner',g]}}">
+    <handicap
+      bind:__l="__l"
+      class="data-v-c8b99ca4"
+      data-c-h="{{!a}}"
+      uI="c8b99ca4-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></handicap>
+    <trade-list-hk-lv2
+      bind:__l="__l"
+      class="data-v-c8b99ca4"
+      uI="c8b99ca4-1"
+      uP="{{d}}"
+      wx:if="{{c}}"
+    ></trade-list-hk-lv2>
+    <trade-list
+      bind:__l="__l"
+      class="data-v-c8b99ca4"
+      uI="c8b99ca4-2"
+      uP="{{f}}"
+      wx:if="{{e}}"
+    ></trade-list>
+  </view>
+  <view class="_div tab-bar mins-tab-bar data-v-c8b99ca4" wx:if="{{h}}">
+    <view
+      catchtap="{{tab.d}}"
+      class="{{['_div','tab-item','data-v-c8b99ca4',tab.c&&'selected']}}"
+      wx:for="{{i}}"
+      wx:for-item="tab"
+      wx:key="b"
+      >{{tab.a}}</view
+    >
+  </view>
+</view>

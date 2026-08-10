@@ -1,0 +1,79 @@
+<view class="_div top-bar-container data-v-409f5b71">
+  <view
+    class="_div safe-area-padding-top data-v-409f5b71"
+    style="{{'height:'+a}}"
+  ></view>
+  <view class="{{['_div','data-v-409f5b71','big-title',d,e,f,g]}}">
+    <view class="_div title-content data-v-409f5b71">
+      <image
+        class="_img logo-icon data-v-409f5b71"
+        src="https://st.gtimg.com/design/81be415b3a98e6c1350a5e247e4224c6.png"
+      ></image>
+      <label bindlongpress="{{b}}" class="_span logo-text data-v-409f5b71"
+        >腾讯自选股</label
+      >
+      <label class="_span dev-version data-v-409f5b71" wx:if="{{c}}"
+        >Vue3</label
+      >
+    </view>
+  </view>
+  <view
+    class="_div search-bar-container data-v-409f5b71"
+    style="{{n}}"
+    wx:if="{{h}}"
+  >
+    <view catchtap="{{i}}" class="_div search-bar data-v-409f5b71">
+      <image
+        class="_img search-icon-new data-v-409f5b71"
+        src="https://st.gtimg.com/design/96ec55dbdac0cdd339acf96714cbcf5d.png"
+      ></image
+      >搜索股票<label class="_span line data-v-409f5b71">/</label>板块<label
+        class="_span line data-v-409f5b71"
+        >/</label
+      >资讯<label class="_span line data-v-409f5b71">/</label>问元宝</view
+    >
+    <view class="_div topbar-icon-wrapper data-v-409f5b71">
+      <ai-entry
+        bind:__l="__l"
+        class="topbar-icon-entry ai-entry data-v-409f5b71"
+        uI="409f5b71-0"
+        uP="{{k}}"
+        wx:if="{{j}}"
+      ></ai-entry>
+      <view
+        catchtap="{{m}}"
+        class="_div topbar-icon-entry profile-entry data-v-409f5b71"
+      >
+        <qianji-red-point-placeholder
+          bind:__l="__l"
+          class="profile-redpoint data-v-409f5b71"
+          uI="409f5b71-1"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></qianji-red-point-placeholder>
+        <image
+          alt=""
+          class="_img profile-img data-v-409f5b71"
+          src="https://st.gtimg.com/design/34a7180e57d0b468c46316065472bc01.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+  <view
+    class="_div add-my-xcx data-v-409f5b71"
+    style="{{'top:'+p}}"
+    wx:if="{{o}}"
+  ></view>
+  <view
+    class="delivery-guide-pulldown-access data-v-409f5b71"
+    style="{{'top:'+s}}"
+  >
+    <guide-pull-down-access
+      bind:__l="__l"
+      class="data-v-409f5b71"
+      uI="409f5b71-2"
+      uP="{{r}}"
+      wx:if="{{q}}"
+    ></guide-pull-down-access>
+  </view>
+</view>

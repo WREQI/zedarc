@@ -1,0 +1,190 @@
+<view class="_div data-v-a7c0b025" ref="deliverynewstock">
+  <view
+    class="{{['_div','data-v-a7c0b025','delivery-global-curtain-adv',U,V]}}"
+    wx:if="{{a}}"
+  >
+    <view
+      catchtap="{{T}}"
+      class="{{['_div','pop-adv','adv-normal','data-v-a7c0b025',S&&'adv-popup-visible']}}"
+    >
+      <view catchtap="{{R}}" class="_div ipo pop-new-wrapper data-v-a7c0b025">
+        <view class="_div pop-new-img-wrap data-v-a7c0b025">
+          <view class="_div pop-new-title data-v-a7c0b025">{{b}}</view>
+        </view>
+        <view class="_div pop-new-list data-v-a7c0b025" wx:if="{{c}}">
+          <block wx:if="{{d}}">
+            <view class="_div profit-rate data-v-a7c0b025"
+              >过去3月打新股<label class="red-desc data-v-a7c0b025"
+                >平均每签赚{{e}}元</label
+              >
+            </view>
+            <view class="_div list-title data-v-a7c0b025">
+              <label class="title-name data-v-a7c0b025">股票名称</label>
+              <label class="title-price data-v-a7c0b025">发行价</label>
+              <label class="title-rate data-v-a7c0b025">发行市盈率</label>
+            </view>
+            <view
+              class="{{['_div','data-v-a7c0b025','pop-new-list-item',item.g]}}"
+              wx:for="{{f}}"
+              wx:key="h"
+            >
+              <view class="_div name-code data-v-a7c0b025">
+                <view class="_div item-name ellipsis-text data-v-a7c0b025"
+                  >{{item.a}}</view
+                >
+                <view class="_div item-detail data-v-a7c0b025">
+                  <market-icon
+                    bind:__l="__l"
+                    class="m-icon data-v-a7c0b025"
+                    uI="{{item.b}}"
+                    uP="{{item.c}}"
+                    wx:if="{{item.c}}"
+                  ></market-icon>
+                  <view class="_div item-code data-v-a7c0b025">{{item.d}}</view>
+                </view>
+              </view>
+              <view class="_div item-num item-price data-v-a7c0b025"
+                >{{item.e}}</view
+              >
+              <view class="_div item-num item-rate data-v-a7c0b025"
+                >{{item.f}}</view
+              >
+            </view>
+            <view class="_div gap data-v-a7c0b025" wx:if="{{g}}"></view>
+          </block>
+          <block wx:if="{{h}}">
+            <view
+              class="{{['_div','profit-rate','data-v-a7c0b025',j&&'profit-rate-bond']}}"
+              >过去3月打新债<label class="red-desc data-v-a7c0b025"
+                >平均每签赚{{i}}元</label
+              >
+            </view>
+            <view class="_div list-title data-v-a7c0b025">
+              <label class="title-name data-v-a7c0b025">债券名称</label>
+              <label class="title-price title-price-bond data-v-a7c0b025"
+                >发行价</label
+              >
+              <label class="title-rate data-v-a7c0b025">参考中签收益率</label>
+            </view>
+            <view
+              class="{{['_div','data-v-a7c0b025','pop-new-list-item',item.g]}}"
+              wx:for="{{k}}"
+              wx:key="h"
+            >
+              <view class="_div name-code data-v-a7c0b025">
+                <view class="_div item-name ellipsis-text data-v-a7c0b025"
+                  >{{item.a}}</view
+                >
+                <view class="_div item-detail data-v-a7c0b025">
+                  <market-icon
+                    bind:__l="__l"
+                    class="m-icon data-v-a7c0b025"
+                    uI="{{item.b}}"
+                    uP="{{item.c}}"
+                    wx:if="{{item.c}}"
+                  ></market-icon>
+                  <view class="_div item-code data-v-a7c0b025">{{item.d}}</view>
+                </view>
+              </view>
+              <view class="_div item-num item-price data-v-a7c0b025"
+                >{{item.e}}</view
+              >
+              <view class="_div item-num item-rate data-v-a7c0b025"
+                >{{item.f}}</view
+              >
+            </view>
+          </block>
+          <view
+            class="_div scroll-mask-placeholder data-v-a7c0b025"
+            wx:if="{{l}}"
+          ></view>
+          <view class="_div scroll-mask data-v-a7c0b025" wx:if="{{m}}"></view>
+        </view>
+        <view class="_div gap data-v-a7c0b025" wx:if="{{n}}"></view>
+        <view class="_div pop-profit-rate data-v-a7c0b025" wx:if="{{o}}">
+          <view class="_div left-stock data-v-a7c0b025">
+            <view class="_div desc data-v-a7c0b025">近3月打主板新股</view>
+            <view class="_div rate-desc data-v-a7c0b025" wx:if="{{p}}"
+              >盈利概率</view
+            >
+            <view class="{{['_div','data-v-a7c0b025','rate-num',r]}}"
+              >{{q}}%</view
+            >
+            <view
+              class="_div rate-desc rate-desc-top data-v-a7c0b025"
+              wx:if="{{s}}"
+              >盈利概率</view
+            >
+            <view class="_div rate-desc data-v-a7c0b025" wx:if="{{t}}"
+              >平均每签赚</view
+            >
+            <view class="{{['_div','data-v-a7c0b025','rate-num',w]}}"
+              >{{v}}元</view
+            >
+            <view
+              class="_div rate-desc rate-desc-bottom data-v-a7c0b025"
+              wx:if="{{x}}"
+              >平均每签赚</view
+            >
+          </view>
+          <view class="_div sep-line data-v-a7c0b025"></view>
+          <view class="_div right-bond data-v-a7c0b025">
+            <view class="_div desc data-v-a7c0b025">近3月打新债</view>
+            <view class="_div rate-desc data-v-a7c0b025" wx:if="{{y}}"
+              >盈利概率</view
+            >
+            <view class="{{['_div','data-v-a7c0b025','rate-num',A]}}"
+              >{{z}}%</view
+            >
+            <view
+              class="_div rate-desc rate-desc-top data-v-a7c0b025"
+              wx:if="{{B}}"
+              >盈利概率</view
+            >
+            <view class="_div rate-desc data-v-a7c0b025" wx:if="{{C}}"
+              >平均每签赚</view
+            >
+            <view class="{{['_div','data-v-a7c0b025','rate-num',E]}}"
+              >{{D}}元</view
+            >
+            <view
+              class="_div rate-desc rate-desc-bottom data-v-a7c0b025"
+              wx:if="{{F}}"
+              >平均每签赚</view
+            >
+          </view>
+        </view>
+        <view
+          class="{{['_div','pop-new-btn-wrap','data-v-a7c0b025',L&&'btn-has-new']}}"
+        >
+          <button
+            catchtap="{{I}}"
+            class="{{['pop-new-btn','data-v-a7c0b025',H&&'has-share']}}"
+          >
+            {{G}}
+          </button>
+          <view
+            catchtap="{{K}}"
+            class="_div pop-share-tips data-v-a7c0b025"
+            wx:if="{{J}}"
+            >分享给好友</view
+          >
+        </view>
+        <view
+          catchtap="{{N}}"
+          class="_div adv-close-bg data-v-a7c0b025"
+          wx:if="{{M}}"
+        ></view>
+        <uninterest
+          bind:__l="__l"
+          bindmore="{{Q}}"
+          bindnot="{{P}}"
+          class="data-v-a7c0b025"
+          uI="a7c0b025-2"
+          wx:if="{{O}}"
+        ></uninterest>
+      </view>
+    </view>
+    <view class="_div pop-adv-mask data-v-a7c0b025"></view>
+  </view>
+</view>

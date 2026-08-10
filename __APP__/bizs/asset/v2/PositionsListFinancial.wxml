@@ -1,0 +1,81 @@
+<view
+  class="{{['stock-list-container','stock-list--financial',n&&'border--bottom-c1']}}"
+  hidden="{{!m}}"
+>
+  <scroll-view bindscroll="{{k}}" class="scroll-wrap" scrollX="true">
+    <view class="stock-list-content">
+      <list-header
+        bind:__l="__l"
+        bindexplain="{{b}}"
+        bindsort="{{a}}"
+        uI="41cc1364-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></list-header>
+      <view class="stock-list-body">
+        <view
+          bindtap="{{item.K}}"
+          class="{{['stock-list-item',item.I]}}"
+          style="{{item.J}}"
+          wx:for="{{d}}"
+          wx:key="H"
+        >
+          <view
+            class="{{['long-press-base','long-press-placeholder',item.a&&'long-press-placeholder--active']}}"
+          ></view>
+          <view
+            bindtouchcancel="{{item.d}}"
+            bindtouchend="{{item.e}}"
+            bindtouchmove="{{item.c}}"
+            bindtouchstart="{{item.b}}"
+            class="long-press-base long-press-mask"
+          ></view>
+          <view class="{{['mock-border-bottom',item.f]}}"></view>
+          <view catchtap="{{item.t}}" class="col-item col-a cell">
+            <view
+              class="{{['long-press-base','long-press-base-a','long-press-placeholder',item.g&&'long-press-placeholder--active']}}"
+            ></view>
+            <view
+              bindtouchcancel="{{item.j}}"
+              bindtouchend="{{item.k}}"
+              bindtouchmove="{{item.i}}"
+              bindtouchstart="{{item.h}}"
+              class="long-press-base long-press-base-a long-press-mask"
+            ></view>
+            <view class="{{['title',item.m,item.n,item.o]}}">{{item.l}}</view>
+            <view class="subtitle" wx:if="{{e}}">{{item.p}}</view>
+            <position-drawer
+              bind:__l="__l"
+              uI="{{item.r}}"
+              uP="{{item.s}}"
+              wx:if="{{item.q}}"
+            ></position-drawer>
+          </view>
+          <view class="col-item col-b cell" wx:if="{{f}}">
+            <view class="{{['title',item.w,item.x]}}">{{item.v}}</view>
+          </view>
+          <view class="col-item col-b cell cell-hide" wx:else>***</view>
+          <view class="col-item col-c cell" wx:if="{{g}}">
+            <view class="title fs-24">{{item.y}}</view>
+            <view class="subtitle">{{item.z}}</view>
+          </view>
+          <view class="col-item col-c cell cell-hide" wx:else>***</view>
+          <view class="col-item col-d cell" wx:if="{{h}}">
+            <view class="{{['title',item.B,item.C,item.D]}}">{{item.A}}</view>
+            <view class="subtitle">{{item.E}}</view>
+          </view>
+          <view class="col-item col-d cell cell-hide" wx:else>***</view>
+          <view class="col-item col-e cell" wx:if="{{i}}">
+            <view class="title fs-28">{{item.F}}</view>
+          </view>
+          <view class="col-item col-e cell cell-hide" wx:else>***</view>
+          <view class="col-item col-f cell" wx:if="{{j}}">
+            <view class="title">{{item.G}}</view>
+          </view>
+          <view class="col-item col-f cell cell-hide" wx:else>***</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="stock-list-body-gradient" wx:if="{{l}}"></view>
+</view>

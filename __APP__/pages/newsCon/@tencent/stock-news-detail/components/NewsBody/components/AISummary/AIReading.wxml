@@ -1,0 +1,117 @@
+<view class="{{['_div','data-v-3478a9ec','ai-container',A]}}" wx:if="{{a}}">
+  <view class="_div ai-header data-v-3478a9ec">
+    <view class="_div left data-v-3478a9ec">
+      <image alt="" class="_img head-gif data-v-3478a9ec" src="{{b}}"></image>
+      <view class="{{['_div','data-v-3478a9ec','left-content']}}">{{c}}</view>
+    </view>
+    <view bindtap="{{e}}" class="_div right data-v-3478a9ec">{{d}}</view>
+  </view>
+  <view class="_div ai-seperate-line data-v-3478a9ec" wx:if="{{f}}"></view>
+  <view class="_div ai-content data-v-3478a9ec" wx:if="{{g}}">
+    <block wx:if="{{h}}">
+      <view class="_div ai-section-title data-v-3478a9ec">
+        <image
+          alt=""
+          class="_img ai-section-title__icon data-v-3478a9ec"
+          src="https://st.gtimg.com/design/e0eea46f684b49692a0b3d1b61fb7c11.png"
+        ></image>
+        <label class="_span ai-section-title__text data-v-3478a9ec"
+          >AI总结</label
+        >
+      </view>
+      <view class="_div ai-summary-text data-v-3478a9ec">
+        <view class="_div ai-summary-text__title data-v-3478a9ec">
+          <label
+            class="{{['_span','data-v-3478a9ec','ai-seg',seg.c]}}"
+            wx:for="{{i}}"
+            wx:for-item="seg"
+            wx:key="b"
+            >{{seg.a}}</label
+          >
+        </view>
+        <view class="_div ai-summary-text__item data-v-3478a9ec" wx:if="{{j}}">
+          <label
+            class="{{['_span','data-v-3478a9ec','ai-seg',seg.c]}}"
+            wx:for="{{k}}"
+            wx:for-item="seg"
+            wx:key="b"
+            >{{seg.a}}</label
+          >
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{l}}">
+      <view
+        class="_div ai-section-title ai-section-title--event data-v-3478a9ec"
+      >
+        <image
+          alt=""
+          class="_img ai-section-title__icon ai-section-title__icon--event data-v-3478a9ec"
+          src="https://st.gtimg.com/design/0b8fcedbcb0532aac258bc7572b970fa.png"
+        ></image>
+        <label class="_span ai-section-title__text data-v-3478a9ec"
+          >事件影响</label
+        >
+      </view>
+      <view class="_div ai-summary-text data-v-3478a9ec">
+        <view class="_div ai-summary-text__title data-v-3478a9ec">
+          <label
+            class="{{['_span','data-v-3478a9ec','ai-seg',seg.c]}}"
+            wx:for="{{m}}"
+            wx:for-item="seg"
+            wx:key="b"
+            >{{seg.a}}</label
+          >
+        </view>
+        <view class="_div ai-summary-text__item data-v-3478a9ec" wx:if="{{n}}">
+          <label
+            class="{{['_span','data-v-3478a9ec','ai-seg',seg.c]}}"
+            wx:for="{{o}}"
+            wx:for-item="seg"
+            wx:key="b"
+            >{{seg.a}}</label
+          >
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="_div ai-tip data-v-3478a9ec" wx:if="{{p}}">
+    <view class="_div ai-tip__text data-v-3478a9ec"
+      >内容由自选股问AI模型生成，不构成投资建议。</view
+    >
+    <view class="_div ai-tip__line data-v-3478a9ec"></view>
+  </view>
+  <view class="_div ai-footer data-v-3478a9ec" wx:if="{{q}}">
+    <view class="_div left data-v-3478a9ec">
+      <view bindtap="{{r}}" class="_div view-more data-v-3478a9ec">
+        <label class="_span view-more__text data-v-3478a9ec"
+          >点击查看更多</label
+        >
+        <image
+          alt=""
+          class="_img view-more__arrow data-v-3478a9ec"
+          src="https://st.gtimg.com/design/3df3f6362a01c93ef4b273ea26a83754.svg"
+        ></image>
+      </view>
+    </view>
+    <view class="_div right data-v-3478a9ec">
+      <view
+        bindtap="{{t}}"
+        class="{{['_i','data-v-3478a9ec','ai-icon','ai-icon-like',s]}}"
+      ></view>
+      <view
+        bindtap="{{w}}"
+        class="{{['_i','data-v-3478a9ec','ai-icon','ai-icon-dislike',v]}}"
+      ></view>
+      <view
+        bindtap="{{x}}"
+        class="{{['_i','data-v-3478a9ec','ai-icon','ai-icon-copy']}}"
+      ></view>
+      <view
+        bindtap="{{z}}"
+        class="{{['_i','data-v-3478a9ec','ai-icon','ai-icon-share']}}"
+        wx:if="{{y}}"
+      ></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<view
+  catchtap="{{e}}"
+  class="{{['_div','fq-bubble','data-v-1c4b7dba',c]}}"
+  style="{{d}}"
+  wx:if="{{a}}"
+>
+  <view class="_div fq-bubble__arrow data-v-1c4b7dba"></view>
+  <view class="_div fq-bubble__content data-v-1c4b7dba">
+    <view class="_div fq-bubble__text data-v-1c4b7dba">
+      <view class="_div fq-bubble__line data-v-1c4b7dba"
+        >K线不连续，切换前复权</view
+      >
+      <view class="_div fq-bubble__line data-v-1c4b7dba"
+        >可平滑显示<label
+          class="_span fq-bubble__chevron data-v-1c4b7dba"
+        ></label>
+      </view>
+    </view>
+    <view catchtap="{{b}}" class="_div fq-bubble__close data-v-1c4b7dba">
+      <label class="_span fq-bubble__close-icon data-v-1c4b7dba"></label>
+    </view>
+  </view>
+</view>

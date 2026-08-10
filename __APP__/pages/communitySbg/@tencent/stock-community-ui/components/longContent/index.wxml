@@ -1,0 +1,24 @@
+<view class="_div mod-show-long-content data-v-5394281a">
+  <view class="_div title data-v-5394281a">
+    <slot name="title-start"></slot>{{a}}</view
+  >
+  <view class="{{['_div','data-v-5394281a','long-content-container',f]}}">
+    <label
+      class="_span long-content-box data-v-5394281a"
+      id="longContent"
+      ref="longContent"
+      >{{b}}</label
+    >
+    <view
+      class="{{['_div','data-v-5394281a','long-content-more']}}"
+      wx:if="{{c}}"
+    >
+      <label
+        class="{{['_span','data-v-5394281a','long-content-more-mask',d]}}"
+      ></label>
+      <label class="{{['_span','data-v-5394281a','long-content-more-text',e]}}"
+        >...</label
+      >
+    </view>
+  </view>
+</view>

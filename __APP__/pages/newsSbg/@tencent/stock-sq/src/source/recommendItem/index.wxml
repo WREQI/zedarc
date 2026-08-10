@@ -1,0 +1,45 @@
+<view class="{{['_div','data-v-f949f37e','recommend-item',v]}}">
+  <view catchtap="{{m}}" class="_div item-box data-v-f949f37e">
+    <view class="{{['_div','data-v-f949f37e','image-box',c,d]}}">
+      <base-image
+        bind:__l="__l"
+        class="data-v-f949f37e"
+        uI="f949f37e-0"
+        uP="{{b}}"
+        wx:if="{{a}}"
+      ></base-image>
+    </view>
+    <view class="_div info-box data-v-f949f37e">
+      <view class="_div user-name data-v-f949f37e">{{e}}</view>
+      <view class="_div desc-wrap data-v-f949f37e">
+        <view class="_div auth-icon data-v-f949f37e" wx:if="{{f}}"></view>
+        <view class="_div desc-text data-v-f949f37e">{{g}}</view>
+      </view>
+      <view class="_div info-line data-v-f949f37e">
+        <view class="_div fans-num data-v-f949f37e" wx:if="{{h}}"
+          >{{i}}粉丝</view
+        >
+        <view class="_div dot data-v-f949f37e" wx:if="{{j}}">•</view>
+        <view class="_div virtual-assets data-v-f949f37e" wx:if="{{k}}"
+          >{{l}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view catchtap="{{p}}" class="_div data-v-f949f37e" wx:if="{{n}}">
+    <st-checkbox
+      bind:__l="__l"
+      class="mgl-30 data-v-f949f37e"
+      uI="f949f37e-1"
+      uP="{{o}}"
+      wx:if="{{o}}"
+    ></st-checkbox>
+  </view>
+  <view
+    catchtap="{{s}}"
+    class="{{['_div','data-v-f949f37e','follow-btn',t]}}"
+    wx:else
+  >
+    <view class="_i add-icon data-v-f949f37e" wx:if="{{q}}"></view>{{r}}</view
+  >
+</view>

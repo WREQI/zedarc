@@ -1,0 +1,124 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="d2173416-0"
+  uP="{{O}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{O}}"
+>
+  <view>
+    <view class="custom-navbar" wx:if="{{b}}">
+      <custom-navbar
+        bind:__l="__l"
+        bindback="{{d}}"
+        bindheightReady="{{c}}"
+        uI="d2173416-1,d2173416-0"
+      ></custom-navbar>
+    </view>
+    <scroll-view
+      enhanced
+      scrollWithAnimation
+      bindscroll="{{J}}"
+      bindscrolltoupper="{{I}}"
+      bindtouchend="{{M}}"
+      bindtouchmove="{{L}}"
+      bindtouchstart="{{K}}"
+      bounces="{{false}}"
+      class="list-details"
+      ref="personalContainer"
+      scrollIntoView="{{F}}"
+      scrollY="{{G}}"
+      showScrollbar="{{false}}"
+      style="{{'padding-top:'+H}}"
+    >
+      <view class="account-personal-container">
+        <view class="{{[g]}}" wx:if="{{e}}">{{f}}</view>
+        <view class="account-personal-header">
+          <view class="account-personal-header__fund">
+            <label class="account-personal-header__fund-label"
+              >资金账号：{{h}}</label
+            >
+            <label
+              bindtap="{{k}}"
+              class="{{['icon','account-personal-header__fund-eye',j]}}"
+              wx:if="{{i}}"
+            ></label>
+            <image
+              bindtap="{{m}}"
+              class="account-personal-header__fund-copy"
+              src="https://st.gtimg.com/image/mp-broker/trade/copy-icon.png"
+              wx:if="{{l}}"
+            ></image>
+          </view>
+          <shareholder-card-stack
+            bind:__l="__l"
+            bindcollapse="{{o}}"
+            bindexpand="{{n}}"
+            bindopen="{{p}}"
+            uI="d2173416-2,d2173416-0"
+            uP="{{q}}"
+            wx:if="{{q}}"
+          ></shareholder-card-stack>
+        </view>
+        <view
+          class="{{['account-personal-permission',t&&'account-personal-permission--expanded']}}"
+        >
+          <trading-permission-panel
+            bind:__l="__l"
+            bindcollapseCard="{{r}}"
+            uI="d2173416-3,d2173416-0"
+            uP="{{s}}"
+            wx:if="{{s}}"
+          ></trading-permission-panel>
+        </view>
+        <preload-card-bg
+          bind:__l="__l"
+          uI="d2173416-4,d2173416-0"
+        ></preload-card-bg>
+        <view class="account-personal-divider border--top"></view>
+        <view class="box-setting">
+          <base-info
+            bind:__l="__l"
+            bindsubmitRes="{{v}}"
+            class="list-account"
+            uI="d2173416-5,d2173416-0"
+            uP="{{w}}"
+            wx:if="{{w}}"
+          ></base-info>
+          <view
+            catchtap="{{y}}"
+            class="action-button action-profileupdate"
+            wx:if="{{x}}"
+            >更新个人信息</view
+          >
+          <change-account
+            bind:__l="__l"
+            uI="d2173416-6,d2173416-0"
+          ></change-account>
+          <view catchtap="{{A}}" class="action-button" wx:if="{{z}}"
+            >注销账户</view
+          >
+          <view catchtap="{{C}}" class="action-button" wx:if="{{B}}"
+            >证券账户查询</view
+          >
+          <login-info
+            bind:__l="__l"
+            uI="d2173416-7,d2173416-0"
+            wx:if="{{D}}"
+          ></login-info>
+        </view>
+        <mp-dialog
+          bind:__l="__l"
+          id="mp-dialog"
+          uI="d2173416-8,d2173416-0"
+          uP="{{E}}"
+          wx:if="{{E}}"
+        ></mp-dialog>
+        <view id="changeAccountPosition"></view>
+      </view>
+    </scroll-view>
+  </view>
+</global-wrap>

@@ -1,0 +1,84 @@
+<view class="_div data-v-87ea3ba4">
+  <view class="_div funds-container data-v-87ea3ba4">
+    <view class="_div nums-card data-v-87ea3ba4" wx:if="{{a}}">
+      <view class="_div nums-group nums-group-left data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{c}}"
+          >{{b}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="left-label"
+          >近60日大宗交易总量</label
+        >
+      </view>
+      <view class="_div nums-group data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{e}}"
+          >{{d}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="middle-label"
+          >折价交易</label
+        >
+      </view>
+      <view class="_div nums-group data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{g}}"
+          >{{f}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="right-label"
+          >溢价交易</label
+        >
+      </view>
+      <view class="_div nums-group nums-group-left data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{i}}"
+          >{{h}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="left-label"
+          >近60日大宗交易总额</label
+        >
+      </view>
+      <view class="_div nums-group data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{'color:'+k}}"
+          >{{j}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="middle-label"
+          >平均折价率</label
+        >
+      </view>
+      <view class="_div nums-group data-v-87ea3ba4">
+        <label class="_span trend-nums data-v-87ea3ba4" style="{{'color:'+m}}"
+          >{{l}}</label
+        >
+        <label class="_span trend-label data-v-87ea3ba4" id="right-label"
+          >平均溢价率</label
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div dzjy-content data-v-87ea3ba4" id="{{r}}">
+    <view class="_div dzjy-title data-v-87ea3ba4">
+      <view class="_div left-title data-v-87ea3ba4">
+        <label class="_span time data-v-87ea3ba4">时间</label>
+        <label class="_span cjj data-v-87ea3ba4">成交价</label>
+      </view>
+      <view class="_div cje data-v-87ea3ba4">成交额</view>
+      <view class="_div yyl data-v-87ea3ba4">溢价率</view>
+    </view>
+    <view class="_div info-container data-v-87ea3ba4">
+      <view class="_div dzjy-info data-v-87ea3ba4" wx:for="{{n}}" wx:key="f">
+        <view class="_div left-info data-v-87ea3ba4">
+          <label class="_span left-info-left data-v-87ea3ba4" style="{{o}}"
+            >{{item.a}}</label
+          >
+          <label class="_span left-info-right data-v-87ea3ba4" style="{{p}}"
+            >{{item.b}}</label
+          >
+        </view>
+        <label class="_span cje-info data-v-87ea3ba4" style="{{q}}"
+          >{{item.c}}</label
+        >
+        <label
+          class="_span yjl-info data-v-87ea3ba4"
+          style="{{'color:'+item.e}}"
+          >{{item.d}}</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

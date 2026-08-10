@@ -1,0 +1,109 @@
+<view class="_div yaowen data-v-f5f4b037" id="yaowen">
+  <top-headline
+    bind:__l="__l"
+    bindgoNewsDetail="{{b}}"
+    class="data-v-f5f4b037"
+    uI="f5f4b037-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></top-headline>
+  <view
+    class="_div news-list data-v-f5f4b037"
+    ref="newsList"
+    style="position: relative"
+  >
+    <view
+      class="{{['_div','data-v-f5f4b037',news.Q]}}"
+      wx:for="{{d}}"
+      wx:for-item="news"
+      wx:key="P"
+    >
+      <view
+        class="_div news-item data-v-f5f4b037"
+        data-flow="{{news.i}}"
+        data-id="{{news.h}}"
+        data-index="{{news.k}}"
+        data-recall="{{news.j}}"
+        data-type="{{news.l}}"
+        key="{{news.g}}"
+        ref="videoCardWrapper"
+        wx:if="{{news.a}}"
+      >
+        <video-card
+          bind:__l="__l"
+          bindonMuteStatusChange="{{news.d}}"
+          bindopen="{{news.c}}"
+          class="r-i-f data-v-f5f4b037"
+          uI="{{news.e}}"
+          uP="{{news.f}}"
+          uR="videoCard"
+          wx:if="{{news.f}}"
+        ></video-card>
+      </view>
+      <good-and-bad-news
+        bind:__l="__l"
+        bindonExposure="{{news.o}}"
+        bindonItemClick="{{news.n}}"
+        class="data-v-f5f4b037"
+        uI="{{news.p}}"
+        uP="{{news.q}}"
+        wx:elif="{{news.m}}"
+      ></good-and-bad-news>
+      <view
+        class="_div news-item data-v-f5f4b037"
+        data-flow="{{news.L}}"
+        data-id="{{news.K}}"
+        data-index="{{news.N}}"
+        data-recall="{{news.M}}"
+        data-show="{{news.J}}"
+        data-type="{{news.O}}"
+        ref="newsItem"
+        wx:else
+      >
+        <view class="_div data-v-f5f4b037" wx:if="{{news.r}}">
+          <view class="_div recom-spliter-content data-v-f5f4b037"></view>
+          <recom-spliter
+            bind:__l="__l"
+            class="r-i-f data-v-f5f4b037"
+            uI="{{news.t}}"
+            uR="wntj"
+          ></recom-spliter>
+        </view>
+        <big-item
+          bind:__l="__l"
+          bindopen="{{news.w}}"
+          class="data-v-f5f4b037"
+          uI="{{news.x}}"
+          uP="{{news.y}}"
+          wx:if="{{news.v}}"
+        ></big-item>
+        <yaowen-feedback-item
+          bind:__l="__l"
+          binddismiss="{{news.B}}"
+          bindexposed="{{news.A}}"
+          bindopen="{{news.C}}"
+          bindshowFeedback="{{news.D}}"
+          class="data-v-f5f4b037"
+          uI="{{news.E}}"
+          uP="{{news.F}}"
+          wx:elif="{{news.z}}"
+        ></yaowen-feedback-item>
+        <yaowen-item
+          bind:__l="__l"
+          bindopen="{{news.G}}"
+          class="data-v-f5f4b037"
+          uI="{{news.H}}"
+          uP="{{news.I||''}}"
+          wx:else
+        ></yaowen-item>
+      </view>
+    </view>
+  </view>
+  <supporter
+    bind:__l="__l"
+    class="data-v-f5f4b037"
+    uI="f5f4b037-7"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></supporter>
+</view>

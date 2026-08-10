@@ -1,0 +1,153 @@
+@import "/app.wxss";
+.trade-debt {
+  background-color: var(--fill-2);
+  min-height: calc(100vh - env(safe-area-inset-bottom));
+}
+.trade-debt-header {
+  height: 1.2rem;
+}
+.trade-debt .rate-wrapper {
+  padding: 0.266667rem 0 0.64rem;
+}
+.trade-debt .rate-wrapper .value {
+  font-size: 1.066667rem;
+  font-weight: 500;
+  padding-top: 0.2rem;
+}
+.trade-debt .intro {
+  padding-bottom: 0.48rem;
+}
+.trade-debt .intro > div:nth-of-type(1) {
+  padding-right: 0.4rem;
+}
+.trade-debt .intro > div:nth-of-type(2) {
+  padding-left: 0.4rem;
+}
+.trade-debt .intro .fs-28 {
+  padding-bottom: 0.213333rem;
+}
+.trade-debt .intro .box-stepline .fs-22 {
+  padding-bottom: 0.506667rem;
+}
+.trade-debt .trade-tips {
+  padding: 0.4rem;
+}
+.trade-debt .transinfo-header {
+  font-size: 0.32rem;
+  margin-top: 0.8rem;
+}
+.trade-debt .transinfo-header > .flex-1 {
+  padding: 0.16rem 0.48rem 0.16rem 0.373333rem;
+}
+.trade-debt .transinfo-body .li .li-detail {
+  font-size: 0.32rem;
+  padding: 0.16rem 0.48rem 0.16rem 0.373333rem;
+}
+.trade-debt .transinfo-body .label {
+  border-radius: 0.053333rem;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 0.293333rem;
+  font-style: normal;
+  height: 0.373333rem;
+  line-height: normal;
+  margin-right: 0.133333rem;
+  text-align: center;
+  width: 0.373333rem;
+}
+.trade-debt .confirm-dialog {
+  position: relative;
+}
+.trade-debt .confirm-dialog .title {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.trade-debt .confirm-dialog .content {
+  font-size: 0.426667rem;
+  line-height: 1.2;
+}
+.trade-debt .confirm-dialog .content .item {
+  padding: 0.213333rem 0;
+}
+.trade-debt .confirm-dialog .content .label {
+  color: var(--text-color-4);
+}
+.trade-debt .confirm-dialog .content .value {
+  color: var(--text-color-1);
+}
+.trade-debt .confirm-dialog .content .placeholder {
+  height: 0.453333rem;
+}
+.trade-debt .confirm-dialog .warning-tips {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #fff5f5;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  height: 0.746667rem;
+  left: 0;
+  line-height: 0.453333rem;
+  padding: 0 0.64rem;
+  position: absolute;
+  right: 0;
+}
+[data-theme="dark"] .trade-debt .confirm-dialog .warning-tips {
+  background-color: #26171b;
+}
+.trade-debt .st-cell {
+  overflow: initial;
+}
+.popover {
+  background: #727377;
+  border-radius: 0.053333rem;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.426667rem;
+  padding: 0.16rem 0.213333rem;
+  top: -0.666667rem;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  z-index: 11;
+}
+.popover,
+.popover:before {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
+.popover:before {
+  border: 0.186667rem solid transparent;
+  border-top-color: #727377;
+  content: "";
+  display: inline-block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  top: 100%;
+  width: 0;
+}
+.popover-error-bg {
+  background: #ff891e;
+}
+.popover-error-bg:before {
+  border-top-color: #ff891e;
+}
+.dialog-tip-rate-text {
+  color: #ff891e;
+}
+.dialog-item-padding {
+  padding-top: 0.213333rem;
+}
+.dialog-item-text-padding {
+  padding-top: 0.106667rem;
+}
+.show-rate-tip-container .input-class,
+.show-rate-tip-container .js-value,
+.show-rate-tip-container .magnifying-glass {
+  color: #ff891e;
+}

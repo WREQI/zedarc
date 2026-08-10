@@ -1,0 +1,113 @@
+<view class="_div account-main-card-wrapper data-v-39e21785">
+  <view class="_div data-v-39e21785" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <broker-unbind-card
+        bind:__l="__l"
+        class="data-v-39e21785"
+        uI="39e21785-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></broker-unbind-card>
+    </block>
+    <block wx:elif="{{d}}">
+      <broker-unbind-card
+        bind:__l="__l"
+        bindclickDetailBtn="{{e}}"
+        class="data-v-39e21785"
+        uI="39e21785-1"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></broker-unbind-card>
+    </block>
+    <block wx:else>
+      <broker-asset-card
+        bind:__l="__l"
+        class="data-v-39e21785"
+        uI="39e21785-2"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></broker-asset-card>
+    </block>
+  </view>
+  <view class="_div data-v-39e21785" wx:elif="{{h}}">
+    <block wx:if="{{i}}">
+      <broker-unbind-card
+        bind:__l="__l"
+        class="data-v-39e21785"
+        uI="39e21785-3"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></broker-unbind-card>
+    </block>
+    <block wx:else>
+      <broker-unbind-card
+        bind:__l="__l"
+        bindclickDetailBtn="{{k}}"
+        class="data-v-39e21785"
+        uI="39e21785-4"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></broker-unbind-card>
+    </block>
+  </view>
+  <view class="_div data-v-39e21785" wx:elif="{{m}}">
+    <block wx:if="{{n}}">
+      <broker-unbind-card
+        bind:__l="__l"
+        class="data-v-39e21785"
+        uI="39e21785-5"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></broker-unbind-card>
+    </block>
+    <block wx:else>
+      <broker-unbind-card
+        bind:__l="__l"
+        bindclickDetailBtn="{{p}}"
+        class="data-v-39e21785"
+        uI="39e21785-6"
+        uP="{{q}}"
+        wx:if="{{q}}"
+      ></broker-unbind-card>
+    </block>
+  </view>
+  <view class="_div data-v-39e21785" wx:elif="{{r}}">
+    <block wx:if="{{s}}">
+      <broker-unbind-card
+        bind:__l="__l"
+        class="data-v-39e21785"
+        uI="39e21785-7"
+        uP="{{t}}"
+        wx:if="{{t}}"
+      ></broker-unbind-card>
+    </block>
+    <block wx:else>
+      <broker-unbind-card
+        bind:__l="__l"
+        bindclickDetailBtn="{{v}}"
+        class="data-v-39e21785"
+        uI="39e21785-8"
+        uP="{{w}}"
+        wx:if="{{w}}"
+      ></broker-unbind-card>
+    </block>
+  </view>
+  <view class="_div newuser-guide-wrapper data-v-39e21785" wx:else>
+    <view class="_div newuser-guide-title data-v-39e21785"
+      >投资股市先开户 快人一步</view
+    >
+    <view bindtap="{{x}}" class="_div newuser-guide-openbtn data-v-39e21785"
+      >在线开户</view
+    >
+    <view bindtap="{{y}}" class="_div newuser-guide-login data-v-39e21785"
+      >已有账户，<label class="_span login-blue data-v-39e21785">去登录</label>
+    </view>
+  </view>
+  <account-broker-password
+    bind:__l="__l"
+    class="data-v-39e21785"
+    uI="39e21785-9"
+    uP="{{A}}"
+    wx:if="{{z}}"
+  ></account-broker-password>
+</view>

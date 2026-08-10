@@ -1,0 +1,97 @@
+.etf-invest-card__logo.data-v-40d06035 {
+  align-items: flex-end;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6266666666666667rem;
+  justify-content: center;
+  left: 0.32rem;
+  overflow: hidden;
+  position: absolute;
+  top: 1.3066666666666666rem;
+  width: 1.6266666666666667rem;
+}
+.etf-invest-card__logo-chart.data-v-40d06035 {
+  display: block;
+  flex-shrink: 0;
+}
+.etf-invest-card__name-wrap.data-v-40d06035 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  left: 2.2666666666666666rem;
+  min-height: 0.5866666666666667rem;
+  position: absolute;
+  top: 1.2rem;
+}
+.etf-invest-card__name-wrap--clickable.data-v-40d06035 {
+  cursor: pointer;
+}
+.etf-invest-card__name.data-v-40d06035 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  max-width: 5.933333333333334rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-invest-card__watchlist.data-v-40d06035 {
+  cursor: pointer;
+  height: 0.5333333333333333rem;
+  object-fit: cover;
+  position: absolute;
+  right: 0.32rem;
+  top: 1.2266666666666666rem;
+  width: 0.5333333333333333rem;
+}
+.etf-invest-card__watchlist--disabled.data-v-40d06035 {
+  opacity: 0.6;
+}
+.etf-invest-card__metric.data-v-40d06035 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 1.0933333333333333rem;
+  position: absolute;
+  top: 1.9466666666666668rem;
+}
+.etf-invest-card__metric--ratio.data-v-40d06035 {
+  left: 2.2666666666666666rem;
+  max-width: 1.4133333333333333rem;
+}
+.etf-invest-card__metric--relevance.data-v-40d06035 {
+  left: 4.426666666666667rem;
+  max-width: 1.6rem;
+}
+.etf-invest-card__metric--price.data-v-40d06035 {
+  left: 4.6rem;
+  max-width: 1.6rem;
+}
+.etf-invest-card__metric-value.data-v-40d06035 {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  white-space: nowrap;
+}
+.etf-invest-card__metric-value.ratio-rise.data-v-40d06035 {
+  color: var(--color-red);
+}
+.etf-invest-card__metric-value.ratio-drop.data-v-40d06035 {
+  color: var(--color-drop);
+}
+.etf-invest-card__metric-value.ratio-equal.data-v-40d06035 {
+  color: var(--color-lightgray);
+}
+.etf-invest-card__metric-label.data-v-40d06035 {
+  color: var(--color-lightgray);
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+  white-space: nowrap;
+}

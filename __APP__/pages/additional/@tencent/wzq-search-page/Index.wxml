@@ -1,0 +1,82 @@
+<view bindtouchmove="{{aU}}" class="{{['_div','data-v-85dce9e0','search-page-wrapper',aR,aS,aT]}}" ref="searchWrap">
+    <view class="_div search-page data-v-85dce9e0" id="search-page" ref="searchPage">
+        <view class="{{['_div','data-v-85dce9e0','box-search',v]}}">
+            <view class="_div row-sear data-v-85dce9e0">
+                <image class="_img search-icon-new data-v-85dce9e0" src="https://st.gtimg.com/design/0183fe651d60a9934ae067e5e9211286.png"></image>
+                <view class="_div yy-task-choose-index-search data-v-85dce9e0"></view>
+                <input bindconfirm="{{e}}" bindinput="{{d}}" class="row-sear-input search_teach is-mp data-v-85dce9e0" confirmType="search" focus="{{b}}" maxlength="100" placeholder="{{c}}" placeholderClass="placeholderStyle" placeholderStyle="color:#7A8499;" ref="searchBox" type="text" value="{{f}}" wx:if="{{a}}"></input>
+                <form action="." class="input-form data-v-85dce9e0" wx:else>
+                    <input bindconfirm="{{k}}" bindinput="{{j}}" bindkeyup="{{i}}" class="row-sear-input data-v-85dce9e0" confirmType="search" focus="{{g}}" maxlength="100" placeholder="{{h}}" placeholderClass="placeholderStyle" placeholderStyle="color:#7A8499;" ref="searchBox" type="search" value="{{l}}"></input>
+                    <input class="data-v-85dce9e0" style="display:none" type="text"></input>
+                </form>
+                <view catchtap="{{n}}" class="{{['_div','data-v-85dce9e0','wrap-box-close',m]}}">
+                    <view class="_div close-btn data-v-85dce9e0"></view>
+                </view>
+                <view catchtap="{{p}}" class="_div img-ocr data-v-85dce9e0" hidden="{{!o}}"></view>
+            </view>
+            <view catchtap="{{r}}" class="_div search-button data-v-85dce9e0" wx:if="{{q}}">搜索</view>
+            <view catchtap="{{t}}" class="{{['_div','btn-cancel','data-v-85dce9e0','btn-ai',s]}}" wx:else>问元宝</view>
+        </view>
+        <view class="_div box-searlist data-v-85dce9e0">
+            <view class="_div start-box list-wrapper list-scroll no-tab data-v-85dce9e0" wx:if="{{w}}">
+                <view class="_div data-v-85dce9e0">
+                    <view class="_div yy-adv-delivery-search-container data-v-85dce9e0" hidden="{{!x}}"></view>
+                    <hot-search bind:__l="__l" bindjumpToDetail="{{z}}" class="data-v-85dce9e0" uI="85dce9e0-0" uP="{{A}}" wx:if="{{y}}"></hot-search>
+                    <list-search bind:__l="__l" bindaddUserStock="{{D}}" binddeleteList="{{E}}" bindjumpToDetail="{{C}}" class="data-v-85dce9e0" uI="85dce9e0-1" uP="{{F}}" wx:if="{{B}}"></list-search>
+                    <list-search bind:__l="__l" bindaddUserStock="{{I}}" bindjumpToDetail="{{H}}" class="data-v-85dce9e0" uI="85dce9e0-2" uP="{{J}}" wx:if="{{G}}"></list-search>
+                </view>
+                <page-footer bind:__l="__l" bindaskAI="{{K}}" class="data-v-85dce9e0" uI="85dce9e0-3" uP="{{L}}" wx:if="{{L}}"></page-footer>
+            </view>
+            <block wx:else>
+                <tabbar bind:__l="__l" bindswitchTab="{{N}}" class="data-v-85dce9e0" uI="85dce9e0-4" uP="{{O}}" wx:if="{{M}}"></tabbar>
+                <view class="_div data-v-85dce9e0" hidden="{{!U}}">
+                    <scroll-view scrollY bindscroll="{{T}}" class="{{['data-v-85dce9e0','list-wrapper','list-scroll-mp',S]}}">
+                        <view class="_div data-v-85dce9e0">
+                            <view bindtap="{{tab.Z}}" class="_div data-v-85dce9e0" wx:for="{{P}}" wx:for-item="tab" wx:key="Y">
+                                <list-search bind:__l="__l" bindjumpToDetail="{{tab.b}}" class="data-v-85dce9e0" uI="{{tab.c}}" uP="{{tab.d}}" wx:if="{{tab.a}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{tab.f}}" bindclickMore="{{tab.h}}" bindjumpToDetail="{{tab.g}}" class="data-v-85dce9e0" uI="{{tab.i}}" uP="{{tab.j}}" wx:if="{{tab.e}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{tab.m}}" bindclickMore="{{tab.n}}" bindjumpToDetail="{{tab.l}}" class="data-v-85dce9e0" uI="{{tab.o}}" uP="{{tab.p}}" wx:if="{{tab.k}}"></list-search>
+                                <quick-search bind:__l="__l" bindonExpandBtclick="{{tab.s}}" bindonFetchFinish="{{tab.r}}" class="data-v-85dce9e0" uI="{{tab.t}}" uP="{{tab.v}}" wx:if="{{tab.q}}"></quick-search>
+                                <list-search bind:__l="__l" bindjumpToDetail="{{tab.x}}" class="data-v-85dce9e0" uI="{{tab.y}}" uP="{{tab.z}}" wx:if="{{tab.w}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{tab.D}}" bindclickMore="{{tab.B}}" bindjumpToDetail="{{tab.C}}" class="data-v-85dce9e0" uI="{{tab.E}}" uP="{{tab.F}}" wx:if="{{tab.A}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{tab.I}}" bindjumpToDetail="{{tab.H}}" bindtoAics="{{tab.J}}" class="data-v-85dce9e0" uI="{{tab.K}}" uP="{{tab.L}}" wx:if="{{tab.G}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{tab.P}}" bindclickMore="{{tab.N}}" bindjumpToDetail="{{tab.O}}" class="data-v-85dce9e0" uI="{{tab.Q}}" uP="{{tab.R}}" wx:if="{{tab.M}}"></list-search>
+                                <list-search bind:__l="__l" bindclickMore="{{tab.T}}" bindreportSearchBrow="{{tab.U}}" class="data-v-85dce9e0" uI="{{tab.V}}" uP="{{tab.W}}" wx:if="{{tab.S}}"></list-search>
+                                <list-search bind:__l="__l" bindaddUserStock="{{dm.c}}" bindclickMore="{{dm.d}}" bindjumpToDetail="{{dm.b}}" class="data-v-85dce9e0" uI="{{dm.e}}" uP="{{dm.f}}" wx:for="{{tab.X}}" wx:for-item="dm" wx:key="a"></list-search>
+                            </view>
+                        </view>
+                        <page-footer bind:__l="__l" bindaskAI="{{Q}}" class="data-v-85dce9e0" uI="85dce9e0-15" uP="{{R}}" wx:if="{{R}}"></page-footer>
+                    </scroll-view>
+                </view>
+                <view class="_div list-wrapper list-scroll data-v-85dce9e0" wx:if="{{V}}">
+                    <list-search bind:__l="__l" bindaddUserStock="{{Y}}" bindjumpToDetail="{{X}}" class="data-v-85dce9e0" uI="85dce9e0-16" uP="{{Z}}" wx:if="{{W}}"></list-search>
+                    <page-footer bind:__l="__l" bindaskAI="{{aa}}" class="data-v-85dce9e0" uI="85dce9e0-17" uP="{{ab}}" wx:if="{{ab}}"></page-footer>
+                </view>
+                <view class="_div list-wrapper list-scroll data-v-85dce9e0" wx:if="{{ac}}">
+                    <list-search bind:__l="__l" bindaddUserStock="{{af}}" bindjumpToDetail="{{ae}}" class="data-v-85dce9e0" uI="85dce9e0-18" uP="{{ag}}" wx:if="{{ad}}"></list-search>
+                    <page-footer bind:__l="__l" bindaskAI="{{ah}}" class="data-v-85dce9e0" uI="85dce9e0-19" uP="{{ai}}" wx:if="{{ai}}"></page-footer>
+                </view>
+                <view class="_div data-v-85dce9e0" wx:if="{{aj}}">
+                    <tabbar bind:__l="__l" bindswitchTab="{{al}}" class="data-v-85dce9e0" uI="85dce9e0-20" uP="{{am}}" wx:if="{{ak}}"></tabbar>
+                    <view class="{{['_div','data-v-85dce9e0','list-wrapper','list-scroll',ay]}}">
+                        <view class="_div data-v-85dce9e0">
+                            <list-search bind:__l="__l" bindaddUserStock="{{dm.c}}" bindclickMore="{{dm.d}}" bindjumpToDetail="{{dm.b}}" class="data-v-85dce9e0" uI="{{dm.e}}" uP="{{dm.f}}" wx:for="{{an}}" wx:for-item="dm" wx:key="a"></list-search>
+                            <list-search bind:__l="__l" bindaddUserStock="{{aq}}" bindjumpToDetail="{{ap}}" class="data-v-85dce9e0" uI="85dce9e0-22" uP="{{ar}}" wx:if="{{ao}}"></list-search>
+                            <list-search bind:__l="__l" bindclickMore="{{at}}" class="data-v-85dce9e0" uI="85dce9e0-23" uP="{{av}}" wx:if="{{as}}"></list-search>
+                        </view>
+                        <page-footer bind:__l="__l" bindaskAI="{{aw}}" class="data-v-85dce9e0" uI="85dce9e0-24" uP="{{ax}}" wx:if="{{ax}}"></page-footer>
+                    </view>
+                </view>
+                <block wx:if="{{az}}">
+                    <info-list-page bind:__l="__l" bindaskAI="{{aA}}" bindreportSearchBrow="{{aB}}" class="data-v-85dce9e0" uI="85dce9e0-25" uP="{{aC}}" wx:if="{{aC}}"></info-list-page>
+                </block>
+            </block>
+        </view>
+        <view class="_div search-bubble data-v-85dce9e0">
+            <bubble-wzqxcx bind:__l="__l" class="data-v-85dce9e0" uI="85dce9e0-26" uP="{{aE}}" wx:if="{{aD}}"></bubble-wzqxcx>
+        </view>
+    </view>
+    <batch bind:__l="__l" bindfinish="{{aG}}" class="data-v-85dce9e0" uI="85dce9e0-27" uP="{{aH}}" wx:if="{{aF}}"></batch>
+    <popup bind:__l="__l" bindcancel="{{aJ}}" bindconfirm="{{aK}}" class="data-v-85dce9e0" uI="85dce9e0-28" uP="{{aL}}" wx:if="{{aI}}"></popup>
+    <off-site-fund-auth-modal bind:__l="__l" bindcancel="{{aO}}" bindclose="{{aP}}" bindconfirm="{{aN}}" class="data-v-85dce9e0" uI="85dce9e0-29" uP="{{aQ}}" wx:if="{{aM}}"></off-site-fund-auth-modal>
+</view>

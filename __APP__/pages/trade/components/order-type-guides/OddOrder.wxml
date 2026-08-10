@@ -1,0 +1,48 @@
+<guide-layout bind:__l="__l" uI="3a5c810e-0" uS="{{['d']}}">
+  <section-card
+    bind:__l="__l"
+    uI="3a5c810e-1,3a5c810e-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">交易类型</view>
+    <view slot="content">适用于交易数量少于一手的零散股票</view>
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="3a5c810e-2,3a5c810e-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">交易时间</view>
+    <view slot="content"
+      >适用于港交所的持续交易时段（9:30-16:00），不支持早市和收市的集合竞价</view
+    >
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="3a5c810e-3,3a5c810e-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">成交价格</view>
+    <view slot="content"
+      >成交价格通常低于市场价，流动性较好的股票可能折价约0.5%-5%、流动性差的股票折让可达5%以上</view
+    >
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="3a5c810e-4,3a5c810e-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">订单价格</view>
+    <view slot="content">流动性较差，成交周期较长，可能需多次挂单</view>
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    uI="3a5c810e-5,3a5c810e-0"
+    uS="{{['title','content']}}"
+  >
+    <view slot="title">注意事项</view>
+    <view slot="content"
+      >碎股指令只支持限价盘，港股通投资者只可卖出碎股，不可买入</view
+    >
+  </section-card>
+</guide-layout>

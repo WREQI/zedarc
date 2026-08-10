@@ -1,0 +1,35 @@
+<view
+  class="_div stockfriends-list-container data-v-e3c6805b"
+  data-st-theme="{{l}}"
+>
+  <view class="_div contact-list-wrapper data-v-e3c6805b" wx:if="{{a}}">
+    <contact-list
+      bind:__l="__l"
+      bindcontactClick="{{b}}"
+      class="data-v-e3c6805b"
+      uI="e3c6805b-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></contact-list>
+  </view>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{e}}"
+    class="load-container data-v-e3c6805b"
+    uI="e3c6805b-1"
+    uP="{{f}}"
+    wx:if="{{d}}"
+  ></status>
+  <view class="_div empty-state data-v-e3c6805b" wx:if="{{g}}">
+    <text class="data-v-e3c6805b">暂无好友数据</text>
+  </view>
+  <permission-agree-dialog
+    bind:__l="__l"
+    bindagreeProtocal="{{i}}"
+    binddenyProtocal="{{j}}"
+    class="permissionDialog data-v-e3c6805b"
+    uI="e3c6805b-2"
+    uP="{{k}}"
+    wx:if="{{h}}"
+  ></permission-agree-dialog>
+</view>

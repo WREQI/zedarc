@@ -1,0 +1,32 @@
+<view class="wudang-wrapper data-v-69f1c0b6" wx:if="{{a}}">
+  <view class="bar-area data-v-69f1c0b6">
+    <view class="rise data-v-69f1c0b6">买</view>
+    <view class="{{['bar-body','data-v-69f1c0b6',c&&'bg-equal']}}">
+      <view class="bg-buy data-v-69f1c0b6" style="{{'width:'+b}}"></view>
+    </view>
+    <view class="drop data-v-69f1c0b6">卖</view>
+  </view>
+  <view class="list-area data-v-69f1c0b6">
+    <flash-price
+      bind:__l="__l"
+      bindonClickPrice="{{i.b}}"
+      class="item data-v-69f1c0b6"
+      uI="{{i.c}}"
+      uP="{{i.d}}"
+      wx:for="{{d}}"
+      wx:for-item="i"
+      wx:key="a"
+    ></flash-price>
+    <view class="separate-line data-v-69f1c0b6"></view>
+    <flash-price
+      bind:__l="__l"
+      bindonClickPrice="{{i.b}}"
+      class="item data-v-69f1c0b6"
+      uI="{{i.c}}"
+      uP="{{i.d}}"
+      wx:for="{{e}}"
+      wx:for-item="i"
+      wx:key="a"
+    ></flash-price>
+  </view>
+</view>

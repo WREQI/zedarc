@@ -1,0 +1,205 @@
+<view class="_div page-choose-hq data-v-474a8fae" ref="hqBody">
+  <view class="_div data-v-474a8fae" wx:if="{{a}}">
+    <portal
+      bind:__l="__l"
+      class="data-v-474a8fae"
+      uI="474a8fae-0"
+      uP="{{h}}"
+      uS="{{['d']}}"
+      wx:if="{{h}}"
+    >
+      <view
+        bindtap="{{g}}"
+        catchtouchmove="{{f}}"
+        class="{{['_div','data-v-474a8fae','etf-board-wrapper',e]}}"
+        wx:if="{{b}}"
+      >
+        <etf-pop-com
+          bind:__l="__l"
+          bindclosePop="{{d}}"
+          class="r data-v-474a8fae"
+          uI="474a8fae-1,474a8fae-0"
+          uR="etfBoard"
+        ></etf-pop-com>
+      </view>
+    </portal>
+  </view>
+  <view class="_div slide-header data-v-474a8fae" ref="hqHeader">
+    <tabbar
+      bind:__l="__l"
+      bindswitchTab="{{j}}"
+      class="tab-bar r data-v-474a8fae"
+      uI="474a8fae-2"
+      uP="{{k}}"
+      uR="tabBar"
+      wx:if="{{k}}"
+    ></tabbar>
+  </view>
+  <swiper
+    bindchange="{{aJ}}"
+    class="data-v-474a8fae"
+    current="{{aH}}"
+    duration="{{250}}"
+    ref="hqSwiper"
+    style="{{'height:'+aI}}"
+  >
+    <swiper-item class="hs-swiper-container data-v-474a8fae">
+      <view class="{{['_div','data-v-474a8fae','content-wrapper']}}">
+        <market-card
+          bind:__l="__l"
+          bindchangeCounterNum="{{s}}"
+          bindloaded="{{t}}"
+          bindonTabScroll="{{v}}"
+          bindstartSwiperScroll="{{o}}"
+          bindstopSwiperScroll="{{n}}"
+          bindswitchToETF="{{r}}"
+          bindswitchToPlate="{{q}}"
+          bindtoggleRank="{{p}}"
+          class="r data-v-474a8fae"
+          uI="474a8fae-3"
+          uP="{{w}}"
+          uR="hsMarket"
+          wx:if="{{l}}"
+        ></market-card>
+      </view>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <plate
+        bind:__l="__l"
+        bindloaded="{{A}}"
+        bindonPullingDown="{{B}}"
+        bindonTabScroll="{{C}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-4"
+        uP="{{D}}"
+        uR="{{z}}"
+        wx:if="{{x}}"
+      ></plate>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <e-t-f-union-page
+        bind:__l="__l"
+        bindloaded="{{H}}"
+        bindonTabScroll="{{I}}"
+        bindtoggleShowTeachPop="{{J}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-5"
+        uP="{{K}}"
+        uR="{{G}}"
+        wx:if="{{E}}"
+      ></e-t-f-union-page>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <bond-rank
+        bind:__l="__l"
+        bindchangeCounterNum="{{Q}}"
+        bindloaded="{{O}}"
+        bindonPullingDown="{{T}}"
+        bindonTabScroll="{{U}}"
+        bindstartSwiperScroll="{{S}}"
+        bindstopSwiperScroll="{{R}}"
+        bindtoggleRank="{{P}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-6"
+        uP="{{V}}"
+        uR="{{N}}"
+        wx:if="{{L}}"
+      ></bond-rank>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <chy-kch
+        bind:__l="__l"
+        bindloaded="{{aa}}"
+        bindonPullingDown="{{ab}}"
+        bindonTabScroll="{{ac}}"
+        bindstartSwiperScroll="{{Z}}"
+        bindstopSwiperScroll="{{Y}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-7"
+        uP="{{ad}}"
+        uR="chyBoard"
+        wx:if="{{W}}"
+      ></chy-kch>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <chy-kch
+        bind:__l="__l"
+        bindloaded="{{ai}}"
+        bindonPullingDown="{{aj}}"
+        bindonTabScroll="{{ak}}"
+        bindstartSwiperScroll="{{ah}}"
+        bindstopSwiperScroll="{{ag}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-8"
+        uP="{{al}}"
+        uR="kchBoard"
+        wx:if="{{ae}}"
+      ></chy-kch>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <market-card
+        bind:__l="__l"
+        bindchangeCounterNum="{{aw}}"
+        bindloaded="{{ar}}"
+        bindonPullingDown="{{at}}"
+        bindonTabScroll="{{av}}"
+        bindstartSwiperScroll="{{aq}}"
+        bindstopSwiperScroll="{{ap}}"
+        bindswitchToETF="{{as}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-9"
+        uP="{{ax}}"
+        uR="{{ao}}"
+        wx:if="{{am}}"
+      ></market-card>
+    </swiper-item>
+    <swiper-item class="data-v-474a8fae">
+      <market-card
+        bind:__l="__l"
+        bindchangeCounterNum="{{aF}}"
+        bindloaded="{{aB}}"
+        bindonPullingDown="{{aD}}"
+        bindonTabScroll="{{aE}}"
+        bindswitchToETF="{{aC}}"
+        class="r data-v-474a8fae"
+        uI="474a8fae-10"
+        uP="{{aG}}"
+        uR="{{aA}}"
+        wx:if="{{ay}}"
+      ></market-card>
+    </swiper-item>
+  </swiper>
+  <view
+    bindtap="{{aO}}"
+    class="_div counter-wrapper data-v-474a8fae"
+    wx:if="{{aK}}"
+  >
+    <view class="_div counter data-v-474a8fae">
+      <label class="_span spe-text data-v-474a8fae">{{aL}}</label>
+      <label class="_span com-text data-v-474a8fae">{{aM}}/{{aN}}</label>
+      <view class="_div fold data-v-474a8fae"
+        >收起<view class="_div icon data-v-474a8fae"></view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-474a8fae','loading-wrapper',aQ]}}"
+    wx:if="{{aP}}"
+  >
+    <st-loading
+      bind:__l="__l"
+      class="data-v-474a8fae"
+      uI="474a8fae-11"
+    ></st-loading>
+  </view>
+  <root-portal class="data-v-474a8fae" enable="{{true}}" wx:if="{{aR}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{aT}}"
+      class="data-v-474a8fae"
+      uI="474a8fae-12"
+      uP="{{aU}}"
+      wx:if="{{aS}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

@@ -1,0 +1,58 @@
+<view class="{{['_div','data-v-0c9e7b51',r,s]}}">
+  <view class="_div dialog-body data-v-0c9e7b51">
+    <view class="_div status-bar data-v-0c9e7b51" wx:if="{{a}}"></view>
+    <view class="_div title-bar data-v-0c9e7b51">
+      <image
+        catchtap="{{c}}"
+        class="_img title-bar-close-img data-v-0c9e7b51"
+        src="{{b}}"
+      ></image>
+      <view class="_div title-bar-title data-v-0c9e7b51">投诉原因</view>
+      <view
+        catchtap="{{f}}"
+        class="{{['_div','data-v-0c9e7b51','title-bar-submit',e]}}"
+        wx:if="{{d}}"
+        >提交</view
+      >
+      <view class="_div mp-right-holder data-v-0c9e7b51" wx:else></view>
+    </view>
+    <view class="_div title-bar-divider-line data-v-0c9e7b51"></view>
+    <block wx:if="{{g}}">
+      <textarea
+        bindinput="{{i}}"
+        class="main-input data-v-0c9e7b51"
+        placeholder="请描述AI答案中存在的问题,以便我们提供更好的帮助"
+        type="text"
+        value="{{h}}"
+        wx:if="{{r0}}"
+      ></textarea>
+    </block>
+    <view
+      class="_div mp-input-container data-v-0c9e7b51"
+      style="{{'margin-bottom:'+q}}"
+      wx:else
+    >
+      <textarea
+        adjustPosition="{{false}}"
+        bindblur="{{k}}"
+        bindfocus="{{j}}"
+        bindinput="{{n}}"
+        bindkeyboardheightchange="{{l}}"
+        class="main-input data-v-0c9e7b51"
+        holdKeyboard="{{true}}"
+        placeholder="请描述AI答案中存在的问题,以便我们提供更好的帮助"
+        placeholderClass="main-input-placeholder"
+        showConfirmBar="{{false}}"
+        type="text"
+        value="{{m}}"
+        wx:if="{{r0}}"
+      ></textarea>
+      <view
+        bindtap="{{p}}"
+        class="{{['_div','data-v-0c9e7b51','mp-send-btn',o]}}"
+      >
+        <label class="_span data-v-0c9e7b51">提交</label>
+      </view>
+    </view>
+  </view>
+</view>

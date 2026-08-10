@@ -1,0 +1,77 @@
+<view class="{{['performance','data-v-5f48454a',q&&'with-nav']}}">
+  <view class="data-v-5f48454a" wx:if="{{a}}">
+    <view class="tabs-wrapper data-v-5f48454a">
+      <view class="tabbar data-v-5f48454a">
+        <tabbar
+          bind:__l="__l"
+          bindinput="{{b}}"
+          class="data-v-5f48454a"
+          uI="5f48454a-0"
+          uP="{{c}}"
+          wx:if="{{c}}"
+        ></tabbar>
+      </view>
+    </view>
+    <scroll-view
+      bindscrolltolower="{{m}}"
+      class="scroll-container data-v-5f48454a"
+      scrollTop="{{l}}"
+      scrollY="true"
+    >
+      <new-stock-performance-item
+        bind:__l="__l"
+        class="data-v-5f48454a"
+        data-c-h="{{!d}}"
+        uI="5f48454a-1"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></new-stock-performance-item>
+      <new-stock-performance-item
+        bind:__l="__l"
+        class="data-v-5f48454a"
+        data-c-h="{{!f}}"
+        uI="5f48454a-2"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></new-stock-performance-item>
+      <new-stock-performance-item
+        bind:__l="__l"
+        class="data-v-5f48454a"
+        data-c-h="{{!h}}"
+        uI="5f48454a-3"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></new-stock-performance-item>
+      <view class="loading-wrapper flex-center data-v-5f48454a">
+        <label class="fs-22 text-color-4 data-v-5f48454a" wx:if="{{j}}"
+          >暂无更多数据</label
+        >
+        <loading
+          bind:__l="__l"
+          class="data-v-5f48454a"
+          uI="5f48454a-4"
+          uP="{{k||''}}"
+          wx:else
+        ></loading>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="data-v-5f48454a" wx:else>
+    <view class="loading-wrapper flex-center data-v-5f48454a" wx:if="{{n}}">
+      <loading
+        bind:__l="__l"
+        class="data-v-5f48454a"
+        uI="5f48454a-5"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></loading>
+    </view>
+    <empty
+      bind:__l="__l"
+      class="data-v-5f48454a"
+      uI="5f48454a-6"
+      uP="{{p||''}}"
+      wx:else
+    ></empty>
+  </view>
+</view>

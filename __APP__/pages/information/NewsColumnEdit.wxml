@@ -1,0 +1,11 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div" data-st-theme="{{c}}">
+  <mp-privacy-dialog bind:__l="__l" uI="11f87531-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="11f87531-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <news-column-item-edit bind:__l="__l" uI="11f87531-2"></news-column-item-edit>
+</view>

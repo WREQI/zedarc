@@ -1,0 +1,43 @@
+<view
+  class="_div message-bar data-v-34727702"
+  id="fundbar"
+  ref="fundbar"
+  wx:if="{{a}}"
+>
+  <fund-dialog
+    bind:__l="__l"
+    bindgoDetail="{{d}}"
+    bindonClose="{{c}}"
+    class="data-v-34727702"
+    uI="34727702-0"
+    uP="{{e}}"
+    wx:if="{{b}}"
+  ></fund-dialog>
+  <view class="{{['_div','data-v-34727702','message',h]}}" wx:if="{{f}}">
+    <view
+      catchtap="{{item.h}}"
+      class="{{['_div','data-v-34727702','message-item',item.f]}}"
+      key="{{item.g}}"
+      wx:if="{{item.a}}"
+      wx:for="{{g}}"
+    >
+      <image class="_img tip data-v-34727702" src="{{item.b}}"></image>
+      <view class="_div content data-v-34727702">
+        <label class="_span title data-v-34727702">{{item.c}}</label>
+        <label class="{{['_span','data-v-34727702','count',item.e]}}"
+          >{{item.d}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view catchtap="{{j}}" class="_div onlyone data-v-34727702" wx:if="{{i}}"
+    >查看详情<label class="_span right data-v-34727702"></label>
+  </view>
+  <view class="_div manyone data-v-34727702" wx:else>
+    <label class="_span right data-v-34727702"></label>
+    <label class="_span split data-v-34727702"></label>
+    <label catchtap="{{l}}" class="_span message-count data-v-34727702"
+      >{{k}}</label
+    >
+  </view>
+</view>

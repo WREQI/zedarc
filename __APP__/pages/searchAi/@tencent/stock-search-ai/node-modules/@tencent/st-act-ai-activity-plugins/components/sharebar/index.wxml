@@ -1,0 +1,37 @@
+<view class="_div data-v-40444cfa" wx:if="{{a}}">
+  <view
+    class="_div content-container data-v-40444cfa"
+    style="{{'background-image:'+h}}"
+  >
+    <image
+      alt="彩带装饰"
+      class="_img ribbon-decor data-v-40444cfa"
+      src="{{b}}"
+    ></image>
+    <view class="_div wrap data-v-40444cfa">
+      <image
+        alt="红包"
+        class="_img left-content data-v-40444cfa"
+        src="{{c}}"
+      ></image>
+      <view class="_div center-content data-v-40444cfa">
+        <view class="_div top-content data-v-40444cfa">{{d}}</view>
+        <view class="_div bottom-content data-v-40444cfa">{{e}}</view>
+      </view>
+      <view bindtap="{{g}}" class="_div data-v-40444cfa">
+        <share-button-wrapper
+          bind:__l="__l"
+          class="data-v-40444cfa"
+          uI="40444cfa-0"
+          uS="{{['d']}}"
+        >
+          <image
+            alt="分享按钮"
+            class="_img right-content data-v-40444cfa"
+            src="{{f}}"
+          ></image>
+        </share-button-wrapper>
+      </view>
+    </view>
+  </view>
+</view>

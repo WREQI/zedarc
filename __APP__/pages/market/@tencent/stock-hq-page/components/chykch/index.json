@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "market-index": "../common/MarketIndex",
+    "compare": "../common/Compare",
+    "tabbar": "../tabs/mp",
+    "market-icon": "../../../../../detailSbg/@tencent/stock-markets-base/components/MarketIcon",
+    "kcb-etf-card": "./kch/KcbEtfCard",
+    "wzq-info-modal": "../../node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal"
+  },
+  "componentPlaceholder": { "market-icon": "view" }
+}

@@ -1,0 +1,8 @@
+<view class="{{['icon-tip-container','data-v-ff5fa4f8',b]}}">
+  <view class="icon-tip-list-item data-v-ff5fa4f8" wx:for="{{a}}" wx:key="d">
+    <view class="icon-container data-v-ff5fa4f8">
+      <label class="{{['img','data-v-ff5fa4f8',item.a,item.b]}}"></label>
+    </view>
+    <label class="text data-v-ff5fa4f8">{{item.c}}</label>
+  </view>
+</view>

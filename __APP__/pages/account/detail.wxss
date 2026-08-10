@@ -1,0 +1,44 @@
+@import "/app.wxss";
+.account-detail-container {
+  height: 100vh;
+}
+.account-detail-container .account-wrap-title {
+  height: 1.28rem;
+  line-height: 1.2rem;
+  padding: 0 0.4rem;
+}
+.account-detail-container .copy-btn {
+  color: #4774b3;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  margin-left: 0.16rem;
+}
+.account-detail-container .detail-account-wrap {
+  background: var(--fill-2);
+}
+.account-detail-container .detail-account-wrap .li-account {
+  padding: 0.666667rem 0 0.533333rem;
+}
+.account-detail-container .detail-account-wrap .li-item {
+  padding: 0.133333rem 0 0.266667rem;
+}
+.account-detail-container .detail-account-wrap .item-attr {
+  font-size: 0.373333rem;
+  padding-bottom: 0.133333rem;
+}
+.account-detail-container .item-val {
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+}
+.account-detail-container .detail-content {
+  height: 9.76rem;
+}
+.account-detail-container .box-button-account {
+  padding: 0.64rem 0.4rem 1.226667rem;
+}
+.account-detail-container .box-button-account button:last-child {
+  margin-top: 0.4rem;
+}
+.account-detail-container.account-detail-container__simple-mode .copy-btn {
+  color: #576b95;
+}

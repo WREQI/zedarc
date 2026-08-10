@@ -1,0 +1,28 @@
+<view
+  catchtap="{{h}}"
+  catchtouchmove="{{i}}"
+  class="{{['_div','drop-down','data-v-232eba78',g]}}"
+  hidden="{{!f}}"
+>
+  <view class="_div drop-down-open data-v-232eba78">
+    <view class="_div shadow data-v-232eba78"></view>
+    <view
+      class="_div drop-down-items data-v-232eba78"
+      style="{{'top:'+d+';'+'left:'+e}}"
+      wx:if="{{a}}"
+    >
+      <view class="_div data-v-232eba78" wx:for="{{b}}" wx:key="f">
+        <view catchtap="{{item.d}}" class="_div drop-down-item data-v-232eba78">
+          <label
+            class="{{['_span','item-value','data-v-232eba78',item.b&&'item-value-seleted',item.c&&c]}}"
+            >{{item.a}}</label
+          >
+        </view>
+        <view
+          class="_div drop-down-item-seperator data-v-232eba78"
+          wx:if="{{item.e}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+</view>

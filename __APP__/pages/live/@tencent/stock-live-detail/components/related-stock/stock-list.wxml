@@ -1,0 +1,30 @@
+<view class="{{['_div','data-v-cfe1fb12','hq-container',g,h]}}">
+  <view catchtap="{{b}}" class="_div hq-header data-v-cfe1fb12">
+    <view catchtap="{{a}}" class="_div header-btn data-v-cfe1fb12"></view>
+    <label class="_span header-title data-v-cfe1fb12">相关行情</label>
+    <view class="_div header-right data-v-cfe1fb12"></view>
+  </view>
+  <view
+    catchtap="{{f}}"
+    class="_div scroll-container data-v-cfe1fb12"
+    style="{{'max-height:'+d+';'+'min-height:'+e}}"
+  >
+    <view class="_div scroll-content data-v-cfe1fb12">
+      <view
+        class="_div card-container data-v-cfe1fb12"
+        wx:for="{{c}}"
+        wx:key="d"
+      >
+        <related-stock-item
+          bind:__l="__l"
+          bindmanageSelfStock="{{item.a}}"
+          class="flex-1 data-v-cfe1fb12"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.c}}"
+        ></related-stock-item>
+      </view>
+      <view class="_div bottom-bar data-v-cfe1fb12"></view>
+    </view>
+  </view>
+</view>

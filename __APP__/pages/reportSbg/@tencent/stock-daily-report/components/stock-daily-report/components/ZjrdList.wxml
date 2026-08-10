@@ -1,0 +1,84 @@
+<view class="{{['_div','daily-component-module-fund','data-v-a9496ff2',c]}}">
+  <view class="_div plate-list data-v-a9496ff2">
+    <view
+      class="_div group-item flex flex-justify-between data-v-a9496ff2"
+      wx:if="{{a}}"
+    >
+      <view
+        class="_div plate-container data-v-a9496ff2"
+        wx:for="{{b}}"
+        wx:for-item="plate"
+        wx:key="t"
+      >
+        <view class="{{['_div','data-v-a9496ff2','item-order',plate.b]}}">
+          <view class="_div order-text tttgb data-v-a9496ff2">{{plate.a}}</view>
+        </view>
+        <view class="_div left flex-1 data-v-a9496ff2">
+          <view bindtap="{{plate.i}}" class="_div list-item data-v-a9496ff2">
+            <view
+              class="_div flex flex-align-center flex-justify-between chart-container data-v-a9496ff2"
+            >
+              <view class="_div data-v-a9496ff2">
+                <view class="_div fund-text data-v-a9496ff2">主力净流入</view>
+                <view class="_div fund-value bold data-v-a9496ff2">
+                  <label class="{{['_span','data-v-a9496ff2',plate.d]}}"
+                    >{{plate.c}}</label
+                  >
+                </view>
+              </view>
+              <view class="_div fund-thumb data-v-a9496ff2"></view>
+            </view>
+            <view class="_div plate-meta data-v-a9496ff2">
+              <view class="_div flex flex-align-center data-v-a9496ff2">
+                <view class="_div plate-name bold data-v-a9496ff2"
+                  >{{plate.e}}</view
+                >
+                <view class="_div plate-quote bold data-v-a9496ff2">
+                  <label class="{{['_span','data-v-a9496ff2',plate.g]}}"
+                    >{{plate.f}}</label
+                  >
+                </view>
+              </view>
+              <view class="_div plate-tags data-v-a9496ff2">
+                <view
+                  class="_div tag-item data-v-a9496ff2"
+                  wx:for="{{plate.h}}"
+                  wx:for-item="tag"
+                  wx:key="c"
+                >
+                  <label class="_span data-v-a9496ff2" wx:if="{{tag.a}}"
+                    >{{tag.b}}</label
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div right data-v-a9496ff2" wx:if="{{plate.j}}">
+          <view catchtap="{{plate.l}}" class="_div etf-title data-v-a9496ff2">
+            <label class="_span etf-title-name data-v-a9496ff2"
+              >{{plate.k}}</label
+            >
+            <label
+              class="_span iconfont icon_indicator indicator data-v-a9496ff2"
+            ></label>
+          </view>
+          <label class="{{['_span','data-v-a9496ff2','etf-quote',plate.n]}}"
+            >{{plate.m}}</label
+          >
+          <label class="_span etf-desc data-v-a9496ff2">{{plate.o}}</label>
+          <zjrd-add-btn
+            bind:__l="__l"
+            bindaddStockBrow="{{plate.q}}"
+            bindaddStockToZixuan="{{plate.p}}"
+            class="data-v-a9496ff2"
+            uI="{{plate.r}}"
+            uP="{{plate.s}}"
+            wx:if="{{plate.s}}"
+          ></zjrd-add-btn>
+        </view>
+        <view class="_div right-placeholder data-v-a9496ff2" wx:else></view>
+      </view>
+    </view>
+  </view>
+</view>

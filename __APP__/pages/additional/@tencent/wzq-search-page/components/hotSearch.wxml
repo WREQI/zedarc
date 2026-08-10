@@ -1,0 +1,34 @@
+<view class="{{['_div','data-v-dafc0a98','hot-search',d]}}">
+  <view bindtap="{{b}}" class="_div hot-title data-v-dafc0a98">
+    <view class="_div title-text data-v-dafc0a98">热搜榜</view>
+    <view class="_div all-rank data-v-dafc0a98"
+      >{{a}}<image
+        class="_img more data-v-dafc0a98"
+        src="https://st.gtimg.com/design/d429d411c760c968fc2c5a568faadee1.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div hot-stocks data-v-dafc0a98">
+    <view
+      class="_div row-stocks data-v-dafc0a98"
+      wx:for="{{c}}"
+      wx:for-item="i"
+      wx:key="b"
+    >
+      <view
+        bindtap="{{j.h}}"
+        class="_div hot-stock data-v-dafc0a98"
+        data-ishotstock="Y"
+        data-market="{{j.f}}"
+        data-name="{{j.g}}"
+        data-scode="{{j.e}}"
+        wx:for="{{i.a}}"
+        wx:for-item="j"
+        wx:key="d"
+      >
+        <view class="_div stock-name data-v-dafc0a98">{{j.a}}</view>
+        <view class="_div stock-code data-v-dafc0a98">{{j.b}}.{{j.c}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,95 @@
+<view class="_div history-page-wrapper data-v-16192adc">
+  <history-tab
+    bind:__l="__l"
+    bindclickTab="{{a}}"
+    class="data-v-16192adc"
+    uI="16192adc-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></history-tab>
+  <swiper
+    bindchange="{{x}}"
+    class="swiper-container data-v-16192adc"
+    current="{{w}}"
+    duration="{{350}}"
+  >
+    <swiper-item class="data-v-16192adc">
+      <scroll-view
+        bindrefresherrefresh="{{g}}"
+        bindscrolltolower="{{h}}"
+        class="my-history data-v-16192adc"
+        refresherEnabled="{{true}}"
+        refresherThreshold="100"
+        refresherTriggered="{{f}}"
+        scrollY="{{true}}"
+      >
+        <view class="_div list-wrapper data-v-16192adc">
+          <stock-history-list
+            bind:__l="__l"
+            bindloadAll="{{d}}"
+            class="stock r data-v-16192adc"
+            uI="16192adc-1"
+            uR="stock"
+          ></stock-history-list>
+          <view class="_div tx-logo data-v-16192adc">
+            <view
+              class="{{['_div','logo-img','data-v-16192adc',e&&'classic']}}"
+            ></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="data-v-16192adc" wx:if="{{i}}">
+      <scroll-view
+        bindrefresherrefresh="{{n}}"
+        bindscrolltolower="{{o}}"
+        class="my-history data-v-16192adc"
+        refresherEnabled="{{true}}"
+        refresherThreshold="100"
+        refresherTriggered="{{m}}"
+        scrollY="{{true}}"
+      >
+        <view class="_div list-wrapper data-v-16192adc">
+          <basket-history-list
+            bind:__l="__l"
+            bindloadAll="{{k}}"
+            class="basket r data-v-16192adc"
+            uI="16192adc-2"
+            uR="basket"
+          ></basket-history-list>
+          <view class="_div tx-logo data-v-16192adc">
+            <view
+              class="{{['_div','logo-img','data-v-16192adc',l&&'classic']}}"
+            ></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item class="data-v-16192adc">
+      <scroll-view
+        bindrefresherrefresh="{{t}}"
+        bindscrolltolower="{{v}}"
+        class="my-history data-v-16192adc"
+        refresherEnabled="{{true}}"
+        refresherThreshold="100"
+        refresherTriggered="{{s}}"
+        scrollY="{{true}}"
+      >
+        <view class="_div list-wrapper data-v-16192adc">
+          <news-history-list
+            bind:__l="__l"
+            bindloadAll="{{q}}"
+            class="news r data-v-16192adc"
+            uI="16192adc-3"
+            uR="news"
+          ></news-history-list>
+          <view class="_div tx-logo data-v-16192adc">
+            <view
+              class="{{['_div','logo-img','data-v-16192adc',r&&'classic']}}"
+            ></view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

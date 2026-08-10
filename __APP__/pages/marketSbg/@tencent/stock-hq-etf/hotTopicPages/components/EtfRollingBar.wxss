@@ -1,0 +1,83 @@
+.etf-rolling-bar.data-v-6956d25e {
+  align-items: center;
+  background-color: var(--color-card);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5866666666666667rem;
+  line-height: 1;
+  max-width: 100%;
+  padding: 0 0.21333333333333335rem;
+  position: relative;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.etf-rolling-bar.etf-rolling-bar--carousel.data-v-6956d25e {
+  overflow: hidden;
+}
+.roll-row.data-v-6956d25e {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  max-width: 100%;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.roll-row--anim.data-v-6956d25e {
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  animation-name: ds-rolling-bar-roll-6956d25e;
+  animation-timing-function: ease;
+}
+@-webkit-keyframes ds-rolling-bar-roll-6956d25e {
+  0% {
+    transform: translateY(100%);
+  }
+  5% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes ds-rolling-bar-roll-6956d25e {
+  0% {
+    transform: translateY(100%);
+  }
+  5% {
+    transform: translateY(0);
+  }
+  95% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.market-icon.data-v-6956d25e {
+  flex-shrink: 0;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  object-fit: cover;
+  width: 0.37333333333333335rem;
+}
+.etf-name.data-v-6956d25e {
+  color: var(--color-midgray);
+  font-size: 0.32rem;
+  font-weight: 500;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-ratio.data-v-6956d25e {
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  margin-left: 0.10666666666666667rem;
+}

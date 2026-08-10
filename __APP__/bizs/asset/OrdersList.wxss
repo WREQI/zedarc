@@ -1,0 +1,93 @@
+@import "/app.wxss";
+.order-list-container {
+  height: 100%;
+}
+.order-list-container .col-a {
+  width: 1.6rem;
+}
+.order-list-container .col-b {
+  width: 2.4rem;
+}
+.order-list-container .col-c {
+  width: 1.733333rem;
+}
+.order-list-container .col-d {
+  width: 1.666667rem;
+}
+.order-list-container .col-e {
+  width: 2.6rem;
+}
+@media screen and (min-width: 540px) {
+  .order-list-container .col-a,
+  .order-list-container .col-b,
+  .order-list-container .col-c,
+  .order-list-container .col-d,
+  .order-list-container .col-e {
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+.order-list-container .gap {
+  background: var(--fill-1);
+  height: 0.213333rem;
+}
+.order-list-container .status-label {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  padding: 0.213333rem 0 0.213333rem 0.4rem;
+}
+.order-list-container .status-label .icon {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  margin-left: 0.213333rem;
+  position: relative;
+  top: 0.026667rem;
+  transform: scale(0.5);
+  transform-origin: left center;
+}
+.order-list-container.order-list-container__classic-mode.order-list-container__embedded-mode {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+@media screen and (max-width: 800px) {
+  .order-list-container__simple-mode .col-a {
+    width: 1.68rem;
+  }
+  .order-list-container__simple-mode .col-b {
+    width: 1.866667rem;
+  }
+  .order-list-container__simple-mode .col-c,
+  .order-list-container__simple-mode .col-d {
+    width: 1.733333rem;
+  }
+  .order-list-container__simple-mode .col-e {
+    width: 2.346667rem;
+  }
+  .order-list-container__simple-mode.order-list-container__embedded-mode
+    .col-e {
+    width: 2.906667rem;
+  }
+}
+.order-list-container__simple-mode .col-e {
+  padding-right: 0.32rem !important;
+}
+.order-list-container__simple-mode .container {
+  border-bottom-left-radius: 0.213333rem;
+  border-bottom-right-radius: 0.213333rem;
+}
+.order-list-container__simple-mode .container.undone-empty {
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+}
+.order-list-container__simple-mode .status-label {
+  font-size: 0.346667rem;
+}

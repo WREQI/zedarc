@@ -1,0 +1,21 @@
+<view bindtap="{{g}}" class="_div more_dialog_bg data-v-058fb03a" wx:if="{{a}}">
+  <view catchtap="{{f}}" class="_div bot_dialog_con data-v-058fb03a">
+    <view class="_div content data-v-058fb03a">
+      <view class="_div btn-wrapper data-v-058fb03a">
+        <view bindtap="{{b}}" class="_div btn-item data-v-058fb03a">
+          <view class="_div icon-group img data-v-058fb03a"></view>
+          <view class="_div title data-v-058fb03a">设置分组</view>
+        </view>
+        <view bindtap="{{c}}" class="_div btn-item data-v-058fb03a">
+          <view class="_div icon-delete img data-v-058fb03a"></view>
+          <view class="_div title data-v-058fb03a">删除自选</view>
+        </view>
+        <view bindtap="{{d}}" class="_div btn-item data-v-058fb03a">
+          <view class="_div icon-set-top img data-v-058fb03a"></view>
+          <view class="_div title data-v-058fb03a">设置置顶</view>
+        </view>
+      </view>
+      <view bindtap="{{e}}" class="_div cancel-btn data-v-058fb03a">取消</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="_div chart-setting data-v-54063886">
+    <view class="{{['_div','setting-wrapper','data-v-54063886',c&&'unfolder']}}" ref="setting">
+        <view class="_div setting-item data-v-54063886" wx:for="{{a}}" wx:key="o">
+            <view bindtap="{{item.c}}" class="_div select-box data-v-54063886">
+                <circle-check-vue bind:__l="__l" class="content data-v-54063886" uI="{{item.a}}" uP="{{item.b}}" wx:if="{{item.b}}"></circle-check-vue>
+            </view>
+            <view class="_div color-box data-v-54063886" style="{{'background:'+item.f}}">
+                <label class="_span line data-v-54063886" style="{{'background:'+item.d}}"></label>
+                <label class="_span index data-v-54063886" style="{{'color:'+item.e}}">{{b}}</label>
+            </view>
+            <input bindblur="{{item.k}}" bindinput="{{item.j}}" class="digital-box data-v-54063886" data-index="{{item.h}}" placeholder="{{item.i}}" type="number" value="{{item.g}}"></input>
+            <view class="_div slider-area data-v-54063886">
+                <slider-bar bind:__l="__l" bindvalueChange="{{item.l}}" class="data-v-54063886" uI="{{item.m}}" uP="{{item.n}}" wx:if="{{item.n}}"></slider-bar>
+            </view>
+        </view>
+    </view>
+    <view class="_div action-bar data-v-54063886">
+        <label catchtap="{{d}}" class="_span left-btn data-v-54063886">恢复默认</label>
+        <view catchtap="{{i}}" class="_div right-btn data-v-54063886" wx:if="{{e}}">
+            <label class="_span text data-v-54063886">{{f}}</label>
+            <label class="{{['_span','arrow','data-v-54063886',g&&'reverse',h&&'isBlack']}}"></label>
+        </view>
+    </view>
+    <view class="_div data-v-54063886" wx:if="{{j}}">
+        <view class="_div separate-strip data-v-54063886"></view>
+        <view class="_div text-box super-line data-v-54063886">
+            <label class="_span title data-v-54063886">简介</label>
+            <label class="_span content data-v-54063886">{{k}}</label>
+        </view>
+        <view class="_div text-box data-v-54063886">
+            <label class="_span title data-v-54063886">应用方法</label>
+            <label class="_span content data-v-54063886" wx:for="{{l}}" wx:key="b">{{item.a}}</label>
+        </view>
+    </view>
+</view>

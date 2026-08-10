@@ -1,0 +1,16 @@
+<view
+  class="{{['navbar','flex-between','border--top','data-v-aa5e7637',c&&'navbar-new']}}"
+  wx:if="{{a}}"
+>
+  <view
+    bindtap="{{item.e}}"
+    class="flex-1 navbar-item flex-column flex-center data-v-aa5e7637"
+    wx:for="{{b}}"
+    wx:key="d"
+  >
+    <image class="icon data-v-aa5e7637" src="{{item.a}}"></image>
+    <label class="name data-v-aa5e7637" style="{{'color:'+item.c}}"
+      >{{item.b}}</label
+    >
+  </view>
+</view>

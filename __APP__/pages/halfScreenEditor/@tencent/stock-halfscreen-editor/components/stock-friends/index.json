@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "contact-list": "../ContactList/ContactList",
+    "permission-agree-dialog": "../../../../../searchAi/@tencent/stock-search-ai/components/PermissionAgreeDialog",
+    "status": "../../../../../../node-modules/@tencent/st-status/mp/index"
+  },
+  "componentPlaceholder": { "permission-agree-dialog": "view" }
+}

@@ -1,0 +1,40 @@
+<view bindtouchstart="{{o}}" class="_div cover data-v-fcaa0aed" hidden="{{!n}}">
+  <view
+    catchtap="{{a}}"
+    catchtouchmove="{{b}}"
+    class="_div prevent-scroll data-v-fcaa0aed"
+  ></view>
+  <view
+    class="{{['_div','data-v-fcaa0aed','input-container',k,l]}}"
+    style="{{'padding-bottom:'+m}}"
+  >
+    <view class="_div input-area data-v-fcaa0aed">
+      <image class="_img header data-v-fcaa0aed" src="{{c}}"></image>
+      <textarea
+        autoHeight
+        adjustPosition="{{false}}"
+        autofocus="{{true}}"
+        bindconfirm="{{h}}"
+        bindinput="{{g}}"
+        class="input-box data-v-fcaa0aed"
+        confirmType="send"
+        disableDefaultPadding="true"
+        focus="{{d}}"
+        holdKeyboard="{{true}}"
+        maxlength="{{f}}"
+        placeholder="{{e}}"
+        placeholderStyle="color:#98A0B3;font-size:16px;line-height:22px;"
+        ref="textarea"
+        showConfirmBar="{{false}}"
+        wx:if="{{r0}}"
+      ></textarea>
+    </view>
+    <view class="_div emoji-container data-v-fcaa0aed">
+      <view
+        catchtap="{{i}}"
+        class="{{['_div','data-v-fcaa0aed','confirm-btn',j]}}"
+        >发送</view
+      >
+    </view>
+  </view>
+</view>

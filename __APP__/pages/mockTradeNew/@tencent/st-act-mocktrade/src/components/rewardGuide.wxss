@@ -1,0 +1,197 @@
+.row.data-v-5e11111c {
+  flex-direction: row;
+}
+.dialog-wrapper.data-v-5e11111c {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+.guide-dialog.data-v-5e11111c {
+  height: 9.866666666666667rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.guide-dialog .popup-rank.data-v-5e11111c {
+  background-color: #fff;
+  background-image: linear-gradient(
+      180deg,
+      rgba(230, 53, 53, 0) 38.65%,
+      rgba(230, 53, 53, 0.12)
+    ),
+    url(https://st.gtimg.com/design/52ec01eb01bf10f4a2a523defeab4da4.png);
+  background-repeat: no-repeat;
+  background-size: 7.2rem 9.866666666666667rem, 7.2rem 5.386666666666667rem;
+  border-radius: 0.21333333333333335rem;
+  height: 9.866666666666667rem;
+  width: 7.2rem;
+}
+.guide-dialog .popup-rank .rank-title.data-v-5e11111c {
+  color: #262e40;
+  font-family: PingFang SC;
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 0.96rem;
+  padding: 0.7466666666666667rem 0 0.09333333333333334rem;
+  text-align: center;
+}
+.guide-dialog .popup-rank .rank-reward.data-v-5e11111c {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.guide-dialog .popup-rank .rank-reward .rank-reward-icon.data-v-5e11111c {
+  height: 0.5333333333333333rem;
+  width: 0.5333333333333333rem;
+}
+.guide-dialog .popup-rank .rank-reward .rank-reward-text.data-v-5e11111c {
+  align-items: center;
+  color: rgba(38, 46, 64, 0.6);
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 0.5866666666666667rem;
+  margin-left: 0.08rem;
+}
+.guide-dialog
+  .popup-rank
+  .rank-reward
+  .rank-reward-text
+  .rank-reward-highlight.data-v-5e11111c {
+  color: #e63535;
+  font-weight: 600;
+  margin-left: 0.02666666666666667rem;
+}
+.guide-dialog .popup-rank .rank-content.data-v-5e11111c {
+  background: url(https://st.gtimg.com/design/a478cb0c6400e3436e2a92075662c0f2.png)
+    no-repeat;
+  background-size: 100% 100%;
+  height: 4.666666666666667rem;
+  margin: 0.5733333333333334rem auto 0;
+  width: 6.133333333333334rem;
+}
+.guide-dialog .popup-rank .rank-content-title.data-v-5e11111c {
+  color: #262e40;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 0.7733333333333333rem;
+  line-height: 0.7733333333333333rem;
+  text-align: center;
+}
+.guide-dialog .popup-rank .rank-content-ratio.data-v-5e11111c {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin: 0.4266666666666667rem auto 0.10666666666666667rem;
+}
+.guide-dialog .popup-rank .rank-content-ratio-text.data-v-5e11111c {
+  color: #e63535;
+  font-family: PingFang SC;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.0666666666666667rem;
+  position: relative;
+}
+.guide-dialog .popup-rank .rank-content-ratio-text.data-v-5e11111c:before {
+  background: url(https://st.gtimg.com/design/60e87fd28104cec2fa07af8738301892.png)
+    no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 0.8533333333333334rem;
+  left: -0.5333333333333333rem;
+  position: absolute;
+  top: 0.13333333333333333rem;
+  width: 0.32rem;
+}
+.guide-dialog .popup-rank .rank-content-ratio-text.data-v-5e11111c:after {
+  background: url(https://st.gtimg.com/design/4085100f87bb6190705c1d3c2f29c02a.png)
+    no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  display: block;
+  height: 0.8533333333333334rem;
+  position: absolute;
+  right: -0.5333333333333333rem;
+  top: 0.13333333333333333rem;
+  width: 0.32rem;
+}
+.guide-dialog .popup-rank .rank-content-subtitle.data-v-5e11111c {
+  color: rgba(38, 46, 64, 0.6);
+  font-family: PingFang SC;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  text-align: center;
+}
+.guide-dialog .popup-rank .rank-content-stock.data-v-5e11111c {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8266666666666667rem 0.5333333333333333rem 0;
+}
+.guide-dialog
+  .popup-rank
+  .rank-content-stock
+  .rank-content-stock-title.data-v-5e11111c {
+  color: rgba(38, 46, 64, 0.6);
+  font-family: PingFang SC;
+  font-size: 0.24rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.32rem;
+}
+.guide-dialog
+  .popup-rank
+  .rank-content-stock
+  .rank-content-stock-name.data-v-5e11111c {
+  color: #262e40;
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-weight: 600;
+  line-height: 0.4533333333333333rem;
+}
+.guide-dialog
+  .popup-rank
+  .rank-content-stock
+  .rank-content-stock-ratio.data-v-5e11111c {
+  color: #e63535;
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-weight: 600;
+  line-height: 0.4533333333333333rem;
+}
+.guide-dialog .popup-rank .rank-button.data-v-5e11111c {
+  background: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  margin: 0.5333333333333333rem auto 0;
+  text-align: center;
+  width: 6.133333333333334rem;
+}
+.guide-dialog .close-img.data-v-5e11111c {
+  background: url(https://st.gtimg.com/design/416de7d02dc3a4238bf50049a37b4d21.png)
+    no-repeat;
+  background-size: 100% 100%;
+  height: 0.64rem;
+  position: absolute;
+  right: -0.32rem;
+  top: -0.8533333333333334rem;
+  width: 0.64rem;
+}

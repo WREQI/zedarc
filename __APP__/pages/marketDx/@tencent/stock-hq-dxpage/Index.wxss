@@ -1,0 +1,122 @@
+.black .st-popup-mask,
+.panda .st-popup-mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.black .st-modal-btn,
+.black .st-modal-main,
+.panda .st-modal-btn,
+.panda .st-modal-main {
+  background-color: #171d28;
+}
+.black .st-modal-title-def,
+.panda .st-modal-title-def {
+  color: #f0f1f5;
+}
+.black .st-modal-title + .st-modal-content,
+.panda .st-modal-title + .st-modal-content {
+  color: #a7b0c4;
+}
+.black .st-modal .content-container .risk-desc,
+.panda .st-modal .content-container .risk-desc {
+  color: #69738c;
+}
+.black .st-modal-btn:before,
+.panda .st-modal-btn:before {
+  border-color: #262e40 !important;
+}
+.content-container .risk-desc {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.32rem;
+}
+.black .page-wrapper-app.data-v-2ee508bb,
+.panda .page-wrapper-app.data-v-2ee508bb {
+  background-image: url(https://st.gtimg.com/design/d808dc6faa2d7756fbc49fabd0a8d224.png);
+}
+.page-wrapper.data-v-2ee508bb {
+  background-color: var(--fill-2);
+  background-repeat: no-repeat;
+  background-size: 100% 2.986666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+}
+.page-wrapper.page-wrapper-wzq.data-v-2ee508bb {
+  background-image: url(https://st.gtimg.com/design/08a8a661a4794c7357d1380114b05b7c.png);
+  padding-top: 0.37333333333333335rem !important;
+}
+.page-wrapper.page-wrapper-app.data-v-2ee508bb {
+  background-image: url(https://st.gtimg.com/design/af135c522c99444e0e21b4f7c7a638b0.png);
+  background-size: 100% 5.333333333333333rem;
+}
+.page-wrapper.page-wrapper-mp.data-v-2ee508bb {
+  background-color: var(--fill-1);
+  background-image: url(https://st.gtimg.com/design/da3a95099c0715b4cc765cbdba9638f9.png);
+  background-size: 100% 3.84rem;
+  padding-top: 0.37333333333333335rem !important;
+  position: relative;
+}
+.page-wrapper.page-wrapper-mp.has-btn.data-v-2ee508bb {
+  padding-bottom: 2.6666666666666665rem;
+}
+.page-wrapper.page-wrapper-mp .loading-text.data-v-2ee508bb {
+  align-items: center;
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 0.6666666666666666rem;
+  justify-content: center;
+  margin: 0.4rem 0;
+  text-align: center;
+  width: 100%;
+}
+.page-wrapper.page-wrapper-mp .zxg-logo.data-v-2ee508bb {
+  background-color: var(--fill-1);
+  background-image: url(https://st.gtimg.com/design/114b3ab0b5052774e13de00c771146a1.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 1.76rem;
+  width: 100%;
+}
+.navigation-bar.data-v-2ee508bb {
+  height: 1.28rem;
+}
+.content-wrapper.data-v-2ee508bb {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.16rem;
+}
+.content-wrapper.content-wrapper-mp.data-v-2ee508bb {
+  min-height: calc(100vh - 5.466666666666667rem);
+  padding-top: 0;
+  position: relative;
+}
+.content-wrapper.content-wrapper-mp.content-wrapper-mp-btn.data-v-2ee508bb {
+  min-height: calc(100vh - 7.466666666666667rem);
+}
+.market-wrapper-outer-ceiling.data-v-2ee508bb {
+  background-color: var(--fill-2);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 12;
+}
+.market-wrapper-outer-ceiling-app.data-v-2ee508bb {
+  top: 1.28rem;
+}
+.fade-enter-active.data-v-2ee508bb,
+.fade-leave-active.data-v-2ee508bb {
+  transition: all 0.15s ease-out;
+}
+.fade-enter.data-v-2ee508bb,
+.fade-leave-to.data-v-2ee508bb {
+  opacity: 0;
+}

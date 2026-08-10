@@ -1,0 +1,62 @@
+<overlay
+  bind:__l="__l"
+  bindclick="{{m}}"
+  class="{{['quick-amount-overlay','^quick-amount-overlay',l]}}"
+  uI="2aff7f28-0"
+  uP="{{n}}"
+  uS="{{['d']}}"
+  wx:if="{{n}}"
+>
+  <view
+    class="{{['amount-popup','text-color-1','triangle','^amount-popup','^triangle',j]}}"
+    style="{{'top:'+k}}"
+  >
+    <scroll-view
+      enhanced
+      class="{{['scroll-height','^scroll-height',f&&'use-transition',g&&'embedded-mode']}}"
+      scrollY="true"
+      showScrollbar="{{false}}"
+    >
+      <view class="flex position ^position">
+        <view class="{{['flex-1',c]}}" wx:if="{{a}}">
+          <view
+            bindtap="{{item.f}}"
+            class="amount-item border--bottom flex-between ^amount-item"
+            wx:for="{{b}}"
+            wx:key="e"
+          >
+            <label class="buy-color">
+              <block wx:if="{{item.a}}">买全仓</block>
+              <block wx:elif="{{item.b}}">买半仓</block>
+              <block wx:else>买{{item.c}}仓</block>
+            </label>
+            <label class="fs-24 text-color-4">{{item.d}}</label>
+          </view>
+        </view>
+        <view class="flex-1" wx:if="{{d}}">
+          <view
+            catchtap="{{item.f}}"
+            class="amount-item border--bottom flex-between ^amount-item"
+            wx:for="{{e}}"
+            wx:key="e"
+          >
+            <label class="sell-color">
+              <block wx:if="{{item.a}}">卖全仓</block>
+              <block wx:elif="{{item.b}}">卖半仓</block>
+              <block wx:else>卖{{item.c}}仓</block>
+            </label>
+            <label class="fs-24 text-color-4">{{item.d}}</label>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view
+      bindtap="{{i}}"
+      class="border--top flex-center set-position ^set-position"
+      wx:if="{{h}}"
+    >
+      <label class="icon icon-all-safesetting ^icon-all-safesetting"></label
+      >设置常用仓位</view
+    >
+  </view>
+</overlay>

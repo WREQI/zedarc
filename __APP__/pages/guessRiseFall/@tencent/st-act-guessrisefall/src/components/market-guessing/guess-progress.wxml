@@ -1,0 +1,35 @@
+<view class="_div guess-progress data-v-3abce4dd">
+  <view class="_div guess-progress__body data-v-3abce4dd">
+    <view class="_div guess-progress__list data-v-3abce4dd">
+      <view
+        class="_div guess-progress__item data-v-3abce4dd"
+        wx:for="{{a}}"
+        wx:key="d"
+      >
+        <view
+          class="_div guess-progress__cell guess-progress__icon data-v-3abce4dd"
+        >
+          <image
+            alt="图标"
+            class="_img guess-progress__icon-img data-v-3abce4dd"
+            src="{{item.a}}"
+          ></image>
+        </view>
+        <view
+          class="_div guess-progress__cell guess-progress__date data-v-3abce4dd"
+          >{{item.b}}</view
+        >
+        <view
+          class="_div guess-progress__cell guess-progress__text data-v-3abce4dd"
+          >{{item.c}}</view
+        >
+      </view>
+    </view>
+    <view class="_div guess-progress__track data-v-3abce4dd">
+      <view
+        class="_div guess-progress__track-fill data-v-3abce4dd"
+        style="{{'width:'+b}}"
+      ></view>
+    </view>
+  </view>
+</view>

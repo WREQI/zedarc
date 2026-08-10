@@ -1,0 +1,48 @@
+<view class="_div brief-card data-v-0dfa2185">
+  <view class="_div header-guide data-v-0dfa2185">
+    <view class="_div zxg-logo data-v-0dfa2185"></view>
+    <view
+      bindtap="{{f}}"
+      class="_div header-guide-subscribe data-v-0dfa2185"
+      wx:if="{{a}}"
+    >
+      <block wx:if="{{b}}">
+        <view
+          class="_div subscribe-btn subscribed data-v-0dfa2185"
+          wx:if="{{c}}"
+          >已订阅·{{d}}W</view
+        >
+        <view class="_div subscribe-btn data-v-0dfa2185" wx:else>
+          <image
+            alt=""
+            class="_img subscribe-icon data-v-0dfa2185"
+            src="https://st.gtimg.com/design/35f69c173092b54b0f3653ce28501283.png"
+          ></image
+          >订阅·{{e}}W</view
+        >
+      </block>
+    </view>
+  </view>
+  <view class="_div speech-title-wrapper data-v-0dfa2185">
+    <view class="_div summary data-v-0dfa2185">{{g}}</view>
+    <view class="{{['_div','speech-wrapper','data-v-0dfa2185',m]}}">
+      <label class="_span year-month-day data-v-0dfa2185">{{h}}</label>
+      <block wx:if="{{i}}">
+        <speech-entry
+          bind:__l="__l"
+          class="data-v-0dfa2185"
+          uI="0dfa2185-0"
+          uP="{{k}}"
+          wx:if="{{j}}"
+        ></speech-entry>
+        <speech-morning
+          bind:__l="__l"
+          class="data-v-0dfa2185"
+          uI="0dfa2185-1"
+          uP="{{l||''}}"
+          wx:else
+        ></speech-morning>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="container">
+  <mp-privacy-dialog bind:__l="__l" uI="6e9adce0-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="6e9adce0-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="main-content-about">
+    <view class="hd-banner-logo flex flex-align-center flex-pack-center">
+      <debug-function-entry bind:__l="__l" uI="6e9adce0-2" uS="{{['d']}}">
+        <view class="wrap-logo">
+          <label class="block icon-zxg"></label>
+        </view>
+      </debug-function-entry>
+    </view>
+    <view class="bd-text-intro">
+      <view class="bd-text-h1">腾讯{{c}}介绍</view>
+      <view wx:if="{{d}}"
+        >腾讯倡导的互联网+和连接一切的理念下，由合作证券公司为您提供开户、交易、查询等证券服务。</view
+      >
+      <view wx:if="{{e}}">
+        <view
+          >腾讯自选股是一款轻便、简洁、专业的股票行情软件，秉承「专业伴你成长」的理念，为用户提供沪深港美全球精准实时行情，7*24小时推送精选全球财经资讯，及伴你成长的温度交流社区。
+          由合作证券公司提供开户、交易、查询等金融服务，畅享便捷、高效、优质的证券投资服务。支持微信或QQ一键登录，随时随地把握股市机会。</view
+        >
+        <view style="margin-top: 20rpx"
+          >欢迎在应用市场下载腾讯自选股APP体验。</view
+        >
+      </view>
+    </view>
+    <protocol-list bind:__l="__l" uI="6e9adce0-3"></protocol-list>
+  </view>
+</view>

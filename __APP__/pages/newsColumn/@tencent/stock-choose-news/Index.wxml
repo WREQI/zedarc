@@ -1,0 +1,17 @@
+<refresh-wrapper
+  bind:__l="__l"
+  uI="4983acbb-0"
+  uP="{{d}}"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <choose-list-view
+    bind:__l="__l"
+    binddataReport="{{b}}"
+    class="r"
+    uI="4983acbb-1,4983acbb-0"
+    uP="{{c}}"
+    uR="chooseListView"
+    wx:if="{{c}}"
+  ></choose-list-view>
+</refresh-wrapper>

@@ -1,0 +1,152 @@
+<page-meta class="data-v-8fd16bfa" rootFontSize="{{a}}"></page-meta>
+<view class="edit data-v-8fd16bfa" data-st-theme="{{C}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8fd16bfa"
+    uI="8fd16bfa-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8fd16bfa"
+    uI="8fd16bfa-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="text-area-container data-v-8fd16bfa">
+    <textarea
+      autofocus="{{f}}"
+      bindblur="{{i}}"
+      bindconfirm="{{k}}"
+      bindfocus="{{h}}"
+      bindinput="{{j}}"
+      class="data-v-8fd16bfa"
+      confirmType="send"
+      cursor="{{e}}"
+      focus="{{g}}"
+      maxlength="-1"
+      placeholder="{{c}}"
+      showConfirmBar="{{l}}"
+      value="{{d}}"
+      wx:if="{{r0}}"
+    ></textarea>
+  </view>
+  <view class="edit_operateArea data-v-8fd16bfa">
+    <view class="edit_media data-v-8fd16bfa" wx:if="{{m}}">
+      <view class="edit_preview data-v-8fd16bfa" wx:if="{{n}}">
+        <view
+          class="edit_preview_item data-v-8fd16bfa"
+          wx:for="{{o}}"
+          wx:key="j"
+        >
+          <image
+            catchtap="{{item.f}}"
+            class="data-v-8fd16bfa"
+            data-idx="{{item.g}}"
+            data-src="{{item.h}}"
+            mode="aspectFill"
+            src="{{item.e}}"
+          >
+            <view
+              catchtap="{{item.b}}"
+              class="edit_preview_item_del data-v-8fd16bfa"
+              data-idx="{{item.c}}"
+              data-src="{{item.d}}"
+              wx:if="{{item.a}}"
+            ></view>
+          </image>
+          <progress class="data-v-8fd16bfa" percent="{{item.i}}"></progress>
+        </view>
+        <view
+          bindtap="{{q}}"
+          class="edit_preview_item edit_preview_add data-v-8fd16bfa"
+          wx:if="{{p}}"
+        ></view>
+      </view>
+    </view>
+    <view class="edit_operate data-v-8fd16bfa">
+      <view
+        catchtap="{{r}}"
+        class="edit_operate_view edit_operate_image data-v-8fd16bfa"
+        id="image"
+      >
+        <view class="data-v-8fd16bfa">
+          <view
+            class="edit_operate_inline edit_operate_icon edit_operate_icon_image data-v-8fd16bfa"
+          ></view>
+          <view class="edit_operate_inline edit_operate_text data-v-8fd16bfa"
+            >插入图片</view
+          >
+        </view>
+        <view
+          class="edit_operate_icon edit_operate_icon_arrow data-v-8fd16bfa"
+        ></view>
+      </view>
+      <view
+        catchtap="{{s}}"
+        class="edit_operate_view edit_operate_emoji data-v-8fd16bfa"
+        id="emoji"
+      >
+        <view class="data-v-8fd16bfa">
+          <view
+            class="edit_operate_inline edit_operate_icon edit_operate_icon_emoji data-v-8fd16bfa"
+          ></view>
+          <view class="edit_operate_inline edit_operate_text data-v-8fd16bfa"
+            >插入表情</view
+          >
+        </view>
+        <view
+          class="edit_operate_icon edit_operate_icon_arrow data-v-8fd16bfa"
+        ></view>
+      </view>
+      <view
+        catchtap="{{t}}"
+        class="edit_operate_view edit_operate_at data-v-8fd16bfa"
+      >
+        <view class="data-v-8fd16bfa">
+          <view
+            class="edit_operate_inline edit_operate_icon edit_operate_icon_at data-v-8fd16bfa"
+          ></view>
+          <view class="edit_operate_inline edit_operate_text data-v-8fd16bfa"
+            >提醒谁看</view
+          >
+        </view>
+        <view
+          class="edit_operate_icon edit_operate_icon_arrow data-v-8fd16bfa"
+        ></view>
+      </view>
+      <view class="edit_operate_view edit_operate_send data-v-8fd16bfa">
+        <view
+          bindtap="{{x}}"
+          class="{{['data-v-8fd16bfa','edit_operate_send_sendBtn',v]}}"
+          data-op="{{w}}"
+          >发送</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="{{['data-v-8fd16bfa','swiper_container',B]}}" wx:if="{{y}}">
+    <swiper
+      class="data-v-8fd16bfa"
+      indicatorActiveColor="rgba(138,103,71,1)"
+      indicatorColor="rgba(198,178,172,1)"
+      indicatorDots="{{A}}"
+    >
+      <swiper-item
+        class="data-v-8fd16bfa"
+        wx:for="{{z}}"
+        wx:for-item="ItemData"
+        wx:key="c"
+      >
+        <view class="{{['data-v-8fd16bfa','panel',ItemData.b]}}">
+          <view
+            bindtap="{{item.a}}"
+            class="emoji_btn data-v-8fd16bfa"
+            data-name="{{item.b}}"
+            wx:for="{{ItemData.a}}"
+            wx:key="c"
+          ></view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

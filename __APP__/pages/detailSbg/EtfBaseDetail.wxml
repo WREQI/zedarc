@@ -1,0 +1,13 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<detail bind:__l="__l" uI="572804b4-0" uP="{{d}}" uS="{{['d']}}" wx:if="{{b}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    uI="572804b4-1,572804b4-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="572804b4-2,572804b4-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></stock-privacy-dialog>
+</detail>

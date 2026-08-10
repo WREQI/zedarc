@@ -1,0 +1,32 @@
+<page-meta class="data-v-61345e54" rootFontSize="{{a}}"></page-meta>
+<view class="{{['_div','container','data-v-61345e54',h]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-61345e54"
+    uI="61345e54-0"
+  ></mp-privacy-dialog>
+  <block wx:if="{{b}}">
+    <web-view-component
+      bind:__l="__l"
+      bindmessage="{{c}}"
+      class="data-v-61345e54"
+      uI="61345e54-1"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></web-view-component>
+  </block>
+  <block wx:elif="{{e}}">
+    <st-status
+      bind:__l="__l"
+      class="data-v-61345e54"
+      uI="61345e54-2"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></st-status>
+  </block>
+  <block wx:else>
+    <image class="_img logo data-v-61345e54"></image>
+    <label class="_span text data-v-61345e54">点击下方按钮前往券商服务</label>
+    <button bindtap="{{g}}" class="btn data-v-61345e54">前往券商服务</button>
+  </block>
+</view>

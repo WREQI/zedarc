@@ -1,0 +1,44 @@
+<view class="_div mcp-quote-item data-v-1d648dcd">
+  <view class="_div mcp-quote-title data-v-1d648dcd" wx:if="{{a}}">
+    <view bindtap="{{c}}" class="_div mcp-quote-title-layout data-v-1d648dcd"
+      >{{b}}</view
+    >
+    <image
+      bindtap="{{f}}"
+      class="{{['_img','data-v-1d648dcd','quoteContentArrow',g]}}"
+      src="{{e}}"
+      wx:if="{{d}}"
+    ></image>
+    <view class="_div loading-area data-v-1d648dcd" wx:if="{{h}}">
+      <view class="_div dot data-v-1d648dcd"></view>
+      <view class="_div dot data-v-1d648dcd"></view>
+      <view class="_div dot data-v-1d648dcd"></view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-1d648dcd',q]}}" wx:if="{{i}}">
+    <view class="{{['_div','data-v-1d648dcd','quoteContentListLayout',p]}}">
+      <view class="_div leftLine data-v-1d648dcd"></view>
+      <view class="{{['_div','data-v-1d648dcd','quoteContentList']}}">
+        <view class="_div data-v-1d648dcd" wx:if="{{j}}">
+          <view
+            class="{{['_div','data-v-1d648dcd','quoteContentListItem','quoteContentListItemDisable']}}"
+            wx:for="{{k}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+        <view class="_div data-v-1d648dcd" wx:elif="{{l}}">
+          <view
+            class="{{['_div','data-v-1d648dcd','quoteContentListItem',item.c]}}"
+            wx:for="{{m}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+          <view class="_div outerContentInfo data-v-1d648dcd" wx:if="{{n}}"
+            >{{o}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

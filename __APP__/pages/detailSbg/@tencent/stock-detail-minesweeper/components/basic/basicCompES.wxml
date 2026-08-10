@@ -1,0 +1,25 @@
+<view class="_div chart data-v-5e4d18b4" wx:if="{{a}}">
+  <view class="_div legend data-v-5e4d18b4">
+    <view
+      class="_div legend-item data-v-5e4d18b4"
+      wx:for="{{b}}"
+      wx:for-item="t"
+      wx:key="e"
+    >
+      <label
+        class="_span color data-v-5e4d18b4"
+        key="{{t.a}}"
+        style="{{'background-color:'+t.b}}"
+      ></label>
+      <label class="_span name data-v-5e4d18b4" key="{{t.d}}">{{t.c}}</label>
+    </view>
+  </view>
+  <f2
+    bind:__l="__l"
+    bindonInit="{{d}}"
+    class="data-v-5e4d18b4"
+    uI="5e4d18b4-0"
+    uP="{{e}}"
+    wx:if="{{c}}"
+  ></f2>
+</view>

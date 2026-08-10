@@ -1,0 +1,17 @@
+<view class="_div" wx:if="{{a}}">
+  <slot></slot>
+</view>
+<st-scroll
+  bind:__l="__l"
+  bindbeforeScrollStart="{{e}}"
+  bindscroll="{{c}}"
+  bindscrollEnd="{{d}}"
+  class="r"
+  uI="199822bf-0"
+  uP="{{f||''}}"
+  uR="scroll"
+  uS="{{['d']}}"
+  wx:else
+>
+  <slot></slot>
+</st-scroll>

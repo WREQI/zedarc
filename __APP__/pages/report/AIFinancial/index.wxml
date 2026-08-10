@@ -1,0 +1,18 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view>
+  <mp-privacy-dialog bind:__l="__l" uI="7cb11478-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="7cb11478-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <a-i-financial
+    bind:__l="__l"
+    class="r"
+    uI="7cb11478-2"
+    uP="{{e}}"
+    uR="aiFinancialRef"
+    wx:if="{{c}}"
+  ></a-i-financial>
+</view>

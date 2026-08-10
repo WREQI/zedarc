@@ -1,0 +1,5 @@
+<web-view
+  binderror="onWebViewError"
+  bindmessage="onMessage"
+  src="{{url}}"
+></web-view>

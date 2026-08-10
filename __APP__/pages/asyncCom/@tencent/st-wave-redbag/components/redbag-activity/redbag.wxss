@@ -1,0 +1,41 @@
+.yy-activity-wave-redbag.data-v-4a95cd23 {
+  background-image: url(https://st.gtimg.com/design/8106d372b778d22f7f400d2e3bf43b9d.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 0.4266666666666667rem;
+  position: relative;
+  top: 0.06666666666666667rem;
+  width: 0.3466666666666667rem;
+}
+.yy-activity-wave-redbag.lite.data-v-4a95cd23 {
+  background-image: url(https://st.gtimg.com/design/00260086bf638a83d399f80a80f1f22a.png);
+  width: 0.4266666666666667rem;
+}
+.yy-activity-wave-redbag.mina.data-v-4a95cd23 {
+  margin-left: 0.10666666666666667rem;
+}
+.yy-activity-wave-animation.data-v-4a95cd23 {
+  animation: yy-activity-wave-breath-4a95cd23 0.6s linear 1s 3;
+}
+@-webkit-keyframes yy-activity-wave-breath-4a95cd23 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes yy-activity-wave-breath-4a95cd23 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

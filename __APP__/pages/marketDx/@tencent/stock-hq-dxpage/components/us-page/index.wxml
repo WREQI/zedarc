@@ -1,0 +1,25 @@
+<view class="{{['_div','us-page-wrapper','data-v-3bd7e1ac',g,h]}}">
+  <view class="{{['_div','us-block','data-v-3bd7e1ac',d]}}" wx:if="{{a}}">
+    <title-block
+      bind:__l="__l"
+      class="data-v-3bd7e1ac"
+      uI="3bd7e1ac-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></title-block>
+    <us-stock-item
+      bind:__l="__l"
+      class="us-item-wrapper data-v-3bd7e1ac"
+      uI="3bd7e1ac-1"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></us-stock-item>
+  </view>
+  <no-data-block
+    bind:__l="__l"
+    class="data-v-3bd7e1ac"
+    uI="3bd7e1ac-2"
+    uP="{{f}}"
+    wx:elif="{{e}}"
+  ></no-data-block>
+</view>

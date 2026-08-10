@@ -1,0 +1,10 @@
+<view class="_div tab-container data-v-bfcd88f0" id="tab-scroll">
+  <view
+    bindtap="{{item.e}}"
+    class="{{['_div','data-v-bfcd88f0',b,item.c]}}"
+    id="{{item.b}}"
+    wx:for="{{a}}"
+    wx:key="d"
+    >{{item.a}}</view
+  >
+</view>

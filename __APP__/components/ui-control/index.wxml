@@ -1,0 +1,219 @@
+<import src="./comps/play-btn.wxml"></import>
+<import src="./comps/stop-btn.wxml"></import>
+<import src="./comps/fullscreen-btn.wxml"></import>
+<import src="./comps/exit-fullscreen-btn.wxml"></import>
+<import src="./comps/pause-btn.wxml"></import>
+<import src="./comps/definition-select.wxml"></import>
+<import src="./comps/playbackrate-select.wxml"></import>
+<import src="./comps/back-btn.wxml"></import>
+<import src="./comps/background-playback-btn.wxml"></import>
+<import src="./comps/hdr-option-icon.wxml"></import>
+<import src="./comps/dolby-option-icon.wxml"></import>
+<import src="./comps/speed-icon.wxml"></import>
+<import src="./comps/loading-icon.wxml"></import>
+<view class="definition-select" hidden="{{!isDefinitionSelectShow}}">
+  <template
+    is="definition-select"
+    data="{{displayDefinitionList:displayDefinitionList}}"
+  ></template>
+</view>
+<view class="playbackrate-select" hidden="{{!isPlaybackRateSelectShow}}">
+  <template
+    is="playbackrate-select"
+    data="{{playbackRateList:playbackRateList}}"
+  ></template>
+</view>
+<view class="live-mask" wx:if="{{isLiveMaskShow}}"></view>
+<view class="loading" wx:if="{{isShowLoading}}">
+  <template is="loading-icon" data></template>
+</view>
+<view class="poster" wx:if="{{usePoster&&isShowPoster}}">
+  <image mode="aspectFill" src="{{posterUrl||defaultPosterUrl}}"></image>
+</view>
+<view
+  class="watermark-container"
+  style="top: {{mask.top+'px'}}; right: {{mask.right+'px'}};opacity: {{mask.alpha/100}};"
+  wx:for="{{useWatermark?watermarkList:[]}}"
+  wx:for-item="mask"
+  wx:key="url"
+>
+  <image
+    class="watermark"
+    src="{{mask.url}}"
+    style="width:{{mask.width+'px'}}; height: {{mask.height+'px'}};"
+  ></image>
+</view>
+<view
+  class="top-toast-container bold-text white-text {{!isControlShow?'backdrop':''}}"
+  wx:if="{{controls&&isLongPress}}"
+>
+  <view class="toast-text {{!direction?'fullscreen-top-safe-area':''}}">
+    <view>{{toastData}}</view>
+    <view class="speed-arrow">
+      <template is="speed-icon" data></template>
+    </view>
+  </view>
+</view>
+<view class="middle-toast-container white-text" wx:if="{{controls&&toastShow}}">
+  <view class="toast">{{toastData}}</view>
+</view>
+<view
+  catch:tap="onSkipBtnTap"
+  class="ad-skip-container {{isFullscreen?'fullscreen':''}} {{!direction?'fullscreen-top-safe-area':''}}"
+  wx:if="{{isAd&&autoplay}}"
+>
+  <view class="bold-text ad-skip-stopwatch" wx:if="{{adRemainTime>0}}"
+    >{{adRemainTime}}</view
+  >
+  <view class="bold-text ad-skip-button {{adRemainTime>0?'':'ad-skippable'}}"
+    >{{adText}}</view
+  >
+</view>
+<view
+  class="top-shadow-container"
+  wx:if="{{isFullscreen&&controls&&isControlShow&&useTopLeftArea}}"
+></view>
+<view
+  class="top-left-item-container {{isFullscreen?'fullscreen-left-safe-area':''}} {{!direction?'fullscreen-top-safe-area':''}}"
+  wx:if="{{isFullscreen&&controls&&isControlShow&&useTopLeftArea}}"
+>
+  <view catch:tap="onFullscreenTap" wx:if="{{showFullscreenBackBtn}}">
+    <template is="back-btn" data></template>
+  </view>
+  <view class="title">{{title}}</view>
+</view>
+<view
+  catch:tap="stopPropagation"
+  class="top-right-slot-item-container {{isFullscreen?'fullscreen-right-safe-area':''}} {{!direction?'fullscreen-top-safe-area':''}}"
+  wx:if="{{!isAd&&controls&&isControlShow}}"
+>
+  <slot name="ui-top-right-ctrl-btn"></slot>
+</view>
+<view class="control-container" wx:if="{{controls&&isControlShow}}">
+  <view class="seek-time-wrap" wx:if="{{isFullscreen&&isSeeking}}">
+    <text>{{isSeeking?seekTime:playtime}}</text>
+    <text>/</text>
+    <text>{{duration}}</text>
+  </view>
+  <view
+    class="control-item-container {{isFullscreen?'fullscreen':''}} {{!direction?'fullscreen-bottom-safe-area':''}}"
+  >
+    <view
+      class="play-btn-container ctrl-btn-container {{isFullscreen?'row-2 fullscreen':''}}"
+    >
+      <view catch:tap="onPlayBtnTap" wx:if="{{showPlayBtn}}">
+        <template
+          is="play-btn"
+          data="{{isFullscreen:isFullscreen}}"
+          wx:if="{{!playing}}"
+        ></template>
+        <block wx:else>
+          <template
+            is="pause-btn"
+            data="{{isFullscreen:isFullscreen}}"
+            wx:if="{{!isLive}}"
+          ></template>
+          <template
+            is="stop-btn"
+            data="{{isFullscreen:isFullscreen}}"
+            wx:else
+          ></template>
+        </block>
+      </view>
+      <view catch:tap="stopPropagation" wx:if="{{isFullscreen}}">
+        <slot class="ctrl-btn" name="ui-bottom-left-ctrl-btn"></slot>
+      </view>
+    </view>
+    <view
+      class="white-text bold-text playtime-text-container {{isFullscreen?'row-0 fullscreen':''}}"
+      wx:if="{{showProgress&&!isAd&&!isLive}}"
+    >
+      {{playtime}}
+    </view>
+    <view
+      catch:tap="stopPropagation"
+      class="progress-bar-container {{isFullscreen?'row-1 fullscreen':''}}"
+    >
+      <slider
+        activeColor="#FFFFFF"
+        backgroundColor="rgba(255, 255, 255, 0.2)"
+        blockColor="#FFFFFF"
+        blockSize="12"
+        catch:change="onProgressChange"
+        catch:changing="onProgressChanging"
+        class="progress-bar"
+        disabled="{{!autoplay||sliderValue>=100||disableProgress}}"
+        showValue="{{false}}"
+        step="0.25"
+        value="{{sliderValue}}"
+        wx:if="{{showProgress&&!isAd&&!isLive}}"
+      ></slider>
+    </view>
+    <view
+      class="white-text bold-text duration-text-container {{isFullscreen?'row-0 fullscreen':''}}"
+      wx:if="{{showProgress&&!isAd&&!isLive}}"
+    >
+      {{duration}}
+    </view>
+    <view
+      catch:tap="stopPropagation"
+      class="bottom-right-slot-item-container white-text bold-text row-2"
+      wx:if="{{!isAd&&isFullscreen}}"
+    >
+      <slot class="ctrl-btn" name="ui-bottom-right-ctrl-btn"></slot>
+    </view>
+    <view
+      catch:tap="onPlaybackRateBtnTap"
+      class="white-text bold-text playbackrate-text-container row-2"
+      wx:if="{{IS_WX&&autoplay&&!isLive&&!isAd&&isFullscreen&&showPlaybackRateBtn}}"
+    >
+      <block
+        wx:if="{{rate.selected}}"
+        wx:for="{{playbackRateList}}"
+        wx:for-item="rate"
+        wx:key="rate"
+      >
+        <block wx:if="{{rate.rate!==1}}">{{rate.rate}}X</block>
+        <block wx:else>倍速</block>
+      </block>
+    </view>
+    <view
+      catch:tap="onDefinitionBtnTap"
+      class="white-text bold-text definition-text-container row-2"
+      wx:if="{{autoplay&&!isAd&&isFullscreen&&showDefinitionBtn}}"
+    >
+      <block wx:for="{{definitionList}}" wx:for-item="defn" wx:key="resolution">
+        <block wx:if="{{defn.selected&&defn.formatName}}">
+          {{defn.formatName}}
+          <view class="definitionBtn" wx:if="{{defn.name==='hdr10'}}">
+            <template is="hdr-option-icon" data></template>
+          </view>
+        </block>
+        <block wx:if="{{defn.selected&&!defn.formatName}}"
+          >{{defn.resolution}}</block
+        >
+      </block>
+    </view>
+    <view
+      catch:tap="onShowBackgroundPlaybackBtnTap"
+      class="background-playback-btn-container ctrl-btn-container row-2 {{isFullscreen?'fullscreen':''}}"
+      wx:if="{{autoplay&&!isAd&&isAndroidOrIOS&&showBackgroundPlaybackBtn}}"
+    >
+      <view class="new-tips" wx:if="{{showNewTips&&!hasShowNewTips}}">
+        轻触将以悬浮小窗形式播放
+      </view>
+      <template
+        is="background-playback-btn"
+        data="{{isFullscreen:isFullscreen}}"
+      ></template>
+    </view>
+    <view
+      catch:tap="onFullscreenTap"
+      class="fullscreen-btn-container ctrl-btn-container row-2"
+      wx:if="{{showFullscreenBtn}}"
+    >
+      <template is="fullscreen-btn" data wx:if="{{!isFullscreen}}"></template>
+      <template is="exit-fullscreen-btn" data wx:else></template>
+    </view>
+  </view>
+</view>

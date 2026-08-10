@@ -1,0 +1,13 @@
+<action-sheet bind:__l="__l" bindcancel="{{q}}" class="data-v-e9aff8b1" uI="e9aff8b1-0" uP="{{r}}" uS="{{['d']}}" wx:if="{{r}}">
+    <view class="picker-container data-v-e9aff8b1">
+        <view class="tip-text data-v-e9aff8b1">请输入<label class="attention-text data-v-e9aff8b1">银行卡绑定的手机号</label>用于身份校验</view>
+        <view class="input-container data-v-e9aff8b1">
+            <input bindfocus="{{b}}" bindinput="{{d}}" class="tel-input data-v-e9aff8b1" maxlength="11" placeholder="请输入银行卡绑定手机号码" type="text" value="{{c}}" wx:if="{{a}}"></input>
+            <input bindblur="{{f}}" bindfocus="{{e}}" bindinput="{{h}}" class="tel-input data-v-e9aff8b1" id="tel-number-input" maxlength="11" placeholder="请输入银行卡绑定手机号码" type="number" value="{{g}}" wx:else></input>
+            <view bindtap="{{j}}" class="tel-clear data-v-e9aff8b1" wx:if="{{i}}"></view>
+        </view>
+        <sign-protocol bind:__l="__l" bindprotocolCheck="{{m}}" class="protocol-container r data-v-e9aff8b1" uI="e9aff8b1-1,e9aff8b1-0" uP="{{n}}" uR="SignProtocol" wx:if="{{k}}"></sign-protocol>
+        <view class="err-text data-v-e9aff8b1" wx:if="{{o}}">请输入正确的手机号</view>
+        <button bindtap="{{p}}" class="action-button data-v-e9aff8b1">提交</button>
+    </view>
+</action-sheet>

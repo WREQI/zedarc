@@ -1,0 +1,30 @@
+<page-meta class="data-v-6efbc9c4" rootFontSize="{{a}}"></page-meta>
+<view class="_div container data-v-6efbc9c4">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-6efbc9c4"
+    uI="6efbc9c4-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-6efbc9c4"
+    uI="6efbc9c4-1"
+  ></stock-privacy-dialog>
+  <event-detail
+    bind:__l="__l"
+    bindrefreshSuccess="{{d}}"
+    class="r data-v-6efbc9c4"
+    uI="6efbc9c4-2"
+    uP="{{e}}"
+    uR="eventDetailRef"
+    wx:if="{{b}}"
+  ></event-detail>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{f}}"
+    class="data-v-6efbc9c4"
+    uI="6efbc9c4-3"
+    uP="{{g}}"
+    wx:if="{{g}}"
+  ></privacy-policy-modal>
+</view>

@@ -1,0 +1,98 @@
+<page-meta class="data-v-a573e25a" rootFontSize="{{a}}"></page-meta>
+<mp-privacy-dialog
+  bind:__l="__l"
+  class="data-v-a573e25a"
+  uI="a573e25a-0"
+></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  class="data-v-a573e25a"
+  uI="a573e25a-1"
+  uP="{{b}}"
+  wx:if="{{b}}"
+></stock-privacy-dialog>
+<view class="title data-v-a573e25a">布局调试按钮</view>
+<view
+  class="button-row data-v-a573e25a"
+  wx:for="{{c}}"
+  wx:for-item="row"
+  wx:key="b"
+>
+  <button
+    bindtap="{{button.c}}"
+    class="compact-btn data-v-a573e25a"
+    wx:for="{{row.a}}"
+    wx:for-item="button"
+    wx:key="b"
+  >
+    {{button.a}}
+  </button>
+</view>
+<view class="button-row data-v-a573e25a">
+  <button bindtap="{{d}}" class="compact-btn data-v-a573e25a">图片OCR</button>
+  <button bindtap="{{e}}" class="compact-btn data-v-a573e25a">早报页面</button>
+  <button bindtap="{{f}}" class="compact-btn data-v-a573e25a">晚报页面</button>
+</view>
+<view class="button-row data-v-a573e25a">
+  <button bindtap="{{g}}" class="compact-btn data-v-a573e25a">微信热搜</button>
+  <button bindtap="{{h}}" class="compact-btn data-v-a573e25a">投资TOP榜</button>
+  <button bindtap="{{i}}" class="compact-btn data-v-a573e25a">
+    巴菲特股单
+  </button>
+</view>
+<view class="button-row data-v-a573e25a">
+  <button bindtap="{{j}}" class="compact-btn data-v-a573e25a">ETF优选榜</button>
+</view>
+<view class="data-v-a573e25a">
+  <view class="title data-v-a573e25a">小程序服务通知订阅能力调试</view>
+  <view class="business-container data-v-a573e25a" wx:for="{{k}}" wx:key="f">
+    <view class="business-name data-v-a573e25a"
+      >{{item.a}}<text
+        class="data-v-a573e25a"
+        style="color: #07c160; font-size: 16px"
+        wx:if="{{item.b}}"
+        >(已订阅)</text
+      >
+      <text
+        class="data-v-a573e25a"
+        style="color: #ff4d4f; font-size: 16px"
+        wx:else
+        >(未订阅)</text
+      >
+    </view>
+    <view class="button-group data-v-a573e25a">
+      <view bindtap="{{item.c}}" class="subscribe-button data-v-a573e25a"
+        >点我订阅一次</view
+      >
+      <view bindtap="{{item.d}}" class="subscribe-button data-v-a573e25a"
+        >点我续订一次</view
+      >
+      <view class="num data-v-a573e25a"
+        >已订阅<label class="_span red data-v-a573e25a">{{item.e}}</label
+        >次</view
+      >
+    </view>
+  </view>
+  <view class="msg data-v-a573e25a">{{l}}</view>
+  <view class="data-v-a573e25a">
+    <view class="jump-buttons2 data-v-a573e25a">
+      <button bindtap="{{m}}" class="jump-button data-v-a573e25a">
+        不限定银行
+      </button>
+      <button bindtap="{{n}}" class="jump-button data-v-a573e25a">
+        工商银行
+      </button>
+      <button bindtap="{{o}}" class="jump-button data-v-a573e25a">
+        中国银行
+      </button>
+    </view>
+    <view class="jump-buttons2 data-v-a573e25a">
+      <button bindtap="{{p}}" class="jump-button data-v-a573e25a">
+        交通银行
+      </button>
+      <button bindtap="{{q}}" class="jump-button data-v-a573e25a">
+        农业银行
+      </button>
+    </view>
+  </view>
+</view>

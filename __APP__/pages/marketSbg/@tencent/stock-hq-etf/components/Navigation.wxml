@@ -1,0 +1,16 @@
+<view class="{{['_div','navigation',i,j]}}" ref="navigation" wx:if="{{a}}">
+  <view class="_div mask" style="{{'opacity:'+b}}">
+    <slot></slot>
+  </view>
+  <view class="_div status-bar" style="{{'height:'+c+';'+'opacity:'+d}}"></view>
+  <view class="_div navigation-bar flex-center">
+    <view bindtap="{{e}}" class="_div btn-icon btn-left">
+      <view class="_div icon-btn-back"></view>
+    </view>
+    <view
+      class="{{['_div','navigation-title','flex-center',g]}}"
+      style="{{'opacity:'+h}}"
+      >{{f}}</view
+    >
+  </view>
+</view>

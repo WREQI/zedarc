@@ -1,0 +1,25 @@
+<reward-guide
+  bind:__l="__l"
+  bindclose="{{c}}"
+  bindgoTrade="{{b}}"
+  uI="90e38044-0"
+  uP="{{d}}"
+  wx:if="{{a}}"
+></reward-guide>
+<reward
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  bindgoTrade="{{f}}"
+  key="rewardCoin"
+  uI="90e38044-1"
+  uP="{{h}}"
+  wx:elif="{{e}}"
+></reward>
+<redbag
+  bind:__l="__l"
+  bindclose="{{k}}"
+  bindshare="{{j}}"
+  uI="90e38044-2"
+  uP="{{l}}"
+  wx:elif="{{i}}"
+></redbag>

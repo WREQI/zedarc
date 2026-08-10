@@ -1,0 +1,66 @@
+@import "/app.wxss";
+.cond-actionsheet.data-v-869065fe .st-action-sheet-header {
+  display: none;
+}
+.cond-actionsheet-header.data-v-869065fe {
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.426667rem 0.32rem;
+}
+.cond-actionsheet-title.data-v-869065fe {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 600;
+}
+.cond-actionsheet-action.data-v-869065fe {
+  padding: 0 0.32rem;
+}
+.cond-actionsheet-action .buy.data-v-869065fe {
+  background: var(--color-buy);
+  color: #fff;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  margin-top: 0.48rem;
+}
+.cond-actionsheet-action .sell.data-v-869065fe {
+  background: var(--color-sell);
+  color: #fff;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.left-placeholder.data-v-869065fe {
+  height: 0.426667rem;
+  width: 0.426667rem;
+}
+.close-bg.data-v-869065fe {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.cond-actionsheet-tips.data-v-869065fe {
+  color: var(--color-orange);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  margin-bottom: 0.533333rem;
+  padding-top: 0.133333rem;
+  text-align: center;
+}
+.cond-actionsheet-tips .tips-icon-bg.data-v-869065fe {
+  background-image: url(https://st.gtimg.com/design/4a07d6e2c44c7ba63de6bda46f15d528.png);
+  background-size: 100%auto;
+  display: inline-block;
+  height: 0.373333rem;
+  margin-right: 0.106667rem;
+  width: 0.373333rem;
+}

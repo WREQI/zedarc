@@ -1,0 +1,22 @@
+@import "/app.wxss";
+.scroll-container.data-v-ac23004d {
+  box-sizing: border-box;
+  height: calc(100vh - 2.16rem - env(safe-area-inset-bottom));
+  margin-top: -0.013333rem;
+  overflow-y: scroll;
+}
+.scroll-container.data-v-ac23004d::-webkit-scrollbar {
+  display: none;
+}
+.scroll-container.with-nav.data-v-ac23004d {
+  height: calc(100vh - 3.493333rem - env(safe-area-inset-bottom));
+}
+.tabs-wrapper.data-v-ac23004d {
+  background-color: var(--fill-2);
+}
+.avg-profit span.data-v-ac23004d:first-child {
+  margin-right: 0.026667rem;
+}
+.profit-unit-avg.data-v-ac23004d {
+  height: 100%;
+}

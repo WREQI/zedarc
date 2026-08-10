@@ -1,0 +1,69 @@
+<view
+  class="_div mod-profile-pop data-v-884f45de"
+  id="mod-security-profile-pop"
+>
+  <transition
+    bind:__l="__l"
+    class="data-v-884f45de"
+    uI="884f45de-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view
+      catchtap="{{b}}"
+      class="_div shadow data-v-884f45de"
+      wx:if="{{a}}"
+    ></view>
+  </transition>
+  <transition
+    bind:__l="__l"
+    class="data-v-884f45de"
+    uI="884f45de-1"
+    uP="{{t}}"
+    uS="{{['d']}}"
+    wx:if="{{t}}"
+  >
+    <view
+      class="{{['_div','wrapper','data-v-884f45de',r&&'wxNavBarIsShow',s&&'wrapper-bottom-inset']}}"
+      wx:if="{{d}}"
+    >
+      <view class="_div top-bar data-v-884f45de">
+        <view catchtap="{{e}}" class="_div close data-v-884f45de"></view>
+        <view class="_div title data-v-884f45de">请修改个人资料</view>
+      </view>
+      <view class="_div content-wrap data-v-884f45de">
+        <view class="_div desc data-v-884f45de">{{f}}</view>
+        <view class="_div profile-wrap data-v-884f45de">
+          <image class="_img avatar data-v-884f45de" src="{{g}}"></image>
+          <view class="_div user-info data-v-884f45de">
+            <view class="_div nickname data-v-884f45de">{{h}}</view>
+            <view class="_div note data-v-884f45de" wx:if="{{i}}">{{j}}</view>
+          </view>
+        </view>
+        <view class="_div btn-ban-mode data-v-884f45de" wx:if="{{k}}">
+          <view
+            catchtap="{{m}}"
+            class="{{['_div','data-v-884f45de','btn','default',l]}}"
+            >使用默认资料</view
+          >
+          <view class="_div ban-text data-v-884f45de"
+            >当前暂不支持自主修改</view
+          >
+        </view>
+        <view class="_div btn-wrap data-v-884f45de" wx:else>
+          <view
+            catchtap="{{o}}"
+            class="{{['_div','data-v-884f45de','btn','modify',n]}}"
+            >自主修改</view
+          >
+          <view
+            catchtap="{{q}}"
+            class="{{['_div','data-v-884f45de','btn','default',p]}}"
+            >使用默认资料</view
+          >
+        </view>
+      </view>
+    </view>
+  </transition>
+</view>

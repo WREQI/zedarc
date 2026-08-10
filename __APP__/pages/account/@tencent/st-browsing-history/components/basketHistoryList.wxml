@@ -1,0 +1,18 @@
+<view class="_div basket-history-wrapper data-v-54b1c2ea">
+  <basket-history-block
+    bind:__l="__l"
+    class="history-wrapper listRef r-i-f data-v-54b1c2ea"
+    id="{{item.b}}"
+    uI="{{item.d}}"
+    uP="{{item.e}}"
+    uR="listRef"
+    wx:for="{{a}}"
+    wx:key="c"
+  ></basket-history-block>
+  <empty-show
+    bind:__l="__l"
+    class="data-v-54b1c2ea"
+    uI="54b1c2ea-1"
+    wx:if="{{b}}"
+  ></empty-show>
+</view>

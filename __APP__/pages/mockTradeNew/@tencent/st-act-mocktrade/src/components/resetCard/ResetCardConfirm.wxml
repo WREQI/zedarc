@@ -1,0 +1,29 @@
+<view
+  class="{{['_div','reset-card-confirm','data-v-b952c976',g]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div reset-card-confirm__mask data-v-b952c976"></view>
+  <view class="_div reset-card-confirm__content data-v-b952c976">
+    <view class="_div reset-card-confirm__body data-v-b952c976">
+      <view class="_div reset-card-confirm__title data-v-b952c976"
+        >确认使用重置卡?</view
+      >
+      <view class="_div reset-card-confirm__desc data-v-b952c976"
+        >使用重置卡后将重置当前模拟账户资金、持仓及交易记录，并且不可参与当周周赛排行</view
+      >
+    </view>
+    <view class="_div reset-card-confirm__buttons data-v-b952c976">
+      <view
+        bindtap="{{b}}"
+        class="_div reset-card-confirm__btn reset-card-confirm__btn--cancel data-v-b952c976"
+        >取消</view
+      >
+      <view class="_div reset-card-confirm__divider data-v-b952c976"></view>
+      <view
+        bindtap="{{f}}"
+        class="{{['_div','reset-card-confirm__btn','reset-card-confirm__btn--confirm','data-v-b952c976',d,e]}}"
+        >{{c}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view bindtap="{{i}}" class="_div helper-assign data-v-773ba31e">
+  <view class="_div tri data-v-773ba31e"></view>
+  <view class="{{['_div','slides','data-v-773ba31e',f,g,h]}}">
+    <view class="_div slides-out data-v-773ba31e">
+      <view class="{{['_div','slides-out-container','data-v-773ba31e',d,e]}}">
+        <view class="_div data-v-773ba31e" wx:if="{{a}}">
+          <view
+            class="_div slides-item data-v-773ba31e"
+            wx:for="{{b}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+        <view class="_div data-v-773ba31e" wx:else>
+          <view
+            class="_div slides-item data-v-773ba31e"
+            wx:for="{{c}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <image
+    alt=""
+    class="_img icon data-v-773ba31e"
+    src="https://st.gtimg.com/design/5a42de2479c07d88a36d03fd54519ae2.png"
+  ></image>
+</view>

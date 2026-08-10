@@ -1,0 +1,52 @@
+<view class="quote-wrap data-v-730a6d36">
+  <view class="quote-line1 data-v-730a6d36">
+    <view class="quote-left data-v-730a6d36">
+      <label bindtap="{{e}}" class="data-v-730a6d36">
+        <label class="{{['quote-stock-name','data-v-730a6d36',b]}}"
+          >{{a}}</label
+        >
+        <label class="quote-stock-code data-v-730a6d36">{{c}}{{d}}</label>
+      </label>
+      <label class="quote-stock-label data-v-730a6d36">
+        <slot name="label"></slot>
+      </label>
+    </view>
+    <view
+      bindtap="{{g}}"
+      class="quote-right icon icon-search data-v-730a6d36"
+      wx:if="{{f}}"
+    ></view>
+    <view class="data-v-730a6d36" wx:else></view>
+  </view>
+  <view class="quote-info data-v-730a6d36" wx:if="{{h}}">
+    <value-color
+      bind:__l="__l"
+      class="light-equal data-v-730a6d36"
+      uI="730a6d36-0"
+      uP="{{k}}"
+      uS="{{['d']}}"
+      wx:if="{{k}}"
+    >
+      <label bindtap="{{j}}" class="data-v-730a6d36">{{i}}</label>
+    </value-color>
+    <value-color
+      bind:__l="__l"
+      class="light-equal data-v-730a6d36"
+      uI="730a6d36-1"
+      uP="{{m}}"
+      uS="{{['d']}}"
+      wx:if="{{m}}"
+      >{{l}}</value-color
+    >
+    <value-color
+      bind:__l="__l"
+      class="light-equal data-v-730a6d36"
+      uI="730a6d36-2"
+      uP="{{o}}"
+      uS="{{['d']}}"
+      wx:if="{{o}}"
+      >{{n}}%</value-color
+    >
+  </view>
+  <view class="quote-info-placeholder data-v-730a6d36" wx:else></view>
+</view>

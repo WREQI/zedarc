@@ -1,0 +1,49 @@
+<view
+  catchtap="{{m}}"
+  class="{{['_div','reverse-container','data-v-5433b6d4',l]}}"
+>
+  <view
+    catchtouchmove="{{c}}"
+    class="_div reverse-title-container data-v-5433b6d4"
+  >
+    <label class="{{['_span','reverse-title-text','data-v-5433b6d4',a]}}"
+      >预约更多直播</label
+    >
+    <view
+      catchtap="{{b}}"
+      class="_div reverse-title-close data-v-5433b6d4"
+    ></view>
+  </view>
+  <view class="_div reverse-live-list data-v-5433b6d4">
+    <view class="_div live-subscribe-bar data-v-5433b6d4" wx:if="{{d}}">
+      <view class="_div live-subscribe-desc data-v-5433b6d4">
+        <label class="{{['_span','data-v-5433b6d4','live-subscribe-tips',e]}}"
+          >您可预约更多直播场次</label
+        >
+        <view catchtap="{{h}}" class="_div live-subscribe-btn data-v-5433b6d4">
+          <label class="{{['_span','data-v-5433b6d4',f,g]}}">预约更多</label>
+        </view>
+      </view>
+      <view
+        catchtap="{{i}}"
+        class="_div live-subscribe-close data-v-5433b6d4"
+      ></view>
+    </view>
+    <view
+      class="{{['_div','data-v-5433b6d4','reverse-live-item',item.f]}}"
+      wx:for="{{j}}"
+      wx:key="e"
+    >
+      <live-card-small
+        bind:__l="__l"
+        bindreserve="{{item.b}}"
+        bindtapLiveCard="{{item.a}}"
+        class="data-v-5433b6d4"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:if="{{item.d}}"
+      ></live-card-small>
+    </view>
+    <view class="_div data-v-5433b6d4" style="{{'height:'+k}}"></view>
+  </view>
+</view>

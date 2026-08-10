@@ -1,0 +1,417 @@
+<view
+  class="{{['_div','data-v-a5eff5d6','page-live container flex flex-direction-column',br,bs]}}"
+  style="{{'height:'+bt}}"
+>
+  <down-load
+    bind:__l="__l"
+    class="r data-v-a5eff5d6"
+    uI="a5eff5d6-0"
+    uP="{{c}}"
+    uR="download"
+    wx:if="{{a}}"
+  ></down-load>
+  <navigate-to-app
+    bind:__l="__l"
+    bindnavigate="{{e}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-1"
+    uP="{{f}}"
+    wx:if="{{d}}"
+  ></navigate-to-app>
+  <block wx:if="{{g}}">
+    <view
+      class="{{['_div','data-v-a5eff5d6','player-wrapper',x,y]}}"
+      style="{{'height:'+z+';'+'background-image:'+A}}"
+      wx:if="{{h}}"
+    >
+      <view class="_div player-horizonal-mask data-v-a5eff5d6"></view>
+      <view
+        class="_div player-container-wrapper data-v-a5eff5d6"
+        key="{{t}}"
+        style="{{'width:'+v+';'+'height:'+w}}"
+      >
+        <live-player-m-p
+          bind:__l="__l"
+          binddataReport="{{k}}"
+          bindplayStatusChange="{{l}}"
+          class="r data-v-a5eff5d6"
+          uI="a5eff5d6-2"
+          uP="{{m}}"
+          uR="liveplayer"
+          wx:if="{{i}}"
+        ></live-player-m-p>
+        <live-player
+          bind:__l="__l"
+          binddataReport="{{o}}"
+          bindmuteChange="{{r}}"
+          bindplayStatusChange="{{p}}"
+          bindshowToast="{{q}}"
+          class="r data-v-a5eff5d6"
+          uI="a5eff5d6-3"
+          uP="{{s||''}}"
+          uR="liveplayer"
+          wx:else
+        ></live-player>
+      </view>
+      <view class="_div player-horizonal-mask data-v-a5eff5d6"></view>
+    </view>
+    <view class="_div thumb-wrapper data-v-a5eff5d6" wx:else>
+      <view
+        class="_div live-thumb flex data-v-a5eff5d6"
+        style="{{'height:'+D}}"
+      >
+        <image
+          alt
+          class="_img live-thumb-img data-v-a5eff5d6"
+          src="{{C}}"
+          wx:if="{{B}}"
+        ></image>
+      </view>
+    </view>
+    <live-scroll-wrapper
+      bind:__l="__l"
+      bindbeforeScrollStart="{{aH}}"
+      bindscroll="{{aF}}"
+      bindscrollEnd="{{aG}}"
+      class="scroll-container r data-v-a5eff5d6"
+      uI="a5eff5d6-4"
+      uP="{{aI}}"
+      uR="outerscroll"
+      uS="{{['d']}}"
+      wx:if="{{aI}}"
+    >
+      <view
+        class="{{['_div','data-v-a5eff5d6','scroll-header',aq]}}"
+        ref="scrollheader"
+      >
+        <view class="_div live-wrapper data-v-a5eff5d6" wx:if="{{E}}">
+          <view class="_div live-title data-v-a5eff5d6" wx:if="{{F}}">
+            <label class="_span title-text clamp-2 data-v-a5eff5d6"
+              >{{G}}</label
+            >
+          </view>
+          <block wx:if="{{H}}">
+            <view
+              class="_div live-back flex flex-align-center flex-justify-between data-v-a5eff5d6"
+              wx:if="{{I}}"
+            >
+              <view
+                class="_div live-status flex flex-align-center data-v-a5eff5d6"
+              >
+                <view
+                  class="{{['_div','status-dot','data-v-a5eff5d6',J&&'active']}}"
+                ></view>
+                <view class="_div status-text data-v-a5eff5d6">
+                  <label class="_span data-v-a5eff5d6">{{K}}</label>
+                  <label class="_span data-v-a5eff5d6" wx:if="{{L}}"
+                    >·{{M}}人{{N}}</label
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div live-meta data-v-a5eff5d6" wx:else>
+              <view class="_div flex flex-justify-between data-v-a5eff5d6">
+                <view class="_div flex flex-direction-column data-v-a5eff5d6">
+                  <label class="_span time-tip data-v-a5eff5d6"
+                    >{{O}}开播</label
+                  >
+                  <time-counter
+                    bind:__l="__l"
+                    class="data-v-a5eff5d6"
+                    uI="a5eff5d6-5,a5eff5d6-4"
+                    uP="{{P}}"
+                    wx:if="{{P}}"
+                  ></time-counter>
+                </view>
+                <view class="_div reserve-container data-v-a5eff5d6">
+                  <view class="_div reserve-tip data-v-a5eff5d6"
+                    >{{Q}}人已预约</view
+                  >
+                  <button
+                    bindtap="{{S}}"
+                    class="reserve-btn active data-v-a5eff5d6"
+                    wx:if="{{R}}"
+                  >
+                    <label class="_span reserve-text data-v-a5eff5d6"
+                      >预约</label
+                    >
+                  </button>
+                  <button
+                    bindtap="{{T}}"
+                    class="reserve-btn data-v-a5eff5d6"
+                    wx:else
+                  >
+                    <label class="_span reserve-text data-v-a5eff5d6"
+                      >已预约</label
+                    >
+                  </button>
+                </view>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view
+              class="{{['_div','data-v-a5eff5d6','live-meta']}}"
+              wx:if="{{U}}"
+            >
+              <view class="_div flex flex-justify-between data-v-a5eff5d6">
+                <view class="_div flex flex-direction-column data-v-a5eff5d6">
+                  <label class="_span time-tip data-v-a5eff5d6"
+                    >{{V}}开播</label
+                  >
+                  <time-counter
+                    bind:__l="__l"
+                    class="data-v-a5eff5d6"
+                    uI="a5eff5d6-6,a5eff5d6-4"
+                    uP="{{W}}"
+                    wx:if="{{W}}"
+                  ></time-counter>
+                </view>
+                <view class="_div reserve-container data-v-a5eff5d6">
+                  <view class="_div reserve-tip data-v-a5eff5d6"
+                    >{{X}}人已预约</view
+                  >
+                  <button
+                    class="reserve-btn active data-v-a5eff5d6"
+                    wx:if="{{Y}}"
+                  >
+                    <label class="_span reserve-text data-v-a5eff5d6"
+                      >开始直播</label
+                    >
+                  </button>
+                  <block wx:else>
+                    <button
+                      bindtap="{{aa}}"
+                      class="reserve-btn active data-v-a5eff5d6"
+                      wx:if="{{Z}}"
+                    >
+                      <label class="_span reserve-text data-v-a5eff5d6"
+                        >预约</label
+                      >
+                    </button>
+                    <button
+                      bindtap="{{ab}}"
+                      class="reserve-btn data-v-a5eff5d6"
+                      wx:else
+                    >
+                      <label class="_span reserve-text data-v-a5eff5d6"
+                        >已预约</label
+                      >
+                    </button>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view
+          class="_div ai-search-container data-v-a5eff5d6"
+          hidden="{{!ah}}"
+          wx:if="{{ac}}"
+        >
+          <search-ai-bar
+            bind:__l="__l"
+            bindonClickAiDialog="{{ad}}"
+            bindonHideAiEntry="{{af}}"
+            bindonShowAiEntry="{{ae}}"
+            class="data-v-a5eff5d6"
+            uI="a5eff5d6-7,a5eff5d6-4"
+            uP="{{ag}}"
+            wx:if="{{ag}}"
+          ></search-ai-bar>
+        </view>
+        <live-to-app
+          bind:__l="__l"
+          bindonLiveGuideBarClose="{{ak}}"
+          bindonSubscribe="{{aj}}"
+          bindreport="{{al}}"
+          class="data-v-a5eff5d6"
+          uI="a5eff5d6-8,a5eff5d6-4"
+          uP="{{am}}"
+          wx:elif="{{ai}}"
+        ></live-to-app>
+        <multi-streams
+          bind:__l="__l"
+          bindchangeSource="{{ao}}"
+          class="data-v-a5eff5d6"
+          uI="a5eff5d6-9,a5eff5d6-4"
+          uP="{{ap}}"
+          wx:if="{{an}}"
+        ></multi-streams>
+      </view>
+      <view
+        class="_div tab-swiper-wrapper data-v-a5eff5d6"
+        style="{{'height:'+aD}}"
+      >
+        <view class="_div tab-wrapper data-v-a5eff5d6">
+          <view
+            class="{{['_div','tab-list','flex','flex-align-center','data-v-a5eff5d6',as]}}"
+          >
+            <view
+              bindtap="{{tab.e}}"
+              class="{{['_div','data-v-a5eff5d6','tab-item',tab.d]}}"
+              wx:for="{{ar}}"
+              wx:for-item="tab"
+              wx:key="c"
+            >
+              <view class="_div tab-text data-v-a5eff5d6">{{tab.a}}</view>
+              <view
+                class="_div tab-cursor data-v-a5eff5d6"
+                wx:if="{{tab.b}}"
+              ></view>
+            </view>
+          </view>
+        </view>
+        <swiper
+          bindchange="{{ax}}"
+          circular="{{false}}"
+          class="swiper-wrapper data-v-a5eff5d6"
+          current="{{aw}}"
+          ref="swiper"
+          wx:if="{{at}}"
+        >
+          <swiper-item
+            class="data-v-a5eff5d6"
+            wx:for="{{av}}"
+            wx:for-item="tab"
+            wx:key="d"
+          >
+            <live-swiper-item
+              bind:__l="__l"
+              bindmanageSelfStock="{{tab.a}}"
+              class="data-v-a5eff5d6"
+              uI="{{tab.b}}"
+              uP="{{tab.c}}"
+              wx:if="{{tab.c}}"
+            ></live-swiper-item>
+          </swiper-item>
+        </swiper>
+        <swiper
+          bindslideChange="{{aC}}"
+          class="swiper-wrapper data-v-a5eff5d6"
+          initialIndex="{{aA}}"
+          loop="{{false}}"
+          options="{{aB}}"
+          ref="swiper"
+          wx:elif="{{ay}}"
+        >
+          <swiper-slide
+            bind:__l="__l"
+            class="data-v-a5eff5d6"
+            uI="{{tab.j}}"
+            uS="{{['d']}}"
+            wx:for="{{az}}"
+            wx:for-item="tab"
+            wx:key="i"
+          >
+            <live-swiper-item
+              bind:__l="__l"
+              bindmanageSelfStock="{{tab.f}}"
+              bindonListScrollHandle="{{tab.c}}"
+              bindonReportMatch="{{tab.b}}"
+              bindonScrollHandleBegin="{{tab.e}}"
+              bindonScrollHandleEnd="{{tab.d}}"
+              class="r-i-f data-v-a5eff5d6"
+              uI="{{tab.g}}"
+              uP="{{tab.h}}"
+              uR="list"
+              wx:if="{{tab.h}}"
+            ></live-swiper-item>
+          </swiper-slide>
+        </swiper>
+      </view>
+    </live-scroll-wrapper>
+  </block>
+  <view class="_div comment-wrap data-v-a5eff5d6" ref="comment" wx:if="{{aJ}}">
+    <label catchtap="{{aL}}" class="_span text-input data-v-a5eff5d6"
+      >{{aK}}</label
+    >
+    <view
+      catchtap="{{aN}}"
+      class="_div bottom-btn data-v-a5eff5d6"
+      wx:if="{{aM}}"
+    >
+      <view class="_div relate-hq-img data-v-a5eff5d6"></view>
+      <label class="_span relate-hq-title data-v-a5eff5d6">相关行情</label>
+    </view>
+  </view>
+  <bubble
+    bind:__l="__l"
+    bindcloseBubble="{{aP}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-13"
+    uP="{{aQ}}"
+    wx:if="{{aO}}"
+  ></bubble>
+  <qrcode
+    bind:__l="__l"
+    bindclose="{{aR}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-14"
+    uP="{{aS}}"
+    wx:if="{{aS}}"
+  ></qrcode>
+  <view class="_div reserve-toast data-v-a5eff5d6" wx:if="{{aT}}">
+    <image
+      alt="预约成功"
+      class="_img logo data-v-a5eff5d6"
+      src="https://dlied5.qq.com/zixuangu/pkg/zhibo/dc164b042f486390723f7b48503de767.png"
+    ></image>
+    <view class="_div title text-info data-v-a5eff5d6">预约成功</view>
+    <view class="_div sub-desc text-info data-v-a5eff5d6"
+      >直播开始前将收到提醒</view
+    >
+  </view>
+  <view class="_div toast data-v-a5eff5d6" wx:if="{{aU}}">{{aV}}</view>
+  <related-stock
+    bind:__l="__l"
+    bindmanageSelfStock="{{aX}}"
+    bindonHideRelatedStock="{{aW}}"
+    bindreport="{{aY}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-15"
+    uP="{{aZ}}"
+    wx:if="{{aZ}}"
+  ></related-stock>
+  <subscribe-tips-dialog
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{ba}}"
+    bindonSubscribeTipsConfirm="{{bb}}"
+    bindreport="{{bc}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-16"
+    uP="{{bd}}"
+    wx:if="{{bd}}"
+  ></subscribe-tips-dialog>
+  <reverse-more-live-dialog
+    bind:__l="__l"
+    bindonReserve="{{bg}}"
+    bindonReverseMoreLiveClose="{{be}}"
+    bindonSubscribe="{{bf}}"
+    bindreport="{{bi}}"
+    bindtapLiveCard="{{bh}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-17"
+    uP="{{bj}}"
+    wx:if="{{bj}}"
+  ></reverse-more-live-dialog>
+  <news-status
+    bind:__l="__l"
+    bindretry="{{bl}}"
+    class="data-v-a5eff5d6"
+    uI="a5eff5d6-18"
+    uP="{{bm}}"
+    wx:if="{{bk}}"
+  ></news-status>
+  <root-portal class="data-v-a5eff5d6" enable="{{true}}" wx:if="{{bn}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{bp}}"
+      bindshareAiAnswer="{{bo}}"
+      class="data-v-a5eff5d6"
+      uI="a5eff5d6-19"
+      uP="{{bq}}"
+      wx:if="{{bq}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+</view>

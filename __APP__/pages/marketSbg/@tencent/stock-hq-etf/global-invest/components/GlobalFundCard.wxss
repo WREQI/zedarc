@@ -1,0 +1,495 @@
+.market-fund-card--nasdaq.data-v-cb53e442 {
+  flex-shrink: 0;
+  height: 3.6533333333333333rem;
+  position: relative;
+  width: 100%;
+}
+.market-fund-card__surface--nasdaq.data-v-cb53e442 {
+  height: 3.6533333333333333rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.market-fund-card__content--nasdaq.data-v-cb53e442 {
+  justify-content: space-between;
+  left: 0.32rem;
+  min-height: 1.28rem;
+  position: absolute;
+  top: 1.28rem;
+  width: calc(100% - 0.64rem);
+}
+.market-fund-card__content--nasdaq.data-v-cb53e442,
+.market-fund-card__metrics--nasdaq.data-v-cb53e442 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.market-fund-card__metrics--nasdaq.data-v-cb53e442 {
+  flex-shrink: 0;
+  min-height: 1.0933333333333333rem;
+  width: 3.88rem;
+}
+.market-fund-card__return--nasdaq.data-v-cb53e442 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  max-width: 1.5066666666666666rem;
+  min-height: 1.0933333333333333rem;
+  width: 100%;
+}
+.market-fund-card__return-value--nasdaq.data-v-cb53e442 {
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+}
+.market-fund-card__return-label--nasdaq.data-v-cb53e442,
+.market-fund-card__return-value--nasdaq.data-v-cb53e442 {
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+}
+.market-fund-card__return-label--nasdaq.data-v-cb53e442 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+}
+.market-fund-card__price--nasdaq.data-v-cb53e442 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-left: 0.64rem;
+  max-width: 1.7333333333333334rem;
+  min-height: 1.0933333333333333rem;
+  width: 100%;
+}
+.market-fund-card__price-value--nasdaq.data-v-cb53e442 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+}
+.market-fund-card__price-label--nasdaq.data-v-cb53e442,
+.market-fund-card__price-value--nasdaq.data-v-cb53e442 {
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
+.market-fund-card__price-label--nasdaq.data-v-cb53e442 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+}
+.market-fund-card__holdings--nasdaq.data-v-cb53e442 {
+  justify-content: flex-end;
+  min-height: 1.28rem;
+  width: 3.6266666666666665rem;
+}
+.market-fund-card__holding--nasdaq-first.data-v-cb53e442,
+.market-fund-card__holdings--nasdaq.data-v-cb53e442 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.market-fund-card__holding--nasdaq-first.data-v-cb53e442 {
+  background: linear-gradient(
+    90deg,
+    rgba(230, 53, 53, 0.1),
+    rgba(230, 53, 53, 0)
+  );
+  border-radius: 1.32rem;
+  box-sizing: border-box;
+  height: 1.28rem;
+  justify-content: center;
+  padding: 0 0.26666666666666666rem;
+  width: 1.28rem;
+}
+.market-fund-card__holding-text--nasdaq-first.data-v-cb53e442 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--color-midgray);
+  display: -webkit-box;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 500;
+  line-height: 0.37333333333333335rem;
+  max-width: 1rem;
+  overflow: hidden;
+  text-align: center;
+  word-break: break-all;
+}
+.market-fund-card__holding--nasdaq-second.data-v-cb53e442 {
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 53, 53, 0.1),
+    rgba(230, 53, 53, 0)
+  );
+  border-radius: 1.32rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 1.28rem;
+  justify-content: center;
+  margin-left: -0.10666666666666667rem;
+  padding: 0 0.26666666666666666rem;
+  width: 1.28rem;
+}
+.market-fund-card__holding-text--nasdaq-second.data-v-cb53e442 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--color-midgray);
+  display: -webkit-box;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 500;
+  line-height: 0.37333333333333335rem;
+  max-width: 1rem;
+  overflow: hidden;
+  text-align: center;
+  word-break: break-all;
+}
+.market-fund-card__holding--nasdaq-third.data-v-cb53e442 {
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 53, 53, 0.1),
+    rgba(230, 53, 53, 0)
+  );
+  border-radius: 1.32rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  height: 1.28rem;
+  justify-content: center;
+  margin-left: -0.10666666666666667rem;
+  padding: 0 0.26666666666666666rem;
+  width: 1.28rem;
+}
+.market-fund-card__holding-text--nasdaq-third.data-v-cb53e442 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--color-midgray);
+  display: -webkit-box;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 500;
+  line-height: 0.37333333333333335rem;
+  max-width: 1rem;
+  overflow: hidden;
+  text-align: center;
+  word-break: break-all;
+}
+.market-fund-card__holding-text--four-chars.data-v-cb53e442 {
+  max-width: 0.6666666666666666rem;
+}
+.market-fund-card__top-row--nasdaq.data-v-cb53e442 {
+  justify-content: space-between;
+  left: 0.32rem;
+  min-height: 0.64rem;
+  position: absolute;
+  top: 0.32rem;
+  width: calc(100% - 0.64rem);
+}
+.market-fund-card__name-row--nasdaq.data-v-cb53e442,
+.market-fund-card__top-row--nasdaq.data-v-cb53e442 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.market-fund-card__name-row--nasdaq.data-v-cb53e442 {
+  flex-shrink: 0;
+  min-height: 0.5866666666666667rem;
+  width: 3.1066666666666665rem;
+}
+.market-fund-card__name--nasdaq.data-v-cb53e442 {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.market-fund-card__tag--nasdaq.data-v-cb53e442 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-left: 0.10666666666666667rem;
+  min-height: 0.37333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+  position: relative;
+  width: 0.7066666666666667rem;
+}
+.market-fund-card__tag--nasdaq.data-v-cb53e442:after {
+  border: 1px solid rgba(230, 53, 53, 0.5);
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  display: block;
+  height: 200%;
+  left: 0;
+  margin-left: -0.006666666666666667rem;
+  margin-top: -0.006666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0 0;
+  width: 200%;
+  z-index: 1;
+}
+.market-fund-card__tag-text--nasdaq.data-v-cb53e442 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.market-fund-card__buy-button--nasdaq.data-v-cb53e442 {
+  align-items: center;
+  border: 0.02666666666666667rem solid #e63535;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  min-height: 0.64rem;
+  padding: 0.09333333333333334rem 0.21333333333333335rem;
+  width: 1.0666666666666667rem;
+}
+.market-fund-card__buy-text--nasdaq.data-v-cb53e442 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 700;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.market-fund-card__description--nasdaq.data-v-cb53e442 {
+  color: #7a8499;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 400;
+  left: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  max-width: 8.72rem;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  text-overflow: ellipsis;
+  top: 2.88rem;
+  white-space: nowrap;
+}
+.fund-card--nasdaq-100.data-v-cb53e442 {
+  flex-shrink: 0;
+  height: 3.6533333333333333rem;
+  position: relative;
+  width: 100%;
+}
+.fund-card__bg--nasdaq-100.data-v-cb53e442 {
+  height: 3.6533333333333333rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.fund-card__metrics-row--nasdaq-100.data-v-cb53e442 {
+  justify-content: space-between;
+  left: 0.32rem;
+  min-height: 1.28rem;
+  position: absolute;
+  top: 1.28rem;
+  width: calc(100% - 0.64rem);
+}
+.fund-card__metrics--nasdaq-100.data-v-cb53e442,
+.fund-card__metrics-row--nasdaq-100.data-v-cb53e442 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.fund-card__metrics--nasdaq-100.data-v-cb53e442 {
+  flex-shrink: 0;
+  min-height: 1.0933333333333333rem;
+  width: 3.88rem;
+}
+.fund-card__metric--return-nasdaq-100.data-v-cb53e442 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  max-width: 1.5066666666666666rem;
+  min-height: 1.0933333333333333rem;
+  width: 100%;
+}
+.fund-card__return--nasdaq-100.data-v-cb53e442 {
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+}
+.fund-card__metric-label--return-nasdaq-100.data-v-cb53e442,
+.fund-card__return--nasdaq-100.data-v-cb53e442 {
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__metric-label--return-nasdaq-100.data-v-cb53e442 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+}
+.fund-card__metric--price-nasdaq-100.data-v-cb53e442 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-left: 0.64rem;
+  max-width: 1.7333333333333334rem;
+  min-height: 1.0933333333333333rem;
+  width: 100%;
+}
+.fund-card__price--nasdaq-100.data-v-cb53e442 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.5866666666666667rem;
+}
+.fund-card__metric-label--price-nasdaq-100.data-v-cb53e442,
+.fund-card__price--nasdaq-100.data-v-cb53e442 {
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-weight: 400;
+  text-align: right;
+  white-space: nowrap;
+}
+.fund-card__metric-label--price-nasdaq-100.data-v-cb53e442 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.05333333333333334rem;
+}
+.fund-card__header--nasdaq-100.data-v-cb53e442 {
+  justify-content: space-between;
+  left: 0.32rem;
+  min-height: 0.64rem;
+  position: absolute;
+  top: 0.32rem;
+  width: calc(100% - 0.64rem);
+}
+.fund-card__header--nasdaq-100.data-v-cb53e442,
+.fund-card__title-row--nasdaq-100.data-v-cb53e442 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.fund-card__title-row--nasdaq-100.data-v-cb53e442 {
+  flex-shrink: 0;
+  min-height: 0.5866666666666667rem;
+  width: 3.1066666666666665rem;
+}
+.fund-card__title--nasdaq-100.data-v-cb53e442 {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__trade-tag--nasdaq-100.data-v-cb53e442 {
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  margin-left: 0.10666666666666667rem;
+  min-height: 0.37333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+  width: 0.7066666666666667rem;
+}
+.fund-card__trade-tag-text--nasdaq-100.data-v-cb53e442 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__buy-button--nasdaq-100.data-v-cb53e442 {
+  align-items: center;
+  border: 0.02666666666666667rem solid #e63535;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: center;
+  min-height: 0.64rem;
+  padding: 0.09333333333333334rem 0.21333333333333335rem;
+  width: 1.0666666666666667rem;
+}
+.fund-card__buy-text--nasdaq-100.data-v-cb53e442 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 700;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__description--nasdaq-100.data-v-cb53e442 {
+  color: #7a8499;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 400;
+  left: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  max-width: 8.72rem;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  text-overflow: ellipsis;
+  top: 2.88rem;
+  white-space: nowrap;
+}
+.equal.data-v-cb53e442 {
+  color: var(--color-ping) !important;
+}

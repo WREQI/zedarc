@@ -1,0 +1,49 @@
+<view class="_div custom-video-item data-v-92c22b04">
+  <view class="_div custom-video-body data-v-92c22b04">
+    <view class="_div custom-video-player data-v-92c22b04">
+      <view
+        class="_div custom-video-inner video-info data-v-92c22b04"
+        hidden="{{!g}}"
+      >
+        <view class="_div custom-live-status data-v-92c22b04">
+          <label class="{{['_span','data-v-92c22b04','dot',a]}}"></label>
+          <label class="_span status-text data-v-92c22b04">{{b}}</label>
+        </view>
+        <image
+          catchtap="{{d}}"
+          class="_img data-v-92c22b04"
+          src="{{c}}"
+        ></image>
+        <label
+          catchtap="{{f}}"
+          class="_span btn-play data-v-92c22b04"
+          wx:if="{{e}}"
+        >
+          <view class="_i icon-play data-v-92c22b04"></view>
+        </label>
+      </view>
+      <view class="_div custom-video-inner player data-v-92c22b04">
+        <view
+          catchtap="{{k}}"
+          class="_div custom-player-content data-v-92c22b04"
+          id="{{h}}"
+          ref="{{i}}"
+          style="{{j}}"
+        ></view>
+      </view>
+      <view
+        class="_div custom-video-process data-v-92c22b04"
+        hidden="{{!l}}"
+      ></view>
+      <view
+        catchtap="{{n}}"
+        class="_div custom-voice-box data-v-92c22b04"
+        hidden="{{!o}}"
+      >
+        <view class="_div custom-voice-inner data-v-92c22b04">
+          <view class="{{['_i','data-v-92c22b04','icon',m]}}"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

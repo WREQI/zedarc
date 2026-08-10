@@ -1,0 +1,64 @@
+<view class="_div column-container data-v-a8c949ff">
+  <list-sort-title
+    bind:__l="__l"
+    bindshowPlate="{{a}}"
+    class="data-v-a8c949ff"
+    uI="a8c949ff-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></list-sort-title>
+  <view class="_div scroll-container data-v-a8c949ff">
+    <view class="_div top-placeholder data-v-a8c949ff"></view>
+    <scroll-view
+      bindrefresherrefresh="{{j}}"
+      bindscroll="{{l}}"
+      bindscrolltolower="{{k}}"
+      class="column-list data-v-a8c949ff"
+      refresherEnabled="{{true}}"
+      refresherThreshold="100"
+      refresherTriggered="{{i}}"
+      scrollY="{{true}}"
+    >
+      <view class="_div topic-list-padding data-v-a8c949ff">
+        <column-list
+          bind:__l="__l"
+          bindconterUpdate="{{g}}"
+          bindonLoadError="{{f}}"
+          bindonLoadList="{{e}}"
+          class="r data-v-a8c949ff"
+          data-c-h="{{!d}}"
+          uI="a8c949ff-1"
+          uP="{{h}}"
+          uR="basketListRef"
+          wx:if="{{h}}"
+        ></column-list>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="_div counter-wrapper data-v-a8c949ff" wx:if="{{m}}">
+    <view class="_div counter-container data-v-a8c949ff">
+      <label class="_span counter-num data-v-a8c949ff">{{n}}</label>
+      <label class="_span counter-line data-v-a8c949ff">/</label>
+      <label class="_span data-v-a8c949ff">{{o}}</label>
+    </view>
+  </view>
+  <view class="_div status-container data-v-a8c949ff" wx:if="{{p}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{q}}"
+      class="data-v-a8c949ff"
+      uI="a8c949ff-2"
+      uP="{{r}}"
+      wx:if="{{r}}"
+    ></st-status>
+  </view>
+  <selector
+    bind:__l="__l"
+    bindonSelectChange="{{t}}"
+    class="r data-v-a8c949ff"
+    uI="a8c949ff-3"
+    uP="{{v}}"
+    uR="selector"
+    wx:if="{{v}}"
+  ></selector>
+</view>

@@ -1,0 +1,33 @@
+<view class="_div top-bar-container data-v-3b2d0a32">
+  <view
+    class="_div safe-area-padding-top data-v-3b2d0a32"
+    style="{{'height:'+b}}"
+    wx:if="{{a}}"
+  ></view>
+  <view
+    class="_div content-container data-v-3b2d0a32"
+    style="{{'padding-top:'+i+';'+'position:'+j}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div title-content data-v-3b2d0a32" wx:if="{{d}}">
+      <image
+        ariaLabel="back-home-icon"
+        ariaRole="返回首页"
+        catchtap="{{f}}"
+        class="_img back-icon data-v-3b2d0a32"
+        src="https://st.gtimg.com/design/073be223eb1bf32879c6b3acd6ff5e68.png"
+        wx:if="{{e}}"
+      ></image>
+      <image
+        ariaLabel="back-icon"
+        ariaRole="返回按钮"
+        catchtap="{{h}}"
+        class="_img back-icon data-v-3b2d0a32"
+        src="https://st.gtimg.com/design/2de309bd00716133dd871f1b24307783.png"
+        wx:if="{{g}}"
+      ></image>
+      <view class="_div main-title data-v-3b2d0a32">股票提醒</view>
+    </view>
+  </view>
+  <view class="_div hold-space data-v-3b2d0a32" wx:if="{{k}}"></view>
+</view>

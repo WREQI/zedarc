@@ -1,0 +1,22 @@
+@import "/app.wxss";
+.cell {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 1.573333rem;
+  justify-content: center;
+  line-height: 1;
+}
+.cell .text-color-1 {
+  z-index: 1;
+}
+.cell .fs-24 {
+  margin-top: 0.146667rem;
+}
+.cell--high {
+  height: 2.373333rem;
+}

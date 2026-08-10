@@ -1,0 +1,64 @@
+<view class="register-risk-popup-container data-v-a0d4eb63" wx:if="{{a}}">
+  <mp-dialog
+    bind:__l="__l"
+    bindconfirm="{{i}}"
+    class="data-v-a0d4eb63"
+    uI="a0d4eb63-0"
+    uP="{{j}}"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <view
+      class="mp-dialog__message register-risk-confirm-modal data-v-a0d4eb63"
+    >
+      <view class="register-risk-confirm-modal__body data-v-a0d4eb63">
+        <view class="content data-v-a0d4eb63">
+          <label class="modal-header data-v-a0d4eb63" wx:if="{{b}}"
+            >{{c}}</label
+          >
+          <label class="{{['modal-text','data-v-a0d4eb63',e&&'spec']}}"
+            >{{d}}</label
+          >
+          <view class="text-protocol data-v-a0d4eb63" wx:if="{{f}}">
+            <label
+              class="data-v-a0d4eb63"
+              wx:for="{{g}}"
+              wx:for-item="protocol"
+              wx:key="d"
+            >
+              <label
+                bindtap="{{protocol.c}}"
+                class="blue data-v-a0d4eb63"
+                wx:if="{{protocol.a}}"
+                >{{protocol.b}}</label
+              >
+            </label>
+          </view>
+          <view class="protocol-container flex-center data-v-a0d4eb63" wx:else>
+            <loading-provider
+              bind:__l="__l"
+              class="data-v-a0d4eb63"
+              uI="a0d4eb63-1,a0d4eb63-0"
+              uS="{{['d']}}"
+            >
+              <label
+                class="data-v-a0d4eb63"
+                wx:for="{{h}}"
+                wx:for-item="protocol"
+                wx:key="d"
+              >
+                <v-protocol
+                  bind:__l="__l"
+                  class="data-v-a0d4eb63"
+                  uI="{{protocol.b}}"
+                  uP="{{protocol.c}}"
+                  wx:if="{{protocol.a}}"
+                ></v-protocol>
+              </label>
+            </loading-provider>
+          </view>
+        </view>
+      </view>
+    </view>
+  </mp-dialog>
+</view>

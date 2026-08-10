@@ -1,0 +1,16 @@
+<view class="_div">
+  <overlay
+    bind:__l="__l"
+    bindclick="{{b}}"
+    uI="f1a407e6-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></overlay>
+  <view
+    class="{{['_div','^mp-popup','^^mp-popup','^^^mp-popup','mp-popup',e,f]}}"
+    hidden="{{!d}}"
+    style="{{g}}"
+  >
+    <slot></slot>
+  </view>
+</view>

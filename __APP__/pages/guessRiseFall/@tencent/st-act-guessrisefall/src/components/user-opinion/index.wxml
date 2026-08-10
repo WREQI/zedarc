@@ -1,0 +1,82 @@
+<view class="_div opinion-panel data-v-73af494f" ref="opinion">
+  <view class="_div opinion-panel__title-area data-v-73af494f">
+    <view class="_div opinion-panel__shadow-title data-v-73af494f"></view>
+    <view class="_div opinion-panel__main-title data-v-73af494f">
+      <view class="_div opinion-panel__title-label data-v-73af494f"
+        >大家怎么看</view
+      >
+      <view class="_div opinion-panel__subtitle data-v-73af494f">
+        <label class="_span opinion-panel__subtitle-left data-v-73af494f"
+          >社区话题</label
+        >
+        <label class="_span opinion-panel__subtitle-right data-v-73af494f"
+          >#全民猜涨跌</label
+        >
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','opinion-panel__list','data-v-73af494f',g]}}">
+    <view
+      class="_div opinion-panel__column opinion-panel__column--left data-v-73af494f"
+    >
+      <view
+        class="_div opinion-panel__label opinion-panel__label--positive data-v-73af494f"
+        >看涨观点</view
+      >
+      <scroll-view
+        scrollY
+        class="opinion-panel__scroll data-v-73af494f"
+        style="{{c}}"
+        wx:if="{{a}}"
+      >
+        <view
+          class="_div opinion-panel__slide data-v-73af494f"
+          wx:for="{{b}}"
+          wx:for-item="positive"
+          wx:key="c"
+        >
+          <view class="_div opinion-panel__card data-v-73af494f">
+            <opinion-item
+              bind:__l="__l"
+              class="data-v-73af494f"
+              uI="{{positive.a}}"
+              uP="{{positive.b}}"
+              wx:if="{{positive.b}}"
+            ></opinion-item>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view
+      class="_div opinion-panel__column opinion-panel__column--right data-v-73af494f"
+    >
+      <view
+        class="_div opinion-panel__label opinion-panel__label--negative data-v-73af494f"
+        >看跌观点</view
+      >
+      <scroll-view
+        scrollY
+        class="opinion-panel__scroll data-v-73af494f"
+        style="{{f}}"
+        wx:if="{{d}}"
+      >
+        <view
+          class="_div opinion-panel__slide data-v-73af494f"
+          wx:for="{{e}}"
+          wx:for-item="negative"
+          wx:key="c"
+        >
+          <view class="_div opinion-panel__card data-v-73af494f">
+            <opinion-item
+              bind:__l="__l"
+              class="data-v-73af494f"
+              uI="{{negative.a}}"
+              uP="{{negative.b}}"
+              wx:if="{{negative.b}}"
+            ></opinion-item>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

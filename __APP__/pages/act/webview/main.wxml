@@ -1,0 +1,12 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="container" wx:if="{{b}}">
+  <mp-privacy-dialog bind:__l="__l" uI="ac627572-0"></mp-privacy-dialog>
+  <zxg-webview
+    bind:__l="__l"
+    bindload="{{d}}"
+    bindmessage="{{c}}"
+    uI="ac627572-1"
+    uP="{{e}}"
+    wx:if="{{e}}"
+  ></zxg-webview>
+</view>

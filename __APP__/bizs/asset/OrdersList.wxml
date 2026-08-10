@@ -1,0 +1,90 @@
+<view class="{{['order-list-container','^order-list-container',H,I]}}">
+  <block wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <list-header
+        bind:__l="__l"
+        bindexplain="{{c}}"
+        uI="cabfe18e-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></list-header>
+      <orders-list-item
+        bind:__l="__l"
+        bindcancelOrder="{{f}}"
+        bindshowFailReason="{{g}}"
+        id="undoneOrderList"
+        style="{{e}}"
+        uI="cabfe18e-1"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></orders-list-item>
+    </block>
+    <empty
+      bind:__l="__l"
+      key="undone-empty"
+      uI="cabfe18e-2"
+      uP="{{j}}"
+      wx:if="{{i}}"
+    ></empty>
+    <view class="gap" wx:if="{{k}}"></view>
+    <block wx:if="{{l}}">
+      <view bindtap="{{q}}" class="{{['status-label',p]}}"
+        >已完成<label>({{m}})</label>
+        <label class="{{['icon',o]}}" wx:if="{{n}}"></label>
+      </view>
+      <list-header
+        bind:__l="__l"
+        uI="cabfe18e-3"
+        uP="{{s}}"
+        wx:if="{{r}}"
+      ></list-header>
+      <orders-list-item
+        bind:__l="__l"
+        bindcancelOrder="{{v}}"
+        bindshowFailReason="{{w}}"
+        id="doneOrderList"
+        uI="cabfe18e-4"
+        uP="{{x}}"
+        wx:if="{{t}}"
+      ></orders-list-item>
+    </block>
+    <empty
+      bind:__l="__l"
+      key="all-empty"
+      uI="cabfe18e-5"
+      uP="{{z}}"
+      wx:if="{{y}}"
+    ></empty>
+  </block>
+  <block wx:else>
+    <block wx:if="{{A}}">
+      <list-header
+        bind:__l="__l"
+        uI="cabfe18e-6"
+        uP="{{B}}"
+        wx:if="{{B}}"
+      ></list-header>
+      <scroll-view
+        catchtouchmove="{{F}}"
+        class="orders-list-scroll-view ^orders-list-scroll-view"
+        scrollY="true"
+      >
+        <orders-list-item
+          bind:__l="__l"
+          bindcancelOrder="{{C}}"
+          bindshowFailReason="{{D}}"
+          uI="cabfe18e-7"
+          uP="{{E}}"
+          wx:if="{{E}}"
+        ></orders-list-item>
+      </scroll-view>
+    </block>
+    <empty
+      bind:__l="__l"
+      key="all-empty"
+      uI="cabfe18e-8"
+      uP="{{G||''}}"
+      wx:else
+    ></empty>
+  </block>
+</view>

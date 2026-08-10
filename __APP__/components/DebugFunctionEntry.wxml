@@ -1,0 +1,24 @@
+<view class="_div data-v-3478a04b">
+  <view
+    bindlongpress="{{b}}"
+    bindtap="{{a}}"
+    class="_div debug-area data-v-3478a04b"
+  >
+    <slot></slot>
+  </view>
+  <layer-modal
+    bind:__l="__l"
+    bindclose="{{d}}"
+    class="data-v-3478a04b"
+    uI="3478a04b-0"
+    uP="{{e}}"
+    uS="{{['d']}}"
+    wx:if="{{e}}"
+  >
+    <view class="_div func-entry data-v-3478a04b">
+      <view bindtap="{{c}}" class="_div debug-btn data-v-3478a04b"
+        >拷贝openId</view
+      >
+    </view>
+  </layer-modal>
+</view>

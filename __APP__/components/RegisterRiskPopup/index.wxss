@@ -1,0 +1,53 @@
+@import "/app.wxss";
+.register-risk-popup-container.data-v-a0d4eb63 .mp-overlay {
+  z-index: 99 !important;
+}
+.register-risk-popup-container.data-v-a0d4eb63 .mp-popup {
+  z-index: 100 !important;
+}
+.register-risk-popup-container .register-risk-confirm-modal.data-v-a0d4eb63 {
+  text-align: left;
+}
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .modal-header.data-v-a0d4eb63 {
+  margin-bottom: 0.2rem;
+  white-space: pre-line;
+}
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .modal-header.data-v-a0d4eb63,
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .modal-text.spec.data-v-a0d4eb63 {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+}
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .text-protocol.data-v-a0d4eb63 {
+  display: inline;
+}
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .protocol-container.data-v-a0d4eb63 {
+  min-height: 1.333333rem;
+  position: relative;
+}
+.register-risk-popup-container
+  .register-risk-confirm-modal
+  .protocol-container.data-v-a0d4eb63
+  .loading-wrapper {
+  height: 100%;
+  padding-top: 0.4rem;
+  position: relative;
+}
+.register-risk-popup-container.data-v-a0d4eb63 .rich-text-protocol {
+  padding-left: 0;
+  padding-right: 0;
+}

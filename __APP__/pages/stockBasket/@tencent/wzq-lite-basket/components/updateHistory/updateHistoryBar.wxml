@@ -1,0 +1,14 @@
+<view class="_div container data-v-b702a74f">
+  <view class="_div container-left data-v-b702a74f">
+    <view class="_div title data-v-b702a74f">股票列表</view>
+    <view class="_div sub-title data-v-b702a74f" wx:if="{{a}}">{{b}}</view>
+  </view>
+  <view
+    bindtap="{{d}}"
+    class="_div container-right data-v-b702a74f"
+    wx:if="{{c}}"
+  >
+    <view class="_div right-text data-v-b702a74f">更新记录</view>
+    <view class="_div right-arrow data-v-b702a74f"></view>
+  </view>
+</view>

@@ -1,0 +1,90 @@
+.chart-setting.data-v-48a1dd44 {
+  background: var(--fill-background);
+}
+.chart-setting .setting-group.data-v-48a1dd44 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3333333333333333rem;
+  padding: 0 0.4rem;
+}
+.chart-setting .setting-group .title.data-v-48a1dd44 {
+  color: var(--color-lightgray-1);
+  font-size: 0.37333333333333335rem;
+}
+.chart-setting .setting-item.data-v-48a1dd44 {
+  align-items: center;
+  background-color: var(--fill-content-layer);
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3333333333333333rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.chart-setting .setting-item.data-v-48a1dd44:after {
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  bottom: 0;
+  content: "";
+  height: 0.013333333333333334rem;
+  left: 0.4rem;
+  position: absolute;
+  right: 0.4rem;
+}
+.chart-setting .setting-item.data-v-48a1dd44:last-child:after,
+.chart-setting .setting-item.no-border.data-v-48a1dd44:after {
+  border-bottom: 0;
+}
+.chart-setting .setting-item.count-setting.data-v-48a1dd44 {
+  margin-bottom: 0.16rem;
+}
+.chart-setting .setting-item.count-setting.data-v-48a1dd44:after {
+  border-bottom: 0;
+}
+.chart-setting .setting-item.count-setting .setting-item-count.data-v-48a1dd44 {
+  display: -webkit-flex;
+  display: flex;
+}
+.chart-setting
+  .setting-item.count-setting
+  .setting-item-count
+  .count-item.data-v-48a1dd44 {
+  border: 0.013333333333333334rem solid var(--border-heavy);
+  border-radius: 0.10666666666666667rem;
+  color: var(--text-color-2);
+  font-size: 0.32rem;
+  height: 0.8533333333333334rem;
+  line-height: 0.8533333333333334rem;
+  margin-left: 0.21333333333333335rem;
+  text-align: center;
+  width: 1.1733333333333333rem;
+}
+.chart-setting
+  .setting-item.count-setting
+  .setting-item-count
+  .count-item.active.data-v-48a1dd44 {
+  background-color: rgba(48, 119, 236, 0.08);
+  border-color: rgba(48, 119, 236, 0.4);
+  color: var(--color-blue);
+  font-weight: 500;
+}
+.chart-setting .setting-item .title.data-v-48a1dd44 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  line-height: 0.64rem;
+}
+.chart-setting .setting-item .content.data-v-48a1dd44,
+.chart-setting .setting-item .title.data-v-48a1dd44 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.chart-setting .setting-item .content .text.data-v-48a1dd44 {
+  color: var(--color-lightgray-1);
+  font-size: 0.37333333333333335rem;
+  margin-right: 0.26666666666666666rem;
+}
+.chart-setting .setting-item .arrow.data-v-48a1dd44 {
+  height: 0.32rem;
+  width: 0.32rem;
+}

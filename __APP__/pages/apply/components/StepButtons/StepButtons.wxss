@@ -1,0 +1,82 @@
+@import "/app.wxss";
+.step-buttons-container.data-v-2c6faf13 {
+  background-color: var(--fill-2);
+  border-top: 0.013333rem solid var(--border-color-1);
+  padding: 0.213333rem 0.4rem;
+  z-index: 2;
+}
+.step-buttons-container.transparent.data-v-2c6faf13 {
+  background-color: initial;
+  border-top: none;
+}
+.step-buttons-container.fixed.data-v-2c6faf13 {
+  bottom: 0;
+  left: 0;
+  padding-bottom: 0.346667rem;
+  position: fixed;
+  right: 0;
+}
+.step-buttons-container .buttons-wrap.data-v-2c6faf13 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.step-buttons-container .buttons-wrap .safe-icon.data-v-2c6faf13 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_security_white.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  height: 0.533333rem;
+  margin-right: 0.16rem;
+  position: relative;
+  top: 0.106667rem;
+  width: 0.346667rem;
+}
+.step-buttons-container .buttons-wrap.center.data-v-2c6faf13 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  justify-content: center;
+}
+.step-buttons-container .buttons-wrap.center .next-button-wrap.data-v-2c6faf13,
+.step-buttons-container .buttons-wrap.center .prev-button.data-v-2c6faf13 {
+  margin: auto;
+}
+.step-buttons-container .buttons-wrap .prev-button.data-v-2c6faf13 {
+  background-color: var(--fill-2);
+  border: 0.026667rem solid #e9ebf0;
+  box-sizing: border-box;
+  color: var(--text-color-5);
+  font-weight: 500;
+  height: 1.173333rem;
+  margin-right: 0.32rem;
+  padding: 0 0.133333rem;
+  width: 2.133333rem;
+}
+[data-theme="dark"]
+  .step-buttons-container
+  .buttons-wrap
+  .prev-button.data-v-2c6faf13 {
+  border: 0.026667rem solid #262e40;
+}
+.step-buttons-container .buttons-wrap .next-button-wrap.data-v-2c6faf13 {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.step-buttons-container .buttons-wrap .next-button.data-v-2c6faf13 {
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.step-buttons-container .buttons-wrap.pure-mode.data-v-2c6faf13 {
+  border-top: none;
+  color: var(--color-primary-1);
+  font-size: 0.373333rem;
+  font-weight: 500;
+  justify-content: space-around;
+  line-height: 0.533333rem;
+}

@@ -1,0 +1,63 @@
+<view class="_div message-home data-v-9942375f">
+  <view class="_div message-top data-v-9942375f">
+    <view class="_div text data-v-9942375f">全部消息</view>
+    <image
+      alt=""
+      bindtap="{{b}}"
+      class="_img icon data-v-9942375f"
+      src="https://st.gtimg.com/design/e49767f1ece4d443262a63dcf5931230.svg"
+      wx:if="{{a}}"
+    ></image>
+    <image
+      alt=""
+      bindtap="{{c}}"
+      class="_img icon data-v-9942375f"
+      src="https://st.gtimg.com/design/85bb9dd938a453853c24eeb4ec27bca1.svg"
+      wx:else
+    ></image>
+  </view>
+  <view class="_div message-container data-v-9942375f" wx:if="{{d}}">
+    <view
+      bindtap="{{item.m}}"
+      class="_div message-item data-v-9942375f"
+      wx:for="{{e}}"
+      wx:key="l"
+    >
+      <view class="_div icon-wrapper data-v-9942375f">
+        <image
+          alt=""
+          class="_img icon-item data-v-9942375f"
+          src="{{item.a}}"
+        ></image>
+        <view class="_div count-status data-v-9942375f">
+          <view
+            class="_div red-point data-v-9942375f"
+            wx:if="{{item.b}}"
+          ></view>
+          <view
+            class="{{['_div','num','data-v-9942375f',item.e]}}"
+            wx:elif="{{item.c}}"
+            >{{item.d}}</view
+          >
+        </view>
+      </view>
+      <view class="_div content data-v-9942375f">
+        <view class="_div content-first data-v-9942375f">
+          <view class="_div title data-v-9942375f">{{item.f}}</view>
+          <view class="_div time data-v-9942375f" wx:if="{{item.g}}"
+            >{{item.h}}</view
+          >
+        </view>
+        <view class="{{['_div','summary','data-v-9942375f',item.j]}}"
+          >{{item.i}}</view
+        >
+      </view>
+      <view class="_div line data-v-9942375f" wx:if="{{item.k}}"></view>
+    </view>
+  </view>
+  <image
+    alt=""
+    class="_img logo-icon data-v-9942375f"
+    src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+  ></image>
+</view>

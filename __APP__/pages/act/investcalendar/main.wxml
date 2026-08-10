@@ -1,0 +1,67 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div container">
+  <mp-privacy-dialog bind:__l="__l" uI="4ee0bfe6-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="4ee0bfe6-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div error-status" wx:if="{{c}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{d}}"
+      uI="4ee0bfe6-2"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></st-status>
+  </view>
+  <view class="_div list" wx:elif="{{f}}">
+    <view
+      bindtap="{{item.j}}"
+      class="_div calendar-item"
+      wx:for="{{g}}"
+      wx:key="i"
+    >
+      <view class="{{['_div','content',item.h&&'last']}}">
+        <view class="_div left">
+          <view class="_div title">
+            <label class="{{['_span','title-color',item.a]}}"></label>
+            <label class="_span title-val">{{item.b}}</label>
+          </view>
+          <view class="_div subtitle">
+            <view class="_div subtitle-img" wx:if="{{item.c}}">
+              <image
+                alt=""
+                class="_img head-img"
+                src="{{imgSrc.a}}"
+                wx:for="{{item.d}}"
+                wx:for-item="imgSrc"
+              ></image>
+            </view>
+            <label class="_span subtitle-num">{{item.e}}人已订阅</label>
+          </view>
+        </view>
+        <view class="_div right">
+          <label class="_span status-ok" wx:if="{{item.f}}">已订阅</label>
+          <label catchtap="{{item.g}}" class="_span status-no" wx:else
+            >订阅</label
+          >
+          <image
+            alt=""
+            class="_img right-img"
+            src="https://st.gtimg.com/design/2842315083080933d73642cbfff2e5b2.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <subscribe-guide
+    bind:__l="__l"
+    bindclose="{{h}}"
+    bindsetting="{{i}}"
+    uI="4ee0bfe6-3"
+    uP="{{j}}"
+    wx:if="{{j}}"
+  ></subscribe-guide>
+</view>

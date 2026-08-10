@@ -1,0 +1,20 @@
+<view class="_div etf data-v-fda0e478">
+  <heardbar-vue
+    bind:__l="__l"
+    bindrouteToPage="{{a}}"
+    class="data-v-fda0e478"
+    uI="fda0e478-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></heardbar-vue>
+  <table-list
+    bind:__l="__l"
+    bindgotoStockDetail="{{item.b}}"
+    bindreport="{{item.c}}"
+    class="data-v-fda0e478"
+    uI="{{item.d}}"
+    uP="{{item.e}}"
+    wx:for="{{c}}"
+    wx:key="a"
+  ></table-list>
+</view>

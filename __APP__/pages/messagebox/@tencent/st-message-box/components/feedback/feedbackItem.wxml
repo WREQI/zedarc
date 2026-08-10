@@ -1,0 +1,27 @@
+<view class="_div feedback-item data-v-d3a5910c" wx:if="{{a}}">
+  <view class="_div top data-v-d3a5910c">
+    <view class="_div title data-v-d3a5910c">意见反馈提醒</view>
+    <view class="_div time data-v-d3a5910c">{{b}}</view>
+  </view>
+  <view class="_div feedback-subtitle data-v-d3a5910c">客服已处理你的反馈</view>
+  <view class="_div show_contents data-v-d3a5910c">
+    <view
+      bindtap="{{item.g}}"
+      class="_div kv-item data-v-d3a5910c"
+      wx:for="{{c}}"
+      wx:key="f"
+    >
+      <view class="_div key-txt data-v-d3a5910c">{{item.a}}</view>
+      <view class="{{['_div','data-v-d3a5910c',item.c]}}" wx:if="{{d}}">
+        <rich-text class="data-v-d3a5910c" nodes="{{item.b}}"></rich-text>
+      </view>
+      <view class="{{['_div','data-v-d3a5910c',item.e]}}" wx:else>
+        <rich-text class="data-v-d3a5910c" nodes="{{item.d}}"></rich-text>
+      </view>
+    </view>
+  </view>
+  <view bindtap="{{e}}" class="_div feedback-item-btn data-v-d3a5910c">
+    <view class="_div item-btn-text data-v-d3a5910c">查看详情</view>
+    <view class="_div item-btn-arrow data-v-d3a5910c"></view>
+  </view>
+</view>

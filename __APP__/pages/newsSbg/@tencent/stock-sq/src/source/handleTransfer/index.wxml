@@ -1,0 +1,60 @@
+<view
+  class="{{['_div','data-v-21177ed4','mod-handleTransfer',r&&'no-padding-bg']}}"
+>
+  <view class="_div turn-log-box data-v-21177ed4" wx:if="{{a}}">
+    <short-content
+      bind:__l="__l"
+      class="data-v-21177ed4"
+      uI="{{item.d}}"
+      uP="{{item.e}}"
+      uS="{{['start']}}"
+      wx:for="{{b}}"
+      wx:key="c"
+    >
+      <label class="_span turn-name-box data-v-21177ed4" slot="start">
+        <label class="_span zhuanfa data-v-21177ed4">转发</label>
+        <label class="_span b data-v-21177ed4" data-personid="{{item.b}}"
+          >{{item.a}}</label
+        >
+        <label class="_span data-v-21177ed4">:</label>
+      </label>
+    </short-content>
+  </view>
+  <view class="_div source-box data-v-21177ed4" wx:if="{{c}}">
+    <other-source
+      bind:__l="__l"
+      class="data-v-21177ed4"
+      uI="21177ed4-1"
+      uP="{{e}}"
+      wx:if="{{d}}"
+    ></other-source>
+    <view class="_div post-box data-v-21177ed4" wx:else>
+      <view
+        class="_div post-img data-v-21177ed4"
+        style="{{'background-image:'+g+';'+'background-size:'+'cover'}}"
+        wx:if="{{f}}"
+      ></view>
+      <view class="_div post_content short data-v-21177ed4" wx:if="{{h}}">
+        <short-content
+          bind:__l="__l"
+          class="data-v-21177ed4"
+          uI="21177ed4-2"
+          uP="{{k}}"
+          uS="{{['start']}}"
+          wx:if="{{k}}"
+        >
+          <view slot="start">
+            <label class="_span b data-v-21177ed4" wx:if="{{i}}">{{j}}</label>
+          </view>
+        </short-content>
+      </view>
+      <view class="_div post_content long data-v-21177ed4" wx:if="{{l}}">
+        <view class="_div long-content-box data-v-21177ed4">
+          <label class="_span b data-v-21177ed4">{{m}}</label>
+          <label class="_span b data-v-21177ed4">文章·</label>{{n}}{{o}}</view
+        >
+      </view>
+      <view class="_div data-v-21177ed4" wx:if="{{p}}">{{q}}</view>
+    </view>
+  </view>
+</view>

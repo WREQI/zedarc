@@ -1,0 +1,45 @@
+.reset-card-entry.data-v-28718f9d {
+  align-items: center;
+  background-color: #f5f6fa;
+  border-radius: 0.10666666666666667rem;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  gap: 0.10666666666666667rem;
+  height: 0.64rem;
+  margin-right: 0.21333333333333335rem;
+  padding: 0 0.16rem;
+  position: relative;
+}
+.reset-card-entry__icon.data-v-28718f9d {
+  display: block;
+  flex-shrink: 0;
+  height: 0.37333333333333335rem;
+  width: 0.37333333333333335rem;
+}
+.reset-card-entry__text.data-v-28718f9d {
+  color: var(--color-heavygray);
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  white-space: nowrap;
+}
+.reset-card-entry__red-dot.data-v-28718f9d {
+  background-color: #e63535;
+  border-radius: 50%;
+  height: 0.16rem;
+  position: absolute;
+  right: 0;
+  top: -0.04rem;
+  width: 0.16rem;
+}
+.reset-card-entry--used.data-v-28718f9d {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.reset-card-entry--dark.data-v-28718f9d {
+  background-color: #12161f;
+}

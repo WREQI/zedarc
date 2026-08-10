@@ -1,0 +1,16 @@
+<page-meta class="data-v-ad265dbd" rootFontSize="{{a}}"></page-meta>
+<view class="_div custom-container data-v-ad265dbd">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-ad265dbd"
+    uI="ad265dbd-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-ad265dbd"
+    uI="ad265dbd-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <custom bind:__l="__l" class="data-v-ad265dbd" uI="ad265dbd-2"></custom>
+</view>

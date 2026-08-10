@@ -1,0 +1,15 @@
+<view
+  bindtap="{{e}}"
+  class="{{['_div','reset-card-entry','data-v-28718f9d',c,d]}}"
+>
+  <image
+    alt="重置"
+    class="_img reset-card-entry__icon data-v-28718f9d"
+    src="{{a}}"
+  ></image>
+  <label class="_span reset-card-entry__text data-v-28718f9d">重置账户</label>
+  <label
+    class="_span reset-card-entry__red-dot data-v-28718f9d"
+    wx:if="{{b}}"
+  ></label>
+</view>

@@ -1,0 +1,27 @@
+<view
+  class="{{['_div','data-v-5de13424','etf-union-page','scroll-wapper',k]}}"
+  ref="scroll"
+>
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{g}}"
+    bindrefresherrefresh="{{i}}"
+    bindrefresherrestore="{{h}}"
+    bindscroll="{{j}}"
+    class="data-v-5de13424"
+    refresherEnabled="{{e}}"
+    refresherThreshold="100"
+    refresherTriggered="{{f}}"
+    style="{{d}}"
+  >
+    <e-t-f-main-page
+      bind:__l="__l"
+      bindtoggleShowTeachPop="{{b}}"
+      class="r data-v-5de13424"
+      uI="5de13424-0"
+      uP="{{c}}"
+      uR="etfPage"
+      wx:if="{{c}}"
+    ></e-t-f-main-page>
+  </scroll-view>
+</view>

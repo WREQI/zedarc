@@ -1,0 +1,25 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="99be0b34-0"
+  uP="{{f}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <history-new
+    bind:__l="__l"
+    class="r"
+    uI="99be0b34-1,99be0b34-0"
+    uR="historyNewRef"
+    wx:if="{{b}}"
+  ></history-new>
+  <history-old
+    bind:__l="__l"
+    uI="99be0b34-2,99be0b34-0"
+    wx:elif="{{d}}"
+  ></history-old>
+  <view wx:else></view>
+</global-wrap>

@@ -1,0 +1,85 @@
+<view
+  capture-bind:touchmove="{{B}}"
+  capture-bind:touchstart="{{A}}"
+  class="_div hot-topic-search-page data-v-68bcfcfb"
+  data-st-theme="{{z}}"
+>
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    bindlayout="{{c}}"
+    class="data-v-68bcfcfb"
+    uI="68bcfcfb-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view class="_div top-search data-v-68bcfcfb" style="{{h}}">
+    <search-bar
+      bind:__l="__l"
+      bindcancel="{{f}}"
+      bindinput="{{e}}"
+      class="top-search__bar data-v-68bcfcfb"
+      uI="68bcfcfb-1"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></search-bar>
+  </view>
+  <scroll-view
+    bindscroll="{{p}}"
+    bindscrolltolower="{{q}}"
+    class="{{['data-v-68bcfcfb','page-body','page-body--scroll',n]}}"
+    scrollY="{{o}}"
+    wx:if="{{i}}"
+  >
+    <view class="_div list-item-wrap data-v-68bcfcfb" wx:for="{{j}}" wx:key="c">
+      <list-item
+        bind:__l="__l"
+        class="data-v-68bcfcfb"
+        uI="{{item.a}}"
+        uP="{{item.b}}"
+        wx:if="{{item.b}}"
+      ></list-item>
+    </view>
+    <view class="_div empty-state data-v-68bcfcfb" wx:if="{{k}}">
+      <image
+        alt=""
+        class="_img empty-img data-v-68bcfcfb"
+        src="https://st.gtimg.com/design/77f4b6848f0e8fecc3320ef981eafeef.png"
+      ></image>
+      <view class="_div empty-text data-v-68bcfcfb">暂无相关板块</view>
+    </view>
+    <view class="_div loading-tips data-v-68bcfcfb" wx:if="{{l}}"
+      >加载中...</view
+    >
+    <view class="_div footer-logo data-v-68bcfcfb" wx:if="{{m}}"></view>
+  </scroll-view>
+  <st-reach-bottom
+    bind:__l="__l"
+    bindscroll="{{x}}"
+    class="{{['r','data-v-68bcfcfb','page-body','page-body--h5',w]}}"
+    uI="68bcfcfb-3"
+    uP="{{y||''}}"
+    uR="reachBottomRef"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="_div list-item-wrap data-v-68bcfcfb" wx:for="{{r}}" wx:key="c">
+      <list-item
+        bind:__l="__l"
+        class="data-v-68bcfcfb"
+        uI="{{item.a}}"
+        uP="{{item.b}}"
+        wx:if="{{item.b}}"
+      ></list-item>
+    </view>
+    <view class="_div empty-state data-v-68bcfcfb" wx:if="{{s}}">
+      <image
+        alt=""
+        class="_img empty-img data-v-68bcfcfb"
+        src="https://st.gtimg.com/design/77f4b6848f0e8fecc3320ef981eafeef.png"
+      ></image>
+      <view class="_div empty-text data-v-68bcfcfb">暂无相关板块</view>
+    </view>
+    <view class="_div footer-logo data-v-68bcfcfb" wx:if="{{t}}"></view>
+  </st-reach-bottom>
+</view>

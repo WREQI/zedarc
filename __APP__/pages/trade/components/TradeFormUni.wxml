@@ -1,0 +1,186 @@
+<view class="{{['trade-form-container','^trade-form-container',cb,cc,cd]}}" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+        <view class="form-container">
+            <view class="title flex-between">
+                <label class="fs-28 text-color-1">{{c}}</label>
+                <label bindtap="{{d}}" class="fs-24 link">交易规则</label>
+            </view>
+            <view class="inputbox border-bottom flex-vcenter" wx:if="{{e}}">
+                <view class="prefix text-color-1">¥</view>
+                <input bindblur="{{l}}" bindfocus="{{k}}" bindinput="{{j}}" class="money-input flex-1" cursorColor="{{'var(--color-primary-1)'}}" disabled="{{h}}" maxlength="{{9}}" placeholder="{{i}}" ref="moneyInput" type="number" value="{{g}}" wx:if="{{f}}"></input>
+                <custom-input bind:__l="__l" bindblur="{{p}}" bindbuy="{{q}}" bindfocus="{{n}}" bindinput="{{o}}" class="money-input flex-1 r" uI="0db40153-0" uP="{{r||''}}" uR="moneyInput" wx:else></custom-input>
+                <view bindtap="{{t}}" class="icon icon-clear" wx:if="{{s}}"></view>
+                <view class="input-popover" wx:if="{{v}}">{{w}}</view>
+            </view>
+            <view class="inputbox border-bottom flex-vcenter" wx:if="{{x}}">
+                <input bindblur="{{E}}" bindfocus="{{D}}" bindinput="{{C}}" class="amount-input flex-1" cursorColor="{{'var(--color-primary-1)'}}" disabled="{{A}}" maxlength="{{8}}" placeholder="{{B}}" ref="amountInput" type="number" value="{{z}}" wx:if="{{y}}"></input>
+                <custom-input bind:__l="__l" bindblur="{{I}}" bindfocus="{{G}}" bindinput="{{H}}" bindsell="{{J}}" class="amount-input flex-1 r" uI="0db40153-1" uP="{{K||''}}" uR="amountInput" wx:else></custom-input>
+                <view bindtap="{{M}}" class="icon icon-clear" wx:if="{{L}}"></view>
+                <view class="postfix text-color-1" wx:if="{{N}}">{{O}}</view>
+                <view class="input-popover amount" wx:if="{{P}}">{{Q}}</view>
+            </view>
+            <view class="max-info-bar flex-between" wx:if="{{R}}">
+                <view class="{{['max-canuse','border--surround',Y]}}" wx:if="{{S}}">
+                    <label>可用资金</label>
+                    <label wx:if="{{T}}">--</label>
+                    <label bindtap="{{X}}" class="{{[V,W]}}" wx:else>{{U}}元</label>
+                </view>
+                <view class="quick-import flex fs-24">
+                    <view bindtap="{{item.c}}" class="{{['quick-import-item','border--surround','money',aa]}}" wx:for="{{Z}}" wx:key="b">{{item.a}}</view>
+                </view>
+            </view>
+            <view class="max-info-bar flex-between" wx:if="{{ab}}">
+                <view class="{{['max-canuse','border--surround',ai]}}">
+                    <label>最大可卖</label>
+                    <label wx:if="{{ac}}">--</label>
+                    <label bindtap="{{ah}}" class="{{[af,ag]}}" wx:else>{{ad}}{{ae}}</label>
+                </view>
+                <view class="quick-import flex fs-24">
+                    <view bindtap="{{item.e}}" class="{{['quick-import-item','amount','border--surround','flex-center',ak,al,item.d]}}" wx:for="{{aj}}" wx:key="c">{{item.a}}<view class="triangle-down js-amount-btn-r" wx:if="{{item.b}}"></view>
+                    </view>
+                </view>
+            </view>
+            <view class="order-info flex-between">
+                <view class="order-money-left flex-vcenter">
+                    <label class="label-name">订单金额</label>
+                    <label bindtap="{{an}}" class="icon icon-italic-info text-color-5 fs-28" wx:if="{{am}}"></label>
+                </view>
+                <view class="order-money-right flex-vcenter">
+                    <view class="price-and-amount text-color-5">(价格<label class="{{['price',ap]}}">{{ao}}</label>数量<label class="{{ar}}">{{aq}}</label>)</view>
+                    <view class="{{['money','text-color-1',av&&'fs-24',aw&&'fs-26',ax&&'fs-28',ay&&'fs-30']}}">{{as}} {{at}}</view>
+                </view>
+            </view>
+        </view>
+        <mp-dialog bind:__l="__l" bindclose="{{az}}" uI="0db40153-2" uP="{{aA}}" uS="{{['d']}}" wx:if="{{aA}}">
+            <view class="order-explain-dialog">
+                <view class="line text-color-2">
+                    <label class="highlight">买入金额：</label>您在输入框内填写的<label class="primary highlight">期望委托金额</label>。</view>
+                <view class="line text-color-2">
+                    <label class="highlight">订单金额：</label>根据交易所规则，将买入金额换算为实际可买数量后，与委托价格相乘得到的<label class="primary highlight">实际委托金额</label>。</view>
+            </view>
+        </mp-dialog>
+    </block>
+    <block wx:else>
+        <view class="cell-group ^cell-group">
+            <view class="cell flex ^cell">
+                <view bindtap="{{aC}}" class="field ^field flex-vcenter">
+                    <view class="strategy-btn ^strategy-btn js-strategy-btn-l">{{aB}}</view>
+                    <view class="triangle-down"></view>
+                </view>
+                <view class="stepper-wrapper flex-1 flex-between">
+                    <stepper bind:__l="__l" bindblur="{{aJ}}" bindchange="{{aF}}" bindfocus="{{aI}}" bindlongPress="{{aH}}" bindnext="{{aK}}" bindtapClick="{{aG}}" class="{{['flex-1','r',aE]}}" uI="0db40153-3" uP="{{aL}}" uR="priceStepper" wx:if="{{aL}}"></stepper>
+                    <view class="{{['popover',aO]}}" wx:if="{{aM}}">{{aN}}</view>
+                </view>
+            </view>
+            <view class="cell flex amount-cell ^cell ^amount-cell">
+                <view class="field flex-vcenter">
+                    <label class="amount-btn ^amount-btn">数量</label>
+                </view>
+                <view class="stepper-wrapper flex-1 flex-between">
+                    <stepper bind:__l="__l" bindblur="{{aV}}" bindbuy="{{aW}}" bindchange="{{aT}}" bindfocus="{{aU}}" bindlongPress="{{aS}}" bindoverlimit="{{aY}}" bindsell="{{aX}}" bindtapClick="{{aR}}" class="{{['flex-1','r',aQ]}}" uI="0db40153-4" uP="{{aZ}}" uR="amountStepper" wx:if="{{aZ}}"></stepper>
+                    <view class="popover" wx:if="{{ba}}">{{bb}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="max-trade flex-between ^max-trade">
+            <view class="max-info" wx:if="{{bc}}">
+                <view bindtap="{{bk}}" class="{{['item','border--surround',bj]}}">
+                    <label class="{{['label',bd]}}">最大可买</label>
+                    <label wx:if="{{be}}">--</label>
+                    <label class="{{[bh,bi]}}" wx:else>{{bf}}{{bg}}</label>
+                </view>
+            </view>
+            <view class="max-info" wx:if="{{bl}}">
+                <view bindtap="{{bt}}" class="{{['item','border--surround',bs]}}">
+                    <label class="{{['label',bm]}}">最大可卖</label>
+                    <label wx:if="{{bn}}">--</label>
+                    <label class="{{[bq,br]}}" wx:else>{{bo}}{{bp}}</label>
+                </view>
+            </view>
+            <view class="pos-setting ^pos-setting flex">
+                <view bindtap="{{item.e}}" class="{{['flex-center','quick-amount','border--surround','^quick-amount',bw,bx,item.d]}}" wx:for="{{bv}}" wx:key="c">{{item.a}}<view class="triangle-down js-amount-btn-r" wx:if="{{item.b}}"></view>
+                </view>
+            </view>
+        </view>
+        <view class="section-wrap flex-between ^section-wrap">
+            <view class="embedded-order-money-title ^embedded-order-money-title">订单金额</view>
+            <view class="flex-1 flex-end">
+                <label class="{{['text-color-5','can-use',bA]}}" wx:if="{{by}}">（可用资金 {{bz}}元）</label>
+                <label class="{{['embedded-order-money',bD]}}">{{bB}}{{bC}}</label>
+            </view>
+        </view>
+    </block>
+    <view class="btns flex tradeform-btns-js" wx:if="{{bE}}">
+        <view class="{{['secucard-wrap-embedded',bI]}}" wx:if="{{bF}}">
+            <trade-g-g-t-share-holder-selector bind:__l="__l" bindselect="{{bG}}" uI="0db40153-5" uP="{{bH}}" wx:if="{{bH}}"></trade-g-g-t-share-holder-selector>
+        </view>
+        <block wx:if="{{bJ}}">
+            <button bindtap="{{bM}}" class="btn buy flex-1" disabled="{{bL}}" wx:if="{{bK}}">买入</button>
+            <button bindtap="{{bP}}" class="btn sell flex-1" disabled="{{bO}}" wx:if="{{bN}}">卖出</button>
+        </block>
+        <button bindtap="{{bR}}" class="btn flex-1" type="primary" wx:else>{{bQ}}</button>
+    </view>
+    <trade-price-strategy bind:__l="__l" bindchangeStrategy="{{bU}}" bindinput="{{bT}}" class="trade-price-strategy" uI="0db40153-6" uP="{{bV}}" wx:if="{{bS}}"></trade-price-strategy>
+    <trade-quick-amount bind:__l="__l" bindinput="{{bY}}" bindsetAmount="{{bZ}}" class="{{['trade-quick-amount',bX]}}" uI="0db40153-7" uP="{{ca}}" wx:if="{{bW}}"></trade-quick-amount>
+</view>
+<view class="{{['trade-form-container','trade-form-container__not-split-mode',dp]}}" wx:else>
+    <view class="cell-group">
+        <view class="cell flex">
+            <view bindtap="{{cf}}" class="field flex-vcenter js-strategy-btn-l">
+                <label class="">{{ce}}</label>
+                <label class="triangle-down"></label>
+            </view>
+            <view class="stepper-wrapper flex-1 flex-between">
+                <stepper bind:__l="__l" bindblur="{{cm}}" bindchange="{{ci}}" bindfocus="{{cl}}" bindlongPress="{{ck}}" bindnext="{{cn}}" bindtapClick="{{cj}}" class="{{['flex-1','r',ch]}}" uI="0db40153-8" uP="{{co}}" uR="priceStepper" wx:if="{{co}}"></stepper>
+                <view bindtap="{{cp}}" class="show-popup flex-center border--surround js-strategy-btn-r border-radius-with-after-base">
+                    <label class="icon icon-trade-price st-stepper__icon"></label>
+                </view>
+                <view class="{{['popover',cs]}}" wx:if="{{cq}}">{{cr}}</view>
+            </view>
+        </view>
+        <view class="cell flex">
+            <view bindtap="{{ct}}" class="field ^field flex-vcenter js-amount-btn-l">
+                <label>数量</label>
+                <label class="triangle-down"></label>
+            </view>
+            <view class="stepper-wrapper flex-1 flex-between">
+                <stepper bind:__l="__l" bindblur="{{cB}}" bindchange="{{cz}}" bindfocus="{{cA}}" bindlongPress="{{cy}}" bindoverlimit="{{cC}}" bindtapClick="{{cx}}" class="{{['flex-1','r',cw]}}" uI="0db40153-9" uP="{{cD}}" uR="amountStepper" wx:if="{{cD}}"></stepper>
+                <view bindtap="{{cE}}" class="show-popup flex-center border--surround js-amount-btn-r border-radius-with-after-base">
+                    <label class="icon icon-trade-amount st-stepper__icon"></label>
+                </view>
+                <view class="popover" wx:if="{{cF}}">{{cG}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="max-trade flex-between">
+        <view class="max-info">
+            <view bindtap="{{cM}}" class="item border--surround border-radius-with-after-sm">
+                <label class="label">最大可买：</label>
+                <label wx:if="{{cH}}">--</label>
+                <label class="{{[cK,cL]}}" wx:else>{{cI}}{{cJ}}</label>
+            </view>
+        </view>
+        <view class="max-info">
+            <view bindtap="{{cS}}" class="item border--surround border-radius-with-after-sm">
+                <label class="label">最大可卖：</label>
+                <label wx:if="{{cN}}">--</label>
+                <label class="{{[cQ,cR]}}" wx:else>{{cO}}{{cP}}</label>
+            </view>
+        </view>
+    </view>
+    <view class="section-wrap flex-between">
+        <view class="flex-1 flex-between border--right order-money">订单金额<label class="{{[cV]}}">{{cT}}{{cU}}</label>
+        </view>
+        <view class="flex-1 flex-between can-use" wx:if="{{cW}}">可用资金<label class="{{[cY]}}">{{cX}}元</label>
+        </view>
+    </view>
+    <view class="btns flex">
+        <block wx:if="{{cZ}}">
+            <button bindtap="{{db}}" class="btn buy flex-1" disabled="{{da}}">买入</button>
+            <button bindtap="{{dd}}" class="btn sell flex-1" disabled="{{dc}}">卖出</button>
+        </block>
+        <button bindtap="{{df}}" class="btn flex-1" type="primary" wx:else>{{de}}</button>
+    </view>
+    <trade-price-strategy bind:__l="__l" bindchangeStrategy="{{di}}" bindinput="{{dh}}" uI="0db40153-10" uP="{{dj}}" wx:if="{{dg}}"></trade-price-strategy>
+    <trade-quick-amount bind:__l="__l" bindinput="{{dl}}" bindsetAmount="{{dm}}" uI="0db40153-11" uP="{{dn}}" wx:if="{{dk}}"></trade-quick-amount>
+</view>

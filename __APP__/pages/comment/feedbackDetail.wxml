@@ -1,0 +1,63 @@
+<page-meta class="data-v-685c956a" rootFontSize="{{a}}"></page-meta>
+<view class="data-v-685c956a" data-st-theme="{{v}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-685c956a"
+    uI="685c956a-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-685c956a"
+    uI="685c956a-1"
+  ></stock-privacy-dialog>
+  <feedback-detail
+    bind:__l="__l"
+    bindgoEdit="{{c}}"
+    class="r data-v-685c956a"
+    id="topicDetail"
+    uI="685c956a-2"
+    uP="{{d}}"
+    uR="topicDetail"
+    wx:if="{{d}}"
+  ></feedback-detail>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{e}}"
+    class="data-v-685c956a"
+    uI="685c956a-3"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></privacy-policy-modal>
+  <view
+    class="_div nav-bar data-v-685c956a"
+    id="navBar"
+    style="{{'padding-top:'+o+';'+'background-color:'+p}}"
+    wx:if="{{g}}"
+  >
+    <view class="_div btn data-v-685c956a" wx:if="{{h}}"></view>
+    <view catchtap="{{k}}" class="_div btn data-v-685c956a" wx:elif="{{i}}">
+      <view
+        class="{{['_div','data-v-685c956a','right-arrow','left',j]}}"
+      ></view>
+    </view>
+    <view catchtap="{{l}}" class="_div btn home data-v-685c956a" wx:else>
+      <image
+        class="_img home-icon data-v-685c956a"
+        src="https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png"
+      ></image>
+    </view>
+    <label class="_span title data-v-685c956a" style="{{'opacity:'+n}}"
+      >{{m}}</label
+    >
+    <view class="_div btn data-v-685c956a"></view>
+  </view>
+  <half-editor
+    bind:__l="__l"
+    bindonHide="{{s}}"
+    class="r data-v-685c956a"
+    uI="685c956a-4"
+    uP="{{t}}"
+    uR="halfEditor"
+    wx:if="{{q}}"
+  ></half-editor>
+</view>

@@ -1,0 +1,305 @@
+<view class="_div news-text data-v-a7ebfc1d">
+  <block wx:for="{{a}}">
+    <render-content
+      bind:__l="__l"
+      bindgoToFunctions="{{item.f}}"
+      bindgoToNews="{{item.b}}"
+      bindgoToStock="{{item.c}}"
+      bindgoToUrl="{{item.e}}"
+      bindhandleTech="{{item.d}}"
+      class="data-v-a7ebfc1d"
+      uI="{{item.g}}"
+      uP="{{item.h}}"
+      wx:if="{{item.a}}"
+    ></render-content>
+    <render-content-mp
+      bind:__l="__l"
+      bindgoToFunctions="{{item.n}}"
+      bindgoToNews="{{item.j}}"
+      bindgoToStock="{{item.k}}"
+      bindgoToUrl="{{item.m}}"
+      bindhandleTech="{{item.l}}"
+      class="data-v-a7ebfc1d"
+      uI="{{item.o}}"
+      uP="{{item.p}}"
+      wx:if="{{item.i}}"
+    ></render-content-mp>
+    <view class="_div news-table data-v-a7ebfc1d" wx:elif="{{item.q}}">
+      <rich-text class="data-v-a7ebfc1d" nodes="{{item.r}}"></rich-text>
+    </view>
+    <view class="_div news-snptb data-v-a7ebfc1d" wx:elif="{{item.s}}">
+      <view class="_table data-v-a7ebfc1d">
+        <view class="_tr data-v-a7ebfc1d" wx:for="{{item.t}}" wx:for-item="tr">
+          <view
+            catchtap="{{td.p}}"
+            class="{{['_td','data-v-a7ebfc1d',td.o]}}"
+            colspan="{{td.n}}"
+            wx:for="{{tr.a}}"
+            wx:for-item="td"
+          >
+            <block wx:if="{{td.a}}">
+              <view class="{{['_div','data-v-a7ebfc1d',td.d]}}" wx:if="{{td.b}}"
+                >{{td.c}}</view
+              >
+              <view class="_div td-content-group data-v-a7ebfc1d">
+                <label
+                  catchtap="{{td.g}}"
+                  class="_span news-stock data-v-a7ebfc1d"
+                  wx:if="{{td.e}}"
+                  >{{td.f}}</label
+                >
+                <label class="_span data-v-a7ebfc1d" wx:else>{{td.h}}</label>
+                <label
+                  catchtap="{{td.k}}"
+                  class="_span news-stock data-v-a7ebfc1d"
+                  wx:if="{{td.i}}"
+                  >{{td.j}}</label
+                >
+                <label class="_span data-v-a7ebfc1d" wx:elif="{{td.l}}"
+                  >{{td.m}}</label
+                >
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+    <news-image
+      bind:__l="__l"
+      bindloadImage="{{item.w}}"
+      bindloadImageError="{{item.x}}"
+      class="data-v-a7ebfc1d"
+      uI="{{item.y}}"
+      uP="{{item.z}}"
+      wx:elif="{{item.v}}"
+    ></news-image>
+    <view class="_div news-emphasis data-v-a7ebfc1d" wx:elif="{{item.A}}">
+      <view class="_div emphasis-title data-v-a7ebfc1d">划重点：</view>
+      <view class="_ul data-v-a7ebfc1d">
+        <view
+          class="_li data-v-a7ebfc1d"
+          wx:for="{{item.B}}"
+          wx:for-item="content"
+        >
+          <render-content
+            bind:__l="__l"
+            class="data-v-a7ebfc1d"
+            uI="{{content.a}}"
+            uP="{{content.b}}"
+            wx:if="{{item.C}}"
+          ></render-content>
+          <render-content-mp
+            bind:__l="__l"
+            class="data-v-a7ebfc1d"
+            uI="{{content.c}}"
+            uP="{{content.d||''}}"
+            wx:else
+          ></render-content-mp>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtap="{{item.U}}"
+      class="_div video-box data-v-a7ebfc1d"
+      wx:elif="{{item.D}}"
+    >
+      <view class="_div data-v-a7ebfc1d" wx:if="{{item.E}}">
+        <view
+          bindtap="{{item.J}}"
+          class="_div player-container-mp data-v-a7ebfc1d"
+          style="{{item.I}}"
+        >
+          <slot name="txvplayer" wx:if="{{item.F}}"></slot>
+          <txv-video
+            class="data-v-a7ebfc1d"
+            height="100%"
+            playerid="{{item.H}}"
+            usePoster="{{false}}"
+            vid="{{item.G}}"
+            width="100%"
+            wx:else
+          ></txv-video>
+        </view>
+        <text class="video-desc data-v-a7ebfc1d" wx:if="{{item.K}}"
+          >{{item.L}}</text
+        >
+      </view>
+      <view class="_div data-v-a7ebfc1d" wx:else>
+        <view class="_div video data-v-a7ebfc1d">
+          <video-player
+            bind:__l="__l"
+            bindonDurationChange="{{item.N}}"
+            bindonPlayStatusChange="{{item.M}}"
+            class="data-v-a7ebfc1d"
+            uI="{{item.O}}"
+            uP="{{item.P}}"
+            wx:if="{{item.P}}"
+          ></video-player>
+        </view>
+        <view class="_div video-desc data-v-a7ebfc1d" wx:if="{{item.Q}}">
+          <rich-text class="data-v-a7ebfc1d" nodes="{{item.R}}"></rich-text>
+        </view>
+      </view>
+      <view class="_div more-button data-v-a7ebfc1d">
+        <view
+          catchtap="{{item.T}}"
+          class="_div _button data-v-a7ebfc1d"
+          wx:if="{{item.S}}"
+        >
+          <image
+            class="_img more-icon data-v-a7ebfc1d"
+            src="https://st.gtimg.com/design/ba671bfbcf4b5e07d1d2f4719a76ad7c.png"
+          ></image>
+          <label class="_span more-text data-v-a7ebfc1d">更多视频</label>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div live-box video-box data-v-a7ebfc1d"
+      key="{{item.ak}}"
+      wx:elif="{{item.V}}"
+    >
+      <view
+        class="_div player-container-mp data-v-a7ebfc1d"
+        style="{{item.Z}}"
+        wx:if="{{item.W}}"
+      >
+        <mp-live
+          bind:__l="__l"
+          class="data-v-a7ebfc1d"
+          uI="{{item.X}}"
+          uP="{{item.Y}}"
+          wx:if="{{item.Y}}"
+        ></mp-live>
+      </view>
+      <live
+        bind:__l="__l"
+        bindgotoLiveDetail="{{item.ae}}"
+        bindreportPauseLive="{{item.ad}}"
+        bindreportPlayLive="{{item.ac}}"
+        class="r-i-f data-v-a7ebfc1d"
+        style="{{item.ab}}"
+        uI="{{item.af}}"
+        uP="{{item.ag||''}}"
+        uR="liveWrap"
+        wx:else
+      ></live>
+      <view class="_div video-desc data-v-a7ebfc1d" wx:if="{{item.ah}}">
+        <rich-text class="data-v-a7ebfc1d" nodes="{{item.ai}}"></rich-text>
+      </view>
+      <view class="_div more-button data-v-a7ebfc1d">
+        <view catchtap="{{item.aj}}" class="_div _button data-v-a7ebfc1d">
+          <image
+            class="_img more-icon data-v-a7ebfc1d"
+            src="https://st.gtimg.com/design/ba671bfbcf4b5e07d1d2f4719a76ad7c.png"
+          ></image>
+          <label class="_span more-text data-v-a7ebfc1d">更多直播</label>
+        </view>
+      </view>
+    </view>
+    <block wx:elif="{{item.al}}">
+      <view
+        bindtap="{{item.at}}"
+        class="_div news-vd-container data-v-a7ebfc1d"
+        wx:if="{{item.am}}"
+      >
+        <view class="_div news-vd-top-source data-v-a7ebfc1d"
+          >来自微信视频号</view
+        >
+        <image
+          alt=""
+          class="_img news-vd-img data-v-a7ebfc1d"
+          data-preview="1"
+          mode="widthFix"
+          src="{{item.ao}}"
+          style="{{item.ap}}"
+          wx:if="{{item.an}}"
+        ></image>
+        <image
+          alt=""
+          class="_img news-vd-img img-mp data-v-a7ebfc1d"
+          data-preview="1"
+          src="{{item.aq}}"
+          wx:else
+        ></image>
+        <label class="_span news-vd-btn-play data-v-a7ebfc1d">
+          <view class="_i news-vd-icon-play data-v-a7ebfc1d"></view>
+        </label>
+        <view
+          class="_div news-vd-image-desc data-v-a7ebfc1d"
+          wx:if="{{item.ar}}"
+        >
+          <rich-text class="data-v-a7ebfc1d" nodes="{{item.as}}"></rich-text>
+        </view>
+      </view>
+    </block>
+    <view class="_div data-v-a7ebfc1d" wx:if="{{item.av}}">
+      <live-card
+        bind:__l="__l"
+        bindreserve="{{item.ax}}"
+        bindtapLiveCard="{{item.aw}}"
+        class="data-v-a7ebfc1d"
+        style="margin-bottom: 0"
+        uI="{{item.ay}}"
+        uP="{{item.az}}"
+        wx:if="{{item.az}}"
+      ></live-card>
+    </view>
+    <subscribe-wx-msg-bar
+      bind:__l="__l"
+      bindcloseSubscribeBar="{{item.aD}}"
+      bindonSubscribe="{{item.aC}}"
+      bindshowToast="{{item.aB}}"
+      class="rmzb-subscribe data-v-a7ebfc1d"
+      uI="{{item.aE}}"
+      uP="{{item.aF}}"
+      wx:if="{{item.aA}}"
+    ></subscribe-wx-msg-bar>
+    <plate-template
+      bind:__l="__l"
+      class="data-v-a7ebfc1d"
+      data-win-type="{{item.aH}}"
+      uI="{{item.aI}}"
+      uP="{{item.aJ}}"
+      wx:elif="{{item.aG}}"
+    ></plate-template>
+    <viewport-module
+      bind:__l="__l"
+      bindwzqKeepPos="{{item.aN}}"
+      class="limit-max-width r-i-f data-v-a7ebfc1d"
+      uI="{{item.aO}}"
+      uP="{{item.aP}}"
+      uR="{{item.aM}}"
+      wx:elif="{{item.aK}}"
+    ></viewport-module>
+    <view
+      class="_div vote-wrap limit-max-width data-v-a7ebfc1d"
+      wx:elif="{{item.aQ}}"
+    >
+      <vote-main
+        bind:__l="__l"
+        bindpickVote="{{item.aS}}"
+        class="data-v-a7ebfc1d"
+        uI="{{item.aT}}"
+        uP="{{item.aU}}"
+        wx:if="{{item.aR}}"
+      ></vote-main>
+    </view>
+    <view class="{{['_div','data-v-a7ebfc1d',item.aV]}}" wx:if="{{b}}"></view>
+  </block>
+  <st-modal
+    bind:__l="__l"
+    bindcancel="{{f}}"
+    bindconfirm="{{g}}"
+    bindtoggle="{{e}}"
+    class="teach-modal data-v-a7ebfc1d"
+    uI="a7ebfc1d-13"
+    uP="{{h}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div teach-content data-v-a7ebfc1d">
+      <rich-text class="data-v-a7ebfc1d" nodes="{{d}}"></rich-text>
+    </view>
+  </st-modal>
+</view>

@@ -1,0 +1,22 @@
+<view
+  catchtap="{{d}}"
+  class="_div plate-item layout-column flex layout-align-center-center data-v-e74676c6"
+>
+  <view class="_div plate-name data-v-e74676c6" style="{{'font-size:'+b}}"
+    >{{a}}</view
+  >
+  <view class="_div plate-content layout-align-center-start data-v-e74676c6">
+    <view class="_div item-wrapper data-v-e74676c6" wx:for="{{c}}" wx:key="h">
+      <label class="_span item-name data-v-e74676c6">{{item.a}}</label>
+      <label class="_span item-normal data-v-e74676c6" wx:if="{{item.b}}"
+        >{{item.c}}</label
+      >
+      <label class="_span item-normal data-v-e74676c6" wx:elif="{{item.d}}"
+        >{{item.e}}%</label
+      >
+      <label class="{{[item.g,'_span','item-quote','data-v-e74676c6']}}" wx:else
+        >{{item.f}}%</label
+      >
+    </view>
+  </view>
+</view>

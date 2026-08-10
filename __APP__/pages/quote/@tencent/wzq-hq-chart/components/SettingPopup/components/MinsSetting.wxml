@@ -1,0 +1,43 @@
+<view class="_div mins-setting-container data-v-8082549d">
+  <view class="_div item-set data-v-8082549d">
+    <view class="_div item-title data-v-8082549d">成交量</view>
+    <view class="_div set-switch data-v-8082549d">
+      <switch-com
+        bind:__l="__l"
+        bindchange="{{a}}"
+        class="swicth-default data-v-8082549d"
+        uI="8082549d-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></switch-com>
+    </view>
+  </view>
+  <view class="_div item-set data-v-8082549d" wx:if="{{c}}">
+    <view class="_div item-title data-v-8082549d">{{d}}明细</view>
+    <view class="_div set-switch data-v-8082549d">
+      <switch-com
+        bind:__l="__l"
+        bindchange="{{e}}"
+        class="swicth-default data-v-8082549d"
+        uI="8082549d-1"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></switch-com>
+    </view>
+  </view>
+  <view class="_div item-set data-v-8082549d" wx:if="{{g}}">
+    <view class="_div item-title data-v-8082549d"
+      >集合竞价<label class="_span time data-v-8082549d">{{h}}</label>
+    </view>
+    <view class="_div set-switch data-v-8082549d">
+      <switch-com
+        bind:__l="__l"
+        bindchange="{{i}}"
+        class="swicth-default data-v-8082549d"
+        uI="8082549d-2"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></switch-com>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "remind-item": "./components/remindItem",
+    "monitoring-remind-pop": "../../../asyncCom/@tencent/stock-monitoring-remind/components/MonitoringRemindPop",
+    "close-monitoring-pop": "../../../asyncCom/@tencent/stock-monitoring-remind/components/CloseMonitoringPop"
+  },
+  "componentPlaceholder": {
+    "monitoring-remind-pop": "view",
+    "close-monitoring-pop": "view"
+  }
+}

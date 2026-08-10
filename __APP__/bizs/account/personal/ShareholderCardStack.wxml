@@ -1,0 +1,19 @@
+<view class="shareholder-card-stack data-v-f1d07982" style="{{b}}">
+  <view
+    class="shareholder-card-stack__item data-v-f1d07982"
+    style="{{card.f}}"
+    wx:for="{{a}}"
+    wx:for-item="card"
+    wx:key="e"
+  >
+    <shareholder-card
+      bind:__l="__l"
+      bindclick="{{card.a}}"
+      bindopen="{{card.b}}"
+      class="data-v-f1d07982"
+      uI="{{card.c}}"
+      uP="{{card.d}}"
+      wx:if="{{card.d}}"
+    ></shareholder-card>
+  </view>
+</view>

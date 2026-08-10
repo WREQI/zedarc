@@ -1,0 +1,33 @@
+<view class="_div data-v-b6e588e5">
+  <base-title
+    bind:__l="__l"
+    class="data-v-b6e588e5"
+    uI="b6e588e5-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></base-title>
+  <view class="_div data-v-b6e588e5">
+    <view class="_div content-title data-v-b6e588e5"
+      >{{b}}<label bindtap="{{d}}" class="_span content-more data-v-b6e588e5"
+        >{{c}}<image
+          class="_img content-img data-v-b6e588e5"
+          src="https://st.gtimg.com/design/569c4d180706cdc9eaf4cc99d62bf787.png"
+        ></image>
+      </label>
+    </view>
+  </view>
+  <module
+    bind:__l="__l"
+    class="data-v-b6e588e5"
+    uI="b6e588e5-1"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></module>
+  <module-hel
+    bind:__l="__l"
+    class="data-v-b6e588e5"
+    uI="b6e588e5-2"
+    uP="{{g||''}}"
+    wx:else
+  ></module-hel>
+</view>

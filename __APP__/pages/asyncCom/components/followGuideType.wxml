@@ -1,0 +1,13 @@
+<view class="_div guide-wrap data-v-8f130860" wx:if="{{a}}">
+  <view class="_div guide-box data-v-8f130860">
+    <view class="_div title data-v-8f130860">{{b}}</view>
+    <view class="_div desc data-v-8f130860">{{c}}</view>
+    <view class="_div img data-v-8f130860"></view>
+    <view class="_div guide-buttons data-v-8f130860">
+      <view bindtap="{{d}}" class="_div button cancel data-v-8f130860"
+        >取消</view
+      >
+      <view bindtap="{{e}}" class="_div button data-v-8f130860">立即关注</view>
+    </view>
+  </view>
+</view>

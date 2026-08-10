@@ -1,0 +1,21 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div page-remind-list">
+  <mp-privacy-dialog bind:__l="__l" uI="0c5426f8-0"></mp-privacy-dialog>
+  <stock-privacy-dialog bind:__l="__l" uI="0c5426f8-1"></stock-privacy-dialog>
+  <remind-list
+    bind:__l="__l"
+    bindcheckUserSubscribe="{{c}}"
+    class="r"
+    uI="0c5426f8-2"
+    uP="{{d}}"
+    uR="remindList"
+    wx:if="{{d}}"
+  ></remind-list>
+  <follow-guide
+    bind:__l="__l"
+    bindclose="{{e}}"
+    uI="0c5426f8-3"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></follow-guide>
+</view>

@@ -1,0 +1,39 @@
+<view
+  class="{{['_div','data-v-95384e06','global-invest-wrapper',l]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div global-invest-block data-v-95384e06">
+    <view bindtap="{{c}}" class="_div header data-v-95384e06">
+      <view class="_div title data-v-95384e06">
+        <view class="_div main-title data-v-95384e06">
+          <image
+            alt="投全球"
+            class="_img title-img data-v-95384e06"
+            src="{{b}}"
+          ></image>
+        </view>
+        <view class="_div sub-title data-v-95384e06">捕捉全球机会</view>
+      </view>
+      <view class="_div right-arrow-icon data-v-95384e06"></view>
+    </view>
+    <view class="_div global-invest-content data-v-95384e06" wx:if="{{d}}">
+      <view bindtap="{{g}}" class="_div hot-desc data-v-95384e06" wx:if="{{e}}">
+        <view class="_div hot-tag data-v-95384e06">热点</view>
+        <view class="_div hot-text data-v-95384e06">{{f}}</view>
+      </view>
+      <view class="_div card-split data-v-95384e06"></view>
+      <global-market-rank-item
+        bind:__l="__l"
+        bindcardClick="{{i}}"
+        class="data-v-95384e06"
+        uI="95384e06-0"
+        uP="{{j}}"
+        wx:if="{{h}}"
+      ></global-market-rank-item>
+    </view>
+    <view class="_div skeleton data-v-95384e06" wx:if="{{k}}">
+      <view class="_div skeleton-row skeleton-row--top data-v-95384e06"></view>
+      <view class="_div skeleton-row skeleton-row--mid data-v-95384e06"></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="_div feedback-detail-wrapper data-v-37feddb2">
+  <view class="_div feedback-detail-top data-v-37feddb2">
+    <view class="_div feedback-detail-content data-v-37feddb2">{{a}}</view>
+    <view class="_div mt28 data-v-37feddb2">
+      <label class="_span feedback-detail-top-item-g data-v-37feddb2"
+        >咨询时间：</label
+      >
+      <label class="_span feedback-detail-top-item-b data-v-37feddb2"
+        >{{b}}</label
+      >
+    </view>
+    <view class="_div mt16 data-v-37feddb2">
+      <label class="_span feedback-detail-top-item-g data-v-37feddb2"
+        >问题分类：</label
+      >
+      <label class="_span feedback-detail-top-item-b data-v-37feddb2"
+        >{{c}}</label
+      >
+    </view>
+  </view>
+  <view class="_div feedback-detail-list data-v-37feddb2" wx:if="{{d}}">
+    <view class="_div f-d-list-item data-v-37feddb2" wx:for="{{e}}" wx:key="h">
+      <view class="_div f-d-list-item-l data-v-37feddb2">
+        <view class="{{['_div','data-v-37feddb2',item.a]}}">
+          <view class="_div imgmmgmgg data-v-37feddb2"></view>
+        </view>
+      </view>
+      <view class="_div f-d-list-item-r data-v-37feddb2">
+        <view class="{{['_div','data-v-37feddb2',item.c]}}">{{item.b}}</view>
+        <view class="_div f-d-list-item-r-sub data-v-37feddb2">{{item.d}}</view>
+        <view
+          class="_div f-d-list-item-r-reply data-v-37feddb2"
+          wx:if="{{item.e}}"
+          >{{item.f}}</view
+        >
+        <view class="_div f-d-list-item-r-reply-time data-v-37feddb2"
+          >{{item.g}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

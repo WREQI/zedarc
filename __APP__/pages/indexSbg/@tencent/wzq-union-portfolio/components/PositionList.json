@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "caption-bar": "./CaptionBar/CaptionBar",
+    "stock-item-chart": "../../../../asyncCom/@tencent/stock-mini-mins/component/StockItemChartV2",
+    "market-icon-sprite": "../../../../detailSbg/@tencent/stock-markets-base/components/MarketIconSprite"
+  },
+  "componentPlaceholder": {
+    "stock-item-chart": "view",
+    "market-icon-sprite": "view"
+  }
+}

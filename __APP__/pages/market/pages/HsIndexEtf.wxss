@@ -1,0 +1,56 @@
+.nav-bar.data-v-3ae62a90 {
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+.nav-bar .btn.data-v-3ae62a90,
+.nav-bar.data-v-3ae62a90 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+}
+.nav-bar .btn.data-v-3ae62a90 {
+  justify-content: center;
+  width: 1.1733333333333333rem;
+}
+.nav-bar .btn .back-icon.data-v-3ae62a90 {
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.nav-bar .right-arrow.data-v-3ae62a90 {
+  background-color: #12161f;
+  height: 0.4533333333333333rem;
+  mask-image: url(https://st.gtimg.com/design/cd41628924039703991105993f46fb55.svg);
+  mask-size: 100% 100%;
+  width: 0.4533333333333333rem;
+}
+.nav-bar .right-arrow.left.data-v-3ae62a90 {
+  transform: rotate(180deg);
+}
+.nav-bar .right-arrow.black.data-v-3ae62a90,
+.nav-bar .right-arrow.dark.data-v-3ae62a90 {
+  background-color: #fff;
+}
+.nav-bar .home.data-v-3ae62a90 {
+  justify-content: flex-end;
+}
+.nav-bar .home .home-icon.data-v-3ae62a90 {
+  height: 0.8533333333333334rem;
+  width: 0.8533333333333334rem;
+}
+.nav-bar .title.data-v-3ae62a90 {
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  color: var(--color-heavygray);
+  display: -webkit-box;
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  max-width: 4.266666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

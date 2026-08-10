@@ -1,0 +1,33 @@
+<view class="_div report-inverate data-v-c3995fc3">
+  <view class="_div rate-title data-v-c3995fc3" wx:if="{{a}}"
+    >机构评级（近半年内）</view
+  >
+  <view class="_div rate-page-title data-v-c3995fc3" wx:else
+    >近6个月内机构评级以买入为主</view
+  >
+  <view class="_div rate-container data-v-c3995fc3">
+    <f2
+      bind:__l="__l"
+      bindonInit="{{b}}"
+      class="data-v-c3995fc3"
+      uI="c3995fc3-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></f2>
+  </view>
+  <view class="_ul rate-list data-v-c3995fc3">
+    <view
+      catchtap="{{item.e}}"
+      class="_li list-li data-v-c3995fc3"
+      wx:for="{{d}}"
+      wx:key="d"
+    >
+      <label class="_span li-name data-v-c3995fc3">{{item.a}}</label>
+      <label class="_span li-action data-v-c3995fc3">{{item.b}}</label>
+      <label class="_span li-time data-v-c3995fc3">{{item.c}}</label>
+    </view>
+  </view>
+  <view bindtap="{{f}}" class="_div rate-more data-v-c3995fc3" wx:if="{{e}}"
+    >点击查看更多</view
+  >
+</view>

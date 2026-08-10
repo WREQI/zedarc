@@ -1,0 +1,50 @@
+@import "/app.wxss";
+.loading {
+  height: 100%;
+}
+.mp-loading {
+  padding: 0.4rem 0;
+}
+.group-title {
+  background: var(--fill-2);
+  font-size: 0.4rem;
+  font-weight: 500;
+  height: 1.173333rem;
+  padding: 0 0.4rem 0.013333rem;
+}
+.group-title .desc {
+  font-weight: 400;
+  margin-right: 0.2rem;
+}
+.group-title .icon {
+  font-size: 0.213333rem;
+  width: 0.333333rem;
+}
+.group-body {
+  background: var(--fill-2);
+}
+.records-item {
+  font-size: 0.426667rem;
+  height: 1.6rem;
+  margin-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.records-item .gray {
+  font-size: 0.32rem;
+  margin-top: 0.133333rem;
+}
+.records-item .money {
+  font-size: 0.48rem;
+  margin-bottom: 0.16rem;
+}
+.records-item .figure {
+  -webkit-box-pack: end;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.346667rem;
+  justify-content: flex-end;
+}
+.records-item .figure-icon {
+  font-size: 0.346667rem;
+}

@@ -1,0 +1,23 @@
+@import "/app.wxss";
+.data-v-aecd3438 .page-apply-risk {
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+}
+.data-v-aecd3438 .page-apply-risk .flex-column {
+  height: 100%;
+}
+.data-v-aecd3438 .page-apply-risk .content-container {
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow: scroll;
+}
+.data-v-aecd3438 .page-apply-risk .section-content {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-sizing: border-box;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}

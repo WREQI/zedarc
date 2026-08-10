@@ -1,0 +1,8 @@
+<view class="form-wrap ^form-wrap flex-vcenter data-v-3aefdbfd">
+  <view class="form-wrap-left ^form-wrap-left data-v-3aefdbfd">
+    <slot name="left"></slot>
+  </view>
+  <view class="form-wrap-right ^form-wrap-right data-v-3aefdbfd">
+    <slot name="right"></slot>
+  </view>
+</view>

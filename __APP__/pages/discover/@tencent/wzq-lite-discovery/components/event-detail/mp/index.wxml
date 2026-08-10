@@ -1,0 +1,101 @@
+<view class="_div wx-news-container data-v-542266bf">
+  <scroll-view
+    bindrefresherpulling="{{t}}"
+    bindrefresherrefresh="{{p}}"
+    bindscroll="{{r}}"
+    bindscrolltolower="{{q}}"
+    bindscrolltoupper="{{s}}"
+    class="wx-tops data-v-542266bf"
+    id="wxTops"
+    refresherEnabled="{{false}}"
+    refresherThreshold="16"
+    refresherTriggered="{{n}}"
+    scrollTop="{{o}}"
+    scrollY="{{true}}"
+  >
+    <view class="_div min-height data-v-542266bf" id="wxTopsContentId">
+      <event-detail
+        bind:__l="__l"
+        bindemptyData="{{f}}"
+        bindgoEdit="{{c}}"
+        bindrefreshFail="{{e}}"
+        bindrefreshSuccess="{{d}}"
+        bindshowProfilePop="{{h}}"
+        bindshowWxTopTips="{{g}}"
+        class="r data-v-542266bf"
+        data-c-h="{{!b}}"
+        uI="542266bf-0"
+        uP="{{i}}"
+        uR="contentRef"
+        wx:if="{{i}}"
+      ></event-detail>
+      <view class="_div brand data-v-542266bf" wx:if="{{j}}"></view>
+      <view class="_div status-container data-v-542266bf" wx:if="{{k}}">
+        <news-status
+          bind:__l="__l"
+          bindretry="{{l}}"
+          class="data-v-542266bf"
+          uI="542266bf-1"
+          uP="{{m}}"
+          wx:if="{{m}}"
+        ></news-status>
+      </view>
+    </view>
+  </scroll-view>
+  <hot-event-bar
+    bind:__l="__l"
+    bindtapComment="{{x}}"
+    bindtapShare="{{w}}"
+    class="data-v-542266bf"
+    data-c-h="{{!v}}"
+    uI="542266bf-2"
+    uP="{{y}}"
+    wx:if="{{y}}"
+  ></hot-event-bar>
+  <view
+    class="_div nav-bar data-v-542266bf"
+    id="navBar"
+    style="{{'padding-top:'+G+';'+'background-color:'+H}}"
+  >
+    <view class="_div btn data-v-542266bf" wx:if="{{z}}"></view>
+    <view catchtap="{{C}}" class="_div btn data-v-542266bf" wx:elif="{{A}}">
+      <view
+        class="{{['_div','data-v-542266bf','right-arrow','left',B]}}"
+      ></view>
+    </view>
+    <view catchtap="{{D}}" class="_div btn home data-v-542266bf" wx:else>
+      <image
+        class="_img home-icon data-v-542266bf"
+        src="https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png"
+      ></image>
+    </view>
+    <label class="_span title data-v-542266bf" style="{{'opacity:'+F}}"
+      >{{E}}</label
+    >
+    <view class="_div btn data-v-542266bf"></view>
+  </view>
+  <view
+    catchtap="{{N}}"
+    catchtouchmove="{{M}}"
+    class="_div tool-tips-wrapper data-v-542266bf"
+    wx:if="{{I}}"
+  >
+    <view catchtap="{{L}}" class="_div tool-tips data-v-542266bf">
+      <view class="_div title-container data-v-542266bf">
+        <view class="_div data-v-542266bf">事件概要</view>
+        <view catchtap="{{J}}" class="_div close-button data-v-542266bf"></view>
+      </view>
+      <view class="_div tips-info data-v-542266bf">{{K}}</view>
+    </view>
+  </view>
+  <block wx:if="{{O}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{P}}"
+      class="data-v-542266bf"
+      uI="542266bf-3"
+      uP="{{Q}}"
+      wx:if="{{Q}}"
+    ></profile-pop>
+  </block>
+</view>

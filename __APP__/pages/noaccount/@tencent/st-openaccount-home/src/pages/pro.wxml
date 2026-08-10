@@ -1,0 +1,143 @@
+<view class="_div page-apply-noaccount data-v-d1b0b602">
+  <view class="_div content-container data-v-d1b0b602">
+    <view class="_div old-content-container data-v-d1b0b602">
+      <view
+        class="{{['_div','head-bgc','data-v-d1b0b602',b&&'head-bgc-large-screen']}}"
+        style="{{'background-image:'+c}}"
+        wx:if="{{a}}"
+      ></view>
+      <view class="_div center-contain data-v-d1b0b602" wx:if="{{d}}">
+        <dealer-rigths
+          bind:__l="__l"
+          bindclick="{{f}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-0"
+          uP="{{g}}"
+          wx:if="{{e}}"
+        ></dealer-rigths>
+        <view
+          bindtap="{{i}}"
+          class="_div shelves-helper-assign data-v-d1b0b602"
+          wx:if="{{h}}"
+        >
+          <view class="_div assing-logo data-v-d1b0b602"></view>
+        </view>
+        <broker-choose
+          bind:__l="__l"
+          bindclick="{{j}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-1"
+          uP="{{k}}"
+          wx:if="{{k}}"
+        ></broker-choose>
+        <open-button
+          bind:__l="__l"
+          bindgoToApplyRecords="{{m}}"
+          bindgoToBind="{{l}}"
+          bindselectDealer="{{n}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-2"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></open-button>
+        <helper-assistant
+          bind:__l="__l"
+          bindclick="{{q}}"
+          class="helper-assign-wrapper data-v-d1b0b602"
+          uI="d1b0b602-3"
+          uP="{{r}}"
+          wx:if="{{p}}"
+        ></helper-assistant>
+      </view>
+      <view class="_div center-contain-secend data-v-d1b0b602" wx:if="{{s}}">
+        <dealer-rigths
+          bind:__l="__l"
+          bindclick="{{v}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-4"
+          uP="{{w}}"
+          wx:if="{{t}}"
+        ></dealer-rigths>
+      </view>
+    </view>
+    <view class="_div new-content-container data-v-d1b0b602" wx:if="{{false}}">
+      <view
+        class="_div head-bgc data-v-d1b0b602"
+        style="{{'background-image:'+y}}"
+        wx:if="{{x}}"
+      ></view>
+      <view class="_div center-contain data-v-d1b0b602" wx:if="{{z}}">
+        <broker-choose
+          bind:__l="__l"
+          bindclick="{{A}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-5"
+          uP="{{B}}"
+          wx:if="{{B}}"
+        ></broker-choose>
+        <open-button
+          bind:__l="__l"
+          bindgoToApplyRecords="{{D}}"
+          bindgoToBind="{{C}}"
+          bindselectDealer="{{E}}"
+          class="data-v-d1b0b602"
+          uI="d1b0b602-6"
+          uP="{{F}}"
+          wx:if="{{F}}"
+        ></open-button>
+      </view>
+      <view class="_div shelves-cards-container2 data-v-d1b0b602"></view>
+      <view
+        bindtap="{{H}}"
+        class="_div shelves-helper-assign data-v-d1b0b602"
+        wx:if="{{G}}"
+      >
+        <view class="_div assing-logo data-v-d1b0b602"></view>
+      </view>
+      <view
+        bindtap="{{L}}"
+        class="_div cover-button data-v-d1b0b602"
+        wx:if="{{I}}"
+      >
+        <view class="{{['_div','button-text','data-v-d1b0b602',K]}}"
+          >{{J}}</view
+        >
+      </view>
+    </view>
+    <select-broker-sheet
+      bind:__l="__l"
+      bindaction="{{M}}"
+      bindinput="{{O}}"
+      bindjumpToDealerGuide="{{N}}"
+      class="data-v-d1b0b602"
+      uI="d1b0b602-7"
+      uP="{{P}}"
+      wx:if="{{P}}"
+    ></select-broker-sheet>
+    <helper-sheet
+      bind:__l="__l"
+      bindinput="{{Q}}"
+      class="data-v-d1b0b602"
+      uI="d1b0b602-8"
+      uP="{{R}}"
+      wx:if="{{R}}"
+    ></helper-sheet>
+    <dealer-rights-sheet
+      bind:__l="__l"
+      bindaction="{{T}}"
+      bindinput="{{U}}"
+      class="data-v-d1b0b602"
+      uI="d1b0b602-9"
+      uP="{{V}}"
+      wx:if="{{S}}"
+    ></dealer-rights-sheet>
+    <subscribe-popup
+      bind:__l="__l"
+      bindclosePopup="{{W}}"
+      class="data-v-d1b0b602"
+      uI="d1b0b602-10"
+      uP="{{X}}"
+      wx:if="{{X}}"
+    ></subscribe-popup>
+  </view>
+</view>

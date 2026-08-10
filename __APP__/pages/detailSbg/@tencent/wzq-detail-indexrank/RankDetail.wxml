@@ -1,0 +1,111 @@
+<view
+  class="{{['_div','data-v-8877e5b1','mod-rank',n&&'skin-black',o&&'mod-rank-error',p&&'mod-rank-pro']}}"
+>
+  <block wx:if="{{a}}">
+    <view class="_div hk-market-tips data-v-8877e5b1" wx:if="{{b}}">
+      <view class="_div hk-market-tips-text data-v-8877e5b1"
+        >港交所规定基础行情列表超过20只展示延时行情</view
+      >
+      <label
+        catchtap="{{c}}"
+        class="_span tip-icon-close data-v-8877e5b1"
+      ></label>
+    </view>
+    <view class="{{['_div','caption','data-v-8877e5b1',e&&'fixed-caption']}}">
+      <view class="_div caption-inner data-v-8877e5b1">
+        <view class="_div table-name data-v-8877e5b1">股票</view>
+        <view
+          catchtap="{{colName.e}}"
+          class="_div table-sort order data-v-8877e5b1"
+          wx:for="{{d}}"
+          wx:for-item="colName"
+          wx:key="d"
+          >{{colName.a}}<view class="_div trend data-v-8877e5b1">
+            <label
+              class="{{['_span','data-v-8877e5b1','up',colName.b]}}"
+            ></label>
+            <label
+              class="{{['_span','data-v-8877e5b1','down',colName.c]}}"
+            ></label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_ul rank-list data-v-8877e5b1" id="cfg-rankList">
+      <view
+        catchtap="{{item.j}}"
+        class="{{['_li','data-v-8877e5b1','list-block']}}"
+        wx:for="{{f}}"
+        wx:key="i"
+      >
+        <view class="_div col-name data-v-8877e5b1">
+          <view class="_div name data-v-8877e5b1">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-8877e5b1"
+              uI="{{item.a}}"
+              uP="{{item.b}}"
+              wx:if="{{g}}"
+            ></market-icon>
+            <view class="_div stock-name data-v-8877e5b1">{{item.c}}</view>
+          </view>
+          <view class="{{['_div','data-v-8877e5b1','code',i]}}">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-8877e5b1"
+              uI="{{item.d}}"
+              uP="{{item.e}}"
+              wx:if="{{h}}"
+            ></market-icon
+            >{{item.f}}<label
+              class="_span market-icon-delay data-v-8877e5b1"
+              wx:if="{{item.g}}"
+            ></label>
+          </view>
+        </view>
+        <view
+          class="_div col-number data-v-8877e5b1"
+          wx:for="{{item.h}}"
+          wx:for-item="colName"
+          wx:key="j"
+        >
+          <view class="_div data-v-8877e5b1" wx:if="{{colName.a}}"
+            >{{colName.b}}</view
+          >
+          <view
+            class="{{['_div','data-v-8877e5b1',colName.e]}}"
+            wx:if="{{colName.c}}"
+            >{{colName.d}}%</view
+          >
+          <view class="_div data-v-8877e5b1" wx:if="{{colName.f}}"
+            >{{colName.g}}%</view
+          >
+          <view class="_div data-v-8877e5b1" wx:if="{{colName.h}}"
+            >{{colName.i}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div zxg-logo data-v-8877e5b1"></view>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-8877e5b1"
+    uI="8877e5b1-2"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无数据</block>
+  </no-data>
+  <view class="_div error-status data-v-8877e5b1" wx:if="{{k}}">
+    <status
+      bind:__l="__l"
+      bindhandleError="{{l}}"
+      class="data-v-8877e5b1"
+      uI="8877e5b1-3"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></status>
+  </view>
+</view>

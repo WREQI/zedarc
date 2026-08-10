@@ -1,0 +1,21 @@
+<view class="_div compare-content data-v-e6dd7703" wx:if="{{a}}">
+  <svg
+    bind:__l="__l"
+    class="compare-content-svg data-v-e6dd7703"
+    uI="e6dd7703-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <polygon
+      bind:__l="__l"
+      class="data-v-e6dd7703"
+      uI="{{v0.b}}"
+      uP="{{v0.c}}"
+      wx:for="{{b}}"
+      wx:for-item="v0"
+      wx:key="a"
+    ></polygon>
+  </svg>
+  <slot></slot>
+</view>

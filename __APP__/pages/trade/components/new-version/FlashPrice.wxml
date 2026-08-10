@@ -1,0 +1,12 @@
+<view
+  class="{{['item-wrapper','data-v-ddada241',i&&'bg-color-rise',j&&'bg-color-drop']}}"
+>
+  <view class="title data-v-ddada241">{{a}}{{b}}</view>
+  <view catchtap="{{e}}" class="{{['price','data-v-ddada241',d]}}">{{c}}</view>
+  <view class="amount data-v-ddada241"
+    >{{f}}<view
+      class="{{['bg-amount','data-v-ddada241',g]}}"
+      style="{{'width:'+h}}"
+    ></view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+.apply-button.data-v-ed586fe5 {
+  position: relative;
+}
+.apply-button .apply-button-item.data-v-ed586fe5 {
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-size: 0.4533333333333333rem;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  margin: 0.4266666666666667rem auto 0;
+  text-align: center;
+  width: 5.76rem;
+}
+.apply-button .apply-button-item.btn-red.data-v-ed586fe5 {
+  background: #ee1818;
+  color: #fff;
+}
+.apply-button .apply-button-item.btn-gray.data-v-ed586fe5 {
+  background: #98a0b3;
+  opacity: 0.4;
+}
+.apply-button .apply-button-item.btn-breathing.data-v-ed586fe5 {
+  animation: breathing-ed586fe5 1.7s infinite;
+}
+@-webkit-keyframes breathing-ed586fe5 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes breathing-ed586fe5 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

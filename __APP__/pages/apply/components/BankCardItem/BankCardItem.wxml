@@ -1,0 +1,52 @@
+<view
+  catchtap="{{m}}"
+  class="{{['bank-card-item_container','data-v-9cced1da',l]}}"
+>
+  <bank-logo
+    bind:__l="__l"
+    class="bank-card-item_bg-logo data-v-9cced1da"
+    uI="9cced1da-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></bank-logo>
+  <view class="bank-card-item_bk-name data-v-9cced1da">
+    <bank-logo
+      bind:__l="__l"
+      class="bank-logo data-v-9cced1da"
+      uI="9cced1da-1"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></bank-logo>
+    <view
+      class="bank-card-item_bk-title flex flex-direction-column data-v-9cced1da"
+    >
+      <label class="block title-bank data-v-9cced1da">
+        <label class="bank-name data-v-9cced1da">{{c}}</label>
+        <label class="bank-desc data-v-9cced1da" wx:if="{{d}}">{{e}}</label>
+      </label>
+      <label class="block title-card data-v-9cced1da">储蓄卡</label>
+    </view>
+  </view>
+  <view
+    capture-bind:tap="{{i}}"
+    class="bank-card-item_bank-select data-v-9cced1da"
+  >
+    <st-checkbox
+      bind:__l="__l"
+      class="{{['data-v-9cced1da',g&&'checkbox-selected']}}"
+      uI="9cced1da-2"
+      uP="{{h}}"
+      wx:if="{{f}}"
+    ></st-checkbox>
+    <label class="bank-card-item_unsupport data-v-9cced1da" wx:else></label>
+  </view>
+  <view class="bank-card-item_bank-num data-v-9cced1da">
+    <label class="mask data-v-9cced1da">****</label>
+    <label class="mask data-v-9cced1da">****</label>
+    <label class="mask data-v-9cced1da">****</label>
+    <label class="num data-v-9cced1da">{{j}}</label>
+  </view>
+  <view class="bank-card-item_last-chosen data-v-9cced1da" wx:if="{{k}}"
+    >上次选择</view
+  >
+</view>

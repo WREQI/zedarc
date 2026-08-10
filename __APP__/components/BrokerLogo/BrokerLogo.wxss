@@ -1,0 +1,92 @@
+@import "/app.wxss";
+.broker-logo-icon {
+  background-size: 100%;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.broker-logo-icon.not-colorful {
+  filter: grayscale(100%) opacity(0.2);
+}
+.icon-10000 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10000.svg);
+}
+.icon-10000,
+.icon-10100 {
+  background-repeat: no-repeat;
+}
+.icon-10100 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10100.svg);
+}
+.icon-10200 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10200.svg);
+}
+.icon-10200,
+.icon-10500 {
+  background-repeat: no-repeat;
+}
+.icon-10500 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10500.svg);
+}
+.icon-10800 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10800.svg);
+}
+.icon-10800,
+.icon-10900 {
+  background-repeat: no-repeat;
+}
+.icon-10900 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10900.svg);
+}
+.icon-11100 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/11100.svg);
+}
+.icon-11100,
+.icon-12800 {
+  background-repeat: no-repeat;
+}
+.icon-12800 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/12800.svg);
+}
+.icon-15900 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/15900.svg);
+}
+.icon-15900,
+.icon-19000 {
+  background-repeat: no-repeat;
+}
+.icon-19000 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/19000.svg);
+}
+.icon-19900 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/19900.svg);
+}
+.icon-10300,
+.icon-19900 {
+  background-repeat: no-repeat;
+}
+.icon-10300 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10300.svg);
+}
+.icon-10600 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10600.svg);
+}
+.icon-10600,
+.icon-12200 {
+  background-repeat: no-repeat;
+}
+.icon-12200 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/12200.svg);
+}
+.icon-18600 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/18600.svg);
+  background-repeat: no-repeat;
+}
+[data-theme="dark"] .icon-15900 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/15900_dark.png);
+  background-repeat: no-repeat;
+}
+.broker-logo-icon.not-colorful.icon-10800 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/broker-logo/10800_grey.svg);
+  filter: none;
+}

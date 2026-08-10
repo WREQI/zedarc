@@ -1,0 +1,100 @@
+<view catchtap="{{t}}" class="_div chart-setting-popup data-v-0018ccaf">
+  <view
+    bindtouchmove="{{a}}"
+    catchtap="{{b}}"
+    class="{{['_div','data-v-0018ccaf','background-mask']}}"
+  ></view>
+  <view
+    catchtap="{{s}}"
+    catchtouchmove="{{r}}"
+    class="{{['_div','data-v-0018ccaf','popup-content',q]}}"
+  >
+    <view class="_div setting-title data-v-0018ccaf">
+      <view class="_div tech-title data-v-0018ccaf" wx:if="{{c}}"
+        >技术指标<label
+          catchtap="{{d}}"
+          class="_span back-region data-v-0018ccaf"
+        >
+          <image
+            class="_img back-arrow data-v-0018ccaf"
+            src="https://st.gtimg.com/design/fa886c11576ac6c40b3a985c8d27b241.png"
+          ></image>
+        </label>
+      </view>
+      <view class="_ul tab-container data-v-0018ccaf" wx:else>
+        <view
+          bindtap="{{item.d}}"
+          class="{{['_li','data-v-0018ccaf','tab-item',item.b]}}"
+          wx:for="{{e}}"
+          wx:key="c"
+          >{{item.a}}</view
+        >
+      </view>
+      <label catchtap="{{f}}" class="_span close-Region data-v-0018ccaf">
+        <image
+          class="_img close data-v-0018ccaf"
+          src="https://st.gtimg.com/design/a630c61e7e3a3434c5bd12c549773987.png"
+        ></image>
+      </label>
+    </view>
+    <view class="_div setting-content data-v-0018ccaf">
+      <swiper
+        bindchange="{{p}}"
+        class="swiper-height data-v-0018ccaf"
+        current="{{o}}"
+        duration="250"
+        wx:if="{{g}}"
+      >
+        <swiper-item
+          bindtouchend="{{events.touchend}}"
+          bindtouchmove="{{events.touchmove}}"
+          bindtouchstart="{{events.touchstart}}"
+          class="slide-content-one data-v-0018ccaf"
+          data-direction="left"
+        >
+          <mins-setting
+            bind:__l="__l"
+            bindchange="{{h}}"
+            class="data-v-0018ccaf"
+            uI="0018ccaf-0"
+            uP="{{i}}"
+            wx:if="{{i}}"
+          ></mins-setting>
+        </swiper-item>
+        <swiper-item
+          bindtouchend="{{events.touchend}}"
+          bindtouchmove="{{events.touchmove}}"
+          bindtouchstart="{{events.touchstart}}"
+          class="slide-content-two data-v-0018ccaf"
+          data-direction="right"
+        >
+          <kline-setting
+            bind:__l="__l"
+            bindchange="{{j}}"
+            bindjumpIndicatorSetting="{{k}}"
+            class="data-v-0018ccaf"
+            uI="0018ccaf-1"
+            uP="{{l}}"
+            wx:if="{{l}}"
+          ></kline-setting>
+        </swiper-item>
+        <swiper-item
+          bindtouchend="{{events.touchend}}"
+          bindtouchmove="{{events.touchmove}}"
+          bindtouchstart="{{events.touchstart}}"
+          class="slide-content-two data-v-0018ccaf"
+          data-direction="right"
+        >
+          <indicator-setting
+            bind:__l="__l"
+            bindchange="{{m}}"
+            class="data-v-0018ccaf"
+            uI="0018ccaf-2"
+            uP="{{n}}"
+            wx:if="{{n}}"
+          ></indicator-setting>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

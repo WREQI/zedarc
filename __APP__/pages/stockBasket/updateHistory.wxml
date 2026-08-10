@@ -1,0 +1,23 @@
+<page-meta class="data-v-dfec0ba4" rootFontSize="{{a}}"></page-meta>
+<view class="_div update-container data-v-dfec0ba4">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-dfec0ba4"
+    uI="dfec0ba4-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-dfec0ba4"
+    uI="dfec0ba4-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <update-history
+    bind:__l="__l"
+    class="r data-v-dfec0ba4"
+    uI="dfec0ba4-2"
+    uP="{{d}}"
+    uR="updateHistoryRef"
+    wx:if="{{d}}"
+  ></update-history>
+</view>

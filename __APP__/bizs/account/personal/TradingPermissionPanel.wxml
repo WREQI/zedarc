@@ -1,0 +1,48 @@
+<view class="trading-permission-panel data-v-9b0b5dd8">
+  <view class="trading-permission-panel__header data-v-9b0b5dd8">
+    <label class="trading-permission-panel__title data-v-9b0b5dd8"
+      >交易权限</label
+    >
+    <view
+      bindtap="{{a}}"
+      class="trading-permission-panel__view-all flex-center data-v-9b0b5dd8"
+    >
+      <label class="trading-permission-panel__view-all-text data-v-9b0b5dd8"
+        >查看全部</label
+      >
+      <label
+        class="icon icon-arrow-right trading-permission-panel__view-all-icon data-v-9b0b5dd8"
+      ></label>
+    </view>
+  </view>
+  <view class="trading-permission-panel__grid data-v-9b0b5dd8">
+    <view
+      bindtap="{{item.h}}"
+      class="trading-permission-panel__item data-v-9b0b5dd8"
+      wx:for="{{b}}"
+      wx:key="g"
+    >
+      <view
+        class="{{['trading-permission-panel__icon','data-v-9b0b5dd8',item.b,item.c]}}"
+        style="{{'--icon-url:'+item.d}}"
+      >
+        <label
+          class="trading-permission-panel__badge data-v-9b0b5dd8"
+          wx:if="{{item.a}}"
+        ></label>
+      </view>
+      <label
+        class="{{['trading-permission-panel__label','data-v-9b0b5dd8',item.f]}}"
+        >{{item.e}}</label
+      >
+    </view>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-9b0b5dd8"
+    id="mp-dialog"
+    uI="9b0b5dd8-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></mp-dialog>
+</view>

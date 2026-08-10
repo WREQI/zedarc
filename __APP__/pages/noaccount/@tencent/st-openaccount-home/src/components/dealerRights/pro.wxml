@@ -1,0 +1,56 @@
+<view bindtap="{{f}}" class="_div dealer-rights-wrapper data-v-3f8dea31">
+  <view class="_div brokder-rights data-v-3f8dea31">
+    <view
+      class="_ul banner-icon-list layout f-row f-space-around data-v-3f8dea31"
+      wx:if="{{a}}"
+    >
+      <view class="_div rightstline new-style-line data-v-3f8dea31"></view>
+      <view
+        class="_li banner-icon-list-item-new data-v-3f8dea31"
+        wx:for="{{b}}"
+        wx:key="f"
+      >
+        <view class="{{['_div','icon-wrapper','data-v-3f8dea31',c,item.b,d]}}">
+          <image
+            alt=""
+            class="_img icon data-v-3f8dea31"
+            src="{{item.a}}"
+          ></image>
+        </view>
+        <view class="_div detail-wrapper data-v-3f8dea31">
+          <view class="_div dec t-28 data-v-3f8dea31">{{item.c}}</view>
+          <view class="_div text t-24 data-v-3f8dea31">
+            <label class="_span blue data-v-3f8dea31" wx:if="{{item.d}}"
+              >点击查看更多权益></label
+            >
+            <label class="_span data-v-3f8dea31" wx:else>{{item.e}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_ul banner-icon-list layout f-row f-space-around data-v-3f8dea31"
+      wx:else
+    >
+      <view class="_div rightstline line-4 data-v-3f8dea31"></view>
+      <view
+        class="_li banner-icon-list-item tc data-v-3f8dea31"
+        wx:for="{{e}}"
+        wx:key="e"
+      >
+        <image
+          alt=""
+          class="_img icon data-v-3f8dea31"
+          src="{{item.a}}"
+        ></image>
+        <view class="_div dec t-28 data-v-3f8dea31">{{item.b}}</view>
+        <view class="_div text t-24 data-v-3f8dea31">
+          <label class="_span blue data-v-3f8dea31" wx:if="{{item.c}}"
+            >点击查看更多权益></label
+          >
+          <label class="_span data-v-3f8dea31" wx:else>{{item.d}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

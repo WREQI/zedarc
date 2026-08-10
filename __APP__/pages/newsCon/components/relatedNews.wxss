@@ -1,0 +1,71 @@
+.related-stock-list {
+  background-color: var(--fill-background);
+  font-size: 0.37333333333333335rem;
+  line-height: 1.4;
+  margin: 0 0.48rem;
+  padding: 0.29333333333333333rem 0.37333333333333335rem;
+}
+.related-stock-list .row-a {
+  color: #3077ec;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 65%;
+}
+.related-stock-list .row-b {
+  width: 20%;
+}
+.related-stock-list .row-c {
+  text-align: right;
+  width: 15%;
+}
+.related-stock-list ._li {
+  line-height: 1.4;
+  padding-bottom: 0.5866666666666667rem;
+}
+.related-review-list {
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  font-size: 0.4533333333333333rem;
+  line-height: 1.5;
+  margin: 0 0.48rem;
+  padding: 0.24rem 0;
+}
+.related-review-list:last-child {
+  border-bottom: 0.013333333333333334rem solid transparent;
+}
+.related-review-list ._p {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+}
+.related-review-list ._a {
+  color: var(--color-heavygray);
+  display: inline-block;
+  line-height: 1.4;
+}
+.new-comments-title-wrap {
+  background-color: var(--fill-background);
+}
+.item-title {
+  align-items: center;
+  background: var(--fill-background);
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.item-title-span {
+  font-size: 0.4rem;
+  font-weight: 500;
+  padding-left: 0.32rem;
+}
+.review-list-from {
+  padding-top: 0.08rem;
+}
+.list-from-time {
+  color: var(--color-lightgray-2);
+  font-size: 0.32rem;
+  padding-right: 0.32rem;
+}

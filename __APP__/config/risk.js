@@ -1,0 +1,17 @@
+require("../app.js"),
+  (exports.LETTER_MAP = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+  ]),
+  (exports.NUM_HANZI = "零一二三四五六七八九十"),
+  (exports.NUM_HANZI_2 = "零一两三四五六七八九十");

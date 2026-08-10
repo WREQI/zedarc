@@ -1,0 +1,264 @@
+<view class="{{['_div','data-v-db6c157a',aw,ax]}}">
+  <top-header
+    bind:__l="__l"
+    class="data-v-db6c157a"
+    uI="db6c157a-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></top-header>
+  <view class="{{['_div','separator-container','data-v-db6c157a',b]}}"></view>
+  <view class="{{['_div','info-block','basic-info','data-v-db6c157a',h]}}">
+    <view class="_div block-title data-v-db6c157a">
+      <view class="_div data-v-db6c157a">基本信息</view>
+      <view
+        catchtap="{{e}}"
+        class="{{['_div','data-v-db6c157a','block-title-right',d]}}"
+        wx:if="{{c}}"
+      >
+        <view class="_div data-v-db6c157a">查看招股书</view>
+        <view class="_div jump-arrow data-v-db6c157a"></view>
+      </view>
+    </view>
+    <view class="_div info-list data-v-db6c157a">
+      <view
+        class="{{['_div','data-v-db6c157a','info-row-item',g,basic.l]}}"
+        wx:for="{{f}}"
+        wx:for-item="basic"
+        wx:key="m"
+      >
+        <view class="_div info-row-item-desc data-v-db6c157a">{{basic.a}}</view>
+        <view
+          catchtap="{{basic.k}}"
+          class="{{['_div','info-row-item-num','data-v-db6c157a',basic.i,basic.j]}}"
+        >
+          <view class="_div data-v-db6c157a"
+            >{{basic.b}}<label class="_span data-v-db6c157a" wx:if="{{basic.c}}"
+              >{{basic.d}}</label
+            >
+          </view>
+          <view class="_div tip-img data-v-db6c157a" wx:if="{{basic.e}}">
+            <image
+              catchtap="{{basic.g}}"
+              class="_img desc-tip data-v-db6c157a"
+              src="https://st.gtimg.com/design/40b2dcfe6a4924fd7e8194b40248a8f2.png"
+              wx:if="{{basic.f}}"
+            ></image>
+            <image
+              catchtap="{{basic.h}}"
+              class="_img desc-tip data-v-db6c157a"
+              src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+              wx:else
+            ></image>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-db6c157a"></view>
+    </view>
+  </view>
+  <view class="{{['_div','separator-container','data-v-db6c157a',i]}}"></view>
+  <view class="{{['_div','info-block','data-v-db6c157a',o]}}">
+    <view class="_div block-title data-v-db6c157a">
+      <view class="_div data-v-db6c157a">发行信息</view>
+    </view>
+    <view class="_div info-list data-v-db6c157a">
+      <view
+        class="{{['_div','data-v-db6c157a','info-row-item',k,issue.e]}}"
+        wx:for="{{j}}"
+        wx:for-item="issue"
+        wx:key="f"
+      >
+        <view class="_div info-row-item-desc data-v-db6c157a">{{issue.a}}</view>
+        <view class="_div info-row-item-num data-v-db6c157a"
+          >{{issue.b}}<label class="_span data-v-db6c157a" wx:if="{{issue.c}}"
+            >{{issue.d}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      class="{{['_div','data-v-db6c157a','info-row-item',m,'row-nomar']}}"
+      wx:if="{{l}}"
+    >
+      <view class="_div info-row-item-desc data-v-db6c157a">中签号</view>
+      <view class="_div info-row-item-num data-v-db6c157a">--</view>
+    </view>
+    <more-single-column-item
+      bind:__l="__l"
+      class="data-v-db6c157a"
+      uI="db6c157a-1"
+      uP="{{n||''}}"
+      wx:else
+    ></more-single-column-item>
+  </view>
+  <view class="{{['_div','separator-container','data-v-db6c157a',p]}}"></view>
+  <view class="{{['_div','info-block','data-v-db6c157a',C]}}" wx:if="{{q}}">
+    <view class="_div block-title gs-title data-v-db6c157a">
+      <view class="_div data-v-db6c157a">公司简介</view>
+    </view>
+    <view
+      catchtap="{{y}}"
+      class="{{['_div','data-v-db6c157a','company-content',x]}}"
+      >{{r}}<view
+        catchtap="{{w}}"
+        class="_div extend-button data-v-db6c157a"
+        wx:if="{{s}}"
+      >
+        <label class="_span data-v-db6c157a" wx:if="{{t}}">...</label>
+        <label class="_span extend-button-text data-v-db6c157a">{{v}}</label>
+      </view>
+    </view>
+    <view
+      catchtap="{{B}}"
+      class="_div extend-button-line data-v-db6c157a"
+      wx:if="{{z}}"
+    >
+      <label class="_span extend-button-text data-v-db6c157a">{{A}}</label>
+    </view>
+  </view>
+  <view
+    class="{{['_div','separator-container','data-v-db6c157a',E]}}"
+    wx:if="{{D}}"
+  ></view>
+  <view class="{{['_div','info-block','data-v-db6c157a',R]}}" wx:if="{{F}}">
+    <view class="_div block-title gs-title data-v-db6c157a">
+      <view class="_div data-v-db6c157a">经营范围</view>
+    </view>
+    <view
+      catchtap="{{M}}"
+      class="{{['_div','data-v-db6c157a','company-content',L]}}"
+      >{{G}}<view
+        catchtap="{{K}}"
+        class="_div extend-button data-v-db6c157a"
+        wx:if="{{H}}"
+      >
+        <label class="_span data-v-db6c157a" wx:if="{{I}}">...</label>
+        <label class="_span extend-button-text data-v-db6c157a">{{J}}</label>
+      </view>
+    </view>
+    <view
+      catchtap="{{Q}}"
+      class="_div extend-button-line data-v-db6c157a"
+      wx:if="{{N}}"
+    >
+      <label class="_span data-v-db6c157a" wx:if="{{O}}">...</label>
+      <label class="_span extend-button-text data-v-db6c157a">{{P}}</label>
+    </view>
+  </view>
+  <view
+    class="{{['_div','separator-container','data-v-db6c157a',T]}}"
+    wx:if="{{S}}"
+  ></view>
+  <view class="{{['_div','info-block','data-v-db6c157a',ah]}}" wx:if="{{U}}">
+    <view class="_div block-title hy-title data-v-db6c157a">
+      <view class="_div data-v-db6c157a">可比公司及所在行业发展</view>
+      <view class="{{['_div','data-v-db6c157a','block-title-right',W]}}"
+        >所属行业：{{V}}</view
+      >
+    </view>
+    <view class="_div gray-line data-v-db6c157a"></view>
+    <view class="_div tab-scroll-wrapper data-v-db6c157a" wx:if="{{X}}">
+      <scroll-view class="tab-scroll-view data-v-db6c157a" scrollX="{{true}}">
+        <view
+          class="_div tab-block data-v-db6c157a"
+          wx:for="{{Y}}"
+          wx:for-item="tab"
+          wx:key="e"
+        >
+          <view
+            catchtap="{{tab.d}}"
+            class="{{['_div','tab-block-item','data-v-db6c157a',tab.c]}}"
+          >
+            <view class="_div tab-name data-v-db6c157a">{{tab.a}}</view>
+            <view class="_div tab-bot data-v-db6c157a" wx:if="{{tab.b}}"></view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="_div tab-wrapper data-v-db6c157a" wx:if="{{Z}}">
+      <tabs
+        bind:__l="__l"
+        bindselect="{{ab}}"
+        class="hy-tabbar data-v-db6c157a"
+        uI="db6c157a-2"
+        uP="{{ac}}"
+        uS="{{['d']}}"
+        wx:if="{{ac}}"
+      >
+        <tab
+          bind:__l="__l"
+          class="data-v-db6c157a"
+          id="{{tab.c}}"
+          uI="{{tab.d}}"
+          uP="{{tab.e}}"
+          uS="{{['d']}}"
+          wx:for="{{aa}}"
+          wx:for-item="tab"
+          wx:key="b"
+        >
+          <view class="_div tname data-v-db6c157a">{{tab.a}}</view>
+        </tab>
+      </tabs>
+    </view>
+    <view class="_div gray-line data-v-db6c157a" wx:if="{{ad}}"></view>
+    <view class="_div chart-wrapper data-v-db6c157a" wx:if="{{ae}}">
+      <f2
+        bind:__l="__l"
+        class="r data-v-db6c157a"
+        uI="db6c157a-4"
+        uP="{{ag}}"
+        uR="hydbChart"
+        wx:if="{{ag}}"
+      ></f2>
+    </view>
+    <view class="_div hydbChartClass data-v-db6c157a" wx:else>暂无数据</view>
+  </view>
+  <view
+    class="{{['_div','separator-container','data-v-db6c157a',aj]}}"
+    wx:if="{{ai}}"
+  ></view>
+  <view class="{{['_div','info-block','data-v-db6c157a',ao]}}" wx:if="{{ak}}">
+    <view class="{{['_div','data-v-db6c157a','block-title','mj-title',al]}}">
+      <view class="_div data-v-db6c157a">募集资金用途</view>
+    </view>
+    <view class="_div mj-content data-v-db6c157a">
+      <view class="{{['_div','data-v-db6c157a','mj-title',am]}}">
+        <view class="_div data-v-db6c157a">项目名称</view>
+        <view class="_div data-v-db6c157a">募集资金</view>
+      </view>
+      <view class="_div mj-body data-v-db6c157a">
+        <view
+          class="_div mj-body-row data-v-db6c157a"
+          wx:for="{{an}}"
+          wx:for-item="mjitem"
+          wx:key="c"
+        >
+          <view class="_div body-row-left data-v-db6c157a">{{mjitem.a}}</view>
+          <view class="_div body-row-right data-v-db6c157a">{{mjitem.b}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-db6c157a" wx:if="{{ap}}"></view>
+  <view
+    class="{{['_div','data-v-db6c157a','pur-button-wrapper']}}"
+    wx:if="{{aq}}"
+  >
+    <purchase-button
+      bind:__l="__l"
+      class="data-v-db6c157a"
+      uI="db6c157a-5"
+      uP="{{ar}}"
+      wx:if="{{ar}}"
+    ></purchase-button>
+  </view>
+  <view class="_div teach-wrapper data-v-db6c157a" wx:if="{{as}}">
+    <teach-pop-block
+      bind:__l="__l"
+      bindclosePop="{{at}}"
+      class="data-v-db6c157a"
+      uI="db6c157a-6"
+      uP="{{av}}"
+      wx:if="{{av}}"
+    ></teach-pop-block>
+  </view>
+</view>

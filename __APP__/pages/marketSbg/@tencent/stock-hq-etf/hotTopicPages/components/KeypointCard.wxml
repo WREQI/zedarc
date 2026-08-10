@@ -1,0 +1,20 @@
+<view class="keypoint-card data-v-fbbd98f5">
+  <view class="_div keypoint-card__title data-v-fbbd98f5">划重点</view>
+  <view class="_div keypoint-card__item data-v-fbbd98f5" wx:if="{{a}}">
+    <view
+      class="_div keypoint-card__tag keypoint-card__tag--news data-v-fbbd98f5"
+      >大事</view
+    >
+    <view class="_div keypoint-card__text data-v-fbbd98f5">{{b}}</view>
+  </view>
+  <view
+    class="_div keypoint-card__item keypoint-card__item--affect data-v-fbbd98f5"
+    wx:if="{{c}}"
+  >
+    <view
+      class="_div keypoint-card__tag keypoint-card__tag--affect data-v-fbbd98f5"
+      >影响</view
+    >
+    <view class="_div keypoint-card__text data-v-fbbd98f5">{{d}}</view>
+  </view>
+</view>

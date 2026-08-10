@@ -1,0 +1,24 @@
+<view class="{{['_div','more-span-container','data-v-573d91a9',m]}}">
+  <view class="{{['_div','data-v-573d91a9','up-span',b]}}">{{a}}</view>
+  <view class="_div item-right data-v-573d91a9">
+    <view
+      bindtap="{{e}}"
+      class="_div down-fold-span data-v-573d91a9"
+      wx:if="{{c}}"
+      >{{d}}</view
+    >
+    <view
+      bindtap="{{h}}"
+      class="_div down-unfold-span data-v-573d91a9"
+      wx:if="{{f}}"
+      >{{g}}</view
+    >
+    <view
+      catchtap="{{l}}"
+      class="{{['_div','button-text','data-v-573d91a9',k]}}"
+    >
+      <label class="_span data-v-573d91a9" wx:if="{{i}}">展开</label>
+      <label class="_span data-v-573d91a9" wx:if="{{j}}">收起</label>
+    </view>
+  </view>
+</view>

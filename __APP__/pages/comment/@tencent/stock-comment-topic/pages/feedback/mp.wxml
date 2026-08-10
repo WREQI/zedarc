@@ -1,0 +1,84 @@
+<view class="_div content data-v-be3d2a49">
+  <view class="_div mod-comment data-v-be3d2a49" hidden="{{!x}}">
+    <view class="_div comment-box data-v-be3d2a49">
+      <topic-area
+        bind:__l="__l"
+        bindcommentReport="{{c}}"
+        class="r data-v-be3d2a49"
+        uI="be3d2a49-0"
+        uP="{{d}}"
+        uR="topicArea"
+        wx:if="{{a}}"
+      ></topic-area>
+      <view class="_div list-container data-v-be3d2a49">
+        <feedback-multi-list
+          bind:__l="__l"
+          bindchangePageTo="{{i}}"
+          bindcommentReport="{{g}}"
+          bindgetFeedbackFinished="{{f}}"
+          bindonPutComment="{{j}}"
+          bindonTapDetail="{{h}}"
+          bindonTapFollow="{{k}}"
+          bindonTapPerson="{{l}}"
+          bindrenderFinished="{{m}}"
+          bindshowCommentGuideModel="{{n}}"
+          bindshowProfilePop="{{o}}"
+          class="r data-v-be3d2a49"
+          uI="be3d2a49-1"
+          uP="{{p}}"
+          uR="stockList"
+          wx:if="{{p}}"
+        ></feedback-multi-list>
+      </view>
+    </view>
+    <reply-box
+      bind:__l="__l"
+      bindgoEdit="{{s}}"
+      bindshowProfilePop="{{v}}"
+      bindtapAvatar="{{t}}"
+      class="r data-v-be3d2a49"
+      uI="be3d2a49-2"
+      uP="{{w}}"
+      uR="replyRef"
+      wx:if="{{q}}"
+    ></reply-box>
+  </view>
+  <dropdown-vue
+    bind:__l="__l"
+    class="data-v-be3d2a49"
+    uI="be3d2a49-3"
+  ></dropdown-vue>
+  <view class="_div empty-bg data-v-be3d2a49" wx:if="{{y}}">
+    <status
+      bind:__l="__l"
+      class="data-v-be3d2a49"
+      uI="be3d2a49-4"
+      uP="{{z}}"
+      wx:if="{{z}}"
+    ></status>
+  </view>
+  <view class="_div empty-bg data-v-be3d2a49" wx:if="{{A}}">
+    <status
+      bind:__l="__l"
+      class="data-v-be3d2a49"
+      uI="be3d2a49-5"
+      uP="{{B}}"
+      wx:if="{{B}}"
+    ></status>
+  </view>
+  <view
+    catchtap="{{D}}"
+    class="_div comment-guide data-v-be3d2a49"
+    wx:if="{{C}}"
+  ></view>
+  <block wx:if="{{E}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{F}}"
+      class="data-v-be3d2a49"
+      uI="be3d2a49-6"
+      uP="{{G}}"
+      wx:if="{{G}}"
+    ></profile-pop>
+  </block>
+</view>

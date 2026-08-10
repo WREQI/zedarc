@@ -1,0 +1,88 @@
+<page-meta class="data-v-1080ab71" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-1080ab71"
+  id="global-wrap"
+  uI="1080ab71-0"
+  uP="{{B}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{B}}"
+>
+  <view class="debt-auto-order data-v-1080ab71">
+    <view class="page-container flex-column data-v-1080ab71" wx:if="{{b}}">
+      <setting-form
+        bind:__l="__l"
+        bindformCellClick="{{c}}"
+        bindsaveSetting="{{d}}"
+        class="data-v-1080ab71"
+        uI="1080ab71-1,1080ab71-0"
+      ></setting-form>
+      <view class="page-instruction data-v-1080ab71">
+        <view class="header data-v-1080ab71">{{e}}</view>
+        <view class="content data-v-1080ab71">
+          <rich-text class="data-v-1080ab71" nodes="{{f}}"></rich-text>
+        </view>
+      </view>
+    </view>
+    <select-sheet
+      bind:__l="__l"
+      bindchangeVisble="{{h}}"
+      class="data-v-1080ab71"
+      uI="1080ab71-2,1080ab71-0"
+      uP="{{i}}"
+      wx:if="{{g}}"
+    ></select-sheet>
+    <time-picker
+      bind:__l="__l"
+      bindclose="{{k}}"
+      bindconfirm="{{l}}"
+      class="data-v-1080ab71"
+      uI="1080ab71-3,1080ab71-0"
+      uP="{{m}}"
+      wx:if="{{j}}"
+    ></time-picker>
+    <mp-dialog
+      bind:__l="__l"
+      class="condition-order-risk-dialog data-v-1080ab71"
+      id="condition-order-risk-dialog"
+      uI="1080ab71-4,1080ab71-0"
+      uP="{{p}}"
+      uS="{{['d']}}"
+      wx:if="{{p}}"
+    >
+      <view class="{{['func-tips','data-v-1080ab71',o&&'simple']}}"
+        >您需阅读并同意<view bindtap="{{n}}" class="inline-link data-v-1080ab71"
+          >《智能条件单风险揭示说明》</view
+        >才能创建智能条件单</view
+      >
+    </mp-dialog>
+    <confirm-dialog
+      bind:__l="__l"
+      bindchangeVisble="{{t}}"
+      bindconfirm="{{s}}"
+      bindinput="{{r}}"
+      class="data-v-1080ab71"
+      uI="1080ab71-5,1080ab71-0"
+      uP="{{v}}"
+      wx:if="{{q}}"
+    ></confirm-dialog>
+    <cond-result
+      bind:__l="__l"
+      bindcancel="{{x}}"
+      class="r data-v-1080ab71"
+      uI="1080ab71-6,1080ab71-0"
+      uP="{{y}}"
+      uR="condResult"
+      wx:if="{{y}}"
+    ></cond-result>
+    <mp-dialog
+      bind:__l="__l"
+      class="data-v-1080ab71"
+      id="mp-dialog"
+      uI="1080ab71-7,1080ab71-0"
+      uP="{{z}}"
+      wx:if="{{z}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

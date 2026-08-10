@@ -1,0 +1,82 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{c}}"
+  bindinput="{{b}}"
+  class="data-v-b7a2ae1f"
+  uI="b7a2ae1f-0"
+  uP="{{d}}"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <view class="guide-content-wrapper data-v-b7a2ae1f">
+    <view class="text-xz-normal data-v-b7a2ae1f"
+      >申购新股时需要有新股对应市场/板块的申购配额，申购配额的获得通过投资者对应市场持仓资产计算，计算规则如下</view
+    >
+    <view class="title data-v-b7a2ae1f">普通新股</view>
+    <view class="table-flow data-v-b7a2ae1f">
+      <view
+        class="table fs-28 border--bottom border-right align-c text-color-2 data-v-b7a2ae1f"
+      >
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"></view>
+          <view class="col border--left border--top data-v-b7a2ae1f">沪市</view>
+          <view class="col border--left border--top data-v-b7a2ae1f">深市</view>
+        </view>
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >最低标准</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >申购日前22个交易日至前2个交易日期间对应市场的平均持仓市值≥10000元</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >申购日前22个交易日至前2个交易日期间对应市场的平均持仓市值≥10000元</view
+          >
+        </view>
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >额度计算</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >每5000元对应500股配额</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >每5000元对应500股配额</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="title data-v-b7a2ae1f">科创板新股</view>
+    <view class="table-flow data-v-b7a2ae1f">
+      <view
+        class="table fs-28 border--bottom border-right align-c text-color-2 data-v-b7a2ae1f"
+      >
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"></view>
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >科创板</view
+          >
+        </view>
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >最低标准</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >申购日前22个交易日至前2个交易日期间沪市的平均持仓市值≥10000元</view
+          >
+        </view>
+        <view class="row data-v-b7a2ae1f">
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >额度计算</view
+          >
+          <view class="col border--left border--top data-v-b7a2ae1f"
+            >每5000元对应500股配额</view
+          >
+        </view>
+      </view>
+    </view>
+    <view bindtap="{{a}}" class="learn-more-button flex-center data-v-b7a2ae1f"
+      >了解更多</view
+    >
+  </view>
+</action-sheet>

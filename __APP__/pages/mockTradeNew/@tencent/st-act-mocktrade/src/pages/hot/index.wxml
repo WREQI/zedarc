@@ -1,0 +1,77 @@
+<view class="_div search-hot-wrapper flex height100 data-v-78674bdf">
+  <tab-host
+    bind:__l="__l"
+    bindsetSwiperindex="{{n}}"
+    class="tab-wrapper data-v-78674bdf"
+    uI="78674bdf-0"
+    uS="{{['d']}}"
+  >
+    <tab-view
+      bind:__l="__l"
+      class="data-v-78674bdf"
+      uI="78674bdf-1,78674bdf-0"
+      uP="{{e}}"
+      uS="{{['d']}}"
+      wx:if="{{e}}"
+    >
+      <tab-nav
+        bind:__l="__l"
+        bindchange="{{c}}"
+        bindlayout="{{a}}"
+        bindtapTab="{{b}}"
+        class="data-v-78674bdf"
+        uI="78674bdf-2,78674bdf-1"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></tab-nav>
+    </tab-view>
+    <swiper
+      needAnimation
+      bindchange="{{k}}"
+      binddragging="{{l}}"
+      binddropped="{{m}}"
+      class="tab-swiper tab-swiper-hot data-v-78674bdf"
+      current="{{j}}"
+      ref="swiperref"
+    >
+      <swiper-item class="swiper-slide data-v-78674bdf">
+        <view class="_div scroll-view data-v-78674bdf">
+          <view class="_div swiper-item data-v-78674bdf">
+            <view class="_div data-v-78674bdf">
+              <label class="_span tab-desc data-v-78674bdf"
+                >计算搜索热度，每5分钟更新，排行不构成投资建议</label
+              >
+              <hot-searches
+                bind:__l="__l"
+                bindonStockTap="{{f}}"
+                class="data-v-78674bdf"
+                uI="78674bdf-3,78674bdf-0"
+                uP="{{g}}"
+                wx:if="{{g}}"
+              ></hot-searches>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="swiper-slide data-v-78674bdf">
+        <view class="_div scroll-view data-v-78674bdf">
+          <view class="_div swiper-item data-v-78674bdf">
+            <view class="_div data-v-78674bdf">
+              <label class="_span tab-desc data-v-78674bdf"
+                >计算24小时搜索热度，每5分钟更新，排行不构成投资建议</label
+              >
+              <hot-searches
+                bind:__l="__l"
+                bindonStockTap="{{h}}"
+                class="data-v-78674bdf"
+                uI="78674bdf-4,78674bdf-0"
+                uP="{{i}}"
+                wx:if="{{i}}"
+              ></hot-searches>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </tab-host>
+</view>

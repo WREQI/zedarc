@@ -1,0 +1,221 @@
+.tool-bar-container.data-v-83437a9c {
+  box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.1);
+  font-size: 0.32rem;
+  position: fixed;
+  z-index: 4;
+}
+.tool-bar-container .tool-bar-inner.data-v-83437a9c,
+.tool-bar-container .tool-popup-inner.data-v-83437a9c {
+  align-items: center;
+  background-color: #fff;
+  border: 0.013333333333333334rem solid #dcdfe6;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.16rem;
+  justify-content: space-around;
+}
+.tool-bar-container .tool-bar-inner .popover-arrow.data-v-83437a9c,
+.tool-bar-container .tool-popup-inner .popover-arrow.data-v-83437a9c {
+  background-color: var(--color-white);
+  border-color: transparent #dcdfe6 #dcdfe6 transparent;
+  border-style: solid;
+  border-width: 0.013333333333333334rem;
+  bottom: -0.10666666666666667rem;
+  height: 0.13333333333333333rem;
+  left: 0.5066666666666667rem;
+  position: absolute;
+  transform: translate(-50%) rotate(45deg);
+  width: 0.13333333333333333rem;
+}
+.tool-bar-inner.data-v-83437a9c {
+  padding: 0.10666666666666667rem 0.21333333333333335rem 0.10666666666666667rem
+    0;
+}
+.tool-popup-inner.data-v-83437a9c {
+  font-weight: 400;
+  left: -0.12rem;
+  padding: 0.10666666666666667rem 0.21333333333333335rem;
+  position: absolute;
+  top: -1.4666666666666666rem;
+  z-index: 1;
+}
+.tool-icon.data-v-83437a9c {
+  background-position: 50% !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  height: 0.8533333333333334rem;
+  width: 0.8533333333333334rem;
+}
+.tool-icon-move.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/51f0b359fe54410e3a84821a826a447a.svg);
+  width: 0.72rem;
+}
+.tool-icon-del.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/9e5fdc27c49202b2d75843a302545d27.svg);
+}
+.tool-icon-font.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/dc310eb0cee36022f64b4f272dae79f3.png);
+}
+.tool-icon-lock.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/98ba17bd4c72a4fd2381a9c9d57e48b2.svg);
+}
+.tool-icon-locked.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/377b3546ceb834b7756eaadd6e12c0b9.min.svg);
+}
+.tool-icon-show.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/28a7cfda20c2530a67f018320546288f.svg);
+}
+.tool-icon-hide.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/7e80b8d7688769acb9671428f8209e07.svg);
+}
+.tool-icon-lines.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/0c8075e7536c18f5b116858de5625f10.svg);
+}
+.tool-icon-weight.data-v-83437a9c {
+  align-items: center;
+  background: none;
+  background-color: #12161f;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 0.29333333333333333rem;
+}
+.tool-icon-weight.tool-icon-line-1.data-v-83437a9c {
+  border-radius: 0.013333333333333334rem !important;
+  height: 0.02666666666666667rem !important;
+}
+.tool-icon-weight.tool-icon-line-2.data-v-83437a9c {
+  border-radius: 0.02666666666666667rem !important;
+  height: 0.05333333333333334rem !important;
+}
+.tool-icon-weight.tool-icon-line-3.data-v-83437a9c {
+  border-radius: 0.04rem !important;
+  height: 0.08rem !important;
+}
+.tips-modal.data-v-83437a9c {
+  background-color: #3077ec;
+  border-radius: 0.05333333333333334rem;
+  color: #fff;
+  left: 50%;
+  line-height: 0.26666666666666666rem;
+  margin-left: -0.6666666666666666rem;
+  position: absolute;
+  text-align: center;
+  top: -0.6666666666666666rem;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.tips-modal .tips-inner.data-v-83437a9c {
+  margin: 0.10666666666666667rem 0.13333333333333333rem;
+  white-space: nowrap;
+}
+.tips-modal .tips-arrow.data-v-83437a9c {
+  border-color: transparent #3077ec #3077ec transparent;
+  border-style: solid;
+  border-width: 0.05333333333333334rem;
+  bottom: -0.06666666666666667rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%) rotate(45deg);
+}
+.tool-icon-content.data-v-83437a9c {
+  gap: 0.16rem;
+  height: 0.8533333333333334rem;
+  position: relative;
+  width: 0.8533333333333334rem;
+}
+.tool-icon-content .color-border.data-v-83437a9c,
+.tool-icon-content.data-v-83437a9c {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.tool-icon-content .color-border.data-v-83437a9c {
+  height: 0.5333333333333333rem;
+  width: 0.5333333333333333rem;
+}
+.tool-icon-content .color-border.active.data-v-83437a9c {
+  border: 0.02666666666666667rem solid #12161f;
+  border-radius: 0.10666666666666667rem;
+}
+.color-content.data-v-83437a9c {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.8533333333333334rem;
+  justify-content: center;
+  position: relative;
+  width: 0.8533333333333334rem;
+}
+.color-content .color-content-inner.data-v-83437a9c {
+  border-radius: 0.05333333333333334rem;
+  height: 0.4266666666666667rem;
+  width: 0.4266666666666667rem;
+}
+.color-content .color-content-border.data-v-83437a9c {
+  align-items: center;
+  border: 0.02666666666666667rem solid #12161f;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5333333333333333rem;
+  justify-content: center;
+  width: 0.5333333333333333rem;
+}
+.is-black.tool-bar-container.data-v-83437a9c {
+  box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+}
+.is-black.tool-bar-container .tool-bar-inner.data-v-83437a9c,
+.is-black.tool-bar-container .tool-popup-inner.data-v-83437a9c {
+  background-color: var(--color-card);
+  border: 0.013333333333333334rem solid var(--border-heavy);
+}
+.is-black.tool-bar-container .tool-bar-inner .popover-arrow.data-v-83437a9c,
+.is-black.tool-bar-container .tool-popup-inner .popover-arrow.data-v-83437a9c {
+  background-color: var(--color-card);
+  border: 0.013333333333333334rem solid var(--border-heavy);
+  border-color: transparent var(--border-heavy) var(--border-heavy) transparent;
+}
+.is-black.tool-bar-container .tool-icon-content.data-v-83437a9c {
+  color: #dcdfe6;
+}
+.is-black.tool-bar-container
+  .color-content
+  .color-content-border.data-v-83437a9c,
+.is-black.tool-bar-container
+  .tool-icon-content
+  .color-border.active.data-v-83437a9c {
+  border: 0.02666666666666667rem solid var(--color-icon2);
+}
+.is-black .tool-icon-move.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/85122f055d3528bd6972b8a8bd818e33.svg);
+}
+.is-black .tool-icon-del.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/e4cbe2534216b968f3077145c5068334.svg);
+}
+.is-black .tool-icon-font.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/f59f981cf93ea7d7bc3d6ae92895fa80.png);
+}
+.is-black .tool-icon-lock.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/97b8d1ba5a18a5c9aa1fc94988c328ab.svg);
+}
+.is-black .tool-icon-locked.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/377b3546ceb834b7756eaadd6e12c0b9.min.svg);
+}
+.is-black .tool-icon-show.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/732ce6a201f83f250f29f23e20d2f654.svg);
+}
+.is-black .tool-icon-hide.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/9e7cf9de116cf94e2a17c7e779d52b0d.svg);
+}
+.is-black .tool-icon-lines.data-v-83437a9c {
+  background: url(https://st.gtimg.com/design/94bfafb133bd814cf9f9caa73e089b2d.svg);
+}
+.is-black .tool-icon-weight.data-v-83437a9c {
+  background-color: var(--color-icon2);
+}

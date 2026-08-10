@@ -1,0 +1,27 @@
+<view
+  catchtap="{{w}}"
+  class="{{['_div','data-v-736b9be6','hq-tool',s,t,v]}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','data-v-736b9be6','tool-tag']}}" style="{{b}}"></view>
+  <label class="_span tool-name data-v-736b9be6">{{c}}</label>
+  <view class="_div content data-v-736b9be6" wx:if="{{d}}">
+    <block wx:if="{{e}}">
+      <label class="_span title data-v-736b9be6">成交额</label>
+      <label class="_span desc data-v-736b9be6">{{f}}</label>
+      <view class="_div divider data-v-736b9be6"></view>
+      <label class="_span title data-v-736b9be6">{{g}}</label>
+      <label class="{{['_span','data-v-736b9be6','desc',i]}}">{{h}}</label>
+    </block>
+    <label class="_span tool-desc data-v-736b9be6" wx:elif="{{j}}">{{k}}</label>
+    <block wx:elif="{{l}}">
+      <label class="_span tool-sub-desc data-v-736b9be6">交易所官方公布</label>
+      <view class="_div divider data-v-736b9be6"></view>
+      <label class="_span tool-sub-desc data-v-736b9be6">跟踪主力资金</label>
+    </block>
+    <label class="_span tool-desc data-v-736b9be6" wx:elif="{{m}}">{{n}}</label>
+    <label class="_span tool-desc data-v-736b9be6" wx:elif="{{o}}">{{p}}</label>
+    <label class="_span tool-desc data-v-736b9be6" wx:else>{{q}}</label>
+  </view>
+  <view class="{{['_div','data-v-736b9be6','indicator',r]}}"></view>
+</view>

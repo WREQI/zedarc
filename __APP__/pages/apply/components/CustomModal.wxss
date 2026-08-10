@@ -1,0 +1,109 @@
+.trade-page-container.data-v-597c09c6 {
+  --color-blue: #3077ec;
+  --color-red: #e63535;
+  --color-primary: var(--color-blue);
+  --text-color-0: #000;
+  --text-color-1: #262e40;
+  --text-color-2: #475166;
+  --text-color-3: #606980;
+  --text-color-4: #7a8499;
+  --text-color-5: #98a0b3;
+  --text-color-6: #a7b0c4;
+  --text-color-7: #12161f;
+  --fill-1: #f5f6fa;
+  --fill-2: #fff;
+  --fill-3: #f5f6f9;
+  --fill-mask: rgba(0, 0, 0, 0.3);
+  --border-color-1: #e9ebf0;
+  --border-color-2: #e5e5e5;
+  --arrow-color: #525866;
+}
+.trade-page-container.skin-black.data-v-597c09c6 {
+  --text-color-0: #fff;
+  --text-color-1: #f0f1f5;
+  --text-color-2: #a7b0c4;
+  --text-color-3: #a7b0c4;
+  --text-color-4: #a7b0c4;
+  --text-color-5: #69738c;
+  --text-color-6: #a7b0c4;
+  --text-color-7: #f0f1f5;
+  --fill-1: #12161f;
+  --fill-2: #12161f;
+  --fill-3: #000;
+  --border-color-1: #191e27;
+  --border-color-2: #262e40;
+}
+.border-left-1.data-v-597c09c6,
+.border-top-1.data-v-597c09c6 {
+  position: relative;
+}
+.border-left-1.data-v-597c09c6:after,
+.border-left-1.data-v-597c09c6:before,
+.border-top-1.data-v-597c09c6:after,
+.border-top-1.data-v-597c09c6:before {
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: 0 0;
+}
+.border-left-1.data-v-597c09c6:before,
+.border-top-1.data-v-597c09c6:before {
+  left: 0;
+  top: 0;
+}
+.border-top-1.data-v-597c09c6:before {
+  border-top: 0.013333333333333334rem solid var(--border-color-2);
+  transform-origin: 0 top;
+  width: 100%;
+}
+.border-left-1.data-v-597c09c6:before {
+  border-left: 0.013333333333333334rem solid var(--border-color-2);
+  height: 100%;
+  transform-origin: left 0;
+}
+.modal-container.data-v-597c09c6 {
+  align-items: center;
+  background: var(--fill-mask);
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.modal-container .modal-content.data-v-597c09c6 {
+  align-items: center;
+  animation: modal-zoom-597c09c6 0.4s both;
+  background: var(--fill-2);
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  max-height: 80%;
+  width: 80%;
+}
+@-webkit-keyframes modal-zoom-597c09c6 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes modal-zoom-597c09c6 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

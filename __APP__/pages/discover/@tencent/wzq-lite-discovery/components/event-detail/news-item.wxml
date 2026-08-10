@@ -1,0 +1,21 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','data-v-263c173d','part-up',h]}}"
+  id="{{g}}"
+>
+  <view class="_div part-up-left data-v-263c173d">
+    <view class="_div title data-v-263c173d">{{a}}</view>
+    <view class="_div info data-v-263c173d">
+      <view class="_div tag data-v-263c173d" wx:if="{{b}}">{{c}}</view>
+      <view class="_div source data-v-263c173d">{{d}}</view>
+      <view class="_div time data-v-263c173d">{{e}}</view>
+    </view>
+  </view>
+  <view class="_div part-up-right data-v-263c173d">
+    <image
+      class="_img cover data-v-263c173d"
+      mode="aspectFill"
+      src="{{f}}"
+    ></image>
+  </view>
+</view>

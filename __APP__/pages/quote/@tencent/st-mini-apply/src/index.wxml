@@ -1,0 +1,105 @@
+<semi-mask
+  bind:__l="__l"
+  bindcloseSemimask="{{J}}"
+  class="mini-apply-sheet r data-v-6a152eb6"
+  uI="6a152eb6-0"
+  uR="semimask"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div transition-container data-v-6a152eb6"
+    style="{{'transform:'+G+';'+'height:'+H}}"
+  >
+    <view class="{{['_div','transition-left','data-v-6a152eb6',y]}}">
+      <view class="_div action-sheet-head data-v-6a152eb6">
+        <view class="{{['_div','title','data-v-6a152eb6',c&&'font_guiding']}}"
+          >{{b}}</view
+        >
+        <view bindtap="{{d}}" class="_div right data-v-6a152eb6">
+          <view class="_div close data-v-6a152eb6"></view>
+        </view>
+      </view>
+      <slot name="mini-apply-slot" wx:if="{{e}}"></slot>
+      <highest-broker
+        bind:__l="__l"
+        bindshowMoreDealer="{{h}}"
+        class="data-v-6a152eb6"
+        uI="6a152eb6-1,6a152eb6-0"
+        uP="{{i}}"
+        wx:if="{{g}}"
+      ></highest-broker>
+      <view class="_div text-guide-partner-etf data-v-6a152eb6" wx:if="{{j}}"
+        >场内基金用股票帐号交易，无印花税。</view
+      >
+      <view
+        class="{{['_div','div-guide-open-account','data-v-6a152eb6',m]}}"
+        wx:if="{{k}}"
+      >
+        <image
+          alt=""
+          class="_img img-guide-open-account data-v-6a152eb6"
+          src="{{l}}"
+        ></image>
+      </view>
+      <button
+        bindtap="{{o}}"
+        class="btn-guide-open-account data-v-6a152eb6"
+        wx:if="{{n}}"
+      >
+        立即开户
+      </button>
+      <button
+        bindtap="{{q}}"
+        class="btn-guide-open-account data-v-6a152eb6"
+        wx:elif="{{p}}"
+      >
+        查看相关场内基金
+      </button>
+      <bottom-button
+        bind:__l="__l"
+        bindbindAccount="{{r}}"
+        bindopenAccount="{{s}}"
+        bindtoTrade="{{t}}"
+        class="data-v-6a152eb6"
+        uI="6a152eb6-2,6a152eb6-0"
+        uP="{{v||''}}"
+        wx:else
+      ></bottom-button>
+      <view class="_div login-guide-open-account data-v-6a152eb6" wx:if="{{w}}">
+        <navigator
+          bindtap="{{x}}"
+          class="_a a-guide-open-account data-v-6a152eb6"
+          href="javascript;"
+          >已有股票账户，去登录<label
+            class="_span login-icon data-v-6a152eb6"
+          ></label>
+        </navigator>
+      </view>
+    </view>
+    <view class="{{['_div','transition-right','data-v-6a152eb6',F]}}">
+      <view class="_div action-sheet-head data-v-6a152eb6">
+        <view bindtap="{{z}}" class="_div left data-v-6a152eb6">
+          <view class="_div back data-v-6a152eb6"></view>
+        </view>
+        <view class="_div title data-v-6a152eb6" hidden="{{!A}}"
+          >请选择证券服务方</view
+        >
+        <view class="_div title font_guiding data-v-6a152eb6" hidden="{{!B}}"
+          >极速开户</view
+        >
+        <view bindtap="{{C}}" class="_div right data-v-6a152eb6">
+          <view class="_div close data-v-6a152eb6"></view>
+        </view>
+      </view>
+      <dealer-list
+        bind:__l="__l"
+        binddealerAction="{{D}}"
+        class="data-v-6a152eb6"
+        uI="6a152eb6-3,6a152eb6-0"
+        uP="{{E}}"
+        wx:if="{{E}}"
+      ></dealer-list>
+    </view>
+  </view>
+</semi-mask>

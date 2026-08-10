@@ -1,0 +1,25 @@
+<view class="_div flie-list-container data-v-a6fd9f31">
+  <view class="_div flie-list-content data-v-a6fd9f31">
+    <view
+      bindtap="{{item.e}}"
+      class="_div flie-list-item data-v-a6fd9f31"
+      wx:for="{{a}}"
+      wx:key="d"
+    >
+      <view class="_div file-list-title data-v-a6fd9f31">{{item.a}}</view>
+      <view class="_div file-list-desc data-v-a6fd9f31">
+        <view class="_div file-source-content data-v-a6fd9f31">{{item.b}}</view>
+        <view class="_div file-time-content data-v-a6fd9f31">{{item.c}}</view>
+      </view>
+    </view>
+    <no-data
+      bind:__l="__l"
+      class="data-v-a6fd9f31"
+      uI="a6fd9f31-0"
+      uS="{{['d']}}"
+      wx:if="{{b}}"
+    >
+      <label class="_span data-v-a6fd9f31">暂无数据</label>
+    </no-data>
+  </view>
+</view>

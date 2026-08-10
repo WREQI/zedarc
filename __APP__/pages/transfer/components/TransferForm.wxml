@@ -1,0 +1,27 @@
+<view class="transfer-form-container border-with-margin--top">
+    <view class="error-layout" wx:if="{{a}}">
+        <view class="error-icon">
+            <view class="icon-wrapper flex-center">
+                <label class="icon icon-warning"></label>
+            </view>
+        </view>
+        <view class="text-color-1 flex flex-column flex-center">
+            <view class="error-title">三方存管报错原因</view>
+            <view class="error-tips">{{b}}</view>
+        </view>
+    </view>
+    <block wx:else>
+        <view class="section-tips">
+            <slot name="tips"></slot>
+            <view class="{{['money-unit','text-color-3','border--left',d&&'pl']}}">{{c}}</view>
+        </view>
+        <view class="section-input flex">
+            <label class="flex-vcenter rmb text-color-1">￥</label>
+            <label class="fund-input-wrapper flex-1">
+                <input bindblur="{{j}}" bindfocus="{{i}}" bindinput="{{h}}" class="{{['fund-input','text-color-1',f]}}" inputmode="decimal" maxlength="{{g}}" placeholder="请输入转账金额(0手续费)" placeholderClass="input-placeholder" ref="input" type="digit" value="{{e}}"></input>
+                <slot name="popup"></slot>
+            </label>
+            <slot name="action"></slot>
+        </view>
+    </block>
+</view>

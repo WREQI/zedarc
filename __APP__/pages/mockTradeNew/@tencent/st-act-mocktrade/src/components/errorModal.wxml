@@ -1,0 +1,17 @@
+<view
+  animationType="fade"
+  class="_div error-dialog-wrapper data-v-ffd8f141"
+  wx:if="{{a}}"
+>
+  <view class="_div dialog-container data-v-ffd8f141">
+    <view class="_div dialog-mask data-v-ffd8f141"></view>
+    <view class="_div dialog-main data-v-ffd8f141">
+      <label class="_span dialog-content data-v-ffd8f141">{{b}}</label>
+      <view class="_div dialog-footer data-v-ffd8f141">
+        <view bindtap="{{d}}" class="_div dialog-btn data-v-ffd8f141">
+          <label class="_span dialog-btn--text data-v-ffd8f141">{{c}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<view class="_div add-to-my-mp-guide-container data-v-7c461af2" wx:if="{{a}}">
+  <view class="_div hint-area data-v-7c461af2" style="{{'left:'+g}}">
+    <view
+      bindtap="{{d}}"
+      class="_div hint-text guide-text data-v-7c461af2"
+      wx:if="{{b}}"
+    >
+      <view class="_div data-v-7c461af2">{{c}}</view>
+    </view>
+    <view class="_div hint-text data-v-7c461af2" wx:else>
+      <view class="_div data-v-7c461af2">点击添加到【我的小程序】</view>
+      <view class="_div data-v-7c461af2">下次就能更快找到我喔</view>
+    </view>
+    <view bindtap="{{f}}" class="_div gesture-area data-v-7c461af2">
+      <image class="_img data-v-7c461af2" src="{{e}}"></image>
+    </view>
+  </view>
+</view>

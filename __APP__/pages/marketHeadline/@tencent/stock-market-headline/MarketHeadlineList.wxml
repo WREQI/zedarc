@@ -1,0 +1,44 @@
+<view class="_div market-headlines-container" wx:if="{{a}}">
+  <view class="_div news-item" wx:for="{{b}}" wx:key="m">
+    <market-headline-item
+      bind:__l="__l"
+      binddataReport="{{item.b}}"
+      bindjumpToDetail="{{item.a}}"
+      bindmanageSelfStock="{{item.e}}"
+      bindonSubscribe="{{item.d}}"
+      bindsetShareInfo="{{item.c}}"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:if="{{item.g}}"
+    ></market-headline-item>
+    <basket-overview
+      bind:__l="__l"
+      bindgoToBasketDetail="{{item.j}}"
+      bindheaderToggleClick="{{item.i}}"
+      uI="{{item.k}}"
+      uP="{{item.l}}"
+      wx:if="{{item.h}}"
+    ></basket-overview>
+    <view class="_div bottom" wx:else></view>
+  </view>
+  <view class="_div logo_wrap">
+    <view class="_div zxg_logo"></view>
+  </view>
+  <follow-guide
+    bind:__l="__l"
+    bindcancel="{{c}}"
+    bindconfirm="{{d}}"
+    bindreport="{{e}}"
+    uI="52c9af4e-2"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></follow-guide>
+  <basket-guide-modal
+    bind:__l="__l"
+    bindclose="{{h}}"
+    bindconfirm="{{g}}"
+    uI="52c9af4e-3"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></basket-guide-modal>
+</view>

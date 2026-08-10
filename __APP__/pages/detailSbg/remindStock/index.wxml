@@ -1,0 +1,21 @@
+<page-meta class="data-v-21265751" rootFontSize="{{a}}"></page-meta>
+<view class="_div page-remind-setting data-v-21265751">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-21265751"
+    uI="21265751-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-21265751"
+    uI="21265751-1"
+  ></stock-privacy-dialog>
+  <setting-detail
+    bind:__l="__l"
+    bindsubscribeStockRemind="{{c}}"
+    class="data-v-21265751"
+    uI="21265751-2"
+    uP="{{d}}"
+    wx:if="{{b}}"
+  ></setting-detail>
+</view>

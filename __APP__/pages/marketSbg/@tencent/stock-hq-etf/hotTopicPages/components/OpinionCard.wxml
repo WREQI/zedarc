@@ -1,0 +1,72 @@
+<view class="{{['data-v-e89c6e8a','opinion-card',l]}}">
+  <view class="_div opinion-card__header data-v-e89c6e8a">
+    <view class="_div opinion-card__title data-v-e89c6e8a">后市怎么看</view>
+    <image
+      alt="说明"
+      bindtap="{{a}}"
+      class="_img opinion-card__info-icon data-v-e89c6e8a"
+      src="https://st.gtimg.com/pcm/mp3q0opt_168770b974b2ad4cd7ff7fa76ea0e049.svg"
+    ></image>
+  </view>
+  <view class="_div opinion-card__overview data-v-e89c6e8a">{{b}}</view>
+  <view class="_div opinion-card__judgments data-v-e89c6e8a">
+    <view class="_div opinion-card__judgment data-v-e89c6e8a">
+      <view
+        class="{{['_div','data-v-e89c6e8a','opinion-card__judgment-value',d]}}"
+        >{{c}}</view
+      >
+      <view class="_div opinion-card__judgment-label data-v-e89c6e8a"
+        >短期 (0～3月)</view
+      >
+    </view>
+    <view
+      class="_div opinion-card__judgment opinion-card__judgment--long data-v-e89c6e8a"
+    >
+      <view
+        class="{{['_div','data-v-e89c6e8a','opinion-card__judgment-value',f]}}"
+        >{{e}}</view
+      >
+      <view class="_div opinion-card__judgment-label data-v-e89c6e8a"
+        >中长期 (3+月)</view
+      >
+    </view>
+  </view>
+  <view class="_div opinion-card__analysis-list data-v-e89c6e8a" wx:if="{{g}}">
+    <view
+      class="_div opinion-card__analysis-item data-v-e89c6e8a"
+      wx:for="{{h}}"
+      wx:key="f"
+    >
+      <view class="_div opinion-card__analysis-head data-v-e89c6e8a">
+        <view class="_div opinion-card__analysis-title data-v-e89c6e8a"
+          >{{item.a}}</view
+        >
+        <view
+          class="{{['_div','data-v-e89c6e8a','opinion-card__analysis-badge',item.d]}}"
+        >
+          <image
+            alt=""
+            class="_img opinion-card__analysis-badge-icon data-v-e89c6e8a"
+            src="{{item.b}}"
+          ></image>
+          <label class="_span opinion-card__analysis-badge-text data-v-e89c6e8a"
+            >{{item.c}}</label
+          >
+        </view>
+      </view>
+      <view class="_div opinion-card__analysis-desc data-v-e89c6e8a"
+        >{{item.e}}</view
+      >
+    </view>
+  </view>
+  <view bindtap="{{k}}" class="_div opinion-card__share data-v-e89c6e8a">
+    <image
+      alt="{{j}}"
+      class="{{['_img','data-v-e89c6e8a','opinion-card__share-icon',i]}}"
+      src="https://st.gtimg.com/pcm/mp3q0oz6_2ad3e4980db40bd1abb363ef6a0f78fe.svg"
+    ></image>
+  </view>
+  <view class="_div opinion-card__disclaimer data-v-e89c6e8a"
+    >内容由自选股问AI模型生成，不构成投资建议。</view
+  >
+</view>

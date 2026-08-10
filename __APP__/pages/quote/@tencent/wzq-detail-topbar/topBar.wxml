@@ -1,0 +1,73 @@
+<view class="_div top-bar-container data-v-e9965cc2">
+  <view
+    class="_div safe-area-padding-top data-v-e9965cc2"
+    style="{{'height:'+a}}"
+  ></view>
+  <view
+    class="_div content-container data-v-e9965cc2"
+    style="{{'padding-top:'+D+';'+'position:'+E}}"
+  >
+    <view class="_div title-content data-v-e9965cc2">
+      <block wx:if="{{b}}">
+        <image
+          ariaLabel="back-home-icon"
+          ariaRole="返回首页"
+          catchtap="{{d}}"
+          class="_img back-icon data-v-e9965cc2"
+          src="https://st.gtimg.com/design/fbd6efbee01658e5e0c78a3c6f8149ad.png"
+          wx:if="{{c}}"
+        ></image>
+        <image
+          ariaLabel="back-icon"
+          ariaRole="返回按钮"
+          catchtap="{{f}}"
+          class="_img back-icon data-v-e9965cc2"
+          src="https://st.gtimg.com/design/01d5c0038c6fa258c6039e9cb90a77b3.png"
+          wx:if="{{e}}"
+        ></image>
+      </block>
+      <block wx:else>
+        <image
+          ariaLabel="back-home-icon"
+          ariaRole="返回首页"
+          catchtap="{{h}}"
+          class="_img back-icon data-v-e9965cc2"
+          src="https://st.gtimg.com/design/0d4da8e9f07e0d5bfa65e21ad0ee3043.png"
+          wx:if="{{g}}"
+        ></image>
+        <image
+          ariaLabel="back-icon"
+          ariaRole="返回按钮"
+          catchtap="{{j}}"
+          class="_img back-icon data-v-e9965cc2"
+          src="https://st.gtimg.com/design/2762cc7da3f8a3d5a58564498534ff03.png"
+          wx:if="{{i}}"
+        ></image>
+      </block>
+      <view
+        class="{{['_div','data-v-e9965cc2','detail-main-title',n]}}"
+        wx:if="{{k}}"
+      >
+        <label class="_span name data-v-e9965cc2">{{l}}</label>
+        <label class="_span scode data-v-e9965cc2">({{m}})</label>
+      </view>
+      <block wx:if="{{o}}">
+        <view
+          bindtap="{{w}}"
+          class="{{['_div','sub-title-fix','data-v-e9965cc2',v]}}"
+          wx:if="{{p}}"
+        >
+          <label class="_span status data-v-e9965cc2">{{q}}</label>
+          <label class="_span image-tip data-v-e9965cc2" wx:if="{{r}}"></label>
+          <label class="_span time data-v-e9965cc2" wx:if="{{s}}">{{t}}</label>
+        </view>
+        <view class="_div sub-title-scroll data-v-e9965cc2" wx:else>
+          <label class="{{['_span','price','data-v-e9965cc2',y]}}">{{x}}</label>
+          <label class="{{['_span','zde','data-v-e9965cc2',A]}}">{{z}}</label>
+          <label class="{{['_span','zdf','data-v-e9965cc2',C]}}">{{B}}</label>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="_div hold-space data-v-e9965cc2" wx:if="{{F}}"></view>
+</view>

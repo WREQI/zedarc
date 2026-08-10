@@ -1,0 +1,15 @@
+<view
+  bindtap="{{d}}"
+  class="{{['editable-input','data-v-19271abe',c&&'focused']}}"
+>
+  <view
+    catchtap="{{char.e}}"
+    class="{{[char.c&&'cursor-before',char.d&&'cursor-after','input-char','data-v-19271abe']}}"
+    data-index="{{char.f}}"
+    wx:for="{{a}}"
+    wx:for-item="char"
+    wx:key="b"
+    >{{char.a}}</view
+  >
+  <view class="cursor-placeholder data-v-19271abe" wx:if="{{b}}"></view>
+</view>

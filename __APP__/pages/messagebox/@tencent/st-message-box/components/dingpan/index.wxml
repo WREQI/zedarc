@@ -1,0 +1,14 @@
+<view class="_div dingpan-list data-v-3d1f19e3">
+  <view
+    bindtap="{{item.e}}"
+    class="_div dingpan-item data-v-3d1f19e3"
+    wx:for="{{a}}"
+    wx:key="d"
+  >
+    <view class="_div item-header data-v-3d1f19e3">
+      <label class="_span stock-name data-v-3d1f19e3">{{item.a}}</label>
+      <label class="_span trigger-time data-v-3d1f19e3">{{item.b}}</label>
+    </view>
+    <view class="_div trigger-reason data-v-3d1f19e3">{{item.c}}</view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<web-view
+  binderror="{{c}}"
+  bindload="{{e}}"
+  bindmessage="{{d}}"
+  data-webview="webview"
+  src="{{b}}"
+  wx:if="{{a}}"
+></web-view>

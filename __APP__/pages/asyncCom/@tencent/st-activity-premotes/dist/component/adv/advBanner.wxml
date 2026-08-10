@@ -1,0 +1,19 @@
+<view class="{{['_div','adv-banner','data-v-168d42c3',j,k,l,m]}}" wx:if="{{a}}">
+  <view class="_div banner-content data-v-168d42c3">
+    <image
+      bindload="{{c}}"
+      bindtap="{{d}}"
+      class="_img bg-img data-v-168d42c3"
+      mode="heightFix"
+      src="{{b}}"
+    ></image>
+    <image
+      bindtap="{{g}}"
+      class="_img btn-img data-v-168d42c3"
+      mode="heightFix"
+      src="{{f}}"
+      wx:if="{{e}}"
+    ></image>
+    <view bindtap="{{i}}" class="_i close data-v-168d42c3" wx:if="{{h}}"></view>
+  </view>
+</view>

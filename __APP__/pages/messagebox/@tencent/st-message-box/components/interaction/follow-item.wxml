@@ -1,0 +1,35 @@
+<view catchtap="{{k}}" class="_div follow-item data-v-71204b63" id="{{j}}">
+  <view class="_div head-img-container data-v-71204b63">
+    <image
+      alt="head-img"
+      class="_img head-img data-v-71204b63"
+      mode="aspectFill"
+      src="{{a}}"
+    ></image>
+    <image
+      alt="icon-certified"
+      class="_img icon-certified data-v-71204b63"
+      mode="aspectFill"
+      src="{{c}}"
+      wx:if="{{b}}"
+    ></image>
+  </view>
+  <view class="_div follow-content-container data-v-71204b63">
+    <view class="_div user-content data-v-71204b63">
+      <label class="{{['_span','data-v-71204b63','user-name',e]}}">{{d}}</label>
+      <view class="_div medal-img-container data-v-71204b63" wx:if="{{f}}">
+        <image
+          alt="medal-img"
+          class="_img medal-img data-v-71204b63"
+          mode="aspectFill"
+          src="{{item.b}}"
+          wx:for="{{g}}"
+          wx:key="a"
+        ></image>
+      </view>
+      <label class="_span user-description data-v-71204b63">{{h}}</label>
+    </view>
+    <label class="_span follow-message data-v-71204b63">关注了你</label>
+    <label class="_span follow-date data-v-71204b63">{{i}}</label>
+  </view>
+</view>

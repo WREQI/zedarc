@@ -1,0 +1,55 @@
+<view class="{{['_div','data-v-e87b31ec','lhlk-item',q]}}">
+  <view catchtap="{{j}}" class="_div lhlk-item-wrapper data-v-e87b31ec">
+    <view class="_div title data-v-e87b31ec" hoverClass="onLongTouch">
+      <label class="_span data-v-e87b31ec">{{a}}</label>
+      <view class="_div news-type data-v-e87b31ec" wx:if="{{b}}">
+        <label class="_span span data-v-e87b31ec">{{c}}</label>
+      </view>
+    </view>
+    <view
+      class="_div brokerage-wrapper data-v-e87b31ec"
+      hoverClass="onLongTouch"
+    >
+      <view class="_p brokerage-container data-v-e87b31ec">
+        <label class="_span brokerage-name data-v-e87b31ec">
+          <view
+            class="_i icon data-v-e87b31ec"
+            style="{{'background-image:'+e}}"
+            wx:if="{{d}}"
+          ></view
+          >{{f}}</label
+        >
+        <label class="_span brokerage-content data-v-e87b31ec">{{g}}</label>
+      </view>
+    </view>
+    <related-hq-group
+      bind:__l="__l"
+      class="data-v-e87b31ec"
+      uI="e87b31ec-0"
+      uP="{{i}}"
+      wx:if="{{h}}"
+    ></related-hq-group>
+  </view>
+  <basket-embed-header
+    bind:__l="__l"
+    bindgoToBasketDetail="{{n}}"
+    bindgoToStockDetail="{{m}}"
+    bindheaderToggleClick="{{l}}"
+    class="data-v-e87b31ec"
+    uI="e87b31ec-1"
+    uP="{{o}}"
+    wx:if="{{k}}"
+  ></basket-embed-header>
+  <view
+    catchtap="{{p}}"
+    class="_div secondary-link data-v-e87b31ec"
+    hoverClass="onLongTouch"
+  >
+    <label class="_span data-v-e87b31ec">查看全文</label>
+    <image
+      alt=""
+      class="_img img data-v-e87b31ec"
+      src="https://st.gtimg.com/design/866d67eeb3b06ab052f9c21d8b23446f.png"
+    ></image>
+  </view>
+</view>

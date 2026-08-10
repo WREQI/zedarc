@@ -1,0 +1,13 @@
+<view class="{{['_div','data-v-1b5ef2e0',e]}}">
+  <view
+    bindtap="{{d}}"
+    class="_div enter-live-support-container data-v-1b5ef2e0"
+  >
+    <image
+      class="_img enter-live-support-img data-v-1b5ef2e0"
+      src="{{b}}"
+      wx:if="{{a}}"
+    ></image>
+    <label class="_span enter-live-support-text data-v-1b5ef2e0">{{c}}</label>
+  </view>
+</view>

@@ -1,0 +1,149 @@
+<view class="after-purchase-list-item data-v-2cc34f3b">
+  <view class="list-header flex-vcenter fs-28 border-bottom data-v-2cc34f3b"
+    >{{a}}</view
+  >
+  <empty
+    bind:__l="__l"
+    class="empty-comp data-v-2cc34f3b"
+    uI="2cc34f3b-0"
+    uP="{{c}}"
+    wx:if="{{b}}"
+  ></empty>
+  <view class="data-v-2cc34f3b" wx:else>
+    <view class="data-v-2cc34f3b" wx:for="{{d}}" wx:for-item="list" wx:key="j">
+      <view
+        class="{{['list-item','data-v-2cc34f3b',list.h&&'border-bottom',list.i&&'notBook']}}"
+        wx:if="{{list.a}}"
+      >
+        <view class="item-title fs-28 text-color-1 data-v-2cc34f3b"
+          >{{list.b}}</view
+        >
+        <view
+          class="{{['item-card','text-color-1','fs-30','data-v-2cc34f3b',item.G&&'border-bottom']}}"
+          wx:for="{{list.c}}"
+          wx:key="F"
+        >
+          <view
+            bindtap="{{item.e}}"
+            class="item-card-header flex-between fs-30 data-v-2cc34f3b"
+          >
+            <view class="flex-vcenter data-v-2cc34f3b">
+              <view class="market-tag flex flex-center data-v-2cc34f3b">
+                <label class="data-v-2cc34f3b">{{item.a}}</label>
+              </view>
+              <view class="item-name data-v-2cc34f3b">{{item.b}}</view>
+              <view class="item-code fs-24 text-color-4 data-v-2cc34f3b"
+                >{{item.c}}{{item.d}}</view
+              >
+            </view>
+            <label
+              class="icon icon-arrow text-color-5 fs-34 data-v-2cc34f3b"
+            ></label>
+          </view>
+          <view class="item-card-mid data-v-2cc34f3b">
+            <view
+              bindtap="{{item.h}}"
+              class="compare-company data-v-2cc34f3b"
+              wx:if="{{item.f}}"
+            >
+              <view class="content data-v-2cc34f3b"
+                >可比公司&行业：{{item.g}}</view
+              >
+            </view>
+          </view>
+          <view
+            class="{{['item-card-body','flex-vcenter','data-v-2cc34f3b',list.f&&'notbooking-item']}}"
+          >
+            <view
+              bindtap="{{item.j}}"
+              class="item-card-body__selected flex flex-vcenter data-v-2cc34f3b"
+              wx:if="{{list.d}}"
+            >
+              <label
+                class="{{['icon','icon-check-box','custom-checkbox','data-v-2cc34f3b',item.i&&'icon-checked']}}"
+              ></label>
+            </view>
+            <view class="item flex-column num-text data-v-2cc34f3b">
+              <label class="item-card-body__title data-v-2cc34f3b"
+                >发行价</label
+              >
+              <label class="data-v-2cc34f3b">{{item.k}}</label>
+            </view>
+            <view class="item flex-1 flex-column align-c data-v-2cc34f3b">
+              <view
+                class="item-card-body__title item-purchase-ratio flex-center data-v-2cc34f3b"
+              >
+                <label class="data-v-2cc34f3b">{{item.l}}</label>
+                <label
+                  bindtap="{{item.m}}"
+                  class="icon icon-info-sparse text-color-5 fs-20 icon-hotarea data-v-2cc34f3b"
+                ></label>
+              </view>
+              <label class="data-v-2cc34f3b" wx:if="{{item.n}}"
+                >{{item.o}}</label
+              >
+              <label class="data-v-2cc34f3b" wx:else>{{item.p}}</label>
+            </view>
+            <view
+              class="item flex-1 flex-column align-c data-v-2cc34f3b"
+              wx:if="{{list.e}}"
+            >
+              <view
+                class="item-amount item-card-body__title flex-center data-v-2cc34f3b"
+                >申购数量<label
+                  bindtap="{{item.q}}"
+                  class="icon icon-info-sparse text-color-5 fs-20 icon-hotarea data-v-2cc34f3b"
+                  data-stat="trade.playnew.booking.best_instruction"
+                ></label>
+              </view>
+              <picker
+                bindchange="{{item.w}}"
+                class="data-v-2cc34f3b"
+                range="{{item.v}}"
+                rangeKey="text"
+                value="{{item.t}}"
+                wx:if="{{item.r}}"
+              >
+                <label class="number-font data-v-2cc34f3b">{{item.s}}</label>
+                <label
+                  class="icon icon-arrow-down text-color-5 data-v-2cc34f3b"
+                ></label>
+              </picker>
+              <view bindtap="{{item.y}}" class="data-v-2cc34f3b" wx:else>
+                <label class="number-font data-v-2cc34f3b">{{item.x}}</label>
+                <label
+                  class="icon icon-arrow-down text-color-5 data-v-2cc34f3b"
+                ></label>
+              </view>
+            </view>
+            <view
+              class="item flex-1 flex-column flex-vcenter data-v-2cc34f3b"
+              wx:else
+            >
+              <label
+                class="item-upper-limit item-card-body__title data-v-2cc34f3b"
+                >申购上限</label
+              >
+              <label class="data-v-2cc34f3b">{{item.z}}</label>
+            </view>
+            <view class="item flex-1 flex-column align-r data-v-2cc34f3b">
+              <label
+                class="item-card-body__title item-purchase-date data-v-2cc34f3b"
+                >申购日期</label
+              >
+              <label class="no-wrap data-v-2cc34f3b">{{item.A}}</label>
+            </view>
+          </view>
+          <view
+            bindtap="{{item.E}}"
+            class="{{['reason','flex-vcenter','data-v-2cc34f3b',item.D&&'blue']}}"
+            wx:if="{{list.g}}"
+            >{{item.B}}<view
+              class="{{['fs-26','data-v-2cc34f3b',item.C]}}"
+            ></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

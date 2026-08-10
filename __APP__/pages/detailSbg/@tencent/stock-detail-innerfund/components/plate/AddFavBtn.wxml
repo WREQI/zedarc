@@ -1,0 +1,4 @@
+<view catchtap="{{c}}" class="_div yy_mask_add data-v-b9b8a6b3" wx:if="{{a}}">
+  <view class="_div add-btn active data-v-b9b8a6b3" wx:if="{{b}}">+ 自选</view>
+  <view class="_div add-btn data-v-b9b8a6b3" wx:else>已添加</view>
+</view>

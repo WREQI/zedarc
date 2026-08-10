@@ -1,0 +1,19 @@
+<view class="_div community-scope data-v-4045f3de">
+    <view class="_div community-scope-wrapper data-v-4045f3de">
+        <view class="_div item-title new-comments-title-wrap data-v-4045f3de" wx:if="{{a}}">
+            <label class="_span item-title-span data-v-4045f3de">最新评论</label>
+            <view bindtap="{{h}}" class="_div edit-comment data-v-4045f3de" wx:if="{{b}}">
+                <block wx:if="{{c}}">
+                    <image alt="" class="_img img data-v-4045f3de" src="https://st.gtimg.com/design/dad2e2e4a30ede64b579419cb5e6bc9c.png"></image>
+                    <label class="_span span data-v-4045f3de">写评论</label>
+                    <view class="_div divider data-v-4045f3de" wx:if="{{d}}"></view>
+                </block>
+                <label catchtap="{{g}}" class="_span span data-v-4045f3de" wx:if="{{e}}">{{f}}</label>
+                <input class="fake-input data-v-4045f3de" ref="fakeInput" type="text"></input>
+            </view>
+        </view>
+        <view class="{{['_div','data-v-4045f3de',s]}}" wx:if="{{i}}">
+            <com-list bind:__l="__l" bindcomListDataReady="{{p}}" bindcommentMore="{{m}}" bindcommentReport="{{l}}" bindgetCommentCount="{{n}}" bindgoAppStock="{{k}}" bindonHandelTurn="{{o}}" bindshowProfilePop="{{q}}" class="r data-v-4045f3de" uI="4045f3de-0" uP="{{r}}" uR="newsCommentList" wx:if="{{r}}"></com-list>
+        </view>
+    </view>
+</view>

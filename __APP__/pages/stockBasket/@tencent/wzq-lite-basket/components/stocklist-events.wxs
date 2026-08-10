@@ -1,0 +1,247 @@
+var startX = 0;
+var startY = 0;
+var prevX = 0;
+var minX = undefined;
+var maxX = 0;
+var momentumStartX = 0;
+var startTime = 0;
+var momentumTimeThreshold = 300;
+var momentumXThreshold = 15;
+var moveX = 0;
+var duration = 0;
+var bezier = "linear";
+var sortBar = null;
+var fakeSortBar = null;
+var dataColumn = null;
+var cFieldsLength = 0;
+var actionHeaderRealColumn = null;
+var actionHeaderFakeColumn = null;
+var actionContentColumn = null;
+var opacityTimer;
+var OPACITY_DELAY_TIME = 1000;
+var OPACITY_AFTER_TRANSITION_DELAY_TIME = 500;
+function momentum(current, start, duration) {
+  var durationMap = { noBounce: 2500, weekBounce: 800, strongBounce: 400 };
+  var bezierMap = {
+    noBounce: "cubic-bezier(.17, .89, .45, 1)",
+    weekBounce: "cubic-bezier(.25, .46, .45, .94)",
+    strongBounce: "cubic-bezier(.25, .46, .45, .94)",
+  };
+  var type = "noBounce";
+  var deceleration = 0.003;
+  var bounceRate = 10;
+  var bounceThreshold = 300;
+  var maxOverflowX = 0;
+  var overflowX;
+  var distance = current - start;
+  var speed = (2 * Math.abs(distance)) / duration;
+  var destination = current + (speed / deceleration) * (distance < 0 ? -1 : 1);
+  if (destination < minX) {
+    overflowX = minX - destination;
+    type = overflowX > bounceThreshold ? "strongBounce" : "weekBounce";
+    destination = Math.max(minX - maxOverflowX, minX - overflowX / bounceRate);
+  } else if (destination > maxX) {
+    overflowX = destination - maxX;
+    type = overflowX > bounceThreshold ? "strongBounce" : "weekBounce";
+    destination = Math.min(maxX + maxOverflowX, maxX + overflowX / bounceRate);
+  }
+  return {
+    destination: destination,
+    duration:
+      durationMap[
+        ((nt_0 = type),
+        null == nt_0 ? undefined : "number" === typeof nt_0 ? nt_0 : "" + nt_0)
+      ],
+    bezier:
+      bezierMap[
+        ((nt_1 = type),
+        null == nt_1 ? undefined : "number" === typeof nt_1 ? nt_1 : "" + nt_1)
+      ],
+  };
+}
+function isNeedReset() {
+  var offsetX;
+  if (moveX < minX) {
+    offsetX = minX;
+  } else if (moveX > maxX) {
+    offsetX = maxX;
+  }
+  if (typeof offsetX !== "undefined") {
+    moveX = offsetX;
+    duration = 500;
+    bezier = "cubic-bezier(.165, .84, .44, 1)";
+    var style = {
+      transform: "translateX(" + moveX + "px)",
+      "transition-duration": duration + "ms",
+      "transition-timing-function": bezier,
+    };
+    sortBar.setStyle(style);
+    fakeSortBar.setStyle(style);
+    dataColumn.setStyle(style);
+    return true;
+  }
+  return false;
+}
+function stopScrollX() {
+  var res = dataColumn.getComputedStyle(["transform"]);
+  if (!res || !res.transform || res.transform === "none") return;
+  moveX = Math.round(+res.transform.split(")")[0].split(", ")[4]);
+  var style = {
+    transform: "translateX(" + moveX + "px)",
+    "transition-duration": 0 + "ms",
+    "transition-timing-function": "linear",
+  };
+  sortBar.setStyle(style);
+  fakeSortBar.setStyle(style);
+  dataColumn.setStyle(style);
+}
+function cal(ins) {
+  var left = ins.selectComponent(".name-column").getBoundingClientRect();
+  dataColumn = ins.selectComponent(".data-inner-wrapper");
+  var middle = dataColumn.getBoundingClientRect();
+  var right = ins.selectComponent(".action-column").getBoundingClientRect();
+  var father = ins.selectComponent(".stock-body").getBoundingClientRect();
+  var leftWidth = (left && left.width) || 0;
+  var middleWidth = (middle && middle.width) || 0;
+  var rightWidth = (right && right.width) || 0;
+  var fatherWidth = (father && father.width) || 0;
+  minX = fatherWidth - leftWidth - middleWidth - rightWidth;
+}
+function doSetOpacity(opacity) {
+  var columnInstance = [
+    actionHeaderRealColumn,
+    actionHeaderFakeColumn,
+    actionContentColumn,
+  ];
+  for (var i = 0; i < columnInstance.length; i++) {
+    if (
+      columnInstance[
+        ((nt_4 = i),
+        null == nt_4 ? undefined : "number" === typeof nt_4 ? nt_4 : "" + nt_4)
+      ]
+    ) {
+      columnInstance[
+        ((nt_5 = i),
+        null == nt_5 ? undefined : "number" === typeof nt_5 ? nt_5 : "" + nt_5)
+      ].setStyle({ opacity: opacity });
+    }
+  }
+}
+function setColumnOpacity(opacity, isAfterTransition, ins) {
+  if (ins) {
+    ins.clearTimeout(opacityTimer);
+    opacityTimer = ins.setTimeout(
+      function () {
+        doSetOpacity(opacity);
+      },
+      isAfterTransition
+        ? OPACITY_AFTER_TRANSITION_DELAY_TIME
+        : OPACITY_DELAY_TIME
+    );
+  } else {
+    doSetOpacity(opacity);
+  }
+}
+module.exports = {
+  onTouchstart: function (e, ins) {
+    cFieldsLength =
+      e.currentTarget &&
+      e.currentTarget.dataset &&
+      e.currentTarget.dataset.fieldslen;
+    if (cFieldsLength === 3) {
+      return;
+    }
+    cal(ins);
+    if (!sortBar) {
+      sortBar = ins.selectComponent(".real-sortable-row");
+    }
+    if (!fakeSortBar) {
+      fakeSortBar = ins.selectComponent(".fake-sortable-row");
+    }
+    if (!dataColumn) {
+      dataColumn = ins.selectComponent(".data-inner-wrapper");
+    }
+    if (!actionHeaderRealColumn) {
+      actionHeaderRealColumn = ins.selectComponent(
+        ".action-column-placeholder.real"
+      );
+    }
+    if (!actionHeaderFakeColumn) {
+      actionHeaderFakeColumn = ins.selectComponent(
+        ".action-column-placeholder.fake"
+      );
+    }
+    if (!actionContentColumn) {
+      actionContentColumn = ins.selectComponent(".action-column");
+    }
+    var touch = e && e.touches && e.touches[0];
+    startX = (touch && touch.pageX) || 0;
+    startY = (touch && touch.pageY) || 0;
+    momentumStartX = moveX;
+    prevX = moveX;
+    startTime = getDate();
+    duration = 0;
+  },
+  onTouchmove: function (e) {
+    if (cFieldsLength === 3) {
+      return;
+    }
+    var touch = e && e.touches && e.touches[0];
+    var pageX = (touch && touch.pageX) || 0;
+    var pageY = (touch && touch.pageY) || 0;
+    var absX = Math.abs(pageX - startX);
+    var absY = Math.abs(pageY - startY);
+    if (absY > absX) {
+      return true;
+    }
+    var detlaX = pageX - startX;
+    moveX = Math.round(detlaX + prevX);
+    if (moveX < minX) {
+      moveX = minX;
+    } else if (moveX > maxX) {
+      moveX = maxX;
+    }
+    if (!(moveX >= 0 || moveX <= minX)) {
+      setColumnOpacity(0);
+    }
+    var style = {
+      transform: "translateX(" + moveX + "px)",
+      "transition-duration": 0 + "ms",
+      "transition-timing-function": "linear",
+    };
+    sortBar.setStyle(style);
+    fakeSortBar.setStyle(style);
+    dataColumn.setStyle(style);
+    var now = getDate();
+    if (now - startTime > momentumTimeThreshold) {
+      momentumStartX = moveX;
+      startTime = now;
+    }
+    return false;
+  },
+  onTouchend: function (e, ins) {
+    if (cFieldsLength === 3) {
+      return;
+    }
+    if (isNeedReset()) return;
+    var absDeltaX = Math.abs(moveX - momentumStartX);
+    var timeGap = getDate() - startTime;
+    if (timeGap < momentumTimeThreshold && absDeltaX > momentumXThreshold) {
+      var res = momentum(moveX, momentumStartX, timeGap);
+      moveX = Math.round(res.destination);
+      var style = {
+        transform: "translateX(" + moveX + "px)",
+        "transition-duration": res.duration + "ms",
+        "transition-timing-function": res.bezier,
+      };
+      sortBar.setStyle(style);
+      fakeSortBar.setStyle(style);
+      dataColumn.setStyle(style);
+    }
+    setColumnOpacity(1, false, ins);
+  },
+  onTransitionEnd: function (e, ins) {
+    setColumnOpacity(1, true, ins);
+    isNeedReset();
+  },
+};

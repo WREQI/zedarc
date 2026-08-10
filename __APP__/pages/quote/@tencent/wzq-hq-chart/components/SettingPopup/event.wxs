@@ -1,0 +1,33 @@
+var startX = 0;
+var startY = 0;
+module.exports = {
+  touchstart: function (event) {
+    var touch = event.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  },
+  touchmove: function (event) {
+    var disabbleDirection = event.currentTarget.dataset.direction;
+    var touch = event.touches[0];
+    var currentX = touch.clientX;
+    var currentY = touch.clientY;
+    var moveX = currentX - startX;
+    var moveY = currentY - startY;
+    startX = currentX;
+    startY = currentY;
+    if (disabbleDirection === "right") {
+      return Math.abs(moveX) > Math.abs(moveY) && moveX > 0;
+    }
+    if (disabbleDirection === "left") {
+      return Math.abs(moveX) > Math.abs(moveY) && moveX < 0;
+    }
+    if (disabbleDirection === "leftright") {
+      return !Math.abs(moveX) > Math.abs(moveY);
+    }
+    return true;
+  },
+  touchend: function () {
+    startX = 0;
+    startY = 0;
+  },
+};

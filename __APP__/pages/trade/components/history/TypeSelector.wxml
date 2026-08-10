@@ -1,0 +1,44 @@
+<action-sheet
+  bind:__l="__l"
+  bindmaskClick="{{f}}"
+  class="data-v-8d9ed1bb"
+  uI="8d9ed1bb-0"
+  uP="{{g}}"
+  uS="{{['d']}}"
+  wx:if="{{g}}"
+>
+  <view
+    class="{{['content-wrap','data-v-8d9ed1bb',e&&'content-wrap__simple-mode']}}"
+  >
+    <view class="content-wrap-detail data-v-8d9ed1bb">
+      <view class="desc data-v-8d9ed1bb">交易类型</view>
+      <view class="btn-list flex data-v-8d9ed1bb">
+        <view
+          bindtap="{{item.e}}"
+          class="{{['btn-item','data-v-8d9ed1bb',item.c,item.d]}}"
+          wx:for="{{a}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+      <view class="desc data-v-8d9ed1bb">业务类型</view>
+      <view class="btn-list flex data-v-8d9ed1bb">
+        <view
+          bindtap="{{item.e}}"
+          class="{{['btn-item','data-v-8d9ed1bb',item.c,item.d]}}"
+          wx:for="{{b}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+    </view>
+    <view class="button-wrap flex flex-vcenter data-v-8d9ed1bb">
+      <button bindtap="{{c}}" class="cancel-btn flex-1 data-v-8d9ed1bb">
+        取消
+      </button>
+      <button bindtap="{{d}}" class="confirm-btn flex-1 data-v-8d9ed1bb">
+        确定
+      </button>
+    </view>
+  </view>
+</action-sheet>

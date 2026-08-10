@@ -1,0 +1,202 @@
+<view class="{{['_div','content-wrapper','data-v-a7b0c0a1',x]}}">
+  <view bindtap="{{b}}" class="_div go-back data-v-a7b0c0a1" wx:if="{{a}}">
+    <image
+      alt=""
+      class="_img back-img data-v-a7b0c0a1"
+      src="https://st.gtimg.com/design/024652e0868c92c986685d7bca504aa4.png"
+    ></image
+    >切回竖屏</view
+  >
+  <view class="_div sort-bar data-v-a7b0c0a1">
+    <view class="_div sort-bar-inner data-v-a7b0c0a1">
+      <view
+        class="_div name-title data-v-a7b0c0a1"
+        style="{{'padding-left:'+c}}"
+        >股票名称</view
+      >
+      <view class="_div sortable-captions data-v-a7b0c0a1">
+        <view
+          bindtouchend="{{events.onTouchend}}"
+          bindtouchmove="{{events.onTouchmove}}"
+          bindtouchstart="{{events.onTouchstart}}"
+          bindtransitionend="{{events.onTransitionEnd}}"
+          class="_div sortable-row data-v-a7b0c0a1"
+        >
+          <view
+            bindtap="{{caption.g}}"
+            class="_div caption data-v-a7b0c0a1"
+            wx:for="{{d}}"
+            wx:for-item="caption"
+            wx:key="f"
+          >
+            <view
+              class="{{['_div','data-v-a7b0c0a1','caption-name',caption.c]}}"
+              >{{caption.a}}<label
+                class="_span data-v-a7b0c0a1"
+                wx:if="{{caption.b}}"
+                >(USD)</label
+              >
+            </view>
+            <label class="_span caption-arrow data-v-a7b0c0a1">
+              <view
+                class="{{['_i','up','data-v-a7b0c0a1',caption.d&&'activated']}}"
+              ></view>
+              <view
+                class="{{['_i','down','data-v-a7b0c0a1',caption.e&&'activated']}}"
+              ></view>
+            </label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{o}}"
+    bindrefresherrefresh="{{q}}"
+    bindrefresherrestore="{{p}}"
+    bindscroll="{{r}}"
+    bindscrolltolower="{{s}}"
+    class="stock-scroll-list data-v-a7b0c0a1"
+    lowerThreshold="{{100}}"
+    refresherDefaultStyle="black"
+    refresherEnabled="true"
+    refresherThreshold="100"
+    refresherTriggered="{{n}}"
+    wx:if="{{e}}"
+  >
+    <view class="_div list-wrapper data-v-a7b0c0a1">
+      <view class="_div name-column data-v-a7b0c0a1">
+        <view
+          bindtap="{{stock.o}}"
+          class="{{['_div','portfolio-stock-item','item-wrap','data-v-a7b0c0a1',stock.m,stock.n]}}"
+          style="{{'padding-left:'+g}}"
+          wx:for="{{f}}"
+          wx:for-item="stock"
+          wx:key="l"
+        >
+          <view
+            bindanimationend="{{stock.c}}"
+            class="{{['_div','data-v-a7b0c0a1',stock.b,'bg-gradient-animate']}}"
+            wx:if="{{stock.a}}"
+          ></view>
+          <view class="_div stock-info column data-v-a7b0c0a1">
+            <label
+              class="{{['_span','stock-info-name','text-black','data-v-a7b0c0a1',stock.e]}}"
+              >{{stock.d}}</label
+            >
+            <view class="_div stock-info-scode text-gray data-v-a7b0c0a1">
+              <view class="_div new-market-icon data-v-a7b0c0a1">
+                <market-icon-sprite
+                  bind:__l="__l"
+                  class="data-v-a7b0c0a1"
+                  uI="{{stock.f}}"
+                  uP="{{stock.g}}"
+                  wx:if="{{stock.g}}"
+                ></market-icon-sprite>
+              </view>
+              <view class="_div block stock-code-wrapper data-v-a7b0c0a1">
+                <label class="_span stock-code data-v-a7b0c0a1"
+                  >{{stock.h}}</label
+                >
+                <image
+                  alt
+                  class="_img icon icon-delay delay data-v-a7b0c0a1"
+                  src="https://st.gtimg.com/design/d9bdf6eb6ce682f94ee4882d2c8c4622.png"
+                  wx:if="{{stock.i}}"
+                ></image>
+              </view>
+              <view
+                class="_div tracked-label data-v-a7b0c0a1"
+                wx:if="{{stock.j}}"
+                >{{stock.k}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        bindtouchend="{{events.onTouchend}}"
+        bindtouchmove="{{events.onTouchmove}}"
+        bindtouchstart="{{events.onTouchstart}}"
+        bindtransitionend="{{events.onTransitionEnd}}"
+        class="_div data-column data-v-a7b0c0a1"
+      >
+        <view class="_div data-column-inner data-v-a7b0c0a1">
+          <view
+            bindtap="{{stock.j}}"
+            class="{{['_div','portfolio-stock-item','item-wrap','data-v-a7b0c0a1',stock.h,stock.i]}}"
+            wx:for="{{h}}"
+            wx:for-item="stock"
+            wx:key="g"
+          >
+            <view
+              bindanimationend="{{stock.c}}"
+              class="{{['_div','data-v-a7b0c0a1',stock.b,'bg-gradient-animate']}}"
+              wx:if="{{stock.a}}"
+            ></view>
+            <block wx:if="{{stock.d}}">
+              <view
+                class="{{['_div','stock-block','data-v-a7b0c0a1',stock.f]}}"
+                wx:for="{{stock.e}}"
+                wx:for-item="c"
+                wx:key="o"
+              >
+                <block wx:if="{{c.a}}">{{c.b}}</block>
+                <label
+                  class="{{['_span','stock-rise-info','data-v-a7b0c0a1',c.e]}}"
+                  wx:elif="{{c.c}}"
+                  >{{c.d}}</label
+                >
+                <label
+                  class="{{['_span','stock-rise-info','data-v-a7b0c0a1',c.h]}}"
+                  wx:elif="{{c.f}}"
+                  >{{c.g}}</label
+                >
+                <block wx:elif="{{c.i}}">
+                  <block wx:if="{{c.j}}">{{c.k}}</block>
+                  <block wx:else>{{c.l}}</block>
+                </block>
+                <block wx:elif="{{c.m}}">{{c.n}}</block>
+              </view>
+            </block>
+            <view class="_div stock-unusable data-v-a7b0c0a1" wx:else
+              >该行情仅自选股App可看</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <block wx:if="{{i}}">
+      <view
+        class="_div hk-message border-bottom-1px data-v-a7b0c0a1"
+        style="{{'padding-left:'+l}}"
+        wx:if="{{j}}"
+        >应港交所要求基本行情需手动刷新<label
+          class="_span data-v-a7b0c0a1"
+          wx:if="{{k}}"
+          >，超出20只的港股延时15分钟</label
+        >
+      </view>
+    </block>
+    <view class="_div loading-dots data-v-a7b0c0a1" wx:elif="{{m}}">
+      <view class="_div dot dot-1 data-v-a7b0c0a1"></view>
+      <view class="_div dot dot-2 data-v-a7b0c0a1"></view>
+      <view class="_div dot dot-3 data-v-a7b0c0a1"></view>
+    </view>
+    <view class="_div mp-list-placeholder data-v-a7b0c0a1"></view>
+  </scroll-view>
+  <view class="_div empty-page data-v-a7b0c0a1" wx:elif="{{t}}">
+    <empty
+      bind:__l="__l"
+      class="data-v-a7b0c0a1"
+      uI="a7b0c0a1-1"
+      uP="{{v}}"
+      wx:if="{{v}}"
+    ></empty>
+    <view catchtap="{{w}}" class="_div add-stock-btn data-v-a7b0c0a1">
+      <view class="_div icon icon-add-bold data-v-a7b0c0a1"></view
+      >添加股票</view
+    >
+  </view>
+</view>

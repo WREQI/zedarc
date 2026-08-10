@@ -1,0 +1,69 @@
+.mod-show-more.data-v-bfbc051f {
+  color: #5f86bd;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.mod-show-more.desc .text.data-v-bfbc051f,
+.mod-show-more.long .text.data-v-bfbc051f,
+.mod-show-more.reply .text.data-v-bfbc051f,
+.mod-show-more.short .text.data-v-bfbc051f,
+.mod-show-more.turn .text.data-v-bfbc051f,
+.mod-show-more.turnLog .text.data-v-bfbc051f,
+.mod-show-more.turnNews .text.data-v-bfbc051f {
+  background-color: #fff;
+}
+.mod-show-more.desc .fold-text.data-v-bfbc051f,
+.mod-show-more.long .fold-text.data-v-bfbc051f,
+.mod-show-more.reply .fold-text.data-v-bfbc051f,
+.mod-show-more.short .fold-text.data-v-bfbc051f,
+.mod-show-more.turn .fold-text.data-v-bfbc051f,
+.mod-show-more.turnLog .fold-text.data-v-bfbc051f,
+.mod-show-more.turnNews .fold-text.data-v-bfbc051f {
+  font-size: 0.37333333333333335rem;
+}
+.mod-show-more.desc .shadow-box.data-v-bfbc051f,
+.mod-show-more.long .shadow-box.data-v-bfbc051f,
+.mod-show-more.reply .shadow-box.data-v-bfbc051f,
+.mod-show-more.short .shadow-box.data-v-bfbc051f,
+.mod-show-more.turn .shadow-box.data-v-bfbc051f,
+.mod-show-more.turnLog .shadow-box.data-v-bfbc051f,
+.mod-show-more.turnNews .shadow-box.data-v-bfbc051f {
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), #fff);
+}
+.mod-show-more.comment .fold-text.data-v-bfbc051f,
+.mod-show-more.desc .fold-text.data-v-bfbc051f,
+.mod-show-more.turnLog .fold-text.data-v-bfbc051f,
+.mod-show-more.turnShort .fold-text.data-v-bfbc051f {
+  font-size: 0.37333333333333335rem;
+}
+.mod-show-more.comment .text.data-v-bfbc051f,
+.mod-show-more.turnShort .text.data-v-bfbc051f {
+  background: linear-gradient(180deg, #f5f6fa, #fafafc);
+}
+.mod-show-more.comment .shadow-box.data-v-bfbc051f,
+.mod-show-more.turnShort .shadow-box.data-v-bfbc051f {
+  background: linear-gradient(90deg, rgba(245, 246, 250, 0), #f5f6fa);
+}
+.mod-show-more i.data-v-bfbc051f {
+  display: none;
+}
+.mod-show-more .text.data-v-bfbc051f {
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+}
+.mod-show-more .text .dian.data-v-bfbc051f {
+  color: #262e40;
+}
+.mod-show-more.isFolded.data-v-bfbc051f {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+}
+.mod-show-more.isFolded i.data-v-bfbc051f {
+  display: block;
+  height: 0.5866666666666667rem;
+  width: 0.6666666666666666rem;
+}

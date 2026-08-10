@@ -1,0 +1,7 @@
+<view
+  bindlongpress="{{a}}"
+  catchtap="{{b}}"
+  class="_div longpress-container data-v-f9eb36e4"
+>
+  <slot name="longpresscontent"></slot>
+</view>

@@ -1,0 +1,9 @@
+<view class="_div tab-wrapper data-v-4c819644">
+  <view
+    bindtap="{{item.d}}"
+    class="{{['_div','data-v-4c819644','tab-item',item.c,b]}}"
+    wx:for="{{a}}"
+    wx:key="b"
+    >{{item.a}}</view
+  >
+</view>

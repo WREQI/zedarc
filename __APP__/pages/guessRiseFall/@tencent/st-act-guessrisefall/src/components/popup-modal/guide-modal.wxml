@@ -1,0 +1,90 @@
+<base-modal
+  bind:__l="__l"
+  bindclose="{{v}}"
+  bindupdateVisible="{{t}}"
+  class="data-v-7c66bf5c"
+  uI="7c66bf5c-0"
+  uP="{{w}}"
+  uS="{{['d']}}"
+  wx:if="{{w}}"
+>
+  <view class="_div guide-modal data-v-7c66bf5c">
+    <view class="_div guide-modal__header data-v-7c66bf5c">
+      <view class="_div guide-modal__notice data-v-7c66bf5c"></view>
+      <view class="_div guide-modal__subtitle data-v-7c66bf5c"
+        >请留意{{a}}竞猜结果提醒</view
+      >
+    </view>
+    <view class="_div guide-modal__content data-v-7c66bf5c">
+      <view class="_div guide-modal__title data-v-7c66bf5c"></view>
+      <view
+        class="_div guide-modal__info data-v-7c66bf5c"
+        hidden="{{!g}}"
+        wx:if="{{b}}"
+      >
+        <lottie-com
+          bind:__l="__l"
+          bindlottieReady="{{c}}"
+          class="data-v-7c66bf5c"
+          data-c-h="{{!false}}"
+          uI="7c66bf5c-1,7c66bf5c-0"
+        ></lottie-com>
+        <canvas
+          canvasId="dapan-lottie-animate"
+          class="dapan-lottie-animate data-v-7c66bf5c"
+          disableScroll="{{true}}"
+          style="{{d}}"
+          type="2d"
+        ></canvas>
+        <view class="_div guide-modal__desc data-v-7c66bf5c"
+          >当前有超过<label
+            class="_span guide-modal__percent--account data-v-7c66bf5c"
+            >{{e}}%</label
+          >用户看好{{f}}</view
+        >
+      </view>
+      <block wx:if="{{h}}">
+        <view class="_div guide-modal__sub-title data-v-7c66bf5c"
+          >你最近的竞猜胜率超过</view
+        >
+        <view
+          class="_div guide-modal__follow-desc data-v-7c66bf5c"
+          hidden="{{!l}}"
+        >
+          <lottie-com
+            bind:__l="__l"
+            bindlottieReady="{{i}}"
+            class="data-v-7c66bf5c"
+            data-c-h="{{!false}}"
+            uI="7c66bf5c-2,7c66bf5c-0"
+          ></lottie-com>
+          <canvas
+            canvasId="dapan-lottie-animate"
+            class="dapan-lottie-animate data-v-7c66bf5c"
+            disableScroll="{{true}}"
+            style="{{j}}"
+            type="2d"
+          ></canvas>
+          <label class="_span guide-modal__percent--follow data-v-7c66bf5c"
+            >{{k}}</label
+          >
+          <label class="_span data-v-7c66bf5c">%</label>
+          <label class="_span data-v-7c66bf5c">用户</label>
+        </view>
+      </block>
+      <view
+        bindtap="{{o}}"
+        class="{{['_div','guide-modal__btn','data-v-7c66bf5c',n&&'guide-modal__btn--follow']}}"
+        >{{m}}</view
+      >
+      <view class="{{['_div','guide-modal__tip','data-v-7c66bf5c',s]}}">
+        <block wx:if="{{p}}">今日舆情普遍看涨，投资快人一步</block>
+        <block wx:else
+          >若跟投近{{q}}收益率即达<label class="_span data-v-7c66bf5c"
+            >{{r}}%</label
+          >
+        </block>
+      </view>
+    </view>
+  </view>
+</base-modal>

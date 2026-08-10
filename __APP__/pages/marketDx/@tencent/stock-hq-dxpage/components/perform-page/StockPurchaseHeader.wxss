@@ -1,0 +1,154 @@
+.header.data-v-1784287e {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  overflow: hidden;
+  padding-right: 0.32rem;
+}
+.spec-line.data-v-1784287e {
+  background-color: var(--border-light);
+  height: 0.013333333333333334rem;
+  margin: 0.32rem 0;
+  width: 100%;
+}
+.oem-header.data-v-1784287e {
+  padding-top: 0.4rem;
+}
+.oem-header .list-container.data-v-1784287e {
+  padding-bottom: 0.5333333333333333rem;
+}
+.mini-header .list-container.data-v-1784287e,
+.wzq-header .list-container.data-v-1784287e {
+  padding-bottom: 0.4rem;
+  padding-top: 0.4rem;
+}
+.mini-header
+  .list-container-hs.list-container-stock.data-v-1784287e:nth-child(-n + 2),
+.wzq-header
+  .list-container-hs.list-container-stock.data-v-1784287e:nth-child(-n + 2) {
+  border: 0.013333333333333334rem solid var(--border-light);
+}
+.mini-header
+  .list-container-hs.list-container-stock.data-v-1784287e:nth-child(
+    -n + 2
+  ):after,
+.wzq-header
+  .list-container-hs.list-container-stock.data-v-1784287e:nth-child(
+    -n + 2
+  ):after {
+  left: 0.5333333333333333rem;
+  width: 8.933333333333334rem;
+}
+.mini-header .list-container-hs.list-container-bond.data-v-1784287e:first-child,
+.wzq-header .list-container-hs.list-container-bond.data-v-1784287e:first-child {
+  border: 0.013333333333333334rem solid var(--border-light);
+}
+.mini-header
+  .list-container-hs.list-container-bond.data-v-1784287e:first-child:after,
+.wzq-header
+  .list-container-hs.list-container-bond.data-v-1784287e:first-child:after {
+  left: 0.5333333333333333rem;
+  width: 8.933333333333334rem;
+}
+.oem-header .list-container-hs.list-container-stock.data-v-1784287e {
+  padding-bottom: 1.1733333333333333rem;
+}
+.mini-header .list-container-bond.data-v-1784287e,
+.mini-header .list-container-stock.data-v-1784287e {
+  margin-left: 0.5333333333333333rem;
+}
+.mini-header .list-container-stock.data-v-1784287e:nth-child(-n + 2) {
+  border-bottom: 0.013333333333333334rem solid var(--border-light);
+}
+.title.data-v-1784287e {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  height: 0.5333333333333333rem;
+  padding-bottom: 0.21333333333333335rem;
+}
+.title .title-name.data-v-1784287e {
+  color: var(--text-color-1);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+}
+.title .tips.data-v-1784287e {
+  height: 0.32rem;
+  margin-left: 0.13333333333333333rem;
+  width: 0.32rem;
+}
+.h5-title.data-v-1784287e {
+  padding-left: 0;
+}
+.item-container.data-v-1784287e {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  height: 1.16rem;
+  justify-content: space-between;
+}
+.item-container .item.data-v-1784287e {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 35%;
+}
+.item-container .item.data-v-1784287e:last-child {
+  width: 30%;
+}
+.item-container .item .top-title.data-v-1784287e {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.44rem;
+}
+.item-container .item .top-title-oem.data-v-1784287e {
+  color: var(--text-color-2);
+}
+.item-container .item .bottom-title.data-v-1784287e {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.6666666666666666rem;
+  margin-top: 0.05333333333333334rem;
+}
+.item-container .wzq-item.data-v-1784287e {
+  padding-left: 0.5333333333333333rem;
+}
+.oem-item-container.data-v-1784287e {
+  margin-left: 1.0666666666666667rem;
+}
+.bottom-desc.data-v-1784287e {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  margin-top: 0.10666666666666667rem;
+}
+.bottom-desc-oem.data-v-1784287e {
+  color: var(--text-color-3);
+}
+.bottom-desc-mini.data-v-1784287e {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.header-sepeator.data-v-1784287e {
+  background-color: var(--fill-1);
+  height: 0.16rem;
+}
+.color-rise.data-v-1784287e {
+  color: var(--color-red) !important;
+}
+.color-fall.data-v-1784287e {
+  color: var(--color-green) !important;
+}
+.color-equal.data-v-1784287e {
+  color: var(--color-heavygray) !important;
+}

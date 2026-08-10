@@ -1,0 +1,24 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="0f83a380-0"
+  uP="{{d}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <apply-wrap bind:__l="__l" uI="0f83a380-1,0f83a380-0" uS="{{['d']}}">
+    <apply-status
+      bind:__l="__l"
+      uI="0f83a380-2,0f83a380-1"
+      wx:if="{{b}}"
+    ></apply-status>
+    <old-recover
+      bind:__l="__l"
+      uI="0f83a380-3,0f83a380-1"
+      wx:else
+    ></old-recover>
+  </apply-wrap>
+</global-wrap>

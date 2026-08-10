@@ -1,0 +1,19 @@
+<view class="{{['_div','data-v-88095698',g,h]}}" wx:if="{{a}}">
+  <view bindtap="{{b}}" class="_div dialog-backdrop data-v-88095698"></view>
+  <view class="_div dialog-body data-v-88095698">
+    <view class="_div dialog-header data-v-88095698">
+      <label class="_span dialog-title data-v-88095698">免责声明</label>
+      <image
+        bindtap="{{d}}"
+        class="_img dialog-title-close data-v-88095698"
+        src="{{c}}"
+      ></image>
+    </view>
+    <view class="_div content-container data-v-88095698">
+      <label class="_span content data-v-88095698">{{e}}</label>
+    </view>
+    <view catchtap="{{f}}" class="_div confirmBtn data-v-88095698"
+      >我知道了</view
+    >
+  </view>
+</view>

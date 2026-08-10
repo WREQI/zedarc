@@ -1,0 +1,107 @@
+<view
+  class="_div etf-buy-index data-v-46c16173"
+  data-st-theme="{{A}}"
+  data-test-id="buy-index-landing-page"
+>
+  <buy-index-nav-bar
+    bind:__l="__l"
+    bindback="{{a}}"
+    bindlayout="{{b}}"
+    class="data-v-46c16173"
+    uI="46c16173-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></buy-index-nav-bar>
+  <buy-index-hero-section
+    bind:__l="__l"
+    class="data-v-46c16173"
+    uI="46c16173-1"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></buy-index-hero-section>
+  <view class="_div etf-buy-index__content data-v-46c16173">
+    <view
+      class="_div etf-buy-index__module etf-buy-index__module--benefits data-v-46c16173"
+    >
+      <buy-index-benefits-section
+        bind:__l="__l"
+        class="data-v-46c16173"
+        uI="46c16173-2"
+      ></buy-index-benefits-section>
+    </view>
+    <view
+      class="_div etf-buy-index__module etf-buy-index__module--recommend data-v-46c16173"
+    >
+      <buy-index-recommend-block
+        bind:__l="__l"
+        bindautoinvest="{{g}}"
+        bindbuy="{{f}}"
+        bindcardClick="{{h}}"
+        class="r data-v-46c16173"
+        uI="46c16173-3"
+        uP="{{i}}"
+        uR="recommendBlockRef"
+        wx:if="{{i}}"
+      ></buy-index-recommend-block>
+    </view>
+    <view
+      class="_div etf-buy-index__module etf-buy-index__module--rank data-v-46c16173"
+    >
+      <buy-index-broad-rank-block
+        bind:__l="__l"
+        bindfilterChange="{{k}}"
+        bindshare="{{m}}"
+        bindtabChange="{{j}}"
+        bindviewAll="{{l}}"
+        class="data-v-46c16173"
+        uI="46c16173-4"
+        uP="{{n}}"
+        wx:if="{{n}}"
+      ></buy-index-broad-rank-block>
+    </view>
+    <view
+      class="_div etf-buy-index__module etf-buy-index__module--tips data-v-46c16173"
+    >
+      <buy-index-risk-tips
+        bind:__l="__l"
+        class="data-v-46c16173"
+        uI="46c16173-5"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></buy-index-risk-tips>
+    </view>
+    <trust-footer
+      bind:__l="__l"
+      class="data-v-46c16173"
+      uI="46c16173-6"
+      wx:if="{{p}}"
+    ></trust-footer>
+  </view>
+  <footer-bar
+    bind:__l="__l"
+    bindask="{{q}}"
+    bindshare="{{r}}"
+    class="etf-buy-index__footer-bar data-v-46c16173"
+    uI="46c16173-7"
+    uP="{{s}}"
+    wx:if="{{s}}"
+  ></footer-bar>
+  <root-portal class="data-v-46c16173" enable="{{true}}" wx:if="{{t}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{v}}"
+      class="data-v-46c16173"
+      uI="46c16173-8"
+      uP="{{w}}"
+      wx:if="{{w}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{y}}"
+    class="data-v-46c16173"
+    uI="46c16173-9"
+    uP="{{z}}"
+    wx:elif="{{x}}"
+  ></half-screen-ai-entry>
+</view>

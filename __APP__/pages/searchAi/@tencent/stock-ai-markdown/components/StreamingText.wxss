@@ -1,0 +1,11 @@
+.streaming-text-color-segment.data-v-fd14b889 {
+  display: inline;
+}
+.streaming-text-color-char.data-v-fd14b889 {
+  color: var(--stream-text-initial-color, #bfc4ce);
+  transition: color var(--stream-text-duration, 0.55s) ease-out;
+  will-change: color;
+}
+.streaming-text-color-char--done.data-v-fd14b889 {
+  color: var(--stream-text-final-color, currentColor);
+}

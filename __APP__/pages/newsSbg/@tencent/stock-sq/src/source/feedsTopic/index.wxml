@@ -1,0 +1,19 @@
+<view catchtap="{{e}}" class="_div feeds-topic data-v-5f4fe1ed">
+  <single-topic
+    bind:__l="__l"
+    bindcommentReport="{{c}}"
+    class="data-v-5f4fe1ed"
+    uI="5f4fe1ed-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{d}}"
+  >
+    <scroll-bar
+      bind:__l="__l"
+      class="data-v-5f4fe1ed"
+      uI="5f4fe1ed-1,5f4fe1ed-0"
+      uP="{{b}}"
+      wx:if="{{a}}"
+    ></scroll-bar>
+  </single-topic>
+</view>

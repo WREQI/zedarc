@@ -1,0 +1,16 @@
+<detail-v1
+  bind:__l="__l"
+  bindclick="{{b}}"
+  binderror="{{c}}"
+  uI="09e7cbb1-0"
+  uP="{{d}}"
+  wx:if="{{a}}"
+></detail-v1>
+<detail-v2
+  bind:__l="__l"
+  bindclick="{{e}}"
+  binderror="{{f}}"
+  uI="09e7cbb1-1"
+  uP="{{g||''}}"
+  wx:else
+></detail-v2>

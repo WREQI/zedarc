@@ -1,0 +1,49 @@
+<view class="_div mod-otherSource data-v-d2630d25" wx:if="{{a}}">
+  <view
+    catchtap="{{f}}"
+    class="_div source_others data-v-d2630d25"
+    wx:if="{{b}}"
+  >
+    <view
+      class="{{['_div','source_inline','source_others_op','data-v-d2630d25',d]}}"
+      wx:if="{{c}}"
+    ></view>
+    <view class="_div source_inline source_others_text data-v-d2630d25"
+      >{{e}}</view
+    >
+  </view>
+  <view
+    catchtap="{{l}}"
+    class="_div source_others data-v-d2630d25"
+    wx:if="{{g}}"
+  >
+    <view class="_div source_inline source_others_op data-v-d2630d25">
+      <base-image
+        bind:__l="__l"
+        class="data-v-d2630d25"
+        uI="d2630d25-0"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></base-image>
+    </view>
+    <view
+      class="_div source_inline source_others_text data-v-d2630d25"
+      wx:if="{{i}}"
+    >
+      <label
+        class="_span source_others_text_tag data-v-d2630d25"
+        wx:for="{{j}}"
+        wx:for-item="tag"
+        wx:key="d"
+        >{{tag.a}}<label
+          class="_span source_others_text_tag_dian data-v-d2630d25"
+          wx:if="{{tag.b}}"
+        ></label>
+        <label
+          class="_span source_others_text_tag_line data-v-d2630d25"
+          wx:if="{{tag.c}}"
+        ></label> </label
+      >{{k}}</view
+    >
+  </view>
+</view>

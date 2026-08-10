@@ -1,0 +1,20 @@
+<view
+  catchtap="{{e}}"
+  catchtouchmove="{{d}}"
+  class="_div trade-timeline-mask-wrapper data-v-3315c0d0"
+  data-st-theme="{{f}}"
+>
+  <view catchtap="{{c}}" class="_div trade-timeline-popup data-v-3315c0d0">
+    <view class="_div trade-timeline-top data-v-3315c0d0">
+      <view class="_div trade-timeline-title data-v-3315c0d0">交易时间</view>
+      <image
+        catchtap="{{a}}"
+        class="_img trade-timeline-close data-v-3315c0d0"
+        src="https://st.gtimg.com/design/5f974828bcad5ff05484543acbaf23b0.png"
+      ></image>
+    </view>
+    <view
+      class="{{['_div','trade-timeline-image','data-v-3315c0d0',b]}}"
+    ></view>
+  </view>
+</view>

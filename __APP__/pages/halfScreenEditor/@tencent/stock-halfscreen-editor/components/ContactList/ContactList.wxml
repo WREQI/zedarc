@@ -1,0 +1,64 @@
+<view class="_div contact-list-container data-v-89266d3e">
+  <scroll-view
+    scrollY
+    class="contact-list data-v-89266d3e"
+    ref="contactList"
+    scrollTop="{{b}}"
+    scrollWithAnimation="{{true}}"
+  >
+    <view
+      class="_div contact-group data-v-89266d3e"
+      wx:for="{{a}}"
+      wx:for-item="group"
+      wx:key="d"
+    >
+      <view class="_div group-header data-v-89266d3e" id="{{group.b}}"
+        >{{group.a}}</view
+      >
+      <view class="_div contact-items data-v-89266d3e">
+        <view
+          bindtap="{{contact.h}}"
+          class="_div contact-item data-v-89266d3e"
+          wx:for="{{group.c}}"
+          wx:for-item="contact"
+          wx:key="g"
+        >
+          <view class="_div head-img-container data-v-89266d3e">
+            <image
+              alt="{{contact.c}}"
+              class="_img head-img data-v-89266d3e"
+              src="{{contact.b}}"
+              wx:if="{{contact.a}}"
+            ></image>
+            <image
+              alt="vip-icon"
+              class="_img icon-vip data-v-89266d3e"
+              src="https://st.gtimg.com/design/f704103913d3b44e7f7edce709d02fe9.webp"
+              wx:if="{{contact.d}}"
+            ></image>
+            <image
+              alt="vip-icon"
+              class="_img icon-vip data-v-89266d3e"
+              src="https://st.gtimg.com/design/ebcf024baba0ed9dd5db02368cbe5644.webp"
+              wx:if="{{contact.e}}"
+            ></image>
+          </view>
+          <view class="_div contact-info data-v-89266d3e">
+            <view class="_div contact-name data-v-89266d3e">{{contact.f}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="_div alphabet-nav data-v-89266d3e">
+    <view
+      bindtap="{{letter.e}}"
+      class="{{['_div','data-v-89266d3e','nav-item',letter.c]}}"
+      data-letter="{{letter.d}}"
+      wx:for="{{c}}"
+      wx:for-item="letter"
+      wx:key="b"
+      >{{letter.a}}</view
+    >
+  </view>
+</view>

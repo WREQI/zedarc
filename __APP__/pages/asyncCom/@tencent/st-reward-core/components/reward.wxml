@@ -1,0 +1,5 @@
+<view class="_div reward-main" wx:if="{{a}}">
+  <label class="_span reward-num">{{b}}</label>
+  <label class="_span reward-unit">{{c}}</label>
+</view>
+<view class="_div reward-main" wx:else>{{d}}</view>

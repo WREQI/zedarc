@@ -1,0 +1,42 @@
+<view
+  class="{{['stock-list--delisted',d&&'stock-list--delisted__simple-mode',e&&'border--bottom-c1']}}"
+>
+  <list-header
+    bind:__l="__l"
+    uI="44d13bc9-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></list-header>
+  <view
+    class="{{['stock-list--delisted-item',item.l&&'border--bottom-c1']}}"
+    wx:for="{{b}}"
+    wx:key="k"
+  >
+    <block wx:if="{{c}}">
+      <view class="hide-title">***</view>
+      <view class="hide-desc"
+        >*********************************************</view
+      >
+    </block>
+    <block wx:else>
+      <view class="flex-between">
+        <view class="stock-name">{{item.a}}（持有{{item.b}}{{item.c}}）</view>
+        <view bindtap="{{item.d}}" class="ico-more"></view>
+      </view>
+      <view class="desc">
+        <block wx:if="{{item.e}}">
+          <label class="tag">已转板</label
+          >该证券于{{item.f}}从{{item.g}}退市，你持有的股份已进入退市板转让交易。</block
+        >
+        <block wx:else>
+          <label class="tag">已退市</label
+          >该证券于{{item.h}}从{{item.i}}退市，如公司因合并等主动原因退市将无法继续交易；其他情况退市，你持有的股份预计45个交易日内进入退市板转让交易。</block
+        >
+      </view>
+      <view bindtap="{{item.j}}" class="detail">
+        <view class="text">查看详情</view>
+        <view class="icon-arrow-link"></view>
+      </view>
+    </block>
+  </view>
+</view>

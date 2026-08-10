@@ -1,0 +1,69 @@
+<view class="transfer-out">
+  <transfer-info
+    bind:__l="__l"
+    uI="4c48ce2b-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></transfer-info>
+  <transfer-form
+    bind:__l="__l"
+    bindblur="{{l}}"
+    bindfocus="{{k}}"
+    bindinput="{{j}}"
+    uI="4c48ce2b-1"
+    uP="{{m}}"
+    uS="{{['tips','action']}}"
+    wx:if="{{m}}"
+  >
+    <view slot="tips">
+      <view class="flex-start text-color-1 transfer-amount"
+        >可转出到银行卡：<label>{{b}}元</label>
+        <label bindtap="{{d}}" class="icon icon-info" wx:if="{{c}}"></label>
+      </view>
+      <view class="delay-tip-container">
+        <label class="delay-tip" wx:if="{{e}}">{{f}}</label>
+        <label bindtap="{{h}}" class="debt-auto-order-text" wx:if="{{g}}"
+          >去设置</label
+        >
+      </view>
+    </view>
+    <view bindtap="{{i}}" class="primary-color action" slot="action"
+      >全部转出</view
+    >
+  </transfer-form>
+  <view class="button-wrapper">
+    <button bindtap="{{o}}" disabled="{{n}}" type="primary">立即转出</button>
+  </view>
+  <view class="tips">
+    <label wx:if="{{p}}">
+      <label class="red">{{q}}<label wx:if="{{r}}">。</label> </label>
+      <label bindtap="{{v}}" class="link" wx:if="{{s}}">{{t}}</label>
+    </label>
+    <label class="red" wx:elif="{{w}}">已超出可转出金额，请调整</label>
+    <label wx:else>{{x}}</label>
+  </view>
+  <transfer-bottom-nav
+    bind:__l="__l"
+    class="transfer-bottom-nav"
+    uI="4c48ce2b-2"
+    uP="{{z}}"
+    wx:if="{{y}}"
+  ></transfer-bottom-nav>
+  <transfer-pending-tip
+    bind:__l="__l"
+    uI="4c48ce2b-3"
+    uP="{{A}}"
+    wx:if="{{A}}"
+  ></transfer-pending-tip>
+  <view class="transfer-animate" wx:if="{{B}}">
+    <transfer-loading bind:__l="__l" uI="4c48ce2b-4"></transfer-loading>
+  </view>
+  <transfer-out-pre-time-dialog
+    bind:__l="__l"
+    bindcancel="{{E}}"
+    bindconfirm="{{D}}"
+    uI="4c48ce2b-5"
+    uP="{{F}}"
+    wx:if="{{C}}"
+  ></transfer-out-pre-time-dialog>
+</view>

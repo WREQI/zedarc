@@ -1,0 +1,15 @@
+<mp-action-sheet bind:__l="__l" bindinput="{{p}}" class="{{['apply-profile-radio__container','plugin-component-action-sheet','data-v-6e741d0e',n&&'unsubmitable',o&&'hide-confirm']}}" uI="6e741d0e-0" uP="{{q}}" uS="{{['d']}}" wx:if="{{q}}">
+    <view class="actionsheet-content-container data-v-6e741d0e" ref="contentContainer">
+        <radio-group bindchange="{{d}}" class="{{['data-v-6e741d0e',c]}}">
+            <label class="{{['flex','radio-item','data-v-6e741d0e',b&&'layout layout-row',one.i&&'border--bottom']}}" hidden="{{!one.g}}" wx:for="{{a}}" wx:for-item="one" wx:key="h">
+                <view class="{{['data-v-6e741d0e',one.b]}}">{{one.a}}</view>
+                <view class="empty-radio data-v-6e741d0e" wx:if="{{one.c}}"></view>
+                <radio checked="{{one.f}}" class="data-v-6e741d0e" color="{{one.d}}" size="28" value="{{one.e}}" wx:else></radio>
+            </label>
+        </radio-group>
+        <input alwaysEmbed="{{true}}" bindblur="{{i}}" bindinput="{{k}}" class="profile-input data-v-6e741d0e" cursorSpacing="20" hidden="{{!e}}" maxlength="{{g}}" placeholder="{{h}}" ref="otherInput" type="{{f}}" value="{{j}}" wx:if="{{r0}}"></input>
+    </view>
+    <view class="fs-24 align-c info-text data-v-6e741d0e" wx:if="{{l}}">
+        <rich-text class="data-v-6e741d0e" nodes="{{m}}"></rich-text>
+    </view>
+</mp-action-sheet>

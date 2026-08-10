@@ -1,0 +1,32 @@
+<popup
+  bind:__l="__l"
+  class="one-click-transcription data-v-79cf935f"
+  uI="79cf935f-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <view class="container data-v-79cf935f">
+    <view class="header flex-center data-v-79cf935f">
+      <label class="title data-v-79cf935f">申请授权使用你的身份信息</label>
+    </view>
+    <view class="content data-v-79cf935f">
+      <view class="data-v-79cf935f"
+        >为了帮助你更快捷完成开户，我们将通过<label
+          bindtap="{{a}}"
+          class="link data-v-79cf935f"
+          >《个人信息授权书》</label
+        >授权，帮助你快速获取你在财付通支付科技有限公司绑定的身份证信息。此信息仅用于找回账号流程使用。点击“同意并授权”按钮代表你自主选择使用已经留存在财付通公司的身份证证件副本传输（转移）至{{b}}公司，且确认此身份证证件副本为你最新的真实有效的证件图片，并同意{{c}}公司通过财付通公司收集该信息。</view
+      >
+    </view>
+    <view class="button-container data-v-79cf935f">
+      <view bindtap="{{d}}" class="cancel-button data-v-79cf935f">不同意</view>
+      <view
+        bindtap="{{e}}"
+        class="confirm-button data-v-79cf935f"
+        type="primary"
+        >同意并继续</view
+      >
+    </view>
+  </view>
+</popup>

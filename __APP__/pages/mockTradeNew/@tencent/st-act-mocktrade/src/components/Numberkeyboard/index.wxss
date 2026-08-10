@@ -1,0 +1,110 @@
+.number-keyboard.data-v-2ec3d313 {
+  background: var(--fill-background);
+  width: 100%;
+}
+.number-keyboard .keyboard-body.data-v-2ec3d313 {
+  background: var(--fill-background);
+  padding: 0.32rem;
+  position: relative;
+}
+[data-st-theme="dark"] .number-keyboard .keyboard-body.data-v-2ec3d313 {
+  background: var(--fill-content-layer);
+}
+.number-keyboard .keyboard-body .keyboard-row.data-v-2ec3d313 {
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.21333333333333335rem;
+  position: relative;
+}
+.number-keyboard .keyboard-body .keyboard-row.data-v-2ec3d313:last-child {
+  margin-bottom: 0;
+}
+.number-keyboard
+  .keyboard-body
+  .keyboard-row.with-vertical-confirm
+  .key-btn.data-v-2ec3d313:not(.vertical-confirm):not(.confirm-placeholder) {
+  flex: 1;
+}
+.number-keyboard .keyboard-body .key-btn.data-v-2ec3d313 {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.6666666666666666rem;
+  height: 1.28rem;
+  justify-content: center;
+  margin-right: 0.21333333333333335rem;
+}
+.number-keyboard .keyboard-body .key-btn.data-v-2ec3d313:last-child {
+  margin-right: 0;
+}
+.number-keyboard .keyboard-body .key-btn.full-width.data-v-2ec3d313 {
+  flex: 3;
+}
+.number-keyboard .keyboard-body .confirm-placeholder.data-v-2ec3d313 {
+  flex: 1;
+  height: 1.28rem;
+  visibility: hidden;
+}
+.number-keyboard .keyboard-body .key-btn.number-key.data-v-2ec3d313 {
+  background: var(--fill-content-layer);
+  color: var(--color-heavygray);
+}
+.number-keyboard
+  .keyboard-body
+  .key-btn.number-key.decimal-key.data-v-2ec3d313 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.number-keyboard .keyboard-body .key-btn.special-key.data-v-2ec3d313 {
+  background: var(--fill-content-layer);
+  font-size: 0.37333333333333335rem;
+}
+.number-keyboard
+  .keyboard-body
+  .key-btn.special-key.close-keyboard.data-v-2ec3d313 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.number-keyboard
+  .keyboard-body
+  .key-btn.special-key.close-keyboard
+  .close-keyboard-icon.data-v-2ec3d313 {
+  background-color: var(--color-heavygray);
+  height: 0.5333333333333333rem;
+  mask-image: url(https://st.gtimg.com/design/0370faebc71808551e3ab5165c408722.svg);
+  mask-size: 100% 100%;
+  width: 0.5333333333333333rem;
+}
+.number-keyboard .keyboard-body .key-btn.special-key.clear-key.data-v-2ec3d313 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+}
+.number-keyboard .keyboard-body .key-btn.delete-key.data-v-2ec3d313 {
+  background: var(--fill-content-layer);
+}
+.number-keyboard
+  .keyboard-body
+  .key-btn.delete-key
+  .delete-key-icon.data-v-2ec3d313 {
+  background-color: var(--color-heavygray);
+  height: 0.4533333333333333rem;
+  mask-image: url(https://st.gtimg.com/design/3297f4c3e89fba1e04b6ad4100f69062.svg);
+  mask-size: 100% 100%;
+  width: 0.6133333333333333rem;
+}
+.number-keyboard .keyboard-body .key-btn.queren-key.data-v-2ec3d313 {
+  background: #38b0f5;
+  color: #fff;
+  font-size: 0.4266666666666667rem;
+  height: 2.7466666666666666rem;
+  position: absolute;
+  right: 0.32rem;
+  top: 3.28rem;
+  width: 2.1866666666666665rem;
+  z-index: 2;
+}

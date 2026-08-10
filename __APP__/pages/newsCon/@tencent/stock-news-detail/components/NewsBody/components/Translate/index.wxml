@@ -1,0 +1,12 @@
+<view class="_div data-v-6cb3f228">
+  <view catchtap="{{c}}" class="{{['_div','data-v-6cb3f228',b]}}" wx:if="{{a}}">
+    <view class="_div text data-v-6cb3f228">英文资讯已支持翻译，点击切换</view>
+    <view class="_div arrow data-v-6cb3f228"></view>
+  </view>
+  <view catchtap="{{f}}" class="{{['_div','data-v-6cb3f228',e]}}" wx:if="{{d}}">
+    <image
+      class="_img icon-text data-v-6cb3f228"
+      src="https://st.gtimg.com/design/c68a6a0e1709fb2aec2e86e3f18ac961.png"
+    ></image>
+  </view>
+</view>

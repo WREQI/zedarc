@@ -1,0 +1,26 @@
+<view
+  class="{{['_div','trade-detail','data-v-98ee9ca3',g&&'landscape-wrapper']}}"
+>
+  <portrait
+    bind:__l="__l"
+    bindchangeRefreshStatus="{{b}}"
+    class="data-v-98ee9ca3"
+    uI="98ee9ca3-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></portrait>
+  <landscape-level2
+    bind:__l="__l"
+    class="data-v-98ee9ca3"
+    uI="98ee9ca3-1"
+    uP="{{e}}"
+    wx:elif="{{d}}"
+  ></landscape-level2>
+  <landscape
+    bind:__l="__l"
+    class="data-v-98ee9ca3"
+    uI="98ee9ca3-2"
+    uP="{{f||''}}"
+    wx:else
+  ></landscape>
+</view>

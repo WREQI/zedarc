@@ -1,0 +1,19 @@
+<view class="_div inverse-page-container data-v-e660b986">
+  <inverse-rate
+    bind:__l="__l"
+    class="data-v-e660b986"
+    uI="e660b986-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></inverse-rate>
+  <no-data
+    bind:__l="__l"
+    class="data-v-e660b986"
+    uI="e660b986-1"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无机构评级数据</block>
+  </no-data>
+</view>

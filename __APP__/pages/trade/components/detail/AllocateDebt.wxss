@@ -1,0 +1,48 @@
+@import "/app.wxss";
+.trade-detail-container .base-info {
+  background-color: var(--fill-2);
+  height: 1.333333rem;
+  padding: 0 0.4rem;
+}
+.trade-detail-container .base-info .text-color-1 {
+  font-weight: 500;
+  margin-right: 0.133333rem;
+}
+.trade-detail-container .steps-wraper {
+  background-color: var(--fill-2);
+  padding: 0.6rem 0;
+}
+.trade-detail-container .steps-wraper .st-steps-item-description {
+  font-size: 0.266667rem;
+  line-height: 1.2;
+  margin-top: 0.133333rem;
+  width: 2.133333rem;
+}
+.trade-detail-container .section {
+  padding: 0 0.4rem;
+}
+.trade-detail-container .section-detail {
+  background-color: var(--fill-2);
+}
+.trade-detail-container .section-detail .detail-order-num {
+  height: 2.186667rem;
+}
+.trade-detail-container .section-detail .detail-total {
+  height: 1.626667rem;
+}
+.trade-detail-container .section-detail .detail-total .value {
+  font-size: 0.666667rem;
+  font-weight: 500;
+}
+.trade-detail-container .section-detail .left {
+  padding: 0.48rem 0.4rem 0.48rem 0;
+}
+.trade-detail-container .section-detail .right {
+  padding: 0.48rem 0 0.48rem 0.4rem;
+}
+.trade-detail-container .section-detail .flex-1:first-child {
+  padding-left: 0;
+}
+.trade-detail-container .section-detail .flex-1:last-child {
+  padding-right: 0;
+}

@@ -1,0 +1,144 @@
+<view class="{{['_div','data-v-f5c3aef2','scroll-wapper',J,K,L]}}" ref="scroll">
+  <etf-bulletin
+    bind:__l="__l"
+    class="r data-v-f5c3aef2"
+    uI="f5c3aef2-0"
+    uR="bulletin"
+    wx:if="{{a}}"
+  ></etf-bulletin>
+  <st-pull-refresh
+    bind:__l="__l"
+    bindpullDownRefresh="{{E}}"
+    class="r data-v-f5c3aef2"
+    uI="f5c3aef2-1"
+    uP="{{F}}"
+    uR="refresh"
+    uS="{{['d']}}"
+    wx:if="{{F}}"
+  >
+    <view class="_div mod-etf-zxg data-v-f5c3aef2">
+      <view class="_div data-v-f5c3aef2">
+        <view class="_div seperate-line data-v-f5c3aef2" wx:if="{{c}}"></view>
+        <etf-quick-entry
+          bind:__l="__l"
+          class="data-v-f5c3aef2"
+          uI="f5c3aef2-2,f5c3aef2-1"
+          uP="{{e}}"
+          wx:if="{{d}}"
+        ></etf-quick-entry>
+        <view class="_div seperate-line data-v-f5c3aef2"></view>
+        <newpub-etf-bar
+          bind:__l="__l"
+          class="data-v-f5c3aef2"
+          uI="f5c3aef2-3,f5c3aef2-1"
+          wx:if="{{f}}"
+        ></newpub-etf-bar>
+        <view class="_div dig-hot-wrapper data-v-f5c3aef2">
+          <etf-dig-hot-block
+            bind:__l="__l"
+            bindgotoHotTopic="{{h}}"
+            class="r data-v-f5c3aef2"
+            uI="f5c3aef2-4,f5c3aef2-1"
+            uP="{{i}}"
+            uR="digHotBlock"
+            wx:if="{{i}}"
+          ></etf-dig-hot-block>
+        </view>
+        <view class="_div fx-block-wrapper data-v-f5c3aef2">
+          <view class="_div buy-index-entry-wrapper data-v-f5c3aef2">
+            <etf-buy-index-entry
+              bind:__l="__l"
+              class="r data-v-f5c3aef2"
+              uI="f5c3aef2-5,f5c3aef2-1"
+              uP="{{k}}"
+              uR="buyIndexEntry"
+              wx:if="{{k}}"
+            ></etf-buy-index-entry>
+          </view>
+          <etf-discover-block
+            bind:__l="__l"
+            class="r data-v-f5c3aef2"
+            uI="f5c3aef2-6,f5c3aef2-1"
+            uP="{{n}}"
+            uR="globalDiscover"
+            wx:if="{{l}}"
+          ></etf-discover-block>
+        </view>
+        <view class="_div global-wrapper data-v-f5c3aef2" wx:if="{{o}}">
+          <global-invest
+            bind:__l="__l"
+            bindgotoHotTopic="{{p}}"
+            class="data-v-f5c3aef2"
+            uI="f5c3aef2-7,f5c3aef2-1"
+            uP="{{q}}"
+            wx:if="{{q}}"
+          ></global-invest>
+        </view>
+        <etf-dividend-block
+          bind:__l="__l"
+          class="r data-v-f5c3aef2"
+          uI="f5c3aef2-8,f5c3aef2-1"
+          uP="{{s}}"
+          uR="dividendDiscover"
+          wx:if="{{s}}"
+        ></etf-dividend-block>
+        <view class="_div underVal-wrapper data-v-f5c3aef2">
+          <etf-zone-t0-module
+            bind:__l="__l"
+            class="r data-v-f5c3aef2"
+            uI="f5c3aef2-9,f5c3aef2-1"
+            uP="{{v}}"
+            uR="etfStrategy"
+            wx:if="{{v}}"
+          ></etf-zone-t0-module>
+        </view>
+        <view class="_div rank-wrapper data-v-f5c3aef2" wx:if="{{w}}">
+          <etf-rank-block
+            bind:__l="__l"
+            bindonShowTeachPop="{{y}}"
+            class="r data-v-f5c3aef2"
+            uI="f5c3aef2-10,f5c3aef2-1"
+            uP="{{z}}"
+            uR="etfranklist"
+            wx:if="{{z}}"
+          ></etf-rank-block>
+        </view>
+        <view
+          class="_div etf-teach-wrapper data-v-f5c3aef2"
+          ref="etfTeachWrapper"
+        >
+          <etf-teach
+            bind:__l="__l"
+            class="r data-v-f5c3aef2"
+            uI="f5c3aef2-11,f5c3aef2-1"
+            uR="etfteach"
+          ></etf-teach>
+        </view>
+        <view class="{{['_div','data-v-f5c3aef2','tips-wrapper',B]}}"
+          >本页内容仅供参考，不构成投资建议和保证，基金过往业绩并不预示其未来表现。基金有风险，投资需谨慎。</view
+        >
+        <trust-footer
+          bind:__l="__l"
+          class="data-v-f5c3aef2"
+          uI="f5c3aef2-12,f5c3aef2-1"
+          wx:if="{{C}}"
+        ></trust-footer>
+      </view>
+    </view>
+  </st-pull-refresh>
+  <view class="_div teach-pop-wrapper data-v-f5c3aef2" wx:if="{{G}}">
+    <etf-pop-com
+      bind:__l="__l"
+      class="data-v-f5c3aef2"
+      uI="f5c3aef2-13"
+    ></etf-pop-com>
+  </view>
+  <teach-pop
+    bind:__l="__l"
+    bindcloseTeachPop="{{H}}"
+    class="data-v-f5c3aef2"
+    uI="f5c3aef2-14"
+    uP="{{I}}"
+    wx:if="{{I}}"
+  ></teach-pop>
+</view>

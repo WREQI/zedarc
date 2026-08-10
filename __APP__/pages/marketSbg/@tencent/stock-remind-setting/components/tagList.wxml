@@ -1,0 +1,39 @@
+<view class="_div mp-tag-list-container data-v-8319e818">
+  <scroll-view
+    scrollX
+    class="mp-tag-list data-v-8319e818"
+    showScrollbar="{{false}}"
+    wx:if="{{a}}"
+  >
+    <label class="_span mp-tag-list-inner data-v-8319e818">
+      <label
+        bindtap="{{item.d}}"
+        class="_span tag-wrap data-v-8319e818"
+        wx:for="{{b}}"
+        wx:key="c"
+      >
+        <label class="_span tag data-v-8319e818">{{item.a}}</label>
+        <label class="_span price data-v-8319e818">{{item.b}}</label>
+      </label>
+      <label class="_span mp-tag-list-spacer data-v-8319e818"></label>
+    </label>
+  </scroll-view>
+  <scroll-view
+    scrollX
+    class="{{['data-v-8319e818','mp-tag-list','flex-space','zdf',d]}}"
+    showScrollbar="{{false}}"
+    wx:else
+  >
+    <label class="_span mp-tag-list-inner data-v-8319e818">
+      <label
+        bindtap="{{item.c}}"
+        class="_span tag-wrap center data-v-8319e818"
+        wx:for="{{c}}"
+        wx:key="b"
+      >
+        <label class="_span text data-v-8319e818">{{item.a}}</label>
+      </label>
+      <label class="_span mp-tag-list-spacer data-v-8319e818"></label>
+    </label>
+  </scroll-view>
+</view>

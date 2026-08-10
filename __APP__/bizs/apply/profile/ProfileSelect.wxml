@@ -1,0 +1,40 @@
+<mp-action-sheet
+  bind:__l="__l"
+  bindinput="{{h}}"
+  class="profile-select-actionsheet plugin-component-action-sheet"
+  uI="201a3877-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{i}}"
+>
+  <view class="profile-select-container">
+    <view class="result-wrapper">
+      <tabbar
+        bind:__l="__l"
+        bindinput="{{a}}"
+        class="flex-1 profile-tabbar"
+        uI="201a3877-1,201a3877-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></tabbar>
+    </view>
+    <swiper
+      bindchange="{{e}}"
+      bindtouchend="{{g}}"
+      bindtouchstart="{{f}}"
+      class="swiper"
+      current="{{d}}"
+      duration="300"
+    >
+      <swiper-item wx:for="{{c}}" wx:for-item="items" wx:key="d">
+        <profile-select-item
+          bind:__l="__l"
+          bindchangeItem="{{items.a}}"
+          uI="{{items.b}}"
+          uP="{{items.c}}"
+          wx:if="{{items.c}}"
+        ></profile-select-item>
+      </swiper-item>
+    </swiper>
+  </view>
+</mp-action-sheet>

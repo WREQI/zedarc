@@ -1,0 +1,38 @@
+<popup
+  bind:__l="__l"
+  class="data-v-836ef535"
+  uI="836ef535-0"
+  uP="{{h}}"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <view
+    class="{{['subscribe-container','data-v-836ef535',g&&'subscribe-container--ams']}}"
+    name="st-action-sheet-move"
+  >
+    <view catchtap="{{f}}" class="st-action-sheet-panel data-v-836ef535">
+      <view class="st-action-sheet-header data-v-836ef535">
+        <view class="pop-header data-v-836ef535">
+          <label
+            class="{{['top-tip','data-v-836ef535',a&&'top-tip--ams']}}"
+          ></label>
+          <label
+            bindtap="{{b}}"
+            class="icon icon-close data-v-836ef535"
+          ></label>
+        </view>
+      </view>
+      <view class="popup-content data-v-836ef535">
+        <view
+          class="{{['popup-content-bg','data-v-836ef535',e&&'popup-content-bg--ams']}}"
+        >
+          <image
+            showMenuByLongpress
+            class="{{['qrcode-img','data-v-836ef535',c&&'qrcode-img--ams']}}"
+            src="{{d}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</popup>

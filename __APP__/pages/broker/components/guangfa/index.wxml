@@ -1,0 +1,19 @@
+<view class="_div">
+  <asset-index
+    bindjumpQuote="{{d}}"
+    bindreportTime="{{c}}"
+    class="broker-index"
+    scrollHeight="{{b}}"
+    wx:if="{{a}}"
+  ></asset-index>
+  <apply-recover
+    class="broker-index"
+    scrollHeight="{{f}}"
+    wx:elif="{{e}}"
+  ></apply-recover>
+  <apply-progress
+    class="broker-index"
+    scrollHeight="{{h}}"
+    wx:elif="{{g}}"
+  ></apply-progress>
+</view>

@@ -1,0 +1,13 @@
+<view class="_div mod-loadText data-v-6459512f" ref="loadText">
+  <view class="{{['_div','load-text','data-v-6459512f',d]}}">
+    <block wx:if="{{a}}">网络不可用，请检查网路设置</block>
+    <block wx:if="{{b}}">{{c}}</block>
+  </view>
+  <instructions
+    bind:__l="__l"
+    bindtapProtocol="{{f}}"
+    class="instructions data-v-6459512f"
+    uI="6459512f-0"
+    wx:if="{{e}}"
+  ></instructions>
+</view>

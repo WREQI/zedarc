@@ -1,0 +1,94 @@
+<view class="{{['_div','data-v-9d8b5886',s,t]}}">
+  <view class="_div data-v-9d8b5886" wx:if="{{a}}">
+    <view class="{{['_div','rank-head','data-v-9d8b5886',n]}}">
+      <view class="_div rank-left data-v-9d8b5886">
+        <view class="_div rank-left-select data-v-9d8b5886" id="{{j}}">
+          <image
+            bindtap="{{c}}"
+            class="_img index-filter-btn data-v-9d8b5886"
+            src="https://st.gtimg.com/design/0fa6cabc0e83182bb29ffcc0575ae94c.png"
+            wx:if="{{b}}"
+          ></image>
+          <image
+            bindtap="{{e}}"
+            class="_img index-filter-btn data-v-9d8b5886"
+            src="https://st.gtimg.com/design/66995e4dc6d6580da36ac1857b500e46.png"
+            wx:elif="{{d}}"
+          ></image>
+          <image
+            bindtap="{{g}}"
+            class="_img index-filter-btn data-v-9d8b5886"
+            src="https://st.gtimg.com/design/4b12f8220fdfff20ed5d76f524cf20a6.png"
+            wx:elif="{{f}}"
+          ></image>
+          <view bindtap="{{h}}" class="_div data-v-9d8b5886">指数过滤</view>
+          <view
+            catchtap="{{i}}"
+            class="_div index-filter-info-wrap data-v-9d8b5886"
+          >
+            <view class="_div index-filter-info data-v-9d8b5886"></view>
+          </view>
+        </view>
+      </view>
+      <view class="_div rank-sort rank-middle data-v-9d8b5886">
+        <view class="_div sort-text data-v-9d8b5886">{{k}}</view>
+      </view>
+      <view class="_div rank-sort rank-right data-v-9d8b5886" style="{{m}}">
+        <view class="_div sort-text data-v-9d8b5886">{{l}}</view>
+      </view>
+    </view>
+    <view class="_div rank-body data-v-9d8b5886">
+      <view
+        class="_div data-v-9d8b5886"
+        wx:for="{{o}}"
+        wx:for-item="stock"
+        wx:key="n"
+      >
+        <view
+          bindtap="{{stock.m}}"
+          class="{{['_div','data-v-9d8b5886','rank-item',stock.l,r]}}"
+        >
+          <view
+            class="{{['_div','data-v-9d8b5886','rank-top',stock.b,'font-numeric-tabular']}}"
+            wx:if="{{p}}"
+            >{{stock.a}}</view
+          >
+          <view class="_div rank-left data-v-9d8b5886">
+            <view class="_div rank-detail-name data-v-9d8b5886"
+              >{{stock.c}}</view
+            >
+            <view class="_div rank-detail-symbol data-v-9d8b5886">
+              <image
+                class="_img market-icon data-v-9d8b5886"
+                src="{{stock.d}}"
+              ></image>
+              <view class="_div stock-code data-v-9d8b5886">{{stock.e}}</view>
+              <view class="_div stock-tag data-v-9d8b5886" wx:if="{{stock.f}}"
+                >{{stock.g}}</view
+              >
+            </view>
+          </view>
+          <view class="{{['_div','data-v-9d8b5886','rank-middle',stock.i]}}"
+            >{{stock.h}}</view
+          >
+          <view
+            class="{{['_div','data-v-9d8b5886','rank-right',stock.k]}}"
+            style="{{q}}"
+            >{{stock.j}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-9d8b5886" wx:else>
+    <no-data
+      bind:__l="__l"
+      class="data-v-9d8b5886"
+      uI="9d8b5886-0"
+      uS="{{['d']}}"
+    >
+      <slot wx:if="{{$slots.d}}"></slot>
+      <block wx:else>暂无数据</block>
+    </no-data>
+  </view>
+</view>

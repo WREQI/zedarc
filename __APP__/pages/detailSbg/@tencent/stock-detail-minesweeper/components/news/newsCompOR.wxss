@@ -1,0 +1,668 @@
+.summary.data-v-e25ab432 {
+  color: var(--color-heavygray);
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+}
+.pj-list.data-v-e25ab432 {
+  margin-top: 0.4266666666666667rem;
+}
+.pj-list.special.data-v-e25ab432 {
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+}
+.pj-list .pj-li.data-v-e25ab432,
+.pj-list .pj-title.data-v-e25ab432 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.pj-list .pj-li .pj-li-1.data-v-e25ab432,
+.pj-list .pj-title .pj-li-1.data-v-e25ab432 {
+  width: 35%;
+}
+.pj-list .pj-li .pj-li-2.data-v-e25ab432,
+.pj-list .pj-title .pj-li-2.data-v-e25ab432 {
+  width: 30%;
+}
+.pj-list .pj-li .pj-li-3.data-v-e25ab432,
+.pj-list .pj-title .pj-li-3.data-v-e25ab432 {
+  flex: 1;
+  text-align: right;
+}
+.pj-list .pj-title.data-v-e25ab432 {
+  color: var(--color-lightgray-1);
+  font-size: 0.3466666666666667rem;
+  height: 0.49333333333333335rem;
+  line-height: 0.49333333333333335rem;
+}
+.pj-list .pj-li.data-v-e25ab432 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  height: 0.5866666666666667rem;
+  line-height: 0.5866666666666667rem;
+  margin-top: 0.21333333333333335rem;
+}
+.chart.data-v-e25ab432 {
+  margin-top: 0.88rem;
+}
+.chart.special.data-v-e25ab432 {
+  font-family: PingFangSC-Regular, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+}
+.chart .chart-label.data-v-e25ab432,
+.chart .chart-main.data-v-e25ab432 {
+  display: -webkit-flex;
+  display: flex;
+}
+.chart .chart-label .chart-main-title.data-v-e25ab432,
+.chart .chart-label .stock-rating-time.data-v-e25ab432,
+.chart .chart-main .chart-main-title.data-v-e25ab432,
+.chart .chart-main .stock-rating-time.data-v-e25ab432 {
+  margin-right: 0.06666666666666667rem;
+  width: 1.8666666666666667rem;
+}
+.chart .chart-label .chart-label-list.data-v-e25ab432,
+.chart .chart-label .chart-main-level.data-v-e25ab432,
+.chart .chart-main .chart-label-list.data-v-e25ab432,
+.chart .chart-main .chart-main-level.data-v-e25ab432 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.chart .chart-label .chart-label-list .chart-label-1.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-1.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-1.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-1.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-1.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-1.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-1.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-1.data-v-e25ab432 {
+  color: var(--color-green);
+}
+.chart .chart-label .chart-label-list .chart-label-1.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .chart-label-1.rec.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-1.data-v-e25ab432:before,
+.chart .chart-label .chart-label-list .rec-1.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-1.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-1.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-1.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-1.data-v-e25ab432:before,
+.chart .chart-label .chart-main-level .rec-1.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-1.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-1.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-1.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-1.data-v-e25ab432:before,
+.chart .chart-main .chart-label-list .rec-1.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-1.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-1.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-1.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-1.data-v-e25ab432:before,
+.chart .chart-main .chart-main-level .rec-1.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-1.rec.data-v-e25ab432 {
+  background-color: var(--color-green);
+}
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-label-list
+  .rec-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .rec-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .rec-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-1.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .rec-1.rec
+  .rec-i.cur.data-v-e25ab432:after {
+  border-top-color: var(--color-green);
+}
+.chart .chart-label .chart-label-list .chart-label-2.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-2.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-2.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-2.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-2.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-2.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-2.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-2.data-v-e25ab432 {
+  color: #49bb63;
+}
+.chart .chart-label .chart-label-list .chart-label-2.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .chart-label-2.rec.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-2.data-v-e25ab432:before,
+.chart .chart-label .chart-label-list .rec-2.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-2.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-2.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-2.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-2.data-v-e25ab432:before,
+.chart .chart-label .chart-main-level .rec-2.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-2.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-2.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-2.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-2.data-v-e25ab432:before,
+.chart .chart-main .chart-label-list .rec-2.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-2.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-2.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-2.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-2.data-v-e25ab432:before,
+.chart .chart-main .chart-main-level .rec-2.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-2.rec.data-v-e25ab432 {
+  background-color: #49bb63;
+}
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-label-list
+  .rec-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .rec-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .rec-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-2.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .rec-2.rec
+  .rec-i.cur.data-v-e25ab432:after {
+  border-top-color: #49bb63;
+}
+.chart .chart-label .chart-label-list .chart-label-3.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-3.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-3.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-3.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-3.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-3.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-3.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-3.data-v-e25ab432 {
+  color: var(--color-midgray-2);
+}
+.chart .chart-label .chart-label-list .chart-label-3.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .chart-label-3.rec.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-3.data-v-e25ab432:before,
+.chart .chart-label .chart-label-list .rec-3.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-3.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-3.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-3.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-3.data-v-e25ab432:before,
+.chart .chart-label .chart-main-level .rec-3.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-3.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-3.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-3.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-3.data-v-e25ab432:before,
+.chart .chart-main .chart-label-list .rec-3.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-3.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-3.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-3.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-3.data-v-e25ab432:before,
+.chart .chart-main .chart-main-level .rec-3.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-3.rec.data-v-e25ab432 {
+  background-color: var(--color-midgray-2);
+}
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-label-list
+  .rec-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .rec-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .rec-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-3.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .rec-3.rec
+  .rec-i.cur.data-v-e25ab432:after {
+  border-top-color: var(--color-midgray-2);
+}
+.chart .chart-label .chart-label-list .chart-label-4.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-4.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-4.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-4.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-4.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-4.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-4.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-4.data-v-e25ab432 {
+  color: #ec665f;
+}
+.chart .chart-label .chart-label-list .chart-label-4.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .chart-label-4.rec.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-4.data-v-e25ab432:before,
+.chart .chart-label .chart-label-list .rec-4.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-4.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-4.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-4.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-4.data-v-e25ab432:before,
+.chart .chart-label .chart-main-level .rec-4.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-4.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-4.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-4.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-4.data-v-e25ab432:before,
+.chart .chart-main .chart-label-list .rec-4.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-4.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-4.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-4.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-4.data-v-e25ab432:before,
+.chart .chart-main .chart-main-level .rec-4.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-4.rec.data-v-e25ab432 {
+  background-color: #ec665f;
+}
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-label-list
+  .rec-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .rec-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .rec-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-4.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .rec-4.rec
+  .rec-i.cur.data-v-e25ab432:after {
+  border-top-color: #ec665f;
+}
+.chart .chart-label .chart-label-list .chart-label-5.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-5.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-5.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-5.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-5.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-5.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-5.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-5.data-v-e25ab432 {
+  color: var(--color-red);
+}
+.chart .chart-label .chart-label-list .chart-label-5.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .chart-label-5.rec.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-5.data-v-e25ab432:before,
+.chart .chart-label .chart-label-list .rec-5.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-label-list .rec-5.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-5.data-v-e25ab432:before,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .chart-label-5.rec.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-5.data-v-e25ab432:before,
+.chart .chart-label .chart-main-level .rec-5.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-label .chart-main-level .rec-5.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-5.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .chart-label-5.rec.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-5.data-v-e25ab432:before,
+.chart .chart-main .chart-label-list .rec-5.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-label-list .rec-5.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-5.data-v-e25ab432:before,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .chart-label-5.rec.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-5.data-v-e25ab432:before,
+.chart .chart-main .chart-main-level .rec-5.rec .rec-i.cur.data-v-e25ab432,
+.chart .chart-main .chart-main-level .rec-5.rec.data-v-e25ab432 {
+  background-color: var(--color-red);
+}
+.chart
+  .chart-label
+  .chart-label-list
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-label-list
+  .rec-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-label
+  .chart-main-level
+  .rec-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-label-list
+  .rec-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .chart-label-5.rec
+  .rec-i.cur.data-v-e25ab432:after,
+.chart
+  .chart-main
+  .chart-main-level
+  .rec-5.rec
+  .rec-i.cur.data-v-e25ab432:after {
+  border-top-color: var(--color-red);
+}
+.chart .chart-main.data-v-e25ab432 {
+  margin-bottom: 0.05333333333333334rem;
+}
+.chart .chart-main .sell_num_a.data-v-e25ab432:after,
+.chart .chart-main .sell_num_b.data-v-e25ab432:before {
+  background: var(--color-green);
+}
+.chart .chart-main .reduce_num_a.data-v-e25ab432:after,
+.chart .chart-main .reduce_num_b.data-v-e25ab432:before {
+  background: #49bb63;
+}
+.chart .chart-main .even_num_a.data-v-e25ab432:after,
+.chart .chart-main .even_num_b.data-v-e25ab432:before {
+  background: var(--color-midgray-2);
+}
+.chart .chart-main .increase_num_a.data-v-e25ab432:after,
+.chart .chart-main .increase_num_b.data-v-e25ab432:before {
+  background: #ec665f;
+}
+.chart .chart-main .buy_num_a.data-v-e25ab432:after,
+.chart .chart-main .buy_num_b.data-v-e25ab432:before {
+  background: var(--color-red);
+}
+.chart .chart-main .chart-main-title.data-v-e25ab432 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.5333333333333333rem;
+  line-height: 0.5333333333333333rem;
+}
+.chart .chart-main .chart-main-level.data-v-e25ab432 {
+  position: relative;
+}
+.chart .chart-main .chart-main-level .rec.data-v-e25ab432 {
+  display: inline-block;
+  height: 0.16rem;
+  margin-left: 0.05333333333333334rem;
+  margin-top: 0.18666666666666668rem;
+  min-width: 0.08rem;
+  text-align: center;
+  transform: skew(-25deg);
+}
+.chart .chart-main .chart-main-level .rec.rec-1.data-v-e25ab432 {
+  margin-left: 0;
+}
+.chart .chart-main .chart-main-level .rec.rec-5.data-v-e25ab432 {
+  margin-right: 0;
+}
+.chart .chart-main .chart-main-level .rec .rec-i.data-v-e25ab432 {
+  display: inline-block;
+  font-size: 0.32rem;
+  font-style: normal;
+  position: absolute;
+  transform: skew(25deg) translateY(-0.3333333333333333rem);
+}
+.chart .chart-main .chart-main-level .rec .rec-i.cur.data-v-e25ab432 {
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-white);
+  font-size: 0.24rem;
+  height: 0.5333333333333333rem;
+  line-height: 0.5333333333333333rem;
+  position: absolute;
+  transform: skew(25deg) translateY(-0.6666666666666666rem);
+  width: 0.9333333333333333rem;
+}
+.chart .chart-main .chart-main-level .rec .rec-i.cur.data-v-e25ab432:after {
+  border: 0.08rem solid transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -0.08rem;
+  position: absolute;
+  top: 0.5333333333333333rem;
+  width: 0;
+}
+.chart .chart-main .chart-main-level .rec ._i.rec-i.data-v-e25ab432 {
+  transform: skew(25deg) translateY(-0.5333333333333333rem);
+}
+.chart .chart-main .chart-main-level .rec ._i.rec-i.cur.data-v-e25ab432 {
+  transform: skew(25deg) translateY(-0.7466666666666667rem);
+}
+.chart .chart-main .chart-main-level.data-v-e25ab432:before {
+  content: "";
+  height: 0.16rem;
+  left: -0.013333333333333334rem;
+  position: absolute;
+  top: 0.18666666666666668rem;
+  width: 0.10666666666666667rem;
+}
+.chart .chart-main .chart-main-level.data-v-e25ab432:after {
+  content: "";
+  height: 0.16rem;
+  position: absolute;
+  right: -0.04rem;
+  top: 0.18666666666666668rem;
+  width: 0.10666666666666667rem;
+}
+.chart .chart-label .stock-rating-time.data-v-e25ab432 {
+  color: var(--color-lightgray-1);
+  font-size: 0.32rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+}
+.chart .chart-label .chart-label-list.data-v-e25ab432 {
+  font-size: 0.26666666666666666rem;
+  height: 0.44rem;
+  line-height: 0.44rem;
+}
+.chart .chart-label .chart-label-item.data-v-e25ab432 {
+  display: inline-block;
+  margin-right: 0.26666666666666666rem;
+  padding-left: 0.26666666666666666rem;
+  position: relative;
+  width: 0.8rem;
+}
+.chart .chart-label .chart-label-item.data-v-e25ab432:before {
+  border-radius: 0.02666666666666667rem;
+  content: "";
+  height: 0.16rem;
+  left: 0;
+  position: absolute;
+  top: 0.16rem;
+  width: 0.16rem;
+}

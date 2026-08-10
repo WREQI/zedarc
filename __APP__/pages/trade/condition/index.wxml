@@ -1,0 +1,71 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="10f03ca0-0"
+  uP="{{t}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{t}}"
+>
+  <view class="{{['records-container',r]}}">
+    <view class="{{['tabs-wrapper','flex',e]}}">
+      <tabbar
+        bind:__l="__l"
+        bindchange="{{b}}"
+        class="flex-1 func-tab"
+        uI="10f03ca0-1,10f03ca0-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></tabbar>
+      <view bindtap="{{d}}" class="create-entry flex-vcenter">
+        <view class="create-line">|</view>
+        <view class="create-icon"></view>
+        <label class="create-txt">创建</label>
+      </view>
+    </view>
+    <scroll-view
+      bindscroll="{{i}}"
+      bindscrolltolower="{{j}}"
+      class="records-scroll-view"
+      scrollTop="{{h}}"
+      scrollY="true"
+      wx:if="{{f}}"
+    >
+      <cond-list-item
+        bind:__l="__l"
+        bindcondDetailClick="{{item.b}}"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{g}}"
+        wx:key="a"
+      ></cond-list-item>
+      <view class="cond-list-placeholder"></view>
+    </scroll-view>
+    <empty
+      bind:__l="__l"
+      class="empty"
+      uI="10f03ca0-3,10f03ca0-0"
+      uP="{{k||''}}"
+      wx:else
+    ></empty>
+    <condition-strategy
+      bind:__l="__l"
+      bindclose="{{m}}"
+      bindconditionItemClick="{{o}}"
+      bindinput="{{l}}"
+      bindtoCreateCond="{{n}}"
+      uI="10f03ca0-4,10f03ca0-0"
+      uP="{{p}}"
+      wx:if="{{p}}"
+    ></condition-strategy>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="10f03ca0-5,10f03ca0-0"
+      uP="{{q}}"
+      wx:if="{{q}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

@@ -1,0 +1,10 @@
+<view
+  bindtap="{{l}}"
+  class="{{['_div','warrants-bar','data-v-242b5b82',k&&'skin-black']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div stock-name data-v-242b5b82">{{b}}</view>
+  <view class="{{['_div','stock-info','data-v-242b5b82',d]}}">{{c}} HKD</view>
+  <view class="{{['_div','stock-info','data-v-242b5b82',g]}}">{{e}}{{f}}</view>
+  <view class="{{['_div','stock-info','data-v-242b5b82',j]}}">{{h}}{{i}}%</view>
+</view>

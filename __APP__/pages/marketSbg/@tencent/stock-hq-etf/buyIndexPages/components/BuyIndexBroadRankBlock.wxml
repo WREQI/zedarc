@@ -1,0 +1,155 @@
+<view class="_div etf-buy-index__rank-list data-v-6150d329">
+  <view
+    catchtap="{{a}}"
+    class="_div etf-buy-index__rank-header data-v-6150d329"
+  >
+    <view class="_div etf-buy-index__rank-header-bg data-v-6150d329"></view>
+    <view class="_div etf-buy-index__rank-header-share data-v-6150d329"></view>
+    <view class="_div etf-buy-index__rank-header-title data-v-6150d329"
+      >更多宽基ETF</view
+    >
+  </view>
+  <view class="_div etf-buy-index__rank-tabs-wrap data-v-6150d329">
+    <view class="_div etf-buy-index__rank-tabs-bg data-v-6150d329"></view>
+    <view class="_div etf-buy-index__rank-tabs data-v-6150d329">
+      <view
+        catchtap="{{tab.f}}"
+        class="{{['_div','data-v-6150d329','etf-buy-index__rank-tab',tab.e]}}"
+        wx:for="{{b}}"
+        wx:for-item="tab"
+        wx:key="d"
+      >
+        <view
+          class="{{['_div','data-v-6150d329','etf-buy-index__rank-tab-label',tab.b]}}"
+          >{{tab.a}}</view
+        >
+        <view
+          class="_div etf-buy-index__rank-tab-indicator data-v-6150d329"
+          wx:if="{{tab.c}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+  <swiper
+    bindchange="{{g}}"
+    class="etf-buy-index__rank-swiper data-v-6150d329"
+    current="{{e}}"
+    duration="{{250}}"
+    style="{{'height:'+f}}"
+  >
+    <swiper-item
+      class="etf-buy-index__rank-swiper-item data-v-6150d329"
+      wx:for="{{c}}"
+      wx:for-item="tab"
+      wx:key="p"
+    >
+      <view
+        class="{{['_div','data-v-6150d329','etf-buy-index__rank-swiper-inner',tab.o]}}"
+        ref="{{tab.n}}"
+      >
+        <view class="_div etf-buy-index__rank-desc-wrap data-v-6150d329">
+          <view class="_div etf-buy-index__rank-desc-inner data-v-6150d329">
+            <view class="_div etf-buy-index__rank-desc data-v-6150d329"
+              >{{tab.a}}</view
+            >
+          </view>
+        </view>
+        <view class="_div etf-buy-index__rank-columns data-v-6150d329">
+          <view
+            class="_div etf-buy-index__rank-columns-bg data-v-6150d329"
+          ></view>
+          <view
+            catchtap="{{tab.d}}"
+            class="_div etf-buy-index__rank-filter data-v-6150d329"
+            wx:if="{{d}}"
+          >
+            <view class="_div etf-buy-index__rank-filter-inner data-v-6150d329">
+              <view
+                class="{{['_div','etf-buy-index__rank-filter-checkbox','data-v-6150d329',tab.b]}}"
+              ></view>
+              <view
+                class="_div etf-buy-index__rank-filter-label data-v-6150d329"
+                >指数过滤</view
+              >
+              <view
+                catchtap="{{tab.c}}"
+                class="_div etf-buy-index__rank-filter-icon data-v-6150d329"
+              ></view>
+            </view>
+          </view>
+          <view
+            class="_div etf-buy-index__rank-col-label etf-buy-index__rank-col-label--change data-v-6150d329"
+            >涨跌幅</view
+          >
+          <view
+            class="_div etf-buy-index__rank-col-group data-v-6150d329"
+            wx:if="{{tab.e}}"
+          >
+            <image
+              alt=""
+              catchtap="{{tab.h}}"
+              class="_img etf-buy-index__rank-col-icon data-v-6150d329"
+              src="{{tab.g}}"
+              wx:if="{{tab.f}}"
+            ></image>
+            <view
+              class="_div etf-buy-index__rank-col-label etf-buy-index__rank-col-label--hold data-v-6150d329"
+              >{{tab.i}}</view
+            >
+          </view>
+        </view>
+        <view
+          class="_div etf-buy-index__rank-status data-v-6150d329"
+          wx:if="{{tab.j}}"
+          >加载中...</view
+        >
+        <view
+          class="_div etf-buy-index__rank-status data-v-6150d329"
+          wx:elif="{{tab.k}}"
+          >数据加载失败</view
+        >
+        <block wx:else>
+          <view
+            class="_div etf-buy-index__rank-status etf-buy-index__rank-status--empty data-v-6150d329"
+            wx:if="{{tab.l}}"
+            >暂无符合条件的ETF</view
+          >
+          <buy-index-rank-list-item
+            bind:__l="__l"
+            bindrowClick="{{row.b}}"
+            class="data-v-6150d329"
+            uI="{{row.c}}"
+            uP="{{row.d}}"
+            wx:for="{{tab.m}}"
+            wx:for-item="row"
+            wx:key="a"
+          ></buy-index-rank-list-item>
+        </block>
+      </view>
+    </swiper-item>
+  </swiper>
+  <buy-index-index-filter-teach-sheet
+    bind:__l="__l"
+    bindclose="{{h}}"
+    class="data-v-6150d329"
+    uI="6150d329-1"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></buy-index-index-filter-teach-sheet>
+  <buy-index-national-team-teach-sheet
+    bind:__l="__l"
+    bindclose="{{j}}"
+    class="data-v-6150d329"
+    uI="6150d329-2"
+    uP="{{k}}"
+    wx:if="{{k}}"
+  ></buy-index-national-team-teach-sheet>
+  <buy-index-pe-percentile-teach-sheet
+    bind:__l="__l"
+    bindclose="{{l}}"
+    class="data-v-6150d329"
+    uI="6150d329-3"
+    uP="{{m}}"
+    wx:if="{{m}}"
+  ></buy-index-pe-percentile-teach-sheet>
+</view>

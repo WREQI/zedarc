@@ -1,0 +1,44 @@
+<view class="_div component-card-stock-list data-v-3dacde05" wx:if="{{a}}">
+  <view class="_div list data-v-3dacde05">
+    <view
+      bindtap="{{item.i}}"
+      class="_div list-item data-v-3dacde05"
+      wx:for="{{b}}"
+      wx:key="h"
+    >
+      <view class="_div img-area data-v-3dacde05">
+        <image
+          alt=""
+          class="_img k-img data-v-3dacde05"
+          src="{{item.b}}"
+          wx:if="{{item.a}}"
+        ></image>
+      </view>
+      <view class="_div stock-info data-v-3dacde05">
+        <view class="_div stock-name data-v-3dacde05">
+          <view class="_div stock-text data-v-3dacde05">{{item.c}}</view>
+        </view>
+        <view class="_div stock-desc data-v-3dacde05" wx:if="{{item.d}}">
+          <view
+            class="{{['_div','column','data-v-3dacde05',attr.g&&'one']}}"
+            wx:for="{{item.e}}"
+            wx:for-item="attr"
+            wx:key="f"
+          >
+            <view
+              class="{{['_div','zdf','data-v-3dacde05',attr.c&&'down-green']}}"
+              wx:if="{{attr.a}}"
+              >{{attr.b}}</view
+            >
+            <view class="_div count data-v-3dacde05" wx:else>{{attr.d}}</view>
+            <view class="_div val data-v-3dacde05">{{attr.e}}</view>
+          </view>
+        </view>
+      </view>
+      <view
+        catchtap="{{item.g}}"
+        class="{{['_div','check-icon','data-v-3dacde05',item.f]}}"
+      ></view>
+    </view>
+  </view>
+</view>

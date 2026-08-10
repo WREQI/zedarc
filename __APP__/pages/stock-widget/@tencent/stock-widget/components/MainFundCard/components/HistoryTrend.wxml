@@ -1,0 +1,84 @@
+<view
+  class="{{['_div','ht-container','history-trend','data-v-2ef64ca7',x,y]}}"
+  data-card="fund"
+>
+  <view class="_div funds-trend-chart data-v-2ef64ca7">
+    <view catchlongpress="{{m}}" class="_div chart data-v-2ef64ca7">
+      <view class="_div funds-daily-trend-outer data-v-2ef64ca7">
+        <f2
+          bind:__l="__l"
+          bindcanvasInfo="{{i}}"
+          bindonInit="{{e}}"
+          bindtouchend="{{f}}"
+          bindtouchmove="{{h}}"
+          bindtouchstart="{{g}}"
+          class="data-v-2ef64ca7"
+          uI="2ef64ca7-0"
+          uP="{{j}}"
+          uS="{{['d']}}"
+          wx:if="{{j}}"
+        >
+          <view
+            class="{{['_div','data-v-2ef64ca7','f2-tooltip',d]}}"
+            wx:if="{{a}}"
+          >
+            <view class="_div f2-tooltip-inner data-v-2ef64ca7">
+              <view class="_div f2-tooltip-title data-v-2ef64ca7">{{b}}</view>
+              <view
+                class="_div f2-tooltip-value data-v-2ef64ca7"
+                wx:for="{{c}}"
+                wx:key="d"
+              >
+                <label class="_span f2-tooltip-subtitle data-v-2ef64ca7"
+                  >{{item.a}}</label
+                >
+                <label
+                  class="{{['_span','data-v-2ef64ca7','f2-tooltip-after',item.c]}}"
+                  >{{item.b}}</label
+                >
+              </view>
+            </view>
+          </view>
+        </f2>
+      </view>
+      <view class="{{['_div','data-v-2ef64ca7','date-container',l]}}">
+        <view class="_div date-text data-v-2ef64ca7" wx:for="{{k}}" wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+    </view>
+    <view class="_div funds-trend-chart-labels data-v-2ef64ca7">
+      <view class="{{['_div','data-v-2ef64ca7','label-item-left',q]}}">
+        <view class="_div label-item data-v-2ef64ca7" wx:if="{{n}}">
+          <view class="_div label-item-line line-orange data-v-2ef64ca7"></view>
+          <view class="_div label-item-text data-v-2ef64ca7">主力净流入</view>
+        </view>
+        <view class="_div label-item data-v-2ef64ca7" wx:if="{{o}}">
+          <view class="_div label-item-line square-red data-v-2ef64ca7"></view>
+          <view class="_div label-item-text data-v-2ef64ca7">主力净流入</view>
+        </view>
+        <view class="_div label-item data-v-2ef64ca7" wx:if="{{p}}">
+          <view
+            class="_div label-item-line square-green data-v-2ef64ca7"
+          ></view>
+          <view class="_div label-item-text data-v-2ef64ca7">主力净流出</view>
+        </view>
+        <view class="_div label-item data-v-2ef64ca7">
+          <view class="_div label-item-line line-gray data-v-2ef64ca7"></view>
+          <view class="_div label-item-text data-v-2ef64ca7">股价</view>
+        </view>
+      </view>
+      <view
+        bindtap="{{w}}"
+        class="{{['_div','label-item','data-v-2ef64ca7',v]}}"
+        id="daily-plate-inflow-radio"
+        wx:if="{{r}}"
+      >
+        <view class="{{['_div','label-item-radio','data-v-2ef64ca7',t]}}">
+          <view class="_div checked-point data-v-2ef64ca7" wx:if="{{s}}"></view>
+        </view>
+        <view class="_div label-item-text data-v-2ef64ca7">行业平均</view>
+      </view>
+    </view>
+  </view>
+</view>

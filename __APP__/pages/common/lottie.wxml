@@ -1,0 +1,9 @@
+<view class="_div lottie-animation-container">
+  <canvas
+    disableScroll="{{d}}"
+    id="{{a}}"
+    style="{{'width:'+b+';'+'height:'+c}}"
+    type="2d"
+    wx:if="{{r0}}"
+  ></canvas>
+</view>

@@ -1,0 +1,94 @@
+.live-common-guide-bar {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.live-common-guide-bar .common-guide-icon {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 1.04rem;
+  width: 1.04rem;
+}
+.live-common-guide-bar .common-guide-bar {
+  align-items: center;
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 0.88rem;
+  overflow: hidden;
+  position: relative;
+}
+.live-common-guide-bar .common-guide-bar .bg {
+  background-color: rgba(48, 119, 236, 0.1);
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.live-common-guide-bar .common-guide-bar .common-guide-desc {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 0.05333333333333334rem;
+}
+.live-common-guide-bar .common-guide-bar .common-guide-desc .common-guide-tips {
+  color: var(--color-heavygray);
+  display: inline-block;
+  flex-grow: 0;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.52rem;
+  margin-left: 0.32rem;
+}
+.live-common-guide-bar .common-guide-bar .common-guide-desc .goto-common-guide {
+  color: #3077ec;
+  display: inline-block;
+  flex-grow: 0;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.52rem;
+  margin-left: 0.21333333333333335rem;
+}
+.live-common-guide-bar
+  .common-guide-bar
+  .common-guide-desc
+  .common-guide-indocator {
+  height: 0.29333333333333333rem;
+  width: 0.29333333333333333rem;
+}
+.live-common-guide-bar .common-guide-bar .close-common-guide {
+  background-image: url(https://st.gtimg.com/design/edfc8727c8e5636fa252bbeede2fb0a7.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 0.28rem;
+  margin-right: 0.32rem;
+  width: 0.28rem;
+}
+.live-common-guide-bar.light
+  .common-guide-bar
+  .common-guide-desc
+  .goto-common-guide {
+  color: #e63535;
+}
+.black .common-guide-bar .common-guide-desc .common-guide-tips {
+  color: #fff;
+}
+.black .common-guide-bar .close-common-guide,
+[data-st-theme="black"] .common-guide-bar .close-common-guide,
+[data-st-theme="dark"] .common-guide-bar .close-common-guide {
+  background-image: url(https://st.gtimg.com/design/111f1146b244fb0a0b10118a3649e91a.png);
+}
+[data-st-theme="black"] .common-guide-bar .bg,
+[data-st-theme="dark"] .common-guide-bar .bg {
+  color: var(--color-icon2);
+}

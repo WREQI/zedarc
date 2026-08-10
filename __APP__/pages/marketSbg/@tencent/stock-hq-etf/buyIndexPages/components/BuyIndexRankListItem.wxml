@@ -1,0 +1,23 @@
+<view bindtap="{{k}}" class="_div etf-buy-index__rank-row data-v-91ff83bc">
+  <view class="_div etf-buy-index__rank-row-bg data-v-91ff83bc"></view>
+  <view
+    class="_div etf-buy-index__rank-row-divider data-v-91ff83bc"
+    wx:if="{{a}}"
+  ></view>
+  <view class="{{['_div','data-v-91ff83bc',c]}}">{{b}}</view>
+  <view class="_div etf-buy-index__rank-row-hold data-v-91ff83bc">{{d}}</view>
+  <view class="_div etf-buy-index__rank-row-name data-v-91ff83bc">{{e}}</view>
+  <view class="_div etf-buy-index__rank-row-desc data-v-91ff83bc">{{f}}</view>
+  <view class="{{['_div','data-v-91ff83bc',j]}}">
+    <market-icon
+      bind:__l="__l"
+      class="etf-buy-index__rank-row-code-tag data-v-91ff83bc"
+      uI="91ff83bc-0"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></market-icon>
+    <view class="_div etf-buy-index__rank-row-code-text data-v-91ff83bc"
+      >{{i}}</view
+    >
+  </view>
+</view>

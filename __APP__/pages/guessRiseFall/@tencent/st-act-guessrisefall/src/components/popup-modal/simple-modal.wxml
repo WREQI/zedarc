@@ -1,0 +1,158 @@
+<base-modal
+  bind:__l="__l"
+  bindclose="{{R}}"
+  bindupdateVisible="{{Q}}"
+  class="data-v-57c5a3d3"
+  uI="57c5a3d3-0"
+  uP="{{S}}"
+  uS="{{['d']}}"
+  wx:if="{{S}}"
+>
+  <view
+    class="_div simple-modal simple-modal--info data-v-57c5a3d3"
+    wx:if="{{a}}"
+  >
+    <view class="_div simple-modal__header data-v-57c5a3d3">
+      <image
+        alt=""
+        class="_img simple-modal__header-icon data-v-57c5a3d3"
+        src="https://st.gtimg.com/design/5160c0b91c5458403ed879eb06b88d6b.png"
+      ></image>
+    </view>
+    <view class="_div simple-modal__body data-v-57c5a3d3">
+      <view class="_div simple-modal__title data-v-57c5a3d3">{{b}}</view>
+      <view class="_div simple-modal__content data-v-57c5a3d3">{{c}}</view>
+    </view>
+    <view class="_div simple-modal__footer data-v-57c5a3d3">
+      <view bindtap="{{e}}" class="_div simple-modal__btn data-v-57c5a3d3"
+        >{{d}}</view
+      >
+    </view>
+  </view>
+  <view
+    class="_div simple-modal simple-modal--ordinary data-v-57c5a3d3"
+    wx:elif="{{f}}"
+  >
+    <view
+      class="_div simple-modal__header simple-modal__header--ordinary data-v-57c5a3d3"
+    >
+      <view
+        class="_div simple-modal__header-icon simple-modal__header-icon--ordinary data-v-57c5a3d3"
+      ></view>
+    </view>
+    <view class="_div simple-modal__body data-v-57c5a3d3">
+      <view class="_div simple-modal__title data-v-57c5a3d3">{{g}}</view>
+      <view class="_div simple-modal__content data-v-57c5a3d3">
+        <rich-text class="data-v-57c5a3d3" nodes="{{h}}"></rich-text>
+      </view>
+    </view>
+    <view class="_div simple-modal__footer data-v-57c5a3d3">
+      <view bindtap="{{j}}" class="_div simple-modal__btn data-v-57c5a3d3"
+        >{{i}}</view
+      >
+    </view>
+  </view>
+  <view
+    class="_div simple-modal simple-modal--status data-v-57c5a3d3"
+    wx:elif="{{k}}"
+  >
+    <view class="_div simple-modal__status-icon data-v-57c5a3d3" wx:if="{{l}}">
+      <view class="{{['_div','data-v-57c5a3d3',m]}}"></view>
+    </view>
+    <view
+      class="_div simple-modal__title simple-modal__title--status data-v-57c5a3d3"
+      wx:if="{{n}}"
+      >{{o}}</view
+    >
+    <view
+      class="_div simple-modal__content simple-modal__content--status data-v-57c5a3d3"
+      wx:if="{{p}}"
+    >
+      <rich-text class="data-v-57c5a3d3" nodes="{{q}}"></rich-text>
+    </view>
+    <view
+      bindtap="{{s}}"
+      class="_div simple-modal__btn simple-modal__btn--status data-v-57c5a3d3"
+      >{{r}}</view
+    >
+  </view>
+  <view
+    class="_div simple-modal simple-modal--qrcode data-v-57c5a3d3"
+    wx:elif="{{t}}"
+  >
+    <view
+      class="_div simple-modal__title simple-modal__title--qrcode data-v-57c5a3d3"
+      >{{v}}</view
+    >
+    <view class="_div simple-modal__desc data-v-57c5a3d3">{{w}}</view>
+    <view class="_div simple-modal__highlight data-v-57c5a3d3" wx:if="{{x}}">
+      <label class="_span data-v-57c5a3d3">并获得最高</label>
+      <label class="_span simple-modal__highlight-text data-v-57c5a3d3"
+        >{{y}}</label
+      >
+      <label class="_span data-v-57c5a3d3">现金红包</label>
+    </view>
+    <image
+      alt="二维码"
+      class="_img simple-modal__qrcode data-v-57c5a3d3"
+      showMenuByLongpress="{{true}}"
+      src="{{z}}"
+    ></image>
+  </view>
+  <view
+    class="_div simple-modal simple-modal--notice data-v-57c5a3d3"
+    wx:elif="{{A}}"
+  >
+    <view class="_div simple-modal__notice-icon data-v-57c5a3d3"></view>
+    <view class="_div simple-modal__notice-text data-v-57c5a3d3">{{B}}</view>
+  </view>
+  <view
+    class="{{['_div','simple-modal','simple-modal--exception','data-v-57c5a3d3',P&&'simple-modal--exception-success']}}"
+    wx:elif="{{C}}"
+  >
+    <view class="_div simple-modal__exception-header data-v-57c5a3d3"></view>
+    <view class="_div simple-modal__exception-body data-v-57c5a3d3">
+      <view class="_div simple-modal__title data-v-57c5a3d3">{{D}}</view>
+      <view
+        class="_div simple-modal__exception-content data-v-57c5a3d3"
+        wx:if="{{E}}"
+      >
+        <view class="_div data-v-57c5a3d3">
+          <rich-text class="data-v-57c5a3d3" nodes="{{F}}"></rich-text>
+        </view>
+      </view>
+      <view
+        class="_div simple-modal__exception-content data-v-57c5a3d3"
+        wx:else
+      >
+        <view class="_div data-v-57c5a3d3">
+          <rich-text class="data-v-57c5a3d3" nodes="{{G}}"></rich-text>
+        </view>
+        <block wx:if="{{H}}">
+          <view class="data-v-57c5a3d3"></view>
+          <view class="_div data-v-57c5a3d3">
+            <rich-text class="data-v-57c5a3d3" nodes="{{I}}"></rich-text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="_div simple-modal__exception-footer data-v-57c5a3d3">
+      <view
+        class="_div simple-modal__exception-tips data-v-57c5a3d3"
+        wx:if="{{J}}"
+        >{{K}}</view
+      >
+      <view
+        bindtap="{{O}}"
+        class="_div simple-modal__exception-btn data-v-57c5a3d3"
+      >
+        <label class="_span data-v-57c5a3d3">{{L}}</label>
+        <label
+          class="_span simple-modal__exception-countdown data-v-57c5a3d3"
+          wx:if="{{M}}"
+          >{{N}}s</label
+        >
+      </view>
+    </view>
+  </view>
+</base-modal>

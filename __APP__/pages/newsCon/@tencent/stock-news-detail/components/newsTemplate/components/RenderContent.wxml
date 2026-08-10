@@ -1,0 +1,65 @@
+<view class="{{['_p','data-v-16e33ca4',c,d,e]}}" wx:if="{{a}}">
+  <block wx:for="{{b}}" wx:for-item="content">
+    <label
+      bindtap="{{content.c}}"
+      class="{{['_span','news-link','data-v-16e33ca4',content.d]}}"
+      wx:if="{{content.a}}"
+      >{{content.b}}</label
+    >
+    <label
+      class="{{['_span','data-v-16e33ca4',content.g]}}"
+      wx:if="{{content.e}}"
+      >{{content.f}}</label
+    >
+    <block wx:if="{{content.h}}">
+      <label
+        class="{{['_span','data-v-16e33ca4',content.k]}}"
+        wx:if="{{content.i}}"
+        >{{content.j}}</label
+      >
+      <label
+        bindtap="{{content.m}}"
+        class="{{['_span','news-stock','data-v-16e33ca4',content.n]}}"
+        wx:else
+        >{{content.l}}</label
+      >
+    </block>
+    <block wx:if="{{content.o}}">
+      <label
+        bindtap="{{content.s}}"
+        class="{{['_span','news-stock','news-func','data-v-16e33ca4',content.r]}}"
+        wx:if="{{content.p}}"
+        >{{content.q}}</label
+      >
+      <label
+        class="{{['_span','news-func','data-v-16e33ca4',content.v]}}"
+        wx:else
+        >{{content.t}}</label
+      >
+    </block>
+    <block wx:if="{{content.w}}">
+      <label
+        class="{{['_span','data-v-16e33ca4',content.z]}}"
+        wx:if="{{content.x}}"
+        >{{content.y}}</label
+      >
+      <label
+        bindtap="{{content.B}}"
+        class="{{['_span','news-link','data-v-16e33ca4',content.C]}}"
+        wx:else
+        >{{content.A}}</label
+      >
+    </block>
+    <block wx:if="{{content.D}}">
+      <label
+        bindtap="{{content.H}}"
+        class="{{['_span','news-teach','data-v-16e33ca4',content.G]}}"
+        wx:if="{{content.E}}"
+        >{{content.F}}</label
+      >
+      <label class="{{['_span','data-v-16e33ca4',content.J]}}" wx:else
+        >{{content.I}}</label
+      >
+    </block>
+  </block>
+</view>

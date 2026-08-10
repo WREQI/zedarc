@@ -1,0 +1,42 @@
+<view class="simple-result simple-result__simple-mode" wx:if="{{a}}">
+  <view class="simple-result--header flex-between fs-32">
+    <view class="flex-1"></view>
+    <view class="flex-2 align-c">订单结果</view>
+    <view class="flex-1 flex-end">
+      <view bindtap="{{c}}" class="close-bg" wx:if="{{b}}"></view>
+    </view>
+  </view>
+  <view class="{{['simple-result--body',r]}}">
+    <view class="simple-result-loading-container grey" wx:if="{{d}}">
+      <view class="loading">
+        <view class="circle-1"></view>
+        <view class="circle-2"></view>
+        <view class="circle-3"></view>
+      </view>
+    </view>
+    <label
+      animation="{{g}}"
+      class="{{['simple-result-status--icon',h]}}"
+      ref="iconRef"
+    >
+      <label animation="{{e}}" class="{{[f]}}" ref="iconLogoRef"></label>
+    </label>
+    <label animation="{{j}}" class="simple-result-status--text" ref="textRef"
+      >{{i}}</label
+    >
+    <view animation="{{p}}" class="simple-result-other" ref="orderInfoRef">
+      <view class="simple-result-loading-placeholder" wx:if="{{k}}"></view>
+      <view class="fs-28 text-color-5 align-c simple-result-tips">{{l}}</view>
+      <view class="simple-result-btn">
+        <button bindtap="{{o}}" class="{{['btn',n]}}">{{m}}</button>
+      </view>
+    </view>
+    <view class="simple-result--caidai" wx:if="{{q}}"></view>
+  </view>
+  <slot name="footer"></slot>
+  <image
+    alt=""
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/simple/caidai-new.gif"
+  ></image>
+</view>

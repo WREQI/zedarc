@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "vip-more": "../../../VipMore/index",
+    "render-template": "../../../../../newsTemplate/index",
+    "related-stock": "./related-stock",
+    "hq-tool": "../../../hq-tool",
+    "help-or-no-help": "./HelpOrNoHelp",
+    "basket-overview": "../../../../../../../../../stockBasket/@tencent/wzq-lite-basket/components/basketOverview",
+    "basket-guide-modal": "../../../../../../../../../stockBasket/@tencent/wzq-lite-basket/components/basketGuideModal",
+    "news-ai-bar": "../../../../../../../../../searchAi/@tencent/stock-ai-common-bar/components/stock-news-ai-bar/index"
+  },
+  "componentPlaceholder": {
+    "basket-overview": "view",
+    "basket-guide-modal": "view",
+    "news-ai-bar": "view"
+  }
+}

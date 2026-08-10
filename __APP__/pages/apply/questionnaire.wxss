@@ -1,0 +1,174 @@
+@import "/app.wxss";
+.page-apply-questionnaire.data-v-72c4633e {
+  padding-bottom: calc(1.786667rem + env(safe-area-inset-bottom));
+}
+.page-apply-questionnaire .top-tips.data-v-72c4633e {
+  color: var(--text-color-5);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.44rem;
+  padding: 0.186667rem 0.4rem;
+}
+.page-apply-questionnaire .content-wrap.data-v-72c4633e {
+  background-color: var(--fill-2);
+}
+.page-apply-questionnaire .content-wrap .question-item-wrap.data-v-72c4633e {
+  color: var(--text-color-1);
+  font-size: 0.4rem;
+  line-height: 0.56rem;
+  padding: 0.4rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .question-item-wrap
+  .question-item.data-v-72c4633e {
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  white-space: pre-line;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .question-item-wrap
+  .question-answer-container.data-v-72c4633e {
+  -webkit-box-pack: justify;
+  align-content: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.64rem 0.6rem 0.24rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .question-item-wrap
+  .question-answer-container
+  .answer-item.data-v-72c4633e {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .question-item-wrap
+  .question-answer-container
+  .answer-item
+  .answer-content.data-v-72c4633e {
+  padding-left: 0.32rem;
+}
+.page-apply-questionnaire .content-wrap .bottom-line.data-v-72c4633e {
+  background: var(--fill-1);
+  height: 0.16rem;
+}
+.page-apply-questionnaire .content-wrap .avatar-ico.data-v-72c4633e {
+  font-size: 1.333333rem;
+}
+.page-apply-questionnaire .content-wrap .open-tip-title.data-v-72c4633e {
+  margin: 0.48rem 0 0.426667rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .market-item.data-v-72c4633e:first-child {
+  margin-right: 1.24rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .open-checkbox.data-v-72c4633e {
+  margin-right: 0.266667rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .open-checkbox
+  .st-checkbox-small
+  .st-checkbox-inner.data-v-72c4633e {
+  height: 0.453333rem !important;
+  width: 0.453333rem !important;
+}
+.page-apply-questionnaire .content-wrap .open-tip-title.data-v-72c4633e {
+  color: var(--text-color-4);
+  font-size: 0.373333rem !important;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .market-item.data-v-72c4633e,
+.page-apply-questionnaire .content-wrap .open-account-group.data-v-72c4633e {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .market-item.data-v-72c4633e {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  height: 1.013333rem;
+  margin-right: 0;
+  width: 3.2rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .market-item.data-v-72c4633e:first-child {
+  margin-right: 0.666667rem;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .market-item
+  .market-text.data-v-72c4633e {
+  font-size: 0.426667rem !important;
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .open-checkbox.data-v-72c4633e
+  .st-checkbox
+  .st-checkbox-inner {
+  background: var(--fill-2);
+}
+.page-apply-questionnaire
+  .content-wrap
+  .open-account-group
+  .open-checkbox.data-v-72c4633e
+  .st-checkbox-checked
+  .st-checkbox-inner {
+  background: var(--color-green);
+}
+.page-apply-questionnaire .protocol-container.data-v-72c4633e {
+  -webkit-box-align: start;
+  align-items: flex-start;
+  color: var(--text-color-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFangSC-Regular;
+  font-size: 0.4rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  padding: 0.533333rem 0.4rem 1.333333rem;
+}
+.page-apply-questionnaire
+  .protocol-container
+  .protocol-checkbox.data-v-72c4633e {
+  transform: scale(0.7);
+}
+.page-apply-questionnaire .submit-container.data-v-72c4633e {
+  background-color: var(--fill-1);
+  bottom: 0;
+  margin: unset !important;
+  padding: 0.32rem 0.4rem calc(0.133333rem + env(safe-area-inset-bottom));
+  position: fixed;
+  width: 9.2rem;
+}

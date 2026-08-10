@@ -1,0 +1,18 @@
+<view bindtap="{{b}}" class="_div data-v-d3c8d4e3" hidden="{{!c}}">
+  <view class="_div subscribe-btn subscribed data-v-d3c8d4e3" wx:if="{{a}}">
+    <image
+      alt=""
+      class="_img wx-img data-v-d3c8d4e3"
+      src="https://st.gtimg.com/design/87c1970d57aa43b3f8c09301993ebad5.png"
+    ></image
+    >已开启通知</view
+  >
+  <view class="_div subscribe-btn data-v-d3c8d4e3" wx:else>
+    <image
+      alt=""
+      class="_img shake-img data-v-d3c8d4e3"
+      src="https://st.gtimg.com/design/c4e36a3da4309a81715a6f5aa1cd78c7.png"
+    ></image
+    >微信通知</view
+  >
+</view>

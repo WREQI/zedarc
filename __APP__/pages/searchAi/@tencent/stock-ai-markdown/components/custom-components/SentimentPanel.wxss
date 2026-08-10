@@ -1,0 +1,51 @@
+.sentiment-panel.data-v-002859f3 {
+  background-color: #f5f6fa;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  gap: 0.32rem;
+  margin-bottom: 0.32rem;
+  margin-top: 0.32rem;
+  padding: 0.32rem;
+}
+.sentiment-panel.data-v-002859f3,
+.sentiment-panel__item.data-v-002859f3 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sentiment-panel__item.data-v-002859f3 {
+  flex-shrink: 0;
+  gap: 0.21333333333333335rem;
+}
+.sentiment-panel__item + .sentiment-panel__item.data-v-002859f3 {
+  border-top: 0.013333333333333334rem solid var(--border-light-divider);
+  padding-top: 0.32rem;
+}
+.sentiment-panel__label.data-v-002859f3 {
+  flex-shrink: 0;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.sentiment-panel__label--bullish.data-v-002859f3 {
+  color: #e63535;
+}
+.sentiment-panel__label--bearish.data-v-002859f3 {
+  color: #1caa3c;
+}
+.sentiment-panel__text.data-v-002859f3 {
+  color: #7a8499;
+  flex-shrink: 0;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  text-align: left;
+  word-break: break-word;
+}
+.sentiment-panel__text-title.data-v-002859f3 {
+  color: #262e40;
+  font-weight: 500;
+}

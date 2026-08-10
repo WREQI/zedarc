@@ -1,0 +1,141 @@
+<page-meta class="data-v-301b0a2b" rootFontSize="{{a}}"></page-meta>
+<view class="{{['data-v-301b0a2b','container',n,o]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-301b0a2b"
+    uI="301b0a2b-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-301b0a2b"
+    uI="301b0a2b-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="row-descrip bar-switch-fixed data-v-301b0a2b" wx:if="{{c}}">
+    <view class="bar-switch flex data-v-301b0a2b">
+      <block wx:if="{{d}}">
+        <label
+          bindtap="{{item.c}}"
+          class="{{['data-v-301b0a2b','block','bar-switch-tab',item.b]}}"
+          data-action="{{item.d}}"
+          href="javascript:;"
+          wx:for="{{e}}"
+          wx:key="e"
+          >{{item.a}}</label
+        >
+      </block>
+    </view>
+  </view>
+  <view class="bd-cont data-v-301b0a2b">
+    <view class="report-wrapper data-v-301b0a2b">
+      <view class="report-fixed data-v-301b0a2b">
+        <view
+          class="report-title report-item-stock flex flex-align-center flex-pack-justify data-v-301b0a2b"
+        >
+          <view class="row-a btmline-gray data-v-301b0a2b">
+            <view class="stock-name data-v-301b0a2b">{{f}}</view>
+          </view>
+        </view>
+        <view
+          class="{{['data-v-301b0a2b','report-section',item.d]}}"
+          wx:for="{{g}}"
+          wx:key="e"
+        >
+          <view
+            class="report-item flex flex-align-center flex-pack-justify data-v-301b0a2b"
+            wx:if="{{item.a}}"
+          >
+            <view class="row-a btmline-gray topline-gray data-v-301b0a2b"
+              >{{item.b}}</view
+            >
+          </view>
+          <view class="report-one-box data-v-301b0a2b">
+            <view
+              class="report-item-one flex flex-align-center flex-pack-justify data-v-301b0a2b"
+              wx:for="{{item.c}}"
+              wx:for-item="inItem"
+              wx:key="b"
+            >
+              <view class="row-a flex data-v-301b0a2b">
+                <label class="row-a-span2 flex-1 data-v-301b0a2b"
+                  >{{inItem.a}}</label
+                >
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="{{['data-v-301b0a2b','report-slide','align-r',m]}}">
+        <view
+          class="report-title report-item-stock flex flex-align-center flex-pack-justify data-v-301b0a2b"
+        >
+          <view class="row-a btmline-gray topline-gray data-v-301b0a2b">
+            <view class="stock-name data-v-301b0a2b">{{h}}</view>
+          </view>
+          <view
+            class="row-b btmline-gray topline-gray data-v-301b0a2b"
+            wx:for="{{i}}"
+            wx:key="f"
+          >
+            <label
+              bindtap="{{item.a}}"
+              class="show-arrow-l data-v-301b0a2b"
+              data-slide="{{item.b}}"
+              wx:if="{{j}}"
+            ></label>
+            <label class="data-v-301b0a2b">{{item.c}}</label>
+            <label
+              bindtap="{{item.d}}"
+              class="show-arrow-r data-v-301b0a2b"
+              data-slide="{{item.e}}"
+              wx:if="{{k}}"
+            ></label>
+          </view>
+        </view>
+        <view
+          class="{{['data-v-301b0a2b','report-section',item.e]}}"
+          wx:for="{{l}}"
+          wx:key="f"
+        >
+          <view
+            class="report-item flex flex-align-center flex-pack-justify data-v-301b0a2b"
+            wx:if="{{item.a}}"
+          >
+            <view class="row-a btmline-gray topline-gray data-v-301b0a2b"
+              >{{item.b}}</view
+            >
+            <view
+              class="row-b btmline-gray topline-gray data-v-301b0a2b"
+              wx:for="{{item.c}}"
+              wx:for-item="zitem"
+              wx:key="b"
+              >{{zitem.a}}</view
+            >
+          </view>
+          <view class="report-one-box data-v-301b0a2b">
+            <view
+              class="report-item-one flex flex-align-center flex-pack-justify data-v-301b0a2b"
+              wx:for="{{item.d}}"
+              wx:for-item="kitem"
+              wx:key="c"
+            >
+              <view class="row-a flex data-v-301b0a2b">
+                <label class="row-a-span2 flex-1 data-v-301b0a2b"
+                  >{{kitem.a}}</label
+                >
+              </view>
+              <view
+                class="row-b data-v-301b0a2b"
+                wx:for="{{kitem.b}}"
+                wx:for-item="uitem"
+                wx:key="b"
+                >{{uitem.a}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

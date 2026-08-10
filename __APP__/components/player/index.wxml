@@ -1,0 +1,86 @@
+<view
+  class="container"
+  id="{{instanceId}}"
+  style="width:{{width}};height:{{height}}; border-radius:{{borderRadius}}"
+>
+  <view class="vn-container">
+    <video-node
+      active="{{item===activeVideoNode||item===0&&activeVideoNode===-1}}"
+      autoPauseIfNavigate="{{autoPauseIfNavigate}}"
+      autoPauseIfOpenNative="{{autoPauseIfOpenNative}}"
+      autoplay="{{isAutoplay}}"
+      borderRadius="{{borderRadius}}"
+      direction="{{direction===-1?90:direction}}"
+      enableAutoRotation="{{enableAutoRotation}}"
+      enablePlayGesture="{{enablePlayGesture}}"
+      enableProgressGesture="{{!isAd&&enableProgressGesture}}"
+      id="vn-{{item}}"
+      idx="{{item}}"
+      longPressPlaybackRate="{{longPressPlaybackRate}}"
+      loop="{{loop}}"
+      muted="{{muted}}"
+      objectFit="{{objectFit}}"
+      pictureInPictureMode="{{isAd?[]:pictureInPictureMode}}"
+      vslideGesture="{{vslideGesture}}"
+      vslideGestureInFullscreen="{{vslideGestureInFullscreen}}"
+      wx:for="{{IS_WX?maxVideoNode:1}}"
+    >
+      <ui-control
+        autoplay="{{isAutoplay}}"
+        binduievent="proxyUIEvent"
+        controls="{{controls}}"
+        direction="{{direction===-1?90:direction}}"
+        disableProgress="{{disableProgress}}"
+        height="{{height}}"
+        id="ui-{{item}}"
+        playerId="{{instanceId}}"
+        posterUrl="{{posterUrl}}"
+        showBackgroundPlaybackBtn="{{showBackgroundPlaybackBtn}}"
+        showDefinitionBtn="{{showDefinitionBtn}}"
+        showFullscreenBackBtn="{{showFullscreenBackBtn}}"
+        showFullscreenBtn="{{showFullscreenBtn}}"
+        showNewTips="{{showNewTips}}"
+        showPlayBtn="{{showPlayBtn}}"
+        showPlaybackRateBtn="{{showPlaybackRateBtn}}"
+        showProgress="{{showProgress}}"
+        title="{{title}}"
+        usePoster="{{usePoster}}"
+        useWatermark="{{useWatermark}}"
+        width="{{width}}"
+        wx:if="{{item===activeVideoNode}}"
+      >
+        <view slot="ui-bottom-left-ctrl-btn">
+          <slot name="bottom-left-ctrl-btn"></slot>
+        </view>
+        <view slot="ui-bottom-right-ctrl-btn">
+          <slot name="bottom-right-ctrl-btn"></slot>
+        </view>
+        <view slot="ui-top-right-ctrl-btn">
+          <slot name="top-right-ctrl-btn"></slot>
+        </view>
+      </ui-control>
+      <error-page
+        playerId="{{instanceId}}"
+        useErrorPage="{{useErrorPage}}"
+        wx:if="{{item===activeVideoNode||item===0&&activeVideoNode===-1}}"
+      ></error-page>
+      <custom-layer
+        class="custom-layer-class"
+        param="{{customLayerData}}"
+        playerId="{{instanceId}}"
+        wx:if="{{item===activeVideoNode||item===0&&activeVideoNode===-1}}"
+      ></custom-layer>
+      <custom-toast
+        class="custom-toast-class"
+        param="{{customToastData}}"
+        playerId="{{instanceId}}"
+        wx:if="{{item===activeVideoNode}}"
+      ></custom-toast>
+      <block wx:if="{{item===activeVideoNode||item===0&&activeVideoNode===-1}}">
+        <slot name="toast"></slot>
+        <slot name="default"></slot>
+      </block>
+    </video-node>
+    <image hidden src="{{envReportUrl}}"></image>
+  </view>
+</view>

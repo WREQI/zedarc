@@ -1,0 +1,139 @@
+<view class="_div rank-wrapper flex height100 data-v-42c5afc4">
+  <view class="_div rank-header data-v-42c5afc4">
+    <image
+      class="_img rank-header-img data-v-42c5afc4"
+      resizeMode="cover"
+      src="https://wzq.gtimg.com/resources/mocktrade/card_bg_rank.png"
+      style="{{'width:'+a}}"
+    ></image>
+    <view class="_div rank-hd data-v-42c5afc4" style="{{'width:'+r}}">
+      <view class="_div row layout-align-space-between data-v-42c5afc4">
+        <label class="_span rank-hd__title data-v-42c5afc4">周赛榜TOP100</label>
+        <label class="_span rank-hd__time data-v-42c5afc4" wx:if="{{b}}"
+          >本期 {{c}}-{{d}}</label
+        >
+      </view>
+      <view
+        class="_div rank-hd__cnt row layout-align-space-between data-v-42c5afc4"
+        wx:if="{{e}}"
+      >
+        <view class="_div row layout-align-space-between data-v-42c5afc4">
+          <label class="_span order data-v-42c5afc4" wx:if="{{f}}">{{g}}</label>
+          <label class="_span norank--left-text data-v-42c5afc4" wx:else
+            >暂无排名  </label
+          >
+          <image class="_img hdimg data-v-42c5afc4" src="{{h}}"></image>
+          <label class="_span username data-v-42c5afc4" wx:if="{{i}}"
+            >{{j}}</label
+          >
+          <label class="_span username data-v-42c5afc4" wx:else>****</label>
+        </view>
+        <view class="_div row prize-text data-v-42c5afc4" wx:if="{{k}}">
+          <label
+            class="{{['_span','profit','data-v-42c5afc4',n]}}"
+            wx:if="{{l}}"
+            >{{m}}</label
+          >
+          <label
+            class="{{['_span','profit-sign','data-v-42c5afc4',p]}}"
+            wx:if="{{o}}"
+            >%</label
+          >
+        </view>
+        <label class="_span norank--right-text data-v-42c5afc4" wx:else
+          >{{q}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <tab-host
+    bind:__l="__l"
+    bindsetSwiperindex="{{I}}"
+    class="tab-wrapper data-v-42c5afc4"
+    uI="42c5afc4-0"
+    uS="{{['d']}}"
+  >
+    <tab-view
+      bind:__l="__l"
+      class="data-v-42c5afc4"
+      uI="42c5afc4-1,42c5afc4-0"
+      uP="{{x}}"
+      uS="{{['d']}}"
+      wx:if="{{false}}"
+    >
+      <tab-nav
+        bind:__l="__l"
+        bindchange="{{v}}"
+        bindlayout="{{s}}"
+        bindtapTab="{{t}}"
+        class="data-v-42c5afc4"
+        uI="42c5afc4-2,42c5afc4-1"
+        uP="{{w}}"
+        wx:if="{{w}}"
+      ></tab-nav>
+    </tab-view>
+    <swiper
+      needAnimation
+      bindchange="{{H}}"
+      binddragging="{{F}}"
+      binddropped="{{G}}"
+      class="tab-swiper tab-swiper-rank data-v-42c5afc4"
+      current="{{E}}"
+      ref="swiperref"
+    >
+      <swiper-item
+        class="{{['swiper-item','data-v-42c5afc4',A&&'flex-center']}}"
+      >
+        <view class="_div scroll-view data-v-42c5afc4">
+          <view class="_div swiper-item data-v-42c5afc4">
+            <view class="_div week-rank-container data-v-42c5afc4">
+              <reward-stage
+                bind:__l="__l"
+                class="data-v-42c5afc4"
+                uI="42c5afc4-3,42c5afc4-0"
+                uP="{{y}}"
+                wx:if="{{y}}"
+              ></reward-stage>
+              <view class="_div list-container data-v-42c5afc4">
+                <rank-list
+                  bind:__l="__l"
+                  class="data-v-42c5afc4"
+                  uI="42c5afc4-4,42c5afc4-0"
+                  uP="{{z}}"
+                  wx:if="{{z}}"
+                ></rank-list>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item
+        class="{{['swiper-item','data-v-42c5afc4',D&&'flex-center']}}"
+        wx:if="{{false}}"
+      >
+        <view class="_div scroll-view data-v-42c5afc4">
+          <view class="_div swiper-item data-v-42c5afc4">
+            <view class="_div week-rank-container data-v-42c5afc4">
+              <reward-stage
+                bind:__l="__l"
+                class="data-v-42c5afc4"
+                uI="42c5afc4-5,42c5afc4-0"
+                uP="{{B}}"
+                wx:if="{{B}}"
+              ></reward-stage>
+              <view class="_div list-container data-v-42c5afc4">
+                <rank-list
+                  bind:__l="__l"
+                  class="data-v-42c5afc4"
+                  uI="42c5afc4-6,42c5afc4-0"
+                  uP="{{C}}"
+                  wx:if="{{C}}"
+                ></rank-list>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </tab-host>
+</view>

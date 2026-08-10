@@ -1,0 +1,14 @@
+<view>
+  <popup bind:__l="__l" uI="9fe66a2c-0" uP="{{b}}" uS="{{['d']}}" wx:if="{{b}}">
+    <view class="dialog-container">
+      <st-loading
+        bind:__l="__l"
+        class="status-layer-tip"
+        uI="9fe66a2c-1,9fe66a2c-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></st-loading>
+      <view class="dialog-title">正在加载</view>
+    </view>
+  </popup>
+</view>

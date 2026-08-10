@@ -1,0 +1,59 @@
+<view class="_div data-v-779bd592">
+  <view class="_div container data-v-779bd592">
+    <view class="_div date-text data-v-779bd592">{{a}}</view>
+    <view class="_div stock-num data-v-779bd592" wx:if="{{b}}"
+      >添加了{{c}}只股票</view
+    >
+    <view class="_div stock-container data-v-779bd592">
+      <view
+        bindtap="{{item.g}}"
+        class="_div stock-item data-v-779bd592"
+        wx:for="{{d}}"
+        wx:key="f"
+      >
+        <view class="{{['_div','data-v-779bd592','stock-item-name',item.b]}}"
+          >{{item.a}}</view
+        >
+        <view class="_div stock-item-code-box data-v-779bd592">
+          <view class="_div data-v-779bd592">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-779bd592"
+              uI="{{item.c}}"
+              uP="{{item.d}}"
+              wx:if="{{item.d}}"
+            ></market-icon>
+          </view>
+          <view class="_div stock-scode data-v-779bd592">{{item.e}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="_div stock-num stock-num-remove data-v-779bd592" wx:if="{{e}}"
+      >移出了{{f}}只股票</view
+    >
+    <view class="_div stock-container data-v-779bd592">
+      <view
+        bindtap="{{item.g}}"
+        class="_div stock-item data-v-779bd592"
+        wx:for="{{g}}"
+        wx:key="f"
+      >
+        <view class="{{['_div','data-v-779bd592','stock-item-name',item.b]}}"
+          >{{item.a}}</view
+        >
+        <view class="_div stock-item-code-box data-v-779bd592">
+          <view class="_div data-v-779bd592">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-779bd592"
+              uI="{{item.c}}"
+              uP="{{item.d}}"
+              wx:if="{{item.d}}"
+            ></market-icon>
+          </view>
+          <view class="_div stock-scode data-v-779bd592">{{item.e}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="_div tutorial-wrapper data-v-01251dab">
+  <view
+    bindtap="{{b}}"
+    class="_div tutorial-box layout layout-row layout-align-space-between layout-align-center-center data-v-01251dab"
+  >
+    <view class="_div layout layout-align-start-center data-v-01251dab">
+      <image
+        class="_img icon-tutorial data-v-01251dab"
+        src="https://st.gtimg.com/design/aafcf3f5c41659d31941fdcbc546f2be.png"
+      ></image>
+      <view class="_div layout layout-column data-v-01251dab">
+        <label class="_span top-text data-v-01251dab">板块功能教程</label>
+        <label class="_span bottom-text data-v-01251dab"
+          >怎么使用板块投资</label
+        >
+      </view>
+    </view>
+    <image class="_img icon-arrow data-v-01251dab" src="{{a}}"></image>
+  </view>
+</view>

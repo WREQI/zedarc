@@ -1,0 +1,78 @@
+<view
+  bindtap="{{q}}"
+  class="_div plate-box data-v-1566be0d"
+  data-win-type="{{s}}"
+  name="{{r}}"
+  ref="plate"
+  wx:if="{{a}}"
+>
+  <view class="_div plate-body data-v-1566be0d">
+    <view class="_div plate-head data-v-1566be0d" wx:if="{{b}}">
+      <view class="_p plate-info-title data-v-1566be0d">{{c}}({{d}})</view>
+      <view class="{{['_p','plate-info-price','data-v-1566be0d',h]}}"
+        >{{e}} {{f}} {{g}}%</view
+      >
+    </view>
+    <view class="{{['_table','data-v-1566be0d',k]}}">
+      <view class="_thead data-v-1566be0d">
+        <view class="_tr data-v-1566be0d">
+          <view class="_td stock-col-1 data-v-1566be0d">股票名称</view>
+          <view class="_td data-v-1566be0d">最新价</view>
+          <view class="_td data-v-1566be0d">主力净流入</view>
+          <view class="_td stock-col-4 mp-head-col-4 data-v-1566be0d"
+            >涨跌幅</view
+          >
+        </view>
+      </view>
+      <view class="_tbody data-v-1566be0d">
+        <view class="_tr data-v-1566be0d" wx:for="{{i}}" wx:for-item="stock">
+          <view class="_td stock-col-1 data-v-1566be0d">
+            <view class="_p stock-name data-v-1566be0d">{{stock.a}}</view>
+            <view class="_p stock-code data-v-1566be0d">
+              <view class="{{['_i','data-v-1566be0d',stock.b]}}"></view>
+              <label class="_span data-v-1566be0d">{{stock.c}}</label>
+            </view>
+          </view>
+          <view class="_td data-v-1566be0d">{{stock.d}}</view>
+          <view class="{{['_td','data-v-1566be0d',stock.f]}}">{{stock.e}}</view>
+          <view class="{{['_td','stock-col-4','data-v-1566be0d',stock.h]}}"
+            >{{stock.g}}</view
+          >
+          <view class="_td addFav-wrap data-v-1566be0d" wx:if="{{j}}">
+            <add-fav
+              bind:__l="__l"
+              bindactionReport="{{stock.i}}"
+              class="data-v-1566be0d"
+              uI="{{stock.j}}"
+              uP="{{stock.k}}"
+              wx:if="{{stock.k}}"
+            ></add-fav>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div plate-note data-v-1566be0d">
+    <image
+      alt=""
+      class="_img note-img image-white data-v-1566be0d"
+      src="{{l}}"
+    ></image>
+    <image
+      alt=""
+      class="_img note-img image-black data-v-1566be0d"
+      src="{{m}}"
+    ></image>
+    <label class="_span data-v-1566be0d">点击查看详情</label>
+  </view>
+  <view class="_div fav-btn-wrap data-v-1566be0d" wx:if="{{n}}">
+    <add-fav
+      bind:__l="__l"
+      bindactionReport="{{o}}"
+      class="data-v-1566be0d"
+      uI="1566be0d-1"
+      uP="{{p}}"
+      wx:if="{{p}}"
+    ></add-fav>
+  </view>
+</view>

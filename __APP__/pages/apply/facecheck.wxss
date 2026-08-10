@@ -1,0 +1,111 @@
+@import "/app.wxss";
+.data-v-bb5fdff9 .page-apply-facecheck {
+  background: var(--fill-2);
+  border-top: 0.013333rem solid transparent;
+  height: 100%;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .section-content {
+  background-color: var(--fill-2);
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-sizing: border-box;
+  height: calc(100% - 4.613333rem);
+  margin-top: 4.613333rem;
+  overflow: scroll;
+  position: relative;
+  z-index: 1;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .banner {
+  background: var(--fill-2);
+  border: 0.213333rem;
+  margin: 0.32rem 0.32rem 0;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .banner-tip {
+  color: var(---Heavy-gray, #262e40);
+  color: var(--text-color-1);
+  font-family: PingFang SC;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  padding: 0.48rem 0;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .banner-pic {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/video_example.png);
+  background-size: 100%;
+  height: 6.786667rem;
+  width: 4.426667rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .icon-tip-list,
+.data-v-bb5fdff9 .page-apply-facecheck .icon-tip-list .icon-tip {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .protocol-container {
+  padding-bottom: 0.533333rem;
+}
+.data-v-bb5fdff9
+  .page-apply-facecheck
+  .protocol-container
+  ::v-deep
+  .protocol-checkbox {
+  transform: scale(0.7);
+}
+.data-v-bb5fdff9 .page-apply-facecheck.page-apply-facecheck__simple-mode {
+  background: #f5f6f9;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-info-wrap,
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-wrap {
+  background: var(--fill-2);
+  border-radius: 0.213333rem;
+  margin-left: 0.32rem;
+  margin-right: 0.32rem;
+  margin-top: 0.32rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-wrap {
+  margin-bottom: 0.32rem 0.32rem 0 0.32rem;
+  padding-top: 0.533333rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-wrap .facecheck-logo-wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-wrap .facecheck-logo {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/face-check-logo-simple.png);
+  background-size: 100%;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-wrap .facecheck-text {
+  color: #262e40;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  margin: 0.64rem auto 0.133333rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-info-wrap {
+  padding: 0 0.32rem;
+}
+.data-v-bb5fdff9 .page-apply-facecheck .facecheck-info-wrap .facecheck-info {
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  align-items: center;
+  color: #475166;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 1.466667rem;
+  width: 100%;
+}
+.data-v-bb5fdff9 .footprint {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}

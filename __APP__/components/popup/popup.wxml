@@ -1,0 +1,5 @@
+<view bingdtap="" class="popup-warpper" wx:if="{{isShowPop}}">
+  <view class="wrapper">
+    <slot name="after"></slot>
+  </view>
+</view>

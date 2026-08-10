@@ -1,0 +1,346 @@
+.investment-page.data-v-18a13435 {
+  border-radius: 0.21333333333333335rem;
+  margin: 0 0.32rem;
+  padding-bottom: calc(2.3866666666666667rem + env(safe-area-inset-bottom));
+}
+.investment-page.nav-padding.data-v-18a13435 {
+  margin: 2.506666666666667rem 0.32rem 0;
+}
+.investment-page__header.data-v-18a13435 {
+  height: 2.3466666666666667rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.investment-page__back-icon.data-v-18a13435 {
+  height: 0.64rem;
+  left: 0.26666666666666666rem;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
+  top: 1.44rem;
+  width: 0.64rem;
+}
+.investment-page__title.data-v-18a13435 {
+  font-family: PingFang SC, sans-serif;
+  font-weight: 700;
+  left: 4.1466666666666665rem;
+  line-height: 0.5866666666666667rem;
+  text-align: center;
+  top: 1.4666666666666666rem;
+}
+.investment-page__title.data-v-18a13435,
+.market-card__price.data-v-18a13435 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  position: absolute;
+  white-space: nowrap;
+}
+.market-card__price.data-v-18a13435 {
+  left: 5.266666666666667rem;
+}
+.market-card__change.data-v-18a13435,
+.market-card__price.data-v-18a13435 {
+  font-family: "230525_zxg", sans-serif;
+  font-weight: 400;
+  line-height: 0.5090133158360001rem;
+  text-align: right;
+  top: 0.6rem;
+}
+.market-card__change.data-v-18a13435 {
+  color: #e63535;
+  font-size: 0.4266666666666667rem;
+  left: 7.533333333333333rem;
+  position: absolute;
+  white-space: nowrap;
+}
+.market-card__info.data-v-18a13435 {
+  height: 1.0933333333333333rem;
+  left: 0.32rem;
+  overflow: hidden;
+  position: absolute;
+  top: 0.30666666666666664rem;
+  width: 2.493333333333333rem;
+}
+.market-card__name.data-v-18a13435 {
+  color: var(--color-heavygray);
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  left: 0;
+  line-height: 0.5866666666666667rem;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  white-space: nowrap;
+}
+.market-card__code.data-v-18a13435 {
+  color: #7a8499;
+  font-family: "230525_zxg", sans-serif;
+  font-size: 0.3200000508626667rem;
+  font-weight: 400;
+  left: 0.48rem;
+  line-height: 0.4rem;
+  position: absolute;
+  text-align: left;
+  top: 0.6933333333333334rem;
+  white-space: nowrap;
+}
+.market-card__tag-icon.data-v-18a13435 {
+  height: 0.26666666666666666rem;
+  left: 0.32rem;
+  object-fit: cover;
+  position: absolute;
+  top: 1.0666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.fund-panel__bg.data-v-18a13435 {
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem;
+  height: 20.613333333333333rem;
+  left: 0.32rem;
+  position: absolute;
+  top: 2.6666666666666665rem;
+  width: calc(100% - 0.64rem);
+}
+.investment-page__empty.data-v-18a13435,
+.investment-page__loading.data-v-18a13435 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  margin-top: 0.32rem;
+  min-height: 6.933333333333334rem;
+}
+.investment-page__loading.data-v-18a13435 {
+  align-items: center;
+  color: var(--color-lightgray, #98a0b3);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.3466666666666667rem;
+  justify-content: center;
+}
+.fund-panel__list.data-v-18a13435 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.32rem;
+  padding: 0.32rem;
+}
+.loading-tips.data-v-18a13435 {
+  color: var(--color-lightgray, #98a0b3);
+  font-size: 0.3466666666666667rem;
+  padding: 0.32rem 0;
+  text-align: center;
+}
+.footer-logo.data-v-18a13435 {
+  background-image: url(https://st.gtimg.com/design/aa65870c4a9bbd7ba311225f19e33525.png);
+  background-position: center 0.64rem;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 1.44rem;
+  padding: 0.4266666666666667rem 0 0;
+  width: 100%;
+}
+.fund-panel__divider.data-v-18a13435 {
+  background-color: var(--border-light-divider);
+  flex-shrink: 0;
+  height: 0.013333333333333334rem;
+  margin: 0.4266666666666667rem 0;
+  width: 100%;
+}
+.fund-card.data-v-18a13435 {
+  flex-shrink: 0;
+  height: 2.4rem;
+  position: relative;
+  width: 100%;
+}
+.fund-card__buy-button.data-v-18a13435 {
+  align-items: center;
+  border: 0.02666666666666667rem solid #e63535;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 0.64rem;
+  padding: 0.09333333333333334rem 0.21333333333333335rem;
+  position: absolute;
+  right: 0;
+  top: 0.7066666666666667rem;
+  width: 1.0666666666666667rem;
+}
+.fund-card__buy-text.data-v-18a13435 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 700;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__highlight.data-v-18a13435 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  min-height: 0.56rem;
+  position: absolute;
+  top: 1.84rem;
+  width: 100%;
+}
+.fund-card__highlight-badge.data-v-18a13435 {
+  border-radius: 0.05333333333333334rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  min-height: 0.37333333333333335rem;
+  padding: 0 0.10666666666666667rem;
+  position: relative;
+  width: 1.28rem;
+}
+.fund-card__highlight-badge.data-v-18a13435:after {
+  border: 1px solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  display: block;
+  height: 200%;
+  left: 0;
+  margin-left: -0.006666666666666667rem;
+  margin-top: -0.006666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transform-origin: 0 0 0;
+  width: 200%;
+  z-index: 1;
+}
+.fund-card__highlight-badge-text.data-v-18a13435 {
+  color: #e63535;
+  flex-shrink: 0;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.fund-card__highlight-text.data-v-18a13435 {
+  color: var(--color-midgray);
+  flex: 1 1 auto;
+  font-family: xcxfont, sans-serif;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-left: 0.16rem;
+  max-width: calc(100% - 1.44rem);
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page-scroll--h5.data-v-18a13435,
+.page-scroll.data-v-18a13435 {
+  -webkit-overflow-scrolling: touch;
+  flex: 1 1 auto;
+}
+.page-scroll--h5.data-v-18a13435 {
+  height: calc(100vh - 0.32rem);
+}
+.investment-page.flex-grow.data-v-18a13435 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.investment-page.flex-grow .fund-panel__bg.data-v-18a13435,
+.investment-page.flex-grow .investment-page__header.data-v-18a13435,
+.investment-page.flex-grow .market-card.data-v-18a13435 {
+  flex-shrink: 0;
+  left: auto;
+  position: relative;
+  top: auto;
+}
+.investment-page.flex-grow .investment-page__header.data-v-18a13435 {
+  margin-top: 0;
+}
+.investment-page.flex-grow .fund-panel__bg.data-v-18a13435 {
+  margin-left: 0.32rem;
+  margin-top: 0.32rem;
+}
+.investment-page.flex-grow .market-card.data-v-18a13435 {
+  margin-left: 0.32rem;
+  margin-top: 0.38666666666666666rem;
+}
+.fund-card__hot-topic-header.data-v-18a13435 {
+  left: -0.32rem;
+  position: absolute;
+  top: -1.2rem;
+  transform: scale(0.932);
+  transform-origin: 0 0;
+}
+.investment-page__header--hidden.data-v-18a13435 {
+  visibility: hidden;
+}
+.global-invest-navigation.data-v-18a13435 .navigation-bar {
+  height: 2.3466666666666667rem;
+}
+.global-invest-navigation.data-v-18a13435 .status-bar {
+  display: none;
+}
+.global-invest-navigation.data-v-18a13435 .mask {
+  background: hsla(0, 0%, 100%, 0.99);
+}
+.global-invest-navigation.data-v-18a13435 .navigation-title {
+  box-sizing: border-box;
+  color: var(--color-heavygray);
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 2.3466666666666667rem;
+  line-height: 0.5866666666666667rem;
+  padding-top: 1.1733333333333333rem;
+}
+.global-invest-navigation.data-v-18a13435 .btn-icon {
+  padding: 0.09333333333333334rem 0.18666666666666668rem;
+  top: 1.76rem;
+}
+.global-invest-navigation.data-v-18a13435 .btn-icon.btn-left {
+  left: 0.08rem;
+}
+.global-invest-navigation.data-v-18a13435 .btn-icon .icon-btn-back {
+  height: 0.4533333333333333rem;
+  width: 0.25333333333333335rem;
+}
+.global-invest-navigation.hot-topic-nav-bar.data-v-18a13435 {
+  z-index: 1024;
+}
+.global-invest-navigation.hot-topic-nav-bar.data-v-18a13435
+  .hot-topic-nav-bar__title-layer {
+  background: hsla(0, 0%, 100%, 0.99);
+  height: 2.3466666666666667rem !important;
+}
+.global-invest-navigation.hot-topic-nav-bar.data-v-18a13435
+  .hot-topic-nav-bar__content {
+  height: 1.1733333333333333rem !important;
+  margin-top: 1.1733333333333333rem;
+}
+.global-invest-navigation.hot-topic-nav-bar.data-v-18a13435
+  .hot-topic-nav-bar__title {
+  color: var(--color-heavygray);
+  font-family: PingFang SC, sans-serif;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  line-height: 0.5866666666666667rem;
+}
+.global-invest-navigation.hot-topic-nav-bar.data-v-18a13435
+  .hot-topic-nav-bar__back {
+  left: 0.08rem;
+  top: 1.2666666666666666rem !important;
+}

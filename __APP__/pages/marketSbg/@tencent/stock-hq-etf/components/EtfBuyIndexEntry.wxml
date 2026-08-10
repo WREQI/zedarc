@@ -1,0 +1,96 @@
+<view
+  bindtap="{{q}}"
+  class="{{['_div','data-v-2ebfee07','etf-buy-index-entry',p]}}"
+>
+  <view class="_div etf-buy-index-entry__header data-v-2ebfee07">
+    <view class="_div etf-buy-index-entry__header-row data-v-2ebfee07">
+      <view class="_div etf-buy-index-entry__title data-v-2ebfee07">
+        <image
+          alt="买指数"
+          class="_img etf-buy-index-entry__title-img data-v-2ebfee07"
+          src="{{a}}"
+        ></image>
+      </view>
+      <view class="_div etf-buy-index-entry__desc data-v-2ebfee07"
+        >布局核心指数</view
+      >
+    </view>
+    <view class="_div etf-buy-index-entry__arrow data-v-2ebfee07"></view>
+  </view>
+  <view class="_div etf-buy-index-entry__highlights data-v-2ebfee07">
+    <view
+      catchtap="{{c}}"
+      class="_div etf-buy-index-entry__highlight-row etf-buy-index-entry__highlight-row--product data-v-2ebfee07"
+    >
+      <view class="_div etf-buy-index-entry__highlight-line data-v-2ebfee07">
+        <label class="_span etf-buy-index-entry__badge data-v-2ebfee07"
+          >产品亮点</label
+        >
+        <label class="_span etf-buy-index-entry__highlight-text data-v-2ebfee07"
+          >{{b}}</label
+        >
+      </view>
+    </view>
+    <view
+      catchtap="{{e}}"
+      class="_div etf-buy-index-entry__highlight-row etf-buy-index-entry__highlight-row--history data-v-2ebfee07"
+    >
+      <view class="_div etf-buy-index-entry__highlight-line data-v-2ebfee07">
+        <label class="_span etf-buy-index-entry__badge data-v-2ebfee07"
+          >历史收益</label
+        >
+        <label class="_span etf-buy-index-entry__highlight-text data-v-2ebfee07"
+          >{{d}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{o}}"
+    class="_div etf-buy-index-entry__fund-row data-v-2ebfee07"
+    wx:if="{{f}}"
+  >
+    <view class="_div etf-buy-index-entry__fund-info data-v-2ebfee07">
+      <view class="_div etf-buy-index-entry__fund-name data-v-2ebfee07"
+        >{{g}}</view
+      >
+      <view class="_div etf-buy-index-entry__fund-meta data-v-2ebfee07">
+        <market-icon
+          bind:__l="__l"
+          class="data-v-2ebfee07"
+          uI="2ebfee07-0"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></market-icon>
+        <view class="_div etf-buy-index-entry__fund-code data-v-2ebfee07"
+          >{{i}}</view
+        >
+        <view
+          class="_div etf-buy-index-entry__fund-tag-wrap data-v-2ebfee07"
+          wx:if="{{j}}"
+        >
+          <label class="_span etf-buy-index-entry__fund-tag data-v-2ebfee07"
+            >{{k}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div etf-buy-index-entry__fund-change data-v-2ebfee07">
+      <view
+        class="{{['_div','etf-buy-index-entry__fund-rise','data-v-2ebfee07',m]}}"
+        >{{l}}</view
+      >
+      <view class="_div etf-buy-index-entry__fund-change-label data-v-2ebfee07"
+        >涨跌幅</view
+      >
+    </view>
+    <view class="_div etf-buy-index-entry__fund-min-buy data-v-2ebfee07">
+      <view class="_div etf-buy-index-entry__fund-price data-v-2ebfee07"
+        >{{n}}</view
+      >
+      <view class="_div etf-buy-index-entry__fund-min-buy-label data-v-2ebfee07"
+        >买一笔仅需</view
+      >
+    </view>
+  </view>
+</view>

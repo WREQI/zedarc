@@ -1,0 +1,17 @@
+<view class="_div worran-contaner data-v-a2fb50d0">
+  <view class="_div title data-v-a2fb50d0">简况</view>
+  <view class="_ul list data-v-a2fb50d0">
+    <view class="_li item data-v-a2fb50d0" wx:for="{{a}}" wx:key="c">
+      <label class="_span one data-v-a2fb50d0">{{item.a}}</label>
+      <label class="_span last data-v-a2fb50d0">{{item.b}}</label>
+    </view>
+  </view>
+  <view class="_div splite-line data-v-a2fb50d0" wx:if="{{b}}"></view>
+  <view class="_div title data-v-a2fb50d0" wx:if="{{c}}">技术数据</view>
+  <view class="_ul list data-v-a2fb50d0">
+    <view class="_li item data-v-a2fb50d0" wx:for="{{d}}" wx:key="c">
+      <label class="_span one data-v-a2fb50d0">{{item.a}}</label>
+      <label class="_span last data-v-a2fb50d0">{{item.b}}</label>
+    </view>
+  </view>
+</view>

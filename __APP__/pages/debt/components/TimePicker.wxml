@@ -1,0 +1,11 @@
+<view class="time-picker-wrapper flex-column data-v-44b97e2b">
+  <custom-picker
+    bind:__l="__l"
+    bindclose="{{a}}"
+    bindconfirm="{{b}}"
+    class="data-v-44b97e2b"
+    uI="44b97e2b-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></custom-picker>
+</view>

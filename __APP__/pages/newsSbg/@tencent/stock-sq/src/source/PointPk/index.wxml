@@ -1,0 +1,72 @@
+<view class="_div point-pk data-v-ae8dfcb9">
+  <view
+    class="{{['_div','data-v-ae8dfcb9','point-box',l,m]}}"
+    style="{{'background-image:'+n}}"
+  >
+    <view class="_div top-box data-v-ae8dfcb9">
+      <label class="{{['_span','data-v-ae8dfcb9','top-title']}}">话题PK</label>
+      <label class="_span comment-num data-v-ae8dfcb9" wx:if="{{a}}"
+        >{{b}}人已参加</label
+      >
+    </view>
+    <view class="_div title-box data-v-ae8dfcb9">
+      <label class="_span title data-v-ae8dfcb9">{{c}}</label>
+    </view>
+    <view class="_div pk-box data-v-ae8dfcb9" wx:if="{{d}}">
+      <label
+        catchtap="{{item.b}}"
+        class="{{['_span','data-v-ae8dfcb9','pk-text',item.d]}}"
+        wx:for="{{e}}"
+        wx:key="c"
+        >{{item.a}}</label
+      >
+    </view>
+    <view
+      class="_div ratio-box data-v-ae8dfcb9"
+      style="{{'width:'+h}}"
+      wx:if="{{f}}"
+    >
+      <view
+        class="{{['_div','data-v-ae8dfcb9','ratio-wrap',item.g]}}"
+        wx:for="{{g}}"
+        wx:key="h"
+      >
+        <image
+          class="{{['_img','data-v-ae8dfcb9','ratio-img',item.b,item.c,item.d,item.e]}}"
+          src="{{item.a}}"
+          style="{{'width:'+item.f}}"
+        ></image>
+      </view>
+    </view>
+    <view
+      class="_div text-box data-v-ae8dfcb9"
+      style="{{'width:'+k}}"
+      wx:if="{{i}}"
+    >
+      <view
+        class="{{['_div','data-v-ae8dfcb9','text-wrap',item.l,item.m,item.n]}}"
+        wx:for="{{j}}"
+        wx:key="k"
+      >
+        <label class="{{['_span','data-v-ae8dfcb9','ratio-text']}}"
+          >{{item.a}}%</label
+        >
+        <view class="{{['_div','data-v-ae8dfcb9','result-box',item.i,item.j]}}">
+          <image
+            class="_img pick data-v-ae8dfcb9"
+            src="{{item.c}}"
+            wx:if="{{item.b}}"
+          ></image>
+          <label class="{{['_span','data-v-ae8dfcb9','result',item.f]}}"
+            >{{item.d}}{{item.e}}</label
+          >
+          <label
+            class="{{['_span','data-v-ae8dfcb9','plus-text',item.g,item.h]}}"
+            >+1</label
+          >
+        </view>
+      </view>
+    </view>
+    <slot></slot>
+  </view>
+</view>

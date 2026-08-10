@@ -1,0 +1,8 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<nav-bar bind:__l="__l" uI="1b1b7db2-0"></nav-bar>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="1b1b7db2-1"
+  uP="{{b}}"
+  wx:if="{{b}}"
+></stock-privacy-dialog>

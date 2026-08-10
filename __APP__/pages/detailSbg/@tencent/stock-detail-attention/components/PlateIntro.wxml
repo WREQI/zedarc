@@ -1,0 +1,9 @@
+<view
+  bindtap="{{e}}"
+  class="{{['_div','wrapper','data-v-28785e02',d&&'extend']}}"
+  ref="wrapper"
+>
+  <view class="_div brief-text data-v-28785e02">简介</view>
+  <label class="_span text data-v-28785e02">{{a}}</label>
+  <view class="_div fold-text data-v-28785e02" wx:if="{{b}}">{{c}}</view>
+</view>

@@ -1,0 +1,98 @@
+@-webkit-keyframes blink-5078dd0f {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+@keyframes blink-5078dd0f {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+.fund-chart-wrapper.data-v-5078dd0f {
+  position: relative;
+}
+.fund-chart-wrapper .funds-chart-history.data-v-5078dd0f,
+.fund-chart-wrapper .funds-chart-today.data-v-5078dd0f {
+  height: 4.8rem;
+  width: 100%;
+}
+.fund-chart-wrapper .tooltip-wrapper.data-v-5078dd0f {
+  background-color: var(--color-card);
+  border-radius: 0 0 0.10666666666666667rem;
+  padding: 0.16rem;
+  position: absolute;
+  top: 0;
+  width: 3.4133333333333336rem;
+}
+.fund-chart-wrapper .tooltip-wrapper.left.data-v-5078dd0f {
+  left: 0.2rem;
+}
+.fund-chart-wrapper .tooltip-wrapper.right.data-v-5078dd0f {
+  right: 0;
+}
+.fund-chart-wrapper .tooltip-wrapper .tooltip-item.data-v-5078dd0f {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  justify-content: space-between;
+  line-height: 0.4266666666666667rem;
+  margin-bottom: 0.10666666666666667rem;
+}
+.fund-chart-wrapper .tooltip-wrapper .tooltip-item.data-v-5078dd0f:last-child {
+  margin-bottom: 0;
+}
+.fund-chart-wrapper
+  .tooltip-wrapper
+  .tooltip-item
+  .tooltip-text.data-v-5078dd0f {
+  color: var(--color-lightgray-1);
+}
+.fund-chart-wrapper
+  .tooltip-wrapper
+  .tooltip-item
+  .tooltip-value.data-v-5078dd0f {
+  color: var(--color-heavygray);
+}
+.fund-chart-wrapper
+  .tooltip-wrapper
+  .tooltip-item
+  .tooltip-value.red.data-v-5078dd0f {
+  color: #e63535;
+}
+.fund-chart-wrapper
+  .tooltip-wrapper
+  .tooltip-item
+  .tooltip-value.green.data-v-5078dd0f {
+  color: #1caa3c;
+}
+.fund-chart-wrapper .current-dot.data-v-5078dd0f {
+  animation: blink-5078dd0f 2s ease-in-out infinite;
+  background: rgba(255, 137, 32, 0.25);
+  border-radius: 50%;
+  height: 0.26666666666666666rem;
+  position: absolute;
+  transform-origin: center;
+  width: 0.26666666666666666rem;
+}
+.zxg_black .fund-chart-wrapper .tooltip-wrapper.data-v-5078dd0f {
+  background: #1f242d;
+}
+.zxg_black .fund-chart-wrapper .tooltip-wrapper .tooltip-text.data-v-5078dd0f {
+  color: var(--color-ping);
+}
+.zxg_black .fund-chart-wrapper .tooltip-wrapper .tooltip-value.data-v-5078dd0f {
+  color: #f0f1f5;
+}

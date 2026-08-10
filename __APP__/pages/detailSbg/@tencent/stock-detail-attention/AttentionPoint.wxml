@@ -1,0 +1,262 @@
+<view class="_div attention-wrapper data-v-87f60f8f">
+  <view class="{{['_div','data-v-87f60f8f','card-block']}}">
+    <view class="_div plate-padding data-v-87f60f8f">
+      <plate-intro
+        bind:__l="__l"
+        class="data-v-87f60f8f"
+        uI="87f60f8f-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></plate-intro>
+    </view>
+  </view>
+  <view class="_div gray-line data-v-87f60f8f" wx:if="{{b}}"></view>
+  <view class="_div card-block card-padding data-v-87f60f8f" wx:if="{{c}}">
+    <view class="_div card-title-warpper data-v-87f60f8f">
+      <view class="_div card-title-left data-v-87f60f8f">最新热点</view>
+      <view bindtap="{{d}}" class="_div card-title-right data-v-87f60f8f">
+        <label class="_span data-v-87f60f8f">查看全部</label>
+        <image
+          class="_img title-arrow-right data-v-87f60f8f"
+          src="https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png"
+        ></image>
+      </view>
+    </view>
+    <spot-list
+      bind:__l="__l"
+      class="spot-list r data-v-87f60f8f"
+      uI="87f60f8f-1"
+      uP="{{f}}"
+      uR="spotlist"
+      wx:if="{{f}}"
+    ></spot-list>
+  </view>
+  <view class="_div gray-line data-v-87f60f8f" wx:if="{{g}}"></view>
+  <view class="_div card-block data-v-87f60f8f" wx:if="{{h}}">
+    <view class="_div card-title-warpper data-v-87f60f8f">
+      <view class="_div card-title-left data-v-87f60f8f">
+        <label class="_span data-v-87f60f8f">板块分析</label>
+        <image
+          bindtap="{{i}}"
+          class="_img image-tip data-v-87f60f8f"
+          lazyLoad="{{true}}"
+          src="https://st.gtimg.com/design/a495b29720e9bab1eaea87f780be63aa.png"
+        ></image>
+      </view>
+    </view>
+    <view class="_div data-v-87f60f8f" wx:if="{{j}}">
+      <view class="_div heat-text-tip data-v-87f60f8f">{{k}}。</view>
+      <view
+        class="_div card-title-warpper sub-title-wrapper heat-title data-v-87f60f8f"
+      >
+        <view class="_div card-title-left sub-title data-v-87f60f8f">热度</view>
+        <view class="_div card-title-right data-v-87f60f8f">{{l}}更新</view>
+      </view>
+      <view class="_div data-v-87f60f8f">
+        <concept-heat
+          bind:__l="__l"
+          bindgetCurrentHeat="{{n}}"
+          class="heat-chart r data-v-87f60f8f"
+          uI="87f60f8f-2"
+          uP="{{o}}"
+          uR="heatchart"
+          wx:if="{{o}}"
+        ></concept-heat>
+      </view>
+    </view>
+    <view
+      class="_div list-line line-margin data-v-87f60f8f"
+      wx:if="{{p}}"
+    ></view>
+    <view class="_div data-v-87f60f8f" wx:if="{{q}}">
+      <view class="_div card-title-warpper sub-title-wrapper data-v-87f60f8f">
+        <view class="_div card-title-left sub-title data-v-87f60f8f">估值</view>
+      </view>
+      <view class="_div value-card-wrapper data-v-87f60f8f">
+        <view class="_div value-tab data-v-87f60f8f">
+          <view
+            bindtap="{{s}}"
+            class="{{['_div','data-v-87f60f8f','tab-item',r]}}"
+            >PE市盈率</view
+          >
+          <view
+            bindtap="{{v}}"
+            class="{{['_div','data-v-87f60f8f','tab-item',t]}}"
+            >PB市净率</view
+          >
+        </view>
+        <view class="_div value-info data-v-87f60f8f" wx:if="{{w}}">
+          <view class="_div data-v-87f60f8f">
+            <label class="_span data-v-87f60f8f">当前估值：</label>
+            <label class="{{['_span','data-v-87f60f8f',y]}}">{{x}}</label>
+          </view>
+          <view class="_div data-v-87f60f8f">
+            <label class="_span data-v-87f60f8f">{{z}}：</label>
+            <label class="_span info-black data-v-87f60f8f">{{A}}</label>
+          </view>
+          <view class="_div data-v-87f60f8f">
+            <label class="_span data-v-87f60f8f">{{B}}百分比：</label>
+            <label class="_span info-black data-v-87f60f8f">{{C}}</label>
+          </view>
+        </view>
+        <view class="_div value-content data-v-87f60f8f" wx:if="{{D}}">
+          <view class="_div value-graph data-v-87f60f8f" ref="valueChart">
+            <view
+              bindtouchend="{{G}}"
+              bindtouchmove="{{F}}"
+              bindtouchstart="{{E}}"
+              class="_div fake-chart data-v-87f60f8f"
+            ></view>
+            <f2
+              bind:__l="__l"
+              bindonInit="{{I}}"
+              class="r data-v-87f60f8f"
+              uI="87f60f8f-3"
+              uP="{{J}}"
+              uR="lineChart"
+              wx:if="{{J}}"
+            ></f2>
+            <view
+              class="{{['_ul','canvas-toolTip','data-v-87f60f8f',Q]}}"
+              wx:if="{{K}}"
+            >
+              <view class="_li tool-tip-item data-v-87f60f8f">
+                <label class="_span data-v-87f60f8f">时间</label>
+                <label class="_span info-black data-v-87f60f8f">{{L}}</label>
+              </view>
+              <view class="_li tool-tip-item data-v-87f60f8f">
+                <label class="_span data-v-87f60f8f">{{M}}</label>
+                <label class="_span info-black data-v-87f60f8f">{{N}}</label>
+              </view>
+              <view class="_li tool-tip-item data-v-87f60f8f">
+                <label class="_span data-v-87f60f8f">{{O}}百分比</label>
+                <label class="_span info-black data-v-87f60f8f">{{P}}%</label>
+              </view>
+            </view>
+          </view>
+          <view class="_div value-tag data-v-87f60f8f">
+            <view class="_div tag-item data-v-87f60f8f">
+              <view class="_div circle-line data-v-87f60f8f"></view
+              >板块估值</view
+            >
+            <view class="_div tag-item data-v-87f60f8f">
+              <view class="_div circle-point drop data-v-87f60f8f"></view
+              >低估区</view
+            >
+            <view class="_div tag-item data-v-87f60f8f">
+              <view class="_div circle-point normal data-v-87f60f8f"></view
+              >正常区</view
+            >
+            <view class="_div tag-item data-v-87f60f8f">
+              <view class="_div circle-point up data-v-87f60f8f"></view
+              >高估区</view
+            >
+          </view>
+        </view>
+        <no-data
+          bind:__l="__l"
+          class="data-v-87f60f8f"
+          uI="87f60f8f-4"
+          uS="{{['d']}}"
+          wx:else
+        >
+          <slot wx:if="{{$slots.d}}"></slot>
+          <block wx:else>暂无数据</block>
+        </no-data>
+      </view>
+    </view>
+  </view>
+  <view class="_div gray-line data-v-87f60f8f" wx:if="{{R}}"></view>
+  <view class="_div card-block data-v-87f60f8f" wx:if="{{S}}">
+    <view class="_div card-title-warpper data-v-87f60f8f">
+      <view class="_div card-title-left data-v-87f60f8f">热门股票</view>
+      <view bindtap="{{T}}" class="_div card-title-right data-v-87f60f8f">
+        <label class="_span data-v-87f60f8f">查看更多热股</label>
+        <image
+          class="_img title-arrow-right data-v-87f60f8f"
+          src="https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png"
+        ></image>
+      </view>
+    </view>
+    <view class="_div data-v-87f60f8f">
+      <stock-card
+        bind:__l="__l"
+        class="data-v-87f60f8f"
+        uI="87f60f8f-5"
+        uP="{{U}}"
+        wx:if="{{U}}"
+      ></stock-card>
+    </view>
+  </view>
+  <view class="_div gray-line data-v-87f60f8f" wx:if="{{V}}"></view>
+  <view class="_div card-block data-v-87f60f8f" wx:if="{{W}}">
+    <view class="_div card-title-warpper data-v-87f60f8f">
+      <view class="_div card-title-left data-v-87f60f8f">相关基金</view>
+      <view bindtap="{{X}}" class="_div card-title-right data-v-87f60f8f">
+        <label class="_span data-v-87f60f8f">更多优选基金可申购</label>
+        <image
+          class="_img title-arrow-right data-v-87f60f8f"
+          src="https://st.gtimg.com/design/df779cca8532a88d2b9004d048a3f3fb.png"
+        ></image>
+      </view>
+    </view>
+    <view class="_div data-v-87f60f8f">
+      <stock-card
+        bind:__l="__l"
+        class="data-v-87f60f8f"
+        uI="87f60f8f-6"
+        uP="{{Y}}"
+        wx:if="{{Y}}"
+      ></stock-card>
+    </view>
+  </view>
+  <view class="_div gray-line data-v-87f60f8f" wx:if="{{Z}}"></view>
+  <view class="_div card-block data-v-87f60f8f" wx:if="{{aa}}">
+    <view class="_div card-title-warpper data-v-87f60f8f">
+      <view class="_div card-title-left data-v-87f60f8f">
+        <label class="_span data-v-87f60f8f">相关板块</label>
+      </view>
+    </view>
+    <view class="_div data-v-87f60f8f" wx:if="{{ab}}">
+      <view class="_div card-title-warpper sub-title-wrapper data-v-87f60f8f">
+        <view class="_div card-title-left sub-title data-v-87f60f8f"
+          >所属一级行业</view
+        >
+      </view>
+      <view class="_div data-v-87f60f8f">
+        <plate-card
+          bind:__l="__l"
+          class="data-v-87f60f8f"
+          uI="87f60f8f-7"
+          uP="{{ac}}"
+          wx:if="{{ac}}"
+        ></plate-card>
+      </view>
+    </view>
+    <view
+      class="_div list-line line-margin data-v-87f60f8f"
+      wx:if="{{ad}}"
+    ></view>
+    <view class="_div data-v-87f60f8f" wx:if="{{ae}}">
+      <view class="_div card-title-warpper sub-title-wrapper data-v-87f60f8f">
+        <view
+          class="_div card-title-left sub-title data-v-87f60f8f"
+          wx:if="{{af}}"
+          >包含{{ag}}个二级行业</view
+        >
+        <view class="_div card-title-left sub-title data-v-87f60f8f" wx:else
+          >相关二级行业</view
+        >
+      </view>
+      <view class="_div data-v-87f60f8f">
+        <plate-card
+          bind:__l="__l"
+          class="data-v-87f60f8f"
+          uI="87f60f8f-8"
+          uP="{{ah}}"
+          wx:if="{{ah}}"
+        ></plate-card>
+      </view>
+    </view>
+  </view>
+</view>

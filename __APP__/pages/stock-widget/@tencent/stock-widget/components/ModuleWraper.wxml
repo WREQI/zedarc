@@ -1,0 +1,64 @@
+<view
+  bindtap="{{s}}"
+  class="{{['_div','viewport-module-container','data-v-c4529cf3',q,r]}}"
+  wx:if="{{a}}"
+>
+  <slot name="hqCom" wx:if="{{b}}"></slot>
+  <view class="_div img-wrap data-v-c4529cf3" wx:else>
+    <image
+      alt="image-white"
+      bindtap="{{d}}"
+      class="_img image-white data-v-c4529cf3"
+      mode="widthFix"
+      src="{{c}}"
+    ></image>
+    <image
+      alt="image-black"
+      bindtap="{{f}}"
+      class="_img image-black data-v-c4529cf3"
+      mode="widthFix"
+      src="{{e}}"
+    ></image>
+  </view>
+  <slot name="bottomBar" wx:if="{{$slots.bottomBar}}"></slot>
+  <block wx:else>
+    <view class="_div etfbar-wrap data-v-c4529cf3" wx:if="{{g}}">
+      <e-t-f-bar
+        bind:__l="__l"
+        binddataReport="{{i}}"
+        bindetfEmpty="{{h}}"
+        class="data-v-c4529cf3"
+        uI="c4529cf3-0"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></e-t-f-bar>
+    </view>
+    <view class="_div module-note data-v-c4529cf3" wx:elif="{{k}}">
+      <image
+        alt=""
+        class="_img note-img image-white data-v-c4529cf3"
+        src="https://st.gtimg.com/design/ba2c8637a11113ae1b383ab2fd2a010c.png"
+      ></image>
+      <image
+        alt=""
+        class="_img note-img image-black data-v-c4529cf3"
+        src="https://st.gtimg.com/design/80a9ceae6e17fc767fd73e838aa4eb66.png"
+      ></image>
+      <label class="_span data-v-c4529cf3">点击查看详情</label>
+    </view>
+    <view class="_div module-blank data-v-c4529cf3" wx:if="{{l}}"></view>
+  </block>
+  <view class="{{['_div','data-v-c4529cf3','fav-btn-wrap',p]}}" wx:if="{{m}}">
+    <slot name="AddFav" wx:if="{{$slots.AddFav}}"></slot>
+    <block wx:else>
+      <add-fav
+        bind:__l="__l"
+        bindreport="{{n}}"
+        class="data-v-c4529cf3"
+        uI="c4529cf3-1"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></add-fav>
+    </block>
+  </view>
+</view>

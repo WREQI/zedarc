@@ -1,0 +1,25 @@
+<view
+  catchtouchmove="{{k}}"
+  class="_div yy-activity-task-guide data-v-a337a96a"
+  wx:if="{{a}}"
+>
+  <view class="_div guide-mask data-v-a337a96a"></view>
+  <view class="_div guide-image-container data-v-a337a96a" style="{{f}}">
+    <view
+      class="_div guide-image guide-image-light data-v-a337a96a"
+      style="{{c}}"
+      wx:if="{{b}}"
+    ></view>
+    <view
+      class="_div guide-image guide-image-dark data-v-a337a96a"
+      style="{{e}}"
+      wx:if="{{d}}"
+    ></view>
+  </view>
+  <view
+    catchtap="{{j}}"
+    class="{{['_div','data-v-a337a96a','guide-button',h]}}"
+    style="{{i}}"
+    >{{g}}</view
+  >
+</view>

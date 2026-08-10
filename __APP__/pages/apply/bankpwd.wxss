@@ -1,0 +1,155 @@
+@import "/app.wxss";
+.page-apply-bankpwd.data-v-528ce82a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  background-color: var(--fill-1);
+  border-top: 0.013333rem solid transparent;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.page-apply-bankpwd .top-header.data-v-528ce82a {
+  background: -webkit-linear-gradient(
+        top,
+        rgba(48, 119, 236, 0.14),
+        rgba(48, 119, 236, 0)
+      )
+      no-repeat,
+    #fff;
+  background: linear-gradient(
+        180deg,
+        rgba(48, 119, 236, 0.14),
+        rgba(48, 119, 236, 0)
+      )
+      no-repeat,
+    #fff;
+  background-size: 100% 10.933333rem;
+  flex-shrink: 0;
+  height: 3.68rem;
+  overflow: hidden;
+}
+[data-theme="dark"] .page-apply-bankpwd .top-header.data-v-528ce82a {
+  background: -webkit-linear-gradient(top, #171d2c, rgba(21, 26, 38, 0.9))
+    no-repeat;
+  background: linear-gradient(180deg, #171d2c, rgba(21, 26, 38, 0.9)) no-repeat;
+  background-size: 100% 10.933333rem;
+}
+.page-apply-bankpwd.page-apply-bankpwd__simple-mode
+  .top-header.data-v-528ce82a {
+  background: -webkit-linear-gradient(
+        top,
+        rgba(230, 53, 53, 0.14),
+        rgba(230, 53, 53, 0)
+      )
+      no-repeat,
+    #fff;
+  background: linear-gradient(
+        180deg,
+        rgba(230, 53, 53, 0.14),
+        rgba(230, 53, 53, 0)
+      )
+      no-repeat,
+    #fff;
+  background-size: 100% 10.933333rem;
+}
+.page-apply-bankpwd .security-banner.data-v-528ce82a {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding: 0.32rem 0.4rem;
+}
+.page-apply-bankpwd .security-banner .security-banner__icon.data-v-528ce82a {
+  background: url(https://st.gtimg.com/design/9efa393c49c5140ade1ea7aa66888f12.png)
+    no-repeat;
+  background-size: 100%auto;
+  flex-shrink: 0;
+  height: 0.493333rem;
+  margin-right: 0.133333rem;
+  width: 0.373333rem;
+}
+.page-apply-bankpwd .security-banner .security-banner__text.data-v-528ce82a {
+  color: var(--text-color-1);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.page-apply-bankpwd.data-v-528ce82a .progress-container {
+  background-color: var(--fill-2);
+  background-image: none !important;
+  border-radius: 0.213333rem;
+  margin: 0 auto;
+  width: 9.36rem;
+}
+.page-apply-bankpwd.data-v-528ce82a
+  .st-number-keyboard.st-number-keyboard--embedded {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.page-apply-bankpwd .content-area.data-v-528ce82a {
+  -webkit-box-flex: 1;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: calc(5.066667rem + env(safe-area-inset-bottom));
+}
+.page-apply-bankpwd .bank-info.data-v-528ce82a {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.96rem;
+}
+.page-apply-bankpwd .bank-info .bank-logo-wrap.data-v-528ce82a {
+  height: 1.493333rem;
+  width: 1.493333rem;
+}
+.page-apply-bankpwd .label-text.data-v-528ce82a {
+  font-size: 0.426667rem;
+  font-weight: 400;
+  line-height: 0.586667rem;
+  margin: 0.32rem 0.56rem 0;
+  text-align: center;
+}
+.page-apply-bankpwd .password-box.data-v-528ce82a {
+  margin-top: 0.64rem;
+  padding: 0 1.2rem;
+}
+.page-apply-bankpwd .back-link.data-v-528ce82a {
+  color: var(--color-primary-1);
+  font-size: 0.426667rem;
+  line-height: 0.586667rem;
+  margin-bottom: 0.96rem;
+  margin-top: 0.426667rem;
+  text-align: center;
+}
+.page-apply-bankpwd .security-tips.data-v-528ce82a {
+  -webkit-box-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0 0.4rem;
+  opacity: 0.8;
+}
+.page-apply-bankpwd .security-tips .security-tips__icon.data-v-528ce82a {
+  background: url(https://st.gtimg.com/design/3e89ee1a72f506e3cc4d7a64def105c8.png)
+    no-repeat;
+  background-size: 100%auto;
+  flex-shrink: 0;
+  height: 0.346667rem;
+  margin: 0.053333rem 0.133333rem 0 0;
+  width: 0.293333rem;
+}
+.page-apply-bankpwd .security-tips .security-tips__text.data-v-528ce82a {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+}

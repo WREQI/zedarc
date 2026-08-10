@@ -1,0 +1,96 @@
+<view
+  class="_div zxtx-wrapper data-v-08af9d3f"
+  ref="zixuanWrapper"
+  wx:if="{{a}}"
+>
+  <card-header
+    bind:__l="__l"
+    class="data-v-08af9d3f"
+    uI="08af9d3f-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></card-header>
+  <view class="_div zxtx-container data-v-08af9d3f">
+    <view class="_div search-ai-bar data-v-08af9d3f" hidden="{{!h}}">
+      <search-ai-bar
+        bind:__l="__l"
+        bindonClickAiDialog="{{d}}"
+        bindonHideAiEntry="{{f}}"
+        bindonShowAiEntry="{{e}}"
+        class="data-v-08af9d3f"
+        uI="08af9d3f-1"
+        uP="{{g}}"
+        wx:if="{{c}}"
+      ></search-ai-bar>
+    </view>
+    <view class="_div zxtx-content data-v-08af9d3f">
+      <view class="_div data-v-08af9d3f" wx:for="{{i}}" wx:key="s">
+        <view class="_div zxtx-item data-v-08af9d3f" wx:if="{{item.a}}">
+          <view catchtap="{{item.h}}" class="_div self-stock data-v-08af9d3f">
+            <view
+              catchtap="{{item.c}}"
+              class="_div stock-icon data-v-08af9d3f"
+              hoverClass="onLongTouch"
+              style="{{'background-image:'+item.b}}"
+            ></view>
+            <view
+              catchtap="{{item.e}}"
+              class="_div stock-name data-v-08af9d3f"
+              hoverClass="onLongTouch"
+              >{{item.d}}</view
+            >
+            <block wx:if="{{item.f}}">
+              <view class="_div stock-info data-v-08af9d3f">触发中高风险</view>
+              <view class="_div stock-risk data-v-08af9d3f"></view>
+            </block>
+            <view class="_div stock-info data-v-08af9d3f" wx:elif="{{item.g}}"
+              >有重要新闻</view
+            >
+          </view>
+          <block wx:if="{{item.i}}">
+            <view
+              catchtap="{{item.l}}"
+              class="_div stock-news enable-touch data-v-08af9d3f"
+              >{{item.j}}{{item.k}}</view
+            >
+            <view
+              catchtap="{{item.o}}"
+              class="_div stock-risk-desc enable-touch data-v-08af9d3f"
+              wx:if="{{item.m}}"
+              >{{item.n}}</view
+            >
+          </block>
+          <view
+            class="_div data-v-08af9d3f"
+            hoverClass="onLongTouch"
+            wx:elif="{{item.p}}"
+          >
+            <view
+              catchtap="{{item.r}}"
+              class="_div stock-news enable-touch data-v-08af9d3f"
+              >{{item.q}}></view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <more-button
+      bind:__l="__l"
+      bindmoreClick="{{k}}"
+      class="more-button data-v-08af9d3f"
+      uI="08af9d3f-2"
+      uP="{{l}}"
+      wx:if="{{j}}"
+    ></more-button>
+  </view>
+  <view
+    class="{{['_div','goto-zixuan-popup','data-v-08af9d3f',p]}}"
+    wx:if="{{m}}"
+  >
+    <view catchtap="{{n}}" class="_div goto-zixuan-title data-v-08af9d3f">
+      <label class="_span desc data-v-08af9d3f">点击查看自选提醒</label>
+      <view class="_div arrow data-v-08af9d3f"></view>
+    </view>
+    <view catchtap="{{o}}" class="_div close data-v-08af9d3f"></view>
+  </view>
+</view>

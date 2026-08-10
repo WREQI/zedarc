@@ -1,0 +1,12 @@
+<view
+  class="{{['_div','data-v-d94165f5','stock-tag-container',i]}}"
+  id="{{h}}"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{g}}" class="_div stock-tag data-v-d94165f5">
+    <view class="_div name data-v-d94165f5" wx:if="{{b}}">{{c}}</view>
+    <view class="{{['_div','data-v-d94165f5','zdf',f]}}" wx:if="{{d}}"
+      >{{e}}</view
+    >
+  </view>
+</view>

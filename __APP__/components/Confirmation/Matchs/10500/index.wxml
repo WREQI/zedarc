@@ -1,0 +1,48 @@
+<trade
+  bind:__l="__l"
+  bindcancel="{{c}}"
+  bindconfirm="{{b}}"
+  uI="0c4bb7b5-0"
+  uP="{{d}}"
+  wx:if="{{a}}"
+></trade>
+<kechuang
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  bindconfirm="{{f}}"
+  uI="0c4bb7b5-1"
+  uP="{{h}}"
+  wx:elif="{{e}}"
+></kechuang>
+<apply
+  bind:__l="__l"
+  bindcancel="{{k}}"
+  bindconfirm="{{j}}"
+  uI="0c4bb7b5-2"
+  uP="{{l}}"
+  wx:elif="{{i}}"
+></apply>
+<kzz
+  bind:__l="__l"
+  bindcancel="{{o}}"
+  bindconfirm="{{n}}"
+  uI="0c4bb7b5-3"
+  uP="{{p}}"
+  wx:elif="{{m}}"
+></kzz>
+<gem
+  bind:__l="__l"
+  bindcancel="{{s}}"
+  bindconfirm="{{r}}"
+  uI="0c4bb7b5-4"
+  uP="{{t}}"
+  wx:elif="{{q}}"
+></gem>
+<st
+  bind:__l="__l"
+  bindcancel="{{x}}"
+  bindconfirm="{{w}}"
+  uI="0c4bb7b5-5"
+  uP="{{y}}"
+  wx:elif="{{v}}"
+></st>

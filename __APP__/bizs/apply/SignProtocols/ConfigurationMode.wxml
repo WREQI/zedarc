@@ -1,0 +1,51 @@
+<view class="data-v-f3a1fc6b">
+  <protocol-bar-wrap
+    bind:__l="__l"
+    bindchange="{{q}}"
+    class="data-v-f3a1fc6b"
+    uI="f3a1fc6b-0"
+    uP="{{r}}"
+    uS="{{['d']}}"
+    wx:if="{{r}}"
+  >
+    <label bindtap="{{b}}" class="text-color-2 data-v-f3a1fc6b">{{a}}</label>
+    <block wx:if="{{c}}">
+      <block wx:if="{{d}}">
+        <label
+          class="data-v-f3a1fc6b"
+          wx:for="{{e}}"
+          wx:for-item="protocolItem"
+          wx:key="e"
+        >
+          <label catchtap="{{protocolItem.b}}" class="link data-v-f3a1fc6b"
+            >{{protocolItem.a}}</label
+          >
+          <label class="data-v-f3a1fc6b" wx:if="{{protocolItem.c}}">，</label>
+          <label class="mg-5 text-color-2 data-v-f3a1fc6b" wx:elif="{{f}}"
+            >{{protocolItem.d}}</label
+          >
+        </label>
+      </block>
+      <label bindtap="{{i}}" class="link data-v-f3a1fc6b" wx:if="{{g}}"
+        >{{h}}</label
+      >
+    </block>
+    <block wx:if="{{j}}">
+      <label class="data-v-f3a1fc6b" wx:if="{{k}}">，</label>
+      <label catchtap="{{m}}" class="link data-v-f3a1fc6b">{{l}}</label>
+    </block>
+    <label bindtap="{{p}}" class="text-color-2 data-v-f3a1fc6b" wx:if="{{n}}"
+      >{{o}}</label
+    >
+  </protocol-bar-wrap>
+  <protocols
+    bind:__l="__l"
+    bindclose="{{t}}"
+    bindconfirm="{{v}}"
+    bindview="{{s}}"
+    class="data-v-f3a1fc6b"
+    uI="f3a1fc6b-1"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></protocols>
+</view>

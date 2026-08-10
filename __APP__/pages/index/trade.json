@@ -1,0 +1,22 @@
+{
+  "enablePullDownRefresh": false,
+  "disableScroll": true,
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "",
+  "componentPlaceholder": {
+    "task": "view",
+    "asset": "view",
+    "empty-quote": "view",
+    "escape-notice": "view"
+  },
+  "backgroundColor": "#f5f6fa",
+  "usingComponents": {
+    "asset": "../noaccount/OpenAccount/OpenTransferPage",
+    "top-bar": "../../components/topbar/index",
+    "escape-notice": "../noaccount/EscapeNotice",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index"
+  }
+}

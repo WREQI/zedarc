@@ -1,0 +1,35 @@
+<page-meta class="data-v-86ed79b8" rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r data-v-86ed79b8" id="global-wrap" uI="86ed79b8-0" uP="{{N}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{N}}">
+    <view class="ts-bind-account account-common-form data-v-86ed79b8">
+        <view class="account-top-tip data-v-86ed79b8">填写{{b}}账户资料，登录微证券</view>
+        <st-cell-group bind:__l="__l" class="data-v-86ed79b8" uI="86ed79b8-1,86ed79b8-0" uP="{{q}}" uS="{{['d']}}" wx:if="{{q}}">
+            <st-cell bind:__l="__l" class="data-v-86ed79b8" uI="86ed79b8-2,86ed79b8-1" uP="{{j}}" uS="{{['extra','d']}}" wx:if="{{j}}">
+                <input bindblur="{{f}}" bindinput="{{e}}" class="form-input data-v-86ed79b8" maxlength="{{d}}" placeholder="{{c}}" placeholderClass="input-placeholder" type="number" value="{{g}}"></input>
+                <view slot="extra">
+                    <label bindtap="{{i}}" class="right-slot data-v-86ed79b8" wx:if="{{h}}">
+                        <view class="icon icon-arrow-right data-v-86ed79b8"></view>
+                    </label>
+                </view>
+            </st-cell>
+            <st-cell bind:__l="__l" class="data-v-86ed79b8" uI="86ed79b8-3,86ed79b8-1" uP="{{p}}" uS="{{['extra','d']}}" wx:if="{{p}}">
+                <input alwaysEmbed="{{true}}" bindinput="{{l}}" class="form-input data-v-86ed79b8" maxlength="6" password="{{k}}" placeholder="输入6位数字交易密码" placeholderClass="input-placeholder" type="number" value="{{m}}"></input>
+                <label class="right-slot data-v-86ed79b8" slot="extra">
+                    <view bindtap="{{o}}" class="{{[n,'icon','eye','data-v-86ed79b8']}}"></view>
+                </label>
+            </st-cell>
+        </st-cell-group>
+        <checkbox-group bindchange="{{x}}" class="protocol-container data-v-86ed79b8" wx:if="{{r}}">
+            <checkbox checked="{{t}}" class="protocol-checkbox data-v-86ed79b8" color="{{s}}"></checkbox>
+            <label bindtap="{{v}}" class="text-color-4 data-v-86ed79b8">本人已详细阅读并同意签署</label>
+            <label bindtap="{{w}}" class="all-protocol-text data-v-86ed79b8">全部文件</label>
+        </checkbox-group>
+        <view class="submit-wrapper data-v-86ed79b8">
+            <button bindtap="{{y}}" class="submit-button data-v-86ed79b8" type="primary">立即登录</button>
+        </view>
+        <bottom-nav bind:__l="__l" bindfindAccount="{{z}}" class="bind-bottom-nav data-v-86ed79b8" uI="86ed79b8-4,86ed79b8-0" uP="{{A}}" wx:if="{{A}}"></bottom-nav>
+        <server-broker bind:__l="__l" class="data-v-86ed79b8" uI="86ed79b8-5,86ed79b8-0" uP="{{B}}" wx:if="{{B}}"></server-broker>
+        <mp-dialog bind:__l="__l" class="data-v-86ed79b8" id="mp-dialog" uI="86ed79b8-6,86ed79b8-0" uP="{{C}}" wx:if="{{C}}"></mp-dialog>
+        <select-account-sheet bind:__l="__l" bindclose="{{F}}" bindselect="{{E}}" class="data-v-86ed79b8" uI="86ed79b8-7,86ed79b8-0" uP="{{G}}" wx:if="{{D}}"></select-account-sheet>
+        <protocols bind:__l="__l" bindcancel="{{I}}" bindclose="{{J}}" bindconfirm="{{H}}" bindview="{{K}}" class="data-v-86ed79b8" uI="86ed79b8-8,86ed79b8-0" uP="{{L}}" wx:if="{{L}}"></protocols>
+    </view>
+</global-wrap>

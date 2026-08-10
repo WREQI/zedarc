@@ -1,0 +1,41 @@
+<view class="_div live-list-container data-v-916319d1">
+  <view
+    bindtap="{{news.i}}"
+    class="_div list-item flex flex-align-center data-v-916319d1"
+    wx:for="{{a}}"
+    wx:for-item="news"
+    wx:key="h"
+  >
+    <view class="_div flex-1 data-v-916319d1">
+      <label class="_span news-title clamp-2 data-v-916319d1">{{news.a}}</label>
+      <view class="_div flex data-v-916319d1">
+        <label class="_span news-meta data-v-916319d1">{{news.b}}</label>
+        <label class="_span news-meta data-v-916319d1" wx:if="{{news.c}}"
+          >{{news.d}}评</label
+        >
+        <label class="_span news-meta data-v-916319d1">{{news.e}}</label>
+      </view>
+    </view>
+    <image
+      alt
+      class="_img news-thumb data-v-916319d1"
+      src="{{news.g}}"
+      wx:if="{{news.f}}"
+    ></image>
+  </view>
+  <view class="_div empty-box flex data-v-916319d1" wx:if="{{b}}">
+    <image
+      alt
+      class="_img empty-img data-v-916319d1"
+      src="{{'https://wzq.gtimg.com/resources/hippy/empty-white.png'}}"
+    ></image>
+    <view class="_div empty-text data-v-916319d1">暂无新闻</view>
+  </view>
+  <view class="_div refresh-box data-v-916319d1" wx:if="{{c}}">
+    <view
+      class="_div ul-refresh-text data-v-916319d1"
+      style="{{'margin-bottom:'+d}}"
+      >没有更多数据了</view
+    >
+  </view>
+</view>

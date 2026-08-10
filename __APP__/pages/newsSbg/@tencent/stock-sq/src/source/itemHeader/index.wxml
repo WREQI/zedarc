@@ -1,0 +1,54 @@
+<view catchtap="{{A}}" class="_div mod-item-header data-v-af6dd5ae">
+  <avator-card
+    bind:__l="__l"
+    bindtapPerson="{{a}}"
+    bindtapStock="{{b}}"
+    class="data-v-af6dd5ae"
+    uI="af6dd5ae-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></avator-card>
+  <view class="{{['_div','data-v-af6dd5ae',z]}}">
+    <label class="_span top-tag data-v-af6dd5ae" wx:if="{{d}}"> </label>
+    <view
+      catchtap="{{h}}"
+      class="_div tag-right-content data-v-af6dd5ae"
+      wx:if="{{e}}"
+    >
+      <view class="{{['_i','data-v-af6dd5ae',f]}}"></view>{{g}}</view
+    >
+    <show-label
+      bind:__l="__l"
+      class="data-v-af6dd5ae"
+      uI="af6dd5ae-1"
+      uP="{{j}}"
+      wx:if="{{i}}"
+    ></show-label>
+    <handle-follow
+      bind:__l="__l"
+      bindtapFollow="{{l}}"
+      bindtoast="{{m}}"
+      class="data-v-af6dd5ae"
+      uI="af6dd5ae-2"
+      uP="{{n}}"
+      wx:if="{{k}}"
+    ></handle-follow>
+    <view
+      catchtap="{{q}}"
+      class="{{['_div','data-v-af6dd5ae','look-oneself',p]}}"
+      wx:if="{{o}}"
+    ></view>
+    <handle-more
+      bind:__l="__l"
+      bindonHandleTurn="{{x}}"
+      bindtapDeleteItem="{{v}}"
+      bindtapIllegal="{{t}}"
+      bindtapMore="{{s}}"
+      bindtoast="{{w}}"
+      class="data-v-af6dd5ae"
+      uI="af6dd5ae-3"
+      uP="{{y}}"
+      wx:if="{{r}}"
+    ></handle-more>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="_div remind-modal__lock-layer data-v-84d8f676">
+  <view class="_div remind-modal__lock-gradient data-v-84d8f676"></view>
+  <view class="_div remind-modal__lock-illustration data-v-84d8f676"></view>
+  <view class="_div remind-modal__lock-title data-v-84d8f676"
+    >关注「腾讯微证券」公众号</view
+  >
+  <view class="_div remind-modal__lock-desc data-v-84d8f676">{{a}}</view>
+  <view catchtap="{{b}}" class="_div remind-modal__lock-btn data-v-84d8f676"
+    >立刻关注解锁</view
+  >
+  <view class="_div remind-modal__lock-footnote data-v-84d8f676" wx:if="{{c}}"
+    >{{d}}</view
+  >
+</view>

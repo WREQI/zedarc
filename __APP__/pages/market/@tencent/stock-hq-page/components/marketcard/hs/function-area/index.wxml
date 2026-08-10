@@ -1,0 +1,71 @@
+<view class="_div data-v-b9947ce0">
+  <view class="_div data-v-b9947ce0" wx:if="{{a}}">
+    <scroll-view
+      scrollX
+      class="function-wrapper data-v-b9947ce0"
+      id="function-scroll-view"
+    >
+      <view
+        class="_div group-box data-v-b9947ce0"
+        wx:for="{{b}}"
+        wx:for-item="group"
+        wx:key="b"
+      >
+        <view
+          class="_div list-item data-v-b9947ce0"
+          wx:for="{{group.a}}"
+          wx:key="c"
+        >
+          <function-card
+            bind:__l="__l"
+            class="function-card-info data-v-b9947ce0"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></function-card>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="_div data-v-b9947ce0" wx:if="{{c}}">
+    <swiper
+      bindchange="{{h}}"
+      class="function-area-swiper data-v-b9947ce0"
+      current="{{f}}"
+      id="function-area"
+      ref="cardIndex"
+      style="{{'height:'+g}}"
+      wx:if="{{d}}"
+    >
+      <swiper-item
+        class="swiper-slide data-v-b9947ce0"
+        wx:for="{{e}}"
+        wx:for-item="group"
+        wx:key="b"
+      >
+        <view
+          class="_div list-item data-v-b9947ce0"
+          wx:for="{{group.a}}"
+          wx:key="d"
+        >
+          <function-card
+            bind:__l="__l"
+            class="function-card-info r-i-f data-v-b9947ce0"
+            uI="{{item.b}}"
+            uP="{{item.c}}"
+            uR="functionCard"
+            wx:if="{{item.c}}"
+          ></function-card>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="_div index-dot data-v-b9947ce0" wx:if="{{i}}">
+      <view
+        class="{{['_div','data-v-b9947ce0','dot-item',list.b]}}"
+        wx:for="{{j}}"
+        wx:for-item="list"
+        wx:key="a"
+      ></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view
+  bindtouchmove="{{l}}"
+  catchtap="{{m}}"
+  class="_div full-editor-main data-v-662bdf7c"
+>
+  <view class="_div top-operate data-v-662bdf7c">
+    <label catchtap="{{a}}" class="_span cancel data-v-662bdf7c">取消</label>
+    <label catchtap="{{c}}" class="{{['_span','data-v-662bdf7c','submit',b]}}"
+      >发表</label
+    >
+  </view>
+  <view class="_div content-box data-v-662bdf7c">
+    <textarea
+      adjustPosition="{{false}}"
+      autoHeight="{{false}}"
+      bindblur="{{i}}"
+      bindinput="{{j}}"
+      bindkeyboardheightchange="{{k}}"
+      bindtap="{{h}}"
+      class="my-textarea data-v-662bdf7c"
+      focus="{{f}}"
+      maxlength="{{300}}"
+      placeholder="{{g}}"
+      ref="myTextarea"
+      style="{{'height:'+d}}"
+      value="{{e}}"
+      wx:if="{{r0}}"
+    ></textarea>
+  </view>
+</view>

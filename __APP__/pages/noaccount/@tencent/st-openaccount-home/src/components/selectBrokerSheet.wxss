@@ -1,0 +1,250 @@
+.action-sheet.data-v-06befa24 .st-action-sheet-header .st-action-sheet-cancel {
+  margin: auto;
+  right: 0;
+}
+.action-sheet.data-v-06befa24 .st-action-sheet-header .st-action-sheet-title {
+  color: #262e40;
+}
+[data-theme="dark"]
+  .action-sheet.data-v-06befa24
+  .st-action-sheet-header
+  .st-action-sheet-title {
+  color: #f0f1f5;
+}
+[data-theme="dark"] .action-sheet.data-v-06befa24 .st-action-sheet-content,
+[data-theme="dark"] .action-sheet.data-v-06befa24 .st-action-sheet-panel {
+  background: #12161f !important;
+}
+.action-sheet.data-v-06befa24 .mp-popup {
+  animation: roll-06befa24 0.5s forwards;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  transform: translateY(100%);
+}
+[data-theme="dark"] .action-sheet.data-v-06befa24 .mp-popup {
+  background: #12161f !important;
+}
+@-webkit-keyframes roll-06befa24 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes roll-06befa24 {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.action-sheet-container.data-v-06befa24 {
+  max-height: 11.733333333333333rem;
+  overflow: auto;
+}
+.action-sheet-container .sheet-item.broker.data-v-06befa24 {
+  align-items: flex-start;
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.32rem 0.4rem 0.4rem;
+}
+[data-theme="dark"] .action-sheet-container .sheet-item.broker.data-v-06befa24 {
+  border-bottom: 0.013333333333333334rem solid #191e27;
+}
+.action-sheet-container .sheet-item.broker.data-v-06befa24:nth-child(1) {
+  border-top: 0.013333333333333334rem solid #e9ebf0;
+}
+[data-theme="dark"]
+  .action-sheet-container
+  .sheet-item.broker.data-v-06befa24:nth-child(1) {
+  border-top: 0.013333333333333334rem solid #191e27;
+}
+.action-sheet-container .sheet-item.broker .sheet-item-left.data-v-06befa24 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-left
+  .broker-logo.data-v-06befa24 {
+  height: 0.48rem;
+  margin-right: 0.24rem;
+  margin-top: 0.05333333333333334rem;
+  width: 0.48rem;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-left
+  .broker-logo
+  .logo-icon-img.data-v-06befa24 {
+  height: 100%;
+  width: 100%;
+}
+.action-sheet-container .sheet-item.broker .sheet-item-mid.data-v-06befa24 {
+  flex: 1;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info.data-v-06befa24 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .broker-title.data-v-06befa24 {
+  color: #12161f;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .broker-title
+  .broker-name.data-v-06befa24 {
+  color: #262e40;
+  line-height: 0.6rem;
+}
+[data-theme="dark"]
+  .action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .broker-title
+  .broker-name.data-v-06befa24 {
+  color: #fff;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .broker-title
+  .state-maintain.data-v-06befa24 {
+  color: #69738c;
+  font-weight: 400;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .broker-desc.data-v-06befa24 {
+  color: var(--color-midgray, #69738c);
+  font-size: 0.32rem;
+  font-weight: 400;
+  margin-top: 0.10666666666666667rem;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .sheet-intro.data-v-06befa24 {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 0.10666666666666667rem;
+  overflow: hidden;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-mid
+  .broker-info
+  .sheet-intro-item.data-v-06befa24 {
+  border: 0.02666666666666667rem solid rgba(48, 119, 236, 0.5);
+  border-radius: 0.05333333333333334rem;
+  color: #3077ec;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  line-height: 0.37333333333333335rem;
+  margin-right: 0.10666666666666667rem;
+  padding: 0.02666666666666667rem 0.06666666666666667rem;
+}
+.action-sheet-container .sheet-item.broker .sheet-item-right.data-v-06befa24 {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+}
+.action-sheet-container
+  .sheet-item.broker
+  .sheet-item-right
+  .sheet-button.data-v-06befa24 {
+  background-color: #3077ec;
+  border: 0.02666666666666667rem solid #3077ec;
+  border-radius: 0.08rem;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-size: 0.32rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  width: 1.6rem;
+}
+.action-sheet-container .sheet-item.more.data-v-06befa24 {
+  color: #69738c;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 1.3066666666666666rem;
+  line-height: 1.3066666666666666rem;
+  text-align: center;
+}
+.action-sheet-container.lite-mode .sheet-item.broker.data-v-06befa24 {
+  margin: 0 0.4rem;
+  padding: 0.32rem 0 0.4rem;
+}
+.action-sheet-container.lite-mode
+  .sheet-item.broker
+  .sheet-item-mid
+  .sheet-intro-item.data-v-06befa24 {
+  border: 0.02666666666666667rem solid #e6353550;
+  border-radius: 0.05333333333333334rem;
+  color: #e63535;
+  flex-shrink: 0;
+  font-size: 0.26666666666666666rem;
+  height: 0.37333333333333335rem;
+  line-height: 0.4rem;
+  margin-right: 0.10666666666666667rem;
+  padding: 0.02666666666666667rem 0.06666666666666667rem;
+}
+.action-sheet-container.lite-mode
+  .sheet-item.broker
+  .sheet-item-right
+  .sheet-button.data-v-06befa24 {
+  background-color: #e63535;
+  border: 0.02666666666666667rem solid #e63535;
+  font-weight: 500;
+  height: 0.7466666666666667rem;
+  line-height: 0.7733333333333333rem;
+  margin-top: 0.4rem;
+  width: 1.3866666666666667rem;
+}
+.action-sheet-container.zxg-mode
+  .sheet-item.broker
+  .sheet-item-right
+  .sheet-button.data-v-06befa24 {
+  background-color: initial;
+  color: #3077ec;
+}
+.action-sheet-container.wzqzj-mode
+  .sheet-item.broker
+  .sheet-item-mid
+  .sheet-intro-item.data-v-06befa24 {
+  border: 0.02666666666666667rem solid #e6353550;
+  color: #e63535;
+}
+.action-sheet-container.wzqzj-mode
+  .sheet-item.broker
+  .sheet-item-right
+  .sheet-button.data-v-06befa24 {
+  background-color: #e63535;
+  border: 0.02666666666666667rem solid #e63535;
+}

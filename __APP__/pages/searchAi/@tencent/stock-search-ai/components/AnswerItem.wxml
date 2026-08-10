@@ -1,0 +1,234 @@
+<view class="{{['_div','data-v-b97f161d',ap,aq,ar,as,at,av,aw]}}">
+  <view class="_div data-v-b97f161d" wx:if="{{a}}">
+    <view class="_div serverBusyTipsContainer data-v-b97f161d">
+      <view class="_div serverBusyTipsLine data-v-b97f161d"></view>
+      <view class="_div serverBusyTipsContent data-v-b97f161d">{{b}}</view>
+      <view class="_div serverBusyTipsLine data-v-b97f161d"></view>
+    </view>
+  </view>
+  <view class="_div gptContent data-v-b97f161d" wx:if="{{c}}">
+    <view class="_div functionTipsContent data-v-b97f161d">{{d}}</view>
+  </view>
+  <view class="_div mbtiContent data-v-b97f161d" wx:if="{{e}}">
+    <mbti-component
+      bind:__l="__l"
+      bindselectMbti="{{f}}"
+      class="data-v-b97f161d"
+      uI="b97f161d-0"
+    ></mbti-component>
+  </view>
+  <view class="_div gptContent data-v-b97f161d" wx:else>
+    <view class="_div content-container data-v-b97f161d" wx:if="{{g}}">
+      <view class="_div deny-permission-sub-text data-v-b97f161d"
+        >在正式为你解答这个问题之前，需要你同意相关服务协议。<label
+          bindtap="{{h}}"
+          class="_span deny-permission-agree-text data-v-b97f161d"
+          >点击同意</label
+        >
+        <image
+          bindtap="{{j}}"
+          class="_img deny-permission-agree-arrow data-v-b97f161d"
+          src="{{i}}"
+        ></image>
+      </view>
+    </view>
+    <view class="_div content-container data-v-b97f161d" wx:else>
+      <view
+        class="_div ai-expert-info-card-in-answer data-v-b97f161d"
+        wx:if="{{k}}"
+      >
+        <ai-expert-info-card
+          bind:__l="__l"
+          class="data-v-b97f161d"
+          uI="b97f161d-1"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></ai-expert-info-card>
+      </view>
+      <view
+        class="_div contentItemAlignLeft contentItem plugin-placeholder-xuangu data-v-b97f161d"
+        wx:if="{{m}}"
+      >
+        <answer-function-xuan-gu
+          bind:__l="__l"
+          bindfunctionItemFinish="{{n}}"
+          class="data-v-b97f161d"
+          uI="b97f161d-2"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></answer-function-xuan-gu>
+      </view>
+      <mcp-quote-item
+        bind:__l="__l"
+        class="data-v-b97f161d"
+        uI="b97f161d-3"
+        uP="{{q}}"
+        wx:if="{{p}}"
+      ></mcp-quote-item>
+      <view class="_div quoteContainer data-v-b97f161d" wx:if="{{r}}">
+        <view bindtap="{{z}}" class="_div quoteContent data-v-b97f161d">
+          <view class="_div quoteContentText data-v-b97f161d">
+            <view class="_div quote-status data-v-b97f161d">
+              <view
+                ariaHidden="true"
+                class="_div status-text-sizer data-v-b97f161d"
+                >{{s}}</view
+              >
+              <view
+                class="{{['_div','data-v-b97f161d','line',line.c,v]}}"
+                wx:for="{{t}}"
+                wx:for-item="line"
+                wx:key="b"
+                >{{line.a}}</view
+              >
+            </view>
+          </view>
+          <image
+            class="{{['_img','data-v-b97f161d','quoteContentArrow',y]}}"
+            src="{{x}}"
+            wx:if="{{w}}"
+          ></image>
+        </view>
+        <view class="{{['_div','data-v-b97f161d',D]}}">
+          <view class="{{['_div','data-v-b97f161d','quoteContentListLayout']}}">
+            <view class="_div leftLine data-v-b97f161d"></view>
+            <view class="{{['_div','data-v-b97f161d','quoteContentList']}}">
+              <view
+                bindtap="{{item.d}}"
+                class="{{['_div','data-v-b97f161d','quoteContentListItem',item.c]}}"
+                wx:for="{{A}}"
+                wx:key="b"
+                >{{item.a}}</view
+              >
+              <view class="_div outerContentInfo data-v-b97f161d" wx:if="{{B}}"
+                >{{C}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_div thinkingArea data-v-b97f161d" wx:if="{{E}}">
+        <view bindtap="{{K}}" class="_div thinkingTextArea data-v-b97f161d">
+          <view class="_div ai-status data-v-b97f161d">
+            <view
+              ariaHidden="true"
+              class="_div status-text-sizer data-v-b97f161d"
+              >{{F}}</view
+            >
+            <view
+              class="{{['_div','data-v-b97f161d','line',line.c,H]}}"
+              wx:for="{{G}}"
+              wx:for-item="line"
+              wx:key="b"
+              >{{line.a}}</view
+            >
+          </view>
+          <image
+            class="{{['_img','data-v-b97f161d','quoteContentArrow',J]}}"
+            src="{{I}}"
+          ></image>
+        </view>
+        <view class="_div thinkingContent data-v-b97f161d" wx:if="{{L}}">
+          <view class="_div leftLine data-v-b97f161d"></view>
+          <view class="_div mainThinkingContentRight data-v-b97f161d">
+            <markdown-renderer
+              bind:__l="__l"
+              class="mainThinkingContent data-v-b97f161d"
+              uI="b97f161d-4"
+              uP="{{M}}"
+              wx:if="{{M}}"
+            ></markdown-renderer>
+          </view>
+        </view>
+      </view>
+      <answer-process-panel
+        bind:__l="__l"
+        binddisableOuterAutoScroll="{{O}}"
+        class="data-v-b97f161d"
+        uI="b97f161d-5"
+        uP="{{P}}"
+        wx:if="{{N}}"
+      ></answer-process-panel>
+      <view class="_div mainReplyContent data-v-b97f161d">
+        <markdown-renderer
+          bind:__l="__l"
+          bindMBTIvalueChange="{{U}}"
+          bindcontentClick="{{Q}}"
+          bindlinkClick="{{S}}"
+          bindmpLinkClick="{{R}}"
+          bindquoteLinkClick="{{T}}"
+          class="data-v-b97f161d"
+          uI="b97f161d-6"
+          uP="{{V}}"
+          wx:if="{{V}}"
+        ></markdown-renderer>
+      </view>
+      <view
+        class="_div contentItemAlignLeft contentItem plugin-placeholder-function data-v-b97f161d"
+        wx:if="{{W}}"
+      >
+        <answer-function-item
+          bind:__l="__l"
+          bindfunctionItemFinish="{{X}}"
+          class="data-v-b97f161d"
+          uI="b97f161d-7"
+          uP="{{Y}}"
+          wx:if="{{Y}}"
+        ></answer-function-item>
+      </view>
+      <view class="_div bottomXinPinContainer data-v-b97f161d" wx:if="{{Z}}">
+        <view class="_div xianPinDividerLine data-v-b97f161d"></view>
+        <view class="_div xianPinText data-v-b97f161d">换一个模型试试吧～</view>
+        <view bindtap="{{ab}}" class="_div changeModel data-v-b97f161d"
+          >立即切换<image
+            class="{{['_img','data-v-b97f161d','xianPinRightArrow']}}"
+            src="{{aa}}"
+          ></image>
+        </view>
+      </view>
+      <view class="_div bottomInfoContainer data-v-b97f161d" wx:if="{{ac}}">
+        <view bindtap="{{ae}}" class="_div bottomInfoText data-v-b97f161d"
+          >{{ad}}</view
+        >
+        <view class="_div bottomZanAndCaiLayout data-v-b97f161d" wx:if="{{af}}">
+          <image
+            bindtap="{{ah}}"
+            class="_img attitudeIcon attitudeIconLeft data-v-b97f161d"
+            src="{{ag}}"
+          ></image>
+          <image
+            bindtap="{{aj}}"
+            class="_img attitudeIcon attitudeIconCenter data-v-b97f161d"
+            src="{{ai}}"
+          ></image>
+          <image
+            bindtap="{{al}}"
+            class="_img attitudeIcon attitudeIconCenter data-v-b97f161d"
+            src="https://st.gtimg.com/design/2b891d7971dc1635a302623238db09ba.png"
+            wx:if="{{ak}}"
+          ></image>
+          <view bindtap="{{am}}" class="_div attitudeIconRight data-v-b97f161d">
+            <share-button-wrapper
+              bind:__l="__l"
+              class="data-v-b97f161d"
+              uI="b97f161d-8"
+              uS="{{['d']}}"
+            >
+              <image
+                class="_img attitudeIcon data-v-b97f161d"
+                src="https://st.gtimg.com/design/db6012c37ce9dadc757ace3fc2c5a310.svg"
+              ></image>
+            </share-button-wrapper>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div illegal-container data-v-b97f161d" wx:if="{{an}}">
+    <view class="_div illegal-divider data-v-b97f161d"></view>
+    <view bindtap="{{ao}}" class="_div illegal-change-topic data-v-b97f161d"
+      >换个话题聊聊看</view
+    >
+    <view class="_div illegal-divider data-v-b97f161d"></view>
+  </view>
+</view>

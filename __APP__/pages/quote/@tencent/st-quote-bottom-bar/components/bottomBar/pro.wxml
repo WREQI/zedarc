@@ -1,0 +1,143 @@
+<view
+  class="{{['_div','details-btn','flex','show-float-button','data-v-2dd5c1c1',aa&&'pyq-mode',ab&&'hide-trade-area']}}"
+>
+  <view class="_div detail-btn-left flex flex-pack-justify data-v-2dd5c1c1">
+    <view
+      bindtap="{{d}}"
+      class="_div btn-col-set comment-btn left data-v-2dd5c1c1"
+    >
+      <view class="{{['_div','data-v-2dd5c1c1',a,b]}}"></view>
+      <view class="_div icon-comment data-v-2dd5c1c1"></view>
+      <view class="_div btn-col-text-icon data-v-2dd5c1c1">{{c}}</view>
+    </view>
+    <view bindtap="{{f}}" class="_div btn-col-set left data-v-2dd5c1c1">
+      <button
+        class="btn-col-set share-btn left data-v-2dd5c1c1"
+        id="shareBtn"
+        openType="share"
+        plain="true"
+        wx:if="{{e}}"
+      >
+        <view class="_div icon-share-bar data-v-2dd5c1c1"></view>
+        <view class="_div btn-col-text-icon data-v-2dd5c1c1">分享</view>
+      </button>
+      <view
+        class="_div btn-col-set share-btn left data-v-2dd5c1c1"
+        id="shareBtn"
+        plain="true"
+        wx:else
+      >
+        <view class="_div icon-share-bar data-v-2dd5c1c1"></view>
+        <view class="_div btn-col-text-icon data-v-2dd5c1c1">分享</view>
+      </view>
+    </view>
+    <view
+      bindtap="{{h}}"
+      class="_div btn-col-set mocktrade-btn-wrap left data-v-2dd5c1c1"
+      wx:if="{{g}}"
+    >
+      <view class="_div icon-mocktrade data-v-2dd5c1c1"></view>
+      <view class="_div btn-col-text-icon data-v-2dd5c1c1">模拟交易</view>
+    </view>
+    <view
+      bindtap="{{l}}"
+      class="_div btn-col-set left data-v-2dd5c1c1"
+      wx:if="{{i}}"
+    >
+      <view class="{{['_div','data-v-2dd5c1c1','icon-remind',j]}}"></view>
+      <view class="_div btn-col-text-icon data-v-2dd5c1c1">{{k}}</view>
+    </view>
+    <view class="_div btn-col-set left data-v-2dd5c1c1" wx:if="{{m}}">
+      <view class="_div icon-calculate-bar data-v-2dd5c1c1"></view>
+      <view class="_div btn-col-text-icon data-v-2dd5c1c1">收益试算</view>
+    </view>
+  </view>
+  <view
+    bindtap="{{q}}"
+    class="{{['_div','btn-col-set-right','data-v-2dd5c1c1',p]}}"
+    wx:if="{{n}}"
+  >
+    <view class="_div buy-zs-bk data-v-2dd5c1c1">{{o}}</view>
+  </view>
+  <view
+    bindtap="{{t}}"
+    class="{{['_div','btn-col-set-right','data-v-2dd5c1c1',s]}}"
+    wx:elif="{{r}}"
+  >
+    <view class="_div buy-zs-bk data-v-2dd5c1c1">更多指数</view>
+  </view>
+  <view
+    class="{{['_div','btn-col-set-right','data-v-2dd5c1c1',D]}}"
+    wx:elif="{{v}}"
+  >
+    <view bindtap="{{y}}" class="_div buy-zs-bk data-v-2dd5c1c1" wx:if="{{w}}"
+      >{{x}}</view
+    >
+    <block wx:elif="{{z}}">
+      <view bindtap="{{B}}" class="_div buy-zs-bk data-v-2dd5c1c1" wx:if="{{A}}"
+        >查看自选</view
+      >
+      <view bindtap="{{C}}" class="_div buy-zs-bk data-v-2dd5c1c1" wx:else
+        >加入自选</view
+      >
+    </block>
+  </view>
+  <view
+    bindtap="{{G}}"
+    class="{{['_div','btn-col-set-right','data-v-2dd5c1c1',F]}}"
+    wx:elif="{{E}}"
+  >
+    <image
+      class="_img quote-choose data-v-2dd5c1c1"
+      src="https://st.gtimg.com/image/mp-weapp/stock/hq.png"
+    ></image>
+    <view class="_div btn-col-text-icon data-v-2dd5c1c1">查看行情</view>
+  </view>
+  <view
+    class="{{['_div','btn-col-set-right','btn-col-set-trade','data-v-2dd5c1c1',T,U]}}"
+    wx:elif="{{H}}"
+  >
+    <view class="_div trade-button-wrapper data-v-2dd5c1c1" wx:if="{{I}}">
+      <view bindtap="{{K}}" class="_div trade-btn buy data-v-2dd5c1c1">
+        <view class="_div data-v-2dd5c1c1" wx:if="{{J}}">买入</view>
+        <view class="_div trade-btn-loading data-v-2dd5c1c1" wx:else></view>
+      </view>
+      <view bindtap="{{M}}" class="_div trade-btn sell data-v-2dd5c1c1">
+        <view class="_div data-v-2dd5c1c1" wx:if="{{L}}">卖出</view>
+        <view class="_div trade-btn-loading data-v-2dd5c1c1" wx:else></view>
+      </view>
+    </view>
+    <view
+      bindtap="{{O}}"
+      class="_div trade-button-wrapper-only-one data-v-2dd5c1c1"
+      wx:elif="{{N}}"
+    >
+      <view class="_div trade-item-btn data-v-2dd5c1c1">开户交易</view>
+    </view>
+    <view
+      bindtap="{{Q}}"
+      class="_div trade-button-wrapper-only-one data-v-2dd5c1c1"
+      wx:elif="{{P}}"
+    >
+      <view class="_div trade-item-btn data-v-2dd5c1c1">认购</view>
+    </view>
+    <view
+      bindtap="{{S}}"
+      class="_div trade-button-wrapper-only-one data-v-2dd5c1c1"
+      wx:elif="{{R}}"
+    >
+      <view class="_div trade-item-btn data-v-2dd5c1c1">交易</view>
+    </view>
+  </view>
+  <more-dialog
+    bind:__l="__l"
+    bindclose="{{Y}}"
+    bindsetTop="{{X}}"
+    bindtapChooseManage="{{W}}"
+    bindtoggleAdded="{{V}}"
+    class="data-v-2dd5c1c1"
+    uI="2dd5c1c1-0"
+    uP="{{Z}}"
+    wx:if="{{Z}}"
+  ></more-dialog>
+</view>

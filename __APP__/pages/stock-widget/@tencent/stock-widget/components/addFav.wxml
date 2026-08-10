@@ -1,0 +1,21 @@
+<view class="_div addFav-btn-wrap data-v-b2339478" wx:if="{{a}}">
+  <view catchtap="{{i}}" class="_div add-btn data-v-b2339478" wx:if="{{b}}">
+    <view
+      class="{{['_div','add-fav-icon','white-theme','add-fav-blue-icon','data-v-b2339478',c,d]}}"
+    ></view>
+    <view
+      class="{{['_div','add-fav-icon','black-theme','add-fav-black-icon','data-v-b2339478',e,f]}}"
+    ></view>
+    <view class="{{['_div','add-fav-text','data-v-b2339478',h]}}" wx:if="{{g}}"
+      >已添加</view
+    >
+  </view>
+  <view catchtap="{{o}}" class="_div add-btn active data-v-b2339478" wx:else>
+    <view
+      class="{{['_div','add-fav-icon','active','data-v-b2339478',j,k]}}"
+    ></view>
+    <view class="{{['_div','add-fav-text','data-v-b2339478',n]}}" wx:if="{{l}}"
+      >{{m}}</view
+    >
+  </view>
+</view>

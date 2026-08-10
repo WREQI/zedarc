@@ -1,0 +1,26 @@
+<view
+  class="{{['_div','data-v-e00574b8','emotion-boost-guide',h]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div guide-card data-v-e00574b8">
+    <view class="_div guide-content data-v-e00574b8">
+      <view class="_div guide-icon data-v-e00574b8">
+        <image class="_img guide-icon__img data-v-e00574b8" src="{{b}}"></image>
+      </view>
+      <view class="_div guide-text data-v-e00574b8">
+        <view
+          class="_div data-v-e00574b8"
+          wx:for="{{c}}"
+          wx:for-item="line"
+          wx:key="b"
+          >{{line.a}}</view
+        >
+      </view>
+      <view
+        bindtap="{{g}}"
+        class="{{['_div','data-v-e00574b8','guide-btn',e&&'guide-btn--added',f&&'guide-btn--visible']}}"
+        >{{d}}</view
+      >
+    </view>
+  </view>
+</view>

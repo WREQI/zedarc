@@ -1,0 +1,45 @@
+<view class="{{['_div','data-v-81dbaa29','single-topic',z]}}">
+  <view class="_div topic-box-mac data-v-81dbaa29" wx:if="{{a}}">
+    <view
+      class="_div topic-box-mac-blur data-v-81dbaa29"
+      style="{{'background-image:'+b}}"
+    ></view>
+    <view
+      class="_div topic-box-mac-main data-v-81dbaa29"
+      style="{{'background-image:'+c}}"
+    ></view>
+  </view>
+  <view
+    class="{{['_div','data-v-81dbaa29',t,v,w]}}"
+    style="{{'background-image:'+x}}"
+    wx:else
+  >
+    <view class="{{['_div','data-v-81dbaa29',j,'top-box']}}">
+      <label class="{{['_span','data-v-81dbaa29',e,f]}}">{{d}}</label>
+      <label
+        class="_span comment-num data-v-81dbaa29"
+        style="{{'color:'+i}}"
+        wx:if="{{g}}"
+        >{{h}}</label
+      >
+    </view>
+    <view class="_div title-box-small title-box data-v-81dbaa29" wx:if="{{k}}">
+      <label class="_span title2 data-v-81dbaa29">{{l}}</label>
+      <label class="_span title2 data-v-81dbaa29" wx:if="{{m}}">{{n}}</label>
+    </view>
+    <view class="_div title-box data-v-81dbaa29" wx:else>
+      <label class="_span title data-v-81dbaa29">{{o}}</label>
+      <label class="_span title data-v-81dbaa29">{{p}}</label>
+    </view>
+    <view class="_div relate-topic-block data-v-81dbaa29" wx:if="{{q}}">
+      <view class="_div go-check data-v-81dbaa29"></view>
+      <view class="_div relate-topic-text data-v-81dbaa29">{{r}}</view>
+    </view>
+    <slot wx:if="{{s}}"></slot>
+  </view>
+  <image
+    class="_img topic-ip data-v-81dbaa29"
+    src="https://st.gtimg.com/design/0da71b112c627398f3f51c981fad02e7.png"
+    wx:if="{{y}}"
+  ></image>
+</view>

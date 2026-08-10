@@ -1,0 +1,24 @@
+<view class="_div related-stock-container data-v-0eca72ac">
+  <view class="_div row-container data-v-0eca72ac">
+    <view class="_div row-item data-v-0eca72ac" wx:for="{{a}}" wx:key="c">
+      <related-stock
+        bind:__l="__l"
+        class="item-container data-v-0eca72ac"
+        uI="{{item.a}}"
+        uP="{{item.b}}"
+        wx:if="{{item.b}}"
+      ></related-stock>
+    </view>
+  </view>
+  <view class="_div row-container row-2 data-v-0eca72ac" wx:if="{{b}}">
+    <view class="_div row-item data-v-0eca72ac" wx:for="{{c}}" wx:key="c">
+      <related-stock
+        bind:__l="__l"
+        class="item-container data-v-0eca72ac"
+        uI="{{item.a}}"
+        uP="{{item.b}}"
+        wx:if="{{item.b}}"
+      ></related-stock>
+    </view>
+  </view>
+</view>

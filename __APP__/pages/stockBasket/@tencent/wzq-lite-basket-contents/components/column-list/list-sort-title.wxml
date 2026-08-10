@@ -1,0 +1,10 @@
+<view class="{{['_div','data-v-b6870a0a','dropdown-container',d]}}">
+  <view class="_div title data-v-b6870a0a">股单</view>
+  <view catchtap="{{c}}" class="_div select-btn data-v-b6870a0a" wx:if="{{a}}">
+    <view class="_div select-text data-v-b6870a0a">{{b}}</view>
+    <image
+      class="_img btn-arrow data-v-b6870a0a"
+      src="https://st.gtimg.com/design/c1fee4819ea8b996db6e168b8edcd5fe.png"
+    ></image>
+  </view>
+</view>

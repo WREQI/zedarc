@@ -1,0 +1,16 @@
+<view class="{{['_div','data-v-6956d25e','etf-rolling-bar',i]}}" wx:if="{{a}}">
+  <view
+    catchtap="{{h}}"
+    class="{{['_div','data-v-6956d25e','roll-row',g]}}"
+    key="{{f}}"
+    wx:if="{{b}}"
+  >
+    <image
+      alt=""
+      class="_img market-icon data-v-6956d25e"
+      src="https://wzq.tenpay.com/resources/mp-files/portfolio/icon/cnjj.svg"
+    ></image>
+    <view class="_div etf-name data-v-6956d25e">{{c}}</view>
+    <view class="{{['_div','data-v-6956d25e','etf-ratio',e]}}">{{d}}</view>
+  </view>
+</view>

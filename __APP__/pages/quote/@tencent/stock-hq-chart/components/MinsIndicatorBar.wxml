@@ -1,0 +1,11 @@
+<view class="_div menu-box data-v-bed6129d">
+  <view class="_div indicators data-v-bed6129d">
+    <view
+      bindtap="{{item.d}}"
+      class="{{['_div','item','data-v-bed6129d',item.b&&'selected']}}"
+      wx:for="{{a}}"
+      wx:key="c"
+      >{{item.a}}</view
+    >
+  </view>
+</view>

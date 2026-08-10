@@ -1,0 +1,15 @@
+<view class="_div extra-com-wrapper">
+  <broker-action-sheet
+    bind:__l="__l"
+    bindclose="{{b}}"
+    data-c-h="{{!a}}"
+    uI="42f278ce-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></broker-action-sheet>
+  <protocol-update-banner
+    bind:__l="__l"
+    uI="42f278ce-1"
+  ></protocol-update-banner>
+  <task bind:__l="__l" uI="42f278ce-2" wx:if="{{d}}"></task>
+</view>

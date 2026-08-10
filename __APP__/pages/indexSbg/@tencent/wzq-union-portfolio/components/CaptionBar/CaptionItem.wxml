@@ -1,0 +1,11 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','caption','flex-pack-start','data-v-1273c8a0',g,h]}}"
+>
+  <view class="_div sort-label-content data-v-1273c8a0" wx:if="{{a}}">USD</view>
+  <view class="{{['_div','data-v-1273c8a0','caption-name',c]}}">{{b}}</view>
+  <label class="_span caption-arrow data-v-1273c8a0" wx:if="{{d}}">
+    <view class="{{['_i','up','data-v-1273c8a0',e&&'activated']}}"></view>
+    <view class="{{['_i','down','data-v-1273c8a0',f&&'activated']}}"></view>
+  </label>
+</view>

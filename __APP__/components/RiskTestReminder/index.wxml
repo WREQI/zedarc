@@ -1,0 +1,25 @@
+<view class="risk-test-reminder-container">
+  <mp-dialog
+    bind:__l="__l"
+    bindconfirm="{{b}}"
+    uI="56c27897-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></mp-dialog>
+  <mp-dialog
+    bind:__l="__l"
+    bindcancel="{{d}}"
+    bindconfirm="{{e}}"
+    uI="56c27897-1"
+    uP="{{f||''}}"
+    wx:else
+  ></mp-dialog>
+  <mp-dialog
+    bind:__l="__l"
+    bindcancel="{{h}}"
+    bindconfirm="{{g}}"
+    uI="56c27897-2"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></mp-dialog>
+</view>

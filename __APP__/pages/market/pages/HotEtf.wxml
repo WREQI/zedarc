@@ -1,0 +1,40 @@
+<page-meta class="data-v-9e55cfc4" rootFontSize="{{a}}"></page-meta>
+<view class="_div etf-hs-index-page data-v-9e55cfc4" data-st-theme="{{l}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-9e55cfc4"
+    uI="9e55cfc4-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-9e55cfc4"
+    uI="9e55cfc4-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view
+    class="_div nav-bar data-v-9e55cfc4"
+    id="navBar"
+    style="{{'padding-top:'+h+';'+'background-color:'+i}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div btn data-v-9e55cfc4" wx:if="{{d}}"></view>
+    <view catchtap="{{f}}" class="_div btn data-v-9e55cfc4" wx:else>
+      <view
+        class="{{['_div','data-v-9e55cfc4','right-arrow','left',e]}}"
+      ></view>
+    </view>
+    <label class="_span title data-v-9e55cfc4" style="{{'opacity:'+g}}"
+      >选行业</label
+    >
+    <view class="_div btn data-v-9e55cfc4"></view>
+  </view>
+  <discover-detail-page
+    bind:__l="__l"
+    class="r data-v-9e55cfc4"
+    uI="9e55cfc4-2"
+    uP="{{k}}"
+    uR="discoverDetailPage"
+    wx:if="{{k}}"
+  ></discover-detail-page>
+</view>

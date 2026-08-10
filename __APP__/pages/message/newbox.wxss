@@ -1,0 +1,44 @@
+@import "/app.wxss";
+.msg-box-container.data-v-044e6774 {
+  background: var(--fill-1);
+  height: 100%;
+  width: 100%;
+}
+.msg-box-container .scroll-view.data-v-044e6774 {
+  height: 100vh;
+}
+.msg-box-container .scroll-view .msg-wrapper.data-v-044e6774 {
+  margin: 0.16rem 0.32rem 0.32rem;
+}
+.data-v-044e6774 .msg-box-container .empty.container {
+  background: var(--fill-1);
+  height: calc(100vh - constant(safe-area-inset-bottom)) !important;
+  height: calc(100vh - env(safe-area-inset-bottom)) !important;
+}
+.data-v-044e6774 .msg-box-container .empty.container .text {
+  color: var(--text-color-5);
+}
+.msg-box-container .scroll-loading.data-v-044e6774,
+.msg-box-container .tips-text.data-v-044e6774 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.72rem;
+  justify-content: center;
+  margin-top: 0.133333rem;
+}
+.msg-box-container .scroll-loading.data-v-044e6774 {
+  text-align: center;
+}
+.msg-box-container .tips-text.data-v-044e6774 {
+  color: var(--text-color-4);
+  font-size: 0.346667rem;
+  line-height: 1.333333rem;
+  text-align: center;
+}
+.data-v-044e6774 .container {
+  background: var(--fill-1);
+}

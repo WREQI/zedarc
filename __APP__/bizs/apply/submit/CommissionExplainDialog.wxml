@@ -1,0 +1,35 @@
+<mp-dialog
+  bind:__l="__l"
+  bindclose="{{b}}"
+  class="data-v-f1bd2443"
+  uI="f1bd2443-0"
+  uP="{{c}}"
+  uS="{{['d']}}"
+  wx:if="{{c}}"
+>
+  <view class="container data-v-f1bd2443">
+    <view class="item data-v-f1bd2443" wx:for="{{a}}" wx:key="d">
+      <view class="title fs-28 data-v-f1bd2443" wx:if="{{item.a}}"
+        >{{item.b}}</view
+      >
+      <view
+        class="sub-item data-v-f1bd2443"
+        wx:for="{{item.c}}"
+        wx:for-item="subItem"
+        wx:key="e"
+      >
+        <view class="subtitle fs-26 data-v-f1bd2443" wx:if="{{subItem.a}}"
+          >{{subItem.b}}</view
+        >
+        <view
+          class="content-item fs-24 data-v-f1bd2443"
+          wx:for="{{subItem.c}}"
+          wx:for-item="contentItem"
+          wx:key="b"
+          >{{contentItem.a}}</view
+        >
+        <view class="note fs-22 data-v-f1bd2443">{{subItem.d}}</view>
+      </view>
+    </view>
+  </view>
+</mp-dialog>

@@ -1,0 +1,50 @@
+<view
+  bindtap="{{t}}"
+  class="{{['_div','data-v-bf8b365c','global-market-rank-item',r,s]}}"
+>
+  <view class="_div rank-item data-v-bf8b365c">
+    <view class="{{['_div','rank-left','data-v-bf8b365c',g]}}">
+      <view class="{{['_div','rank-detail-name','data-v-bf8b365c',b]}}"
+        >{{a}}</view
+      >
+      <view class="_div rank-detail-symbol data-v-bf8b365c">
+        <image
+          alt="市场图标"
+          class="_img market-icon data-v-bf8b365c"
+          src="{{c}}"
+        ></image>
+        <view class="_div stock-code data-v-bf8b365c">{{d}}</view>
+        <view class="_div tag-list data-v-bf8b365c" wx:if="{{e}}">
+          <view
+            class="_div stock-tag data-v-bf8b365c"
+            wx:for="{{f}}"
+            wx:for-item="tag"
+            wx:key="b"
+            >{{tag.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div rank-right-block data-v-bf8b365c">
+      <view class="_div rank-middle data-v-bf8b365c">
+        <view class="{{['_div','data-v-bf8b365c','num',i]}}">{{h}}</view>
+        <view class="_div desc data-v-bf8b365c">{{j}}</view>
+      </view>
+      <view class="_div rank-right data-v-bf8b365c">
+        <view class="_div num data-v-bf8b365c">{{k}}</view>
+        <view class="_div desc data-v-bf8b365c">{{l}}</view>
+      </view>
+      <view
+        catchtap="{{o}}"
+        class="_div fund-card__buy-button--nasdaq-100 data-v-bf8b365c"
+        data-test-id="{{n}}"
+        wx:if="{{m}}"
+      >
+        <view class="_div fund-card__buy-text--nasdaq-100 data-v-bf8b365c"
+          >买入</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div rank-description data-v-bf8b365c" wx:if="{{p}}">{{q}}</view>
+</view>

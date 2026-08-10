@@ -1,0 +1,56 @@
+<view class="_div data-v-bb981c78">
+  <view class="{{['_div','data-v-bb981c78','rank-head',e]}}" wx:if="{{a}}">
+    <view class="_div rank-left data-v-bb981c78">{{b}}名称</view>
+    <view class="_div rank-middle data-v-bb981c78">{{c}}</view>
+    <view class="_div rank-right data-v-bb981c78">{{d}}</view>
+  </view>
+  <view class="_div rank-body data-v-bb981c78" id="{{h}}" ref="{{i}}">
+    <view
+      class="_div data-v-bb981c78"
+      wx:for="{{f}}"
+      wx:for-item="stock"
+      wx:key="s"
+    >
+      <view
+        bindtap="{{stock.r}}"
+        class="{{['_div','data-v-bb981c78','rank-item',stock.q]}}"
+        id="{{stock.o}}"
+        ref="{{stock.p}}"
+      >
+        <view class="_div rank-left data-v-bb981c78">
+          <view
+            class="{{['_div','data-v-bb981c78','rank-detail-name',stock.b]}}"
+            >{{stock.a}}</view
+          >
+          <view class="_div rank-detail-symbol data-v-bb981c78">
+            <image
+              class="_img market-icon data-v-bb981c78"
+              src="{{stock.c}}"
+            ></image>
+            <view class="_div stock-code data-v-bb981c78">{{stock.d}}</view>
+          </view>
+        </view>
+        <block wx:if="{{g}}">
+          <view
+            class="{{['_div','data-v-bb981c78','rank-middle',stock.g]}}"
+            wx:if="{{stock.e}}"
+            >{{stock.f}}</view
+          >
+          <view
+            class="{{['_div','data-v-bb981c78','rank-right def',stock.j]}}"
+            wx:if="{{stock.h}}"
+            >{{stock.i}}</view
+          >
+        </block>
+        <block wx:else>
+          <view class="_div rank-middle data-v-bb981c78">{{stock.k}}</view>
+          <view
+            class="{{['_div','data-v-bb981c78','rank-right def',stock.n]}}"
+            wx:if="{{stock.l}}"
+            >{{stock.m}}</view
+          >
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

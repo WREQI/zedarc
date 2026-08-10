@@ -1,0 +1,226 @@
+<page-meta class="data-v-692adc9f" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-692adc9f"
+  id="global-wrap"
+  uI="692adc9f-0"
+  uP="{{Y}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{Y}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-692adc9f"
+    uI="692adc9f-1,692adc9f-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-advisory data-v-692adc9f">
+      <block wx:if="{{b}}">
+        <progress-bar
+          bind:__l="__l"
+          class="data-v-692adc9f"
+          uI="692adc9f-2,692adc9f-1"
+          uP="{{c}}"
+          wx:if="{{c}}"
+        ></progress-bar>
+        <view class="advisory-content data-v-692adc9f">
+          <block wx:if="{{d}}">
+            <view class="advisory-card data-v-692adc9f">
+              <view class="advisory-card__header data-v-692adc9f">
+                <view class="advisory-card__title text-color-1 data-v-692adc9f"
+                  >投顾VIP服务</view
+                >
+                <view class="advisory-card__tag data-v-692adc9f" wx:if="{{e}}"
+                  >{{f}}</view
+                >
+              </view>
+              <view class="advisory-card__services data-v-692adc9f">
+                <view
+                  class="advisory-service data-v-692adc9f"
+                  wx:for="{{g}}"
+                  wx:key="d"
+                >
+                  <view
+                    class="advisory-service__name text-color-1 data-v-692adc9f"
+                    >特权{{item.a}}：{{item.b}}</view
+                  >
+                  <view
+                    class="advisory-service__desc text-color-1 data-v-692adc9f"
+                    >{{item.c}}</view
+                  >
+                </view>
+              </view>
+              <view
+                class="advisory-card__commission data-v-692adc9f"
+                wx:if="{{h}}"
+              >
+                <view
+                  class="advisory-commission__text text-color-1 data-v-692adc9f"
+                  >投顾费：全账户提佣<label
+                    class="advisory-commission__rate data-v-692adc9f"
+                    >{{i}}</label
+                  >（可随时退订）</view
+                >
+                <view class="advisory-commission__info data-v-692adc9f">
+                  <label
+                    class="advisory-commission__icon data-v-692adc9f"
+                  ></label>
+                  <view class="advisory-commission__desc data-v-692adc9f"
+                    >签约后佣金率=基础佣金率+{{j}}</view
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="advisory-disclaimer data-v-692adc9f" wx:if="{{k}}"
+              >{{l}}</view
+            >
+          </block>
+          <view class="zj-advisory data-v-692adc9f" wx:else>
+            <view class="zj-advisory__card data-v-692adc9f">
+              <view bindtap="{{q}}" class="zj-advisory__header data-v-692adc9f">
+                <label
+                  class="{{['zj-advisory__check','data-v-692adc9f',m&&'zj-advisory__check--checked']}}"
+                ></label>
+                <label class="zj-advisory__title data-v-692adc9f">{{n}}</label>
+                <label class="advisory-card__tag data-v-692adc9f" wx:if="{{o}}"
+                  >{{p}}</label
+                >
+              </view>
+              <view class="zj-advisory__product data-v-692adc9f">
+                <view class="zj-advisory__product-main data-v-692adc9f">
+                  <view class="zj-advisory__product-name data-v-692adc9f"
+                    >{{r}}</view
+                  >
+                  <view class="zj-advisory__product-desc data-v-692adc9f"
+                    >{{s}}</view
+                  >
+                </view>
+                <label bindtap="{{v}}" class="zj-advisory__link data-v-692adc9f"
+                  >{{t}}</label
+                >
+              </view>
+              <view class="zj-advisory__fee data-v-692adc9f">
+                <view class="zj-advisory__fee-title data-v-692adc9f"
+                  >{{w}}<label class="zj-advisory__fee-rate data-v-692adc9f"
+                    >{{x}}</label
+                  >{{y}}</view
+                >
+                <view
+                  class="zj-advisory__fee-note data-v-692adc9f"
+                  wx:if="{{z}}"
+                >
+                  <label
+                    class="zj-advisory__fee-note-icon data-v-692adc9f"
+                  ></label>
+                  <label class="zj-advisory__fee-note-text data-v-692adc9f"
+                    >{{A}}</label
+                  >
+                </view>
+                <view
+                  class="zj-advisory__fee-detail data-v-692adc9f"
+                  wx:for="{{B}}"
+                  wx:for-item="detail"
+                  wx:key="b"
+                  >{{detail.a}}</view
+                >
+                <view
+                  class="zj-advisory__fee-detail data-v-692adc9f"
+                  wx:if="{{C}}"
+                  >{{D}}</view
+                >
+                <view
+                  class="zj-advisory__fee-detail data-v-692adc9f"
+                  wx:if="{{E}}"
+                  >{{F}}<label
+                    bindtap="{{H}}"
+                    class="zj-advisory__link zj-advisory__link--inline data-v-692adc9f"
+                    >{{G}}</label
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="zj-advisory__notices data-v-692adc9f">
+              <view
+                class="zj-advisory__notice data-v-692adc9f"
+                wx:for="{{I}}"
+                wx:for-item="notice"
+                wx:key="c"
+              >
+                <view class="data-v-692adc9f" wx:if="{{notice.a}}"></view
+                >{{notice.b}}</view
+              >
+            </view>
+          </view>
+        </view>
+        <foot-print
+          bind:__l="__l"
+          class="advisory-footer data-v-692adc9f"
+          uI="692adc9f-3,692adc9f-1"
+        ></foot-print>
+        <view class="advisory-actions data-v-692adc9f">
+          <view class="advisory-actions__inner data-v-692adc9f">
+            <button
+              bindtap="{{J}}"
+              class="advisory-btn advisory-btn--skip data-v-692adc9f"
+            >
+              跳过
+            </button>
+            <view class="advisory-confirm-wrap data-v-692adc9f">
+              <view class="advisory-tooltip data-v-692adc9f" wx:if="{{K}}"
+                >{{L}}</view
+              >
+              <button
+                bindtap="{{O}}"
+                class="{{['advisory-btn','advisory-btn--confirm','data-v-692adc9f',M&&'advisory-btn--disabled']}}"
+                disabled="{{N}}"
+              >
+                确定
+              </button>
+            </view>
+          </view>
+        </view>
+        <mp-dialog
+          bind:__l="__l"
+          class="data-v-692adc9f"
+          id="mp-dialog"
+          uI="692adc9f-4,692adc9f-1"
+          uP="{{P}}"
+          wx:if="{{P}}"
+        ></mp-dialog>
+        <popup
+          bind:__l="__l"
+          bindclickOverlay="{{V}}"
+          class="data-v-692adc9f"
+          uI="692adc9f-5,692adc9f-1"
+          uP="{{W}}"
+          uS="{{['d']}}"
+          wx:if="{{W}}"
+        >
+          <view
+            catch:touchmove
+            catchtouchmove="{{U}}"
+            class="advisory-fee-popup__content data-v-692adc9f"
+          >
+            <view class="advisory-fee-popup__title data-v-692adc9f">{{Q}}</view>
+            <view class="advisory-fee-popup__body data-v-692adc9f">
+              <view
+                class="advisory-fee-popup__paragraph data-v-692adc9f"
+                wx:for="{{R}}"
+                wx:for-item="text"
+                wx:key="b"
+                >{{text.a}}</view
+              >
+            </view>
+            <button
+              bindtap="{{T}}"
+              class="advisory-fee-popup__confirm data-v-692adc9f"
+            >
+              {{S}}
+            </button>
+          </view>
+        </popup>
+      </block>
+    </view>
+  </apply-wrap>
+</global-wrap>

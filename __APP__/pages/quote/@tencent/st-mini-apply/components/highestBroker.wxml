@@ -1,0 +1,18 @@
+<view class="_div higher-dealer data-v-168b13bc">
+  <view bindtap="{{g}}" class="_div higher-dealer-wrapper data-v-168b13bc">
+    <view class="_div dealer-icon data-v-168b13bc">
+      <image alt="" class="_img icon data-v-168b13bc" src="{{a}}"></image>
+    </view>
+    <view class="_div dealer-name data-v-168b13bc">{{b}}</view>
+    <view class="_div dealer-maintain data-v-168b13bc" wx:if="{{c}}"
+      >(维护中)</view
+    >
+    <view class="_div line data-v-168b13bc"></view>
+    <view class="_div dealer-desc data-v-168b13bc">{{d}}</view>
+    <view class="_div show-more-icon data-v-168b13bc" wx:if="{{e}}"></view>
+    <view
+      class="_div show-more-icon-guiding data-v-168b13bc"
+      wx:if="{{f}}"
+    ></view>
+  </view>
+</view>

@@ -1,0 +1,72 @@
+<view class="_div news-text data-v-5a8f8023">
+  <view
+    class="_div summary-container data-v-5a8f8023"
+    hoverClass="onLongTouch"
+    wx:if="{{a}}"
+  >
+    <view
+      class="_div enable-touch data-v-5a8f8023"
+      wx:for="{{b}}"
+      wx:for-item="content"
+      wx:key="g"
+    >
+      <image
+        class="_img icon-wrapper data-v-5a8f8023"
+        src="{{content.b}}"
+        wx:if="{{content.a}}"
+      ></image>
+      <view class="_div summary-title data-v-5a8f8023" wx:if="{{content.c}}">
+        <view
+          bindtap="{{content.f}}"
+          class="{{['_div','summary-title-text','data-v-5a8f8023',content.e]}}"
+          >{{content.d}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div tag-container data-v-5a8f8023" wx:if="{{c}}">
+    <view class="_div news-type data-v-5a8f8023" wx:if="{{d}}">
+      <view class="_div text data-v-5a8f8023">{{e}}</view>
+    </view>
+    <view class="{{['_div','data-v-5a8f8023',h]}}" wx:if="{{f}}">
+      <view class="_div text data-v-5a8f8023">{{g}}</view>
+    </view>
+  </view>
+  <view
+    class="_div data-v-5a8f8023"
+    hoverClass="onLongTouch"
+    wx:for="{{i}}"
+    wx:key="h"
+  >
+    <render-content
+      bind:__l="__l"
+      bindgoToFunctions="{{item.d}}"
+      bindgoToNews="{{item.b}}"
+      bindgoToStock="{{item.c}}"
+      bindgoToUrl="{{item.e}}"
+      class="data-v-5a8f8023"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:if="{{item.a}}"
+    ></render-content>
+  </view>
+  <related-hq-group
+    bind:__l="__l"
+    class="data-v-5a8f8023"
+    uI="5a8f8023-1"
+    uP="{{k}}"
+    wx:if="{{j}}"
+  ></related-hq-group>
+  <view
+    bindtap="{{l}}"
+    class="_div secondary-link data-v-5a8f8023"
+    hoverClass="onLongTouch"
+  >
+    <label class="_span data-v-5a8f8023">查看全文</label>
+    <image
+      alt=""
+      class="_img img data-v-5a8f8023"
+      src="https://st.gtimg.com/design/866d67eeb3b06ab052f9c21d8b23446f.png"
+    ></image>
+  </view>
+</view>

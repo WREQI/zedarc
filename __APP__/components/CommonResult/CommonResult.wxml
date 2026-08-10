@@ -1,0 +1,19 @@
+<view
+  class="{{['common-result-container','^common-result-container','^^common-result-container',h]}}"
+>
+  <view
+    class="{{['section-result','^section-result','^^section-result',f]}}"
+    style="{{'height:'+g}}"
+  >
+    <block wx:if="{{a}}">
+      <view class="{{['result-icon',c]}}" wx:if="{{b}}"></view>
+      <view class="result-icon result-icon--warning" wx:else></view>
+    </block>
+    <view class="{{['result-icon',e]}}" wx:else>
+      <view class="icon-wrapper flex-center">
+        <label class="{{['icon',d]}}"></label>
+      </view>
+    </view>
+    <slot></slot>
+  </view>
+</view>

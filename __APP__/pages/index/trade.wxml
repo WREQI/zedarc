@@ -1,0 +1,48 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div trade-box" data-st-theme="{{s}}">
+  <mp-privacy-dialog bind:__l="__l" uI="24d63edc-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="24d63edc-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <top-bar
+    bind:__l="__l"
+    class="top-bar"
+    uI="24d63edc-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></top-bar>
+  <escape-notice bind:__l="__l" uI="24d63edc-3" wx:if="{{e}}"></escape-notice>
+  <block wx:else>
+    <view class="_div" style="{{i}}" wx:if="{{f}}">
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{g}}"
+        uI="24d63edc-4"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></st-status>
+    </view>
+    <asset
+      bind:__l="__l"
+      bindpageInit="{{l}}"
+      bindpluginReady="{{m}}"
+      class="asset-container"
+      style="{{k}}"
+      uI="24d63edc-5"
+      uP="{{n}}"
+      wx:if="{{j}}"
+    ></asset>
+    <view class="_div" style="{{r}}" wx:if="{{o}}">
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{p}}"
+        uI="24d63edc-6"
+        uP="{{q}}"
+        wx:if="{{q}}"
+      ></st-status>
+    </view>
+  </block>
+</view>

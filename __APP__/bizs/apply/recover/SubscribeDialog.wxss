@@ -1,0 +1,36 @@
+@import "/app.wxss";
+.subscribe_container.data-v-01aefb73 {
+  height: 11.733333rem;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.2rem;
+}
+.subscribe_container .subscribe-bg.data-v-01aefb73 {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+.subscribe_container .subscribe-qrcode-png.data-v-01aefb73 {
+  height: 3.76rem;
+  left: 50%;
+  position: absolute;
+  top: 3.68rem;
+  transform: translate(-50%);
+  width: 3.76rem;
+}
+.subscribe_container .close-btn.data-v-01aefb73 {
+  background: url(https://st.gtimg.com/design/6c3146678abff7c4940c6bf0006e0432.png);
+  background-size: 100% 100%;
+  height: 0.72rem;
+  position: absolute;
+  right: 0;
+  top: -1.093333rem;
+  transform: translate(50%);
+  width: 0.72rem;
+}

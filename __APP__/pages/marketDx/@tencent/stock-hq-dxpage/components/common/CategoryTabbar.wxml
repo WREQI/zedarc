@@ -1,0 +1,24 @@
+<view class="_div category-tab data-v-bbd6294f">
+  <tabs
+    bind:__l="__l"
+    bindselect="{{b}}"
+    class="category-wrapper data-v-bbd6294f"
+    uI="bbd6294f-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <tab
+      bind:__l="__l"
+      class="r-i-f data-v-bbd6294f"
+      uI="{{tab.e}}"
+      uP="{{tab.f}}"
+      uR="{{tab.c}}"
+      uS="{{['d']}}"
+      wx:for="{{a}}"
+      wx:for-item="tab"
+      wx:key="d"
+      >{{tab.a}}</tab
+    >
+  </tabs>
+</view>

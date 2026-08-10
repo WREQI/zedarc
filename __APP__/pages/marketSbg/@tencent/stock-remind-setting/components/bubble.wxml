@@ -1,0 +1,26 @@
+<view
+  class="{{['_div','data-v-421fa093','md-remind-bubble',k,l]}}"
+  style="{{m}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div triangle triangle-up data-v-421fa093"
+    style="{{'border-bottom-color:'+c}}"
+    wx:if="{{b}}"
+  ></view>
+  <view
+    class="_div rectangle data-v-421fa093"
+    style="{{'color:'+g+';'+'background-color:'+h}}"
+    >{{d}}<label
+      bindtap="{{f}}"
+      class="_span close-btn data-v-421fa093"
+      wx:if="{{e}}"
+      >×</label
+    >
+  </view>
+  <view
+    class="_div triangle data-v-421fa093"
+    style="{{'border-top-color:'+j}}"
+    wx:if="{{i}}"
+  ></view>
+</view>

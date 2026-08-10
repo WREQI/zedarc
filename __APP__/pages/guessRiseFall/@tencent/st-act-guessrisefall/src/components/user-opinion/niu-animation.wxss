@@ -1,0 +1,299 @@
+.opinion-niu-animation.data-v-c4bcbe0a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  justify-content: center;
+  line-height: 1;
+  position: relative;
+}
+.opinion-niu-animation--zooming .opinion-niu-animation__svg.data-v-c4bcbe0a {
+  animation: opinion-niu-zoom-out-c4bcbe0a 0.3s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.opinion-niu-animation--zooming.opinion-niu-animation--selected
+  .opinion-niu-animation__svg.data-v-c4bcbe0a {
+  animation: opinion-niu-zoom-in-c4bcbe0a 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.opinion-niu-animation--zooming.opinion-niu-animation--selected
+  .opinion-niu-animation__ripple-item.data-v-c4bcbe0a {
+  animation: opinion-niu-ripple-c4bcbe0a 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.opinion-niu-animation--zooming.opinion-niu-animation--selected
+  .opinion-niu-animation__ripple--outline
+  .opinion-niu-animation__ripple-item.data-v-c4bcbe0a {
+  animation: opinion-niu-ripple-c4bcbe0a 0.8s
+    cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.15s;
+}
+.opinion-niu-animation--selected
+  .opinion-niu-animation__outline.data-v-c4bcbe0a {
+  opacity: 0;
+}
+.opinion-niu-animation--selected
+  .opinion-niu-animation__breath-item.data-v-c4bcbe0a {
+  animation: opinion-niu-breath-item-c4bcbe0a 0.9s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
+}
+.opinion-niu-animation--selected
+  .opinion-niu-animation__breath.data-v-c4bcbe0a {
+  animation: opinion-niu-breath-c4bcbe0a 0.9s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
+}
+.opinion-niu-animation__static-icon.data-v-c4bcbe0a {
+  display: block;
+  height: 0.30666666666666664rem;
+  width: 0.49333333333333335rem;
+}
+.opinion-niu-animation__static-icon--tap.data-v-c4bcbe0a {
+  animation: opinion-niu-static-pop-c4bcbe0a 0.45s ease-out;
+}
+.opinion-niu-animation__icon-box.data-v-c4bcbe0a {
+  background: transparent;
+  font-size: 0;
+  margin-right: -0.5333333333333333rem;
+  position: relative;
+  top: 0.02666666666666667rem;
+  width: 1.0133333333333334rem;
+}
+.opinion-niu-animation__ripple.data-v-c4bcbe0a {
+  height: 0.48rem;
+  left: 0.24rem;
+  position: absolute;
+  top: 0.21333333333333335rem;
+  transform: translate(-50%, -50%);
+  width: 0.48rem;
+}
+.opinion-niu-animation__ripple--outline.data-v-c4bcbe0a {
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.opinion-niu-animation__ripple--outline
+  .opinion-niu-animation__ripple-item.data-v-c4bcbe0a {
+  background-color: initial;
+  border: 0.013333333333333334rem solid hsla(0, 78%, 68%, 0.25);
+  box-sizing: border-box;
+}
+.opinion-niu-animation__ripple-item.data-v-c4bcbe0a {
+  background-color: hsla(0, 78%, 68%, 0.25);
+  border-radius: 50%;
+  height: 100%;
+  opacity: 0;
+  width: 100%;
+}
+.opinion-niu-animation__svg.data-v-c4bcbe0a {
+  height: 0.5333333333333333rem;
+  left: -0.26666666666666666rem;
+  position: relative;
+  transform-origin: center;
+  width: 1.0133333333333334rem;
+}
+.opinion-niu-animation__breath.data-v-c4bcbe0a {
+  opacity: 0;
+}
+.opinion-niu-animation__breath-item.data-v-c4bcbe0a {
+  transform-origin: center;
+}
+.opinion-niu-animation__outline.data-v-c4bcbe0a {
+  transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.opinion-niu-animation__number-box.data-v-c4bcbe0a {
+  height: 0.64rem;
+  margin-left: 0.08rem;
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0,
+    #000 30%,
+    #000 70%,
+    transparent
+  );
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  width: 0.8533333333333334rem;
+}
+.opinion-niu-animation__number-static.data-v-c4bcbe0a {
+  color: #b0b0b0;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  margin-left: 0.08rem;
+  text-align: left;
+  white-space: nowrap;
+  width: 0.8533333333333334rem;
+}
+.opinion-niu-animation__number-static--selected.data-v-c4bcbe0a {
+  color: #eb5d5d;
+}
+.opinion-niu-animation__number-scroll.data-v-c4bcbe0a {
+  color: #b0b0b0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.opinion-niu-animation__number-scroll--tap.data-v-c4bcbe0a {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.opinion-niu-animation__number-scroll--selected.data-v-c4bcbe0a {
+  color: #eb5d5d;
+  transform: translateY(-0.64rem);
+}
+.opinion-niu-animation__number-scroll span.data-v-c4bcbe0a {
+  height: 0.64rem;
+  line-height: 0.64rem;
+  text-align: left;
+  white-space: nowrap;
+}
+@-webkit-keyframes opinion-niu-static-pop-c4bcbe0a {
+  0% {
+    transform: scale(0.82);
+  }
+  55% {
+    transform: scale(1.24);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes opinion-niu-static-pop-c4bcbe0a {
+  0% {
+    transform: scale(0.82);
+  }
+  55% {
+    transform: scale(1.24);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes opinion-niu-zoom-in-c4bcbe0a {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  90%,
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes opinion-niu-zoom-in-c4bcbe0a {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(2);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  90%,
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes opinion-niu-ripple-c4bcbe0a {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes opinion-niu-ripple-c4bcbe0a {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes opinion-niu-zoom-out-c4bcbe0a {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes opinion-niu-zoom-out-c4bcbe0a {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes opinion-niu-breath-item-c4bcbe0a {
+  0%,
+  20% {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+@keyframes opinion-niu-breath-item-c4bcbe0a {
+  0%,
+  20% {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+@-webkit-keyframes opinion-niu-breath-c4bcbe0a {
+  0% {
+    opacity: 0;
+    transform: translate(7px, 7px);
+  }
+  30%,
+  5% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(7px, 20px);
+  }
+}
+@keyframes opinion-niu-breath-c4bcbe0a {
+  0% {
+    opacity: 0;
+    transform: translate(7px, 7px);
+  }
+  30%,
+  5% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate(7px, 20px);
+  }
+}

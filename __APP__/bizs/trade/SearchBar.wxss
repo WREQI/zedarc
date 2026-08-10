@@ -1,0 +1,26 @@
+@import "/app.wxss";
+.search-bar.data-v-d9c79de1 {
+  height: 0.8rem;
+}
+.search-bar input.data-v-d9c79de1 {
+  background-color: var(--fill-1);
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/search-light.png);
+  background-position: 0.24rem;
+  background-repeat: no-repeat;
+  background-size: 0.346667rem;
+  border-radius: 0.106667rem;
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  height: 100%;
+  padding-left: 0.866667rem;
+  width: 100%;
+}
+.search-bar input.data-v-d9c79de1::-webkit-input-placeholder {
+  color: var(--text-color-4);
+}
+.search-bar .search-bar-cancel.data-v-d9c79de1 {
+  color: var(--color-primary-2);
+  font-size: 0.4rem;
+  line-height: 0.8rem;
+  margin-left: 0.32rem;
+}

@@ -1,0 +1,14 @@
+<view class="_div news-history-block data-v-1e5f3c60">
+  <view class="_div title data-v-1e5f3c60">{{a}}</view>
+  <view class="_div new-warpper data-v-1e5f3c60">
+    <view
+      bindtap="{{item.d}}"
+      class="_div news-item data-v-1e5f3c60"
+      wx:for="{{b}}"
+      wx:key="c"
+    >
+      <view class="_div news-title data-v-1e5f3c60">{{item.a}}</view>
+      <view class="_div source data-v-1e5f3c60">{{item.b}}</view>
+    </view>
+  </view>
+</view>

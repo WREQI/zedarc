@@ -1,0 +1,48 @@
+@import "/app.wxss";
+.subscribe_container.data-v-ff45f1ab {
+  height: 10.133333rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.2rem;
+}
+.subscribe_container .close-subscribe-btn.data-v-ff45f1ab {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/close_btn.png);
+  background-size: 100% 100%;
+  height: 0.8rem;
+  position: absolute;
+  right: 0;
+  transform: translateY(-130%);
+  width: 0.8rem;
+}
+.subscribe_container .subscribe-qrcode-png.data-v-ff45f1ab {
+  border-radius: 0.106667rem;
+  height: 100%;
+  width: 100%;
+}
+.data-v-ff45f1ab .mp-popup {
+  border-top-left-radius: 0.32rem;
+  border-top-right-radius: 0.32rem;
+}
+.data-v-ff45f1ab .st-action-sheet-panel {
+  background: transparent;
+}
+.subscribe-container.data-v-ff45f1ab {
+  padding-bottom: 0.266667rem;
+  position: relative;
+}
+.subscribe-container .qrcode-img.data-v-ff45f1ab {
+  height: 6.933333rem;
+  width: 10rem;
+}
+.subscribe-container .icon-close.data-v-ff45f1ab {
+  color: #98a0b3;
+  font-weight: 700;
+  padding: 0.266667rem;
+  position: absolute;
+  right: 0.133333rem;
+  top: 0.666667rem;
+  transform: translateY(-50%);
+  z-index: 6;
+}

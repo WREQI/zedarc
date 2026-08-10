@@ -1,0 +1,26 @@
+<view class="{{['_div','data-v-a4624d99',h]}}" wx:if="{{a}}">
+  <view
+    catchtap="{{item.i}}"
+    class="{{['_div','image-item','data-v-a4624d99',c,item.f]}}"
+    data-images="{{d}}"
+    data-imagesw="{{e}}"
+    data-index="{{item.j}}"
+    data-info="{{f}}"
+    data-src="{{item.k}}"
+    data-urls="{{g}}"
+    ref="{{item.g}}"
+    style="{{item.h}}"
+    wx:for="{{b}}"
+    wx:key="e"
+  >
+    <base-image
+      bind:__l="__l"
+      bindloaded="{{item.a}}"
+      class="data-v-a4624d99"
+      uI="{{item.b}}"
+      uP="{{item.c}}"
+      wx:if="{{item.c}}"
+    ></base-image>
+    <label class="_span gif-tag data-v-a4624d99" wx:if="{{item.d}}">Gif</label>
+  </view>
+</view>

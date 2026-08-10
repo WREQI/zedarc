@@ -1,0 +1,139 @@
+<page-meta class="data-v-f673e9b8" rootFontSize="{{a}}"></page-meta>
+<view class="_div zhuxiao-account-rights data-v-f673e9b8" wx:if="{{b}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f673e9b8"
+    uI="f673e9b8-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-f673e9b8"
+    uI="f673e9b8-1"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></stock-privacy-dialog>
+  <view class="_div zhuxiao-subtitle data-v-f673e9b8"
+    >你现在绑定了以下证券，请先手动解除你所绑定关联的券商账户</view
+  >
+  <block wx:if="{{d}}">
+    <view class="_div zhuxiao-title data-v-f673e9b8">当前可解绑的账户</view>
+    <view class="_div zhuxiao-kjb data-v-f673e9b8">
+      <view
+        class="_div zhuxiao-kjb-item data-v-f673e9b8"
+        wx:for="{{e}}"
+        wx:key="d"
+      >
+        <view
+          class="_div zhuxiao-kjb-item-img data-v-f673e9b8"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view class="_div zhuxiao-kjb-item-name flex1 data-v-f673e9b8"
+          >{{item.b}}</view
+        >
+        <view
+          bindtap="{{item.c}}"
+          class="_div zhuxiao-kjb-item-btn data-v-f673e9b8"
+          >解绑</view
+        >
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{f}}">
+    <view class="_div zhuxiao-title data-v-f673e9b8"
+      >需前往「腾讯自选股」APP解绑的账户</view
+    >
+    <view class="_div zhuxiao-kjb data-v-f673e9b8">
+      <view
+        class="_div zhuxiao-kjb-item data-v-f673e9b8"
+        wx:for="{{g}}"
+        wx:key="c"
+      >
+        <view
+          class="_div zhuxiao-kjb-item-img data-v-f673e9b8"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view class="_div zhuxiao-kjb-item-name data-v-f673e9b8"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+    <view class="_div zhuxiao-tips data-v-f673e9b8"
+      >您需前往“腾讯自选股”app登录绑定券商账户，于交易tab-全部-账户信息，通过页面底部"解除绑定账户"进行手动解绑</view
+    >
+  </block>
+  <block wx:if="{{h}}">
+    <view class="_div zhuxiao-title data-v-f673e9b8"
+      >需前往「腾讯微证券」公众号解绑的账户</view
+    >
+    <view class="_div zhuxiao-kjb data-v-f673e9b8">
+      <view
+        class="_div zhuxiao-kjb-item data-v-f673e9b8"
+        wx:for="{{i}}"
+        wx:key="c"
+      >
+        <view
+          class="_div zhuxiao-kjb-item-img data-v-f673e9b8"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view class="_div zhuxiao-kjb-item-name data-v-f673e9b8"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+    <view class="_div zhuxiao-tips data-v-f673e9b8"
+      >您需前往微信“腾讯自选股微信版|微证券”公众号登录绑定券商账户，于交易tab-全部-账户信息，通过页面底部"解除绑定账户"进行手动解绑</view
+    >
+  </block>
+  <block wx:if="{{j}}">
+    <view class="_div zhuxiao-title data-v-f673e9b8"
+      >需前往两融账号切换后解绑的账户</view
+    >
+    <view class="_div zhuxiao-kjb data-v-f673e9b8">
+      <view
+        class="_div zhuxiao-kjb-item data-v-f673e9b8"
+        wx:for="{{k}}"
+        wx:key="c"
+      >
+        <view
+          class="_div zhuxiao-kjb-item-img data-v-f673e9b8"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view class="_div zhuxiao-kjb-item-name data-v-f673e9b8"
+          >{{item.b}}</view
+        >
+        <view class="_div zhuxiao-kjb-item-name-rong data-v-f673e9b8">融</view>
+      </view>
+    </view>
+    <view class="_div zhuxiao-tips data-v-f673e9b8"
+      >您需前往对应券商账户切换至普通账号后，于交易tab-全部-账户信息，通过页面底部"解除绑定账户"进行手动解绑</view
+    >
+  </block>
+  <view class="_div zhuxiao-fengexian data-v-f673e9b8"></view>
+  <block wx:if="{{l}}">
+    <view class="_div zhuxiao-title data-v-f673e9b8"
+      >正在开户流程中<text class="data-v-f673e9b8">暂时无法解绑</text
+      >的账户</view
+    >
+    <view class="_div zhuxiao-kjb zhuxiao-kjb-opiticy data-v-f673e9b8">
+      <view
+        class="_div zhuxiao-kjb-item data-v-f673e9b8"
+        wx:for="{{m}}"
+        wx:key="c"
+      >
+        <view
+          class="_div zhuxiao-kjb-item-img data-v-f673e9b8"
+          style="{{'background-image:'+item.a}}"
+        ></view>
+        <view class="_div zhuxiao-kjb-item-name data-v-f673e9b8"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+    <view class="_div zhuxiao-tips data-v-f673e9b8"
+      >因当前存在正在开户流程中的账户，<text class="data-v-f673e9b8"
+        >需等待流程完成后</text
+      >方可进行解除绑定操作</view
+    >
+  </block>
+  <view class="_div tencent-logo data-v-f673e9b8"></view>
+</view>

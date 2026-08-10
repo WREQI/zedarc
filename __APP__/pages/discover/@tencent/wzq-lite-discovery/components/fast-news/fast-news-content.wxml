@@ -1,0 +1,42 @@
+<view class="_div fast-news-content data-v-8aa01bf9">
+  <view class="_div section-header data-v-8aa01bf9" wx:if="{{a}}">今天</view>
+  <view class="_div data-v-8aa01bf9" wx:for="{{b}}" wx:key="c">
+    <fast-news-item
+      bind:__l="__l"
+      class="data-v-8aa01bf9"
+      uI="{{item.a}}"
+      uP="{{item.b}}"
+      wx:if="{{item.b}}"
+    ></fast-news-item>
+  </view>
+  <view class="_div section-header data-v-8aa01bf9" wx:if="{{c}}">昨天</view>
+  <view class="_div data-v-8aa01bf9" wx:for="{{d}}" wx:key="c">
+    <fast-news-item
+      bind:__l="__l"
+      class="data-v-8aa01bf9"
+      uI="{{item.a}}"
+      uP="{{item.b}}"
+      wx:if="{{item.b}}"
+    ></fast-news-item>
+  </view>
+  <view
+    class="_div data-v-8aa01bf9"
+    wx:for="{{e}}"
+    wx:for-item="itemList"
+    wx:key="d"
+  >
+    <view class="_div data-v-8aa01bf9" wx:if="{{itemList.a}}">
+      <view class="_div section-header data-v-8aa01bf9">{{itemList.b}}</view>
+      <view class="_div data-v-8aa01bf9" wx:for="{{itemList.c}}" wx:key="c">
+        <fast-news-item
+          bind:__l="__l"
+          class="data-v-8aa01bf9"
+          uI="{{item.a}}"
+          uP="{{item.b}}"
+          wx:if="{{item.b}}"
+        ></fast-news-item>
+      </view>
+    </view>
+  </view>
+  <view class="_div brand data-v-8aa01bf9" wx:if="{{f}}"></view>
+</view>

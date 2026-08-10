@@ -1,0 +1,74 @@
+.basket-news-item .part-up.data-v-c8254de2 {
+  align-items: stretch;
+  border-bottom: 0.013333333333333334rem solid var(--border-light);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 2.08rem;
+  padding: 0.4266666666666667rem 0;
+}
+.basket-news-item .part-up.last.data-v-c8254de2 {
+  border-bottom: 0 solid var(--border-light);
+}
+.basket-news-item .part-up .part-up-left.data-v-c8254de2 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 1.6266666666666667rem;
+  overflow: hidden;
+}
+.basket-news-item .part-up .part-up-left .title.data-v-c8254de2 {
+  color: var(--color-midgray-1);
+  flex: 0;
+  font-size: 0.4266666666666667rem;
+  line-break: anywhere;
+  line-height: 0.64rem;
+  text-align: left;
+}
+.basket-news-item .part-up .part-up-left .info.data-v-c8254de2 {
+  align-items: center;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  height: 0.5333333333333333rem;
+  line-height: 1;
+  margin-top: 0.26666666666666666rem;
+}
+.basket-news-item .part-up .part-up-left .info .source.data-v-c8254de2,
+.basket-news-item .part-up .part-up-left .info .tag.data-v-c8254de2,
+.basket-news-item .part-up .part-up-left .info .time.data-v-c8254de2 {
+  margin-right: 0.21333333333333335rem;
+}
+.basket-news-item .part-up .part-up-left .info .tag.data-v-c8254de2 {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+.basket-news-item .part-up .part-up-left .info .source.data-v-c8254de2 {
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.basket-news-item .part-up .part-up-left .info .time.data-v-c8254de2 {
+  flex-shrink: 0;
+}
+.basket-news-item .part-up .part-up-right.data-v-c8254de2 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  margin-left: 0.26666666666666666rem;
+  width: 1.9733333333333334rem;
+}
+.basket-news-item .part-up .part-up-right .cover.data-v-c8254de2 {
+  border-radius: 0.10666666666666667rem;
+  flex-shrink: 0;
+  height: 1.9733333333333334rem;
+  margin-top: 0.05333333333333334rem;
+  object-fit: cover;
+  width: 1.9733333333333334rem;
+}

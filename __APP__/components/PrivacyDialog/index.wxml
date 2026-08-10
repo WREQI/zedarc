@@ -1,0 +1,41 @@
+<modal
+  bind:__l="__l"
+  class="privacy-modal data-v-5a09f021"
+  uI="5a09f021-0"
+  uP="{{e}}"
+  uS="{{['btns','d']}}"
+  wx:if="{{e}}"
+>
+  <view class="_div mp-dialog__message data-v-5a09f021">
+    <view class="_div modal-content data-v-5a09f021">
+      <view class="_div modal-content-text data-v-5a09f021">
+        <view class="_p data-v-5a09f021"
+          >为更好地提供证券服务，请您仔细阅读<label
+            bindtap="{{b}}"
+            class="_span link data-v-5a09f021"
+            >{{a}}</label
+          >。</view
+        >
+        <view class="_p data-v-5a09f021"
+          >如您同意，请点击“同意”。若点击“拒绝”可能无法使用相关证券服务。</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div btn-container data-v-5a09f021" slot="btns">
+    <button
+      bindtap="{{c}}"
+      class="mp-dialog__button mp-dialog__cancel border--right data-v-5a09f021"
+    >
+      拒绝
+    </button>
+    <button
+      bindagreeprivacyauthorization="{{d}}"
+      class="mp-dialog__button mp-dialog__confirm active data-v-5a09f021"
+      id="mp-privacy-agree-btn"
+      openType="agreePrivacyAuthorization"
+    >
+      同意
+    </button>
+  </view>
+</modal>

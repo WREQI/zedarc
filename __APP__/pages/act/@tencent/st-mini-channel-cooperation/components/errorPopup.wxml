@@ -1,0 +1,24 @@
+<view
+  catchtouchmove="{{l}}"
+  class="_div error-popup-overlay data-v-eed573cc"
+  wx:if="{{a}}"
+>
+  <view class="_div error-popup-wrap data-v-eed573cc">
+    <view class="_div error-popup-content data-v-eed573cc">
+      <view class="_div popup-img data-v-eed573cc" wx:if="{{b}}">
+        <image
+          class="_img custom-img data-v-eed573cc"
+          src="{{d}}"
+          wx:if="{{c}}"
+        ></image>
+        <view class="{{['_div','data-v-eed573cc',e]}}" wx:else></view>
+      </view>
+      <view class="_div popup-title data-v-eed573cc" wx:if="{{f}}">{{g}}</view>
+      <view class="_div popup-title w7 data-v-eed573cc" wx:else>温馨提醒</view>
+      <view class="_div popup-subtitle data-v-eed573cc" wx:if="{{h}}">
+        <rich-text class="data-v-eed573cc" nodes="{{i}}"></rich-text>
+      </view>
+      <view bindtap="{{k}}" class="_div popup-btn data-v-eed573cc">{{j}}</view>
+    </view>
+  </view>
+</view>

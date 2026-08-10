@@ -1,0 +1,23 @@
+@import "/app.wxss";
+.shareholder-card-stack.data-v-f1d07982 {
+  --card-height: 5.226667rem;
+  --card-gap: 1.2rem;
+  --card-count: 1;
+  height: calc(var(--card-height) + (var(--card-count) - 1) * var(--card-gap));
+  padding-bottom: 0.533333rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.shareholder-card-stack__item.data-v-f1d07982 {
+  --card-offset: 0;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%)
+    translateY(calc(var(--card-offset) * var(--card-gap)));
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  width: 9.36rem;
+}

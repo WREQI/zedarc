@@ -1,0 +1,15 @@
+.container {
+  background-color: #000;
+  box-sizing: border-box !important;
+  height: 100%;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.container:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+  width: 100%;
+}

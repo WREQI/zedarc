@@ -1,0 +1,76 @@
+<view class="{{['_div','content-container','data-v-d6dd6af5',F]}}">
+  <block wx:if="{{a}}">
+    <view class="_div fix-gray-line data-v-d6dd6af5" wx:if="{{b}}"></view>
+    <category-tabbar
+      bind:__l="__l"
+      bindupdateCategoryTab="{{g}}"
+      class="{{['r','data-v-d6dd6af5',e,f]}}"
+      uI="d6dd6af5-0"
+      uP="{{h}}"
+      uR="categoryTabbar"
+      wx:if="{{c}}"
+    ></category-tabbar>
+    <view class="{{['_div','fake-line','data-v-d6dd6af5',i]}}"></view>
+    <view class="{{['_div','data-v-d6dd6af5','category-content',x]}}">
+      <view class="_div data-v-d6dd6af5" wx:if="{{j}}">
+        <pending-subscription
+          bind:__l="__l"
+          bindshowTeachPop="{{k}}"
+          class="data-v-d6dd6af5"
+          uI="d6dd6af5-1"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></pending-subscription>
+      </view>
+      <view class="_div data-v-d6dd6af5" wx:if="{{m}}">
+        <available-subscription
+          bind:__l="__l"
+          bindshowTeachPop="{{n}}"
+          class="data-v-d6dd6af5"
+          uI="d6dd6af5-2"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></available-subscription>
+      </view>
+      <view class="_div data-v-d6dd6af5" wx:if="{{p}}">
+        <pending-go-public
+          bind:__l="__l"
+          bindshowTeachPop="{{q}}"
+          class="data-v-d6dd6af5"
+          uI="d6dd6af5-3"
+          uP="{{r}}"
+          wx:if="{{r}}"
+        ></pending-go-public>
+      </view>
+      <view class="_div data-v-d6dd6af5" wx:if="{{s}}">
+        <already-go-public
+          bind:__l="__l"
+          bindloadFinished="{{v}}"
+          class="r data-v-d6dd6af5"
+          uI="d6dd6af5-4"
+          uP="{{w}}"
+          uR="alreadyGoPublic"
+          wx:if="{{w}}"
+        ></already-go-public>
+      </view>
+    </view>
+    <view class="{{['_div','data-v-d6dd6af5','daxin-button-wrapper',B]}}">
+      <daxin-button
+        bind:__l="__l"
+        bindbuttonClick="{{z}}"
+        class="data-v-d6dd6af5"
+        uI="d6dd6af5-5"
+        uP="{{A}}"
+        wx:if="{{y}}"
+      ></daxin-button>
+    </view>
+  </block>
+  <no-data-card
+    bind:__l="__l"
+    bindclick="{{D}}"
+    class="error-card-wrapper data-v-d6dd6af5"
+    uI="d6dd6af5-6"
+    uP="{{E}}"
+    wx:if="{{C}}"
+  ></no-data-card>
+</view>

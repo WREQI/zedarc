@@ -1,0 +1,33 @@
+<view
+  bindlongpress="{{g}}"
+  bindtouchend="{{i}}"
+  bindtouchmove="{{j}}"
+  bindtouchstart="{{h}}"
+  class="{{['_div','data-v-c7ebbe96','set-item',f]}}"
+>
+  <view
+    catchtap="{{b}}"
+    class="_div delete-bubble data-v-c7ebbe96"
+    wx:if="{{a}}"
+  >
+    <view class="_div delete-bubble-content data-v-c7ebbe96">
+      <image
+        class="_img delete-icon data-v-c7ebbe96"
+        src="https://st.gtimg.com/design/78485ce29b74baaf62839033b11975b2.png"
+      ></image>
+      <label class="_span delete-text data-v-c7ebbe96">删除</label>
+    </view>
+    <view class="_div delete-bubble-arrow data-v-c7ebbe96"></view>
+  </view>
+  <view class="_div inner-box data-v-c7ebbe96">
+    <view class="_div label data-v-c7ebbe96">{{c}}</view>
+    <switch-btn
+      bind:__l="__l"
+      bindtoggleChoose="{{d}}"
+      class="data-v-c7ebbe96"
+      uI="c7ebbe96-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></switch-btn>
+  </view>
+</view>

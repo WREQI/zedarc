@@ -1,0 +1,23 @@
+<view
+  bindtouchcancel="{{CustomScroll.touchend}}"
+  bindtouchend="{{CustomScroll.touchend}}"
+  bindtouchstart="{{CustomScroll.touchstart}}"
+  catchtouchmove="{{CustomScroll.touchmove}}"
+  change:scrollOptions="{{CustomScroll.setup}}"
+  class="_div tab-wrapper data-v-dc4c0700"
+  id="ceilingPartMP"
+  ref="ceilingPart"
+  scrollOptions="{{b}}"
+>
+  <view class="_div brief-tab data-v-dc4c0700" ref="ceilingTabs">
+    <label
+      bindtap="{{val.e}}"
+      class="{{['_span','brief-tab-span','data-v-dc4c0700',val.d&&'active']}}"
+      hidden="{{!val.b}}"
+      wx:for="{{a}}"
+      wx:for-item="val"
+      wx:key="c"
+      >{{val.a}}</label
+    >
+  </view>
+</view>

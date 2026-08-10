@@ -1,0 +1,17 @@
+<view class="{{['data-v-d26801e0','navbar-wrap',b,c,d]}}">
+  <view class="navbar-list data-v-d26801e0">
+    <view
+      bindtap="{{nav.f}}"
+      class="{{[nav.e,'navbar-item','data-v-d26801e0']}}"
+      wx:for="{{a}}"
+      wx:for-item="nav"
+      wx:key="d"
+    >
+      <image
+        class="{{['data-v-d26801e0','icon',nav.a]}}"
+        src="{{nav.b}}"
+      ></image>
+      <view class="name data-v-d26801e0">{{nav.c}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,259 @@
+<view class="purchase-list-item data-v-38304dbf">
+  <view class="recent-tab border--bottom data-v-38304dbf">{{a}}</view>
+  <view class="lists data-v-38304dbf">
+    <view class="lists-card data-v-38304dbf" wx:for="{{b}}" wx:key="at">
+      <view
+        bindtap="{{item.h}}"
+        class="{{['flex-between','lists-card__header','data-v-38304dbf',item.g&&'lists-card__header-disabled']}}"
+        data-stat="TRADE.NEWSTOCK.INDEX.STOCKDETAILS"
+      >
+        <view class="flex-vcenter data-v-38304dbf">
+          <label class="market-tag data-v-38304dbf" wx:if="{{c}}"
+            >{{item.a}}</label
+          >
+          <label class="market-tag data-v-38304dbf" wx:else>{{item.b}}</label>
+          <label class="market-name data-v-38304dbf">{{item.c}}</label>
+          <label class="market-code data-v-38304dbf"
+            >{{item.d}}{{item.e}}</label
+          >
+          <label class="profit-tag data-v-38304dbf" wx:if="{{item.f}}"
+            >尚未盈利</label
+          >
+        </view>
+        <label
+          class="icon icon-arrow-right fs-26 text-color-5 data-v-38304dbf"
+        ></label>
+      </view>
+      <view class="lists-card__mid data-v-38304dbf">
+        <view
+          bindtap="{{item.l}}"
+          class="compare-company data-v-38304dbf"
+          wx:if="{{item.i}}"
+        >
+          <view class="content data-v-38304dbf">可比公司&行业：{{item.j}}</view>
+          <label class="more data-v-38304dbf" wx:if="{{item.k}}"
+            >查看更多</label
+          >
+        </view>
+      </view>
+      <view
+        class="{{['lists-card__body','flex-vcenter','flex-between','data-v-38304dbf',item.as&&'border--bottom']}}"
+      >
+        <view class="lists-card__selected data-v-38304dbf">
+          <label
+            bindtap="{{item.p}}"
+            class="{{['icon','icon-check-box','custom-radio','data-v-38304dbf',item.m&&'lists-card__selected-disabled',item.n&&'icon-checked',item.o&&'applying']}}"
+          ></label>
+        </view>
+        <view
+          class="{{['flex-1','flex-between','lists-card__table','text','data-v-38304dbf',item.ar&&'lists-card__table__disabled']}}"
+        >
+          <view class="flex-column flex-center data-v-38304dbf">
+            <view class="newstock-list-header fs-24 data-v-38304dbf"
+              >发行价</view
+            >
+            <view class="issue-price data-v-38304dbf">{{item.q}}</view>
+          </view>
+          <view class="flex-column flex-center data-v-38304dbf">
+            <view class="newstock-list-header fs-24 flex-center data-v-38304dbf"
+              >{{item.r}}<view
+                bindtap="{{item.s}}"
+                class="icon icon-info-sparse fs-20 ml-6 icon-hotarea data-v-38304dbf"
+              ></view>
+            </view>
+            <view class="ratio data-v-38304dbf">
+              <block wx:if="{{item.t}}">{{item.v}}</block>
+              <block wx:else>{{item.w}}</block>
+            </view>
+          </view>
+          <view class="flex-column flex-center data-v-38304dbf">
+            <view class="newstock-list-header fs-24 data-v-38304dbf"
+              >申购上限</view
+            >
+            <view class="number-font data-v-38304dbf"
+              >{{item.x}}<label class="data-v-38304dbf">{{d}}</label>
+            </view>
+          </view>
+          <view class="flex-column purchase-amount data-v-38304dbf">
+            <view class="newstock-list-header fs-24 data-v-38304dbf"
+              >申购数量</view
+            >
+            <block wx:if="{{item.y}}">
+              <block wx:if="{{item.z}}">
+                <picker
+                  bindchange="{{item.E}}"
+                  class="data-v-38304dbf"
+                  range="{{item.D}}"
+                  rangeKey="text"
+                  value="{{item.C}}"
+                  wx:if="{{item.A}}"
+                >
+                  <label class="number-font data-v-38304dbf">{{item.B}}</label>
+                  <label
+                    class="select icon icon-arrow-down text-color-5 data-v-38304dbf"
+                  ></label>
+                </picker>
+                <block wx:else>
+                  <view class="fs-24 sub-status data-v-38304dbf"
+                    >无申购配额</view
+                  >
+                  <view
+                    bindtap="{{item.F}}"
+                    class="link-biz-open data-v-38304dbf"
+                    data-stat="trade.newstock.today.quota"
+                    >查看配额规则</view
+                  >
+                </block>
+              </block>
+              <block wx:else>
+                <view
+                  bindtap="{{item.I}}"
+                  class="data-v-38304dbf"
+                  wx:if="{{item.G}}"
+                >
+                  <label class="number-font data-v-38304dbf">{{item.H}}</label>
+                  <label
+                    class="select icon icon-arrow-down text-color-5 data-v-38304dbf"
+                  ></label>
+                </view>
+                <block wx:else>
+                  <view class="fs-24 text-color-5 data-v-38304dbf"
+                    >无申购配额</view
+                  >
+                  <view
+                    bindtap="{{item.J}}"
+                    class="link-biz-open data-v-38304dbf"
+                    data-stat="trade.newstock.today.quota"
+                    >查看配额规则</view
+                  >
+                </block>
+              </block>
+            </block>
+            <view
+              class="purchased sub-status data-v-38304dbf"
+              wx:elif="{{item.K}}"
+            >
+              <view class="data-v-38304dbf">申购中</view>
+              <view class="data-v-38304dbf" wx:if="{{item.L}}"
+                >{{item.M}}{{item.N}}</view
+              >
+            </view>
+            <view
+              class="purchased sub-status data-v-38304dbf"
+              wx:elif="{{item.O}}"
+            >
+              <view class="data-v-38304dbf">已申购</view>
+              <view class="data-v-38304dbf" wx:if="{{item.P}}"
+                >{{item.Q}}{{item.R}}</view
+              >
+            </view>
+            <block wx:elif="{{item.S}}">
+              <view class="fs-24 align-c sub-status data-v-38304dbf"
+                >无申购配额</view
+              >
+              <view
+                bindtap="{{item.T}}"
+                class="link-biz-open aign-c data-v-38304dbf"
+                data-stat="trade.newstock.today.quota"
+                >查看配额规则</view
+              >
+            </block>
+            <block wx:elif="{{item.U}}">
+              <view class="fs-24 align-c sub-status data-v-38304dbf"
+                >无创业板权限</view
+              >
+              <view
+                bindtap="{{item.W}}"
+                class="link-biz-open align-c data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.V}}"
+                >去开通</view
+              >
+            </block>
+            <block wx:elif="{{item.X}}">
+              <view class="fs-24 align-c sub-status data-v-38304dbf"
+                >无科创板权限</view
+              >
+              <view
+                bindtap="{{item.Z}}"
+                class="link-biz-open aign-c data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.Y}}"
+                >去开通</view
+              >
+            </block>
+            <block wx:elif="{{item.aa}}">
+              <view class="fs-24 align-c sub-status data-v-38304dbf"
+                >无成长层权限</view
+              >
+              <view
+                bindtap="{{item.ac}}"
+                class="link-biz-open data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.ab}}"
+                >去开通</view
+              >
+            </block>
+            <block wx:elif="{{item.ad}}">
+              <view class="fs-24 algin-c sub-status data-v-38304dbf"
+                >无沪市交易权限</view
+              >
+              <view
+                catchtap="{{item.ae}}"
+                class="link-biz-open aign-c data-v-38304dbf"
+                >如何处理</view
+              >
+            </block>
+            <block wx:elif="{{item.af}}">
+              <view class="fs-24 aign-c sub-status data-v-38304dbf"
+                >无深市交易权限</view
+              >
+              <view
+                catchtap="{{item.ag}}"
+                class="link-biz-open aign-c data-v-38304dbf"
+                >如何处理</view
+              >
+            </block>
+            <block wx:elif="{{item.ah}}">
+              <view class="fs-24 sub-status data-v-38304dbf"
+                >创业板权限不足</view
+              >
+              <view
+                bindtap="{{item.aj}}"
+                class="link-biz-open data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.ai}}"
+                >去升级</view
+              >
+            </block>
+            <block wx:elif="{{item.ak}}">
+              <view class="fs-24 sub-status data-v-38304dbf"
+                >无深市可转债权限</view
+              >
+              <view
+                bindtap="{{item.am}}"
+                class="link-biz-open data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.al}}"
+                >去开通</view
+              >
+            </block>
+            <block wx:elif="{{item.an}}">
+              <view class="fs-24 sub-status data-v-38304dbf"
+                >无沪市可转债权限</view
+              >
+              <view
+                bindtap="{{item.ap}}"
+                class="link-biz-open data-v-38304dbf"
+                data-stat="trade.newstock.today.found"
+                wx:if="{{item.ao}}"
+                >去开通</view
+              >
+            </block>
+            <view class="data-v-38304dbf" wx:else>未知错误({{item.aq}})</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="detail-account-wrap">
+  <view class="account_name">{{a}}</view>
+  <view class="account_number"
+    >{{b}}<label bindtap="{{c}}" class="copy-btn"></label>
+  </view>
+  <view class="li-account flex-between">
+    <view class="li-item align-c flex-1 border-right">
+      <view class="item-attr text-color-5">沪股东卡</view>
+      <view class="text-color-1 item-val">{{d}}</view>
+      <label class="cont" wx:if="{{e}}">
+        <navigator>去开通</navigator>
+      </label>
+    </view>
+    <view class="li-item align-c flex-1">
+      <view class="item-attr text-color-5">深股东卡</view>
+      <view class="text-color-1 item-val">{{f}}</view>
+      <label class="cont" wx:if="{{g}}">
+        <navigator>去开通</navigator>
+      </label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+<view class="_div swiper-wrapper data-v-4a858f9b">
+  <view class="_div tab-bar-wrapper data-v-4a858f9b">
+    <tab-bar
+      bind:__l="__l"
+      bindswitchTab="{{b}}"
+      class="data-v-4a858f9b"
+      uI="4a858f9b-0"
+      uP="{{c}}"
+      wx:if="{{a}}"
+    ></tab-bar>
+  </view>
+  <block wx:if="{{d}}">
+    <swiper
+      bindchange="{{h}}"
+      class="swiper-container data-v-4a858f9b"
+      current="{{g}}"
+      style="{{'height:'+f}}"
+    >
+      <swiper-item
+        class="swiper-item data-v-4a858f9b"
+        wx:for="{{e}}"
+        wx:key="e"
+      >
+        <view class="{{['_div','data-v-4a858f9b',item.d]}}">
+          <rest-calendar
+            bind:__l="__l"
+            class="rest-com data-v-4a858f9b"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></rest-calendar>
+          <view class="_div content-wrapper data-v-4a858f9b">
+            <text class="content data-v-4a858f9b">{{item.c}}</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <swiper-dots
+      bind:__l="__l"
+      class="swiper-dots data-v-4a858f9b"
+      uI="4a858f9b-2"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></swiper-dots>
+  </block>
+  <view class="_div rest-com-wrapper data-v-4a858f9b" wx:else>
+    <rest-calendar
+      bind:__l="__l"
+      class="data-v-4a858f9b"
+      uI="4a858f9b-3"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></rest-calendar>
+    <view class="_div content-wrapper data-v-4a858f9b">
+      <text class="content data-v-4a858f9b">{{k}}</text>
+    </view>
+  </view>
+</view>

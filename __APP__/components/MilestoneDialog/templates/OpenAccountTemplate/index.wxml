@@ -1,0 +1,49 @@
+<excite-celebrate-shell
+  bind:__l="__l"
+  bindmaskClick="{{l}}"
+  class="open-account-template data-v-f21d977b"
+  uI="f21d977b-0"
+  uP="{{m}}"
+  uS="{{['title','subtitle','body','footer']}}"
+  wx:if="{{m}}"
+>
+  <label class="open-account-template__title data-v-f21d977b" slot="title"
+    >{{a}}</label
+  >
+  <view slot="subtitle">
+    <block wx:if="{{b}}">
+      <view class="data-v-f21d977b">{{c}}</view>
+      <view class="data-v-f21d977b" wx:if="{{d}}">（{{e}}09:30可交易）</view>
+    </block>
+    <view class="data-v-f21d977b" wx:else>投资之旅，从此刻开始</view>
+  </view>
+  <view
+    class="open-account-template__card-wrapper flex-center data-v-f21d977b"
+    slot="body"
+  >
+    <view class="card-stack data-v-f21d977b">
+      <image class="card-stack__bg-back data-v-f21d977b" src="{{f}}"></image>
+      <shareholder-card
+        bind:__l="__l"
+        class="data-v-f21d977b"
+        uI="{{card.b}}"
+        uP="{{card.c}}"
+        wx:for="{{g}}"
+        wx:for-item="card"
+        wx:key="a"
+      ></shareholder-card>
+      <view
+        class="card-stack__bg-front-wrapper data-v-f21d977b"
+        style="{{'background-image:'+j}}"
+      >
+        <view class="title data-v-f21d977b" wx:if="{{h}}">{{i}}</view>
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{k}}"
+    class="open-account-template__btn data-v-f21d977b"
+    slot="footer"
+    >收下股东卡</view
+  >
+</excite-celebrate-shell>

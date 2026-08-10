@@ -1,0 +1,43 @@
+var lastTouchX = 0;
+var shouldMove = true;
+var moveStartX = 0;
+module.exports = {
+  touchstart: function (event) {
+    if (event.currentTarget.dataset.first || event.currentTarget.dataset.last) {
+      moveStartX = event.touches[0].pageX;
+      lastTouchX = moveStartX;
+    }
+  },
+  touchmove: function (event) {
+    if (event.currentTarget.dataset.first || event.currentTarget.dataset.last) {
+      var changeDelta = event.touches[0].pageX - lastTouchX;
+      var startDelta = moveStartX - event.touches[0].pageX;
+      if (event.currentTarget.dataset.first) {
+        if (shouldMove) {
+          if (startDelta > 0) {
+            shouldMove = true;
+          } else {
+            shouldMove = changeDelta < 0;
+          }
+        }
+      }
+      if (event.currentTarget.dataset.last) {
+        if (shouldMove) {
+          if (startDelta < 0) {
+            shouldMove = true;
+          } else {
+            shouldMove = changeDelta > 0;
+          }
+        }
+      }
+      lastTouchX = event.touches[0].pageX;
+      return shouldMove;
+    }
+  },
+  touchend: function (event) {
+    if (event.currentTarget.dataset.first || event.currentTarget.dataset.last) {
+      lastTouchX = 0;
+      shouldMove = true;
+    }
+  },
+};

@@ -1,0 +1,35 @@
+<popup bind:__l="__l" uI="24d30d0e-0" uP="{{h}}" uS="{{['d']}}" wx:if="{{h}}">
+  <view class="st-picker-panel st-safe-area-pb">
+    <view class="st-picker-choose border-bottom-1rpx">
+      <label bindtap="{{a}}" class="st-picker-cancel">
+        <label class="icon icon-close"></label>
+      </label>
+      <label bindtap="{{c}}" class="st-picker-confirm">{{b}}</label>
+      <view class="st-picker-title-group">
+        <view class="st-picker-title">{{d}}</view>
+      </view>
+    </view>
+    <view class="st-picker-content">
+      <view class="border-bottom-1rpx st-picker-content-border"></view>
+      <view class="border-top-1rpx st-picker-content-border"></view>
+      <view class="st-picker-wheel-wrapper">
+        <picker-view
+          bindchange="{{g}}"
+          indicatorStyle="height: 40px;"
+          style="width: 100%; height: 200px"
+          value="{{f}}"
+        >
+          <picker-view-column>
+            <view
+              class="st-picker-wheel-item"
+              style="height: 40px; line-height: 40px"
+              wx:for="{{e}}"
+              wx:key="b"
+              >{{item.a}}</view
+            >
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+  </view>
+</popup>

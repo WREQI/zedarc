@@ -1,0 +1,22 @@
+<view class="records-item ^records-item flex-between border--bottom">
+  <view class="item-col ^item-col col-1 ^col-1">
+    <view class="{{['primary','^primary','state-action',d,e,f,g]}}"
+      >{{a}}<label class="after-trade-label" data-action="{{c}}" wx:if="{{b}}"
+        >盘后</label
+      >
+    </view>
+    <view class="secondary ^secondary state-text">{{h}}</view>
+  </view>
+  <view class="item-col ^item-col col-2 ^col-2">
+    <view class="primary ^primary info-name">{{i}}</view>
+    <view class="secondary ^secondary ellipsis info-money">{{j}}</view>
+  </view>
+  <view class="item-col ^item-col col-3 tabular-nums ^col-3">
+    <view class="primary ^primary numeric-amount">{{k}}</view>
+    <view class="secondary ^secondary numeric-price">{{l}}</view>
+  </view>
+  <view class="item-col ^item-col col-4 tabular-nums ^col-4">
+    <view class="primary ^primary time-date">{{m}}</view>
+    <view class="secondary ^secondary time-time">{{n}}</view>
+  </view>
+</view>

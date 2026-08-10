@@ -1,0 +1,86 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{v}}"
+  class="{{['protocol-popup','data-v-b4b93f3d',t&&'with-nav']}}"
+  uI="b4b93f3d-0"
+  uP="{{w}}"
+  uS="{{['d']}}"
+  wx:if="{{w}}"
+>
+  <view
+    catchtap="{{s}}"
+    class="popup-container data-v-b4b93f3d"
+    hidden="{{!r}}"
+  >
+    <view class="popup-header data-v-b4b93f3d" hidden="{{!g}}">
+      <view
+        class="{{['protocol-title-group','data-v-b4b93f3d',d&&'with-subtitle',e&&'border-bottom']}}"
+      >
+        <view class="protocol-title data-v-b4b93f3d">{{a}}</view>
+        <view class="protocol-subtitle data-v-b4b93f3d" wx:if="{{b}}"
+          >{{c}}</view
+        >
+      </view>
+      <view bindtap="{{f}}" class="popup-close data-v-b4b93f3d">
+        <label class="icon icon-close data-v-b4b93f3d"></label>
+      </view>
+    </view>
+    <view class="protocol-content data-v-b4b93f3d">
+      <view class="data-v-b4b93f3d" wx:if="{{h}}">
+        <slot name="content" wx:if="{{$slots.content}}"></slot>
+        <block wx:else>
+          <view class="data-v-b4b93f3d" wx:if="{{i}}">{{j}}</view>
+          <block wx:elif="{{k}}">
+            <loading-provider
+              bind:__l="__l"
+              class="data-v-b4b93f3d"
+              uI="{{item.d}}"
+              uS="{{['d']}}"
+              wx:for="{{l}}"
+              wx:key="c"
+            >
+              <rich-text-protocol
+                bind:__l="__l"
+                class="data-v-b4b93f3d"
+                uI="{{item.a}}"
+                uP="{{item.b}}"
+                wx:if="{{item.b}}"
+              ></rich-text-protocol>
+            </loading-provider>
+          </block>
+        </block>
+      </view>
+      <view class="data-v-b4b93f3d" wx:else>
+        <slot name="content" wx:if="{{$slots.content}}"></slot>
+        <view class="protocol-link data-v-b4b93f3d" wx:else>
+          <view class="text-color-2 data-v-b4b93f3d" wx:if="{{m}}">{{n}}</view>
+          <label class="text-color-2 data-v-b4b93f3d" wx:else>同意并签署</label>
+          <label
+            class="data-v-b4b93f3d"
+            wx:for="{{o}}"
+            wx:for-item="protocolItem"
+            wx:key="e"
+          >
+            <label catchtap="{{protocolItem.b}}" class="link data-v-b4b93f3d"
+              >{{protocolItem.a}}</label
+            >
+            <label class="data-v-b4b93f3d" wx:if="{{protocolItem.c}}">，</label>
+            <label
+              class="text-color-2 data-v-b4b93f3d"
+              wx:elif="{{protocolItem.d}}"
+              >和</label
+            >
+          </label>
+        </view>
+      </view>
+    </view>
+    <slot name="sign-button" wx:if="{{$slots['sign-button']}}"></slot>
+    <view
+      bindtap="{{q}}"
+      class="protocol-sign-button border-top data-v-b4b93f3d"
+      wx:else
+    >
+      <button class="data-v-b4b93f3d" type="primary">{{p}}</button>
+    </view>
+  </view>
+</popup>

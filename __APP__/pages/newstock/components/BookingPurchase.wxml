@@ -1,0 +1,67 @@
+<view class="{{['booking-purchase-container','data-v-0d20a711',ac&&'with-nav']}}">
+    <quota-info bind:__l="__l" class="quota-info data-v-0d20a711" uI="0d20a711-0" uP="{{a}}" wx:if="{{a}}"></quota-info>
+    <view class="booking-list-wrapper data-v-0d20a711">
+        <view class="booking-list data-v-0d20a711" wx:if="{{b}}">
+            <view class="booking-list-header flex-between data-v-0d20a711">
+                <view class="booking-account fs-28 text-color-1 data-v-0d20a711">已预约({{c}})</view>
+                <label bindtap="{{d}}" class="primary-color fs-24 data-v-0d20a711" data-stat="trade.playnew.booking.all_cancel">全部取消</label>
+            </view>
+            <view class="{{['booking-list-body','data-v-0d20a711',l]}}">
+                <booking-list-item bind:__l="__l" bindcancel="{{f}}" class="data-v-0d20a711" uI="0d20a711-1" uP="{{g}}" wx:if="{{e}}"></booking-list-item>
+                <booking-list-item bind:__l="__l" bindcancel="{{j}}" class="{{['data-v-0d20a711',i&&'border-top']}}" uI="0d20a711-2" uP="{{k}}" wx:if="{{h}}"></booking-list-item>
+            </view>
+            <view catchtap="{{p}}" class="show-more text-color-4 fs-28 flex-center data-v-0d20a711" wx:if="{{m}}">
+                <label class="data-v-0d20a711">{{n}}</label>
+                <label class="{{['data-v-0d20a711','icon',o]}}"></label>
+            </view>
+        </view>
+    </view>
+    <view class="after-purhcase-list data-v-0d20a711">
+        <after-purchase-list-item bind:__l="__l" class="data-v-0d20a711" uI="0d20a711-3" uP="{{q}}" wx:if="{{q}}"></after-purchase-list-item>
+        <after-purchase-list-item bind:__l="__l" class="data-v-0d20a711" uI="0d20a711-4" uP="{{s}}" wx:if="{{r}}"></after-purchase-list-item>
+    </view>
+    <view class="bottom-bar flex-vcenter data-v-0d20a711">
+        <view bindtap="{{w}}" class="{{['checkbox-wrapper','flex-vcenter','data-v-0d20a711',v&&'disabled']}}">
+            <label class="{{['icon','icon-check-box','custom-checkbox','data-v-0d20a711',t&&'icon-checked']}}"></label>
+            <label class="fs-34 text-color-1 data-v-0d20a711">全选</label>
+        </view>
+        <button bindtap="{{z}}" class="booking-button flex-1 data-v-0d20a711" disabled="{{y}}">立即预约{{x}}</button>
+    </view>
+    <view class="risk-tip data-v-0d20a711" wx:if="{{A}}">
+        <view class="header data-v-0d20a711">风险提示</view>{{B}}</view>
+    <protocol-popup bind:__l="__l" bindconfirm="{{E}}" bindinput="{{D}}" class="risktip-actionsheet data-v-0d20a711" uI="0d20a711-5" uP="{{F}}" wx:if="{{C}}"></protocol-popup>
+    <mp-dialog bind:__l="__l" bindcancel="{{N}}" bindconfirm="{{M}}" class="data-v-0d20a711" uI="0d20a711-6" uP="{{O}}" uS="{{['d']}}" wx:if="{{O}}">
+        <view class="mp-dialog__message booking-confirm-tip data-v-0d20a711">
+            <view class="data-v-0d20a711">您正在预约打新，确认后将自动为您申购已选中的新股/新债。确认预约吗？</view>
+            <view class="risk-tip popup data-v-0d20a711" wx:if="{{G}}">
+                <view class="header data-v-0d20a711">{{H}}</view>
+                <view class="{{['text','data-v-0d20a711',J&&'expand']}}">{{I}}<label class="em data-v-0d20a711"></label>
+                </view>
+                <label bindtap="{{L}}" class="expand-btn data-v-0d20a711">
+                    <label class="data-v-0d20a711" wx:if="{{K}}">展开</label>
+                    <block wx:else>收起</block>
+                </label>
+            </view>
+        </view>
+    </mp-dialog>
+    <action-sheet bind:__l="__l" bindcancel="{{aa}}" bindconfirm="{{Z}}" bindinput="{{Y}}" class="debt-amount-actionsheet data-v-0d20a711" uI="0d20a711-7" uP="{{ab}}" uS="{{['d']}}" wx:if="{{ab}}">
+        <radio-group bindchange="{{X}}" class="data-v-0d20a711">
+            <view class="input-li-content border--bottom data-v-0d20a711">
+                <radio checked="{{Q}}" class="left-checkbox data-v-0d20a711" color="var(--color-primary)" value="0">
+                    <view class="wrapper flex-between data-v-0d20a711">
+                        <view class="left-title data-v-0d20a711">顶额申购</view>
+                        <view class="right-text data-v-0d20a711">{{P}}</view>
+                    </view>
+                </radio>
+            </view>
+            <view class="input-li-content border-bottom-1 data-v-0d20a711">
+                <radio checked="{{W}}" class="left-checkbox data-v-0d20a711" color="var(--color-primary)" value="1">
+                    <view class="wrapper flex-between data-v-0d20a711">
+                        <view class="left-title data-v-0d20a711">自定义申购</view>
+                        <input alwaysEmbed="{{true}}" bindblur="{{T}}" bindinput="{{V}}" class="right-input data-v-0d20a711" cursorSpacing="{{50}}" focus="{{R}}" id="debtNumInput" maxlength="{{5}}" pattern="d*" placeholder="{{S}}" placeholderClass="input-placeholder" type="tel" value="{{U}}"></input>
+                    </view>
+                </radio>
+            </view>
+        </radio-group>
+    </action-sheet>
+</view>

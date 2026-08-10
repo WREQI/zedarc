@@ -1,0 +1,16 @@
+<view class="_div content-container data-v-83f3546e">
+  <view
+    class="_div detail-value data-v-83f3546e"
+    wx:for="{{a}}"
+    wx:for-item="line"
+    wx:key="d"
+  >
+    <label class="{{['_span','data-v-83f3546e',line.b,'detail-value-tag']}}">
+      <view class="_div detail-value-tag-text data-v-83f3546e">{{line.a}}</view>
+      <view class="_div detail-value-status data-v-83f3546e">
+        <view class="_div triangle data-v-83f3546e"></view>
+      </view>
+    </label>
+    <label class="_span detail-value-text data-v-83f3546e">{{line.c}}</label>
+  </view>
+</view>

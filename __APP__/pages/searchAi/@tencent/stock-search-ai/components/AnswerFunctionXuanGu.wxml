@@ -1,0 +1,63 @@
+<view class="{{['_div','data-v-93e8a226',A]}}" data-st-theme="{{B}}">
+  <view class="_div xuanguTips data-v-93e8a226" wx:if="{{a}}">{{b}}</view>
+  <view class="_div mbti data-v-93e8a226" wx:if="{{c}}">
+    <view class="_div mbtiTips data-v-93e8a226">你的MBTI人格是</view>
+    <view class="_div mbti-option-card data-v-93e8a226" wx:if="{{d}}">
+      <image
+        alt="{{f}}"
+        class="_img mbti-option-image data-v-93e8a226"
+        src="{{e}}"
+      ></image>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-93e8a226','metricContent']}}" wx:if="{{g}}">
+    <view class="_div leftLine data-v-93e8a226"></view>
+    <view class="_div metricContentList data-v-93e8a226">
+      <view
+        class="_div metricContentListItem data-v-93e8a226"
+        wx:for="{{h}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+  <view class="{{['_div','data-v-93e8a226','xuanguTipsV2']}}" wx:if="{{i}}"
+    >{{j}}</view
+  >
+  <view class="{{['_div','data-v-93e8a226','xuanguTipsV2']}}" wx:if="{{k}}"
+    >以下为部分筛选结果及关键指标:</view
+  >
+  <view class="{{['_div','data-v-93e8a226','xuanguTipsV2']}}" wx:if="{{l}}"
+    >{{m}}</view
+  >
+  <view class="{{['_div','data-v-93e8a226','functionPluginBg']}}">
+    <view class="_div data-v-93e8a226" wx:if="{{n}}">
+      <ai-strategy
+        bind:__l="__l"
+        bindclick="{{q}}"
+        bindstar="{{r}}"
+        bindview="{{p}}"
+        class="r data-v-93e8a226"
+        uI="93e8a226-0"
+        uP="{{s}}"
+        uR="aiStrategy"
+        wx:if="{{s}}"
+      ></ai-strategy>
+    </view>
+    <view class="_div data-v-93e8a226" wx:elif="{{t}}">
+      <ai-strategy
+        bind:__l="__l"
+        bindclick="{{x}}"
+        bindstar="{{y}}"
+        bindview="{{w}}"
+        class="r data-v-93e8a226"
+        uI="93e8a226-1"
+        uP="{{z}}"
+        uR="aiStrategy"
+        wx:if="{{z}}"
+      ></ai-strategy>
+    </view>
+  </view>
+  <view class="_div xuanguJieDuText data-v-93e8a226">以下是相关解读：</view>
+  <view class="_div xuanguDividerLine data-v-93e8a226"></view>
+</view>

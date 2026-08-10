@@ -1,0 +1,19 @@
+{
+  "component": true,
+  "usingComponents": {
+    "task": "../../../../../../asyncCom/@tencent/st-act-task/components/task/index",
+    "rank": "../../components/guess-ranking/index",
+    "market-guessing": "../../components/market-guessing/mp",
+    "individual-guess": "../../components/individual-guess/index",
+    "viewpoint": "../../components/user-opinion/index",
+    "gold-entry": "../../components/gold-entry/index",
+    "guide-modal": "../../components/popup-modal/guide-modal",
+    "simple-modal": "../../components/popup-modal/simple-modal",
+    "reward-modal": "../../components/popup-modal/reward-modal",
+    "lottie-modal": "../../components/popup-modal/lottie-modal/mp",
+    "evaluate-popup": "../../components/popup-modal/evaluate-popup",
+    "half-screen-ai-entry": "../../../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "market-analysis": "../../components/market-analysis/index"
+  },
+  "componentPlaceholder": { "task": "view", "half-screen-ai-entry": "view" }
+}

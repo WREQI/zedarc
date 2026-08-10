@@ -1,0 +1,18 @@
+<view class="confirmation-bar">
+  <sign-protocol
+    bind:__l="__l"
+    bindprotocolCheck="{{b}}"
+    uI="2d5e233f-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></sign-protocol>
+  <block wx:else
+    >本人知悉并同意适当性匹配的评估结果<label
+      catchtap="{{f}}"
+      class="link"
+      wx:if="{{d}}"
+      >《{{e}}》</label
+    >
+    <label catchtap="{{h}}" class="link">{{g}}</label>
+  </block>
+</view>

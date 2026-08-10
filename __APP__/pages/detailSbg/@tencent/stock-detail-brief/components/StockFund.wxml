@@ -1,0 +1,30 @@
+<view class="{{['_div','fund-wrapper','data-v-14dc712f',f&&'skin-black']}}">
+  <view class="_div tab-wrapper data-v-14dc712f">
+    <view
+      bindtap="{{item.d}}"
+      class="{{['_div','tab','data-v-14dc712f',item.b]}}"
+      wx:for="{{a}}"
+      wx:key="c"
+    >
+      <view class="_div tname data-v-14dc712f">{{item.a}}</view>
+    </view>
+  </view>
+  <scroll-list
+    bind:__l="__l"
+    bindchangeSort="{{c}}"
+    class="scroll-list data-v-14dc712f"
+    uI="14dc712f-0"
+    uP="{{d}}"
+    wx:if="{{b}}"
+  ></scroll-list>
+  <no-data
+    bind:__l="__l"
+    class="data-v-14dc712f"
+    uI="14dc712f-1"
+    uS="{{['d']}}"
+    wx:if="{{e}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>当前模块暂无数据</block>
+  </no-data>
+</view>

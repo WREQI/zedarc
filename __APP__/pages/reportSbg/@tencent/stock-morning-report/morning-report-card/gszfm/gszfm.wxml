@@ -1,0 +1,57 @@
+<view class="_div gszfm-wrapper data-v-9254ec59">
+  <card-header
+    bind:__l="__l"
+    class="data-v-9254ec59"
+    uI="9254ec59-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></card-header>
+  <view class="_div gszfm-content data-v-9254ec59" wx:if="{{c}}">
+    <view
+      class="{{['_div','data-v-9254ec59','gszfm-item',e]}}"
+      wx:for="{{d}}"
+      wx:key="f"
+    >
+      <view class="_div gszfm-title data-v-9254ec59" wx:if="{{item.a}}"
+        >{{item.b}}</view
+      >
+      <block wx:if="{{item.c}}">
+        <view
+          class="_div gszfm-subitem data-v-9254ec59"
+          wx:for="{{item.d}}"
+          wx:for-item="content"
+          wx:key="f"
+        >
+          <render-content
+            bind:__l="__l"
+            bindgoToStock="{{content.b}}"
+            bindgotoNews="{{content.c}}"
+            class="data-v-9254ec59"
+            uI="{{content.d}}"
+            uP="{{content.e}}"
+            wx:if="{{content.a}}"
+          ></render-content>
+        </view>
+      </block>
+      <view
+        class="_div gszfm-seperator data-v-9254ec59"
+        wx:if="{{item.e}}"
+      ></view>
+    </view>
+    <more-button
+      bind:__l="__l"
+      bindmoreClick="{{g}}"
+      class="data-v-9254ec59"
+      uI="9254ec59-2"
+      uP="{{h}}"
+      wx:if="{{f}}"
+    ></more-button>
+  </view>
+  <image-link-item
+    bind:__l="__l"
+    class="data-v-9254ec59"
+    uI="9254ec59-3"
+    uP="{{j}}"
+    wx:if="{{i}}"
+  ></image-link-item>
+</view>

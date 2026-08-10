@@ -1,0 +1,110 @@
+@import "/app.wxss";
+.certificate-container .explain.data-v-ba197006 {
+  box-sizing: border-box;
+  height: 1.28rem;
+  line-height: 1.4;
+  padding: 0.186667rem 0.4rem;
+  width: 100%;
+}
+.certificate-container .title.data-v-ba197006 {
+  font-size: 0.373333rem;
+  font-weight: 600;
+  line-height: 0.533333rem;
+  padding: 0 0.32rem;
+}
+.certificate-container .item-card.data-v-ba197006 {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  padding: 0.426667rem 0;
+  width: 100%;
+}
+.certificate-container .item-card .option-wrapper.data-v-ba197006 {
+  box-sizing: border-box;
+  margin-left: 0.4rem;
+  width: calc(100% - 0.4rem);
+}
+.certificate-container .item-card .option-wrapper .option.data-v-ba197006 {
+  font-size: 0.4rem;
+  font-weight: 500;
+  margin-top: 0.48rem;
+}
+.certificate-container
+  .item-card
+  .option-wrapper
+  .option.data-v-ba197006
+  uni-radio {
+  transform: scale(1);
+}
+.certificate-container
+  .item-card
+  .option-wrapper
+  .option.data-v-ba197006
+  uni-radio
+  .uni-radio-input {
+  height: 0.48rem;
+  margin-right: 0.32rem;
+  width: 0.48rem;
+}
+.certificate-container .item-card .option-wrapper.upload.data-v-ba197006 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: var(--fill-1);
+  border: 0.013333rem solid var(--text-color-7);
+  border-radius: 0.106667rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 2.4rem;
+  justify-content: center;
+  margin-top: 0.426667rem;
+  position: relative;
+  width: 2.4rem;
+}
+.certificate-container .item-card .option-wrapper.upload .img.data-v-ba197006 {
+  height: 100%;
+  width: 100%;
+}
+.certificate-container
+  .item-card
+  .option-wrapper.upload
+  .icon-add.data-v-ba197006 {
+  color: var(--text-color-5);
+  font-size: 0.8rem;
+}
+.certificate-container
+  .item-card
+  .option-wrapper.upload
+  .ico-edit.data-v-ba197006 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/idcard/edit.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  bottom: 0.16rem;
+  font-size: 0.613333rem;
+  height: 0.613333rem;
+  position: absolute;
+  right: 0.16rem;
+  width: 0.613333rem;
+}
+.certificate-container .item-card + .item-card.data-v-ba197006 {
+  margin-top: 0.16rem;
+}
+.certificate-container .tips.data-v-ba197006 {
+  color: var(--text-color-5);
+  font-size: 0.346667rem;
+  line-height: 0.48rem;
+  padding: 0.32rem 0.4rem 0;
+}
+.certificate-container .action-button[disabled].data-v-ba197006 {
+  background-color: var(--text-color-5) !important;
+}
+.certificate-container .submit-container.data-v-ba197006 {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+.certificate-container .submit-container .action-button.data-v-ba197006 {
+  background: var(--color-primary-2);
+  color: #fff;
+  margin-top: 0.8rem;
+}

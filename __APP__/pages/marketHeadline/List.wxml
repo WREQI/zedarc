@@ -1,0 +1,43 @@
+<page-meta class="data-v-8ee6b330" rootFontSize="{{a}}"></page-meta>
+<view class="{{['_div','data-v-8ee6b330','market-headline-container',m]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8ee6b330"
+    uI="8ee6b330-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-8ee6b330"
+    uI="8ee6b330-1"
+  ></stock-privacy-dialog>
+  <view class="_div status-wrapper data-v-8ee6b330" wx:if="{{b}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{c}}"
+      class="data-v-8ee6b330"
+      uI="8ee6b330-2"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></st-status>
+  </view>
+  <market-headline-list
+    bind:__l="__l"
+    binddataReady="{{g}}"
+    binddataReport="{{h}}"
+    bindshareItemDetail="{{i}}"
+    class="r data-v-8ee6b330"
+    data-c-h="{{!f}}"
+    uI="8ee6b330-3"
+    uP="{{j}}"
+    uR="detail"
+    wx:if="{{j}}"
+  ></market-headline-list>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{k}}"
+    class="data-v-8ee6b330"
+    uI="8ee6b330-4"
+    uP="{{l}}"
+    wx:if="{{l}}"
+  ></privacy-policy-modal>
+</view>

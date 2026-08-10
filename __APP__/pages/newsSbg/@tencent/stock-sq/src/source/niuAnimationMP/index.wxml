@@ -1,0 +1,47 @@
+<view
+  class="{{['_div','mod-like-box','data-v-91e26929',t&&'selected',v&&'zooming',w&&'customize',x&&'inReplyBox']}}"
+>
+  <view class="_div data-v-91e26929" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <slot wx:if="{{$slots.d}}"></slot>
+      <block wx:else>
+        <view class="_div sq-icon-hongniu data-v-91e26929" wx:if="{{c}}"></view>
+        <view class="_div sq-icon-niu data-v-91e26929" wx:if="{{d}}"></view>
+      </block>
+    </block>
+    <view class="_div niu-sq-icon-box data-v-91e26929" wx:if="{{e}}">
+      <view class="_div ripple data-v-91e26929">
+        <view class="_div ripple-item data-v-91e26929"></view>
+      </view>
+      <view class="_div ripple outline data-v-91e26929">
+        <view class="_div ripple-item data-v-91e26929"></view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-91e26929" wx:else>
+    <image
+      class="{{['_img','data-v-91e26929',g]}}"
+      src="{{h}}"
+      wx:if="{{f}}"
+    ></image>
+    <image
+      class="{{['_img','data-v-91e26929',j]}}"
+      src="{{k}}"
+      wx:if="{{i}}"
+    ></image>
+  </view>
+  <view class="_div scrollable-box data-v-91e26929">
+    <view
+      class="{{['_div','scrollable','data-v-91e26929',r&&'isTap',s&&'selected']}}"
+    >
+      <block wx:if="{{l}}">
+        <label class="_span span data-v-91e26929">{{m}}</label>
+        <label class="_span span data-v-91e26929">{{n}}</label>
+      </block>
+      <block wx:if="{{o}}">
+        <label class="_span span data-v-91e26929">{{p}}</label>
+        <label class="_span span data-v-91e26929">{{q}}</label>
+      </block>
+    </view>
+  </view>
+</view>

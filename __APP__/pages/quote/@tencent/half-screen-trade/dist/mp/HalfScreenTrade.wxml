@@ -1,0 +1,19 @@
+<view
+  class="{{['_div','data-v-4f871a21','embedded-stock-container',g]}}"
+  hidden="{{!f}}"
+>
+  <view
+    class="{{['_div','embedded-wrapper','data-v-4f871a21',d]}}"
+    style="{{'min-height:'+e}}"
+  >
+    <trade-skeleton
+      bind:__l="__l"
+      class="data-v-4f871a21"
+      data-c-h="{{!a}}"
+      uI="4f871a21-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></trade-skeleton>
+    <slot wx:if="{{c}}"></slot>
+  </view>
+</view>

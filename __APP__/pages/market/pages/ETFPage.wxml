@@ -1,0 +1,23 @@
+<page-meta class="data-v-73f91289" rootFontSize="{{a}}"></page-meta>
+<view class="_div etf-main-page data-v-73f91289">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-73f91289"
+    uI="73f91289-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-73f91289"
+    uI="73f91289-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <e-t-f-main-page
+    bind:__l="__l"
+    class="r data-v-73f91289"
+    uI="73f91289-2"
+    uP="{{d}}"
+    uR="etfPage"
+    wx:if="{{d}}"
+  ></e-t-f-main-page>
+</view>

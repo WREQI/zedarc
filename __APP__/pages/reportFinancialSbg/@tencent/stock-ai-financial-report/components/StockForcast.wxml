@@ -1,0 +1,21 @@
+<view class="_div perfect-forcast data-v-40f9e057" wx:if="{{a}}">
+  <view class="_div title-container data-v-40f9e057">
+    <view class="_div title-text data-v-40f9e057">盈利预测</view>
+  </view>
+  <view class="_div sub-title data-v-40f9e057" wx:if="{{b}}"
+    >{{c}}<label
+      class="_span sub-line-span data-v-40f9e057"
+      style="{{'color:'+e}}"
+      >{{d}}</label
+    >
+  </view>
+  <view class="_div pefect-chart-container data-v-40f9e057">
+    <f2
+      bind:__l="__l"
+      class="data-v-40f9e057"
+      uI="40f9e057-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></f2>
+  </view>
+</view>

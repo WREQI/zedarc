@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "store-list": "./components/StoreList",
+    "order-list": "./components/OrderList",
+    "empty": "./components/Empty",
+    "counter": "./components/Counter",
+    "tabbar": "./components/tabs/mp",
+    "trust-footer": "../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index"
+  },
+  "componentPlaceholder": { "trust-footer": "view" }
+}

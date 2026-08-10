@@ -1,0 +1,36 @@
+<view class="_div tabbar-top-wrapper data-v-3e57e40d">
+  <scroll-view
+    scrollX
+    class="tabbar-wrapper data-v-3e57e40d"
+    id="tabbar-scroll-view"
+    scrollIntoView="{{b}}"
+  >
+    <view class="_div tabbar-container data-v-3e57e40d">
+      <view
+        bindtap="{{tab.g}}"
+        class="{{['_div','data-v-3e57e40d','tab',tab.f]}}"
+        id="{{tab.d}}"
+        wx:for="{{a}}"
+        wx:for-item="tab"
+        wx:key="e"
+        >{{tab.a}}<red-num
+          bind:__l="__l"
+          class="data-v-3e57e40d"
+          uI="{{tab.b}}"
+          uP="{{tab.c}}"
+          wx:if="{{tab.c}}"
+        ></red-num>
+      </view>
+    </view>
+  </scroll-view>
+  <view
+    bindtap="{{d}}"
+    class="_div title-wrapper data-v-3e57e40d"
+    wx:if="{{c}}"
+  >
+    <image
+      class="_img title-arrow data-v-3e57e40d"
+      src="https://st.gtimg.com/design/c1c471d2b6a15459d1654f8cdb3a3c44.png"
+    ></image>
+  </view>
+</view>

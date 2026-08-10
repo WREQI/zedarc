@@ -1,0 +1,81 @@
+<view class="_div list-plate data-v-0e9d8e6b">
+  <view class="_p title data-v-0e9d8e6b">{{a}}</view>
+  <view class="_div table data-v-0e9d8e6b">
+    <view class="{{['_div','data-v-0e9d8e6b','table-header']}}">
+      <view
+        class="{{['_div','table-header-th','data-v-0e9d8e6b',label.b,c]}}"
+        wx:for="{{b}}"
+        wx:for-item="label"
+        wx:key="c"
+        >{{label.a}}</view
+      >
+    </view>
+    <view class="_div table-body data-v-0e9d8e6b">
+      <view
+        class="_div table-body-tr data-v-0e9d8e6b"
+        wx:for="{{d}}"
+        wx:key="e"
+      >
+        <view
+          class="{{['_div','table-body-td','data-v-0e9d8e6b',e]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="cloumnKey"
+          wx:key="q"
+        >
+          <block wx:if="{{cloumnKey.a}}">
+            <view class="_div data-v-0e9d8e6b">{{cloumnKey.b}}</view>
+            <view class="_div table-td-plate data-v-0e9d8e6b">
+              <image
+                alt=""
+                class="_img image data-v-0e9d8e6b"
+                src="https://st.gtimg.com/design/07e795009262ade705f1a7f24454b9e2.png"
+                wx:if="{{cloumnKey.c}}"
+              ></image>
+              <image
+                alt=""
+                class="_img image data-v-0e9d8e6b"
+                src="https://st.gtimg.com/design/d0a82b9af44dc003b77285d49b2336f6.png"
+                wx:if="{{cloumnKey.d}}"
+              ></image>
+              <image
+                alt=""
+                class="_img image data-v-0e9d8e6b"
+                src="https://st.gtimg.com/design/9a85c70086b94034f94f326e30e78373.png"
+                wx:if="{{cloumnKey.e}}"
+              ></image>
+              <image
+                alt=""
+                class="_img image data-v-0e9d8e6b"
+                src="https://st.gtimg.com/design/5e454ba631bd97dadc7edfe53c70504e.png"
+                wx:if="{{cloumnKey.f}}"
+              ></image>
+              <label class="_span code data-v-0e9d8e6b">{{cloumnKey.g}}</label>
+            </view>
+          </block>
+          <block wx:elif="{{cloumnKey.h}}">
+            <label
+              class="{{['_span','data-v-0e9d8e6b',cloumnKey.k,cloumnKey.l,'font-numeric-tabular']}}"
+              wx:if="{{cloumnKey.i}}"
+              >{{cloumnKey.j}}</label
+            >
+            <label
+              class="{{['_span','data-v-0e9d8e6b',cloumnKey.n,cloumnKey.o,cloumnKey.p,'font-numeric-tabular']}}"
+              wx:else
+              >{{cloumnKey.m}}</label
+            >
+          </block>
+        </view>
+        <view class="{{['_div','data-v-0e9d8e6b','add-fav-wrap',f]}}">
+          <add-fav
+            bind:__l="__l"
+            bindreport="{{item.b}}"
+            class="data-v-0e9d8e6b"
+            uI="{{item.c}}"
+            uP="{{item.d}}"
+            wx:if="{{item.d}}"
+          ></add-fav>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,186 @@
+<view class="{{['_div','data-v-09713cec','list-group','mp',b]}}">
+  <view
+    class="_div scroll-item data-v-09713cec"
+    style="{{'z-index:'+stock.ay}}"
+    wx:for="{{a}}"
+    wx:for-item="stock"
+    wx:key="ax"
+  >
+    <view
+      bindlongpress="{{stock.aw}}"
+      bindtap="{{stock.av}}"
+      class="{{['_div','stock-item','portfolio-stock-item','data-v-09713cec',stock.at&&'portfolio-stock-item-notstar']}}"
+      data-key="{{stock.as}}"
+    >
+      <view
+        class="{{['_div','item-wrap','data-v-09713cec',stock.T&&'star',stock.U&&'last-star']}}"
+        hoverClass="press"
+      >
+        <view
+          bindanimationend="{{stock.c}}"
+          class="{{['_div','data-v-09713cec',stock.b,'bg-gradient-animate']}}"
+          wx:if="{{stock.a}}"
+        ></view>
+        <view class="_div long-press-placeholder data-v-09713cec"></view>
+        <view class="_div stock-info column flex-1 data-v-09713cec">
+          <label
+            class="{{['_span','stock-info-name','text-black','data-v-09713cec',stock.h]}}"
+            >{{stock.d}}<redbag-activity
+              bind:__l="__l"
+              class="data-v-09713cec"
+              uI="{{stock.f}}"
+              uP="{{stock.g}}"
+              wx:if="{{stock.e}}"
+            ></redbag-activity>
+          </label>
+          <label class="_span stock-info-scode text-gray data-v-09713cec">
+            <view class="_div new-market-icon data-v-09713cec">
+              <view
+                class="{{['_div','data-v-09713cec',stock.j]}}"
+                wx:if="{{stock.i}}"
+              ></view>
+            </view>
+            <label class="block stock-code-wrapper data-v-09713cec">
+              <label class="_span stock-code data-v-09713cec"
+                >{{stock.k}}</label
+              >
+              <image
+                alt=""
+                class="_img icon icon-delay delay data-v-09713cec"
+                src="https://st.gtimg.com/design/d9bdf6eb6ce682f94ee4882d2c8c4622.png"
+                wx:if="{{stock.l}}"
+              ></image>
+            </label>
+            <view class="_div tracked-label data-v-09713cec" wx:if="{{stock.m}}"
+              >{{stock.n}}</view
+            >
+          </label>
+        </view>
+        <view
+          class="_div stock-chart-price data-v-09713cec"
+          wx:if="{{stock.o}}"
+        >
+          <stock-item-chart
+            bind:__l="__l"
+            class="item-chart-wrapper column data-v-09713cec"
+            uI="{{stock.q}}"
+            uP="{{stock.r}}"
+            wx:if="{{stock.p}}"
+          ></stock-item-chart>
+          <view class="_div price-rise-group data-v-09713cec">
+            <view
+              class="_div stock-price text-black align-r add-touch data-v-09713cec"
+              >{{stock.s}}</view
+            >
+            <view
+              catchtap="{{stock.S}}"
+              class="_div stock-rise align-r add-touch data-v-09713cec"
+            >
+              <view
+                class="{{['_div','stock-rise-info','data-v-09713cec',stock.G]}}"
+                wx:if="{{stock.t}}"
+              >
+                <block wx:if="{{stock.v}}">{{stock.w}}</block>
+                <block wx:elif="{{stock.x}}">{{stock.y}}</block>
+                <block wx:elif="{{stock.z}}">{{stock.A}}</block>
+                <block wx:elif="{{stock.B}}">
+                  <block wx:if="{{stock.C}}"
+                    >{{stock.D}}<label
+                      class="_span label-usd-sub data-v-09713cec"
+                      wx:if="{{stock.E}}"
+                      >$</label
+                    >
+                  </block>
+                  <block wx:else>{{stock.F}}</block>
+                </block>
+              </view>
+              <view
+                bindtransitionend="{{stock.R}}"
+                class="{{['_div','data-v-09713cec','stock-rise-group',stock.Q]}}"
+                wx:else
+              >
+                <view
+                  class="{{['_div','stock-rise-info','data-v-09713cec',stock.I,stock.J]}}"
+                  >{{stock.H}}</view
+                >
+                <view
+                  class="{{['_div','stock-rise-info','data-v-09713cec',stock.L,stock.M]}}"
+                  >{{stock.K}}</view
+                >
+                <view
+                  class="{{['_div','stock-rise-info','fake','data-v-09713cec',stock.O,stock.P]}}"
+                  >{{stock.N}}</view
+                >
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div stock-unusable data-v-09713cec" wx:else
+          >该行情仅自选股App可看</view
+        >
+      </view>
+      <view
+        class="{{['_div','pop-action','layout','data-v-09713cec',stock.ar]}}"
+        wx:if="{{stock.V}}"
+      >
+        <label class="arrow-btm data-v-09713cec"></label>
+        <label
+          catchtouchend="{{stock.X}}"
+          catchtouchstart="{{stock.W}}"
+          class="_span block flex-1 data-v-09713cec"
+          >删除</label
+        >
+        <label
+          catchtouchend="{{stock.aa}}"
+          catchtouchstart="{{stock.Z}}"
+          class="_span block data-v-09713cec"
+          wx:if="{{stock.Y}}"
+          >取消置顶</label
+        >
+        <label
+          catchtouchend="{{stock.ac}}"
+          catchtouchstart="{{stock.ab}}"
+          class="_span block flex-1 data-v-09713cec"
+          wx:else
+          >置顶</label
+        >
+        <label
+          catchtouchend="{{stock.ae}}"
+          catchtouchstart="{{stock.ad}}"
+          class="_span block flex-1 data-v-09713cec"
+          >置底</label
+        >
+        <label
+          catchtouchend="{{stock.ag}}"
+          catchtouchstart="{{stock.af}}"
+          class="_span block flex-1 data-v-09713cec"
+          >调整</label
+        >
+        <label
+          catchtouchend="{{stock.ai}}"
+          catchtouchstart="{{stock.ah}}"
+          class="_span block flex-1 data-v-09713cec"
+          >分组</label
+        >
+        <button
+          class="share-button data-v-09713cec"
+          data-comment="{{stock.ap}}"
+          data-name="{{stock.aj}}"
+          data-price="{{stock.am}}"
+          data-stockType="{{stock.al}}"
+          data-symbol="{{stock.ak}}"
+          data-type="defineShare"
+          data-zde="{{stock.ao}}"
+          data-zdf="{{stock.an}}"
+          data-zixuan="{{stock.aq}}"
+          hoverStopPropagation="{{true}}"
+          id="shareButton"
+          openType="share"
+          plain="true"
+        >
+          分享
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<view class="_div data-v-fb82ecb8">
+  <view
+    class="{{['_div','guide-container','data-v-fb82ecb8',p&&'guide-container-default']}}"
+    style="{{'top:'+q+';'+'left:'+r+';'+'width:'+s+';'+'bottom:'+t+';'+'position:'+v}}"
+    wx:if="{{a}}"
+  >
+    <view
+      class="_div guide-arrow-top data-v-fb82ecb8"
+      style="{{'margin-left:'+c+';'+'border-color:'+d}}"
+      wx:if="{{b}}"
+    ></view>
+    <view class="_div guide-info data-v-fb82ecb8">
+      <view
+        class="_div guide-notice layout layout-align-center-center data-v-fb82ecb8"
+        style="{{'background-color:'+l+';'+'background-size:'+'100% 100%'}}"
+      >
+        <view
+          class="_div guide-notice-left data-v-fb82ecb8"
+          style="{{'color:'+f}}"
+          >{{e}}</view
+        >
+        <view class="_div right data-v-fb82ecb8">
+          <view
+            bindtap="{{i}}"
+            class="_div finish-btn data-v-fb82ecb8"
+            wx:if="{{g}}"
+            >{{h}}</view
+          >
+          <view
+            bindtap="{{k}}"
+            class="_div notice-right data-v-fb82ecb8"
+            wx:else
+          >
+            <image
+              class="_img toast-illustration data-v-fb82ecb8"
+              src="{{j}}"
+            ></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div guide-arrow-down data-v-fb82ecb8"
+      style="{{'margin-left:'+n+';'+'border-color:'+o}}"
+      wx:if="{{m}}"
+    ></view>
+  </view>
+</view>

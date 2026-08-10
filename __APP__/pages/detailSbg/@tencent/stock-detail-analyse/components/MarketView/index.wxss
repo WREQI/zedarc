@@ -1,0 +1,87 @@
+.market-view.data-v-795fe512 {
+  background: var(--fill-2);
+  box-sizing: border-box;
+}
+.market-view .main-title.data-v-795fe512 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 0.32rem;
+}
+.market-view .main-title .line.data-v-795fe512 {
+  background: var(--color-primary-1);
+  border: 0.08rem solid var(--fill-2);
+  border-left-color: var(--color-primary-1);
+  display: inline-block;
+  height: 0.37333333333333335rem;
+}
+.market-view .main-title .text.data-v-795fe512 {
+  color: var(--text-color-1);
+  margin-left: 0.26666666666666666rem;
+  margin-right: 0.21333333333333335rem;
+}
+.market-view .main-title .score.data-v-795fe512,
+.market-view .main-title .text.data-v-795fe512 {
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0.6rem;
+}
+.market-view .main-title .score.data-v-795fe512 {
+  color: var(--color-red);
+}
+.trend-tag-wrapper.data-v-795fe512 {
+  height: 0.37333333333333335rem;
+  width: 0.7466666666666667rem;
+}
+.trend-tag-wrapper .trend-tag.data-v-795fe512 {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.5333333333333333rem;
+  height: 0.7466666666666667rem;
+  padding: 0 0.21333333333333335rem;
+  transform: scale(0.5);
+  transform-origin: left top;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.trend-tag-wrapper .trend-red.data-v-795fe512 {
+  border: 0.02666666666666667rem solid var(--color-red);
+  color: var(--color-red);
+}
+.trend-tag-wrapper .trend-green.data-v-795fe512 {
+  border: 0.02666666666666667rem solid var(--color-green);
+  color: var(--color-green);
+}
+.trend-tag-wrapper .trend-orange.data-v-795fe512 {
+  border: 0.02666666666666667rem solid #ff7400;
+  color: #ff7400;
+}
+.trend-tag-wrapper .trend-grey.data-v-795fe512 {
+  border: 0.02666666666666667rem solid var(--color-gray);
+  color: var(--color-gray);
+}
+.trend-tag-wrapper .trend-safe.data-v-795fe512 {
+  border: 0.02666666666666667rem solid var(--color-blue);
+  color: var(--color-blue);
+}
+.trend-tag-wrapper .trend-low.data-v-795fe512 {
+  border: 0.02666666666666667rem solid #52a7cc;
+  color: #52a7cc;
+  font-weight: 500;
+}
+.trend-tag-wrapper .trend-mid.data-v-795fe512 {
+  border: 0.02666666666666667rem solid #41a39c;
+  color: #41a39c;
+  font-weight: 500;
+}
+.trend-tag-wrapper .trend-high.data-v-795fe512 {
+  border: 0.02666666666666667rem solid #56ac6a;
+  color: #56ac6a;
+  font-weight: 500;
+}

@@ -1,0 +1,32 @@
+@import "/app.wxss";
+.transfer-pending-tip {
+  margin-top: 1.013333rem;
+  text-align: center;
+}
+.transfer-pending-tip .tip-text {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #dcdfe6;
+  border-radius: 0.106667rem;
+  color: var(--text-color-1);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.533333rem;
+  padding: 0.16rem 0.32rem;
+}
+[data-theme="dark"] .transfer-pending-tip .tip-text {
+  background-color: #262e40;
+}
+.transfer-pending-tip .tip-text .red-point {
+  background-color: #e63535;
+  border-radius: 50%;
+  height: 0.186667rem;
+  margin: 0 0.106667rem;
+  width: 0.186667rem;
+}
+.transfer-pending-tip .tip-text .icon-arrow {
+  font-size: 0.533333rem;
+}

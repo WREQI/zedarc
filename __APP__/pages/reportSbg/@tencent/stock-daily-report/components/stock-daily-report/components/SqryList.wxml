@@ -1,0 +1,59 @@
+<view class="_div sqry-rank-wrap data-v-23834e0c" wx:if="{{a}}">
+  <base-title
+    bind:__l="__l"
+    class="data-v-23834e0c"
+    uI="23834e0c-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></base-title>
+  <view class="_div content data-v-23834e0c">
+    <view class="_div hot-stock-list data-v-23834e0c" wx:if="{{c}}">
+      <view
+        bindtap="{{stock.l}}"
+        class="_div stock-item flex flex-align-center data-v-23834e0c"
+        wx:for="{{d}}"
+        wx:for-item="stock"
+        wx:key="k"
+      >
+        <view class="{{['_div','item-row1','data-v-23834e0c',stock.b]}}"
+          >NO.{{stock.a}}</view
+        >
+        <view class="_div item-row2 data-v-23834e0c">
+          <view class="_div stock-name data-v-23834e0c">{{stock.c}}</view>
+          <view class="_div stock-number data-v-23834e0c"
+            >{{stock.d}}.{{stock.e}}</view
+          >
+        </view>
+        <view class="{{['_div','data-v-23834e0c','item-row3',stock.g]}}"
+          >{{stock.f}}</view
+        >
+        <view class="_div item-row4 data-v-23834e0c">{{stock.h}}热评</view>
+        <view catchtap="{{stock.j}}" class="_div item-row5 data-v-23834e0c">
+          <view
+            class="_div icon icon-created data-v-23834e0c"
+            wx:if="{{stock.i}}"
+          ></view>
+          <view class="_div icon icon-create data-v-23834e0c" wx:else></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div hot-topic-list data-v-23834e0c" wx:if="{{e}}">
+      <view
+        bindtap="{{topic.d}}"
+        class="_div topic-item flex flex-align-center flex-justify-between data-v-23834e0c"
+        wx:for="{{f}}"
+        wx:for-item="topic"
+        wx:key="c"
+      >
+        <view class="_div topic-title flex flex-align-center data-v-23834e0c">
+          <label class="_span topic-type data-v-23834e0c">话题</label>
+          <label class="_span topic-desc data-v-23834e0c">{{topic.a}}</label>
+        </view>
+        <view class="_div topic-numer data-v-23834e0c">
+          <label class="_span topic-icon data-v-23834e0c"></label>
+          <label class="_span topic-count data-v-23834e0c">{{topic.b}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view
+  bindtouchmove="{{i}}"
+  class="_div st-popup st-popup_mask data-v-01723b69"
+  hidden="{{!g}}"
+  style="{{'z-index:'+h}}"
+>
+  <view bindtap="{{f}}" class="_div st-popup-mask data-v-01723b69">
+    <slot name="mask"></slot>
+    <view class="_div mask data-v-01723b69" style="{{a}}"></view>
+    <view class="_div st-popup-container st-popup-center data-v-01723b69">
+      <view
+        class="{{[c,'_div','st-popup-content','data-v-01723b69']}}"
+        wx:if="{{b}}"
+      >
+        <slot></slot>
+      </view>
+      <view class="{{[e,'_div','st-popup-content','data-v-01723b69']}}" wx:else>
+        <rich-text class="data-v-01723b69" nodes="{{d}}"></rich-text>
+      </view>
+    </view>
+  </view>
+</view>

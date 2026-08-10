@@ -1,0 +1,71 @@
+@import "/app.wxss";
+.list-header {
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--fill-2);
+  color: var(--text-color-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.746667rem;
+}
+.list-header .icon-italic-info {
+  font-size: 0.373333rem;
+  line-height: normal;
+  padding-left: 0.053333rem;
+}
+.list-header .col-item {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  height: 100%;
+  line-height: 0.746667rem;
+  position: relative;
+}
+.list-header .col-item.header-color {
+  color: var(--text-color-1) !important;
+}
+.list-header .col-item.col-explain,
+.list-header .col-item.col-sortable {
+  -webkit-box-pack: end;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.list-header .col-item.col-explain.col-a,
+.list-header .col-item.col-sortable.col-a {
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.list-header .col-item.header-marker:before {
+  border-color: transparent transparent var(--color-primary-1);
+  border-style: none solid solid;
+  border-width: 0 0.066667rem 0.08rem;
+  content: "";
+  display: block;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -100%) rotate(90deg);
+  transform-origin: center bottom;
+  width: 0.413333rem;
+}
+.list-header .col-item.pl-30 {
+  padding-left: 0.4rem;
+}
+.list-header .col-item.pr-30 {
+  padding-right: 0.4rem;
+}
+.list-header .text {
+  position: relative;
+  white-space: nowrap;
+}
+.list-header .text .upper-icon {
+  font-size: 0.186667rem;
+  position: relative;
+  top: -0.08rem;
+}

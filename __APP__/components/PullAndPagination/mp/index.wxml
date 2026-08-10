@@ -1,0 +1,20 @@
+<scroll-view
+  refresherEnabled
+  scrollY
+  bindrefresherabort="{{i}}"
+  bindrefresherrefresh="{{g}}"
+  bindrefresherrestore="{{h}}"
+  bindscroll="{{k}}"
+  bindscrolltolower="{{l}}"
+  bindscrolltoupper="{{j}}"
+  class="{{a}}"
+  lowerThreshold="{{c}}"
+  refresherDefaultStyle="{{e}}"
+  refresherThreshold="{{48}}"
+  refresherTriggered="{{f}}"
+  scrollTop="{{d}}"
+  throttle="{{false}}"
+  upperThreshold="{{b}}"
+>
+  <slot></slot>
+</scroll-view>

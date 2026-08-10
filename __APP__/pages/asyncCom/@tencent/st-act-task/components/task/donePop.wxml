@@ -1,0 +1,80 @@
+<view
+  class="{{['_div','donePop-container','data-v-adf8dd21',w&&'mask-appear',x&&'mask-disappear',y&&'normal']}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div flower-lottie-2 data-v-adf8dd21"
+    hidden="{{!b}}"
+    id="flower-lottie-2"
+  ></view>
+  <view class="_div wrapper data-v-adf8dd21">
+    <image
+      alt=""
+      bindtap="{{d}}"
+      class="{{['_img','close','data-v-adf8dd21',c]}}"
+      src="https://st.gtimg.com/design/88bf62b7274ba4c8dc48329bcfe8b525.svg"
+    ></image>
+    <block wx:if="{{e}}">
+      <view class="_div undone-title data-v-adf8dd21"
+        >恭喜你获得<label class="_span west data-v-adf8dd21">{{f}}</label
+        >元</view
+      >
+      <view class="_div undone-subtitle data-v-adf8dd21"
+        >再完成<label class="_span west data-v-adf8dd21">{{g}}</label
+        >个任务，可提现<label class="_span west data-v-adf8dd21">{{h}}</label
+        >元</view
+      >
+      <view class="_div undone-progress data-v-adf8dd21">
+        <view class="_div redbag-container data-v-adf8dd21">
+          <view
+            class="{{['_div','redbag-item','data-v-adf8dd21',item.d]}}"
+            wx:for="{{i}}"
+            wx:key="c"
+          >
+            <view class="_div red-coin data-v-adf8dd21" wx:if="{{item.a}}"
+              >{{item.b}}</view
+            >
+          </view>
+        </view>
+        <view class="_div bar data-v-adf8dd21">
+          <view class="{{['_div','dot','data-v-adf8dd21',j]}}"></view>
+          <view
+            class="_div bar-wrapper data-v-adf8dd21"
+            wx:for="{{k}}"
+            wx:key="e"
+          >
+            <view
+              class="{{['_div','line','data-v-adf8dd21',item.b]}}"
+              key="{{item.a}}"
+            ></view>
+            <view
+              class="{{['_div','dot','data-v-adf8dd21',item.d]}}"
+              key="{{item.c}}"
+            ></view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="_div done-title data-v-adf8dd21">恭喜完成全部{{l}}任务</view>
+      <view class="_div done-subtitle data-v-adf8dd21"
+        >获得{{m}}元现金红包</view
+      >
+      <view class="_div done-progress data-v-adf8dd21">
+        <view class="_div done-progress-coin data-v-adf8dd21">{{n}}元</view>
+      </view>
+    </block>
+    <view class="_div red-desc data-v-adf8dd21" wx:if="{{o}}">
+      <image
+        alt=""
+        class="_img red-icon data-v-adf8dd21"
+        src="https://st.gtimg.com/design/d80b3e641e7a7cc7718760b2eda7c664.svg"
+      ></image>
+      <view class="_div desc data-v-adf8dd21">{{p}}</view>
+    </view>
+    <view bindtap="{{r}}" class="_div first-btn data-v-adf8dd21">{{q}}</view>
+    <view bindtap="{{v}}" class="_div sec-btn data-v-adf8dd21" wx:if="{{s}}"
+      >{{t}}</view
+    >
+  </view>
+</view>

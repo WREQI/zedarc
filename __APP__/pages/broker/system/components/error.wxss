@@ -1,0 +1,90 @@
+.system-error.data-v-f57aea05 {
+  background: var(--fill-content-layer);
+  box-sizing: border-box;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 0.8rem 0.9066666666666666rem;
+}
+.present-container.data-v-f57aea05,
+.system-error.data-v-f57aea05 {
+  align-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.present-container.data-v-f57aea05 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.present-container .server-img.data-v-f57aea05 {
+  display: block;
+  height: 1.9333333333333333rem;
+  margin-bottom: 0.5333333333333333rem;
+  object-fit: contain;
+  object-position: center;
+  width: 1.6133333333333333rem;
+}
+.present-container .maintain-header-container.data-v-f57aea05 {
+  color: var(--text-color-1);
+  font-size: 0.4533333333333333rem;
+  margin-bottom: 0.5333333333333333rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.present-container .maintain-header-container.data-v-f57aea05:after {
+  left: 50%;
+}
+.present-container .maintain-header-container.data-v-f57aea05:after,
+.present-container .maintain-header-container.data-v-f57aea05:before {
+  border: 0.013333333333333334rem solid #b8becc;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(0.5);
+  width: 2.4rem;
+}
+.present-container .maintain-header-container.data-v-f57aea05:before {
+  right: 50%;
+}
+.present-container .maintain-header-title.data-v-f57aea05 {
+  background: var(--fill-2);
+  padding: 0 0.32rem;
+  position: relative;
+  z-index: 1;
+}
+.solution-container.data-v-f57aea05 {
+  align-content: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  font-size: 0.4rem;
+  line-height: 0.6133333333333333rem;
+  padding: 0 0.8rem 0.4rem;
+  width: 100%;
+}
+.solution-container .server-text.data-v-f57aea05 {
+  margin-bottom: 0.56rem;
+}
+.solution-container .server-text.main.data-v-f57aea05 {
+  color: var(--text-color-1);
+  line-height: 0.6133333333333333rem;
+}
+.solution-container .server-text.sub.data-v-f57aea05 {
+  color: var(--text-color-4);
+  font-size: 0.3466666666666667rem;
+  line-height: 0.3466666666666667rem;
+}
+.solution-container .btn.data-v-f57aea05 {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0 1.6rem;
+}
+.bottom-info.data-v-f57aea05 {
+  color: var(--text-color-6);
+  font-size: 0.29333333333333333rem;
+  margin: 0.08rem 0;
+}

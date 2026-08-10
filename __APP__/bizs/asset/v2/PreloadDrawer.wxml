@@ -1,0 +1,5 @@
+<view class="preload-icon-wrap">
+  <label wx:for="{{a}}" wx:key="b">
+    <label class="{{[item.a,'icon']}}"></label>
+  </label>
+</view>

@@ -1,0 +1,3 @@
+require("../../app.js"),
+  (exports.AEGIS_EVENT_STEP_ADVANCE = "MONITOR-APPLY-STEP-BTN-CLICK"),
+  (exports.AEGIS_EVENT_STEP_VIEW = "MONITOR-APPLY-STEP-PAGE-READY");

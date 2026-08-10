@@ -1,0 +1,81 @@
+<view
+  bindlongpress="{{E}}"
+  bindtouchend="{{G}}"
+  bindtouchmove="{{H}}"
+  bindtouchstart="{{F}}"
+  class="{{['_div','data-v-fca527dc','set-item',B,C,D]}}"
+>
+  <view
+    catchtap="{{b}}"
+    class="_div delete-bubble data-v-fca527dc"
+    wx:if="{{a}}"
+  >
+    <view class="_div delete-bubble-content data-v-fca527dc">
+      <image
+        class="_img delete-icon data-v-fca527dc"
+        src="https://st.gtimg.com/design/78485ce29b74baaf62839033b11975b2.png"
+      ></image>
+      <label class="_span delete-text data-v-fca527dc">删除</label>
+    </view>
+    <view class="_div delete-bubble-arrow data-v-fca527dc"></view>
+  </view>
+  <view class="_div inner-box data-v-fca527dc">
+    <view class="_div label data-v-fca527dc">{{c}}</view>
+    <view class="{{['_div','data-v-fca527dc','content',y]}}">
+      <view class="_div tag data-v-fca527dc" wx:if="{{d}}">{{e}}</view>
+      <view class="_div input-box data-v-fca527dc">
+        <view class="_div custom-input data-v-fca527dc">
+          <custom-input
+            bind:__l="__l"
+            bindblur="{{n}}"
+            bindfocus="{{m}}"
+            bindinput="{{j}}"
+            bindminus="{{k}}"
+            bindplus="{{l}}"
+            bindsave="{{o}}"
+            class="r data-v-fca527dc"
+            uI="fca527dc-0"
+            uP="{{p}}"
+            uR="customInput"
+            uS="{{['number-keyboard-top']}}"
+            wx:if="{{p}}"
+          >
+            <view slot="number-keyboard-top">
+              <tag-list
+                bind:__l="__l"
+                bindtagClick="{{g}}"
+                class="data-v-fca527dc"
+                uI="fca527dc-1,fca527dc-0"
+                uP="{{h}}"
+                wx:if="{{f}}"
+              ></tag-list>
+            </view>
+          </custom-input>
+          <image
+            catchtap="{{s}}"
+            class="_img warn-icon data-v-fca527dc"
+            src="https://st.gtimg.com/design/814f417ba107686c95dd8fa67024f075.png"
+            style="{{r}}"
+            wx:if="{{q}}"
+          ></image>
+        </view>
+        <bubble
+          bind:__l="__l"
+          class="data-v-fca527dc"
+          uI="fca527dc-2"
+          uP="{{v}}"
+          wx:if="{{t}}"
+        ></bubble>
+      </view>
+      <view class="_div unit data-v-fca527dc" wx:if="{{w}}">{{x}}</view>
+    </view>
+    <switch-btn
+      bind:__l="__l"
+      bindtoggleChoose="{{z}}"
+      class="data-v-fca527dc"
+      uI="fca527dc-3"
+      uP="{{A}}"
+      wx:if="{{A}}"
+    ></switch-btn>
+  </view>
+</view>

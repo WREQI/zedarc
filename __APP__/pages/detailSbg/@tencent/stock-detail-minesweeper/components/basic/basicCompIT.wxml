@@ -1,0 +1,16 @@
+<view class="_div comp-block data-v-20436b60">
+  <view class="_div chart-wrapper data-v-20436b60" wx:if="{{a}}">
+    <view class="_div chart-legend data-v-20436b60">
+      <label class="_span data-v-20436b60">存货 ({{b}})</label>
+      <label class="_span data-v-20436b60">占营业成本比率 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{d}}"
+      class="data-v-20436b60"
+      uI="20436b60-0"
+      uP="{{e}}"
+      wx:if="{{c}}"
+    ></f2>
+  </view>
+</view>

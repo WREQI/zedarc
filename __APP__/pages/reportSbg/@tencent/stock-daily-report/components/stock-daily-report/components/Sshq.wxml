@@ -1,0 +1,18 @@
+<view class="_div hq data-v-f32048ff">
+  <view
+    bindtap="{{item.j}}"
+    class="{{['_div','data-v-f32048ff','item-wrap',item.i]}}"
+    wx:for="{{a}}"
+    wx:key="h"
+  >
+    <view class="_p name data-v-f32048ff">{{item.a}}</view>
+    <view class="{{['_div','data-v-f32048ff','price',item.d]}}">
+      <view class="{{['_div','data-v-f32048ff','trangle',item.b]}}"></view
+      >{{item.c}}</view
+    >
+    <view class="{{['_div','data-v-f32048ff','change',item.g]}}">
+      <view class="_div data-v-f32048ff">{{item.e}}</view>
+      <view class="_div data-v-f32048ff">{{item.f}}</view>
+    </view>
+  </view>
+</view>

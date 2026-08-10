@@ -1,0 +1,38 @@
+<swiper
+  autoplay="{{true}}"
+  bindchange="{{b}}"
+  circular="{{true}}"
+  class="performance-bar-wrapper data-v-11acc0c4"
+  duration="1000"
+  interval="{{5000}}"
+  ref="performanceBar"
+  vertical="{{true}}"
+>
+  <swiper-item
+    catchtap="{{item.f}}"
+    class="data-v-11acc0c4"
+    wx:for="{{a}}"
+    wx:key="e"
+  >
+    <view class="_div performance-bar-container data-v-11acc0c4">
+      <view class="_div left-wrapper data-v-11acc0c4">
+        <image
+          class="_img gold-coin data-v-11acc0c4"
+          src="https://st.gtimg.com/design/9f7f171f270d37d4cbd433f3bbbe01d1.png"
+        ></image>
+        <label class="_span main-title data-v-11acc0c4">{{item.a}}</label>
+      </view>
+      <view class="_div right-wrapper data-v-11acc0c4">
+        <label class="_span sub-title data-v-11acc0c4">{{item.b}}</label>
+        <label class="{{['_span','amount','data-v-11acc0c4',item.d]}}"
+          >{{item.c}}</label
+        >
+        <image
+          class="_img arrow-right data-v-11acc0c4"
+          src="https://st.gtimg.com/design/514edb6ec8bd162de590d2ed4e27bf3f.png"
+        ></image>
+        <label class="_span right-wrapper-icon-arrow data-v-11acc0c4"></label>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

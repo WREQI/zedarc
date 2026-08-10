@@ -1,0 +1,69 @@
+<view class="{{['_div','data-v-efb746c0','fund-block',p,q]}}">
+  <view class="_div data-v-efb746c0">
+    <view
+      class="{{['_div','fund-content','data-v-efb746c0',g&&'fund-content--inner-first']}}"
+      wx:if="{{a}}"
+    >
+      <fund-outer
+        bind:__l="__l"
+        class="fund-content__outer data-v-efb746c0"
+        uI="efb746c0-0"
+        uP="{{c}}"
+        wx:if="{{b}}"
+      ></fund-outer>
+      <view
+        class="_div block-line fund-content__divider data-v-efb746c0"
+        wx:if="{{d}}"
+      ></view>
+      <fund-inner
+        bind:__l="__l"
+        class="fund-content__inner data-v-efb746c0"
+        uI="efb746c0-1"
+        uP="{{f}}"
+        wx:if="{{e}}"
+      ></fund-inner>
+    </view>
+    <view class="_div data-v-efb746c0" wx:else>
+      <view class="_div data-v-efb746c0" wx:if="{{h}}">
+        <view class="_div title data-v-efb746c0">
+          <view class="_div data-v-efb746c0"
+            >暂无相关基金，可关注以下热门基金</view
+          >
+        </view>
+        <freeze-scroll-list
+          bind:__l="__l"
+          bindclickStockDetail="{{i}}"
+          class="data-v-efb746c0"
+          uI="efb746c0-2"
+          uP="{{j}}"
+          wx:if="{{j}}"
+        ></freeze-scroll-list>
+      </view>
+      <view class="_div data-v-efb746c0" wx:else>
+        <no-data
+          bind:__l="__l"
+          class="data-v-efb746c0"
+          uI="efb746c0-3"
+          uS="{{['d']}}"
+        >
+          <slot wx:if="{{$slots.d}}"></slot>
+          <block wx:else>暂无数据</block>
+        </no-data>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{k}}">
+    <view class="_div block-line data-v-efb746c0" wx:if="{{l}}"></view>
+    <us-etf-list
+      bind:__l="__l"
+      bindloaded="{{m}}"
+      class="data-v-efb746c0"
+      uI="efb746c0-4"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></us-etf-list>
+  </block>
+  <view class="_div warning-info data-v-efb746c0" wx:if="{{o}}"
+    >根据基金与板块历史业绩相似度，以及基金历史持仓数据测算得出，不代表基金当前持仓，仅供参考，不构成投资建议，市场有风险，投资需谨慎。</view
+  >
+</view>

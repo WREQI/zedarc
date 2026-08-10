@@ -1,0 +1,63 @@
+<view class="_div t0-rank data-v-8e49b063" data-test-id="t0-rank-list">
+  <view bindtap="{{b}}" class="_div t0-rank__header data-v-8e49b063">
+    <view class="_div t0-rank__title data-v-8e49b063">T+0 排行榜</view>
+    <image class="_img t0-rank__share data-v-8e49b063" src="{{a}}"></image>
+  </view>
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{c}}"
+    class="t0-rank__tabs data-v-8e49b063"
+    uI="8e49b063-0"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></tabbar>
+  <swiper
+    autoplay="{{false}}"
+    bindchange="{{i}}"
+    circular="{{false}}"
+    class="t0-rank__swiper data-v-8e49b063"
+    current="{{f}}"
+    duration="{{300}}"
+    options="{{g}}"
+    ref="swiperRoot"
+    style="{{h}}"
+  >
+    <swiper-item
+      class="data-v-8e49b063"
+      wx:for="{{e}}"
+      wx:for-item="cat"
+      wx:key="g"
+    >
+      <view class="{{['_div','data-v-8e49b063','t0-rank__slide',cat.f]}}">
+        <etf-rank-top
+          bind:__l="__l"
+          bindonShowTeachPop="{{cat.b}}"
+          bindonStockClick="{{cat.c}}"
+          bindtoggleIndexFilter="{{cat.a}}"
+          class="data-v-8e49b063"
+          uI="{{cat.d}}"
+          uP="{{cat.e}}"
+          wx:if="{{cat.e}}"
+        ></etf-rank-top>
+      </view>
+    </swiper-item>
+  </swiper>
+  <teach-pop
+    bind:__l="__l"
+    bindcloseTeachPop="{{j}}"
+    class="data-v-8e49b063"
+    uI="8e49b063-2"
+    uP="{{k}}"
+    wx:if="{{k}}"
+  ></teach-pop>
+  <root-portal class="data-v-8e49b063" enable="{{true}}" wx:if="{{l}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{m}}"
+      class="data-v-8e49b063"
+      uI="8e49b063-3"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></wzq-info-modal>
+  </root-portal>
+</view>

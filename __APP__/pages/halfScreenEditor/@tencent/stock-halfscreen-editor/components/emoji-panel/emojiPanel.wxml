@@ -1,0 +1,36 @@
+<view class="_div emoji-container data-v-92687fb1">
+  <view class="_div emoji-tab data-v-92687fb1" wx:if="{{a}}">
+    <view class="_div data-v-92687fb1" wx:for="{{b}}" wx:key="d">
+      <view class="{{['_div','data-v-92687fb1','emoji-block',item.c]}}">
+        <view
+          catchtap="{{item.b}}"
+          class="{{['_div','data-v-92687fb1','emoji',item.a]}}"
+        ></view>
+      </view>
+    </view>
+  </view>
+  <view
+    bindscroll="{{j}}"
+    class="_div emoji-panel data-v-92687fb1"
+    ref="emojiPanel"
+    wx:if="{{c}}"
+  >
+    <emoji
+      bind:__l="__l"
+      bindtapEmoji="{{f}}"
+      class="r data-v-92687fb1"
+      uI="92687fb1-0"
+      uP="{{g}}"
+      uR="scrollEmoji"
+      wx:if="{{d}}"
+    ></emoji>
+    <zxg-gif
+      bind:__l="__l"
+      bindpickGif="{{i}}"
+      class="r data-v-92687fb1"
+      uI="92687fb1-1"
+      uR="gif"
+      wx:else
+    ></zxg-gif>
+  </view>
+</view>

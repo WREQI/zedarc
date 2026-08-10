@@ -1,0 +1,20 @@
+<view
+  class="{{['_div','data-v-befbded4','ai-search-bar',c]}}"
+  id="aiSearchBar"
+  wx:if="{{a}}"
+>
+  <view class="_div ai-search-header data-v-befbded4">
+    <view class="_div ai-icon data-v-befbded4">问元宝</view>
+  </view>
+  <view class="_div ai-divider data-v-befbded4"></view>
+  <view
+    bindtap="{{question.c}}"
+    class="_div ai-question data-v-befbded4"
+    wx:for="{{b}}"
+    wx:for-item="question"
+    wx:key="b"
+  >
+    <view class="_div ai-question-tag data-v-befbded4">•</view>
+    <view class="_div ai-question-title data-v-befbded4">{{question.a}}</view>
+  </view>
+</view>

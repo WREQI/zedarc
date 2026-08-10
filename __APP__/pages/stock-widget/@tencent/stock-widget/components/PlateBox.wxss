@@ -1,0 +1,220 @@
+.plate-box.data-v-32276f84 {
+  background: #f5f6fa;
+  position: relative;
+}
+.plate-head.data-v-32276f84 {
+  align-items: center;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 1.12rem;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.plate-head.data-v-32276f84:after {
+  background-color: #e9ebf0;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin-bottom: -0.006666666666666667rem;
+  position: absolute;
+  transform: scaleY(0.5);
+  transform-origin: 0 0 0;
+  width: 100%;
+  z-index: 1;
+}
+.plate-head .plate-info-title.data-v-32276f84 {
+  color: #12161f;
+  font-size: 0.3466666666666667rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.49333333333333335rem;
+}
+.plate-head .plate-info-price.data-v-32276f84 {
+  font-size: 0.29333333333333333rem;
+  letter-spacing: 0;
+  line-height: 0.4rem;
+}
+.plate-body ._table.data-v-32276f84,
+.plate-body table.data-v-32276f84 {
+  background: #fff;
+  width: 100%;
+}
+.plate-body ._thead ._tr.data-v-32276f84,
+.plate-body ._thead tr.data-v-32276f84,
+.plate-body thead ._tr.data-v-32276f84,
+.plate-body thead tr.data-v-32276f84 {
+  color: #7a8499;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  height: 0.7066666666666667rem;
+  letter-spacing: 0;
+  line-height: 0.2752rem;
+}
+.plate-body ._tbody.data-v-32276f84,
+.plate-body tbody.data-v-32276f84 {
+  color: #262e40;
+  font-size: 0.37333333333333335rem;
+  letter-spacing: 0;
+  line-height: 0.36693333333333333rem;
+}
+.plate-body ._tbody :last-child ._td.data-v-32276f84,
+.plate-body ._tbody :last-child td.data-v-32276f84,
+.plate-body tbody :last-child ._td.data-v-32276f84,
+.plate-body tbody :last-child td.data-v-32276f84 {
+  padding-bottom: 0.32rem;
+}
+.plate-body .mp-table ._tr.data-v-32276f84,
+.plate-body .mp-table tr.data-v-32276f84 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.plate-body .mp-table ._tr .mp-head-col-4.data-v-32276f84,
+.plate-body .mp-table tr .mp-head-col-4.data-v-32276f84 {
+  padding-right: 0.8rem;
+}
+.plate-body .mp-table ._tr .addFav-wrap.data-v-32276f84,
+.plate-body .mp-table tr .addFav-wrap.data-v-32276f84 {
+  padding-right: 0.26666666666666666rem;
+  width: auto;
+}
+.plate-body .mp-table ._td.data-v-32276f84,
+.plate-body .mp-table td.data-v-32276f84 {
+  width: 100%;
+}
+.plate-body ._tr.data-v-32276f84,
+.plate-body tr.data-v-32276f84 {
+  display: table-row;
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+}
+.plate-body ._tr .stock-col-1.data-v-32276f84,
+.plate-body tr .stock-col-1.data-v-32276f84 {
+  font-weight: 400;
+  padding-left: 0.21333333333333335rem;
+  text-align: left;
+}
+.plate-body ._tr .stock-col-4.data-v-32276f84,
+.plate-body tr .stock-col-4.data-v-32276f84 {
+  padding-right: 0.26666666666666666rem;
+}
+.plate-body ._tr .addFav-wrap.data-v-32276f84,
+.plate-body tr .addFav-wrap.data-v-32276f84 {
+  padding-right: 0.06666666666666667rem;
+}
+.plate-body ._td.data-v-32276f84,
+.plate-body td.data-v-32276f84 {
+  display: table-cell;
+  padding: 0.16rem 0;
+}
+.plate-body .stock-code.data-v-32276f84 {
+  align-items: center;
+  color: #656b6e;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.2752rem;
+  justify-content: flex-start;
+  line-height: 0.2752rem;
+  padding-top: 0.10666666666666667rem;
+}
+.plate-body .stock-code ._i.data-v-32276f84,
+.plate-body .stock-code i.data-v-32276f84 {
+  display: inline-block;
+  height: 0.22666666666666666rem;
+  margin-right: 0.05333333333333334rem;
+  width: 0.32rem;
+}
+.plate-body .stock-code .stock-icon-SH.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/07e795009262ade705f1a7f24454b9e2.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-body .stock-code .stock-icon-SZ.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/9a85c70086b94034f94f326e30e78373.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-body .stock-code .stock-icon-HK.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/d0a82b9af44dc003b77285d49b2336f6.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-body .stock-code .stock-icon-US.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/5e454ba631bd97dadc7edfe53c70504e.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-body .stock-code .stock-icon-CHUANG.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/ec906bb90e22d949d98648abe0cc4bab.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-body .stock-code .stock-icon-KE.data-v-32276f84 {
+  background: url(https://st.gtimg.com/design/e9de2a495de7b617333b7b9c728e9e08.png?inline)
+    no-repeat 50%;
+  background-size: contain;
+}
+.plate-placeholder.data-v-32276f84 {
+  background: #fff;
+  height: 7.2rem;
+}
+.up.data-v-32276f84 {
+  color: #e63535;
+}
+.down.data-v-32276f84 {
+  color: #1caa3c;
+}
+.flat.data-v-32276f84 {
+  color: #262e40;
+}
+.black .plate-box.data-v-32276f84 {
+  background: #171d28;
+}
+.black .plate-head.data-v-32276f84 {
+  background: #12161f;
+  position: relative;
+}
+.black .plate-head.data-v-32276f84:after {
+  background-color: #191e27;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin-bottom: -0.006666666666666667rem;
+  position: absolute;
+  transform: scaleY(0.5);
+  transform-origin: 0 0 0;
+  width: 100%;
+  z-index: 1;
+}
+.black .plate-head .plate-info-title.data-v-32276f84 {
+  color: #f0f1f5;
+}
+.black .plate-body ._table.data-v-32276f84,
+.black .plate-body table.data-v-32276f84 {
+  background: #12161f;
+}
+.black .plate-body ._thead ._tr.data-v-32276f84,
+.black .plate-body ._thead tr.data-v-32276f84,
+.black .plate-body thead ._tr.data-v-32276f84,
+.black .plate-body thead tr.data-v-32276f84 {
+  color: #a7b0c4;
+}
+.black .plate-body ._tbody.data-v-32276f84,
+.black .plate-body tbody.data-v-32276f84 {
+  color: #f0f1f5;
+}
+.black .plate-body .stock-code.data-v-32276f84 {
+  color: #656b6e;
+}
+.black .flat.data-v-32276f84 {
+  color: #f0f1f5;
+}

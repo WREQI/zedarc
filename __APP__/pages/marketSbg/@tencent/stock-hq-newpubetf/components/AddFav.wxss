@@ -1,0 +1,110 @@
+.add-btn.data-v-84b10366 {
+  border: 1px solid var(--color-lightgray-2);
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-lightgray-2);
+  font-size: 0.37333333333333335rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  padding: 0 0.24rem;
+}
+.add-btn.active.data-v-84b10366 {
+  border: 1px solid var(--color-primary-1);
+  color: var(--color-primary-1);
+  position: relative;
+}
+.add-btn .zs-bk-bubble-tip.data-v-84b10366 {
+  position: absolute;
+  right: -0.32rem;
+  top: 0.96rem;
+  z-index: 10;
+}
+.add-btn-etf.data-v-84b10366 {
+  align-items: center;
+  background: var(--fill-1);
+  border: 1px solid var(--fill-1);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-weight: 500;
+  height: 0.7466666666666667rem;
+  justify-content: center;
+  text-align: center;
+  width: 1.3866666666666667rem;
+}
+.add-btn-etf.active.data-v-84b10366 {
+  background: var(--color-primary-1);
+  border: 1px solid var(--color-primary-1);
+  color: #fff;
+}
+.add-btn-etf-mini.data-v-84b10366 {
+  align-items: center;
+  background: var(--fill-2);
+  border: 1px solid var(--border-heavy);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  color: var(--color-lightgray-2);
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-weight: 600;
+  height: 0.7466666666666667rem;
+  justify-content: center;
+  text-align: center;
+  width: 1.3866666666666667rem;
+}
+.add-btn-etf-mini.active.data-v-84b10366 {
+  background: var(--color-red);
+  border: 1px solid var(--color-red);
+  color: #fff;
+}
+.hasAdd.data-v-84b10366 {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.26666666666666666rem;
+  justify-content: center;
+}
+.hasAdd .icon.data-v-84b10366 {
+  background: var(--color-text-1);
+  display: inline-block;
+  font-size: 0.32rem;
+  height: 0.5333333333333333rem;
+  margin-bottom: 0.12rem;
+  -webkit-mask-image: url(./hasAdded.svg-do-not-use-local-path-./pages/marketSbg/@tencent/stock-hq-newpubetf/components/AddFav.wxss&1&1995);
+  -webkit-mask-size: 100% 100%;
+  width: 0.5333333333333333rem;
+}
+.hasAdd .text.data-v-84b10366 {
+  height: 0.37333333333333335rem;
+  line-height: 0.37333333333333335rem;
+}
+.add.data-v-84b10366 {
+  align-items: center;
+  color: var(--color-primary-1);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.26666666666666666rem;
+  justify-content: center;
+}
+.add .icon.data-v-84b10366 {
+  background: var(--color-primary-1);
+  display: inline-block;
+  font-size: 0.32rem;
+  height: 0.5333333333333333rem;
+  margin-bottom: 0.12rem;
+  -webkit-mask-image: url(./add.svg-do-not-use-local-path-./pages/marketSbg/@tencent/stock-hq-newpubetf/components/AddFav.wxss&1&2598);
+  -webkit-mask-size: 100% 100%;
+  width: 0.5333333333333333rem;
+}
+.add .text.data-v-84b10366 {
+  height: 0.37333333333333335rem;
+  line-height: 0.37333333333333335rem;
+}

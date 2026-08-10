@@ -1,0 +1,64 @@
+<view class="{{['data-v-6c445f0c','financial-report-wrapper',x]}}">
+  <view class="_div data-v-6c445f0c" id="aiContent" ref="aiContent">
+    <a-i-financial-report
+      bind:__l="__l"
+      binddataReady="{{b}}"
+      bindshareFinancialReport="{{a}}"
+      class="data-v-6c445f0c"
+      uI="6c445f0c-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></a-i-financial-report>
+  </view>
+  <view
+    class="_div community-scope data-v-6c445f0c"
+    id="communityWrap"
+    ref="communityWrap"
+    wx:if="{{d}}"
+  >
+    <view
+      class="_div item-title new-comments-title-wrap data-v-6c445f0c"
+      wx:if="{{e}}"
+    >
+      <label class="_span item-title-span data-v-6c445f0c">最新评论</label>
+    </view>
+    <news-com-list
+      bind:__l="__l"
+      bindcheckUserAgreementStatus="{{l}}"
+      bindcommentMore="{{j}}"
+      bindgetCommentCount="{{h}}"
+      bindonPutComment="{{i}}"
+      bindsuccessHanlde="{{k}}"
+      class="r data-v-6c445f0c"
+      uI="6c445f0c-1"
+      uP="{{m}}"
+      uR="newsCommentList"
+      wx:if="{{f}}"
+    ></news-com-list>
+    <view
+      class="{{['_div','data-v-6c445f0c','zxg-logo',o]}}"
+      wx:if="{{n}}"
+    ></view>
+    <view
+      class="{{['_div','data-v-6c445f0c','reply-box-placeholder',p,q]}}"
+      id="replyBoxPlaceholder"
+    ></view>
+    <reply-box
+      bind:__l="__l"
+      bindgoEdit="{{s}}"
+      bindtapComment="{{r}}"
+      class="data-v-6c445f0c"
+      uI="6c445f0c-2"
+      uP="{{t}}"
+      wx:if="{{t}}"
+    ></reply-box>
+  </view>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{v}}"
+    class="data-v-6c445f0c"
+    uI="6c445f0c-3"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></privacy-policy-modal>
+</view>

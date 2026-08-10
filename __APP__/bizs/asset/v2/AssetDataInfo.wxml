@@ -1,0 +1,84 @@
+<view class="{{['asset-data-container',L,M]}}">
+  <view class="top-wrap flex-between">
+    <view class="flex-vcenter broker-info">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo"
+        uI="4db6ca8b-0"
+      ></broker-logo>
+      <view class="broker-name">{{a}}</view>
+      <view class="margin-tag" wx:if="{{b}}">融</view>
+      <view class="line"></view>
+      <view class="broker-account">{{c}}{{d}}</view>
+      <view bindtap="{{f}}" class="icon-arrow-link" wx:if="{{e}}"></view>
+    </view>
+    <view bindtap="{{j}}" class="{{i}}">
+      <view class="{{['eye',g]}}"></view>
+      <view class="text" wx:if="{{h}}">显示资产</view>
+    </view>
+  </view>
+  <view class="asset-text flex-row flex-between">
+    <view class="flex-vcenter">今日盈亏</view>
+    <view>持仓盈亏</view>
+  </view>
+  <view class="flex-row flex-between">
+    <view class="earn-val-today text-color-1" wx:if="{{k}}">
+      <label class="icon icon-smile"></label>
+    </view>
+    <value-color
+      bind:__l="__l"
+      class="earn-val-today"
+      uI="4db6ca8b-1"
+      uP="{{q||''}}"
+      uS="{{['d']}}"
+      wx:else
+    >
+      <view class="flex">
+        <view class="{{[m,n]}}">{{l}}</view>
+        <view class="{{['earn-rate',p]}}">{{o}}%</view>
+      </view>
+    </value-color>
+    <view class="earn-val-hold text-color-1" wx:if="{{r}}">* * *</view>
+    <value-color
+      bind:__l="__l"
+      class="earn-val-hold"
+      uI="4db6ca8b-2"
+      uP="{{w||''}}"
+      uS="{{['d']}}"
+      wx:else
+    >
+      <view class="{{[t,v]}}">{{s}}</view>
+    </value-color>
+  </view>
+  <view class="progress-bar-placeholder border--bottom"></view>
+  <view class="flex-between money-summary-row">
+    <view class="align-l flex-1 total-money-wrap">
+      <view bindtap="{{z}}" class="money-title flex-start"
+        >总资产<label class="icon-down-triangle" wx:if="{{x}}"></label>
+        <label class="icon-arrow-right-new" wx:elif="{{y}}"></label>
+      </view>
+      <view class="money-text" wx:if="{{A}}">* * *</view>
+      <view class="{{['money-text',C]}}" wx:else>{{B}}</view>
+    </view>
+    <view lass="align-c flex-1">
+      <view class="money-title align-c flex-vcenter">
+        <label class="square color-hold"></label>证券及理财<label
+          bindtap="{{E}}"
+          class="icon icon-italic-info"
+          wx:if="{{D}}"
+        ></label>
+      </view>
+      <view class="money-text align-c" wx:if="{{F}}">* * *</view>
+      <view class="{{['money-text','align-c',H]}}" wx:else>{{G}}</view>
+    </view>
+    <view class="align-r flex-1 cash-wrap">
+      <view class="cash-wrap-content">
+        <view class="money-title flex-end">
+          <label class="square color-bal"></label>可用资金</view
+        >
+        <view class="money-text" wx:if="{{I}}">* * *</view>
+        <view class="{{['money-text',K]}}" wx:else>{{J}}</view>
+      </view>
+    </view>
+  </view>
+</view>

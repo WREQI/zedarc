@@ -1,0 +1,270 @@
+<view
+  class="{{['_div','plate-rank-list-wrapper','data-v-55a92b31',ab&&'skin-black']}}"
+>
+  <view class="_div ai-xiaobao-entry-wrapper data-v-55a92b31" hidden="{{!e}}">
+    <search-ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{a}}"
+      bindonHideAiEntry="{{c}}"
+      bindonShowAiEntry="{{b}}"
+      class="data-v-55a92b31"
+      uI="55a92b31-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></search-ai-bar>
+  </view>
+  <root-portal class="data-v-55a92b31" enable="{{true}}" wx:if="{{f}}">
+    <view
+      catchtap="{{y}}"
+      catchtouchmove="{{x}}"
+      class="_div mask data-v-55a92b31"
+      wx:if="{{g}}"
+    >
+      <view
+        catchtap="{{w}}"
+        class="{{['_div','popup','data-v-55a92b31',r&&'popup-black']}}"
+        id="popup"
+        ref="popup"
+        style="{{'top:'+s+';'+'left:'+t+';'+'opacity:'+v}}"
+      >
+        <image
+          class="_img arrow-up arrow-plate data-v-55a92b31"
+          hidden="{{!i}}"
+          src="https://st.gtimg.com/design/b2052920f18b8dc7e40c6a228a4ae9fe.svg"
+          wx:if="{{h}}"
+        ></image>
+        <image
+          class="_img arrow-up arrow-plate data-v-55a92b31"
+          hidden="{{!j}}"
+          src="https://st.gtimg.com/design/c1db34c5a940e3f494eb5977a98d0b89.svg"
+          wx:else
+        ></image>
+        <view class="_div option-wrapper data-v-55a92b31">
+          <view
+            bindtap="{{l}}"
+            class="{{['_div','option','data-v-55a92b31',m&&'selected']}}"
+          >
+            <label class="_span data-v-55a92b31">全部</label>
+            <label class="_span data-v-55a92b31">({{k}})</label>
+          </view>
+          <view
+            bindtap="{{item.e}}"
+            class="{{['_div','option','data-v-55a92b31',item.c&&'selected']}}"
+            wx:for="{{n}}"
+            wx:key="d"
+          >
+            <label class="_span data-v-55a92b31">{{item.a}}</label>
+            <label class="_span data-v-55a92b31">({{item.b}})</label>
+          </view>
+        </view>
+        <image
+          class="_img arrow-down data-v-55a92b31"
+          hidden="{{!p}}"
+          src="https://st.gtimg.com/design/b2052920f18b8dc7e40c6a228a4ae9fe.svg"
+          wx:if="{{o}}"
+        ></image>
+        <image
+          class="_img arrow-down data-v-55a92b31"
+          hidden="{{!q}}"
+          src="https://st.gtimg.com/design/c1db34c5a940e3f494eb5977a98d0b89.svg"
+          wx:else
+        ></image>
+      </view>
+    </view>
+  </root-portal>
+  <view
+    bindtouchcancel="{{CustomScroll.touchend}}"
+    bindtouchend="{{CustomScroll.touchend}}"
+    bindtouchmove="{{CustomScroll.touchmove}}"
+    bindtouchstart="{{CustomScroll.touchstart}}"
+    change:scrollOptions="{{CustomScroll.setup}}"
+    class="_div stock-cats bg-theme data-v-55a92b31"
+    id="stocktab"
+    ref="stocktab"
+    scrollOptions="{{D}}"
+    style="{{C}}"
+    wx:if="{{z}}"
+  >
+    <view class="_div stock-tab-container data-v-55a92b31">
+      <view class="_div stock-tab data-v-55a92b31">
+        <view
+          bindtap="{{item.p}}"
+          class="{{['_div','data-v-55a92b31','cat-item',item.k,item.l]}}"
+          id="{{item.o}}"
+          ref="{{item.n}}"
+          wx:for="{{A}}"
+          wx:key="m"
+          >{{item.a}}<label class="_span data-v-55a92b31" wx:if="{{item.b}}"
+            >({{item.c}})</label
+          >
+          <label class="_span data-v-55a92b31" wx:elif="{{item.d}}"
+            >({{item.e}})</label
+          >
+          <label class="_span data-v-55a92b31" wx:elif="{{item.f}}"
+            >{{item.g}}({{item.h}})</label
+          >
+          <image
+            class="_img filter-arrow data-v-55a92b31"
+            src="https://st.gtimg.com/design/0b96818e1212879e397f24cef871e8d2.png"
+            wx:if="{{item.i}}"
+          ></image>
+          <image
+            class="_img filter-arrow data-v-55a92b31"
+            src="https://st.gtimg.com/design/a168eea0d03957dd395ac2868c5fc0cf.png"
+            wx:elif="{{item.j}}"
+          ></image>
+        </view>
+      </view>
+      <image
+        bindtap="{{B}}"
+        class="_img image-tip data-v-55a92b31"
+        src="https://st.gtimg.com/design/94247587202f4f81b35ae66037b317d0.svg"
+      ></image>
+    </view>
+  </view>
+  <view class="_div bg-theme data-v-55a92b31" style="{{'min-height:'+W}}">
+    <view
+      class="_div plate-padding plate-rank-list list-container data-v-55a92b31"
+      ref="listContainer"
+      wx:if="{{E}}"
+    >
+      <view class="_div auto-test data-v-55a92b31">cfg-list</view>
+      <view class="_div list-freeze data-v-55a92b31" wx:if="{{F}}">
+        <view bindtap="{{I}}" class="_div list-th data-v-55a92b31">
+          <view class="_div btn-radio data-v-55a92b31">
+            <view class="_div radio-dot data-v-55a92b31" wx:if="{{G}}"></view>
+          </view>
+          <view class="_div list-name data-v-55a92b31">{{H}}</view>
+        </view>
+        <view
+          class="_div freeze-container data-v-55a92b31"
+          wx:for="{{J}}"
+          wx:key="y"
+        >
+          <list-item
+            bind:__l="__l"
+            class="list-item r-i-f data-v-55a92b31"
+            key="{{item.b}}"
+            uI="{{item.c}}"
+            uP="{{item.d}}"
+            uR="listitem"
+            wx:if="{{item.d}}"
+          ></list-item>
+          <view
+            class="{{['_div','item-desc','data-v-55a92b31',item.n,item.o]}}"
+            key="{{item.m}}"
+            ref="{{item.l}}"
+            wx:if="{{K}}"
+          >
+            <view
+              class="{{['_div','data-v-55a92b31','fold-div',item.j,item.k]}}"
+            >
+              <label
+                class="{{['_span','data-v-55a92b31','desc-tag',tag.c]}}"
+                wx:for="{{item.e}}"
+                wx:for-item="tag"
+                wx:key="b"
+                >{{tag.a}}</label
+              >{{item.f}}<label
+                bindtap="{{item.i}}"
+                class="{{['_span','desc-btn','data-v-55a92b31',item.h&&'desc-btn-black']}}"
+                >{{item.g}}</label
+              >
+            </view>
+          </view>
+          <view
+            class="{{['_div','item-desc','item-desc-hide','unfolded','data-v-55a92b31',item.x]}}"
+            key="{{item.w}}"
+            ref="{{item.v}}"
+            wx:if="{{L}}"
+          >
+            <view class="{{['_div','data-v-55a92b31','fold-div',item.t]}}">
+              <label
+                class="{{['_span','data-v-55a92b31','desc-tag',tag.c]}}"
+                wx:for="{{item.p}}"
+                wx:for-item="tag"
+                wx:key="b"
+                >{{tag.a}}</label
+              >{{item.q}}<label
+                class="{{['_span','desc-btn','data-v-55a92b31',item.s&&'desc-btn-black']}}"
+                >{{item.r}}</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+      <view
+        bindtouchcancel="{{CustomScroll.touchend}}"
+        bindtouchend="{{CustomScroll.touchend}}"
+        bindtouchmove="{{CustomScroll.touchmove}}"
+        bindtouchstart="{{CustomScroll.touchstart}}"
+        change:scrollOptions="{{CustomScroll.setup}}"
+        class="_div list-overflow-wrapper data-v-55a92b31"
+        id="stocklist"
+        scrollOptions="{{R}}"
+        wx:if="{{M}}"
+      >
+        <view class="_div list-overflow data-v-55a92b31">
+          <view class="_div list-th data-v-55a92b31">
+            <label
+              catchtap="{{item.e}}"
+              class="{{['_span','th-span','list-order','data-v-55a92b31',item.c,item.d,O]}}"
+              wx:for="{{N}}"
+              wx:key="b"
+              >{{item.a}}</label
+            >
+            <view class="_div place-hold data-v-55a92b31"></view>
+          </view>
+          <view class="_div data-v-55a92b31" wx:for="{{P}}" wx:key="k">
+            <list-item
+              bind:__l="__l"
+              class="data-v-55a92b31"
+              data-c-h="{{!item.a}}"
+              key="{{item.b}}"
+              uI="{{item.c}}"
+              uP="{{item.d}}"
+              wx:if="{{item.d}}"
+            ></list-item>
+            <view
+              class="{{['_div','data-v-55a92b31',item.h,item.i,item.j]}}"
+              key="{{item.g}}"
+              ref="{{item.e}}"
+              style="{{item.f}}"
+              wx:if="{{Q}}"
+            ></view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div bottom-block data-v-55a92b31" wx:if="{{S}}"
+      >没有更多了</view
+    >
+    <view bindtap="{{U}}" class="_div cfg-tip data-v-55a92b31" wx:if="{{T}}">
+      <label class="_span data-v-55a92b31"
+        >板块成份股指标详解，教你看懂每一项指标</label
+      >
+      <image
+        class="_img image-tip-blue data-v-55a92b31"
+        src="https://st.gtimg.com/design/796ae868979d39727f8eb2855630789c.png"
+      ></image>
+    </view>
+    <view class="_div cfg-bottom-place data-v-55a92b31" wx:if="{{V}}"></view>
+  </view>
+  <view class="_div warning-info data-v-55a92b31" wx:if="{{X}}"
+    >投资有风险，任何数据及其衍生产品仅供参考。
+    易淘金依据交易所公开数据以及外购或自有的行情数据源作为计算的基础数据，
+    本公司会尽力但并不保证基础数据的及时性、准确性、真实性和完整性，
+    不承担因任何数据不准确或遗漏等造成的任何损失或者损害的责任，本页面的金融产品展示不构成投资建议。
+    投资者依据相关信息进行投资操作时，应当自主进行判断，所导致的盈亏由投资者自行承担。浏览本页面或使用本功能即表示投资者同意所载免责声明。</view
+  >
+  <root-portal class="data-v-55a92b31" enable="{{true}}" wx:if="{{Y}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{Z}}"
+      class="data-v-55a92b31"
+      uI="55a92b31-3"
+      uP="{{aa}}"
+      wx:if="{{aa}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+</view>

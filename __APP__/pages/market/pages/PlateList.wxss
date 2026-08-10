@@ -1,0 +1,167 @@
+.rank-list.data-v-1ec8cc90 {
+  background-color: var(--fill-content-layer);
+  min-height: 100%;
+}
+.rank-header.data-v-1ec8cc90 {
+  background: var(--fill-content-layer);
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  box-sizing: border-box;
+  height: 0.72rem;
+  padding: 0 0.4rem;
+}
+.rank-header .header-wrapper.data-v-1ec8cc90 {
+  box-sizing: border-box;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  height: 100%;
+}
+.rank-header .header-wrapper .rank-middle.data-v-1ec8cc90,
+.rank-header .header-wrapper.data-v-1ec8cc90 {
+  align-items: center;
+}
+.rank-header .sort-name.data-v-1ec8cc90 {
+  color: var(--color-blue);
+  font-weight: 500;
+}
+.rank-header .sort-icon.data-v-1ec8cc90 {
+  height: 0.26666666666666666rem;
+  margin-left: 0.12rem;
+  width: 0.16rem;
+}
+.rank-left.data-v-1ec8cc90 {
+  flex: 1;
+}
+.rank-list-wrapper.data-v-1ec8cc90 {
+  max-width: 3.8666666666666667rem;
+}
+.rank-middle.data-v-1ec8cc90 {
+  margin-right: 0.13333333333333333rem;
+  width: 1.6rem;
+}
+.rank-middle.data-v-1ec8cc90,
+.rank-right.data-v-1ec8cc90 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.rank-right.data-v-1ec8cc90 {
+  width: 2.6133333333333333rem;
+}
+.rank-right .zdf.data-v-1ec8cc90 {
+  border-radius: 0.06666666666666667rem;
+  color: var(--color-white);
+  min-width: 2.1333333333333333rem;
+  padding: 0.16rem 0.06666666666666667rem;
+  text-align: center;
+}
+.rank-right.rise .zdf.data-v-1ec8cc90 {
+  background-color: var(--color-rise);
+}
+.rank-right.drop .zdf.data-v-1ec8cc90 {
+  background-color: var(--color-drop);
+}
+.rank-right.equal .zdf.data-v-1ec8cc90 {
+  background-color: var(--color-equal);
+}
+.rank-left.data-v-1ec8cc90,
+.rank-middle.data-v-1ec8cc90,
+.rank-right.data-v-1ec8cc90 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+.rank-body.data-v-1ec8cc90 {
+  color: var(--color-heavygray);
+  margin: 0;
+  overflow: hidden;
+}
+.rank-body .rank-item.data-v-1ec8cc90 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  height: 1.3333333333333333rem;
+  padding: 0 0.4rem;
+  position: relative;
+}
+.rank-body .rank-item.data-v-1ec8cc90:after {
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  bottom: 0;
+  content: "";
+  height: 0.013333333333333334rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleY(0.5);
+  transform-origin: 0 100%;
+  z-index: 9;
+}
+.rank-body .rank-item .rank-left.data-v-1ec8cc90 {
+  min-width: 0;
+}
+.rank-body .rank-item .stock-name.data-v-1ec8cc90 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rank-body .rank-item .rank-list-box.data-v-1ec8cc90 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.rank-body .rank-item .rank-list-box .market-icon.data-v-1ec8cc90 {
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.rank-body .rank-item .rank-list-box .stock-list-symbol.data-v-1ec8cc90 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+}
+.zxg-logo.data-v-1ec8cc90 {
+  background-image: url(https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 2.506666666666667rem 0.4266666666666667rem;
+  height: 1.76rem;
+}
+.skin-black .zxg-logo.data-v-1ec8cc90 {
+  background-image: url(https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png);
+}
+.caption-arrow.data-v-1ec8cc90 {
+  font-size: 0.3466666666666667rem;
+  line-height: 1;
+  margin-left: 0.10666666666666667rem;
+  white-space: nowrap;
+}
+.caption-arrow .up.data-v-1ec8cc90 {
+  border-color: transparent transparent var(--color-icon2) transparent;
+  border-style: dashed dashed solid;
+  border-width: 0.10666666666666667rem;
+  display: block;
+  font-size: 0;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+.caption-arrow .up.activated.data-v-1ec8cc90 {
+  border-color: transparent transparent var(--color-blue) transparent;
+}
+.caption-arrow .down.data-v-1ec8cc90 {
+  border-color: var(--color-icon2) transparent transparent transparent;
+  border-style: dashed dashed solid;
+  border-width: 0.10666666666666667rem;
+  display: block;
+  font-size: 0;
+  height: 0;
+  margin-top: 0.08rem;
+  overflow: hidden;
+  width: 0;
+}
+.caption-arrow .down.activated.data-v-1ec8cc90 {
+  border-color: var(--color-blue) transparent transparent transparent;
+}

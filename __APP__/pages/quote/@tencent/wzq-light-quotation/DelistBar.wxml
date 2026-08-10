@@ -1,0 +1,89 @@
+<view
+  catchtap="{{x}}"
+  class="{{['_div','data-v-2cb7f082','delist-bar',w&&'isLite']}}"
+  wx:if="{{a}}"
+>
+  <block wx:if="{{b}}">
+    <view class="_div left-area data-v-2cb7f082">
+      <view class="_div text data-v-2cb7f082"
+        >该公司已从当前市场退市，最新行情查看：</view
+      >
+      <view class="_div info data-v-2cb7f082">{{c}} ({{d}})</view>
+    </view>
+    <image
+      class="_img arrow data-v-2cb7f082"
+      lazyLoad="{{true}}"
+      src="https://st.gtimg.com/design/f73e3187fa829a7f886400cca980b402.png"
+    ></image>
+  </block>
+  <view class="_div left-area data-v-2cb7f082" wx:else>
+    <view class="_div text data-v-2cb7f082" wx:if="{{e}}"
+      >该公司已从当前市场退市，查看退市说明</view
+    >
+    <view class="_div text data-v-2cb7f082" wx:elif="{{f}}"
+      >该公司已进入退市整理期，请注意风险</view
+    >
+    <view class="_div text data-v-2cb7f082" wx:elif="{{g}}"
+      >该公司已被实施ST，查看ST风险说明</view
+    >
+    <image
+      catchtap="{{h}}"
+      class="_img tip data-v-2cb7f082"
+      lazyLoad="{{true}}"
+      src="https://st.gtimg.com/design/7e58c8307bb799b28471cc60a4cbced5.svg"
+    ></image>
+  </view>
+  <view
+    catchtap="{{t}}"
+    catchtouchmove="{{v}}"
+    class="{{['_div','shadow-layer','2222','data-v-2cb7f082',s]}}"
+    wx:if="{{i}}"
+  >
+    <view
+      catchtap="{{r}}"
+      class="{{['_div','content-layer','data-v-2cb7f082',q]}}"
+    >
+      <view class="_div title-wrapper data-v-2cb7f082">
+        <view class="_div title data-v-2cb7f082" wx:if="{{j}}"
+          >股票退市说明</view
+        >
+        <view class="_div title data-v-2cb7f082" wx:elif="{{k}}"
+          >退市整理期说明</view
+        >
+        <view class="_div title data-v-2cb7f082" wx:elif="{{l}}"
+          >ST风险说明</view
+        >
+        <image
+          catchtap="{{m}}"
+          class="_img close data-v-2cb7f082"
+          src="https://st.gtimg.com/design/c88bacb6962581df77d488e45027061b.png"
+        ></image>
+      </view>
+      <view class="_div text data-v-2cb7f082" wx:if="{{n}}"
+        >上市公司被交易所终止上市后，相应股份将转移至全国中小企业股份转让系统（老三板）或者直接退市，具体取决于上市公司，请投资者关注上市公司公告。</view
+      >
+      <view class="_div text data-v-2cb7f082" wx:elif="{{o}}"
+        >退市整理期是沪深交易所设置的一个特殊交易阶段。当上市公司的股票被证券交易所作出强制终止上市的决定后的5到15个交易日后，该股票会进入退市整理期进行交易。退市整理期的期限通常为30个交易日。<view
+          class="data-v-2cb7f082"
+        ></view>
+        <view class="data-v-2cb7f082"></view
+        >退市整理期的主要目的是为投资者提供股票正式退市前必要的交易卖出机会，充分释放风险。在退市整理期届满后的5个交易日内，证券交易所会对该股票进行摘牌，公司股票正式终止上市，届时股票将不支持在沪深交易所继续交易。<view
+          class="data-v-2cb7f082"
+        ></view>
+        <view class="data-v-2cb7f082"></view
+        >请投资者关注相关风险，谨慎投资。</view
+      >
+      <view class="_div text data-v-2cb7f082" wx:elif="{{p}}"
+        >ST意为“特别处理”，当上市公司出现财务或其他方面的问题时，证券交易所向投资者发出风险警示并在股票名称前贴上ST标签，提示投资者关注公司风险。<view
+          class="data-v-2cb7f082"
+        ></view>
+        <view class="data-v-2cb7f082"></view
+        >当被交易所实施退市风险警示，在股票简称前会冠以*ST字样，如果上市公司在规定时间内未能改善业绩或解决问题，可能会面临退市，届时相关股票将不支持在沪深交易所继续交易。<view
+          class="data-v-2cb7f082"
+        ></view>
+        <view class="data-v-2cb7f082"></view
+        >请投资者关注公司动态和风险变化，谨慎投资。</view
+      >
+    </view>
+  </view>
+</view>

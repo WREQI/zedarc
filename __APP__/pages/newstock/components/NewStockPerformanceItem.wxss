@@ -1,0 +1,78 @@
+@import "/app.wxss";
+.newstock-performance-item .recent-tab.data-v-234bcbaf {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  height: 1.093333rem;
+  line-height: 1.093333rem;
+  margin-top: 0.16rem;
+}
+.newstock-performance-item .recent-tab.data-v-234bcbaf:before {
+  background: none;
+  border: 0.08rem solid transparent;
+  border-left: 0.08rem solid var(--color-primary-1);
+  content: "";
+  height: 0.32rem;
+  margin-right: 0.32rem;
+  margin-top: 0.293333rem;
+  width: 0.32rem;
+}
+.newstock-performance-item .recent-tab span.data-v-234bcbaf {
+  color: var(--text-color-2);
+  font-size: 0.373333rem;
+}
+.newstock-performance-item .recent-tab1.data-v-234bcbaf {
+  margin-top: 0.16rem;
+}
+.newstock-performance-item .recent-tab1.data-v-234bcbaf:before {
+  position: static;
+}
+.newstock-performance-item .recent-module.data-v-234bcbaf {
+  background-color: var(--fill-2);
+  padding-left: 0.666667rem;
+  padding-top: 0.346667rem;
+}
+.newstock-performance-item .recent-module .module.data-v-234bcbaf {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  padding-bottom: 0.666667rem;
+  text-align: left;
+}
+.newstock-performance-item .recent-module .module .module-text.data-v-234bcbaf {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 500;
+  margin-bottom: 0.16rem;
+}
+.newstock-performance-item-list-header.data-v-234bcbaf {
+  background-color: var(--fill-2);
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  padding: 0.266667rem 0.4rem;
+}
+.newstock-performance-item-lists.data-v-234bcbaf {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  font-size: 0.4rem;
+  padding: 0 0.4rem;
+}
+.newstock-performance-item-lists .list-item.data-v-234bcbaf {
+  height: 1.48rem;
+}
+.newstock-performance-item-lists .list-item .stock-name.data-v-234bcbaf {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.newstock-performance-item-lists .list-item .stock-code.data-v-234bcbaf {
+  color: var(--text-color-4);
+  font-size: 0.293333rem;
+}
+.newstock-performance-item-lists .list-item.data-v-234bcbaf:last-child {
+  border-bottom: 0;
+}
+.newstock-performance-item .loading-wrapper.data-v-234bcbaf {
+  margin: 0.4rem 0;
+}

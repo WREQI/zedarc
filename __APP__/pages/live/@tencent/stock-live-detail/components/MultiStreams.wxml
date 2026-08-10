@@ -1,0 +1,12 @@
+<view class="{{['_div','data-v-f4f1d4ef','multi-sources',c]}}" wx:if="{{a}}">
+  <view class="_div title data-v-f4f1d4ef">语言选择</view>
+  <view class="_div sep data-v-f4f1d4ef"></view>
+  <view
+    catchtap="{{item.d}}"
+    class="{{['_div','data-v-f4f1d4ef','btn',item.c]}}"
+    wx:for="{{b}}"
+    wx:key="b"
+  >
+    <view class="_div btn-text data-v-f4f1d4ef">{{item.a}}</view>
+  </view>
+</view>

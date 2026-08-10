@@ -1,0 +1,28 @@
+<view
+  class="{{['operate-container','data-v-7a3fd2ac',l&&'bg-white',m&&'simple_mode']}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{k}}" class="flex-between data-v-7a3fd2ac">
+    <view class="label flex-1 data-v-7a3fd2ac">
+      <label class="flex flex-vcenter data-v-7a3fd2ac">
+        <label class="img-wrapper data-v-7a3fd2ac">
+          <image class="img data-v-7a3fd2ac" src="{{b}}"></image>
+        </label>
+        <view class="text-wrap flex-1 data-v-7a3fd2ac" ref="outer">
+          <label
+            class="{{['text-tips','flex','data-v-7a3fd2ac',d&&'animate']}}"
+            ref="inner"
+            style="{{'width:'+e+';'+'animation-duration:'+f}}"
+            >{{c}}</label
+          >
+        </view>
+      </label>
+    </view>
+    <view class="right flex-between data-v-7a3fd2ac">
+      <view catchtap="{{i}}" class="btn data-v-7a3fd2ac" wx:if="{{g}}"
+        >{{h}}</view
+      >
+      <view catchtap="{{j}}" class="icon icon-close data-v-7a3fd2ac"></view>
+    </view>
+  </view>
+</view>

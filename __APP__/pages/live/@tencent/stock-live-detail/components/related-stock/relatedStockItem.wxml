@@ -1,0 +1,46 @@
+<view class="{{['_div','data-v-a50ce647','related-stock-container',x]}}">
+  <view class="{{['_div','data-v-a50ce647','title-container',l]}}">
+    <view class="_div top-title-container data-v-a50ce647">
+      <view
+        class="_div stock-icon data-v-a50ce647"
+        style="{{'background-image:'+a}}"
+      ></view>
+      <label catchtap="{{c}}" class="_span title data-v-a50ce647">{{b}}</label>
+    </view>
+    <view class="_div tag-container data-v-a50ce647" wx:if="{{d}}">
+      <view
+        class="_div tag-border data-v-a50ce647"
+        wx:for="{{e}}"
+        wx:for-item="tag"
+        wx:key="b"
+      >
+        <label class="_span tag data-v-a50ce647">{{tag.a}}</label>
+      </view>
+    </view>
+    <view class="_div tag-container data-v-a50ce647" wx:elif="{{f}}">
+      <label class="_span year-rise data-v-a50ce647">年初至今涨跌幅</label>
+      <label class="_span year-rise-value up data-v-a50ce647" wx:if="{{g}}"
+        >{{h}}</label
+      >
+      <label class="_span year-rise-value down data-v-a50ce647" wx:elif="{{i}}"
+        >{{j}}</label
+      >
+      <label class="_span year-rise-value data-v-a50ce647" wx:else>{{k}}</label>
+    </view>
+  </view>
+  <view catchtap="{{n}}" class="_div instock-btn data-v-a50ce647" wx:if="{{m}}">
+    <label class="_span instock-text data-v-a50ce647">已加自选</label>
+  </view>
+  <view catchtap="{{p}}" class="_div addstock-btn data-v-a50ce647" wx:else>
+    <label class="_span addstock-text data-v-a50ce647">{{o}}</label>
+  </view>
+  <view catchtap="{{r}}" class="_div trade-btn data-v-a50ce647" wx:if="{{q}}">
+    <label class="_span trade-text data-v-a50ce647">交易板块</label>
+  </view>
+  <view catchtap="{{t}}" class="_div trade-btn data-v-a50ce647" wx:elif="{{s}}">
+    <label class="_span trade-text data-v-a50ce647">交易指数</label>
+  </view>
+  <view catchtap="{{w}}" class="_div trade-btn data-v-a50ce647" wx:elif="{{v}}">
+    <label class="_span trade-text data-v-a50ce647">立即交易</label>
+  </view>
+</view>

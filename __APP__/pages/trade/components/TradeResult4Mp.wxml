@@ -1,0 +1,41 @@
+<view class="trade-result trade-result__simple-mode" wx:if="{{a}}">
+  <view class="{{['trade-result--body',t,'trade-result--body__simpletheme']}}">
+    <view class="loading-container green" wx:if="{{b}}">
+      <view class="loading">
+        <view class="circle-1"></view>
+        <view class="circle-2"></view>
+        <view class="circle-3"></view>
+      </view>
+    </view>
+    <label animation="{{f}}" class="status--icon" ref="iconRef">
+      <label
+        animation="{{c}}"
+        bindtransitionend="{{e}}"
+        class="{{[d]}}"
+        ref="iconLogoRef"
+      ></label>
+    </label>
+    <label animation="{{h}}" class="status--text" ref="textRef">{{g}}</label>
+    <view animation="{{r}}" class="order-info-wrapper" ref="orderInfoRef">
+      <view class="loading-placeholder" wx:if="{{i}}"></view>
+      <view class="fs-24 text-color-5 align-c order-info-tips" wx:elif="{{j}}"
+        >{{k}}</view
+      >
+      <view class="fs-24 text-color-5 align-c order-info-tips" wx:else
+        >{{l}}</view
+      >
+      <view class="btn-wrapper" wx:if="{{m}}">
+        <button bindtap="{{q}}" class="{{['btn',o]}}" disabled="{{p}}">
+          {{n}}
+        </button>
+      </view>
+    </view>
+    <view class="trade-result--caidai" wx:if="{{s}}"></view>
+  </view>
+  <slot name="footer"></slot>
+  <image
+    alt=""
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/simple/caidai-new.gif"
+  ></image>
+</view>

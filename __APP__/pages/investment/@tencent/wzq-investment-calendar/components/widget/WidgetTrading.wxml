@@ -1,0 +1,53 @@
+<view bindtap="{{g}}" class="_div widget-trading data-v-14914d75" wx:if="{{a}}">
+  <view class="_div widget-trading__header data-v-14914d75">
+    <view class="_div widget-trading__title data-v-14914d75"
+      >财经日历-交易提醒</view
+    >
+    <view
+      bindtap="{{e}}"
+      class="{{['_div','data-v-14914d75','widget-trading__subscribe',d]}}"
+      wx:if="{{b}}"
+      >{{c}}</view
+    >
+  </view>
+  <view class="_div widget-trading__divider data-v-14914d75"></view>
+  <view class="_div widget-trading__table-header data-v-14914d75">
+    <view
+      class="_div widget-trading__col widget-trading__col--name data-v-14914d75"
+      >事件名称</view
+    >
+    <view
+      class="_div widget-trading__col widget-trading__col--date data-v-14914d75"
+      >日期</view
+    >
+    <view
+      class="_div widget-trading__col widget-trading__col--market data-v-14914d75"
+      >休市安排</view
+    >
+  </view>
+  <view class="_div widget-trading__list data-v-14914d75">
+    <view
+      bindtap="{{item.e}}"
+      class="_div widget-trading__item data-v-14914d75"
+      wx:for="{{f}}"
+      wx:key="d"
+    >
+      <view class="_div widget-trading__item-name data-v-14914d75"
+        >{{item.a}}</view
+      >
+      <view class="_div widget-trading__item-date data-v-14914d75"
+        >{{item.b}}</view
+      >
+      <view class="_div widget-trading__item-market data-v-14914d75"
+        >{{item.c}}</view
+      >
+    </view>
+  </view>
+  <view class="_div widget-trading__footer-divider data-v-14914d75"></view>
+  <view class="_div widget-trading__more data-v-14914d75">
+    <label class="_span widget-trading__more-text data-v-14914d75"
+      >更多交易提醒</label
+    >
+    <view class="_div widget-trading__more-icon data-v-14914d75"></view>
+  </view>
+</view>

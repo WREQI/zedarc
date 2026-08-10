@@ -1,0 +1,52 @@
+.opinion-banner.data-v-ae2ce627 {
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: block;
+  padding: 0.32rem;
+  width: 100%;
+}
+.opinion-banner--bullish.data-v-ae2ce627 {
+  background-color: rgba(230, 53, 53, 0.1);
+}
+.opinion-banner--bullish .opinion-banner__label.data-v-ae2ce627 {
+  color: var(--color-red, #e63535);
+}
+.opinion-banner--bearish.data-v-ae2ce627 {
+  background-color: rgba(28, 170, 60, 0.1);
+}
+.opinion-banner--bearish .opinion-banner__label.data-v-ae2ce627 {
+  color: var(--color-green, #1caa3c);
+}
+.opinion-banner--neutral.data-v-ae2ce627 {
+  background-color: var(--color-card3, #e6f0ff);
+}
+.opinion-banner--neutral .opinion-banner__label.data-v-ae2ce627 {
+  color: var(--color-heavygray, #262e40);
+}
+.opinion-banner__title.data-v-ae2ce627 {
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.opinion-banner__label.data-v-ae2ce627 {
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.opinion-banner__text.data-v-ae2ce627 {
+  color: var(--color-heavygray, #262e40);
+  font-weight: 500;
+}
+.opinion-banner__detail.data-v-ae2ce627 {
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: var(--color-midgray, #475166);
+  display: -webkit-box;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-top: 0.21333333333333335rem;
+  overflow: hidden;
+  word-break: break-word;
+}

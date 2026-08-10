@@ -1,0 +1,25 @@
+<view class="_div data-v-e713deff">
+  <view class="_div match-text data-v-e713deff" wx:if="{{a}}"
+    >{{b}}<label
+      bindtap="{{e}}"
+      class="_span highlight data-v-e713deff"
+      wx:if="{{c}}"
+      >{{d}}</label
+    >{{f}}<skip-deatil
+      bind:__l="__l"
+      class="data-v-e713deff"
+      uI="e713deff-0"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></skip-deatil>
+  </view>
+  <view class="_div match-text data-v-e713deff" wx:else
+    >{{i}}<skip-deatil
+      bind:__l="__l"
+      class="data-v-e713deff"
+      uI="e713deff-1"
+      uP="{{k}}"
+      wx:if="{{j}}"
+    ></skip-deatil>
+  </view>
+</view>

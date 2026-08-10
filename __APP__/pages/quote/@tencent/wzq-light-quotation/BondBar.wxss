@@ -1,0 +1,107 @@
+.color-equal.data-v-9b42a375 {
+  color: var(--color-equal) !important;
+}
+.color-rise.data-v-9b42a375 {
+  color: var(--color-rise) !important;
+}
+.color-drop.data-v-9b42a375 {
+  color: var(--color-drop) !important;
+}
+.container.data-v-9b42a375 {
+  overflow: hidden;
+}
+.wrapper.data-v-9b42a375 {
+  font-size: 0.32rem;
+  justify-content: space-between;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.21333333333333335rem;
+}
+.wrapper .block.data-v-9b42a375,
+.wrapper.data-v-9b42a375 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.wrapper .block.data-v-9b42a375 {
+  width: 50%;
+}
+.wrapper .block.right.data-v-9b42a375 {
+  justify-content: flex-end;
+}
+.wrapper .block .title.data-v-9b42a375 {
+  color: var(--color-gray);
+  font-weight: 400;
+  margin-right: 0.05333333333333334rem;
+}
+.wrapper .block .arrow.data-v-9b42a375 {
+  color: #98a0b3;
+  font-size: 0.26666666666666666rem;
+  height: 0.28rem;
+  padding-left: 0.4266666666666667rem;
+  width: 0.16rem;
+}
+.wrapper .block .title-classic.data-v-9b42a375 {
+  color: var(--color-heavygray);
+}
+.wrapper .block .text.data-v-9b42a375 {
+  color: var(--color-heavygray);
+  font-weight: 500;
+  margin-left: 0.16rem;
+}
+.wrapper-classic.data-v-9b42a375 {
+  height: 0.7466666666666667rem;
+  margin-top: 0;
+}
+.seperate.data-v-9b42a375 {
+  background-image: linear-gradient(
+    90deg,
+    #dcdfe6 0,
+    #dcdfe6 50%,
+    transparent 0,
+    transparent
+  );
+  background-repeat: repeat-x;
+  background-size: 0.13333333333333333rem 0.06666666666666667rem;
+  height: 1px;
+  margin-top: 0.21333333333333335rem;
+  width: 100%;
+}
+@-webkit-keyframes carousel-9b42a375 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes carousel-9b42a375 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+.animation.data-v-9b42a375 {
+  animation: carousel-9b42a375 6s ease infinite;
+}

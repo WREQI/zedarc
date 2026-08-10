@@ -1,0 +1,48 @@
+<view class="_div news-column-edit data-v-87e3c89d">
+  <view class="_div news-column-title-layout data-v-87e3c89d">
+    <view bindtap="{{a}}" class="_div news-column-title-finish data-v-87e3c89d"
+      >完成</view
+    >
+    <view class="_div news-column-title-text data-v-87e3c89d">编辑栏目</view>
+  </view>
+  <view class="_div news-column-title-ll data-v-87e3c89d">
+    <label class="_span title-left data-v-87e3c89d">我的栏目</label>
+    <label class="_span title-right data-v-87e3c89d">长按拖动排序</label>
+  </view>
+  <view class="_div column-list data-v-87e3c89d">
+    <view
+      bindtouchend="{{item.j}}"
+      bindtouchstart="{{item.h}}"
+      catchtouchmove="{{item.i}}"
+      class="{{['data-v-87e3c89d','grid-item',item.f]}}"
+      style="{{item.g}}"
+      wx:for="{{b}}"
+      wx:key="e"
+    >
+      <news-column-item
+        bind:__l="__l"
+        bindfnBtnClick="{{item.a}}"
+        bindsetSize="{{item.b}}"
+        class="data-v-87e3c89d"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:if="{{item.d}}"
+      ></news-column-item>
+    </view>
+  </view>
+  <view class="_div news-column-title-ll data-v-87e3c89d" style="{{c}}">
+    <label class="_span title-left data-v-87e3c89d">推荐栏目</label>
+    <label class="_span title-right data-v-87e3c89d">点击添加栏目</label>
+  </view>
+  <view class="_div column-list data-v-87e3c89d">
+    <news-column-item
+      bind:__l="__l"
+      bindfnBtnClick="{{item.b}}"
+      class="data-v-87e3c89d"
+      uI="{{item.c}}"
+      uP="{{item.d}}"
+      wx:for="{{d}}"
+      wx:key="a"
+    ></news-column-item>
+  </view>
+</view>

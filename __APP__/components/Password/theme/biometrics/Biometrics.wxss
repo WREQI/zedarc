@@ -1,0 +1,124 @@
+@import "/app.wxss";
+.bio-component--embeded-wrap.data-v-19f849cc .mp-popup {
+  background-color: var(--fill-2);
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+}
+.bio-component--embeded.data-v-19f849cc {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  height: 11.893333rem;
+}
+.bio-title-wrap.data-v-19f849cc {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0.426667rem 0.4rem 0.64rem;
+}
+.bio-title-wrap .bio-title-wrap-center.data-v-19f849cc,
+.bio-title-wrap.data-v-19f849cc {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.bio-title-wrap .bio-title-wrap-center .bio-broker-logo.data-v-19f849cc {
+  height: 0.533333rem;
+  padding-right: 0.213333rem;
+  width: 0.533333rem;
+}
+.bio-title-wrap
+  .bio-title-wrap-center
+  .bio-broker-logo
+  .bio-server-broker-logo.data-v-19f849cc {
+  height: 0.533333rem;
+  position: absolute;
+  width: 0.533333rem;
+}
+.bio-title-wrap
+  .bio-title-wrap-center
+  .bio-broker-logo
+  .bio-server-broker-logo.data-v-19f849cc
+  .broker-logo-icon {
+  position: absolute;
+}
+.bio-title-wrap .bio-title-wrap-center .bio-broker-name.data-v-19f849cc {
+  font-size: 0.426667rem;
+  font-weight: 400;
+  line-height: 0.613333rem;
+}
+.bio-body.data-v-19f849cc {
+  -webkit-box-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.666667rem;
+}
+.bio-body .bio-login-icon.data-v-19f849cc {
+  height: 1.653333rem;
+  width: 1.653333rem;
+}
+.bio-body .bio-login-text.data-v-19f849cc {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 0.586667rem;
+  margin-top: 0.32rem;
+}
+.bio-body .bio-login-tips.data-v-19f849cc {
+  color: var(--text-color-4);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-top: 0.32rem;
+}
+.bio-body .bio-login-icon-finger.data-v-19f849cc {
+  height: 1.546667rem;
+  width: 1.546667rem;
+}
+.bio-body .bio-login-text-finger.data-v-19f849cc {
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-top: 0.426667rem;
+}
+.bio-body .bio-login-text-finger .icon.data-v-19f849cc {
+  font-size: 0.56rem;
+}
+.bio-switch.data-v-19f849cc {
+  bottom: 0.853333rem;
+  bottom: calc(0.853333rem + env(safe-area-inset-bottom));
+  color: var(--color-link);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.bio-close-bg.data-v-19f849cc {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  position: relative;
+  width: 0.48rem;
+}
+.bio-close-bg.data-v-19f849cc:after {
+  content: " ";
+  display: inline-block;
+  height: 0.693333rem;
+  left: -0.106667rem;
+  position: absolute;
+  top: -0.106667rem;
+  width: 0.693333rem;
+}
+.bio-simple .bio-switch.data-v-19f849cc {
+  color: #576b95;
+}

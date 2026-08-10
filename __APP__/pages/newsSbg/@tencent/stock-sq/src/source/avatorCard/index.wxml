@@ -1,0 +1,110 @@
+<view
+  catchtap="{{ad}}"
+  class="{{['_div','mod-avatorName','avatorName','data-v-afe7d198',aa&&'valign-center',ab&&'disabled']}}"
+  key="{{ac}}"
+>
+  <view class="_div reply-bar data-v-afe7d198" wx:if="{{a}}">
+    <view class="_div user-info data-v-afe7d198">
+      <view
+        class="{{['_div','data-v-afe7d198','name',c,d,e]}}"
+        data-userid="{{f}}"
+        >{{b}}</view
+      >
+      <label
+        class="{{['_span','show-action','data-v-afe7d198',i]}}"
+        wx:if="{{g}}"
+        >{{h}}</label
+      >
+    </view>
+    <view class="_div right data-v-afe7d198">
+      <label class="_span date data-v-afe7d198" wx:if="{{j}}">{{k}}</label>
+      <slot name="replyHandle"></slot>
+    </view>
+  </view>
+  <block wx:if="{{l}}">
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>
+      <view
+        class="{{['_div','data-v-afe7d198','image-box',n,o,p]}}"
+        data-userid="{{q}}"
+      >
+        <base-image
+          bind:__l="__l"
+          class="data-v-afe7d198"
+          uI="afe7d198-0"
+          uP="{{m}}"
+          wx:if="{{m}}"
+        ></base-image>
+      </view>
+      <view class="_div content data-v-afe7d198">
+        <view class="_div user-info data-v-afe7d198">
+          <view
+            class="{{['_div','data-v-afe7d198','name',s,t,v]}}"
+            data-userid="{{x}}"
+            style="{{w}}"
+            >{{r}}</view
+          >
+          <view
+            class="{{['_div','user-mark','data-v-afe7d198',z,A]}}"
+            wx:if="{{y}}"
+          ></view>
+          <view
+            class="{{['_div','user-tag','data-v-afe7d198',C,D]}}"
+            wx:if="{{B}}"
+          ></view>
+          <user-model
+            bind:__l="__l"
+            class="data-v-afe7d198"
+            uI="afe7d198-1"
+            uP="{{F}}"
+            wx:elif="{{E}}"
+          ></user-model>
+        </view>
+        <view class="_div desc-box data-v-afe7d198" wx:if="{{G}}">
+          <label class="_span tag data-v-afe7d198" wx:if="{{H}}">{{I}}</label>
+          <label class="_span date data-v-afe7d198" wx:if="{{J}}">
+            <label class="_span data-v-afe7d198" wx:if="{{K}}"
+              >{{L}}<label class="_span data-v-afe7d198" wx:if="{{M}}"
+                >{{N}}</label
+              >
+              <label class="_span data-v-afe7d198" wx:else>更新</label>
+            </label>
+            <label class="_span data-v-afe7d198" wx:else>
+              <label class="_span time data-v-afe7d198">{{O}}</label>
+              <label
+                class="_span hint-text data-v-afe7d198"
+                wx:for="{{P}}"
+                wx:key="d"
+              >
+                <view
+                  class="{{['_i','data-v-afe7d198',item.b]}}"
+                  wx:if="{{item.a}}"
+                ></view
+                >{{item.c}}</label
+              >
+              <label
+                catchtap="{{S}}"
+                class="_span hint-text data-v-afe7d198"
+                wx:if="{{Q}}"
+                >{{R}}</label
+              >
+            </label>
+          </label>
+          <label
+            class="{{['_span','show-action','data-v-afe7d198',V]}}"
+            wx:if="{{T}}"
+          >
+            <label class="_span data-v-afe7d198">{{U}}</label>
+          </label>
+          <label
+            class="{{['_span','verify','data-v-afe7d198',X]}}"
+            wx:if="{{W}}"
+          ></label>
+          <label class="_span user-desc data-v-afe7d198" wx:if="{{Y}}">
+            <label class="_span line data-v-afe7d198">|</label>{{Z}}</label
+          >
+        </view>
+      </view>
+    </block>
+  </block>
+</view>

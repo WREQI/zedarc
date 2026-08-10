@@ -1,0 +1,60 @@
+<view class="container data-v-09d06219">
+    <view class="card-container data-v-09d06219">
+        <view class="tip-text fs-24 text-color-4 flex data-v-09d06219">
+            <label class="icon-shield data-v-09d06219"></label>
+            <label class="data-v-09d06219">《证券法》规定，需用本人银行卡开通资金存管，资金仅在本人证券账户和资金存管卡间流转，保障您的资金安全</label>
+        </view>
+        <st-cell-group bind:__l="__l" class="import-card-container data-v-09d06219" uI="09d06219-0" uS="{{['d']}}" wx:if="{{a}}">
+            <st-cell bind:__l="__l" bindclick="{{b}}" class="data-v-09d06219" uI="09d06219-1,09d06219-0" uS="{{['extra','d']}}">
+                <view class="import-card data-v-09d06219">
+                    <label class="icon data-v-09d06219"></label>
+                    <label class="text data-v-09d06219">选择已有银行卡</label>
+                </view>
+                <label class="icon icon-arrow-right data-v-09d06219" slot="extra"></label>
+            </st-cell>
+        </st-cell-group>
+        <st-cell-group bind:__l="__l" class="form-container data-v-09d06219" uI="09d06219-2" uS="{{['d']}}">
+            <bank-card-ocr bind:__l="__l" binderror="{{e}}" bindsuccess="{{d}}" class="r data-v-09d06219" uI="09d06219-3,09d06219-2" uR="ocr"></bank-card-ocr>
+            <st-cell bind:__l="__l" class="data-v-09d06219" uI="09d06219-4,09d06219-2" uS="{{['title','extra','d']}}">
+                <view class="{{['data-v-09d06219',f&&'red']}}" slot="title">
+                    <label class="justify data-v-09d06219">银行卡号</label>
+                </view>
+                <input bindfocus="{{h}}" bindinput="{{j}}" class="data-v-09d06219" maxlength="19" placeholder="请填写（必填）" type="text" value="{{i}}" wx:if="{{g}}"></input>
+                <input bindblur="{{l}}" bindfocus="{{k}}" bindinput="{{n}}" class="data-v-09d06219" id="cardno-number-input" maxlength="19" placeholder="请填写（必填）" type="text" value="{{m}}" wx:else></input>
+                <view slot="extra">
+                    <label catchtap="{{p}}" class="icon icon-scan data-v-09d06219" wx:if="{{o}}"></label>
+                </view>
+            </st-cell>
+            <st-cell bind:__l="__l" class="data-v-09d06219" uI="09d06219-5,09d06219-2" uS="{{['title','d']}}">
+                <view class="{{['data-v-09d06219',q&&'red']}}" slot="title">
+                    <label class="justify data-v-09d06219">银行名称</label>
+                </view>
+                <input bindinput="{{t}}" bindtap="{{r}}" class="data-v-09d06219" disabled="{{true}}" placeholder="请选择（必选）" type="text" value="{{s}}"></input>
+            </st-cell>
+        </st-cell-group>
+        <view class="error-tip red fs-24 data-v-09d06219" hidden="{{!w}}">{{v}}</view>
+    </view>
+    <view bindtap="{{x}}" class="support-banks link data-v-09d06219">
+        <label class="data-v-09d06219">支持的银行</label>
+        <label class="icon icon-italic-info link data-v-09d06219"></label>
+    </view>
+    <foot-print bind:__l="__l" class="foot data-v-09d06219" uI="09d06219-6" uP="{{y}}" wx:if="{{y}}"></foot-print>
+    <step-buttons bind:__l="__l" bindclickNext="{{z}}" class="data-v-09d06219" uI="09d06219-7" uP="{{A}}" wx:if="{{A}}"></step-buttons>
+    <st-picker bind:__l="__l" bindinput="{{B}}" bindselect="{{C}}" class="data-v-09d06219" uI="09d06219-8" uP="{{D}}" wx:if="{{D}}"></st-picker>
+    <mp-dialog bind:__l="__l" bindclose="{{E}}" bindconfirm="{{F}}" class="bank-ocr-tips data-v-09d06219" uI="09d06219-9" uP="{{G}}" uS="{{['d']}}" wx:if="{{G}}">
+        <view class="bank-orc-example data-v-09d06219">
+            <view class="example-pic data-v-09d06219"></view>
+            <view class="example-desc data-v-09d06219">
+                <label class="data-v-09d06219">边框展示完整</label>
+                <label class="dot data-v-09d06219"></label>
+                <label class="data-v-09d06219">字迹清晰</label>
+                <label class="dot data-v-09d06219"></label>
+                <label class="data-v-09d06219">亮度均匀</label>
+            </view>
+        </view>
+        <label class="data-v-09d06219"></label>
+    </mp-dialog>
+    <block wx:if="{{H}}">
+        <bank-auth-popup bind:__l="__l" bindauthError="{{K}}" bindauthSuccess="{{J}}" bindinput="{{I}}" class="data-v-09d06219" uI="09d06219-10" uP="{{L}}" wx:if="{{L}}"></bank-auth-popup>
+    </block>
+</view>

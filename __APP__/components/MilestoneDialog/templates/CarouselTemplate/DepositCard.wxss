@@ -1,0 +1,36 @@
+@import "/app.wxss";
+.deposit-card.data-v-6e5b32c3 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: justify;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.266667rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 4.64rem;
+  justify-content: space-between;
+  padding: 0.92rem 0.426667rem 0.426667rem;
+  width: 8.346667rem;
+}
+.deposit-card__source.data-v-6e5b32c3 {
+  color: #475166;
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+}
+.deposit-card__amount.data-v-6e5b32c3 {
+  color: var(--color-red);
+  font-size: 0.64rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin-top: 0.32rem;
+}
+.deposit-card__date.data-v-6e5b32c3 {
+  color: #262e40;
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  opacity: 0.3;
+}

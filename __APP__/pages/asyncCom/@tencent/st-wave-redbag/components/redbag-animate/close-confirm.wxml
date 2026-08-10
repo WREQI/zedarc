@@ -1,0 +1,27 @@
+<view class="_div site-popup data-v-2010deee" wx:if="{{a}}">
+  <view class="{{['_div','yy-activity-comfirm','data-v-2010deee',l]}}">
+    <view class="_div yy-activity-confirm-title data-v-2010deee" wx:if="{{b}}"
+      >{{c}}</view
+    >
+    <view class="_div yy-activity-confirm-desc data-v-2010deee" wx:if="{{d}}"
+      >{{e}}</view
+    >
+    <view class="_div yy-activity-comfirm-actions data-v-2010deee">
+      <view
+        bindtap="{{g}}"
+        class="_div yy-activity-comfirm-action yy-activity-comfirm-actions-always data-v-2010deee"
+        >{{f}}</view
+      >
+      <view
+        bindtap="{{i}}"
+        class="_div yy-activity-comfirm-action yy-activity-confrim-actions-onlytoday data-v-2010deee"
+        >{{h}}</view
+      >
+      <view
+        bindtap="{{k}}"
+        class="_div yy-activity-comfirm-action yy-activity-confirm-actions-cancle data-v-2010deee"
+        >{{j}}</view
+      >
+    </view>
+  </view>
+</view>

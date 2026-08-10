@@ -1,0 +1,18 @@
+<view
+  class="{{['_div','data-v-b5908d58','reverse-container-wrapper',h,i]}}"
+  style="{{'top:'+j+';'+'left:'+0+';'+'right:'+0}}"
+  wx:if="{{a}}"
+>
+  <reverse-more-live-list
+    bind:__l="__l"
+    bindcloseSubscribeBar="{{c}}"
+    bindonReserve="{{f}}"
+    bindonReverseMoreLiveClose="{{b}}"
+    bindonSubscribe="{{d}}"
+    bindtapLiveCard="{{e}}"
+    class="reverse-container-list data-v-b5908d58"
+    uI="b5908d58-0"
+    uP="{{g}}"
+    wx:if="{{g}}"
+  ></reverse-more-live-list>
+</view>

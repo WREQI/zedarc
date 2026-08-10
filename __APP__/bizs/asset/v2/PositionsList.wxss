@@ -1,0 +1,76 @@
+@import "/app.wxss";
+.positions-list-container {
+  background-color: var(--fill-1);
+  position: relative;
+}
+.positions-list-container .empty-block {
+  background-color: var(--fill-2);
+  margin-bottom: 0.213333rem;
+}
+.positions-list-container .empty-block .title {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.853333rem;
+  line-height: 0.32rem;
+  line-height: 0.853333rem;
+  padding-left: 0.4rem;
+  position: relative;
+}
+.positions-list-container .empty-block .title:before {
+  border-color: transparent transparent var(--color-primary-1);
+  border-style: none solid solid;
+  border-width: 0 0.066667rem 0.08rem;
+  content: "";
+  display: block;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 0.026667rem) !important;
+  transform: translate(-50%, -100%) rotate(90deg);
+  transform-origin: center bottom;
+  width: 0.24rem;
+}
+.positions-list-container .empty-block .title.color-financial:before,
+.positions-list-container .empty-block .title.color-stock:before {
+  border-color: transparent transparent #e63535;
+}
+.positions-list-container .empty-block .title.color-cash:before {
+  border-color: transparent transparent #e5a73c;
+}
+.positions-list-container .ggt-bubble-tip {
+  position: absolute;
+  right: 0.32rem;
+  top: 0;
+  transform: translateZ(0);
+  width: -webkit-fit-content;
+  width: fit-content;
+  z-index: 36;
+}
+.positions-list-container .ggt-bubble-tip .bubble-tip {
+  padding: 0.213333rem 0.32rem;
+}
+.positions-list-container .ggt-bubble-tip .bubble-tip.top-center:after {
+  right: 41%;
+}
+.positions-list-container .ggt-bubble-tip .icon {
+  font-size: 0.266667rem;
+}
+.positions-list-container .ggt-bubble-tip .content {
+  font-size: 0.426667rem;
+  line-height: 0.586667rem;
+}
+.positions-list-container__simple-mode {
+  border-bottom-left-radius: 0.213333rem;
+  border-bottom-right-radius: 0.213333rem;
+}
+.positions-list-container__simple-mode .empty-block {
+  background-color: var(--fill-2);
+  margin-bottom: 0;
+  padding: 0.213333rem 0;
+}
+.positions-list-container__simple-mode .empty-block.last {
+  border-bottom-left-radius: 0.213333rem;
+  border-bottom-right-radius: 0.213333rem;
+  overflow: hidden;
+}

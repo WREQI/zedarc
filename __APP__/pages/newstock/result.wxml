@@ -1,0 +1,57 @@
+<page-meta class="data-v-e9bf911b" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-e9bf911b"
+  id="global-wrap"
+  uI="e9bf911b-0"
+  uP="{{q}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{q}}"
+>
+  <view class="container data-v-e9bf911b" hidden="{{!o}}">
+    <view class="scroll-content data-v-e9bf911b">
+      <view class="bd-cont data-v-e9bf911b">
+        <view class="{{['section-result','data-v-e9bf911b',n]}}">
+          <view class="banner-img data-v-e9bf911b">
+            <view class="symbol-suc flex-center data-v-e9bf911b">
+              <label class="icon icon-tick block data-v-e9bf911b"></label>
+            </view>
+            <view class="symbol-fail flex-center data-v-e9bf911b">
+              <label class="icon icon-mark block data-v-e9bf911b"></label>
+            </view>
+            <view class="symbol-inf flex-center data-v-e9bf911b">
+              <label class="icon icon-inf block data-v-e9bf911b"></label>
+            </view>
+          </view>
+          <view class="tit-result data-v-e9bf911b">
+            <view class="tit data-v-e9bf911b">
+              <label class="data-v-e9bf911b" wx:if="{{b}}">申购成功</label>
+              <label class="data-v-e9bf911b" wx:if="{{c}}"
+                >{{d}}支{{e}}申购失败</label
+              >
+              <label class="data-v-e9bf911b" wx:if="{{f}}">申购失败</label>
+            </view>
+            <view class="result-desc data-v-e9bf911b">
+              <label class="data-v-e9bf911b" wx:if="{{g}}"
+                >中签公布日期为<label class="data-v-e9bf911b">{{h}}</label
+                >,请留意中签结果</label
+              >
+              <label class="data-v-e9bf911b" wx:else>{{i}}</label>
+            </view>
+          </view>
+          <view class="btn-line data-v-e9bf911b">
+            <button bindtap="{{k}}" class="data-v-e9bf911b" type="primary">
+              {{j}}
+            </button>
+          </view>
+          <view class="btn-tips data-v-e9bf911b" wx:if="{{l}}">
+            <button bindtap="{{m}}" class="data-v-e9bf911b">
+              查看申购记录
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</global-wrap>

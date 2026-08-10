@@ -1,0 +1,93 @@
+<view class="_div ai-reading-detail-card data-v-6ed22020" wx:if="{{a}}">
+  <view class="_div ai-content data-v-6ed22020">
+    <block wx:if="{{b}}">
+      <view class="_div ai-section-title data-v-6ed22020">
+        <image
+          alt=""
+          class="_img ai-section-title__icon data-v-6ed22020"
+          src="https://st.gtimg.com/design/e0eea46f684b49692a0b3d1b61fb7c11.png"
+        ></image>
+        <label class="_span ai-section-title__text data-v-6ed22020"
+          >AI总结</label
+        >
+      </view>
+      <view class="_div ai-summary-text data-v-6ed22020">
+        <view class="_div ai-summary-text__title data-v-6ed22020" wx:if="{{c}}">
+          <label class="_span ai-summary-text__dot data-v-6ed22020"></label>
+          <label class="_span ai-summary-text__title-content data-v-6ed22020"
+            >{{d}}</label
+          >
+        </view>
+        <view
+          class="{{['_div','data-v-6ed22020','ai-summary-text__item',itemSegs.d]}}"
+          wx:for="{{e}}"
+          wx:for-item="itemSegs"
+          wx:key="c"
+        >
+          <label class="_span ai-summary-text__index data-v-6ed22020"
+            >{{itemSegs.a}}.</label
+          >
+          <label class="_span ai-summary-text__item-content data-v-6ed22020"
+            >{{itemSegs.b}}</label
+          >
+        </view>
+      </view>
+    </block>
+    <view class="_div divider data-v-6ed22020" wx:if="{{f}}"></view>
+    <block wx:if="{{g}}">
+      <view class="_div ai-section-title data-v-6ed22020">
+        <image
+          alt=""
+          class="_img ai-section-title__icon data-v-6ed22020"
+          src="https://st.gtimg.com/design/0b8fcedbcb0532aac258bc7572b970fa.png"
+        ></image>
+        <label class="_span ai-section-title__text data-v-6ed22020"
+          >事件影响</label
+        >
+      </view>
+      <view class="_div ai-summary-text data-v-6ed22020">
+        <view class="_div ai-summary-text__title data-v-6ed22020" wx:if="{{h}}">
+          <label class="_span ai-summary-text__dot data-v-6ed22020"></label>
+          <label class="_span ai-summary-text__title-content data-v-6ed22020"
+            >{{i}}</label
+          >
+        </view>
+        <view
+          class="{{['_div','data-v-6ed22020','ai-summary-text__item',itemSegs.d]}}"
+          wx:for="{{j}}"
+          wx:for-item="itemSegs"
+          wx:key="c"
+        >
+          <label class="_span ai-summary-text__index data-v-6ed22020"
+            >{{itemSegs.a}}.</label
+          >
+          <label class="_span ai-summary-text__item-content data-v-6ed22020"
+            >{{itemSegs.b}}</label
+          >
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="_div ai-footer data-v-6ed22020">
+    <view bindtap="{{k}}" class="_div left data-v-6ed22020">免责声明</view>
+    <view class="_div right data-v-6ed22020">
+      <view
+        bindtap="{{m}}"
+        class="{{['_i','data-v-6ed22020','ai-icon','ai-icon-like',l]}}"
+      ></view>
+      <view
+        bindtap="{{o}}"
+        class="{{['_i','data-v-6ed22020','ai-icon','ai-icon-dislike',n]}}"
+      ></view>
+      <view
+        bindtap="{{p}}"
+        class="{{['_i','data-v-6ed22020','ai-icon','ai-icon-copy']}}"
+      ></view>
+      <view
+        bindtap="{{r}}"
+        class="{{['_i','data-v-6ed22020','ai-icon','ai-icon-share']}}"
+        wx:if="{{q}}"
+      ></view>
+    </view>
+  </view>
+</view>

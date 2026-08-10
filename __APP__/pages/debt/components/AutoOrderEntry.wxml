@@ -1,0 +1,19 @@
+<view
+  catchtap="{{j}}"
+  class="{{['auto-order-entry','flex-between','flex-vcenter','border--top','data-v-e78bb8a2',i]}}"
+  wx:if="{{a}}"
+>
+  <view class="left flex-vcenter data-v-e78bb8a2">
+    <view class="{{['order-icon','data-v-e78bb8a2',b,c]}}"></view>
+    <view class="order-text data-v-e78bb8a2">{{d}}</view>
+  </view>
+  <view class="right data-v-e78bb8a2">
+    <view class="flex-vcenter data-v-e78bb8a2" wx:if="{{e}}">
+      <view class="action-text data-v-e78bb8a2">{{f}}</view>
+      <label class="icon icon-arrow-right right-arrow data-v-e78bb8a2"></label>
+    </view>
+    <view class="flex-vcenter data-v-e78bb8a2" wx:else>
+      <button catchtap="{{h}}" class="action-btn data-v-e78bb8a2">{{g}}</button>
+    </view>
+  </view>
+</view>

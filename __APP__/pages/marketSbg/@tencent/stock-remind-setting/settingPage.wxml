@@ -1,0 +1,106 @@
+<view class="_div data-v-5b792e5f">
+  <topbar
+    bind:__l="__l"
+    bindgetTopBarHeight="{{b}}"
+    class="data-v-5b792e5f"
+    uI="5b792e5f-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></topbar>
+  <view class="{{['_div','data-v-5b792e5f','md-setting-page',N,O]}}">
+    <block wx:if="{{d}}">
+      <view
+        class="_div stock-info-box md-box debt data-v-5b792e5f"
+        style="{{'top:'+h}}"
+        wx:if="{{e}}"
+      >
+        <view class="_div left-wrapper data-v-5b792e5f">
+          <view class="_div stock-name data-v-5b792e5f">{{f}}</view>
+          <view
+            class="{{['_div','data-v-5b792e5f','right-text','up','is-debt']}}"
+            >{{g}}</view
+          >
+        </view>
+      </view>
+      <view
+        class="_div stock-info-box md-box data-v-5b792e5f"
+        style="{{'top:'+s}}"
+        wx:else
+      >
+        <view class="_div left-wrapper data-v-5b792e5f">
+          <view class="_div stock-name data-v-5b792e5f">{{i}}</view>
+          <view class="_div stock-info data-v-5b792e5f">
+            <view
+              class="{{['_div','data-v-5b792e5f','stock-price','right-text',k]}}"
+              >{{j}}</view
+            >
+            <view
+              class="{{['_div','data-v-5b792e5f','stock-zde','right-text',m]}}"
+              >{{l}}</view
+            >
+            <view
+              class="{{['_div','data-v-5b792e5f','stock-zdf','right-text',o]}}"
+              >{{n}}</view
+            >
+          </view>
+        </view>
+        <switch-btn
+          bind:__l="__l"
+          bindtoggleChoose="{{q}}"
+          class="data-v-5b792e5f"
+          uI="5b792e5f-1"
+          uP="{{r}}"
+          wx:if="{{p}}"
+        ></switch-btn>
+      </view>
+    </block>
+    <open-remind-pop
+      bind:__l="__l"
+      bindclose="{{w}}"
+      bindsubscribeStockRemind="{{v}}"
+      class="data-v-5b792e5f"
+      uI="5b792e5f-2"
+      uP="{{x}}"
+      wx:if="{{t}}"
+    ></open-remind-pop>
+    <setting-detail
+      bind:__l="__l"
+      bindaddItem="{{J}}"
+      bindcloseEditTip="{{K}}"
+      bindfirstSetRemind="{{F}}"
+      bindfirstSetRemindWithNewItem="{{G}}"
+      bindhandleRemindClick="{{C}}"
+      bindhasActiveRemind="{{E}}"
+      bindprefillItemDeleted="{{L}}"
+      bindsettingEmpty="{{D}}"
+      bindshowModal="{{H}}"
+      bindshowToast="{{I}}"
+      bindsubmitDelete="{{z}}"
+      bindupdateRemindData="{{A}}"
+      bindupdateSmartData="{{B}}"
+      class="r data-v-5b792e5f"
+      uI="5b792e5f-3"
+      uP="{{M}}"
+      uR="settingDetail"
+      wx:if="{{M}}"
+    ></setting-detail>
+  </view>
+  <upgrade-pop
+    bind:__l="__l"
+    bindclose="{{Q}}"
+    bindupgradeSmart="{{R}}"
+    class="data-v-5b792e5f"
+    uI="5b792e5f-4"
+    uP="{{S}}"
+    wx:if="{{P}}"
+  ></upgrade-pop>
+  <add-item-modal
+    bind:__l="__l"
+    bindcloseModal="{{U}}"
+    bindtoggleSelect="{{V}}"
+    class="data-v-5b792e5f"
+    uI="5b792e5f-5"
+    uP="{{W}}"
+    wx:if="{{T}}"
+  ></add-item-modal>
+</view>

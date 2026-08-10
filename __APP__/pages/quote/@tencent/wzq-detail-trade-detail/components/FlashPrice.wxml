@@ -1,0 +1,16 @@
+<view
+  class="{{['_div','item-wrapper','data-v-34443aac',i&&'ten-trans',j&&'bg-color-rise',k&&'bg-color-drop']}}"
+>
+  <view class="_div item-content data-v-34443aac">
+    <view class="_div title data-v-34443aac">{{a}}{{b}}</view>
+    <view catchtap="{{e}}" class="{{['_div','price','data-v-34443aac',d]}}"
+      >{{c}}</view
+    >
+  </view>
+  <view class="_div amount data-v-34443aac"
+    >{{f}}<view
+      class="{{['_div','bg-amount','data-v-34443aac',g]}}"
+      style="{{'width:'+h}}"
+    ></view>
+  </view>
+</view>

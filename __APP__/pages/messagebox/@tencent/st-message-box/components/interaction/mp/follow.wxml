@@ -1,0 +1,33 @@
+<scroll-view
+  bindrefresherrefresh="{{i}}"
+  bindscroll="{{k}}"
+  bindscrolltolower="{{j}}"
+  class="index-item-container data-v-fd0d9fcf"
+  refresherEnabled="{{true}}"
+  refresherThreshold="100"
+  refresherTriggered="{{h}}"
+  scrollY="{{true}}"
+>
+  <view class="_div data-v-fd0d9fcf">
+    <follow-content
+      bind:__l="__l"
+      bindrefreshFail="{{c}}"
+      bindrefreshSuccess="{{b}}"
+      class="r data-v-fd0d9fcf"
+      uI="fd0d9fcf-0"
+      uP="{{d}}"
+      uR="contentRef"
+      wx:if="{{d}}"
+    ></follow-content>
+    <view class="_div status-container data-v-fd0d9fcf" wx:if="{{e}}">
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{f}}"
+        class="data-v-fd0d9fcf"
+        uI="fd0d9fcf-1"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></st-status>
+    </view>
+  </view>
+</scroll-view>

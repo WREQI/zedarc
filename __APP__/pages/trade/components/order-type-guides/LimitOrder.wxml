@@ -1,0 +1,32 @@
+<guide-layout
+  bind:__l="__l"
+  class="data-v-755125df"
+  uI="755125df-0"
+  uS="{{['d']}}"
+>
+  <section-card
+    bind:__l="__l"
+    class="data-v-755125df"
+    uI="755125df-1,755125df-0"
+    uS="{{['title','content']}}"
+  >
+    <view class="data-v-755125df" slot="title">限价单</view>
+    <view class="data-v-755125df" slot="content"
+      >指投资者可根据指定的价格进行买入或卖出委托。</view
+    >
+  </section-card>
+  <section-card
+    bind:__l="__l"
+    class="data-v-755125df"
+    uI="755125df-2,755125df-0"
+    uS="{{['title','content']}}"
+  >
+    <view class="data-v-755125df" slot="title">成交规则</view>
+    <view class="data-v-755125df" slot="content"
+      >撮合成交时，交易系统会按照满足投资者委托价格要求的最优成交价格成交。以买入为例，如委托队列如下图所示：<view
+        class="intro-bg data-v-755125df"
+      ></view
+      >如投资者选择限价委托以199.96的价格申报买入300手，那么该笔申报暂时无法成交，需卖一价格到达或者低于199.96才能成交。若当日交易结束后最优五个卖档价格始终未达到或者低于199.96，则该笔委托将失效并在收盘后进行撤单操作。</view
+    >
+  </section-card>
+</guide-layout>

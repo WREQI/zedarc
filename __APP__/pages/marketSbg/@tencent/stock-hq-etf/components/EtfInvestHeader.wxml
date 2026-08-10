@@ -1,0 +1,58 @@
+<view class="_div etf-invest-card-header data-v-40d06035">
+  <view class="_div etf-invest-card__logo data-v-40d06035" wx:if="{{a}}">
+    <st-mini-mins
+      bind:__l="__l"
+      class="etf-invest-card__logo-chart data-v-40d06035"
+      uI="40d06035-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></st-mini-mins>
+  </view>
+  <view
+    bindtap="{{d}}"
+    class="_div etf-invest-card__name-wrap etf-invest-card__name-wrap--clickable data-v-40d06035"
+  >
+    <view class="_div etf-invest-card__name data-v-40d06035">{{c}}</view>
+  </view>
+  <image
+    alt="{{h}}"
+    bindtap="{{i}}"
+    class="{{['_img','data-v-40d06035','etf-invest-card__watchlist',f]}}"
+    src="{{g}}"
+    wx:if="{{e}}"
+  ></image>
+  <view
+    bindtap="{{m}}"
+    class="_div etf-invest-card__metric etf-invest-card__metric--ratio data-v-40d06035"
+  >
+    <view
+      class="{{['_div','data-v-40d06035','etf-invest-card__metric-value',k]}}"
+      >{{j}}</view
+    >
+    <view class="_div etf-invest-card__metric-label data-v-40d06035"
+      >{{l}}</view
+    >
+  </view>
+  <view
+    class="_div etf-invest-card__metric etf-invest-card__metric--relevance data-v-40d06035"
+    wx:if="{{n}}"
+  >
+    <view class="_div etf-invest-card__metric-value data-v-40d06035"
+      >{{o}}</view
+    >
+    <view class="_div etf-invest-card__metric-label data-v-40d06035"
+      >板块相关性</view
+    >
+  </view>
+  <view
+    bindtap="{{q}}"
+    class="_div etf-invest-card__metric etf-invest-card__metric--price data-v-40d06035"
+  >
+    <view class="_div etf-invest-card__metric-value data-v-40d06035"
+      >{{p}}</view
+    >
+    <view class="_div etf-invest-card__metric-label data-v-40d06035"
+      >买一笔仅需</view
+    >
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view
+  class="{{['_div','yy-bubble','data-v-1e10b008',i,j]}}"
+  ref="bubble"
+  style="{{h}}"
+  wx:if="{{a}}"
+>
+  <view class="_div logo data-v-1e10b008" wx:if="{{b}}">
+    <slot name="yy-bubble-logo" wx:if="{{$slots['yy-bubble-logo']}}"></slot>
+    <block wx:else>
+      <icon
+        bind:__l="__l"
+        class="st-bubble-logo data-v-1e10b008"
+        uI="1e10b008-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></icon>
+    </block>
+  </view>
+  <view class="_div text data-v-1e10b008">
+    <slot name="yy-bubble-text"></slot>
+  </view>
+  <view bindtap="{{f}}" class="_div close-box data-v-1e10b008" wx:if="{{d}}">
+    <icon
+      bind:__l="__l"
+      class="close-img data-v-1e10b008"
+      uI="1e10b008-1"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></icon>
+  </view>
+  <image
+    class="arrow data-v-1e10b008"
+    src="https://st.gtimg.com/design/fa6b38cdf118481c68cdf14cf573f317.png"
+    style="{{g}}"
+  ></image>
+</view>

@@ -1,0 +1,56 @@
+<view
+  class="{{['lottery-share-dialog','data-v-b1837407',o&&'lottery-share-dialog--simple',p&&'lottery-share-dialog--zxg']}}"
+  wx:if="{{a}}"
+>
+  <view class="lottery-share-dialog__wrapper data-v-b1837407">
+    <view class="lottery-share-dialog__header data-v-b1837407">
+      <view catchtap="{{b}}" class="lottery-share-dialog__back data-v-b1837407"
+        >返回</view
+      >
+      <view
+        catchtap="{{c}}"
+        class="lottery-share-dialog__close data-v-b1837407"
+      ></view>
+    </view>
+    <view class="lottery-share-dialog__content-frame data-v-b1837407">
+      <scroll-view
+        scrollY
+        bindscroll="{{j}}"
+        bindscrolltolower="{{k}}"
+        class="{{['lottery-share-dialog__content','data-v-b1837407',i&&'lottery-share-dialog__content--scrollable']}}"
+        lowerThreshold="{{1}}"
+      >
+        <image
+          showMenuByLongpress
+          class="lottery-share-dialog__snapshot data-v-b1837407"
+          mode="widthFix"
+          src="{{e}}"
+          wx:if="{{d}}"
+        ></image>
+        <view
+          class="lottery-share-dialog__skeleton data-v-b1837407"
+          wx:if="{{f}}"
+        >
+          <view
+            catchtap="{{h}}"
+            class="lottery-share-dialog__retry data-v-b1837407"
+            wx:if="{{g}}"
+            >加载失败，点击重试</view
+          >
+          <view class="lottery-share-dialog__loading data-v-b1837407" wx:else
+            >图片加载中…</view
+          >
+        </view>
+      </scroll-view>
+      <view
+        class="{{['lottery-share-dialog__shadow','lottery-share-dialog__shadow--top','data-v-b1837407',l&&'lottery-share-dialog__shadow--visible']}}"
+      ></view>
+      <view
+        class="{{['lottery-share-dialog__shadow','lottery-share-dialog__shadow--bottom','data-v-b1837407',m&&'lottery-share-dialog__shadow--visible']}}"
+      ></view>
+    </view>
+    <view class="lottery-share-dialog__save-tip data-v-b1837407" wx:if="{{n}}"
+      >长按图片保存即可分享</view
+    >
+  </view>
+</view>

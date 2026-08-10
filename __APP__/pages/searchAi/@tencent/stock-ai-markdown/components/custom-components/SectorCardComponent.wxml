@@ -1,0 +1,22 @@
+<view bindtap="{{h}}" class="_div sector-card-wrapper data-v-2412d0ec">
+  <view class="_div sector-card__content data-v-2412d0ec">
+    <view class="_div sector-card__header data-v-2412d0ec">
+      <view class="_div sector-card__title data-v-2412d0ec">{{a}}</view>
+    </view>
+    <view class="_div sector-card__stats data-v-2412d0ec">
+      <view class="_div sector-card__performance data-v-2412d0ec"
+        >今日<label class="{{['_span','data-v-2412d0ec',c]}}">{{b}}</label>，
+        年初至今<label class="{{['_span','data-v-2412d0ec',e]}}">{{d}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div sector-card__chart data-v-2412d0ec">
+    <stock-item-chart
+      bind:__l="__l"
+      class="stock-type data-v-2412d0ec"
+      uI="2412d0ec-0"
+      uP="{{g}}"
+      wx:if="{{f}}"
+    ></stock-item-chart>
+  </view>
+</view>

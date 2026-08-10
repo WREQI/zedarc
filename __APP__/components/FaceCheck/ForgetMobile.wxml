@@ -1,0 +1,6 @@
+<view class="forget-mobile-text data-v-635d62f9" wx:if="{{a}}">
+  <label class="data-v-635d62f9">手机号码无法验证？</label>
+  <label bindtap="{{b}}" class="action-text data-v-635d62f9"
+    >用人脸识别验证</label
+  >
+</view>

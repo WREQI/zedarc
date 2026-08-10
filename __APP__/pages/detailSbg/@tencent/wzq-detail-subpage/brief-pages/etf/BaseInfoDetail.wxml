@@ -1,0 +1,137 @@
+<view class="{{['_div','base-info-wrapper','data-v-6d5c45f3',A&&'wzq']}}">
+  <view class="_div base-info-block data-v-6d5c45f3" wx:if="{{a}}">
+    <view class="_div base-block-title data-v-6d5c45f3">基本信息</view>
+    <view class="_div base-block-content data-v-6d5c45f3">
+      <view
+        class="_div base-block-row data-v-6d5c45f3"
+        wx:for="{{b}}"
+        wx:for-item="title"
+        wx:key="e"
+      >
+        <view class="_div base-block-inner data-v-6d5c45f3">{{title.a}}</view>
+        <view class="_div base-block-after data-v-6d5c45f3" wx:if="{{title.b}}"
+          >{{title.c}}</view
+        >
+        <view class="_div base-block-after data-v-6d5c45f3" wx:else
+          >{{title.d}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div base-info-block data-v-6d5c45f3" wx:if="{{c}}">
+    <view catchtap="{{d}}" class="_div base-block-title data-v-6d5c45f3">
+      <label class="_span data-v-6d5c45f3">交易信息</label>
+      <label class="_span icon-tips data-v-6d5c45f3"></label>
+    </view>
+    <view class="_div base-block-content data-v-6d5c45f3">
+      <view
+        class="_div base-block-row data-v-6d5c45f3"
+        wx:for="{{e}}"
+        wx:for-item="title"
+        wx:key="c"
+      >
+        <view class="_div base-block-inner data-v-6d5c45f3">{{title.a}}</view>
+        <view class="_div base-block-after data-v-6d5c45f3">{{title.b}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div base-info-block data-v-6d5c45f3" wx:if="{{f}}">
+    <view class="_div base-block-title data-v-6d5c45f3">投资目标</view>
+    <view class="_div base-block-content text-content data-v-6d5c45f3"
+      >{{g}}</view
+    >
+  </view>
+  <view class="_div base-info-block data-v-6d5c45f3" wx:if="{{h}}">
+    <view class="_div base-block-title data-v-6d5c45f3">投资策略</view>
+    <view
+      bindtap="{{p}}"
+      class="{{['_div','data-v-6d5c45f3','base-block-content text-content',o]}}"
+    >
+      <label class="_span strategy-content data-v-6d5c45f3">{{i}}</label>
+      <label class="_span sp-more data-v-6d5c45f3" hidden="{{!k}}">{{j}}</label>
+      <label class="_span sp-more data-v-6d5c45f3" hidden="{{!l}}"
+        >...展开</label
+      >
+      <label class="_span sp-more wrap-row data-v-6d5c45f3" hidden="{{!m}}"
+        >收起</label
+      >
+      <view
+        class="_div data-v-6d5c45f3"
+        hidden="{{!n}}"
+        style="clear: both"
+      ></view>
+    </view>
+  </view>
+  <view class="_div base-info-block data-v-6d5c45f3" wx:if="{{q}}">
+    <view class="_div base-block-title data-v-6d5c45f3">基金经理</view>
+    <view class="_div base-block-content data-v-6d5c45f3">
+      <view
+        class="_div manage-item-content data-v-6d5c45f3"
+        wx:for="{{r}}"
+        wx:key="j"
+      >
+        <view class="_div manage-item-info data-v-6d5c45f3">
+          <view class="_div manage-item-media data-v-6d5c45f3">
+            <image
+              class="_img manage-avatar data-v-6d5c45f3"
+              src="{{item.a}}"
+            ></image>
+          </view>
+          <view class="_div manage-item-after data-v-6d5c45f3">
+            <view class="_div manage-item-name data-v-6d5c45f3"
+              >{{item.b}}</view
+            >
+            <view class="_div manage-item-work data-v-6d5c45f3">
+              <view class="_div manage-work-content data-v-6d5c45f3">
+                <view class="_div manage-work-item data-v-6d5c45f3">
+                  <view class="_div manage-item-work-title data-v-6d5c45f3"
+                    >累计从业</view
+                  >
+                  <view class="_div manage-item-work-value data-v-6d5c45f3"
+                    >{{item.c}}</view
+                  >
+                </view>
+                <view class="_div manage-work-item data-v-6d5c45f3">
+                  <view class="_div manage-item-work-title data-v-6d5c45f3"
+                    >任期回报</view
+                  >
+                  <view
+                    class="{{['_div','data-v-6d5c45f3','manage-item-work-value',item.e]}}"
+                    >{{item.d}}</view
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="_div manage-item-desc data-v-6d5c45f3">
+          <view
+            class="{{['_div','manage-item-desc-inner','data-v-6d5c45f3',item.i&&'text-row-3']}}"
+          >
+            <label class="_span data-v-6d5c45f3">{{item.f}}</label>
+            <label catchtap="{{item.h}}" class="_span sp-more data-v-6d5c45f3"
+              >{{item.g}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-6d5c45f3" wx:if="{{s}}"></view>
+  <tips-info-modal
+    bind:__l="__l"
+    bindclose="{{v}}"
+    class="data-v-6d5c45f3"
+    uI="6d5c45f3-0"
+    uP="{{w}}"
+    wx:if="{{t}}"
+  ></tips-info-modal>
+  <tips-info-wzq
+    bind:__l="__l"
+    bindclose="{{y}}"
+    class="data-v-6d5c45f3"
+    uI="6d5c45f3-1"
+    uP="{{z}}"
+    wx:if="{{x}}"
+  ></tips-info-wzq>
+</view>

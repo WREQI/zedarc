@@ -1,0 +1,36 @@
+<scroll-view
+  binddragend="{{i}}"
+  binddragging="{{j}}"
+  binddragstart="{{h}}"
+  bindscroll="{{g}}"
+  bindtap="{{k}}"
+  class="{{['data-v-d63a6428','scroll-view',b]}}"
+  enableFlex="{{true}}"
+  enhanced="{{true}}"
+  scrollAnchoring="{{f}}"
+  scrollIntoView="{{e}}"
+  scrollTop="{{d}}"
+  scrollWithAnimation="{{c}}"
+  scrollY="{{true}}"
+  showScrollbar="{{false}}"
+  style="{{'height:'+'100%'}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','data-v-d63a6428','mpMainList']}}">
+    <slot></slot>
+    <view class="_div mpBottomSpacer data-v-d63a6428"></view>
+    <view class="_div data-v-d63a6428" id="mpBottom1"></view>
+    <view class="_div data-v-d63a6428" id="mpBottom2"></view>
+  </view>
+</scroll-view>
+<view
+  bindscroll="{{q}}"
+  bindtouchmove="{{o}}"
+  bindtouchstart="{{n}}"
+  capture-bind:touchend="{{p}}"
+  class="{{['_div','data-v-d63a6428','mainList',l&&'scroll-disabled',m&&'wzq-resume']}}"
+  ref="mainList"
+  wx:else
+>
+  <slot></slot>
+</view>

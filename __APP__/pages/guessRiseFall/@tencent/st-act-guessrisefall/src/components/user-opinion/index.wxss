@@ -1,0 +1,166 @@
+.opinion-panel__title-area.data-v-73af494f {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.opinion-panel__shadow-title.data-v-73af494f {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(1turn, #f6f6f6, #d8d8d8);
+  -webkit-background-clip: text;
+  color: #323336;
+  font-family: DIN;
+  font-size: 0.64rem;
+  font-weight: 900;
+  line-height: 0.7866666666666666rem;
+  opacity: 0.3;
+}
+.opinion-panel__main-title.data-v-73af494f {
+  align-items: center;
+  color: #323336;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.5066666666666667rem;
+  font-weight: 600;
+  margin-top: -0.26666666666666666rem;
+}
+.opinion-panel__title-label.data-v-73af494f {
+  font-family: TTTGBMedium;
+}
+.opinion-panel__subtitle.data-v-73af494f {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+}
+.opinion-panel__subtitle-left.data-v-73af494f {
+  margin-right: 0.06666666666666667rem;
+}
+.opinion-panel__subtitle-right.data-v-73af494f {
+  margin-left: 0.06666666666666667rem;
+}
+.opinion-panel.data-v-73af494f {
+  padding: 0.26666666666666666rem 0;
+  position: relative;
+}
+.opinion-panel__list.data-v-73af494f {
+  display: -webkit-flex;
+  display: flex;
+  max-height: 11.013333333333334rem;
+  min-height: 2rem;
+  overflow: hidden;
+  padding-top: 0.4rem;
+}
+.opinion-panel__list--max2.data-v-73af494f {
+  max-height: 8.933333333333334rem;
+}
+.opinion-panel__list--max1.data-v-73af494f {
+  max-height: 6.133333333333334rem;
+}
+.opinion-panel__column.data-v-73af494f {
+  flex: 1;
+  max-width: calc(100% - 4.44rem);
+  overflow: hidden;
+}
+.opinion-panel__column--left.data-v-73af494f {
+  margin-right: 0.16rem;
+}
+.opinion-panel__column--right.data-v-73af494f {
+  margin-left: 0.16rem;
+}
+.opinion-panel__card.data-v-73af494f {
+  background: #fff;
+  border: 0.013333333333333334rem solid hsla(218, 5%, 68%, 0.2);
+  border-radius: 0 0 0.4rem;
+  box-shadow: 0 0.08rem 0.08rem rgba(0, 0, 0, 0.04);
+  margin: 0 0.10666666666666667rem 0.26666666666666666rem;
+  overflow: hidden;
+}
+.opinion-panel__scroll.data-v-73af494f {
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  display: block;
+  max-height: 9.466666666666667rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  width: 100%;
+}
+.opinion-panel__scroll--with-actions.data-v-73af494f {
+  padding-bottom: 1.76rem;
+}
+.opinion-panel__label.data-v-73af494f {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  justify-content: center;
+  width: 100%;
+}
+.opinion-panel__label--positive.data-v-73af494f {
+  background: url(https://st.gtimg.com/design/dad3d30c19c56db432a360873b3fb227.png);
+  background-size: 100% 100%;
+  color: #e63535;
+  height: 1.0266666666666666rem;
+}
+.opinion-panel__label--negative.data-v-73af494f {
+  background: url(https://st.gtimg.com/design/c51383538a3958c18750d92049c035a0.png);
+  background-size: 100% 100%;
+  color: #1caa3c;
+  height: 1.0266666666666666rem;
+}
+.opinion-panel__actions.data-v-73af494f {
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 96%, 0),
+    #f5f5f5 40%,
+    hsla(0, 0%, 100%, 0.8)
+  );
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 0.10666666666666667rem;
+  padding-top: 1.8266666666666667rem;
+  pointer-events: none;
+  position: absolute;
+  width: calc(100% - 0.21333333333333335rem);
+  z-index: 9;
+}
+.opinion-panel__actions--compact.data-v-73af494f {
+  padding-top: 0;
+}
+.opinion-panel__action-btn.data-v-73af494f {
+  align-items: center;
+  border-radius: 0.5866666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  pointer-events: auto;
+  width: 100%;
+}
+.opinion-panel__action-btn--rise.data-v-73af494f {
+  background-image: linear-gradient(270deg, #e63535, #ef5350);
+}
+.opinion-panel__action-btn--fall.data-v-73af494f {
+  background-image: linear-gradient(270deg, #1caa3c 1%, #57d673);
+  margin-left: 0.3333333333333333rem;
+}
+.opinion-panel__pen-icon.data-v-73af494f {
+  background: url(https://st.gtimg.com/design/c2c6ad384746ad26d3d9fd31e7f07e3e.svg);
+  background-size: 100% 100%;
+  height: 0.4rem;
+  margin-right: 0.2rem;
+  position: relative;
+  top: -0.02666666666666667rem;
+  width: 0.4rem;
+}
+.opinion-panel__placeholder.data-v-73af494f {
+  height: 4.666666666666667rem;
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+<view class="_div data-v-343973cf">
+  <view class="{{['_div','speech','data-v-343973cf',B]}}">
+    <view
+      bindtap="{{e}}"
+      class="_div speech-ready data-v-343973cf"
+      wx:if="{{a}}"
+    >
+      <image
+        alt="ready_black"
+        class="_img ready-image data-v-343973cf"
+        src="{{c}}"
+        wx:if="{{b}}"
+      ></image>
+      <image
+        alt="ready_white"
+        class="_img ready-image data-v-343973cf"
+        src="{{d}}"
+        wx:else
+      ></image>
+      <label class="_span ready-text data-v-343973cf">听全文</label>
+    </view>
+    <view
+      bindtap="{{p}}"
+      class="{{['_div','speech-playing','data-v-343973cf',o]}}"
+      wx:if="{{f}}"
+    >
+      <view class="_div speech-ops data-v-343973cf">
+        <lottie
+          bind:__l="__l"
+          class="lottie-playing data-v-343973cf"
+          uI="343973cf-0"
+          uP="{{h}}"
+          wx:if="{{g}}"
+        ></lottie>
+        <image
+          alt=""
+          class="_img data-v-343973cf"
+          src="{{j}}"
+          wx:if="{{i}}"
+        ></image>
+        <label class="_span data-v-343973cf">{{k}}</label>
+      </view>
+      <view
+        catchtap="{{n}}"
+        class="_div speech-rate data-v-343973cf"
+        wx:if="{{l}}"
+      >
+        <label class="_span data-v-343973cf">{{m}}X</label>
+      </view>
+    </view>
+    <view
+      bindtap="{{y}}"
+      class="{{['_div','speech-pause','data-v-343973cf',x]}}"
+      wx:if="{{q}}"
+    >
+      <view class="_div speech-ops data-v-343973cf">
+        <image alt="" class="_img data-v-343973cf" src="{{r}}"></image>
+        <label class="_span data-v-343973cf">{{s}}</label>
+      </view>
+      <view
+        catchtap="{{w}}"
+        class="_div speech-rate data-v-343973cf"
+        wx:if="{{t}}"
+      >
+        <label class="_span data-v-343973cf">{{v}}X</label>
+      </view>
+    </view>
+    <audio
+      hidden
+      class="data-v-343973cf"
+      ref="audioRef"
+      src="{{A}}"
+      wx:if="{{z}}"
+    ></audio>
+  </view>
+</view>

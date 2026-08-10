@@ -1,0 +1,39 @@
+<view class="{{['_div','data-v-1784287e','header',j]}}">
+  <view
+    class="{{['_div','data-v-1784287e','list-container',e,f]}}"
+    wx:for="{{a}}"
+    wx:key="g"
+  >
+    <view
+      class="{{['_div','data-v-1784287e','title',item.d]}}"
+      wx:if="{{item.a}}"
+    >
+      <label class="_span title-name data-v-1784287e">{{item.b}}</label>
+      <image
+        catchtap="{{item.c}}"
+        class="_img tips data-v-1784287e"
+        src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+      ></image>
+    </view>
+    <view class="{{['_div','data-v-1784287e','item-container',d]}}">
+      <view
+        class="{{['_div','data-v-1784287e','item',c]}}"
+        wx:for="{{item.e}}"
+        wx:for-item="config"
+        wx:key="d"
+      >
+        <label class="{{['_span','data-v-1784287e','top-title',b]}}"
+          >{{config.a}}</label
+        >
+        <label class="{{['_span','data-v-1784287e','bottom-title',config.c]}}"
+          >{{config.b}}</label
+        >
+      </view>
+    </view>
+    <view class="_div spec-line data-v-1784287e" wx:if="{{item.f}}"></view>
+  </view>
+  <label class="{{['_span','data-v-1784287e','bottom-desc',i]}}" wx:if="{{g}}"
+    >{{h}}</label
+  >
+  <view class="_div spec-line data-v-1784287e"></view>
+</view>

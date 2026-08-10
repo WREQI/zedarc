@@ -1,0 +1,48 @@
+<view
+  class="{{['stock-list-container','stock-list--allocatedebt',i&&'border--bottom-c1']}}"
+>
+  <list-header
+    bind:__l="__l"
+    bindexplain="{{b}}"
+    bindsort="{{a}}"
+    uI="f0d0e206-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></list-header>
+  <view class="stock-list-body">
+    <view
+      bindtap="{{item.p}}"
+      class="stock-list-item"
+      wx:for="{{d}}"
+      wx:key="o"
+    >
+      <view class="{{['mock-border-bottom',item.a]}}"></view>
+      <view class="col-item col-a cell" wx:if="{{e}}">
+        <view class="{{['title',item.c,item.d]}}">{{item.b}}</view>
+        <view class="subtitle">
+          <market-label
+            bind:__l="__l"
+            class="stock-market"
+            uI="{{item.e}}"
+            uP="{{item.f}}"
+            wx:if="{{item.f}}"
+          ></market-label
+          >{{item.g}}</view
+        >
+      </view>
+      <view class="col-item col-a cell cell-hide" wx:else>***</view>
+      <view class="col-item col-b cell" wx:if="{{f}}">
+        <view class="title">{{item.h}}</view>
+      </view>
+      <view class="col-item col-b cell cell-hide" wx:else>***</view>
+      <view class="col-item col-c cell" wx:if="{{g}}">
+        <view class="{{['title',item.j,item.k]}}">{{item.i}}</view>
+      </view>
+      <view class="col-item col-c cell cell-hide" wx:else>***</view>
+      <view class="col-item col-d cell" wx:if="{{h}}">
+        <view class="{{['title',item.m,item.n]}}">{{item.l}}</view>
+      </view>
+      <view class="col-item col-d cell cell-hide" wx:else>***</view>
+    </view>
+  </view>
+</view>

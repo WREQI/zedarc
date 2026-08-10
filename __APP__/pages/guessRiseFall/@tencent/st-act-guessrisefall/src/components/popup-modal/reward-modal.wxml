@@ -1,0 +1,142 @@
+<view
+  catchtouchmove="{{H}}"
+  class="_div reward-modal data-v-77310ab3"
+  wx:if="{{a}}"
+>
+  <view class="_div reward-modal__reward-wrapper data-v-77310ab3" wx:if="{{b}}">
+    <view class="_div reward-modal__reward-body data-v-77310ab3">
+      <lottie-com
+        bind:__l="__l"
+        bindlottieReady="{{c}}"
+        class="data-v-77310ab3"
+        data-c-h="{{!false}}"
+        uI="77310ab3-0"
+      ></lottie-com>
+      <canvas
+        class="reward-modal__reward-lottie data-v-77310ab3"
+        disableScroll="{{true}}"
+        hidden="{{!d}}"
+        style="width: 600rpx; height: 502rpx"
+        type="2d"
+      ></canvas>
+      <view class="_div reward-modal__reward-image data-v-77310ab3">
+        <view class="_div reward-modal__reward-amount data-v-77310ab3">
+          <reward-core
+            bind:__l="__l"
+            class="data-v-77310ab3"
+            uI="77310ab3-1"
+            uP="{{e}}"
+            wx:if="{{e}}"
+          ></reward-core>
+        </view>
+      </view>
+      <view class="_div reward-modal__reward-tips data-v-77310ab3"
+        >恭喜获得</view
+      >
+      <view class="_div reward-modal__reward-desc data-v-77310ab3">
+        <reward-core
+          bind:__l="__l"
+          class="data-v-77310ab3"
+          uI="77310ab3-2"
+          uP="{{f}}"
+          wx:if="{{f}}"
+        ></reward-core>
+        <label class="_span data-v-77310ab3" wx:if="{{g}}">现金红包</label>
+      </view>
+      <view
+        class="_div reward-modal__reward-btns data-v-77310ab3"
+        wx:if="{{h}}"
+      >
+        <view
+          bindtap="{{i}}"
+          class="_div reward-modal__reward-btn--new data-v-77310ab3"
+          >开心收下</view
+        >
+        <view class="_div reward-modal__reward-new-text data-v-77310ab3"
+          >24小时内到账微信零钱</view
+        >
+      </view>
+      <view class="_div reward-modal__reward-btns data-v-77310ab3" wx:else>
+        <view
+          bindtap="{{j}}"
+          class="_div reward-modal__reward-btn--withdraw data-v-77310ab3"
+          >去提现</view
+        >
+        <view
+          bindtap="{{k}}"
+          class="_div reward-modal__reward-btn--continue data-v-77310ab3"
+          >继续问</view
+        >
+      </view>
+      <image
+        bindtap="{{l}}"
+        class="_img reward-modal__reward-close data-v-77310ab3"
+        src="https://st.gtimg.com/design/752962aece11212a850439b45f7f2548.png"
+      ></image>
+    </view>
+  </view>
+  <view
+    class="_div reward-modal__reward-wrapper data-v-77310ab3"
+    wx:elif="{{m}}"
+  >
+    <view class="_div reward-modal__error-wrap data-v-77310ab3">
+      <image
+        bindtap="{{n}}"
+        class="_img reward-modal__error-close data-v-77310ab3"
+        src="https://st.gtimg.com/design/752962aece11212a850439b45f7f2548.png"
+      ></image>
+      <view class="_div reward-modal__error-title data-v-77310ab3" wx:if="{{o}}"
+        >{{p}}</view
+      >
+      <view
+        class="{{['_div','reward-modal__error-subtitle','data-v-77310ab3',s&&'reward-modal__error-subtitle--untitle']}}"
+        wx:if="{{q}}"
+      >
+        <rich-text class="data-v-77310ab3" nodes="{{r}}"></rich-text>
+      </view>
+      <view bindtap="{{t}}" class="_div reward-modal__error-btn data-v-77310ab3"
+        >我知道了</view
+      >
+    </view>
+  </view>
+  <block wx:else>
+    <view class="_div reward-modal__mask data-v-77310ab3"></view>
+    <view class="_div reward-modal__box data-v-77310ab3">
+      <view class="_div reward-modal__content data-v-77310ab3">
+        <block wx:if="{{v}}">
+          <view class="_div reward-modal__title data-v-77310ab3">恭喜获得</view>
+          <view
+            class="{{['_div','reward-modal__coin-box','data-v-77310ab3',z&&'reward-modal__coin-box--active']}}"
+          >
+            <view class="_div reward-modal__num data-v-77310ab3">{{w}}</view>
+            <view class="_div reward-modal__unit data-v-77310ab3" wx:if="{{x}}"
+              >{{y}}</view
+            >
+          </view>
+          <view class="_div reward-modal__tip data-v-77310ab3" wx:if="{{A}}"
+            >{{B}}</view
+          >
+          <view class="_div reward-modal__footer data-v-77310ab3">
+            <view class="_div reward-modal__memo data-v-77310ab3">{{C}}</view>
+            <view bindtap="{{D}}" class="_div reward-modal__btn data-v-77310ab3"
+              >我知道了</view
+            >
+          </view>
+        </block>
+        <block wx:else>
+          <view
+            class="_div reward-modal__title reward-modal__title--hb data-v-77310ab3"
+            >恭喜获得</view
+          >
+          <view class="_div reward-modal__tip-img data-v-77310ab3">{{E}}</view>
+          <view class="_div reward-modal__footer data-v-77310ab3">
+            <view class="_div reward-modal__memo data-v-77310ab3">{{F}}</view>
+            <view bindtap="{{G}}" class="_div reward-modal__btn data-v-77310ab3"
+              >我知道了</view
+            >
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

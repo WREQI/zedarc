@@ -1,0 +1,22 @@
+<semi-mask
+  bind:__l="__l"
+  bindcloseSemimask="{{f}}"
+  class="r data-v-f1f27dbf"
+  uI="f1f27dbf-0"
+  uR="semimask"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div teach-info data-v-f1f27dbf">
+    <view class="_div nav-bar data-v-f1f27dbf">
+      <label class="_span title data-v-f1f27dbf">{{b}}</label>
+      <view bindtap="{{c}}" class="_div close-btn data-v-f1f27dbf">
+        <image
+          class="_img close-btn-img data-v-f1f27dbf"
+          src="https://st.gtimg.com/design/f2a8543fd8a53d011af849bf437d80d5.png"
+        ></image>
+      </view>
+    </view>
+    <view class="_div content data-v-f1f27dbf">{{d}}</view>
+  </view>
+</semi-mask>

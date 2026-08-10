@@ -1,0 +1,65 @@
+<mp-action-sheet
+  bind:__l="__l"
+  bindinput="{{r}}"
+  class="{{['district-select-actionsheet','plugin-component-action-sheet',q&&'isUnSubmitable']}}"
+  uI="7aa282a8-0"
+  uP="{{s}}"
+  uS="{{['d']}}"
+  wx:if="{{s}}"
+>
+  <view class="district-select-container">
+    <view class="result-wrapper">
+      <label bindtap="{{c}}" class="{{['result',b&&'active']}}">{{a}}</label>
+      <label bindtap="{{g}}" class="{{['result',f&&'active']}}" wx:if="{{d}}"
+        >{{e}}</label
+      >
+      <label bindtap="{{k}}" class="{{['result',j&&'active']}}" wx:if="{{h}}"
+        >{{i}}</label
+      >
+    </view>
+    <scroll-view
+      class="district-scroll-area"
+      scrollIntoView="{{o}}"
+      scrollY="true"
+    >
+      <view hidden="{{!m}}" id="idTOP">
+        <view class="popular-cities-title">热门城市</view>
+        <view class="popular-cities-grid">
+          <label
+            bindtap="{{popluar_city.c}}"
+            class="city-name"
+            wx:for="{{l}}"
+            wx:for-item="popluar_city"
+            wx:key="b"
+            >{{popluar_city.a}}</label
+          >
+        </view>
+      </view>
+      <view
+        class="district-wrapper flex-row"
+        id="{{item.g}}"
+        wx:for="{{n}}"
+        wx:key="h"
+      >
+        <view class="initial-wrap">
+          <label wx:if="{{item.a}}">{{item.b}}</label>
+        </view>
+        <label
+          bindtap="{{item.e}}"
+          class="{{['district-item','flex-1',item.d&&'primary-color']}}"
+          >{{item.c}}</label
+        >
+        <label class="icon icon-check primary-color" wx:if="{{item.f}}"></label>
+      </view>
+    </scroll-view>
+    <view class="initials-sidebar flex-column">
+      <label
+        bindtap="{{item.c}}"
+        class="initials-sidebar-item"
+        wx:for="{{p}}"
+        wx:key="b"
+        >{{item.a}}</label
+      >
+    </view>
+  </view>
+</mp-action-sheet>

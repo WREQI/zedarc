@@ -1,0 +1,33 @@
+<view class="_div share-wrapper data-v-78a1f15b">
+  <view catchtap="{{a}}" class="_div data-v-78a1f15b">
+    <share-button-wrapper
+      bind:__l="__l"
+      class="data-v-78a1f15b"
+      uI="78a1f15b-0"
+      uS="{{['d']}}"
+    >
+      <view
+        class="_div share-btn-wrapper friend data-v-78a1f15b"
+        hoverClass="onLongTouch"
+      >
+        <image
+          class="_img icon data-v-78a1f15b"
+          src="https://st.gtimg.com/design/c50f1a568b56d159b4f98b1d7e6790d5.png"
+        ></image>
+        <label class="_span data-v-78a1f15b">分享好友</label>
+      </view>
+    </share-button-wrapper>
+  </view>
+  <view
+    catchtap="{{c}}"
+    class="_div share-btn-wrapper circle data-v-78a1f15b"
+    hoverClass="onLongTouch"
+    wx:if="{{b}}"
+  >
+    <image
+      class="_img icon data-v-78a1f15b"
+      src="https://st.gtimg.com/design/97a011fb9f0603b395a3ec131adf4b25.png"
+    ></image>
+    <label class="_span data-v-78a1f15b">分享朋友圈</label>
+  </view>
+</view>

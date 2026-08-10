@@ -1,0 +1,15 @@
+<view bindtap="{{d}}" class="_div data-v-49181af7" hidden="{{!e}}">
+  <view
+    class="{{['_div','subscribe-btn','subscribed','data-v-49181af7',b]}}"
+    wx:if="{{a}}"
+    >已开启订阅</view
+  >
+  <view class="{{['_div','subscribe-btn','data-v-49181af7',c]}}" wx:else>
+    <image
+      alt=""
+      class="_img shake-img data-v-49181af7"
+      src="https://st.gtimg.com/design/509c2adc2da409bf4ea812720739b4b6.png"
+    ></image
+    >微信订阅</view
+  >
+</view>

@@ -1,0 +1,208 @@
+<view class="{{['_div','stock-list-container','data-v-a924b7dc',af]}}">
+  <view class="_div switch-bar data-v-a924b7dc" wx:if="{{a}}">
+    <view class="_div data-v-a924b7dc">可切换查看历史持仓信息</view>
+    <view
+      class="_div selector heavyFont data-v-a924b7dc"
+      id="assetsSelector"
+      ref="assetsSelector"
+    >
+      <label bindtap="{{c}}" class="_span data-v-a924b7dc">{{b}}</label>
+      <label
+        bindtap="{{d}}"
+        class="_span icon icon-date-triangle data-v-a924b7dc"
+      ></label>
+      <root-portal class="data-v-a924b7dc" enable="{{true}}" wx:if="{{e}}">
+        <select-plate
+          bind:__l="__l"
+          bindchangeTab="{{g}}"
+          class="r data-v-a924b7dc"
+          uI="a924b7dc-0"
+          uP="{{h}}"
+          uR="selectPlate"
+          wx:if="{{h}}"
+        ></select-plate>
+      </root-portal>
+    </view>
+  </view>
+  <view class="_div switch-bar data-v-a924b7dc" wx:if="{{i}}">
+    <view class="_div switch-container data-v-a924b7dc">
+      <view
+        bindtap="{{k}}"
+        class="{{['_div','switch-item','data-v-a924b7dc',j&&'active']}}"
+        >实时持仓</view
+      >
+      <view
+        bindtap="{{m}}"
+        class="{{['_div','switch-item','data-v-a924b7dc',l&&'active']}}"
+        >季度持仓</view
+      >
+    </view>
+    <view
+      class="{{['_div','data-v-a924b7dc','selector',x&&'heavyFont']}}"
+      id="assetsSelector"
+      ref="assetsSelector"
+      wx:if="{{n}}"
+    >
+      <label class="_span selector-tip-text data-v-a924b7dc">更新时间</label>
+      <label bindtap="{{p}}" class="_span data-v-a924b7dc">{{o}}</label>
+      <label
+        bindtap="{{r}}"
+        class="{{['_span','data-v-a924b7dc','icon',q]}}"
+      ></label>
+      <root-portal class="data-v-a924b7dc" enable="{{true}}" wx:if="{{s}}">
+        <select-plate
+          bind:__l="__l"
+          bindchangeTab="{{v}}"
+          class="r data-v-a924b7dc"
+          uI="a924b7dc-1"
+          uP="{{w}}"
+          uR="selectPlate"
+          wx:if="{{w}}"
+        ></select-plate>
+      </root-portal>
+    </view>
+  </view>
+  <view
+    class="{{['_div','tab-fund-asset','data-v-a924b7dc',E&&'no-border']}}"
+    wx:if="{{y}}"
+  >
+    <view class="_div tab-asset-title-wrapper data-v-a924b7dc">
+      <label class="_span data-v-a924b7dc">资产配置</label>
+    </view>
+    <view class="_div tab-asset-chart-wrapper data-v-a924b7dc">
+      <view class="_div tab-asset-left-area data-v-a924b7dc">
+        <view class="_div tab-asset-chart data-v-a924b7dc">
+          <f2
+            bind:__l="__l"
+            bindonInit="{{B}}"
+            class="r data-v-a924b7dc"
+            uI="a924b7dc-2"
+            uP="{{C}}"
+            uR="assetPieChart"
+            wx:if="{{z}}"
+          ></f2>
+        </view>
+      </view>
+      <view class="_div tab-asset-legend data-v-a924b7dc">
+        <view
+          class="_div tab-asset-item data-v-a924b7dc"
+          wx:for="{{D}}"
+          wx:key="c"
+        >
+          <view class="_div tab-asset-line data-v-a924b7dc"></view>
+          <view class="_div tab-asset-name data-v-a924b7dc">{{item.a}}</view>
+          <view class="_div tab-asset-ratio data-v-a924b7dc">{{item.b}}%</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div stock-list-block data-v-a924b7dc" wx:if="{{F}}">
+    <view class="_div assets-divider data-v-a924b7dc" wx:if="{{G}}"></view>
+    <assets-stock-list
+      bind:__l="__l"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-3"
+      uP="{{H}}"
+      wx:if="{{H}}"
+    ></assets-stock-list>
+  </view>
+  <view class="_div stock-list-block data-v-a924b7dc" wx:if="{{I}}">
+    <assets-stock-list
+      bind:__l="__l"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-4"
+      uP="{{J}}"
+      wx:if="{{J}}"
+    ></assets-stock-list>
+  </view>
+  <view class="_div stock-list-block data-v-a924b7dc" wx:if="{{K}}">
+    <assets-stock-list
+      bind:__l="__l"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-5"
+      uP="{{L}}"
+      wx:if="{{L}}"
+    ></assets-stock-list>
+  </view>
+  <view class="_div stock-list-block data-v-a924b7dc" wx:if="{{M}}">
+    <view class="_div assets-divider data-v-a924b7dc"></view>
+    <assets-stock-list
+      bind:__l="__l"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-6"
+      uP="{{N}}"
+      wx:if="{{N}}"
+    ></assets-stock-list>
+  </view>
+  <view class="_div stock-list-block data-v-a924b7dc" wx:if="{{O}}">
+    <view class="_div assets-divider data-v-a924b7dc"></view>
+    <assets-stock-list
+      bind:__l="__l"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-7"
+      uP="{{P}}"
+      wx:if="{{P}}"
+    ></assets-stock-list>
+  </view>
+  <view class="_div stock-industry-content data-v-a924b7dc" wx:if="{{Q}}">
+    <view class="_div assets-divider data-v-a924b7dc"></view>
+    <view class="_div title-wrapper data-v-a924b7dc">
+      <label class="_span data-v-a924b7dc">行业组合</label>
+    </view>
+    <view class="_div stock-industry-list data-v-a924b7dc">
+      <view
+        class="_div stock-industry-td stock-industry-header data-v-a924b7dc"
+      >
+        <label class="_span fund-rank-name data-v-a924b7dc">行业种类</label>
+        <label class="_span fund-rank-rate data-v-a924b7dc">净值占比</label>
+      </view>
+      <view
+        class="_div stock-industry-td stock-industry-body data-v-a924b7dc"
+        wx:for="{{R}}"
+        wx:key="c"
+      >
+        <label class="_span fund-rank-name data-v-a924b7dc">{{item.a}}</label>
+        <label class="_span fund-rank-rate data-v-a924b7dc">{{item.b}}%</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div error data-v-a924b7dc" wx:if="{{S}}">
+    <status
+      bind:__l="__l"
+      bindhandleError="{{T}}"
+      class="st-status data-v-a924b7dc"
+      uI="a924b7dc-8"
+      uP="{{U}}"
+      wx:if="{{U}}"
+    ></status>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-a924b7dc"
+    uI="a924b7dc-9"
+    uS="{{['d']}}"
+    wx:elif="{{V}}"
+  >
+    <view class="_div no-data-text data-v-a924b7dc">{{W}}</view>
+  </no-data>
+  <root-portal class="data-v-a924b7dc" enable="{{true}}" wx:if="{{X}}">
+    <wzq-info-modal
+      bind:__l="__l"
+      bindclose="{{Z}}"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-10"
+      uP="{{aa}}"
+      wx:if="{{Y}}"
+    ></wzq-info-modal>
+  </root-portal>
+  <root-portal class="data-v-a924b7dc" enable="{{true}}" wx:if="{{ab}}">
+    <etf-tip-modal
+      bind:__l="__l"
+      bindclose="{{ad}}"
+      class="data-v-a924b7dc"
+      uI="a924b7dc-11"
+      uP="{{ae}}"
+      wx:if="{{ac}}"
+    ></etf-tip-modal>
+  </root-portal>
+</view>

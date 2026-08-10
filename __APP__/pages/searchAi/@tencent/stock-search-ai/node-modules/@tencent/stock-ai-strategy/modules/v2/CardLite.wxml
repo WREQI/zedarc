@@ -1,0 +1,34 @@
+<view class="_div component-ai-strategy-card data-v-1d3ff431" wx:if="{{a}}">
+  <view class="_div card-title flex-vcenter flex-between data-v-1d3ff431">
+    <view class="_div title-text data-v-1d3ff431">
+      <label class="_span main-title-text data-v-1d3ff431">{{b}}</label>
+      <label class="_span sub-title-text data-v-1d3ff431">{{c}}更新</label>
+    </view>
+    <view class="_div change data-v-1d3ff431" wx:if="{{d}}">
+      <image
+        alt=""
+        class="_img change-icon data-v-1d3ff431"
+        src="https://st.gtimg.com/design/123b7e8342b9e3616b5f49bbb5686c66.png"
+      ></image>
+      <label bindtap="{{e}}" class="_span change-txt data-v-1d3ff431"
+        >换一换</label
+      >
+    </view>
+  </view>
+  <view class="_div card-content data-v-1d3ff431">
+    <stock-list
+      bind:__l="__l"
+      bindclick="{{g}}"
+      bindstar="{{f}}"
+      class="data-v-1d3ff431"
+      uI="1d3ff431-0"
+      uP="{{h}}"
+      wx:if="{{h}}"
+    ></stock-list>
+    <view
+      bindtap="{{k}}"
+      class="{{['_div','all-add-btn','data-v-1d3ff431',j&&'added']}}"
+      >{{i}}</view
+    >
+  </view>
+</view>

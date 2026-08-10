@@ -1,0 +1,38 @@
+<view
+  class="{{['_div','hangqingdetailpage-usdetaillist','data-v-ba9a12eb',d]}}"
+>
+  <view
+    class="_div usstock-wrapper data-v-ba9a12eb"
+    id="list"
+    numberOfRows="{{b}}"
+  >
+    <view
+      class="_div data-v-ba9a12eb"
+      wx:for="{{a}}"
+      wx:for-item="ui"
+      wx:key="g"
+    >
+      <view
+        class="_div stock-header-container data-v-ba9a12eb"
+        wx:if="{{ui.a}}"
+      >
+        <label class="_span stock-header-container-left-span data-v-ba9a12eb"
+          >{{ui.b}}</label
+        >
+        <label class="_span stock-header-container-right-span data-v-ba9a12eb"
+          >{{ui.c}}.US</label
+        >
+      </view>
+      <view class="_div us-separator data-v-ba9a12eb" wx:if="{{ui.d}}"></view>
+      <view class="_div stock-content-container data-v-ba9a12eb">
+        <label class="_span stock-content-container-left-span data-v-ba9a12eb"
+          >{{ui.e}}</label
+        >
+        <label class="_span stock-content-container-right-span data-v-ba9a12eb"
+          >{{ui.f}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div zxg-logo data-v-ba9a12eb" wx:if="{{c}}"></view>
+</view>

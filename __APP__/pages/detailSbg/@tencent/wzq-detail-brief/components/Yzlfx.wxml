@@ -1,0 +1,129 @@
+<view class="_div data-v-03ab689c">
+  <view class="_div chart-container data-v-03ab689c" wx:if="{{a}}">
+    <view class="_div chart-desc-content data-v-03ab689c">
+      <view class="_div chart-desc-item data-v-03ab689c">
+        <view class="_div chart-item-content data-v-03ab689c">
+          <label class="_span m-r-5 data-v-03ab689c">当前溢折率</label>
+          <label
+            class="{{['_span','data-v-03ab689c',d&&'up',e&&'down',f&&'equal']}}"
+            >{{b}}{{c}}%</label
+          >
+          <label class="_span data-v-03ab689c" wx:if="{{g}}">({{h}})</label>
+        </view>
+        <view
+          catchtap="{{j}}"
+          class="_div select-btn data-v-03ab689c"
+          id="yzlfxSelectbtn"
+        >
+          <view class="_div select-text data-v-03ab689c">{{i}}</view>
+          <label class="_span btn-arrow data-v-03ab689c"></label>
+        </view>
+      </view>
+      <view
+        class="_div chart-desc-item flex-start data-v-03ab689c"
+        wx:if="{{k}}"
+      >
+        <label class="_span m-r-5 data-v-03ab689c">同指数ETF平均溢折率</label>
+        <label
+          class="{{['_span','data-v-03ab689c',n&&'up',o&&'equal',p&&'down']}}"
+          >{{l}}{{m}}%</label
+        >
+      </view>
+    </view>
+    <view class="_div chart-content data-v-03ab689c">
+      <f2
+        bind:__l="__l"
+        class="r data-v-03ab689c"
+        uI="03ab689c-0"
+        uP="{{w}}"
+        uR="yzlfxChart"
+        uS="{{['d']}}"
+        wx:if="{{w}}"
+      >
+        <view
+          class="{{['_div','data-v-03ab689c','f2-tooltip',t]}}"
+          wx:if="{{q}}"
+        >
+          <view class="_div f2-tooltip-inner data-v-03ab689c">
+            <view class="_div f2-tooltip-title data-v-03ab689c">{{r}}</view>
+            <view
+              class="_div f2-tooltip-value data-v-03ab689c"
+              wx:for="{{s}}"
+              wx:key="g"
+            >
+              <label class="_span f2-tooltip-subtitle data-v-03ab689c"
+                >{{item.a}}</label
+              >
+              <label
+                class="{{['_span','f2-tooltip-after','data-v-03ab689c',item.d&&'up',item.e&&'down',item.f&&'equal']}}"
+                >{{item.b}}{{item.c}}%</label
+              >
+            </view>
+          </view>
+        </view>
+      </f2>
+      <view
+        class="_div chart-time-content m-t-5 space-between data-v-03ab689c"
+        wx:if="{{x}}"
+      >
+        <label
+          class="_span chart-time-item data-v-03ab689c"
+          wx:for="{{y}}"
+          wx:for-item="dt"
+          wx:key="b"
+          >{{dt.a}}</label
+        >
+      </view>
+      <view class="_div chart-legend-content data-v-03ab689c">
+        <view class="_div chart-legend-item data-v-03ab689c" wx:if="{{z}}">
+          <label
+            class="_span percentile-line percentile-line-red data-v-03ab689c"
+          ></label>
+          <label
+            class="_span percentile-line percentile-line-red data-v-03ab689c"
+          ></label>
+          <label class="_span percentile-text data-v-03ab689c">70分位值</label>
+          <label
+            class="_span percentile-value percentile-value-red data-v-03ab689c"
+            >{{A}}</label
+          >
+        </view>
+        <view class="_div chart-legend-item data-v-03ab689c" wx:if="{{B}}">
+          <label
+            class="_span percentile-line percentile-line-green data-v-03ab689c"
+          ></label>
+          <label
+            class="_span percentile-line percentile-line-green data-v-03ab689c"
+          ></label>
+          <label class="_span percentile-text data-v-03ab689c">30分位值</label>
+          <label
+            class="_span percentile-value percentile-value-green data-v-03ab689c"
+            >{{C}}</label
+          >
+        </view>
+        <view class="_div chart-legend-item data-v-03ab689c">
+          <label
+            class="_span chart-legend-icon data-v-03ab689c"
+            style="{{'background-color:'+'var(--color-orange)'}}"
+          ></label>
+          <label class="_span chart-legend-title data-v-03ab689c">溢折率</label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div ai-interpretation data-v-03ab689c" wx:if="{{D}}">
+    <label class="_span ai-interpretation-title data-v-03ab689c">解读：</label>
+    <label class="_span ai-interpretation-content data-v-03ab689c">{{E}}</label>
+  </view>
+  <root-portal class="data-v-03ab689c" enable="{{true}}" wx:if="{{F}}">
+    <select-plate
+      bind:__l="__l"
+      bindchangeTab="{{I}}"
+      class="r data-v-03ab689c"
+      uI="03ab689c-1"
+      uP="{{J}}"
+      uR="selectPlate"
+      wx:if="{{G}}"
+    ></select-plate>
+  </root-portal>
+</view>

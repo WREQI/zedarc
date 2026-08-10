@@ -1,0 +1,41 @@
+@import "/app.wxss";
+.question-wrapper {
+  max-height: 13.333333rem;
+  overflow-y: scroll;
+  padding: 0.533333rem 0.4rem 0;
+  text-align: left;
+}
+.question-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.question-wrapper .question-tips {
+  color: var(--text-color-1);
+  font-family: PingFangSC-Medium;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.6rem;
+}
+.question-wrapper .question-tips .orange {
+  color: #ff891e;
+}
+.question-wrapper .question-item {
+  margin-top: 0.533333rem;
+}
+.question-wrapper .question-item .question-ask {
+  color: var(--text-color-1);
+  line-height: 0.6rem;
+  padding-bottom: 0.4rem;
+}
+.question-wrapper .question-item .question-answer-container {
+  padding-bottom: 0.533333rem;
+}
+.question-wrapper .question-item .question-answer-container .answer-item {
+  line-height: 0.6rem;
+  padding: 0.4rem 0;
+}
+.question-wrapper .question-item .question-answer-container.p-b-0 {
+  padding-bottom: 0;
+}
+.question-wrapper .question-item .question-answer-container .answer-content {
+  margin-right: 0.4rem;
+}

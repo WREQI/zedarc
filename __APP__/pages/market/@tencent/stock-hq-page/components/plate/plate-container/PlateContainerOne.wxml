@@ -1,0 +1,26 @@
+<view class="_div plate-card data-v-58d8a1b9">
+  <plate-title
+    bind:__l="__l"
+    bindgotoList="{{a}}"
+    class="data-v-58d8a1b9"
+    uI="58d8a1b9-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></plate-title>
+  <view
+    class="_div plate-item-row layout-row data-v-58d8a1b9"
+    wx:for="{{c}}"
+    wx:for-item="row"
+    wx:key="b"
+  >
+    <plate-block
+      bind:__l="__l"
+      bindgotoDetail="{{item.b}}"
+      class="plate-item-wrapper data-v-58d8a1b9"
+      uI="{{item.c}}"
+      uP="{{item.d}}"
+      wx:for="{{row.a}}"
+      wx:key="a"
+    ></plate-block>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<page-meta class="data-v-a39d7cc1" rootFontSize="{{a}}"></page-meta>
+<view class="_div hydb-second-container data-v-a39d7cc1">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a39d7cc1"
+    uI="a39d7cc1-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-a39d7cc1"
+    uI="a39d7cc1-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <hydb
+    bind:__l="__l"
+    class="data-v-a39d7cc1"
+    uI="a39d7cc1-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></hydb>
+  <view class="_div zxg-logo data-v-a39d7cc1"></view>
+</view>

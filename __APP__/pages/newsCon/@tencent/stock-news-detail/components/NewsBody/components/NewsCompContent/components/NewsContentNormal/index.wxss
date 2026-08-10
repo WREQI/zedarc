@@ -1,0 +1,358 @@
+@font-face {
+  font-family: iconfont;
+  src: url(iconfont.woff2?t=1625193493219-do-not-use-local-path-./pages/newsCon/@tencent/stock-news-detail/components/NewsBody/components/NewsCompContent/components/NewsContentNormal/index.wxss&1&37)
+      format("woff2"),
+    url(iconfont.woff?t=1625193493219-do-not-use-local-path-./pages/newsCon/@tencent/stock-news-detail/components/NewsBody/components/NewsCompContent/components/NewsContentNormal/index.wxss&1&37)
+      format("woff"),
+    url(iconfont.ttf?t=1625193493219-do-not-use-local-path-./pages/newsCon/@tencent/stock-news-detail/components/NewsBody/components/NewsCompContent/components/NewsContentNormal/index.wxss&1&37)
+      format("truetype");
+}
+.iconfont {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: iconfont !important;
+  font-size: 0.21333333333333335rem;
+  font-style: normal;
+}
+.icon_shoucangicon2x:before {
+  content: "";
+}
+.icon_jiaguanzhuicon2x:before {
+  content: "";
+}
+.icon_yiguanzhuicon2x:before {
+  content: "";
+}
+.icon_quxiaoshoucang:before {
+  content: "";
+}
+.icon_shoucang:before {
+  content: "";
+}
+.icon_jinruzhibo-loukong2x:before {
+  content: "";
+}
+.icon_tongyong-White2x:before {
+  content: "";
+}
+.icon_huo-White2x:before {
+  content: "";
+}
+.icon_xinwenshipinyishoucang_Dark2x:before {
+  content: "";
+}
+.icon_xinwenshipinshoucang-Dark2x:before {
+  content: "";
+}
+.icon_plus_white:before {
+  content: "";
+}
+.icon_topic_white:before {
+  content: "";
+}
+.icon_location_white:before {
+  content: "";
+}
+.icon_yinliangda-xin:before {
+  content: "";
+}
+.icon_jingyin-xin:before {
+  content: "";
+}
+.icon_Combined-Shape1:before {
+  content: "";
+}
+.icon_star-thr:before {
+  content: "";
+}
+.icon_zhibo:before {
+  content: "";
+}
+.icon_publish:before {
+  content: "";
+}
+.icon_slice:before {
+  content: "";
+}
+.icon_editor:before {
+  content: "";
+}
+.icon_article:before {
+  content: "";
+}
+.icon_xuangu1:before {
+  content: "";
+}
+.icon_xuangugongju:before {
+  content: "";
+}
+.icon_yuqingfenxi:before {
+  content: "";
+}
+.icon_bk:before {
+  content: "";
+}
+.icon_gitx:before {
+  content: "";
+}
+.icon_duantie:before {
+  content: "";
+}
+.icon_changwen:before {
+  content: "";
+}
+.icon_refresh:before {
+  content: "";
+}
+.icon_jinzhipinglun:before {
+  content: "";
+}
+.icon_zhuanfa1:before {
+  content: "";
+}
+.icon_gengduoshipin:before {
+  content: "";
+}
+.icon_duanshipingengduo:before {
+  content: "";
+}
+.icon_indicator:before {
+  content: "";
+}
+.icon_back:before {
+  content: "";
+}
+.icon_jiaguanzhu:before {
+  content: "";
+}
+.icon_player_play:before {
+  content: "";
+}
+.icon_pinglun1:before {
+  content: "";
+}
+.icon_xiaoshipingengduo:before {
+  content: "";
+}
+.icon_zhuanfa:before {
+  content: "";
+}
+.icon_peitu:before {
+  content: "";
+}
+.icon_niu1:before {
+  content: "";
+}
+.icon_hongniu1:before {
+  content: "";
+}
+.icon_aite:before {
+  content: "";
+}
+.icon_gegu:before {
+  content: "";
+}
+.icon_lianjie1:before {
+  content: "";
+}
+.icon_huati:before {
+  content: "";
+}
+.icon_pinglun:before {
+  content: "";
+}
+.icon_testzuozhebiaoqian:before {
+  content: "";
+}
+.icon_zuozhebiaoqianx:before {
+  content: "";
+}
+.icon_louzhubiaoqian:before {
+  content: "";
+}
+.icon_chengchanglibao:before {
+  content: "";
+}
+.icon_zichan:before {
+  content: "";
+}
+.icon_xuangu:before {
+  content: "";
+}
+.icon_shequ:before {
+  content: "";
+}
+.icon_kaihu:before {
+  content: "";
+}
+.icon_jijin:before {
+  content: "";
+}
+.icon_caizhangdie:before {
+  content: "";
+}
+.icon_bianzu:before {
+  content: "";
+}
+.icon_arrow_up:before {
+  content: "";
+}
+.icon_arrow_down:before {
+  content: "";
+}
+.icon_warn:before {
+  content: "";
+}
+.icon_share:before {
+  content: "";
+}
+.up {
+  color: #e63535;
+}
+.down {
+  color: #1caa3c;
+}
+.basket-title {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3333333333333333rem;
+  margin: 0.4266666666666667rem 0.32rem 0;
+  position: relative;
+}
+.basket-title:after {
+  background-color: #e9ebf0;
+  content: "";
+  display: block;
+  height: 0.013333333333333334rem;
+  left: 0;
+  margin-top: -0.006666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: scaleY(0.5);
+  transform-origin: 0 0 0;
+  width: 100%;
+  z-index: 1;
+}
+.basket-title .title {
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+  margin-top: 0.05333333333333334rem;
+  text-align: left;
+}
+.basket-overview {
+  display: block;
+  margin: 0 0.32rem;
+}
+.xg-info {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.06666666666666667rem 0.08rem rgba(0, 0, 0, 0.05);
+  display: -webkit-flex;
+  display: flex;
+  height: 1.0666666666666667rem;
+  justify-content: space-between;
+  margin: 0.4rem;
+  padding: 0 0.32rem !important;
+  position: relative;
+}
+.xg-info:after {
+  border: 0.02666666666666667rem solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.21333333333333335rem;
+  content: "";
+  height: 200%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transform-origin: top left;
+  width: 200%;
+}
+.xg-info .xg-left {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0;
+}
+.xg-info .xg-left .xg-icon {
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.xg-info .xg-left .xg-name {
+  color: #262e40;
+  font-weight: 700;
+  margin-left: 0.21333333333333335rem;
+}
+.xg-info .xg-left .xg-name,
+.xg-info .xg-right {
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+}
+.xg-info .xg-right {
+  align-items: center;
+  color: #7a8499;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0;
+}
+.xg-info .xg-right img {
+  filter: opacity(0.5);
+  font-size: 0.37333333333333335rem;
+  height: 0.32rem;
+  margin-left: 0.06666666666666667rem;
+  margin-top: 0.04rem;
+  width: 0.21333333333333335rem;
+}
+.footer-note {
+  color: #98a0b3;
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  margin: 0.5333333333333333rem 0.4rem;
+  text-align: justify;
+  word-break: break-all;
+}
+.footer-note.english {
+  text-align: left;
+  word-break: break-word;
+}
+.footer-note div {
+  margin-bottom: 0.18666666666666668rem;
+}
+.reading ._span,
+.reading span {
+  background-color: rgba(48, 119, 236, 0.1);
+  transition: background-color 0.4s;
+}
+.reading ._span.news-teach,
+.reading span.news-teach {
+  background: transparent;
+}
+.black .footer-note {
+  color: #98a0b3;
+}
+.black .reading ._span,
+.black .reading span {
+  background-color: rgba(48, 119, 236, 0.2);
+}
+.black .reading ._span.news-teach,
+.black .reading span.news-teach {
+  background: transparent;
+}
+.content-subject-optional + .hq-tool,
+.hq-tool + .footer-note {
+  margin-top: 0.4266666666666667rem;
+}
+.content-subject-optional + .footer-note {
+  margin-top: 0.32rem;
+}
+.news-text + .hq-tool {
+  margin-top: 0.4266666666666667rem;
+}
+.news-content-ai-entry {
+  margin: 0.4rem 0.4rem 0;
+}
+.related-stock-bar-anchor {
+  height: 0.013333333333333334rem;
+  width: 0.013333333333333334rem;
+}

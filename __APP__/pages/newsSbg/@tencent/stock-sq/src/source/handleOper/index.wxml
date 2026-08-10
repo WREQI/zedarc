@@ -1,0 +1,25 @@
+<view class="_div mod-handle-view-oper oper-box data-v-08dc37e0" wx:if="{{a}}">
+    <view class="_div view-box data-v-08dc37e0" wx:if="{{b}}">
+        <label class="_span data-v-08dc37e0">阅读 {{c}}</label>
+    </view>
+    <view class="{{['_div','data-v-08dc37e0',q]}}">
+        <view catchtap="{{f}}" class="_div op data-v-08dc37e0" ref="turn" wx:if="{{d}}">
+            <view class="_div text data-v-08dc37e0">
+                <view class="_i sq-icon-zhuanfa data-v-08dc37e0"></view>
+                <label class="_span data-v-08dc37e0">{{e}}</label>
+            </view>
+        </view>
+        <view catchtap="{{k}}" class="_div op data-v-08dc37e0" ref="commentButton" wx:if="{{g}}">
+            <view class="_div text data-v-08dc37e0">
+                <view class="_i sq-icon-pinglun data-v-08dc37e0"></view>
+                <label class="_span pinglun-span data-v-08dc37e0" wx:if="{{h}}">{{i}}</label>
+                <label class="_span pinglun-span data-v-08dc37e0" wx:else>{{j}}</label>
+            </view>
+        </view>
+        <view catchtap="{{p}}" class="_div op like-box data-v-08dc37e0" wx:if="{{l}}">
+            <niu-animation-m-p bind:__l="__l" class="niuAnimation r data-v-08dc37e0" uI="08dc37e0-0" uP="{{o}}" uR="niu" wx:if="{{m}}"></niu-animation-m-p>
+        </view>
+    </view>
+    <handle-more bind:__l="__l" bindonHandleTurn="{{x}}" bindtapDeleteItem="{{v}}" bindtapIllegal="{{t}}" bindtapMore="{{w}}" class="r data-v-08dc37e0" uI="08dc37e0-1" uP="{{y}}" uR="handleMore" wx:if="{{r}}"></handle-more>
+    <input class="fake-input data-v-08dc37e0" ref="fakeInput" type="text"></input>
+</view>

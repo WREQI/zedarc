@@ -1,0 +1,16 @@
+<view
+  class="{{['common-status-item','flex-column','data-v-043f0867',g&&'no-bottom']}}"
+>
+  <view class="common-status-header flex-row data-v-043f0867">
+    <view
+      class="{{['common-status-icon','data-v-043f0867',a&&'warning',b&&'done']}}"
+    ></view>
+    <view
+      class="{{['common-status-title','flex-1','data-v-043f0867',d&&'warning',e&&'done']}}"
+      >{{c}}</view
+    >
+  </view>
+  <view class="item-right flex-column flex-1 data-v-043f0867" wx:if="{{f}}">
+    <slot></slot>
+  </view>
+</view>

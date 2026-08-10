@@ -1,0 +1,29 @@
+<page-meta class="data-v-5d4df48b" rootFontSize="{{a}}"></page-meta>
+<view class="{{['data-v-5d4df48b','container',d,e]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5d4df48b"
+    uI="5d4df48b-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-5d4df48b"
+    uI="5d4df48b-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="top-bar flex flex-pack-justify data-v-5d4df48b">
+    <label class="block data-v-5d4df48b">名字</label>
+    <label class="block data-v-5d4df48b">职务</label>
+  </view>
+  <view class="bd-cont data-v-5d4df48b">
+    <view
+      class="item-rank flex flex-pack-justify data-v-5d4df48b"
+      wx:for="{{c}}"
+      wx:key="c"
+    >
+      <label class="block col-lft data-v-5d4df48b">{{item.a}}</label>
+      <label class="block col-rht data-v-5d4df48b">{{item.b}}</label>
+    </view>
+  </view>
+</view>

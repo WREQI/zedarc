@@ -1,0 +1,64 @@
+<page-meta class="data-v-1b0a5def" rootFontSize="{{a}}"></page-meta>
+<view class="_div cancellation-wrapper wrapper data-v-1b0a5def">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1b0a5def"
+    uI="1b0a5def-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-1b0a5def"
+    uI="1b0a5def-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div apply-wrapper data-v-1b0a5def">
+    <view class="_div title data-v-1b0a5def">申请注销账号</view>
+    <view class="_div bold-tips data-v-1b0a5def"
+      >账号注销为不可恢复的操作，为了保护你的合法权益，在开始操作前，请务必确认与该注销账号相关的所有服务均已进行妥善处理：</view
+    >
+    <view class="_div sub-title data-v-1b0a5def">1. 账号处于安全状态</view>
+    <view class="_div desc data-v-1b0a5def"
+      >账号没有被盗、被封等风险，无任何纠纷，包括投诉举报、国家机关调查等。</view
+    >
+    <view class="_div sub-title data-v-1b0a5def"
+      >2. 账号关联券商账户绑定关系解除</view
+    >
+    <view class="_div desc data-v-1b0a5def"
+      >你所绑定关联的券商账户均已手动解除绑定，未开通券商账户无需手动解除。</view
+    >
+    <view class="_div sub-title data-v-1b0a5def">3. 账号相关权益已到期</view>
+    <view class="_div desc data-v-1b0a5def"
+      >请确认你所拥有的沪深level2、港股level2、VIP资讯等权益均已到期，如未到期，注销后将不再享有该权益，且已支付款项无法退换。</view
+    >
+    <view class="_div sub-title data-v-1b0a5def"
+      >4. 账号关联并授权数据处理</view
+    >
+    <view class="_div desc data-v-1b0a5def"
+      >该账号被其他平台引用和关联的信息，注销后其他平台将无法查看和使用该账号的数据，如自选列表被清空。</view
+    >
+    <view class="_div bottom-wrapper data-v-1b0a5def">
+      <button
+        bindtap="{{d}}"
+        class="agree-btn data-v-1b0a5def"
+        disabled="{{c}}"
+        type="primary"
+      >
+        申请注销
+      </button>
+      <view class="_div agree-protocal data-v-1b0a5def">
+        <checkbox-group bindchange="{{f}}" class="data-v-1b0a5def">
+          <checkbox
+            checked="{{e}}"
+            class="protocal-check data-v-1b0a5def"
+            color="#E63535"
+          ></checkbox> </checkbox-group
+        >我已阅读并同意签署<navigator
+          bindtap="{{g}}"
+          class="_a link data-v-1b0a5def"
+          >《注销协议》</navigator
+        >
+      </view>
+    </view>
+  </view>
+</view>

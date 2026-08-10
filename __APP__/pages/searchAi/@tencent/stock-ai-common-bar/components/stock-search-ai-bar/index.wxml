@@ -1,0 +1,14 @@
+<view class="_div ai-search-bar data-v-61b7c22b" id="aiSearchBar" wx:if="{{a}}">
+    <view catchtap="{{l}}" class="{{['_div','data-v-61b7c22b','ai-search-enrty',k]}}">
+        <view catchtap="{{b}}" class="_div ai-icon data-v-61b7c22b">问元宝</view>
+        <view class="_div ai-divider-line data-v-61b7c22b"></view>
+        <view catchtap="{{e}}" class="_div ai-question data-v-61b7c22b" wx:if="{{c}}">
+            <label class="_span ai-question-title data-v-61b7c22b">{{d}}</label>
+        </view>
+        <view class="_div ai-question data-v-61b7c22b" wx:elif="{{f}}">
+            <scrollboard bind:__l="__l" bindhandleClick="{{g}}" class="data-v-61b7c22b" uI="61b7c22b-0" uP="{{h}}" wx:if="{{h}}"></scrollboard>
+        </view>
+        <view catchtap="{{i}}" class="_div more-btn data-v-61b7c22b"></view>
+        <input class="fake-input data-v-61b7c22b" ref="fakeInput" wx:if="{{j}}"></input>
+    </view>
+</view>

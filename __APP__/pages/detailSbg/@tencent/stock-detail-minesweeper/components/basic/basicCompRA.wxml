@@ -1,0 +1,17 @@
+<view class="_div comp-block data-v-9a56db37">
+  <view class="_div chart-wrapper data-v-9a56db37" wx:if="{{a}}">
+    <view class="_div chart-legend data-v-9a56db37">
+      <label class="_span data-v-9a56db37">应收账款 (亿元)</label>
+      <label class="_span item-2 data-v-9a56db37">营业总收入 (亿元)</label>
+      <label class="_span data-v-9a56db37">占比 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{c}}"
+      class="data-v-9a56db37"
+      uI="9a56db37-0"
+      uP="{{d}}"
+      wx:if="{{b}}"
+    ></f2>
+  </view>
+</view>

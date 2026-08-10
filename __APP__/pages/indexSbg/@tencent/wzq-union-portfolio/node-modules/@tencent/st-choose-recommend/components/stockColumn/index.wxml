@@ -1,0 +1,84 @@
+<view class="_div chance-wrap stock-column data-v-d990c766" wx:if="{{a}}">
+  <view class="_div head data-v-d990c766" wx:if="{{b}}">
+    <view class="_div title data-v-d990c766" wx:if="{{c}}">{{d}}</view>
+    <view class="_div subtitle data-v-d990c766" wx:if="{{e}}">{{f}}</view>
+  </view>
+  <view class="_div head-list data-v-d990c766" wx:else>
+    <view class="_div title data-v-d990c766">{{g}}</view>
+    <view class="_div tabs data-v-d990c766">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','tabs-item','data-v-d990c766',item.c&&'selected']}}"
+        wx:for="{{h}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+    <view class="_div subtitle data-v-d990c766" wx:if="{{i}}">{{j}}</view>
+  </view>
+  <view
+    class="_div tab-content data-v-d990c766"
+    wx:for="{{k}}"
+    wx:for-item="tab"
+    wx:key="d"
+  >
+    <view
+      class="_div list data-v-d990c766"
+      hidden="{{!tab.c}}"
+      wx:if="{{tab.a}}"
+    >
+      <view
+        class="_div list-item data-v-d990c766"
+        wx:for="{{tab.b}}"
+        wx:key="i"
+      >
+        <view class="_div img-area data-v-d990c766">
+          <stock-item-chart
+            bind:__l="__l"
+            class="stock-type data-v-d990c766"
+            uI="{{item.b}}"
+            uP="{{item.c}}"
+            wx:if="{{item.a}}"
+          ></stock-item-chart>
+        </view>
+        <view bindtap="{{item.f}}" class="_div stock-info data-v-d990c766">
+          <view class="_div stock-name data-v-d990c766">
+            <view class="_div stock-text data-v-d990c766">{{item.d}}</view>
+          </view>
+          <view class="_div stock-desc data-v-d990c766">
+            <view
+              class="{{['_div','column','data-v-d990c766',attr.l&&'one']}}"
+              wx:for="{{item.e}}"
+              wx:for-item="attr"
+              wx:key="k"
+            >
+              <view
+                class="{{['_div','zdf','data-v-d990c766',attr.c&&'down-green']}}"
+                wx:if="{{attr.a}}"
+                >{{attr.b}}</view
+              >
+              <view
+                class="{{['_div','zdf','data-v-d990c766',attr.f&&'down-green']}}"
+                wx:elif="{{attr.d}}"
+                >{{attr.e}}</view
+              >
+              <view class="_div count data-v-d990c766" wx:elif="{{attr.g}}"
+                >{{attr.h}}</view
+              >
+              <view class="_div count data-v-d990c766" wx:else>{{attr.i}}</view>
+              <view class="_div val data-v-d990c766">{{attr.j}}</view>
+            </view>
+          </view>
+        </view>
+        <view bindtap="{{item.h}}" class="_div add-area data-v-d990c766">
+          <image
+            alt=""
+            class="_img stock-add data-v-d990c766"
+            src="{{item.g}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view bindtap="{{l}}" class="_div all-add-btn data-v-d990c766">一键添加</view>
+</view>

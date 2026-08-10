@@ -1,0 +1,40 @@
+<view class="_div updown-wrapper flex-1 data-v-e1b97566">
+  <view catchtap="{{g}}" class="_div data-v-e1b97566">
+    <view
+      class="_div updown-graph-wrapper flex-1 flex-column data-v-e1b97566"
+      wx:if="{{a}}"
+    >
+      <view
+        class="_div updown-vertical-bar flex-1 data-v-e1b97566"
+        wx:if="{{b}}"
+      >
+        <view
+          class="{{['_div','data-v-e1b97566','bar-wrapper',item.d,item.e,item.f]}}"
+          wx:for="{{c}}"
+          wx:key="c"
+        >
+          <view class="_div number data-v-e1b97566">{{item.a}}</view>
+          <view class="_div bar data-v-e1b97566" style="{{item.b}}"></view>
+        </view>
+      </view>
+      <view
+        class="_div updown-vertical-bar-label data-v-e1b97566"
+        wx:if="{{d}}"
+      >
+        <view
+          class="{{['_div','data-v-e1b97566','label-wrapper',item.c,item.d,item.e]}}"
+          wx:for="{{e}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+      <compare
+        bind:__l="__l"
+        class="compare data-v-e1b97566"
+        uI="e1b97566-0"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></compare>
+    </view>
+  </view>
+</view>

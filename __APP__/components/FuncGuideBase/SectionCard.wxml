@@ -1,0 +1,8 @@
+<view class="guide-section data-v-18e2f2a5">
+  <view class="guide-title data-v-18e2f2a5">
+    <slot name="title"></slot>
+  </view>
+  <view class="guide-content data-v-18e2f2a5">
+    <slot name="content"></slot>
+  </view>
+</view>

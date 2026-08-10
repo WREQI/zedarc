@@ -1,0 +1,105 @@
+.flex-between.data-v-ac232e53 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.chart-skeleton.data-v-ac232e53 {
+  border-top-left-radius: 0.21333333333333335rem;
+  border-top-right-radius: 0.21333333333333335rem;
+  left: 0;
+  min-height: calc(9.84rem + env(safe-area-inset-bottom));
+  overflow: hidden;
+  padding: 0 0.32rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.chart-skeleton-wzq.data-v-ac232e53 {
+  background-color: #fff;
+}
+.chart-skeleton-zxg.data-v-ac232e53 {
+  background-color: var(--fill-content-layer, #fff);
+}
+.header.data-v-ac232e53 {
+  height: 1.4133333333333333rem;
+}
+.header .header-title.data-v-ac232e53 {
+  color: var(--text-color-1);
+  font-size: 0.4533333333333333rem;
+  font-weight: 600;
+  line-height: 0.64rem;
+}
+.header .close-bg.data-v-ac232e53 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.chart-placeholder.data-v-ac232e53 {
+  animation: chart-skeleton-shimmer-ac232e53 1.4s ease infinite;
+  background: linear-gradient(
+    90deg,
+    var(--fill-1, #f5f6fa) 25%,
+    var(--fill-2, #eceef2) 37%,
+    var(--fill-1, #f5f6fa) 63%
+  );
+  background-size: 400% 100%;
+  border-radius: 0.16rem;
+  height: 6.4rem;
+  margin-top: 0.21333333333333335rem;
+}
+[data-st-theme="black"] .chart-placeholder.data-v-ac232e53 {
+  background: linear-gradient(90deg, #202f40 25%, #2a3a4e 37%, #202f40 63%);
+  background-size: 400% 100%;
+}
+.action-bar.data-v-ac232e53 {
+  height: 0.96rem;
+  margin-top: 0.4266666666666667rem;
+}
+.action-bar .action-item.data-v-ac232e53 {
+  background-color: var(--fill-1, #f5f6fa);
+  border-radius: 0.10666666666666667rem;
+  flex: 1;
+  height: 0.96rem;
+  margin-right: 0.21333333333333335rem;
+}
+.action-bar .action-item.data-v-ac232e53:last-child {
+  margin-right: 0;
+}
+[data-st-theme="black"] .action-bar .action-item.data-v-ac232e53 {
+  background-color: #202f40;
+}
+.footer.data-v-ac232e53 {
+  margin-top: 0.37333333333333335rem;
+}
+.footer .footer-row.data-v-ac232e53 {
+  background-color: var(--fill-1, #f5f6fa);
+  border-radius: 0.08rem;
+  height: 0.37333333333333335rem;
+  margin-bottom: 0.26666666666666666rem;
+}
+.footer .footer-row--short.data-v-ac232e53 {
+  width: 40%;
+}
+[data-st-theme="black"] .footer .footer-row.data-v-ac232e53 {
+  background-color: #202f40;
+}
+@-webkit-keyframes chart-skeleton-shimmer-ac232e53 {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}
+@keyframes chart-skeleton-shimmer-ac232e53 {
+  0% {
+    background-position: 100% 50%;
+  }
+  to {
+    background-position: 0 50%;
+  }
+}

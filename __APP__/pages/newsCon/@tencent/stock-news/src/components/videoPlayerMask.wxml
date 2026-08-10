@@ -1,0 +1,105 @@
+<view
+  class="_div video-item-container data-v-e446f01d"
+  id="content"
+  ref="content"
+>
+  <view bindtap="{{k}}" class="_div player-content data-v-e446f01d">
+    <view class="_div player-mask data-v-e446f01d" style="{{'display:'+c}}">
+      <view
+        class="player-mask-img data-v-e446f01d"
+        style="{{'background-image:'+a}}"
+      ></view>
+      <label catchtap="{{b}}" class="_span btn-play data-v-e446f01d">
+        <view class="_i icon-play data-v-e446f01d"></view>
+      </label>
+    </view>
+    <view
+      class="_div play-process swiper-no-swiping data-v-e446f01d"
+      style="{{'display:'+j}}"
+      wx:if="{{d}}"
+    >
+      <label class="_span timeSpan data-v-e446f01d">{{e}}</label>
+      <vue-slider
+        bind:__l="__l"
+        bindchange="{{f}}"
+        binddragEnd="{{g}}"
+        class="slider-content data-v-e446f01d"
+        uI="e446f01d-0"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></vue-slider>
+      <label class="_span timeSpan data-v-e446f01d">{{i}}</label>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-e446f01d','video-item-desc',E]}}">
+    <view class="_div video-item-info data-v-e446f01d">
+      <view class="_div media-info-content data-v-e446f01d">
+        <view class="_div media-icon data-v-e446f01d">
+          <image
+            class="_img media-icon-img data-v-e446f01d"
+            src="{{l}}"
+          ></image>
+        </view>
+        <view class="_div media-name data-v-e446f01d">{{m}}</view>
+        <view
+          bindtap="{{p}}"
+          class="{{['_div','data-v-e446f01d','media-icon-follow',o]}}"
+          wx:if="{{n}}"
+        >
+          <view class="_i icon-follow data-v-e446f01d"></view>
+        </view>
+      </view>
+      <view class="_div video-info-text data-v-e446f01d">
+        <view class="_div video-info-title data-v-e446f01d">{{q}}</view>
+        <view class="_div video-info-subTitle data-v-e446f01d" wx:if="{{r}}">
+          <label
+            class="{{['_span','data-v-e446f01d',item.c]}}"
+            wx:for="{{s}}"
+            wx:key="b"
+            >{{item.a}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div video-item-operate data-v-e446f01d">
+      <view bindtap="{{x}}" class="_div operate-content data-v-e446f01d">
+        <label class="_span icon data-v-e446f01d">
+          <view class="{{['_i','data-v-e446f01d','icon-like',t]}}"></view>
+        </label>
+        <label class="_span data-v-e446f01d" wx:if="{{v}}">{{w}}</label>
+        <label class="_span content-text data-v-e446f01d" wx:else>点赞</label>
+      </view>
+      <view bindtap="{{A}}" class="_div operate-content data-v-e446f01d">
+        <label class="_span icon data-v-e446f01d">
+          <view class="_i icon-comment data-v-e446f01d"></view>
+        </label>
+        <label class="_span data-v-e446f01d" wx:if="{{y}}">{{z}}</label>
+        <label class="_span content-text data-v-e446f01d" wx:else>评论</label>
+      </view>
+      <view
+        bindtap="{{C}}"
+        class="_div operate-content data-v-e446f01d"
+        openType="share"
+        plain="true"
+        wx:if="{{B}}"
+      >
+        <label class="_span icon data-v-e446f01d">
+          <view class="_i icon-turn data-v-e446f01d"></view>
+        </label>
+        <label class="_span content-text data-v-e446f01d">转发</label>
+      </view>
+      <button
+        bindtap="{{D}}"
+        class="operate-content data-v-e446f01d"
+        openType="share"
+        plain="true"
+        wx:else
+      >
+        <label class="_span icon data-v-e446f01d">
+          <view class="_i icon-turn data-v-e446f01d"></view>
+        </label>
+        <label class="_span content-text data-v-e446f01d">转发</label>
+      </button>
+    </view>
+  </view>
+</view>

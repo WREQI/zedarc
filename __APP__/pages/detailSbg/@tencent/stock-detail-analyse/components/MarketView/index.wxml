@@ -1,0 +1,45 @@
+<view class="_div market-view data-v-795fe512">
+  <view class="_div main-title data-v-795fe512">
+    <label class="_span line data-v-795fe512"></label>
+    <label class="_span text data-v-795fe512">市场观点</label>
+    <view class="_div trend-tag-wrapper data-v-795fe512">
+      <view class="{{['_div','trend-tag','data-v-795fe512',b]}}">{{a}}</view>
+    </view>
+    <label class="_span warning data-v-795fe512"></label>
+  </view>
+  <jg-rate
+    bind:__l="__l"
+    class="data-v-795fe512"
+    uI="795fe512-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></jg-rate>
+  <target-price
+    bind:__l="__l"
+    class="data-v-795fe512"
+    uI="795fe512-1"
+    uP="{{e}}"
+    wx:if="{{d}}"
+  ></target-price>
+  <profit-forcecast
+    bind:__l="__l"
+    class="data-v-795fe512"
+    uI="795fe512-2"
+    uP="{{g}}"
+    wx:if="{{f}}"
+  ></profit-forcecast>
+  <miain-fund-change
+    bind:__l="__l"
+    class="data-v-795fe512"
+    uI="795fe512-3"
+    uP="{{i}}"
+    wx:if="{{h}}"
+  ></miain-fund-change>
+  <news
+    bind:__l="__l"
+    class="data-v-795fe512"
+    uI="795fe512-4"
+    uP="{{k}}"
+    wx:if="{{j}}"
+  ></news>
+</view>

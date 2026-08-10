@@ -1,0 +1,148 @@
+.layout.data-v-c884a35b {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-c884a35b,
+.layout-align-start-center.data-v-c884a35b {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-c884a35b {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-c884a35b {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-c884a35b {
+  justify-content: flex-start;
+}
+.layout-column.data-v-c884a35b {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-c884a35b {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-c884a35b {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.market-change-container.data-v-c884a35b {
+  background-color: var(--fill-2);
+}
+.market-change-container.data-v-c884a35b .bottom-infor .time .time-item {
+  background: var(--fill-content-layer) !important;
+  border-color: var(--border-heavy-divider) !important;
+  color: var(--color-heavygray) !important;
+}
+.market-change-container.data-v-c884a35b .bottom-infor .stock-infor.red {
+  color: var(--color-red);
+}
+.market-change-container.data-v-c884a35b .bottom-infor .stock-infor.green {
+  color: var(--color-green);
+}
+.market-change-container .title-wrapper.data-v-c884a35b {
+  font-weight: 600;
+  height: 1.0933333333333333rem;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  position: relative;
+  text-decoration: none;
+}
+.market-change-container .title-wrapper .title-box.data-v-c884a35b,
+.market-change-container .title-wrapper.data-v-c884a35b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.market-change-container .title-wrapper .title-box.data-v-c884a35b {
+  color: var(--color-heavygray);
+  font-size: 0.4rem;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 0.56rem;
+}
+.market-change-container .title-wrapper .title-box .image-tip.data-v-c884a35b {
+  background: url(https://st.gtimg.com/design/199f80b6989595dba300b568c9d5686b.png)
+    no-repeat 0;
+  background-size: contain;
+  height: 0.3466666666666667rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.3466666666666667rem;
+  z-index: 10;
+}
+.market-change-container .title-wrapper .right.data-v-c884a35b {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.market-change-container .title-wrapper .right .amount.data-v-c884a35b {
+  align-items: center;
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+    Microsoft YaHei, Source Han Sans CN, sans-serif;
+  font-size: 0.3466666666666667rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.48rem;
+}
+.market-change-container
+  .title-wrapper
+  .right
+  .amount
+  .countdown-container.data-v-c884a35b {
+  font-size: 0.3466666666666667rem;
+  height: 0.64rem;
+  margin-left: 0.10666666666666667rem;
+  width: 1.4133333333333333rem;
+}
+.market-change-container
+  .title-wrapper
+  .right
+  .amount
+  .countdown-container
+  .countdown-item.data-v-c884a35b {
+  align-items: center;
+  background-color: #f4f4f4;
+  border: 0.013333333333333334rem solid var(--border-heavy);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: block;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 0.6133333333333333rem;
+  text-align: center;
+  width: 0.64rem;
+}
+[data-st-theme="black"]
+  .market-change-container
+  .title-wrapper
+  .right
+  .amount
+  .countdown-container
+  .countdown-item.data-v-c884a35b {
+  background-color: #171d28;
+}
+.market-change-container .title-wrapper .icon-arrow.data-v-c884a35b {
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.market-change-container .right-arrow-icon.data-v-c884a35b {
+  background-image: url(https://st.gtimg.com/design/5c8d3517ec1225898294d85de0281be8.png);
+  background-size: contain;
+  height: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+  width: 0.21333333333333335rem;
+}

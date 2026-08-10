@@ -1,0 +1,233 @@
+<view
+  class="{{['_div','composition-wrapper','data-v-adc4ba95',aQ&&'landscape-wrapper',aR&&'skin-dark']}}"
+  style="{{aS}}"
+>
+  <news-bar
+    bind:__l="__l"
+    bindchangeShowNewsBar="{{c}}"
+    class="news-bar data-v-adc4ba95"
+    data-c-h="{{!b}}"
+    uI="adc4ba95-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></news-bar>
+  <view
+    class="{{['_div','data-v-adc4ba95','data-bar',i]}}"
+    hidden="{{!k}}"
+    style="{{'width:'+j}}"
+  >
+    <mins-bar
+      bind:__l="__l"
+      class="data-v-adc4ba95"
+      data-c-h="{{!e}}"
+      uI="adc4ba95-1"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></mins-bar>
+    <kline-bar
+      bind:__l="__l"
+      class="data-v-adc4ba95"
+      data-c-h="{{!g}}"
+      uI="adc4ba95-2"
+      uP="{{h}}"
+      wx:if="{{h}}"
+    ></kline-bar>
+  </view>
+  <view
+    class="{{['_div','data-v-adc4ba95','chart-area',am]}}"
+    style="{{'height:'+an}}"
+  >
+    <view class="_div canvas-area data-v-adc4ba95" style="{{'width:'+ag}}">
+      <view class="_div mins-click-tips data-v-adc4ba95" wx:if="{{l}}">
+        <view
+          catchtap="{{m}}"
+          class="_div mins-tips-close data-v-adc4ba95"
+        ></view>
+      </view>
+      <slot name="redBag" wx:if="{{n}}"></slot>
+      <anchor-tip
+        bind:__l="__l"
+        bindaiClick="{{r}}"
+        bindclose="{{q}}"
+        class="data-v-adc4ba95"
+        uI="adc4ba95-3"
+        uP="{{s}}"
+        wx:if="{{p}}"
+      ></anchor-tip>
+      <fq-bubble
+        bind:__l="__l"
+        bindclose="{{t}}"
+        bindjump="{{v}}"
+        class="data-v-adc4ba95"
+        uI="adc4ba95-4"
+        uP="{{w}}"
+        wx:if="{{w}}"
+      ></fq-bubble>
+      <mins
+        bind:__l="__l"
+        binderror="{{F}}"
+        bindhandleExtra="{{A}}"
+        bindonDoubleTap="{{D}}"
+        bindonTouchCancel="{{C}}"
+        bindonTouchMove="{{B}}"
+        bindshowAnchorTip="{{G}}"
+        bindupdateSetting="{{E}}"
+        class="r data-v-adc4ba95"
+        data-c-h="{{!z}}"
+        uI="adc4ba95-5"
+        uP="{{H}}"
+        uR="mins"
+        wx:if="{{x}}"
+      ></mins>
+      <five-mins
+        bind:__l="__l"
+        binderror="{{Q}}"
+        bindhandleExtra="{{L}}"
+        bindonDoubleTap="{{O}}"
+        bindonTouchCancel="{{N}}"
+        bindonTouchMove="{{M}}"
+        bindupdateSetting="{{P}}"
+        class="r data-v-adc4ba95"
+        data-c-h="{{!K}}"
+        uI="adc4ba95-6"
+        uP="{{R}}"
+        uR="fiveMins"
+        wx:if="{{I}}"
+      ></five-mins>
+      <kline
+        bind:__l="__l"
+        bindchipToggle="{{ac}}"
+        binderror="{{ae}}"
+        bindhandleExtra="{{W}}"
+        bindonDoubleTap="{{aa}}"
+        bindonDrawEnd="{{V}}"
+        bindonPinch="{{ad}}"
+        bindonSwipeX="{{Y}}"
+        bindonTouchCancel="{{Z}}"
+        bindonTouchMove="{{X}}"
+        bindupdateSetting="{{ab}}"
+        class="r data-v-adc4ba95"
+        data-c-h="{{!U}}"
+        uI="adc4ba95-7"
+        uP="{{af}}"
+        uR="kline"
+        wx:if="{{S}}"
+      ></kline>
+    </view>
+    <view
+      class="_div side-area data-v-adc4ba95"
+      hidden="{{!al}}"
+      id="sideArea"
+      wx:if="{{ah}}"
+    >
+      <trade-detail
+        bind:__l="__l"
+        bindchangeRefreshStatus="{{aj}}"
+        class="data-v-adc4ba95"
+        style="{{'opacity:'+ai}}"
+        uI="adc4ba95-8"
+        uP="{{ak}}"
+        wx:if="{{ak}}"
+      ></trade-detail>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-adc4ba95','bar-area',aH]}}"
+    id="tabbar"
+    ref="tabbar"
+    style="{{'opacity:'+aI}}"
+  >
+    <view class="_div tab-bar data-v-adc4ba95">
+      <view class="_div items-wrapper data-v-adc4ba95" style="{{az}}">
+        <view
+          catchtap="{{tab.d}}"
+          class="{{['_div','tab-item','data-v-adc4ba95',tab.b&&'selected']}}"
+          wx:for="{{ao}}"
+          wx:for-item="tab"
+          wx:key="c"
+        >
+          <view class="_div tab-item-inner data-v-adc4ba95">{{tab.a}}</view>
+        </view>
+        <view
+          catchtap="{{as}}"
+          class="{{['_div','tab-item','data-v-adc4ba95',ar&&'selected']}}"
+          id="moreTabItem"
+          ref="moreTabItem"
+          wx:if="{{ap}}"
+        >
+          <view class="_div tab-item-inner data-v-adc4ba95"
+            >{{aq}}<view class="_div triangle data-v-adc4ba95"></view>
+          </view>
+        </view>
+        <view
+          bindtap="{{ay}}"
+          class="_div tab-item setting-width data-v-adc4ba95"
+          wx:if="{{at}}"
+        >
+          <view class="_div tab-item-inner data-v-adc4ba95">
+            <image
+              class="_img setting-icon data-v-adc4ba95"
+              src="https://st.gtimg.com/design/bc5c2fc88cc336de5867a2b098d36cb2.png"
+            ></image>
+            <setting-tip-bubble
+              bind:__l="__l"
+              class="data-v-adc4ba95"
+              uI="adc4ba95-9"
+              uP="{{aw}}"
+              wx:if="{{av}}"
+            ></setting-tip-bubble>
+            <setting-tip-bubble
+              bind:__l="__l"
+              class="data-v-adc4ba95"
+              uI="adc4ba95-10"
+              wx:elif="{{ax}}"
+            ></setting-tip-bubble>
+          </view>
+        </view>
+      </view>
+      <view
+        class="_div items-wrapper data-v-adc4ba95"
+        style="{{aC}}"
+        wx:if="{{aA}}"
+      >
+        <view
+          catchtap="{{tab.d}}"
+          class="{{['_div','tab-item','data-v-adc4ba95',tab.b&&'selected']}}"
+          wx:for="{{aB}}"
+          wx:for-item="tab"
+          wx:key="c"
+        >
+          <view class="_div tab-item-inner data-v-adc4ba95">{{tab.a}}</view>
+        </view>
+      </view>
+      <root-portal class="data-v-adc4ba95" enable="{{true}}" wx:if="{{aD}}">
+        <selector
+          bind:__l="__l"
+          class="r data-v-adc4ba95"
+          uI="adc4ba95-11"
+          uP="{{aG}}"
+          uR="selector"
+          wx:if="{{aE}}"
+        ></selector>
+      </root-portal>
+    </view>
+  </view>
+  <setting-popup
+    bind:__l="__l"
+    bindcloseSetting="{{aK}}"
+    bindswitchChart="{{aM}}"
+    bindupdateSetting="{{aL}}"
+    class="data-v-adc4ba95"
+    uI="adc4ba95-12"
+    uP="{{aN}}"
+    wx:if="{{aJ}}"
+  ></setting-popup>
+  <fq-switch-dialog
+    bind:__l="__l"
+    bindclose="{{aO}}"
+    class="data-v-adc4ba95"
+    uI="adc4ba95-13"
+    uP="{{aP}}"
+    wx:if="{{aP}}"
+  ></fq-switch-dialog>
+</view>

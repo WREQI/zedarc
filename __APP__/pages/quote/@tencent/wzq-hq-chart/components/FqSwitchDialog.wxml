@@ -1,0 +1,34 @@
+<view
+  catchtap="{{e}}"
+  catchtouchmove="{{f}}"
+  class="_div fq-switch-dialog data-v-8b23cee7"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{c}}"
+    catchtouchmove="{{d}}"
+    class="_div fq-switch-dialog__panel data-v-8b23cee7"
+  >
+    <view class="_div fq-switch-dialog__body data-v-8b23cee7">
+      <view class="_div fq-switch-dialog__title data-v-8b23cee7"
+        >切换复权说明</view
+      >
+      <view class="_div fq-switch-dialog__desc data-v-8b23cee7"
+        >切换复权类型后，K线走势可能发生变化，股价与现价可能存在差异。</view
+      >
+      <image
+        alt="切换复权说明示意图"
+        class="_img fq-switch-dialog__image data-v-8b23cee7"
+        src="https://st.gtimg.com/pcm/mrtzl0fp_16bc317210cf80f2fd8e97c9364f174e.png"
+      ></image>
+    </view>
+    <view class="_div fq-switch-dialog__footer data-v-8b23cee7">
+      <view class="_div fq-switch-dialog__divider data-v-8b23cee7"></view>
+      <view
+        catchtap="{{b}}"
+        class="_div fq-switch-dialog__button data-v-8b23cee7"
+        >我知道了</view
+      >
+    </view>
+  </view>
+</view>

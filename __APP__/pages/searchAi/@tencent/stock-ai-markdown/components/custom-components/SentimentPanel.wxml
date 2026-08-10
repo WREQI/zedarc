@@ -1,0 +1,62 @@
+<view class="_div sentiment-panel data-v-002859f3">
+  <view class="_div sentiment-panel__item data-v-002859f3" wx:if="{{a}}">
+    <view
+      class="_div sentiment-panel__label sentiment-panel__label--bullish data-v-002859f3"
+      >看多</view
+    >
+    <view class="_div sentiment-panel__text data-v-002859f3">
+      <label class="_span data-v-002859f3" wx:if="{{b}}">
+        <label class="_span sentiment-panel__text-title data-v-002859f3"
+          >{{c}}：</label
+        >
+        <label class="_span sentiment-panel__content data-v-002859f3">
+          <rich-text class="data-v-002859f3" nodes="{{d}}"></rich-text>
+        </label>
+      </label>
+      <rich-text
+        class="sentiment-panel__content data-v-002859f3"
+        nodes="{{e}}"
+        wx:else
+      ></rich-text>
+    </view>
+    <view class="_div data-v-002859f3" wx:if="{{f}}">
+      <ai-card-c-ai-gzh-info
+        bind:__l="__l"
+        class="data-v-002859f3"
+        uI="002859f3-0"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></ai-card-c-ai-gzh-info>
+    </view>
+  </view>
+  <view class="_div sentiment-panel__item data-v-002859f3" wx:if="{{h}}">
+    <view
+      class="_div sentiment-panel__label sentiment-panel__label--bearish data-v-002859f3"
+      >看空</view
+    >
+    <view class="_div sentiment-panel__text data-v-002859f3">
+      <label class="_span data-v-002859f3" wx:if="{{i}}">
+        <label class="_span sentiment-panel__text-title data-v-002859f3"
+          >{{j}}：</label
+        >
+        <label class="_span sentiment-panel__content data-v-002859f3">
+          <rich-text class="data-v-002859f3" nodes="{{k}}"></rich-text>
+        </label>
+      </label>
+      <rich-text
+        class="sentiment-panel__content data-v-002859f3"
+        nodes="{{l}}"
+        wx:else
+      ></rich-text>
+    </view>
+    <view class="_div data-v-002859f3" wx:if="{{m}}">
+      <ai-card-c-ai-gzh-info
+        bind:__l="__l"
+        class="data-v-002859f3"
+        uI="002859f3-1"
+        uP="{{n}}"
+        wx:if="{{n}}"
+      ></ai-card-c-ai-gzh-info>
+    </view>
+  </view>
+</view>

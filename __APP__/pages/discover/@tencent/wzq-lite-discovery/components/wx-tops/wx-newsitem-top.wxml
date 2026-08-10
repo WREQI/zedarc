@@ -1,0 +1,74 @@
+<view
+  catchlongpress="{{D}}"
+  class="{{['_div','data-v-e56c5554','wx-news-item-typetop',C]}}"
+>
+  <view catchtap="{{s}}" class="_div top-header data-v-e56c5554" id="{{r}}">
+    <view class="_div block-title-container data-v-e56c5554" wx:if="{{a}}">
+      <view class="_div left-title data-v-e56c5554">
+        <view class="{{['_div','data-v-e56c5554','index-base',c,d]}}">
+          <view class="_div left data-v-e56c5554"></view>
+          <view class="_div index data-v-e56c5554">{{b}}</view>
+          <view class="_div right data-v-e56c5554"></view>
+        </view>
+        <view class="_div block-title data-v-e56c5554">{{e}}</view>
+        <view class="{{['_div','data-v-e56c5554','tag',f]}}"></view>
+      </view>
+      <view class="_div hot data-v-e56c5554" wx:if="{{g}}">{{h}}</view>
+    </view>
+    <view class="_div block-title-container data-v-e56c5554" wx:if="{{i}}">
+      <view class="_div left-title data-v-e56c5554">
+        <view class="{{['_div','data-v-e56c5554','index-base',k,l]}}">
+          <view class="_div left data-v-e56c5554"></view>
+          <view class="_div index data-v-e56c5554">{{j}}</view>
+          <view class="_div right data-v-e56c5554"></view>
+        </view>
+        <view class="_div block-title data-v-e56c5554">{{m}}</view>
+        <view class="{{['_div','data-v-e56c5554','tag',n]}}"></view>
+      </view>
+      <view class="_div right-arrow data-v-e56c5554" wx:if="{{o}}"></view>
+    </view>
+    <view class="_div block-hot data-v-e56c5554" wx:if="{{p}}">{{q}}</view>
+  </view>
+  <view
+    catchtap="{{item.i}}"
+    class="{{['_div','data-v-e56c5554','part-up',item.h]}}"
+    wx:for="{{t}}"
+    wx:key="g"
+  >
+    <view class="_div part-up-left data-v-e56c5554">
+      <view class="_div title data-v-e56c5554">{{item.a}}</view>
+      <view class="_div info data-v-e56c5554">
+        <view class="_div tag data-v-e56c5554" wx:if="{{item.b}}"
+          >{{item.c}}</view
+        >
+        <view class="_div source data-v-e56c5554">{{item.d}}</view>
+        <view class="_div time data-v-e56c5554">{{item.e}}</view>
+      </view>
+    </view>
+    <view class="_div part-up-right data-v-e56c5554">
+      <image
+        class="_img cover data-v-e56c5554"
+        mode="aspectFill"
+        src="{{item.f}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div watch-line data-v-e56c5554" id="{{v}}"></view>
+  <view class="_div item-relate-target data-v-e56c5554" wx:if="{{w}}">
+    <news-item-basket
+      bind:__l="__l"
+      class="item-basket data-v-e56c5554"
+      uI="e56c5554-0"
+      uP="{{y}}"
+      wx:if="{{x}}"
+    ></news-item-basket>
+    <stock-tag
+      bind:__l="__l"
+      class="item-stock data-v-e56c5554"
+      uI="e56c5554-1"
+      uP="{{A}}"
+      wx:elif="{{z}}"
+    ></stock-tag>
+  </view>
+  <view class="_div on-long-press data-v-e56c5554" wx:if="{{B}}"></view>
+</view>

@@ -1,0 +1,64 @@
+@import "/app.wxss";
+.cond-detail-body {
+  padding: 0.16rem 0.32rem 0.32rem;
+}
+.cond-detail-body .cond-detail-row {
+  margin-bottom: 0.32rem;
+}
+.cond-detail-body .cond-detail-row.last {
+  margin-bottom: 0;
+}
+.detail-container .records-scroll-view {
+  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom)) !important;
+}
+.detail-container .wrapper {
+  border-radius: 0.213333rem;
+}
+.detail-container .btn-area {
+  border-radius: 0.213333rem;
+  padding: 0 0.32rem 0.32rem;
+}
+.detail-container .btn-area .btn-half {
+  font-size: 0.426667rem;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.detail-container .btn-area .cancel-btn {
+  background-color: initial;
+  border: 0.026667rem solid var(--color-primary-2);
+  border-radius: 0.106667rem;
+  color: var(--color-primary-2);
+  line-height: 1.12rem;
+  margin-right: 0.32rem;
+}
+.detail-container .btn-area .btn-full {
+  margin: 0 0.4rem;
+}
+.detail-container .btn-area.one-more-btn {
+  padding: 0 0 0.32rem;
+}
+.detail-container .cond-detail-info {
+  background-color: var(--fill-2);
+  border-radius: 0.213333rem;
+  margin: 0.32rem 0.32rem 0;
+}
+.detail-container .cond-detail {
+  background-color: var(--fill-2);
+  border-radius: 0.213333rem;
+  margin: 0.32rem;
+  padding-top: 0.32rem;
+}
+.detail-container .cond-detail .cond-detail-title {
+  color: var(--text-color-1);
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.586667rem;
+  padding-bottom: 0.32rem;
+}
+.detail-container .cond-detail-divider {
+  margin: 0.32rem 0;
+}
+.detail-container .block-wrap {
+  height: 0.32rem;
+}

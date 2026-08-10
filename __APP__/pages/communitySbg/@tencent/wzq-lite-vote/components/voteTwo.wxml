@@ -1,0 +1,69 @@
+<view class="_div vote-box data-v-eedeec11">
+  <vote-title
+    bind:__l="__l"
+    bindupdateList="{{a}}"
+    class="data-v-eedeec11"
+    uI="eedeec11-0"
+    uP="{{b}}"
+    uS="{{['votetitledesc']}}"
+    wx:if="{{b}}"
+  >
+    <view slot="votetitledesc">
+      <slot name="votedesccontainer"></slot>
+    </view>
+  </vote-title>
+  <view class="{{['_div','data-v-eedeec11','no-vote',e,f]}}" wx:if="{{c}}">
+    <view
+      catchtap="{{item.d}}"
+      class="{{['_div','data-v-eedeec11','vote-item',item.c]}}"
+      wx:for="{{d}}"
+      wx:key="b"
+    >
+      <view class="_div up-icon data-v-eedeec11">
+        <view class="_div icon-visible data-v-eedeec11"></view>
+        <view class="_div icon-shadow data-v-eedeec11"></view>
+      </view>
+      <view class="_div text data-v-eedeec11">{{item.a}}</view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-eedeec11','vote-chosen',l,m]}}"
+    id="voteChosen"
+    ref="voteChosen"
+    wx:else
+  >
+    <view class="_div text-wrap data-v-eedeec11">
+      <view
+        class="{{['_div','data-v-eedeec11','vote-text',item.f]}}"
+        wx:for="{{g}}"
+        wx:key="e"
+      >
+        <view class="_div sign data-v-eedeec11" wx:if="{{item.a}}"></view>
+        <view class="_div chosen-text chosen data-v-eedeec11" wx:if="{{item.b}}"
+          >已选「{{item.c}}」</view
+        >
+        <view class="_div chosen-text data-v-eedeec11" wx:else>{{item.d}}</view>
+      </view>
+    </view>
+    <view class="_div rate-wrap data-v-eedeec11" style="{{'width:'+j}}">
+      <view
+        class="{{['_div','data-v-eedeec11','vote-item',_.b]}}"
+        style="{{'width:'+_.c}}"
+        wx:for="{{h}}"
+        wx:for-item="_"
+        wx:key="a"
+      >
+        <view class="{{['_div','data-v-eedeec11','slide',i]}}"></view>
+      </view>
+    </view>
+    <view class="_div rate-text-wrap data-v-eedeec11">
+      <view
+        class="{{['_div','data-v-eedeec11','rate',item.b]}}"
+        id="{{item.c}}"
+        wx:for="{{k}}"
+        wx:key="d"
+        >{{item.a}}%</view
+      >
+    </view>
+  </view>
+</view>

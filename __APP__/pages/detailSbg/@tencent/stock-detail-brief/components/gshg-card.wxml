@@ -1,0 +1,65 @@
+<view class="_div brief-block data-v-acd98b98" wx:if="{{a}}">
+  <view bindtap="{{d}}" class="_div item-title-zxg data-v-acd98b98">
+    <view class="_div title-text data-v-acd98b98"
+      >公司回购<view
+        catchtap="{{c}}"
+        class="_div image-tip data-v-acd98b98"
+        wx:if="{{b}}"
+      ></view>
+    </view>
+    <view class="_div title-jump data-v-acd98b98">
+      <view class="_i jump-arrow data-v-acd98b98"></view>
+    </view>
+  </view>
+  <view class="_div item-block one-column data-v-acd98b98">
+    <view class="_div layout data-v-acd98b98">
+      <view class="_div item-label data-v-acd98b98" style="{{'width:'+e}}"
+        >日期</view
+      >
+      <view
+        class="_div item-label data-v-acd98b98"
+        style="{{'text-align:right'+';'+'width:'+g}}"
+        wx:if="{{f}}"
+        >市场</view
+      >
+      <view
+        class="_div item-label data-v-acd98b98"
+        style="{{'text-align:right'+';'+'width:'+h}}"
+        >金额</view
+      >
+      <view
+        class="_div item-label data-v-acd98b98"
+        style="{{'text-align:right'+';'+'width:'+i}}"
+        >均价</view
+      >
+    </view>
+    <view
+      class="_div layout data-v-acd98b98"
+      wx:for="{{j}}"
+      wx:for-item="val"
+      wx:key="k"
+    >
+      <view class="_div flex-row-item data-v-acd98b98" wx:if="{{val.a}}">
+        <view class="_div item-value data-v-acd98b98" style="{{'width:'+val.c}}"
+          >{{val.b}}</view
+        >
+        <view
+          class="_div item-value data-v-acd98b98"
+          style="{{'text-align:right'+';'+'width:'+val.f}}"
+          wx:if="{{val.d}}"
+          >{{val.e}}</view
+        >
+        <view
+          class="_div item-value data-v-acd98b98"
+          style="{{'text-align:right'+';'+'width:'+val.h}}"
+          >{{val.g}}</view
+        >
+        <view
+          class="_div item-value data-v-acd98b98"
+          style="{{'text-align:right'+';'+'width:'+val.j}}"
+          >{{val.i}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="_div fund-outer-block data-v-7e4bf073">
+  <view bindtap="{{b}}" class="_div title data-v-7e4bf073">
+    <view div class="_div data-v-7e4bf073">相关场外基金</view>
+    <view class="_div icon data-v-7e4bf073" wx:if="{{a}}"></view>
+  </view>
+  <view class="_div content data-v-7e4bf073">
+    <fund-l-c-t
+      bind:__l="__l"
+      bindclickStockDetail="{{e}}"
+      class="r data-v-7e4bf073"
+      uI="7e4bf073-0"
+      uP="{{f}}"
+      uR="fundlct"
+      wx:if="{{c}}"
+    ></fund-l-c-t>
+    <freeze-scroll-list
+      bind:__l="__l"
+      bindclickStockDetail="{{g}}"
+      class="data-v-7e4bf073"
+      uI="7e4bf073-1"
+      uP="{{h||''}}"
+      wx:else
+    ></freeze-scroll-list>
+  </view>
+</view>

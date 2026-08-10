@@ -1,0 +1,43 @@
+<view class="{{['_div','ActionSheet','data-v-4394e6c7',k&&'isIphoneX']}}">
+  <transition
+    bind:__l="__l"
+    class="data-v-4394e6c7"
+    uI="4394e6c7-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view
+      catchtap="{{b}}"
+      class="_div Action_mask data-v-4394e6c7"
+      wx:if="{{a}}"
+    ></view>
+  </transition>
+  <transition
+    bind:__l="__l"
+    class="data-v-4394e6c7"
+    uI="4394e6c7-1"
+    uP="{{j}}"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <view class="_div Action_wrap data-v-4394e6c7" wx:if="{{d}}">
+      <view class="_div menu_cell title data-v-4394e6c7" wx:if="{{e}}"
+        >{{f}}</view
+      >
+      <view
+        catchtap="{{menu.d}}"
+        class="_div menu_cell item data-v-4394e6c7"
+        wx:for="{{g}}"
+        wx:for-item="menu"
+        wx:key="c"
+      >
+        <view class="_div text data-v-4394e6c7">{{menu.a}}</view>
+        <view class="_div more-icon data-v-4394e6c7" wx:if="{{menu.b}}"></view>
+      </view>
+      <view catchtap="{{i}}" class="_div cancel data-v-4394e6c7" wx:if="{{h}}"
+        >取消</view
+      >
+    </view>
+  </transition>
+</view>

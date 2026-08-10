@@ -1,0 +1,53 @@
+<view class="{{['_div','data-v-2d747e2f',d,e]}}">
+  <view class="_div main-title data-v-2d747e2f">{{a}}</view>
+  <view
+    class="{{['_div','data-v-2d747e2f','content-container']}}"
+    wx:if="{{b}}"
+  >
+    <view class="_div question-list data-v-2d747e2f">
+      <view class="_div block-line data-v-2d747e2f">大家在问：</view>
+      <view class="_div list data-v-2d747e2f">
+        <view
+          bindtap="{{item.n}}"
+          class="_div list-item data-v-2d747e2f"
+          wx:for="{{c}}"
+          wx:key="m"
+        >
+          <view
+            class="_div newuser-question data-v-2d747e2f"
+            wx:if="{{item.a}}"
+          >
+            <view class="_div info data-v-2d747e2f">
+              <view class="_div text data-v-2d747e2f" ref="textElement"
+                >{{item.b}} {{item.c}}</view
+              >
+              <view class="_div watch-container data-v-2d747e2f">
+                <label class="_span btn data-v-2d747e2f">去看看</label>
+                <label class="_span watch-heat data-v-2d747e2f"
+                  >{{item.d}}</label
+                >
+              </view>
+            </view>
+            <image
+              alt=""
+              class="{{['_img','data-v-2d747e2f','logo',item.e&&'wrap-text']}}"
+              src="{{item.f}}"
+            ></image>
+          </view>
+          <view
+            class="{{['_div','question','data-v-2d747e2f',item.l&&'last-item']}}"
+            wx:else
+          >
+            <view
+              class="{{['_div','data-v-2d747e2f',item.i&&'question-text-pin-width']}}"
+              >{{item.g}} {{item.h}}</view
+            >
+            <view class="_div question-heat data-v-2d747e2f" wx:if="{{item.j}}"
+              >{{item.k}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

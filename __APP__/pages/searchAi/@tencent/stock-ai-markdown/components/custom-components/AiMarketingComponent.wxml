@@ -1,0 +1,16 @@
+<view
+  class="{{['_div','data-v-493cfa0a','ai-marketing-container',d]}}"
+  wx:if="{{a}}"
+>
+  <label class="_span ai-marketing-desc data-v-493cfa0a">{{b}}</label>
+  <view class="_div ai-marketing-list data-v-493cfa0a">
+    <view
+      catchtap="{{item.c}}"
+      class="_div ai-marketing-item data-v-493cfa0a"
+      wx:for="{{c}}"
+      wx:key="b"
+    >
+      <label class="_span data-v-493cfa0a">{{item.a}}</label>
+    </view>
+  </view>
+</view>

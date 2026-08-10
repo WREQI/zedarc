@@ -1,0 +1,161 @@
+@import "/app.wxss";
+.st-stepper {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.st-stepper--focus .st-stepper__button--minus:after {
+  border-right-color: var(--color-blue);
+}
+.st-stepper--focus .st-stepper__button--plus:after {
+  border-left-color: var(--color-blue);
+}
+.st-stepper--focus:after {
+  border-color: var(--color-blue);
+}
+.st-stepper__button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  background-color: #f5f6fa;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 1.173333rem;
+  justify-content: center;
+  position: relative;
+  width: 1.173333rem;
+}
+[data-theme="dark"] .st-stepper__button {
+  background-color: #262e40;
+}
+.st-stepper__button:active {
+  background-color: var(--border-color-1);
+}
+.st-stepper__button--disabled {
+  background-color: var(--fill-1);
+}
+.st-stepper__button--disabled .st-stepper__icon {
+  color: var(--fill-1);
+}
+.st-stepper:after {
+  border-radius: 0.213333rem;
+}
+.st-stepper__button--minus {
+  border-bottom-left-radius: 0.106667rem;
+  border-top-left-radius: 0.106667rem;
+  z-index: 2;
+}
+.st-stepper__button--minus:after {
+  border-bottom-left-radius: 0.213333rem;
+  border-top-left-radius: 0.213333rem;
+}
+.st-stepper__button--plus {
+  border-bottom-right-radius: 0.106667rem;
+  border-top-right-radius: 0.106667rem;
+  z-index: 2;
+}
+.st-stepper__button--plus:after {
+  border-bottom-right-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+}
+.st-stepper__button--steptip .st-stepper__icon {
+  font-size: 0.4rem;
+}
+.st-stepper__icon.icon {
+  color: #475166;
+  font-size: 0.4rem;
+  transition: all 50ms;
+}
+[data-theme="dark"] .st-stepper__icon.icon {
+  color: var(--text-color-2);
+}
+.st-stepper__step {
+  color: var(--text-color-5);
+  font-size: 0.346667rem;
+}
+.st-stepper .stepper__input {
+  -webkit-box-flex: 1;
+  flex: 1;
+  font-size: 0.506667rem;
+  font-weight: 500;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  margin-right: 0;
+  position: relative;
+  text-align: center;
+}
+.st-stepper .stepper__input.disabled .uni-input-input {
+  color: var(--text-color-4);
+}
+.st-stepper .stepper__input--pc {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.st-stepper .stepper__input--pc .stepper__input-after,
+.st-stepper .stepper__input--pc .stepper__input-prefix {
+  color: inherit;
+  flex-shrink: 0;
+  font-size: 0.506667rem;
+  font-weight: 500;
+}
+.st-stepper .stepper__input--pc .stepper__input-inner {
+  color: inherit;
+  font-size: 0.506667rem;
+  font-weight: 500;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  text-align: center;
+  width: 100%;
+}
+.st-stepper--simple:after {
+  border: none;
+}
+.st-stepper--simple .st-stepper__button {
+  border-radius: 0.106667rem;
+  height: 0.746667rem;
+  overflow: visible;
+  position: relative;
+  width: 0.746667rem;
+}
+.st-stepper--simple .st-stepper__button:after {
+  border: none;
+  bottom: -0.16rem;
+  content: " ";
+  display: inline-block;
+  pointer-events: auto;
+  position: absolute;
+  top: -0.16rem;
+  transform: scale(1);
+}
+.st-stepper--simple .st-stepper__button[data-type="minus"]:after {
+  left: -0.16rem;
+  right: 0;
+}
+.st-stepper--simple .st-stepper__button[data-type="plus"]:after {
+  left: 0;
+  right: -0.16rem;
+}
+.st-stepper--simple .st-stepper__icon.icon {
+  font-size: 0.32rem;
+  font-weight: 500;
+}
+.st-stepper--simple .stepper__input {
+  font-size: 0.426667rem;
+  height: 0.746667rem;
+  line-height: 0.746667rem;
+  line-height: 0.586667rem;
+}

@@ -1,0 +1,61 @@
+<view class="_div common-func-wrapper data-v-acb33f88" ref="commonFunc">
+  <view class="_div top-bar-wrapper data-v-acb33f88">
+    <view class="_div name-top data-v-acb33f88"></view>
+    <view class="_div name data-v-acb33f88">{{a}}</view>
+    <view class="_div name-bottom data-v-acb33f88"></view>
+  </view>
+  <view class="_div common-func-content-wrapper data-v-acb33f88">
+    <view
+      bindtap="{{item.s}}"
+      class="{{['_div','data-v-acb33f88','common-func-item-wrapper',item.r]}}"
+      ref="{{item.q}}"
+      wx:for="{{b}}"
+      wx:key="p"
+    >
+      <view class="_div common-func-item data-v-acb33f88">
+        <view class="{{['_div','data-v-acb33f88','title',item.b]}}"
+          >{{item.a}}</view
+        >
+        <view class="_div right-content data-v-acb33f88" wx:if="{{item.c}}">
+          <view
+            class="_div account-redpoint data-v-acb33f88"
+            wx:if="{{item.d}}"
+          ></view>
+          <view
+            class="{{['_div','placeholder','data-v-acb33f88',item.f&&'account']}}"
+            >{{item.e}}</view
+          >
+          <image
+            class="_img arrow-img data-v-acb33f88"
+            src="https://st.gtimg.com/design/9219b56ceedd2a0efc4536383a21e0bd.png"
+          ></image>
+        </view>
+        <view class="_div right-content data-v-acb33f88" wx:else>
+          <view
+            class="{{['_div','data-v-acb33f88',item.h]}}"
+            wx:if="{{item.g}}"
+          ></view>
+          <text-red-point
+            bind:__l="__l"
+            class="r-i-f data-v-acb33f88"
+            uI="{{item.k}}"
+            uP="{{item.l}}"
+            uR="deliveryRp"
+            wx:elif="{{item.i}}"
+          ></text-red-point>
+          <view class="_div placeholder data-v-acb33f88" wx:if="{{item.m}}">
+            <rich-text class="data-v-acb33f88" nodes="{{item.n}}"></rich-text>
+          </view>
+          <image
+            class="_img arrow-img data-v-acb33f88"
+            src="https://st.gtimg.com/design/9219b56ceedd2a0efc4536383a21e0bd.png"
+          ></image>
+        </view>
+      </view>
+      <view
+        class="_div common-func-item-line data-v-acb33f88"
+        wx:if="{{item.o}}"
+      ></view>
+    </view>
+  </view>
+</view>

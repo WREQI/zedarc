@@ -1,0 +1,10 @@
+<view class="{{['_div','st-checkbox','data-v-f58dbbfa',c,d]}}">
+  <label bindtap="{{b}}" class="_span st-checkbox-inner data-v-f58dbbfa">
+    <image
+      alt=""
+      class="_img st-checkbox-check data-v-f58dbbfa"
+      src="https://st.gtimg.com/design/f181c38b66026d9c23bed96f72b72e71.png"
+      wx:if="{{a}}"
+    ></image>
+  </label>
+</view>

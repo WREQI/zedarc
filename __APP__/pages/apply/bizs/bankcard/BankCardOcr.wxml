@@ -1,0 +1,14 @@
+<view bindtap="{{g}}" class="photo-contaier data-v-06c37515" hidden="{{!f}}">
+  <view
+    class="{{['photo-content','margin-auto','data-v-06c37515',e&&'local']}}"
+  >
+    <image
+      binderror="{{d}}"
+      bindload="{{c}}"
+      class="photo data-v-06c37515"
+      mode="aspectFit"
+      src="{{b}}"
+      wx:if="{{a}}"
+    ></image>
+  </view>
+</view>

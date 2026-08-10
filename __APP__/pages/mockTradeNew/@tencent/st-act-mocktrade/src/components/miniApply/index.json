@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "semi-mask": "../../../../../../asyncCom/@tencent/st-semi-modal/index",
+    "trade-component": "./trade",
+    "confirm-component": "./confirm",
+    "finish-component": "./finish",
+    "info-modal": "../InfoModal"
+  },
+  "componentPlaceholder": { "semi-mask": "view" }
+}

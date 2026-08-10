@@ -1,0 +1,44 @@
+<view class="_div premium-card data-v-5b84ebef" data-test-id="t0-premium-card">
+  <view class="_div col-header data-v-5b84ebef">
+    <view class="_div col-name data-v-5b84ebef">基金名称</view>
+    <view class="_div col-yield data-v-5b84ebef">溢折率</view>
+    <view class="_div col-level data-v-5b84ebef">溢折率水平</view>
+  </view>
+  <view
+    class="_div premium-fund-block data-v-5b84ebef"
+    wx:for="{{a}}"
+    wx:for-item="fund"
+    wx:key="e"
+  >
+    <view class="_div premium-fund-block__row data-v-5b84ebef">
+      <t0-premium-rank-item
+        bind:__l="__l"
+        class="data-v-5b84ebef"
+        uI="{{fund.a}}"
+        uP="{{fund.b}}"
+        wx:if="{{fund.b}}"
+      ></t0-premium-rank-item>
+    </view>
+    <view
+      bindtap="{{fund.d}}"
+      class="_div premium-note data-v-5b84ebef"
+      data-test-id="t0-premium-note"
+    >
+      <view class="_div premium-note__text data-v-5b84ebef">
+        <label class="_span premium-note__text-title data-v-5b84ebef"
+          >解读：</label
+        >{{fund.c}}<view
+          class="_div premium-note__more data-v-5b84ebef"
+          data-test-id="t0-premium-explain"
+        >
+          <view class="_div data-v-5b84ebef">查看详情</view>
+          <image
+            alt=""
+            class="_img premium-note__more-arrow data-v-5b84ebef"
+            src="https://st.gtimg.com/design/40e5629d491132e6dbc0779f0e544563.svg"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

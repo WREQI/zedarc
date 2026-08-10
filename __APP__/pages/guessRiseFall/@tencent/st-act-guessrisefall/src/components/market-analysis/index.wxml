@@ -1,0 +1,141 @@
+<view class="_div market-analysis data-v-0b0bba30">
+  <view class="_div market-analysis__title data-v-0b0bba30" wx:if="{{a}}"
+    >体验猜涨跌AI助手，分享领现金</view
+  >
+  <view class="_div market-analysis__task-list data-v-0b0bba30">
+    <view class="_div market-analysis__task-item data-v-0b0bba30">
+      <view class="_div market-analysis__task-icon data-v-0b0bba30"></view>
+      <view class="_div market-analysis__task-info data-v-0b0bba30">
+        <view class="_div market-analysis__task-name data-v-0b0bba30"
+          >问元宝分析大盘趋势</view
+        >
+        <view class="_div market-analysis__task-desc data-v-0b0bba30"
+          >猜涨跌AI助手</view
+        >
+      </view>
+      <view
+        bindtap="{{c}}"
+        class="_div market-analysis__ai-btn data-v-0b0bba30"
+        wx:if="{{b}}"
+        >问元宝</view
+      >
+      <view class="_div market-analysis__ai-done data-v-0b0bba30" wx:else
+        >已完成</view
+      >
+    </view>
+  </view>
+  <view class="_div market-analysis__action data-v-0b0bba30" wx:if="{{d}}">
+    <view
+      class="_div market-analysis__action-tips data-v-0b0bba30"
+      wx:if="{{e}}"
+    ></view>
+    <button
+      class="market-analysis__invite-btn market-analysis__invite-btn--disabled data-v-0b0bba30"
+      wx:if="{{f}}"
+    >
+      邀请好友体验 领现金
+    </button>
+    <button
+      bindtap="{{h}}"
+      class="market-analysis__invite-btn data-v-0b0bba30"
+      data-aiquestion="{{g}}"
+      openType="share"
+      wx:else
+    >
+      邀请好友体验 领现金
+    </button>
+  </view>
+  <view class="_div market-analysis__wallet data-v-0b0bba30" wx:if="{{i}}">
+    <view
+      bindtap="{{k}}"
+      class="_div market-analysis__wallet-withdraw data-v-0b0bba30"
+      >去提现（{{j}}）</view
+    >
+    <view class="_div market-analysis__wallet-divider data-v-0b0bba30"></view>
+    <view
+      bindtap="{{l}}"
+      class="_div market-analysis__wallet-records data-v-0b0bba30"
+      >奖励记录</view
+    >
+  </view>
+  <view
+    class="_div market-analysis__popup market-analysis__popup--guess data-v-0b0bba30"
+    wx:if="{{m}}"
+  >
+    <view class="_div market-analysis__popup-body data-v-0b0bba30">
+      <view class="_div market-analysis__popup-header data-v-0b0bba30">
+        <view class="_div market-analysis__popup-notice data-v-0b0bba30"></view>
+        <view class="_div market-analysis__popup-notice-text data-v-0b0bba30"
+          >请留意{{n}}竞猜结果提醒</view
+        >
+      </view>
+      <view class="_div market-analysis__popup-main data-v-0b0bba30">
+        <view class="_div market-analysis__popup-title data-v-0b0bba30"
+          >AI怎么看今日大盘？</view
+        >
+        <view class="_div market-analysis__popup-subtitle data-v-0b0bba30"
+          >来看看今日早/午/收盘行情解读</view
+        >
+        <view class="_div market-analysis__popup-question data-v-0b0bba30"
+          >{{o}}</view
+        >
+        <view class="_div market-analysis__popup-answer data-v-0b0bba30"></view>
+        <view
+          bindtap="{{p}}"
+          class="_div market-analysis__popup-btn data-v-0b0bba30"
+          >问元宝大盘解读</view
+        >
+      </view>
+      <view
+        bindtap="{{q}}"
+        class="_div market-analysis__popup-close data-v-0b0bba30"
+      ></view>
+    </view>
+  </view>
+  <view
+    class="_div market-analysis__popup market-analysis__popup--guest data-v-0b0bba30"
+    wx:if="{{r}}"
+  >
+    <view class="_div market-analysis__popup-body data-v-0b0bba30">
+      <view
+        class="_div market-analysis__popup-main market-analysis__popup-main--no-header data-v-0b0bba30"
+      >
+        <view class="_div market-analysis__popup-title data-v-0b0bba30"
+          >好友邀请你体验AI分析</view
+        >
+        <view class="_div market-analysis__popup-subtitle data-v-0b0bba30"
+          >来看看今日走势解读</view
+        >
+        <view class="_div market-analysis__popup-question data-v-0b0bba30"
+          >{{s}}</view
+        >
+        <view class="_div market-analysis__popup-answer data-v-0b0bba30"></view>
+        <view
+          bindtap="{{t}}"
+          class="_div market-analysis__popup-btn data-v-0b0bba30"
+          >问元宝大盘解读</view
+        >
+      </view>
+      <view
+        bindtap="{{v}}"
+        class="_div market-analysis__popup-close data-v-0b0bba30"
+      ></view>
+    </view>
+  </view>
+  <history-modal
+    bind:__l="__l"
+    bindupdateVisible="{{w}}"
+    class="data-v-0b0bba30"
+    uI="0b0bba30-0"
+    uP="{{x}}"
+    wx:if="{{x}}"
+  ></history-modal>
+  <simple-modal
+    bind:__l="__l"
+    class="r data-v-0b0bba30"
+    uI="0b0bba30-1"
+    uP="{{z}}"
+    uR="simpleModal"
+    wx:if="{{z}}"
+  ></simple-modal>
+</view>

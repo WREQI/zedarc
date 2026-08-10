@@ -1,0 +1,161 @@
+<view class="_div mod-diagnose-zxg data-v-e7fb8000">
+  <view
+    class="_div zxg-sa-block overview-top data-v-e7fb8000"
+    ref="overview"
+    wx:if="{{a}}"
+  >
+    <analyse-tab
+      bind:__l="__l"
+      bindonChange="{{c}}"
+      class="{{['data-v-e7fb8000',b]}}"
+      uI="e7fb8000-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></analyse-tab>
+    <view class="_div overview data-v-e7fb8000">
+      <view class="_div update-time data-v-e7fb8000">
+        <label class="_span data-v-e7fb8000">最近更新 {{e}}</label>
+        <label catchtap="{{f}}" class="_span pk data-v-e7fb8000"></label>
+      </view>
+      <view class="_div chart-area data-v-e7fb8000">
+        <view class="_div num-rank data-v-e7fb8000">
+          <view class="_div num-order dash-border data-v-e7fb8000">
+            <view class="_strong num-strong data-v-e7fb8000"
+              >{{g}}<label
+                class="{{['_span','num-i','data-v-e7fb8000',h]}}"
+              ></label>
+            </view>
+            <view catchtap="{{i}}" class="_div tips-wrapper data-v-e7fb8000"
+              >综合评分<view class="_i tip-i data-v-e7fb8000"></view>
+            </view>
+          </view>
+          <view class="_div market-rank dash-border data-v-e7fb8000">
+            <view class="_p rank-p data-v-e7fb8000">
+              <label class="{{['_span','rank-crown','data-v-e7fb8000',j]}}"
+                >行业排名</label
+              >
+              <label catchtap="{{n}}" class="_span market-pos data-v-e7fb8000"
+                >{{k}}/{{l}}<view
+                  class="_i arrow-right data-v-e7fb8000"
+                  wx:if="{{m}}"
+                ></view>
+              </label>
+            </view>
+            <view class="_p rank-p data-v-e7fb8000">
+              <label class="{{['_span','rank-crown','data-v-e7fb8000',o]}}"
+                >市场排名</label
+              >
+              <label catchtap="{{s}}" class="_span market-pos data-v-e7fb8000"
+                >{{p}}/{{q}}<view
+                  class="_i arrow-right data-v-e7fb8000"
+                  wx:if="{{r}}"
+                ></view>
+              </label>
+            </view>
+          </view>
+          <view class="_div rank-brief data-v-e7fb8000">超越{{t}}%的股票</view>
+        </view>
+        <view
+          bindtap="{{A}}"
+          class="_div chart-block-container data-v-e7fb8000"
+        >
+          <label
+            catchtap="{{item.f}}"
+            class="_span t-span part-type data-v-e7fb8000"
+            wx:for="{{v}}"
+            wx:key="e"
+            >{{item.a}}<view class="t-b data-v-e7fb8000" wx:if="{{item.b}}"
+              >{{item.c}}</view
+            >
+            <block wx:else>{{item.d}}</block>
+          </label>
+          <f2
+            bind:__l="__l"
+            bindonInit="{{y}}"
+            class="r data-v-e7fb8000"
+            uI="e7fb8000-1"
+            uP="{{z}}"
+            uR="radarChart"
+            wx:if="{{w}}"
+          ></f2>
+        </view>
+      </view>
+      <view class="_div stock-profile data-v-e7fb8000" wx:if="{{B}}">
+        <view class="profile-h5 data-v-e7fb8000">股票画像</view>
+        <view class="_div tag-wrapper data-v-e7fb8000">
+          <block wx:if="{{C}}">
+            <label
+              class="_span c-tag c-span data-v-e7fb8000"
+              wx:for="{{D}}"
+              wx:key="b"
+              >{{item.a}}</label
+            >
+          </block>
+          <block wx:if="{{E}}">
+            <label
+              catchtap="{{item.c}}"
+              class="_span hit-tag c-span data-v-e7fb8000"
+              wx:for="{{F}}"
+              wx:key="b"
+              >{{item.a}}<image
+                class="_img strategy-arrow data-v-e7fb8000"
+                src="https://st.gtimg.com/design/73969fa58163784136c7de75457e9d74.png"
+              ></image>
+            </label>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <technical
+    bind:__l="__l"
+    class="r data-v-e7fb8000"
+    id="technical"
+    uI="e7fb8000-2"
+    uP="{{I}}"
+    uR="technical"
+    wx:if="{{G}}"
+  ></technical>
+  <capital
+    bind:__l="__l"
+    class="r data-v-e7fb8000"
+    id="capital"
+    uI="e7fb8000-3"
+    uP="{{L}}"
+    uR="capital"
+    wx:if="{{J}}"
+  ></capital>
+  <market-view
+    bind:__l="__l"
+    class="r data-v-e7fb8000"
+    id="opinion"
+    uI="e7fb8000-4"
+    uP="{{O}}"
+    uR="opinion"
+    wx:if="{{M}}"
+  ></market-view>
+  <fundamental
+    bind:__l="__l"
+    class="r data-v-e7fb8000"
+    id="fundamental"
+    uI="e7fb8000-5"
+    uP="{{R}}"
+    uR="fundamental"
+    wx:if="{{P}}"
+  ></fundamental>
+  <view class="_div zxg-sa-ann data-v-e7fb8000" wx:if="{{S}}">
+    <view class="_p data-v-e7fb8000"
+      >以上数据来自交易所行情及已授权的上市公司披露信息，均基于历史数据进行一定算法评述，不代表未来趋势，不构成投资建议，仅供参考。投资者需依赖自身独立判断进行投资决策，股市有风险，投资需谨慎。</view
+    >
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-e7fb8000"
+    uI="e7fb8000-6"
+    uS="{{['d']}}"
+    wx:if="{{T}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>{{U}}</block>
+  </no-data>
+</view>

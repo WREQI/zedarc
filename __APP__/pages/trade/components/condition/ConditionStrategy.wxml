@@ -1,0 +1,35 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  class="data-v-2ecda134"
+  uI="2ecda134-0"
+  uP="{{h}}"
+  uS="{{['d']}}"
+  wx:if="{{h}}"
+>
+  <view
+    class="{{['cond-strategy','data-v-2ecda134',f&&'cond-strategy-navbar']}}"
+  >
+    <view class="cond-strategy--body data-v-2ecda134">
+      <trade-tool-option
+        bind:__l="__l"
+        bindconditionItemClick="{{a}}"
+        class="trade-tool-option data-v-2ecda134"
+        uI="2ecda134-1,2ecda134-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></trade-tool-option>
+    </view>
+    <view class="flex-center footer-broker data-v-2ecda134">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo-icon data-v-2ecda134"
+        uI="2ecda134-2,2ecda134-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></broker-logo>
+      <view class="data-v-2ecda134">{{d}} {{e}}</view>
+      <view class="cur-broket-tag data-v-2ecda134">当前交易券商</view>
+    </view>
+  </view>
+</action-sheet>

@@ -1,0 +1,55 @@
+.target-price.data-v-97e24fb8 {
+  box-sizing: border-box;
+  margin-top: 0.64rem;
+}
+.target-price .title.data-v-97e24fb8 {
+  font-weight: 600;
+  margin-bottom: 0.22666666666666666rem;
+}
+.target-price .price-describe.data-v-97e24fb8,
+.target-price .title.data-v-97e24fb8 {
+  color: var(--text-color-1);
+  font-family: PingFang SC;
+  font-size: 0.37333333333333335rem;
+  font-style: normal;
+  line-height: 0.52rem;
+  padding: 0 0.4rem;
+}
+.target-price .price-describe.data-v-97e24fb8 {
+  font-weight: 400;
+  height: 1.04rem;
+}
+.price-chart-container.data-v-97e24fb8 {
+  padding: 0 0.4rem;
+  position: relative;
+}
+.price-chart-container .price-chart.data-v-97e24fb8 {
+  height: 6.666666666666667rem;
+  margin: 0 auto;
+}
+.price-chart-container .canvas-toolTip.data-v-97e24fb8 {
+  background-color: var(--color-card);
+  color: var(--color-heavygray);
+  font-size: 0.29333333333333333rem;
+  margin: 0.32rem 0.48rem;
+  padding: 0.13333333333333333rem;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  width: 50%;
+}
+.price-chart-container .canvas-toolTip-left.data-v-97e24fb8 {
+  left: 0;
+  right: auto;
+}
+.price-chart-container .canvas-toolTip-right.data-v-97e24fb8 {
+  left: auto;
+  right: 0;
+}
+.price-chart-container .canvas-toolTip .tips-item.data-v-97e24fb8 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.4rem;
+  padding: 0;
+}

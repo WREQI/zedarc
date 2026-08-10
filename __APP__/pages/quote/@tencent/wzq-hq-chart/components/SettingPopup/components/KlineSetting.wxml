@@ -1,0 +1,106 @@
+<view class="_div kline-set-content data-v-281cc308">
+  <view class="_div item-first-line data-v-281cc308">
+    <view
+      bindtap="{{e}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',d]}}"
+      wx:if="{{a}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{b}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{c}}</view>
+    </view>
+    <view
+      bindtap="{{i}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',h]}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{f}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{g}}</view>
+    </view>
+    <view
+      bindtap="{{m}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',l]}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{j}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{k}}</view>
+    </view>
+    <view
+      bindtap="{{r}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',q]}}"
+      wx:if="{{n}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{o}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{p}}</view>
+    </view>
+    <view
+      bindtap="{{x}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',w]}}"
+      wx:if="{{s}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{t}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{v}}</view>
+    </view>
+    <view
+      bindtap="{{C}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',B]}}"
+      wx:if="{{y}}"
+    >
+      <image class="_img icon-img data-v-281cc308" src="{{z}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{A}}</view>
+    </view>
+    <view
+      bindtap="{{H}}"
+      class="{{['_div','data-v-281cc308','switch-item-gt',G]}}"
+      wx:if="{{D}}"
+    >
+      <label class="_span vip-badge data-v-281cc308">VIP</label>
+      <image class="_img icon-img data-v-281cc308" src="{{E}}"></image>
+      <view class="_div big-icon-text data-v-281cc308">{{F}}</view>
+    </view>
+  </view>
+  <view class="_div split-line data-v-281cc308"></view>
+  <view class="_div item-set kset data-v-281cc308">
+    <view class="_div item-title data-v-281cc308">复权类型</view>
+    <view class="_div fuquan data-v-281cc308">
+      <view
+        bindtap="{{item.d}}"
+        class="{{['_div','data-v-281cc308','fq-tag',item.c]}}"
+        wx:for="{{I}}"
+        wx:key="b"
+        >{{item.a}}</view
+      >
+    </view>
+  </view>
+  <view class="_div item-set kset data-v-281cc308">
+    <view class="_div item-title data-v-281cc308">K线样式</view>
+    <view class="_div k-style data-v-281cc308">
+      <view
+        bindtap="{{item.e}}"
+        class="{{['_div','data-v-281cc308','ks-item',item.d]}}"
+        wx:for="{{J}}"
+        wx:key="c"
+      >
+        <image class="_img k-icon data-v-281cc308" src="{{item.a}}"></image
+        >{{item.b}}</view
+      >
+    </view>
+  </view>
+  <view class="_div item-set kset data-v-281cc308">
+    <view class="_div item-title data-v-281cc308">跳空缺口</view>
+    <view class="_div set-switch data-v-281cc308">
+      <switch-com
+        bind:__l="__l"
+        bindchange="{{K}}"
+        class="swicth-default data-v-281cc308"
+        uI="281cc308-0"
+        uP="{{L}}"
+        wx:if="{{L}}"
+      ></switch-com>
+    </view>
+  </view>
+  <view catchtap="{{M}}" class="_div item-set kset data-v-281cc308">
+    <label class="_span item-title data-v-281cc308">技术指标</label>
+    <image
+      class="_img right-arraw-tech data-v-281cc308"
+      src="https://st.gtimg.com/design/4b086d28acbe500b68d927b9c5506b8e.png"
+    ></image>
+  </view>
+</view>

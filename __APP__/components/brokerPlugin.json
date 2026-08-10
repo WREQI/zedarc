@@ -1,0 +1,27 @@
+{
+  "component": true,
+  "usingComponents": {
+    "system-error": "../pages/broker/system/components/error",
+    "zhao-shang": "../pages/broker/components/zhaoshang/index",
+    "hua-lin": "../pages/broker/components/hualin/index",
+    "guo-xin": "../pages/broker/components/guoxin/index",
+    "guo-jin": "../pages/broker/components/guojin/index",
+    "zhong-jin-cai-fu": "../pages/broker/components/zhongjincaifu/index",
+    "guang-fa": "../pages/broker/components/guangfa/index",
+    "zhong-xin-jian-tou": "../pages/broker/components/zhongxinjiantou/index",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index"
+  },
+  "componentPlaceholder": {
+    "system-error": "view",
+    "zhao-shang": "view",
+    "hua-lin": "view",
+    "guo-xin": "view",
+    "guo-jin": "view",
+    "zhong-jin-cai-fu": "view",
+    "guang-fa": "view",
+    "zhong-xin-jian-tou": "view"
+  }
+}

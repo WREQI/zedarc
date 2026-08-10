@@ -1,0 +1,24 @@
+<view
+  bindtap="{{k}}"
+  class="{{['st-cell','^st-cell','border--bottom','^border--bottom',i&&'disabled',j&&'st-cell--noborder']}}"
+>
+  <view class="st-cell--title ^st-cell--title" wx:if="{{a}}">
+    <slot name="title" wx:if="{{$slots.title}}"></slot>
+    <block wx:else>
+      <label>{{b}}</label>
+      <view class="st-cell--label" wx:if="{{c}}">{{d}}</view>
+    </block>
+  </view>
+  <view class="{{['st-cell--value','^st-cell--value',f]}}">
+    <slot wx:if="{{$slots.d}}"></slot>
+    <label wx:else>{{e}}</label>
+  </view>
+  <slot name="extra"></slot>
+  <block wx:if="{{g}}">
+    <slot name="right-icon" wx:if="{{$slots['right-icon']}}"></slot>
+    <label
+      class="{{['st-cell--right-icon','^st-cell--right-icon','icon','icon-arrow',h]}}"
+      wx:else
+    ></label>
+  </block>
+</view>

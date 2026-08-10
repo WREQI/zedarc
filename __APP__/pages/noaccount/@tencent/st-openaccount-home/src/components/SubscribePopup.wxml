@@ -1,0 +1,20 @@
+<pop-up
+  bind:__l="__l"
+  class="data-v-5a6f2bf4"
+  uI="5a6f2bf4-0"
+  uP="{{f}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['_div','data-v-5a6f2bf4','subscribe_container',e]}}">
+    <view
+      bindtap="{{b}}"
+      class="_div close-subscribe-btn data-v-5a6f2bf4"
+    ></view>
+    <image class="_img subscribe-bg data-v-5a6f2bf4" src="{{c}}"></image>
+    <image
+      class="_img subscribe-qrcode-png data-v-5a6f2bf4"
+      src="{{d}}"
+    ></image>
+  </view>
+</pop-up>

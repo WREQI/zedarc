@@ -1,0 +1,26 @@
+<biometrics-protocol-container
+  bind:__l="__l"
+  bindclose="{{b}}"
+  class="data-v-79aceb0b"
+  uI="79aceb0b-0"
+  uP="{{c}}"
+  uS="{{['content']}}"
+  wx:if="{{c}}"
+>
+  <view class="bio-protocol-container data-v-79aceb0b" slot="content">
+    <loading-provider
+      bind:__l="__l"
+      class="data-v-79aceb0b"
+      uI="79aceb0b-1,79aceb0b-0"
+      uS="{{['d']}}"
+    >
+      <v-protocol
+        bind:__l="__l"
+        class="data-v-79aceb0b"
+        uI="79aceb0b-2,79aceb0b-1"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></v-protocol>
+    </loading-provider>
+  </view>
+</biometrics-protocol-container>

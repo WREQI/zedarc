@@ -1,0 +1,64 @@
+<view class="_div my-choose data-v-2e21a91d" id="my-choose">
+  <view class="_div choose-list data-v-2e21a91d" wx:if="{{a}}">
+    <view
+      class="_div data-v-2e21a91d"
+      wx:for="{{b}}"
+      wx:for-item="choose"
+      wx:key="p"
+    >
+      <view class="{{['_div','data-v-2e21a91d','choose-item',choose.o]}}">
+        <view class="_div choose-right data-v-2e21a91d">
+          <view
+            bindtap="{{choose.f}}"
+            class="_div desc data-v-2e21a91d"
+            wx:if="{{choose.a}}"
+          >
+            <image
+              class="_img stock-m data-v-2e21a91d"
+              src="{{choose.b}}"
+            ></image>
+            <label class="_span stock-n data-v-2e21a91d">{{choose.c}}</label>
+            <label class="{{['_span','stock-zdf','data-v-2e21a91d',choose.e]}}"
+              >{{choose.d}}</label
+            >
+          </view>
+          <view
+            bindtap="{{choose.j}}"
+            class="_div news-content data-v-2e21a91d"
+          >
+            <view class="_div news-title data-v-2e21a91d">{{choose.g}}</view>
+            <view
+              class="_div stock-logo data-v-2e21a91d"
+              style="{{'background-image:'+choose.i}}"
+              wx:if="{{choose.h}}"
+            ></view>
+          </view>
+          <view bindtap="{{choose.n}}" class="_div news-info data-v-2e21a91d">
+            <label
+              class="_span news-source data-v-2e21a91d"
+              wx:if="{{choose.k}}"
+              >{{choose.l}}</label
+            >
+            <label class="_span news-time data-v-2e21a91d">{{choose.m}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div choose-empty-tip data-v-2e21a91d" wx:elif="{{c}}">
+    <empty
+      bind:__l="__l"
+      class="data-v-2e21a91d"
+      uI="2e21a91d-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></empty>
+  </view>
+  <supporter
+    bind:__l="__l"
+    class="data-v-2e21a91d"
+    uI="2e21a91d-1"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></supporter>
+</view>

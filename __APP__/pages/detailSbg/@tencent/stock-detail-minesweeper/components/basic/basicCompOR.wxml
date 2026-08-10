@@ -1,0 +1,29 @@
+<view class="_div comp-block data-v-72d02f31">
+  <view class="_p brief data-v-72d02f31" wx:if="{{a}}">{{b}}</view>
+  <view class="_div or-item data-v-72d02f31" wx:if="{{c}}">
+    <view class="_p data-v-72d02f31">
+      <label class="_span data-v-72d02f31">业绩披露：</label>{{d}}</view
+    >
+    <view class="_i data-v-72d02f31">{{e}}</view>
+  </view>
+  <view class="_div or-item data-v-72d02f31" wx:if="{{f}}">
+    <view class="_p data-v-72d02f31">
+      <label class="_span data-v-72d02f31">业绩披露：</label>{{g}}</view
+    >
+    <view class="_i data-v-72d02f31">{{h}}</view>
+  </view>
+  <view class="_div or-item data-v-72d02f31" wx:if="{{i}}">
+    <view class="_p data-v-72d02f31">
+      <label class="_span data-v-72d02f31">{{j}}：</label>{{k}}</view
+    >
+    <view class="_i data-v-72d02f31">{{l}}</view>
+  </view>
+  <view class="_div or-item data-v-72d02f31" wx:if="{{m}}">
+    <view class="_p brief data-v-72d02f31">
+      <label class="_span data-v-72d02f31">业绩预告变动原因：</label>{{n}}<view
+        catchtap="{{o}}"
+        class="_i data-v-72d02f31"
+      ></view>
+    </view>
+  </view>
+</view>

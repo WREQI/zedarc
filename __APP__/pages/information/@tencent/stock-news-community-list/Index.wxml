@@ -1,0 +1,14 @@
+<view class="_div community-index data-v-f4c40755">
+  <square
+    bind:__l="__l"
+    bindonMpScroll="{{d}}"
+    bindonPutComment="{{b}}"
+    bindshowProfilePop="{{e}}"
+    bindtapLike="{{c}}"
+    class="r data-v-f4c40755"
+    uI="f4c40755-0"
+    uP="{{f}}"
+    uR="squareRef"
+    wx:if="{{f}}"
+  ></square>
+</view>

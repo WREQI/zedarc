@@ -1,0 +1,22 @@
+@import "/app.wxss";
+.bottom-selector-trigger.data-v-90fe59c7 {
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  font-weight: 500;
+}
+.bottom-selector-trigger .icon-arrow-bg.data-v-90fe59c7 {
+  background-image: url(https://st.gtimg.com/design/23205a1bc42e97dd40f41aee3852c1da.png);
+  background-size: cover;
+  display: inline-block;
+  height: 0.32rem;
+  margin-left: 0.053333rem;
+  width: 0.32rem;
+}
+[data-theme="dark"] .bottom-selector-trigger .icon-arrow-bg.data-v-90fe59c7 {
+  background-image: url(https://st.gtimg.com/design/7eeb53ae69ce7e5c13be7ebe7581c25a.png);
+}

@@ -1,0 +1,27 @@
+<view class="{{['_div','data-v-c4905f5e','mod-handle-view-oper','oper-box',o,p]}}">
+    <view class="{{['_div','data-v-c4905f5e',n]}}">
+        <view catchtap="{{c}}" class="_div op data-v-c4905f5e" ref="commentButton" wx:if="{{a}}">
+            <view class="_div text data-v-c4905f5e">
+                <label class="_span data-v-c4905f5e">{{b}}</label>
+            </view>
+        </view>
+        <view catchtap="{{e}}" class="_div op like-box data-v-c4905f5e" wx:if="{{d}}">
+            <view class="_div text data-v-c4905f5e">
+                <image class="{{['_img','data-v-c4905f5e','icon']}}" src="https://st.gtimg.com/design/a6de4410bb57c2254410aa06d36c188b.png"></image>
+            </view>
+        </view>
+        <view catchtap="{{k}}" class="_div op like-box data-v-c4905f5e" wx:if="{{f}}">
+            <view class="_div text data-v-c4905f5e">
+                <image class="{{['_img','data-v-c4905f5e','icon']}}" src="https://st.gtimg.com/design/df1731c808be272110c160f7d8e4a838.png" wx:if="{{g}}"></image>
+                <image class="{{['_img','data-v-c4905f5e','icon']}}" src="https://st.gtimg.com/design/3be764c56be50923c8fae9b6f87a2b55.png" wx:else></image>
+                <label class="{{['_span','data-v-c4905f5e',j]}}" wx:if="{{h}}">{{i}}</label>
+            </view>
+        </view>
+        <view catchtap="{{m}}" class="_div op like-box data-v-c4905f5e" wx:if="{{l}}">
+            <view class="_div text data-v-c4905f5e">
+                <image class="{{['_img','data-v-c4905f5e','icon']}}" src="https://st.gtimg.com/design/0375376392cb0ee1201cb4697f3c85a7.png"></image>
+            </view>
+        </view>
+    </view>
+    <input class="fake-input data-v-c4905f5e" ref="fakeInput" type="text"></input>
+</view>

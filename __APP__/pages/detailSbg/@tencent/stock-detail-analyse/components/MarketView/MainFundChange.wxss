@@ -1,0 +1,110 @@
+.main-fund-change.data-v-f6a84e5c {
+  box-sizing: border-box;
+  margin-top: 0.64rem;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.main-fund-change .fund-title.data-v-f6a84e5c {
+  color: var(--text-color-1);
+  font-weight: 600;
+  margin-bottom: 0.16rem;
+}
+.main-fund-change .fund-title.data-v-f6a84e5c,
+.main-fund-change .sub-title.data-v-f6a84e5c {
+  font-family: PingFang SC;
+  font-size: 0.37333333333333335rem;
+  font-style: normal;
+  line-height: 0.52rem;
+}
+.main-fund-change .sub-title.data-v-f6a84e5c {
+  color: var(--color-heavygray);
+  font-weight: 400;
+  margin-bottom: 0.32rem;
+}
+.main-fund-change .fund-flow.data-v-f6a84e5c {
+  background: var(--fill-1);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 2.36rem;
+  justify-content: space-between;
+  margin-bottom: 0.4266666666666667rem;
+  padding: 0.32rem 0.92rem;
+}
+.main-fund-change .fund-flow .flow-item .item-top.data-v-f6a84e5c {
+  color: var(--text-color-1);
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-style: normal;
+  font-weight: 600;
+  height: 0.6133333333333333rem;
+  line-height: 0.6133333333333333rem;
+  text-align: center;
+}
+.main-fund-change .fund-flow .flow-item .item-center.data-v-f6a84e5c {
+  color: var(--text-color-4);
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 0.56rem;
+  line-height: 0.56rem;
+  text-align: center;
+}
+.main-fund-change .fund-flow .flow-item .item-center .f-up.data-v-f6a84e5c {
+  color: var(--color-red);
+}
+.main-fund-change .fund-flow .flow-item .item-center .f-hori.data-v-f6a84e5c {
+  color: var(--text-color-4);
+}
+.main-fund-change .fund-flow .flow-item .item-center .f-down.data-v-f6a84e5c {
+  color: var(--color-green);
+}
+.main-fund-change .fund-flow .flow-item .item-bottom.data-v-f6a84e5c {
+  color: var(--text-color-4);
+  font-family: PingFang SC;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  text-align: center;
+}
+.main-fund-change .fund-chart-container.data-v-f6a84e5c {
+  position: relative;
+  width: 100%;
+}
+.main-fund-change .fund-chart-container .fund-chart.data-v-f6a84e5c {
+  height: 6.666666666666667rem;
+  width: 100%;
+}
+.main-fund-change .fund-chart-container .canvas-toolTip.data-v-f6a84e5c {
+  background-color: var(--color-card);
+  color: var(--color-heavygray);
+  font-size: 0.29333333333333333rem;
+  margin: 0.8533333333333334rem 0.05333333333333334rem;
+  padding: 0.13333333333333333rem;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  width: 50%;
+}
+.main-fund-change .fund-chart-container .canvas-toolTip-left.data-v-f6a84e5c {
+  left: 0;
+  right: auto;
+}
+.main-fund-change .fund-chart-container .canvas-toolTip-right.data-v-f6a84e5c {
+  left: auto;
+  right: 0;
+}
+.main-fund-change
+  .fund-chart-container
+  .canvas-toolTip
+  .tips-item.data-v-f6a84e5c {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.4rem;
+  padding: 0;
+}

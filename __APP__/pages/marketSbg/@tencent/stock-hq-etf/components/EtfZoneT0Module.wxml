@@ -1,0 +1,39 @@
+<view
+  class="{{['_div','t0-card','data-v-47896f04',e&&'t0-card-pro']}}"
+  data-test-id="etf-t0-module"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{c}}" class="_div t0-card__header data-v-47896f04">
+    <view class="_div t0-card__header-left data-v-47896f04">
+      <image
+        alt="T+0交易"
+        class="_img t0-card__tag data-v-47896f04"
+        src="{{b}}"
+      ></image>
+      <view class="_div t0-card__subtitle data-v-47896f04">当天灵活买卖</view>
+    </view>
+    <view class="_div right-arrow-icon data-v-47896f04"></view>
+  </view>
+  <view class="_div t0-card-content data-v-47896f04">
+    <view
+      class="_div t0-card__slot data-v-47896f04"
+      data-strategy="{{slot.f}}"
+      wx:for="{{d}}"
+      wx:for-item="slot"
+      wx:key="e"
+    >
+      <view class="_div t0-card__tip data-v-47896f04">
+        <label class="_span t0-card__tip-prefix data-v-47896f04"
+          >{{slot.a}}</label
+        >{{slot.b}}</view
+      >
+      <t0-strategy-item
+        bind:__l="__l"
+        class="t0-card__item data-v-47896f04"
+        uI="{{slot.c}}"
+        uP="{{slot.d}}"
+        wx:if="{{slot.d}}"
+      ></t0-strategy-item>
+    </view>
+  </view>
+</view>

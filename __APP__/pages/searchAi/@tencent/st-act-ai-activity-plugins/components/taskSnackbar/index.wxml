@@ -1,0 +1,19 @@
+<view
+  class="{{['_div','yy-activity-task-snackbar','data-v-2997ea4e',g&&'snackbar-fixed']}}"
+  hidden="{{!h}}"
+>
+  <view class="_div content data-v-2997ea4e">
+    <view class="_div main-text data-v-2997ea4e">{{a}}</view>
+    <view class="_div sub-text data-v-2997ea4e" wx:if="{{b}}">{{c}}</view>
+  </view>
+  <button bindtap="{{d}}" class="share-btn data-v-2997ea4e" openType="share">
+    分享好友
+  </button>
+  <view bindtap="{{f}}" class="_div close-btn data-v-2997ea4e" wx:if="{{e}}">
+    <image
+      alt="关闭"
+      class="_img close-icon data-v-2997ea4e"
+      src="https://st.gtimg.com/design/e6e42ff30976c54a10b320f1babba5dd.png"
+    ></image>
+  </view>
+</view>

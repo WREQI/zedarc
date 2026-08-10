@@ -1,0 +1,73 @@
+@import "/app.wxss";
+@media screen and (max-width: 540px) {
+  .debt-orderlist.data-v-7f5874b3 .col-a {
+    width: 2.8rem;
+  }
+  .debt-orderlist.data-v-7f5874b3 .col-b {
+    width: 2.533333rem;
+  }
+  .debt-orderlist.data-v-7f5874b3 .col-c {
+    width: 2.186667rem;
+  }
+  .debt-orderlist.data-v-7f5874b3 .col-d {
+    width: 2.48rem;
+  }
+}
+@media screen and (min-width: 540px) {
+  .debt-orderlist.data-v-7f5874b3 .col-a,
+  .debt-orderlist.data-v-7f5874b3 .col-b,
+  .debt-orderlist.data-v-7f5874b3 .col-c,
+  .debt-orderlist.data-v-7f5874b3 .col-d {
+    -webkit-box-flex: 1;
+    flex: 1;
+  }
+}
+.stock-list-body .stock-list-item .col-item.data-v-7f5874b3 {
+  box-sizing: border-box;
+}
+.stock-list-body .stock-list-item .col-a.data-v-7f5874b3 {
+  padding-left: 0.4rem;
+}
+.stock-list-body .stock-list-item .col-d.data-v-7f5874b3 {
+  padding-right: 0.4rem;
+}
+.stock-list-body .stock-list-item .col-d .btn.data-v-7f5874b3 {
+  float: right;
+  font-size: 0.32rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  margin: 0;
+  padding: 0;
+  width: 1.333333rem;
+}
+.debt-orderlist.simple.data-v-7f5874b3 .list-header {
+  height: 0.746667rem;
+}
+.debt-orderlist.simple.data-v-7f5874b3 .list-header .col-item {
+  flex-shrink: unset;
+  line-height: 0.746667rem;
+}
+.debt-orderlist.simple.data-v-7f5874b3
+  .list-header
+  .col-item.border--bottom:after {
+  border-bottom: none;
+}
+.debt-orderlist.simple .stock-list-body .col-a.data-v-7f5874b3,
+.debt-orderlist.simple.data-v-7f5874b3 .list-header .col-a {
+  padding-left: 0.32rem !important;
+  width: 2.666667rem;
+}
+.debt-orderlist.simple .stock-list-body .col-b.data-v-7f5874b3,
+.debt-orderlist.simple .stock-list-body .col-c.data-v-7f5874b3,
+.debt-orderlist.simple.data-v-7f5874b3 .list-header .col-b,
+.debt-orderlist.simple.data-v-7f5874b3 .list-header .col-c {
+  width: 2.4rem;
+}
+.debt-orderlist.simple .stock-list-body .col-d.data-v-7f5874b3,
+.debt-orderlist.simple.data-v-7f5874b3 .list-header .col-d {
+  padding-right: 0.32rem !important;
+  width: 2.533333rem;
+}
+.debt-orderlist.simple .stock-list-item.border--bottom.data-v-7f5874b3:after {
+  border-bottom: none;
+}

@@ -1,0 +1,143 @@
+<view
+  class="{{['_div','data-v-5b9ae403','mod-item-wrap',ab]}}"
+  data-postid="{{ac}}"
+  ref="comItemRef"
+>
+  <view catchtap="{{b}}" class="_div selection data-v-5b9ae403" wx:if="{{a}}">
+    <view class="_div title data-v-5b9ae403">精选互动</view>
+    <view class="_div right-box data-v-5b9ae403">
+      <view class="_div text data-v-5b9ae403">查看全部</view>
+      <view class="_div arrow data-v-5b9ae403"></view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-5b9ae403','selection-date',f]}}" wx:if="{{c}}">
+    <view class="_div month data-v-5b9ae403">{{d}}</view>
+    <view class="_div day data-v-5b9ae403">{{e}}</view>
+  </view>
+  <view
+    class="{{['_div','data-v-5b9ae403','mod-list-item',Z]}}"
+    data-comid="{{aa}}"
+  >
+    <item-header
+      bind:__l="__l"
+      bindhandleHeader="{{h}}"
+      bindtapDetail="{{g}}"
+      class="data-v-5b9ae403"
+      uI="5b9ae403-0"
+      uP="{{i}}"
+      wx:if="{{i}}"
+    ></item-header>
+    <view catchtap="{{B}}" class="_div content-box data-v-5b9ae403">
+      <view class="_div source_content data-v-5b9ae403">
+        <short-content
+          bind:__l="__l"
+          bindtapContent="{{m}}"
+          bindtapDetail="{{l}}"
+          bindtapImage="{{k}}"
+          class="data-v-5b9ae403"
+          uI="5b9ae403-1"
+          uP="{{n}}"
+          wx:if="{{j}}"
+        ></short-content>
+        <long-content
+          bind:__l="__l"
+          class="data-v-5b9ae403"
+          uI="5b9ae403-2"
+          uP="{{p}}"
+          wx:if="{{o}}"
+        ></long-content>
+      </view>
+      <item-image
+        bind:__l="__l"
+        bindtapImage="{{r}}"
+        class="data-v-5b9ae403"
+        uI="5b9ae403-3"
+        uP="{{s}}"
+        wx:if="{{q}}"
+      ></item-image>
+      <item-hq-mins
+        bind:__l="__l"
+        bindtapDetail="{{v}}"
+        class="data-v-5b9ae403"
+        uI="5b9ae403-4"
+        uP="{{w}}"
+        wx:if="{{t}}"
+      ></item-hq-mins>
+      <other-source
+        bind:__l="__l"
+        bindgoSharePage="{{y}}"
+        bindtapOtherSource="{{z}}"
+        class="data-v-5b9ae403"
+        uI="5b9ae403-5"
+        uP="{{A}}"
+        wx:if="{{x}}"
+      ></other-source>
+    </view>
+    <show-turn
+      bind:__l="__l"
+      bindtapTurnContent="{{D}}"
+      class="show-turn data-v-5b9ae403"
+      uI="5b9ae403-6"
+      uP="{{E}}"
+      wx:if="{{C}}"
+    ></show-turn>
+    <view class="_div related-stock-container data-v-5b9ae403" wx:if="{{F}}">
+      <stock-bar
+        bind:__l="__l"
+        bindaddstock="{{stock.c}}"
+        bindexpose="{{stock.e}}"
+        bindgodetail="{{stock.b}}"
+        bindremovestock="{{stock.d}}"
+        class="data-v-5b9ae403"
+        uI="{{stock.f}}"
+        uP="{{stock.g}}"
+        wx:for="{{G}}"
+        wx:for-item="stock"
+        wx:key="a"
+      ></stock-bar>
+    </view>
+    <show-box
+      bind:__l="__l"
+      bindcommentReport="{{I}}"
+      bindtapShowBox="{{H}}"
+      class="data-v-5b9ae403"
+      uI="5b9ae403-8"
+      uP="{{J}}"
+      wx:if="{{J}}"
+    ></show-box>
+    <view class="_div watchlist-container data-v-5b9ae403" wx:if="{{K}}">
+      <basket-tag
+        bind:__l="__l"
+        bindgoToBasketDetail="{{N}}"
+        bindgoToStockDetail="{{M}}"
+        bindheaderToggleClick="{{L}}"
+        class="data-v-5b9ae403"
+        uI="5b9ae403-9"
+        uP="{{O}}"
+        wx:if="{{O}}"
+      ></basket-tag>
+    </view>
+    <view class="_div com-yb-disclaimer data-v-5b9ae403" wx:if="{{P}}"
+      >{{Q}}</view
+    >
+    <handle-oper
+      bind:__l="__l"
+      bindonHandleOper="{{R}}"
+      class="data-v-5b9ae403"
+      uI="5b9ae403-10"
+      uP="{{S}}"
+      wx:if="{{S}}"
+    ></handle-oper>
+    <show-comment
+      bind:__l="__l"
+      bindtapCommentItem="{{U}}"
+      bindtapDetail="{{W}}"
+      bindtapImage="{{V}}"
+      bindtapPerson="{{X}}"
+      class="data-v-5b9ae403"
+      uI="5b9ae403-11"
+      uP="{{Y}}"
+      wx:if="{{T}}"
+    ></show-comment>
+  </view>
+</view>

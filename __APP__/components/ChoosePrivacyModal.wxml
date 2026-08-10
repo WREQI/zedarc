@@ -1,0 +1,17 @@
+<view class="{{['_div','data-v-a5180d9c','choose-privacy-container',f]}}">
+  <layer-modal
+    bind:__l="__l"
+    bindcancel="{{d}}"
+    bindconfirm="{{c}}"
+    class="data-v-a5180d9c"
+    uI="a5180d9c-0"
+    uP="{{e}}"
+    uS="{{['d']}}"
+    wx:if="{{e}}"
+  >
+    <view class="{{['_div','data-v-a5180d9c','text-box','choose']}}">
+      <label class="_span text-context data-v-a5180d9c">{{a}}</label>
+      <label bindtap="{{b}}" class="_span info-icon data-v-a5180d9c"></label>
+    </view>
+  </layer-modal>
+</view>

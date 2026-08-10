@@ -1,0 +1,45 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap bind:__l="__l" class="r" id="global-wrap" uI="1dd162e3-0" uP="{{Q}}" uR="#global-wrap" uS="{{['d']}}" wx:if="{{Q}}">
+    <view class="pwd-reset-form account-common-form" wx:if="{{b}}">
+        <view class="fund-account" wx:if="{{c}}">
+            <broker-logo bind:__l="__l" class="broker-logo" uI="1dd162e3-1,1dd162e3-0"></broker-logo>{{d}}{{e}}</view>
+        <view class="title-list-account">请填写你的预留信息</view>
+        <st-cell-group bind:__l="__l" uI="1dd162e3-2,1dd162e3-0" uP="{{p}}" uS="{{['d']}}" wx:if="{{p}}">
+            <st-cell bind:__l="__l" uI="1dd162e3-3,1dd162e3-2" uP="{{l}}" uS="{{['d']}}" wx:if="{{f}}">
+                <input bindinput="{{j}}" disabled="{{i}}" maxlength="{{h}}" pattern="[0-9]+" placeholder="{{g}}" placeholderClass="input-placeholder" type="number" value="{{k}}"></input>
+            </st-cell>
+            <st-cell bind:__l="__l" uI="1dd162e3-4,1dd162e3-2" uP="{{o}}" uS="{{['d']}}" wx:if="{{o}}">
+                <input bindinput="{{n}}" maxlength="18" placeholder="请输入15或18位身份证号码" placeholderClass="input-placeholder" type="idcard" value="{{m}}"></input>
+            </st-cell>
+        </st-cell-group>
+        <view class="second-group"></view>
+        <st-cell-group bind:__l="__l" uI="1dd162e3-5,1dd162e3-0" uP="{{C}}" uS="{{['d']}}" wx:if="{{C}}">
+            <st-cell bind:__l="__l" uI="1dd162e3-6,1dd162e3-5" uP="{{s}}" uS="{{['d']}}" wx:if="{{s}}">
+                <input bindinput="{{r}}" maxlength="11" placeholder="请输入预留手机号码" placeholderClass="input-placeholder" type="tel" value="{{q}}"></input>
+            </st-cell>
+            <st-cell bind:__l="__l" class="sms-cell" uI="1dd162e3-7,1dd162e3-5" uP="{{B}}" uS="{{['extra','d']}}" wx:if="{{B}}">
+                <input bindinput="{{x}}" disabled="{{v}}" maxlength="{{t}}" placeholder="请输入短信验证码" placeholderClass="input-placeholder" type="number" value="{{w}}"></input>
+                <button bindtap="{{A}}" class="sms-button" disabled="{{z}}" size="mini" slot="extra" type="primary">{{y}}</button>
+            </st-cell>
+        </st-cell-group>
+        <view class="forget-mobile-wrap">
+            <forget-mobile bind:__l="__l" bindfacecheck="{{E}}" class="forget-mobile" uI="1dd162e3-8,1dd162e3-0" wx:if="{{D}}"></forget-mobile>
+            <view wx:else></view>
+            <view bindtap="{{F}}" class="right-code primary-color">收不到验证码</view>
+        </view>
+        <protocol-check bind:__l="__l" class="r" uI="1dd162e3-9,1dd162e3-0" uR="protocolCheck"></protocol-check>
+        <view class="{{[J]}}">
+            <button bindtap="{{I}}" disabled="{{H}}" type="primary">下一步</button>
+        </view>
+        <mp-dialog bind:__l="__l" id="mp-dialog" uI="1dd162e3-10,1dd162e3-0" uP="{{K}}" wx:if="{{K}}"></mp-dialog>
+        <mp-dialog bind:__l="__l" id="no-code" uI="1dd162e3-11,1dd162e3-0" uP="{{N}}" uS="{{['d']}}" wx:if="{{N}}">
+            <view class="mp-dialog__message align-l fs-32">
+                <view>请检查以下事项</view>
+                <view>1.手机号是否正确；</view>
+                <view>2.短信是否被安全软件拦截。</view>
+                <view>若有疑问请联系{{L}}客服：{{M}}</view>
+            </view>
+        </mp-dialog>
+        <id-card-form bind:__l="__l" class="r" uI="1dd162e3-12,1dd162e3-0" uR="idcardForm"></id-card-form>
+    </view>
+</global-wrap>

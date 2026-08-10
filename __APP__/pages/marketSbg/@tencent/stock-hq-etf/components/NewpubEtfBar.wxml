@@ -1,0 +1,16 @@
+<view class="{{['_div','newpub-outter','data-v-fd716c32',i]}}" wx:if="{{a}}">
+  <view bindtap="{{h}}" class="_div newpub-etf-bar data-v-fd716c32">
+    <view class="_div title-icon data-v-fd716c32"></view>
+    <view class="_div right-container data-v-fd716c32">
+      <view class="_div text-wraper data-v-fd716c32" wx:if="{{b}}">
+        <label class="_span hitext data-v-fd716c32">正在发售 ({{c}})</label>
+        <label class="_span highlight data-v-fd716c32">{{d}}支</label>
+      </view>
+      <view class="_div text-wraper data-v-fd716c32" wx:if="{{e}}">
+        <label class="_span hitext data-v-fd716c32">即将发售 ({{f}})</label>
+        <label class="_span highlight data-v-fd716c32">{{g}}支</label>
+      </view>
+      <view class="_div close data-v-fd716c32"></view>
+    </view>
+  </view>
+</view>

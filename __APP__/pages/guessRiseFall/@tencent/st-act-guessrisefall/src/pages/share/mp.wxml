@@ -1,0 +1,92 @@
+<scroll-view class="data-v-8736b962" scrollY="true">
+  <view class="_div guess-guest data-v-8736b962">
+    <image
+      class="guess-guest__bg-preload data-v-8736b962"
+      lazyLoad="{{false}}"
+      mode="aspectFill"
+      src="https://st.gtimg.com/design/59600b5ba28d387b08ef7216125fe31e.png"
+    ></image>
+    <view class="_div guess-guest__banner data-v-8736b962" wx:if="{{a}}">
+      <view class="_div guess-guest__invite-box data-v-8736b962">
+        <view
+          class="_div guess-guest__avatar data-v-8736b962"
+          style="{{'background-image:'+c}}"
+          wx:if="{{b}}"
+        ></view>
+        <view class="_div guess-guest__avatar data-v-8736b962" wx:else></view>
+        <view class="_div guess-guest__nickname data-v-8736b962" wx:if="{{d}}"
+          >{{e}}</view
+        >
+        <view
+          class="_div guess-guest__nickname guess-guest__nickname--long data-v-8736b962"
+          wx:if="{{f}}"
+          >{{g}}</view
+        >
+        <view class="_div guess-guest__tip data-v-8736b962">
+          <view class="_div guess-guest__tip-text data-v-8736b962">
+            <rich-text class="data-v-8736b962" nodes="{{h}}"></rich-text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div guess-guest__guessing data-v-8736b962">
+      <market-guessing
+        bind:__l="__l"
+        bindbulletAnchorPoint="{{j}}"
+        bindguessOpResult="{{i}}"
+        class="data-v-8736b962"
+        uI="8736b962-0"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></market-guessing>
+    </view>
+    <market-analysis
+      bind:__l="__l"
+      bindonClickAiDialog="{{m}}"
+      class="r data-v-8736b962"
+      uI="8736b962-1"
+      uP="{{n}}"
+      uR="MarketAnalysis"
+      wx:if="{{n}}"
+    ></market-analysis>
+    <simple-modal
+      bind:__l="__l"
+      bindclose="{{q}}"
+      bindupdateVisible="{{p}}"
+      class="data-v-8736b962"
+      uI="8736b962-2"
+      uP="{{r}}"
+      wx:if="{{o}}"
+    ></simple-modal>
+    <view class="_div guess-guest__canvas data-v-8736b962">
+      <canvas
+        canvasId="js_index"
+        class="{{['data-v-8736b962','guess-guest__canvas']}}"
+        style="{{'width:'+s+';'+'height:'+t}}"
+      ></canvas>
+    </view>
+    <simple-modal
+      bind:__l="__l"
+      bindupdateVisible="{{v}}"
+      class="data-v-8736b962"
+      uI="8736b962-3"
+      uP="{{w}}"
+      wx:if="{{w}}"
+    ></simple-modal>
+  </view>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{y}}"
+    class="guess-guest__ai-entry data-v-8736b962"
+    uI="8736b962-4"
+    uP="{{z}}"
+    wx:if="{{x}}"
+  ></half-screen-ai-entry>
+  <reward-modal
+    bind:__l="__l"
+    bindcontinue="{{B}}"
+    class="r data-v-8736b962"
+    uI="8736b962-5"
+    uR="rewardModal"
+  ></reward-modal>
+</scroll-view>

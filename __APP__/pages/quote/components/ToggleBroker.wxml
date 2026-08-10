@@ -1,0 +1,35 @@
+<view bindtap="{{e}}" class="_div select-broker-sheet-wrapper">
+  <view catchtap="{{d}}" class="_div action-sheet">
+    <view class="_div sheet-header">
+      <label bindtap="{{a}}" class="_span left-arrow"></label>
+      <label bindtap="{{b}}" class="_span icon-close-bg"></label>
+      <label class="_span title">请选择券商</label>
+    </view>
+    <view class="_div menu">
+      <view
+        catchtap="{{item.f}}"
+        class="_div menu-item"
+        wx:for="{{c}}"
+        wx:key="e"
+      >
+        <view class="_div menu-item-left">
+          <broker-logo
+            bind:__l="__l"
+            class="broker-logo"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></broker-logo>
+          <view class="_div menu-item-left-vertical">
+            <view class="_div text">
+              <label class="_span">{{item.c}}</label>
+            </view>
+          </view>
+        </view>
+        <view class="_div menu-item-right" wx:if="{{item.d}}">
+          <view class="_div selected-icon"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

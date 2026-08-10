@@ -1,0 +1,63 @@
+.guess-progress.data-v-3abce4dd {
+  width: 100%;
+}
+.guess-progress__body.data-v-3abce4dd {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.guess-progress__list.data-v-3abce4dd {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+}
+.guess-progress__item.data-v-3abce4dd {
+  color: #98a0b3;
+  flex-direction: column;
+  font-size: 0.26666666666666666rem;
+  position: relative;
+  z-index: 2;
+}
+.guess-progress__cell.data-v-3abce4dd,
+.guess-progress__item.data-v-3abce4dd {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.guess-progress__cell.data-v-3abce4dd {
+  justify-content: center;
+  width: 100%;
+}
+.guess-progress__icon.data-v-3abce4dd {
+  display: block;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.guess-progress__icon-img.data-v-3abce4dd {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.guess-progress__date.data-v-3abce4dd {
+  margin-top: 0.14666666666666667rem;
+}
+.guess-progress__text.data-v-3abce4dd {
+  margin-top: 0.10666666666666667rem;
+}
+.guess-progress__track.data-v-3abce4dd {
+  background-color: #e5e5e5;
+  margin: 0 auto;
+  position: absolute;
+  top: 0.4266666666666667rem;
+  width: 96%;
+}
+.guess-progress__track-fill.data-v-3abce4dd {
+  background: #3077ec;
+  height: 0.04rem;
+  position: relative;
+  z-index: 1;
+}

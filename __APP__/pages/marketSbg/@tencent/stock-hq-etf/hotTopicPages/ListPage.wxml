@@ -1,0 +1,127 @@
+<view class="_div hot-topic-list-page data-v-571e59e0" data-st-theme="{{I}}">
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    bindlayout="{{c}}"
+    class="data-v-571e59e0"
+    uI="571e59e0-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <scroll-view
+    scrollY
+    bindrefresherrefresh="{{r}}"
+    bindrefresherrestore="{{s}}"
+    bindscroll="{{p}}"
+    bindscrolltolower="{{q}}"
+    class="page-scroll data-v-571e59e0"
+    refresherEnabled="{{true}}"
+    refresherTriggered="{{o}}"
+    scrollAnchoring="{{false}}"
+    wx:if="{{e}}"
+  >
+    <view class="_div hero data-v-571e59e0">
+      <view class="_div hero-title data-v-571e59e0"></view>
+      <view class="_div hero-sub data-v-571e59e0"
+        >用ETF投资行业板块，紧跟热点机会</view
+      >
+    </view>
+    <view class="_div search-placeholder data-v-571e59e0" wx:if="{{f}}"></view>
+    <view
+      class="{{['_div','data-v-571e59e0','search-sticky',j]}}"
+      style="{{k}}"
+    >
+      <view class="_div search-bar-box data-v-571e59e0">
+        <search-bar
+          bind:__l="__l"
+          bindclick="{{g}}"
+          class="search-bar-comp data-v-571e59e0"
+          uI="571e59e0-1"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></search-bar>
+      </view>
+      <view bindtap="{{i}}" class="_div filter-entry data-v-571e59e0">
+        <label class="_span filter-entry__text data-v-571e59e0">筛选</label>
+      </view>
+    </view>
+    <view class="_div page-body data-v-571e59e0">
+      <list-item
+        bind:__l="__l"
+        class="list-item data-v-571e59e0"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:for="{{l}}"
+        wx:key="a"
+      ></list-item>
+      <view class="_div empty-tips data-v-571e59e0" wx:if="{{m}}"
+        >暂无相关数据</view
+      >
+      <view class="_div loading-tips data-v-571e59e0" wx:if="{{n}}"
+        >加载中...</view
+      >
+    </view>
+  </scroll-view>
+  <st-pull-refresh
+    bind:__l="__l"
+    bindpullDownRefresh="{{H}}"
+    class="page-pull-refresh r data-v-571e59e0"
+    uI="571e59e0-3"
+    uR="pullRefreshRef"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="{{['_div','data-v-571e59e0','hero',t]}}">
+      <view class="_div hero-title data-v-571e59e0"></view>
+      <view class="_div hero-sub data-v-571e59e0"
+        >用ETF投资行业板块，紧跟热点机会</view
+      >
+    </view>
+    <view class="_div search-placeholder data-v-571e59e0" wx:if="{{v}}"></view>
+    <view
+      class="{{['_div','data-v-571e59e0','search-sticky',z]}}"
+      style="{{A}}"
+    >
+      <view class="_div search-bar-box data-v-571e59e0">
+        <search-bar
+          bind:__l="__l"
+          bindclick="{{w}}"
+          class="search-bar-comp data-v-571e59e0"
+          uI="571e59e0-4,571e59e0-3"
+          uP="{{x}}"
+          wx:if="{{x}}"
+        ></search-bar>
+      </view>
+      <view bindtap="{{y}}" class="_div filter-entry data-v-571e59e0">
+        <label class="_span filter-entry__text data-v-571e59e0">筛选</label>
+      </view>
+    </view>
+    <st-reach-bottom
+      bind:__l="__l"
+      class="page-body r data-v-571e59e0"
+      uI="571e59e0-5,571e59e0-3"
+      uP="{{F}}"
+      uR="reachBottomRef"
+      uS="{{['d']}}"
+      wx:if="{{F}}"
+    >
+      <list-item
+        bind:__l="__l"
+        class="list-item data-v-571e59e0"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:for="{{B}}"
+        wx:key="a"
+      ></list-item>
+      <view class="_div empty-tips data-v-571e59e0" wx:if="{{C}}"
+        >暂无相关数据</view
+      >
+      <trust-footer
+        bind:__l="__l"
+        class="data-v-571e59e0"
+        uI="571e59e0-7,571e59e0-5"
+        wx:if="{{D}}"
+      ></trust-footer>
+    </st-reach-bottom>
+  </st-pull-refresh>
+</view>

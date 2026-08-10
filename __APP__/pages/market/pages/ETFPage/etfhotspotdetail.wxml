@@ -1,0 +1,17 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<hot-topic-detail-page
+  bind:__l="__l"
+  class="r"
+  data-st-theme="{{c}}"
+  uI="38db5445-0"
+  uP="{{d}}"
+  uR="hotTopicDetailPageRef"
+  wx:if="{{d}}"
+></hot-topic-detail-page>
+<mp-privacy-dialog bind:__l="__l" uI="38db5445-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="38db5445-2"
+  uP="{{e}}"
+  wx:if="{{e}}"
+></stock-privacy-dialog>

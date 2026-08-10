@@ -1,0 +1,107 @@
+<excite-celebrate-shell
+  bind:__l="__l"
+  bindmaskClick="{{x}}"
+  class="data-v-f1c8eb3e"
+  uI="f1c8eb3e-0"
+  uP="{{y}}"
+  uS="{{['title','subtitle','body','footer']}}"
+  wx:if="{{y}}"
+>
+  <view slot="title">{{a}}</view>
+  <view slot="subtitle">{{b}}</view>
+  <view class="carousel-excite__card-wrapper data-v-f1c8eb3e" slot="body">
+    <view class="carousel-excite__single-card data-v-f1c8eb3e" wx:if="{{c}}">
+      <deposit-card
+        bind:__l="__l"
+        class="data-v-f1c8eb3e"
+        uI="f1c8eb3e-1,f1c8eb3e-0"
+        uP="{{e}}"
+        wx:if="{{d}}"
+      ></deposit-card>
+      <first-buy-card
+        bind:__l="__l"
+        class="data-v-f1c8eb3e"
+        uI="f1c8eb3e-2,f1c8eb3e-0"
+        uP="{{g}}"
+        wx:elif="{{f}}"
+      ></first-buy-card>
+      <first-profit-card
+        bind:__l="__l"
+        class="data-v-f1c8eb3e"
+        uI="f1c8eb3e-3,f1c8eb3e-0"
+        uP="{{i}}"
+        wx:elif="{{h}}"
+      ></first-profit-card>
+    </view>
+    <view class="carousel-excite__swiper-wrapper data-v-f1c8eb3e" wx:else>
+      <swiper
+        autoplay="{{k}}"
+        bindanimationfinish="{{q}}"
+        bindchange="{{m}}"
+        bindtouchend="{{o}}"
+        bindtouchstart="{{n}}"
+        bindtransition="{{p}}"
+        circular="{{true}}"
+        class="carousel-excite__swiper data-v-f1c8eb3e"
+        current="{{l}}"
+        duration="{{300}}"
+        interval="{{2000}}"
+        nextMargin="62rpx"
+        previousMargin="62rpx"
+      >
+        <swiper-item
+          class="carousel-excite__swiper-item data-v-f1c8eb3e"
+          wx:for="{{j}}"
+          wx:key="k"
+        >
+          <view
+            class="carousel-excite__card-inner data-v-f1c8eb3e"
+            style="{{'transform:'+item.j}}"
+          >
+            <deposit-card
+              bind:__l="__l"
+              class="data-v-f1c8eb3e"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.a}}"
+            ></deposit-card>
+            <first-buy-card
+              bind:__l="__l"
+              class="data-v-f1c8eb3e"
+              uI="{{item.e}}"
+              uP="{{item.f}}"
+              wx:elif="{{item.d}}"
+            ></first-buy-card>
+            <first-profit-card
+              bind:__l="__l"
+              class="data-v-f1c8eb3e"
+              uI="{{item.h}}"
+              uP="{{item.i}}"
+              wx:elif="{{item.g}}"
+            ></first-profit-card>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="carousel-excite__indicator data-v-f1c8eb3e">
+        <view
+          class="{{['carousel-excite__indicator-dot','data-v-f1c8eb3e',item.b&&'carousel-excite__indicator-dot--active']}}"
+          wx:for="{{r}}"
+          wx:key="a"
+        ></view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="carousel-excite__btn__wrapper flex-column flex-center data-v-f1c8eb3e"
+    slot="footer"
+  >
+    <view catchtap="{{s}}" class="carousel-excite__btn data-v-f1c8eb3e"
+      >我知道了</view
+    >
+    <view
+      catchtap="{{w}}"
+      class="{{['carousel-excite__adv-text','data-v-f1c8eb3e',v&&'carousel-excite__adv-text--visible']}}"
+      >{{t}}</view
+    >
+  </view>
+</excite-celebrate-shell>

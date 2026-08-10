@@ -1,0 +1,270 @@
+.etf-buy-index__fund-card.data-v-c57588aa {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-family: stockFont, -apple-system, BlinkMacSystemFont, Roboto, PingFang SC,
+    Hiragino Sans GB, Source Han Sans CN, sans-serif;
+  margin-bottom: 0.4266666666666667rem;
+  margin-top: 0.4266666666666667rem;
+}
+.etf-buy-index__fund-card-title
+  + .etf-buy-index__fund-card-content.data-v-c57588aa {
+  margin-top: 0.32rem;
+}
+.etf-buy-index__fund-card-title.data-v-c57588aa {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+  min-height: 0.56rem;
+  min-width: 8.72rem;
+  text-align: left;
+}
+.etf-buy-index__fund-card-content.data-v-c57588aa {
+  flex-shrink: 0;
+  height: 4.1066666666666665rem;
+  position: relative;
+  width: 8.72rem;
+}
+.etf-buy-index__fund-card-actions.data-v-c57588aa {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  left: 0;
+  min-height: 0.96rem;
+  position: absolute;
+  top: 3.1466666666666665rem;
+  width: 8.72rem;
+}
+.etf-buy-index__fund-card-actions--only-buy
+  .etf-buy-index__fund-card-btn.data-v-c57588aa {
+  flex: 1;
+  width: auto;
+}
+.etf-buy-index__fund-card-actions--only-buy
+  .etf-buy-index__fund-card-btn-bg.data-v-c57588aa {
+  width: 100%;
+}
+.etf-buy-index__fund-card-btn.data-v-c57588aa {
+  flex-shrink: 0;
+  height: 0.96rem;
+  overflow: hidden;
+  position: relative;
+  width: 4.2rem;
+}
+.etf-buy-index__fund-card-btn-bg.data-v-c57588aa {
+  border-radius: 0.10666666666666667rem;
+  height: 0.96rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 4.2rem;
+}
+.etf-buy-index__fund-card-btn-bg--outline.data-v-c57588aa {
+  background-color: var(--fill-content-layer);
+  border: 0.02666666666666667rem solid #e63535;
+  box-sizing: border-box;
+}
+.etf-buy-index__fund-card-btn-bg--primary.data-v-c57588aa {
+  background-color: #e63535;
+}
+.etf-buy-index__fund-card-btn-text.data-v-c57588aa {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.96rem;
+  justify-content: center;
+  left: 0;
+  line-height: 0.5333333333333333rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.etf-buy-index__fund-card-btn-text--outline.data-v-c57588aa {
+  color: #e63535;
+}
+.etf-buy-index__fund-card-btn-text--primary.data-v-c57588aa {
+  color: var(--color-white);
+}
+.etf-buy-index__fund-card-highlight.data-v-c57588aa {
+  display: block;
+  left: 0;
+  line-height: 0.56rem;
+  min-height: 0.56rem;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 2.16rem;
+  white-space: nowrap;
+}
+.etf-buy-index__fund-card-highlight--high-yield.data-v-c57588aa,
+.etf-buy-index__fund-card-highlight--stable.data-v-c57588aa {
+  width: 8.72rem;
+}
+.etf-buy-index__fund-card-tag.data-v-c57588aa {
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.05333333333333334rem;
+  color: #e63535;
+  display: inline;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  line-height: 0.37333333333333335rem;
+  margin-right: 0.16rem;
+  padding: 0.013333333333333334rem 0.10666666666666667rem;
+  text-align: left;
+  vertical-align: 0.04rem;
+  white-space: nowrap;
+}
+.etf-buy-index__fund-card-desc.data-v-c57588aa {
+  color: var(--color-midgray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index__fund-card-info.data-v-c57588aa {
+  height: 1.84rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 8.72rem;
+}
+.etf-buy-index__fund-card-logo.data-v-c57588aa {
+  align-items: flex-end;
+  border-radius: 0.10666666666666667rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6266666666666667rem;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0.10666666666666667rem;
+  width: 1.6266666666666667rem;
+}
+.etf-buy-index__fund-card-logo-chart.data-v-c57588aa {
+  display: block;
+  flex-shrink: 0;
+  transform: translateY(0.05333333333333334rem) scale(1.03, 1.06);
+  transform-origin: left bottom;
+}
+.etf-buy-index__fund-card-name-wrap.data-v-c57588aa {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  left: 1.9466666666666668rem;
+  min-height: 0.5866666666666667rem;
+  position: absolute;
+  top: 0;
+}
+.etf-buy-index__fund-card-name-wrap--stable.data-v-c57588aa {
+  width: 4.093333333333334rem;
+}
+.etf-buy-index__fund-card-name-wrap--high-yield.data-v-c57588aa {
+  width: 2.986666666666667rem;
+}
+.etf-buy-index__fund-card-name.data-v-c57588aa {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index__fund-card-watchlist.data-v-c57588aa {
+  height: 0.5333333333333333rem;
+  left: 8.186666666666667rem;
+  object-fit: cover;
+  position: absolute;
+  top: 0.02666666666666667rem;
+  width: 0.5333333333333333rem;
+}
+.etf-buy-index__fund-card-stat.data-v-c57588aa {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: 1.9466666666666668rem;
+  min-height: 1.0933333333333333rem;
+  position: absolute;
+  top: 0.7466666666666667rem;
+  width: 100%;
+}
+.etf-buy-index__fund-card-stat-value
+  + .etf-buy-index__fund-card-stat-label.data-v-c57588aa,
+.etf-buy-index__fund-card-stat-value-wrap
+  + .etf-buy-index__fund-card-stat-label.data-v-c57588aa {
+  margin-top: 0.05333333333333334rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--stable.data-v-c57588aa {
+  max-width: 1.4rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--high-yield.data-v-c57588aa {
+  max-width: 1.3866666666666667rem;
+}
+.etf-buy-index__fund-card-stat--price.etf-buy-index__fund-card-stat--stable.data-v-c57588aa {
+  left: 4.28rem;
+  max-width: 1.7466666666666666rem;
+}
+.etf-buy-index__fund-card-stat--price.etf-buy-index__fund-card-stat--high-yield.data-v-c57588aa {
+  left: 4.28rem;
+  max-width: 1.76rem;
+}
+.etf-buy-index__fund-card-stat-value-wrap.data-v-c57588aa {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  min-height: 0.5866666666666667rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--stable
+  .etf-buy-index__fund-card-stat-value-wrap.data-v-c57588aa {
+  width: 1.4rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--high-yield
+  .etf-buy-index__fund-card-stat-value-wrap.data-v-c57588aa {
+  width: 1.3866666666666667rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--stable
+  .etf-buy-index__fund-card-stat-value-inner.data-v-c57588aa {
+  width: 1.4rem;
+}
+.etf-buy-index__fund-card-stat--change.etf-buy-index__fund-card-stat--high-yield
+  .etf-buy-index__fund-card-stat-value-inner.data-v-c57588aa {
+  width: 1.3866666666666667rem;
+}
+.etf-buy-index__fund-card-stat-value-inner.data-v-c57588aa {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  min-height: 0.5866666666666667rem;
+}
+.etf-buy-index__fund-card-stat-value.data-v-c57588aa {
+  color: var(--color-heavygray);
+  flex-shrink: 0;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index__fund-card-stat-label.data-v-c57588aa {
+  color: var(--color-lightgray);
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}

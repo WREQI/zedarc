@@ -1,0 +1,16 @@
+<view
+  class="_div mod-funds-hs-zxg data-v-d4c2a66b"
+  ref="fundTab"
+  style="font-size: 24px"
+>
+  <view class="_div board-white-bg data-v-d4c2a66b">
+    <dzjy-card
+      bind:__l="__l"
+      class="r data-v-d4c2a66b"
+      uI="d4c2a66b-0"
+      uP="{{b}}"
+      uR="dzjyCard"
+      wx:if="{{b}}"
+    ></dzjy-card>
+  </view>
+</view>

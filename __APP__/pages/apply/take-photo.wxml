@@ -1,0 +1,83 @@
+<page-meta class="data-v-dec9466c" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-dec9466c"
+  id="global-wrap"
+  uI="dec9466c-0"
+  uP="{{m}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{m}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-dec9466c"
+    uI="dec9466c-1,dec9466c-0"
+    uS="{{['d']}}"
+  >
+    <view class="take-photo data-v-dec9466c">
+      <view class="tips data-v-dec9466c"
+        >请拍摄身份证<text class="side data-v-dec9466c">{{b}}</text>
+      </view>
+      <view class="collision-status align-c data-v-dec9466c">
+        <view class="collision-status-success data-v-dec9466c" wx:if="{{c}}">
+          <view class="collision-status-success-icon data-v-dec9466c">
+            <image
+              class="data-v-dec9466c"
+              src="https://st.gtimg.com/image/mp-broker/apply/icon-success.png"
+            ></image>
+          </view>
+          <view class="collision-status-success-text data-v-dec9466c"
+            >身份证已在框内，请拍摄</view
+          >
+        </view>
+        <view class="collision-status-fail data-v-dec9466c" wx:if="{{d}}">
+          <view class="collision-status-fail-icon data-v-dec9466c">
+            <image
+              class="data-v-dec9466c"
+              src="https://st.gtimg.com/image/mp-broker/apply/icon-fail.png"
+            ></image>
+          </view>
+          <view class="collision-status-fail-text data-v-dec9466c">{{e}}</view>
+        </view>
+      </view>
+      <view class="camera-wrap data-v-dec9466c">
+        <camera
+          binderror="{{f}}"
+          class="camera data-v-dec9466c"
+          devicePosition="back"
+          flash="off"
+        ></camera>
+        <view class="{{['mask','data-v-dec9466c',g]}}"></view>
+        <canvas
+          canvasId="realtimeCanvas"
+          class="box-canvas data-v-dec9466c"
+        ></canvas>
+      </view>
+      <view class="example-container data-v-dec9466c">
+        <image
+          class="example-container-bg data-v-dec9466c"
+          src="https://st.gtimg.com/image/mp-broker/apply/idcard/fail-examples.png"
+        ></image>
+      </view>
+      <view
+        class="{{['action-container','data-v-dec9466c',j&&'action-container-disabled']}}"
+      >
+        <view bindtap="{{h}}" class="cancel data-v-dec9466c">取消</view>
+        <view bindtap="{{i}}" class="button data-v-dec9466c">
+          <view class="outer data-v-dec9466c"></view>
+          <view class="inner data-v-dec9466c"></view>
+        </view>
+        <view class="placeholder data-v-dec9466c"></view>
+      </view>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-dec9466c"
+        id="mp-dialog"
+        uI="dec9466c-2,dec9466c-1"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

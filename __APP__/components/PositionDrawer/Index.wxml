@@ -1,0 +1,18 @@
+<view
+  catchtap="{{g}}"
+  class="{{['position-drawer','^position-drawer',e&&'hide-fund',f&&'hide-margin-top']}}"
+>
+  <view class="{{['wrapper',c&&'border--top-c1',d&&'border--bottom-c1']}}">
+    <view
+      catch:touchmove
+      catchtap="{{item.f}}"
+      catchtouchmove="{{item.g}}"
+      class="{{[b,item.d,item.e,'drawer-item']}}"
+      wx:for="{{a}}"
+      wx:key="c"
+    >
+      <view class="{{[item.a,'icon']}}"></view>
+      <view class="text">{{item.b}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,116 @@
+<view
+  class="{{['data-v-8ae7438f','page-apply-recover','bg-color',t&&'with-nav']}}"
+  style="{{'height:'+v}}"
+>
+  <view class="content-container flex-column data-v-8ae7438f">
+    <progress-bar
+      bind:__l="__l"
+      class="data-v-8ae7438f"
+      uI="8ae7438f-0"
+      uP="{{b}}"
+      wx:if="{{a}}"
+    ></progress-bar>
+    <st-steps
+      bind:__l="__l"
+      class="step-container data-v-8ae7438f"
+      uI="8ae7438f-1"
+      uP="{{c||''}}"
+      wx:else
+    ></st-steps>
+    <common-result
+      bind:__l="__l"
+      class="common-result flex-1 data-v-8ae7438f"
+      uI="8ae7438f-2"
+      uP="{{h}}"
+      uS="{{['d']}}"
+      wx:if="{{h}}"
+    >
+      <view class="fs-32 result-title text-color-1 data-v-8ae7438f"
+        >资料审核未通过</view
+      >
+      <view class="fs-28 error-msg data-v-8ae7438f">
+        <view class="reason-list-style data-v-8ae7438f">
+          <view
+            class="{{['text-color-2','data-v-8ae7438f',e&&'align-c']}}"
+            wx:for="{{d}}"
+            wx:for-item="reason"
+            wx:key="d"
+          >
+            <view class="orange data-v-8ae7438f">{{reason.a}}{{reason.b}}</view>
+            <view class="data-v-8ae7438f">{{reason.c}}</view>
+          </view>
+          <view bindtap="{{g}}" class="more blue data-v-8ae7438f" wx:if="{{f}}"
+            >更多未通过原因</view
+          >
+        </view>
+      </view>
+    </common-result>
+    <view
+      class="algin-c fs-24 text-color-2 opertip-txt data-v-8ae7438f"
+      wx:if="{{i}}"
+      >{{j}}</view
+    >
+    <view class="button-container data-v-8ae7438f">
+      <button
+        borderRadius
+        bindtap="{{l}}"
+        class="data-v-8ae7438f"
+        data-stat="trade.apply.fail.reapply"
+        type="primary"
+      >
+        {{k}}
+      </button>
+    </view>
+    <multi-broker-entry
+      bind:__l="__l"
+      class="data-v-8ae7438f"
+      uI="8ae7438f-3"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></multi-broker-entry>
+    <foot-print
+      bind:__l="__l"
+      class="foot data-v-8ae7438f"
+      uI="8ae7438f-4"
+    ></foot-print>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    bindclose="{{o}}"
+    class="data-v-8ae7438f"
+    uI="8ae7438f-5"
+    uP="{{p}}"
+    uS="{{['d']}}"
+    wx:if="{{p}}"
+  >
+    <view class="reason-list-container data-v-8ae7438f">
+      <view class="reason-list data-v-8ae7438f">
+        <view
+          class="list-item data-v-8ae7438f"
+          wx:for="{{n}}"
+          wx:for-item="reason"
+          wx:key="d"
+        >
+          <view class="orange data-v-8ae7438f">{{reason.a}}{{reason.b}}</view>
+          <view class="data-v-8ae7438f">{{reason.c}}</view>
+        </view>
+      </view>
+    </view>
+  </mp-dialog>
+  <subscribe-dialog
+    bind:__l="__l"
+    bindclose="{{q}}"
+    class="data-v-8ae7438f"
+    uI="8ae7438f-6"
+    uP="{{r}}"
+    wx:if="{{r}}"
+  ></subscribe-dialog>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-8ae7438f"
+    id="mp-dialog"
+    uI="8ae7438f-7"
+    uP="{{s}}"
+    wx:if="{{s}}"
+  ></mp-dialog>
+</view>

@@ -1,0 +1,276 @@
+@import "/app.wxss";
+.close-bg {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-close.png);
+}
+.back-bg,
+.close-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.back-bg {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-back.svg);
+}
+.broker-logo-icon-header {
+  height: 0.4rem;
+  margin-right: 0.16rem;
+  width: 0.4rem;
+}
+.broker-fundaccount {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 0.613333rem;
+}
+.trade-setting {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/half-setting.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.48rem;
+  width: 0.48rem;
+}
+.stock-embedded {
+  background-color: var(--fill-2);
+  min-height: 8rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.stock-embedded .header {
+  background-color: var(--fill-2);
+  height: 0.613333rem;
+  left: 0;
+  padding-top: 0.373333rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.stock-embedded .header .header-start {
+  left: 0.4rem;
+  position: absolute;
+}
+.stock-embedded .header .header-end {
+  position: absolute;
+  right: 0.4rem;
+}
+.stock-embedded .header .header-end .embedded-loading-wrapper {
+  margin-right: 0.333333rem;
+}
+.stock-embedded .header .header-end .embedded-loading-wrapper .icon-refresh {
+  color: var(--text-color-5);
+  font-size: 0.373333rem;
+}
+.stock-embedded .header .header-end .embedded-loading-wrapper .loading {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/loading.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color-5);
+  display: inline-block;
+  font-size: 0.426667rem;
+  height: 0.426667rem;
+  width: 0.426667rem;
+}
+.stock-embedded .header .header-end .embedded-loading-wrapper .loading.rotate {
+  animation: rotate 0.35s linear infinite forwards;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.stock-embedded .header .broker-area {
+  line-height: 0.613333rem;
+}
+.stock-embedded .header .broker-area .broker-logo-icon {
+  height: 0.48rem;
+  margin-right: 0.2rem;
+  width: 0.48rem;
+}
+.stock-embedded .container-1 {
+  background-color: var(--fill-2);
+  height: calc(100% - 0.986667rem);
+  position: relative;
+}
+.stock-embedded .container-1 .tab-bar-wrapper {
+  background-color: var(--fill-2);
+  padding: 0.426667rem 0.4rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0.986667rem;
+  z-index: 11;
+}
+.stock-embedded .container-1 .tab-bar-wrapper .stock-tabbar {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.stock-embedded .container-1 .tab-bar-wrapper .stock-tabbar .mp-tab-bar {
+  height: unset;
+  overflow: initial;
+}
+.stock-embedded
+  .container-1
+  .tab-bar-wrapper
+  .stock-tabbar
+  .mp-tab-bar
+  .mp-tab {
+  -webkit-box-flex: 0;
+  flex: none;
+  height: 0.533333rem;
+  margin-right: 0.48rem;
+  padding: unset;
+}
+.stock-embedded
+  .container-1
+  .tab-bar-wrapper
+  .stock-tabbar
+  .mp-tab-bar
+  .mp-tab:nth-last-child(2) {
+  margin-right: 0.106667rem;
+}
+.stock-embedded
+  .container-1
+  .tab-bar-wrapper
+  .stock-tabbar
+  .mp-tab-bar
+  .mp-tab
+  .tab-text {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.533333rem;
+  line-height: 0.533333rem;
+}
+.stock-embedded .container-1 .tab-bar-wrapper .jump-btn .total-asset {
+  color: var(--text-color-4) !important;
+  font-size: 0.373333rem;
+  height: 0.533333rem;
+  line-height: 0.533333rem;
+}
+.stock-embedded .container-1 .tab-bar-wrapper .jump-btn .link-arrow {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/link-arrow.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.32rem 0.32rem;
+  height: 0.373333rem;
+  width: 0.373333rem;
+}
+[data-theme="dark"]
+  .stock-embedded
+  .container-1
+  .tab-bar-wrapper
+  .jump-btn
+  .link-arrow {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/link-arrow-dark.png);
+}
+.stock-embedded .container-1 .tab-bar-wrapper .switch-trade-mode-bubble-tip {
+  left: 0.4rem;
+  position: absolute;
+  top: 1.36rem;
+  z-index: 10;
+}
+.stock-embedded .container-1 .order-list-container,
+.stock-embedded .container-1 .trade-tool-option {
+  height: calc(100% - 1.2rem);
+  margin-top: 0.253333rem;
+}
+.stock-embedded .container-1 .order-list-container .orders-list-scroll-view {
+  height: calc(100% - 0.746667rem);
+}
+.stock-embedded .container-1 .position-list-scroll-view {
+  height: calc(100% - 1.2rem);
+  margin-top: 0.253333rem;
+}
+.stock-embedded .container-2,
+.stock-embedded .container-3 {
+  background-color: var(--fill-2);
+  height: calc(100% - 0.986667rem);
+}
+.stock-embedded .container-2.container-2-with-errortips {
+  height: 8.066667rem;
+}
+.stock-embedded.stock-embedded__with-bulletin .bar-cont {
+  margin-top: 0.266667rem !important;
+}
+.stock-embedded.stock-embedded__with-bulletin .container-1 .trade-tool-option {
+  height: calc(100% - 1.2rem);
+}
+.stock-embedded.stock-embedded__with-bulletin
+  .container-1
+  .order-list-container {
+  height: calc(100% - 1.2rem - 1.173333rem);
+}
+.stock-embedded.stock-embedded__with-bulletin
+  .container-1
+  .order-list-container
+  .orders-list-scroll-view {
+  height: calc(100% - 0.746667rem);
+}
+.stock-embedded.stock-embedded__with-bulletin
+  .container-1
+  .position-list-scroll-view {
+  height: calc(100% - 1.2rem - 1.173333rem);
+}
+.stock-embedded.stock-embedded--simple {
+  min-height: 8.773333rem !important;
+}
+.stock-embedded.stock-embedded--simple .header .header-start {
+  left: 0.32rem;
+}
+.stock-embedded.stock-embedded--simple .header .header-end {
+  right: 0.32rem;
+}
+.stock-embedded.stock-embedded--simple .container-1 .tab-bar-wrapper {
+  padding: 0.426667rem 0.32rem 0;
+}
+.stock-embedded.stock-embedded--simple .container-2.container-2-with-errortips {
+  height: 8.84rem;
+}
+.tab-bar-wrapper .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 0.373333rem 0.373333rem;
+  height: 0.373333rem;
+  margin-right: 0.053333rem;
+  width: 0.373333rem;
+}
+[data-theme="dark"] .tab-bar-wrapper .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool-dark.png);
+}
+.tab-bar-wrapper .mp-tab--active .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool-active.png);
+}
+[data-theme="dark"] .tab-bar-wrapper .mp-tab--active .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool-dark-active.png);
+}
+.embedded-shadow {
+  border-top-left-radius: 0.213333rem;
+  border-top-right-radius: 0.213333rem;
+  box-shadow: 0-0.213333rem 0.213333rem hsla(0, 0%, 78%, 0.3);
+  overflow: hidden;
+}
+[data-theme="dark"] .embedded-shadow,
+[data-theme="dark"] .embedded-shadow .mp-popup {
+  box-shadow: 0-0.213333rem 0.48rem hsla(0, 0%, 100%, 0.11);
+}
+.embedded-shadow .password-component--with-shadow .mp-popup {
+  box-shadow: 0-0.213333rem 0.213333rem hsla(0, 0%, 78%, 0.3);
+}
+.stock-embedded[data-theme="dark"] .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool-dark.png);
+}
+.stock-embedded[data-theme="dark"] .mp-tab--active .icon-trade-tool {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/trade-tool-dark-active.png);
+}

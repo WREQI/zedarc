@@ -1,0 +1,42 @@
+<view class="{{['_div','data-v-709e2d16','platefund-wrapper']}}">
+  <block wx:if="{{a}}">
+    <swiper
+      bindchange="{{d}}"
+      class="sub-swiper data-v-709e2d16"
+      current="{{c}}"
+      duration="{{250}}"
+      indicatorActiveColor="#98a0b3"
+      indicatorColor="#dcdfe6"
+      indicatorDots="{{false}}"
+      nextMargin="-1px"
+      previousMargin="-1px"
+    >
+      <swiper-item
+        class="data-v-709e2d16"
+        data-first="{{t.f}}"
+        data-last="{{t.g}}"
+        wx:for="{{b}}"
+        wx:for-item="t"
+        wx:key="e"
+      >
+        <platefund-item
+          bind:__l="__l"
+          bindgoToBarDetail="{{t.b}}"
+          bindgoToDetail="{{t.a}}"
+          class="data-v-709e2d16"
+          uI="{{t.c}}"
+          uP="{{t.d}}"
+          wx:if="{{t.d}}"
+        ></platefund-item>
+      </swiper-item>
+    </swiper>
+    <view class="_div slide-dots data-v-709e2d16">
+      <view
+        class="{{['_div','data-v-709e2d16','st-slide-dot',item.b]}}"
+        wx:for="{{e}}"
+        wx:key="a"
+      ></view>
+    </view>
+  </block>
+  <view class="_div plate-fund-blank data-v-709e2d16" wx:else></view>
+</view>

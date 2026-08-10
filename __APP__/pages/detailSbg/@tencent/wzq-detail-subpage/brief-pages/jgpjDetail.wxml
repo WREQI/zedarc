@@ -1,0 +1,124 @@
+<view class="_div detail-wrapper-all data-v-f0d24cdf">
+  <view class="_div detail-wrapper data-v-f0d24cdf" wx:if="{{a}}">
+    <view class="_div brief-block title-wrapper data-v-f0d24cdf">
+      <view class="_div item-title-zxg data-v-f0d24cdf">机构评级</view>
+      <view class="_div line-wrapper data-v-f0d24cdf" wx:if="{{b}}">
+        <view class="_div line-top data-v-f0d24cdf">
+          <view
+            class="{{['_div','line-top-item','data-v-f0d24cdf',line.f]}}"
+            style="{{'width:'+line.g}}"
+            wx:for="{{c}}"
+            wx:for-item="line"
+            wx:key="e"
+          >
+            <view
+              class="{{['_div','color-line','data-v-f0d24cdf',line.a,line.b,d]}}"
+              style="{{'background-color:'+line.c}}"
+            ></view>
+            <view
+              class="_div spec-color-line data-v-f0d24cdf"
+              wx:if="{{line.d}}"
+            ></view>
+          </view>
+        </view>
+        <view class="_div line-desc data-v-f0d24cdf">
+          <view class="_div line-desc-left data-v-f0d24cdf">
+            <view
+              class="_div line-desc-item data-v-f0d24cdf"
+              wx:for="{{e}}"
+              wx:for-item="line"
+              wx:key="e"
+            >
+              <view
+                class="_div line-desc-item-sq data-v-f0d24cdf"
+                style="{{'background-color:'+line.a}}"
+              ></view>
+              <view
+                class="{{['_div','line-desc-item-text','data-v-f0d24cdf',line.d]}}"
+                >{{line.b}} {{line.c}}{{f}}</view
+              >
+            </view>
+          </view>
+          <view class="_div line-text data-v-f0d24cdf" wx:if="{{g}}"
+            >共{{h}}位分析师做出评级</view
+          >
+        </view>
+        <view
+          class="_div line-text line-text-margin data-v-f0d24cdf"
+          wx:if="{{i}}"
+          >共{{j}}位分析师做出评级</view
+        >
+      </view>
+      <block wx:if="{{k}}">
+        <view class="_div spec-line-small data-v-f0d24cdf" wx:if="{{l}}"></view>
+        <view class="_div table-wrapper data-v-f0d24cdf">
+          <view class="_div pj-title data-v-f0d24cdf">
+            <view class="_div pj-title-item data-v-f0d24cdf" style="width: 45%"
+              >评级日期</view
+            >
+            <view
+              class="_div pj-title-item text-right data-v-f0d24cdf"
+              style="width: 30%"
+              >研究机构</view
+            >
+            <view
+              class="_div oj-title-item text-right data-v-f0d24cdf"
+              style="width: 25%"
+              >评级</view
+            >
+          </view>
+          <view
+            class="_div pj-content data-v-f0d24cdf"
+            wx:for="{{m}}"
+            wx:for-item="val"
+            wx:key="d"
+          >
+            <view class="_div content-row data-v-f0d24cdf">
+              <view class="_div row-item data-v-f0d24cdf" style="width: 45%"
+                >{{val.a}}</view
+              >
+              <view
+                class="_div row-item text-right data-v-f0d24cdf"
+                style="width: 30%"
+                >{{val.b}}</view
+              >
+              <view
+                class="_div row-item text-right data-v-f0d24cdf"
+                style="width: 25%"
+                >{{val.c}}</view
+              >
+            </view>
+          </view>
+        </view>
+        <block wx:if="{{n}}">
+          <view class="_div spec-line-small data-v-f0d24cdf"></view>
+          <view catchtap="{{o}}" class="_div check-more data-v-f0d24cdf"
+            >查看更多</view
+          >
+        </block>
+      </block>
+    </view>
+    <view class="_div brief-block data-v-f0d24cdf" wx:if="{{p}}">
+      <view class="_div item-title-zxg data-v-f0d24cdf">券商研报</view>
+      <view class="_div news-content data-v-f0d24cdf">
+        <view
+          catchtap="{{item.f}}"
+          class="_div news-content-item data-v-f0d24cdf"
+          wx:for="{{q}}"
+          wx:key="e"
+        >
+          <view class="_div news-item-left data-v-f0d24cdf">{{item.a}}</view>
+          <view class="_div new-item-subtitle data-v-f0d24cdf">
+            <label class="_span data-v-f0d24cdf">{{item.b}}</label>
+            <label class="_span data-v-f0d24cdf">{{item.c}}</label>
+          </view>
+          <view
+            class="_div spec-line-small-light data-v-f0d24cdf"
+            wx:if="{{item.d}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div zxg-logo data-v-f0d24cdf"></view>
+  </view>
+</view>

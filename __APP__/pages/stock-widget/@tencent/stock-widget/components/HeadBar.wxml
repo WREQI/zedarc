@@ -1,0 +1,22 @@
+<view class="_div charts data-v-c2de479a">
+  <view
+    class="_div charts-top data-v-c2de479a"
+    style="{{'background-image:'+f}}"
+  >
+    <view
+      class="_div top-title data-v-c2de479a"
+      style="{{'background-image:'+a}}"
+    ></view>
+    <view class="_div top-intor data-v-c2de479a">
+      <label class="_span data-v-c2de479a">{{b}}</label>
+      <label catchtap="{{e}}" class="_span data-v-c2de479a" wx:if="{{c}}">
+        <label class="_span intor-account data-v-c2de479a">{{d}}</label>
+        <image
+          alt=""
+          class="_img intor-arrow-right data-v-c2de479a"
+          src="https://st.gtimg.com/design/423c8e0a11c4f0a176b9cf163ad4ccab.png"
+        ></image>
+      </label>
+    </view>
+  </view>
+</view>

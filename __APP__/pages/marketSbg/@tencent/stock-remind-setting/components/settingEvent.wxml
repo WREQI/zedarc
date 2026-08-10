@@ -1,0 +1,53 @@
+<view class="_div event-wrapper data-v-6b894733">
+  <view class="{{['_div','data-v-6b894733','event-remind',d]}}" wx:if="{{a}}">
+    <view bindtap="{{c}}" class="_div title-wrapper data-v-6b894733">
+      <view class="_div title-box data-v-6b894733">
+        <label class="_span text data-v-6b894733">重要异动提醒</label>
+        <view class="_div right-box data-v-6b894733">
+          <view class="_div status-text data-v-6b894733">{{b}}</view>
+          <image
+            alt=""
+            class="_img info-svg data-v-6b894733"
+            src="https://st.gtimg.com/design/cbf4e247ac3c1f027f87649941a864d8.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    bindtap="{{j}}"
+    catchtouchmove="{{i}}"
+    class="_div event-modal data-v-6b894733"
+    wx:if="{{e}}"
+  >
+    <view catchtap="{{h}}" class="_div event-modal__content data-v-6b894733">
+      <view class="_div event-modal__header data-v-6b894733">
+        <view class="_div event-modal__title data-v-6b894733"
+          >重要异动提醒</view
+        >
+        <view
+          bindtap="{{f}}"
+          class="_div event-modal__close data-v-6b894733"
+        ></view>
+      </view>
+      <view class="_div event-modal__list data-v-6b894733">
+        <view
+          bindtap="{{item.e}}"
+          class="_div event-modal__item data-v-6b894733"
+          wx:for="{{g}}"
+          wx:key="d"
+        >
+          <view class="_div event-modal__item-text data-v-6b894733"
+            >{{item.a}}</view
+          >
+          <image
+            alt=""
+            class="_img event-modal__item-check data-v-6b894733"
+            src="{{item.c}}"
+            wx:if="{{item.b}}"
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

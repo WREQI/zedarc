@@ -1,0 +1,31 @@
+<view class="_div market-change-container data-v-c884a35b">
+  <view catchtap="{{e}}" class="_div title-wrapper data-v-c884a35b">
+    <view class="_div title-box data-v-c884a35b"
+      >板块异动<view
+        catchtap="{{a}}"
+        class="_i image-tip data-v-c884a35b"
+      ></view>
+    </view>
+    <view class="_div right data-v-c884a35b">
+      <view class="_div amount data-v-c884a35b" wx:if="{{b}}">
+        <label class="_span data-v-c884a35b">等待开盘</label>
+        <view
+          class="_div countdown-container layout-align-space-between layout-row layout-align-end-center data-v-c884a35b"
+        >
+          <view class="_div countdown-item data-v-c884a35b">{{c}}</view>
+          <label class="_span data-v-c884a35b">:</label>
+          <view class="_div countdown-item data-v-c884a35b">{{d}}</view>
+        </view>
+      </view>
+      <view class="_div right-arrow-icon data-v-c884a35b"></view>
+    </view>
+  </view>
+  <change-index
+    bind:__l="__l"
+    class="r data-v-c884a35b"
+    uI="c884a35b-0"
+    uP="{{g}}"
+    uR="changeWrapper"
+    wx:if="{{g}}"
+  ></change-index>
+</view>

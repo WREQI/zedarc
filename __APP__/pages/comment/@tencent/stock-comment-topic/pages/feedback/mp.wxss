@@ -1,0 +1,35 @@
+.content.data-v-be3d2a49 {
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.content .mod-comment.data-v-be3d2a49 {
+  background-color: var(--fill-background);
+}
+.content .mod-comment .comment-box.data-v-be3d2a49 {
+  height: 100%;
+  overflow-y: auto;
+}
+.content .mod-comment .comment-box .list-container.data-v-be3d2a49 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  margin: 0 0.32rem;
+  overflow: hidden;
+}
+.content .comment-guide.data-v-be3d2a49 {
+  background-image: url(https://st.gtimg.com/design/67bbb40fffec80239059449f685130ac.png);
+  background-size: 100% 100%;
+  bottom: calc(1.1733333333333333rem + env(safe-area-inset-bottom));
+  height: 1.36rem;
+  left: 0.7rem;
+  position: fixed;
+  width: 8.266666666666667rem;
+  z-index: 999;
+}
+.empty-bg.data-v-be3d2a49 {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+}

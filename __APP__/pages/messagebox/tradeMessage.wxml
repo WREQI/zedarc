@@ -1,0 +1,14 @@
+<view class="_div plugin-wrapper" wx:if="{{a}}">
+  <view class="_div broker-plugin-list" wx:for="{{b}}" wx:key="f">
+    <view class="_div broker-plugin-wrapper" hidden="{{!item.e}}">
+      <broker-message
+        bind:__l="__l"
+        bindpullRefresh="{{item.b}}"
+        bindstyleChange="{{item.a}}"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:if="{{item.d}}"
+      ></broker-message>
+    </view>
+  </view>
+</view>

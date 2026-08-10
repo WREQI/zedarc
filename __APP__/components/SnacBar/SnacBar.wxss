@@ -1,0 +1,81 @@
+@import "/app.wxss";
+.snac-bar.data-v-a2747001 {
+  background-color: var(--fill-2);
+  border: 0.013333rem solid var(--text-color-7);
+  border-radius: 0.106667rem;
+  bottom: 0.426667rem;
+  box-shadow: 0 0.213333rem 0.213333rem rgba(0, 0, 0, 0.04);
+  left: 0;
+  margin: 0 auto;
+  min-height: 1.44rem;
+  position: fixed;
+  right: 0;
+  width: 9.2rem;
+  z-index: 1;
+}
+.snac-bar-content.data-v-a2747001,
+.snac-bar.data-v-a2747001 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.snac-bar-content.data-v-a2747001 {
+  margin: 0.16rem 0.32rem;
+  width: 100%;
+}
+.snac-bar-content-coin.data-v-a2747001 {
+  background: url(https://st.gtimg.com/design/57816af89dbe8a06df859f2273fb48e7.svg)
+    0 0 no-repeat;
+  background-size: cover;
+  height: 0.533333rem;
+  width: 0.533333rem;
+}
+.snac-bar-content-close.data-v-a2747001 {
+  background: url(https://st.gtimg.com/design/b2cf294ad50e943cb4eb1ab44d3e9772.png)
+    0 0 no-repeat;
+  background-size: cover;
+  height: 0.293333rem;
+  width: 0.293333rem;
+}
+.snac-bar-content-btn.data-v-a2747001 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border: 0.026667rem solid var(--color-blue);
+  border-radius: 0.106667rem;
+  color: var(--color-blue);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 600;
+  height: 0.746667rem;
+  justify-content: center;
+  line-height: 0.453333rem;
+  margin-left: 0.213333rem;
+  margin-right: 0.213333rem;
+  width: 1.706667rem;
+}
+.snac-bar-content-text.data-v-a2747001 {
+  -webkit-box-flex: 1;
+  color: var(--text-color-1);
+  display: inline;
+  flex: 1;
+  font-size: 0.373333rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-left: 0.106667rem;
+}
+.snac-bar-content-text span.data-v-a2747001 {
+  color: var(--color-orange);
+}
+.simple_mode .snac-bar-content-btn.data-v-a2747001 {
+  border: 0.026667rem solid #e63535;
+  color: #e63535;
+}

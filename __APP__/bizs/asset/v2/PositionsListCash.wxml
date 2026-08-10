@@ -1,0 +1,39 @@
+<view
+  class="{{['stock-list-container','stock-list--cash','lite-asset',r&&'last',s&&'border--bottom-c1']}}"
+>
+  <scroll-view bindscroll="{{p}}" class="scroll-wrap" scrollX="true">
+    <view class="stock-list-content">
+      <list-header
+        bind:__l="__l"
+        uI="7ed3307e-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></list-header>
+      <view class="stock-list-body">
+        <view class="stock-list-item">
+          <view class="col-item col-a cell" wx:if="{{b}}">
+            <view class="title">可用资金</view>
+          </view>
+          <view class="col-item col-a cell cell-hide" wx:else>***</view>
+          <view class="col-item col-b cell" wx:if="{{c}}">
+            <view class="{{['title',e,f]}}">{{d}}</view>
+          </view>
+          <view class="col-item col-b cell cell-hide" wx:else>***</view>
+          <view class="col-item col-c cell" wx:if="{{g}}">
+            <view class="{{['title',i,j,k]}}">{{h}}</view>
+          </view>
+          <view class="col-item col-c cell cell-hide" wx:else>***</view>
+          <view class="col-item col-d cell" wx:if="{{l}}">
+            <view class="title">{{m}}</view>
+          </view>
+          <view class="col-item col-d cell cell-hide" wx:else>***</view>
+          <view class="col-item cell col-e" wx:if="{{n}}">
+            <view class="title">{{o}}</view>
+          </view>
+          <view class="col-item cell cell-hide col-e" wx:else>***</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="stock-list-body-gradient" wx:if="{{q}}"></view>
+</view>

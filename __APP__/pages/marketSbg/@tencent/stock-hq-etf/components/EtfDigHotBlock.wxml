@@ -1,0 +1,79 @@
+<view
+  class="{{['_div','data-v-134b2488','dig-hot-block-wrapper',o]}}"
+  ref="block"
+  wx:if="{{a}}"
+>
+  <view class="_div dig-hot-block data-v-134b2488">
+    <view bindtap="{{c}}" class="_div header data-v-134b2488">
+      <view class="_div title data-v-134b2488">
+        <view class="_div main-title data-v-134b2488">
+          <image
+            alt="挖热点"
+            class="_img title-img data-v-134b2488"
+            src="{{b}}"
+          ></image>
+        </view>
+        <view class="_div sub-title data-v-134b2488">紧跟实时热点</view>
+      </view>
+      <view class="_div right-arrow-icon data-v-134b2488"></view>
+    </view>
+    <view class="_div dig-hot-content data-v-134b2488" wx:if="{{d}}">
+      <view class="_div theme-row data-v-134b2488">
+        <view
+          bindtap="{{item.i}}"
+          class="{{['_div','data-v-134b2488','theme-item',item.h]}}"
+          wx:for="{{e}}"
+          wx:key="g"
+        >
+          <view class="_div theme-rank data-v-134b2488">
+            <label class="{{['_span','data-v-134b2488','rank-badge',item.b]}}">
+              <label
+                ariaHidden="true"
+                class="_span rank-deco rank-deco--left data-v-134b2488"
+              ></label>
+              <label class="_span rank-num data-v-134b2488">{{item.a}}</label>
+              <label
+                ariaHidden="true"
+                class="_span rank-deco rank-deco--right data-v-134b2488"
+              ></label>
+            </label>
+          </view>
+          <view class="_div theme-info data-v-134b2488">
+            <view class="_div theme-name data-v-134b2488">{{item.c}}</view>
+            <view class="{{['_div','data-v-134b2488','theme-change',item.e]}}"
+              >{{item.d}}</view
+            >
+            <view
+              class="_div theme-underline data-v-134b2488"
+              wx:if="{{item.f}}"
+            ></view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="{{h}}" class="_div hot-desc data-v-134b2488" wx:if="{{f}}">
+        <view class="_div hot-tag data-v-134b2488">热点</view>
+        <view class="_div hot-text data-v-134b2488">{{g}}</view>
+      </view>
+      <view
+        catchtap="{{m}}"
+        class="_div etf-card data-v-134b2488"
+        wx:if="{{i}}"
+      >
+        <view class="_div etf-info data-v-134b2488">
+          <image
+            alt="基金"
+            class="_img etf-tag data-v-134b2488"
+            src="https://wzq.tenpay.com/resources/mp-files/portfolio/icon/cnjj.svg"
+          ></image>
+          <view class="_div etf-name data-v-134b2488">{{j}}</view>
+        </view>
+        <view class="{{['_div','data-v-134b2488','etf-change',l]}}">{{k}}</view>
+      </view>
+    </view>
+    <view class="_div skeleton data-v-134b2488" wx:if="{{n}}">
+      <view class="_div skeleton-row skeleton-row--top data-v-134b2488"></view>
+      <view class="_div skeleton-row skeleton-row--mid data-v-134b2488"></view>
+      <view class="_div skeleton-row skeleton-row--btm data-v-134b2488"></view>
+    </view>
+  </view>
+</view>

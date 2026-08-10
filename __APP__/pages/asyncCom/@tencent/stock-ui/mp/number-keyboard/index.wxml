@@ -1,0 +1,99 @@
+<view class="{{['_div','st-number-keyboard',A]}}" hidden="{{!z}}">
+  <view catchtouchmove="{{y}}" class="{{['_div',x]}}">
+    <view class="_div st-number-keyboard__title" wx:if="{{a}}">
+      <label
+        bindtap="{{c}}"
+        class="_span icon icon-close st-number-keyboard__close"
+        wx:if="{{b}}"
+      ></label>
+      <label class="_span">{{d}}</label>
+      <label
+        bindtap="{{f}}"
+        class="_span st-number-keyboard__done"
+        wx:if="{{e}}"
+        >完成</label
+      >
+    </view>
+    <slot name="keyboard-top"></slot>
+    <view class="_div st-number-keyboard__body">
+      <view class="_div st-number-keyboard__keys">
+        <block wx:if="{{g}}">
+          <view class="_div" wx:for="{{h}}" wx:for-item="key" wx:key="k">
+            <label
+              catchtap="{{key.d}}"
+              catchtouchend="{{key.f}}"
+              catchtouchstart="{{key.e}}"
+              class="{{['_span','st-number-key','^st-number-key',key.b,key.c]}}"
+              role="NumberKey"
+              wx:if="{{i}}"
+              >{{key.a}}</label
+            >
+            <label
+              catchtap="{{key.j}}"
+              class="{{['_span','st-number-key',key.h,key.i]}}"
+              role="NumberKey"
+              wx:else
+              >{{key.g}}</label
+            >
+          </view>
+        </block>
+        <block wx:else>
+          <key
+            bind:__l="__l"
+            bindpress="{{key.b}}"
+            class="st-key__wrapper"
+            uI="{{key.c}}"
+            uP="{{key.d}}"
+            wx:for="{{j}}"
+            wx:for-item="key"
+            wx:key="a"
+          ></key>
+        </block>
+      </view>
+      <view class="_div st-number-keyboard__sidebar" wx:if="{{k}}">
+        <key
+          bind:__l="__l"
+          bindpress="{{l}}"
+          class="st-key__wrapper"
+          uI="05a74a28-1"
+          uP="{{m}}"
+          wx:if="{{m}}"
+        ></key>
+        <key
+          bind:__l="__l"
+          bindpress="{{n}}"
+          class="st-key__wrapper"
+          uI="05a74a28-2"
+          uP="{{o}}"
+          wx:if="{{o}}"
+        ></key>
+        <view class="_div st-key__wrapper flex" wx:if="{{p}}">
+          <key
+            bind:__l="__l"
+            bindpress="{{q}}"
+            class="flex-1"
+            uI="05a74a28-3"
+            uP="{{r}}"
+            wx:if="{{r}}"
+          ></key>
+          <key
+            bind:__l="__l"
+            bindpress="{{s}}"
+            class="flex-1"
+            uI="05a74a28-4"
+            uP="{{t}}"
+            wx:if="{{t}}"
+          ></key>
+        </view>
+        <key
+          bind:__l="__l"
+          bindpress="{{v}}"
+          class="st-key__wrapper"
+          uI="05a74a28-5"
+          uP="{{w}}"
+          wx:if="{{w}}"
+        ></key>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<view class="_div component-range-slider data-v-0e956c97">
+  <view
+    bindtouchstart="{{t}}"
+    class="_div slider data-v-0e956c97"
+    id="slider-wrapper"
+    ref="slider"
+  >
+    <view class="_div slider-track data-v-0e956c97"></view>
+    <view class="_div slider-range data-v-0e956c97" style="{{a}}"></view>
+    <view
+      bindtouchend="{{e}}"
+      bindtouchmove="{{d}}"
+      bindtouchstart="{{c}}"
+      class="_div slider-thumb data-v-0e956c97"
+      style="{{'left:'+b}}"
+    ></view>
+    <view
+      bindtouchend="{{i}}"
+      bindtouchmove="{{h}}"
+      bindtouchstart="{{g}}"
+      class="_div slider-thumb data-v-0e956c97"
+      style="{{'left:'+f}}"
+    ></view>
+    <view
+      class="{{['_div','slider-label','min','data-v-0e956c97',k&&'active']}}"
+      id="cursor-min"
+      ref="cursorMin"
+      >{{j}}</view
+    >
+    <view
+      class="_div slider-label start data-v-0e956c97"
+      style="{{n}}"
+      wx:if="{{l}}"
+      >{{m}}</view
+    >
+    <view
+      class="_div slider-label end data-v-0e956c97"
+      style="{{q}}"
+      wx:if="{{o}}"
+      >{{p}}</view
+    >
+    <view
+      class="{{['_div','slider-label','max','data-v-0e956c97',s&&'active']}}"
+      id="cursor-max"
+      ref="cursorMax"
+      >{{r}}</view
+    >
+  </view>
+</view>

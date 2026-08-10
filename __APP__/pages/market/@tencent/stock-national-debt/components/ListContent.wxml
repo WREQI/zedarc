@@ -1,0 +1,73 @@
+<view class="_div list-warpper data-v-523d9bfe">
+  <view class="_div slide-header data-v-523d9bfe">
+    <view class="_div tab-content data-v-523d9bfe">
+      <view bindtap="{{b}}" class="_div tab-content-inner data-v-523d9bfe">
+        <view
+          class="{{['_div','data-v-523d9bfe','tab-content-item',tab.c]}}"
+          data-index="{{tab.b}}"
+          wx:for="{{a}}"
+          wx:for-item="tab"
+          wx:key="d"
+          >{{tab.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div rank-list data-v-523d9bfe">
+    <view class="_div rank-header data-v-523d9bfe">
+      <view class="_div header-text-1 data-v-523d9bfe">品种</view>
+      <view class="_div header-text-2 data-v-523d9bfe">年化收益率</view>
+      <view class="_div header-text-3 data-v-523d9bfe">每10万收益</view>
+      <view class="_div header-text-4 data-v-523d9bfe"
+        >计息天数/资金可用日</view
+      >
+    </view>
+    <view
+      bindtap="{{stock.j}}"
+      class="_div rank-content data-v-523d9bfe"
+      wx:for="{{c}}"
+      wx:for-item="stock"
+      wx:key="i"
+    >
+      <view class="_div content-1 data-v-523d9bfe">
+        <view class="_div date data-v-523d9bfe">{{stock.a}}天期</view>
+        <view class="_div card-tag data-v-523d9bfe" wx:if="{{stock.b}}"
+          >7日最高</view
+        >
+        <view class="_div code data-v-523d9bfe">{{stock.c}}</view>
+      </view>
+      <view class="_div content-2 data-v-523d9bfe">{{stock.d}}%</view>
+      <view class="_div content-3 data-v-523d9bfe">{{stock.e}}元</view>
+      <view class="_div content-4 data-v-523d9bfe">
+        <view class="_div content-4-1 data-v-523d9bfe">
+          <view class="_div num data-v-523d9bfe">{{stock.f}}天</view>
+          <view class="_div date data-v-523d9bfe">{{stock.g}}</view>
+        </view>
+        <view catchtap="{{stock.h}}" class="_div trade-btn data-v-523d9bfe"
+          >交易</view
+        >
+      </view>
+    </view>
+    <view class="_div footer-tips data-v-523d9bfe" wx:if="{{d}}">{{e}}</view>
+    <view bindtap="{{h}}" class="_div rank-footer data-v-523d9bfe">
+      <label class="_span data-v-523d9bfe">{{f}}</label>
+      <view class="{{['_div','data-v-523d9bfe','more',g]}}"></view>
+    </view>
+  </view>
+  <view
+    bindtap="{{k}}"
+    class="_div open-trade-btn data-v-523d9bfe"
+    wx:if="{{i}}"
+  >
+    <view class="_div icon data-v-523d9bfe"></view>{{j}}</view
+  >
+  <view class="_div open-trade-bottom-wrapper data-v-523d9bfe">
+    <view
+      bindtap="{{n}}"
+      class="_div open-trade-bottom data-v-523d9bfe"
+      wx:if="{{l}}"
+    >
+      <view class="_div icon data-v-523d9bfe"></view>{{m}}</view
+    >
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<view class="_div chart-setting data-v-bfc7e934">
+    <view class="_div items-area data-v-bfc7e934" wx:if="{{a}}">
+        <view class="{{['_div','data-v-bfc7e934',item.B]}}" wx:for="{{b}}" wx:key="A">
+            <view class="_div text-item data-v-bfc7e934" wx:if="{{item.a}}">
+                <block wx:if="{{item.b}}">
+                    <view class="_div text-rect-vertical data-v-bfc7e934" style="{{'background:'+item.c}}"></view>
+                    <view class="_div text-rect-vertical2 data-v-bfc7e934" style="{{'background:'+item.d}}"></view>
+                </block>
+                <view class="_div text-rect data-v-bfc7e934" style="{{'background-color:'+item.f}}" wx:elif="{{item.e}}"></view>
+                <view class="_div text-content data-v-bfc7e934">{{item.g}}</view>
+            </view>
+            <view class="_div formula-item data-v-bfc7e934" wx:elif="{{item.h}}">
+                <view class="_div data-v-bfc7e934">{{item.i}}  =  </view>
+                <view class="_div formula-body data-v-bfc7e934">
+                    <view class="_div data-v-bfc7e934">{{item.j}}</view>
+                    <view class="_div formula-line data-v-bfc7e934"></view>
+                    <view class="_div data-v-bfc7e934">{{item.k}}</view>
+                </view>
+                <view class="_div data-v-bfc7e934">  x  100%</view>
+            </view>
+            <view class="_div option-item data-v-bfc7e934" wx:elif="{{item.l}}">
+                <view class="_div option-left data-v-bfc7e934" style="{{'width:'+item.r}}" wx:if="{{item.m}}">
+                    <view class="{{['_div','option-block','data-v-bfc7e934',block.d&&'margin-left']}}" style="{{'background:'+block.e}}" wx:for="{{item.n}}" wx:for-item="block" wx:key="f">
+                        <view class="_div option-block-rect data-v-bfc7e934" style="{{'background:'+block.a}}"></view>
+                        <view class="_div option-block-title data-v-bfc7e934" style="{{'color:'+block.c}}">{{block.b}}</view>
+                    </view>
+                    <view class="{{['_div','option-title','data-v-bfc7e934',item.q&&'margin-left']}}" wx:if="{{item.o}}">{{item.p}}</view>
+                </view>
+                <input bindblur="{{item.w}}" bindinput="{{item.v}}" class="option-input data-v-bfc7e934" placeholder="{{item.s}}" type="number" value="{{item.t}}"></input>
+                <view class="_div option-slider data-v-bfc7e934">
+                    <slider-bar bind:__l="__l" bindvalueChange="{{item.x}}" class="data-v-bfc7e934" uI="{{item.y}}" uP="{{item.z}}" wx:if="{{item.z}}"></slider-bar>
+                </view>
+            </view>
+        </view>
+        <view bindtap="{{c}}" class="_div reset-button data-v-bfc7e934">恢复默认</view>
+    </view>
+    <view class="_div intro-area data-v-bfc7e934" wx:if="{{d}}">
+        <view class="_div intro-title data-v-bfc7e934">简介</view>
+        <view class="_div intro-content data-v-bfc7e934">{{e}}</view>
+        <view class="_div sep-line data-v-bfc7e934"></view>
+        <view class="_div intro-title data-v-bfc7e934">应用方法</view>
+        <view class="_div data-v-bfc7e934" wx:if="{{f}}">
+            <view class="_div intro-content data-v-bfc7e934">{{g}}</view>
+            <view class="_div image-group-wrapper data-v-bfc7e934">
+                <view class="_div image-wrapper data-v-bfc7e934">
+                    <image class="_img image data-v-bfc7e934" src="https://st.gtimg.com/design/f18ae4c3423294e028b5b717e88a61a5.png"></image>
+                    <view class="_div text data-v-bfc7e934">（金叉）</view>
+                </view>
+                <view class="_div image-wrapper data-v-bfc7e934">
+                    <image class="_img image data-v-bfc7e934" src="https://st.gtimg.com/design/1c7cc973c1805a00351eb9db3f9e918f.png"></image>
+                    <view class="_div text data-v-bfc7e934">（死叉）</view>
+                </view>
+            </view>
+            <view class="_div intro-content data-v-bfc7e934">{{h}}</view>
+            <view class="_div image-wrapper image-wrapper-3 data-v-bfc7e934">
+                <image class="_img image data-v-bfc7e934" src="https://st.gtimg.com/design/3f7684bf2021316f552ce592001862fb.png"></image>
+                <view class="_div text data-v-bfc7e934">（顶背离）</view>
+            </view>
+            <view class="_div image-wrapper data-v-bfc7e934">
+                <image class="_img image data-v-bfc7e934" src="https://st.gtimg.com/design/597445dd9ccfae515586a0b354573b96.png"></image>
+                <view class="_div text data-v-bfc7e934">（底背离）</view>
+            </view>
+            <view class="_div intro-content data-v-bfc7e934">{{i}}</view>
+            <view class="_div intro-content data-v-bfc7e934">{{j}}</view>
+        </view>
+        <block wx:else>
+            <view class="_div intro-content data-v-bfc7e934" wx:for="{{k}}" wx:key="b">{{item.a}}</view>
+        </block>
+    </view>
+</view>

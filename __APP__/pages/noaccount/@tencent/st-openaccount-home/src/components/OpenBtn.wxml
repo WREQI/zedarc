@@ -1,0 +1,130 @@
+<view class="{{['_div','button-wrapper','data-v-a8b0f91f',V,W,X,Y,Z,aa,ab]}}">
+  <view class="_div stock-detail data-v-a8b0f91f" wx:if="{{a}}">
+    <view class="_div stock-detail-state data-v-a8b0f91f">
+      <view class="_div name data-v-a8b0f91f">{{b}}</view>
+      <view class="_div state data-v-a8b0f91f">{{c}}</view>
+    </view>
+    <view class="_div stock-detail-price-old data-v-a8b0f91f">
+      <view class="_div cur data-v-a8b0f91f">{{d}}</view>
+      <view class="_div zdf data-v-a8b0f91f">
+        <label class="_span data-v-a8b0f91f">{{e}}%</label>
+      </view>
+      <view class="_div fivezdf data-v-a8b0f91f">{{f}}%</view>
+    </view>
+  </view>
+  <view class="_div stock-detail data-v-a8b0f91f" wx:if="{{g}}">
+    <view class="_div stock-detail-information data-v-a8b0f91f">
+      <view class="_div name data-v-a8b0f91f">{{h}}</view>
+      <view class="_div scode data-v-a8b0f91f">{{i}}</view>
+    </view>
+    <view class="_div stock-detail-price-new data-v-a8b0f91f">
+      <view class="_div left data-v-a8b0f91f">
+        <view class="_div cur data-v-a8b0f91f"
+          >最新价：<label class="_span cur-price data-v-a8b0f91f">{{j}}</label>
+        </view>
+        <view class="_div zdf data-v-a8b0f91f"
+          >涨跌幅：<label class="_span zdf-value data-v-a8b0f91f">{{k}}%</label>
+        </view>
+      </view>
+      <view class="_div right data-v-a8b0f91f">
+        <view class="_div fivezdf data-v-a8b0f91f">{{l}}%</view>
+        <view class="_div state data-v-a8b0f91f">{{m}}</view>
+      </view>
+    </view>
+  </view>
+  <view
+    class="_div source-channel-provider data-v-a8b0f91f"
+    style="{{'background-image:'+o}}"
+    wx:elif="{{n}}"
+  ></view>
+  <view class="_div source-gznhg data-v-a8b0f91f" wx:elif="{{p}}">
+    <view class="_div content data-v-a8b0f91f" wx:if="{{q}}">
+      <image
+        alt=""
+        class="_img icon data-v-a8b0f91f"
+        src="https://st.gtimg.com/design/25f4d0751a6c7c3717c22af518a6ae0a.png"
+      ></image>
+      <label class="_span guozhai-value data-v-a8b0f91f">{{r}}%</label>
+      <image
+        alt=""
+        class="_img icon data-v-a8b0f91f"
+        src="https://st.gtimg.com/design/a2db137420655f00e99dc59c62e2820d.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div source-dxrl data-v-a8b0f91f" wx:elif="{{s}}">
+    <view class="_div content data-v-a8b0f91f" wx:if="{{t}}">
+      <image
+        alt=""
+        class="_img icon data-v-a8b0f91f"
+        src="https://st.gtimg.com/design/25f4d0751a6c7c3717c22af518a6ae0a.png"
+      ></image>
+      <label class="_span dxrl-value data-v-a8b0f91f"
+        >{{v}}<label class="_span small data-v-a8b0f91f">元</label>
+      </label>
+      <image
+        alt=""
+        class="_img icon data-v-a8b0f91f"
+        src="https://st.gtimg.com/design/a2db137420655f00e99dc59c62e2820d.png"
+      ></image>
+    </view>
+    <view class="_div new-stock-list data-v-a8b0f91f" wx:if="{{w}}"
+      >今日申购：{{x}}</view
+    >
+  </view>
+  <view
+    class="_div source-xklc-zhaoshang-new data-v-a8b0f91f"
+    wx:elif="{{y}}"
+  ></view>
+  <view
+    class="_div source-xklc-zhaoshang data-v-a8b0f91f"
+    wx:elif="{{z}}"
+  ></view>
+  <view class="_div source-cpx-hualin data-v-a8b0f91f" wx:elif="{{A}}"></view>
+  <view class="_div source-zhongjin data-v-a8b0f91f" wx:elif="{{B}}"></view>
+  <view class="_div continue-open-text data-v-a8b0f91f" wx:elif="{{C}}"
+    >即将开户完成，开启股票投资</view
+  >
+  <view class="{{['_div','button-container','data-v-a8b0f91f',N&&'ipline']}}">
+    <label class="_span guide t-20 data-v-a8b0f91f" wx:if="{{D}}">{{E}}</label>
+    <view class="_div ipGuide data-v-a8b0f91f" wx:if="{{F}}">
+      <image
+        alt=""
+        class="_img ip data-v-a8b0f91f"
+        src="https://st.gtimg.com/design/6ae03fbf48f980cb0fee79624acbff8c.png"
+      ></image>
+    </view>
+    <view class="_div pupple data-v-a8b0f91f" wx:if="{{G}}">
+      <view class="_div text data-v-a8b0f91f"
+        >{{H}}<image
+          bindtap="{{I}}"
+          class="_img close data-v-a8b0f91f"
+          src="https://st.gtimg.com/design/e5c8ac37b20a66ac131ff4f00826e268.png"
+        ></image>
+        <view class="_div trip data-v-a8b0f91f"></view>
+      </view>
+    </view>
+    <view
+      bindtap="{{M}}"
+      class="{{['_div','open-btn','data-v-a8b0f91f',K]}}"
+      style="{{L}}"
+      >{{J}}</view
+    >
+  </view>
+  <view class="_div login-wrapperer data-v-a8b0f91f" wx:if="{{O}}">
+    <view class="_div multi-entry data-v-a8b0f91f" wx:if="{{P}}">
+      <label bindtap="{{Q}}" class="_span data-v-a8b0f91f">查询开户记录</label>
+      <label class="_span separator data-v-a8b0f91f">|</label>
+      <label bindtap="{{R}}" class="_span data-v-a8b0f91f">登录已有账户</label>
+    </view>
+    <view class="{{['_div','data-v-a8b0f91f','login-container',U]}}" wx:else>
+      <label bindtap="{{S}}" class="_span data-v-a8b0f91f"
+        >已有股票账户，去登录</label
+      >
+      <label
+        bindtap="{{T}}"
+        class="_span right-arrow-icon data-v-a8b0f91f"
+      ></label>
+    </view>
+  </view>
+</view>

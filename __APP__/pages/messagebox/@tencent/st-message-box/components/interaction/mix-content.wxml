@@ -1,0 +1,32 @@
+<view class="_div content-container data-v-e45d571d">
+  <view class="_div content data-v-e45d571d" wx:if="{{a}}">
+    <view class="_div data-v-e45d571d" wx:for="{{b}}" wx:key="f">
+      <follow-item
+        bind:__l="__l"
+        class="data-v-e45d571d"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:if="{{item.a}}"
+      ></follow-item>
+      <item
+        bind:__l="__l"
+        class="data-v-e45d571d"
+        uI="{{item.d}}"
+        uP="{{item.e||''}}"
+        wx:else
+      ></item>
+    </view>
+  </view>
+  <blank-tips
+    bind:__l="__l"
+    class="blank data-v-e45d571d"
+    uI="e45d571d-2"
+    wx:elif="{{c}}"
+  ></blank-tips>
+  <bottom-tips
+    bind:__l="__l"
+    class="brand data-v-e45d571d"
+    uI="e45d571d-3"
+    wx:if="{{d}}"
+  ></bottom-tips>
+</view>

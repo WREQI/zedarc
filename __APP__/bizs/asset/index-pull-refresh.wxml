@@ -1,0 +1,19 @@
+<view>
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{d}}"
+    bindrefresherrefresh="{{f}}"
+    bindrefresherrestore="{{e}}"
+    bindscroll="{{g}}"
+    class="scroll-wrapper"
+    refresherDefaultStyle="{{b}}"
+    refresherEnabled="true"
+    refresherThreshold="100"
+    refresherTriggered="{{c}}"
+    showScrollbar="{{false}}"
+    style="{{'height:'+a}}"
+  >
+    <slot></slot>
+  </scroll-view>
+  <slot></slot>
+</view>

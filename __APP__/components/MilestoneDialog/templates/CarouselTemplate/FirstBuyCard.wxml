@@ -1,0 +1,23 @@
+<view class="first-buy-card data-v-cc6d7d8a" style="{{'background-image:'+f}}">
+  <view class="first-buy-card__header data-v-cc6d7d8a">
+    <stock-logo
+      bind:__l="__l"
+      class="stock-label data-v-cc6d7d8a"
+      uI="cc6d7d8a-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></stock-logo>
+    <label class="stock-name data-v-cc6d7d8a">{{b}}</label>
+  </view>
+  <view class="first-buy-card__data data-v-cc6d7d8a">
+    <view class="first-buy-card__data-col data-v-cc6d7d8a">
+      <label class="first-buy-card__data-value data-v-cc6d7d8a">{{c}}</label>
+      <label class="first-buy-card__data-label data-v-cc6d7d8a">成交均价</label>
+    </view>
+    <view class="first-buy-card__data-col data-v-cc6d7d8a">
+      <label class="first-buy-card__data-value data-v-cc6d7d8a">{{d}}</label>
+      <label class="first-buy-card__data-label data-v-cc6d7d8a">成交数量</label>
+    </view>
+  </view>
+  <view class="first-buy-card__date data-v-cc6d7d8a">{{e}}</view>
+</view>

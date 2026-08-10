@@ -1,0 +1,53 @@
+.mask-wrapper.data-v-d9744042 {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+.plate-wrapper.data-v-d9744042 {
+  background-color: #fff;
+  border-radius: 0.10666666666666667rem;
+  color: #262e40;
+  margin-top: 0.10666666666666667rem;
+  position: absolute;
+  width: 2.6666666666666665rem;
+}
+.plate-wrapper .plate-arrow.data-v-d9744042 {
+  background-image: url(https://st.gtimg.com/image/kline/arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 0.21333333333333335rem;
+  margin-top: -0.2rem;
+  position: absolute;
+  width: 0.5333333333333333rem;
+}
+.plate-wrapper .config.data-v-d9744042 {
+  font-size: 0.32rem;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  text-align: center;
+}
+.plate-wrapper .selected.data-v-d9744042 {
+  color: #e63535;
+  font-weight: 500;
+}
+.h5-pro.mask-wrapper .plate-wrapper.data-v-d9744042,
+.mp-pro.mask-wrapper .plate-wrapper.data-v-d9744042 {
+  margin-top: -0.02666666666666667rem;
+}
+.h5-pro.mask-wrapper .plate-wrapper .selected.data-v-d9744042,
+.mp-pro.mask-wrapper .plate-wrapper .selected.data-v-d9744042 {
+  color: #3077ec !important;
+}
+.h5-pro.mask-wrapper.skin-dark .plate-arrow.data-v-d9744042,
+.mp-pro.mask-wrapper.skin-dark .plate-arrow.data-v-d9744042 {
+  background-image: url(https://st.gtimg.com/design/cfdfd70f1c22bc8669de1ff0dc25933c.png);
+}
+.h5-pro.mask-wrapper.skin-dark .plate-wrapper.data-v-d9744042,
+.mp-pro.mask-wrapper.skin-dark .plate-wrapper.data-v-d9744042 {
+  background-color: #12161f;
+  color: #f0f1f5;
+}

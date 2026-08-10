@@ -1,0 +1,48 @@
+<view class="{{['_div','adr-wrapper','data-v-28e4a568',G&&'isLite']}}">
+  <block wx:if="{{a}}">
+    <view class="_div seperate data-v-28e4a568" wx:if="{{b}}"></view>
+    <view bindtap="{{k}}" class="_div wrapper data-v-28e4a568">
+      <view class="_div block data-v-28e4a568">
+        <view class="_div title data-v-28e4a568">{{c}}</view>
+        <view class="_div text data-v-28e4a568">{{d}} {{e}}</view>
+        <view class="{{['_div','text','data-v-28e4a568',g]}}">{{f}}%</view>
+      </view>
+      <view class="_div block right data-v-28e4a568">
+        <view class="_div title data-v-28e4a568">{{h}}</view>
+        <view class="_div title title-text data-v-28e4a568">溢价(H/A)</view>
+        <view class="{{['_div','text','data-v-28e4a568',j]}}">{{i}}%</view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{l}}">
+    <view class="_div seperate data-v-28e4a568" wx:if="{{m}}"></view>
+    <view bindtap="{{t}}" class="_div wrapper data-v-28e4a568">
+      <view class="_div block data-v-28e4a568">
+        <view class="_div title data-v-28e4a568">ADR换算价</view>
+        <view class="{{['_div','text','data-v-28e4a568',o]}}">{{n}} HKD</view>
+      </view>
+      <view class="_div block right data-v-28e4a568">
+        <view class="_div title data-v-28e4a568">相对港股</view>
+        <view class="{{['_div','text','data-v-28e4a568',q]}}">{{p}} HKD</view>
+        <view class="{{['_div','text','data-v-28e4a568',s]}}">{{r}}%</view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{v}}">
+    <view class="_div seperate data-v-28e4a568" wx:if="{{w}}"></view>
+    <view bindtap="{{F}}" class="_div wrapper data-v-28e4a568">
+      <view class="_div block data-v-28e4a568">
+        <view class="_div title data-v-28e4a568" wx:if="{{x}}">H股</view>
+        <view class="_div title data-v-28e4a568" wx:else>{{y}}(H股)</view>
+        <view class="{{['_div','text','data-v-28e4a568',A]}}">{{z}} HKD</view>
+        <view class="{{['_div','text','data-v-28e4a568',C]}}">{{B}}%</view>
+      </view>
+      <view
+        class="{{['_div','block','right','data-v-28e4a568',E&&'proTimeSpan']}}"
+      >
+        <view class="_div title data-v-28e4a568">北京时间</view>
+        <view class="_div title title-text data-v-28e4a568">{{D}}</view>
+      </view>
+    </view>
+  </block>
+</view>

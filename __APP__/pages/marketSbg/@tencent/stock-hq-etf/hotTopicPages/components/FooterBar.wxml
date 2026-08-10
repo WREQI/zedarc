@@ -1,0 +1,28 @@
+<view class="{{['data-v-fdf16d42','footer-bar',k]}}" hidden="{{!j}}">
+  <view class="_div footer-bar__main data-v-fdf16d42">
+    <ai-bar
+      bind:__l="__l"
+      bindonClickAiDialog="{{e}}"
+      bindonHideAiEntry="{{d}}"
+      bindonShowAiEntry="{{c}}"
+      class="footer-bar__ask r data-v-fdf16d42"
+      uI="fdf16d42-0"
+      uP="{{f}}"
+      uR="aiBarRef"
+      wx:if="{{a}}"
+    ></ai-bar>
+    <button
+      bindtap="{{i}}"
+      class="footer-bar__share data-v-fdf16d42"
+      openType="{{h}}"
+      plain="true"
+    >
+      <image
+        alt="分享"
+        class="_img footer-bar__share-icon data-v-fdf16d42"
+        src="{{g}}"
+      ></image>
+      <view class="_div footer-bar__share-text data-v-fdf16d42">分享</view>
+    </button>
+  </view>
+</view>

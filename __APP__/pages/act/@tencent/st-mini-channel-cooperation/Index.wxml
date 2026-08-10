@@ -1,0 +1,47 @@
+<view class="_div channel-cooperation data-v-6872e77a" wx:if="{{a}}">
+  <header-img
+    bind:__l="__l"
+    class="data-v-6872e77a"
+    uI="6872e77a-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></header-img>
+  <view class="_div rights data-v-6872e77a">
+    <image
+      class="_img rights-img data-v-6872e77a"
+      src="{{d}}"
+      wx:if="{{c}}"
+    ></image>
+  </view>
+  <apply-button
+    bind:__l="__l"
+    bindaegisReporterFn="{{g}}"
+    bindreportData="{{f}}"
+    class="data-v-6872e77a"
+    uI="6872e77a-1"
+    uP="{{h}}"
+    wx:if="{{e}}"
+  ></apply-button>
+  <rule
+    bind:__l="__l"
+    class="data-v-6872e77a"
+    uI="6872e77a-2"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></rule>
+  <finish-popup
+    bind:__l="__l"
+    bindreportData="{{k}}"
+    class="r data-v-6872e77a"
+    uI="6872e77a-3"
+    uP="{{l}}"
+    uR="finishPopup"
+    wx:if="{{l}}"
+  ></finish-popup>
+  <error-popup
+    bind:__l="__l"
+    class="r data-v-6872e77a"
+    uI="6872e77a-4"
+    uR="errorPopup"
+  ></error-popup>
+</view>

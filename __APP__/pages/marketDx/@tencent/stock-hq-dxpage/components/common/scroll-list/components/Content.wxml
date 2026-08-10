@@ -1,0 +1,45 @@
+<view class="_div grid-rows data-v-c7620de6">
+  <view
+    class="_div row-item data-v-c7620de6"
+    wx:for="{{a}}"
+    wx:for-item="row"
+    wx:key="b"
+  >
+    <view
+      catchtap="{{cell.m}}"
+      class="_div cell-wrapper data-v-c7620de6"
+      wx:for="{{row.a}}"
+      wx:for-item="cell"
+      wx:key="l"
+    >
+      <view
+        class="{{['_div','data-v-c7620de6','cell-container',cell.j,cell.k]}}"
+      >
+        <view class="_div cell-up-down data-v-c7620de6" wx:if="{{cell.a}}">
+          <label class="_span cell-up data-v-c7620de6">{{cell.b}}</label>
+          <label class="_span cell-down data-v-c7620de6">{{cell.c}}</label>
+        </view>
+        <view class="{{['_div','data-v-c7620de6','cell',cell.e]}}" wx:else
+          >{{cell.d}}</view
+        >
+        <view
+          class="_div identifier-code-wrapper data-v-c7620de6"
+          wx:if="{{cell.f}}"
+        >
+          <view class="_div icon-market data-v-c7620de6">
+            <market-icon
+              bind:__l="__l"
+              class="data-v-c7620de6"
+              uI="{{cell.g}}"
+              uP="{{cell.h}}"
+              wx:if="{{cell.h}}"
+            ></market-icon>
+          </view>
+          <label class="_span identifier-code data-v-c7620de6"
+            >{{cell.i}}</label
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="_div addFav-btn-wrap data-v-117ead09" wx:if="{{a}}">
+  <view catchtap="{{f}}" class="_div add-btn data-v-117ead09" wx:if="{{b}}">
+    <image
+      class="_img add-fav-icon white-theme data-v-117ead09"
+      src="{{c}}"
+    ></image>
+    <image
+      class="_img add-fav-icon black-theme data-v-117ead09"
+      src="{{d}}"
+    ></image>
+    <view class="_div add-fav-text data-v-117ead09" wx:if="{{e}}">已添加</view>
+  </view>
+  <view catchtap="{{j}}" class="_div add-btn active data-v-117ead09" wx:else>
+    <image class="_img add-fav-icon active data-v-117ead09" src="{{g}}"></image>
+    <view class="_div add-fav-text data-v-117ead09" wx:if="{{h}}">{{i}}</view>
+  </view>
+</view>

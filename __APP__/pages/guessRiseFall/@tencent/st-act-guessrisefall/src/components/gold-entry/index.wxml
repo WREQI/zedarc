@@ -1,0 +1,49 @@
+<view
+  class="{{['_div','gold-entry','data-v-a9aaeb12',g&&'gold-entry--fade-in']}}"
+>
+  <view class="_div gold-entry__content data-v-a9aaeb12">
+    <view class="_div gold-entry__left data-v-a9aaeb12">
+      <view class="_div gold-entry__avatar data-v-a9aaeb12">
+        <label class="_span gold-entry__img-box data-v-a9aaeb12">
+          <image
+            alt=""
+            class="gold-entry__img data-v-a9aaeb12"
+            mode="widthFix"
+            src="{{b}}"
+            wx:if="{{a}}"
+          ></image>
+          <image
+            class="_img gold-entry__img data-v-a9aaeb12"
+            src="{{c}}"
+            wx:else
+          ></image>
+        </label>
+      </view>
+      <view class="_div gold-entry__gold data-v-a9aaeb12">
+        <reward-core
+          bind:__l="__l"
+          class="gold-entry__gold-num data-v-a9aaeb12"
+          uI="a9aaeb12-0"
+          uP="{{d}}"
+          wx:if="{{d}}"
+        ></reward-core>
+        <label class="_span gold-entry__gold-num data-v-a9aaeb12">金币</label>
+        <label class="_span gold-entry__division data-v-a9aaeb12">|</label>
+        <label class="_span gold-entry__amount data-v-a9aaeb12">约</label>
+        <reward-core
+          bind:__l="__l"
+          class="gold-entry__amount data-v-a9aaeb12"
+          uI="a9aaeb12-1"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></reward-core>
+        <label class="_span gold-entry__amount data-v-a9aaeb12">元</label>
+      </view>
+    </view>
+    <view class="_div gold-entry__action data-v-a9aaeb12">
+      <view bindtap="{{f}}" class="_div gold-entry__btn data-v-a9aaeb12"
+        >去兑换</view
+      >
+    </view>
+  </view>
+</view>

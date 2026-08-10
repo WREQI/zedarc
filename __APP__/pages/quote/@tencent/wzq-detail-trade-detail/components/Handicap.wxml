@@ -1,0 +1,83 @@
+<view
+  class="{{['_div','data-v-b6c7e5d0','wudang-wrapper',m,n,o]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div bar-area data-v-b6c7e5d0">
+    <view class="_div data-v-b6c7e5d0">买</view>
+    <view class="{{['_div','bar-body','data-v-b6c7e5d0',c&&'bg-equal']}}">
+      <view class="_div bg-buy data-v-b6c7e5d0" style="{{'width:'+b}}"></view>
+    </view>
+    <view class="_div data-v-b6c7e5d0">卖</view>
+  </view>
+  <scroll-view
+    enhanced
+    scrollY
+    class="pannel-scroll-wrapper data-v-b6c7e5d0"
+    ref="scrollContent"
+    wx:if="{{d}}"
+  >
+    <view class="_div list-area data-v-b6c7e5d0" ref="itemWrapper">
+      <flash-price
+        bind:__l="__l"
+        bindonClickPrice="{{i.b}}"
+        class="item data-v-b6c7e5d0"
+        uI="{{i.c}}"
+        uP="{{i.d}}"
+        wx:for="{{e}}"
+        wx:for-item="i"
+        wx:key="a"
+      ></flash-price>
+      <view class="_div separate-line data-v-b6c7e5d0"></view>
+      <flash-price
+        bind:__l="__l"
+        bindonClickPrice="{{i.b}}"
+        class="item data-v-b6c7e5d0"
+        uI="{{i.c}}"
+        uP="{{i.d}}"
+        wx:for="{{f}}"
+        wx:for-item="i"
+        wx:key="a"
+      ></flash-price>
+    </view>
+  </scroll-view>
+  <block wx:else>
+    <view
+      bindtouchend="{{j}}"
+      bindtouchstart="{{i}}"
+      class="_div pannel-scroll-wrapper data-v-b6c7e5d0"
+      ref="scrollContent"
+    >
+      <view class="_div list-area data-v-b6c7e5d0" ref="itemWrapper">
+        <flash-price
+          bind:__l="__l"
+          bindonClickPrice="{{i.b}}"
+          class="item data-v-b6c7e5d0"
+          uI="{{i.c}}"
+          uP="{{i.d}}"
+          wx:for="{{g}}"
+          wx:for-item="i"
+          wx:key="a"
+        ></flash-price>
+        <view class="_div separate-line data-v-b6c7e5d0"></view>
+        <flash-price
+          bind:__l="__l"
+          bindonClickPrice="{{i.b}}"
+          class="item data-v-b6c7e5d0"
+          uI="{{i.c}}"
+          uP="{{i.d}}"
+          wx:for="{{h}}"
+          wx:for-item="i"
+          wx:key="a"
+        ></flash-price>
+      </view>
+    </view>
+    <view class="_div bubble-guide data-v-b6c7e5d0" wx:if="{{k}}">
+      <view class="_div bubble-guide-text data-v-b6c7e5d0"
+        >点击买卖5档可快速填入价格</view
+      >
+      <view catchtap="{{l}}" class="_div bubble-guide-close data-v-b6c7e5d0"
+        >✕</view
+      >
+    </view>
+  </block>
+</view>

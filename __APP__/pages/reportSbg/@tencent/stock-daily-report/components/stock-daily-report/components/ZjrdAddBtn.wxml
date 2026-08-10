@@ -1,0 +1,9 @@
+<view class="_div zjrd-add-btn data-v-c35452ca">
+  <view bindtap="{{b}}" class="_div remove-btn data-v-c35452ca" wx:if="{{a}}">
+    <label class="_span data-v-c35452ca">已添加</label>
+  </view>
+  <view bindtap="{{c}}" class="_div add-btn data-v-c35452ca" wx:else>
+    <label class="_span plus data-v-c35452ca"></label>
+    <label class="_span data-v-c35452ca">自选</label>
+  </view>
+</view>

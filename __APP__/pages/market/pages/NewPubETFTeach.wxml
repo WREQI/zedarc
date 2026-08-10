@@ -1,0 +1,14 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<newpub-etf-teach
+  bind:__l="__l"
+  uI="cbbaeda4-0"
+  uP="{{b}}"
+  wx:if="{{b}}"
+></newpub-etf-teach>
+<mp-privacy-dialog bind:__l="__l" uI="cbbaeda4-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="cbbaeda4-2"
+  uP="{{c}}"
+  wx:if="{{c}}"
+></stock-privacy-dialog>

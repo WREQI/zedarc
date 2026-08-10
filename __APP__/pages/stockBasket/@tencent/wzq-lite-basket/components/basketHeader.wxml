@@ -1,0 +1,77 @@
+<view
+  catchtap="{{H}}"
+  class="{{['_div','basket-header-wrapper','data-v-be0beac9',E,F,G]}}"
+  ref="basket-header-wrapper"
+>
+  <view class="_div header-info data-v-be0beac9">
+    <view class="_div header-info-text data-v-be0beac9">
+      <view class="_div header-start-wrapper data-v-be0beac9">
+        <view class="_div header-title-wrapper data-v-be0beac9">
+          <view class="_div header-label data-v-be0beac9" wx:if="{{a}}"
+            >精选</view
+          >
+          <view class="{{['_div','data-v-be0beac9','header-title-text',c]}}"
+            >{{b}}</view
+          >
+        </view>
+        <basket-footer
+          bind:__l="__l"
+          bindbasketFooterClick="{{e}}"
+          class="data-v-be0beac9"
+          uI="be0beac9-0"
+          uP="{{f}}"
+          wx:if="{{d}}"
+        ></basket-footer>
+        <view
+          catchtap="{{l}}"
+          class="_div header-add-wrapper data-v-be0beac9"
+          wx:elif="{{g}}"
+        >
+          <image
+            alt="已添加"
+            class="_img basket-added-icon data-v-be0beac9"
+            ref="basket-added-icon"
+            src="{{i}}"
+            wx:if="{{h}}"
+          ></image>
+          <image
+            alt="添加自选"
+            class="_img basket-add-icon data-v-be0beac9"
+            ref="basket-add-icon"
+            src="{{j}}"
+            wx:else
+          ></image>
+          <label class="_span data-v-be0beac9">{{k}}</label>
+        </view>
+      </view>
+      <view class="_div subtitle data-v-be0beac9" wx:if="{{m}}">
+        <block wx:if="{{n}}">
+          <label class="_span subtitle-key data-v-be0beac9" wx:if="{{o}}"
+            >股票</label
+          >
+          <label class="_span subtitle-total data-v-be0beac9" wx:if="{{p}}"
+            >{{q}}</label
+          >
+        </block>
+        <label class="_span subtitle-key data-v-be0beac9" wx:if="{{r}}"
+          >当日涨跌</label
+        >
+        <label class="{{['_span','data-v-be0beac9',v]}}" wx:if="{{s}}"
+          >{{t}}%</label
+        >
+        <label class="_span subtitle-key data-v-be0beac9" wx:if="{{w}}"
+          >近一月涨跌</label
+        >
+        <label class="{{['_span','data-v-be0beac9',z]}}" wx:if="{{x}}"
+          >{{y}}%</label
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','header-desc','data-v-be0beac9',C&&'show-line',D&&'font24px']}}"
+    data-name="summary"
+    wx:if="{{A}}"
+    >{{B}}</view
+  >
+</view>

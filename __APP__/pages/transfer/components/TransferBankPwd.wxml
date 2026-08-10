@@ -1,0 +1,12 @@
+<view class="transfer-bank-pwd-container">
+    <view class="transfer-form-top fs-28 text-color-1">应{{a}}要求，资金转入时需要输入{{b}}密码，以确认身份</view>
+    <st-cell-group bind:__l="__l" uI="0c886e3e-0" uS="{{['d']}}">
+        <st-cell bind:__l="__l" uI="0c886e3e-1,0c886e3e-0" uP="{{c}}" wx:if="{{c}}"></st-cell>
+        <st-cell bind:__l="__l" uI="0c886e3e-2,0c886e3e-0" uP="{{f}}" uS="{{['d']}}" wx:if="{{f}}">
+            <input bindinput="{{e}}" maxlength="6" placeholder="请输入银行密码" type="password" value="{{d}}"></input>
+        </st-cell>
+    </st-cell-group>
+    <view class="transfer-form-btn">
+        <button bindtap="{{h}}" disabled="{{g}}" type="primary">立即转入</button>
+    </view>
+</view>

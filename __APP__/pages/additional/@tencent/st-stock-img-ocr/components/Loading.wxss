@@ -1,0 +1,76 @@
+.loading-wrap.data-v-a0829538 {
+  height: calc(
+    100vh - constant(safe-area-inset-bottom) - 1.7866666666666666rem
+  );
+  height: calc(100vh - env(safe-area-inset-bottom) - 1.7866666666666666rem);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+.loading-wrap .scan-item.data-v-a0829538 {
+  animation: slideDown-a0829538 3s ease-in-out infinite;
+  background-image: url(https://st.gtimg.com/design/dc86423c7f9349b343a11bc54eaf60f0.png);
+  background-size: cover;
+  height: 2.6666666666666665rem;
+  width: 100%;
+}
+.loading-wrap.mp .scan-item.data-v-a0829538 {
+  animation: slideDownMp-a0829538 3s ease-in-out infinite;
+}
+@-webkit-keyframes slideDown-a0829538 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(
+      calc(100vh - constant(safe-area-inset-bottom) - 324px)
+    );
+    -webkit-transform: translateY(
+      calc(100vh - env(safe-area-inset-bottom) - 324px)
+    );
+    transform: translateY(calc(100vh - env(safe-area-inset-bottom) - 324px));
+  }
+}
+@keyframes slideDown-a0829538 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(
+      calc(100vh - constant(safe-area-inset-bottom) - 324px)
+    );
+    -webkit-transform: translateY(
+      calc(100vh - env(safe-area-inset-bottom) - 324px)
+    );
+    transform: translateY(calc(100vh - env(safe-area-inset-bottom) - 324px));
+  }
+}
+@-webkit-keyframes slideDownMp-a0829538 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(
+      calc(100vh - constant(safe-area-inset-bottom) - 134px)
+    );
+    -webkit-transform: translateY(
+      calc(100vh - env(safe-area-inset-bottom) - 134px)
+    );
+    transform: translateY(calc(100vh - env(safe-area-inset-bottom) - 134px));
+  }
+}
+@keyframes slideDownMp-a0829538 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(
+      calc(100vh - constant(safe-area-inset-bottom) - 134px)
+    );
+    -webkit-transform: translateY(
+      calc(100vh - env(safe-area-inset-bottom) - 134px)
+    );
+    transform: translateY(calc(100vh - env(safe-area-inset-bottom) - 134px));
+  }
+}

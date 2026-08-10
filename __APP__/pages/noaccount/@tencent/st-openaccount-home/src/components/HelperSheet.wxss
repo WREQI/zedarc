@@ -1,0 +1,169 @@
+.action-sheet.data-v-2ee5d2cb img {
+  width: 100%;
+}
+.action-sheet.data-v-2ee5d2cb .st-action-sheet-header {
+  background-color: initial;
+  font-size: 0.37333333333333335rem;
+  height: 1.52rem;
+}
+.action-sheet.data-v-2ee5d2cb .st-action-sheet-header .st-action-sheet-cancel {
+  margin: auto;
+  right: 0;
+}
+.action-sheet.data-v-2ee5d2cb .st-action-sheet-header .st-action-sheet-title {
+  color: #262e40;
+}
+[data-theme="dark"]
+  .action-sheet.data-v-2ee5d2cb
+  .st-action-sheet-header
+  .st-action-sheet-title {
+  color: #f0f1f5;
+}
+[data-theme="dark"] .action-sheet.data-v-2ee5d2cb .st-action-sheet-content,
+[data-theme="dark"] .action-sheet.data-v-2ee5d2cb .st-action-sheet-panel {
+  background: #12161f !important;
+}
+.action-sheet.data-v-2ee5d2cb .mp-popup {
+  animation: roll-2ee5d2cb 0.5s forwards;
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  transform: translateY(100%);
+}
+[data-theme="dark"] .action-sheet.data-v-2ee5d2cb .mp-popup {
+  background: #12161f !important;
+}
+@-webkit-keyframes roll-2ee5d2cb {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes roll-2ee5d2cb {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.action-sheet .left-icon.data-v-2ee5d2cb {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: 0.4rem;
+  position: absolute;
+  top: 0.26666666666666666rem;
+}
+.action-sheet .left-icon-img.data-v-2ee5d2cb {
+  height: 0.6666666666666666rem;
+  width: 0.8rem;
+}
+.action-sheet .left-icon-text.data-v-2ee5d2cb {
+  color: #475166;
+  font-size: 0.26666666666666666rem;
+  margin-top: 0.10666666666666667rem;
+}
+[data-theme="dark"] .action-sheet .left-icon-text.data-v-2ee5d2cb {
+  color: #f0f1f5;
+}
+.action-sheet-container.data-v-2ee5d2cb {
+  max-height: 12.933333333333334rem;
+  overflow: auto;
+}
+.action-sheet-container-item.data-v-2ee5d2cb {
+  margin: 0.32rem 0.4rem 0.7466666666666667rem;
+  text-align: left;
+}
+.action-sheet-container-item .title.data-v-2ee5d2cb {
+  color: #262e40;
+  font-size: 0.4rem;
+  line-height: 0.6rem;
+}
+[data-theme="dark"] .action-sheet-container-item .title.data-v-2ee5d2cb {
+  color: #f0f1f5;
+}
+.action-sheet-container-item .rich-text-bg.data-v-2ee5d2cb .tableWrapper {
+  -webkit-text-size-adjust: none;
+  margin-top: 0.26666666666666666rem;
+}
+.action-sheet-container-item
+  .rich-text-bg.data-v-2ee5d2cb
+  .tableWrapper
+  .rich_text_table {
+  border-collapse: collapse;
+}
+.action-sheet-container-item
+  .rich-text-bg.data-v-2ee5d2cb
+  .tableWrapper
+  .rich_text_table
+  .rich_text_th {
+  background: #f0f1f5;
+  border: 0.013333333333333334rem solid #dcdfe6;
+  color: #475166;
+}
+[data-theme="dark"]
+  .action-sheet-container-item
+  .rich-text-bg.data-v-2ee5d2cb
+  .tableWrapper
+  .rich_text_table
+  .rich_text_th {
+  background: #171d28;
+  border: 0.013333333333333334rem solid #262e40;
+  color: #f0f1f5;
+}
+.action-sheet-container-item
+  .rich-text-bg.data-v-2ee5d2cb
+  .tableWrapper
+  .rich_text_table
+  .rich_text_td {
+  border: 0.013333333333333334rem solid #dcdfe6;
+}
+[data-theme="dark"]
+  .action-sheet-container-item
+  .rich-text-bg.data-v-2ee5d2cb
+  .tableWrapper
+  .rich_text_table
+  .rich_text_td {
+  border: 0.013333333333333334rem solid #262e40;
+}
+.action-sheet-container-item .text.data-v-2ee5d2cb {
+  color: #475166 !important;
+  font-size: 0.32rem !important;
+  letter-spacing: 0 !important;
+  line-height: 0.6rem !important;
+}
+[data-theme="dark"] .action-sheet-container-item .text.data-v-2ee5d2cb {
+  color: #a7b0c4 !important;
+}
+.action-sheet-container-item .text.data-v-2ee5d2cb .tableWrapper {
+  -webkit-text-size-adjust: none;
+  margin-top: 0.26666666666666666rem;
+}
+.action-sheet-container-item .text.data-v-2ee5d2cb .tableWrapper table th {
+  background: #f0f1f5;
+  border: 0.013333333333333334rem solid #dcdfe6;
+  color: #475166;
+}
+[data-theme="dark"]
+  .action-sheet-container-item
+  .text.data-v-2ee5d2cb
+  .tableWrapper
+  table
+  th {
+  background: #171d28;
+  border: 0.013333333333333334rem solid #262e40;
+  color: #f0f1f5;
+}
+.action-sheet-container-item .text.data-v-2ee5d2cb .tableWrapper table td {
+  border: 0.013333333333333334rem solid #dcdfe6;
+}
+[data-theme="dark"]
+  .action-sheet-container-item
+  .text.data-v-2ee5d2cb
+  .tableWrapper
+  table
+  td {
+  border: 0.013333333333333334rem solid #262e40;
+}

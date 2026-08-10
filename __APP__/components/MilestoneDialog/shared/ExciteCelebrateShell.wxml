@@ -1,0 +1,37 @@
+<view
+  catchtap="{{f}}"
+  class="{{['excite-celebrate-shell','data-v-37e9b8da',e&&'excite-celebrate-shell--closing']}}"
+>
+  <view class="excite-celebrate-shell__confetti data-v-37e9b8da">
+    <image
+      alt=""
+      class="excite-celebrate-shell__confetti-img data-v-37e9b8da"
+      src="{{a}}"
+    ></image>
+  </view>
+  <view class="excite-celebrate-shell__content data-v-37e9b8da">
+    <view
+      class="excite-celebrate-shell__title ^excite-celebrate-shell__title data-v-37e9b8da"
+      wx:if="{{b}}"
+    >
+      <slot name="title"></slot>
+    </view>
+    <view
+      class="excite-celebrate-shell__subtitle ^excite-celebrate-shell__subtitle data-v-37e9b8da"
+      wx:if="{{c}}"
+    >
+      <slot name="subtitle"></slot>
+    </view>
+    <view
+      class="excite-celebrate-shell__body ^excite-celebrate-shell__body data-v-37e9b8da"
+    >
+      <slot name="body"></slot>
+    </view>
+    <view
+      class="excite-celebrate-shell__footer ^excite-celebrate-shell__footer data-v-37e9b8da"
+      wx:if="{{d}}"
+    >
+      <slot name="footer"></slot>
+    </view>
+  </view>
+</view>

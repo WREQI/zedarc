@@ -1,0 +1,71 @@
+<view class="_div hot-wrapper data-v-20d71b7a" wx:if="{{a}}">
+  <view class="_div hot-title data-v-20d71b7a">
+    <view class="_div new-title-row data-v-20d71b7a">
+      <view class="_div title-row data-v-20d71b7a">
+        <label class="_span title data-v-20d71b7a">{{b}}</label>
+        <image
+          bindtap="{{c}}"
+          class="_img title-icon data-v-20d71b7a"
+          src="https://st.gtimg.com/design/dfb64edf08404a6a73b1031ab32fc6a3.svg"
+        ></image>
+      </view>
+      <view class="_div subtitle data-v-20d71b7a" wx:if="{{d}}">{{e}}</view>
+      <view class="_div subtitle data-v-20d71b7a" wx:else>{{f}}</view>
+    </view>
+    <view bindtap="{{g}}" class="_div hot-seeall data-v-20d71b7a">
+      <view class="_p data-v-20d71b7a">全部热股</view>
+      <image
+        class="_img icon-arrow data-v-20d71b7a"
+        src="https://st.gtimg.com/design/52ac740fb8c01a89a028841e789bd2dc.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div stock-rank data-v-20d71b7a">
+    <view class="_div main data-v-20d71b7a">
+      <view
+        bindtap="{{item.g}}"
+        class="_div main-item data-v-20d71b7a"
+        wx:for="{{h}}"
+        wx:key="f"
+      >
+        <view class="_div stock-row data-v-20d71b7a">
+          <image
+            class="_img icon-market data-v-20d71b7a"
+            src="{{item.a}}"
+          ></image>
+          <label class="_span stock-name data-v-20d71b7a">{{item.b}}</label>
+        </view>
+        <view class="_div profit-desc data-v-20d71b7a">{{i}}</view>
+        <view class="_div profit data-v-20d71b7a" style="{{'color:'+item.d}}"
+          >{{item.c}}</view
+        >
+        <view class="_div holders data-v-20d71b7a">{{item.e}}{{j}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div hot-refresh data-v-20d71b7a" wx:if="{{k}}">
+    <image
+      bindtap="{{l}}"
+      class="_img icon-hot-refresh data-v-20d71b7a"
+      src="https://st.gtimg.com/design/ac9aee71fc9609ecb924639cb17041fc.png"
+    ></image>
+    <view bindtap="{{m}}" class="_div text data-v-20d71b7a">换一换</view>
+  </view>
+  <desc-modal
+    bind:__l="__l"
+    bindclose="{{n}}"
+    class="data-v-20d71b7a"
+    uI="20d71b7a-0"
+    uP="{{o}}"
+    wx:if="{{o}}"
+  ></desc-modal>
+  <hotstock-sheet
+    bind:__l="__l"
+    bindclose="{{q}}"
+    bindgoStockDetail="{{p}}"
+    class="data-v-20d71b7a"
+    uI="20d71b7a-1"
+    uP="{{r}}"
+    wx:if="{{r}}"
+  ></hotstock-sheet>
+</view>

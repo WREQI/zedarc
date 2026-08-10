@@ -1,0 +1,253 @@
+<page-meta class="data-v-33565ade" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-33565ade"
+  id="global-wrap"
+  uI="33565ade-0"
+  uP="{{am}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{am}}"
+>
+  <view class="{{['cond-content-container','data-v-33565ade',R&&'mp']}}">
+    <view class="cond-search data-v-33565ade" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-33565ade"
+        uI="33565ade-1,33565ade-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <search-result
+      bind:__l="__l"
+      bindclick="{{g}}"
+      class="data-v-33565ade"
+      data-c-h="{{!f}}"
+      uI="33565ade-2,33565ade-0"
+    ></search-result>
+    <view
+      class="{{['condition-form','condition-form__simple-mode','data-v-33565ade',Q,'has-tips']}}"
+      hidden="{{!P}}"
+    >
+      <view class="{{['condition-quote-wrapper','data-v-33565ade',l&&'mp']}}">
+        <condition-quote
+          bind:__l="__l"
+          bindnameClick="{{j}}"
+          bindsearch="{{i}}"
+          class="data-v-33565ade"
+          uI="33565ade-3,33565ade-0"
+          uP="{{k}}"
+          uS="{{['label']}}"
+          wx:if="{{h}}"
+        >
+          <view class="data-v-33565ade" slot="label">涨停买入</view>
+        </condition-quote>
+      </view>
+      <form-wrap
+        bind:__l="__l"
+        class="trigger-limit-up-form data-v-33565ade"
+        uI="33565ade-4,33565ade-0"
+        uS="{{['left','right']}}"
+      >
+        <view class="flex-hcenter flex-column data-v-33565ade" slot="left">
+          <view class="flex-vcenter data-v-33565ade">触发条件</view>
+        </view>
+        <view class="limit-up-limit-trigger-detail data-v-33565ade" slot="right"
+          >盘中触达涨停价</view
+        >
+      </form-wrap>
+      <view class="tips-bar flex-vcenter data-v-33565ade"
+        >满足以上触发条件，系统将自动提交以下委托单</view
+      >
+      <view class="bottom-wrapper data-v-33565ade">
+        <view class="input-gap data-v-33565ade">
+          <form-wrap
+            bind:__l="__l"
+            class="limit-up-form data-v-33565ade"
+            uI="33565ade-5,33565ade-0"
+            uS="{{['left','right']}}"
+          >
+            <view slot="left">委托价</view>
+            <view
+              class="limit-up-limit-trigger-detail data-v-33565ade"
+              slot="right"
+              >涨停价</view
+            >
+          </form-wrap>
+        </view>
+        <view class="input-gap data-v-33565ade">
+          <form-wrap
+            bind:__l="__l"
+            class="limit-up-form data-v-33565ade"
+            uI="33565ade-6,33565ade-0"
+            uS="{{['left','right']}}"
+          >
+            <view
+              bindtap="{{n}}"
+              class="limit-up-entrust-type data-v-33565ade"
+              slot="left"
+              >{{m}}<label
+                class="text-color-1 icon icon-triangle triangle-down data-v-33565ade"
+              ></label>
+            </view>
+            <view slot="right">
+              <block wx:if="{{o}}">
+                <pop-over
+                  bind:__l="__l"
+                  class="{{['data-v-33565ade',v]}}"
+                  uI="33565ade-7,33565ade-6"
+                  uP="{{w}}"
+                  uS="{{['d']}}"
+                  wx:if="{{w}}"
+                >
+                  <view class="{{['data-v-33565ade',t]}}">
+                    <stepper
+                      bind:__l="__l"
+                      bindblur="{{r}}"
+                      bindchange="{{p}}"
+                      bindfocus="{{q}}"
+                      class="data-v-33565ade"
+                      key="maxAmount"
+                      uI="33565ade-8,33565ade-7"
+                      uP="{{s}}"
+                      wx:if="{{s}}"
+                    ></stepper>
+                  </view>
+                </pop-over>
+              </block>
+              <block wx:else>
+                <pop-over
+                  bind:__l="__l"
+                  class="{{['data-v-33565ade',B]}}"
+                  uI="33565ade-9,33565ade-6"
+                  uP="{{C}}"
+                  uS="{{['d']}}"
+                  wx:if="{{C}}"
+                >
+                  <stepper
+                    bind:__l="__l"
+                    bindblur="{{z}}"
+                    bindchange="{{x}}"
+                    bindfocus="{{y}}"
+                    class="data-v-33565ade"
+                    key="investQuantity"
+                    uI="33565ade-10,33565ade-9"
+                    uP="{{A}}"
+                    wx:if="{{A}}"
+                  ></stepper>
+                </pop-over>
+              </block>
+            </view>
+          </form-wrap>
+          <view
+            bindtap="{{G}}"
+            class="avaliable-money data-v-33565ade"
+            wx:if="{{D}}"
+            >可用现金：<label class="{{['num','data-v-33565ade',F]}}"
+              >{{E}}元</label
+            >
+          </view>
+          <view bindtap="{{J}}" class="avaliable-money data-v-33565ade" wx:else
+            >当前可买：<label class="num data-v-33565ade">{{H}}{{I}}</label>
+          </view>
+        </view>
+        <view class="time-form data-v-33565ade">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-33565ade"
+            uI="33565ade-11,33565ade-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="module-title title data-v-33565ade" slot="left"
+              >订单有效期</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{K}}"
+              class="data-v-33565ade"
+              slot="right"
+              uI="33565ade-12,33565ade-11"
+              uP="{{L}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view class="cond-form-tips data-v-33565ade">{{M}}</view>
+        </view>
+      </view>
+      <view bindtap="{{N}}" class="cond-guide-btn data-v-33565ade"
+        >查看涨停买入说明</view
+      >
+      <view class="cond-risk-tips data-v-33565ade"
+        >风险提示：<view class="data-v-33565ade"></view>
+        <view class="data-v-33565ade"
+          >触及涨停时系统第一时间下单抢筹，但成交取决于交易所撮合，本条件单不保证一定成交。</view
+        >
+        <view
+          class="data-v-33565ade"
+          wx:for="{{O}}"
+          wx:for-item="text"
+          wx:key="b"
+          >{{text.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="cond-btnwrap data-v-33565ade" hidden="{{!U}}">
+    <button bindtap="{{T}}" class="submit-btn data-v-33565ade" disabled="{{S}}">
+      保存设置
+    </button>
+  </view>
+  <bottom-selector
+    bind:__l="__l"
+    bindchange="{{V}}"
+    bindclose="{{W}}"
+    class="data-v-33565ade"
+    uI="33565ade-13,33565ade-0"
+    uP="{{X}}"
+    wx:if="{{X}}"
+  ></bottom-selector>
+  <condition-protocol
+    bind:__l="__l"
+    class="r data-v-33565ade"
+    uI="33565ade-14,33565ade-0"
+    uR="condProtocol"
+  ></condition-protocol>
+  <condition-confirm
+    bind:__l="__l"
+    bindcancel="{{aa}}"
+    bindconfirm="{{ab}}"
+    class="data-v-33565ade"
+    uI="33565ade-15,33565ade-0"
+    uP="{{ac}}"
+    wx:if="{{Z}}"
+  ></condition-confirm>
+  <cond-result
+    bind:__l="__l"
+    bindcancel="{{ae}}"
+    class="r data-v-33565ade"
+    uI="33565ade-16,33565ade-0"
+    uP="{{af}}"
+    uR="condResult"
+    wx:if="{{af}}"
+  ></cond-result>
+  <condition-num-or-amount-popup
+    bind:__l="__l"
+    bindchange="{{ai}}"
+    bindclose="{{ah}}"
+    bindinput="{{ag}}"
+    class="data-v-33565ade"
+    uI="33565ade-17,33565ade-0"
+    uP="{{aj}}"
+    wx:if="{{aj}}"
+  ></condition-num-or-amount-popup>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-33565ade"
+    id="mp-dialog"
+    uI="33565ade-18,33565ade-0"
+    uP="{{ak}}"
+    wx:if="{{ak}}"
+  ></mp-dialog>
+</global-wrap>

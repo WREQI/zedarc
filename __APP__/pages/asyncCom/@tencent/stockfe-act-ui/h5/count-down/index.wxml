@@ -1,0 +1,21 @@
+<view class="_div yy-count-down-wrapper">
+  <view bindtap="{{e}}" class="_div yy-count-down">
+    <view class="_div logo">
+      <image alt="" class="_img logo-img" src="{{a}}"></image>
+    </view>
+    <view class="_div count">
+      <view
+        class="_div fill"
+        style="{{'animation-duration:'+b+';'+'animation-play-state:'+c}}"
+      ></view>
+    </view>
+    <view class="_div text">
+      <view class="_div top">
+        <slot name="slot-text"></slot>
+      </view>
+      <view class="_div bottom">
+        <slot name="slot-sub-text"></slot>
+      </view>
+    </view>
+  </view>
+</view>

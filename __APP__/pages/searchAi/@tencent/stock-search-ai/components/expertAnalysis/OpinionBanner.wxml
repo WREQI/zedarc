@@ -1,0 +1,11 @@
+<view class="{{['_div','opinion-banner','data-v-ae2ce627',h]}}" wx:if="{{a}}">
+  <view class="_div opinion-banner__title data-v-ae2ce627" wx:if="{{b}}">
+    <label class="_span opinion-banner__label data-v-ae2ce627" wx:if="{{c}}"
+      >【{{d}}】</label
+    >
+    <label class="_span opinion-banner__text data-v-ae2ce627">{{e}}</label>
+  </view>
+  <view class="_div opinion-banner__detail data-v-ae2ce627" wx:if="{{f}}"
+    >{{g}}</view
+  >
+</view>

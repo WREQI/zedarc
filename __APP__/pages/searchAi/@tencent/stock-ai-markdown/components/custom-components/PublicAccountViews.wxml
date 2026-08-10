@@ -1,0 +1,31 @@
+<view
+  bindtap="{{f}}"
+  class="{{['_div','data-v-188967cb','public-account-views',e]}}"
+>
+  <view class="_div public-account-views__avatars data-v-188967cb">
+    <view
+      class="_div public-account-views__avatar-wrapper data-v-188967cb"
+      style="{{'margin-left:'+avatar.c}}"
+      wx:for="{{a}}"
+      wx:for-item="avatar"
+      wx:key="b"
+    >
+      <image
+        alt=""
+        class="_img public-account-views__avatar data-v-188967cb"
+        src="{{avatar.a}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div public-account-views__text data-v-188967cb"
+    >{{b}}个公众号观点</view
+  >
+  <public-account-views-popup
+    bind:__l="__l"
+    bindclose="{{c}}"
+    class="data-v-188967cb"
+    uI="188967cb-0"
+    uP="{{d}}"
+    wx:if="{{false}}"
+  ></public-account-views-popup>
+</view>

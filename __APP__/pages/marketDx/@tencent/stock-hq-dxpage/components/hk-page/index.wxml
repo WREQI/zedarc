@@ -1,0 +1,30 @@
+<view class="{{['_div','hk-page-wrapper','data-v-dc466dd1',f,g]}}">
+  <block wx:if="{{a}}">
+    <view
+      class="_div hk-item-wrapper data-v-dc466dd1"
+      wx:for="{{b}}"
+      wx:key="e"
+    >
+      <view class="{{['_div','data-v-dc466dd1',c]}}">
+        <hk-stock-item
+          bind:__l="__l"
+          class="data-v-dc466dd1"
+          uI="{{item.a}}"
+          uP="{{item.b}}"
+          wx:if="{{item.b}}"
+        ></hk-stock-item>
+      </view>
+      <view
+        class="{{['_div','separator-strip','data-v-dc466dd1',item.d]}}"
+        wx:if="{{item.c}}"
+      ></view>
+    </view>
+  </block>
+  <no-data-block
+    bind:__l="__l"
+    class="data-v-dc466dd1"
+    uI="dc466dd1-1"
+    uP="{{e}}"
+    wx:elif="{{d}}"
+  ></no-data-block>
+</view>

@@ -1,0 +1,41 @@
+<common-status-item
+  bind:__l="__l"
+  class="data-v-b9cad993"
+  uI="b9cad993-0"
+  uP="{{m}}"
+  uS="{{['d']}}"
+  wx:if="{{m}}"
+>
+  <view class="account-status-item data-v-b9cad993" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <view class="reasons-container data-v-b9cad993" wx:if="{{c}}">
+        <view
+          class="reasons data-v-b9cad993"
+          wx:for="{{d}}"
+          wx:for-item="reason"
+        >
+          <view class="{{['reason-title','data-v-b9cad993',e&&'highlight']}}"
+            >{{reason.a}}{{reason.b}}</view
+          >
+          <view class="reason-text data-v-b9cad993">{{reason.c}}</view>
+        </view>
+      </view>
+      <view class="data-v-b9cad993" wx:elif="{{f}}"
+        >您已成功开通账户，无需重复开户，可直接进行账户绑定。</view
+      >
+      <view class="data-v-b9cad993" wx:elif="{{g}}"
+        >线上开户未能成功。如有疑问，可联系券商客服<label
+          bindtap="{{i}}"
+          class="tel data-v-b9cad993"
+          >{{h}}</label
+        >。</view
+      >
+    </block>
+    <view class="data-v-b9cad993" wx:else
+      >等待“中国证券登记结算有限责任公司”开立证券账户。</view
+    >
+    <view bindtap="{{l}}" class="button data-v-b9cad993" wx:if="{{j}}"
+      >{{k}}</view
+    >
+  </view>
+</common-status-item>

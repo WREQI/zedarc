@@ -1,0 +1,28 @@
+<view
+  class="{{['_div','data-v-dc4b752f','market-index','layout-column',i,'layout-align-center-center',j]}}"
+>
+  <view
+    class="{{['_div','data-v-dc4b752f',a,'opacity-bg']}}"
+    data-idxc="{{b}}"
+  ></view>
+  <view class="_div market-index-wrapper data-v-dc4b752f">
+    <view class="_div market-index-title data-v-dc4b752f">
+      <label class="_span market-index-title-name data-v-dc4b752f">{{c}}</label>
+      <slot></slot>
+    </view>
+    <view
+      class="_div market-index-value layout-row layout-align-center-center data-v-dc4b752f"
+    >
+      <view class="{{['_div','data-v-dc4b752f',e]}}" wx:if="{{d}}"></view>
+      <view class="_div price data-v-dc4b752f">{{f}}</view>
+    </view>
+    <view
+      class="_div market-index-change layout-row layout-align-center-center data-v-dc4b752f"
+    >
+      <view class="_div market-index-change-value data-v-dc4b752f">{{g}}</view>
+      <view class="_div market-index-change-percent data-v-dc4b752f"
+        >({{h}}%)</view
+      >
+    </view>
+  </view>
+</view>

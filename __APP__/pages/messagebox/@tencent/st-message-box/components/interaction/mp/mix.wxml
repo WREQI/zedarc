@@ -1,0 +1,31 @@
+<scroll-view
+  bindrefresherrefresh="{{h}}"
+  bindscroll="{{j}}"
+  bindscrolltolower="{{i}}"
+  class="index-item-container data-v-97bd7569"
+  refresherEnabled="{{true}}"
+  refresherThreshold="100"
+  refresherTriggered="{{g}}"
+  scrollY="{{true}}"
+>
+  <view class="_div data-v-97bd7569">
+    <mix-content
+      bind:__l="__l"
+      bindrefreshFail="{{c}}"
+      bindrefreshSuccess="{{b}}"
+      class="r data-v-97bd7569"
+      uI="97bd7569-0"
+      uR="contentRef"
+    ></mix-content>
+    <view class="_div status-container data-v-97bd7569" wx:if="{{d}}">
+      <st-status
+        bind:__l="__l"
+        bindhandleError="{{e}}"
+        class="data-v-97bd7569"
+        uI="97bd7569-1"
+        uP="{{f}}"
+        wx:if="{{f}}"
+      ></st-status>
+    </view>
+  </view>
+</scroll-view>

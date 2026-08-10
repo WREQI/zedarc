@@ -1,0 +1,34 @@
+<guide-layout
+  bind:__l="__l"
+  class="data-v-3fb5e5ea"
+  uI="3fb5e5ea-0"
+  uS="{{['d']}}"
+>
+  <section-card
+    bind:__l="__l"
+    class="data-v-3fb5e5ea"
+    uI="3fb5e5ea-1,3fb5e5ea-0"
+    uS="{{['title','content']}}"
+  >
+    <view class="data-v-3fb5e5ea" slot="title">价格条件单</view>
+    <view class="data-v-3fb5e5ea" slot="content"
+      >指投资者可预设触发价，当市场价格达到指定的触发价格后，系统会根据用户设定的委托设置提交对应的限价单。<view
+        class="intro-bg data-v-3fb5e5ea"
+      ></view>
+      <view class="paragraphs data-v-3fb5e5ea">
+        <view class="data-v-3fb5e5ea">示例：</view
+        >用户预设股票价格9.40元为触发价，自定价9.60元作为买入委托价进行限价委托。</view
+      >
+      <view class="paragraphs data-v-3fb5e5ea"
+        >1)当股票价格≤9.40元时，条件单触发，自动提交以9.60元买入的限价单。当价格≤9.60元时，委托将会成交。</view
+      >
+      <view class="paragraphs data-v-3fb5e5ea"
+        >2)价格条件单触发后，无论委托现价单是否成交，均不会再次触发。</view
+      >
+      <view class="paragraphs data-v-3fb5e5ea">
+        <view class="data-v-3fb5e5ea">条件单触发说明：</view
+        >条件单功能是以沪深交易所授权的level-1行情作为参考（即盘中实时成交明细，每3秒更新一次数据），不以当日最高、最低价为准。由于交易所数据限制，可能存在当日最高、最低价触达您所设置的条件但是条件单未触发的情况。</view
+      >
+    </view>
+  </section-card>
+</guide-layout>

@@ -1,0 +1,48 @@
+<view catchtap="{{s}}" class="_div stock-info-container data-v-fb142a44">
+  <view class="_div stock-title-container data-v-fb142a44">
+    <view class="_div stock-left data-v-fb142a44">
+      <image
+        class="_img stock-logo data-v-fb142a44"
+        src="{{b}}"
+        wx:if="{{a}}"
+      ></image>
+      <view class="_div stock-name data-v-fb142a44">{{c}}</view>
+      <image
+        class="_img stock-flag data-v-fb142a44"
+        src="{{e}}"
+        wx:if="{{d}}"
+      ></image>
+    </view>
+    <view class="_div stock-right data-v-fb142a44">
+      <view class="_div stock-time data-v-fb142a44" wx:if="{{f}}">{{g}}</view>
+    </view>
+  </view>
+  <view class="_div stock-quote-container data-v-fb142a44">
+    <view class="_div stock-quote-left data-v-fb142a44">
+      <view class="_div stock-zsr-title data-v-fb142a44">营收</view>
+      <view class="_div stock-zsr-value data-v-fb142a44">{{h}}{{i}}</view>
+      <view class="_div stock-zsr-zdf data-v-fb142a44" style="{{'color:'+k}}"
+        >({{j}})</view
+      >
+    </view>
+    <view class="_div stock-quote-right data-v-fb142a44">
+      <label class="_span stock-profit-title data-v-fb142a44">利润</label>
+      <label class="_span stock-profit-value data-v-fb142a44">{{l}}{{m}}</label>
+      <label
+        class="_span stock-profit-zdf data-v-fb142a44"
+        style="{{'color:'+o}}"
+        >({{n}})</label
+      >
+    </view>
+  </view>
+  <view class="_div stock-seperator-line data-v-fb142a44"></view>
+  <view class="_div stock-lightspot-item data-v-fb142a44" wx:if="{{p}}">
+    <view class="_div stock-lightspot-left data-v-fb142a44">
+      <label
+        class="_span stock-lightspot-tag data-v-fb142a44"
+        style="{{'top:'+q}}"
+        >要点</label
+      >{{r}}</view
+    >
+  </view>
+</view>

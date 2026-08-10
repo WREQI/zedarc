@@ -1,0 +1,240 @@
+<view
+  class="{{['stock-embedded','embedded-shadow',aK,aL,aM]}}"
+  data-simple="{{aO}}"
+  data-theme="{{aN}}"
+  style="{{aP}}"
+>
+  <view class="flex-between header">
+    <view class="header-start flex-vcenter">
+      <view bindtap="{{b}}" class="icon trade-setting" wx:if="{{a}}"></view>
+      <view bindtap="{{d}}" class="icon back-bg" wx:elif="{{c}}"></view>
+    </view>
+    <view class="flex-1 flex-center broker-area">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo-icon"
+        uI="11bc16ff-0"
+      ></broker-logo>
+      <label class="fs-32 text-color-1">{{e}} {{f}}</label>
+    </view>
+    <view class="header-end flex-center">
+      <view class="embedded-loading-wrapper flex" wx:if="{{g}}">
+        <view class="loading rotate" wx:if="{{h}}"></view>
+        <view
+          bindtap="{{i}}"
+          class="icon-label icon icon-refresh"
+          data-stat="trade.trade.refresh"
+          wx:else
+        ></view>
+      </view>
+      <view bindtap="{{k}}" class="close-bg" wx:if="{{j}}"></view>
+    </view>
+  </view>
+  <view class="container-1" wx:if="{{l}}">
+    <block wx:if="{{m}}">
+      <bulletin-bar
+        bind:__l="__l"
+        bindclose="{{p}}"
+        bindtextClick="{{q}}"
+        key="new-user-guide-bulletin"
+        uI="11bc16ff-1"
+        uP="{{r}}"
+        uS="{{['d']}}"
+        wx:if="{{n}}"
+        >{{o}}</bulletin-bar
+      >
+      <bulletin-bar
+        bind:__l="__l"
+        bindclose="{{v}}"
+        bindtextClick="{{w}}"
+        key="trade-bulletin-cgi"
+        uI="11bc16ff-2"
+        uP="{{x}}"
+        uS="{{['d']}}"
+        wx:elif="{{s}}"
+        >{{t}}</bulletin-bar
+      >
+      <view class="bulletin-placeholder"></view>
+    </block>
+    <view class="tab-bar-wrapper flex">
+      <tabbar
+        bind:__l="__l"
+        bindclick="{{z}}"
+        bindclickDropDown="{{A}}"
+        bindinput="{{y}}"
+        class="stock-tabbar"
+        uI="11bc16ff-3"
+        uP="{{B}}"
+        wx:if="{{B}}"
+      ></tabbar>
+      <view class="jump-btn flex-vcenter flex-end fs-28 text-color-3">
+        <label bindtap="{{C}}" class="total-asset">总资产</label>
+        <label class="fs-28 icon link-arrow flex-vcenter"></label>
+      </view>
+      <bubble-tip
+        bind:__l="__l"
+        bindclose="{{E}}"
+        class="switch-trade-mode-bubble-tip"
+        uI="11bc16ff-4"
+        uP="{{F}}"
+        wx:if="{{D}}"
+      ></bubble-tip>
+      <bubble-tip
+        bind:__l="__l"
+        bindclose="{{H}}"
+        class="switch-trade-mode-bubble-tip"
+        uI="11bc16ff-5"
+        uP="{{I}}"
+        wx:elif="{{G}}"
+      ></bubble-tip>
+    </view>
+    <view hidden="{{!U}}">
+      <trade-tool-option
+        bind:__l="__l"
+        class="trade-tool-option"
+        uI="11bc16ff-6"
+        uP="{{K}}"
+        wx:if="{{J}}"
+      ></trade-tool-option>
+      <trade-form
+        bind:__l="__l"
+        bindinputBlur="{{R}}"
+        bindinputFocus="{{Q}}"
+        bindsetAmount="{{O}}"
+        bindsetPrice="{{N}}"
+        bindshowConfirmDialog="{{P}}"
+        bindstockHolderChange="{{S}}"
+        class="r"
+        data-c-h="{{!M}}"
+        uI="11bc16ff-7"
+        uP="{{T}}"
+        uR="tradeForm"
+        wx:if="{{T}}"
+      ></trade-form>
+    </view>
+    <orders-list
+      bind:__l="__l"
+      bindcancelOrder="{{W}}"
+      binddoneOrderListExpanded="{{Y}}"
+      bindshowFailReason="{{X}}"
+      class="js-order-list"
+      uI="11bc16ff-8"
+      wx:if="{{V}}"
+    ></orders-list>
+    <scroll-view
+      catchtouchmove="{{ab}}"
+      class="position-list-scroll-view"
+      scrollY="{{true}}"
+      wx:if="{{Z}}"
+    >
+      <positions-list
+        bind:__l="__l"
+        class="js-pos-list"
+        uI="11bc16ff-9"
+        uP="{{aa}}"
+        wx:if="{{aa}}"
+      ></positions-list>
+    </scroll-view>
+  </view>
+  <view class="{{['container-2',ag]}}" wx:if="{{ac}}">
+    <trade-confirm-dialog
+      bind:__l="__l"
+      bindinput="{{ae}}"
+      class="r"
+      uI="11bc16ff-10"
+      uP="{{af}}"
+      uR="confirmRef"
+      wx:if="{{af}}"
+    ></trade-confirm-dialog>
+  </view>
+  <view class="container-3">
+    <trade-result4-mp
+      bind:__l="__l"
+      bindrefreshToday="{{al}}"
+      bindshowConfirmDialog="{{aj}}"
+      bindtradeResultVisibleChange="{{ak}}"
+      class="r"
+      uI="11bc16ff-11"
+      uP="{{am}}"
+      uR="resultRef"
+      wx:if="{{ah}}"
+    ></trade-result4-mp>
+    <trade-result
+      bind:__l="__l"
+      bindrefreshToday="{{aq}}"
+      bindshowConfirmDialog="{{ao}}"
+      bindtradeResultVisibleChange="{{ap}}"
+      class="r"
+      uI="11bc16ff-12"
+      uR="classicTradeResult"
+      wx:else
+    ></trade-result>
+  </view>
+  <order-fail-dialog
+    bind:__l="__l"
+    bindclose="{{at}}"
+    bindinput="{{as}}"
+    uI="11bc16ff-13"
+    uP="{{av}}"
+    wx:if="{{ar}}"
+  ></order-fail-dialog>
+  <notify
+    bind:__l="__l"
+    id="notify"
+    uI="11bc16ff-14"
+    uP="{{aw}}"
+    wx:if="{{aw}}"
+  ></notify>
+  <mp-dialog
+    bind:__l="__l"
+    id="mp-dialog"
+    uI="11bc16ff-15"
+    uP="{{ax}}"
+    wx:if="{{ax}}"
+  ></mp-dialog>
+  <sign-privacy-protocol
+    bind:__l="__l"
+    class="r"
+    uI="11bc16ff-16"
+    uR="privacyProtocolDialog"
+  ></sign-privacy-protocol>
+  <risk-test-reminder
+    bind:__l="__l"
+    uI="11bc16ff-17"
+    wx:if="{{az}}"
+  ></risk-test-reminder>
+  <kzz-risk-dialog
+    bind:__l="__l"
+    class="r"
+    id="KzzRiskDialog"
+    uI="11bc16ff-18"
+    uP="{{aB}}"
+    uR="kzzRiskDialog"
+    wx:if="{{aB}}"
+  ></kzz-risk-dialog>
+  <password
+    bind:__l="__l"
+    bindcancel="{{aD}}"
+    bindhide="{{aE}}"
+    class="password-component--with-shadow r"
+    id="password-component"
+    uI="11bc16ff-19"
+    uP="{{aF}}"
+    uR="#password-component"
+    wx:if="{{aF}}"
+  ></password>
+  <network-detect
+    bind:__l="__l"
+    class="r"
+    id="network-detect-component"
+    uI="11bc16ff-20"
+    uP="{{aI}}"
+    uR="#network-detect-component"
+    wx:if="{{aG}}"
+  ></network-detect>
+  <money-trace-risk-popup
+    bind:__l="__l"
+    uI="11bc16ff-21"
+    wx:if="{{aJ}}"
+  ></money-trace-risk-popup>
+</view>

@@ -1,0 +1,8 @@
+<view
+  class="{{['container','^container','flex-center','data-v-ff70ae49',b,c,d]}}"
+  style="{{'height:'+e}}"
+>
+  <view class="icon data-v-ff70ae49"></view>
+  <view class="text data-v-ff70ae49">{{a}}</view>
+  <slot name="other"></slot>
+</view>

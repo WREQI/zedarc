@@ -1,0 +1,36 @@
+<view class="_div st-bar" wx:if="{{a}}">
+  <view class="_div bar">
+    <view class="_div left">
+      <icon
+        bind:__l="__l"
+        class="bar-icon"
+        uI="3a672ff6-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></icon>
+      <view class="_div bar-text">
+        <label class="_span bar-reward-text">
+          <rich-text nodes="{{c}}"></rich-text>
+        </label>
+        <label class="_span bar-reward" wx:if="{{d}}">{{e}}</label>
+      </view>
+    </view>
+    <view class="_div right">
+      <st-button
+        bind:__l="__l"
+        bindclick="{{f}}"
+        class="bar-btn"
+        uI="3a672ff6-1"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></st-button>
+      <view bindtap="{{h}}" class="_div bar-close">
+        <image
+          alt=""
+          class="_img close-img"
+          src="https://wzq.gtimg.com/resource/images/801d9f219d0065d36bbd75fa79e1c052.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

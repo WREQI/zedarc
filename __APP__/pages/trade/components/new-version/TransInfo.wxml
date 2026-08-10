@@ -1,0 +1,106 @@
+<view class="{{['trans-info','data-v-b1ea49aa',f]}}">
+  <view class="progress-bar flex data-v-b1ea49aa">
+    <block wx:if="{{a}}">
+      <label
+        class="progress-bar-item buy data-v-b1ea49aa"
+        style="{{'text-aligh:'+'left'+';'+'width:'+'50%'}}"
+      ></label>
+      <label
+        class="progress-bar-item sell data-v-b1ea49aa"
+        style="{{'text-aligh:'+'right'+';'+'width:'+'50%'}}"
+      ></label>
+    </block>
+    <block wx:else>
+      <label
+        class="progress-bar-item buy data-v-b1ea49aa"
+        style="{{'text-aligh:'+'left'+';'+'width:'+b}}"
+      ></label>
+      <label
+        class="progress-bar-item sell data-v-b1ea49aa"
+        style="{{'text-aligh:'+'right'+';'+'width:'+c}}"
+      ></label>
+    </block>
+  </view>
+  <view class="box flex data-v-b1ea49aa">
+    <view class="ul flex-1 buy data-v-b1ea49aa">
+      <value-color
+        bind:__l="__l"
+        class="li flex-between hotarea-wrap-buy data-v-b1ea49aa"
+        uI="{{i.i}}"
+        uP="{{i.j}}"
+        uS="{{['d']}}"
+        wx:for="{{d}}"
+        wx:for-item="i"
+        wx:key="h"
+      >
+        <view
+          bindtap="{{i.g}}"
+          class="wrapper flex-1 flex-vcenter data-v-b1ea49aa"
+        >
+          <label class="rise data-v-b1ea49aa">买</label>
+          <view class="label rise-bg data-v-b1ea49aa">{{i.a}}</view>
+          <value-color
+            bind:__l="__l"
+            class="trans-info-btn btn-1 flex-1 data-v-b1ea49aa"
+            uI="{{i.c}}"
+            uP="{{i.d}}"
+            uS="{{['d']}}"
+            wx:if="{{i.d}}"
+          >
+            <label class="data-v-b1ea49aa">{{i.b}}</label>
+          </value-color>
+          <label
+            class="trans-info-btn btn-2 align-r flex-1 data-v-b1ea49aa"
+            wx:if="{{i.e}}"
+            >-</label
+          >
+          <label
+            class="trans-info-btn btn-2 align-r flex-1 data-v-b1ea49aa"
+            wx:else
+            >{{i.f}}</label
+          >
+        </view>
+      </value-color>
+    </view>
+    <view class="ul flex-1 sell data-v-b1ea49aa">
+      <value-color
+        bind:__l="__l"
+        class="li flex-between hotarea-wrap-sell data-v-b1ea49aa"
+        uI="{{i.i}}"
+        uP="{{i.j}}"
+        uS="{{['d']}}"
+        wx:for="{{e}}"
+        wx:for-item="i"
+        wx:key="h"
+      >
+        <view
+          bindtap="{{i.g}}"
+          class="wrapper flex-1 flex-vcenter data-v-b1ea49aa"
+        >
+          <label
+            class="trans-info-btn btn-2 align-l flex-1 data-v-b1ea49aa"
+            wx:if="{{i.a}}"
+            >-</label
+          >
+          <label
+            class="trans-info-btn btn-2 align-l flex-1 data-v-b1ea49aa"
+            wx:else
+            >{{i.b}}</label
+          >
+          <value-color
+            bind:__l="__l"
+            class="trans-info-btn btn-1 align-r flex-1 data-v-b1ea49aa"
+            uI="{{i.d}}"
+            uP="{{i.e}}"
+            uS="{{['d']}}"
+            wx:if="{{i.e}}"
+          >
+            <label class="data-v-b1ea49aa">{{i.c}}</label>
+          </value-color>
+          <view class="drop-bg label data-v-b1ea49aa">{{i.f}}</view>
+          <label class="drop data-v-b1ea49aa">卖</label>
+        </view>
+      </value-color>
+    </view>
+  </view>
+</view>

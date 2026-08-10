@@ -1,0 +1,42 @@
+.chart-wrapper.data-v-1b7858de {
+  display: block;
+  width: 100%;
+}
+.chart-wrapper .basicCompGW.data-v-1b7858de {
+  height: 100%;
+  width: 100%;
+}
+.chart-wrapper .chart-legend.data-v-1b7858de {
+  color: var(--color-midgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  padding: 0.32rem 0;
+}
+.chart-wrapper .chart-legend ._span.data-v-1b7858de,
+.chart-wrapper .chart-legend span.data-v-1b7858de {
+  padding-left: 0.4266666666666667rem;
+  position: relative;
+}
+.chart-wrapper .chart-legend ._span.data-v-1b7858de:before,
+.chart-wrapper .chart-legend span.data-v-1b7858de:before {
+  content: "";
+  height: 0.08rem;
+  left: 0;
+  margin-top: -0.04rem;
+  position: absolute;
+  top: 50%;
+  width: 0.26666666666666666rem;
+}
+.chart-wrapper .chart-legend ._span.data-v-1b7858de:first-child,
+.chart-wrapper .chart-legend span.data-v-1b7858de:first-child {
+  margin-right: 0.32rem;
+}
+.chart-wrapper .chart-legend ._span.data-v-1b7858de:first-child:before,
+.chart-wrapper .chart-legend span.data-v-1b7858de:first-child:before {
+  background: var(--color-blue);
+}
+.chart-wrapper .chart-legend ._span.data-v-1b7858de:last-child:before,
+.chart-wrapper .chart-legend span.data-v-1b7858de:last-child:before {
+  background: var(--color-orange);
+}

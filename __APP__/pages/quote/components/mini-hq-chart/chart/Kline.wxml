@@ -1,0 +1,89 @@
+<view
+  class="_div kline-com-content data-v-c9436035"
+  style="{{'width:'+V+';'+'height:'+W}}"
+>
+  <kline
+    bind:__l="__l"
+    bindChipInfoChange="{{v}}"
+    bindareaSelectChange="{{w}}"
+    binddrawEnd="{{B}}"
+    binddrawInit="{{y}}"
+    binderror="{{s}}"
+    bindgetInitData="{{q}}"
+    bindgetMore="{{m}}"
+    bindmacdRankEntry="{{x}}"
+    bindonAreaSwitch="{{o}}"
+    bindonBarTap="{{k}}"
+    bindonChange="{{i}}"
+    bindonChipSwitch="{{n}}"
+    bindonDoubleTap="{{p}}"
+    bindonPinch="{{r}}"
+    bindonPopup="{{j}}"
+    bindonSwipeX="{{t}}"
+    bindonTipTap="{{l}}"
+    bindonTouchCancle="{{g}}"
+    bindonTouchEnd="{{h}}"
+    bindonTouchMove="{{f}}"
+    bindoptionChange="{{z}}"
+    bindqueryPriceRemind="{{A}}"
+    class="r data-v-c9436035"
+    id="chart"
+    uI="c9436035-0"
+    uP="{{C}}"
+    uR="chart"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <chip-info-panel
+      bind:__l="__l"
+      bindshowTeach="{{c}}"
+      class="data-v-c9436035"
+      uI="c9436035-1,c9436035-0"
+      uP="{{d}}"
+      wx:if="{{b}}"
+    ></chip-info-panel>
+  </kline>
+  <st-status
+    bind:__l="__l"
+    bindhandleError="{{E}}"
+    class="data-v-c9436035"
+    uI="c9436035-2"
+    uP="{{F}}"
+    wx:if="{{D}}"
+  ></st-status>
+  <no-data
+    bind:__l="__l"
+    class="data-v-c9436035"
+    uI="c9436035-3"
+    uP="{{H}}"
+    wx:if="{{G}}"
+  ></no-data>
+  <selector
+    bind:__l="__l"
+    bindshowLesson="{{K}}"
+    bindtoggleMacdChecked="{{L}}"
+    class="r data-v-c9436035"
+    uI="c9436035-4"
+    uP="{{M}}"
+    uR="selector"
+    wx:if="{{I}}"
+  ></selector>
+  <history-panel
+    bind:__l="__l"
+    bindhidePanel="{{P}}"
+    class="r data-v-c9436035"
+    uI="c9436035-5"
+    uP="{{Q}}"
+    uR="historyPanel"
+    wx:if="{{N}}"
+  ></history-panel>
+  <area-select-modal
+    bind:__l="__l"
+    bindclose="{{T}}"
+    class="r data-v-c9436035"
+    uI="c9436035-6"
+    uP="{{U}}"
+    uR="areaSelectModal"
+    wx:if="{{R}}"
+  ></area-select-modal>
+</view>

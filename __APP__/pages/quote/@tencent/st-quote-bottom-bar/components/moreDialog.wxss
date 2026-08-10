@@ -1,0 +1,105 @@
+.more_dialog_bg.data-v-058fb03a {
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 103;
+}
+.more_dialog_bg .bot_dialog_con.data-v-058fb03a {
+  align-items: center;
+  background-color: var(--fill-2);
+  border-top-left-radius: 0.26666666666666666rem;
+  border-top-right-radius: 0.26666666666666666rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 75%;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: relative;
+  width: 100%;
+}
+.more_dialog_bg .bot_dialog_con .content.data-v-058fb03a {
+  margin-bottom: 0.48rem;
+  width: 9.36rem;
+}
+.more_dialog_bg .bot_dialog_con .content .btn-wrapper.data-v-058fb03a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item.data-v-058fb03a {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 2.6133333333333333rem;
+  justify-content: center;
+  width: 25%;
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item
+  .img.data-v-058fb03a {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.64rem;
+  width: 0.64rem;
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item
+  .img.icon-group.data-v-058fb03a {
+  background-image: url(https://st.gtimg.com/design/1980c63afe57a34fcf7281f49ada6282.png);
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item
+  .img.icon-delete.data-v-058fb03a {
+  background-image: url(https://st.gtimg.com/design/3695359fc863902795384776c924fe25.png);
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item
+  .img.icon-set-top.data-v-058fb03a {
+  background-image: url(https://st.gtimg.com/design/f609ce81ea68a720d40dbaa124fec052.png);
+}
+.more_dialog_bg
+  .bot_dialog_con
+  .content
+  .btn-wrapper
+  .btn-item
+  .title.data-v-058fb03a {
+  color: #262e40;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  margin-top: 0.16rem;
+}
+.more_dialog_bg .bot_dialog_con .content .cancel-btn.data-v-058fb03a {
+  border-top: 0.013333333333333334rem solid #e7eaee;
+  color: #26282c;
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.48rem;
+  padding-top: 0.4266666666666667rem;
+  text-align: center;
+}

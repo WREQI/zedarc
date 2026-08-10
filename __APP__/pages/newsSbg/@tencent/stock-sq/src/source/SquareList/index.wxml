@@ -1,0 +1,67 @@
+<view bindtouchmove="{{r}}" class="_div mod-comList-list">
+  <no-network
+    bind:__l="__l"
+    bindclickReload="{{b}}"
+    uI="9d857bd2-0"
+    wx:if="{{a}}"
+  ></no-network>
+  <block wx:if="{{c}}">
+    <hot-post
+      bind:__l="__l"
+      bindcommentReport="{{h}}"
+      bindhotScroll="{{f}}"
+      bindhotScrollEnd="{{g}}"
+      bindnavigateTo="{{i}}"
+      class="r"
+      uI="9d857bd2-1"
+      uP="{{j}}"
+      uR="hotpost"
+      wx:if="{{d}}"
+    ></hot-post>
+    <view
+      class="_div"
+      data-id="{{item.t}}"
+      data-index="{{item.v}}"
+      ref="{{item.x}}"
+      wx:for="{{k}}"
+      wx:key="w"
+    >
+      <slot name="{{item.b}}" wx:if="{{item.a}}"></slot>
+      <com-item
+        bind:__l="__l"
+        bindcommentReport="{{item.h}}"
+        bindonHandleTapItem="{{item.g}}"
+        bindshowProfilePop="{{item.i}}"
+        class="{{[item.d&&'beforeBanner',item.e&&'afterBanner']}}"
+        key="{{item.f}}"
+        uI="{{item.j}}"
+        uP="{{item.k||''}}"
+        wx:else
+      ></com-item>
+      <view class="_div feeds-recommend" wx:if="{{item.l}}">
+        <recommend-area
+          bind:__l="__l"
+          bindnavigateTo="{{item.q}}"
+          bindrecommendFollow="{{item.n}}"
+          bindtapPerson="{{item.p}}"
+          bindtoRecommendList="{{item.o}}"
+          class="r-i-f"
+          uI="{{item.r}}"
+          uP="{{item.s}}"
+          uR="recommendArea"
+          wx:if="{{item.s}}"
+        ></recommend-area>
+      </view>
+    </view>
+  </block>
+  <no-data bind:__l="__l" uI="9d857bd2-4" uP="{{m}}" wx:if="{{l}}"></no-data>
+  <load-more
+    bind:__l="__l"
+    binddoLoadmore="{{p}}"
+    class="r"
+    uI="9d857bd2-5"
+    uP="{{q}}"
+    uR="loadMore"
+    wx:if="{{n}}"
+  ></load-more>
+</view>

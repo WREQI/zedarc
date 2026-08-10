@@ -1,0 +1,30 @@
+{
+  "component": true,
+  "usingComponents": {
+    "answer-list-view": "../components/AnswerListView",
+    "answer-item": "../components/AnswerItem",
+    "question-item": "../components/QuestionItem",
+    "first-guide-item": "../components/FirstGuideItem",
+    "dis-like-select-dialog": "../components/DisLikeSelectDialog",
+    "link-jump-guide": "../components/LinkJumpGuide",
+    "session-history-loading": "../components/SessionHistoryLoading",
+    "permission-agree-dialog": "../components/PermissionAgreeDialog",
+    "old-permission-dialog": "../components/OldPermissionDialog",
+    "full-screen-feed-back": "../components/FullScreenFeedBack",
+    "input-view": "../components/inputView/mp",
+    "input-voice-edit": "../components/InputVoiceEdit",
+    "common-selector": "../components/CommonSelecter",
+    "follow-on-item": "../components/FollowOnItem",
+    "emotion-boost-guide": "../components/EmotionBoostGuide",
+    "ai-model-select-dialog": "../components/AiModelSelectDialog",
+    "ai-model-select-guide": "../components/AiModelSelectGuide",
+    "question-item-long-press-menu": "../components/QuestionItemLongPressMenu",
+    "thirteen-anniversary-task": "../node-modules/@tencent/st-act-ai-activity-plugins/task/index",
+    "thirteen-anniversary-back-pop": "../node-modules/@tencent/st-act-ai-activity-plugins/components/backPop/index",
+    "share-answer-invalid": "../components/ShareAnswerInvalid",
+    "preset-question-welcome-card": "../components/PresetQuestionWelcomeCard",
+    "ai-expert-detail-card": "../components/expertAnalysis/AiExpertDetailCard",
+    "ai-reading-detail-card": "../components/aiReading/AIReadingDetailCard",
+    "disclaimers": "../components/Disclaimers"
+  }
+}

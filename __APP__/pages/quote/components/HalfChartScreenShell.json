@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "half-screen-chart": "../@tencent/half-screen-chart/dist/mp/HalfScreenChart",
+    "zhong-jin-cai-fu-half-chart": "plugin://zhongjincaifu-trade/BizHalfChart",
+    "zhong-xin-jian-tou-half-chart": "plugin://zhongxinjiantou-trade/BizHalfChart"
+  },
+  "componentPlaceholder": {
+    "zhong-jin-cai-fu-half-chart": "view",
+    "zhong-xin-jian-tou-half-chart": "view"
+  }
+}

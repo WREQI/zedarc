@@ -1,0 +1,77 @@
+<view class="_div public-account-popup-container data-v-ba315dfd" wx:if="{{a}}">
+  <view
+    catchtap="{{c}}"
+    class="_div dialog-backdrop fade-enter-active data-v-ba315dfd"
+    wx:if="{{b}}"
+  ></view>
+  <view
+    catchtap="{{h}}"
+    class="_div public-account-popup data-v-ba315dfd"
+    wx:if="{{d}}"
+  >
+    <view class="_div public-account-popup__header data-v-ba315dfd">
+      <view class="_div public-account-popup__header-content data-v-ba315dfd">
+        <view class="_div public-account-popup__title data-v-ba315dfd"
+          >参考{{e}}个公众号观点</view
+        >
+        <view
+          catchtap="{{f}}"
+          class="_div public-account-popup__close data-v-ba315dfd"
+        >
+          <image
+            class="_img public-account-popup__close data-v-ba315dfd"
+            src="https://st.gtimg.com/design/a934aa5445cfa475927453b15ce9f15e.svg"
+          ></image>
+        </view>
+      </view>
+      <view class="_div public-account-popup__subtitle data-v-ba315dfd"
+        >以下内容由AI提炼原文观点生成</view
+      >
+    </view>
+    <scroll-view
+      scrollY
+      class="public-account-popup__scroll-wrapper data-v-ba315dfd"
+    >
+      <view class="_div public-account-popup__list data-v-ba315dfd">
+        <view
+          bindtap="{{item.h}}"
+          class="_div public-account-popup__item data-v-ba315dfd"
+          wx:for="{{g}}"
+          wx:key="g"
+        >
+          <view class="_div public-account-popup__item-content data-v-ba315dfd">
+            <view class="_div public-account-popup__quote data-v-ba315dfd"
+              >{{item.a}}</view
+            >
+            <view class="_div public-account-popup__source data-v-ba315dfd">
+              <view
+                class="_div public-account-popup__source-info data-v-ba315dfd"
+              >
+                <view
+                  class="_div public-account-popup__avatar-wrapper data-v-ba315dfd"
+                >
+                  <image
+                    alt=""
+                    class="_img public-account-popup__avatar data-v-ba315dfd"
+                    src="{{item.b}}"
+                  ></image>
+                </view>
+                <view
+                  class="_div public-account-popup__source-text data-v-ba315dfd"
+                  >{{item.c}}:《{{item.d}}》</view
+                >
+              </view>
+              <view class="_div public-account-popup__time data-v-ba315dfd"
+                >{{item.e}}</view
+              >
+            </view>
+          </view>
+          <view
+            class="_div public-account-popup__item-divider data-v-ba315dfd"
+            wx:if="{{item.f}}"
+          ></view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+.counter-outer.data-v-65422e50 {
+  bottom: 0.8533333333333334rem;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+.counter-outer .counter-button.data-v-65422e50,
+.counter-outer.data-v-65422e50 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.counter-outer .counter-button.data-v-65422e50 {
+  background: var(--fill-2);
+  border: 0.013333333333333334rem solid var(--border-light);
+  border-radius: 0.3466666666666667rem;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  color: var(--color-lightgray-1);
+  font-size: 0.37333333333333335rem;
+  height: 0.6666666666666666rem;
+  width: 1.9733333333333334rem;
+}
+[data-theme="dark"] .counter-outer .counter-button.data-v-65422e50 {
+  background: #171d28;
+}
+.counter-outer .counter-button .now.data-v-65422e50 {
+  color: var(--color-blue);
+}

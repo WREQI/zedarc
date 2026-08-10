@@ -1,0 +1,35 @@
+<view
+  catchtap="{{i}}"
+  class="{{['_div','data-v-9cd969d9','manager-item',g,h]}}"
+>
+  <view
+    class="_div manager-avatar data-v-9cd969d9"
+    style="{{'background-image:'+a}}"
+  ></view>
+  <view class="_div manager-info data-v-9cd969d9">
+    <view class="_div manager-info-content data-v-9cd969d9">
+      <highlight-text
+        bind:__l="__l"
+        class="manager-name data-v-9cd969d9"
+        uI="9cd969d9-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></highlight-text>
+      <view class="_div data-v-9cd969d9" wx:if="{{c}}">
+        <label class="_span font-color-light-gray data-v-9cd969d9"
+          >累计从业</label
+        >
+        <label class="_span data-v-9cd969d9">{{d}}</label>
+      </view>
+    </view>
+    <view class="_div manager-fund-content data-v-9cd969d9" wx:if="{{e}}">
+      <view
+        class="_div manager-fund-item data-v-9cd969d9"
+        wx:for="{{f}}"
+        wx:for-item="f"
+        wx:key="b"
+        >{{f.a}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,366 @@
+{
+  "renderer": { "allUsed": ["webview"], "default": "webview" },
+  "componentFramework": { "allUsed": ["exparser"], "default": "exparser" },
+  "page": {
+    "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/plugin-component.html": {
+      "window": { "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/webview/index.html": {
+      "window": {
+        "navigationBarTitleText": " ",
+        "enablePullDownRefresh": false,
+        "renderer": "webview",
+        "componentGenerics": { "main-webview": true }
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/asset/index.html": {
+      "window": {
+        "navigationBarTitleText": "交易",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/asset/all.html": {
+      "window": {
+        "navigationBarTitleText": "交易",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/asset/currency-setting.html": {
+      "window": {
+        "navigationBarTitleText": "港股持仓币种设置",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/bind.html": {
+      "window": { "navigationBarTitleText": "绑定账户", "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/find-account.html": {
+      "window": { "navigationBarTitleText": "找回账户", "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/personal.html": {
+      "window": {
+        "navigationBarTitleText": "账户信息",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom",
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/safesetting.html": {
+      "window": {
+        "navigationBarTitleText": "交易设置",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/switching.html": {
+      "window": {
+        "navigationBarTitleText": "证券账户登录",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/account/detail.html": {
+      "window": {
+        "navigationBarTitleText": "证券账户",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/guide.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/bindmobile.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/idcard.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/profile.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/bindcard.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/bankpwd.html": {
+      "window": {
+        "enablePullDownRefresh": false,
+        "navigationBarTitleText": "设置密码",
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/setpwd.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/risktest.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/submit.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/pre-review.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/progress.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/recover.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/facecheck.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/video.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/advisory.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/questionnaire.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/apply/take-photo.html": {
+      "window": { "enablePullDownRefresh": false, "renderer": "webview" }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/biz/pwd-reset/form.html": {
+      "window": {
+        "navigationBarTitleText": "重置密码",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/debt/index.html": {
+      "window": {
+        "navigationBarTitleText": "通用回购",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/debt/auto-order.html": {
+      "window": {
+        "navigationBarTitleText": "通用回购自动下单",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/newstock/index.html": {
+      "window": {
+        "navigationBarTitleText": "一键打新",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/newstock/result.html": {
+      "window": {
+        "navigationBarTitleText": "一键打新",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/stock.html": {
+      "window": {
+        "navigationBarTitleText": "交易",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-new.html": {
+      "window": {
+        "navigationBarTitleText": "交易",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-embedded.html": {
+      "window": {
+        "navigationBarTitleText": "交易",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/history.html": {
+      "window": {
+        "navigationBarTitleText": "交易记录",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/detail.html": {
+      "window": {
+        "navigationBarTitleText": "交易详情",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/debt.html": {
+      "window": {
+        "navigationBarTitleText": "通用回购",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/debt/result.html": {
+      "window": {
+        "navigationBarTitleText": "通用回购",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/protocol.html": {
+      "window": {
+        "navigationBarTitleText": "智能条件单风险揭示说明",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/ca-validation.html": {
+      "window": {
+        "navigationBarTitleText": "CA验证",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/index.html": {
+      "window": {
+        "navigationBarTitleText": "条件单",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/detail.html": {
+      "window": {
+        "navigationBarTitleText": "条件单详情",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/grid.html": {
+      "window": {
+        "navigationBarTitleText": "设置网格条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/tpsl.html": {
+      "window": {
+        "navigationBarTitleText": "设置止盈止损条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/price.html": {
+      "window": {
+        "navigationBarTitleText": "设置价格条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/invest.html": {
+      "window": {
+        "navigationBarTitleText": "设置定期定投条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/limit-up.html": {
+      "window": {
+        "navigationBarTitleText": "设置涨停买入条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/opening-sell.html": {
+      "window": {
+        "navigationBarTitleText": "设置开板卖出条件单",
+        "enablePullDownRefresh": true,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund.html": {
+      "window": {
+        "navigationBarTitleText": "出金入金",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/transfer/history.html": {
+      "window": {
+        "navigationBarTitleText": "资金明细",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/records.html": {
+      "window": {
+        "navigationBarTitleText": "出入金记录",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    },
+    "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/recordsdetail.html": {
+      "window": {
+        "navigationBarTitleText": " ",
+        "enablePullDownRefresh": false,
+        "renderer": "webview"
+      }
+    }
+  },
+  "pages": {
+    "plugin-component": "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/plugin-component",
+    "webview-index": "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/webview/index",
+    "asset-index": "__plugin__/wx8c0059a9f61679d1/pages/asset/index",
+    "asset-all": "__plugin__/wx8c0059a9f61679d1/pages/asset/all",
+    "currency-setting": "__plugin__/wx8c0059a9f61679d1/pages/asset/currency-setting",
+    "account-bind": "__plugin__/wx8c0059a9f61679d1/pages/account/bind",
+    "find-account": "__plugin__/wx8c0059a9f61679d1/pages/account/find-account",
+    "account-personal": "__plugin__/wx8c0059a9f61679d1/pages/account/personal",
+    "account-safe-setting": "__plugin__/wx8c0059a9f61679d1/pages/account/safesetting",
+    "account-switching": "__plugin__/wx8c0059a9f61679d1/pages/account/switching",
+    "account-detail": "__plugin__/wx8c0059a9f61679d1/pages/account/detail",
+    "apply-guide": "__plugin__/wx8c0059a9f61679d1/pages/apply/guide",
+    "apply-bind-mobile": "__plugin__/wx8c0059a9f61679d1/pages/apply/bindmobile",
+    "apply-id-card": "__plugin__/wx8c0059a9f61679d1/pages/apply/idcard",
+    "apply-profile": "__plugin__/wx8c0059a9f61679d1/pages/apply/profile",
+    "apply-bind-card": "__plugin__/wx8c0059a9f61679d1/pages/apply/bindcard",
+    "apply-bank-pwd": "__plugin__/wx8c0059a9f61679d1/pages/apply/bankpwd",
+    "apply-set-pwd": "__plugin__/wx8c0059a9f61679d1/pages/apply/setpwd",
+    "apply-risk-test": "__plugin__/wx8c0059a9f61679d1/pages/apply/risktest",
+    "apply-submit": "__plugin__/wx8c0059a9f61679d1/pages/apply/submit",
+    "apply-pre-review": "__plugin__/wx8c0059a9f61679d1/pages/apply/pre-review",
+    "apply-progress": "__plugin__/wx8c0059a9f61679d1/pages/apply/progress",
+    "apply-recover": "__plugin__/wx8c0059a9f61679d1/pages/apply/recover",
+    "apply-facecheck": "__plugin__/wx8c0059a9f61679d1/pages/apply/facecheck",
+    "apply-video": "__plugin__/wx8c0059a9f61679d1/pages/apply/video",
+    "apply-advisory": "__plugin__/wx8c0059a9f61679d1/pages/apply/advisory",
+    "apply-questionnaire": "__plugin__/wx8c0059a9f61679d1/pages/apply/questionnaire",
+    "apply-take-photo": "__plugin__/wx8c0059a9f61679d1/pages/apply/take-photo",
+    "biz-pwd-reset-form": "__plugin__/wx8c0059a9f61679d1/pages/biz/pwd-reset/form",
+    "debt": "__plugin__/wx8c0059a9f61679d1/pages/debt/index",
+    "debt-auto-order": "__plugin__/wx8c0059a9f61679d1/pages/debt/auto-order",
+    "new-stock": "__plugin__/wx8c0059a9f61679d1/pages/newstock/index",
+    "new-stock-result": "__plugin__/wx8c0059a9f61679d1/pages/newstock/result",
+    "trade-stock": "__plugin__/wx8c0059a9f61679d1/pages/trade/stock",
+    "trade-stock-new": "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-new",
+    "trade-stock-embedded": "__plugin__/wx8c0059a9f61679d1/pages/trade/stock-embedded",
+    "trade-history": "__plugin__/wx8c0059a9f61679d1/pages/trade/history",
+    "trade-detail": "__plugin__/wx8c0059a9f61679d1/pages/trade/detail",
+    "trade-debt": "__plugin__/wx8c0059a9f61679d1/pages/trade/debt",
+    "trade-debt-result": "__plugin__/wx8c0059a9f61679d1/pages/trade/debt/result",
+    "condition-protocol": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/protocol",
+    "condition-protocol-ca": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/ca-validation",
+    "condition-list": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/index",
+    "condition-detail": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/detail",
+    "grid-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/grid",
+    "tpsl-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/tpsl",
+    "price-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/price",
+    "invest-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/invest",
+    "limit-up-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/limit-up",
+    "opening-sell-condition": "__plugin__/wx8c0059a9f61679d1/pages/trade/condition/opening-sell",
+    "transfer-fund": "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund",
+    "transfer-history": "__plugin__/wx8c0059a9f61679d1/pages/transfer/history",
+    "transfer-fund-records": "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/records",
+    "transfer-fund-records-detail": "__plugin__/wx8c0059a9f61679d1/pages/transfer/fund/recordsdetail"
+  }
+}

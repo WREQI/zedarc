@@ -1,0 +1,75 @@
+<st-cell-group
+  bind:__l="__l"
+  class="{{['auto-order-setting-form','data-v-2fda3218',s]}}"
+  uI="2fda3218-0"
+  uP="{{t}}"
+  uS="{{['d']}}"
+  wx:if="{{t}}"
+>
+  <view class="container data-v-2fda3218">
+    <view
+      class="order-status flex-center flex-column border--bottom data-v-2fda3218"
+      wx:if="{{a}}"
+    >
+      <image
+        class="status-icon data-v-2fda3218"
+        src="{{c}}"
+        wx:if="{{b}}"
+      ></image>
+      <view class="status-info flex-column flex-center data-v-2fda3218">
+        <view class="status-text data-v-2fda3218">{{d}}</view>
+        <view class="status-desc data-v-2fda3218" wx:if="{{e}}">{{f}}</view>
+      </view>
+    </view>
+    <st-cell
+      bind:__l="__l"
+      bindclick="{{formItem.g}}"
+      class="{{['form-item','data-v-2fda3218',formItem.f]}}"
+      uI="{{formItem.h}}"
+      uP="{{formItem.i}}"
+      uS="{{['d']}}"
+      wx:for="{{g}}"
+      wx:for-item="formItem"
+      wx:key="e"
+    >
+      <view class="value-wrapper flex-column flex-hcenter data-v-2fda3218">
+        <view class="main-value data-v-2fda3218"
+          >{{formItem.a}}<label
+            class="time-red-dot data-v-2fda3218"
+            wx:if="{{formItem.b}}"
+          ></label>
+        </view>
+        <view class="sub-value data-v-2fda3218" wx:if="{{formItem.c}}"
+          >{{formItem.d}}</view
+        >
+      </view>
+    </st-cell>
+  </view>
+  <view class="cond-btnwrap data-v-2fda3218" wx:if="{{h}}">
+    <button
+      bindtap="{{k}}"
+      class="btn solid save-btn flex-center data-v-2fda3218"
+      disabled="{{i}}"
+      loading="{{j}}"
+    >
+      保存设置
+    </button>
+  </view>
+  <view class="btn-group flex data-v-2fda3218" wx:else>
+    <button
+      bindtap="{{n}}"
+      class="btn border left flex-1 flex-center data-v-2fda3218"
+      loading="{{m}}"
+    >
+      {{l}}
+    </button>
+    <button
+      bindtap="{{p}}"
+      class="btn solid right flex-1 flex-center data-v-2fda3218"
+      disabled="{{o}}"
+    >
+      修改设置
+    </button>
+  </view>
+  <view class="{{['form-instruction','data-v-2fda3218',r]}}">{{q}}</view>
+</st-cell-group>

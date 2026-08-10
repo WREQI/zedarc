@@ -1,0 +1,6 @@
+<view class="transfer-pending-tip">
+  <label bindtap="{{c}}" class="tip-text" wx:if="{{a}}"
+    >{{b}}笔转账在途<label class="red-point"></label>
+    <label class="icon icon-arrow"></label>
+  </label>
+</view>

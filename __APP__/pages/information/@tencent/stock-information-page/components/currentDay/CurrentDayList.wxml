@@ -1,0 +1,54 @@
+<view class="_div refresh-current data-v-11918f05">
+  <st-pull-refresh
+    bind:__l="__l"
+    bindpullDownRefresh="{{g}}"
+    class="r data-v-11918f05"
+    uI="11918f05-0"
+    uR="flashScroll"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <st-reach-bottom
+      bind:__l="__l"
+      class="r data-v-11918f05"
+      uI="11918f05-1,11918f05-0"
+      uP="{{e}}"
+      uR="reachBottom"
+      uS="{{['d']}}"
+      wx:if="{{e}}"
+    >
+      <current-day-list-content
+        bind:__l="__l"
+        bindopenDetail="{{b}}"
+        class="data-v-11918f05"
+        uI="11918f05-2,11918f05-1"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></current-day-list-content>
+    </st-reach-bottom>
+  </st-pull-refresh>
+  <block wx:else>
+    <scroll-view
+      bindrefresherrefresh="{{o}}"
+      bindscroll="{{p}}"
+      bindscrolltolower="{{q}}"
+      class="data-v-11918f05"
+      refresherDefaultStyle="{{n}}"
+      refresherEnabled="{{l}}"
+      refresherThreshold="100"
+      refresherTriggered="{{m}}"
+      scrollY="{{true}}"
+      style="{{'width:'+'100%'+';'+'height:'+k}}"
+      wx:if="{{h}}"
+    >
+      <current-day-list-content
+        bind:__l="__l"
+        bindopenDetail="{{i}}"
+        class="data-v-11918f05"
+        uI="11918f05-3"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></current-day-list-content>
+    </scroll-view>
+  </block>
+</view>

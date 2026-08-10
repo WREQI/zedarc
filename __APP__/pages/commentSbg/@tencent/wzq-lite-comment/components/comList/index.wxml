@@ -1,0 +1,33 @@
+<view class="{{['_div','data-v-875ea34c','mod-stockMpComList-list',g]}}">
+  <no-network
+    bind:__l="__l"
+    bindclickReload="{{b}}"
+    class="data-v-875ea34c"
+    data-c-h="{{!a}}"
+    uI="875ea34c-0"
+  ></no-network>
+  <block wx:if="{{c}}">
+    <view
+      class="_div mod-com-list-item data-v-875ea34c"
+      data-postid="{{item.e}}"
+      wx:for="{{d}}"
+      wx:key="d"
+    >
+      <com-item
+        bind:__l="__l"
+        bindonHandleTapItem="{{item.a}}"
+        class="data-v-875ea34c"
+        uI="{{item.b}}"
+        uP="{{item.c}}"
+        wx:if="{{item.c}}"
+      ></com-item>
+    </view>
+  </block>
+  <no-data
+    bind:__l="__l"
+    class="data-v-875ea34c"
+    uI="875ea34c-2"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></no-data>
+</view>

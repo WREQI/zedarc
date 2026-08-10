@@ -1,0 +1,31 @@
+<view
+  catchtap="{{k}}"
+  class="{{['_div','data-v-2856a04d','mod-show-comment',i,j]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div mod-box data-v-2856a04d" key="{{h}}">
+    <show-comment-item
+      bind:__l="__l"
+      bindnewComment="{{item.g}}"
+      bindonHandleTapItem="{{item.h}}"
+      bindsemiTapSubmit="{{item.f}}"
+      bindtapCommentTail="{{item.e}}"
+      bindtapImage="{{item.d}}"
+      bindtapPerson="{{item.c}}"
+      class="data-v-2856a04d"
+      data-c-h="{{!item.a}}"
+      uI="{{item.i}}"
+      uP="{{item.j}}"
+      wx:for="{{b}}"
+      wx:key="b"
+    ></show-comment-item>
+    <view catchtap="{{g}}" class="_div show-more data-v-2856a04d" wx:if="{{c}}">
+      <label class="_span last data-v-2856a04d" wx:if="{{d}}">{{e}}</label>
+      <label class="_span last data-v-2856a04d" wx:else>{{f}}</label>
+      <image
+        class="_img down-arrow data-v-2856a04d"
+        src="https://st.gtimg.com/design/8573d2d5f736dfeaa1852b97e5cba452.png"
+      ></image>
+    </view>
+  </view>
+</view>

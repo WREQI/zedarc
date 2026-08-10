@@ -1,0 +1,12 @@
+<basket-card
+  bind:__l="__l"
+  uI="76649b3e-0"
+  uP="{{b}}"
+  wx:if="{{a}}"
+></basket-card>
+<basket-for-a-i
+  bind:__l="__l"
+  uI="76649b3e-1"
+  uP="{{d}}"
+  wx:elif="{{c}}"
+></basket-for-a-i>

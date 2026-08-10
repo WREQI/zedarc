@@ -1,0 +1,68 @@
+<mp-action-sheet
+  bind:__l="__l"
+  bindinput="{{d}}"
+  class="plugin-component-action-sheet"
+  uI="4e24f393-0"
+  uP="{{e}}"
+  uS="{{['d']}}"
+  wx:if="{{e}}"
+>
+  <view class="question-wrapper bg-color">
+    <view class="question-tips"
+      >您的风险测评命中<label class="orange">{{a}}</label>
+    </view>
+    <view class="question-tips">需回答以下{{b}}个问题，请根据实际情况作答</view>
+    <view>
+      <view
+        class="question-item"
+        wx:for="{{c}}"
+        wx:for-item="quesItem"
+        wx:key="h"
+      >
+        <view class="question-ask fs-32">{{quesItem.a}}. {{quesItem.b}}:</view>
+        <radio-group
+          bindchange="{{quesItem.e}}"
+          class="question-answer-container flex-1"
+          wx:if="{{quesItem.c}}"
+        >
+          <label
+            class="{{['answer-item','fs-32','border--top-c2','flex-between',answer.h,answer.i]}}"
+            wx:for="{{quesItem.d}}"
+            wx:for-item="answer"
+            wx:key="g"
+          >
+            <view class="answer-content">{{answer.a}}. {{answer.b}}</view>
+            <view class="empty-radio" wx:if="{{answer.c}}"></view>
+            <radio
+              checked="{{answer.f}}"
+              color="{{answer.d}}"
+              value="{{answer.e}}"
+              wx:else
+            ></radio>
+          </label>
+        </radio-group>
+        <checkbox-group
+          bindchange="{{quesItem.g}}"
+          class="question-answer-container flex-1"
+          wx:else
+        >
+          <label
+            class="{{['answer-item','fs-32','border--top-c2','flex-between',answer.h,answer.i]}}"
+            wx:for="{{quesItem.f}}"
+            wx:for-item="answer"
+            wx:key="g"
+          >
+            <view class="answer-content">{{answer.a}}. {{answer.b}}</view>
+            <view class="empty-checkbox" wx:if="{{answer.c}}"></view>
+            <checkbox
+              checked="{{answer.f}}"
+              color="{{answer.d}}"
+              value="{{answer.e}}"
+              wx:else
+            ></checkbox>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+</mp-action-sheet>

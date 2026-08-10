@@ -1,0 +1,544 @@
+"use strict";
+var Easing = {
+  v1: function (t) {
+    return 1 + --t * t * t * t * t;
+  },
+  v2: function (t) {
+    return t * (2 - t);
+  },
+  v3: function (t) {
+    return 1 - --t * t * t * t;
+  },
+};
+var Utils = {
+  isUndefined: function (val) {
+    return typeof val === "undefined";
+  },
+  clamp: function (min, max, val) {
+    return Math.max(min, Math.min(max, val));
+  },
+  clonePos: function (pos) {
+    return { x: pos.x, y: pos.y };
+  },
+  isSamePos: function (p1, p2) {
+    return p1.x === p2.x && p1.y === p2.y;
+  },
+};
+var options = {
+  enableScrollX: false,
+  enableScrollY: false,
+  slidingContainerSelector: ".content",
+  damping: 0.3,
+  deceleration: 0.0015,
+  momentumDuration: 1800,
+  momentumOutBoundsDuration: 400,
+  bounceDuration: 800,
+};
+function setOption(userOptions, key) {
+  if (
+    !Utils.isUndefined(
+      userOptions[
+        ((nt_0 = key),
+        null == nt_0 ? undefined : "number" === typeof nt_0 ? nt_0 : "" + nt_0)
+      ]
+    )
+  ) {
+    options[
+      ((nt_1 = key),
+      null == nt_1 ? undefined : "number" === typeof nt_1 ? nt_1 : "" + nt_1)
+    ] =
+      userOptions[
+        ((nt_2 = key),
+        null == nt_2 ? undefined : "number" === typeof nt_2 ? nt_2 : "" + nt_2)
+      ];
+  }
+}
+function resolveOptions(userOptions) {
+  setOption(userOptions, "slidingContainerSelector");
+  setOption(userOptions, "scrollWrapperSelector");
+  setOption(userOptions, "damping");
+  setOption(userOptions, "bounceDuration");
+}
+var id;
+var ownerInstance;
+var containerRect;
+var slidingContainerInstance;
+var slidingContainerRect;
+var canScrollX = false;
+var canScrollY = false;
+var minTranslateX;
+var maxTranslateX = 0;
+var minTranslateY;
+var maxTranslateY = 0;
+var pos = { x: 0, y: 0 };
+var startTouch = { clientX: 0, clientY: 0 };
+var startPos = { x: 0, y: 0 };
+var startTimeStamp = 0;
+var effect = null;
+var onScrollCallbacks = [];
+var scrollManagers = {};
+function setTranslate(pos0) {
+  pos0.x = Math.round(pos0.x);
+  pos0.y = Math.round(pos0.y);
+  if (Utils.isSamePos(pos0, pos)) return;
+  slidingContainerInstance.setStyle({
+    transform: "translateX(" + pos0.x + "px) translateY(" + pos0.y + "px)",
+    "transition-duration": 16 + "ms",
+    "transition-timing-function": "linear",
+  });
+  pos.x = pos0.x;
+  pos.y = pos0.y;
+  onScrollCallbacks.forEach(function (cb) {
+    return cb(
+      {
+        x: pos.x,
+        y: pos.y,
+        maxScrollDistanceX: minTranslateX * -1,
+        maxScrollDistanceY: minTranslateY * -1,
+      },
+      ownerInstance
+    );
+  });
+}
+function moveFromTo(fromPos, toPos, duration, timing, onComplete) {
+  var aborted = false;
+  var completed = false;
+  fromPos = Utils.clonePos(fromPos);
+  toPos = Utils.clonePos(toPos);
+  if (duration === 0) {
+    setTranslate(toPos);
+    ownerInstance.requestAnimationFrame(function () {
+      completed = true;
+      onComplete && onComplete();
+    });
+  } else {
+    var startTime = Date.now();
+    var disX = toPos.x - fromPos.x;
+    var disY = toPos.y - fromPos.y;
+    var progressX = 1;
+    var progressY = 1;
+    var cbId = id;
+    var rAFHandler = function rAFHandler() {
+      if (aborted || cbId !== id) return;
+      var curPos = Utils.clonePos(fromPos);
+      if (canScrollX) {
+        progressX = timing.x(
+          Utils.clamp(0, 1, (Date.now() - startTime) / duration)
+        );
+        curPos.x = disX * progressX + fromPos.x;
+      }
+      if (canScrollY) {
+        progressY = timing.y(
+          Utils.clamp(0, 1, (Date.now() - startTime) / duration)
+        );
+        curPos.y = disY * progressY + fromPos.y;
+      }
+      setTranslate(curPos);
+      if (progressX < 1 || progressY < 1) {
+        ownerInstance.requestAnimationFrame(rAFHandler);
+      } else {
+        completed = true;
+        onComplete && onComplete();
+      }
+    };
+    ownerInstance.requestAnimationFrame(rAFHandler);
+  }
+  if (effect) effect();
+  effect = function abort() {
+    if (!completed && !aborted) {
+      aborted = true;
+    }
+  };
+}
+function positionCorrection(pos) {
+  var correctedPos = {
+    x: Utils.clamp(minTranslateX, maxTranslateX, pos.x),
+    y: Utils.clamp(minTranslateY, maxTranslateY, pos.y),
+  };
+  if (!Utils.isSamePos(correctedPos, pos)) {
+    moveFromTo(pos, correctedPos, options.bounceDuration, {
+      x: Easing.v3,
+      y: Easing.v3,
+    });
+  }
+}
+function setup(_options, _, _ownerInstance, instance) {
+  if (!_options) return;
+  if (_options.id !== id) {
+    saveManager(id);
+  }
+  if (
+    !scrollManagers[
+      ((nt_3 = _options.id),
+      null == nt_3 ? undefined : "number" === typeof nt_3 ? nt_3 : "" + nt_3)
+    ]
+  ) {
+    resetManager();
+  }
+  resolveOptions(_options);
+  ownerInstance = _ownerInstance;
+  containerRect = instance.getBoundingClientRect();
+  slidingContainerInstance = ownerInstance.selectComponent(
+    options.scrollWrapperSelector
+  );
+  slidingContainerRect = slidingContainerInstance.getBoundingClientRect();
+  if (slidingContainerRect.width > containerRect.width) {
+    canScrollX = Utils.isUndefined(_options.enableScrollX)
+      ? true
+      : _options.enableScrollX;
+    minTranslateX = (slidingContainerRect.width - containerRect.width) * -1;
+  }
+  if (slidingContainerRect.height > containerRect.height) {
+    canScrollY = Utils.isUndefined(_options.enableScrollY)
+      ? true
+      : _options.enableScrollY;
+    minTranslateY = (slidingContainerRect.height - containerRect.height) * -1;
+  }
+  if (
+    !scrollManagers[
+      ((nt_4 = _options.id),
+      null == nt_4 ? undefined : "number" === typeof nt_4 ? nt_4 : "" + nt_4)
+    ] ||
+    _options.allawReload
+  ) {
+    if (slidingContainerRect.width > containerRect.width) {
+      setTranslate({ x: 0, y: 0 });
+    }
+    scrollManagers[
+      ((nt_5 = _options.id),
+      null == nt_5 ? undefined : "number" === typeof nt_5 ? nt_5 : "" + nt_5)
+    ] = {
+      ownerInstance: ownerInstance,
+      containerRect: containerRect,
+      slidingContainerInstance: slidingContainerInstance,
+      slidingContainerRect: slidingContainerRect,
+      canScrollX: canScrollX,
+      canScrollY: canScrollY,
+      minTranslateX: minTranslateX,
+      maxTranslateX: maxTranslateX,
+      minTranslateY: minTranslateY,
+      maxTranslateY: maxTranslateY,
+      pos: Utils.clonePos(pos),
+      startTouch: { clientX: startTouch.clientX, clientY: startTouch.clientY },
+      startPos: Utils.clonePos(pos),
+      startTimeStamp: startTimeStamp,
+      effect: effect,
+      onScrollCallbacks: onScrollCallbacks,
+      options: options,
+    };
+  } else {
+    console.log(
+      "\x3d\x3d\x3dwxs,横向滚动初始化,已存在",
+      _options.id,
+      scrollManagers[
+        ((nt_6 = _options.id),
+        null == nt_6 ? undefined : "number" === typeof nt_6 ? nt_6 : "" + nt_6)
+      ].pos.x
+    );
+    scrollManagers[
+      ((nt_7 = _options.id),
+      null == nt_7 ? undefined : "number" === typeof nt_7 ? nt_7 : "" + nt_7)
+    ].containerRect = containerRect;
+    scrollManagers[
+      ((nt_8 = _options.id),
+      null == nt_8 ? undefined : "number" === typeof nt_8 ? nt_8 : "" + nt_8)
+    ].slidingContainerRect = slidingContainerRect;
+    scrollManagers[
+      ((nt_9 = _options.id),
+      null == nt_9 ? undefined : "number" === typeof nt_9 ? nt_9 : "" + nt_9)
+    ].minTranslateX = minTranslateX;
+    scrollManagers[
+      ((nt_10 = _options.id),
+      null == nt_10
+        ? undefined
+        : "number" === typeof nt_10
+        ? nt_10
+        : "" + nt_10)
+    ].maxTranslateX = maxTranslateX;
+    scrollManagers[
+      ((nt_11 = _options.id),
+      null == nt_11
+        ? undefined
+        : "number" === typeof nt_11
+        ? nt_11
+        : "" + nt_11)
+    ].minTranslateY = minTranslateY;
+    scrollManagers[
+      ((nt_12 = _options.id),
+      null == nt_12
+        ? undefined
+        : "number" === typeof nt_12
+        ? nt_12
+        : "" + nt_12)
+    ].maxTranslateY = maxTranslateY;
+  }
+  id = _options.id;
+  console.log(
+    "\x3d\x3d\x3dwxs,横向滚动初始化",
+    id,
+    JSON.stringify(
+      scrollManagers[
+        ((nt_13 = _options.id),
+        null == nt_13
+          ? undefined
+          : "number" === typeof nt_13
+          ? nt_13
+          : "" + nt_13)
+      ]
+    )
+  );
+}
+function touchstart(event) {
+  console.log(
+    "\x3d\x3d\x3dwxs,横向滚动touchstart",
+    id,
+    pos.x,
+    scrollManagers[
+      ((nt_14 = id),
+      null == nt_14
+        ? undefined
+        : "number" === typeof nt_14
+        ? nt_14
+        : "" + nt_14)
+    ].pos.x
+  );
+  transManager(event);
+  console.log(
+    "\x3d\x3d\x3dwxs,横向滚动touchstart,trans after",
+    id,
+    pos.x,
+    scrollManagers[
+      ((nt_15 = id),
+      null == nt_15
+        ? undefined
+        : "number" === typeof nt_15
+        ? nt_15
+        : "" + nt_15)
+    ].pos.x
+  );
+  startTouch.clientX = event.changedTouches[0].clientX;
+  startTouch.clientY = event.changedTouches[0].clientY;
+  startPos.x = pos.x;
+  startPos.y = pos.y;
+  startTimeStamp = event.timeStamp;
+  if (effect) {
+    effect();
+    effect = null;
+  }
+}
+function touchmove(event) {
+  var pageX = event.changedTouches[0].clientX || 0;
+  var pageY = event.changedTouches[0].clientY || 0;
+  var absX = Math.abs(pageX - startTouch.clientX);
+  var absY = Math.abs(pageY - startTouch.clientY);
+  if (absY > absX && !canScrollY) {
+    return true;
+  }
+  var deltaX = event.changedTouches[0].clientX - startTouch.clientX;
+  var deltaY = event.changedTouches[0].clientY - startTouch.clientY;
+  var x = startPos.x;
+  var y = startPos.y;
+  if (canScrollX) {
+    x += deltaX;
+    if (x > maxTranslateX) {
+      x = maxTranslateX + options.damping * (x - maxTranslateX);
+    } else if (x < minTranslateX) {
+      x = minTranslateX + options.damping * (x - minTranslateX);
+    }
+  }
+  if (canScrollY) {
+    y += deltaY;
+    if (y > maxTranslateY) {
+      y = maxTranslateY + options.damping * (y - maxTranslateY);
+    } else if (y < minTranslateY) {
+      y = minTranslateY + options.damping * (y - minTranslateY);
+    }
+  }
+  setTranslate({ x: x, y: y });
+  return false;
+}
+function touchend(event) {
+  var minMovingDistance = 15;
+  var maxMovingDuration = 300;
+  var finalPos = { x: pos.x, y: pos.y };
+  if (Utils.isSamePos(finalPos, startPos)) return;
+  var eventDuration = event.timeStamp - startTimeStamp;
+  if (eventDuration > maxMovingDuration) {
+    positionCorrection(finalPos);
+    return;
+  }
+  var distanceX = Math.abs(finalPos.x - startPos.x);
+  var distanceY = Math.abs(finalPos.y - startPos.y);
+  var durationX = 0;
+  var durationY = 0;
+  var timingX = Easing.v1;
+  var timingY = Easing.v1;
+  var calculateMomentum = function calculateMomentum(start, end, distance) {
+    var speed = distance / eventDuration;
+    var dir = end - start > 0 ? 1 : -1;
+    var duration = Math.min(
+      options.momentumDuration,
+      (speed * 2) / options.deceleration
+    );
+    var delta = (Math.pow(speed, 2) / options.deceleration) * dir;
+    return { duration: duration, delta: delta };
+  };
+  if (
+    canScrollX &&
+    distanceX > minMovingDistance &&
+    finalPos.x <= maxTranslateX &&
+    finalPos.x >= minTranslateX
+  ) {
+    var result = calculateMomentum(startPos.x, pos.x, distanceX);
+    durationX = result.duration;
+    finalPos.x += result.delta;
+    if (finalPos.x > maxTranslateX || finalPos.x < minTranslateX) {
+      durationX = options.momentumOutBoundsDuration;
+      timingX = Easing.v2;
+      var beyondDis = containerRect.width / 6;
+      if (finalPos.x > maxTranslateX) {
+        finalPos.x = maxTranslateX + beyondDis;
+      } else {
+        finalPos.x = minTranslateX + beyondDis * -1;
+      }
+    }
+  }
+  if (
+    canScrollY &&
+    distanceY > minMovingDistance &&
+    finalPos.y >= minTranslateY &&
+    finalPos.y <= maxTranslateY
+  ) {
+    var result = calculateMomentum(startPos.y, pos.y, distanceY);
+    durationY = result.duration;
+    finalPos.y += result.delta;
+    if (finalPos.y > maxTranslateY || finalPos.y < minTranslateY) {
+      durationY = options.momentumOutBoundsDuration;
+      timingY = Easing.v2;
+      var beyondDis = containerRect.height / 6;
+      if (finalPos.y > maxTranslateY) {
+        finalPos.y = maxTranslateY + beyondDis;
+      } else {
+        finalPos.y = minTranslateY + beyondDis * -1;
+      }
+    }
+  }
+  moveFromTo(
+    pos,
+    finalPos,
+    Math.max(durationX, durationY),
+    { x: timingX, y: timingY },
+    function () {
+      positionCorrection(finalPos);
+    }
+  );
+}
+function onScroll(callback) {
+  onScrollCallbacks.push(callback);
+  return function cancel() {
+    var idx = onScrollCallbacks.indexOf(callback);
+    if (idx !== 1) {
+      onScrollCallbacks.splice(idx, 1);
+    }
+  };
+}
+function transManager(event) {
+  var curId = event.currentTarget.id;
+  if (id !== curId) {
+    saveManager(id);
+    var manager =
+      scrollManagers[
+        ((nt_22 = curId),
+        null == nt_22
+          ? undefined
+          : "number" === typeof nt_22
+          ? nt_22
+          : "" + nt_22)
+      ];
+    if (manager) {
+      id = curId;
+      ownerInstance = manager.ownerInstance;
+      containerRect = manager.containerRect;
+      slidingContainerInstance = manager.slidingContainerInstance;
+      slidingContainerRect = manager.slidingContainerRect;
+      canScrollX = manager.canScrollX;
+      canScrollY = manager.canScrollY;
+      minTranslateX = manager.minTranslateX;
+      minTranslateY = manager.minTranslateY;
+      maxTranslateX = manager.maxTranslateX;
+      maxTranslateY = manager.maxTranslateY;
+      pos = Utils.clonePos(manager.pos);
+      startPos = Utils.clonePos(manager.startPos);
+      startTouch = manager.startTouch;
+      startTimeStamp = manager.startTimeStamp;
+      effect = manager.effect;
+      onScrollCallbacks = manager.onScrollCallbacks;
+      options = manager.options;
+    } else {
+      return;
+    }
+  }
+}
+function resetManager() {
+  id = null;
+  ownerInstance = null;
+  containerRect = null;
+  slidingContainerInstance = null;
+  slidingContainerRect = null;
+  canScrollX = false;
+  canScrollY = false;
+  minTranslateX = null;
+  maxTranslateX = 0;
+  minTranslateY = null;
+  maxTranslateY = 0;
+  pos = { x: 0, y: 0 };
+  startTouch = { clientX: 0, clientY: 0 };
+  startPos = { x: 0, y: 0 };
+  startTimeStamp = 0;
+  effect = null;
+  onScrollCallbacks = [];
+  options = {
+    enableScrollX: false,
+    enableScrollY: false,
+    slidingContainerSelector: ".content",
+    damping: 0.3,
+    deceleration: 0.0015,
+    momentumDuration: 1800,
+    momentumOutBoundsDuration: 400,
+    bounceDuration: 800,
+  };
+}
+function saveManager(toId) {
+  var oldManager = {
+    ownerInstance: ownerInstance,
+    containerRect: containerRect,
+    slidingContainerInstance: slidingContainerInstance,
+    slidingContainerRect: slidingContainerRect,
+    canScrollX: canScrollX,
+    canScrollY: canScrollY,
+    minTranslateX: minTranslateX,
+    maxTranslateX: maxTranslateX,
+    minTranslateY: minTranslateY,
+    maxTranslateY: maxTranslateY,
+    pos: Utils.clonePos(pos),
+    startTouch: { clientX: startTouch.clientX, clientY: startTouch.clientY },
+    startPos: Utils.clonePos(startPos),
+    startTimeStamp: startTimeStamp,
+    effect: effect,
+    onScrollCallbacks: onScrollCallbacks,
+    options: options,
+  };
+  scrollManagers[
+    ((nt_23 = toId),
+    null == nt_23 ? undefined : "number" === typeof nt_23 ? nt_23 : "" + nt_23)
+  ] = oldManager;
+}
+var index = {
+  setup: setup,
+  touchstart: touchstart,
+  touchmove: touchmove,
+  touchend: touchend,
+  onScroll: onScroll,
+  setTranslate: setTranslate,
+};
+module.exports = index;

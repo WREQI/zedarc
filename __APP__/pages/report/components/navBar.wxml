@@ -1,0 +1,16 @@
+<view
+  class="_div nav-bar data-v-1854f724"
+  style="{{'padding-top:'+g+';'+'background-color:'+h}}"
+>
+  <view class="_div btn data-v-1854f724" wx:if="{{a}}"></view>
+  <view catchtap="{{c}}" class="_div btn home data-v-1854f724" wx:elif="{{b}}">
+    <view class="_div home-icon data-v-1854f724"></view>
+  </view>
+  <view catchtap="{{d}}" class="_div btn data-v-1854f724" wx:else>
+    <view class="_div back-iconBack data-v-1854f724"></view>
+  </view>
+  <label class="_span title data-v-1854f724" style="{{'opacity:'+f}}"
+    >{{e}}</label
+  >
+  <view class="_div btn data-v-1854f724"></view>
+</view>

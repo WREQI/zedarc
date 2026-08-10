@@ -1,0 +1,39 @@
+<view
+  catchtap="{{n}}"
+  class="{{['_div','data-v-33ca32f6','news-box','news-big-item',m]}}"
+>
+  <view class="{{['_div','title-box','data-v-33ca32f6','title',b]}}"
+    >{{a}}</view
+  >
+  <view class="_div image-box big-image data-v-33ca32f6" wx:if="{{c}}">
+    <image
+      class="_img news-image news-image-placeholder img-bg data-v-33ca32f6"
+      src="{{d}}"
+    ></image>
+    <image class="_img news-image img-bg data-v-33ca32f6" src="{{e}}"></image>
+  </view>
+  <view class="_div image-box three-image data-v-33ca32f6" wx:if="{{f}}">
+    <view
+      class="{{['_div','data-v-33ca32f6','image-item',url.d]}}"
+      wx:for="{{g}}"
+      wx:for-item="url"
+      wx:key="e"
+    >
+      <image
+        class="{{['_img','data-v-33ca32f6','news-image','news-image-placeholder','img-bg',url.a]}}"
+        src="{{h}}"
+      ></image>
+      <image
+        class="{{['_img','data-v-33ca32f6','news-image','img-bg',url.c]}}"
+        src="{{url.b}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div source-box data-v-33ca32f6">
+    <label class="_span source-item data-v-33ca32f6">{{i}}</label>
+    <label class="_span source-item data-v-33ca32f6" wx:if="{{j}}"
+      >{{k}}评</label
+    >
+    <label class="_span source-item data-v-33ca32f6">{{l}}</label>
+  </view>
+</view>

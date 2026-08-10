@@ -1,0 +1,28 @@
+@import "/app.wxss";
+.container.data-v-f1bd2443 {
+  max-height: 5.333333rem;
+  overflow-y: scroll;
+  padding: 0.533333rem;
+}
+.container .item.data-v-f1bd2443,
+.container .sub-item.data-v-f1bd2443 {
+  margin-bottom: 0.16rem;
+}
+.container .subtitle.data-v-f1bd2443,
+.container .title.data-v-f1bd2443 {
+  font-weight: 500;
+  margin-bottom: 0.106667rem;
+}
+.container .content-item.data-v-f1bd2443,
+.container .note.data-v-f1bd2443,
+.container .subtitle.data-v-f1bd2443,
+.container .title.data-v-f1bd2443 {
+  line-height: 1.5;
+  text-align: justify;
+}
+.container .content-item.data-v-f1bd2443 {
+  color: var(--text-color-2);
+}
+.container .note.data-v-f1bd2443 {
+  color: var(--text-color-3);
+}

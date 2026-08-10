@@ -1,0 +1,33 @@
+<view class="_div show-box data-v-1d92856b" wx:if="{{a}}">
+  <view class="_div show-item show-rank-tag data-v-1d92856b" wx:if="{{b}}">
+    <show-rank
+      bind:__l="__l"
+      bindcommentReport="{{c}}"
+      class="data-v-1d92856b"
+      uI="1d92856b-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></show-rank>
+  </view>
+  <view
+    catchtap="{{g}}"
+    class="_div show-item goUrl data-v-1d92856b"
+    wx:if="{{e}}"
+    >{{f}}</view
+  >
+  <view
+    catchtap="{{j}}"
+    class="_div show-item stock data-v-1d92856b"
+    wx:if="{{h}}"
+  >
+    <label class="_span from data-v-1d92856b">来自：</label>{{i}}讨论区</view
+  >
+  <view
+    catchtap="{{m}}"
+    class="_div show-item topic data-v-1d92856b"
+    wx:if="{{k}}"
+  >
+    <view class="_div topic-icon data-v-1d92856b"></view>
+    <label class="_span topic-content data-v-1d92856b">{{l}}</label>
+  </view>
+</view>

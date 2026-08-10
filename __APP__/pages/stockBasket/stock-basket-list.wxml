@@ -1,0 +1,18 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div container">
+  <mp-privacy-dialog bind:__l="__l" uI="23486a20-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="23486a20-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <column-list
+    bind:__l="__l"
+    class="r"
+    uI="23486a20-2"
+    uP="{{e}}"
+    uR="columnListRef"
+    wx:if="{{c}}"
+  ></column-list>
+</view>

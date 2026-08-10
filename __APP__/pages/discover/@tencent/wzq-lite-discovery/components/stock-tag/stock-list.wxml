@@ -1,0 +1,42 @@
+<view class="_div stock-list-wrapper data-v-10fc52d8" wx:if="{{a}}">
+  <view class="_div stock-header data-v-10fc52d8">
+    <view class="_div stock-name data-v-10fc52d8">股票</view>
+    <view class="_div sortable-captions data-v-10fc52d8">
+      <view class="_div sortable-row data-v-10fc52d8">
+        <view class="_div row-th flex-1 data-v-10fc52d8">最新价</view>
+        <view
+          class="_div row-th flex-1 column2-last add-margin-left data-v-10fc52d8"
+          >涨跌幅</view
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{item.i}}"
+    class="_div stock-body data-v-10fc52d8"
+    wx:for="{{b}}"
+    wx:key="h"
+  >
+    <view class="_div stock-name data-v-10fc52d8">
+      <image
+        class="_img icon data-v-10fc52d8"
+        id="iconRef"
+        ref="iconRef"
+        src="{{item.b}}"
+        wx:if="{{item.a}}"
+      ></image>
+      <view class="_div name data-v-10fc52d8">{{item.c}}</view>
+    </view>
+    <view class="_div sortable-captions data-v-10fc52d8">
+      <view class="_div sortable-row data-v-10fc52d8">
+        <view class="{{['_div','data-v-10fc52d8','row-th','flex-1',item.e]}}"
+          >{{item.d}}</view
+        >
+        <view
+          class="{{['_div','data-v-10fc52d8','row-th','flex-1','column2-last','add-margin-left',item.g]}}"
+          >{{item.f}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

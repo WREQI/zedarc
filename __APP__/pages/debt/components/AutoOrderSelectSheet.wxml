@@ -1,0 +1,197 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{av}}"
+  bindinput="{{as}}"
+  class="{{['auto-order-select-sheet','data-v-30df4188',at]}}"
+  uI="30df4188-0"
+  uP="{{aw}}"
+  uS="{{['d']}}"
+  wx:if="{{aw}}"
+>
+  <view
+    class="{{[q,'action-sheet-wrapper','flex-column','left-right','data-v-30df4188']}}"
+    wx:if="{{a}}"
+  >
+    <radio-group
+      bindchange="{{p}}"
+      class="action-sheet-radio-group data-v-30df4188"
+    >
+      <view class="action-sheet-item border--bottom data-v-30df4188">
+        <radio
+          checked="{{d}}"
+          class="radio data-v-30df4188"
+          color="{{b}}"
+          value="{{c}}"
+        ></radio>
+        <view
+          bindtap="{{h}}"
+          class="action-sheet-item-content flex-between data-v-30df4188"
+        >
+          <view class="left flex-column data-v-30df4188">
+            <label class="main data-v-30df4188">{{e}}</label>
+            <label class="sub data-v-30df4188">{{f}}</label>
+          </view>
+          <view class="right data-v-30df4188">
+            <view class="desc data-v-30df4188">{{g}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="action-sheet-item data-v-30df4188">
+        <radio
+          checked="{{k}}"
+          class="radio data-v-30df4188"
+          color="{{i}}"
+          value="{{j}}"
+        ></radio>
+        <view
+          bindtap="{{o}}"
+          class="action-sheet-item-content flex-between data-v-30df4188"
+        >
+          <view class="left flex-column data-v-30df4188">
+            <label class="main data-v-30df4188">{{l}}</label>
+            <label class="sub data-v-30df4188">{{m}}</label>
+          </view>
+          <view class="right data-v-30df4188">
+            <view class="desc data-v-30df4188">{{n}}</view>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view
+    class="{{[Q,'action-sheet-wrapper','flex-column','top-bottom','data-v-30df4188']}}"
+    wx:if="{{r}}"
+  >
+    <radio-group
+      bindchange="{{P}}"
+      class="action-sheet-radio-group data-v-30df4188"
+    >
+      <view class="action-sheet-item border--bottom data-v-30df4188">
+        <radio
+          checked="{{v}}"
+          class="radio data-v-30df4188"
+          color="{{s}}"
+          value="{{t}}"
+        ></radio>
+        <view bindtap="{{y}}" class="action-sheet-item-content data-v-30df4188">
+          <view class="left flex-column data-v-30df4188">
+            <label class="main data-v-30df4188">{{w}}</label>
+            <label class="sub data-v-30df4188">{{x}}</label>
+          </view>
+        </view>
+      </view>
+      <view class="action-sheet-item has-input data-v-30df4188">
+        <radio
+          checked="{{B}}"
+          class="radio flex-vcenter data-v-30df4188"
+          color="{{z}}"
+          value="{{A}}"
+        ></radio>
+        <view
+          bindtap="{{O}}"
+          class="action-sheet-item-content flex-column data-v-30df4188"
+        >
+          <view class="upper flex-between data-v-30df4188">
+            <view class="left data-v-30df4188">
+              <label class="main data-v-30df4188">{{C}}</label>
+            </view>
+            <view class="right flex-column data-v-30df4188">
+              <view class="inputbox flex-vcenter data-v-30df4188">
+                <label class="symbol more data-v-30df4188">≥</label>
+                <custom-input
+                  bind:__l="__l"
+                  bindblur="{{I}}"
+                  bindfocus="{{G}}"
+                  bindinput="{{H}}"
+                  class="{{['custom-input','flex-center','r','data-v-30df4188',E&&'simple',F&&'error']}}"
+                  uI="30df4188-1,30df4188-0"
+                  uP="{{J}}"
+                  uR="rateInput"
+                  wx:if="{{J}}"
+                ></custom-input>
+                <label class="symbol percent data-v-30df4188">%</label>
+              </view>
+              <view
+                class="{{['tips','data-v-30df4188',M&&'simple']}}"
+                wx:if="{{K}}"
+                >{{L}}</view
+              >
+            </view>
+          </view>
+          <view class="down sub data-v-30df4188">{{N}}</view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view
+    class="{{[ao,'action-sheet-wrapper','flex-column','top-bottom','data-v-30df4188']}}"
+    wx:if="{{R}}"
+  >
+    <radio-group
+      bindchange="{{an}}"
+      class="action-sheet-radio-group data-v-30df4188"
+    >
+      <view class="action-sheet-item border--bottom data-v-30df4188">
+        <radio
+          checked="{{U}}"
+          class="radio data-v-30df4188"
+          color="{{S}}"
+          value="{{T}}"
+        ></radio>
+        <view bindtap="{{W}}" class="action-sheet-item-content data-v-30df4188">
+          <view class="left flex-column data-v-30df4188">
+            <label class="main data-v-30df4188">{{V}}</label>
+          </view>
+        </view>
+      </view>
+      <view class="action-sheet-item has-input data-v-30df4188">
+        <radio
+          checked="{{Z}}"
+          class="radio flex-vcenter data-v-30df4188"
+          color="{{X}}"
+          value="{{Y}}"
+        ></radio>
+        <view
+          bindtap="{{am}}"
+          class="action-sheet-item-content flex-column data-v-30df4188"
+        >
+          <view class="upper flex-between data-v-30df4188">
+            <view class="left data-v-30df4188">
+              <label class="main data-v-30df4188">{{aa}}</label>
+            </view>
+            <view class="right flex-column data-v-30df4188">
+              <view class="inputbox flex-vcenter data-v-30df4188">
+                <custom-input
+                  bind:__l="__l"
+                  bindblur="{{ag}}"
+                  bindfocus="{{ae}}"
+                  bindinput="{{af}}"
+                  class="{{['custom-input','flex-center','price','r','data-v-30df4188',ac&&'simple',ad&&'error']}}"
+                  uI="30df4188-2,30df4188-0"
+                  uP="{{ah}}"
+                  uR="priceInput"
+                  wx:if="{{ah}}"
+                ></custom-input>
+                <label class="symbol data-v-30df4188">元</label>
+              </view>
+              <view
+                class="{{['tips','data-v-30df4188',ak&&'simple']}}"
+                wx:if="{{ai}}"
+                >{{aj}}</view
+              >
+            </view>
+          </view>
+          <view class="down sub data-v-30df4188">{{al}}</view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <button
+    catchtap="{{ar}}"
+    class="confirm-btn flex-center data-v-30df4188"
+    disabled="{{aq}}"
+    wx:if="{{ap}}"
+  >
+    确认
+  </button>
+</action-sheet>

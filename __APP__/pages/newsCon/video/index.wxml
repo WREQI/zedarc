@@ -1,0 +1,122 @@
+<view
+  class="{{['_div','data-v-a42c9cec','video-list-container',Q]}}"
+  style="{{'padding-bottom:'+R}}"
+>
+  <view class="_div video-list-swiper data-v-a42c9cec" style="{{t}}">
+    <view class="_div st-pull-refresh__head data-v-a42c9cec" wx:if="{{a}}">
+      <view class="_div st-pull-refresh__pull-refresh-bar data-v-a42c9cec">
+        <view class="_div st-pull-refresh__icon-container data-v-a42c9cec">
+          <view class="_div progress data-v-a42c9cec"></view>
+        </view>
+        <view class="_div st-pull-refresh__pull-refresh-text data-v-a42c9cec"
+          >下拉刷新数据</view
+        >
+      </view>
+    </view>
+    <swiper
+      bindanimationfinish="{{e}}"
+      bindtouchend="{{i}}"
+      bindtouchmove="{{h}}"
+      bindtouchstart="{{g}}"
+      bindtransition="{{f}}"
+      circular="{{false}}"
+      class="swiper-content data-v-a42c9cec"
+      current="{{d}}"
+      ref="listSwiper"
+      vertical="{{true}}"
+      wx:if="{{b}}"
+    >
+      <swiper-item class="data-v-a42c9cec" wx:for="{{c}}" wx:key="j">
+        <video-player
+          bind:__l="__l"
+          binddataReport="{{item.g}}"
+          bindplayVideo="{{item.f}}"
+          bindseekTime="{{item.e}}"
+          bindtapDetail="{{item.d}}"
+          class="r-i-f data-v-a42c9cec"
+          key="{{item.c}}"
+          uI="{{item.h}}"
+          uP="{{item.i}}"
+          uR="{{item.b}}"
+          wx:if="{{item.i}}"
+        ></video-player>
+      </swiper-item>
+    </swiper>
+    <view
+      class="_div empty-content data-v-a42c9cec"
+      style="{{l}}"
+      wx:if="{{j}}"
+    >
+      <view class="_div empty-inner data-v-a42c9cec">
+        <label class="_span video-icon-empty data-v-a42c9cec"></label>
+        <label class="_span video-empty-tips data-v-a42c9cec">暂无关注</label>
+      </view>
+      <view catchtap="{{k}}" class="_div more-button data-v-a42c9cec">
+        <label class="_span data-v-a42c9cec">前往推荐看更多视频</label>
+        <label class="_span icon-more-button data-v-a42c9cec"></label>
+      </view>
+    </view>
+    <mp-player
+      bind:__l="__l"
+      bindonPlayStatusChange="{{r}}"
+      class="{{['r','data-v-a42c9cec','video-player-content',q]}}"
+      style="{{'opacity:'+p}}"
+      uI="a42c9cec-1"
+      uP="{{s}}"
+      uR="{{o}}"
+      wx:if="{{m}}"
+    ></mp-player>
+  </view>
+  <view class="_div video-item-comment data-v-a42c9cec" wx:if="{{v}}">
+    <view
+      catchtap="{{w}}"
+      class="_div video-comment-top data-v-a42c9cec"
+    ></view>
+    <view class="_div video-comment-title data-v-a42c9cec">
+      <label catchtap="{{x}}" class="_span icon-inner data-v-a42c9cec">
+        <view class="_i icon icon-close data-v-a42c9cec"></view>
+      </label>
+      <label class="_span text data-v-a42c9cec" wx:if="{{y}}"
+        >{{z}}条评论</label
+      >
+      <label class="_span text data-v-a42c9cec" wx:else>评论</label>
+    </view>
+    <view class="_div video-comment-inner data-v-a42c9cec">
+      <news-com-list
+        bind:__l="__l"
+        bindcommentMore="{{E}}"
+        bindgetCommentCount="{{C}}"
+        bindonPutComment="{{D}}"
+        bindshowProfilePop="{{F}}"
+        class="r data-v-a42c9cec"
+        uI="a42c9cec-2"
+        uP="{{G}}"
+        uR="{{B}}"
+        wx:if="{{G}}"
+      ></news-com-list>
+    </view>
+    <view
+      class="_div video-comment-bottom data-v-a42c9cec"
+      style="{{'height:'+L}}"
+    >
+      <reply-box
+        bind:__l="__l"
+        bindgoEdit="{{J}}"
+        class="r data-v-a42c9cec"
+        uI="a42c9cec-3"
+        uP="{{K}}"
+        uR="reply"
+        wx:if="{{H}}"
+      ></reply-box>
+    </view>
+  </view>
+  <half-editor
+    bind:__l="__l"
+    bindonHide="{{O}}"
+    class="r data-v-a42c9cec"
+    uI="a42c9cec-4"
+    uP="{{P}}"
+    uR="halfEditor"
+    wx:if="{{M}}"
+  ></half-editor>
+</view>

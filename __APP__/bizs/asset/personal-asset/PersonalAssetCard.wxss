@@ -1,0 +1,152 @@
+@import "/app.wxss";
+.content-detail.data-v-578a0b1c {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.213333rem;
+}
+.content-detail .total-money.data-v-578a0b1c {
+  color: var(--text-color-1);
+}
+.content-detail .today-profit.data-v-578a0b1c,
+.content-detail .total-money.data-v-578a0b1c {
+  font-size: 0.453333rem;
+  font-weight: 500;
+  line-height: 0.666667rem;
+}
+.content-detail .profit-area.data-v-578a0b1c {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.content-detail .profit-area-right.data-v-578a0b1c {
+  margin-left: 0.32rem;
+}
+.transfer-wrap.data-v-578a0b1c {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.24rem;
+  padding-top: 0.32rem;
+}
+.transfer-wrap .transfer-tips.data-v-578a0b1c {
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.533333rem;
+}
+.transfer-wrap .transfer-btn.data-v-578a0b1c {
+  background: var(--fill-2);
+  border: 0.026667rem solid var(--text-color-7);
+  border-radius: 0.106667rem;
+  color: var(--text-color-1);
+  font-weight: 600;
+  height: 0.746667rem;
+  line-height: 0.773333rem;
+  text-align: center;
+  width: 1.706667rem;
+}
+.normal-skin .transfer-wrap .transfer-btn.data-v-578a0b1c {
+  background: var(--color-blue);
+}
+.eye.data-v-578a0b1c {
+  background-size: 0.426667rem 0.426667rem;
+  height: 0.426667rem;
+  margin-left: 0.16rem;
+  margin-top: 0.04rem;
+  width: 0.426667rem;
+}
+.eye-open.data-v-578a0b1c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-eye-open.png);
+  background-repeat: no-repeat;
+}
+[data-theme="dark"] .eye-open.data-v-578a0b1c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-eye-open-dark.png);
+}
+.eye-close.data-v-578a0b1c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-eye-close.png);
+  background-repeat: no-repeat;
+}
+[data-theme="dark"] .eye-close.data-v-578a0b1c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/icon-eye-close-dark.png);
+}
+.passwd-wrap.data-v-578a0b1c {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.24rem;
+  padding-top: 0.32rem;
+}
+.passwd-wrap .passwd-tips.data-v-578a0b1c {
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.533333rem;
+}
+.passwd-wrap .passwd-btn.data-v-578a0b1c {
+  background: var(--fill-2);
+  border: 0.026667rem solid var(--text-color-7);
+  border-radius: 0.106667rem;
+  color: var(--text-color-1);
+  font-size: 0.32rem;
+  font-weight: 600;
+  height: 0.746667rem;
+  line-height: 0.773333rem;
+  text-align: center;
+  width: 1.706667rem;
+}
+.asset-refresh.data-v-578a0b1c {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/refresh-iframe.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  height: 0.32rem;
+  margin-left: 0.106667rem;
+  padding: 0.106667rem;
+  width: 0.32rem;
+}
+@-webkit-keyframes rotate-578a0b1c {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate-578a0b1c {
+  0% {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.asset-refresh-rotate.data-v-578a0b1c {
+  animation: rotate-578a0b1c 1.5s linear infinite;
+}
+.asset-refresh.data-v-578a0b1c,
+.eye-close.data-v-578a0b1c,
+.eye-open.data-v-578a0b1c {
+  position: relative;
+}
+.asset-refresh.data-v-578a0b1c:after,
+.eye-close.data-v-578a0b1c:after,
+.eye-open.data-v-578a0b1c:after {
+  content: " ";
+  display: inline-block;
+  height: 0.586667rem;
+  left: -0.106667rem;
+  position: absolute;
+  top: -0.106667rem;
+  width: 0.586667rem;
+}

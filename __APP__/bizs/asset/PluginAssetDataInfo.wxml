@@ -1,0 +1,20 @@
+<plugin-asset-component-wrap
+  bind:__l="__l"
+  class="r"
+  uI="ff6b5a22-0"
+  uP="{{f}}"
+  uR="pluginAssetComWrapRef"
+  uS="{{['d']}}"
+  wx:if="{{f}}"
+>
+  <personal-asset-info
+    bind:__l="__l"
+    bindbtnClick="{{b}}"
+    bindfirstRequestFinish="{{c}}"
+    class="plugin-asset-container r"
+    uI="ff6b5a22-1,ff6b5a22-0"
+    uP="{{d}}"
+    uR="personalAssetRef"
+    wx:if="{{d}}"
+  ></personal-asset-info>
+</plugin-asset-component-wrap>

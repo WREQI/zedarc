@@ -1,0 +1,168 @@
+<view
+  catchtap="{{o}}"
+  catchtouchmove="{{n}}"
+  class="{{['_div','data-v-0222f833','etf-tip-modal',l,m]}}"
+>
+  <view
+    catchtap="{{k}}"
+    class="{{['_div','data-v-0222f833','etf-modal-container',j]}}"
+  >
+    <view class="_div etf-modal-title data-v-0222f833">
+      <label class="_span data-v-0222f833">{{a}}</label>
+      <label
+        bindtap="{{b}}"
+        class="_span etf-icon-close data-v-0222f833"
+      ></label>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{c}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">T+0</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >当天买入后允许当天卖出，没有次数限制。部分ETF（如跨境ETF）支持T+0交易，对比
+          A 股 T+1 交易制度：当天买入后次日才能卖出，交易更自由。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">运作费率</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >运作费用包括基金管理费、托管费、销售服务费，从基金资产中每日计提，每个工作日公告的基金净值已扣除相应费用，无需投资者在每笔交易中另行支付。运作费用详情信息请参考基金招募说明书。</view
+        >
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{d}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">实时持仓</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >根据交易所每日公布的申赎清单估算，结合ETF成分股和对应股票价格，推算出最新的ETF成分股市值占比数据(外币计价股票需要进行汇率转换)。申赎清单的数据不代表ETF真实持仓情况，仅供参考。</view
+        >
+        <view
+          class="_div list-block-content data-v-0222f833"
+          style="{{'margin-top:'+'6px'}}"
+          >部分跨境ETF因为无海外市场的股票行情数据，实时持仓股票不展示海外成分股，重仓持股占比数据实时持仓会低于季度持仓。</view
+        >
+        <view
+          class="_div list-block-content data-v-0222f833"
+          style="{{'margin-top:'+'6px'}}"
+          >实时持仓的重仓持股占比总计是指前二十大重仓股的净值占比求和。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">季度持仓</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >ETF定期报告披露，显示股票公允价值占基金净值比例，一般为季度更新。</view
+        >
+        <view
+          class="_div list-block-content data-v-0222f833"
+          style="{{'margin-top:'+'6px'}}"
+          >季度持仓的重仓持股占比总计是指前十大重仓股的净值占比求和。</view
+        >
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{e}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">收益率</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >基金收益率是反映投资者在该基金上的投资回报，通过该基金收益率和沪深300进行对比，可以了解该基金的收益表现。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">最大回撤率</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >最大回撤率是用来衡量基金风险的指标，帮助我们了解可能面临的最大亏损。最大回撤率越小，表明基金的风险控制能力越强，投资者可能遭受的损失也越小。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-content sub-content data-v-0222f833"
+          >举个例子：近一年
+          ，基金A涨幅为+25%，沪深300涨幅为-12%，该基金业绩表现比沪深300有超额收益37%。该基金同期最大回撤为13%，投资者需要能够承受最大亏损预期为13%。</view
+        >
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{f}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">机构投资者</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >更倾向于配置宽基ETF，因为它们符合机构投资者对流动性和规模的要求。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833">个人投资者</view>
+        <view class="_div list-block-content data-v-0222f833"
+          >更偏好行业主题ETF，因为它们弹性更大。个人投资者的增加有助于提升ETF的流动性，可以增加交易活跃度，从而可能对股价产生正面影响。</view
+        >
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-content sub-content data-v-0222f833"
+          >ETF持有人结构的变化通过影响市场流动性和投资者行为，间接对股价产生影响。</view
+        >
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{g}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833"
+          >1. ETF的申购赎回机制</view
+        >
+        <view class="_div list-block-content data-v-0222f833"
+          >当ETF的市场价高于其净值时，套利者可申购ETF在场内卖出获利。相反，当ETF的市场价低于其净值时，套利者可场内购买ETF并赎回，在场内卖出获利。<view
+            class="_div sub-content data-v-0222f833"
+            >一般情况下，跨境ETF因基金公司外汇额度限制而限购，限购期往往会有较大的溢折率产生。我们可以通过查看ETF申购、赎回状态、限购金额来综合分析。</view
+          >
+        </view>
+      </view>
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-title data-v-0222f833"
+          >2. ETF费用问题</view
+        >
+        <view class="_div list-block-content data-v-0222f833">
+          <view class="_div content-item data-v-0222f833">
+            <label class="_span bold-text data-v-0222f833">新发认购费：</label
+            >仅在ETF新发上市有认购时收取，上市后的交易过程不收取该费用。</view
+          >
+          <view class="_div content-item data-v-0222f833">
+            <label class="_span bold-text data-v-0222f833">管理费：</label
+            >用于基金管理人管理和运营，一般为0.5%左右，对比场外基金约便宜一半。</view
+          >
+          <view class="_div content-item data-v-0222f833">
+            <label class="_span bold-text data-v-0222f833">托管费：</label
+            >ETF获得托管机构提供服务支付的费用。</view
+          >
+          <view class="_div content-item data-v-0222f833">
+            <label class="_span bold-text data-v-0222f833">销售服务费：</label
+            >基金公司获得销售机构服务支持的费用。</view
+          >
+          <view class="_div sub-content data-v-0222f833"
+            >以上费用直接从基金资产中扣除，无需在交易中支付。ETF交易的佣金和股票交易一致，对比股票ETF免印花税
+            (万分之5)，可节约交易成本。</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{h}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-content data-v-0222f833">
+          <view class="_div content-item data-v-0222f833"
+            >盈利预测功能和财报采用的会计准则不同，数据可能存在差异。</view
+          >
+          <view class="_div content-item data-v-0222f833"
+            >由于分析师通常采用非国际财务报告准则预测数据，为保证口径一致，盈利预测真实值也采用相同报告准则。</view
+          >
+          <view class="_div content-item data-v-0222f833"
+            >同一个季度报告期，个股盈利相关财务指标预测值与真实值的对比展示，可以了解公司盈利是否存在超预期或者低于预期的情况。其中预测值由数据商
+            Factset根据分析师报告整理得出，当期预测值每日更新。</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div etf-modal-content data-v-0222f833" wx:if="{{i}}">
+      <view class="_div list-block data-v-0222f833">
+        <view class="_div list-block-paragraph data-v-0222f833"
+          >参考净值 (IOPV)
+          是交易所根据基金管理人提供的计算方法及每日申赎清单计算的实时单位净值的近似值，以便于投资者估计ETF交易价格是否偏离了内在价值，每15秒更新一次。</view
+        >
+        <view class="_div list-block-paragraph linebreak data-v-0222f833"
+          >参考净值对比ETF每日收盘更新的净值数据实时性高，方便在盘中分析偏离数据，当最新价高于参考净值时，场内溢价率高；最新价低于参考净值，场内溢价率低。</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

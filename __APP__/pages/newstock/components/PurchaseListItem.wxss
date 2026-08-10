@@ -1,0 +1,211 @@
+@import "/app.wxss";
+.purchase-list-item .recent-tab.data-v-38304dbf {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  height: 1.093333rem;
+  line-height: 1.093333rem;
+}
+.purchase-list-item .recent-tab.data-v-38304dbf:before {
+  background: none;
+  border: 0.08rem solid transparent;
+  border-left: 0.08rem solid var(--color-primary-1);
+  content: "";
+  height: 0.32rem;
+  margin-right: 0.32rem;
+  margin-top: 0.293333rem;
+  position: static;
+  width: 0.32rem;
+}
+.purchase-list-item .lists-card.data-v-38304dbf {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.purchase-list-item .lists-card.data-v-38304dbf:last-child {
+  margin-bottom: 0.16rem;
+}
+.purchase-list-item .lists-card__header.data-v-38304dbf {
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+}
+.purchase-list-item .lists-card__header .flex-vcenter.data-v-38304dbf {
+  -webkit-box-flex: 1;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+.purchase-list-item .lists-card__header .market-tag.data-v-38304dbf {
+  background-color: #eb5a66;
+  border-radius: 0.053333rem;
+  color: #fff;
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  line-height: 1.2;
+  margin-right: 0.16rem;
+  padding: 0 0.08rem;
+}
+.purchase-list-item .lists-card__header .market-name.data-v-38304dbf {
+  color: var(--text-color-1);
+  flex-shrink: 1;
+  font-size: 0.4rem;
+  font-weight: 500;
+  margin-right: 0.16rem;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.purchase-list-item .lists-card__header .market-code.data-v-38304dbf {
+  color: var(--text-color-2);
+  flex-shrink: 0;
+  font-size: 0.32rem;
+}
+.purchase-list-item .lists-card__header .profit-tag.data-v-38304dbf {
+  background-color: var(--border-color-1);
+  border-radius: 0.053333rem;
+  color: var(--text-color-1);
+  font-size: 0.266667rem;
+  height: 0.373333rem;
+  line-height: 0.373333rem;
+  margin-left: 0.186667rem;
+  padding: 0 0.106667rem;
+}
+.purchase-list-item .lists-card__header-disabled .market-tag.data-v-38304dbf {
+  opacity: 0.3;
+}
+.purchase-list-item .lists-card__header-disabled .market-code.data-v-38304dbf,
+.purchase-list-item .lists-card__header-disabled .market-name.data-v-38304dbf {
+  color: var(--text-color-5);
+}
+.purchase-list-item .lists-card__mid .compare-company.data-v-38304dbf {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  margin: 0.133333rem 0;
+  position: relative;
+  width: 100%;
+}
+.purchase-list-item .lists-card__mid .compare-company .content.data-v-38304dbf {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 1.6rem);
+}
+.purchase-list-item .lists-card__mid .compare-company .more.data-v-38304dbf {
+  color: var(--color-primary-1);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.purchase-list-item .lists-card__body.data-v-38304dbf {
+  box-sizing: border-box;
+  font-size: 0.4rem;
+  padding-bottom: 0.48rem;
+}
+.purchase-list-item .lists-card__body .text.data-v-38304dbf {
+  color: var(--text-color-1);
+}
+.purchase-list-item .lists-card__body .link-biz-open.data-v-38304dbf {
+  color: var(--color-primary-1);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+}
+.purchase-list-item .lists-card__body .select.data-v-38304dbf {
+  font-size: 0.32rem;
+  margin-left: 0.16rem;
+  vertical-align: top;
+}
+.purchase-list-item .lists-card__body .select.data-v-38304dbf:before {
+  font-size: 0.16rem;
+}
+.purchase-list-item
+  .lists-card__body
+  .purchased
+  div.data-v-38304dbf:first-child {
+  font-size: 0.4rem;
+  line-height: 0.426667rem;
+}
+.purchase-list-item
+  .lists-card__body
+  .purchased
+  div.data-v-38304dbf:last-child {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  margin-top: 0.093333rem;
+  text-align: right;
+}
+.purchase-list-item .lists-card__selected.data-v-38304dbf {
+  height: 0.453333rem;
+  line-height: 0.453333rem;
+  margin-right: 0.373333rem;
+  width: 0.453333rem;
+}
+.purchase-list-item .lists-card__selected .custom-radio.data-v-38304dbf {
+  border-radius: 50%;
+  color: var(--text-color-5);
+  font-size: 0.426667rem;
+}
+.purchase-list-item .lists-card__selected-disabled.data-v-38304dbf {
+  background-color: var(--fill-1);
+}
+[data-theme="dark"]
+  .purchase-list-item
+  .lists-card__selected-disabled.data-v-38304dbf {
+  background-color: var(--fill-3);
+}
+.purchase-list-item .lists-card__selected .icon-checked.data-v-38304dbf {
+  color: var(--color-primary-1);
+  font-size: 0.453333rem;
+}
+.purchase-list-item .lists-card__selected .applying.data-v-38304dbf {
+  background-color: initial;
+  color: var(--text-color-7);
+}
+.purchase-list-item .lists-card__table.data-v-38304dbf {
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+.purchase-list-item .lists-card__table .newstock-list-header.data-v-38304dbf {
+  color: var(--text-color-4);
+  line-height: 1.25;
+  margin: 0.266667rem 0;
+}
+.purchase-list-item
+  .lists-card__table
+  .newstock-list-header
+  .icon-explain.data-v-38304dbf {
+  background-image: url(https://st.gtimg.com/design/2c569f5533e6052703957d8b17d08e6f.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 0.32rem;
+  margin-left: 0.066667rem;
+  width: 0.32rem;
+}
+.purchase-list-item .lists-card__table__disabled .issue-price.data-v-38304dbf,
+.purchase-list-item .lists-card__table__disabled .number-font.data-v-38304dbf,
+.purchase-list-item .lists-card__table__disabled .ratio.data-v-38304dbf,
+.purchase-list-item .lists-card__table__disabled .sub-status.data-v-38304dbf {
+  color: var(--text-color-5);
+  line-height: 0.48rem;
+}
+.purchase-list-item .lists-card__table .purchase-amount.data-v-38304dbf {
+  -webkit-box-align: end;
+  align-items: flex-end;
+}
+.purchase-list-item
+  .lists-card__table__disabled
+  .newstock-list-header.data-v-38304dbf {
+  color: var(--text-color-5);
+}
+.purchase-list-item
+  .lists-card__table__disabled
+  .newstock-list-header
+  + div.data-v-38304dbf {
+  color: var(--text-color-5);
+  line-height: 0.48rem;
+}
+.purchase-list-item .ml-6.data-v-38304dbf {
+  margin-left: 0.08rem;
+}

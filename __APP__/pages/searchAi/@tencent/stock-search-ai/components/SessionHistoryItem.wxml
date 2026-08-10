@@ -1,0 +1,22 @@
+<view
+  catchtap="{{h}}"
+  class="{{['_div','data-v-15fdb9e8',e,f,g]}}"
+  hoverClass="hover-press"
+>
+  <long-press-container
+    bind:__l="__l"
+    bindbeforeLongPress="{{b}}"
+    bindlongPress="{{c}}"
+    bindtap="{{d}}"
+    class="data-v-15fdb9e8"
+    uI="15fdb9e8-0"
+    uS="{{['longpresscontent']}}"
+  >
+    <view
+      class="_div session-item-wrapper data-v-15fdb9e8"
+      slot="longpresscontent"
+    >
+      <label class="_span session-title data-v-15fdb9e8">{{a}}</label>
+    </view>
+  </long-press-container>
+</view>

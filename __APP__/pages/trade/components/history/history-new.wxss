@@ -1,0 +1,78 @@
+@import "/app.wxss";
+.history-common.data-v-339bbbcd .mp-tab-1 {
+  margin-left: 0.853333rem;
+}
+.history-common .no-border.data-v-339bbbcd:after {
+  display: none;
+}
+.history-common .history-new-tabs.data-v-339bbbcd {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--fill-2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.173333rem;
+  justify-content: space-between;
+  padding: 0 0.32rem;
+  position: relative;
+  z-index: 1;
+}
+.history-common .history-new-tabs .icon-search.data-v-339bbbcd {
+  color: var(--text-color-1);
+  font-size: 0.533333rem;
+}
+.history-common .history-new-tabs.data-v-339bbbcd .border--bottom:after {
+  display: none;
+}
+.history-new.data-v-339bbbcd {
+  height: 100vh;
+  height: calc(100vh - env(safe-area-inset-bottom));
+}
+.trade-record-swiper.data-v-339bbbcd {
+  height: calc(100vh - 1.173333rem);
+  height: calc(100vh - env(safe-area-inset-bottom) - 1.173333rem);
+}
+.history-class-filter.data-v-339bbbcd {
+  background: var(--fill-2);
+  padding: 0.266667rem 0.32rem 0.16rem;
+  position: relative;
+  z-index: 1;
+}
+.history-class-filter .history-class-trigger.data-v-339bbbcd {
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--fill-1);
+  border-radius: 0.106667rem;
+  color: var(--text-color-1);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  font-size: 0.373333rem;
+  height: 0.853333rem;
+  padding: 0 0.32rem;
+}
+[data-theme="dark"]
+  .history-class-filter
+  .history-class-trigger.data-v-339bbbcd {
+  background: #171d28;
+}
+.history-class-filter .history-class-trigger .divider.data-v-339bbbcd {
+  background: #c9d0dc;
+  height: 0.32rem;
+  margin: 0.213333rem;
+  width: 0.013333rem;
+}
+.history-class-filter .history-class-trigger .trigger-icon.data-v-339bbbcd {
+  height: 0.426667rem;
+  width: 0.426667rem;
+}
+.temp-input.data-v-339bbbcd {
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  z-index: -100;
+}

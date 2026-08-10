@@ -1,0 +1,144 @@
+<view class="_div live-list-container data-v-383464f7">
+  <view
+    class="{{['_div','list-item','data-v-383464f7',chat.x&&'active']}}"
+    wx:for="{{a}}"
+    wx:for-item="chat"
+    wx:key="w"
+  >
+    <view class="_div flex chat-meta data-v-383464f7">
+      <view class="_div chat-user-avatar data-v-383464f7">
+        <image
+          class="_img avatar-img data-v-383464f7"
+          src="{{chat.b}}"
+          wx:if="{{chat.a}}"
+        ></image>
+        <view class="_div avatar-text data-v-383464f7" wx:elif="{{chat.c}}">
+          <view class="_div data-v-383464f7">{{chat.d}}</view>
+        </view>
+        <image
+          class="_img avatar-img data-v-383464f7"
+          src="{{chat.e}}"
+          wx:else
+        ></image>
+        <view class="_div avatar-border data-v-383464f7"></view>
+        <view
+          class="{{['_div','data-v-383464f7','vip',chat.f&&'enterprise',chat.g&&'personal']}}"
+        ></view>
+      </view>
+      <view
+        class="_div flex flex-align-center chat-user-content data-v-383464f7"
+      >
+        <label class="_span chat-user-name data-v-383464f7">{{chat.h}}</label>
+        <label class="_span chat-time data-v-383464f7">{{chat.i}}</label>
+      </view>
+    </view>
+    <view class="_div chat-content-wrapper data-v-383464f7">
+      <view class="_div chat-content data-v-383464f7">
+        <view class="_div content-comment data-v-383464f7" wx:if="{{chat.j}}">
+          <view class="_div comment-user data-v-383464f7">
+            <view class="_div comment-user-divider data-v-383464f7"></view>
+            <view class="_p comment-user-wrapper data-v-383464f7">
+              <label class="_span comment-user-name data-v-383464f7"
+                >{{chat.k}}：</label
+              >
+              <label class="_span comment-user-text data-v-383464f7"
+                >{{chat.l}}</label
+              >
+            </view>
+          </view>
+          <view
+            class="_div comment-content-text data-v-383464f7"
+            wx:if="{{chat.m}}"
+          >
+            <label
+              class="{{['_span','data-v-383464f7',item.c]}}"
+              wx:for="{{chat.n}}"
+              wx:key="b"
+              >{{item.a}}</label
+            >
+          </view>
+        </view>
+        <view class="_div content-text data-v-383464f7" wx:elif="{{chat.o}}">
+          <label
+            class="{{['_span','data-v-383464f7',item.c]}}"
+            wx:for="{{chat.p}}"
+            wx:key="b"
+            >{{item.a}}</label
+          >
+        </view>
+        <view
+          class="_div chat-relate-quotes data-v-383464f7"
+          style="{{'margin-top:'+chat.v}}"
+          wx:if="{{chat.q}}"
+        >
+          <related-stock-item
+            bind:__l="__l"
+            bindmanageSelfStock="{{chat.r}}"
+            class="flex-1 data-v-383464f7"
+            uI="{{chat.s}}"
+            uP="{{chat.t}}"
+            wx:if="{{chat.t}}"
+          ></related-stock-item>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-383464f7" wx:if="{{b}}">
+    <view class="_div chat-list data-v-383464f7">
+      <view
+        class="_div list-item active data-v-383464f7"
+        wx:for="{{c}}"
+        wx:for-item="chat"
+        wx:key="k"
+      >
+        <view class="_div flex chat-meta data-v-383464f7">
+          <view class="_div chat-user-avatar data-v-383464f7">
+            <image
+              class="_img avatar-img data-v-383464f7"
+              src="{{chat.b}}"
+              wx:if="{{chat.a}}"
+            ></image>
+            <view class="_div avatar-text data-v-383464f7" wx:elif="{{chat.c}}">
+              <view class="_div data-v-383464f7">{{chat.d}}</view>
+            </view>
+            <image
+              class="_img avatar-img data-v-383464f7"
+              src="{{chat.e}}"
+              wx:else
+            ></image>
+            <view class="_div avatar-border data-v-383464f7"></view>
+            <view
+              class="{{['_div','data-v-383464f7','vip',chat.f&&'enterprise',chat.g&&'personal']}}"
+            ></view>
+          </view>
+          <view
+            class="_div flex flex-align-center chat-user-content data-v-383464f7"
+          >
+            <label class="_span chat-user-name data-v-383464f7"
+              >{{chat.h}}</label
+            >
+            <label class="_span chat-time data-v-383464f7">{{chat.i}}</label>
+          </view>
+        </view>
+        <view class="_div flex flex-align-center data-v-383464f7">
+          <view class="_div chat-content-wrapper data-v-383464f7">
+            <view class="_div content-cursor data-v-383464f7"></view>
+            <view class="_div chat-content data-v-383464f7">
+              <label class="_span content-text data-v-383464f7"
+                >{{chat.j}}</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div empty-box flex data-v-383464f7" wx:if="{{d}}">
+    <view class="_div empty-img data-v-383464f7"></view>
+    <view class="_div empty-text data-v-383464f7" wx:if="{{e}}"
+      >快来参与互动吧</view
+    >
+    <view class="_div empty-text data-v-383464f7" wx:else>暂不开放发表</view>
+  </view>
+  <view class="_div data-v-383464f7" style="{{'height:'+f}}" wx:else></view>
+</view>

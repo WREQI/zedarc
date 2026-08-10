@@ -1,0 +1,26 @@
+<view class="list-header ^list-header ^^list-header">
+  <view
+    bindtap="{{field.r}}"
+    class="{{['col-item','^col-item',field.i,field.j,field.k,field.l,field.m,field.n,field.o,field.p,b]}}"
+    style="{{'text-align:'+field.q}}"
+    wx:for="{{a}}"
+    wx:for-item="field"
+    wx:key="h"
+  >
+    <label class="text" wx:if="{{field.a}}">{{field.b}}</label>
+    <label class="text" wx:else
+      >收益<label class="upper-icon">估</label>/年化</label
+    >
+    <sorter
+      bind:__l="__l"
+      uI="{{field.d}}"
+      uP="{{field.e}}"
+      wx:if="{{field.c}}"
+    ></sorter>
+    <label
+      catchtap="{{field.g}}"
+      class="icon icon-italic-info ^icon-italic-info"
+      wx:if="{{field.f}}"
+    ></label>
+  </view>
+</view>

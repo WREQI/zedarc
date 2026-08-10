@@ -1,0 +1,45 @@
+<view class="{{['_div','data-v-cb53e442',H]}}" data-test-id="{{I}}">
+  <view class="{{['_div','data-v-cb53e442',a]}}"></view>
+  <view class="{{['_div','data-v-cb53e442',p]}}">
+    <view bindtap="{{n}}" class="{{['_div','data-v-cb53e442',m]}}">
+      <view class="{{['_div','data-v-cb53e442',g]}}">
+        <view class="{{['_div','data-v-cb53e442',c,d]}}">{{b}}</view>
+        <view class="{{['_div','data-v-cb53e442',f]}}">{{e}}</view>
+      </view>
+      <view class="{{['_div','data-v-cb53e442',l]}}">
+        <view class="{{['_div','data-v-cb53e442',i]}}">{{h}}</view>
+        <view class="{{['_div','data-v-cb53e442',k]}}">{{j}}</view>
+      </view>
+    </view>
+    <view class="_div market-fund-card__holdings--nasdaq data-v-cb53e442">
+      <view
+        class="{{['_div','data-v-cb53e442',label.f]}}"
+        wx:for="{{o}}"
+        wx:for-item="label"
+        wx:key="e"
+      >
+        <view
+          catchtap="{{label.d}}"
+          class="{{['_div','data-v-cb53e442',label.b,label.c]}}"
+          >{{label.a}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-cb53e442',D]}}">
+    <view bindtap="{{y}}" class="{{['_div','data-v-cb53e442',x]}}">
+      <view class="{{['_div','data-v-cb53e442',r]}}">{{q}}</view>
+      <view class="{{['_div','data-v-cb53e442',w]}}" wx:if="{{s}}">
+        <view class="{{['_div','data-v-cb53e442',v]}}">{{t}}</view>
+      </view>
+    </view>
+    <view
+      catchtap="{{C}}"
+      class="{{['_div','data-v-cb53e442',A]}}"
+      data-test-id="{{B}}"
+    >
+      <view class="{{['_div','data-v-cb53e442',z]}}">买入</view>
+    </view>
+  </view>
+  <view bindtap="{{G}}" class="{{['_div','data-v-cb53e442',F]}}">{{E}}</view>
+</view>

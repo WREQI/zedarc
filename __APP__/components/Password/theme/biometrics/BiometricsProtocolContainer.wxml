@@ -1,0 +1,40 @@
+<popup
+  bind:__l="__l"
+  class="data-v-35690106"
+  uI="35690106-0"
+  uP="{{j}}"
+  uS="{{['d']}}"
+  wx:if="{{j}}"
+>
+  <view class="{{['bio-protocol-container','data-v-35690106',i]}}">
+    <view class="bio-protocol-header data-v-35690106">
+      <label
+        bindtap="{{b}}"
+        class="bio-protocol-back data-v-35690106"
+        wx:if="{{a}}"
+      ></label>
+      <label class="data-v-35690106" wx:else></label>
+      <label class="bio-protocol-title data-v-35690106">{{c}}</label>
+      <label
+        bindtap="{{e}}"
+        class="bio-protocol-closebg data-v-35690106"
+        wx:if="{{d}}"
+      ></label>
+      <label class="data-v-35690106" wx:else></label>
+    </view>
+    <view class="bio-protocol-content data-v-35690106">
+      <slot name="content"></slot>
+    </view>
+    <view class="bio-protocol-button-container data-v-35690106" wx:if="{{f}}">
+      <view bindtap="{{g}}" class="bio-protocol-cancel-button data-v-35690106"
+        >不同意</view
+      >
+      <view
+        bindtap="{{h}}"
+        class="bio-protocol-confirm-button data-v-35690106"
+        type="primary"
+        >同意并继续开启</view
+      >
+    </view>
+  </view>
+</popup>

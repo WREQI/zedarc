@@ -1,0 +1,25 @@
+<view class="_div basket-guide-wrapper data-v-f8ed9daf">
+  <layer-modal
+    bind:__l="__l"
+    bindclose="{{a}}"
+    bindconfirm="{{b}}"
+    class="data-v-f8ed9daf"
+    uI="f8ed9daf-0"
+    uP="{{c}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div guide-wrapper data-v-f8ed9daf">
+      <view class="_div text data-v-f8ed9daf"
+        >你添加的股单可以在自选页中查看</view
+      >
+      <view class="_div img-wrapper data-v-f8ed9daf">
+        <image
+          alt="你添加的股单可以在自选页中查看"
+          class="_img pic data-v-f8ed9daf"
+          src="https://st.gtimg.com/design/b572d1ac874642a936c0343f553cb85c.png"
+        ></image>
+      </view>
+    </view>
+  </layer-modal>
+</view>

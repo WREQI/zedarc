@@ -1,0 +1,143 @@
+.stock-chart-panel.data-v-29f20308 {
+  --color-card: #f5f6fa;
+  --color-heavygray: #262e40;
+  --color-lightgray: #7a8499;
+  --border-heavy-divider: #dcdfe6;
+  -webkit-touch-callout: none;
+  background-color: var(--color-card);
+  border-radius: 0.21333333333333335rem;
+  user-select: none;
+  width: 100%;
+}
+.stock-chart-panel.data-v-29f20308 .composition-wrapper {
+  --color-midgray-1: #475166;
+  --text-color-2: #475166;
+}
+.stock-chart-panel.data-v-29f20308
+  .composition-wrapper
+  .bar-area
+  .tab-bar
+  .tab-item.selected
+  .tab-item-inner {
+  background-color: #e9ebf0;
+}
+.stock-chart-panel.data-v-29f20308 .composition-wrapper .canvas-area {
+  padding: 0 0.10666666666666667rem !important;
+}
+.stock-chart-panel.skin-black.data-v-29f20308 {
+  --color-card: #171d28;
+  --color-heavygray: #f0f1f5;
+  --color-lightgray: #7d88a1;
+  --border-heavy-divider: #262e40;
+}
+.stock-chart-panel.skin-black.data-v-29f20308 .composition-wrapper {
+  --color-midgray-1: #a7b0c4;
+  --text-color-2: #a7b0c4;
+}
+.stock-chart-panel.skin-black.data-v-29f20308
+  .composition-wrapper
+  .bar-area
+  .tab-bar
+  .tab-item.selected
+  .tab-item-inner {
+  background-color: #262e40;
+}
+.stock-chart-panel .header-wrapper.data-v-29f20308 {
+  padding: 0.32rem 0.32rem 0.21333333333333335rem;
+}
+.stock-chart-panel .top-section.data-v-29f20308 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.stock-chart-panel .top-section .left-wrapper.data-v-29f20308 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.5333333333333333rem;
+}
+.stock-chart-panel .top-section .right-wrapper.data-v-29f20308 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 100%;
+}
+.stock-chart-panel .bottom-section.data-v-29f20308 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.stock-chart-panel .price-section.data-v-29f20308 {
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 0.13333333333333333rem;
+}
+.stock-chart-panel .price-section .number.data-v-29f20308 {
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-right: 0.16rem;
+}
+.stock-chart-panel .price-section .number.color-rise.data-v-29f20308 {
+  color: #e63535;
+}
+.stock-chart-panel .price-section .number.color-drop.data-v-29f20308 {
+  color: #1caa3c;
+}
+.stock-chart-panel .price-section .number.color-equal.data-v-29f20308 {
+  color: #7a8499;
+}
+.stock-chart-panel .us-market-time.data-v-29f20308 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  line-height: 100%;
+  line-height: 0.4533333333333333rem;
+}
+.stock-chart-panel .chart-wrapper.data-v-29f20308 {
+  box-sizing: border-box;
+  margin-bottom: 0.32rem;
+}
+.stock-chart-panel
+  .chart-wrapper.data-v-29f20308
+  .composition-wrapper
+  .bar-area.portrait {
+  width: 100%;
+}
+.stock-chart-panel .divider.data-v-29f20308 {
+  background-color: var(--border-heavy-divider);
+  height: 0.013333333333333334rem;
+  margin: 0 0.32rem;
+}
+.stock-chart-panel .footer-section.data-v-29f20308 {
+  align-items: center;
+  color: var(--color-lightgray);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  padding: 0.21333333333333335rem 0.32rem;
+}
+.stock-chart-panel .footer-section .apply-icon.data-v-29f20308 {
+  height: 0.4666666666666667rem;
+  vertical-align: middle;
+  width: 0.4666666666666667rem;
+}
+.stock-chart-panel .footer-section .to-detail-label.data-v-29f20308 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.stock-chart-panel .footer-section .to-detail-arrow.data-v-29f20308 {
+  height: 0.32rem;
+  vertical-align: middle;
+  width: 0.32rem;
+}
+.stock-chart-panel .footer-section .mock-trade-icon.data-v-29f20308 {
+  background: url(https://st.gtimg.com/design/fb373066cab935f5d8f443321ea25290.png);
+  background-size: contain;
+  height: 0.4666666666666667rem;
+  width: 0.4666666666666667rem;
+}

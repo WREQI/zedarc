@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "f2": "../stock-union-f2/f2MP",
+    "no-data": "../stock-markets-base/components/NoData",
+    "select-plate": "../stock-markets-base/components/SelectPlate",
+    "assets-stock-list": "./components/AssetsStockList",
+    "wzq-info-modal": "./node-modules/@tencent/st-wzqinfo-modal/src/WzqInfoModal",
+    "etf-tip-modal": "../wzq-detail-brief/etf/TipsInfo",
+    "status": "../../../../node-modules/@tencent/st-status/mp/index"
+  }
+}

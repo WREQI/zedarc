@@ -1,0 +1,40 @@
+<view class="_div chance-wrap aiask data-v-80c3db1f" wx:if="{{a}}">
+  <view class="{{['_div','list','data-v-80c3db1f',c&&'horizon']}}">
+    <view class="_div list-item data-v-80c3db1f" wx:for="{{b}}" wx:key="m">
+      <view class="_div img-area data-v-80c3db1f">
+        <stock-item-chart
+          bind:__l="__l"
+          class="stock-type data-v-80c3db1f"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.a}}"
+        ></stock-item-chart>
+      </view>
+      <view bindtap="{{item.j}}" class="_div stock-info data-v-80c3db1f">
+        <view class="_div stock-name data-v-80c3db1f">
+          <view class="_div stock-text data-v-80c3db1f">{{item.d}}</view>
+        </view>
+        <view class="_div stock-desc data-v-80c3db1f">
+          <view class="_div column data-v-80c3db1f" wx:if="{{item.e}}">
+            <view
+              class="{{['_div','zdf','data-v-80c3db1f',item.g&&'down-green']}}"
+              >{{item.f}}</view
+            >
+            <view class="_div val data-v-80c3db1f">今日涨跌</view>
+          </view>
+          <view class="_div column two data-v-80c3db1f" wx:if="{{item.h}}">
+            <view class="_div count stock data-v-80c3db1f">{{item.i}}</view>
+            <view class="_div val data-v-80c3db1f">最新价</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="{{item.l}}" class="_div add-area data-v-80c3db1f">
+        <image
+          alt=""
+          class="_img stock-add data-v-80c3db1f"
+          src="{{item.k}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

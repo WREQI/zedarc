@@ -1,0 +1,60 @@
+<view
+  bindtap="{{z}}"
+  catchtouchmove="{{y}}"
+  class="{{['_div','mask-wrapper','data-v-7b59611c',v&&'skin-dark']}}"
+  hidden="{{!w}}"
+  style="{{'opacity:'+x}}"
+>
+  <view
+    catchtap="{{t}}"
+    class="{{['_div','popup-wrapper','data-v-7b59611c',q&&'popup-wrapper-landscape']}}"
+    id="popup"
+    ref="popup"
+    style="{{'top:'+r+';'+'left:'+s}}"
+  >
+    <image
+      class="{{['_img','triangle-up','data-v-7b59611c',a]}}"
+      hidden="{{!c}}"
+      src="{{b}}"
+    ></image>
+    <scroll-view
+      bindtouchstart="{{l}}"
+      catchtouchmove="{{m}}"
+      class="{{['option-wrapper','data-v-7b59611c',j]}}"
+      ref="popupScroll"
+      scrollY="{{true}}"
+      style="{{'max-height:'+k}}"
+    >
+      <view
+        class="{{['_div','data-v-7b59611c','popup-item-title',f]}}"
+        wx:if="{{d}}"
+      >
+        <label class="_span data-v-7b59611c">指标切换</label>
+        <image
+          catchtap="{{e}}"
+          class="_img icon-tip data-v-7b59611c"
+          src="https://st.gtimg.com/image/kline/tip.png"
+        ></image>
+      </view>
+      <view class="{{['_div','data-v-7b59611c',h,i]}}">
+        <view
+          bindtap="{{item.f}}"
+          class="{{['_div','item','data-v-7b59611c',item.c&&'item-selected',item.d&&'no-border']}}"
+          wx:for="{{g}}"
+          wx:key="e"
+        >
+          <view class="_div rally-content data-v-7b59611c" wx:if="{{item.a}}">
+            <view class="_div data-v-7b59611c">反弹指数</view>
+            <view class="_div sub-text data-v-7b59611c">（择时秘技）</view>
+          </view>
+          <block wx:else>{{item.b}}</block>
+        </view>
+      </view>
+    </scroll-view>
+    <image
+      class="{{['_img','triangle-down','data-v-7b59611c',n]}}"
+      hidden="{{!p}}"
+      src="{{o}}"
+    ></image>
+  </view>
+</view>

@@ -1,0 +1,96 @@
+.lite .tabbar-wrapper.data-v-48f3955d {
+  padding: 0 0.32rem;
+}
+.tabbar-wrapper.data-v-48f3955d {
+  align-items: center;
+  background-color: var(--fill-2);
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+  padding-left: 0.32rem;
+  white-space: nowrap;
+}
+.tabbar-wrapper.tabbar-wrapper-pro.data-v-48f3955d {
+  justify-content: space-between;
+  padding: 0 0.4rem;
+}
+.tabbar-wrapper.data-v-48f3955d .tabbar-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.tabbar-wrapper.data-v-48f3955d .tabbar-scroll-wrapper .tabbar-row {
+  height: 1.0666666666666667rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.tabbar-wrapper.data-v-48f3955d .tabbar-scroll-wrapper .tabbar-row .tab {
+  flex: 0;
+  margin-left: 0;
+  text-align: center;
+}
+.tabbar-wrapper.data-v-48f3955d
+  .tabbar-scroll-wrapper
+  .tabbar-row
+  .tab.select-tab:after {
+  bottom: 0.13333333333333333rem;
+}
+.tabbar-wrapper.tabbar-wrapper--align-left.data-v-48f3955d
+  .tabbar-scroll-wrapper
+  .tabbar-row {
+  justify-content: flex-start;
+}
+.tabbar-wrapper .tabbar-container.data-v-48f3955d {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}
+.tabbar-wrapper .tab.data-v-48f3955d {
+  align-items: center;
+  color: var(--color-midgray-1);
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4rem;
+  height: 1.1733333333333333rem;
+  margin-left: 0.8533333333333334rem;
+}
+.tabbar-wrapper .tab.data-v-48f3955d:first-child {
+  margin-left: 0;
+}
+.tabbar-wrapper .tab.select-tab.data-v-48f3955d {
+  color: var(--color-heavygray);
+  font-weight: 500;
+  position: relative;
+}
+.tabbar-wrapper .tab.select-tab.data-v-48f3955d:after {
+  background-color: var(--color-primary);
+  border-radius: 0.04rem;
+  bottom: 0.18666666666666668rem;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.tabbar-wrapper .tab.select-tab-lite.data-v-48f3955d {
+  color: var(--color-heavygray);
+  font-weight: 500;
+  position: relative;
+}
+.tabbar-wrapper .tab.select-tab-lite.data-v-48f3955d:after {
+  background-color: var(--color-red);
+  border-radius: 0.04rem;
+  bottom: 0.18666666666666668rem;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.tabbar-wrapper .tab--align-left.data-v-48f3955d {
+  margin-right: 0.64rem;
+}

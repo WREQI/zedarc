@@ -1,0 +1,96 @@
+.hot-topic-search-page.data-v-68bcfcfb {
+  background: var(--fill-background);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.top-search.data-v-68bcfcfb {
+  align-items: center;
+  background: var(--fill-content-layer);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  padding: 0.21333333333333335rem 0.32rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.top-search__bar.data-v-68bcfcfb {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+}
+.page-body.data-v-68bcfcfb {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0.32rem 0.32rem 0.64rem;
+  position: relative;
+}
+.page-body--h5.data-v-68bcfcfb,
+.page-body--scroll.data-v-68bcfcfb {
+  flex: 1 1 auto;
+  height: 0;
+  min-height: 0;
+}
+.page-body--h5.data-v-68bcfcfb {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+.page-body--locked.data-v-68bcfcfb {
+  -webkit-overflow-scrolling: auto;
+  overflow-y: hidden;
+}
+.list-item-wrap.data-v-68bcfcfb {
+  width: 100%;
+}
+.list-item-wrap.data-v-68bcfcfb:not(:first-child) {
+  margin-top: 0.32rem;
+}
+.loading-tips.data-v-68bcfcfb {
+  color: var(--color-lightgray);
+  font-size: 0.3466666666666667rem;
+  padding: 0.32rem 0;
+  text-align: center;
+}
+.empty-state.data-v-68bcfcfb {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 28%;
+}
+.empty-state .empty-img.data-v-68bcfcfb {
+  height: 1.6rem;
+  object-fit: contain;
+  width: 1.3333333333333333rem;
+}
+.empty-state .empty-text.data-v-68bcfcfb {
+  color: var(--color-lightgray);
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  margin-top: 0.32rem;
+  text-align: center;
+}
+.footer-logo.data-v-68bcfcfb {
+  background-image: url(https://st.gtimg.com/design/aa65870c4a9bbd7ba311225f19e33525.png);
+  background-position: center 0.64rem;
+  background-repeat: no-repeat;
+  background-size: 2.4266666666666667rem 0.48rem;
+  height: 1.44rem;
+  margin-top: auto;
+  width: 100%;
+}

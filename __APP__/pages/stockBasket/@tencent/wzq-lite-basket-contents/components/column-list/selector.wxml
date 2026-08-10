@@ -1,0 +1,23 @@
+<view
+  bindtap="{{e}}"
+  catchtouchmove="{{d}}"
+  class="{{['_div','data-v-7e088345','mask-wrapper',c]}}"
+  hidden="{{!b}}"
+>
+  <view class="_div popup-wrapper data-v-7e088345">
+    <image
+      class="_img triangle triangle-up triangle-right data-v-7e088345"
+      src="https://st.gtimg.com/image/kline/arrow.png"
+    ></image>
+    <view class="_div option-wrapper data-v-7e088345">
+      <view
+        catchtap="{{item.d}}"
+        class="{{['_div','data-v-7e088345','item']}}"
+        wx:for="{{a}}"
+        wx:key="c"
+      >
+        <view class="{{['_div','data-v-7e088345',item.b]}}">{{item.a}}</view>
+      </view>
+    </view>
+  </view>
+</view>

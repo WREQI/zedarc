@@ -1,0 +1,43 @@
+<view class="_div category-content-wrapper data-v-4b40f18f">
+  <block wx:if="{{a}}">
+    <view
+      class="_div data-v-4b40f18f"
+      wx:for="{{b}}"
+      wx:for-item="view"
+      wx:key="o"
+    >
+      <view class="{{['_div','data-v-4b40f18f',view.i]}}" wx:if="{{view.a}}">
+        <view class="_div data-v-4b40f18f" wx:if="{{view.b}}">
+          <pending-subscription-stock
+            bind:__l="__l"
+            class="data-v-4b40f18f"
+            uI="{{view.c}}"
+            uP="{{view.d}}"
+            wx:if="{{view.d}}"
+          ></pending-subscription-stock>
+        </view>
+        <view class="_div data-v-4b40f18f" wx:if="{{view.e}}">
+          <stock-bond-common
+            bind:__l="__l"
+            bindshowTeachPop="{{view.f}}"
+            class="data-v-4b40f18f"
+            uI="{{view.g}}"
+            uP="{{view.h}}"
+            wx:if="{{view.h}}"
+          ></stock-bond-common>
+        </view>
+      </view>
+      <no-data-card
+        bind:__l="__l"
+        class="{{['data-v-4b40f18f',view.j]}}"
+        uI="{{view.k}}"
+        uP="{{view.l||''}}"
+        wx:else
+      ></no-data-card>
+      <view
+        class="{{['_div','separator-strip','data-v-4b40f18f',view.n]}}"
+        wx:if="{{view.m}}"
+      ></view>
+    </view>
+  </block>
+</view>

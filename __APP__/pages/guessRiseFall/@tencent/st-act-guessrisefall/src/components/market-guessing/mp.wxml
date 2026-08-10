@@ -1,0 +1,111 @@
+<view class="_div guess-market data-v-5d022990">
+  <view class="_div guess-market__body data-v-5d022990">
+    <view class="_div guess-market__top data-v-5d022990">
+      <view class="_div guess-market__bullet data-v-5d022990">
+        <bullet
+          bind:__l="__l"
+          bindbulletAnchorPoint="{{a}}"
+          class="data-v-5d022990"
+          uI="5d022990-0"
+          uP="{{b}}"
+          wx:if="{{b}}"
+        ></bullet>
+        <bullet
+          bind:__l="__l"
+          bindbulletAnchorPoint="{{c}}"
+          class="data-v-5d022990"
+          uI="5d022990-1"
+          uP="{{d}}"
+          wx:if="{{d}}"
+        ></bullet>
+      </view>
+      <view class="_div guess-market__slider data-v-5d022990">
+        <view class="_div guess-market__swiper data-v-5d022990" wx:if="{{e}}">
+          <guess-local
+            bind:__l="__l"
+            bindguessOpResult="{{f}}"
+            bindklineReady="{{h}}"
+            bindshellReady="{{g}}"
+            class="data-v-5d022990"
+            uI="5d022990-2"
+            uP="{{i}}"
+            wx:if="{{i}}"
+          ></guess-local>
+        </view>
+        <view class="_div guess-market__swiper data-v-5d022990" wx:elif="{{j}}">
+          <guess-local
+            bind:__l="__l"
+            bindguessOpResult="{{k}}"
+            bindklineReady="{{m}}"
+            bindshellReady="{{l}}"
+            class="data-v-5d022990"
+            uI="5d022990-3"
+            uP="{{n}}"
+            wx:if="{{n}}"
+          ></guess-local>
+        </view>
+        <swiper
+          bindchange="{{q}}"
+          class="guess-market__swiper data-v-5d022990"
+          current="{{p}}"
+          wx:else
+        >
+          <swiper-item class="data-v-5d022990" wx:for="{{o}}" wx:key="f">
+            <guess-local
+              bind:__l="__l"
+              bindguessOpResult="{{item.a}}"
+              bindklineReady="{{item.c}}"
+              bindshellReady="{{item.b}}"
+              class="data-v-5d022990"
+              uI="{{item.d}}"
+              uP="{{item.e}}"
+              wx:if="{{item.e}}"
+            ></guess-local>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="_div guess-market__dots data-v-5d022990">
+        <view
+          class="_div guess-market__dots-list data-v-5d022990"
+          wx:if="{{r}}"
+        >
+          <view
+            class="{{['_div','data-v-5d022990','guess-market__dot',item.b]}}"
+            wx:for="{{s}}"
+            wx:key="a"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view class="_div guess-market__bottom data-v-5d022990">
+      <view class="_div guess-market__info data-v-5d022990">
+        <view class="_div guess-market__remind data-v-5d022990">
+          <view class="_div guess-market__remind-tip data-v-5d022990">
+            <view class="_div guess-market__remind-title data-v-5d022990"
+              >周期内连续猜对可获得大礼包</view
+            >
+          </view>
+        </view>
+        <view class="_div guess-market__schedule data-v-5d022990">
+          <clock
+            bind:__l="__l"
+            class="data-v-5d022990"
+            uI="5d022990-5"
+            uP="{{t}}"
+            wx:if="{{t}}"
+          ></clock>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtap="{{w}}"
+      class="_div guess-market__back-link data-v-5d022990"
+      wx:if="{{v}}"
+    >
+      <view class="_div guess-market__back-text data-v-5d022990"
+        >前往活动主页</view
+      >
+      <view class="_div guess-market__back-arrow data-v-5d022990"></view>
+    </view>
+  </view>
+</view>

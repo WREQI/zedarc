@@ -1,0 +1,21 @@
+<view class="_div mp-bubble-container data-v-065f0fd0" wx:if="{{a}}">
+  <view class="_div bubble-main data-v-065f0fd0" style="{{e}}">
+    <view class="_div bubble-content data-v-065f0fd0">
+      <view class="_div bubble-text data-v-065f0fd0">
+        <view class="_div text-line data-v-065f0fd0"
+          >点击此处添加到"我的小程序"，方便随时找回</view
+        >
+      </view>
+      <view bindtap="{{b}}" class="_div bubble-close data-v-065f0fd0">
+        <view class="_div close-icon data-v-065f0fd0">
+          <view class="_div close-line close-line-1 data-v-065f0fd0"></view>
+          <view class="_div close-line close-line-2 data-v-065f0fd0"></view>
+        </view>
+      </view>
+    </view>
+    <view
+      class="{{['_div','bubble-arrow','data-v-065f0fd0',c]}}"
+      style="{{'right:'+d}}"
+    ></view>
+  </view>
+</view>

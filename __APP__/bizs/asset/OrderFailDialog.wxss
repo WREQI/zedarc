@@ -1,0 +1,15 @@
+@import "/app.wxss";
+.tel-btn {
+  color: var(--color-primary-1);
+  text-decoration: none;
+}
+.explain-figure,
+.explain-text {
+  color: var(--text-color-3);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  text-align: left;
+}
+.explain-figure {
+  margin-top: 0.16rem;
+}

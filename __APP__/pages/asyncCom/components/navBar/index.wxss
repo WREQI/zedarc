@@ -1,0 +1,14 @@
+::-webkit-scrollbar {
+  display: none;
+}
+.nav-placeholder {
+  height: 1.3066666666666666rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.navbar-wrapper {
+  bottom: 0;
+  left: 0;
+  position: relative;
+  right: 0;
+  width: 100vw;
+}

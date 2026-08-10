@@ -1,0 +1,279 @@
+.etf-buy-index-entry.data-v-2ebfee07 {
+  background-color: var(--fill-content-layer);
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  min-height: 4.746666666666667rem;
+  padding: 0.4266666666666667rem 0.32rem 0.32rem;
+  position: relative;
+  width: 100%;
+}
+.etf-buy-index-entry--pro.data-v-2ebfee07 {
+  border-radius: 0;
+  padding: 0.21333333333333335rem 0.4rem 0.32rem;
+}
+.etf-buy-index-entry--pro .etf-buy-index-entry__highlights.data-v-2ebfee07 {
+  background-color: var(--fill-content-layer);
+  border: 0.013333333333333334rem solid var(--border-heavy-divider);
+  border-bottom: 0;
+  border-radius: 0.10666666666666667rem 0.10666666666666667rem 0 0;
+  box-sizing: border-box;
+  margin-top: 0.32rem;
+  padding: 0.32rem;
+}
+[data-st-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlight-row.data-v-2ebfee07,
+[data-st-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlights.data-v-2ebfee07,
+[data-st-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlight-row.data-v-2ebfee07,
+[data-st-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlights.data-v-2ebfee07,
+[data-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlight-row.data-v-2ebfee07,
+[data-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlights.data-v-2ebfee07,
+[data-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlight-row.data-v-2ebfee07,
+[data-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__highlights.data-v-2ebfee07 {
+  background-color: #171d28;
+}
+.etf-buy-index-entry--pro .etf-buy-index-entry__fund-row.data-v-2ebfee07 {
+  background-color: var(--fill-content-layer);
+  border: 0.013333333333333334rem solid var(--border-heavy-divider);
+  border-radius: 0 0 0.10666666666666667rem 0.10666666666666667rem;
+  border-top: 0;
+  box-shadow: 0 0.10666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  margin-top: 0;
+  padding: 0.32rem;
+}
+[data-st-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__fund-row.data-v-2ebfee07,
+[data-st-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__fund-row.data-v-2ebfee07,
+[data-theme="black"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__fund-row.data-v-2ebfee07,
+[data-theme="dark"]
+  .etf-buy-index-entry--pro
+  .etf-buy-index-entry__fund-row.data-v-2ebfee07 {
+  background-color: #171d28;
+}
+.etf-buy-index-entry__header.data-v-2ebfee07 {
+  justify-content: space-between;
+  width: 100%;
+}
+.etf-buy-index-entry__header-row.data-v-2ebfee07,
+.etf-buy-index-entry__header.data-v-2ebfee07 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  min-height: 0.5066666666666667rem;
+}
+.etf-buy-index-entry__title + .etf-buy-index-entry__desc.data-v-2ebfee07 {
+  margin-left: 0.21333333333333335rem;
+}
+.etf-buy-index-entry__title.data-v-2ebfee07 {
+  flex-shrink: 0;
+  height: 0.5066666666666667rem;
+  width: 1.36rem;
+}
+.etf-buy-index-entry__title-img.data-v-2ebfee07 {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.etf-buy-index-entry__desc.data-v-2ebfee07 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__arrow.data-v-2ebfee07 {
+  background: url(https://st.gtimg.com/design/5c8d3517ec1225898294d85de0281be8.png)
+    no-repeat 0;
+  background-size: contain;
+  flex-shrink: 0;
+  height: 0.32rem;
+  width: 0.21333333333333335rem;
+}
+.etf-buy-index-entry--lite .etf-buy-index-entry__arrow.data-v-2ebfee07 {
+  background-image: url(https://st.gtimg.com/design/4db798796fdbac98c20c441114fc2133.png);
+  height: 0.26666666666666666rem;
+  width: 0.17333333333333334rem;
+}
+.etf-buy-index-entry__highlights.data-v-2ebfee07 {
+  background-color: var(--fill-background);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.32rem;
+  min-height: 1.6533333333333333rem;
+  padding: 0.21333333333333335rem;
+  width: 100%;
+}
+.etf-buy-index-entry__highlight-row
+  + .etf-buy-index-entry__highlight-row.data-v-2ebfee07 {
+  margin-top: 0.16rem;
+}
+.etf-buy-index-entry__highlight-row.data-v-2ebfee07 {
+  min-height: 0.5333333333333333rem;
+}
+.etf-buy-index-entry__highlight-line.data-v-2ebfee07 {
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  display: -webkit-box;
+  line-height: 0.5333333333333333rem;
+  overflow: hidden;
+  padding-left: 0.013333333333333334rem;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.etf-buy-index-entry__badge.data-v-2ebfee07 {
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.05333333333333334rem;
+  color: #e63535;
+  display: inline;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  margin-right: 0.10666666666666667rem;
+  padding: 0.013333333333333334rem 0.10666666666666667rem;
+  text-align: left;
+  vertical-align: 0.04rem;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__highlight-text.data-v-2ebfee07 {
+  color: var(--color-heavygray);
+  display: inline;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  text-align: left;
+}
+.etf-buy-index-entry__fund-row.data-v-2ebfee07 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.32rem;
+  min-height: 1.0933333333333333rem;
+  width: 100%;
+}
+.etf-buy-index-entry__fund-info.data-v-2ebfee07 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.etf-buy-index-entry__fund-name
+  + .etf-buy-index-entry__fund-meta.data-v-2ebfee07 {
+  margin-top: 0.05333333333333334rem;
+}
+.etf-buy-index-entry__fund-name.data-v-2ebfee07 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-meta.data-v-2ebfee07 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  min-height: 0.4533333333333333rem;
+}
+.etf-buy-index-entry__fund-code.data-v-2ebfee07 {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-tag-wrap.data-v-2ebfee07 {
+  flex-shrink: 0;
+  line-height: 0.37333333333333335rem;
+  margin-left: 0.10666666666666667rem;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-tag.data-v-2ebfee07 {
+  border: 0.013333333333333334rem solid rgba(230, 53, 53, 0.4);
+  border-radius: 0.05333333333333334rem;
+  color: #e63535;
+  display: inline;
+  font-size: 0.26666666666666666rem;
+  font-weight: 400;
+  padding: 0.013333333333333334rem 0.10666666666666667rem;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-change.data-v-2ebfee07,
+.etf-buy-index-entry__fund-min-buy.data-v-2ebfee07 {
+  align-items: flex-end;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-left: 0.21333333333333335rem;
+  min-height: 1.0933333333333333rem;
+}
+.etf-buy-index-entry__fund-change
+  + .etf-buy-index-entry__fund-min-buy.data-v-2ebfee07 {
+  margin-left: 0.8533333333333334rem;
+}
+.etf-buy-index-entry__fund-rise.data-v-2ebfee07 {
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: right;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-rise--rise.data-v-2ebfee07 {
+  color: var(--color-red);
+}
+.etf-buy-index-entry__fund-rise--drop.data-v-2ebfee07 {
+  color: var(--color-green);
+}
+.etf-buy-index-entry__fund-rise--equal.data-v-2ebfee07 {
+  color: var(--color-ping);
+}
+.etf-buy-index-entry__fund-price.data-v-2ebfee07 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5866666666666667rem;
+  text-align: right;
+  white-space: nowrap;
+}
+.etf-buy-index-entry__fund-change-label.data-v-2ebfee07,
+.etf-buy-index-entry__fund-min-buy-label.data-v-2ebfee07 {
+  color: var(--color-lightgray);
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  margin-top: 0.02666666666666667rem;
+  text-align: right;
+  white-space: nowrap;
+}

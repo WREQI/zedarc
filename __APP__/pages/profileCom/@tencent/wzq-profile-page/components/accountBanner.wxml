@@ -1,0 +1,41 @@
+<view class="_div account-banner data-v-ad14338a">
+  <block wx:if="{{a}}">
+    <view
+      bindtap="{{i}}"
+      class="{{['_div','data-v-ad14338a','broker-content-wrapper',h]}}"
+      wx:if="{{b}}"
+    >
+      <view class="_div header data-v-ad14338a">
+        <view class="_div title data-v-ad14338a">券商账户</view>
+        <view class="_div normal-mode-wrapper data-v-ad14338a" wx:if="{{c}}">
+          <view bindtap="{{d}}" class="_div login-btn btn data-v-ad14338a"
+            >登录</view
+          >
+          <view bindtap="{{e}}" class="_div apply-btn btn data-v-ad14338a"
+            >开户</view
+          >
+        </view>
+        <view class="_div message-mode-wrapper data-v-ad14338a" wx:else
+          >{{f}}<view class="_div right-arrow-icon-bg data-v-ad14338a"></view>
+        </view>
+      </view>
+      <view class="_div content data-v-ad14338a">
+        <rich-text class="data-v-ad14338a" nodes="{{g}}"></rich-text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <slot wx:if="{{j}}"></slot>
+  </block>
+  <view bindtap="{{o}}" class="_div mock-trade-wrapper data-v-ad14338a">
+    <view class="_div mock-trade-title data-v-ad14338a">模拟炒股账户</view>
+    <view class="_div right-content data-v-ad14338a" wx:if="{{k}}">
+      <view class="_div right-content data-v-ad14338a" wx:if="{{l}}">
+        <label class="_span data-v-ad14338a">领取100万模拟资金</label>
+        <view class="_div redbag-icon data-v-ad14338a"></view>
+      </view>
+      <label class="_span num data-v-ad14338a" wx:elif="{{m}}">{{n}}</label>
+      <view class="_div right-arrow-icon-bg data-v-ad14338a"></view>
+    </view>
+  </view>
+</view>

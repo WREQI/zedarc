@@ -1,0 +1,22 @@
+<view class="{{['_div','chart-skeleton','data-v-ac232e53',c]}}">
+  <image
+    alt=""
+    class="_img data-v-ac232e53"
+    hidden="{{!false}}"
+    src="https://st.gtimg.com/image/mp-broker/trade/half-close.png"
+  ></image>
+  <view class="_div header flex-between data-v-ac232e53">
+    <view class="_div header-title data-v-ac232e53">{{a}}</view>
+    <view bindtap="{{b}}" class="_div close-bg data-v-ac232e53"></view>
+  </view>
+  <view class="_div chart-placeholder data-v-ac232e53"></view>
+  <view class="_div action-bar flex-between data-v-ac232e53">
+    <view class="_div action-item data-v-ac232e53"></view>
+    <view class="_div action-item data-v-ac232e53"></view>
+    <view class="_div action-item data-v-ac232e53"></view>
+  </view>
+  <view class="_div footer data-v-ac232e53">
+    <view class="_div footer-row data-v-ac232e53"></view>
+    <view class="_div footer-row footer-row--short data-v-ac232e53"></view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+<view
+  class="{{['st-status','^st-status','flex-center','data-v-8c69a4c8',l&&'simple']}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="st-status__loading ^st-status__loading flex-center data-v-8c69a4c8"
+    wx:if="{{b}}"
+  >
+    <view
+      class="st-status__dot st-status__dot-1 ^st-status__dot ^st-status__dot-1 data-v-8c69a4c8"
+    ></view>
+    <view
+      class="st-status__dot st-status__dot-2 ^st-status__dot ^st-status__dot-2 data-v-8c69a4c8"
+    ></view>
+    <view
+      class="st-status__dot st-status__dot-3 ^st-status__dot ^st-status__dot-3 data-v-8c69a4c8"
+    ></view>
+  </view>
+  <view
+    class="st-status__error ^st-status__error flex-center data-v-8c69a4c8"
+    wx:if="{{c}}"
+  >
+    <image
+      class="st-status__error-img ^st-status__error-img data-v-8c69a4c8"
+      src="{{e}}"
+      wx:if="{{d}}"
+    ></image>
+    <view
+      class="st-status__error-tips ^st-status__error-tips data-v-8c69a4c8"
+      wx:if="{{f}}"
+      >{{g}}</view
+    >
+    <view
+      catchtap="{{k}}"
+      class="{{['st-status__error-action-btn','^st-status__error-action-btn','flex-center','data-v-8c69a4c8',j&&'simple']}}"
+      wx:if="{{h}}"
+      >{{i}}</view
+    >
+  </view>
+</view>

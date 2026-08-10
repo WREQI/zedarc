@@ -1,0 +1,38 @@
+<view class="{{['_div','data-v-7c022e34','mins-bar',o]}}">
+  <block wx:if="{{a}}">
+    <view class="_div auction-time data-v-7c022e34">{{b}}</view>
+    <view class="_div auction-text-main-p data-v-7c022e34"
+      >价<label class="_span auction-text-right data-v-7c022e34">竞</label>
+    </view>
+    <view class="_div auction-price-count data-v-7c022e34">{{c}}</view>
+    <view class="_div auction-zdf data-v-7c022e34"
+      >幅<label class="{{['_span','data-v-7c022e34','auction-zdf-count',e]}}"
+        >{{d}}</label
+      >
+    </view>
+    <view class="_div auction-text-main-l data-v-7c022e34"
+      >量<label class="_span auction-text-right data-v-7c022e34">匹配</label>
+    </view>
+    <view class="_div auction-price-count data-v-7c022e34">{{f}}</view>
+    <view class="_div auction-text-main-l data-v-7c022e34"
+      >量<label class="_span auction-text-right data-v-7c022e34">未配</label>
+    </view>
+    <view class="_div auction-price-count data-v-7c022e34">{{g}}</view>
+  </block>
+  <block wx:else>
+    <view class="_div block data-v-7c022e34">{{h}}</view>
+    <view class="_div block data-v-7c022e34"
+      >价<label class="_span content data-v-7c022e34">{{i}}</label>
+    </view>
+    <view class="_div block data-v-7c022e34"
+      >幅<label class="{{['_span','content','data-v-7c022e34',k]}}"
+        >{{j}}</label
+      >
+    </view>
+    <view class="_div block data-v-7c022e34" wx:if="{{l}}"
+      >溢折率<label class="{{['_span','content','data-v-7c022e34',n]}}"
+        >{{m}}</label
+      >
+    </view>
+  </block>
+</view>

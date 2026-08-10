@@ -1,0 +1,12 @@
+<view class="transfer-out-progress data-v-dfa0c547">
+  <view
+    class="{{['state-item','data-v-dfa0c547',item.f&&'current',item.g&&'last']}}"
+    wx:for="{{a}}"
+    wx:key="e"
+  >
+    <label class="text data-v-dfa0c547">{{item.a}}：¥{{item.b}}</label>
+    <label class="text date data-v-dfa0c547" wx:if="{{item.c}}"
+      >{{item.d}}到账</label
+    >
+  </view>
+</view>

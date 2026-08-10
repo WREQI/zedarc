@@ -1,0 +1,36 @@
+<view
+  bindtap="{{e}}"
+  class="_div wx-claw-unbind-dialog data-v-aff87c03"
+  wx:if="{{a}}"
+>
+  <view class="_div wx-claw-unbind-dialog__mask data-v-aff87c03"></view>
+  <view
+    catchtap="{{d}}"
+    class="_div wx-claw-unbind-dialog__panel data-v-aff87c03"
+  >
+    <view class="_div wx-claw-unbind-dialog__content data-v-aff87c03">
+      <view class="_div wx-claw-unbind-dialog__title data-v-aff87c03"
+        >是否解除绑定</view
+      >
+      <view class="_div wx-claw-unbind-dialog__desc data-v-aff87c03"
+        >解除绑定后，将无法通过微信ClawBot与问元宝聊天</view
+      >
+    </view>
+    <view class="_div wx-claw-unbind-dialog__actions data-v-aff87c03">
+      <button
+        bindtap="{{b}}"
+        class="wx-claw-unbind-dialog__btn wx-claw-unbind-dialog__btn--cancel data-v-aff87c03"
+        type="button"
+      >
+        取消
+      </button>
+      <button
+        bindtap="{{c}}"
+        class="wx-claw-unbind-dialog__btn wx-claw-unbind-dialog__btn--confirm data-v-aff87c03"
+        type="button"
+      >
+        解除绑定
+      </button>
+    </view>
+  </view>
+</view>

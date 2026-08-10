@@ -1,0 +1,18 @@
+<text bindtap="{{f}}" class="{{['data-v-fd14b889',d]}}" style="{{e}}">
+  <text class="data-v-fd14b889" wx:if="{{a}}">{{b}}</text>
+  <text
+    class="streaming-text-color-segment data-v-fd14b889"
+    wx:for="{{c}}"
+    wx:for-item="segment"
+    wx:key="c"
+  >
+    <text
+      bindtransitionend="{{part.c}}"
+      class="{{['streaming-text-color-char','data-v-fd14b889',segment.b&&'streaming-text-color-char--done']}}"
+      wx:for="{{segment.a}}"
+      wx:for-item="part"
+      wx:key="b"
+      >{{part.a}}</text
+    >
+  </text>
+</text>

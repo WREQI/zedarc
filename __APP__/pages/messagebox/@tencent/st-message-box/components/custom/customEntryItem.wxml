@@ -1,0 +1,36 @@
+<view bindtap="{{j}}" class="_div message-custom-entry-item data-v-9be4f5ff">
+  <view class="_div message-custom-item-left data-v-9be4f5ff">
+    <view
+      class="{{['_div','message-custom-item-icon-con','data-v-9be4f5ff',d]}}"
+    >
+      <red-point-num
+        bind:__l="__l"
+        class="data-v-9be4f5ff"
+        uI="9be4f5ff-0"
+        uP="{{a}}"
+        wx:if="{{a}}"
+      ></red-point-num>
+      <image
+        alt=""
+        class="{{['_img','message-custom-item-icon','data-v-9be4f5ff',c]}}"
+        src="{{b}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div message-custom-item-right data-v-9be4f5ff">
+    <view class="_div message-custom-item-right-top data-v-9be4f5ff">
+      <view class="_div message-custom-item-right-title data-v-9be4f5ff"
+        >{{e}}</view
+      >
+      <view
+        class="_div message-custom-item-right-time data-v-9be4f5ff"
+        wx:if="{{f}}"
+        >{{g}}</view
+      >
+    </view>
+    <view
+      class="{{['_div','message-custom-item-right-bot','data-v-9be4f5ff',i]}}"
+      >{{h}}</view
+    >
+  </view>
+</view>

@@ -1,0 +1,88 @@
+.hg-page-wrapper.data-v-c67bdaac {
+  min-height: calc(100vh - 2.2rem);
+}
+.hg-wrapper.data-v-c67bdaac {
+  border-radius: 0.21333333333333335rem;
+  margin: 0;
+  padding: 0;
+}
+.hg-wrapper .list-container.data-v-c67bdaac {
+  border-radius: 0 0 0.21333333333333335rem 0.21333333333333335rem;
+  overflow: hidden;
+  position: relative;
+}
+.hg-wrapper.data-v-c67bdaac::-webkit-scrollbar {
+  display: none;
+}
+.loading-warapper.data-v-c67bdaac {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.hg-title-container.data-v-c67bdaac {
+  background-color: #f5f6fa;
+  height: 1.2933333333333332rem;
+  position: fixed;
+  z-index: 1;
+}
+.hg-title-container .gray-line.data-v-c67bdaac {
+  height: 0.32rem;
+}
+.hg-title-container .hg-title-box.data-v-c67bdaac {
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  overflow: hidden;
+  width: calc(100vw - 0.64rem);
+}
+.hg-title.data-v-c67bdaac {
+  border-radius: 0.21333333333333335rem 0.21333333333333335rem 0 0;
+  color: var(--color-lightgray);
+  flex-direction: row;
+  font-size: 0.32rem;
+  justify-content: space-between;
+  line-height: 0.4533333333333333rem;
+  padding: 0.32rem 0.4rem 0.21333333333333335rem;
+  pointer-events: none;
+  top: 0;
+  z-index: 2;
+}
+.hg-list.data-v-c67bdaac,
+.hg-title.data-v-c67bdaac {
+  background: var(--fill-content-layer);
+  display: -webkit-flex;
+  display: flex;
+  width: 12rem;
+}
+.hg-list.data-v-c67bdaac {
+  flex-direction: column;
+  padding: 1.44rem 0.4rem 0;
+}
+.hg-list .list-item.data-v-c67bdaac {
+  color: var(--color-heavygray);
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.37333333333333335rem;
+  justify-content: space-between;
+  line-height: 0.5333333333333333rem;
+  padding-bottom: 0.4266666666666667rem;
+}
+.list-left.data-v-c67bdaac,
+.title-left.data-v-c67bdaac {
+  width: 20%;
+}
+.list-second.data-v-c67bdaac,
+.title-second.data-v-c67bdaac {
+  text-align: right;
+  width: 10%;
+}
+.list-mid.data-v-c67bdaac,
+.title-mid.data-v-c67bdaac {
+  text-align: right;
+  width: 19%;
+}
+.list-right.data-v-c67bdaac,
+.title-right.data-v-c67bdaac {
+  text-align: right;
+  width: 13%;
+}

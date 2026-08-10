@@ -1,0 +1,73 @@
+@import "/app.wxss";
+.auto-order-entry.data-v-e78bb8a2 {
+  box-sizing: border-box;
+  height: 1.28rem;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.auto-order-entry.simple.data-v-e78bb8a2 {
+  height: 1.386667rem;
+  padding: 0 0.32rem;
+}
+.auto-order-entry.border--top.data-v-e78bb8a2 {
+  border-top: none;
+}
+.auto-order-entry.border--top.data-v-e78bb8a2:before {
+  left: 0.4rem;
+  transform: scale(0.315) translateZ(0);
+  width: calc(300% - 0.8rem);
+}
+.auto-order-entry .left .order-icon.data-v-e78bb8a2 {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 0.48rem;
+  margin-right: 0.213333rem;
+  width: 0.48rem;
+}
+.auto-order-entry .left .order-icon.setted.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/b002c66d7421d088199c898492057fe8.svg);
+}
+.auto-order-entry .left .order-icon.setted.simple.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/aef68d63f9eb25cc3ef73153216aebeb.svg);
+}
+[data-theme="dark"] .auto-order-entry .left .order-icon.setted.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/52f35172b2c4efa30a3b3152e0c1765a.svg);
+}
+.auto-order-entry .left .order-icon.unset.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/c960d76fa05e6110dab00487cc256014.svg);
+}
+.auto-order-entry .left .order-icon.unset.simple.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/575d2a2c213dc8ef83f7fd558f047ec2.svg);
+}
+[data-theme="dark"] .auto-order-entry .left .order-icon.unset.data-v-e78bb8a2 {
+  background-image: url(https://st.gtimg.com/design/f66392e308d33db5a8f4d3bdcf8566d8.svg);
+}
+.auto-order-entry .left .order-text.data-v-e78bb8a2 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+}
+.auto-order-entry .right .action-btn.data-v-e78bb8a2 {
+  background: var(--color-primary);
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.32rem;
+  font-weight: 600;
+  line-height: 0.64rem;
+  padding: 0.026667rem 0.213333rem 0;
+  text-align: center;
+}
+.auto-order-entry .right .action-text.data-v-e78bb8a2 {
+  color: #576b95;
+  font-size: 0.373333rem;
+  font-weight: 500;
+  line-height: 0.453333rem;
+}
+.auto-order-entry .right .right-arrow.data-v-e78bb8a2 {
+  font-size: 0.373333rem;
+  font-weight: 500 !important;
+}
+.auto-order-entry .right .right-arrow.data-v-e78bb8a2:before {
+  color: #576b95;
+  font-weight: 500;
+}

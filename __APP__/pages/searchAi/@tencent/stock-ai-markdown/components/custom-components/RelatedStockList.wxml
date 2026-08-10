@@ -1,0 +1,54 @@
+<view class="_div related-stock-container data-v-fdc69a82" wx:if="{{a}}">
+  <view class="_div related-stock-container-title data-v-fdc69a82"
+    >相关行情</view
+  >
+  <view class="_div related-stock data-v-fdc69a82">
+    <view class="_div related-stock__header data-v-fdc69a82">
+      <label class="_span related-stock__label data-v-fdc69a82">股票</label>
+      <label
+        class="_span related-stock__label related-stock__label--right data-v-fdc69a82"
+        >近一月涨跌幅</label
+      >
+    </view>
+    <view
+      bindtap="{{item.j}}"
+      class="_div related-stock__item data-v-fdc69a82"
+      wx:for="{{b}}"
+      wx:key="i"
+    >
+      <view class="_div related-stock__info data-v-fdc69a82">
+        <image
+          alt=""
+          class="_img related-stock__market-icon data-v-fdc69a82"
+          src="{{item.a}}"
+        ></image>
+        <label class="_span related-stock__name data-v-fdc69a82"
+          >{{item.b}}</label
+        >
+      </view>
+      <view class="_div related-stock__right data-v-fdc69a82">
+        <label
+          class="{{['_span','data-v-fdc69a82','related-stock__change',item.d]}}"
+          >{{item.c}}</label
+        >
+        <view
+          catchtap="{{item.h}}"
+          class="_div related-stock__favorite data-v-fdc69a82"
+        >
+          <image
+            alt=""
+            class="_img related-stock__heart-icon data-v-fdc69a82"
+            src="{{item.f}}"
+            wx:if="{{item.e}}"
+          ></image>
+          <image
+            alt=""
+            class="_img related-stock__heart-icon data-v-fdc69a82"
+            src="{{item.g}}"
+            wx:else
+          ></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

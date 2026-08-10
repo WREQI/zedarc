@@ -1,0 +1,98 @@
+<page-meta class="data-v-72c4633e" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-72c4633e"
+  id="global-wrap"
+  uI="72c4633e-0"
+  uP="{{q}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{q}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-72c4633e"
+    uI="72c4633e-1,72c4633e-0"
+    uS="{{['d']}}"
+  >
+    <view class="page-apply-questionnaire data-v-72c4633e">
+      <progress-bar
+        bind:__l="__l"
+        class="data-v-72c4633e"
+        uI="72c4633e-2,72c4633e-1"
+        uP="{{c}}"
+        wx:if="{{b}}"
+      ></progress-bar>
+      <view class="top-tips data-v-72c4633e">{{d}}</view>
+      <block wx:if="{{e}}">
+        <view class="content-wrap data-v-72c4633e">
+          <view
+            class="data-v-72c4633e"
+            wx:for="{{f}}"
+            wx:for-item="quesItem"
+            wx:key="e"
+          >
+            <view class="question-item-wrap data-v-72c4633e">
+              <view class="question-item data-v-72c4633e"
+                >{{quesItem.a}}.{{quesItem.b}}</view
+              >
+              <radio-group
+                bindchange="{{quesItem.d}}"
+                class="question-answer-container data-v-72c4633e"
+              >
+                <label
+                  class="answer-item data-v-72c4633e"
+                  wx:for="{{quesItem.c}}"
+                  wx:for-item="answer"
+                  wx:key="d"
+                >
+                  <radio
+                    checked="{{answer.b}}"
+                    class="data-v-72c4633e"
+                    color="#3077ec"
+                    value="{{answer.a}}"
+                  ></radio>
+                  <view class="answer-content data-v-72c4633e"
+                    >{{answer.c}}</view
+                  >
+                </label>
+              </radio-group>
+            </view>
+            <view class="bottom-line data-v-72c4633e"></view>
+          </view>
+        </view>
+        <checkbox-group
+          bindchange="{{k}}"
+          class="protocol-container data-v-72c4633e"
+          wx:if="{{g}}"
+        >
+          <checkbox
+            checked="{{h}}"
+            class="protocol-checkbox data-v-72c4633e"
+          ></checkbox>
+          <view bindtap="{{j}}" class="data-v-72c4633e">{{i}}</view>
+        </checkbox-group>
+        <view class="submit-container data-v-72c4633e">
+          <button
+            borderRadius
+            bindtap="{{n}}"
+            class="data-v-72c4633e"
+            data-stat="trade.apply.questtionnaire.next"
+            disabled="{{m}}"
+            type="primary"
+          >
+            {{l}}
+          </button>
+        </view>
+      </block>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-72c4633e"
+        id="mp-dialog"
+        uI="72c4633e-3,72c4633e-1"
+        uP="{{o}}"
+        wx:if="{{o}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

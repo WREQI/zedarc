@@ -1,0 +1,34 @@
+<view class="trade-detail-container">
+  <view class="flex-between base-info border--bottom">
+    <view class="flex-center">
+      <label class="text-color-1 fs-32">{{a}}</label>
+      <label class="text-color-4 fs-24">{{b}}{{c}}</label>
+    </view>
+  </view>
+  <view class="steps-wraper border--bottom">
+    <st-steps
+      bind:__l="__l"
+      uI="4d60489a-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></st-steps>
+  </view>
+  <view class="section section-detail">
+    <view class="detail-order-num flex">
+      <view class="{{['left','flex-1','flex-column-between',g]}}">
+        <view class="price flex-between">
+          <label class="title text-color-4 fs-24">委托单价</label>
+          <label class="value text-color-1 fs-28">{{e}}</label>
+        </view>
+        <view class="amount flex-between">
+          <label class="title text-color-4 fs-24">委托数量</label>
+          <label class="value text-color-1 fs-28">{{f}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="detail-total flex-between border--top" wx:if="{{h}}">
+      <label class="title text-color-1 fs-30">申购金额</label>
+      <label class="value text-color-1">{{i}}</label>
+    </view>
+  </view>
+</view>

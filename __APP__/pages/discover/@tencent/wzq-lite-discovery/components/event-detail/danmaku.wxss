@@ -1,0 +1,70 @@
+.danmaku-container.data-v-4fe1995c {
+  background-color: initial;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 0.32rem;
+  height: 1.6rem;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.5s;
+  width: 100%;
+}
+.danmaku.data-v-4fe1995c {
+  animation: scroll linear infinite;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.danmaku .line-0.data-v-4fe1995c,
+.danmaku .line-1.data-v-4fe1995c {
+  display: -webkit-flex;
+  display: flex;
+  height: 0.64rem;
+}
+.danmaku .line-1.data-v-4fe1995c {
+  margin-left: 0;
+  margin-top: 0.32rem;
+}
+.headerMargin.data-v-4fe1995c {
+  margin-left: 2.4rem;
+}
+.danmaku-item.data-v-4fe1995c {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.7333333333333333rem;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.5066666666666667rem;
+  margin: 0 0.32rem 0 0;
+  padding: 0.06666666666666667rem 0.26666666666666666rem;
+}
+.danmaku-item .header.data-v-4fe1995c {
+  border-radius: 0.10666666666666667rem;
+  margin-right: 0.10666666666666667rem;
+  overflow: hidden;
+  position: relative;
+}
+.danmaku-item .header .avatar.data-v-4fe1995c,
+.danmaku-item .header .cover.data-v-4fe1995c,
+.danmaku-item .header.data-v-4fe1995c {
+  height: 0.4266666666666667rem;
+  width: 0.4266666666666667rem;
+}
+.danmaku-item .header .cover.data-v-4fe1995c {
+  background: rgba(0, 0, 0, 0.1);
+  border: 0.02666666666666667rem solid #0000001a;
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.danmaku-item .danmaku-content.data-v-4fe1995c {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 0.32rem;
+}
+.danmaku-item .like-num.data-v-4fe1995c {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 0.32rem;
+  margin-left: 0.10666666666666667rem;
+}

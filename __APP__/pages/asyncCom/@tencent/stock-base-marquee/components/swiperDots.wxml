@@ -1,0 +1,9 @@
+<view class="_div swiper-dots-wrapper data-v-a64b43ff">
+  <view class="_div swiper-content data-v-a64b43ff">
+    <view
+      class="{{['_div','dot','data-v-a64b43ff',item.b]}}"
+      wx:for="{{a}}"
+      wx:key="a"
+    ></view>
+  </view>
+</view>

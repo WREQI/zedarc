@@ -1,0 +1,56 @@
+<view class="_div data-v-29f20308" wx:if="{{a}}">
+  <view
+    catchtap="{{v}}"
+    class="{{['_div','stock-chart-panel','data-v-29f20308',t&&'skin-black']}}"
+    wx:if="{{b}}"
+  >
+    <view class="_div header-wrapper data-v-29f20308">
+      <view class="_div top-section data-v-29f20308">
+        <label class="_span left-wrapper data-v-29f20308">{{c}}</label>
+        <label class="_span right-wrapper data-v-29f20308">{{d}}</label>
+      </view>
+      <view class="_div bottom-section data-v-29f20308">
+        <view class="_div price-section data-v-29f20308">
+          <label class="{{['_span','number','data-v-29f20308',f]}}"
+            >{{e}}</label
+          >
+          <label class="{{['_span','number','data-v-29f20308',h]}}"
+            >{{g}}</label
+          >
+          <label class="{{['_span','number','data-v-29f20308',j]}}"
+            >{{i}}%</label
+          >
+        </view>
+        <label class="_span us-market-time data-v-29f20308" wx:if="{{k}}"
+          >美东时间</label
+        >
+      </view>
+    </view>
+    <view
+      class="_div chart-wrapper data-v-29f20308"
+      style="{{'min-height:'+o+';'+'margin-left:'+p}}"
+    >
+      <composition
+        bind:__l="__l"
+        class="r data-v-29f20308"
+        uI="29f20308-0"
+        uP="{{n}}"
+        uR="composition"
+        wx:if="{{l}}"
+      ></composition>
+    </view>
+    <view class="_div divider data-v-29f20308"></view>
+    <view class="_div footer-section data-v-29f20308">
+      <view catchtap="{{s}}" class="_div to-detail-label data-v-29f20308">
+        <view class="_div mock-trade-icon data-v-29f20308" wx:if="{{q}}"></view>
+        <label class="_span data-v-29f20308">{{r}}</label>
+        <image
+          alt=""
+          class="_img to-detail-arrow data-v-29f20308"
+          src="https://st.gtimg.com/design/f19953b5d288fa3371c53a4fe19ca2c2.png"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="_div loading-placeholder data-v-29f20308" wx:else></view>

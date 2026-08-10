@@ -1,0 +1,28 @@
+<view class="{{['_div','data-v-bbdd3121','footer-container',l,m]}}">
+  <view class="_div occupying data-v-bbdd3121" wx:if="{{a}}"></view>
+  <view class="_div no-data-box data-v-bbdd3121" wx:if="{{b}}">
+    <view class="_div no-data-icon data-v-bbdd3121"></view>
+    <view class="_div data-v-bbdd3121"
+      >没有想要的结果？试试<label
+        bindtap="{{c}}"
+        class="_span ask-ai data-v-bbdd3121"
+        >问元宝</label
+      >
+      <image
+        alt=""
+        bindtap="{{e}}"
+        class="_img ai-img data-v-bbdd3121"
+        src="{{d}}"
+      ></image>
+    </view>
+  </view>
+  <view class="_div content-center data-v-bbdd3121">
+    <view class="_div footer-tip data-v-bbdd3121" wx:if="{{f}}">{{g}}</view>
+    <view catchtap="{{j}}" class="_div arrow-box data-v-bbdd3121" wx:if="{{h}}"
+      >去看大盘，发现更多热门{{i}}<view
+        class="_div more-arrow data-v-bbdd3121"
+      ></view>
+    </view>
+    <view class="_div zxg-logo data-v-bbdd3121" wx:if="{{k}}"></view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view catchtap="{{k}}" class="_div data-v-3c204082" id="{{j}}" wx:if="{{a}}">
+  <vote-main
+    bind:__l="__l"
+    bindpickVote="{{h}}"
+    bindupdateList="{{g}}"
+    class="data-v-3c204082"
+    uI="3c204082-0"
+    uP="{{i}}"
+    uS="{{['votedesc']}}"
+    wx:if="{{i}}"
+  >
+    <view class="_div background-container data-v-3c204082" slot="votedesc">
+      <view class="_div subject-desc data-v-3c204082">{{b}}</view>
+      <view class="_div data-v-3c204082">
+        <view
+          catchtap="{{e}}"
+          class="_div thumbnail-container data-v-3c204082"
+          wx:if="{{c}}"
+        >
+          <image
+            class="_img post-thumbnail data-v-3c204082"
+            mode="aspectFill"
+            src="{{d}}"
+          ></image>
+        </view>
+      </view>
+      <view class="_div subject-desc-type data-v-3c204082">{{f}}</view>
+    </view>
+  </vote-main>
+</view>

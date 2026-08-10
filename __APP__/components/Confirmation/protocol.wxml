@@ -1,0 +1,32 @@
+<view
+  class="{{['protocol-confirmation','^protocol-confirmation','data-v-21123344',g]}}"
+>
+  <view class="flex-1 data-v-21123344">
+    <loading-provider
+      bind:__l="__l"
+      class="data-v-21123344"
+      uI="21123344-0"
+      uS="{{['d']}}"
+      wx:if="{{a}}"
+    >
+      <v-protocol
+        bind:__l="__l"
+        class="data-v-21123344"
+        uI="21123344-1,21123344-0"
+        uP="{{b}}"
+        wx:if="{{b}}"
+      ></v-protocol>
+    </loading-provider>
+    <view class="data-v-21123344" wx:if="{{c}}">
+      <view class="bottom-line data-v-21123344" wx:if="{{d}}"></view>
+    </view>
+  </view>
+  <view class="data-v-21123344" wx:if="{{e}}">
+    <view class="btn-wrapper data-v-21123344">
+      <button bindtap="{{f}}" class="btn-bar data-v-21123344" type="primary">
+        确定
+      </button>
+    </view>
+  </view>
+  <slot></slot>
+</view>

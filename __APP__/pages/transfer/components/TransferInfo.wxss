@@ -1,0 +1,84 @@
+@import "/app.wxss";
+.transfer-info-container.data-v-a22a1c5d {
+  background-color: var(--fill-2);
+  padding: 0.533333rem 0.4rem;
+}
+.transfer-info-container.reverse.data-v-a22a1c5d {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+}
+.transfer-info-container .left.data-v-a22a1c5d,
+.transfer-info-container .right.data-v-a22a1c5d {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.transfer-info-container .left .text-color-1.data-v-a22a1c5d,
+.transfer-info-container .right .text-color-1.data-v-a22a1c5d {
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0.106667rem;
+}
+.transfer-info-container .left .text-color-3.data-v-a22a1c5d,
+.transfer-info-container .right .text-color-3.data-v-a22a1c5d {
+  line-height: normal;
+}
+.transfer-info-container .left .margin-tag.data-v-a22a1c5d,
+.transfer-info-container .right .margin-tag.data-v-a22a1c5d {
+  background-color: var(--color-primary-1);
+  border-radius: 0.026667rem;
+  color: #fff;
+  font-size: 0.266667rem;
+  font-weight: 500;
+  height: 0.346667rem;
+  line-height: 0.346667rem;
+  margin-bottom: 0.106667rem;
+  margin-left: 0.053333rem;
+  text-align: center;
+  width: 0.346667rem;
+}
+.transfer-info-container .left .transfer-icon.data-v-a22a1c5d,
+.transfer-info-container .right .transfer-icon.data-v-a22a1c5d {
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 1.333333rem;
+  overflow: hidden;
+  width: 1.333333rem;
+}
+.transfer-info-container .left .transfer-icon .server-bank-logo.data-v-a22a1c5d,
+.transfer-info-container
+  .right
+  .transfer-icon
+  .server-bank-logo.data-v-a22a1c5d {
+  height: 0.96rem;
+  width: 0.96rem;
+}
+.transfer-info-container .left .transfer-icon .avatar.data-v-a22a1c5d,
+.transfer-info-container .right .transfer-icon .avatar.data-v-a22a1c5d {
+  height: 100%;
+  width: 100%;
+}
+.transfer-info-container .left .wrapper.data-v-a22a1c5d,
+.transfer-info-container .right .wrapper.data-v-a22a1c5d {
+  padding-left: 0.106667rem;
+}
+.transfer-info-container .middle.data-v-a22a1c5d {
+  width: 1.6rem;
+}
+.transfer-info-container .middle .arrow-red.data-v-a22a1c5d {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_arrow_red.png);
+  background-size: cover;
+  height: 0.16rem;
+}
+.transfer-info-container .middle .arrow-blue.data-v-a22a1c5d {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/transfer/transfer_arrow_blue.png);
+  background-size: cover;
+  height: 0.16rem;
+}
+.transfer-info-container .middle .icon.data-v-a22a1c5d {
+  transform: scale(4);
+}
+.transfer-info-container .middle .transfer-tips.data-v-a22a1c5d {
+  margin-top: 0.08rem;
+}

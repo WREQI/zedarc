@@ -1,0 +1,43 @@
+<view
+  catchtouchmove="false"
+  class="{{['_div','modal-container','data-v-51968791',s]}}"
+  hidden="{{!r}}"
+  id="privacy-agreement-popup"
+>
+  <view class="{{['_div','content-container','data-v-51968791',q]}}">
+    <view class="_div title data-v-51968791">{{a}}</view>
+    <view
+      catchtap="{{c}}"
+      class="_div close-button data-v-51968791"
+      wx:if="{{b}}"
+    ></view>
+    <view class="_div modal-content data-v-51968791">
+      <slot wx:if="{{$slots.d}}"></slot>
+      <view class="_div modal-content-text data-v-51968791" wx:else>{{d}}</view>
+    </view>
+    <view class="_div modal-buttons data-v-51968791" wx:if="{{e}}">
+      <view
+        catchtap="{{i}}"
+        class="{{['_div','data-v-51968791','modal-button',h]}}"
+        wx:if="{{f}}"
+        >{{g}}</view
+      >
+      <button
+        catchtap="{{m}}"
+        class="{{['data-v-51968791','modal-button','active',l]}}"
+        id="agree-btn"
+        openType="agreePrivacyAuthorization"
+        wx:if="{{j}}"
+      >
+        {{k}}
+      </button>
+      <view
+        catchtap="{{p}}"
+        class="{{['_div','data-v-51968791','modal-button','active',o]}}"
+        id="agree-btn"
+        wx:else
+        >{{n}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<page-meta class="data-v-d3f22269" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-d3f22269"
+  id="global-wrap"
+  uI="d3f22269-0"
+  uP="{{r}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{r}}"
+>
+  <view class="{{['data-v-d3f22269','condition_protocol',o,p]}}">
+    <view class="protocol-content data-v-d3f22269">
+      <block wx:if="{{b}}">
+        <mp-rich-text
+          bind:__l="__l"
+          class="rich-text data-v-d3f22269"
+          uI="{{content.b}}"
+          uP="{{content.c}}"
+          wx:for="{{c}}"
+          wx:for-item="content"
+          wx:key="a"
+        ></mp-rich-text>
+      </block>
+      <block wx:else>
+        <rich-text-protocol
+          bind:__l="__l"
+          class="data-v-d3f22269"
+          uI="d3f22269-2,d3f22269-0"
+          uP="{{d}}"
+          wx:if="{{d}}"
+        ></rich-text-protocol>
+      </block>
+    </view>
+    <view class="bubble-tip flex-center data-v-d3f22269" wx:if="{{e}}"
+      >请滑至底部阅读全部协议<label
+        bindtap="{{f}}"
+        class="bubble-tips-icon data-v-d3f22269"
+      ></label>
+    </view>
+    <view class="button-wrapper data-v-d3f22269" wx:if="{{g}}">
+      <button
+        bindtap="{{l}}"
+        class="{{['data-v-d3f22269','condition_btn',j,'flex-center']}}"
+        disabled="{{k}}"
+      >
+        我已阅读并同意签署<block wx:if="{{h}}">（{{i}}s）</block>
+      </button>
+    </view>
+    <button
+      bindtap="{{m}}"
+      class="condition_btn without_warpper data-v-d3f22269"
+      wx:else
+    >
+      已阅读并同意
+    </button>
+    <mp-dialog
+      bind:__l="__l"
+      class="data-v-d3f22269"
+      id="mp-dialog"
+      uI="d3f22269-3,d3f22269-0"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

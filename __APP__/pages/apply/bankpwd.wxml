@@ -1,0 +1,83 @@
+<page-meta class="data-v-528ce82a" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-528ce82a"
+  id="global-wrap"
+  uI="528ce82a-0"
+  uP="{{q}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{q}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-528ce82a"
+    uI="528ce82a-1,528ce82a-0"
+    uS="{{['d']}}"
+  >
+    <view
+      catchtap="{{o}}"
+      class="{{['page-apply-bankpwd','data-v-528ce82a',n]}}"
+    >
+      <view class="top-header data-v-528ce82a">
+        <progress-bar
+          bind:__l="__l"
+          class="data-v-528ce82a"
+          uI="528ce82a-2,528ce82a-1"
+          uP="{{b}}"
+          wx:if="{{b}}"
+        ></progress-bar>
+      </view>
+      <view class="content-area data-v-528ce82a">
+        <view class="bank-info data-v-528ce82a">
+          <view class="bank-logo-wrap data-v-528ce82a">
+            <bank-logo
+              bind:__l="__l"
+              class="data-v-528ce82a"
+              uI="528ce82a-3,528ce82a-1"
+              uP="{{c}}"
+              wx:if="{{c}}"
+            ></bank-logo>
+          </view>
+        </view>
+        <view class="label-text data-v-528ce82a"
+          >请输入{{d}}**{{e}}的银行密码激活三方存管</view
+        >
+        <view class="password-box data-v-528ce82a">
+          <st-password-input
+            bind:__l="__l"
+            bindcomplete="{{f}}"
+            class="data-v-528ce82a"
+            uI="528ce82a-4,528ce82a-1"
+            uP="{{g}}"
+            wx:if="{{g}}"
+          ></st-password-input>
+        </view>
+        <view bindtap="{{h}}" class="back-link data-v-528ce82a"
+          >返回上一步</view
+        >
+        <view class="security-tips data-v-528ce82a">
+          <label class="security-tips__icon data-v-528ce82a"></label>
+          <label class="security-tips__text data-v-528ce82a">{{i}}</label>
+        </view>
+      </view>
+      <st-number-keyboard
+        bind:__l="__l"
+        binddelete="{{k}}"
+        bindinput="{{j}}"
+        class="data-v-528ce82a"
+        uI="528ce82a-5,528ce82a-1"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></st-number-keyboard>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-528ce82a"
+        id="mp-dialog"
+        uI="528ce82a-6,528ce82a-1"
+        uP="{{m}}"
+        wx:if="{{m}}"
+      ></mp-dialog>
+    </view>
+  </apply-wrap>
+</global-wrap>

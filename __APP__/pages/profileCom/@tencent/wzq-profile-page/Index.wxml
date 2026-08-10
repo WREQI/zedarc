@@ -1,0 +1,74 @@
+<view class="_div container data-v-d511e371">
+  <view class="_div head-bg-wrapper data-v-d511e371">
+    <view class="_div image-lite data-v-d511e371" wx:if="{{a}}"></view>
+    <view class="_div image-pro data-v-d511e371" wx:else></view>
+  </view>
+  <view class="_div content-container mine show-page-main data-v-d511e371">
+    <header-info
+      bind:__l="__l"
+      class="data-v-d511e371"
+      uI="d511e371-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></header-info>
+    <view class="_div broker-asset-wrapper data-v-d511e371">
+      <account-banner
+        bind:__l="__l"
+        bindgoApplyWithPc="{{d}}"
+        bindgoLogin="{{c}}"
+        class="data-v-d511e371"
+        uI="d511e371-1"
+        uP="{{e}}"
+        uS="{{['d']}}"
+        wx:if="{{e}}"
+      >
+        <slot></slot>
+      </account-banner>
+    </view>
+    <view class="_div profile-new-content-wrapper data-v-d511e371">
+      <common-func
+        bind:__l="__l"
+        class="r data-v-d511e371"
+        uI="d511e371-2"
+        uP="{{g}}"
+        uR="commonFunc"
+        wx:if="{{g}}"
+      ></common-func>
+      <common-func
+        bind:__l="__l"
+        bindjumpDetail="{{h}}"
+        class="other-setting-wrapper data-v-d511e371"
+        uI="d511e371-3"
+        uP="{{i}}"
+        wx:if="{{i}}"
+      ></common-func>
+      <common-func
+        bind:__l="__l"
+        class="data-v-d511e371"
+        uI="d511e371-4"
+        uP="{{k}}"
+        wx:if="{{j}}"
+      ></common-func>
+      <view class="_div zhanwei data-v-d511e371"></view>
+    </view>
+  </view>
+  <top-guide
+    bind:__l="__l"
+    class="data-v-d511e371"
+    uI="d511e371-5"
+    uP="{{l}}"
+    wx:if="{{l}}"
+  ></top-guide>
+  <view class="_div tx-logo data-v-d511e371">
+    <view
+      class="{{['_div','logo-img','data-v-d511e371',m&&'logo-img-lite']}}"
+    ></view>
+  </view>
+  <guide-popup
+    bind:__l="__l"
+    class="data-v-d511e371"
+    uI="d511e371-6"
+    uP="{{n}}"
+    wx:if="{{n}}"
+  ></guide-popup>
+</view>

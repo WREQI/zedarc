@@ -1,0 +1,54 @@
+.st-checkbox.data-v-b422f3db {
+  display: inline-block;
+  height: 0.48rem;
+  position: relative;
+  vertical-align: middle;
+  width: 0.48rem;
+}
+.st-checkbox .st-checkbox-check.data-v-b422f3db {
+  height: 0.18666666666666668rem;
+  width: 0.26666666666666666rem;
+}
+.st-checkbox .st-checkbox-inner.data-v-b422f3db {
+  align-items: center;
+  border: 0.013333333333333334rem solid var(--color-lightgray-2);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: transparent;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.28rem;
+  height: 0.48rem;
+  justify-content: center;
+  line-height: 0.28rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 0.48rem;
+}
+.st-checkbox .st-checkbox-inner.data-v-b422f3db:before {
+  left: -0.013333333333333334rem;
+  position: relative;
+  top: -0.013333333333333334rem;
+}
+.st-checkbox-input.data-v-b422f3db {
+  appearance: none;
+  border: 0;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.st-checkbox.st-checkbox-checked .st-checkbox-inner.data-v-b422f3db {
+  background: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--fill-2);
+}
+.st-checkbox.st-checkbox-added .st-checkbox-inner.data-v-b422f3db {
+  background: #dddfe6;
+  border-color: #dddfe6;
+}

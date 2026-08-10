@@ -1,0 +1,54 @@
+<view class="{{['_div','remind-modal__body','data-v-52676426',h]}}">
+  <view class="_div remind-modal__summary data-v-52676426">
+    <view class="_div remind-modal__summary-text data-v-52676426" wx:if="{{a}}"
+      >{{b}}</view
+    >
+    <view class="_div remind-modal__summary-time data-v-52676426" wx:if="{{c}}"
+      >更新时间：{{d}}</view
+    >
+  </view>
+  <view class="_div remind-modal__content data-v-52676426">
+    <view class="_div remind-modal__loading data-v-52676426" wx:if="{{e}}">
+      <view class="_div remind-modal__loading-header data-v-52676426">
+        <view class="_div remind-modal__loading-title data-v-52676426"
+          >AI正在解读中</view
+        >
+        <view class="_div loading-area data-v-52676426">
+          <view class="_div dot data-v-52676426"></view>
+          <view class="_div dot data-v-52676426"></view>
+          <view class="_div dot data-v-52676426"></view>
+        </view>
+      </view>
+      <view class="_div remind-modal__loading-skeleton data-v-52676426">
+        <view class="_div remind-modal__skeleton-item data-v-52676426"></view>
+        <view class="_div remind-modal__skeleton-item data-v-52676426"></view>
+        <view class="_div remind-modal__skeleton-item data-v-52676426"></view>
+        <view class="_div remind-modal__skeleton-item data-v-52676426"></view>
+        <view class="_div remind-modal__skeleton-item data-v-52676426"></view>
+      </view>
+    </view>
+    <view class="_div remind-modal__section data-v-52676426" wx:else>
+      <view class="_div remind-modal__section-title data-v-52676426"
+        >AI解读</view
+      >
+      <view
+        class="_div remind-modal__item data-v-52676426"
+        wx:for="{{f}}"
+        wx:key="c"
+      >
+        <view class="_div remind-modal__item-bullet data-v-52676426">
+          <view class="_div remind-modal__bullet-dot data-v-52676426"></view>
+        </view>
+        <view class="_div remind-modal__item-text data-v-52676426">
+          <label class="_span remind-modal__item-title data-v-52676426"
+            >{{item.a}}</label
+          >
+          <label class="_span data-v-52676426">: {{item.b}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div remind-modal__disclaimer data-v-52676426" wx:if="{{g}}"
+      >内容由AI模型生成，不构成投资建议。请咨询投资顾问后再操作。</view
+    >
+  </view>
+</view>

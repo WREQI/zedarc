@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "trust-footer": "../../../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index",
+    "half-screen-ai-entry": "../../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "semi-mask": "../../../../../asyncCom/@tencent/st-semi-modal/index",
+    "t0-strategy-block": "../components/T0StrategyBlock",
+    "t0-rank-list": "../components/T0RankList",
+    "practice-method-sheet": "../components/PracticeMethodSheet",
+    "hot-topic-nav-bar": "../../hotTopicPages/components/HotTopicNavBar",
+    "footer-bar": "../../hotTopicPages/components/FooterBar"
+  },
+  "componentPlaceholder": {
+    "trust-footer": "view",
+    "half-screen-ai-entry": "view",
+    "semi-mask": "view"
+  }
+}

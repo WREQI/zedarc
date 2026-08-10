@@ -1,0 +1,64 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div apply-records-container" data-st-theme="{{h}}">
+  <mp-privacy-dialog bind:__l="__l" uI="062ea3de-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="062ea3de-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div apply-records-slide-header">
+    <tab-bar
+      bind:__l="__l"
+      bindchange="{{c}}"
+      class="tabbar"
+      uI="062ea3de-2"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></tab-bar>
+  </view>
+  <swiper
+    bindchange="{{g}}"
+    class="swiper-cont"
+    current="{{f}}"
+    duration="{{300}}"
+  >
+    <swiper-item
+      class="swiper-item"
+      wx:for="{{e}}"
+      wx:for-item="tab"
+      wx:key="e"
+    >
+      <block wx:if="{{tab.a}}">
+        <view
+          class="{{['_div','item-wrapper',item.h&&'border']}}"
+          wx:for="{{tab.b}}"
+          wx:key="g"
+        >
+          <broker-logo
+            bind:__l="__l"
+            class="broker-logo"
+            uI="{{item.a}}"
+            uP="{{item.b}}"
+            wx:if="{{item.b}}"
+          ></broker-logo>
+          <view class="_div broker-name">
+            <label class="_span">{{item.c}}</label>
+            <label class="_span state-maintain" wx:if="{{item.d}}"
+              >(维护中)</label
+            >
+          </view>
+          <view bindtap="{{item.f}}" class="_div right-button">{{item.e}}</view>
+        </view>
+      </block>
+      <view class="_div empty" wx:else>
+        <view class="_div icon"></view>
+        <view class="_div text"
+          >您还没有开户记录<block wx:if="{{tab.c}}"
+            >，<label bindtap="{{tab.d}}" class="_span link">现在去开户</label>
+          </block>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

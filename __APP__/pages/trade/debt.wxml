@@ -1,0 +1,233 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="1dfbfab1-0"
+  uP="{{aa}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{aa}}"
+>
+  <view class="trade-debt">
+    <view class="flex-between px-30 trade-debt-header">
+      <view>
+        <label class="text-color-1 fs-32">{{b}}</label>
+        <label class="text-color-4 fs-28">{{c}}</label>
+      </view>
+      <view bindtap="{{e}}" class="link fs-28" wx:if="{{d}}">详情</view>
+    </view>
+    <view bindtap="{{g}}" class="rate-wrapper">
+      <view class="fs-28 text-color-4 align-c">年化收益率</view>
+      <view class="value text-color-1 align-c">{{f}}%</view>
+    </view>
+    <view class="intro flex px-30">
+      <view class="align-c border-right">
+        <view class="fs-28 text-color-1">{{h}}天</view>
+        <view class="fs-26 text-color-4">实际占款</view>
+      </view>
+      <view class="flex-1">
+        <view class="flex-between">
+          <view class="date-box date-loan align-c">
+            <view class="fs-28 text-color-1">借款</view>
+            <view class="fs-26 text-color-4">{{i}}</view>
+          </view>
+          <view class="box-stepline">
+            <view class="fs-22">——</view>
+          </view>
+          <view class="date-box date-use align-c">
+            <view class="fs-28 text-color-1">可用</view>
+            <view class="fs-26 text-color-4">{{j}}</view>
+          </view>
+          <view class="box-stepline">
+            <view class="fs-22">——</view>
+          </view>
+          <view class="date-box date-out align-c">
+            <view class="fs-28 text-color-1">可转出</view>
+            <view class="fs-26 text-color-4">{{k}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <st-cell-group bind:__l="__l" uI="1dfbfab1-1,1dfbfab1-0" uS="{{['d']}}">
+      <st-cell bind:__l="__l" uI="1dfbfab1-2,1dfbfab1-1" uS="{{['title','d']}}">
+        <view slot="title">
+          <label class="justify fs-26 text-color-1">年化(%)</label>
+        </view>
+        <view class="{{r}}">
+          <st-stepper
+            bind:__l="__l"
+            bindblur="{{o}}"
+            bindchange="{{m}}"
+            bindfocus="{{n}}"
+            bindnext="{{p}}"
+            class="r"
+            uI="1dfbfab1-3,1dfbfab1-2"
+            uP="{{q}}"
+            uR="rateStepperRef"
+            wx:if="{{q}}"
+          ></st-stepper>
+        </view>
+        <view class="popover popover-error-bg" wx:if="{{s}}">{{t}}</view>
+      </st-cell>
+      <st-cell bind:__l="__l" uI="1dfbfab1-4,1dfbfab1-1" uS="{{['title','d']}}">
+        <view slot="title">
+          <label class="justify fs-26 text-color-1">金额(元)</label>
+        </view>
+        <st-stepper
+          bind:__l="__l"
+          bindchange="{{w}}"
+          class="r"
+          uI="1dfbfab1-5,1dfbfab1-4"
+          uP="{{x}}"
+          uR="amountStepperRef"
+          wx:if="{{x}}"
+        ></st-stepper>
+      </st-cell>
+    </st-cell-group>
+    <view class="trade-tips flex-between">
+      <view class="align-l fs-26 text-color-4"
+        >可用资金：<label bindtap="{{z}}" class="rise">{{y}}</label>
+      </view>
+      <view class="align-r fs-26 text-color-4"
+        >到期收益：<label class="rise">{{A}}</label>
+      </view>
+    </view>
+    <view class="btn-wrapper px-30">
+      <button bindtap="{{C}}" disabled="{{B}}" type="primary">下单</button>
+    </view>
+    <block wx:if="{{D}}">
+      <view class="flex transinfo-header text-color-1 border--top">
+        <view class="flex-1 flex-between">
+          <label>借入</label>
+          <label class="blue">{{E}}%</label>
+        </view>
+        <view class="flex-1 flex-between">
+          <label>借出</label>
+          <label class="orange">{{F}}%</label>
+        </view>
+      </view>
+      <view class="flex transinfo-body border--top border--bottom">
+        <view class="ul flex-1">
+          <value-color
+            bind:__l="__l"
+            class="li flex-between"
+            uI="{{i.i}}"
+            uP="{{i.j}}"
+            uS="{{['d']}}"
+            wx:for="{{G}}"
+            wx:for-item="i"
+            wx:key="h"
+          >
+            <view bindtap="{{i.g}}" class="li-detail flex-1 flex-between">
+              <view class="text-color-4 label border--surround">{{i.a}}</view>
+              <view class="flex-1 flex-between">
+                <value-color
+                  bind:__l="__l"
+                  class="btn btn-1"
+                  uI="{{i.c}}"
+                  uP="{{i.d}}"
+                  uS="{{['d']}}"
+                  wx:if="{{i.d}}"
+                >
+                  <label>{{i.b}}</label>
+                </value-color>
+                <label class="text-color-4 align-r" wx:if="{{i.e}}">-</label>
+                <label class="text-color-4 align-r" wx:else>{{i.f}}</label>
+              </view>
+            </view>
+          </value-color>
+        </view>
+        <view class="ul flex-1">
+          <value-color
+            bind:__l="__l"
+            class="li flex-between"
+            uI="{{i.i}}"
+            uP="{{i.j}}"
+            uS="{{['d']}}"
+            wx:for="{{H}}"
+            wx:for-item="i"
+            wx:key="h"
+          >
+            <view bindtap="{{i.g}}" class="li-detail flex-1 flex-between">
+              <view class="text-color-4 label border--surround">{{i.a}}</view>
+              <view class="flex-1 flex-between">
+                <value-color
+                  bind:__l="__l"
+                  class="btn btn-1"
+                  uI="{{i.c}}"
+                  uP="{{i.d}}"
+                  uS="{{['d']}}"
+                  wx:if="{{i.d}}"
+                >
+                  <label>{{i.b}}</label>
+                </value-color>
+                <label class="text-color-4 align-r" wx:if="{{i.e}}">-</label>
+                <label class="text-color-4 align-r" wx:else>{{i.f}}</label>
+              </view>
+            </view>
+          </value-color>
+        </view>
+      </view>
+    </block>
+    <view class="trade-tips px-30 align-c fs-22 text-color-4" wx:if="{{I}}"
+      >{{J}}</view
+    >
+    <mp-dialog
+      bind:__l="__l"
+      bindcancel="{{T}}"
+      bindconfirm="{{S}}"
+      uI="1dfbfab1-10,1dfbfab1-0"
+      uP="{{U}}"
+      uS="{{['d']}}"
+      wx:if="{{U}}"
+    >
+      <view class="mp-dialog__message confirm-dialog">
+        <view class="content">
+          <view class="flex-between dialog-item-padding">
+            <view class="label">通用回购：</view>
+            <view class="value">{{K}}</view>
+          </view>
+          <view class="flex-between dialog-item-padding">
+            <view class="label">年化收益率：</view>
+            <view class="value">{{L}}%</view>
+          </view>
+          <view
+            class="fs-24 flex-end dialog-tip-rate-text dialog-item-text-padding"
+            wx:if="{{M}}"
+            >{{N}}</view
+          >
+          <view class="dialog-item-padding flex-between">
+            <view class="label">下单金额：</view>
+            <view class="value">{{O}}元</view>
+          </view>
+          <view class="placeholder" wx:if="{{P}}"></view>
+        </view>
+        <view class="warning-tips" wx:if="{{Q}}">
+          <view class="red align-l"
+            >提示: 此产品资金将锁定{{R}}天, 无法提前赎回</view
+          >
+        </view>
+      </view>
+    </mp-dialog>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="1dfbfab1-11,1dfbfab1-0"
+      uP="{{V}}"
+      wx:if="{{V}}"
+    ></mp-dialog>
+    <risk-test-reminder
+      bind:__l="__l"
+      uI="1dfbfab1-12,1dfbfab1-0"
+    ></risk-test-reminder>
+    <protocol-dialog
+      bind:__l="__l"
+      bindcancel="{{X}}"
+      bindconfirm="{{W}}"
+      uI="1dfbfab1-13,1dfbfab1-0"
+      uP="{{Y}}"
+      wx:if="{{Y}}"
+    ></protocol-dialog>
+  </view>
+</global-wrap>

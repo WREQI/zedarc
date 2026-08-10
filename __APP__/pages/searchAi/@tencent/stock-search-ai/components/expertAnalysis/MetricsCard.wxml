@@ -1,0 +1,15 @@
+<view class="_div metrics-card data-v-c5516d97">
+  <view
+    class="_div metrics-card__item data-v-c5516d97"
+    wx:for="{{a}}"
+    wx:key="f"
+  >
+    <view class="_div metrics-card__label data-v-c5516d97">{{item.a}}</view>
+    <view class="{{['_div','metrics-card__value','data-v-c5516d97',item.c]}}"
+      >{{item.b}}</view
+    >
+    <view class="_div metrics-card__sub data-v-c5516d97" wx:if="{{item.d}}"
+      >{{item.e}}</view
+    >
+  </view>
+</view>

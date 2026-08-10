@@ -1,0 +1,13 @@
+<action-sheet bind:__l="__l" bindcancel="{{o}}" bindinput="{{p}}" bindmaskClick="{{n}}" class="idcard-form data-v-7b77ed55" id="idcardSheet" uI="7b77ed55-0" uP="{{q}}" uS="{{['d']}}" wx:if="{{q}}">
+    <view class="data-v-7b77ed55">
+        <view class="idcard-formheader data-v-7b77ed55">
+            <view class="idcard-formtitle data-v-7b77ed55">人脸识别需要你的姓名和身份证号码</view>
+            <label bindtap="{{a}}" class="icon icon-close data-v-7b77ed55"></label>
+        </view>
+        <view class="idcard-formwrap data-v-7b77ed55">
+            <input adjustPosition="{{b}}" bindblur="{{d}}" bindinput="{{f}}" bindkeyboardheightchange="{{c}}" class="data-v-7b77ed55" maxlength="{{10}}" placeholder="请输入姓名" placeholderClass="input-placeholder" type="text" value="{{e}}"></input>
+            <input adjustPosition="{{g}}" bindblur="{{i}}" bindinput="{{k}}" bindkeyboardheightchange="{{h}}" class="idcard-idinput data-v-7b77ed55" maxlength="18" placeholder="请输入身份证号码" placeholderClass="input-placeholder" type="idcard" value="{{j}}"></input>
+            <button bindtap="{{m}}" class="idcard-formnext data-v-7b77ed55" disabled="{{l}}" type="primary">下一步</button>
+        </view>
+    </view>
+</action-sheet>

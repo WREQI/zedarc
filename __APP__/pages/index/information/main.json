@@ -1,0 +1,14 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "componentPlaceholder": { "information": "view" },
+  "usingComponents": {
+    "top-bar": "../topbar/index",
+    "information": "../../information/main",
+    "mp-privacy-dialog": "/components/PrivacyDialog/index",
+    "st-status": "/node-modules/@tencent/st-status/mp/index",
+    "st-tab-bar": "/components/TabBar/TabBar",
+    "stock-privacy-dialog": "/components/StockPrivacyDialog/index"
+  }
+}

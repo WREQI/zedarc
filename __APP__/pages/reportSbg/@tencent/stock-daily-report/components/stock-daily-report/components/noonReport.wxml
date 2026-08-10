@@ -1,0 +1,20 @@
+<view class="_div data-v-56a731b5">
+  <base-title
+    bind:__l="__l"
+    class="data-v-56a731b5"
+    uI="56a731b5-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></base-title>
+  <view bindtap="{{d}}" class="_div content-title data-v-56a731b5" wx:if="{{b}}"
+    >{{c}}</view
+  >
+  <news-template
+    bind:__l="__l"
+    class="{{['snp-content','r','data-v-56a731b5',g&&'content-desc-up']}}"
+    uI="56a731b5-1"
+    uP="{{h}}"
+    uR="agspContent"
+    wx:if="{{e}}"
+  ></news-template>
+</view>

@@ -1,0 +1,29 @@
+<view
+  class="apply-status-progress-bar flex-column data-v-91d3e751"
+  wx:if="{{a}}"
+>
+  <block wx:if="{{b}}">
+    <progress-bar
+      bind:__l="__l"
+      class="data-v-91d3e751"
+      uI="91d3e751-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></progress-bar>
+  </block>
+  <view class="step-bar data-v-91d3e751" wx:elif="{{d}}">
+    <view class="status-container flex-center data-v-91d3e751" wx:if="{{e}}">
+      <label class="icon success data-v-91d3e751"></label>
+      <label class="fs-28 text-color-1 data-v-91d3e751"
+        >开户申请资料已提交成功</label
+      >
+    </view>
+    <st-steps
+      bind:__l="__l"
+      class="step-container data-v-91d3e751"
+      uI="91d3e751-1"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></st-steps>
+  </view>
+</view>

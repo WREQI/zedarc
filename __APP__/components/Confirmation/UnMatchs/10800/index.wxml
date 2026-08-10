@@ -1,0 +1,16 @@
+<trade
+  bind:__l="__l"
+  bindcancel="{{c}}"
+  bindconfirm="{{b}}"
+  uI="1d950c18-0"
+  uP="{{d}}"
+  wx:if="{{a}}"
+></trade>
+<apply
+  bind:__l="__l"
+  bindcancel="{{g}}"
+  bindconfirm="{{f}}"
+  uI="1d950c18-1"
+  uP="{{h}}"
+  wx:elif="{{e}}"
+></apply>

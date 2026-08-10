@@ -1,0 +1,115 @@
+<view class="_div data-v-5a6146e7">
+  <view class="_div cbzy-container data-v-5a6146e7" hidden="{{!h}}">
+    <view class="_div bg-content data-v-5a6146e7"></view>
+    <view class="_div cb-content data-v-5a6146e7">
+      <view class="_div content data-v-5a6146e7">
+        <view class="_div content-title data-v-5a6146e7">{{a}}</view>
+        <view class="_div tab-box data-v-5a6146e7">
+          <view class="{{['_ul','data-v-5a6146e7',c,'tab-container']}}">
+            <view
+              bindtap="{{item.d}}"
+              class="{{['_li','data-v-5a6146e7','tab-item',item.c]}}"
+              wx:for="{{b}}"
+              wx:key="b"
+              >{{item.a}}</view
+            >
+          </view>
+        </view>
+        <swiper
+          bindchange="{{g}}"
+          class="swiper-outer data-v-5a6146e7"
+          current="{{e}}"
+          duration="250"
+          ref="mySwiper"
+          style="{{'height:'+f}}"
+        >
+          <swiper-item class="data-v-5a6146e7" wx:for="{{d}}" wx:key="b">
+            <view class="_div swiper-inner-content data-v-5a6146e7">
+              <view
+                class="_div cb-card data-v-5a6146e7"
+                wx:for="{{item.a}}"
+                wx:for-item="cbItem"
+                wx:key="l"
+              >
+                <view class="_div cb-card-title data-v-5a6146e7">
+                  <view class="_div data-v-5a6146e7">{{cbItem.a}}</view>
+                  <view class="_div cb-card-title-no-data data-v-5a6146e7">
+                    <label class="_span data-v-5a6146e7" wx:if="{{cbItem.b}}"
+                      >未披露</label
+                    >
+                  </view>
+                </view>
+                <view
+                  class="_div cbzy-content data-v-5a6146e7"
+                  wx:if="{{cbItem.c}}"
+                >
+                  <cbzy-content
+                    bind:__l="__l"
+                    class="r-i-f data-v-5a6146e7"
+                    uI="{{cbItem.e}}"
+                    uP="{{cbItem.f}}"
+                    uR="cbzyContentRef"
+                    wx:if="{{cbItem.f}}"
+                  ></cbzy-content>
+                </view>
+                <view
+                  class="_div zygc-card data-v-5a6146e7"
+                  wx:if="{{cbItem.g}}"
+                >
+                  <view class="_div zygc-card-header data-v-5a6146e7">
+                    <view class="_div data-v-5a6146e7">主营构成</view>
+                    <view class="_div header-zb data-v-5a6146e7">占比</view>
+                    <view class="_div data-v-5a6146e7">营业收入</view>
+                  </view>
+                  <view
+                    class="_div zygc-card-item data-v-5a6146e7"
+                    wx:for="{{cbItem.h}}"
+                    wx:for-item="zygcItem"
+                    wx:key="e"
+                  >
+                    <view
+                      class="_div zygc-card-item-value zygc-name data-v-5a6146e7"
+                    >
+                      <view class="_div name-text data-v-5a6146e7"
+                        >{{zygcItem.a}}</view
+                      >
+                    </view>
+                    <view
+                      class="{{['_div','data-v-5a6146e7','zygc-card-item-value','zygc-zb',zygcItem.c]}}"
+                    >
+                      <view class="_div data-v-5a6146e7">{{zygcItem.b}}%</view>
+                    </view>
+                    <view
+                      class="_div zygc-card-item-value zygc-income data-v-5a6146e7"
+                      >{{zygcItem.d}}</view
+                    >
+                  </view>
+                </view>
+                <view
+                  bindtap="{{cbItem.k}}"
+                  class="_div pdf-container data-v-5a6146e7"
+                  wx:if="{{cbItem.i}}"
+                >
+                  <view class="_div pdf-container-left data-v-5a6146e7">
+                    <view class="_div pdf-logo data-v-5a6146e7"></view>
+                    <view class="_div data-v-5a6146e7">{{cbItem.j}}</view>
+                  </view>
+                  <view class="_div arrow-right data-v-5a6146e7"></view>
+                </view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <status
+    bind:__l="__l"
+    bindhandleError="{{j}}"
+    class="st-status data-v-5a6146e7"
+    uI="5a6146e7-1"
+    uP="{{k}}"
+    wx:if="{{i}}"
+  ></status>
+  <view class="{{['_div','data-v-5a6146e7',l]}}"></view>
+</view>

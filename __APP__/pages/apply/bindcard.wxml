@@ -1,0 +1,102 @@
+<page-meta class="data-v-56301e98" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-56301e98"
+  id="global-wrap"
+  uI="56301e98-0"
+  uP="{{D}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{D}}"
+>
+  <apply-wrap
+    bind:__l="__l"
+    class="data-v-56301e98"
+    uI="56301e98-1,56301e98-0"
+    uS="{{['d']}}"
+  >
+    <view class="container data-v-56301e98">
+      <digital-human
+        bind:__l="__l"
+        class="r data-v-56301e98"
+        uI="56301e98-2,56301e98-1"
+        uP="{{d}}"
+        uR="digitalHumanRef"
+        wx:if="{{b}}"
+      ></digital-human>
+      <view class="{{['data-v-56301e98',s]}}">
+        <progress-bar
+          bind:__l="__l"
+          class="data-v-56301e98"
+          uI="56301e98-3,56301e98-1"
+          uP="{{e}}"
+          wx:if="{{e}}"
+        ></progress-bar>
+        <view class="data-v-56301e98" wx:if="{{f}}">
+          <select-card
+            bind:__l="__l"
+            bindbankPwdProcessing="{{k}}"
+            bindnavigateNextStep="{{j}}"
+            bindshowSupportCardList="{{h}}"
+            bindswitchMode="{{i}}"
+            class="data-v-56301e98"
+            uI="56301e98-4,56301e98-1"
+            uP="{{l}}"
+            wx:if="{{g}}"
+          ></select-card>
+          <input-card
+            bind:__l="__l"
+            bindbankPwdProcessing="{{p}}"
+            bindnavigateNextStep="{{o}}"
+            bindshowSupportCardList="{{m}}"
+            bindswitchMode="{{n}}"
+            class="data-v-56301e98"
+            uI="56301e98-5,56301e98-1"
+            uP="{{q||''}}"
+            wx:else
+          ></input-card>
+        </view>
+        <view class="loading-wrap data-v-56301e98" wx:else>
+          <loading
+            bind:__l="__l"
+            class="data-v-56301e98"
+            uI="56301e98-6,56301e98-1"
+            uP="{{r}}"
+            wx:if="{{r}}"
+          ></loading>
+        </view>
+      </view>
+      <bank-card-support-dialog
+        bind:__l="__l"
+        bindclose="{{t}}"
+        class="data-v-56301e98"
+        id="support-bank"
+        uI="56301e98-7,56301e98-1"
+        uP="{{v}}"
+        wx:if="{{v}}"
+      ></bank-card-support-dialog>
+      <bank-card-privacy-dialog
+        bind:__l="__l"
+        bindclose="{{y}}"
+        bindconfirm="{{w}}"
+        bindrefuse="{{x}}"
+        class="data-v-56301e98"
+        uI="56301e98-8,56301e98-1"
+        uP="{{z}}"
+        wx:if="{{z}}"
+      ></bank-card-privacy-dialog>
+      <mp-dialog
+        bind:__l="__l"
+        class="data-v-56301e98"
+        id="mp-dialog"
+        uI="56301e98-9,56301e98-1"
+        uP="{{A}}"
+        wx:if="{{A}}"
+      ></mp-dialog>
+      <view
+        class="bankpwd-processing-mask data-v-56301e98"
+        wx:if="{{B}}"
+      ></view>
+    </view>
+  </apply-wrap>
+</global-wrap>

@@ -1,0 +1,27 @@
+<view class="{{['_div','data-v-19ab2c3f','discover-block-wrapper',f,g]}}">
+  <view class="_div discover-block data-v-19ab2c3f">
+    <view bindtap="{{c}}" class="_div header data-v-19ab2c3f">
+      <view class="_div left-wrapper data-v-19ab2c3f">
+        <view class="_div title data-v-19ab2c3f">
+          <view class="_div main-title data-v-19ab2c3f">
+            <image class="_img title-img data-v-19ab2c3f" src="{{a}}"></image>
+          </view>
+          <view class="_div sub-title data-v-19ab2c3f">{{b}}</view>
+        </view>
+      </view>
+      <view class="_div right-wrapper data-v-19ab2c3f">
+        <view class="_div right-arrow-icon data-v-19ab2c3f"></view>
+      </view>
+    </view>
+    <view class="_div content-wrapper data-v-19ab2c3f">
+      <discover-card
+        bind:__l="__l"
+        class="data-v-19ab2c3f"
+        uI="19ab2c3f-0"
+        uP="{{e}}"
+        wx:if="{{d}}"
+      ></discover-card>
+      <view class="_div placeholder data-v-19ab2c3f" wx:else></view>
+    </view>
+  </view>
+</view>

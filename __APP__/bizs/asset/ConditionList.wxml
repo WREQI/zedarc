@@ -1,0 +1,30 @@
+<view class="condition-list-wrapper">
+  <condition-list-tab
+    bind:__l="__l"
+    bindcreateClick="{{b}}"
+    bindstatusChange="{{a}}"
+    uI="6451c8b3-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></condition-list-tab>
+  <custom-swiper
+    bind:__l="__l"
+    class="cond-swiper"
+    uI="6451c8b3-1"
+    uP="{{h}}"
+    uS="{{['d']}}"
+    wx:if="{{h}}"
+  >
+    <view slot="{{v0.d}}" wx:for="{{d}}" wx:for-item="v0" wx:key="c">
+      <cond-list-items-panel
+        bind:__l="__l"
+        bindcreateCond="{{f}}"
+        bindfetchCondList="{{g}}"
+        bindjumpHistory="{{e}}"
+        uI="{{v0.a}}"
+        uP="{{v0.b}}"
+        wx:if="{{v0.b}}"
+      ></cond-list-items-panel>
+    </view>
+  </custom-swiper>
+</view>

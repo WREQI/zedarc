@@ -1,0 +1,38 @@
+<view
+  catchtouchmove="false"
+  class="{{['_div','modal-container','data-v-a4b66dd3',n]}}"
+  hidden="{{!m}}"
+>
+  <view class="_div content-container data-v-a4b66dd3">
+    <view class="_div title data-v-a4b66dd3">{{a}}</view>
+    <view catchtap="{{b}}" class="_div close-button data-v-a4b66dd3"></view>
+    <view class="_div modal-content data-v-a4b66dd3">
+      <slot wx:if="{{$slots.d}}"></slot>
+      <view class="_div modal-content-text data-v-a4b66dd3" wx:else>{{c}}</view>
+    </view>
+    <view class="_div modal-buttons data-v-a4b66dd3" wx:if="{{d}}">
+      <view
+        catchtap="{{g}}"
+        class="_div modal-button data-v-a4b66dd3"
+        wx:if="{{e}}"
+        >{{f}}</view
+      >
+      <button
+        catchtap="{{j}}"
+        class="{{['data-v-a4b66dd3','modal-button','active']}}"
+        id="agree-btn"
+        openType="agreePrivacyAuthorization"
+        wx:if="{{h}}"
+      >
+        {{i}}
+      </button>
+      <view
+        catchtap="{{l}}"
+        class="{{['_div','data-v-a4b66dd3','modal-button','active']}}"
+        id="agree-btn"
+        wx:else
+        >{{k}}</view
+      >
+    </view>
+  </view>
+</view>

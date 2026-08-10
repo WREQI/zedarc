@@ -1,0 +1,34 @@
+<view class="_div index-bar-container data-v-d1c6b3a9" wx:if="{{a}}">
+  <view class="_div seperate data-v-d1c6b3a9" wx:if="{{b}}"></view>
+  <view class="{{['_div','index-bar-wrapper','data-v-d1c6b3a9',o&&'isLite']}}">
+    <view catchtap="{{d}}" class="_div bar-left data-v-d1c6b3a9">
+      <view class="_div bar-left-text data-v-d1c6b3a9">跟踪指数</view>
+      <image
+        class="_img image-tip data-v-d1c6b3a9"
+        lazyLoad="{{true}}"
+        src="https://st.gtimg.com/design/7e58c8307bb799b28471cc60a4cbced5.svg"
+        wx:if="{{c}}"
+      ></image>
+    </view>
+    <view catchtap="{{n}}" class="_div bar-right data-v-d1c6b3a9">
+      <view class="_div bar-right-left data-v-d1c6b3a9">
+        <view class="_div bar-right-left-text data-v-d1c6b3a9">{{e}}</view>
+        <view class="{{['_div','data-v-d1c6b3a9','ratio-text',g]}}">{{f}}</view>
+      </view>
+      <view class="_div bar-right-right data-v-d1c6b3a9">
+        <view class="_div data-v-d1c6b3a9" wx:if="{{h}}">{{i}}</view>
+        <view
+          class="{{['_div','data-v-d1c6b3a9','ratio-text',l]}}"
+          wx:if="{{j}}"
+          >{{k}}</view
+        >
+        <image
+          class="_img image-jump data-v-d1c6b3a9"
+          lazyLoad="{{true}}"
+          src="https://st.gtimg.com/design/f73e3187fa829a7f886400cca980b402.png"
+          wx:if="{{m}}"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

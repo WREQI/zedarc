@@ -1,0 +1,17 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<dividend-detail
+  bind:__l="__l"
+  class="r"
+  data-st-theme="{{c}}"
+  uI="a0356d50-0"
+  uP="{{d}}"
+  uR="etfPage"
+  wx:if="{{d}}"
+></dividend-detail>
+<mp-privacy-dialog bind:__l="__l" uI="a0356d50-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="a0356d50-2"
+  uP="{{e}}"
+  wx:if="{{e}}"
+></stock-privacy-dialog>

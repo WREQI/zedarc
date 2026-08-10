@@ -1,0 +1,11 @@
+<view
+  catchtap="{{d}}"
+  class="{{['_div','data-v-3217d037','semi-mask-wrapper',c]}}"
+>
+  <view
+    catchtap="{{b}}"
+    class="{{['_div','data-v-3217d037','semi-mask-content',a]}}"
+  >
+    <slot></slot>
+  </view>
+</view>

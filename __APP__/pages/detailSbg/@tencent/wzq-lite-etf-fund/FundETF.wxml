@@ -1,0 +1,39 @@
+<view
+  class="{{['_div','etf-fund-container','data-v-3af30ab6',j&&'lite',k&&'black']}}"
+>
+  <fund-flow
+    bind:__l="__l"
+    class="data-v-3af30ab6"
+    uI="3af30ab6-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></fund-flow>
+  <hold-scale-trend
+    bind:__l="__l"
+    class="data-v-3af30ab6"
+    uI="3af30ab6-1"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></hold-scale-trend>
+  <margin-card
+    bind:__l="__l"
+    class="r data-v-3af30ab6"
+    uI="3af30ab6-2"
+    uP="{{g}}"
+    uR="marginCard"
+    wx:if="{{e}}"
+  ></margin-card>
+  <empty
+    bind:__l="__l"
+    class="data-v-3af30ab6"
+    uI="3af30ab6-3"
+    wx:if="{{h}}"
+  ></empty>
+  <footer-teach-bar
+    bind:__l="__l"
+    class="data-v-3af30ab6"
+    uI="3af30ab6-4"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></footer-teach-bar>
+</view>

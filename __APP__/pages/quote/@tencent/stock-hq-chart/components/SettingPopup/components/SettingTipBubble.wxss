@@ -1,0 +1,87 @@
+.setting-tip-bubble.data-v-2f10bf77 {
+  bottom: 100%;
+  margin-bottom: 0.18666666666666668rem;
+  pointer-events: auto;
+  position: absolute;
+  right: -0.2rem;
+  z-index: 10;
+}
+.setting-tip-bubble__content.data-v-2f10bf77 {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 0.10666666666666667rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.21333333333333335rem 0.32rem;
+  width: 6.133333333333334rem;
+}
+.setting-tip-bubble__text.data-v-2f10bf77 {
+  color: #fff;
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+}
+.setting-tip-bubble__line.data-v-2f10bf77 {
+  white-space: nowrap;
+}
+.setting-tip-bubble__close.data-v-2f10bf77 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  height: 0.4266666666666667rem;
+  justify-content: center;
+  margin-left: 0.21333333333333335rem;
+  width: 0.4266666666666667rem;
+}
+.setting-tip-bubble__close-icon.data-v-2f10bf77 {
+  display: block;
+  height: 0.32rem;
+  position: relative;
+  width: 0.32rem;
+}
+.setting-tip-bubble__close-icon.data-v-2f10bf77:after,
+.setting-tip-bubble__close-icon.data-v-2f10bf77:before {
+  background-color: #fff;
+  border-radius: 0.013333333333333334rem;
+  content: "";
+  height: 0.02666666666666667rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 0.32rem;
+}
+.setting-tip-bubble__close-icon.data-v-2f10bf77:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.setting-tip-bubble__close-icon.data-v-2f10bf77:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.setting-tip-bubble__arrow.data-v-2f10bf77 {
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent;
+  border-style: solid;
+  border-width: 0.18666666666666668rem 0.21333333333333335rem 0;
+  height: 0;
+  margin-top: -0.013333333333333334rem;
+  position: absolute;
+  right: 0.32rem;
+  top: 100%;
+  width: 0;
+}
+.setting-tip-bubble--dark .setting-tip-bubble__content.data-v-2f10bf77 {
+  background: hsla(0, 0%, 100%, 0.9);
+}
+.setting-tip-bubble--dark .setting-tip-bubble__text.data-v-2f10bf77 {
+  color: #222;
+}
+.setting-tip-bubble--dark .setting-tip-bubble__close-icon.data-v-2f10bf77:after,
+.setting-tip-bubble--dark
+  .setting-tip-bubble__close-icon.data-v-2f10bf77:before {
+  background-color: #222;
+}
+.setting-tip-bubble--dark .setting-tip-bubble__arrow.data-v-2f10bf77 {
+  border-top-color: hsla(0, 0%, 100%, 0.9);
+}

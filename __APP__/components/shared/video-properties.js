@@ -1,0 +1,21 @@
+Object.defineProperty(exports, "__esModule", { value: !0 }),
+  (exports.DEFAULT_VIDEO_PROPERTIES = void 0);
+exports.DEFAULT_VIDEO_PROPERTIES = {
+  autoplay: { type: Boolean, value: !0 },
+  initialTime: { type: Number, value: 0 },
+  controls: { type: Boolean, value: !0 },
+  muted: { type: Boolean, value: !1 },
+  direction: { type: Number, value: -1 },
+  objectFit: { type: String, value: "contain" },
+  enablePlayGesture: { type: Boolean, value: !1 },
+  autoPauseIfNavigate: { type: Boolean, value: !0 },
+  autoPauseIfOpenNative: { type: Boolean, value: !0 },
+  enableAutoRotation: { type: Boolean, value: !1 },
+  vslideGesture: { type: Boolean, value: !1 },
+  vslideGestureInFullscreen: { type: Boolean, value: !0 },
+  enableProgressGesture: { type: Boolean, value: !0 },
+  loop: { type: Boolean, value: !1 },
+  title: { type: String, value: "" },
+  pictureInPictureMode: { type: Array, value: [] },
+  longPressPlaybackRate: { type: Boolean, value: !0 },
+};

@@ -1,0 +1,150 @@
+.individual-guess.data-v-6883fbf4 {
+  padding: 0.5333333333333333rem 0 0;
+}
+.individual-guess__card.data-v-6883fbf4 {
+  background: #fff;
+  border-radius: 0.21333333333333335rem;
+  box-shadow: 0 0.06666666666666667rem 0.21333333333333335rem
+    rgba(233, 237, 247, 0.8);
+  width: 100%;
+}
+.individual-guess__header.data-v-6883fbf4 {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.4933333333333334rem;
+  justify-content: space-between;
+  padding: 0.49333333333333335rem 0.4rem 0.08rem;
+}
+.individual-guess__title.data-v-6883fbf4 {
+  align-items: center;
+  color: #323a4d;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFangSC-Medium;
+  font-size: 0.4266666666666667rem;
+  height: 0.6rem;
+  letter-spacing: 0;
+}
+.individual-guess__rise.data-v-6883fbf4 {
+  color: #ef5350;
+  margin: 0 0.13333333333333333rem;
+}
+.individual-guess__fall.data-v-6883fbf4 {
+  color: #1caa3c;
+  margin: 0 0 0 0.13333333333333333rem;
+}
+.individual-guess__refresh.data-v-6883fbf4 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.6rem;
+}
+.individual-guess__refresh-text.data-v-6883fbf4 {
+  color: #98a0b3;
+  font-family: PingFangHK-Regular;
+  font-size: 0.32rem;
+  width: 0.96rem;
+}
+.individual-guess__refresh-icon.data-v-6883fbf4 {
+  height: 0.32rem;
+  margin-left: 0.06666666666666667rem;
+  width: 0.32rem;
+}
+.individual-guess__list.data-v-6883fbf4 {
+  background-image: linear-gradient(180deg, #fff5f5, #fff 33%);
+  flex-wrap: wrap;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.individual-guess__list.data-v-6883fbf4,
+.individual-guess__stock.data-v-6883fbf4 {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.individual-guess__stock.data-v-6883fbf4 {
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+  flex-wrap: nowrap;
+  height: 1.8533333333333333rem;
+  padding: 0.44rem 0 0;
+  width: 50%;
+}
+.individual-guess__stock.data-v-6883fbf4:nth-of-type(2n) {
+  padding: 0.44rem 0 0 0.25333333333333335rem;
+}
+.individual-guess__stock.data-v-6883fbf4:nth-of-type(odd) {
+  padding: 0.44rem 0.25333333333333335rem 0 0;
+}
+.individual-guess__stock-info.data-v-6883fbf4 {
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 1.9333333333333333rem);
+}
+.individual-guess__stock-name.data-v-6883fbf4 {
+  color: #262e40;
+  display: block;
+  font-family: PingFangSC-Medium;
+  font-size: 0.37333333333333335rem;
+  height: 0.5333333333333333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.individual-guess__stock-change.data-v-6883fbf4 {
+  display: block;
+  font-family: PingFangSC-Medium;
+  font-size: 0.32rem;
+  height: 0.44rem;
+  margin-top: 0.05333333333333334rem;
+  width: 100%;
+}
+.individual-guess__stock-change--rise.data-v-6883fbf4 {
+  color: #e63535;
+}
+.individual-guess__stock-change--fall.data-v-6883fbf4 {
+  color: #1caa3c;
+}
+.individual-guess__stock-change--flat.data-v-6883fbf4 {
+  color: gray;
+}
+.individual-guess__guess-btn.data-v-6883fbf4 {
+  background-image: linear-gradient(270deg, #e63535, #ef5350);
+  border: 0;
+  border-radius: 0.4rem;
+  color: #fff;
+  display: inline-block;
+  font-family: SourceHanSansCN-Medium;
+  font-size: 0.3466666666666667rem;
+  height: 0.7466666666666667rem;
+  line-height: 0.7466666666666667rem;
+  margin-top: 0.14666666666666667rem;
+  padding: 0 0.3466666666666667rem;
+  text-align: center;
+}
+.individual-guess__footer.data-v-6883fbf4 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.2533333333333334rem;
+  justify-content: center;
+  width: 100%;
+}
+.individual-guess__record-link.data-v-6883fbf4 {
+  color: #98a0b3;
+  font-family: PingFangHK-Regular;
+  font-size: 0.32rem;
+  line-height: 1;
+}
+.individual-guess__arrow.data-v-6883fbf4 {
+  border-bottom: 0.10666666666666667rem solid transparent;
+  border-left: 0.10666666666666667rem solid #98a0b3;
+  border-top: 0.10666666666666667rem solid transparent;
+  height: 0;
+  margin-left: 0.12rem;
+  width: 0;
+}

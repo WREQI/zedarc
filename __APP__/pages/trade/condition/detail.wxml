@@ -1,0 +1,113 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r"
+  id="global-wrap"
+  uI="dc71383a-0"
+  uP="{{D}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{D}}"
+>
+  <view class="detail-container">
+    <scroll-view
+      bindscrolltolower="{{A}}"
+      class="records-scroll-view"
+      scrollY="true"
+    >
+      <view class="cond-detail-info">
+        <grid-detail
+          bind:__l="__l"
+          uI="dc71383a-1,dc71383a-0"
+          uP="{{c}}"
+          wx:if="{{b}}"
+        ></grid-detail>
+        <t-p-s-l-detail
+          bind:__l="__l"
+          uI="dc71383a-2,dc71383a-0"
+          uP="{{e}}"
+          wx:if="{{d}}"
+        ></t-p-s-l-detail>
+        <limit-up-item
+          bind:__l="__l"
+          uI="dc71383a-3,dc71383a-0"
+          uP="{{g}}"
+          wx:if="{{f}}"
+        ></limit-up-item>
+        <opening-sell-item
+          bind:__l="__l"
+          uI="dc71383a-4,dc71383a-0"
+          uP="{{i}}"
+          wx:if="{{h}}"
+        ></opening-sell-item>
+        <invest-detail
+          bind:__l="__l"
+          bindcancel="{{k}}"
+          uI="dc71383a-5,dc71383a-0"
+          uP="{{l}}"
+          wx:if="{{j}}"
+        ></invest-detail>
+        <price-detail
+          bind:__l="__l"
+          bindcancel="{{n}}"
+          uI="dc71383a-6,dc71383a-0"
+          uP="{{o}}"
+          wx:if="{{m}}"
+        ></price-detail>
+        <view class="wrapper">
+          <block wx:if="{{p}}">
+            <view class="btn-area flex-between" wx:if="{{q}}">
+              <button
+                catchtap="{{r}}"
+                class="cancel-btn btn-half flex-1"
+                type="default"
+              >
+                终止运行
+              </button>
+              <button catchtap="{{s}}" class="btn-half flex-1" type="primary">
+                修改设置
+              </button>
+            </view>
+          </block>
+          <view class="btn-area flex-between one-more-btn" wx:if="{{t}}">
+            <button catchtap="{{v}}" class="btn-full flex-1" type="primary">
+              再来一单
+            </button>
+          </view>
+        </view>
+      </view>
+      <view class="cond-detail-body cond-detail" wx:if="{{w}}">
+        <view class="cond-detail-title">策略触发记录</view>
+        <block wx:if="{{x}}">
+          <view wx:for="{{y}}" wx:key="e">
+            <triggered-body
+              bind:__l="__l"
+              bindclick="{{item.a}}"
+              uI="{{item.b}}"
+              uP="{{item.c}}"
+              wx:if="{{item.c}}"
+            ></triggered-body>
+            <view
+              class="cond-detail-divider border--top"
+              wx:if="{{item.d}}"
+            ></view>
+          </view>
+        </block>
+        <empty
+          bind:__l="__l"
+          uI="dc71383a-8,dc71383a-0"
+          uP="{{z||''}}"
+          wx:else
+        ></empty>
+      </view>
+      <view class="block-wrap"></view>
+    </scroll-view>
+    <mp-dialog
+      bind:__l="__l"
+      id="mp-dialog"
+      uI="dc71383a-9,dc71383a-0"
+      uP="{{B}}"
+      wx:if="{{B}}"
+    ></mp-dialog>
+  </view>
+</global-wrap>

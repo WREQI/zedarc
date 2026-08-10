@@ -1,0 +1,14 @@
+<view class="_div live-wrapper">
+  <custom-live
+    bind:__l="__l"
+    bindgotoLiveDetail="{{f}}"
+    bindmuteChange="{{c}}"
+    bindreportPauseLive="{{e}}"
+    bindreportPlayLive="{{d}}"
+    class="live-box r"
+    uI="c532b592-0"
+    uP="{{g}}"
+    uR="{{b}}"
+    wx:if="{{g}}"
+  ></custom-live>
+</view>

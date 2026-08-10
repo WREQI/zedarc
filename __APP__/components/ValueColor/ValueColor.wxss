@@ -1,0 +1,17 @@
+@import "/app.wxss";
+.quote-animate.data-v-427e7b49 {
+  transition: background-color 0.3s linear, color 0.3s linear;
+  width: 100%;
+}
+.bg-quote-rise.data-v-427e7b49 {
+  background-color: var(--color-rise-anim) !important;
+}
+.bg-quote-drop.data-v-427e7b49 {
+  background-color: var(--color-drop-anim) !important;
+}
+[data-theme="dark"] .bg-quote-rise.data-v-427e7b49 {
+  background-color: #4b2428 !important;
+}
+[data-theme="dark"] .bg-quote-drop.data-v-427e7b49 {
+  background-color: #2a5236 !important;
+}

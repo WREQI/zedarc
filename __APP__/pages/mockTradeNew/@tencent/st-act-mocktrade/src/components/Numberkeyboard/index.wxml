@@ -1,0 +1,67 @@
+<view
+  catchtap="{{k}}"
+  class="_div number-keyboard data-v-2ec3d313"
+  wx:if="{{a}}"
+>
+  <view class="_div keyboard-body data-v-2ec3d313">
+    <view class="_div keyboard-row data-v-2ec3d313">
+      <view
+        bindtap="{{num.c}}"
+        class="_div key-btn number-key data-v-2ec3d313"
+        wx:for="{{b}}"
+        wx:for-item="num"
+        wx:key="b"
+        >{{num.a}}</view
+      >
+      <view bindtap="{{c}}" class="_div key-btn delete-key data-v-2ec3d313">
+        <view class="_div delete-key-icon data-v-2ec3d313"></view>
+      </view>
+    </view>
+    <view class="_div keyboard-row data-v-2ec3d313">
+      <view
+        bindtap="{{num.c}}"
+        class="_div key-btn number-key data-v-2ec3d313"
+        wx:for="{{d}}"
+        wx:for-item="num"
+        wx:key="b"
+        >{{num.a}}</view
+      >
+      <view
+        bindtap="{{e}}"
+        class="_div key-btn special-key clear-key data-v-2ec3d313"
+        >清空</view
+      >
+    </view>
+    <view class="_div keyboard-row with-vertical-confirm data-v-2ec3d313">
+      <view
+        bindtap="{{num.c}}"
+        class="_div key-btn number-key data-v-2ec3d313"
+        wx:for="{{f}}"
+        wx:for-item="num"
+        wx:key="b"
+        >{{num.a}}</view
+      >
+      <view class="_div confirm-placeholder data-v-2ec3d313"></view>
+    </view>
+    <view class="_div keyboard-row with-vertical-confirm data-v-2ec3d313">
+      <view
+        bindtap="{{g}}"
+        class="_div key-btn special-key close-keyboard data-v-2ec3d313"
+      >
+        <view class="_div close-keyboard-icon data-v-2ec3d313"></view>
+      </view>
+      <view bindtap="{{h}}" class="_div key-btn number-key data-v-2ec3d313"
+        >0</view
+      >
+      <view
+        bindtap="{{i}}"
+        class="_div key-btn number-key decimal-key data-v-2ec3d313"
+        >.</view
+      >
+      <view class="_div confirm-placeholder data-v-2ec3d313"></view>
+    </view>
+    <view bindtap="{{j}}" class="_div key-btn queren-key data-v-2ec3d313"
+      >确认</view
+    >
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="_div delivery-guide-pulldown-access-com data-v-bc0fb375">
+  <view
+    bindtap="{{d}}"
+    class="_div delivery-guide-pulldown-access data-v-bc0fb375"
+    ref="deliveryGuidePulldownAccess"
+    wx:if="{{a}}"
+  >
+    <view class="_div guide-pulldown-access-bg data-v-bc0fb375">
+      <view
+        class="_div guide-pulldown-access-pic data-v-bc0fb375"
+        style="{{'background-image:'+b+';'+'top:'+c}}"
+      ></view>
+    </view>
+  </view>
+</view>

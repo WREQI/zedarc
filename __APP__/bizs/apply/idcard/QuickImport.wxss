@@ -1,0 +1,88 @@
+@import "/app.wxss";
+.content-container-new.data-v-84f8ba21 {
+  background-color: var(--fill-2);
+  padding: 0.64rem 0 0;
+}
+.content-container-new.border--bottom.data-v-84f8ba21:after {
+  bottom: -0.4rem;
+}
+.quick-import-button.data-v-84f8ba21 {
+  font-size: 0.373333rem;
+  margin: auto 0;
+}
+.quick-import-button .text.data-v-84f8ba21 {
+  line-height: 0.533333rem;
+}
+.quick-import-button .right-arrow.data-v-84f8ba21 {
+  margin-left: 0.133333rem;
+  transform: scale(1.2);
+}
+.privacy-container.data-v-84f8ba21 {
+  line-height: 0.56rem;
+  margin: 0.693333rem 0.64rem;
+  max-height: 5.866667rem;
+  overflow-y: scroll;
+  text-align: justify;
+}
+.privacy-title.data-v-84f8ba21 {
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.586667rem;
+  margin: 0 0.32rem;
+  padding: 0.853333rem 0 0.426667rem;
+}
+.privacy-title .broker-icon.data-v-84f8ba21 {
+  -webkit-box-flex: 0;
+  flex: 0 0 1.066667rem;
+  height: 1.066667rem;
+  margin-right: 0.32rem;
+}
+.privacy-top-tip.data-v-84f8ba21 {
+  font-size: 0.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0.48rem;
+  padding: 0.426667rem 0.32rem;
+}
+.privacy-top-tip .icon-shield.data-v-84f8ba21 {
+  -webkit-box-flex: 0;
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_\ security.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  flex: 0 0 0.266667rem;
+  height: 0.333333rem;
+  margin-right: 0.133333rem;
+  transform: translateY(0.053333rem);
+}
+.privacy-button-container.data-v-84f8ba21 {
+  padding: 0 0.64rem 0.32rem;
+  text-align: center;
+}
+.privacy-button-container .button.data-v-84f8ba21 {
+  -webkit-box-flex: 1;
+  border-radius: 0.106667rem;
+  flex: 1;
+  font-family: PingFang SC;
+  font-size: 0.426667rem;
+  font-style: normal;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+}
+.privacy-button-container .confirm-button.data-v-84f8ba21 {
+  background-color: var(--color-primary);
+  border: 0.026667rem solid var(--color-primary);
+  color: var(--fill-2);
+  margin-left: 0.16rem;
+}
+.privacy-button-container .refuse-button.data-v-84f8ba21 {
+  border: 0.026667rem solid var(--color-primary);
+  color: var(--color-primary);
+  margin-right: 0.16rem;
+}
+[data-simple="true"] .content-container-new.border--top.data-v-84f8ba21:before {
+  top: 0.266667rem;
+}

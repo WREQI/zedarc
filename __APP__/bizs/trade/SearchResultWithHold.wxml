@@ -1,0 +1,44 @@
+<view class="search-result-with-hold data-v-6c80a269">
+  <view class="data-v-6c80a269" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <search-result-list
+        bind:__l="__l"
+        bindclick="{{d}}"
+        class="data-v-6c80a269"
+        uI="6c80a269-0"
+        uP="{{e}}"
+        uS="{{['label']}}"
+        wx:if="{{c}}"
+      >
+        <view
+          class="search-list-title flex-between data-v-6c80a269"
+          slot="label"
+        >
+          <label class="search-list-titletext data-v-6c80a269">我的持仓</label>
+        </view>
+      </search-result-list>
+    </block>
+    <view class="search-result-empty data-v-6c80a269" wx:elif="{{f}}">
+      <empty
+        bind:__l="__l"
+        class="data-v-6c80a269"
+        uI="6c80a269-1"
+        uP="{{g}}"
+        wx:if="{{g}}"
+      ></empty>
+    </view>
+  </view>
+  <search-result-list
+    bind:__l="__l"
+    bindclick="{{h}}"
+    class="data-v-6c80a269"
+    uI="6c80a269-2"
+    uP="{{i||''}}"
+    uS="{{['label']}}"
+    wx:else
+  >
+    <view class="search-list-title flex-between data-v-6c80a269" slot="label">
+      <label class="search-list-titletext data-v-6c80a269">搜索结果</label>
+    </view>
+  </search-result-list>
+</view>

@@ -1,0 +1,31 @@
+<page-meta class="data-v-e201f570" rootFontSize="{{a}}"></page-meta>
+<view class="{{['_div','data-v-e201f570','container',d]}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e201f570"
+    uI="e201f570-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-e201f570"
+    uI="e201f570-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div top-bar flex flex-pack-justify data-v-e201f570">
+    <label class="block col-a data-v-e201f570">均价(元)</label>
+    <label class="block col-b data-v-e201f570">数量(股)</label>
+    <label class="block col-c data-v-e201f570">日期</label>
+  </view>
+  <view class="_div bd-cont data-v-e201f570">
+    <view
+      class="_div item-rank flex flex-pack-justify data-v-e201f570"
+      wx:for="{{c}}"
+      wx:key="d"
+    >
+      <label class="block col-a data-v-e201f570">{{item.a}}</label>
+      <label class="block col-b data-v-e201f570">{{item.b}}</label>
+      <label class="block col-c data-v-e201f570">{{item.c}}</label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="_div message-empty-content data-v-a9eb006f">
+  <image
+    alt=""
+    class="_img empty-icon data-v-a9eb006f"
+    src="https://st.gtimg.com/design/dd0bc437f729fec60903074564426cae.svg"
+  ></image>
+  <image
+    alt=""
+    class="_img logo-icon data-v-a9eb006f"
+    src="https://st.gtimg.com/design/6eb62766effb3c00dae50c452219c64f.svg"
+    wx:if="{{a}}"
+  ></image>
+  <image
+    alt=""
+    class="_img logo-icon pro data-v-a9eb006f"
+    src="https://st.gtimg.com/design/3e9d49ded8d53634166aa389506f80fe.png"
+    wx:elif="{{b}}"
+  ></image>
+  <image
+    alt=""
+    class="_img logo-icon pro data-v-a9eb006f"
+    src="https://st.gtimg.com/design/8fa51aef3f07f6cb37f9106c71e673f5.png"
+    wx:else
+  ></image>
+</view>

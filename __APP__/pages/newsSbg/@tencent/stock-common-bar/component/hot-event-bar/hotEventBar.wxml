@@ -1,0 +1,30 @@
+<view class="{{['_div','data-v-4c16856f','basket-bar-container',i]}}">
+  <view class="_div left-content data-v-4c16856f">
+    <button
+      bindtap="{{c}}"
+      class="btn-box data-v-4c16856f"
+      openType="share"
+      plain="true"
+      wx:if="{{a}}"
+    >
+      <view class="_div icon icon-shares data-v-4c16856f"></view>
+      <view class="_div data-v-4c16856f">{{b}}</view>
+    </button>
+    <view bindtap="{{e}}" class="_div btn-box data-v-4c16856f" wx:else>
+      <view class="_div icon icon-shares data-v-4c16856f"></view>
+      <view class="_div data-v-4c16856f">{{d}}</view>
+    </view>
+  </view>
+  <view class="_div right-content data-v-4c16856f">
+    <view bindtap="{{h}}" class="_div comment-box data-v-4c16856f">
+      <view class="_div comment-text data-v-4c16856f" wx:if="{{f}}">
+        <label class="_span data-v-4c16856f">当前有</label>
+        <label class="_span comment-num data-v-4c16856f">{{g}}</label>
+        <label class="_span data-v-4c16856f">条评论，说说你的看法...</label>
+      </view>
+      <view class="_div comment-text data-v-4c16856f" wx:else
+        >说说你的看法...</view
+      >
+    </view>
+  </view>
+</view>

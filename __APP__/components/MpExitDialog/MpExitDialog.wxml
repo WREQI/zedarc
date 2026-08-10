@@ -1,0 +1,15 @@
+<view class="modal-container data-v-455e3993" wx:if="{{a}}">
+  <view class="modal-mask data-v-455e3993"></view>
+  <view class="modal-box data-v-455e3993">
+    <view class="modal-title data-v-455e3993" wx:if="{{b}}">{{c}}</view>
+    <view class="modal-content data-v-455e3993">{{d}}</view>
+    <view bindtap="{{f}}" class="button-container data-v-455e3993">
+      <navigator
+        class="modal-confirm-btn data-v-455e3993"
+        openType="exit"
+        target="miniProgram"
+        >{{e}}</navigator
+      >
+    </view>
+  </view>
+</view>

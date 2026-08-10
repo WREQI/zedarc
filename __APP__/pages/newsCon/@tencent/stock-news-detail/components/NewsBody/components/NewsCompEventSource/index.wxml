@@ -1,0 +1,11 @@
+<view bindtap="{{d}}" class="_div source data-v-e640f260" wx:if="{{a}}">
+  <view class="_div section data-v-e640f260">
+    <image class="_img data-v-e640f260" data-no_preview="1" src="{{b}}"></image>
+    <view class="_div data-v-e640f260">
+      <label class="_span split-line data-v-e640f260"></label>
+      <label class="_span intro data-v-e640f260">来自</label>
+      <label class="_span data-v-e640f260">{{c}}</label>
+    </view>
+  </view>
+  <view class="_div rightAngel data-v-e640f260"></view>
+</view>

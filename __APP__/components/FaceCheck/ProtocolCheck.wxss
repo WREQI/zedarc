@@ -1,0 +1,31 @@
+@import "/app.wxss";
+.protocol-container.data-v-2eb393b5 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  margin-top: 0.426667rem;
+}
+.protocol-container .protocol-checkbox.data-v-2eb393b5 {
+  transform: scale(0.7);
+}
+.protocol-container .protocol-checkbox.data-v-2eb393b5 .uni-checkbox-input {
+  background-color: initial;
+  border: 0.013333rem solid #98a0b3;
+  border-radius: 50%;
+  margin: unset;
+}
+.protocol-container
+  .protocol-checkbox.data-v-2eb393b5
+  .uni-checkbox-input-checked {
+  background-color: var(--color-primary-1);
+  border-color: var(--color-primary-1);
+  color: #fff !important;
+}
+.protocol-container .all-protocol-text.data-v-2eb393b5 {
+  color: var(--color-link);
+  font-weight: 500;
+}

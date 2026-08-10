@@ -1,0 +1,67 @@
+<view class="{{['_div','teach-pop-wrapper','data-v-681a15cd',h&&'lite']}}">
+  <view
+    bindtap="{{g}}"
+    catchtouchmove="{{f}}"
+    class="_div mask-wrapper data-v-681a15cd"
+    hidden="{{!e}}"
+  >
+    <view catchtap="{{d}}" class="_div pop-content data-v-681a15cd">
+      <view class="_div content-top data-v-681a15cd">
+        <view class="_div top-left data-v-681a15cd">
+          <view class="_div top-pic data-v-681a15cd"></view>
+        </view>
+        <view class="_div top-right data-v-681a15cd">
+          <view class="_div top-right-title data-v-681a15cd">
+            <view class="_div data-v-681a15cd">你了解ETF吗？</view>
+            <view
+              catchtap="{{a}}"
+              class="_div top-close data-v-681a15cd"
+            ></view>
+          </view>
+          <view class="_div top-right-text data-v-681a15cd"
+            >通过ETF做资产配置，提升赚钱的可能性</view
+          >
+        </view>
+      </view>
+      <view class="{{['_div','content-mid','data-v-681a15cd',b]}}">
+        <view class="_div content-popup-wrapper data-v-681a15cd">
+          <view class="_div left data-v-681a15cd">
+            <view class="_div content-text mg-b-30 data-v-681a15cd">
+              <image
+                class="_img bg-icon data-v-681a15cd"
+                src="https://st.gtimg.com/design/2e7ba117c1b8237a194e052b05cf41d0.png"
+              ></image
+              >组合投资分散风险</view
+            >
+            <view class="_div content-text data-v-681a15cd">
+              <image
+                class="_img bg-icon data-v-681a15cd"
+                src="https://st.gtimg.com/design/598d3fe351ef239c47f128c6f77d3195.png"
+              ></image
+              >部分支持T+0交易</view
+            >
+          </view>
+          <view class="_div right data-v-681a15cd">
+            <view class="_div content-text mg-b-30 data-v-681a15cd">
+              <image
+                class="_img bg-icon data-v-681a15cd"
+                src="https://st.gtimg.com/design/feab26a010ead1d11ab76490d728185e.png"
+              ></image
+              >可投资全球、黄金</view
+            >
+            <view class="_div content-text data-v-681a15cd">
+              <image
+                class="_img bg-icon data-v-681a15cd"
+                src="https://st.gtimg.com/design/a8aaab645a93de50bad840c0f7682151.png"
+              ></image
+              >费用更低，免印花税</view
+            >
+          </view>
+        </view>
+      </view>
+      <view catchtap="{{c}}" class="_div content-bottom data-v-681a15cd"
+        >1分钟了解ETF</view
+      >
+    </view>
+  </view>
+</view>

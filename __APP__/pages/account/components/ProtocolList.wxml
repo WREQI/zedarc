@@ -1,0 +1,41 @@
+<view class="proto data-v-3c59fde5" wx:if="{{a}}">
+  <view class="proto-line data-v-3c59fde5">
+    <label
+      bindtap="{{d}}"
+      class="data-v-3c59fde5"
+      data-from="about"
+      data-url="{{c}}"
+      href="javascript:;"
+      >《{{b}}》</label
+    >
+    <label
+      bindtap="{{g}}"
+      class="data-v-3c59fde5"
+      data-from="about"
+      data-url="{{f}}"
+      href="javascript:;"
+      >《{{e}}》</label
+    >
+  </view>
+  <view class="proto-line data-v-3c59fde5">
+    <label
+      bindtap="{{j}}"
+      class="data-v-3c59fde5"
+      data-from="about"
+      data-url="{{i}}"
+      href="javascript:;"
+      >《{{h}}》</label
+    >
+    <label class="gray data-v-3c59fde5" key="{{k}}">和</label>
+  </view>
+  <view class="proto-line data-v-3c59fde5">
+    <label
+      bindtap="{{n}}"
+      class="data-v-3c59fde5"
+      data-from="about"
+      data-url="{{m}}"
+      href="javascript:;"
+      >《{{l}}》</label
+    >
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<view class="_div grid-wrapper data-v-5b8e658d">
+  <view class="_div grid-container data-v-5b8e658d" wx:if="{{a}}">
+    <view
+      class="{{['_div','freeze-content','data-v-5b8e658d',f]}}"
+      wx:if="{{b}}"
+    >
+      <list-title
+        bind:__l="__l"
+        class="data-v-5b8e658d"
+        uI="5b8e658d-0"
+        uP="{{c}}"
+        wx:if="{{c}}"
+      ></list-title>
+      <list-content
+        bind:__l="__l"
+        bindrowClick="{{d}}"
+        class="data-v-5b8e658d"
+        uI="5b8e658d-1"
+        uP="{{e}}"
+        wx:if="{{e}}"
+      ></list-content>
+    </view>
+    <view
+      bindscroll="{{k}}"
+      bindtouchmove="{{l}}"
+      class="_div content data-v-5b8e658d"
+      ref="content"
+    >
+      <list-title
+        bind:__l="__l"
+        bindsortClick="{{g}}"
+        class="data-v-5b8e658d"
+        uI="5b8e658d-2"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></list-title>
+      <list-content
+        bind:__l="__l"
+        bindrowClick="{{i}}"
+        class="data-v-5b8e658d"
+        uI="5b8e658d-3"
+        uP="{{j}}"
+        wx:if="{{j}}"
+      ></list-content>
+    </view>
+  </view>
+  <slot name="noData" wx:else></slot>
+</view>

@@ -1,0 +1,54 @@
+<view bindtap="{{s}}" class="cond-trigger-body data-v-1e5b3403">
+  <view class="cond-triggered-action data-v-1e5b3403">
+    <view class="cond-triggered-actiontxt data-v-1e5b3403">{{a}}</view>
+    <view
+      class="cond-triggered-arrow icon icon-arrow data-v-1e5b3403"
+      wx:if="{{b}}"
+    ></view>
+  </view>
+  <condition-detail-row
+    bind:__l="__l"
+    class="data-v-1e5b3403"
+    uI="1e5b3403-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></condition-detail-row>
+  <view class="cond-detail-row cond-orderinfo data-v-1e5b3403">
+    <view class="cond-detail-row-left data-v-1e5b3403">委托信息</view>
+    <view class="cond-detail-row-right data-v-1e5b3403" wx:if="{{d}}"
+      >{{e}}<label class="line data-v-1e5b3403">|</label>{{f}}元<label
+        class="line data-v-1e5b3403"
+        >|</label
+      >{{g}} {{h}}</view
+    >
+    <view class="cond-detail-row-right data-v-1e5b3403" wx:else>***</view>
+  </view>
+  <condition-detail-row
+    bind:__l="__l"
+    class="data-v-1e5b3403"
+    uI="1e5b3403-1"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></condition-detail-row>
+  <view class="{{['data-v-1e5b3403',r]}}">
+    <condition-detail-row
+      bind:__l="__l"
+      class="{{['data-v-1e5b3403',p&&'cond-detail-row-right--ellipsis']}}"
+      uI="1e5b3403-2"
+      uP="{{q}}"
+      uS="{{['right']}}"
+      wx:if="{{q}}"
+    >
+      <view
+        catchtap="{{o}}"
+        class="{{['data-v-1e5b3403','cond-desc-right',n&&'cond-order-desc--ellipsis']}}"
+        slot="right"
+      >
+        <label class="cond-order-desc data-v-1e5b3403">{{j}}</label>
+        <label class="{{['cond-tel','data-v-1e5b3403',m]}}" wx:if="{{k}}"
+          >{{l}}</label
+        >
+      </view>
+    </condition-detail-row>
+  </view>
+</view>

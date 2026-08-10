@@ -1,0 +1,28 @@
+<view class="_div national-debt-container data-v-c5a698e6">
+  <header-view
+    bind:__l="__l"
+    bindgetHightlightPercent="{{a}}"
+    bindsubscribe="{{b}}"
+    class="data-v-c5a698e6"
+    uI="c5a698e6-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></header-view>
+  <list-content
+    bind:__l="__l"
+    bindgoToStockDetail="{{g}}"
+    bindonClickAccount="{{f}}"
+    bindonClickTrade="{{e}}"
+    class="data-v-c5a698e6"
+    uI="c5a698e6-1"
+    uP="{{h}}"
+    wx:if="{{d}}"
+  ></list-content>
+  <footer-view
+    bind:__l="__l"
+    class="data-v-c5a698e6"
+    uI="c5a698e6-2"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></footer-view>
+</view>

@@ -1,0 +1,316 @@
+@font-face {
+  font-display: swap;
+  font-family: TencentSansW7;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://wzq.gtimg.com/resources/mp/lite/fonts/act/W7/TencentSans-W7.ttf)
+    format("truetype");
+}
+.market-analysis.data-v-0b0bba30 {
+  background: linear-gradient(0deg, #fff, #fff),
+    linear-gradient(180deg, #fff5f5 -2.75%, #fff 32.9%);
+  border-radius: 0.10666666666666667rem;
+  box-shadow: 0 0.13333333333333333rem 0.21333333333333335rem
+    hsla(0, 0%, 61%, 0.14);
+  margin: 0.32rem auto;
+  padding: 0.28rem 0 0.4266666666666667rem;
+  width: 9.2rem;
+}
+.market-analysis__title.data-v-0b0bba30 {
+  color: #000;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.48rem;
+  font-weight: 700;
+  line-height: 0.72rem;
+  margin: 0 auto 0.3333333333333333rem;
+  text-align: center;
+}
+.market-analysis__task-item.data-v-0b0bba30 {
+  align-items: center;
+  background: rgba(238, 24, 24, 0.03);
+  border-radius: 0.18666666666666668rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.92rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0.37333333333333335rem 0.4266666666666667rem;
+  width: 8.346666666666666rem;
+}
+.market-analysis__task-icon.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/2ec57dc0627c6dca1566be760a3a081e.png)
+    no-repeat 50% / cover;
+  height: 1.1733333333333333rem;
+  width: 1.1733333333333333rem;
+}
+.market-analysis__task-info.data-v-0b0bba30 {
+  flex: 1;
+  margin: 0 0.21333333333333335rem;
+}
+.market-analysis__task-name.data-v-0b0bba30 {
+  color: #000;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  line-height: 0.64rem;
+  margin-bottom: 0.05333333333333334rem;
+}
+.market-analysis__task-desc.data-v-0b0bba30 {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+}
+.market-analysis__ai-btn.data-v-0b0bba30 {
+  background: radial-gradient(
+    189.32% 141.42%at 0 0,
+    #ff7e75,
+    #f93636 52.6%,
+    #ee1818
+  );
+  border: 0.02rem solid #ff8f88;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.32rem;
+  font-weight: 400;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  padding: 0 0.32rem;
+  text-align: center;
+}
+.market-analysis__ai-done.data-v-0b0bba30 {
+  align-items: center;
+  color: #e63535;
+  display: -webkit-flex;
+  display: flex;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+  opacity: 0.2;
+}
+.market-analysis__ai-done.data-v-0b0bba30:before {
+  background: url(https://st.gtimg.com/design/410cd314bac0d20643e289bf363099f1.png)
+    no-repeat 50% / cover;
+  content: "";
+  display: block;
+  height: 0.26666666666666666rem;
+  margin-right: 0.10666666666666667rem;
+  width: 0.26666666666666666rem;
+}
+.market-analysis__action.data-v-0b0bba30 {
+  position: relative;
+}
+.market-analysis__action-tips.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/9158e069913d186aef78ac51e27a826e.png)
+    no-repeat 50% / cover;
+  height: 0.6666666666666666rem;
+  left: 50%;
+  position: absolute;
+  top: -0.4rem;
+  transform: translate(-50%);
+  width: 5.226666666666667rem;
+}
+.market-analysis__invite-btn.data-v-0b0bba30 {
+  background: radial-gradient(
+    189.32% 141.42%at 0 0,
+    #ff7e75,
+    #f93636 52.6%,
+    #ee1818
+  );
+  border: 0.02666666666666667rem solid #ff8f88;
+  border-radius: 1.3333333333333333rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.12),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 700;
+  height: 1.1733333333333333rem;
+  line-height: 0.64rem;
+  margin: 0.4266666666666667rem auto;
+  padding: 0.26666666666666666rem 0.8533333333333334rem;
+  position: relative;
+  text-align: center;
+  width: 8.346666666666666rem;
+}
+.market-analysis__invite-btn--disabled.data-v-0b0bba30 {
+  opacity: 0.2;
+}
+.market-analysis__wallet.data-v-0b0bba30 {
+  align-items: center;
+  color: #4774b3;
+  display: -webkit-flex;
+  display: flex;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  justify-content: space-between;
+  line-height: 0.56rem;
+  padding: 0 0.4266666666666667rem;
+  text-align: center;
+}
+.market-analysis__wallet-records.data-v-0b0bba30,
+.market-analysis__wallet-withdraw.data-v-0b0bba30 {
+  flex: 1;
+}
+.market-analysis__wallet-divider.data-v-0b0bba30 {
+  background: rgba(0, 0, 0, 0.1);
+  height: 0.48rem;
+  width: 0.013333333333333334rem;
+}
+.market-analysis__popup.data-v-0b0bba30 {
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.market-analysis__popup-body.data-v-0b0bba30 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.market-analysis__popup-close.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/752962aece11212a850439b45f7f2548.png)
+    no-repeat 50% / cover;
+  height: 0.64rem;
+  left: 100%;
+  margin-top: -0.06666666666666667rem;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -120%);
+  width: 0.64rem;
+}
+.market-analysis__popup-header.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/577c6e0e1242588891dba86586124e19.png)
+    no-repeat;
+  background-size: 100%auto;
+  border-radius: 0.21333333333333335rem;
+  height: 2.5866666666666664rem;
+  overflow: hidden;
+  width: 7.2rem;
+}
+.market-analysis__popup-notice.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/2f00f6a2862de6d989f51383c65cfb90.png)
+    no-repeat;
+  background-size: 100%auto;
+  height: 0.7466666666666667rem;
+  margin: 0.5333333333333333rem auto 0;
+  width: 2.1066666666666665rem;
+}
+.market-analysis__popup-notice-text.data-v-0b0bba30 {
+  color: #7a8499;
+  font-family: SourceHanSansCN-Normal;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin-top: 0.26666666666666666rem;
+  text-align: center;
+}
+.market-analysis__popup-main.data-v-0b0bba30 {
+  align-items: center;
+  background: url(https://st.gtimg.com/design/293943c6ff36188ea7c15e0fed3c5976.png)
+    no-repeat;
+  background-size: 100% 100%;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 7.733333333333333rem;
+  margin-top: 0.32rem;
+  padding: 0.4266666666666667rem 0.5333333333333333rem 0.52rem;
+  position: relative;
+  width: 7.2rem;
+}
+.market-analysis__popup-main--no-header.data-v-0b0bba30 {
+  margin-top: 0;
+}
+.market-analysis__popup-title.data-v-0b0bba30 {
+  -webkit-text-fill-color: transparent;
+  background: radial-gradient(50.32% 66.07%at 3% 24.11%, #901616, #510d0d);
+  background-clip: text;
+  font-family: TencentSansW7;
+  font-size: 0.5333333333333333rem;
+  font-weight: 700;
+  letter-spacing: -0.010666666666666668rem;
+  line-height: 0.7466666666666667rem;
+  text-align: center;
+}
+.market-analysis__popup-subtitle.data-v-0b0bba30 {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  margin: 0.16rem auto 0.48rem;
+  text-align: center;
+}
+.market-analysis__popup-question.data-v-0b0bba30 {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  align-self: flex-end;
+  backdrop-filter: blur(0.2212rem);
+  background: radial-gradient(
+    88.83% 100%at 27.93%0,
+    #fff,
+    hsla(0, 0%, 100%, 0.8) 29.25%,
+    hsla(0, 0%, 100%, 0.6)
+  );
+  border: 0.02212rem solid #fff;
+  border-radius: 0.21333333333333335rem 0 0.21333333333333335rem
+    0.21333333333333335rem;
+  color: rgba(38, 46, 64, 0.65);
+  display: -webkit-box;
+  font-family: DFP King Gothic GB;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  max-width: 5.8933333333333335rem;
+  overflow: hidden;
+  padding: 0.21333333333333335rem;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+.market-analysis__popup-answer.data-v-0b0bba30 {
+  background: url(https://st.gtimg.com/design/f1575f3f5988859fb3b4bcc8681e4933.png)
+    no-repeat top/6.133333333333334rem 3.453333333333333rem;
+  height: 2.466666666666667rem;
+  margin-top: 0.16rem;
+  width: 100%;
+}
+.market-analysis__popup-btn.data-v-0b0bba30 {
+  background: radial-gradient(
+    189.32% 141.42%at 0 0,
+    #ff7e75,
+    #f93636 52.6%,
+    #ee1818
+  );
+  border: 0.02666666666666667rem solid #ff8f88;
+  border-radius: 1.3333333333333333rem;
+  bottom: 0.52rem;
+  box-shadow: 0 0.32rem 0.4266666666666667rem rgba(0, 0, 0, 0.06),
+    0 0.08rem 0.16rem rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: DFP King Gothic GB Medium;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  height: 1.1733333333333333rem;
+  left: 50%;
+  line-height: 1.1733333333333333rem;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%);
+  width: 6.133333333333334rem;
+}

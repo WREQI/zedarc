@@ -1,0 +1,46 @@
+<view class="_div mod-fund-zxg data-v-74a06ddb">
+  <view class="_ul fund-list data-v-74a06ddb" wx:if="{{a}}">
+    <view class="{{['_div','caption','data-v-74a06ddb',b]}}">
+      <view class="_div col-name data-v-74a06ddb">基金名称</view>
+      <view class="_div col-value data-v-74a06ddb">单位净值</view>
+      <view class="_div col-rate data-v-74a06ddb">近一年涨跌幅</view>
+    </view>
+    <view class="{{['_div','data-v-74a06ddb',d]}}">
+      <view
+        bindtap="{{item.g}}"
+        class="_li list-item data-v-74a06ddb"
+        wx:for="{{c}}"
+        wx:key="f"
+      >
+        <view class="_div col-name data-v-74a06ddb">
+          <view class="_div name data-v-74a06ddb">{{item.a}}</view>
+          <view class="_div code data-v-74a06ddb">
+            <image
+              class="_img image-icon data-v-74a06ddb"
+              src="https://st.gtimg.com/design/f78194d45779547c3974aed4915a32b6.svg"
+            ></image>
+            <view class="_div data-v-74a06ddb">{{item.b}}</view>
+          </view>
+        </view>
+        <view class="_div col-value data-v-74a06ddb">
+          <view class="_div value data-v-74a06ddb">{{item.c}}</view>
+        </view>
+        <view class="_div col-rate data-v-74a06ddb">
+          <view class="{{['_div','rate','data-v-74a06ddb',item.e]}}"
+            >{{item.d}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-74a06ddb"
+    uI="74a06ddb-0"
+    uS="{{['d']}}"
+    wx:elif="{{e}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无数据</block>
+  </no-data>
+</view>

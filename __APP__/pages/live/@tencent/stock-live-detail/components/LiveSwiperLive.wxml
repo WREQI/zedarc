@@ -1,0 +1,34 @@
+<view class="_div live-list-container">
+  <live-list
+    bind:__l="__l"
+    bindmanageSelfStock="{{b}}"
+    bindonLiveNewsClick="{{a}}"
+    uI="05f0bf9b-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></live-list>
+  <view class="_div" wx:for="{{d}}" wx:for-item="group" wx:key="f">
+    <view class="_div date-wrapper">
+      <label class="_span date-text">{{group.a}}</label>
+    </view>
+    <live-list
+      bind:__l="__l"
+      bindmanageSelfStock="{{group.c}}"
+      bindonLiveNewsClick="{{group.b}}"
+      uI="{{group.d}}"
+      uP="{{group.e}}"
+      wx:if="{{group.e}}"
+    ></live-list>
+  </view>
+  <view class="_div" wx:if="{{e}}">
+    <view class="_div empty-box flex">
+      <view class="_div empty-img"></view>
+      <view class="_div empty-text">主播没有发表言论</view>
+    </view>
+  </view>
+  <view class="_div refresh-box bottom-refresh" wx:elif="{{f}}">
+    <view class="_div ul-refresh-text" style="{{'margin-bottom:'+g}}"
+      >没有更多数据了</view
+    >
+  </view>
+</view>

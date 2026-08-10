@@ -1,0 +1,86 @@
+<view
+  class="{{['progress-bar-container','data-v-1f370fed',o&&'status-page-progress',p&&'progress-container__simple-mode']}}"
+  wx:if="{{a}}"
+>
+  <view class="progress-bar-title text-color-1 flex-center data-v-1f370fed">
+    <label class="safe-icon data-v-1f370fed"></label
+    >{{b}}：所有信息加密传输，仅用于证券开户</view
+  >
+  <view class="{{['progress-container','data-v-1f370fed',n]}}">
+    <swiper
+      autoplay
+      circular
+      vertical
+      class="progress-swiper data-v-1f370fed"
+      duration="150"
+    >
+      <swiper-item
+        class="progress-swiper-item flex flex-center data-v-1f370fed"
+        wx:for="{{c}}"
+        wx:key="g"
+      >
+        <image
+          class="progress-swiper-icon light data-v-1f370fed"
+          src="{{item.a}}"
+        ></image>
+        <image
+          class="progress-swiper-icon dark data-v-1f370fed"
+          src="{{item.b}}"
+        ></image>
+        <label class="progress-swiper-text data-v-1f370fed">{{item.c}}</label>
+        <label
+          bindtap="{{item.f}}"
+          class="progress-swiper-click data-v-1f370fed"
+          wx:if="{{item.d}}"
+          >{{item.e}}</label
+        >
+      </swiper-item>
+    </swiper>
+    <view class="{{['progress-outer','data-v-1f370fed',m&&'short-mode']}}">
+      <view class="{{['node-container','flex','data-v-1f370fed',g&&'head']}}">
+        <view class="flex-1 data-v-1f370fed" wx:for="{{d}}" wx:key="l">
+          <view
+            class="{{['step-node','data-v-1f370fed',item.a&&'done',item.b&&'active']}}"
+            wx:if="{{e}}"
+          ></view>
+          <view
+            class="{{['step-node','data-v-1f370fed',item.c&&'done',item.d&&'active']}}"
+            wx:else
+          ></view>
+          <view
+            class="{{['step-text','flex','flex-column','data-v-1f370fed',item.j&&'fix-text-align',f&&'fix-text-top']}}"
+            style="{{'margin-left:'+item.k}}"
+          >
+            <label
+              class="{{['step-title','fs-20','data-v-1f370fed',item.f&&'text-color-5']}}"
+              >{{item.e}}</label
+            >
+            <label
+              class="{{['step-desc','fs-18','text-color-5','data-v-1f370fed',item.i&&'highlight']}}"
+              wx:if="{{item.g}}"
+              >{{item.h}}</label
+            >
+          </view>
+        </view>
+      </view>
+      <view class="last-step-item flex flex-column data-v-1f370fed">
+        <image
+          class="last-step-item-icon light data-v-1f370fed"
+          src="{{h}}"
+        ></image>
+        <image
+          class="last-step-item-icon dark data-v-1f370fed"
+          src="{{i}}"
+        ></image>
+        <view class="step-title fs-20 text-color-5 data-v-1f370fed">{{j}}</view>
+        <view class="step-desc fs-18 text-color-1 data-v-1f370fed" wx:if="{{k}}"
+          >下一交易日开启交易</view
+        >
+      </view>
+      <view
+        class="progress-inner data-v-1f370fed"
+        style="{{'width:'+l}}"
+      ></view>
+    </view>
+  </view>
+</view>

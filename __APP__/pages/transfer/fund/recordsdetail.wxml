@@ -1,0 +1,99 @@
+<page-meta class="data-v-5399c9cc" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-5399c9cc"
+  id="global-wrap"
+  uI="5399c9cc-0"
+  uP="{{y}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{y}}"
+>
+  <view class="record-detail-container data-v-5399c9cc">
+    <block wx:if="{{b}}">
+      <block wx:if="{{c}}">
+        <view class="recently-pending-tip data-v-5399c9cc" wx:if="{{d}}"
+          >资金<label class="primary-text data-v-5399c9cc">分{{e}}笔</label
+          >转出，<label class="primary-text data-v-5399c9cc">第{{f}}笔</label
+          >预计<label class="primary-text data-v-5399c9cc">{{g}}</label
+          >前到账</view
+        >
+        <view class="status-wrap data-v-5399c9cc">
+          <view class="status-text data-v-5399c9cc">{{h}}</view>
+          <view class="money data-v-5399c9cc">
+            <label class="rmb data-v-5399c9cc">¥</label>{{i}}</view
+          >
+          <transfer-progress
+            bind:__l="__l"
+            bindnodeAnimationComplete="{{j}}"
+            class="data-v-5399c9cc"
+            uI="5399c9cc-1,5399c9cc-0"
+            uP="{{k}}"
+            wx:if="{{k}}"
+          ></transfer-progress>
+        </view>
+        <view class="info-wrap data-v-5399c9cc" wx:for="{{l}}" wx:key="d">
+          <view class="title data-v-5399c9cc">{{item.a}}</view>
+          <view
+            class="{{['info-item','data-v-5399c9cc',viewItem.j]}}"
+            wx:for="{{item.b}}"
+            wx:for-item="viewItem"
+            wx:key="i"
+          >
+            <view class="left data-v-5399c9cc">{{viewItem.a}}</view>
+            <view
+              bindtap="{{viewItem.h}}"
+              class="{{['right','data-v-5399c9cc',viewItem.f,viewItem.g]}}"
+              wx:if="{{item.c}}"
+              >{{viewItem.b}}<label
+                bindtap="{{viewItem.e}}"
+                class="click-btn data-v-5399c9cc"
+                wx:if="{{viewItem.c}}"
+                >{{viewItem.d}}</label
+              >
+            </view>
+          </view>
+        </view>
+        <view
+          class="{{['placeholder','data-v-5399c9cc',m&&'placeholder-btn']}}"
+        ></view>
+        <view
+          class="{{['bottom-btn-wrap','border--top','data-v-5399c9cc',q&&'bottom-btn-navbar-mp']}}"
+          wx:if="{{n}}"
+        >
+          <view bindtap="{{p}}" class="btn data-v-5399c9cc">{{o}}</view>
+        </view>
+      </block>
+      <empty
+        bind:__l="__l"
+        class="data-v-5399c9cc"
+        uI="5399c9cc-2,5399c9cc-0"
+        uP="{{r||''}}"
+        wx:else
+      ></empty>
+    </block>
+    <loading
+      bind:__l="__l"
+      class="loading-wrap flex-center data-v-5399c9cc"
+      uI="5399c9cc-3,5399c9cc-0"
+      uP="{{s||''}}"
+      wx:else
+    ></loading>
+    <mp-dialog
+      bind:__l="__l"
+      class="data-v-5399c9cc"
+      id="mp-dialog"
+      uI="5399c9cc-4,5399c9cc-0"
+      uP="{{t}}"
+      wx:if="{{t}}"
+    ></mp-dialog>
+    <milestone-dialog
+      bind:__l="__l"
+      class="r data-v-5399c9cc"
+      uI="5399c9cc-5,5399c9cc-0"
+      uP="{{w}}"
+      uR="milestoneDialogRef"
+      wx:if="{{w}}"
+    ></milestone-dialog>
+  </view>
+</global-wrap>

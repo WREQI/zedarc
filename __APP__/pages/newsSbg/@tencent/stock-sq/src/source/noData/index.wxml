@@ -1,0 +1,13 @@
+<view class="_div mod-noData data-v-8ba1bbac">
+    <view class="{{['_div','comment-nodata-box','data-v-8ba1bbac',k]}}">
+        <view class="_div icon data-v-8ba1bbac"></view>
+        <view class="_div tip data-v-8ba1bbac" wx:if="{{a}}">{{b}}</view>
+        <block wx:else>
+            <view class="_div tip data-v-8ba1bbac" wx:if="{{c}}">{{d}}</view>
+            <view catchtap="{{j}}" class="{{['_div','jump-tip','data-v-8ba1bbac',i]}}" wx:if="{{e}}">{{f}}<view class="{{['_i','img','data-v-8ba1bbac',h]}}" wx:if="{{g}}"></view>
+            </view>
+            <input class="my-input data-v-8ba1bbac" ref="myInput"></input>
+        </block>
+    </view>
+    <instructions bind:__l="__l" bindtapProtocol="{{m}}" class="data-v-8ba1bbac" uI="8ba1bbac-0" wx:if="{{l}}"></instructions>
+</view>

@@ -1,0 +1,60 @@
+<view bindtap="{{t}}" class="{{['shareholder-card','data-v-d4c0d0b7',r,s]}}">
+  <view
+    class="{{['shareholder-card__inner','data-v-d4c0d0b7',q&&'shareholder-card__inner--has-shadow']}}"
+  >
+    <view class="shareholder-card__front data-v-d4c0d0b7" style="{{j}}">
+      <view class="shareholder-card__front-content data-v-d4c0d0b7">
+        <block wx:if="{{a}}">
+          <view class="shareholder-card__title data-v-d4c0d0b7">{{b}}</view>
+          <view class="shareholder-card__code data-v-d4c0d0b7"
+            >{{c}} {{d}}</view
+          >
+          <view class="shareholder-card__holder data-v-d4c0d0b7">{{e}}</view>
+        </block>
+        <block wx:else>
+          <view class="shareholder-card__header data-v-d4c0d0b7">
+            <view class="shareholder-card__title data-v-d4c0d0b7">{{f}}</view>
+            <view class="{{['shareholder-card__badge','data-v-d4c0d0b7',g]}}"
+              >未开通</view
+            >
+          </view>
+          <view class="shareholder-card__subtitle data-v-d4c0d0b7"
+            >投资无边界，交易更自由</view
+          >
+          <view
+            catchtap="{{i}}"
+            class="shareholder-card__action data-v-d4c0d0b7"
+            wx:if="{{h}}"
+          >
+            <label class="shareholder-card__action-text data-v-d4c0d0b7"
+              >去开通</label
+            >
+            <label class="icon icon-arrow-right data-v-d4c0d0b7"></label>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="shareholder-card__back data-v-d4c0d0b7" style="{{p}}">
+      <view class="shareholder-card__back-content data-v-d4c0d0b7">
+        <view class="shareholder-card__back-title data-v-d4c0d0b7"
+          >{{k}}股东卡权限</view
+        >
+        <view
+          class="{{['shareholder-card__permission-list','data-v-d4c0d0b7',o&&'shareholder-card__permission-list--center']}}"
+          wx:if="{{l}}"
+        >
+          <view
+            class="{{['shareholder-card__permission-tag','data-v-d4c0d0b7',permission.c&&'shareholder-card__permission-tag--active',permission.d&&'shareholder-card__permission-tag--inactive',n&&'shareholder-card__permission-tag--single',permission.e&&'shareholder-card__permission-tag--small']}}"
+            wx:for="{{m}}"
+            wx:for-item="permission"
+            wx:key="b"
+            >{{permission.a}}</view
+          >
+        </view>
+        <view class="shareholder-card__empty data-v-d4c0d0b7" wx:else
+          >暂无权限信息</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

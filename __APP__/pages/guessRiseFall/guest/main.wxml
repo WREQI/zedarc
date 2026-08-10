@@ -1,0 +1,21 @@
+<page-meta class="data-v-60ed7b5e" rootFontSize="{{a}}"></page-meta>
+<view class="_div guess-rise-fall-guest data-v-60ed7b5e">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-60ed7b5e"
+    uI="60ed7b5e-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-60ed7b5e"
+    uI="60ed7b5e-1"
+  ></stock-privacy-dialog>
+  <guest-page
+    bind:__l="__l"
+    class="r data-v-60ed7b5e"
+    uI="60ed7b5e-2"
+    uP="{{c}}"
+    uR="guestPage"
+    wx:if="{{c}}"
+  ></guest-page>
+</view>

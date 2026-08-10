@@ -1,0 +1,39 @@
+<view class="_div comp-block data-v-23474a65">
+  <block wx:if="{{a}}">
+    <view class="{{['_div','table','data-v-23474a65',c]}}">
+      <view class="_div table-row th data-v-23474a65">
+        <label class="_span table-item-1 data-v-23474a65">高管名称</label>
+        <label class="_span table-item-2 data-v-23474a65">职务</label>
+        <label class="_span table-item-3 data-v-23474a65">净变动金额(元)</label>
+        <label class="_span table-item-4 data-v-23474a65">占总市值</label>
+      </view>
+      <view class="_div table-row tr data-v-23474a65" wx:for="{{b}}" wx:key="f">
+        <label class="_span table-item-1 data-v-23474a65">{{item.a}}</label>
+        <label class="_span table-item-2 data-v-23474a65">{{item.b}}</label>
+        <label class="{{['_span','table-item-3','data-v-23474a65',item.d]}}"
+          >{{item.c}}</label
+        >
+        <label class="_span table-item-4 data-v-23474a65">{{item.e}}%</label>
+      </view>
+    </view>
+    <view catchtap="{{d}}" class="_div go-more data-v-23474a65"
+      >查看更多<view class="_i data-v-23474a65"></view>
+    </view>
+  </block>
+  <view class="_div table data-v-23474a65" wx:elif="{{e}}">
+    <view class="_div table-row th data-v-23474a65">
+      <label class="_span table-item-1 data-v-23474a65">高管</label>
+      <label class="_span table-item-2 data-v-23474a65">职务</label>
+      <label class="_span table-item-3 data-v-23474a65">任期</label>
+      <label class="_span table-item-4 data-v-23474a65">离职原因</label>
+    </view>
+    <view class="_div table-row tr data-v-23474a65" wx:for="{{f}}" wx:key="f">
+      <label class="_span table-item-1 data-v-23474a65">{{item.a}}</label>
+      <label class="_span table-item-2 data-v-23474a65">{{item.b}}</label>
+      <label class="_span table-item-3 f26 data-v-23474a65"
+        >{{item.c}}<view class="data-v-23474a65"></view>~{{item.d}}</label
+      >
+      <label class="_span table-item-4 data-v-23474a65">{{item.e}}</label>
+    </view>
+  </view>
+</view>

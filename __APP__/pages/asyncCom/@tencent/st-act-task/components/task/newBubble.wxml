@@ -1,0 +1,20 @@
+<view class="_div coin-task-bubble data-v-50d83708" style="{{g}}">
+  <view
+    class="_div coin-task-bubble-arrow down data-v-50d83708"
+    style="{{b}}"
+    wx:if="{{a}}"
+  ></view>
+  <view class="_div coin-task-bubble-text data-v-50d83708" style="{{d}}">
+    <image
+      alt=""
+      class="_img img-icon data-v-50d83708"
+      src="https://st.gtimg.com/design/121b1878e22a0aeba3f832d3c1f8e177.svg"
+    ></image>
+    <view class="_div content data-v-50d83708">{{c}}</view>
+  </view>
+  <view
+    class="_div coin-task-bubble-arrow up data-v-50d83708"
+    style="{{f}}"
+    wx:if="{{e}}"
+  ></view>
+</view>

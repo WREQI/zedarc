@@ -1,0 +1,16 @@
+<view class="_div comp-block data-v-1b7858de">
+  <view class="_div chart-wrapper data-v-1b7858de" wx:if="{{a}}">
+    <view class="_div chart-legend data-v-1b7858de">
+      <label class="_span data-v-1b7858de">商誉 ({{b}})</label>
+      <label class="_span data-v-1b7858de">占净资产比率 (%)</label>
+    </view>
+    <f2
+      bind:__l="__l"
+      bindonInit="{{c}}"
+      class="data-v-1b7858de"
+      uI="1b7858de-0"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></f2>
+  </view>
+</view>

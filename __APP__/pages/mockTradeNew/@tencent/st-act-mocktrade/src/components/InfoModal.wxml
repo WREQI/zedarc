@@ -1,0 +1,18 @@
+<view
+  bindtap="{{f}}"
+  class="_div info-modal-wrapper data-v-5666572e"
+  wx:if="{{a}}"
+>
+  <view catchtap="{{b}}" class="_div info-modal-mask data-v-5666572e"></view>
+  <view class="_div info-modal-main data-v-5666572e">
+    <view class="_div info-modal-body data-v-5666572e">
+      <slot></slot>
+    </view>
+    <view
+      bindtap="{{e}}"
+      class="{{['_div','info-modal-btn','data-v-5666572e',d&&'lite-mode']}}"
+    >
+      <label class="_span info-modal-btn--text data-v-5666572e">{{c}}</label>
+    </view>
+  </view>
+</view>

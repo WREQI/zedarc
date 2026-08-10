@@ -1,0 +1,32 @@
+<view class="{{['_div','foot-contaner','data-v-a62234d6',e]}}">
+  <view bindtap="{{c}}" class="_div teach-bar data-v-a62234d6" wx:if="{{a}}">
+    <view class="_div left-content data-v-a62234d6">
+      <image
+        class="_img qq-people data-v-a62234d6"
+        lazyLoad="{{true}}"
+        src="https://st.gtimg.com/design/8e96fffd29b2622c24946212e88bfd13.png"
+      ></image>
+      <view class="_div des-text data-v-a62234d6">
+        <view class="_div main data-v-a62234d6">三分钟看懂ETF资金变化</view>
+        <view class="_div sub data-v-a62234d6">{{b}}</view>
+      </view>
+    </view>
+    <image
+      class="_img arrow-right data-v-a62234d6"
+      src="https://st.gtimg.com/design/ded0eb2c76f0667322d63294687c4b8f.png"
+    ></image>
+  </view>
+  <view bindtap="{{d}}" class="_div teach-bar-lite data-v-a62234d6" wx:else>
+    <label class="_span title data-v-a62234d6">
+      <image
+        class="_img icon-maozi data-v-a62234d6"
+        src="https://st.gtimg.com/design/5ee89598558c51aeef152a2097765a7d.png"
+      ></image
+      >如何解读ETF资金流向</label
+    >
+    <image
+      class="_img go-right data-v-a62234d6"
+      src="https://st.gtimg.com/design/ded0eb2c76f0667322d63294687c4b8f.png"
+    ></image>
+  </view>
+</view>

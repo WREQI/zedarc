@@ -1,0 +1,44 @@
+.vote-item-content.data-v-230bdc0f {
+  height: 100%;
+  margin: 0 auto;
+}
+.vote-items.data-v-230bdc0f:after {
+  background: var(--border-light-divider);
+  content: "";
+  display: block;
+  height: 0.013333333333333334rem;
+  margin: 0 0.32rem;
+}
+.subject-desc.data-v-230bdc0f {
+  color: var(--color-midgray-1);
+  font-size: 0.37333333333333335rem;
+  letter-spacing: 0;
+  line-height: 0.56rem;
+  padding: 0.26666666666666666rem 0.32rem 0;
+}
+.subject-desc-type.data-v-230bdc0f {
+  color: var(--color-lightgray-1);
+  font-size: 0.32rem;
+  letter-spacing: 0;
+  line-height: 0.4533333333333333rem;
+  padding: 0.10666666666666667rem 0.32rem 0;
+}
+.logo.data-v-230bdc0f {
+  background: var(--fill-1);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 1.76rem;
+}
+.logo.wzq-logo.data-v-230bdc0f {
+  background-image: url(https://st.gtimg.com/design/114b3ab0b5052774e13de00c771146a1.png);
+  background-size: 2.4266666666666667rem 0.48rem;
+}
+.logo.zxg-logo.data-v-230bdc0f {
+  background-image: url(https://st.gtimg.com/design/918c1fd45b7840f6ac6fb322ef9e97f7.png);
+  background-size: 2.8rem 0.8rem;
+}
+[data-st-theme="black"] .logo.zxg-logo.data-v-230bdc0f,
+[data-st-theme="dark"] .logo.zxg-logo.data-v-230bdc0f {
+  background-image: url(https://st.gtimg.com/design/1474a49a06827996558ed88354d25d32.png);
+  background-size: 2.7066666666666666rem 0.4266666666666667rem;
+}

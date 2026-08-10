@@ -1,0 +1,6 @@
+<view class="search-bar flex data-v-d9c79de1">
+    <view bindtap="{{f}}" class="flex flex-1 data-v-d9c79de1">
+        <input bindblur="{{e}}" bindfocus="{{d}}" bindinput="{{c}}" class="flex-1 data-v-d9c79de1" focus="{{b}}" maxlength="30" placeholder="请输入交易股票名称/代码/首字母" placeholderStyle="color: var(--text-color-4);" type="text" value="{{a}}"></input>
+    </view>
+    <label bindtap="{{h}}" class="search-bar-cancel data-v-d9c79de1" wx:if="{{g}}">取消</label>
+</view>

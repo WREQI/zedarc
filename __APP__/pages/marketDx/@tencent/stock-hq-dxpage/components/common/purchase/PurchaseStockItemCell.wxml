@@ -1,0 +1,88 @@
+<view class="{{['_div','data-v-44bbfb2a','stock-item-cell-wrapper',H,I]}}">
+  <view
+    catchtap="{{D}}"
+    class="{{['_div','data-v-44bbfb2a','stock-item-cell-container',C,'cell-container']}}"
+  >
+    <view class="_div cell-head data-v-44bbfb2a">
+      <label class="_span cell-head-name data-v-44bbfb2a">{{a}}</label>
+      <view class="_div cell-head-bottom data-v-44bbfb2a">
+        <market-icon
+          bind:__l="__l"
+          class="data-v-44bbfb2a"
+          uI="44bbfb2a-0"
+          uP="{{b}}"
+          wx:if="{{b}}"
+        ></market-icon>
+        <view class="_div cell-head-bottom-stock data-v-44bbfb2a">
+          <view
+            class="{{['_div','data-v-44bbfb2a','cell-head-bottom-stock-value',d]}}"
+            >{{c}}</view
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div cell-list data-v-44bbfb2a">
+      <view
+        class="{{['_div','cell-list-col1','cell-list-align-right','data-v-44bbfb2a',g]}}"
+        wx:if="{{e}}"
+      >
+        <label class="_span cell-list-text data-v-44bbfb2a">{{f}}</label>
+      </view>
+      <view
+        class="{{['_div','cell-list-col1','data-v-44bbfb2a',k,l]}}"
+        wx:elif="{{h}}"
+      >
+        <view class="_div item-up-down data-v-44bbfb2a">
+          <label class="_span top data-v-44bbfb2a">{{i}}</label>
+          <label class="_span bottom data-v-44bbfb2a">{{j}}</label>
+        </view>
+      </view>
+      <view
+        class="{{['_div','cell-list-col1-topdown','data-v-44bbfb2a',o]}}"
+        wx:else
+      >
+        <label class="_span top data-v-44bbfb2a">{{m}}</label>
+        <label class="_span bottom data-v-44bbfb2a">~{{n}}</label>
+      </view>
+      <view
+        class="{{['_div','cell-list-col2','cell-list-align-right','data-v-44bbfb2a',w]}}"
+      >
+        <label
+          class="{{['_span','cell-list-text','data-v-44bbfb2a',r]}}"
+          wx:if="{{p}}"
+          >{{q}}</label
+        >
+        <label class="_span cell-list-text data-v-44bbfb2a" wx:else>
+          <label class="_span data-v-44bbfb2a">{{s}}</label>
+          <label class="_span data-v-44bbfb2a" wx:if="{{t}}">/{{v}}</label>
+        </label>
+      </view>
+      <view
+        class="{{['_div','cell-list-col3','cell-list-align-right','data-v-44bbfb2a',B]}}"
+      >
+        <label
+          class="{{['_span','cell-list-text','data-v-44bbfb2a',z]}}"
+          wx:if="{{x}}"
+          >{{y}}</label
+        >
+        <label class="_span cell-list-text data-v-44bbfb2a" wx:else
+          >{{A}}</label
+        >
+      </view>
+    </view>
+  </view>
+  <view
+    catchtap="{{G}}"
+    class="_div bidder-container cell-container data-v-44bbfb2a"
+    wx:if="{{E}}"
+  >
+    <view class="_div bidder-item data-v-44bbfb2a" wx:for="{{F}}" wx:key="e">
+      <label class="{{['_span','data-v-44bbfb2a','bidder-item-title',item.b]}}"
+        >{{item.a}}</label
+      >
+      <label class="{{['_span','data-v-44bbfb2a','bidder-item-num',item.d]}}"
+        >{{item.c}}</label
+      >
+    </view>
+  </view>
+</view>

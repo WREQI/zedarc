@@ -1,0 +1,91 @@
+<condition-card
+  bind:__l="__l"
+  bindclick="{{x}}"
+  class="data-v-691dea72"
+  uI="691dea72-0"
+  uP="{{y}}"
+  uS="{{['header','content']}}"
+  wx:if="{{y}}"
+>
+  <condition-detail-header
+    bind:__l="__l"
+    bindnameClick="{{a}}"
+    class="data-v-691dea72"
+    slot="header"
+    uI="691dea72-1,691dea72-0"
+    uP="{{b}}"
+  ></condition-detail-header>
+  <view class="cond-detail-body data-v-691dea72" slot="content">
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-2,691dea72-0"
+      uP="{{d}}"
+      wx:if="{{c}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-3,691dea72-0"
+      uP="{{k}}"
+      uS="{{['right']}}"
+      wx:if="{{k}}"
+    >
+      <view slot="right">
+        <view class="flex-vcenter data-v-691dea72" wx:if="{{e}}"
+          >{{f}}<view class="cond-baseprice-tag data-v-691dea72" wx:if="{{g}}">
+            <label class="cond-baseprice-text data-v-691dea72">{{h}}</label>
+            <label class="{{['cond-baseprice-value','data-v-691dea72',j]}}"
+              >{{i}}</label
+            >
+            <label class="data-v-691dea72"></label>
+          </view>
+        </view>
+        <view class="data-v-691dea72" wx:else></view>
+      </view>
+    </condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-4,691dea72-0"
+      uP="{{l}}"
+      wx:if="{{l}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-5,691dea72-0"
+      uP="{{m}}"
+      wx:if="{{m}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-6,691dea72-0"
+      uP="{{n}}"
+      wx:if="{{n}}"
+    ></condition-detail-row>
+    <condition-detail-row
+      bind:__l="__l"
+      class="data-v-691dea72"
+      uI="691dea72-7,691dea72-0"
+      uP="{{p}}"
+      wx:if="{{o}}"
+    ></condition-detail-row>
+    <condition-reason
+      bind:__l="__l"
+      bindclick="{{r}}"
+      class="data-v-691dea72"
+      uI="691dea72-8,691dea72-0"
+      uP="{{s}}"
+      wx:if="{{q}}"
+    ></condition-reason>
+    <condition-profit
+      bind:__l="__l"
+      class="{{['data-v-691dea72',v&&'cond-profit']}}"
+      uI="691dea72-9,691dea72-0"
+      uP="{{w}}"
+      wx:if="{{t}}"
+    ></condition-profit>
+  </view>
+</condition-card>

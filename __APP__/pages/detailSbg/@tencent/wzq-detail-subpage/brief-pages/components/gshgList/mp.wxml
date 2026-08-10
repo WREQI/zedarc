@@ -1,0 +1,56 @@
+<view class="_div data-v-c67bdaac">
+  <view class="_div hg-page-wrapper data-v-c67bdaac" hidden="{{!e}}">
+    <view
+      bindtouchcancel="{{events.touchend}}"
+      bindtouchend="{{events.touchend}}"
+      bindtouchmove="{{events.touchmove}}"
+      bindtouchstart="{{events.touchstart}}"
+      change:scrollOptions="{{events.setup}}"
+      class="_div hg-wrapper stock-cats data-v-c67bdaac"
+      scrollOptions="{{d}}"
+    >
+      <view class="_div list-container data-v-c67bdaac">
+        <view class="_div hg-title-container data-v-c67bdaac">
+          <view class="_div gray-line data-v-c67bdaac"></view>
+          <view class="_div hg-title-box data-v-c67bdaac">
+            <view class="_div hg-title data-v-c67bdaac" wx:if="{{a}}">
+              <view class="_div title-left data-v-c67bdaac">日期</view>
+              <view class="_div title-second data-v-c67bdaac">市场</view>
+              <view class="_div title-mid data-v-c67bdaac">金额</view>
+              <view class="_div title-mid data-v-c67bdaac">均价</view>
+              <view class="_div title-mid data-v-c67bdaac">数量 (股)</view>
+              <view class="_div title-right data-v-c67bdaac">币种</view>
+            </view>
+          </view>
+        </view>
+        <view
+          class="_div hg-list stock-tab-container data-v-c67bdaac"
+          ref="hgList"
+          wx:if="{{b}}"
+        >
+          <view
+            class="_div list-item data-v-c67bdaac"
+            wx:for="{{c}}"
+            wx:key="g"
+          >
+            <view class="_div list-left data-v-c67bdaac">{{item.a}}</view>
+            <view class="_div list-second data-v-c67bdaac">{{item.b}}</view>
+            <view class="_div list-mid data-v-c67bdaac">{{item.c}}</view>
+            <view class="_div list-mid data-v-c67bdaac">{{item.d}}</view>
+            <view class="_div list-mid data-v-c67bdaac">{{item.e}}</view>
+            <view class="_div list-right data-v-c67bdaac">{{item.f}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div data-v-c67bdaac" wx:if="{{f}}">
+    <no-data
+      bind:__l="__l"
+      class="data-v-c67bdaac"
+      uI="c67bdaac-0"
+      uS="{{['d']}}"
+      >系统繁忙，请稍后重试</no-data
+    >
+  </view>
+</view>

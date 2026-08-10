@@ -1,0 +1,458 @@
+<view
+  class="{{[bP,bQ,'asset-index-wrap','data-v-72035793']}}"
+  ref="js-wrap"
+  style="{{bR}}"
+>
+  <index-pull-refresh
+    bind:__l="__l"
+    bindpullrefresh="{{Z}}"
+    bindscroll="{{aa}}"
+    class="r data-v-72035793"
+    uI="72035793-0"
+    uP="{{ab}}"
+    uR="indexPullRefresh"
+    uS="{{['d']}}"
+    wx:if="{{ab}}"
+  >
+    <bulletin-bar
+      bind:__l="__l"
+      bindclose="{{c}}"
+      bindtextClick="{{d}}"
+      class="data-v-72035793"
+      uI="72035793-1,72035793-0"
+      uP="{{e}}"
+      uS="{{['d']}}"
+      wx:if="{{a}}"
+      >{{b}}</bulletin-bar
+    >
+    <block wx:if="{{f}}">
+      <view class="bar-divider data-v-72035793" wx:if="{{g}}"></view>
+      <view class="privacy-banner flex-between data-v-72035793" wx:if="{{h}}">
+        <label class="data-v-72035793">你已进入隐私模式，资产信息已隐藏</label>
+        <button catchtap="{{i}}" class="privacy-exit-btn data-v-72035793">
+          退出
+        </button>
+      </view>
+      <view class="bar-divider data-v-72035793" wx:if="{{j}}"></view>
+      <hold-kzz-risk-list
+        bind:__l="__l"
+        class="data-v-72035793"
+        uI="72035793-2,72035793-0"
+      ></hold-kzz-risk-list>
+      <view
+        class="privacy-banner privacy-banner-with-aics flex-vcenter data-v-72035793"
+        wx:if="{{k}}"
+      >
+        <label class="data-v-72035793">你已进入隐私模式，资产信息已隐藏</label>
+        <button
+          catchtap="{{l}}"
+          class="privacy-exit-btn margin-left-20 data-v-72035793"
+        >
+          退出
+        </button>
+      </view>
+    </block>
+    <view class="placeholder-header data-v-72035793" wx:else></view>
+    <asset-data-info-new
+      bind:__l="__l"
+      bindtoggleAccount="{{n}}"
+      class="r data-v-72035793"
+      uI="72035793-3,72035793-0"
+      uP="{{o}}"
+      uR="assetDataInfo"
+      wx:if="{{o}}"
+    ></asset-data-info-new>
+    <view class="module-wrapper module-wrapper__quick-entry data-v-72035793">
+      <quick-entry
+        bind:__l="__l"
+        bindbrokerConfigEntryChange="{{q}}"
+        bindclick="{{p}}"
+        class="quick-entry data-v-72035793"
+        uI="72035793-4,72035793-0"
+        uP="{{r}}"
+        wx:if="{{r}}"
+      ></quick-entry>
+    </view>
+    <block wx:if="{{s}}">
+      <operate-adv
+        bind:__l="__l"
+        bindclose="{{v}}"
+        class="data-v-72035793"
+        uI="72035793-5,72035793-0"
+        uP="{{w}}"
+        wx:if="{{t}}"
+      ></operate-adv>
+    </block>
+    <view class="{{['tabs-wrapper','flex','data-v-72035793',z,A]}}">
+      <tabbar
+        bind:__l="__l"
+        bindinput="{{x}}"
+        class="flex-1 data-v-72035793"
+        uI="72035793-6,72035793-0"
+        uP="{{y}}"
+        wx:if="{{y}}"
+      ></tabbar>
+    </view>
+    <swiper
+      bindchange="{{S}}"
+      bindtouchend="{{U}}"
+      bindtouchstart="{{T}}"
+      class="swiper asset-swiper data-v-72035793"
+      current="{{R}}"
+      duration="300"
+      style="{{'height:'+Q}}"
+    >
+      <swiper-item class="data-v-72035793">
+        <positions-list-new
+          bind:__l="__l"
+          binddisplayDelistedInfo="{{B}}"
+          bindjumpQuote="{{D}}"
+          bindshowDelistedInfo="{{C}}"
+          class="js-pos-list tabular-nums data-v-72035793"
+          key="position-list-new"
+          uI="72035793-7,72035793-0"
+          uP="{{E}}"
+          wx:if="{{E}}"
+        ></positions-list-new>
+      </swiper-item>
+      <swiper-item class="data-v-72035793">
+        <orders-list
+          bind:__l="__l"
+          bindcancelOrder="{{H}}"
+          binddoneOrderListExpanded="{{I}}"
+          bindshowFailReason="{{G}}"
+          class="js-order-list tabular-nums data-v-72035793"
+          uI="72035793-8,72035793-0"
+          uP="{{J}}"
+          wx:if="{{F}}"
+        ></orders-list>
+      </swiper-item>
+      <swiper-item class="data-v-72035793" wx:if="{{K}}">
+        <block wx:if="{{L}}">
+          <condition-list
+            bind:__l="__l"
+            bindcreateCond="{{N}}"
+            bindfetchCondList="{{O}}"
+            class="tabular-nums r data-v-72035793"
+            uI="72035793-9,72035793-0"
+            uP="{{P}}"
+            uR="conditionList"
+            wx:if="{{P}}"
+          ></condition-list>
+        </block>
+      </swiper-item>
+    </swiper>
+    <view class="placeholder-block data-v-72035793" wx:if="{{V}}"></view>
+    <view class="{{['data-v-72035793',X]}}" wx:if="{{W}}"></view>
+  </index-pull-refresh>
+  <server-broker
+    bind:__l="__l"
+    class="data-v-72035793"
+    uI="72035793-10"
+    uP="{{ac}}"
+    wx:if="{{ac}}"
+  ></server-broker>
+  <snac-bar
+    bind:__l="__l"
+    class="data-v-72035793"
+    uI="72035793-11"
+    wx:if="{{ad}}"
+  ></snac-bar>
+  <view
+    bindtap="{{ai}}"
+    class="{{['back-button','data-v-72035793',ah]}}"
+    wx:if="{{ae}}"
+  >
+    <view class="data-v-72035793">返回交易下单</view>
+    <label
+      catchtap="{{ag}}"
+      class="back-button-close icon icon-close data-v-72035793"
+      wx:if="{{af}}"
+    ></label>
+  </view>
+  <view
+    class="flex-between hide-top-wrap border--bottom data-v-72035793"
+    style="{{'top:'+am}}"
+    wx:if="{{aj}}"
+  >
+    <view class="hide-top-info flex-vcenter data-v-72035793">
+      <broker-logo
+        bind:__l="__l"
+        class="broker-logo data-v-72035793"
+        uI="72035793-12"
+      ></broker-logo>
+      <view class="hide-broker-name data-v-72035793">{{ak}}</view>
+      <view class="hide-top-line data-v-72035793"></view>
+      <view class="hide-top-tips data-v-72035793">资产隐藏模式</view>
+    </view>
+    <view bindtap="{{al}}" class="hide-top-btn data-v-72035793">退出</view>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-72035793"
+    id="mp-dialog"
+    uI="72035793-13"
+    uP="{{an}}"
+    wx:if="{{an}}"
+  ></mp-dialog>
+  <register-risk-popup
+    bind:__l="__l"
+    bindconfirm="{{ap}}"
+    bindskip="{{aq}}"
+    class="data-v-72035793"
+    uI="72035793-14"
+    uP="{{ar}}"
+    wx:if="{{ao}}"
+  ></register-risk-popup>
+  <kzz-risk-dialog
+    bind:__l="__l"
+    class="r data-v-72035793"
+    uI="72035793-15"
+    uP="{{at}}"
+    uR="kzzRiskDialog"
+    wx:if="{{at}}"
+  ></kzz-risk-dialog>
+  <risk-test-reminder
+    bind:__l="__l"
+    bindclose="{{aw}}"
+    bindskip="{{ax}}"
+    class="data-v-72035793"
+    uI="72035793-16"
+    wx:if="{{av}}"
+  ></risk-test-reminder>
+  <order-fail-dialog
+    bind:__l="__l"
+    bindclose="{{az}}"
+    bindinput="{{aA}}"
+    class="data-v-72035793"
+    uI="72035793-17"
+    uP="{{aB}}"
+    wx:if="{{ay}}"
+  ></order-fail-dialog>
+  <condition-strategy
+    bind:__l="__l"
+    bindclose="{{aD}}"
+    bindconditionItemClick="{{aG}}"
+    bindinput="{{aF}}"
+    bindtoCreateCond="{{aE}}"
+    class="data-v-72035793"
+    uI="72035793-18"
+    uP="{{aH}}"
+    wx:if="{{aC}}"
+  ></condition-strategy>
+  <action-sheet
+    bind:__l="__l"
+    bindcancel="{{aT}}"
+    bindinput="{{aU}}"
+    bindmaskClick="{{aS}}"
+    class="data-v-72035793"
+    uI="72035793-19"
+    uP="{{aV}}"
+    uS="{{['d']}}"
+    wx:if="{{aI}}"
+  >
+    <view
+      class="{{['delisted-detail-wrap','data-v-72035793',aR&&'no-tab-bar']}}"
+    >
+      <transfer-progress
+        bind:__l="__l"
+        class="data-v-72035793"
+        uI="72035793-20,72035793-19"
+        uP="{{aJ}}"
+        wx:if="{{aJ}}"
+      ></transfer-progress>
+      <view class="desc first data-v-72035793"
+        >根据交易所规则，该证券于{{aK}}从{{aL}}退市，不支持继续交易和资产持仓查询。</view
+      >
+      <block wx:if="{{aM}}">
+        <view class="desc data-v-72035793"
+          >如公司因合并、私有化或股东大会决议解散等主动原因申请退市时，将不会进入退市板继续交易；</view
+        >
+        <view class="desc data-v-72035793"
+          >其他情况退市的公司公司预计在退市后45个工作日内进入退市板（实际以公司公告为准），你持有的股份后续可在退市板进行转让交易。</view
+        >
+      </block>
+      <view class="desc data-v-72035793" wx:else
+        >公司已在{{aN}}进入退市板，你持有的股份可在退市板进行转让交易。</view
+      >
+      <view class="desc data-v-72035793"
+        >如需查询和交易退市板证券，请联系券商客服咨询处理，电话：<label
+          class="tel data-v-72035793"
+          >{{aO}}</label
+        >。</view
+      >
+      <view class="button-wrap flex flex-v data-v-72035793">
+        <button catchtap="{{aP}}" class="cancel-btn flex-1 data-v-72035793">
+          不展示该信息
+        </button>
+        <button catchtap="{{aQ}}" class="confirm-btn flex-1 data-v-72035793">
+          联系券商客服
+        </button>
+      </view>
+    </view>
+  </action-sheet>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{bb}}"
+    bindmaskClick="{{ba}}"
+    class="silent-delisted-popup data-v-72035793"
+    uI="72035793-21"
+    uP="{{bc}}"
+    uS="{{['d']}}"
+    wx:if="{{aW}}"
+  >
+    <view
+      class="{{['silent-delisted-detail-wrap','data-v-72035793',aZ&&'no-tab-bar']}}"
+    >
+      <view catchtap="{{aX}}" class="confirm data-v-72035793"
+        >不再显示这条信息</view
+      >
+      <view class="bottom-line data-v-72035793"></view>
+      <view catchtap="{{aY}}" class="cancel data-v-72035793">取消</view>
+    </view>
+  </action-sheet>
+  <action-sheet
+    bind:__l="__l"
+    bindinput="{{bg}}"
+    bindmaskClick="{{bf}}"
+    class="data-v-72035793"
+    uI="72035793-22"
+    uP="{{bh}}"
+    uS="{{['d']}}"
+    wx:if="{{bd}}"
+  >
+    <view
+      class="{{['clean-bulletin-wrap','data-v-72035793',be&&'no-tab-bar']}}"
+    >
+      <view class="desc data-v-72035793"
+        >通常收盘后，系统在清算期间处于维护状态，您的资产（资金与证券理财）会随着清算过程进度实时变化，资产数据仅供参考，该展示数据不会影响您资产和收益的真实状况。</view
+      >
+      <view class="desc data-v-72035793"
+        >若您还有未撤单成功的日内委托交易，最晚在清算完成后会自动撤单。</view
+      >
+      <view class="desc data-v-72035793"
+        >若您还有资金或者证券未清算完成，则无法交易，因此隔夜委托最晚将于清算完成后开始。</view
+      >
+    </view>
+  </action-sheet>
+  <overlay
+    bind:__l="__l"
+    bindclick="{{bB}}"
+    class="asset-composition-overlay data-v-72035793"
+    uI="72035793-23"
+    uP="{{bC}}"
+    uS="{{['d']}}"
+    wx:if="{{bi}}"
+  >
+    <view
+      class="asset-composition-popup triangle data-v-72035793"
+      style="{{'top:'+bA}}"
+    >
+      <scroll-view
+        scrollY
+        class="popup-scroll-content data-v-72035793"
+        showScrollbar="{{false}}"
+        style="{{bz}}"
+      >
+        <view class="asset-composition-header data-v-72035793">
+          <view class="title-wrapper data-v-72035793">
+            <view class="title data-v-72035793">总资产构成</view>
+            <label
+              bindtap="{{bk}}"
+              class="icon icon-italic-info data-v-72035793"
+              wx:if="{{bj}}"
+            ></label>
+          </view>
+          <view
+            bindtap="{{bm}}"
+            class="analysis-link data-v-72035793"
+            wx:if="{{bl}}"
+          >
+            <view class="analysis-text data-v-72035793">资产分析</view>
+            <view class="icon-arrow-link data-v-72035793"></view>
+          </view>
+        </view>
+        <view class="divider no-margin data-v-72035793"></view>
+        <view class="asset-item data-v-72035793">
+          <view class="asset-item-header data-v-72035793">
+            <view class="asset-name data-v-72035793">证券及理财</view>
+            <view class="asset-value data-v-72035793">{{bn}}</view>
+          </view>
+          <view class="asset-item-detail data-v-72035793">
+            <view class="detail-label data-v-72035793">- 证券</view>
+            <view class="detail-value data-v-72035793">{{bo}}</view>
+          </view>
+          <view class="asset-item-detail data-v-72035793">
+            <view class="detail-label data-v-72035793">- 理财</view>
+            <view class="detail-value data-v-72035793">{{bp}}</view>
+          </view>
+        </view>
+        <view class="divider data-v-72035793"></view>
+        <view class="asset-item data-v-72035793">
+          <view class="asset-item-header data-v-72035793">
+            <view class="asset-name data-v-72035793">可用资金</view>
+            <view class="asset-value data-v-72035793">{{bq}}</view>
+          </view>
+          <block wx:if="{{br}}">
+            <view class="asset-item-detail data-v-72035793">
+              <view class="detail-label data-v-72035793">- A股可用资金</view>
+              <view class="detail-value data-v-72035793">{{bs}}</view>
+            </view>
+            <view class="asset-item-detail data-v-72035793">
+              <view class="detail-label data-v-72035793">- 港股可用资金</view>
+              <view class="detail-value data-v-72035793">{{bt}}</view>
+            </view>
+          </block>
+          <view class="asset-item-detail data-v-72035793">
+            <view class="detail-label data-v-72035793">- 当天可取资金</view>
+            <view class="detail-value data-v-72035793">{{bv}}</view>
+          </view>
+        </view>
+        <view class="divider data-v-72035793"></view>
+        <view class="asset-item data-v-72035793">
+          <view class="asset-item-header data-v-72035793">
+            <view class="asset-name data-v-72035793">冻结资金</view>
+            <view class="asset-value data-v-72035793">{{bw}}</view>
+          </view>
+        </view>
+        <block wx:if="{{bx}}">
+          <view class="divider data-v-72035793"></view>
+          <view class="asset-item data-v-72035793">
+            <view class="asset-item-header data-v-72035793">
+              <view class="asset-name data-v-72035793">其他资产</view>
+              <view class="asset-value data-v-72035793">{{by}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </overlay>
+  <money-trace-risk-popup
+    bind:__l="__l"
+    bindclose="{{bE}}"
+    bindskip="{{bF}}"
+    class="data-v-72035793"
+    uI="72035793-24"
+    wx:if="{{bD}}"
+  ></money-trace-risk-popup>
+  <milestone-dialog
+    bind:__l="__l"
+    bindclose="{{bH}}"
+    bindskip="{{bI}}"
+    class="r data-v-72035793"
+    uI="72035793-25"
+    uP="{{bJ}}"
+    uR="milestoneDialogRef"
+    wx:if="{{bJ}}"
+  ></milestone-dialog>
+  <lottery-reward-dialog
+    bind:__l="__l"
+    bindclose="{{bM}}"
+    bindexposed="{{bL}}"
+    bindgotoList="{{bN}}"
+    class="data-v-72035793"
+    uI="72035793-26"
+    uP="{{bO}}"
+    wx:if="{{bK}}"
+  ></lottery-reward-dialog>
+</view>

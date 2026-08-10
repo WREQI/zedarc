@@ -1,0 +1,106 @@
+<view
+  class="{{['_div','yy-task','data-v-aad407ad',P&&'is-minapp',Q&&'is-pcmina',R&&'wzq-app',S&&'zxg-app']}}"
+>
+  <count-down
+    bind:__l="__l"
+    bindclik="{{e}}"
+    bindtimeend="{{f}}"
+    class="yy-task-count-down data-v-aad407ad"
+    uI="aad407ad-0"
+    uP="{{g}}"
+    uS="{{['slot-text','slot-sub-text']}}"
+    wx:if="{{a}}"
+  >
+    <view slot="{{scope.c}}" wx:for="{{b}}" wx:for-item="scope" wx:key="b">
+      <view
+        class="{{['_div','yy-task-count-down-duration','data-v-aad407ad',c&&'pending']}}"
+        >{{scope.a}}</view
+      >
+    </view>
+    <view
+      class="_div yy-task-count-down-award data-v-aad407ad"
+      slot="slot-sub-text"
+      >{{d}}</view
+    >
+  </count-down>
+  <bubble
+    bind:__l="__l"
+    bindclose="{{j}}"
+    class="yy-task-bubble data-v-aad407ad"
+    uI="aad407ad-1"
+    uP="{{k}}"
+    uS="{{['yy-bubble-text']}}"
+    wx:if="{{h}}"
+  >
+    <view slot="yy-bubble-text">{{i}}</view>
+  </bubble>
+  <new-bubble
+    bind:__l="__l"
+    bindhideNewbubble="{{m}}"
+    bindtaskRealShow="{{n}}"
+    class="yy-task-newbubble data-v-aad407ad"
+    uI="aad407ad-2"
+    uP="{{o}}"
+    wx:if="{{l}}"
+  ></new-bubble>
+  <guide
+    bind:__l="__l"
+    bindtimeend="{{s}}"
+    class="{{['yy-task-guide','data-v-aad407ad',r]}}"
+    uI="aad407ad-3"
+    uP="{{t}}"
+    uS="{{['d']}}"
+    wx:if="{{p}}"
+    >{{q}}</guide
+  >
+  <new-guide
+    bind:__l="__l"
+    bindhideNewguide="{{x}}"
+    bindtaskRealShow="{{w}}"
+    class="yy-task-newguide data-v-aad407ad"
+    uI="aad407ad-4"
+    uP="{{y}}"
+    wx:if="{{v}}"
+  ></new-guide>
+  <done-pop
+    bind:__l="__l"
+    bindcloseDonePop="{{A}}"
+    binddrawCash="{{B}}"
+    class="data-v-aad407ad"
+    uI="aad407ad-5"
+    uP="{{C}}"
+    wx:if="{{z}}"
+  ></done-pop>
+  <snackbar
+    bind:__l="__l"
+    bindclik="{{I}}"
+    bindclose="{{H}}"
+    class="yy-task-snackbar data-v-aad407ad"
+    uI="aad407ad-6"
+    uP="{{J}}"
+    uS="{{['yy-snackbar-text','yy-snackbar-btn-text']}}"
+    wx:if="{{D}}"
+  >
+    <view slot="yy-snackbar-text">
+      <view class="_div snackbar-html data-v-aad407ad" wx:if="{{E}}">
+        <rich-text class="data-v-aad407ad" nodes="{{F}}"></rich-text>
+      </view>
+    </view>
+    <view slot="yy-snackbar-btn-text">{{G}}</view>
+  </snackbar>
+  <snackbar
+    bind:__l="__l"
+    bindclose="{{N}}"
+    class="yy-task-banner data-v-aad407ad"
+    uI="aad407ad-7"
+    uP="{{O}}"
+    uS="{{['yy-snackbar-text']}}"
+    wx:if="{{K}}"
+  >
+    <view slot="yy-snackbar-text">
+      <view class="_div snackbar-html data-v-aad407ad" wx:if="{{L}}">
+        <rich-text class="data-v-aad407ad" nodes="{{M}}"></rich-text>
+      </view>
+    </view>
+  </snackbar>
+</view>

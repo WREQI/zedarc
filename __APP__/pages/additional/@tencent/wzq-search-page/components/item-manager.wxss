@@ -1,0 +1,105 @@
+.manager-item.data-v-9cd969d9 {
+  color: #98a0b3;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  margin: 0 0.4rem;
+  padding: 0.32rem 0;
+}
+.manager-item.profession.item-border-bottom.data-v-9cd969d9 {
+  position: relative;
+}
+.manager-item.profession.item-border-bottom.data-v-9cd969d9:before {
+  border-color: var(--border-heavy-divider);
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 0 1px;
+  bottom: 0;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: 0 0;
+  width: 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+  .manager-item.profession.item-border-bottom.data-v-9cd969d9:before {
+    height: 150%;
+    transform: scale(0.666666);
+    width: 150%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {
+  .manager-item.profession.item-border-bottom.data-v-9cd969d9:before {
+    height: 200%;
+    transform: scale(0.5);
+    width: 200%;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+  .manager-item.profession.item-border-bottom.data-v-9cd969d9:before {
+    height: 300%;
+    transform: scale(0.33);
+    width: 300%;
+  }
+}
+.manager-item .manager-avatar.data-v-9cd969d9 {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0.013333333333333334rem solid var(--border-heavy-divider);
+  border-radius: 50%;
+  height: 1.0666666666666667rem;
+  margin-right: 0.21333333333333335rem;
+  width: 1.0666666666666667rem;
+}
+.manager-item .manager-info.data-v-9cd969d9 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 1.0666666666666667rem;
+  justify-content: space-evenly;
+}
+.manager-item .manager-fund-content.data-v-9cd969d9 {
+  grid-gap: 0.21333333333333335rem;
+  align-items: center;
+  color: var(--color-heavygray, #262e40);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.12rem;
+}
+.manager-item .manager-fund-content .manager-fund-item.data-v-9cd969d9 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  background-color: var(--color-card, #f5f6fa);
+  border-radius: 0.05333333333333334rem;
+  color: var(--color-lightgray, #7a8499);
+  display: -webkit-box;
+  line-height: 0.4533333333333333rem;
+  overflow: hidden;
+  padding: 0.05333333333333334rem 0.10666666666666667rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.manager-item .manager-info-content.data-v-9cd969d9 {
+  align-items: center;
+  color: var(--color-heavygray, #262e40);
+  display: -webkit-flex;
+  display: flex;
+  line-height: 0.48rem;
+}
+.manager-item .manager-info-content .manager-name.data-v-9cd969d9 {
+  font-size: 0.3466666666666667rem;
+  margin-right: 0.21333333333333335rem;
+}
+.manager-item .manager-info-content .font-color-light-gray.data-v-9cd969d9 {
+  color: var(--color-lightgray, #7a8499);
+  margin-right: 0.10666666666666667rem;
+}

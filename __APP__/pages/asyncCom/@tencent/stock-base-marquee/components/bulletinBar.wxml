@@ -1,0 +1,28 @@
+<view class="{{['_div','data-v-225b95c8','bulletin-wrapper',l,m]}}">
+  <view
+    class="{{['_div','data-v-225b95c8','bulletin-content',j]}}"
+    skin="{{k}}"
+    wx:if="{{a}}"
+  >
+    <view
+      bindtap="{{e}}"
+      class="_div content-item data-v-225b95c8"
+      wx:if="{{b}}"
+    >
+      <view class="_div item-text data-v-225b95c8">{{c}}</view>
+      <view class="_div right_icon data-v-225b95c8" wx:if="{{d}}"></view>
+    </view>
+    <view class="_div content-item data-v-225b95c8" wx:else>
+      <bar-swiper
+        bind:__l="__l"
+        bindchange="{{g}}"
+        bindclick="{{f}}"
+        class="data-v-225b95c8"
+        uI="225b95c8-0"
+        uP="{{h}}"
+        wx:if="{{h}}"
+      ></bar-swiper>
+    </view>
+    <view bindtap="{{i}}" class="_div close data-v-225b95c8"></view>
+  </view>
+</view>

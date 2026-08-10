@@ -1,0 +1,127 @@
+<view class="_div multi-list swiper-no-swiping data-v-1e9c6851" wx:if="{{a}}">
+  <view
+    class="{{['_div','data-v-1e9c6851','top-bar fake ceiling',f]}}"
+    wx:if="{{b}}"
+  >
+    <tab
+      bind:__l="__l"
+      bindswitchTab="{{d}}"
+      class="tab-bar r data-v-1e9c6851"
+      uI="1e9c6851-0"
+      uP="{{e}}"
+      uR="tabBar"
+      wx:if="{{e}}"
+    ></tab>
+  </view>
+  <view
+    catchtouchmove="{{n}}"
+    class="{{['_div','data-v-1e9c6851','top-bar list',k,l,m]}}"
+    ref="topBar"
+    wx:if="{{g}}"
+  >
+    <tab
+      bind:__l="__l"
+      bindswitchTab="{{i}}"
+      class="tab-bar r data-v-1e9c6851"
+      uI="1e9c6851-1"
+      uP="{{j}}"
+      uR="tabBar"
+      wx:if="{{j}}"
+    ></tab>
+  </view>
+  <swiper
+    bindchange="{{t}}"
+    class="data-v-1e9c6851"
+    current="{{r}}"
+    duration="250"
+    ref="mySwiper"
+    style="{{'height:'+s}}"
+  >
+    <swiper-item
+      class="{{['data-v-1e9c6851',feedbackItem.p]}}"
+      wx:for="{{o}}"
+      wx:for-item="feedbackItem"
+      wx:key="o"
+    >
+      <scroll-view
+        bindrefresherrefresh="{{feedbackItem.n}}"
+        class="index-item-container data-v-1e9c6851"
+        refresherEnabled="{{p}}"
+        refresherThreshold="100"
+        refresherTriggered="{{q}}"
+        scrollY="{{true}}"
+      >
+        <view
+          class="_div data-v-1e9c6851"
+          id="voteList"
+          ref="voteList"
+          wx:if="{{feedbackItem.a}}"
+        >
+          <vote-list
+            bind:__l="__l"
+            bindrenderFinished="{{feedbackItem.b}}"
+            bindshowCommentGuideModel="{{feedbackItem.c}}"
+            class="data-v-1e9c6851"
+            uI="{{feedbackItem.d}}"
+            uP="{{feedbackItem.e}}"
+            wx:if="{{feedbackItem.e}}"
+          ></vote-list>
+        </view>
+        <view class="_div data-v-1e9c6851" wx:elif="{{feedbackItem.f}}">
+          <view
+            class="_div comment-list-header data-v-1e9c6851"
+            id="commentListHeader"
+            wx:if="{{feedbackItem.g}}"
+          >
+            <view class="_div btn-container data-v-1e9c6851">
+              <view
+                bindtap="{{item.d}}"
+                class="{{['data-v-1e9c6851','btn',item.c]}}"
+                wx:for="{{feedbackItem.h}}"
+                wx:key="b"
+                >{{item.a}}</view
+              >
+            </view>
+            <view
+              catchtap="{{feedbackItem.l}}"
+              class="{{['_div','data-v-1e9c6851','dropdown-container',feedbackItem.k]}}"
+              id="dropdownContainer"
+              ref="dropdownContainer"
+            >
+              <view class="_div dropdown-title data-v-1e9c6851"
+                >{{feedbackItem.i}}</view
+              >
+              <view
+                class="{{['_div','data-v-1e9c6851','arrow',feedbackItem.j]}}"
+              ></view>
+            </view>
+          </view>
+          <view
+            class="data-v-1e9c6851"
+            id="{{item.o}}"
+            wx:for="{{feedbackItem.m}}"
+            wx:key="p"
+          >
+            <stock-list
+              bind:__l="__l"
+              bindcommentReport="{{item.k}}"
+              bindgetListFinished="{{item.j}}"
+              bindonPutComment="{{item.g}}"
+              bindonTapCommentItem="{{item.f}}"
+              bindonTapDetail="{{item.e}}"
+              bindonTapFollow="{{item.h}}"
+              bindrenderFinished="{{item.i}}"
+              bindshowProfilePop="{{item.l}}"
+              class="r-i-f data-v-1e9c6851"
+              data-c-h="{{!item.c}}"
+              uI="{{item.m}}"
+              uP="{{item.n}}"
+              uR="{{item.d}}"
+              wx:if="{{item.a}}"
+            ></stock-list>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

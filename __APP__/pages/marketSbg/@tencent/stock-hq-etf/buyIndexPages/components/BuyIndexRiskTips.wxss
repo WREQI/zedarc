@@ -1,0 +1,18 @@
+.etf-buy-index__disclaimer.data-v-82967471 {
+  color: var(--color-lightgray-2);
+  font-family: stockFont, -apple-system, BlinkMacSystemFont, Roboto, PingFang SC,
+    Hiragino Sans GB, Source Han Sans CN, sans-serif;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+  text-align: left;
+  white-space: nowrap;
+}
+.etf-buy-index__disclaimer--has-brand.data-v-82967471 {
+  padding-bottom: 0;
+}
+.etf-buy-index__disclaimer.data-v-82967471:not(
+    .etf-buy-index__disclaimer--has-brand
+  ) {
+  padding-bottom: calc(0.64rem + env(safe-area-inset-bottom));
+}

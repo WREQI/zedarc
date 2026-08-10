@@ -1,0 +1,21 @@
+<view class="_div longhubang data-v-447b3607">
+  <long-hu-bang-bar
+    bind:__l="__l"
+    bindrouteToPage="{{a}}"
+    class="data-v-447b3607"
+    uI="447b3607-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></long-hu-bang-bar>
+  <long-hu-bang-list
+    bind:__l="__l"
+    bindgotoStockDetail="{{it.b}}"
+    bindreport="{{it.c}}"
+    class="data-v-447b3607"
+    uI="{{it.d}}"
+    uP="{{it.e}}"
+    wx:for="{{c}}"
+    wx:for-item="it"
+    wx:key="a"
+  ></long-hu-bang-list>
+</view>

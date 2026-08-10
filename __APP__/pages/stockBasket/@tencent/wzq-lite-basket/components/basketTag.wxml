@@ -1,0 +1,18 @@
+<view class="_div basket-tag-wrapper data-v-1e6998b1" ref="basket-tag-wrapper">
+  <view
+    catchtap="{{f}}"
+    class="_div basket-tag-container data-v-1e6998b1"
+    wx:if="{{a}}"
+  >
+    <image
+      class="_img tag data-v-1e6998b1"
+      src="https://st.gtimg.com/design/6e622c4b85fad6ade1d937535a9afb28.png"
+    ></image>
+    <view class="_div basket-tag-title data-v-1e6998b1">{{b}}</view>
+    <view class="_div basket-tag-info data-v-1e6998b1" wx:if="{{c}}">
+      <view class="{{['_div','data-v-1e6998b1','basket-tag-change-value',e]}}"
+        >{{d}}</view
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+.footer-bar.data-v-fdf16d42 {
+  width: 100%;
+}
+.footer-bar--fixed.data-v-fdf16d42 {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+}
+.footer-bar__main.data-v-fdf16d42 {
+  align-items: center;
+  background-color: var(--fill-content-layer);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.2rem 0.4rem calc(0.2rem + env(safe-area-inset-bottom));
+}
+.footer-bar__ask.data-v-fdf16d42 {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  min-width: 0;
+  width: 0;
+}
+.footer-bar__share.data-v-fdf16d42 {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  font-size: 0;
+  height: auto;
+  justify-content: center;
+  line-height: normal;
+  margin-left: 0.5333333333333333rem;
+  min-height: 1.1733333333333333rem;
+  padding: 0;
+  width: 0.5866666666666667rem;
+}
+.footer-bar__share.data-v-fdf16d42:after {
+  border: 0;
+}
+.footer-bar__share-icon.data-v-fdf16d42 {
+  display: block;
+  height: 0.4533333333333333rem;
+  object-fit: cover;
+  width: 0.4533333333333333rem;
+}
+.footer-bar__share-text.data-v-fdf16d42 {
+  color: var(--color-heavygray);
+  font-family: PingFang HK, sans-serif;
+  font-size: 0.29333333333333333rem;
+  font-weight: 400;
+  height: 0.4266666666666667rem;
+  line-height: 0.4266666666666667rem;
+  margin-top: 0.10666666666666667rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.footer-bar .footer-bar__ask .ai-search-bar,
+.footer-bar .footer-bar__ask.ai-search-bar {
+  background-color: var(--color-card);
+  box-sizing: border-box;
+  width: 100%;
+}
+[data-st-theme="black"] .footer-bar .footer-bar__ask .ai-search-bar,
+[data-st-theme="black"] .footer-bar .footer-bar__ask.ai-search-bar,
+[data-st-theme="dark"] .footer-bar .footer-bar__ask .ai-search-bar,
+[data-st-theme="dark"] .footer-bar .footer-bar__ask.ai-search-bar,
+html.black .footer-bar .footer-bar__ask .ai-search-bar,
+html.black .footer-bar .footer-bar__ask.ai-search-bar {
+  background-color: #000;
+}

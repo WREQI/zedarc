@@ -1,0 +1,16 @@
+<view class="xinke flex-vcenter data-v-d2e5936f" wx:if="{{a}}">
+  <label class="icon icon-received-suc data-v-d2e5936f" wx:if="{{b}}"></label>
+  <label class="{{['icon','icon-xinke','data-v-d2e5936f',c]}}" wx:else></label>
+  <view class="text flex-1 flex-column flex-hcenter data-v-d2e5936f">
+    <label class="title data-v-d2e5936f">{{d}}</label>
+    <label class="subtitle data-v-d2e5936f">{{e}}</label>
+  </view>
+  <button
+    bindtap="{{h}}"
+    class="button flex-center data-v-d2e5936f"
+    type="primary"
+    wx:if="{{f}}"
+  >
+    {{g}}
+  </button>
+</view>

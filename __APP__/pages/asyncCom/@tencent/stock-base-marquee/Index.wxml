@@ -1,0 +1,31 @@
+<view class="_div growth-bulletin-wrapper">
+  <bulletin-bar
+    bind:__l="__l"
+    bindclick="{{b}}"
+    bindclose="{{c}}"
+    uI="5ae2316c-0"
+    uP="{{d}}"
+    wx:if="{{a}}"
+  ></bulletin-bar>
+  <rest-notice-dialog
+    bind:__l="__l"
+    bindinput="{{h}}"
+    class="r"
+    uI="5ae2316c-1"
+    uP="{{i}}"
+    uR="restDialog"
+    uS="{{['d']}}"
+    wx:if="{{e}}"
+  >
+    <slot name="d"></slot>
+  </rest-notice-dialog>
+  <other-notice-dialog
+    bind:__l="__l"
+    bindinput="{{l}}"
+    class="r"
+    uI="5ae2316c-2"
+    uP="{{m}}"
+    uR="otherDialog"
+    wx:elif="{{j}}"
+  ></other-notice-dialog>
+</view>

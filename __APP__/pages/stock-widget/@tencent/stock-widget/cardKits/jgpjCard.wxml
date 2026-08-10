@@ -1,0 +1,133 @@
+<view
+  catchtap="{{r}}"
+  class="{{['_div','data-v-ab1dbf71','card-wrapper',q]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div content-wrapper data-v-ab1dbf71">
+    <view class="_div title-container data-v-ab1dbf71" wx:if="{{b}}">
+      <view class="_div stock_header_line data-v-ab1dbf71"
+        >{{c}}({{d}})-机构评级</view
+      >
+      <view class="_div spec-line-small data-v-ab1dbf71"></view>
+    </view>
+    <view class="_div jg-wrapper data-v-ab1dbf71">
+      <view class="_div line-wrapper data-v-ab1dbf71">
+        <view class="_div line-top data-v-ab1dbf71">
+          <view
+            class="{{['_div','line-top-item','data-v-ab1dbf71',line.f]}}"
+            style="{{'width:'+line.g}}"
+            wx:for="{{e}}"
+            wx:for-item="line"
+            wx:key="e"
+          >
+            <view
+              class="{{['_div','color-line','data-v-ab1dbf71',line.a,line.b,f]}}"
+              style="{{'background-color:'+line.c}}"
+            ></view>
+            <view
+              class="_div spec-color-line data-v-ab1dbf71"
+              wx:if="{{line.d}}"
+            ></view>
+          </view>
+        </view>
+        <view class="_div line-desc data-v-ab1dbf71">
+          <view class="_div line-desc-left data-v-ab1dbf71">
+            <view
+              class="_div line-desc-item data-v-ab1dbf71"
+              wx:for="{{g}}"
+              wx:for-item="line"
+              wx:key="e"
+            >
+              <view
+                class="_div line-desc-item-sq data-v-ab1dbf71"
+                style="{{'background-color:'+line.a}}"
+              ></view>
+              <view
+                class="{{['_div','line-desc-item-text','data-v-ab1dbf71',line.d]}}"
+                >{{line.b}} {{line.c}} {{h}}</view
+              >
+            </view>
+          </view>
+          <view class="_div line-text data-v-ab1dbf71" wx:if="{{i}}"
+            >共{{j}}位分析师做出评级</view
+          >
+        </view>
+        <view class="_div line-text data-v-ab1dbf71" wx:if="{{k}}"
+          >共{{l}}位分析师做出评级</view
+        >
+      </view>
+      <block wx:if="{{m}}">
+        <view class="_div spec-line-small-light data-v-ab1dbf71"></view>
+        <view class="_div table-wrapper data-v-ab1dbf71">
+          <view class="_div pj-title data-v-ab1dbf71">
+            <view class="_div pj-title-item data-v-ab1dbf71" style="width: 45%"
+              >评级日期</view
+            >
+            <view
+              class="_div pj-title-item text-right data-v-ab1dbf71"
+              style="width: 30%"
+              >研究机构</view
+            >
+            <view
+              class="_div oj-title-item text-right data-v-ab1dbf71"
+              style="width: 25%"
+              >评级</view
+            >
+          </view>
+          <view
+            class="_div pj-content data-v-ab1dbf71"
+            wx:for="{{n}}"
+            wx:for-item="val"
+            wx:key="d"
+          >
+            <view class="_div content-row data-v-ab1dbf71">
+              <view class="_div row-item data-v-ab1dbf71" style="width: 45%"
+                >{{val.a}}</view
+              >
+              <view
+                class="_div row-item text-right data-v-ab1dbf71"
+                style="width: 30%"
+                >{{val.b}}</view
+              >
+              <view
+                class="_div row-item text-right data-v-ab1dbf71"
+                style="width: 25%"
+                >{{val.c}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="_div news-wrapper data-v-ab1dbf71" wx:if="{{o}}">
+      <view class="_div spec-line-small-light data-v-ab1dbf71"></view>
+      <view class="_div news-title data-v-ab1dbf71">券商研报</view>
+      <view class="_div news-content data-v-ab1dbf71">
+        <view
+          catchtap="{{item.f}}"
+          class="_div news-content-item data-v-ab1dbf71"
+          wx:for="{{p}}"
+          wx:key="e"
+        >
+          <view class="_div news-item-top data-v-ab1dbf71">
+            <view class="_div news-item-left data-v-ab1dbf71">{{item.a}}</view>
+            <view class="_div new-item-subtitle data-v-ab1dbf71">
+              <label class="_span data-v-ab1dbf71">{{item.b}}</label>
+              <label class="_span data-v-ab1dbf71">{{item.c}}</label>
+            </view>
+          </view>
+          <view
+            class="_div spec-line-small-light data-v-ab1dbf71"
+            wx:if="{{item.d}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="_div bottom-detail-container data-v-ab1dbf71">
+    <view class="_div bottom-detail-container-image data-v-ab1dbf71"></view>
+    <view class="_div bottom-detail-container-text data-v-ab1dbf71"
+      >点击查看详情</view
+    >
+  </view>
+</view>

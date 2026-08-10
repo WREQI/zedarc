@@ -1,0 +1,51 @@
+<view class="_div dialog-wrapper data-v-f625f98d">
+  <view class="_div dialog-container data-v-f625f98d">
+    <view class="_div dialog-main data-v-f625f98d">
+      <view class="_div popup-cnt data-v-f625f98d">
+        <view class="_div mult-welfare--list-list data-v-f625f98d">
+          <lottie-com
+            bind:__l="__l"
+            bindlottieReady="{{a}}"
+            class="data-v-f625f98d"
+            data-c-h="{{!false}}"
+            uI="f625f98d-0"
+          ></lottie-com>
+          <canvas
+            class="lottie-canvas data-v-f625f98d"
+            id="lottie-canvas"
+            type="2d"
+          ></canvas>
+          <image
+            alt=""
+            class="_img coin data-v-f625f98d"
+            src="https://st.gtimg.com/design/4e27f64cfec1d68fd2a66b4021bc251e.png"
+          ></image>
+          <view class="_p main-title data-v-f625f98d"
+            >恭喜获得模拟炒股周礼包</view
+          >
+          <view class="_div reward-desc data-v-f625f98d">
+            <reward
+              bind:__l="__l"
+              class="data-v-f625f98d"
+              uI="f625f98d-1"
+              uP="{{b}}"
+              wx:if="{{b}}"
+            ></reward>
+          </view>
+        </view>
+        <view class="_div popup-btn-con data-v-f625f98d">
+          <view bindtap="{{c}}" class="_div button data-v-f625f98d"
+            >去实战</view
+          >
+        </view>
+      </view>
+      <view class="_div close-box data-v-f625f98d">
+        <image
+          bindtap="{{d}}"
+          class="_img close__img data-v-f625f98d"
+          src="https://st.gtimg.com/design/b42c44e4761f6d7b84c331f4aa7c7ba9.svg"
+        ></image>
+      </view>
+    </view>
+  </view>
+</view>

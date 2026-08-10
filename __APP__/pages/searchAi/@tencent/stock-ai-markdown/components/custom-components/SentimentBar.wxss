@@ -1,0 +1,120 @@
+.sentiment-bar.data-v-1695fe85 {
+  background-color: #f5f6fa;
+  border-radius: 0.21333333333333335rem;
+  margin-bottom: 0.32rem;
+  padding: 0.32rem;
+}
+.sentiment-bar__header.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.sentiment-bar__title.data-v-1695fe85 {
+  color: #262e40;
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.56rem;
+}
+.sentiment-bar__desc.data-v-1695fe85 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+}
+.sentiment-bar__chart.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.sentiment-bar__progress.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.10666666666666667rem;
+}
+.sentiment-bar__bar-wrapper.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+}
+.sentiment-bar__bar-wrapper--bullish.data-v-1695fe85 {
+  justify-content: flex-start;
+}
+.sentiment-bar__bar-wrapper--neutral.data-v-1695fe85 {
+  justify-content: center;
+}
+.sentiment-bar__bar-wrapper--bearish.data-v-1695fe85 {
+  justify-content: flex-end;
+}
+.sentiment-bar__labels.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.10666666666666667rem;
+  margin-top: 0.16rem;
+}
+.sentiment-bar__label-wrapper.data-v-1695fe85 {
+  display: -webkit-flex;
+  display: flex;
+}
+.sentiment-bar__label-wrapper--bullish.data-v-1695fe85 {
+  justify-content: flex-start;
+  min-width: 1.4666666666666666rem;
+}
+.sentiment-bar__label-wrapper--neutral.data-v-1695fe85 {
+  justify-content: center;
+}
+.sentiment-bar__label-wrapper--bearish.data-v-1695fe85 {
+  justify-content: flex-end;
+  min-width: 1.4666666666666666rem;
+}
+.sentiment-bar__bar.data-v-1695fe85 {
+  height: 0.16rem;
+  width: 100%;
+}
+.sentiment-bar__bar--bullish.data-v-1695fe85 {
+  background-color: #e63535;
+  border-radius: 0.16rem 0 0 0.16rem;
+  position: relative;
+}
+.sentiment-bar__bar--bullish.data-v-1695fe85:after {
+  border-color: #e63535 transparent transparent;
+  border-style: solid;
+  border-width: 0.16rem 0.04rem;
+  content: "";
+  position: absolute;
+  right: -0.04rem;
+  top: 0;
+}
+.sentiment-bar__bar--neutral.data-v-1695fe85 {
+  background-color: #7a8499;
+  transform: skew(-9.46deg);
+}
+.sentiment-bar__bar--bearish.data-v-1695fe85 {
+  background-color: #1caa3c;
+  border-radius: 0 0.16rem 0.16rem 0;
+  position: relative;
+}
+.sentiment-bar__bar--bearish.data-v-1695fe85:after {
+  border-color: transparent transparent #1caa3c;
+  border-style: solid;
+  border-width: 0.16rem 0.04rem;
+  content: "";
+  left: -0.04rem;
+  position: absolute;
+  top: -0.16rem;
+}
+.sentiment-bar__label.data-v-1695fe85 {
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  white-space: nowrap;
+}
+.sentiment-bar__label--bullish.data-v-1695fe85 {
+  color: #e63535;
+}
+.sentiment-bar__label--neutral.data-v-1695fe85 {
+  color: #98a0b3;
+}
+.sentiment-bar__label--bearish.data-v-1695fe85 {
+  color: #1caa3c;
+}

@@ -1,0 +1,25 @@
+<mp-action-sheet bind:__l="__l" bindinput="{{s}}" class="{{['apply-profile-check__container','plugin-component-action-sheet','data-v-680ff90c',r&&'isUnSubmitable']}}" uI="680ff90c-0" uP="{{t}}" uS="{{['d']}}" wx:if="{{t}}">
+    <view class="fs-24 align-c info-text data-v-680ff90c" wx:if="{{a}}">
+        <rich-text class="data-v-680ff90c" nodes="{{b}}"></rich-text>
+    </view>
+    <view class="actionsheet-content-container data-v-680ff90c" ref="contentContainer">
+        <block wx:if="{{c}}">
+            <view class="{{['data-v-680ff90c',e]}}">
+                <view bindtap="{{one.e}}" class="flex select-item text-color-1 data-v-680ff90c" wx:for="{{d}}" wx:for-item="one" wx:key="d">{{one.a}}<st-checkbox bind:__l="__l" class="item-checkbox data-v-680ff90c" uI="{{one.b}}" uP="{{one.c}}" wx:if="{{one.c}}"></st-checkbox>
+                </view>
+            </view>
+            <view class="fs-24 align-c info-text special-info data-v-680ff90c" hidden="{{!g}}">
+                <rich-text class="data-v-680ff90c" nodes="{{f}}"></rich-text>
+            </view>
+            <view class="divider data-v-680ff90c"></view>
+        </block>
+        <view class="{{['data-v-680ff90c',i]}}">
+            <view bindtap="{{one.e}}" class="flex select-item text-color-1 data-v-680ff90c" wx:for="{{h}}" wx:for-item="one" wx:key="d">{{one.a}}<st-checkbox bind:__l="__l" class="item-checkbox data-v-680ff90c" uI="{{one.b}}" uP="{{one.c}}" wx:if="{{one.c}}"></st-checkbox>
+            </view>
+        </view>
+        <input alwaysEmbed="{{true}}" bindinput="{{o}}" class="profile-input data-v-680ff90c" cursorSpacing="20" hidden="{{!j}}" maxlength="{{l}}" placeholder="{{m}}" ref="otherInput" type="{{k}}" value="{{n}}" wx:if="{{r0}}"></input>
+    </view>
+    <view class="fs-24 align-c error-text data-v-680ff90c" wx:if="{{p}}">
+        <rich-text class="data-v-680ff90c" nodes="{{q}}"></rich-text>
+    </view>
+</mp-action-sheet>

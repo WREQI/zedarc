@@ -1,0 +1,176 @@
+<view class="guess-home guess-home--mp data-v-7b8bdff3">
+  <task bind:__l="__l" class="data-v-7b8bdff3" uI="7b8bdff3-0"></task>
+  <image
+    class="guess-home__bg-preload data-v-7b8bdff3"
+    lazyLoad="{{false}}"
+    mode="aspectFill"
+    src="https://st.gtimg.com/design/4203baa61d646aab8cdfea3b56a00888.jpeg"
+  ></image>
+  <view class="guess-home__bg guess-home__bg--collapsed data-v-7b8bdff3">
+    <view class="guess-home__main data-v-7b8bdff3">
+      <view class="guess-home__header-space data-v-7b8bdff3"></view>
+      <view class="guess-home__rule data-v-7b8bdff3">
+        <text bindtap="{{a}}" class="guess-home__rule-btn data-v-7b8bdff3"
+          >规则</text
+        >
+      </view>
+      <view class="guess-home__body data-v-7b8bdff3">
+        <view class="guess-home__market data-v-7b8bdff3">
+          <market-guessing
+            bind:__l="__l"
+            bindactivityProgress="{{e}}"
+            bindbulletAnchorPoint="{{d}}"
+            bindguessOpResult="{{c}}"
+            bindklineReady="{{g}}"
+            bindshellReady="{{f}}"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-1"
+            uP="{{h}}"
+            wx:if="{{b}}"
+          ></market-guessing>
+        </view>
+        <view
+          class="guess-home__invite guess-home__invite--anchor invitePoint data-v-7b8bdff3"
+        >
+          <market-analysis
+            bind:__l="__l"
+            bindinviteFriendHelp="{{l}}"
+            bindonClickAiDialog="{{m}}"
+            bindrefresh="{{k}}"
+            class="r data-v-7b8bdff3"
+            uI="7b8bdff3-2"
+            uP="{{n}}"
+            uR="MarketAnalysis"
+            wx:if="{{i}}"
+          ></market-analysis>
+        </view>
+        <view
+          class="guess-home__stock-recommend data-v-7b8bdff3"
+          id="recommendedStock"
+        >
+          <individual-guess
+            bind:__l="__l"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-3"
+            uP="{{p}}"
+            wx:if="{{o}}"
+          ></individual-guess>
+        </view>
+        <view
+          class="guess-home__viewpoint guess-home__viewpoint--anchor data-v-7b8bdff3"
+        >
+          <viewpoint
+            bind:__l="__l"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-4"
+            uP="{{r}}"
+            wx:if="{{q}}"
+          ></viewpoint>
+        </view>
+        <view class="guess-home__ranking data-v-7b8bdff3">
+          <rank
+            bind:__l="__l"
+            binduserSetting="{{t}}"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-5"
+            uP="{{v}}"
+            wx:if="{{s}}"
+          ></rank>
+        </view>
+        <view class="guess-home__gold-entry data-v-7b8bdff3">
+          <gold-entry
+            bind:__l="__l"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-6"
+            uP="{{x}}"
+            wx:if="{{w}}"
+          ></gold-entry>
+        </view>
+        <view class="guess-home__evaluate data-v-7b8bdff3">
+          <evaluate-popup
+            bind:__l="__l"
+            bindbottomEvaluate="{{z}}"
+            class="data-v-7b8bdff3"
+            uI="7b8bdff3-7"
+            uP="{{A}}"
+            wx:if="{{y}}"
+          ></evaluate-popup>
+        </view>
+        <view class="guess-home__canvas data-v-7b8bdff3">
+          <canvas
+            canvasId="js_index"
+            class="data-v-7b8bdff3"
+            style="{{'width:'+B+';'+'height:'+C}}"
+          ></canvas>
+        </view>
+      </view>
+      <guide-modal
+        bind:__l="__l"
+        bindclose="{{F}}"
+        bindupdateVisible="{{E}}"
+        class="data-v-7b8bdff3"
+        uI="7b8bdff3-8"
+        uP="{{G}}"
+        wx:if="{{D}}"
+      ></guide-modal>
+      <simple-modal
+        bind:__l="__l"
+        bindclose="{{J}}"
+        bindupdateVisible="{{I}}"
+        class="data-v-7b8bdff3"
+        uI="7b8bdff3-9"
+        uP="{{K}}"
+        wx:if="{{H}}"
+      ></simple-modal>
+      <guide-modal
+        bind:__l="__l"
+        bindclose="{{N}}"
+        bindupdateVisible="{{M}}"
+        class="data-v-7b8bdff3"
+        uI="7b8bdff3-10"
+        uP="{{O}}"
+        wx:if="{{L}}"
+      ></guide-modal>
+      <simple-modal
+        bind:__l="__l"
+        class="r data-v-7b8bdff3"
+        uI="7b8bdff3-11"
+        uP="{{Q}}"
+        uR="simpleModal"
+        wx:if="{{Q}}"
+      ></simple-modal>
+      <reward-modal
+        bind:__l="__l"
+        class="r data-v-7b8bdff3"
+        uI="7b8bdff3-12"
+        uP="{{S}}"
+        uR="rewardModal"
+        wx:if="{{S}}"
+      ></reward-modal>
+      <lottie-modal
+        bind:__l="__l"
+        bindclose="{{U}}"
+        class="data-v-7b8bdff3"
+        uI="7b8bdff3-13"
+        uP="{{V}}"
+        wx:if="{{T}}"
+      ></lottie-modal>
+      <evaluate-popup
+        bind:__l="__l"
+        bindupdateIsEvaluateGuideVisible="{{W}}"
+        class="data-v-7b8bdff3"
+        uI="7b8bdff3-14"
+        uP="{{X}}"
+        wx:if="{{X}}"
+      ></evaluate-popup>
+    </view>
+  </view>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{Z}}"
+    class="data-v-7b8bdff3"
+    uI="7b8bdff3-15"
+    uP="{{aa}}"
+    wx:if="{{Y}}"
+  ></half-screen-ai-entry>
+</view>

@@ -1,0 +1,118 @@
+<view class="{{['page-apply-video','data-v-b0599cd6',N]}}" wx:if="{{a}}">
+  <view class="{{['camera-container','data-v-b0599cd6',q]}}">
+    <view class="navigator-bar data-v-b0599cd6" wx:if="{{b}}">
+      <navigator
+        class="{{['data-v-b0599cd6',c]}}"
+        openType="{{e}}"
+        target="{{d}}"
+      ></navigator>
+      <view class="navigator-title data-v-b0599cd6">{{f}}</view>
+    </view>
+    <camera
+      binderror="{{k}}"
+      bindinitdone="{{i}}"
+      bindstop="{{j}}"
+      class="{{['camera','data-v-b0599cd6',g]}}"
+      devicePosition="front"
+      flash="off"
+      resolution="{{h}}"
+    ></camera>
+    <canvas
+      canvasId="realtimeCanvas"
+      class="box-canvas data-v-b0599cd6"
+    ></canvas>
+    <view class="camera-capture-new data-v-b0599cd6">
+      <view class="{{['data-v-b0599cd6',l]}}"
+        >请保持面部完整位于<text class="side data-v-b0599cd6">白框内</text>
+      </view>
+      <view class="collision-status align-c data-v-b0599cd6" wx:if="{{m}}">
+        <view class="collision-status-success data-v-b0599cd6" wx:if="{{n}}">
+          <view class="collision-status-success-icon data-v-b0599cd6">
+            <image
+              class="data-v-b0599cd6"
+              src="https://st.gtimg.com/image/mp-broker/apply/icon-success.png"
+            ></image>
+          </view>
+          <view class="collision-status-success-text data-v-b0599cd6"
+            >{{o}}</view
+          >
+        </view>
+        <view class="collision-status-fail data-v-b0599cd6" wx:else>
+          <view class="collision-status-fail-icon data-v-b0599cd6">
+            <image
+              class="data-v-b0599cd6"
+              src="https://st.gtimg.com/image/mp-broker/apply/icon-fail.png"
+            ></image>
+          </view>
+          <view class="collision-status-fail-text data-v-b0599cd6">{{p}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="mp-for-h5 data-v-b0599cd6">
+    <view class="guide-container data-v-b0599cd6" wx:if="{{r}}">
+      <view class="guide-text data-v-b0599cd6">录制准备中</view>
+    </view>
+    <view class="{{['record-container','data-v-b0599cd6',J,K]}}" wx:if="{{s}}">
+      <view class="top-tips flex-center data-v-b0599cd6" wx:if="{{t}}">
+        <text class="playing data-v-b0599cd6"></text>
+        <text class="data-v-b0599cd6">正在播放问题</text>
+      </view>
+      <view class="record-sentence data-v-b0599cd6" wx:if="{{v}}">
+        <lyrics-comp
+          bind:__l="__l"
+          bindplayed="{{w}}"
+          class="data-v-b0599cd6"
+          uI="b0599cd6-0"
+          uP="{{x}}"
+          wx:if="{{x}}"
+        ></lyrics-comp>
+      </view>
+      <view class="record-tip data-v-b0599cd6" wx:if="{{y}}">
+        <lyrics-comp
+          bind:__l="__l"
+          bindplayed="{{z}}"
+          class="data-v-b0599cd6"
+          uI="b0599cd6-1"
+          uP="{{A}}"
+          wx:if="{{A}}"
+        ></lyrics-comp>
+      </view>
+      <view class="record-counter data-v-b0599cd6" wx:if="{{B}}">
+        <view class="counter-tip data-v-b0599cd6">
+          <text
+            class="{{['data-v-b0599cd6',seg.c]}}"
+            wx:for="{{C}}"
+            wx:for-item="seg"
+            wx:key="b"
+            >{{seg.a}}</text
+          >
+        </view>
+        <view class="counter-progress data-v-b0599cd6">
+          <view class="progress-bar right data-v-b0599cd6">
+            <view class="arc data-v-b0599cd6"></view>
+          </view>
+          <view class="progress-bar left data-v-b0599cd6">
+            <view class="arc data-v-b0599cd6"></view>
+          </view>
+          <view class="progress-cursor data-v-b0599cd6">
+            <view class="dot data-v-b0599cd6"></view>
+          </view>
+          <view class="progress-text data-v-b0599cd6" wx:if="{{D}}">{{E}}</view>
+        </view>
+        <view class="data-v-b0599cd6" wx:if="{{F}}">{{G}}秒后继续播放问题</view>
+        <view class="data-v-b0599cd6" wx:elif="{{H}}">{{I}}秒后结束录制</view>
+        <view class="data-v-b0599cd6" wx:else>已结束录制</view>
+      </view>
+    </view>
+  </view>
+  <mp-dialog
+    bind:__l="__l"
+    class="data-v-b0599cd6"
+    id="mp-dialog"
+    uI="b0599cd6-2"
+    uP="{{L}}"
+    wx:if="{{L}}"
+  ></mp-dialog>
+  <image class="preview-image data-v-b0599cd6" src="{{M}}"></image>
+</view>

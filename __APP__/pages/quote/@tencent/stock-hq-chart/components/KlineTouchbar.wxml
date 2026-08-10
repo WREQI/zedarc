@@ -1,0 +1,111 @@
+<view
+  class="{{['_div','touch-bar','kline-bar','data-v-32186a24',V&&'landscape']}}"
+>
+  <label class="_span col-1 data-v-32186a24" wx:if="{{a}}">
+    <label class="_span block heavy data-v-32186a24">{{b}}</label>
+    <label class="_span block row-2 heavy data-v-32186a24">{{c}}</label>
+  </label>
+  <label class="_span col-1 data-v-32186a24">
+    <label class="_span block data-v-32186a24">
+      <label class="_span block-title data-v-32186a24">开</label>
+      <label class="{{['_span','data-v-32186a24',e]}}">{{d}}</label>
+    </label>
+    <label class="_span block row-2 data-v-32186a24">
+      <label class="_span block-title data-v-32186a24">收</label>
+      <label class="{{['_span','data-v-32186a24',g]}}">{{f}}</label>
+    </label>
+  </label>
+  <label class="_span col-1 data-v-32186a24">
+    <label class="_span block data-v-32186a24">
+      <label class="_span block-title data-v-32186a24">高</label>
+      <label class="{{['_span','data-v-32186a24',i]}}">{{h}}</label>
+    </label>
+    <label class="_span block row-2 data-v-32186a24">
+      <label class="_span block-title data-v-32186a24">低</label>
+      <label class="{{['_span','data-v-32186a24',k]}}">{{j}}</label>
+    </label>
+  </label>
+  <block wx:if="{{l}}">
+    <label class="_span col-1 data-v-32186a24" wx:if="{{m}}">
+      <label class="_span block data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">涨幅</label>
+        <label class="{{['_span','data-v-32186a24',o]}}">{{n}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">{{p}}</label>
+        <label class="_span data-v-32186a24">{{q}}</label>
+      </label>
+    </label>
+    <label class="_span col-1 data-v-32186a24" wx:else>
+      <label class="_span block data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">涨幅</label>
+        <label class="{{['_span','data-v-32186a24',s]}}">{{r}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">涨跌</label>
+        <label class="{{['_span','data-v-32186a24',v]}}">{{t}}</label>
+      </label>
+    </label>
+    <label class="_span col-1 data-v-32186a24" wx:if="{{w}}">
+      <label class="_span block data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">换手</label>
+        <label class="_span data-v-32186a24">{{x}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">振幅</label>
+        <label class="_span data-v-32186a24">{{y}}</label>
+      </label>
+    </label>
+    <label class="_span col-2 data-v-32186a24">
+      <label class="_span block data-v-32186a24">
+        <label
+          class="{{['_span','data-v-32186a24',A&&'special','block-title']}}"
+          >量<view class="_i upper-text data-v-32186a24" wx:if="{{z}}">竞</view>
+        </label>
+        <label class="_span data-v-32186a24">{{B}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label
+          class="{{['_span','data-v-32186a24',D&&'special','block-title']}}"
+          >额<view class="_i upper-text data-v-32186a24" wx:if="{{C}}">竞</view>
+        </label>
+        <label class="_span data-v-32186a24">{{E}}</label>
+      </label>
+    </label>
+  </block>
+  <block wx:else>
+    <label class="_span col-1 data-v-32186a24">
+      <label class="_span block data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">幅</label>
+        <label class="{{['_span','data-v-32186a24',G]}}">{{F}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">额</label>
+        <label class="{{['_span','data-v-32186a24',I]}}">{{H}}</label>
+      </label>
+    </label>
+    <label
+      class="{{['_span','col-1','data-v-32186a24',P&&'single',Q&&'single-vertical',R&&'col-4']}}"
+    >
+      <label class="_span block data-v-32186a24" wx:if="{{J}}">
+        <label
+          class="{{['_span','data-v-32186a24',L&&'special','block-title']}}"
+          >成交<view class="_i upper-text data-v-32186a24" wx:if="{{K}}"
+            >竞</view
+          >
+        </label>
+        <label class="_span data-v-32186a24">{{M}}</label>
+      </label>
+      <label class="_span block row-2 data-v-32186a24">
+        <label class="_span block-title data-v-32186a24">{{N}}</label>
+        <label class="_span data-v-32186a24">{{O}}</label>
+      </label>
+    </label>
+  </block>
+  <label class="_span col-1 col-4 single data-v-32186a24" wx:if="{{S}}">
+    <label class="_span block row-2 data-v-32186a24">
+      <label class="_span block-title data-v-32186a24">至今涨幅</label>
+      <label class="{{['_span','data-v-32186a24',U]}}">{{T}}</label>
+    </label>
+  </label>
+</view>

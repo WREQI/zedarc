@@ -1,0 +1,47 @@
+<view class="_div video-player-mod data-v-7a456c12">
+  <view class="_div video-card-container data-v-7a456c12">
+    <view bindtap="{{o}}" class="_div img-box data-v-7a456c12">
+      <block wx:if="{{a}}">
+        <view class="_div video-mask video-poster data-v-7a456c12">
+          <image class="_img data-v-7a456c12" src="{{b}}"></image>
+        </view>
+        <view class="_div video-mask data-v-7a456c12">
+          <image
+            class="_img data-v-7a456c12"
+            src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/mask-c.png"
+          ></image>
+        </view>
+        <view class="_div video-box2 data-v-7a456c12">
+          <view class="_div play-button data-v-7a456c12">
+            <image
+              class="_img play-icon data-v-7a456c12"
+              src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+            ></image>
+          </view>
+        </view>
+      </block>
+      <txv-video
+        autoplay="{{false}}"
+        bindended="{{k}}"
+        binderror="{{l}}"
+        bindpause="{{j}}"
+        bindplay="{{i}}"
+        bindstatechange="{{m}}"
+        bindtimeupdate="{{n}}"
+        class="data-v-7a456c12"
+        controls="{{false}}"
+        height="{{e}}"
+        isHiddenStop="{{true}}"
+        isNeedMutex="{{true}}"
+        muted="{{false}}"
+        playerid="{{g}}"
+        poster="{{h}}"
+        showFullscreenBtn="{{false}}"
+        showMuteBtn="{{false}}"
+        vid="{{f}}"
+        width="{{d}}"
+        wx:if="{{c}}"
+      ></txv-video>
+    </view>
+  </view>
+</view>

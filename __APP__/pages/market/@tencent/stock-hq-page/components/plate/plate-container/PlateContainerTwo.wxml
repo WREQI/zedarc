@@ -1,0 +1,62 @@
+<view class="_div plate-card data-v-16347bb0">
+  <view class="_div seperate-line data-v-16347bb0"></view>
+  <plate-title
+    bind:__l="__l"
+    bindgotoList="{{a}}"
+    class="data-v-16347bb0"
+    uI="16347bb0-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></plate-title>
+  <view class="_div tabbar-wrapper data-v-16347bb0">
+    <tabbar
+      bind:__l="__l"
+      bindswitchTab="{{c}}"
+      class="tab-bar data-v-16347bb0"
+      uI="16347bb0-1"
+      uP="{{d}}"
+      wx:if="{{d}}"
+    ></tabbar>
+  </view>
+  <view class="_div rise-fall-rate-label data-v-16347bb0" wx:if="{{e}}">
+    <label
+      bindtap="{{name.d}}"
+      class="{{['_span','label','data-v-16347bb0',name.c&&'active']}}"
+      wx:for="{{f}}"
+      wx:for-item="name"
+      wx:key="b"
+      >{{name.a}}</label
+    >
+  </view>
+  <view
+    class="_div plate-item-row layout-row data-v-16347bb0"
+    wx:for="{{g}}"
+    wx:for-item="row"
+    wx:key="c"
+  >
+    <block wx:if="{{h}}">
+      <plate-block-one
+        bind:__l="__l"
+        bindgotoDetail="{{item.b}}"
+        class="data-v-16347bb0"
+        style="{{'flex:'+1}}"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{row.a}}"
+        wx:key="a"
+      ></plate-block-one>
+    </block>
+    <block wx:else>
+      <plate-block-two
+        bind:__l="__l"
+        bindgotoDetail="{{item.b}}"
+        class="data-v-16347bb0"
+        style="{{'flex:'+1}}"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{row.b}}"
+        wx:key="a"
+      ></plate-block-two>
+    </block>
+  </view>
+</view>

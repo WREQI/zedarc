@@ -1,0 +1,27 @@
+@import "/app.wxss";
+.transfer-fund-container {
+  min-height: calc(100vh - env(safe-area-inset-bottom));
+}
+.transfer-fund-container .segments-wrapper {
+  background-color: var(--fill-2);
+  padding: 0.533333rem;
+}
+.transfer-fund-container .segments-wrapper .st-segment {
+  margin: 0 auto;
+  width: 5.333333rem;
+}
+.transfer-fund-container .segments-wrapper .st-segment-item {
+  border-color: var(--color-primary-1);
+  border-width: 1px;
+  color: var(--color-primary-1);
+}
+.transfer-fund-container .segments-wrapper .st-segment-item-selected {
+  background: var(--color-primary-1);
+  color: #fff;
+}
+.transfer-fund-container .empty-tip-container {
+  background: var(--fill-1);
+  box-sizing: border-box;
+  min-height: calc(100vh - env(safe-area-inset-bottom));
+  padding: 40% 1.04rem 0;
+}

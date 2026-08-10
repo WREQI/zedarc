@@ -1,0 +1,112 @@
+@import "/app.wxss";
+.custom-navbar {
+  z-index: 1001;
+}
+.list-details {
+  background-image: url(https://st.gtimg.com/pcm/mkghbcu4-ikqke2f.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100%auto;
+  box-sizing: border-box;
+  height: calc(100vh - env(safe-area-inset-bottom));
+}
+.list-details::-webkit-scrollbar {
+  display: none;
+}
+[data-theme="dark"] .list-details {
+  background-image: url(https://st.gtimg.com/design/b8094002b5a181c6f4c971cdf416b46c.png);
+}
+.account-personal-container {
+  padding-bottom: 0.8rem;
+}
+.account-personal-container .st-cell--title {
+  max-width: 3.6rem;
+}
+.account-personal-container .limit-info-can {
+  background-color: #fae0e0;
+  color: var(--color-red);
+  font-size: 0.346667rem;
+  line-height: 0.346667rem;
+  padding: 0.133333rem 0 0.133333rem 0.466667rem;
+}
+.account-personal-container .limit-info-wait {
+  background-color: #dbe7fd;
+  color: var(--color-blue);
+  font-size: 0.346667rem;
+  line-height: 0.346667rem;
+  padding: 0.133333rem 0 0.133333rem 0.466667rem;
+}
+.account-personal-container .action-button {
+  background-color: var(--fill-2);
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  font-weight: 400;
+  height: 1.493333rem;
+  line-height: 1.493333rem;
+  margin-top: 0.213333rem;
+  text-align: center;
+}
+.account-personal-container .action-button.action-profileupdate {
+  color: var(--color-primary);
+}
+.account-personal-header {
+  overflow: visible;
+  padding: 0.426667rem 0.32rem 0;
+  position: relative;
+}
+.account-personal-header__bg {
+  background-image: url(https://st.gtimg.com/pcm/mkghbcu4-ikqke2f.svg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.account-personal-header__bg-img {
+  display: none;
+}
+.account-personal-header__fund {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.373333rem;
+  justify-content: center;
+  line-height: 0.533333rem;
+  margin-bottom: 0.426667rem;
+  position: relative;
+  z-index: 1;
+}
+.account-personal-header__fund-label {
+  color: var(--text-color-1, #262e40);
+  font-size: 0.373333rem;
+  font-weight: 400;
+}
+.account-personal-header__fund-copy {
+  height: 0.373333rem;
+  margin-left: 0.16rem;
+  width: 0.373333rem;
+}
+.account-personal-header__fund-eye {
+  color: var(--text-color-1);
+  font-size: 0.266667rem;
+  margin: 0 0.266667rem 0 0.16rem;
+}
+.account-personal-permission {
+  margin-top: -3.613333rem;
+  transition: margin-top 0.3s ease;
+}
+.account-personal-permission--expanded {
+  margin-top: 0;
+}
+.account-personal-divider {
+  height: -webkit-fit-content;
+  height: fit-content;
+  width: 100%;
+}

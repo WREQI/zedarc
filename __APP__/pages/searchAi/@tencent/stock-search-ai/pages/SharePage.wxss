@@ -1,0 +1,94 @@
+.navTitle.data-v-3de01010 {
+  background-image: url(https://st.gtimg.com/design/d6f66a07078f39a8765816a29d629fcd.png);
+  background-size: cover;
+  height: 2.506666666666667rem;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+.navTitleWrapper.data-v-3de01010 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  position: absolute;
+  top: 1.1733333333333333rem;
+  width: 100%;
+  z-index: 100;
+}
+.navTitleWrapper .navTitleCenter.data-v-3de01010 {
+  color: #e63535;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 0.5333333333333333rem;
+  line-height: 0.5333333333333333rem;
+}
+.navTitleWrapper .home-icon.data-v-3de01010 {
+  background-image: url(https://st.gtimg.com/design/1d27a10a869b0d62d06baff16187b581.png);
+  background-size: cover;
+  height: 0.8533333333333334rem;
+  left: 0.26666666666666666rem;
+  position: absolute;
+  width: 0.8533333333333334rem;
+}
+.navTitleWrapper .navTitleBack.data-v-3de01010 {
+  background-image: url(https://st.gtimg.com/design/eef4b6f43a57023862725b5bddb105b5.png);
+  background-size: cover;
+  height: 0.64rem;
+  left: 0.26666666666666666rem;
+  position: absolute;
+  width: 0.64rem;
+}
+.mainContent.data-v-3de01010 {
+  background: #f5f6fa;
+  background-image: url(https://st.gtimg.com/design/14c024022af236a2b66f5ef1e7f4a160.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 4rem;
+  box-sizing: border-box;
+  flex-flow: column;
+  height: calc(100vh - 5.12rem);
+  margin-top: 2.506666666666667rem;
+}
+.contentItem.data-v-3de01010,
+.mainContent.data-v-3de01010 {
+  display: -webkit-flex;
+  display: flex;
+}
+.contentItemAlignRight.data-v-3de01010 {
+  justify-content: flex-end;
+}
+.contentItemAlignLeft.data-v-3de01010 {
+  justify-content: flex-start;
+}
+.bottomContent.data-v-3de01010 {
+  background: #fff;
+  border-top: 0.013333333333333334rem solid var(--border-light);
+  bottom: 0;
+  height: 2.6133333333333333rem;
+  position: fixed;
+  width: 100vw;
+}
+.bottomContent .bottomButton.data-v-3de01010 {
+  align-content: center;
+  background: #e63535;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  justify-content: center;
+  line-height: 1.1733333333333333rem;
+  margin: 0.32rem;
+  text-align: center;
+}
+.withoutNav .mainContent.data-v-3de01010 {
+  height: calc(100vh - 2.6133333333333333rem);
+  margin-top: 0;
+}

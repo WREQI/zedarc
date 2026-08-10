@@ -1,0 +1,61 @@
+<view class="_div chart-setting data-v-48a1dd44">
+  <view class="_div setting-group data-v-48a1dd44">
+    <view class="_div title data-v-48a1dd44">主图指标</view>
+  </view>
+  <view
+    bindtap="{{item.d}}"
+    class="{{['_div','data-v-48a1dd44','setting-item',item.b&&'no-border']}}"
+    wx:for="{{a}}"
+    wx:key="c"
+  >
+    <view class="_div title data-v-48a1dd44">{{item.a}}</view>
+    <image
+      class="_img arrow data-v-48a1dd44"
+      src="https://st.gtimg.com/design/4b086d28acbe500b68d927b9c5506b8e.png"
+    ></image>
+  </view>
+  <view class="_div setting-group data-v-48a1dd44">
+    <view class="_div title data-v-48a1dd44">副图指标</view>
+  </view>
+  <view class="_div setting-item count-setting data-v-48a1dd44">
+    <view class="_div title data-v-48a1dd44">副图数量</view>
+    <view class="_div setting-item-count data-v-48a1dd44">
+      <view
+        bindtap="{{c}}"
+        class="{{['_div','count-item','data-v-48a1dd44',b&&'active']}}"
+        data-val="1"
+        >1</view
+      >
+      <view
+        bindtap="{{e}}"
+        class="{{['_div','count-item','data-v-48a1dd44',d&&'active']}}"
+        data-val="2"
+        >2</view
+      >
+      <view
+        bindtap="{{g}}"
+        class="{{['_div','count-item','data-v-48a1dd44',f&&'active']}}"
+        data-val="3"
+        >3</view
+      >
+      <view
+        bindtap="{{i}}"
+        class="{{['_div','count-item','data-v-48a1dd44',h&&'active']}}"
+        data-val="4"
+        >4</view
+      >
+    </view>
+  </view>
+  <view
+    bindtap="{{item.d}}"
+    class="{{['_div','data-v-48a1dd44','setting-item',item.b&&'no-border']}}"
+    wx:for="{{j}}"
+    wx:key="c"
+  >
+    <view class="_div title data-v-48a1dd44">{{item.a}}</view>
+    <image
+      class="_img arrow data-v-48a1dd44"
+      src="https://st.gtimg.com/design/4b086d28acbe500b68d927b9c5506b8e.png"
+    ></image>
+  </view>
+</view>

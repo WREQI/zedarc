@@ -1,0 +1,76 @@
+<view
+  class="_div wx-news-item-basket-container data-v-bd54c0db"
+  id="{{n}}"
+  ref="basketContainer"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{h}}"
+    class="_div wx-news-item-match-basket data-v-bd54c0db"
+    wx:if="{{b}}"
+  >
+    <image
+      alt="股单"
+      class="_img icon data-v-bd54c0db"
+      id="iconRef"
+      ref="iconRef"
+      src="https://st.gtimg.com/design/6e622c4b85fad6ade1d937535a9afb28.png"
+    ></image>
+    <view class="_div match-title data-v-bd54c0db">{{c}}</view>
+    <view
+      class="_div match-stock data-v-bd54c0db"
+      id="matchStock"
+      ref="matchStock"
+      wx:if="{{d}}"
+    >
+      <stock-tag
+        bind:__l="__l"
+        bindonClick="{{item.b}}"
+        class="format-right data-v-bd54c0db"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{e}}"
+        wx:key="a"
+      ></stock-tag>
+    </view>
+    <view
+      class="_div match-stock data-v-bd54c0db"
+      id="matchStock"
+      ref="matchStock"
+      wx:else
+    >
+      <stock-tag-lite
+        bind:__l="__l"
+        bindonClick="{{item.b}}"
+        class="format-right data-v-bd54c0db"
+        uI="{{item.c}}"
+        uP="{{item.d}}"
+        wx:for="{{f}}"
+        wx:key="a"
+      ></stock-tag-lite>
+    </view>
+    <view class="{{['_div','data-v-bd54c0db','more',g]}}">
+      <image
+        class="_img more-img data-v-bd54c0db"
+        src="https://st.gtimg.com/design/7c1b7dcdb1966364bb07506c0c47bebf.png"
+      ></image>
+    </view>
+  </view>
+  <view
+    catchtap="{{m}}"
+    class="_div wx-news-item-basket data-v-bd54c0db"
+    wx:else
+  >
+    <image
+      alt="股单"
+      class="_img icon data-v-bd54c0db"
+      id="iconRef"
+      ref="iconRef"
+      src="https://st.gtimg.com/design/6e622c4b85fad6ade1d937535a9afb28.png"
+    ></image>
+    <view class="_div name data-v-bd54c0db">{{i}}</view>
+    <view class="{{['_div','data-v-bd54c0db','zdf',l]}}" wx:if="{{j}}"
+      >{{k}}</view
+    >
+  </view>
+</view>

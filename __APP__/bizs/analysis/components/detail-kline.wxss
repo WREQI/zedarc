@@ -1,0 +1,365 @@
+@import "/app.wxss";
+[data-theme="dark"] .quotes-chart-bd.data-v-7af2a226 {
+  background-color: var(--fill-2);
+}
+.quotes-chart-bd.data-v-7af2a226 {
+  -webkit-box-pack: start;
+  background-color: var(--fill-2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 6.053333rem;
+  justify-content: flex-start;
+  position: relative;
+}
+.quotes-chart-bd .loading.data-v-7af2a226 {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.quotes-chart-bd-left.data-v-7af2a226 {
+  padding-left: 2px;
+  padding-right: 2px;
+  position: relative;
+}
+.quotes-chart-bd .tool-tip.data-v-7af2a226 {
+  background-color: #f3f4fa;
+  font-size: 0.32rem;
+  left: 0;
+  padding: 0.32rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-100%);
+}
+[data-theme="dark"] .quotes-chart-bd .tool-tip.data-v-7af2a226 {
+  background-color: var(--fill-2);
+}
+.quotes-chart-bd .tool-tip .label.data-v-7af2a226 {
+  margin-right: 0.106667rem;
+}
+[data-theme="dark"] .quotes-chart-bd .tool-tip .label.data-v-7af2a226 {
+  color: #7d88a1;
+}
+.quotes-chart-bd .tool-tip .time.data-v-7af2a226 {
+  font-weight: 500;
+  line-height: 0.44rem;
+  margin-bottom: 0.2rem;
+}
+[data-theme="dark"] .quotes-chart-bd .tool-tip .time.data-v-7af2a226 {
+  color: var(--text-color-1);
+}
+.quotes-chart-bd .tool-tip .hq.data-v-7af2a226 {
+  line-height: 0.44rem;
+}
+.quotes-chart-bd .tool-tip .trade.data-v-7af2a226 {
+  margin-top: 0.306667rem;
+}
+.quotes-chart-bd .tool-tip .trade-one.data-v-7af2a226 {
+  margin-right: 0.32rem;
+}
+.quotes-chart-bd .tool-tip .trade-one_simple .blue.data-v-7af2a226 {
+  color: var(--color-buy) !important;
+}
+.quotes-chart-bd .tool-tip .trade-one_simple .orange.data-v-7af2a226 {
+  color: var(--color-sell) !important;
+}
+.quotes-chart .legend.data-v-7af2a226 {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--fill-2);
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.266667rem;
+  height: 0.933333rem;
+  justify-content: space-between;
+  line-height: 0.293333rem;
+  margin: auto;
+  position: relative;
+  width: 100%;
+}
+.quotes-chart .legend .legend-item .buy.data-v-7af2a226 {
+  color: var(--color-buy);
+}
+.quotes-chart .legend .legend-item .sell.data-v-7af2a226 {
+  color: var(--color-sell);
+  margin-left: 0.8rem;
+}
+.quotes-chart .legend .legend-item .trade.data-v-7af2a226 {
+  color: #b71eff;
+  margin-left: 0.8rem;
+}
+.quotes-chart .legend_simple .legend-item .trade.data-v-7af2a226 {
+  color: var(--color-blue);
+}
+.quotes-chart .legend .legend-icon.data-v-7af2a226 {
+  margin-right: 0.133333rem;
+}
+.quotes-chart .legend .line.data-v-7af2a226 {
+  background-color: #007aff;
+  height: 0.04rem;
+  width: 0.266667rem;
+}
+.quotes-chart .legend .legend-ai-wrapper.data-v-7af2a226 {
+  -webkit-box-flex: 1;
+  flex: 1;
+  padding-left: 0.32rem;
+  position: relative;
+}
+.quotes-chart .legend .legend-ai-tab.data-v-7af2a226,
+.quotes-chart .legend .legend-ai-wrapper.data-v-7af2a226 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.quotes-chart .legend .legend-ai-tab.data-v-7af2a226 {
+  border-radius: 0.106667rem;
+  height: 0.746667rem;
+  padding: 0 0.266667rem;
+}
+.quotes-chart .legend .legend-ai-tab--on.data-v-7af2a226 {
+  background: rgba(48, 119, 236, 0.1);
+}
+.quotes-chart .legend .legend-ai-tab--on .legend-ai-tab__text.data-v-7af2a226 {
+  color: var(--color-primary-1);
+}
+[data-simple="true"] .quotes-chart .legend .legend-ai-tab--on.data-v-7af2a226 {
+  background: rgba(230, 53, 53, 0.1);
+}
+.quotes-chart .legend .legend-ai-tab--off.data-v-7af2a226 {
+  background: hsla(216, 7%, 42%, 0.1);
+}
+.quotes-chart .legend .legend-ai-tab--off .legend-ai-tab__text.data-v-7af2a226 {
+  color: #646a73;
+}
+.quotes-chart .legend .legend-ai-tab__text.data-v-7af2a226 {
+  font-size: 0.293333rem;
+  font-weight: 500;
+  line-height: 0.746667rem;
+}
+.quotes-chart .legend .legend-ai-tab__divider.data-v-7af2a226 {
+  background: #c9d0dc;
+  height: 0.266667rem;
+  margin: 0 0.16rem;
+  width: 0.013333rem;
+}
+.quotes-chart .legend .legend-ai-tab__icon.data-v-7af2a226 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.quotes-chart .legend .legend-ai-tab__gear.data-v-7af2a226 {
+  background: url(https://st.gtimg.com/pcm/mmd9794w_57eb605c85ca32ed70ddc82c4dd7994c.svg)
+    no-repeat 50% / contain;
+  display: block;
+  height: 0.32rem;
+  width: 0.32rem;
+}
+.quotes-chart .legend .legend-bubble-tip.data-v-7af2a226 {
+  bottom: calc(100% + 0.213333rem);
+  box-sizing: border-box;
+  left: 0.32rem;
+  position: absolute;
+  transform: translateZ(0);
+  width: 7.68rem;
+  z-index: 10;
+}
+.quotes-chart .legend .legend-item--bst.data-v-7af2a226 {
+  cursor: pointer;
+}
+.quotes-chart .legend .legend-radio.data-v-7af2a226 {
+  background: var(--color-primary-1);
+  height: 0.373333rem;
+  margin-right: 0.133333rem;
+  mask-size: contain;
+  width: 0.373333rem;
+}
+.quotes-chart .legend .legend-radio.off.data-v-7af2a226 {
+  mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iMTEuNSIgc3Ryb2tlPSIjOThBMEIzIi8+PC9zdmc+);
+}
+.quotes-chart .legend .legend-radio.on.data-v-7af2a226 {
+  mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iMTEuNSIgc3Ryb2tlPSIjRTYzNTM1Ii8+PGNpcmNsZSBjeD0iMTQiIGN5PSIxNCIgcj0iNiIgZmlsbD0iI0U2MzUzNSIvPjwvc3ZnPg==);
+}
+.quotes-chart .legend .legend-markers.data-v-7af2a226 {
+  margin-right: 0.16rem;
+}
+.quotes-chart .legend .legend-markers .marker-item.data-v-7af2a226 {
+  margin-right: 0.026667rem;
+}
+.quotes-chart .legend .legend-markers .marker-item.data-v-7af2a226:last-child {
+  margin-right: 0;
+}
+.quotes-chart .legend .legend-markers .marker-b.data-v-7af2a226,
+.quotes-chart .legend .legend-markers .marker-s.data-v-7af2a226,
+.quotes-chart .legend .legend-markers .marker-t.data-v-7af2a226 {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0.413333rem;
+  width: 0.306667rem;
+}
+.quotes-chart .legend .legend-markers .marker-b.data-v-7af2a226 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/analysis/marker-b.svg);
+}
+.quotes-chart .legend .legend-markers .marker-s.data-v-7af2a226 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/analysis/marker-s.svg);
+}
+.quotes-chart .legend .legend-markers .marker-t.data-v-7af2a226 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/analysis/marker-t.svg);
+}
+.quotes-chart .legend .legend-text.data-v-7af2a226 {
+  color: var(--text-color-4);
+  font-size: 0.32rem;
+  line-height: 0.453333rem;
+  margin-right: 0.32rem;
+}
+.quotes-chart .setting.data-v-7af2a226 {
+  -webkit-box-flex: 1;
+  -webkit-box-pack: end;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.266667rem;
+  justify-content: flex-end;
+  line-height: 0.373333rem;
+  position: relative;
+}
+.quotes-chart .setting .label.data-v-7af2a226 {
+  padding-right: 0.453333rem;
+}
+[data-simple="true"] .quotes-chart .setting .label.data-v-7af2a226 {
+  padding-right: 0.4rem;
+}
+.quotes-chart .setting .icon-triangle.data-v-7af2a226 {
+  color: var(--text-color-2);
+  font-size: 0.106667rem;
+  margin-left: 0.053333rem;
+}
+.quotes-chart .setting .dropdown-wrapper .mask.data-v-7af2a226 {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+.quotes-chart .setting .dropdown-wrapper .dropdown.data-v-7af2a226 {
+  background-color: var(--fill-2);
+  border-radius: 0.106667rem;
+  bottom: calc(100% + 0.346667rem);
+  padding: 0 0.32rem;
+  position: absolute;
+  right: 0.32rem;
+  z-index: 101;
+}
+[data-theme="dark"]
+  .quotes-chart
+  .setting
+  .dropdown-wrapper
+  .dropdown.data-v-7af2a226 {
+  background-color: var(--border-color-2);
+}
+.quotes-chart .setting .dropdown-wrapper .dropdown-item.data-v-7af2a226 {
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.96rem;
+  text-align: center;
+  width: 1.493333rem;
+}
+[data-theme="dark"]
+  .quotes-chart
+  .setting
+  .dropdown-wrapper
+  .dropdown-item.data-v-7af2a226:before {
+  border-color: var(--border-color-1);
+}
+[data-simple="true"]
+  .quotes-chart
+  .setting
+  .dropdown-wrapper
+  .dropdown-item.data-v-7af2a226 {
+  font-size: 0.32rem;
+  line-height: 1.186667rem;
+}
+.quotes-chart .setting .dropdown-wrapper .dropdown-item.active.data-v-7af2a226 {
+  color: var(--color-primary-1);
+  font-weight: 500;
+}
+.quotes-chart .setting .dropdown-wrapper .dropdown.data-v-7af2a226:after {
+  border-color: var(--fill-2) transparent transparent transparent;
+  border-style: solid;
+  border-width: 0.213333rem 0.186667rem 0;
+  bottom: -0.2rem;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0.32rem;
+  width: 0;
+}
+[data-theme="dark"]
+  .quotes-chart
+  .setting
+  .dropdown-wrapper
+  .dropdown.data-v-7af2a226:after {
+  border-color: var(--border-color-2) transparent transparent transparent;
+}
+.data-exception.data-v-7af2a226 {
+  height: 100%;
+  width: 100%;
+}
+.data-exception .no-data-container.data-v-7af2a226,
+.data-exception.data-v-7af2a226 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.data-exception .no-data-container.data-v-7af2a226 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  background-color: var(--fill-1);
+  border: 0.013333rem solid var(--text-color-7);
+  border-radius: 0.106667rem;
+  color: var(--text-color-4);
+  flex-direction: row;
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  padding: 0.266667rem 0.64rem;
+}
+.data-exception .no-data-container .no-data-bg.data-v-7af2a226 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/analysis/kline_no_data.png);
+  background-size: cover;
+  height: 0.32rem;
+  margin-right: 0.16rem;
+  width: 0.32rem;
+}
+[data-theme="dark"] .data-exception .no-data-container.data-v-7af2a226 {
+  background-color: var(--fill-3);
+  border: 0.013333rem solid var(--border-color-1);
+}

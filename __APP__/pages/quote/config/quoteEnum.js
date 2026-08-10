@@ -1,0 +1,32 @@
+(exports.EMBEDDED_INQUOTE_STATUS = { MANUAL: "1", AUTO: "2" }),
+  (exports.MORE_TABS = [
+    { key: "m1Kline", value: "1分", easy: "m1" },
+    { key: "m5Kline", value: "5分", easy: "m5" },
+    { key: "m15Kline", value: "15分", easy: "m15" },
+    { key: "m30Kline", value: "30分", easy: "m30" },
+    { key: "m60Kline", value: "60分", easy: "m60" },
+    { key: "m120Kline", value: "120分", easy: "m120" },
+    { key: "seasonKline", value: "季K", easy: "season" },
+    { key: "yearKline", value: "年K", easy: "year" },
+  ]),
+  (exports.SIDE_TABS = [
+    { key: "handicap", value: "五档" },
+    { key: "tradeDetail", value: "明细" },
+    { key: "bigDeal", value: "大单" },
+  ]),
+  (exports.TABS = [
+    { key: "mins", value: "分时" },
+    { key: "fiveMins", value: "五日" },
+    { key: "dayKline", value: "日K" },
+    { key: "weekKline", value: "周K" },
+    { key: "monthKline", value: "月K" },
+  ]),
+  (exports.YEAR_NAME = [
+    { key: "oneMonthKline", value: "1个月" },
+    { key: "threeMonthKline", value: "3个月" },
+    { key: "halfYearKline", value: "半年" },
+    { key: "oneYearKline", value: "1年" },
+    { key: "threeYearKline", value: "3年" },
+    { key: "fiveYearKline", value: "5年" },
+    { key: "allYearKline", value: "全部" },
+  ]);

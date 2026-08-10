@@ -1,0 +1,52 @@
+<view class="{{['_div','data-v-4f6c1244',p]}}">
+  <hot-topic-nav-bar
+    bind:__l="__l"
+    bindback="{{b}}"
+    class="data-v-4f6c1244"
+    uI="4f6c1244-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></hot-topic-nav-bar>
+  <view
+    bindtap="{{o}}"
+    class="_div global-market flex-grow data-v-4f6c1244"
+    data-st-theme="{{n}}"
+    data-test-id="global-market-page"
+  >
+    <view class="_div global-market-wrapper data-v-4f6c1244">
+      <no-data
+        bind:__l="__l"
+        class="global-market__empty data-v-4f6c1244"
+        uI="4f6c1244-1"
+        uS="{{['d']}}"
+        wx:if="{{d}}"
+        >暂无相关数据</no-data
+      >
+      <global-market-swiper-section
+        bind:__l="__l"
+        bindfilterChange="{{g}}"
+        bindshowTeachPop="{{h}}"
+        bindtabbarHeaderClick="{{i}}"
+        class="r data-v-4f6c1244"
+        uI="4f6c1244-2"
+        uP="{{j}}"
+        uR="swiperSectionRef"
+        wx:elif="{{e}}"
+      ></global-market-swiper-section>
+      <teach-pop
+        bind:__l="__l"
+        bindcloseTeachPop="{{k}}"
+        class="data-v-4f6c1244"
+        uI="4f6c1244-3"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></teach-pop>
+    </view>
+    <trust-footer
+      bind:__l="__l"
+      class="data-v-4f6c1244"
+      uI="4f6c1244-4"
+      wx:if="{{m}}"
+    ></trust-footer>
+  </view>
+</view>

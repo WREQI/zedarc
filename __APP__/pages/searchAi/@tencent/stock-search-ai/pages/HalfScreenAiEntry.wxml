@@ -1,0 +1,32 @@
+<view class="{{['_div','data-v-0bd62cca','ai-half-container']}}" wx:if="{{a}}">
+  <view
+    catchtap="{{p}}"
+    class="{{['_div','data-v-0bd62cca','subscribe-container-wrapper',n,o]}}"
+    wx:if="{{b}}"
+  >
+    <view
+      catchtap="{{k}}"
+      class="{{['_div','subscribe-container','data-v-0bd62cca','subscribe-container',i]}}"
+      style="{{j}}"
+    >
+      <half-screen-ai-view
+        bind:__l="__l"
+        bindcloseHalfScreenWindow="{{f}}"
+        bindmaskShow="{{e}}"
+        bindshareAiAnswer="{{d}}"
+        bindtoggleAdded="{{g}}"
+        class="r data-v-0bd62cca"
+        uI="0bd62cca-0"
+        uP="{{h}}"
+        uR="halfaiview"
+        wx:if="{{h}}"
+      ></half-screen-ai-view>
+    </view>
+    <view
+      catchtap="{{m}}"
+      class="_div wzq-top-bar-mask data-v-0bd62cca"
+      style="width: 100%; height: 42px"
+      wx:if="{{l}}"
+    ></view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<view class="{{['_div','data-v-84b10366',q&&'skin-black']}}" wx:if="{{a}}">
+  <block wx:if="{{b}}">
+    <view catchtap="{{d}}" class="_div hasAdd data-v-84b10366" wx:if="{{c}}">
+      <view class="_div icon data-v-84b10366"></view>
+      <view class="_div text data-v-84b10366">已添加</view>
+    </view>
+    <view catchtap="{{e}}" class="_div add data-v-84b10366" wx:else>
+      <view class="_div icon data-v-84b10366"></view>
+      <view class="_div text data-v-84b10366">添加自选</view>
+    </view>
+  </block>
+  <block wx:elif="{{f}}">
+    <view
+      catchtap="{{i}}"
+      class="{{['_div','data-v-84b10366',h]}}"
+      wx:if="{{g}}"
+      >已添加</view
+    >
+    <view
+      catchtap="{{k}}"
+      class="{{['_div','data-v-84b10366',j,'active']}}"
+      wx:else
+      >加自选</view
+    >
+  </block>
+  <block wx:else>
+    <view bindtap="{{m}}" class="_div add-btn data-v-84b10366" wx:if="{{l}}"
+      >已添加</view
+    >
+    <view bindtap="{{p}}" class="_div add-btn active data-v-84b10366" wx:else
+      >+ 自选<bubble-tip
+        bind:__l="__l"
+        class="zs-bk-bubble-tip data-v-84b10366"
+        uI="84b10366-0"
+        uP="{{o}}"
+        uS="{{['d']}}"
+        wx:if="{{o}}"
+        >{{n}}</bubble-tip
+      >
+    </view>
+  </block>
+</view>

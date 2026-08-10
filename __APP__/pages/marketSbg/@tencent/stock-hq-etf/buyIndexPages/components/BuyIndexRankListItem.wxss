@@ -1,0 +1,99 @@
+.etf-buy-index__rank-row.data-v-91ff83bc {
+  flex-shrink: 0;
+  font-family: stockFont, -apple-system, BlinkMacSystemFont, Roboto, PingFang SC,
+    Hiragino Sans GB, Source Han Sans CN, sans-serif;
+  height: 2.3466666666666667rem;
+  position: relative;
+  width: 9.36rem;
+}
+.etf-buy-index__rank-row-bg.data-v-91ff83bc {
+  background-color: var(--fill-content-layer);
+  height: 2.3466666666666667rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 9.36rem;
+}
+.etf-buy-index__rank-row-divider.data-v-91ff83bc {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  left: 0.32rem;
+  position: absolute;
+  top: 2.3333333333333335rem;
+  width: 8.72rem;
+}
+.etf-buy-index__rank-row-change.data-v-91ff83bc {
+  right: 0.32rem;
+  width: 1.8666666666666667rem;
+}
+.etf-buy-index__rank-row-change.data-v-91ff83bc,
+.etf-buy-index__rank-row-hold.data-v-91ff83bc {
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  line-height: 0.5090133333333333rem;
+  position: absolute;
+  text-align: right;
+  top: 0.6133333333333333rem;
+  white-space: nowrap;
+}
+.etf-buy-index__rank-row-hold.data-v-91ff83bc {
+  color: var(--color-heavygray);
+  right: 2.506666666666667rem;
+  width: 2.933333333333333rem;
+}
+.etf-buy-index__rank-row-name.data-v-91ff83bc {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  left: 0.32rem;
+  line-height: 0.5866666666666667rem;
+  position: absolute;
+  text-align: left;
+  top: 0.32rem;
+  white-space: nowrap;
+}
+.etf-buy-index__rank-row-desc.data-v-91ff83bc {
+  color: var(--color-lightgray);
+  font-size: 0.32rem;
+  font-weight: 400;
+  left: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  position: absolute;
+  text-align: left;
+  top: 1.7333333333333334rem;
+  white-space: nowrap;
+}
+.etf-buy-index__rank-row-code.data-v-91ff83bc {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  left: 0.32rem;
+  min-height: 0.4rem;
+  position: absolute;
+  top: 1.0133333333333334rem;
+  width: 1.5733333333333333rem;
+}
+.etf-buy-index__rank-row-code-tag
+  + .etf-buy-index__rank-row-code-text.data-v-91ff83bc {
+  margin-left: 0.10666666666666667rem;
+}
+.etf-buy-index__rank-row-code--wide.data-v-91ff83bc {
+  width: 1.6533333333333333rem;
+}
+.etf-buy-index__rank-row-code-tag.data-v-91ff83bc {
+  flex-shrink: 0;
+  height: 0.26666666666666666rem;
+  overflow: hidden;
+  position: relative;
+  width: 0.37333333333333335rem;
+}
+.etf-buy-index__rank-row-code-text.data-v-91ff83bc {
+  color: var(--color-lightgray);
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4rem;
+  text-align: left;
+  white-space: nowrap;
+}

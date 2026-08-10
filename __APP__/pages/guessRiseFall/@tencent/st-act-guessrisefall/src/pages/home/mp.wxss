@@ -1,0 +1,93 @@
+.guess-home.data-v-7b8bdff3 {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.guess-home__bg-preload.data-v-7b8bdff3 {
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+.guess-home__bg.data-v-7b8bdff3 {
+  background-color: #fff;
+  background-image: url(https://st.gtimg.com/design/4203baa61d646aab8cdfea3b56a00888.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  position: absolute;
+  transition: all 0.3s linear;
+  width: 100%;
+}
+.guess-home__bg--collapsed.data-v-7b8bdff3 {
+  top: -3.2266666666666666rem;
+}
+.guess-home__bg--expanded.data-v-7b8bdff3 {
+  top: 0;
+}
+.guess-home__main.data-v-7b8bdff3 {
+  height: 100%;
+  margin-top: 3.2266666666666666rem;
+  width: 100%;
+}
+.guess-home__header-space.data-v-7b8bdff3 {
+  height: 2.453333333333333rem;
+}
+.guess-home__header-space.data-v-7b8bdff3,
+.guess-home__rule.data-v-7b8bdff3 {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.guess-home__rule.data-v-7b8bdff3 {
+  height: 0.9066666666666666rem;
+  overflow: hidden;
+}
+.guess-home__rule-btn.data-v-7b8bdff3 {
+  align-items: center;
+  background: hsla(0, 0%, 100%, 0.5);
+  border: 0.013333333333333334rem solid rgba(152, 160, 179, 0.2);
+  border-radius: 1.3333333333333333rem 0 0 1.3333333333333333rem;
+  box-shadow: 0 0.02666666666666667rem 0.10666666666666667rem rgba(0, 0, 0, 0.1);
+  color: #9aa1b4;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  height: 0.64rem;
+  justify-content: center;
+  margin-right: -0.08rem;
+  width: 1.5466666666666666rem;
+}
+.guess-home__body.data-v-7b8bdff3 {
+  box-sizing: border-box;
+  height: calc(100% - 3.36rem);
+  overflow: hidden;
+  padding: 0 0.4rem;
+  width: 100%;
+}
+.guess-home__market.data-v-7b8bdff3 {
+  height: 100%;
+  width: 100%;
+}
+.guess-home__viewpoint.data-v-7b8bdff3 {
+  margin-top: 0.9333333333333333rem;
+}
+.guess-home__ranking.data-v-7b8bdff3 {
+  margin-top: 0.68rem;
+}
+.guess-home__gold-entry.data-v-7b8bdff3 {
+  margin-bottom: 0.5333333333333333rem;
+  margin-top: 0.5333333333333333rem;
+  width: 100%;
+}
+.guess-home__evaluate.data-v-7b8bdff3 {
+  margin: 0.5333333333333333rem auto 2.9466666666666668rem;
+}
+.guess-home__canvas.data-v-7b8bdff3 {
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,35 @@
+<view
+  catchtap="{{e}}"
+  class="_div mod-show-comment data-v-b48e66f5"
+  wx:if="{{a}}"
+>
+  <view class="_div mod-box data-v-b48e66f5">
+    <view class="_div data-v-b48e66f5" wx:for="{{b}}" wx:key="m">
+      <show-comment-item
+        bind:__l="__l"
+        bindnewComment="{{item.g}}"
+        bindsemiTapSubmit="{{item.f}}"
+        bindtapCommentTail="{{item.e}}"
+        bindtapImage="{{item.d}}"
+        bindtapPerson="{{item.c}}"
+        class="data-v-b48e66f5"
+        data-c-h="{{!item.a}}"
+        key="{{item.b}}"
+        uI="{{item.h}}"
+        uP="{{item.i}}"
+        wx:if="{{item.i}}"
+      ></show-comment-item>
+      <view
+        class="{{['_div','data-v-b48e66f5','com-yb-disclaimer',item.l]}}"
+        wx:if="{{item.j}}"
+        >{{item.k}}</view
+      >
+    </view>
+    <view
+      catchtap="{{d}}"
+      class="_div show-more data-v-b48e66f5"
+      hidden="{{!c}}"
+      >查看全部评论</view
+    >
+  </view>
+</view>

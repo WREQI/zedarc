@@ -1,0 +1,40 @@
+<view class="_div privacy-container data-v-2246b16c">
+  <layer-modal
+    bind:__l="__l"
+    bindcancel="{{h}}"
+    bindclose="{{i}}"
+    bindconfirm="{{g}}"
+    class="data-v-2246b16c"
+    uI="2246b16c-0"
+    uP="{{j}}"
+    uS="{{['d']}}"
+    wx:if="{{j}}"
+  >
+    <privacy-agreement-check-list
+      bind:__l="__l"
+      class="r data-v-2246b16c"
+      uI="2246b16c-1,2246b16c-0"
+      uP="{{c}}"
+      uR="agreementCheckList"
+      wx:if="{{a}}"
+    ></privacy-agreement-check-list>
+    <view class="_div privacy-update-announcement data-v-2246b16c" wx:else>
+      <view class="_div privacy-update-announcement__desc data-v-2246b16c"
+        >{{d}}</view
+      >
+      <view class="_div privacy-update-announcement__protocols data-v-2246b16c"
+        >相关协议：<label
+          catchtap="{{protocol.c}}"
+          class="_span privacy-update-announcement__link data-v-2246b16c"
+          wx:for="{{e}}"
+          wx:for-item="protocol"
+          wx:key="b"
+          >《{{protocol.a}}》</label
+        >
+      </view>
+      <view class="_div privacy-update-announcement__date data-v-2246b16c"
+        >公告公示日期：{{f}}</view
+      >
+    </view>
+  </layer-modal>
+</view>

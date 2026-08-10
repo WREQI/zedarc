@@ -1,0 +1,16 @@
+<view class="_div fast-news-item-footer data-v-07a107b5">
+  <view class="_div left data-v-07a107b5">
+    <label class="_span source data-v-07a107b5">{{a}}</label>
+    <label class="_span date data-v-07a107b5">{{b}}</label>
+  </view>
+  <view class="_div right data-v-07a107b5">
+    <button
+      catchtap="{{c}}"
+      class="share-button data-v-07a107b5"
+      openType="share"
+      plain="true"
+    >
+      <view class="_div icon-share-container data-v-07a107b5"></view>
+    </button>
+  </view>
+</view>

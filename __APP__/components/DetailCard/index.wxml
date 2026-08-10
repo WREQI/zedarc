@@ -1,0 +1,6 @@
+<view bindtap="{{c}}" class="data-v-c461b92e">
+  <slot name="header"></slot>
+  <view class="border--top data-v-c461b92e" wx:if="{{a}}"></view>
+  <slot name="content"></slot>
+  <view class="border--bottom data-v-c461b92e" wx:if="{{b}}"></view>
+</view>

@@ -1,0 +1,104 @@
+<view
+  catchtap="{{w}}"
+  catchtouchmove="{{v}}"
+  class="{{['_div','data-v-f281303a','remind-modal-mask',s,t]}}"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{r}}"
+    class="{{['_div','data-v-f281303a','remind-modal',q]}}"
+  >
+    <view class="_div remind-modal__header data-v-f281303a">
+      <view class="_div remind-modal__header-inner data-v-f281303a">
+        <view class="_div remind-modal__header-content data-v-f281303a">
+          <view
+            bindtap="{{b}}"
+            class="_div remind-modal__back-icon data-v-f281303a"
+          ></view>
+          <view class="_div remind-modal__title data-v-f281303a">{{c}}</view>
+          <view
+            bindtap="{{d}}"
+            class="_div remind-modal__close-icon data-v-f281303a"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <scroll-view
+      class="remind-modal__scroll-content data-v-f281303a"
+      scrollWithAnimation="{{false}}"
+      scrollY="{{k}}"
+      wx:if="{{e}}"
+    >
+      <view class="{{['_div','data-v-f281303a','remind-modal__body-wrap',j]}}">
+        <remind-modal-body
+          bind:__l="__l"
+          class="remind-modal__body data-v-f281303a"
+          uI="f281303a-0"
+          uP="{{f}}"
+          wx:if="{{f}}"
+        ></remind-modal-body>
+        <remind-lock-layer
+          bind:__l="__l"
+          bindunlock="{{h}}"
+          class="data-v-f281303a"
+          uI="f281303a-1"
+          uP="{{i}}"
+          wx:if="{{g}}"
+        ></remind-lock-layer>
+      </view>
+    </scroll-view>
+    <view class="_div remind-modal__container data-v-f281303a" wx:else>
+      <view class="{{['_div','data-v-f281303a','remind-modal__body-wrap',p]}}">
+        <remind-modal-body
+          bind:__l="__l"
+          class="remind-modal__body data-v-f281303a"
+          uI="f281303a-2"
+          uP="{{l}}"
+          wx:if="{{l}}"
+        ></remind-modal-body>
+        <remind-lock-layer
+          bind:__l="__l"
+          bindunlock="{{n}}"
+          class="data-v-f281303a"
+          uI="f281303a-3"
+          uP="{{o}}"
+          wx:if="{{m}}"
+        ></remind-lock-layer>
+      </view>
+    </view>
+  </view>
+</view>
+<view
+  catchtap="{{L}}"
+  catchtouchmove="{{K}}"
+  class="{{['_div','data-v-f281303a','tip-modal',I,J]}}"
+  wx:elif="{{x}}"
+>
+  <view
+    catchtap="{{H}}"
+    class="{{['_div','data-v-f281303a','modal-container',G]}}"
+  >
+    <view
+      class="{{['_div','modal-title','data-v-f281303a',A&&'landscape',B&&'ios']}}"
+    >
+      <label class="_span data-v-f281303a">{{y}}</label>
+      <label bindtap="{{z}}" class="_span close data-v-f281303a"></label>
+    </view>
+    <view
+      class="{{['_div','modal-content','data-v-f281303a',F&&'landscape']}}"
+      wx:if="{{C}}"
+    >
+      <view class="_div list-block data-v-f281303a">
+        <view
+          class="{{['_div','list-block-paragraph','data-v-f281303a',D&&'ios']}}"
+          >参考净值 (IOPV)
+          是交易所根据基金管理人提供的计算方法及每日申赎清单计算的实时单位净值的近似值，以便于投资者估计ETF交易价格是否偏离了内在价值，每15秒更新一次。</view
+        >
+        <view
+          class="{{['_div','list-block-paragraph','linebreak','data-v-f281303a',E&&'ios']}}"
+          >参考净值对比ETF每日收盘更新的净值数据实时性高，方便在盘中分析偏离数据，当最新价高于参考净值时，场内溢价率高；最新价低于参考净值，场内溢价率低。</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

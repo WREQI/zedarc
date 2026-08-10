@@ -1,0 +1,60 @@
+<view
+  catchtap="{{m}}"
+  class="{{['_div','data-v-b3f780ae','questionnaire-mask',l]}}"
+  wx:if="{{a}}"
+>
+  <view
+    catchtap="{{k}}"
+    class="{{['_div','data-v-b3f780ae','questionnaire-mask__content',j]}}"
+  >
+    <view class="_div questionnaire data-v-b3f780ae">
+      <view class="_div questionnaire__header data-v-b3f780ae">
+        <label class="_span questionnaire__title data-v-b3f780ae"
+          >问题反馈</label
+        >
+        <view bindtap="{{b}}" class="_div questionnaire__close data-v-b3f780ae">
+          <image
+            class="_img questionnaire__close-icon data-v-b3f780ae"
+            src="https://st.gtimg.com/design/2781b76ad599860a34d7a6301abeb925.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div questionnaire__desc data-v-b3f780ae"
+        >若你在提交开户信息过程中遇到了问题，可在下面选择反馈，平台收集问题后将进行优化。</view
+      >
+      <view class="_div questionnaire__content data-v-b3f780ae">
+        <view class="_div questionnaire__tags data-v-b3f780ae">
+          <view
+            bindtap="{{tag.d}}"
+            class="{{['_div','questionnaire__tag','data-v-b3f780ae',tag.c&&'questionnaire__tag--active']}}"
+            wx:for="{{c}}"
+            wx:for-item="tag"
+            wx:key="b"
+            >{{tag.a}}</view
+          >
+        </view>
+        <view class="_div questionnaire__input-wrap data-v-b3f780ae">
+          <textarea
+            bindinput="{{e}}"
+            class="questionnaire__textarea data-v-b3f780ae"
+            maxlength="200"
+            placeholder="详细反馈可以帮我们提供更好的内容服务..."
+            value="{{d}}"
+            wx:if="{{r0}}"
+          ></textarea>
+          <view
+            class="{{['_div','questionnaire__char-count','data-v-b3f780ae',g&&'questionnaire__char-count--limit']}}"
+            >{{f}}/200</view
+          >
+        </view>
+      </view>
+      <view class="_div questionnaire__footer data-v-b3f780ae">
+        <view
+          bindtap="{{i}}"
+          class="{{['_div','questionnaire__submit-btn','data-v-b3f780ae',h&&'questionnaire__submit-btn--active']}}"
+          >提交反馈</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+<view class="_div mod-comList-list data-v-3ba2cf82" wx:if="{{a}}">
+  <view class="_div tag-box data-v-3ba2cf82" wx:if="{{b}}">
+    <label
+      catchtap="{{item.b}}"
+      class="{{['_span','data-v-3ba2cf82','text',item.c,item.d]}}"
+      ref="tagBox"
+      wx:for="{{c}}"
+      wx:key="e"
+      >{{item.a}}</label
+    >
+  </view>
+  <view class="_div error-container data-v-3ba2cf82" wx:if="{{d}}">
+    <no-network
+      bind:__l="__l"
+      bindclickReload="{{f}}"
+      class="data-v-3ba2cf82"
+      uI="3ba2cf82-0"
+      wx:if="{{e}}"
+    ></no-network>
+    <no-data
+      bind:__l="__l"
+      class="data-v-3ba2cf82"
+      uI="3ba2cf82-1"
+      uP="{{h}}"
+      wx:if="{{g}}"
+    ></no-data>
+  </view>
+  <block wx:if="{{i}}">
+    <view
+      class="{{['_div','mod-com-list-item','data-v-3ba2cf82','item-box',item.o]}}"
+      data-id="{{item.m}}"
+      data-postid="{{item.q}}"
+      id="{{item.p}}"
+      wx:for="{{j}}"
+      wx:key="n"
+    >
+      <com-item
+        bind:__l="__l"
+        bindcommentReport="{{item.e}}"
+        bindonHandleTapItem="{{item.d}}"
+        class="{{['data-v-3ba2cf82',item.b&&'beforeBanner',item.c&&'afterBanner']}}"
+        uI="{{item.f}}"
+        uP="{{item.g}}"
+        wx:if="{{item.a}}"
+      ></com-item>
+      <view
+        class="_div seperator-line data-v-3ba2cf82"
+        wx:if="{{item.h}}"
+      ></view>
+      <fold-tail
+        bind:__l="__l"
+        bindresetUsr="{{item.j}}"
+        class="data-v-3ba2cf82"
+        uI="{{item.k}}"
+        uP="{{item.l}}"
+        wx:if="{{item.i}}"
+      ></fold-tail>
+    </view>
+  </block>
+  <view class="_div load-more data-v-3ba2cf82">
+    <load-more
+      bind:__l="__l"
+      binddoLoadmore="{{l}}"
+      class="data-v-3ba2cf82"
+      uI="3ba2cf82-4"
+      uP="{{m}}"
+      wx:if="{{k}}"
+    ></load-more>
+  </view>
+</view>

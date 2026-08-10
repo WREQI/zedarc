@@ -1,0 +1,152 @@
+<view class="{{['_div','stock-list','data-v-dccf26fe',z&&'skin-black']}}">
+  <view class="{{['_div','data-v-dccf26fe','caption',n]}}" wx:if="{{a}}">
+    <view class="_div no-scroll data-v-dccf26fe" wx:if="{{b}}">
+      <view class="_div item data-v-dccf26fe">
+        <view class="_div column data-v-dccf26fe">
+          <label
+            bindtap="{{f}}"
+            class="{{['_span','name-label','data-v-dccf26fe',e]}}"
+            wx:if="{{c}}"
+            >{{d}}</label
+          >
+          <label class="_span name-label data-v-dccf26fe" wx:else>{{g}}</label>
+          <view class="_div divider data-v-dccf26fe" wx:if="{{h}}"></view>
+          <label
+            bindtap="{{k}}"
+            class="{{['_span','name-label','data-v-dccf26fe',j]}}"
+            wx:if="{{i}}"
+            >全称</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div horizontal-scroll data-v-dccf26fe" ref="captionScroll">
+      <view class="_div item data-v-dccf26fe">
+        <view
+          class="_div column data-v-dccf26fe"
+          wx:for="{{l}}"
+          wx:for-item="column"
+          wx:key="f"
+        >
+          <label
+            bindtap="{{column.d}}"
+            class="{{['_span','data-v-dccf26fe','sort',column.c]}}"
+            wx:if="{{column.a}}"
+            >{{column.b}}</label
+          >
+          <label class="_span data-v-dccf26fe" wx:else>{{column.e}}</label>
+        </view>
+        <view class="_div column data-v-dccf26fe" wx:if="{{m}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-dccf26fe','list',x,y]}}" wx:if="{{o}}">
+    <view class="_div no-scroll data-v-dccf26fe">
+      <view
+        bindtap="{{item.s}}"
+        class="_div item itemcounter data-v-dccf26fe"
+        data-index="{{item.r}}"
+        data-type="{{r}}"
+        wx:for="{{p}}"
+        wx:key="q"
+      >
+        <view class="_div column identifier data-v-dccf26fe">
+          <view class="_div name-wrapper data-v-dccf26fe">
+            <view
+              class="_div identifier-name data-v-dccf26fe"
+              style="{{'font-size:'+item.b}}"
+              wx:if="{{q}}"
+            >
+              <view class="_div name-ellip data-v-dccf26fe">{{item.a}}</view>
+            </view>
+            <view
+              class="_div identifier-name data-v-dccf26fe"
+              style="{{'font-size:'+item.d}}"
+              wx:else
+            >
+              <view class="_div name-ellip data-v-dccf26fe">{{item.c}}</view>
+            </view>
+          </view>
+          <view
+            class="_div identifier-code-wrapper data-v-dccf26fe"
+            wx:if="{{item.e}}"
+          >
+            <image
+              class="_img image-icon data-v-dccf26fe"
+              src="https://st.gtimg.com/design/99f28816e0bd861a5f0a00904d584766.svg"
+              wx:if="{{item.f}}"
+            ></image>
+            <image
+              class="_img image-icon data-v-dccf26fe"
+              src="https://st.gtimg.com/design/f78194d45779547c3974aed4915a32b6.svg"
+              wx:if="{{item.g}}"
+            ></image>
+            <image
+              class="_img image-icon data-v-dccf26fe"
+              src="https://st.gtimg.com/design/ba4db24682b581a464148e93db83eaaf.svg"
+              wx:if="{{item.h}}"
+            ></image>
+            <view class="_div identifier-code data-v-dccf26fe">{{item.i}}</view>
+            <view class="_div stock-tag data-v-dccf26fe" wx:if="{{item.j}}">
+              <label class="_span data-v-dccf26fe">T+0</label>
+            </view>
+            <view
+              class="{{['_div','stock-tag','data-v-dccf26fe',item.m]}}"
+              wx:if="{{item.k}}"
+            >
+              <label class="_span data-v-dccf26fe">{{item.l}}</label>
+            </view>
+            <view class="_div bond-tag-list data-v-dccf26fe" wx:if="{{item.n}}">
+              <label
+                class="_span bond-tag tag-red data-v-dccf26fe"
+                wx:if="{{item.o}}"
+                >正股涨停</label
+              >
+              <label
+                class="_span bond-tag tag-blue data-v-dccf26fe"
+                wx:elif="{{item.p}}"
+                >次新</label
+              >
+              <label
+                class="_span bond-tag tag-green data-v-dccf26fe"
+                wx:if="{{false}}"
+                >强赎</label
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtouchend="{{w}}"
+      bindtouchstart="{{v}}"
+      class="_div horizontal-scroll data-v-dccf26fe"
+      ref="listScroll"
+    >
+      <view
+        bindtap="{{item.c}}"
+        class="_div item data-v-dccf26fe"
+        wx:for="{{s}}"
+        wx:key="b"
+      >
+        <view
+          class="{{['_div','column','data-v-dccf26fe',column.b]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="column"
+          wx:key="c"
+          >{{column.a}}</view
+        >
+        <view class="_div column data-v-dccf26fe" wx:if="{{t}}"></view>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-dccf26fe"
+    uI="dccf26fe-0"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="_div data-v-dccf26fe">暂无数据</view>
+  </no-data>
+</view>

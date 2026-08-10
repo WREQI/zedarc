@@ -1,0 +1,11 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="{{['_div',f&&'skin-black']}}" data-st-theme="{{e}}">
+  <mp-privacy-dialog bind:__l="__l" uI="5056dcaa-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="5056dcaa-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <detail bind:__l="__l" uI="5056dcaa-2" uP="{{d}}" wx:if="{{c}}"></detail>
+</view>

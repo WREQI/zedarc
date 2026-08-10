@@ -1,0 +1,93 @@
+<view class="_div ams-page-container data-v-b4278080">
+  <add-to-mp-guide
+    bind:__l="__l"
+    bindclose="{{b}}"
+    class="data-v-b4278080"
+    uI="b4278080-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></add-to-mp-guide>
+  <view class="_div content data-v-b4278080">
+    <view class="_div ams-header-image data-v-b4278080" wx:if="{{d}}">
+      <image
+        class="_img ams-header-img data-v-b4278080"
+        mode="widthFix"
+        src="{{e}}"
+        style="width: 100%"
+      ></image>
+      <view class="_div ams-header-logo data-v-b4278080" wx:if="{{f}}">
+        <image
+          class="_img ams-header-logo-img data-v-b4278080"
+          mode="heightFix"
+          src="{{g}}"
+        ></image>
+      </view>
+      <view
+        bindtap="{{j}}"
+        class="_div ams-header-btn data-v-b4278080"
+        wx:if="{{h}}"
+        >{{i}}</view
+      >
+    </view>
+    <extra-images
+      bind:__l="__l"
+      class="data-v-b4278080"
+      uI="b4278080-1"
+      uP="{{l}}"
+      wx:if="{{k}}"
+    ></extra-images>
+    <sections
+      bind:__l="__l"
+      bindreportData="{{m}}"
+      bindsectionClick="{{n}}"
+      class="data-v-b4278080"
+      uI="b4278080-2"
+      uP="{{o}}"
+      wx:if="{{o}}"
+    ></sections>
+    <extra-images
+      bind:__l="__l"
+      class="data-v-b4278080"
+      uI="b4278080-3"
+      uP="{{q}}"
+      wx:if="{{p}}"
+    ></extra-images>
+    <view class="_div data-v-b4278080" style="{{'padding-bottom:'+t}}">
+      <brand-area
+        bind:__l="__l"
+        class="data-v-b4278080"
+        uI="b4278080-4"
+        uP="{{s}}"
+        wx:if="{{r}}"
+      ></brand-area>
+    </view>
+  </view>
+  <half-screen-ai-entry
+    bind:__l="__l"
+    bindonSubscribeTipsClose="{{v}}"
+    class="ams-ai-halfscreen data-v-b4278080"
+    uI="b4278080-5"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></half-screen-ai-entry>
+  <overlay-modal
+    bind:__l="__l"
+    bindclose="{{z}}"
+    bindimportLinkClick="{{A}}"
+    class="data-v-b4278080"
+    key="{{y}}"
+    uI="b4278080-6"
+    uP="{{B}}"
+    wx:if="{{x}}"
+  ></overlay-modal>
+  <footer-bar
+    bind:__l="__l"
+    bindbuttonClick="{{D}}"
+    bindruleChange="{{E}}"
+    class="r data-v-b4278080"
+    uI="b4278080-7"
+    uP="{{F}}"
+    uR="footerBar"
+    wx:if="{{F}}"
+  ></footer-bar>
+</view>

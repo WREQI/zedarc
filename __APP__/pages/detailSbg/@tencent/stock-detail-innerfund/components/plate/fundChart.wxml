@@ -1,0 +1,31 @@
+<view
+  class="{{['_div','fund-chart-wrapper','data-v-5078dd0f',i&&'skin-dark']}}"
+>
+  <f2
+    bind:__l="__l"
+    bindonInit="{{a}}"
+    class="data-v-5078dd0f"
+    uI="5078dd0f-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></f2>
+  <view
+    class="{{['_div','tooltip-wrapper','data-v-5078dd0f',h]}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div tooltip-item data-v-5078dd0f">
+      <view class="_div tooltip-text data-v-5078dd0f">时间</view>
+      <view class="_div tooltip-value data-v-5078dd0f">{{d}}</view>
+    </view>
+    <view class="_div tooltip-item data-v-5078dd0f">
+      <view class="_div tooltip-text data-v-5078dd0f">主力净流入</view>
+      <view class="{{['_div','tooltip-value','data-v-5078dd0f',f]}}"
+        >{{e}}</view
+      >
+    </view>
+    <view class="_div tooltip-item data-v-5078dd0f">
+      <view class="_div tooltip-text data-v-5078dd0f">板块指数</view>
+      <view class="_div tooltip-value data-v-5078dd0f">{{g}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="_div" id="news-text">
+  <render-template
+    bind:__l="__l"
+    uI="6c85e7b8-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></render-template>
+</view>

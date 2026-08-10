@@ -1,0 +1,93 @@
+<view class="{{['_div','yaowen-item-container','data-v-1f7e86ba',L]}}">
+  <view
+    bindtouchend="{{H}}"
+    bindtouchmove="{{G}}"
+    bindtouchstart="{{F}}"
+    catchtap="{{I}}"
+    class="_div yaowen-item data-v-1f7e86ba"
+  >
+    <view class="_div news-left data-v-1f7e86ba">
+      <label class="{{['data-v-1f7e86ba','news-title title-box',b]}}"
+        >{{a}}</label
+      >
+      <view class="_div news-info data-v-1f7e86ba">
+        <view class="_div data-v-1f7e86ba" wx:if="{{c}}">
+          <view class="_div news-type-icon data-v-1f7e86ba"></view>
+        </view>
+        <view
+          class="_div news-label data-v-1f7e86ba"
+          style="{{f}}"
+          wx:if="{{d}}"
+          >{{e}}</view
+        >
+        <label class="_span news-label data-v-1f7e86ba" wx:elif="{{g}}"
+          >直播</label
+        >
+        <label class="_span news-label data-v-1f7e86ba" wx:elif="{{h}}"
+          >专题</label
+        >
+        <view class="_div flex report-tag data-v-1f7e86ba" wx:elif="{{i}}">
+          <label class="_span label-report data-v-1f7e86ba" style="{{k}}"
+            >{{j}}</label
+          >
+          <image
+            alt=""
+            class="_img label-arrow data-v-1f7e86ba"
+            src="https://wzq.gtimg.com/resources/hippy/yaowen/arrow.png"
+          ></image>
+        </view>
+        <view class="_div news-info-text source data-v-1f7e86ba" wx:if="{{l}}"
+          >{{m}}</view
+        >
+        <view class="_div news-info-text data-v-1f7e86ba" wx:if="{{n}}"
+          >{{o}}</view
+        >
+        <view class="_div news-info-text data-v-1f7e86ba" wx:if="{{p}}"
+          >{{q}}评</view
+        >
+        <view class="_div news-info-text data-v-1f7e86ba" wx:if="{{r}}"
+          >{{s}}</view
+        >
+        <view class="_div news-read-count data-v-1f7e86ba" wx:if="{{t}}"
+          >{{v}}万阅读</view
+        >
+        <view
+          catchtap="{{x}}"
+          class="_div news-info-text feedback data-v-1f7e86ba"
+          wx:if="{{w}}"
+          >猜你喜欢</view
+        >
+        <view
+          catchtap="{{z}}"
+          class="_i icon icon-close data-v-1f7e86ba"
+          wx:if="{{y}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div li-img-box data-v-1f7e86ba" wx:if="{{A}}">
+      <image class="_img li-img data-v-1f7e86ba" src="{{B}}"></image>
+      <view class="_div icon-wrap data-v-1f7e86ba" wx:if="{{C}}">
+        <image
+          class="_img icon data-v-1f7e86ba"
+          src="https://st.gtimg.com/image/course/play.png"
+        ></image>
+      </view>
+      <view class="_div video-icon data-v-1f7e86ba" wx:elif="{{D}}">
+        <image
+          class="_img icon data-v-1f7e86ba"
+          src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video.png?1"
+        ></image>
+        <label class="_span video-time data-v-1f7e86ba">{{E}}</label>
+      </view>
+    </view>
+  </view>
+  <view class="_div relate-stock data-v-1f7e86ba">
+    <related-stock
+      bind:__l="__l"
+      class="data-v-1f7e86ba"
+      uI="1f7e86ba-0"
+      uP="{{K}}"
+      wx:if="{{J}}"
+    ></related-stock>
+  </view>
+</view>

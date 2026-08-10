@@ -1,0 +1,149 @@
+.service-agreement-modal-overlay.data-v-bc077ce6 {
+  align-items: center;
+  backdrop-filter: blur(0.06666666666666667rem);
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.9),
+    hsla(0, 0%, 100%, 0.9),
+    hsla(0, 0%, 100%, 0.4)
+  );
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  height: calc(100% - 2.3466666666666667rem);
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  width: 8.666666666666666rem;
+  z-index: 999;
+}
+.service-agreement-modal-overlay.useAppH5.data-v-bc077ce6 {
+  background: -webkit-linear-gradient(
+    top,
+    hsla(0, 0%, 100%, 0.4),
+    hsla(0, 0%, 100%, 0.9),
+    hsla(0, 0%, 100%, 0.9),
+    hsla(0, 0%, 100%, 0.4)
+  );
+}
+.service-agreement-modal-overlay.isWZQ.data-v-bc077ce6 {
+  height: calc(100% - 1.3866666666666667rem);
+}
+.modal-content.data-v-bc077ce6 {
+  animation-fill-mode: forwards;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.3466666666666667rem;
+  padding: 0 0.32rem;
+  width: 8.666666666666666rem;
+}
+.modal-content .title.data-v-bc077ce6 {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin-bottom: 0.4266666666666667rem;
+  text-align: center;
+}
+.modal-content .content-body.data-v-bc077ce6 {
+  line-height: 0.56rem;
+  margin-bottom: 0.4266666666666667rem;
+}
+.modal-content .content-body .scroll-area.data-v-bc077ce6,
+.modal-content .content-body.data-v-bc077ce6 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+}
+.modal-content .content-body .scroll-area .link.data-v-bc077ce6 {
+  color: #576b95;
+}
+.modal-content .checkbox-area.data-v-bc077ce6 {
+  align-items: flex-start;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  margin-bottom: 0.4266666666666667rem;
+}
+.modal-content .checkbox-area .checkbox.data-v-bc077ce6 {
+  align-items: center;
+  border: 0.02666666666666667rem solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  height: 0.4266666666666667rem;
+  justify-content: center;
+  margin-right: 0.21333333333333335rem;
+  margin-top: 0.05333333333333334rem;
+  width: 0.4266666666666667rem;
+}
+.modal-content .checkbox-area .checkbox.checked.data-v-bc077ce6 {
+  background-image: url(https://st.gtimg.com/design/a257c90585277acb9259b441e7342e2f.png);
+  background-size: 100% 100%;
+  border: none;
+}
+.modal-content .checkbox-area .checkbox .inner-check.data-v-bc077ce6 {
+  border-bottom: 0.04rem solid #fff;
+  border-left: 0.04rem solid #fff;
+  height: 0.10666666666666667rem;
+  margin-top: -0.05333333333333334rem;
+  transform: rotate(-45deg);
+  width: 0.21333333333333335rem;
+}
+.modal-content .checkbox-area .label.data-v-bc077ce6 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+}
+.modal-content .checkbox-area .label .link.data-v-bc077ce6 {
+  color: #576b95;
+}
+.modal-content .footer.data-v-bc077ce6 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal-content .footer .btn.data-v-bc077ce6 {
+  border-radius: 0.10666666666666667rem;
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  text-align: center;
+}
+.modal-content .footer .btn.cancel-btn.data-v-bc077ce6 {
+  background-color: var(--border-light-divider);
+  color: var(--color-heavygray);
+  margin-right: 0.32rem;
+}
+.modal-content .footer .btn.confirm-btn.data-v-bc077ce6 {
+  background-color: #e63535;
+  color: #f0f1f5;
+}
+.skin-black.data-v-bc077ce6,
+.skin-panda.data-v-bc077ce6 {
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(18, 22, 31, 0.4),
+    rgba(18, 22, 31, 0.94),
+    rgba(18, 22, 31, 0.94),
+    rgba(18, 22, 31, 0.4)
+  );
+}
+.skin-black.useAppH5.data-v-bc077ce6,
+.skin-panda.useAppH5.data-v-bc077ce6 {
+  background: -webkit-linear-gradient(
+    top,
+    rgba(18, 22, 31, 0.4),
+    rgba(18, 22, 31, 0.94),
+    rgba(18, 22, 31, 0.94),
+    rgba(18, 22, 31, 0.4)
+  );
+}

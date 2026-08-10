@@ -1,0 +1,79 @@
+.drop-down.data-v-232eba78 {
+  font-size: 0.32rem;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+}
+.drop-down .shadow.data-v-232eba78 {
+  background: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+[data-st-theme="black"] .drop-down .shadow.data-v-232eba78,
+[data-st-theme="dark"] .drop-down .shadow.data-v-232eba78 {
+  background: rgba(0, 0, 0, 0.6);
+}
+.drop-down .drop-down-items.data-v-232eba78 {
+  background: var(--fill-content-layer);
+  border-radius: 0.13333333333333333rem;
+  box-shadow: 0 0.04rem 0.13333333333333333rem 0.013333333333333334rem
+    rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 0.26666666666666666rem 0;
+  position: absolute;
+  width: 2.506666666666667rem;
+  z-index: 10;
+  z-index: 1000;
+}
+.drop-down .drop-down-items.data-v-232eba78:before {
+  border: 0.24rem solid transparent;
+  border-bottom: 0.24rem solid var(--fill-content-layer);
+  content: "";
+  height: 0;
+  position: absolute;
+  right: 0.4266666666666667rem;
+  top: -0.4rem;
+  width: 0;
+}
+.drop-down .drop-down-items .drop-down-item.data-v-232eba78 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.32rem;
+  justify-content: center;
+  padding: 0.26666666666666666rem;
+  position: relative;
+}
+.drop-down .drop-down-items .drop-down-item .item-value.data-v-232eba78 {
+  color: var(--color-heavygray);
+}
+.drop-down
+  .drop-down-items
+  .drop-down-item
+  .item-value-seleted.data-v-232eba78 {
+  font-weight: 500;
+}
+.drop-down
+  .drop-down-items
+  .drop-down-item
+  .item-value-seleted.wzq-color.data-v-232eba78 {
+  color: var(--color-red);
+}
+.drop-down
+  .drop-down-items
+  .drop-down-item
+  .item-value-seleted.zxg-color.data-v-232eba78 {
+  color: var(--color-blue);
+}
+.drop-down .drop-down-items .drop-down-item-seperator.data-v-232eba78 {
+  background-color: var(--border-light-divider);
+  height: 0.013333333333333334rem;
+  margin: 0.13333333333333333rem 0.32rem;
+}

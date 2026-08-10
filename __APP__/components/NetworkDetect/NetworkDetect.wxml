@@ -1,0 +1,19 @@
+<view class="network-detect-component__wrapper" hidden="{{!g}}">
+  <view wx:if="{{a}}">
+    <detect-loading
+      bind:__l="__l"
+      class="r"
+      uI="803c677c-0"
+      uR="detect-loading"
+    ></detect-loading>
+  </view>
+  <detect-result
+    bind:__l="__l"
+    bindcancel="{{e}}"
+    class="r"
+    uI="803c677c-1"
+    uP="{{f}}"
+    uR="detect-result"
+    wx:elif="{{c}}"
+  ></detect-result>
+</view>

@@ -1,0 +1,176 @@
+<view class="trade-history-container">
+  <view class="segments-wrapper">
+    <st-segment
+      bind:__l="__l"
+      bindinput="{{a}}"
+      uI="2037a1d0-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></st-segment>
+  </view>
+  <view class="filter-box flex-center text-color-1 border--top">
+    <view bindtap="{{e}}" class="{{['align-c','flex-1','flex-center',d]}}"
+      >{{c}}<label class="icon icon-arrow-down"></label>
+    </view>
+    <view
+      bindtap="{{g}}"
+      class="align-c flex-1 flex-center layout layout-align-center"
+      >{{f}}<label class="icon icon-arrow-down"></label>
+    </view>
+  </view>
+  <view class="scroll-wrapper" wx:if="{{h}}">
+    <view class="header records-item flex-between border--bottom fs-24">
+      <view class="col-1">订单状态</view>
+      <view class="col-2">股票/代码</view>
+      <view class="col-3">交易详情</view>
+      <view class="col-4 align-r">时间</view>
+    </view>
+    <scroll-view
+      bindscroll="{{k}}"
+      scrollY="true"
+      style="height: calc(100% - 56rpx)"
+      wx:if="{{i}}"
+    >
+      <view class="list-group" wx:for="{{j}}" wx:for-item="group" wx:key="g">
+        <view
+          bindtap="{{group.d}}"
+          class="flex-between border--bottom group-title"
+        >
+          <label class="flex-1 text-color-1">{{group.a}}</label>
+          <label class="desc text-color-3">{{group.b}}笔</label>
+          <label class="{{['icon','text-color-3',group.c]}}"></label>
+        </view>
+        <view hidden="{{!group.f}}">
+          <view catchtap="{{item.d}}" wx:for="{{group.e}}" wx:key="c">
+            <trade-history-list-item
+              bind:__l="__l"
+              uI="{{item.a}}"
+              uP="{{item.b}}"
+              wx:if="{{item.b}}"
+            ></trade-history-list-item>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <empty bind:__l="__l" uI="2037a1d0-2" uP="{{l||''}}" wx:else></empty>
+  </view>
+  <view class="scroll-wrapper" wx:else>
+    <view class="header records-item flex-between border--bottom fs-24">
+      <view class="col-1">订单状态</view>
+      <view class="col-2">股票/代码</view>
+      <view class="col-3">交易详情</view>
+      <view class="col-4 align-r">时间</view>
+    </view>
+    <scroll-view
+      bindscrolltolower="{{o}}"
+      scrollY="true"
+      style="height: calc(100% - 56rpx)"
+      wx:if="{{m}}"
+    >
+      <view bindtap="{{item.d}}" class="filter-lists" wx:for="{{n}}" wx:key="c">
+        <trade-history-list-item
+          bind:__l="__l"
+          uI="{{item.a}}"
+          uP="{{item.b}}"
+          wx:if="{{item.b}}"
+        ></trade-history-list-item>
+      </view>
+    </scroll-view>
+    <empty bind:__l="__l" uI="2037a1d0-4" uP="{{p||''}}" wx:else></empty>
+  </view>
+  <action-sheet
+    bind:__l="__l"
+    bindcancel="{{H}}"
+    bindconfirm="{{G}}"
+    bindinput="{{F}}"
+    uI="2037a1d0-5"
+    uP="{{I}}"
+    uS="{{['d']}}"
+    wx:if="{{I}}"
+  >
+    <view class="time-picker-wrapper">
+      <view class="quick-btn-wrapper flex-between">
+        <view
+          bindtap="{{item.d}}"
+          class="{{['flex-center','quick-btn','border--surround',item.c]}}"
+          wx:for="{{q}}"
+          wx:key="b"
+          >{{item.a}}</view
+        >
+      </view>
+      <view class="time-range">
+        <view catchtap="{{t}}" class="{{['time','border--bottom',s]}}"
+          >{{r}}</view
+        >至<view catchtap="{{x}}" class="{{['time','border--bottom',w]}}"
+          >{{v}}</view
+        >
+      </view>
+    </view>
+    <picker-view
+      bindchange="{{D}}"
+      class="picker-view"
+      indicatorClass="indicator-class"
+      maskClass="mask-class"
+      style="height: 200px"
+      value="{{C}}"
+      wx:if="{{y}}"
+    >
+      <picker-view-column>
+        <view class="item" wx:for="{{z}}" wx:key="b">{{item.a}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="item" wx:for="{{A}}" wx:key="b">{{item.a}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view class="item" wx:for="{{B}}" wx:key="b">{{item.a}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <view class="picker-view" style="height: 200px" wx:else></view>
+    <view bindtap="{{E}}" class="reset-btn fs-32 text-color-4">重置</view>
+  </action-sheet>
+  <action-sheet
+    bind:__l="__l"
+    bindconfirm="{{N}}"
+    bindinput="{{M}}"
+    id="actionSheet"
+    uI="2037a1d0-6"
+    uP="{{O}}"
+    uS="{{['d']}}"
+    wx:if="{{O}}"
+  >
+    <view class="stock-search-wrapper">
+      <stock-search
+        bind:__l="__l"
+        bindblur="{{L}}"
+        bindclick="{{J}}"
+        bindkeyBoardHeightChange="{{K}}"
+        uI="2037a1d0-7,2037a1d0-6"
+      ></stock-search>
+    </view>
+  </action-sheet>
+  <mp-dialog
+    bind:__l="__l"
+    id="mp-dialog"
+    uI="2037a1d0-8"
+    uP="{{P}}"
+    wx:if="{{P}}"
+  ></mp-dialog>
+  <mp-dialog
+    bind:__l="__l"
+    uI="2037a1d0-9"
+    uP="{{V}}"
+    uS="{{['d']}}"
+    wx:if="{{V}}"
+  >
+    <view class="mp-dialog__message align-l">
+      <view class="bst-img border--surround"></view>
+      <view class="bst-text">股票行情K线标记买卖点，复盘分析更便捷</view>
+      <checkbox-group bindchange="{{U}}" class="bst-proto-wrapper">
+        <checkbox checked="{{Q}}" color="{{R}}"></checkbox>
+        <label>已知晓</label>
+        <label bindtap="{{S}}" class="blue">《买卖点标记功能协议》</label>
+        <view class="bst-mark-tip" wx:if="{{T}}">请确认并勾选用户协议</view>
+      </checkbox-group>
+    </view>
+  </mp-dialog>
+</view>

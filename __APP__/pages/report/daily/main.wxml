@@ -1,0 +1,59 @@
+<page-meta class="data-v-b2b5efc2" rootFontSize="{{a}}"></page-meta>
+<view class="{{['data-v-b2b5efc2','container',s,t]}}" data-st-theme="{{v}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-b2b5efc2"
+    uI="b2b5efc2-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-b2b5efc2"
+    uI="b2b5efc2-1"
+  ></stock-privacy-dialog>
+  <st-status
+    bind:__l="__l"
+    bindhandleError="{{c}}"
+    class="data-v-b2b5efc2"
+    data-c-h="{{!b}}"
+    uI="b2b5efc2-2"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></st-status>
+  <scroll-view
+    bindscroll="{{n}}"
+    class="scroll-wrapper data-v-b2b5efc2"
+    hidden="{{!l}}"
+    scrollTop="{{m}}"
+    scrollWithAnimation="{{true}}"
+    scrollY="{{true}}"
+  >
+    <daily-report
+      bind:__l="__l"
+      bindloadFailed="{{i}}"
+      bindloadSuccess="{{h}}"
+      bindscrollInto="{{g}}"
+      bindshowProfilePop="{{j}}"
+      class="r data-v-b2b5efc2"
+      uI="b2b5efc2-3"
+      uP="{{k}}"
+      uR="dailyReport"
+      wx:if="{{e}}"
+    ></daily-report>
+  </scroll-view>
+  <nav-bar
+    bind:__l="__l"
+    class="r data-v-b2b5efc2"
+    uI="b2b5efc2-4"
+    uR="_navBar"
+  ></nav-bar>
+  <block wx:if="{{p}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{q}}"
+      class="data-v-b2b5efc2"
+      uI="b2b5efc2-5"
+      uP="{{r}}"
+      wx:if="{{r}}"
+    ></profile-pop>
+  </block>
+</view>

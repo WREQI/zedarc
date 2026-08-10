@@ -1,0 +1,39 @@
+<view class="_div video-item-comment data-v-1af0a59c" wx:if="{{a}}">
+  <view
+    catchtap="{{b}}"
+    catchtouchmove="{{c}}"
+    class="_div video-comment-top data-v-1af0a59c"
+  ></view>
+  <view class="_div video-comment-title data-v-1af0a59c">
+    <label catchtap="{{d}}" class="_span icon-inner data-v-1af0a59c">
+      <view class="_i icon icon-close data-v-1af0a59c"></view>
+    </label>
+    <label class="_span text data-v-1af0a59c" wx:if="{{e}}">{{f}}条评论</label>
+    <label class="_span text data-v-1af0a59c" wx:else>评论</label>
+  </view>
+  <view class="_div video-comment-inner black data-v-1af0a59c">
+    <news-com-list
+      bind:__l="__l"
+      bindcommentReport="{{i}}"
+      bindgetCommentCount="{{j}}"
+      bindonHandelTurn="{{k}}"
+      bindonPutComment="{{l}}"
+      class="r data-v-1af0a59c"
+      uI="1af0a59c-0"
+      uP="{{m}}"
+      uR="{{h}}"
+      wx:if="{{m}}"
+    ></news-com-list>
+  </view>
+  <view class="_div video-comment-bottom data-v-1af0a59c">
+    <reply-box
+      bind:__l="__l"
+      bindgoEdit="{{p}}"
+      class="r data-v-1af0a59c"
+      uI="1af0a59c-1"
+      uP="{{q}}"
+      uR="reply"
+      wx:if="{{n}}"
+    ></reply-box>
+  </view>
+</view>

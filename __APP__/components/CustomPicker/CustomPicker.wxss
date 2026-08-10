@@ -1,0 +1,69 @@
+@import "/app.wxss";
+.invest-cond-period.data-v-2f56042f {
+  background-color: var(--fill-2);
+  padding: 0 0.32rem 0.4rem;
+}
+.invest-cond-period .date-picker-view.data-v-2f56042f {
+  height: 6.293333rem;
+  position: relative;
+}
+.invest-cond-period .date-picker-view.data-v-2f56042f:before {
+  background-color: var(--fill-1);
+  border-radius: 0.106667rem;
+  content: "";
+  height: 1.173333rem;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 0.586667rem);
+  width: 100%;
+}
+.invest-cond-period .date-picker-view .item.data-v-2f56042f {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  line-height: 1.173333rem;
+}
+[data-theme="dark"]
+  .invest-cond-period
+  .date-picker-view
+  .item.unselected.data-v-2f56042f {
+  color: #7d88a1;
+}
+.invest-cond-period.data-v-2f56042f .indicator-class:after,
+.invest-cond-period.data-v-2f56042f .indicator-class:before {
+  border: none;
+}
+.invest-cond-period.disabled .item.data-v-2f56042f {
+  color: var(--text-color-4);
+}
+.invest-cond-period .disabled-mask.data-v-2f56042f {
+  height: 6.053333rem;
+  left: 0;
+  position: absolute;
+  top: 1.44rem;
+  width: 100%;
+  z-index: 1;
+}
+.invest-cond-period .confirm-btn.data-v-2f56042f {
+  background-color: var(--color-buy) !important;
+  color: #fff;
+}
+.invest-cond-period .cancel-btn.data-v-2f56042f,
+.invest-cond-period .confirm-btn.data-v-2f56042f {
+  font-size: 0.426667rem;
+  font-weight: 600;
+  height: 1.173333rem;
+  line-height: 1.173333rem;
+  margin-top: 0.32rem;
+  padding: 0;
+  text-align: center;
+}
+.invest-cond-period .cancel-btn.data-v-2f56042f {
+  background-color: var(--border-color-2) !important;
+  color: var(--text-color-1);
+}
+.invest-cond-period .cancel-btn.data-v-2f56042f:after {
+  border: none;
+}
+.invest-cond-period .cancel-btn + button.data-v-2f56042f {
+  margin-left: 0.32rem;
+}

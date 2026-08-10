@@ -1,0 +1,66 @@
+<view class="{{['debt-list','data-v-8d13a7c7',e]}}">
+  <block wx:if="{{a}}">
+    <view class="lists data-v-8d13a7c7" wx:for="{{b}}" wx:key="f">
+      <view class="li-title flex-between flex-vcenter data-v-8d13a7c7">
+        <view class="text-color-1 row-a fs-32 data-v-8d13a7c7"
+          >{{item.a}}天期</view
+        >
+        <view class="row-b text-color-4 fs-24 data-v-8d13a7c7">
+          <label class="{{['data-v-8d13a7c7',item.c]}}">计息{{item.b}}天</label>
+        </view>
+        <view class="row-c text-color-4 fs-24 data-v-8d13a7c7">{{item.d}}</view>
+      </view>
+      <view
+        bindtap="{{each.j}}"
+        class="data-v-8d13a7c7"
+        wx:for="{{item.e}}"
+        wx:for-item="each"
+        wx:key="i"
+      >
+        <value-color
+          bind:__l="__l"
+          class="data-v-8d13a7c7"
+          uI="{{each.g}}"
+          uP="{{each.h}}"
+          uS="{{['d']}}"
+          wx:if="{{each.h}}"
+        >
+          <view class="li-wrap flex-between data-v-8d13a7c7">
+            <view class="row-a data-v-8d13a7c7">
+              <view
+                class="{{['data-v-8d13a7c7','text-color-1','fs-30','name',c]}}"
+                >{{each.a}}<label
+                  class="heighest-red-point data-v-8d13a7c7"
+                  wx:if="{{each.b}}"
+                  >{{each.c}}日最高</label
+                >
+              </view>
+              <view class="text-color-4 fs-26 flex-start value data-v-8d13a7c7">
+                <label class="data-v-8d13a7c7">{{each.d}}</label>
+              </view>
+            </view>
+            <view class="row-b align-r tabular-nums data-v-8d13a7c7">
+              <view class="text-color-1 fs-30 data-v-8d13a7c7">{{each.e}}</view>
+              <view class="text-color-4 fs-26 flex-end data-v-8d13a7c7">
+                <label class="data-v-8d13a7c7">年化收益率</label>
+              </view>
+            </view>
+            <view class="row-c align-r tabular-nums data-v-8d13a7c7">
+              <view class="text-color-1 fs-30 data-v-8d13a7c7">{{each.f}}</view>
+              <view class="text-color-4 fs-26 flex-end data-v-8d13a7c7">
+                <view class="data-v-8d13a7c7">10万收益约(元)</view>
+              </view>
+            </view>
+          </view>
+        </value-color>
+      </view>
+    </view>
+  </block>
+  <empty
+    bind:__l="__l"
+    class="data-v-8d13a7c7"
+    uI="8d13a7c7-1"
+    uP="{{d||''}}"
+    wx:else
+  ></empty>
+</view>

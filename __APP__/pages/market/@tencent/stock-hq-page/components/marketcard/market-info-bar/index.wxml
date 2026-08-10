@@ -1,0 +1,55 @@
+<view class="_div market-info data-v-97e7aea0" wx:if="{{a}}">
+  <view
+    bindtap="{{i}}"
+    class="_div info-bar-content upper-region data-v-97e7aea0"
+  >
+    <view class="_div info-bar-inner data-v-97e7aea0" ref="upperContainer">
+      <label class="_span view-detail data-v-97e7aea0" wx:if="{{b}}">
+        <label class="_span view-detail-desc data-v-97e7aea0">
+          <label catchtap="{{c}}" class="_span data-v-97e7aea0">查看详情</label>
+        </label>
+      </label>
+      <label class="_span title-content data-v-97e7aea0">
+        <label class="_span title data-v-97e7aea0">{{d}}</label>
+        <label class="_span split data-v-97e7aea0"></label>
+      </label>
+      <image
+        class="_img live-logo data-v-97e7aea0"
+        hidden="{{!e}}"
+        src="https://st.gtimg.com/design/bcf6a30db952db777db7f76fffd03088.gif"
+      ></image>
+      <label class="_span info-content data-v-97e7aea0">{{f}}</label>
+      <label
+        class="_span view-detail-1 data-v-97e7aea0"
+        ref="showMore"
+        wx:if="{{g}}"
+      >
+        <label class="_span view-detail-desc data-v-97e7aea0">
+          <label catchtap="{{h}}" class="_span data-v-97e7aea0">查看详情</label>
+        </label>
+      </label>
+    </view>
+  </view>
+  <view
+    bindtap="{{m}}"
+    class="_div info-bar-content mid-region data-v-97e7aea0"
+  >
+    <view class="_div info-bar-inner-1 data-v-97e7aea0" ref="midContainer">
+      <label class="_span title-content data-v-97e7aea0">
+        <label class="_span title data-v-97e7aea0">{{j}}</label>
+        <label class="_span split data-v-97e7aea0"></label>
+      </label>
+      <image
+        class="_img live-logo data-v-97e7aea0"
+        hidden="{{!k}}"
+        src="https://st.gtimg.com/design/bcf6a30db952db777db7f76fffd03088.gif"
+      ></image>
+      <label class="_span info-content data-v-97e7aea0">{{l}}</label>
+      <label class="_span view-detail data-v-97e7aea0">
+        <label class="_span view-detail-desc data-v-97e7aea0">
+          <label class="_span data-v-97e7aea0">查看详情</label>
+        </label>
+      </label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<view
+  class="{{['component-ordertype-select','^component-ordertype-select','data-v-6e2f2adf',g]}}"
+>
+  <view class="selector-bar flex-between data-v-6e2f2adf">
+    <view bindtap="{{a}}" class="left flex-vcenter data-v-6e2f2adf">
+      <label class="type ^type data-v-6e2f2adf">类 型</label>
+      <label class="icon icon-italic-info data-v-6e2f2adf"></label>
+    </view>
+    <popup-display
+      bind:__l="__l"
+      bindclick="{{b}}"
+      class="right data-v-6e2f2adf"
+      uI="6e2f2adf-0"
+      uP="{{c}}"
+      wx:if="{{c}}"
+    ></popup-display>
+  </view>
+  <popup-select
+    bind:__l="__l"
+    bindclick="{{d}}"
+    bindmaskClick="{{e}}"
+    class="data-v-6e2f2adf"
+    uI="6e2f2adf-1"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></popup-select>
+</view>

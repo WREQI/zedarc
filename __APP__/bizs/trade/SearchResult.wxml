@@ -1,0 +1,68 @@
+<view class="{{['data-v-2a1cd71a',r]}}">
+  <view class="data-v-2a1cd71a" wx:if="{{a}}">
+    <block wx:if="{{b}}">
+      <search-result-list
+        bind:__l="__l"
+        bindclick="{{f}}"
+        class="data-v-2a1cd71a"
+        uI="2a1cd71a-0"
+        uP="{{g}}"
+        uS="{{['label']}}"
+        wx:if="{{c}}"
+      >
+        <view
+          class="{{[e,'title','text-color-1','flex-between','data-v-2a1cd71a']}}"
+          slot="label"
+        >
+          <label class="sub-title data-v-2a1cd71a">股票查询记录</label>
+          <label
+            bindtap="{{d}}"
+            class="icon icon-rubbish data-v-2a1cd71a"
+          ></label>
+        </view>
+      </search-result-list>
+      <search-result-list
+        bind:__l="__l"
+        bindclick="{{i}}"
+        class="data-v-2a1cd71a"
+        uI="2a1cd71a-1"
+        uP="{{j}}"
+        uS="{{['label']}}"
+        wx:if="{{h}}"
+      >
+        <view
+          class="title flex-between text-color-0 data-v-2a1cd71a"
+          slot="label"
+        >
+          <label class="data-v-2a1cd71a">持仓股票</label>
+        </view>
+      </search-result-list>
+    </block>
+    <view class="search-result-empty data-v-2a1cd71a" wx:elif="{{k}}">
+      <empty
+        bind:__l="__l"
+        class="data-v-2a1cd71a"
+        uI="2a1cd71a-2"
+        uP="{{l}}"
+        wx:if="{{l}}"
+      ></empty>
+    </view>
+  </view>
+  <search-result-list
+    bind:__l="__l"
+    bindclick="{{m}}"
+    class="data-v-2a1cd71a"
+    uI="2a1cd71a-3"
+    uP="{{n||''}}"
+    wx:else
+  ></search-result-list>
+  <mp-dialog
+    bind:__l="__l"
+    bindcancel="{{o}}"
+    bindconfirm="{{p}}"
+    class="data-v-2a1cd71a"
+    uI="2a1cd71a-4"
+    uP="{{q}}"
+    wx:if="{{q}}"
+  ></mp-dialog>
+</view>

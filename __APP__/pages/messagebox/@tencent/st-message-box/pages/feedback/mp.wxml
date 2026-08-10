@@ -1,0 +1,18 @@
+<scroll-view
+  bindrefresherrefresh="{{c}}"
+  bindscrolltolower="{{d}}"
+  class="message-plat data-v-02380cca"
+  refresherEnabled="{{true}}"
+  refresherThreshold="100"
+  refresherTriggered="{{b}}"
+  scrollY="{{true}}"
+>
+  <view class="_div data-v-02380cca">
+    <feedback-content
+      bind:__l="__l"
+      class="r data-v-02380cca"
+      uI="02380cca-0"
+      uR="contentRef"
+    ></feedback-content>
+  </view>
+</scroll-view>

@@ -1,0 +1,96 @@
+@import "/app.wxss";
+.carousel-excite__card-wrapper.data-v-f1c8eb3e {
+  overflow: hidden;
+  position: relative;
+}
+.carousel-excite__single-card.data-v-f1c8eb3e {
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.carousel-excite__swiper-wrapper.data-v-f1c8eb3e {
+  position: relative;
+}
+.carousel-excite__swiper.data-v-f1c8eb3e {
+  height: 4.64rem;
+  width: 10rem;
+}
+.carousel-excite__swiper-item.data-v-f1c8eb3e {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+}
+.carousel-excite__card-inner.data-v-f1c8eb3e {
+  will-change: transform;
+}
+.carousel-excite__indicator.data-v-f1c8eb3e {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.426667rem;
+}
+.carousel-excite__indicator-dot.data-v-f1c8eb3e {
+  background: #dcdfe6;
+  border-radius: 0.4rem;
+  height: 0.08rem;
+  transition: width 0.3s ease, background 0.3s ease;
+  width: 0.16rem;
+}
+.carousel-excite__indicator-dot.data-v-f1c8eb3e:not(:first-child) {
+  margin-left: 0.106667rem;
+}
+.carousel-excite__indicator-dot--active.data-v-f1c8eb3e {
+  background: #98a0b3;
+  width: 0.32rem;
+}
+.carousel-excite__btn__wrapper.data-v-f1c8eb3e:active {
+  opacity: 0.8;
+}
+.carousel-excite__btn.data-v-f1c8eb3e {
+  background-color: var(--color-primary-1);
+  border-radius: 0.106667rem;
+  color: #fff;
+  font-weight: 500;
+  height: 1.173333rem;
+  line-height: 1;
+  text-align: center;
+}
+.carousel-excite__adv-text.data-v-f1c8eb3e,
+.carousel-excite__btn.data-v-f1c8eb3e {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.426667rem;
+  justify-content: center;
+  width: 5.013333rem;
+}
+.carousel-excite__adv-text.data-v-f1c8eb3e {
+  border: 0.026667rem solid transparent;
+  border-radius: 0.106667rem;
+  color: #98a0b3;
+  line-height: 0.586667rem;
+  margin-top: 0.426667rem;
+  opacity: 0;
+  padding: 0.293333rem 0.426667rem;
+  transition: opacity 0.25s ease, visibility 0.25s ease, border-color 0.25s ease;
+  visibility: hidden;
+}
+.carousel-excite__adv-text--visible.data-v-f1c8eb3e {
+  border-color: #98a0b3;
+  opacity: 1;
+  visibility: visible;
+}

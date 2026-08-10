@@ -1,0 +1,144 @@
+.welcome-old-user-container.data-v-b511b6c8 {
+  bottom: 4.48rem;
+  margin: 0 0.32rem;
+  position: absolute;
+  top: 4.48rem;
+  transition: bottom 0.2s ease-out, top 0.2s ease-out;
+}
+.welcome-old-user-container.mp.data-v-b511b6c8 {
+  bottom: 6.573333333333333rem;
+  top: auto;
+}
+.welcome-old-user-container.keyboard-showing-top.data-v-b511b6c8 {
+  bottom: auto;
+  top: 0.13333333333333333rem;
+}
+.welcome-old-user-container .welcome-old-user-text.data-v-b511b6c8 {
+  align-items: center;
+  color: #262e40;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.48rem;
+  font-weight: 500;
+  line-height: 0.7733333333333333rem;
+  opacity: 0;
+  transform: translateY(1.3333333333333333rem);
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.welcome-old-user-container .welcome-old-user-text.animate-in.data-v-b511b6c8 {
+  animation: slideUp-b511b6c8 0.4s ease-out forwards;
+  animation-delay: 0.4s;
+}
+.welcome-old-user-container
+  .welcome-old-user-text
+  .welcome-old-user-text-user-name.data-v-b511b6c8 {
+  display: inline-block;
+  margin-left: 0.10666666666666667rem;
+  max-width: 4.133333333333334rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.welcome-old-user-container .question-item.data-v-b511b6c8 {
+  background: #fff;
+  border-radius: 0.21333333333333335rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0.32rem;
+  max-width: 9.36rem;
+  opacity: 0;
+  padding: 0.21333333333333335rem 0.32rem;
+  transform: translateY(1.3333333333333333rem);
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.welcome-old-user-container .question-item.animate-in.data-v-b511b6c8 {
+  animation: slideUp-b511b6c8 0.4s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.welcome-old-user-container .question-item .question-text.data-v-b511b6c8 {
+  color: #262e40;
+  font-size: 0.37333333333333335rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+  margin-bottom: 0.10666666666666667rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.welcome-old-user-container .question-item .question-heat.data-v-b511b6c8 {
+  align-items: center;
+  color: #7a8499;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0.32rem;
+  font-weight: 400;
+  gap: 0.10666666666666667rem;
+  text-align: left;
+}
+.welcome-old-user-container .question-item .question-heat-icon.data-v-b511b6c8 {
+  background-image: url(https://st.gtimg.com/design/2280242985f7bcb4bcab7c3c0a7ad10e.png);
+  background-size: 100%;
+  height: 0.37333333333333335rem;
+  width: 0.37333333333333335rem;
+}
+.welcome-old-user-container
+  .question-item
+  .question-heat-icon-like.data-v-b511b6c8 {
+  background-image: url(https://st.gtimg.com/design/2063c8849b6359096ae4a836316b97f6.png);
+}
+.welcome-old-user-container
+  .question-item
+  .question-heat-icon-hot.data-v-b511b6c8 {
+  background-image: url(https://st.gtimg.com/design/90039e6760f7f9c6efe6ae52faac127e.png);
+}
+.welcome-old-user-container
+  .question-item
+  .question-heat-icon-trend.data-v-b511b6c8 {
+  background-image: url(https://st.gtimg.com/design/930409154f44fca22dfbed75d26e7dff.png);
+}
+.skin-black .welcome-old-user-text.data-v-b511b6c8,
+.skin-panda .welcome-old-user-text.data-v-b511b6c8 {
+  color: #fff;
+}
+.skin-black .question-item.data-v-b511b6c8,
+.skin-panda .question-item.data-v-b511b6c8 {
+  background-color: var(--fill-content-layer);
+}
+.skin-black .question-item .question-text.data-v-b511b6c8,
+.skin-panda .question-item .question-text.data-v-b511b6c8 {
+  color: var(--color-heavygray);
+}
+.skin-black .question-item .question-heat.data-v-b511b6c8,
+.skin-panda .question-item .question-heat.data-v-b511b6c8 {
+  color: var(--color-lightgray);
+}
+@-webkit-keyframes slideUp-b511b6c8 {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp-b511b6c8 {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

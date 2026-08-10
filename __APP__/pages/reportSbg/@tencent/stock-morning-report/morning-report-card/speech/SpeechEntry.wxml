@@ -1,0 +1,23 @@
+<view class="_div speech-entry data-v-5a054355">
+  <view bindtap="{{c}}" class="{{['_div','speech-card','data-v-5a054355',b]}}">
+    <image
+      alt="morning_report"
+      class="_img speech-card__icon data-v-5a054355"
+      src="https://st.gtimg.com/design/c278e70b5686ee0af01dd0f737145367.png"
+    ></image>
+    <label class="_span speech-card__title data-v-5a054355"
+      >微证券早间播报</label
+    >
+    <view
+      catchtap="{{a}}"
+      class="_div speech-card__action data-v-5a054355"
+    ></view>
+  </view>
+  <audio
+    hidden
+    class="data-v-5a054355"
+    ref="audioRef"
+    src="{{e}}"
+    wx:if="{{d}}"
+  ></audio>
+</view>

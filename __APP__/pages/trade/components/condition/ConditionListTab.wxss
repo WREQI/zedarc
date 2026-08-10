@@ -1,0 +1,102 @@
+@import "/app.wxss";
+.cond-list-tab.data-v-edbd59f7 {
+  background: var(--fill-2);
+  padding: 0.16rem 0.32rem;
+}
+.cond-list-tab .tab-container.data-v-edbd59f7,
+.cond-list-tab.data-v-edbd59f7 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cond-list-tab .tab-container.data-v-edbd59f7 {
+  width: 100%;
+}
+.cond-list-tab .tab-item.data-v-edbd59f7,
+.cond-list-tab .tab-items.data-v-edbd59f7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.cond-list-tab .tab-item.data-v-edbd59f7 {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  border: 0;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  font-size: 0.373333rem;
+  font-weight: 400;
+  height: 0.853333rem;
+  justify-content: center;
+  line-height: 0.533333rem;
+  margin-right: 0.213333rem;
+  padding: 0.146667rem 0.266667rem;
+  user-select: none;
+  white-space: nowrap;
+}
+.cond-list-tab .tab-item.active.data-v-edbd59f7 {
+  background: rgba(48, 119, 236, 0.1);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+[data-theme="dark"] .cond-list-tab .tab-item.active.data-v-edbd59f7 {
+  background: var(--color-primary);
+  color: #f0f1f5;
+}
+.cond-list-tab .tab-item.data-v-edbd59f7:not(.active) {
+  background: var(--fill-1);
+  color: var(--text-color-2);
+}
+[data-theme="dark"] .cond-list-tab .tab-item.data-v-edbd59f7:not(.active) {
+  background: var(--fill-3);
+  border: 0.013333rem solid #262e40;
+}
+.cond-list-tab .tab-item.data-v-edbd59f7:active {
+  opacity: 0.9;
+}
+.cond-list-tab .divider.data-v-edbd59f7 {
+  background: #98a0b3;
+  flex-shrink: 0;
+  height: 0.32rem;
+  margin-right: 0.266667rem;
+  width: 0.013333rem;
+}
+.cond-list-tab .create-btn.data-v-edbd59f7 {
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.106667rem;
+  margin-left: auto;
+  padding: 0;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+.cond-list-tab .create-btn.data-v-edbd59f7:active {
+  opacity: 0.8;
+}
+.cond-list-tab .create-btn .create-icon.data-v-edbd59f7 {
+  background: url(https://st.gtimg.com/design/6a042819c554c00e63b859b582f17cb7.png)
+    no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  height: 0.36rem;
+  margin-right: 0.106667rem;
+  width: 0.36rem;
+}
+.cond-list-tab .create-btn .create-text.data-v-edbd59f7 {
+  color: var(--color-link);
+  font-size: 0.373333rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+  white-space: nowrap;
+}
+.cond-list-tab.simple-mode .tab-item.active.data-v-edbd59f7 {
+  background: rgba(230, 53, 53, 0.1);
+}

@@ -1,0 +1,14 @@
+<view class="_div privacy-container data-v-d6b4be3c">
+  <layer-modal
+    bind:__l="__l"
+    bindcancel="{{c}}"
+    bindconfirm="{{b}}"
+    class="data-v-d6b4be3c"
+    uI="d6b4be3c-0"
+    uP="{{d}}"
+    uS="{{['d']}}"
+    wx:if="{{d}}"
+  >
+    <view class="{{['_div','data-v-d6b4be3c','text-box']}}">{{a}}</view>
+  </layer-modal>
+</view>

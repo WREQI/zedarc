@@ -1,0 +1,86 @@
+@import "/app.wxss";
+.profile-select-actionsheet .st-action-sheet-panel .border-bottom {
+  border-bottom: none;
+}
+.profile-select-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 11.2rem;
+  padding: 0 0 0.666667rem;
+  position: relative;
+  width: 100%;
+}
+.profile-select-container .swiper {
+  height: 100%;
+  margin: 0 0.32rem;
+}
+.profile-select-container .result-wrapper {
+  background-color: var(--fill-2);
+  left: 0;
+  margin-left: 0.266667rem;
+  overflow-x: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: left;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+}
+.profile-select-container .result-wrapper .profile-tabbar {
+  margin-bottom: 0.213333rem;
+}
+.profile-select-container .result-wrapper .profile-tabbar .mp-tab {
+  -webkit-box-flex: 0;
+  flex: none;
+  margin: 0.32rem 0.4rem 0.32rem 0;
+}
+.profile-select-container .result-wrapper .profile-tabbar .mp-tab .tab-text {
+  display: block;
+  line-height: 0.533333rem;
+  max-width: 2.24rem;
+  overflow: hidden;
+  position: static;
+  text-overflow: ellipsis;
+}
+.profile-select-container
+  .result-wrapper
+  .profile-tabbar
+  .mp-tab
+  .tab-text
+  .slider {
+  bottom: -0.013333rem;
+}
+.profile-select-container .result-wrapper .result {
+  color: var(--text-color-2);
+  display: inline-block;
+  font-size: 0.373333rem;
+  max-width: 2.666667rem;
+  overflow: hidden;
+  padding: 0.32rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.profile-select-container .result-wrapper .active {
+  color: var(--text-color-1);
+  font-weight: 500;
+  position: relative;
+}
+.profile-select-container .result-wrapper .active:after {
+  background-color: var(--color-primary-1);
+  border-radius: 0.04rem;
+  bottom: 0;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.isUnSubmitable .st-action-sheet-confirm {
+  color: var(--text-color-5) !important;
+}

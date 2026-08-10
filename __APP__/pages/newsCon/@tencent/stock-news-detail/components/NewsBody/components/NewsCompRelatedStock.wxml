@@ -1,0 +1,94 @@
+<view class="_div data-v-2b9a038b">
+  <view class="_div relate-stock data-v-2b9a038b" wx:if="{{a}}">
+    <view class="_div stock-list data-v-2b9a038b" ref="stockListRef">
+      <view
+        class="_div stock-group flex data-v-2b9a038b"
+        wx:for="{{b}}"
+        wx:key="c"
+      >
+        <view
+          catchtap="{{stock.j}}"
+          class="{{['_div','stock-item','flex-1','flex','data-v-2b9a038b',c]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="stock"
+          wx:key="i"
+        >
+          <view
+            class="{{['_div','data-v-2b9a038b','stock-tag']}}"
+            style="{{'background-image:'+stock.a}}"
+          ></view>
+          <view class="_div flex-1 stock-name data-v-2b9a038b"
+            >{{stock.b}}</view
+          >
+          <view class="{{['_div','stock-zdf','data-v-2b9a038b',stock.d]}}"
+            >{{stock.c}}</view
+          >
+          <view
+            catchtap="{{stock.h}}"
+            class="_div stock-addbtn data-v-2b9a038b"
+          >
+            <image
+              class="_img add-self-img data-v-2b9a038b"
+              src="{{stock.f}}"
+              wx:if="{{stock.e}}"
+            ></image>
+            <image
+              class="_img add-self-img data-v-2b9a038b"
+              src="{{stock.g}}"
+              wx:else
+            ></image>
+          </view>
+        </view>
+        <view
+          class="_div stock-item flex-1 flex data-v-2b9a038b"
+          style="background-color: transparent"
+          wx:if="{{item.b}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div tri_con data-v-2b9a038b" hidden="{{!f}}">
+      <view
+        bindtap="{{e}}"
+        class="{{['_div','tri','data-v-2b9a038b',d&&'fold']}}"
+      ></view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-2b9a038b','accompany',l]}}"
+    key="{{m}}"
+    wx:if="{{g}}"
+  >
+    <view class="_div reading-accompany data-v-2b9a038b">
+      <swiper
+        autoplay="{{true}}"
+        bindchange="{{k}}"
+        circular="{{j}}"
+        class="swiper data-v-2b9a038b"
+        current="{{i}}"
+        duration="{{1200}}"
+        interval="{{4000}}"
+        ref="swiper"
+        vertical="{{true}}"
+      >
+        <swiper-item
+          class="swiper-slide data-v-2b9a038b"
+          wx:for="{{h}}"
+          wx:for-item="stock"
+          wx:key="h"
+        >
+          <float-animation-stock
+            bind:__l="__l"
+            bindclickAdd="{{stock.e}}"
+            bindclickStock="{{stock.d}}"
+            class="r-i-f data-v-2b9a038b"
+            key="{{stock.c}}"
+            uI="{{stock.f}}"
+            uP="{{stock.g}}"
+            uR="{{stock.b}}"
+            wx:if="{{stock.g}}"
+          ></float-animation-stock>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

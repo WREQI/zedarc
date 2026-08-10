@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "video-player": "../@tencent/stock-news/src/components/videoPlayerMask",
+    "reply-box": "../newsDetail/replybox",
+    "news-com-list": "../../newsSbg/@tencent/stock-sq/src/source/NewsComList/index",
+    "mp-player": "../../information/components/mpPlayer",
+    "half-editor": "../../halfScreenEditor/@tencent/stock-halfscreen-editor/components/halfscreen-editor"
+  },
+  "componentPlaceholder": {
+    "news-com-list": "view",
+    "mp-player": "view",
+    "half-editor": "view"
+  }
+}

@@ -1,0 +1,30 @@
+<view class="_div component-concept-heat data-v-8f1c2b12">
+  <view class="_div pos_rel flex data-v-8f1c2b12">
+    <view
+      class="{{['_div','data-v-8f1c2b12','heat-item',heat.g,heat.h,heat.i]}}"
+      wx:for="{{a}}"
+      wx:for-item="heat"
+      wx:key="j"
+    >
+      <view class="_div heat-bar data-v-8f1c2b12"></view>
+      <view class="{{['_div','heat-text','data-v-8f1c2b12',heat.b]}}"
+        >{{heat.a}}</view
+      >
+      <view
+        class="{{['_div','data-v-8f1c2b12','heat-tag','flex','flex-center',heat.f]}}"
+        wx:if="{{heat.c}}"
+      >
+        <view class="{{['_div','icon-rise','data-v-8f1c2b12',heat.d]}}"></view>
+        <view class="_div heat-tag-text data-v-8f1c2b12">{{heat.e}}</view>
+      </view>
+    </view>
+    <view
+      class="{{['_div','heat-cursor','flex','flex-vcenter','data-v-8f1c2b12',b]}}"
+      style="{{'width:'+c}}"
+    >
+      <view class="_div heat-cursor-bar data-v-8f1c2b12"></view>
+      <view class="_div heat-cursor-dot data-v-8f1c2b12"></view>
+      <view class="_div heat-cursor-mask data-v-8f1c2b12"></view>
+    </view>
+  </view>
+</view>

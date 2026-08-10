@@ -1,0 +1,59 @@
+<page-meta class="data-v-492c5ed3" rootFontSize="{{a}}"></page-meta>
+<view class="_div setting-container data-v-492c5ed3" data-st-theme="{{p}}">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-492c5ed3"
+    uI="492c5ed3-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-492c5ed3"
+    uI="492c5ed3-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div setting-content data-v-492c5ed3">
+    <view class="_div setting-list-wrapper data-v-492c5ed3">
+      <view bindtap="{{d}}" class="_div set-item data-v-492c5ed3" wx:if="{{c}}">
+        <view class="_div text data-v-492c5ed3">账号注销</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{f}}" class="_div set-item data-v-492c5ed3" wx:if="{{e}}">
+        <view class="_div text data-v-492c5ed3">交易安全设置</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{g}}" class="_div set-item data-v-492c5ed3">
+        <view class="_div text data-v-492c5ed3">更换皮肤</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{i}}" class="_div set-item data-v-492c5ed3" wx:if="{{h}}">
+        <view class="_div text data-v-492c5ed3">AI分析助手</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{j}}" class="_div set-item data-v-492c5ed3">
+        <view class="_div text data-v-492c5ed3">隐私权限设置</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{k}}" class="_div set-item data-v-492c5ed3">
+        <view class="_div text data-v-492c5ed3">个人信息收集清单</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{l}}" class="_div set-item data-v-492c5ed3">
+        <view class="_div text data-v-492c5ed3">隐私授权管理</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+      <view bindtap="{{n}}" class="_div set-item data-v-492c5ed3">
+        <view class="_div text data-v-492c5ed3">{{m}}</view>
+        <view class="_div right-arrow-icon data-v-492c5ed3"></view>
+      </view>
+    </view>
+  </view>
+  <protocol-list
+    bind:__l="__l"
+    class="data-v-492c5ed3"
+    uI="492c5ed3-2"
+  ></protocol-list>
+  <view class="logo-wrapper data-v-492c5ed3">
+    <image class="_img logo data-v-492c5ed3" src="{{o}}"></image>
+  </view>
+</view>

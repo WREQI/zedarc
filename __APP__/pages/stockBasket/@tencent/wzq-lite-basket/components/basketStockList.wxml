@@ -1,0 +1,129 @@
+<view
+  class="{{['_div','basket-stocklist-wrapper','simple','data-v-0e04e3f9',r,s]}}"
+>
+  <view class="_div stock-table data-v-0e04e3f9">
+    <view class="_div stock-table-content data-v-0e04e3f9">
+      <view class="_div stock-header data-v-0e04e3f9">
+        <view class="_div stock-name data-v-0e04e3f9">股票</view>
+        <view class="_div sortable-captions data-v-0e04e3f9">
+          <view class="_div sortable-row data-v-0e04e3f9">
+            <view
+              class="{{['_div','data-v-0e04e3f9','row-th',field.c&&'flex-1',field.d&&'font20px',field.e&&'font18px',field.f&&'add-margin-left']}}"
+              data-maxlen="{{field.g}}"
+              style="{{field.h}}"
+              wx:for="{{a}}"
+              wx:for-item="field"
+              wx:key="b"
+              >{{field.a}}</view
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div stock-body data-v-0e04e3f9">
+        <view class="_div name-column data-v-0e04e3f9">
+          <view
+            catchtap="{{rowData.h}}"
+            class="_div stock-wrapper data-v-0e04e3f9"
+            data-index="{{rowData.g}}"
+            ref="stock-wrapper"
+            wx:for="{{b}}"
+            wx:for-item="rowData"
+            wx:key="f"
+          >
+            <view class="_div stock-simple data-v-0e04e3f9">
+              <image
+                class="_img market-icon data-v-0e04e3f9"
+                src="{{rowData.a}}"
+                wx:if="{{c}}"
+              ></image>
+              <view
+                class="{{['_div','stock-name','data-v-0e04e3f9',rowData.c]}}"
+                >{{rowData.b}}</view
+              >
+            </view>
+            <view class="_div stock-symbol data-v-0e04e3f9" wx:if="{{d}}">
+              <image
+                class="_img market-icon data-v-0e04e3f9"
+                src="{{rowData.d}}"
+              ></image>
+              <view class="_div stock-code data-v-0e04e3f9">{{rowData.e}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-column data-v-0e04e3f9">
+          <view class="_div data-inner-wrapper data-v-0e04e3f9">
+            <view
+              catchtap="{{rowData.c}}"
+              class="_div data-column-tr data-v-0e04e3f9"
+              wx:for="{{e}}"
+              wx:for-item="rowData"
+              wx:key="b"
+            >
+              <view
+                class="{{['_div','data-v-0e04e3f9','column-td',field.c,field.d,field.e]}}"
+                data-maxlen="{{field.f}}"
+                style="{{field.g}}"
+                wx:for="{{rowData.a}}"
+                wx:for-item="field"
+                wx:key="b"
+                >{{field.a}}</view
+              >
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div action-icon-wrapper data-v-0e04e3f9" wx:if="{{f}}">
+      <view
+        catchtap="{{rowData.f}}"
+        class="_div stock-wrapper data-v-0e04e3f9"
+        data-index="{{rowData.e}}"
+        ref="addIconRef"
+        wx:for="{{g}}"
+        wx:for-item="rowData"
+        wx:key="d"
+      >
+        <image
+          alt="已添加"
+          class="_img added-icon data-v-0e04e3f9"
+          src="{{rowData.b}}"
+          wx:if="{{rowData.a}}"
+        ></image>
+        <image
+          alt="添加自选"
+          class="_img add-icon data-v-0e04e3f9"
+          src="{{rowData.c}}"
+          wx:else
+        ></image>
+      </view>
+    </view>
+  </view>
+  <view
+    class="{{['_div','data-v-0e04e3f9','all-add-btn-wrapper',m]}}"
+    wx:if="{{h}}"
+  >
+    <view
+      catchtap="{{j}}"
+      class="_div all-add-item route-to-choose-btn data-v-0e04e3f9"
+      ref="routeBtnRef"
+      wx:if="{{i}}"
+      >去自选看看</view
+    >
+    <view
+      catchtap="{{l}}"
+      class="_div all-add-item all-add-btn data-v-0e04e3f9"
+      ref="addAllBtnRef"
+      wx:else
+      >一键加自选({{k}})</view
+    >
+  </view>
+  <basket-footer
+    bind:__l="__l"
+    bindbasketFooterClick="{{o}}"
+    bindgoToMockTrade="{{p}}"
+    class="data-v-0e04e3f9"
+    uI="0e04e3f9-0"
+    uP="{{q}}"
+    wx:if="{{n}}"
+  ></basket-footer>
+</view>

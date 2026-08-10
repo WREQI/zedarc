@@ -1,0 +1,30 @@
+<view
+  class="first-profit-card data-v-7bd21a66"
+  style="{{'background-image:'+f}}"
+>
+  <view class="first-profit-card__header data-v-7bd21a66">
+    <stock-logo
+      bind:__l="__l"
+      class="stock-label data-v-7bd21a66"
+      uI="7bd21a66-0"
+      uP="{{a}}"
+      wx:if="{{a}}"
+    ></stock-logo>
+    <label class="stock-name data-v-7bd21a66">{{b}}</label>
+  </view>
+  <view class="first-profit-card__data data-v-7bd21a66">
+    <view class="first-profit-card__data-col data-v-7bd21a66">
+      <label class="first-profit-card__data-value data-v-7bd21a66">{{c}}</label>
+      <label class="first-profit-card__data-label data-v-7bd21a66"
+        >持仓盈亏</label
+      >
+    </view>
+    <view class="first-profit-card__data-col data-v-7bd21a66">
+      <label class="first-profit-card__data-value data-v-7bd21a66">{{d}}</label>
+      <label class="first-profit-card__data-label data-v-7bd21a66"
+        >今日盈亏</label
+      >
+    </view>
+  </view>
+  <view class="first-profit-card__date data-v-7bd21a66">{{e}}</view>
+</view>

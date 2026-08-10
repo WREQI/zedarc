@@ -1,0 +1,22 @@
+<view
+  catchtouchmove="{{j}}"
+  class="_div popup-wrapper data-v-ff0d7188"
+  wx:if="{{a}}"
+>
+  <view class="_div gongyi-popup data-v-ff0d7188">
+    <view class="_div popup-title data-v-ff0d7188">{{b}}</view>
+    <view class="_div popup-tip data-v-ff0d7188">{{c}}</view>
+    <view class="_div popup-tip data-v-ff0d7188">{{d}}</view>
+    <image
+      class="_img popup-content data-v-ff0d7188"
+      src="{{f}}"
+      wx:if="{{e}}"
+    ></image>
+    <view bindtap="{{h}}" class="_div popup-btn data-v-ff0d7188">{{g}}</view>
+    <image
+      bindtap="{{i}}"
+      class="_img popup-close data-v-ff0d7188"
+      src="https://st.gtimg.com/design/6d9686b4d5ec64f9d1f8f5cd1a6716e8.png"
+    ></image>
+  </view>
+</view>

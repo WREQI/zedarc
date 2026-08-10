@@ -1,0 +1,21 @@
+{
+  "component": true,
+  "usingComponents": {
+    "trust-footer": "../../../../detailSbg/@tencent/stock-markets-base/components/TrustFooter/index",
+    "semi-mask": "../../../../asyncCom/@tencent/st-semi-modal/index",
+    "half-screen-ai-entry": "../../../../searchAi/@tencent/stock-search-ai/pages/HalfScreenAiEntry",
+    "no-data": "../../../../detailSbg/@tencent/stock-markets-base/components/NoData",
+    "hot-topic-nav-bar": "./components/HotTopicNavBar",
+    "keypoint-card": "./components/KeypointCard",
+    "opinion-card": "./components/OpinionCard",
+    "etf-invest-card": "./components/EtfInvestCard",
+    "footer-bar": "./components/FooterBar",
+    "opinion-rule-sheet": "./components/OpinionRuleSheet"
+  },
+  "componentPlaceholder": {
+    "trust-footer": "view",
+    "semi-mask": "view",
+    "half-screen-ai-entry": "view",
+    "no-data": "view"
+  }
+}

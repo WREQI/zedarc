@@ -1,0 +1,67 @@
+<view class="_div data-v-edc56652">
+  <view
+    class="{{['_div','futures-contract','data-v-edc56652',o]}}"
+    wx:if="{{a}}"
+  >
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">合约名称</view>
+      <view class="_div content data-v-edc56652">{{b}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">合约代码</view>
+      <view class="_div content data-v-edc56652">{{c}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">标的</view>
+      <view class="_div content data-v-edc56652">{{d}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">交易所</view>
+      <view class="_div content data-v-edc56652">{{e}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">合约类型</view>
+      <view class="_div content data-v-edc56652">{{f}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">合约规模</view>
+      <view class="_div content data-v-edc56652">{{g}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">货币</view>
+      <view class="_div content data-v-edc56652">{{h}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">最小变动单位</view>
+      <view class="_div content data-v-edc56652">{{i}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">合约价值</view>
+      <view class="_div content data-v-edc56652">{{j}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">交易时间</view>
+      <view class="_div content data-v-edc56652">{{k}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652">
+      <view class="_div title data-v-edc56652">所在时区</view>
+      <view class="_div content data-v-edc56652">{{l}}</view>
+    </view>
+    <view class="_div info-item data-v-edc56652" wx:if="{{m}}">
+      <view class="_div title data-v-edc56652">交易所规格</view>
+      <view bindtap="{{n}}" class="_div content content-url data-v-edc56652"
+        >规格链接</view
+      >
+    </view>
+  </view>
+  <view class="_div error-status data-v-edc56652" wx:if="{{p}}">
+    <st-status
+      bind:__l="__l"
+      bindhandleError="{{q}}"
+      class="data-v-edc56652"
+      uI="edc56652-0"
+      uP="{{r}}"
+      wx:if="{{r}}"
+    ></st-status>
+  </view>
+</view>

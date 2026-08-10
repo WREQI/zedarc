@@ -1,0 +1,118 @@
+@import "/app.wxss";
+.district-select-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 11.2rem;
+  padding: 0 0 0.666667rem 0.453333rem;
+  position: relative;
+  width: 100%;
+}
+.district-select-container .result-wrapper {
+  background-color: var(--fill-2);
+  left: 0;
+  padding: 0.533333rem 0 0.266667rem;
+  position: -webkit-sticky;
+  position: sticky;
+  text-align: left;
+  top: 0;
+  z-index: 9;
+}
+.district-select-container .result-wrapper .result {
+  color: var(--text-color-2);
+  display: inline-block;
+  font-size: 0.373333rem;
+  max-width: 2.666667rem;
+  overflow: hidden;
+  padding: 0.32rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.district-select-container .result-wrapper .active {
+  color: var(--text-color-1);
+  font-weight: 500;
+  position: relative;
+}
+.district-select-container .result-wrapper .active:after {
+  background-color: var(--color-primary-1);
+  border-radius: 0.04rem;
+  bottom: 0;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.district-select-container .district-scroll-area {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 6rem;
+}
+.district-select-container .district-scroll-area .popular-cities-title {
+  color: var(--text-color-3);
+  font-size: 500;
+  padding: 0.426667rem 0;
+  text-align: left;
+}
+.district-select-container .district-scroll-area .popular-cities-grid {
+  -webkit-box-pack: justify;
+  grid-row-gap: 0.213333rem;
+  grid-column-gap: 0.266667rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin-right: 1.6rem;
+  padding-bottom: 0.266667rem;
+}
+.district-select-container
+  .district-scroll-area
+  .popular-cities-grid
+  .city-name {
+  border: 0.013333rem solid var(--border-color-1);
+  border-radius: 0.133333rem;
+  color: var(--text-color-1);
+  font-size: 0.373333rem;
+  line-height: 2;
+  text-align: center;
+}
+.district-select-container .district-scroll-area .district-wrapper {
+  font-size: 0.373333rem;
+  padding: 0.266667rem 1.6rem 0.266667rem 0;
+}
+.district-select-container
+  .district-scroll-area
+  .district-wrapper
+  .initial-wrap {
+  color: var(--text-color-3);
+  margin-right: 0.613333rem;
+  width: 0.533333rem;
+}
+.district-select-container
+  .district-scroll-area
+  .district-wrapper
+  .district-item {
+  color: var(--text-color-1);
+  padding: 0 0 0.266667rem;
+  text-align: left;
+}
+.district-select-container .initials-sidebar {
+  background-color: var(--border-color-1);
+  border-radius: 0.266667rem;
+  color: var(--text-color-3);
+  font-size: 0.266667rem;
+  padding: 0.266667rem 0;
+  position: absolute;
+  right: 0.8rem;
+  top: 1.333333rem;
+  z-index: 99;
+}
+.district-select-container .initials-sidebar-item {
+  padding: 0.133333rem;
+}
+.isUnSubmitable .st-action-sheet-confirm {
+  color: var(--text-color-5) !important;
+}

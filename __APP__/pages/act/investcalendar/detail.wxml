@@ -1,0 +1,82 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div container" wx:if="{{b}}">
+  <mp-privacy-dialog bind:__l="__l" uI="4ebcf0b6-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="4ebcf0b6-1"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></stock-privacy-dialog>
+  <view class="{{['_div','bg-color',e]}}">
+    <image alt="" class="_img bg-img" src="{{d}}"></image>
+  </view>
+  <view class="_div header" style="{{'height:'+j}}">
+    <image
+      alt=""
+      bindtap="{{g}}"
+      class="_img back-img"
+      src="https://st.gtimg.com/design/991b212761f9c9fc190571a46b29a3c4.png"
+      style="{{'top:'+f}}"
+    ></image>
+    <view class="_div title" style="{{'top:'+i}}">{{h}}</view>
+  </view>
+  <view class="_div detail" style="{{'padding-top:'+s}}">
+    <view class="_div info">
+      <view class="_div logo">{{k}}</view>
+      <view class="_div creater">{{l}}创建 · {{m}}人已订阅</view>
+    </view>
+    <view class="_div description">{{n}}</view>
+    <scroll-view bindscroll="{{r}}" class="list" scrollY="true" wx:if="{{o}}">
+      <view class="_div content-wrap">
+        <view
+          bindtap="{{item.h}}"
+          class="_div list-item"
+          wx:for="{{p}}"
+          wx:key="g"
+        >
+          <view class="{{['_div','content',item.f&&'last']}}">
+            <view class="_div title">
+              <label class="{{['_span','title-color',q]}}"></label>
+              <label class="_span title-val">{{item.a}}</label>
+            </view>
+            <view class="_div subtitle">
+              <label class="_span date">{{item.b}}</label>
+              <label class="_span line"></label>
+              <label class="_span week">{{item.c}}</label>
+              <label class="_span line"></label>
+              <label class="_span time">{{item.d}}</label>
+            </view>
+            <view class="_div frequency">{{item.e}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <view class="_div empty-tip" wx:else>
+      <image
+        alt=""
+        class="_img tip-img"
+        src="https://st.gtimg.com/design/726d2749cf5d991271715e48a1809f8c.png"
+      ></image>
+      <view class="_div tip-text">暂无提醒事件，待创建者补充</view>
+    </view>
+  </view>
+  <view class="_div bottom">
+    <button bindtap="{{t}}" class="left" openType="share" plain="true">
+      <image
+        alt=""
+        class="_img share-img"
+        src="https://st.gtimg.com/design/eda3fd17f4d6cb9e59c7d93a5c37ab95.png"
+      ></image>
+      <label class="_span share-val">分享</label>
+    </button>
+    <view bindtap="{{x}}" class="{{['_div','right',w]}}">{{v}}</view>
+  </view>
+  <subscribe-guide
+    bind:__l="__l"
+    bindclose="{{y}}"
+    bindsetting="{{z}}"
+    uI="4ebcf0b6-2"
+    uP="{{A}}"
+    wx:if="{{A}}"
+  ></subscribe-guide>
+</view>

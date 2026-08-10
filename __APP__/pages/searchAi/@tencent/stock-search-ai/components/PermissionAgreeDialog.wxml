@@ -1,0 +1,66 @@
+<view class="{{['_div','data-v-4a8f2447',q,r]}}">
+  <view
+    class="{{['_div','data-v-4a8f2447','dialog-backdrop',b]}}"
+    wx:if="{{a}}"
+  ></view>
+  <view class="{{['_div','data-v-4a8f2447','dialog-body',p]}}" wx:if="{{c}}">
+    <view class="_div permission-title data-v-4a8f2447">服务协议</view>
+    <view class="_div permission-content data-v-4a8f2447"
+      >本服务基于腾讯混元大模型多模态算法；同时，涉及对DeepSeek开源大模型的提供与使用。本服务提供的内容仅供参考，无法保证绝对的准确性或完整，亦不能替代领域专业人员向您提供解答，如有投资者据此操作，风险自担，腾讯自选股对此不承担任何责任。</view
+    >
+    <view class="_div divider-line data-v-4a8f2447"></view>
+    <view class="_div permission-sub-content data-v-4a8f2447"
+      >腾讯混元大模型多模态算法备案编号：</view
+    >
+    <view class="_div permission-beian-text data-v-4a8f2447">
+      <label bindtap="{{d}}" class="_span permission-beian-link data-v-4a8f2447"
+        >网信算备440305295988701240155号</label
+      >
+    </view>
+    <view class="_div permission-agree-line data-v-4a8f2447">
+      <view class="_div permission-agree-pop data-v-4a8f2447" wx:if="{{e}}">
+        <view
+          class="{{['_div','permission-agree-pop-text-line','data-v-4a8f2447',h]}}"
+        >
+          <view class="_div text data-v-4a8f2447">请先阅读并同意协议</view>
+          <image
+            catchtap="{{g}}"
+            class="_img permission-agree-pop-close-icon data-v-4a8f2447"
+            src="{{f}}"
+          ></image>
+        </view>
+        <view class="_div permission-agree-pop-arrow data-v-4a8f2447"></view>
+      </view>
+      <view class="_div permission-agree-line-inner data-v-4a8f2447">
+        <image
+          catchtap="{{j}}"
+          class="_img select_icon data-v-4a8f2447"
+          mode="widthFix"
+          ref="agreeBtnImage"
+          src="{{i}}"
+        ></image>
+        <view
+          catchtap="{{m}}"
+          class="_div permission-agree-text data-v-4a8f2447"
+          >我已知悉、同意授权和签署<label
+            catchtap="{{l}}"
+            class="_span permission-agree-link data-v-4a8f2447"
+            >{{k}}</label
+          >
+        </view>
+      </view>
+    </view>
+    <view class="_div permission-btn-line data-v-4a8f2447">
+      <view
+        catchtap="{{n}}"
+        class="_div permission-btn-item permission-btn-item-left data-v-4a8f2447"
+        >不同意</view
+      >
+      <view
+        catchtap="{{o}}"
+        class="_div permission-btn-item permission-btn-item-right data-v-4a8f2447"
+        >同意</view
+      >
+    </view>
+  </view>
+</view>

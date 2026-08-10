@@ -1,0 +1,68 @@
+<view
+  class="{{['_div','area-select-container','layout','layout-align-space-between','layout-align-center-center','data-v-80c624a0',w]}}"
+>
+  <view class="_div as-row data-v-80c624a0">
+    <view class="_div as-col head-content data-v-80c624a0">
+      <label class="_span as-item-title data-v-80c624a0">区间涨幅</label>
+      <label class="{{['_span','data-v-80c624a0','as-item-content',b]}}"
+        >{{a}}</label
+      >
+      <label class="_span as-item-after data-v-80c624a0">（{{c}}）</label>
+    </view>
+    <view catchtap="{{d}}" class="_div as-col close-content data-v-80c624a0">
+      <image
+        class="_img btn-close data-v-80c624a0"
+        src="https://st.gtimg.com/design/5f974828bcad5ff05484543acbaf23b0.png"
+      ></image>
+    </view>
+  </view>
+  <view class="_div as-row data-v-80c624a0">
+    <view class="_div as-col data-v-80c624a0">
+      <view class="_div time-span data-v-80c624a0">{{e}}～{{f}}</view>
+    </view>
+  </view>
+  <view class="_div as-row data-v-80c624a0">
+    <view class="_div as-col item-content data-v-80c624a0">
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">起始价</label>
+        <label class="{{['_span','data-v-80c624a0','as-item-val',h]}}"
+          >{{g}}</label
+        >
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">最高价</label>
+        <label class="{{['_span','data-v-80c624a0','as-item-val',j,k]}}"
+          >{{i}}</label
+        >
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">成交量</label>
+        <label class="_span as-item-val data-v-80c624a0">{{l}}</label>
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">终止价</label>
+        <label class="{{['_span','data-v-80c624a0','as-item-val',n,o]}}"
+          >{{m}}</label
+        >
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">最低价</label>
+        <label class="{{['_span','data-v-80c624a0','as-item-val',q,r]}}"
+          >{{p}}</label
+        >
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">成交额</label>
+        <label class="_span as-item-val data-v-80c624a0">{{s}}</label>
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">换手率</label>
+        <label class="_span as-item-val data-v-80c624a0">{{t}}</label>
+      </view>
+      <view class="_div as-item data-v-80c624a0">
+        <label class="_span data-v-80c624a0">振   幅</label>
+        <label class="_span as-item-val data-v-80c624a0">{{v}}</label>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="{{['_div','live-common-guide-bar',f,g]}}">
+  <view class="_div common-guide-bar">
+    <view class="_div bg"></view>
+    <view class="_div common-guide-desc">
+      <label class="_span common-guide-tips">{{a}}</label>
+      <label catchtap="{{c}}" class="_span goto-common-guide">{{b}}</label>
+      <image class="_img common-guide-indocator" src="{{d}}"></image>
+    </view>
+    <view catchtap="{{e}}" class="_div close-common-guide"></view>
+  </view>
+</view>

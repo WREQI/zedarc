@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "information": "./@tencent/stock-information-page/pages/information/mp",
+    "comment-panel": "./@tencent/stock-information-page/components/commentPanel",
+    "privacy-policy-modal": "../indexSbg/@tencent/wzq-privacy-policy-modal/ClassicPrivacyPolicyModal",
+    "half-editor": "../halfScreenEditor/@tencent/stock-halfscreen-editor/components/halfscreen-editor"
+  },
+  "componentPlaceholder": {
+    "privacy-policy-modal": "view",
+    "half-editor": "view"
+  }
+}

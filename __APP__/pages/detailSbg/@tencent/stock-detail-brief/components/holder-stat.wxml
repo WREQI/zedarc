@@ -1,0 +1,58 @@
+<view
+  class="_div brief-block gdtj-block data-v-e143f6bb"
+  ref="holderStat"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{c}}" class="_div title-wrapper theme-color data-v-e143f6bb">
+    <label class="_span data-v-e143f6bb">
+      <label class="_span theme-color data-v-e143f6bb">股东统计</label>
+    </label>
+    <label class="_span date-list-wrapper data-v-e143f6bb">
+      <label class="_span data-v-e143f6bb">{{b}} 更新</label>
+      <image
+        class="_img img-arrow data-v-e143f6bb"
+        src="https://st.gtimg.com/design/45621748748f4e014c25a75a66a4572d.png"
+      ></image>
+    </label>
+  </view>
+  <view class="_div item-sub-tab-zxg data-v-e143f6bb" wx:if="{{d}}">
+    <view
+      catchtap="{{item.d}}"
+      class="{{['_div','data-v-e143f6bb','sub-tab',item.b,f]}}"
+      wx:for="{{e}}"
+      wx:key="c"
+    >
+      <view class="_div t-text data-v-e143f6bb">{{item.a}}</view>
+    </view>
+  </view>
+  <view
+    class="_div list-item list-item-color list-item-business data-v-e143f6bb"
+  >
+    <view class="_div list-item-div list-item-business-div data-v-e143f6bb"
+      >{{g}}</view
+    >
+    <view
+      class="_div list-item-div list-item-business-div text-right data-v-e143f6bb"
+      >持股数 (股)</view
+    >
+    <view class="_div list-item-div list-item-business-div data-v-e143f6bb"
+      >占比</view
+    >
+  </view>
+  <view
+    class="_div list-item list-item-business theme-color data-v-e143f6bb"
+    wx:for="{{h}}"
+    wx:key="d"
+  >
+    <view class="_div list-item-div list-item-business-div data-v-e143f6bb"
+      >{{item.a}}</view
+    >
+    <view
+      class="_div list-item-div list-item-business-div text-right data-v-e143f6bb"
+      >{{item.b}}</view
+    >
+    <view class="_div list-item-div list-item-business-div data-v-e143f6bb"
+      >{{item.c}}</view
+    >
+  </view>
+</view>

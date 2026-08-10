@@ -1,0 +1,42 @@
+<view class="data-v-ff45f1ab">
+  <overlay
+    bind:__l="__l"
+    class="data-v-ff45f1ab"
+    uI="ff45f1ab-0"
+    uP="{{e}}"
+    uS="{{['d']}}"
+    wx:if="{{a}}"
+  >
+    <view bindtap="{{d}}" class="subscribe_container data-v-ff45f1ab">
+      <view bindtap="{{b}}" class="close-subscribe-btn data-v-ff45f1ab"></view>
+      <image
+        showMenuByLongpress
+        class="subscribe-qrcode-png data-v-ff45f1ab"
+        ref="qrcodeImg"
+        src="{{c}}"
+      ></image>
+    </view>
+  </overlay>
+  <popup
+    bind:__l="__l"
+    class="data-v-ff45f1ab"
+    uI="ff45f1ab-1"
+    uP="{{i||''}}"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view
+      class="subscribe-container data-v-ff45f1ab"
+      name="st-action-sheet-move"
+    >
+      <view catchtap="{{h}}" class="data-v-ff45f1ab">
+        <label bindtap="{{f}}" class="icon icon-close data-v-ff45f1ab"></label>
+        <image
+          showMenuByLongpress
+          class="qrcode-img data-v-ff45f1ab"
+          src="{{g}}"
+        ></image>
+      </view>
+    </view>
+  </popup>
+</view>

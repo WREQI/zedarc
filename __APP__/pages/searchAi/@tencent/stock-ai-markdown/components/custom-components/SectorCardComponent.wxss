@@ -1,0 +1,104 @@
+.sector-card-wrapper.data-v-2412d0ec {
+  align-items: center;
+  background-color: #f5f6fa;
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.6666666666666666rem;
+  margin-bottom: 0.32rem;
+  padding: 0.17333333333333334rem 0.32rem;
+  position: relative;
+}
+.sector-card__content.data-v-2412d0ec {
+  flex-direction: column;
+  gap: 0.21333333333333335rem;
+  min-height: 1.3333333333333333rem;
+}
+.sector-card__content.data-v-2412d0ec,
+.sector-card__header.data-v-2412d0ec {
+  display: -webkit-flex;
+  display: flex;
+  max-width: 5.786666666666667rem;
+  width: 100%;
+}
+.sector-card__header.data-v-2412d0ec {
+  align-items: center;
+  flex-direction: row;
+  gap: 0.32rem;
+  min-height: 0.64rem;
+}
+.sector-card__title.data-v-2412d0ec {
+  color: #262e40;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  line-height: 0.64rem;
+  max-width: 2.6666666666666665rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.version-tag.data-v-2412d0ec {
+  background-color: #ff9800;
+  border-radius: 0.05333333333333334rem;
+  color: #fff;
+  flex-shrink: 0;
+  font-size: 0.24rem;
+  font-weight: 400;
+  padding: 0.02666666666666667rem 0.10666666666666667rem;
+}
+.sector-card__stats.data-v-2412d0ec {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  gap: 0.13333333333333333rem;
+  max-width: 5.786666666666667rem;
+  min-height: 0.48rem;
+  width: 100%;
+}
+.sector-card__performance.data-v-2412d0ec {
+  color: #475166;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.48rem;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.sector-card__chart.data-v-2412d0ec {
+  position: relative;
+}
+.sector-card__chart .stock-type.data-v-2412d0ec,
+.sector-card__chart.data-v-2412d0ec {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.6266666666666667rem;
+  justify-content: center;
+  width: 1.6266666666666667rem;
+}
+.sector-card__chart .stock-type.data-v-2412d0ec {
+  margin-right: 0.37333333333333335rem;
+}
+.sector-card__chart .stock-type.logo.data-v-2412d0ec {
+  height: 1.1733333333333333rem;
+  margin: 0 0.7733333333333333rem 0 0.24rem;
+  width: 1.1733333333333333rem;
+}
+.sector-card__chart .stock-type.first-name.data-v-2412d0ec {
+  background: #f5f6fa;
+  border-radius: 1.3333333333333333rem;
+  color: #e63535;
+  font-size: 0.5333333333333333rem;
+  font-weight: 500;
+}
+.text-rise.data-v-2412d0ec {
+  color: #e63535;
+}
+.text-drop.data-v-2412d0ec {
+  color: #1caa3c;
+}
+.text-peace.data-v-2412d0ec {
+  color: #7a8499;
+}

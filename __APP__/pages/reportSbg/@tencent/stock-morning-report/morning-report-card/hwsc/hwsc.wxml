@@ -1,0 +1,42 @@
+<view class="_div hwsc-wrapper data-v-ca3f82b3">
+  <card-header
+    bind:__l="__l"
+    class="data-v-ca3f82b3"
+    uI="ca3f82b3-0"
+    uP="{{a}}"
+    wx:if="{{a}}"
+  ></card-header>
+  <view class="_div hwsc-content data-v-ca3f82b3">
+    <view class="_div hwsc-item data-v-ca3f82b3">
+      <view
+        catchtap="{{e}}"
+        class="{{['_div','data-v-ca3f82b3','jg-content','with-image']}}"
+        hoverClass="onLongTouch"
+      >
+        <label class="_span data-v-ca3f82b3">
+          <label class="_span name data-v-ca3f82b3" wx:if="{{b}}">{{c}}：</label
+          >{{d}}<label
+            class="_span data-v-ca3f82b3"
+            style="{{'color:'+'#4774B3'}}"
+            >查看详情</label
+          >
+        </label>
+      </view>
+    </view>
+    <quote
+      bind:__l="__l"
+      bindwzqKeepPos="{{f}}"
+      class="data-v-ca3f82b3"
+      uI="ca3f82b3-1"
+      uP="{{g}}"
+      wx:if="{{g}}"
+    ></quote>
+  </view>
+  <image-link-item
+    bind:__l="__l"
+    class="data-v-ca3f82b3"
+    uI="ca3f82b3-2"
+    uP="{{i}}"
+    wx:if="{{h}}"
+  ></image-link-item>
+</view>

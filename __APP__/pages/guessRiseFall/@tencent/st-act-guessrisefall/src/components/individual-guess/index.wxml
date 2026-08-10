@@ -1,0 +1,69 @@
+<view class="_div individual-guess data-v-6883fbf4" wx:if="{{a}}">
+  <view class="_div individual-guess__card data-v-6883fbf4">
+    <view class="_div individual-guess__header data-v-6883fbf4">
+      <view class="_div individual-guess__title data-v-6883fbf4"
+        >来猜猜这些股票<label
+          class="_span individual-guess__rise data-v-6883fbf4"
+          >涨</label
+        >还是<label class="_span individual-guess__fall data-v-6883fbf4"
+          >跌</label
+        >？</view
+      >
+      <view class="_div individual-guess__refresh data-v-6883fbf4">
+        <label
+          bindtap="{{b}}"
+          class="_span individual-guess__refresh-text data-v-6883fbf4"
+          >换一批</label
+        >
+        <image
+          alt=""
+          bindtap="{{d}}"
+          class="individual-guess__refresh-icon data-v-6883fbf4"
+          src="https://st.gtimg.com/design/238ae919301ea505c2daaa1a11d39c1f.png"
+          wx:if="{{c}}"
+        ></image>
+        <image
+          alt=""
+          bindtap="{{e}}"
+          class="_img individual-guess__refresh-icon data-v-6883fbf4"
+          src="https://st.gtimg.com/design/238ae919301ea505c2daaa1a11d39c1f.png"
+          wx:else
+        ></image>
+      </view>
+    </view>
+    <view class="_div individual-guess__list data-v-6883fbf4">
+      <view
+        class="_div individual-guess__stock data-v-6883fbf4"
+        wx:for="{{f}}"
+        wx:key="e"
+      >
+        <view class="_div individual-guess__stock-info data-v-6883fbf4">
+          <label class="_span individual-guess__stock-name data-v-6883fbf4"
+            >{{item.a}}</label
+          >
+          <label
+            class="{{['_span','individual-guess__stock-change','data-v-6883fbf4',item.c]}}"
+            >{{item.b}}%</label
+          >
+        </view>
+        <button
+          bindtap="{{item.d}}"
+          class="individual-guess__guess-btn data-v-6883fbf4"
+        >
+          去竞猜
+        </button>
+      </view>
+    </view>
+    <view class="_div individual-guess__footer data-v-6883fbf4">
+      <label
+        bindtap="{{g}}"
+        class="_span individual-guess__record-link data-v-6883fbf4"
+        >查看我的个股竞猜记录</label
+      >
+      <view
+        bindtap="{{h}}"
+        class="_div individual-guess__arrow data-v-6883fbf4"
+      ></view>
+    </view>
+  </view>
+</view>

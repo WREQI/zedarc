@@ -1,0 +1,37 @@
+<view
+  class="{{['_div','recommend-wrap','data-v-cd183096',c&&'mpwzq',d&&'recommend-wrap-need-martop']}}"
+  ref="recommendWrap"
+  wx:if="{{a}}"
+>
+  <view class="_div content-group data-v-cd183096" wx:for="{{b}}" wx:key="r">
+    <ai-column
+      bind:__l="__l"
+      bindaddStock="{{item.d}}"
+      bindcolumnStatus="{{item.c}}"
+      bindupdateHeight="{{item.b}}"
+      bindviewStock="{{item.e}}"
+      class="data-v-cd183096"
+      uI="{{item.f}}"
+      uP="{{item.g}}"
+      wx:if="{{item.a}}"
+    ></ai-column>
+    <stock-column
+      bind:__l="__l"
+      bindaddStock="{{item.j}}"
+      bindcolumnStatus="{{item.i}}"
+      bindviewStock="{{item.k}}"
+      class="data-v-cd183096"
+      uI="{{item.l}}"
+      uP="{{item.m}}"
+      wx:elif="{{item.h}}"
+    ></stock-column>
+    <mock-column
+      bind:__l="__l"
+      bindcolumnStatus="{{item.o}}"
+      class="data-v-cd183096"
+      uI="{{item.p}}"
+      uP="{{item.q}}"
+      wx:elif="{{item.n}}"
+    ></mock-column>
+  </view>
+</view>

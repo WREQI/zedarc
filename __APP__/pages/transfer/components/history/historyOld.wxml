@@ -1,0 +1,49 @@
+<scroll-view
+  bindscroll="{{e}}"
+  scrollY="true"
+  style="height: 100vh"
+  wx:if="{{a}}"
+>
+  <loading
+    bind:__l="__l"
+    class="flex-center py-30 loading"
+    uI="705c0dd4-0"
+    uP="{{c}}"
+    wx:if="{{b}}"
+  ></loading>
+  <view class="list-group" wx:for="{{d}}" wx:for-item="group" wx:key="f">
+    <view bindtap="{{group.c}}" class="flex-between border--bottom group-title">
+      <label class="text-color-1">{{group.a}}</label>
+      <label class="{{['icon','text-color-3',group.b]}}"></label>
+    </view>
+    <view class="group-body" hidden="{{!group.e}}">
+      <view
+        bindtap="{{item.j}}"
+        data-item="{{item.i}}"
+        wx:for="{{group.d}}"
+        wx:key="h"
+      >
+        <view class="records-item flex-between border--bottom">
+          <view class="flex-1">
+            <view>
+              <label class="text-color-1">{{item.a}}</label>
+              <label class="transfering" wx:if="{{item.b}}"></label>
+            </view>
+            <label class="gray text-color-4">{{item.c}}</label>
+          </view>
+          <view class="flex-1 align-r">
+            <view class="{{['money',item.e]}}">{{item.d}}</view>
+            <view class="figure blue" wx:if="{{item.f}}">
+              <label class="figure-text">等待处理</label>
+              <label class="figure-icon icon icon-arrow-right"></label>
+            </view>
+            <view class="figure gray text-color-4" wx:if="{{item.g}}">
+              <label class="figure-text">已取消</label>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<empty bind:__l="__l" uI="705c0dd4-1" uP="{{f||''}}" wx:else></empty>

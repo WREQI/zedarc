@@ -1,0 +1,70 @@
+<mp-dialog
+  bind:__l="__l"
+  uI="3dcc0b64-0"
+  uP="{{i}}"
+  uS="{{['btns','d']}}"
+  wx:if="{{i}}"
+>
+  <view class="mp-dialog__message align-l" wx:if="{{a}}"
+    >休市后，当天交易时间内的未成交委托单将自动失效。冻结的资金或股票将在券商清算完成后（一般在晚上9点后）自动返还至证券账户。</view
+  >
+  <block wx:if="{{b}}">
+    <view class="mp-dialog__message align-l" wx:if="{{c}}">
+      <view class="explain-text"
+        >1、沪市股东卡未指定：你已在其他券商开满3个沪市股东卡，需联系券商客服办理指定</view
+      >
+      <view class="explain-text"
+        >2、股东卡注销：你当前券商账户绑定的股东卡已注销，需联系券商绑定正常的股东卡</view
+      >
+      <view class="explain-text"
+        >3、价格不符合规则：买入价不可超过涨停价、实时卖1价+2%或+0.1，卖出价不可低于跌停价、实时买1价-2%或-0.1</view
+      >
+      <view class="explain-figure"
+        >如需查询具体原因和办理业务可拨打电话联系券商客服</view
+      >
+    </view>
+    <view class="mp-dialog__message align-l" wx:else>
+      <view class="explain-text"
+        >1、港股交易时间问题：委托买卖和撤单需要在指定的交易时间段内</view
+      >
+      <view class="explain-text"
+        >2、港股委托订单类型和交易时间不匹配：如港股市场集合竞价期间只能使用竞价限价盘，连续竞价期间只能使用增强限价盘，碎股卖出需要使用碎股盘交易</view
+      >
+      <view class="explain-text"
+        >3、港股委托价格问题：不符合港股最小委托价格单位，或委托价格超过上下限（连续竞价时段买入委托价需小于卖一价加9个单位且大于买一价减24个单位，卖出委托价需小于卖一价加24个单位且大于买一价减9个单位）</view
+      >
+      <view class="explain-text"
+        >4、港股委托数量问题：不符合港股最小委托数量单位</view
+      >
+      <view class="explain-figure"
+        >如需查询具体原因和办理业务可拨打电话联系券商客服</view
+      >
+    </view>
+  </block>
+  <view class="mp-dialog__message" wx:if="{{d}}"
+    >担保证券划转于下一个交易日可在划入的账户中显示。</view
+  >
+  <view class="flex" slot="btns" style="width: 100%">
+    <block wx:if="{{e}}">
+      <button
+        bindtap="{{f}}"
+        class="mp-dialog__button mp-dialog__cancel border--right flex-1"
+      >
+        我知道了
+      </button>
+      <button
+        bindtap="{{g}}"
+        class="mp-dialog__button mp-dialog__confirm active flex-1"
+      >
+        联系客服
+      </button>
+    </block>
+    <button
+      bindtap="{{h}}"
+      class="mp-dialog__button mp-dialog__confirm active flex-1"
+      wx:else
+    >
+      我知道了
+    </button>
+  </view>
+</mp-dialog>

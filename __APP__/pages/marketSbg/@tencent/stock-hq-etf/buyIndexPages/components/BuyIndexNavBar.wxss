@@ -1,0 +1,50 @@
+.etf-buy-index__nav.data-v-029c1939 {
+  font-family: stockFont, -apple-system, BlinkMacSystemFont, Roboto, PingFang SC,
+    Hiragino Sans GB, Source Han Sans CN, sans-serif;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 90;
+}
+.etf-buy-index__nav-title-layer.data-v-029c1939 {
+  background: var(--fill-content-layer);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.etf-buy-index__nav-safe-area.data-v-029c1939 {
+  width: 100%;
+}
+.etf-buy-index__nav-content.data-v-029c1939 {
+  align-items: center;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.etf-buy-index__nav-title.data-v-029c1939 {
+  color: var(--color-heavygray);
+  font-size: 0.4533333333333333rem;
+  line-height: 1.2;
+  max-width: 4.8rem;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.etf-buy-index__nav-back.data-v-029c1939 {
+  box-sizing: initial;
+  height: 0.64rem;
+  left: 0;
+  padding: 0.16rem;
+  pointer-events: auto;
+  position: fixed;
+  width: 0.64rem;
+  z-index: 91;
+}

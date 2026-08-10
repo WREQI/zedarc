@@ -1,0 +1,18 @@
+<view class="pre-review-modify-card data-v-6d218fcb" wx:if="{{a}}">
+  <view class="pre-review-modify-card__title data-v-6d218fcb">{{b}}项修改</view>
+  <view class="pre-review-modify-card__tips data-v-6d218fcb">
+    <view
+      class="pre-review-modify-card__tip data-v-6d218fcb"
+      wx:for="{{c}}"
+      wx:for-item="tip"
+      wx:key="b"
+      >• {{tip.a}}</view
+    >
+  </view>
+  <id-card-photo-swiper
+    bind:__l="__l"
+    class="pre-review-modify-card__photos data-v-6d218fcb"
+    uI="6d218fcb-0"
+    wx:if="{{d}}"
+  ></id-card-photo-swiper>
+</view>

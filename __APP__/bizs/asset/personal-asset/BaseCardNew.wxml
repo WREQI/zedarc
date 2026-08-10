@@ -1,0 +1,34 @@
+<view bindtap="{{n}}" class="{{['container','data-v-6468cbeb',l,m]}}">
+  <view class="more-btn data-v-6468cbeb" wx:if="{{a}}">
+    <view catchtap="{{b}}" class="text data-v-6468cbeb">查看全部</view>
+    <image
+      class="arrow data-v-6468cbeb"
+      src="https://st.gtimg.com/design/911884d1ce3c43dd562fce90ec26a11a.svg"
+    ></image>
+  </view>
+  <view class="broker-info data-v-6468cbeb">
+    <view class="{{['broker-logo','data-v-6468cbeb',c]}}"></view>
+    <view class="broker-name-wrap data-v-6468cbeb">
+      <view class="broker-name data-v-6468cbeb">
+        <view class="broker-name-text data-v-6468cbeb">{{d}}</view>
+        <view class="broker-name-text data-v-6468cbeb" wx:if="{{e}}"
+          >{{f}}</view
+        >
+        <view class="margin-tag flex-center data-v-6468cbeb" wx:if="{{g}}"
+          >融</view
+        >
+        <slot name="eye"></slot>
+      </view>
+      <view class="account-text-cur data-v-6468cbeb" wx:if="{{h}}"
+        >当前交易券商</view
+      >
+      <view class="account-text data-v-6468cbeb" wx:else>{{i}}：{{j}}</view>
+    </view>
+  </view>
+  <view class="broker-trade-tag data-v-6468cbeb" wx:if="{{k}}"
+    >当前交易券商</view
+  >
+  <view class="content-wrap data-v-6468cbeb">
+    <slot name="footer"></slot>
+  </view>
+</view>

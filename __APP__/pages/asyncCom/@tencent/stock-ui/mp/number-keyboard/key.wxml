@@ -1,0 +1,19 @@
+<view class="_div">
+  <view catchtap="{{l}}" class="{{['_div','st-key',k]}}">
+    <block wx:if="{{a}}">
+      <block wx:if="{{b}}">{{c}}</block>
+      <label class="_span icon icon-delet st-key__delete-icon" wx:else></label>
+    </block>
+    <block wx:if="{{d}}">
+      <block wx:if="{{e}}">{{f}}</block>
+      <label class="_span icon icon-delet st-key__delete-icon" wx:else></label>
+    </block>
+    <label
+      class="_span icon icon-keyborad st-key__collapse-icon"
+      wx:elif="{{g}}"
+    ></label>
+    <label class="_span icon icon-minus" wx:elif="{{h}}"></label>
+    <label class="_span icon icon-plus" wx:elif="{{i}}"></label>
+    <block wx:else>{{j}}</block>
+  </view>
+</view>

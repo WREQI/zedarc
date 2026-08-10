@@ -1,0 +1,47 @@
+<view class="password-component--bank-wrap">
+  <popup
+    bind:__l="__l"
+    bindclickOverlay="{{r}}"
+    uI="9466ed76-0"
+    uP="{{s}}"
+    uS="{{['d']}}"
+    wx:if="{{s}}"
+  >
+    <view class="{{['password-component--bank',o,p,q]}}">
+      <view class="title-wrap">
+        <view bindtap="{{b}}" class="{{a}}"></view>
+        <view class="title-wrap-center" wx:if="{{c}}">
+          <view class="bank-logo">
+            <bank-logo
+              bind:__l="__l"
+              class="server-bank-logo"
+              uI="9466ed76-1,9466ed76-0"
+              uP="{{d}}"
+              wx:if="{{d}}"
+            ></bank-logo>
+          </view>
+          <view class="bank-name">{{e}} {{f}}</view>
+        </view>
+        <view>
+          <view bindtap="{{h}}" class="close-bg" wx:if="{{g}}"></view>
+        </view>
+      </view>
+      <view class="content-wrap">请输入{{i}}</view>
+      <st-password-input
+        bind:__l="__l"
+        bindcomplete="{{j}}"
+        uI="9466ed76-2,9466ed76-0"
+        uP="{{k}}"
+        wx:if="{{k}}"
+      ></st-password-input>
+      <st-number-keyboard
+        bind:__l="__l"
+        binddelete="{{m}}"
+        bindinput="{{l}}"
+        uI="9466ed76-3,9466ed76-0"
+        uP="{{n}}"
+        wx:if="{{n}}"
+      ></st-number-keyboard>
+    </view>
+  </popup>
+</view>

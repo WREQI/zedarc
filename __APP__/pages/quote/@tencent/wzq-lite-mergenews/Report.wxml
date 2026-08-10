@@ -1,0 +1,48 @@
+<view class="{{['_div','mod-notices-zxg','data-v-e2794850',g]}}">
+  <inverse-rate
+    bind:__l="__l"
+    class="data-v-e2794850"
+    uI="e2794850-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></inverse-rate>
+  <view class="_div report-title data-v-e2794850" wx:if="{{c}}">研报/路演</view>
+  <view class="_ul notices-list data-v-e2794850" wx:if="{{d}}">
+    <view class="_div auto-test data-v-e2794850">report-list</view>
+    <view
+      catchtap="{{item.j}}"
+      class="_li list-li data-v-e2794850"
+      wx:for="{{e}}"
+      wx:key="i"
+    >
+      <view class="_p notices-title data-v-e2794850">{{item.a}}</view>
+      <view class="_p source-info data-v-e2794850">
+        <label
+          class="_span live-icon data-v-e2794850"
+          wx:if="{{item.b}}"
+        ></label>
+        <label class="_span video-tag data-v-e2794850" wx:if="{{item.c}}"
+          >直播</label
+        >
+        <label class="_span type-tag data-v-e2794850" wx:if="{{item.d}}"
+          >{{item.e}}</label
+        >
+        <label class="_span data-v-e2794850">{{item.f}}</label>
+        <label class="_span translate data-v-e2794850" wx:if="{{item.g}}"
+          >译</label
+        >
+        <label class="_span time-right data-v-e2794850">{{item.h}}</label>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-e2794850"
+    uI="e2794850-1"
+    uS="{{['d']}}"
+    wx:if="{{f}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无研报数据</block>
+  </no-data>
+</view>

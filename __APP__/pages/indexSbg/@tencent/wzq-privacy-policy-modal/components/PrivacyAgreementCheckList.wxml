@@ -1,0 +1,118 @@
+<view class="{{['_div','data-v-3ff8c86f','privacy-agreement-content',v]}}">
+  <block wx:if="{{a}}">
+    <view
+      class="_div privacy-agreement-content__single-auth-desc data-v-3ff8c86f"
+    >
+      <label
+        class="_span data-v-3ff8c86f"
+        wx:for="{{b}}"
+        wx:for-item="text"
+        wx:key="b"
+        >{{text.a}}</label
+      >
+    </view>
+    <view
+      class="_div privacy-agreement-content__single-auth-links data-v-3ff8c86f"
+    >
+      <label
+        catchtap="{{protocol.c}}"
+        class="_span privacy-agreement-content__link data-v-3ff8c86f"
+        wx:for="{{c}}"
+        wx:for-item="protocol"
+        wx:key="b"
+        >《{{protocol.a}}》</label
+      >
+    </view>
+    <view
+      class="_div privacy-agreement-content__notice data-v-3ff8c86f"
+      wx:if="{{d}}"
+      >请点击“同意并继续”开始我们的服务，我们将以业界领先的信息安全技术，全力保护你的安全。
+      如你仍不同意，我们将为你提供“仅浏览”模式</view
+    >
+  </block>
+  <block wx:else>
+    <view class="_div privacy-agreement-content__desc data-v-3ff8c86f">
+      <view
+        class="_div data-v-3ff8c86f"
+        wx:for="{{e}}"
+        wx:for-item="text"
+        wx:key="b"
+        >{{text.a}}</view
+      >
+    </view>
+    <view class="_div privacy-agreement-content__list data-v-3ff8c86f">
+      <view
+        bindtap="{{l}}"
+        class="_div privacy-agreement-content__item data-v-3ff8c86f"
+        wx:if="{{f}}"
+      >
+        <view
+          catchtap="{{i}}"
+          class="_div privacy-agreement-content__bubble data-v-3ff8c86f"
+          wx:if="{{g}}"
+        >
+          <label
+            class="_span privacy-agreement-content__bubble-text data-v-3ff8c86f"
+            >需要先点选协议后才可点击同意按钮</label
+          >
+          <label
+            catchtap="{{h}}"
+            class="_span privacy-agreement-content__bubble-close data-v-3ff8c86f"
+          ></label>
+        </view>
+        <label
+          class="{{['_span','data-v-3ff8c86f','privacy-agreement-content__checkbox',j]}}"
+        ></label>
+        <view class="_div privacy-agreement-content__text data-v-3ff8c86f"
+          >我已知悉、同意授权和签署<label
+            catchtap="{{protocol.c}}"
+            class="_span privacy-agreement-content__link data-v-3ff8c86f"
+            wx:for="{{k}}"
+            wx:for-item="protocol"
+            wx:key="b"
+            >《{{protocol.a}}》</label
+          >
+        </view>
+      </view>
+      <view
+        bindtap="{{s}}"
+        class="_div privacy-agreement-content__item privacy-agreement-content__item--auth data-v-3ff8c86f"
+        wx:if="{{m}}"
+      >
+        <view
+          catchtap="{{p}}"
+          class="_div privacy-agreement-content__bubble data-v-3ff8c86f"
+          wx:if="{{n}}"
+        >
+          <label
+            class="_span privacy-agreement-content__bubble-text data-v-3ff8c86f"
+            >需要先点选协议后才可点击同意按钮</label
+          >
+          <label
+            catchtap="{{o}}"
+            class="_span privacy-agreement-content__bubble-close data-v-3ff8c86f"
+          ></label>
+        </view>
+        <label
+          class="{{['_span','data-v-3ff8c86f','privacy-agreement-content__checkbox',q]}}"
+        ></label>
+        <view class="_div privacy-agreement-content__text data-v-3ff8c86f"
+          >我已知悉、同意授权和签署<label
+            catchtap="{{protocol.c}}"
+            class="_span privacy-agreement-content__link data-v-3ff8c86f"
+            wx:for="{{r}}"
+            wx:for-item="protocol"
+            wx:key="b"
+            >《{{protocol.a}}》</label
+          >
+        </view>
+      </view>
+    </view>
+    <view
+      class="_div privacy-agreement-content__notice data-v-3ff8c86f"
+      wx:if="{{t}}"
+      >请点击“同意并继续”开始我们的服务，我们将以业界领先的信息安全技术，全力保护你的安全。
+      如你仍不同意，我们将为你提供“仅浏览”模式</view
+    >
+  </block>
+</view>

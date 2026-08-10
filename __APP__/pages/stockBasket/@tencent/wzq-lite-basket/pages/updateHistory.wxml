@@ -1,0 +1,78 @@
+<view class="_div page-container data-v-b8dc8431">
+  <view
+    bindscroll="{{p}}"
+    class="_div update-container data-v-b8dc8431"
+    id="update-container"
+    ref="containerRef"
+  >
+    <st-pull-refresh
+      bind:__l="__l"
+      bindpullDownRefresh="{{k}}"
+      class="r data-v-b8dc8431"
+      style="width: 100%"
+      uI="b8dc8431-0"
+      uR="refresh"
+      uS="{{['d']}}"
+    >
+      <view class="_div update-refresh-container data-v-b8dc8431">
+        <view
+          bindtap="{{c}}"
+          class="_div top-date-wrapper data-v-b8dc8431"
+          id="top-date-wrapper"
+          wx:if="{{a}}"
+        >
+          <view class="_div top-date-text data-v-b8dc8431">{{b}}</view>
+          <view class="_div top-date-arrow data-v-b8dc8431"></view>
+        </view>
+        <view class="_div record-container data-v-b8dc8431">
+          <view class="_div empty data-v-b8dc8431" wx:if="{{d}}">
+            <view class="_div empty-logo data-v-b8dc8431"></view>
+            <view class="_div net-error data-v-b8dc8431" wx:if="{{e}}"
+              >网络繁忙，请稍后再试</view
+            >
+            <view class="_div net-error no-data data-v-b8dc8431" wx:if="{{f}}"
+              >所选月份没有更新记录</view
+            >
+            <view
+              bindtap="{{h}}"
+              class="_div refresh-btn data-v-b8dc8431"
+              wx:if="{{g}}"
+              >点击刷新</view
+            >
+          </view>
+          <block wx:else>
+            <view class="_div data-v-b8dc8431" wx:for="{{i}}" wx:key="i">
+              <view
+                bindtap="{{item.e}}"
+                class="{{['_div','data-v-b8dc8431','date-wrapper',item.c]}}"
+                data-value="{{item.d}}"
+                wx:if="{{item.a}}"
+              >
+                <view class="_div date-text data-v-b8dc8431">{{item.b}}</view>
+                <view class="_div date-arrow data-v-b8dc8431"></view>
+              </view>
+              <update-day
+                bind:__l="__l"
+                bindtoQuote="{{item.f}}"
+                class="data-v-b8dc8431"
+                uI="{{item.g}}"
+                uP="{{item.h}}"
+                wx:if="{{item.h}}"
+              ></update-day>
+            </view>
+          </block>
+        </view>
+        <view class="_div zxg-logo data-v-b8dc8431"></view>
+      </view>
+    </st-pull-refresh>
+    <custom-picker
+      bind:__l="__l"
+      bindclose="{{n}}"
+      bindconfirm="{{m}}"
+      class="data-v-b8dc8431"
+      uI="b8dc8431-2"
+      uP="{{o}}"
+      wx:if="{{l}}"
+    ></custom-picker>
+  </view>
+</view>

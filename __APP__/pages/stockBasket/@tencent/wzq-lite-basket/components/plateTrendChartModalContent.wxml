@@ -1,0 +1,20 @@
+<view class="_div chart-tips-modal data-v-195a96d6">
+  <view class="_div data-v-195a96d6">
+    <view class="_div bold-text data-v-195a96d6">成立日</view>
+    <view class="_div normal-text data-v-195a96d6"
+      >指股单建立的日期，本股单成立时间为{{a}}。</view
+    >
+    <view class="_div normal-text data-v-195a96d6"
+      >1）股单成立时间在收盘前的，图上标记的成立日为当日；股单成立时间在收盘后的，图上标记的成立日为下一个交易日。</view
+    >
+    <view class="_div normal-text data-v-195a96d6"
+      >2）股单成立日的收益率计算，采用前复权方式下，股单内各标的成立日收盘价相对于前一交易日的收盘价的涨跌幅的算数平均值近似估计。</view
+    >
+  </view>
+  <view class="_div chart-tips-item-last data-v-195a96d6">
+    <view class="_div bold-text data-v-195a96d6">回溯期</view>
+    <view class="_div normal-text data-v-195a96d6"
+      >为方便参考，我们将成立日当天挑选的股票，向前一年的数据表现回溯展示。</view
+    >
+  </view>
+</view>

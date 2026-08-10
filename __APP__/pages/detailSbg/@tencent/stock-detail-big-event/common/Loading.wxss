@@ -1,0 +1,97 @@
+.quote-animate.data-v-43aa4bdf {
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.bg-quote-rise.data-v-43aa4bdf {
+  background-color: #fcd6d6 !important;
+}
+.bg-quote-drop.data-v-43aa4bdf {
+  background-color: #cff1d9 !important;
+}
+.red.data-v-43aa4bdf {
+  color: var(--color-red) !important;
+}
+.equal.data-v-43aa4bdf {
+  color: var(--color-gray) !important;
+}
+.green.data-v-43aa4bdf {
+  color: var(--color-green) !important;
+}
+.snp-red.data-v-43aa4bdf {
+  color: red;
+  display: inline !important;
+}
+.snp-blue.data-v-43aa4bdf {
+  color: #3077ec;
+  display: inline !important;
+}
+.news-link.data-v-43aa4bdf {
+  border-bottom: 0.04rem dashed #007aff;
+  color: #1f2126;
+  display: inline !important;
+}
+.news-text .list div span.data-v-43aa4bdf {
+  display: inline-block;
+}
+[data-theme="light"] .tap-on.data-v-43aa4bdf:active {
+  background: #e8e8e8 !important;
+}
+[data-theme="dark"] .bg-quote-rise.data-v-43aa4bdf {
+  background-color: #4b2428 !important;
+}
+[data-theme="dark"] .bg-quote-drop.data-v-43aa4bdf {
+  background-color: #2a5236 !important;
+}
+[data-theme="dark"] .red.data-v-43aa4bdf {
+  color: #e63535 !important;
+}
+[data-theme="dark"] .equal.data-v-43aa4bdf {
+  color: #a7b0c4;
+}
+[data-theme="dark"] .green.data-v-43aa4bdf {
+  color: #1caa3c !important;
+}
+.container.data-v-43aa4bdf {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  min-height: 4rem;
+  position: relative;
+  width: 100%;
+}
+[data-theme="light"] .container.data-v-43aa4bdf {
+  background: #fff;
+}
+[data-theme="dark"] .container.data-v-43aa4bdf {
+  background: #12161f;
+}
+.icon.data-v-43aa4bdf {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.7733333333333334rem;
+  width: 1.48rem;
+}
+.text.data-v-43aa4bdf {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  margin-top: 0.32rem;
+}
+[data-theme="light"] .text.data-v-43aa4bdf {
+  color: #a7b0c4;
+}
+[data-theme="dark"] .text.data-v-43aa4bdf {
+  color: #69738c;
+}
+.horizontal.data-v-43aa4bdf {
+  min-height: 1.6rem;
+}
+.horizontal .icon.data-v-43aa4bdf {
+  height: 0.5866666666666667rem;
+  margin-right: 0.24rem;
+  width: 0.49333333333333335rem;
+}
+.horizontal .text.data-v-43aa4bdf {
+  margin-top: 0;
+}

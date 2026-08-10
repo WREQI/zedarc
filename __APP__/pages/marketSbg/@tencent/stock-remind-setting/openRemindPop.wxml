@@ -1,0 +1,32 @@
+<view
+  catchtouchmove="{{j}}"
+  class="_div stock-remind-setting data-v-1c17efd7"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{b}}" class="_div pop-mask data-v-1c17efd7"></view>
+  <view class="_div pop-content-wrap data-v-1c17efd7">
+    <view class="_div nav-bar data-v-1c17efd7">
+      <label class="_span title data-v-1c17efd7">{{c}}</label>
+      <label bindtap="{{d}}" class="_span close-container data-v-1c17efd7">
+        <image
+          class="_img close-btn data-v-1c17efd7"
+          src="https://st.gtimg.com/design/f2a8543fd8a53d011af849bf437d80d5.png"
+        ></image>
+      </label>
+    </view>
+    <pre-setting-remind
+      bind:__l="__l"
+      bindgotoSettingPage="{{e}}"
+      class="data-v-1c17efd7"
+      uI="1c17efd7-0"
+      uP="{{f}}"
+      wx:if="{{f}}"
+    ></pre-setting-remind>
+    <view
+      bindtap="{{i}}"
+      class="{{['_div','data-v-1c17efd7','remind-save-btn',h]}}"
+      data-eventsync="true"
+      >{{g}}</view
+    >
+  </view>
+</view>

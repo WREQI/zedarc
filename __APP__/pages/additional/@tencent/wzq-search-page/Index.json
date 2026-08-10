@@ -1,0 +1,16 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hot-search": "./components/hotSearch",
+    "list-search": "./components/listSearch",
+    "info-list-page": "./components/info-list-page",
+    "page-footer": "./components/page-footer",
+    "tabbar": "./components/tabbar",
+    "bubble-wzqxcx": "../../../asyncCom/@tencent/st-act-premotes/src/components/Bubble/mpwzq/index",
+    "quick-search": "../../../searchAi/@tencent/stock-ai-quick-search/Index",
+    "batch": "./components/batch/Index",
+    "popup": "./components/batch/Popup",
+    "off-site-fund-auth-modal": "./components/OffSiteFundAuthModal"
+  },
+  "componentPlaceholder": { "bubble-wzqxcx": "view", "quick-search": "view" }
+}

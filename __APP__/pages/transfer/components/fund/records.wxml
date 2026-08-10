@@ -1,0 +1,151 @@
+<view class="{{['records-wrap-new',O]}}">
+  <view class="{{['records-title-wrap',i]}}">
+    <view class="choose-wrap">
+      <view bindtap="{{c}}" class="all-btn">
+        <label class="text">{{a}}</label>
+        <label class="line">|</label>
+        <image class="icon-classify" src="{{b}}"></image>
+      </view>
+    </view>
+    <view class="headers border--bottom">
+      <view class="col-1">类型/状态</view>
+      <view class="col-2">银行/卡号</view>
+      <view class="col-3">变动金额/时间</view>
+    </view>
+    <view class="month-title-wrap" wx:if="{{d}}">
+      <view bindtap="{{f}}" class="month-text"
+        >{{e}}<label class="icon icon-arrow-down"></label>
+      </view>
+      <view class="total-num" wx:if="{{g}}">共{{h}}笔</view>
+    </view>
+  </view>
+  <st-pull-and-pagination
+    bind:__l="__l"
+    bindrefresh="{{D}}"
+    bindscroll="{{B}}"
+    bindscrolltolower="{{C}}"
+    bindtopChange="{{E}}"
+    class="r"
+    uI="59be8080-0"
+    uP="{{F}}"
+    uR="transferRecord"
+    uS="{{['d']}}"
+    wx:if="{{F}}"
+  >
+    <view class="month-title-wrap pulling-month border--bottom" wx:if="{{j}}">
+      <view bindtap="{{l}}" class="month-text"
+        >{{k}}<label class="icon icon-arrow-down"></label>
+      </view>
+      <view class="total-num" wx:if="{{m}}">共{{n}}笔</view>
+    </view>
+    <loading
+      bind:__l="__l"
+      class="flex-center py-30 loading"
+      uI="59be8080-1,59be8080-0"
+      uP="{{p}}"
+      wx:if="{{o}}"
+    ></loading>
+    <view class="error-wrap" wx:elif="{{q}}">
+      <status
+        bind:__l="__l"
+        bindhandleError="{{r}}"
+        uI="59be8080-2,59be8080-0"
+        uP="{{s}}"
+        wx:if="{{s}}"
+      ></status>
+    </view>
+    <empty
+      bind:__l="__l"
+      uI="59be8080-3,59be8080-0"
+      uP="{{v}}"
+      wx:elif="{{t}}"
+    ></empty>
+    <block wx:else>
+      <view class="records-detail-wrap">
+        <view wx:for="{{w}}" wx:for-item="group" wx:key="f">
+          <view class="month-title-wrap list-group" wx:if="{{group.a}}">
+            <view bindtap="{{group.c}}" class="month-text"
+              >{{group.b}}<label class="icon icon-arrow-down"></label>
+            </view>
+            <view class="total-num">共{{group.d}}笔</view>
+          </view>
+          <view
+            bindtap="{{item.t}}"
+            class="{{['item-card',item.s&&'item-card-fail']}}"
+            data-item="{{item.r}}"
+            wx:for="{{group.e}}"
+            wx:key="q"
+          >
+            <view class="item-detail">
+              <view class="col-1">
+                <view>{{item.a}}</view>
+                <view class="desc"
+                  >{{item.b}}<label wx:if="{{item.c}}">
+                    <label class="line">|</label>{{item.d}}到账</label
+                  >
+                </view>
+              </view>
+              <view class="col-2">
+                <view class="{{['stock-name',item.f]}}">{{item.e}}</view>
+                <view class="desc">{{item.g}}</view>
+              </view>
+              <view class="col-3">
+                <view class="{{[item.m]}}">
+                  <view class="num" wx:if="{{item.h}}">{{item.i}}</view>
+                  <value-color
+                    bind:__l="__l"
+                    class="num"
+                    uI="{{item.k}}"
+                    uP="{{item.l||''}}"
+                    uS="{{['d']}}"
+                    wx:else
+                    >{{item.j}}</value-color
+                  >
+                </view>
+                <view class="desc">{{item.n}}</view>
+              </view>
+            </view>
+            <view class="sub-items-wrap" wx:if="{{item.o}}">
+              <view
+                class="sub-item"
+                wx:for="{{item.p}}"
+                wx:for-item="sub"
+                wx:key="c"
+              >
+                <view class="sub-label">{{sub.a}}</view>
+                <view class="sub-value">{{sub.b}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="error-in-scrollview" wx:if="{{x}}">
+        <status
+          bind:__l="__l"
+          bindhandleError="{{y}}"
+          uI="59be8080-5,59be8080-0"
+          uP="{{z}}"
+          wx:if="{{z}}"
+        ></status>
+      </view>
+    </block>
+  </st-pull-and-pagination>
+  <custom-picker
+    bind:__l="__l"
+    bindclose="{{H}}"
+    bindconfirm="{{I}}"
+    bindinput="{{G}}"
+    uI="59be8080-6"
+    uP="{{J}}"
+    wx:if="{{J}}"
+  ></custom-picker>
+  <reports-classify-popup
+    bind:__l="__l"
+    bindchange="{{M}}"
+    bindclose="{{L}}"
+    bindinput="{{K}}"
+    uI="59be8080-7"
+    uP="{{N}}"
+    wx:if="{{N}}"
+  ></reports-classify-popup>
+</view>

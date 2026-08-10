@@ -1,0 +1,71 @@
+<view class="{{['trade-stock-quote','data-v-81ecbd79',aj]}}">
+    <view class="smt-input flex data-v-81ecbd79" wx:if="{{a}}">
+        <view bindtap="{{d}}" class="flex flex-1 data-v-81ecbd79">
+            <input bindinput="{{c}}" class="flex-1 data-v-81ecbd79" maxlength="30" placeholder="请输入交易股票名称/代码/首字母" placeholderStyle="color: var(--text-color-4);" ref="smbinput" type="text" value="{{b}}"></input>
+        </view>
+        <label bindtap="{{f}}" class="smb-cancel data-v-81ecbd79" wx:if="{{e}}">取消</label>
+    </view>
+    <view class="quote-info-wrapper data-v-81ecbd79" wx:else>
+        <view class="info flex-between text-color-1 data-v-81ecbd79">
+            <view bindtap="{{r}}" class="flex-start data-v-81ecbd79">
+                <label class="{{['stockname','data-v-81ecbd79',h]}}">{{g}}</label>
+                <label class="stockcode text-color-3 data-v-81ecbd79">{{i}}{{j}}</label>
+                <label class="{{['market-status','data-v-81ecbd79',m]}}" wx:if="{{k}}">{{l}}</label>
+                <label class="{{['market-status','data-v-81ecbd79',p,q]}}" wx:elif="{{n}}">{{o}}</label>
+            </view>
+            <view class="flex-end flex-1 data-v-81ecbd79">
+                <view bindtap="{{s}}" class="icon-label icon icon-search data-v-81ecbd79"></view>
+                <view class="loading-wrapper flex data-v-81ecbd79">
+                    <view class="loading rotate data-v-81ecbd79" wx:if="{{t}}"></view>
+                    <view bindtap="{{v}}" class="icon-label icon icon-refresh data-v-81ecbd79" data-stat="trade.trade.refresh" wx:else></view>
+                </view>
+                <view bindtap="{{x}}" class="icon-label icon icon-all-safesetting data-v-81ecbd79" data-stat="trade.trade.setting" wx:if="{{w}}"></view>
+            </view>
+        </view>
+        <view class="stock-hq flex-vcenter flex-between data-v-81ecbd79" wx:if="{{y}}">
+            <view class="left data-v-81ecbd79">
+                <value-color bind:__l="__l" class="data-v-81ecbd79" uI="81ecbd79-0" uP="{{H}}" uS="{{['d']}}" wx:if="{{H}}">
+                    <view class="quote flex data-v-81ecbd79">
+                        <value-color bind:__l="__l" class="{{['dqj','light-equal','data-v-81ecbd79',B]}}" uI="81ecbd79-1,81ecbd79-0" uP="{{C}}" uS="{{['d']}}" wx:if="{{C}}">
+                            <label bindtap="{{A}}" class="data-v-81ecbd79">{{z}}</label>
+                        </value-color>
+                        <view class="flex flex-vcenter data-v-81ecbd79">
+                            <value-color bind:__l="__l" class="zde light-equal data-v-81ecbd79" uI="81ecbd79-2,81ecbd79-0" uP="{{E}}" uS="{{['d']}}" wx:if="{{E}}">{{D}}</value-color>
+                            <value-color bind:__l="__l" class="light-equal data-v-81ecbd79" uI="81ecbd79-3,81ecbd79-0" uP="{{G}}" uS="{{['d']}}" wx:if="{{G}}">{{F}}%</value-color>
+                        </view>
+                    </view>
+                </value-color>
+            </view>
+            <view class="right flex-between data-v-81ecbd79" wx:if="{{I}}">
+                <view class="price-upper-limit data-v-81ecbd79">
+                    <label class="text-color-2 data-v-81ecbd79">涨停</label>
+                    <label bindtap="{{K}}" class="rise tabular-nums data-v-81ecbd79">{{J}}</label>
+                </view>
+                <view class="price-lower-limit data-v-81ecbd79">
+                    <label class="text-color-2 data-v-81ecbd79">跌停</label>
+                    <label bindtap="{{M}}" class="drop tabular-nums data-v-81ecbd79">{{L}}</label>
+                </view>
+            </view>
+        </view>
+        <trans-info bind:__l="__l" bindsetPrice="{{O}}" class="data-v-81ecbd79" data-c-h="{{!N}}" uI="81ecbd79-4" uP="{{P}}" wx:if="{{P}}"></trans-info>
+        <view class="chart-wrapper flex data-v-81ecbd79" wx:if="{{Q}}">
+            <view class="mins-wrapper flex-1 data-v-81ecbd79">
+                <mins bind:__l="__l" binderror="{{U}}" bindonTouchMove="{{T}}" class="r data-v-81ecbd79" key="{{'mins'}}" uI="81ecbd79-5" uP="{{V}}" uR="chart" wx:if="{{R}}"></mins>
+            </view>
+            <view class="handicap-wrapper data-v-81ecbd79" wx:if="{{W}}">
+                <handicap bind:__l="__l" bindonClickPrice="{{X}}" class="data-v-81ecbd79" uI="81ecbd79-6" uP="{{Y}}" wx:if="{{Y}}"></handicap>
+            </view>
+        </view>
+        <view bindtap="{{ai}}" class="{{['switch-bar','flex-center','data-v-81ecbd79',ah]}}">
+            <block wx:if="{{Z}}">
+                <label class="text-color-5 data-v-81ecbd79">{{aa}}分时图</label>
+                <label class="{{['data-v-81ecbd79','icon',ab]}}"></label>
+            </block>
+            <block wx:else>
+                <label class="text-color-5 data-v-81ecbd79">{{ac}}五档和分时图</label>
+                <label class="{{['data-v-81ecbd79','icon',ad]}}"></label>
+            </block>
+            <bubble-tip bind:__l="__l" bindclose="{{af}}" class="entry-bubble-tip data-v-81ecbd79" uI="81ecbd79-7" uP="{{ag}}" wx:if="{{ae}}"></bubble-tip>
+        </view>
+    </view>
+</view>

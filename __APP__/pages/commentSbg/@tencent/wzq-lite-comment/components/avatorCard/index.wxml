@@ -1,0 +1,24 @@
+<view
+  catchtap="{{p}}"
+  class="{{['_div','mod-avatorName','avatorName','data-v-a0739b6f',m&&'valign-center',n&&'disabled']}}"
+  key="{{o}}"
+>
+  <block wx:if="{{a}}">
+    <slot wx:if="{{$slots.d}}"></slot>
+    <view class="{{['_div','data-v-a0739b6f','content',l]}}" wx:else>
+      <view class="_div user-info data-v-a0739b6f">
+        <view
+          class="{{['_div','data-v-a0739b6f','name',c,d,e]}}"
+          data-userid="{{g}}"
+          style="{{f}}"
+          >{{b}}</view
+        >
+      </view>
+      <view class="_div desc-box data-v-a0739b6f" wx:if="{{h}}">
+        <label class="_span date data-v-a0739b6f" wx:if="{{i}}">
+          <label class="_span data-v-a0739b6f" wx:if="{{j}}">{{k}}</label>
+        </label>
+      </view>
+    </view>
+  </block>
+</view>

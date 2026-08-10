@@ -1,0 +1,30 @@
+require("../../app.js"),
+  (exports.DEALER_REQUEST_TYPE = {
+    JOB: "2",
+    POST: "4",
+    ADDRESS: "5",
+    COMPANY: "6",
+    UNION: "7",
+    YEAR_INCOME: "10",
+  }),
+  (exports.IDCARD_STATUS = {
+    NORMAL: "0",
+    EXPIRING: "1",
+    EXPIRED: "2",
+    EXPIRED_RECENTLY: "3",
+  }),
+  (exports.JOB_SPECIAL_NEW = {
+    NM: "2",
+    WY: "236",
+    XS: "237",
+    LTX: "234",
+    GSH: "235",
+    ZY: "18",
+    QTLTX: "268",
+  }),
+  (exports.LOGIN_TYPE = {
+    7: "网上委托",
+    8: "手机委托",
+    DEFAULT: "其他委托方式",
+  }),
+  (exports.TITLE_SPECIAL = { other: "7", none: "8" });

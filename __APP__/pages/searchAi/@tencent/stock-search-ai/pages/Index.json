@@ -1,0 +1,29 @@
+{
+  "component": true,
+  "usingComponents": {
+    "answer-list-view": "../components/AnswerListView",
+    "answer-item": "../components/AnswerItem",
+    "dual-answer-item": "../components/DualAnswerItem",
+    "question-item": "../components/QuestionItem",
+    "first-guide-item-old-user": "../components/FirstGuideItemOldUser",
+    "dis-like-select-dialog": "../components/DisLikeSelectDialog",
+    "permission-agree-dialog": "../components/PermissionAgreeDialog",
+    "link-jump-guide": "../components/LinkJumpGuide",
+    "old-permission-dialog": "../components/OldPermissionDialog",
+    "full-screen-feed-back": "../components/FullScreenFeedBack",
+    "input-view": "../components/inputView/mp",
+    "input-voice-edit": "../components/InputVoiceEdit",
+    "follow-on-item": "../components/FollowOnItem",
+    "ai-model-select-dialog": "../components/AiModelSelectDialog",
+    "ai-model-select-guide": "../components/AiModelSelectGuide",
+    "question-item-long-press-menu": "../components/QuestionItemLongPressMenu",
+    "session-history-drawer": "../components/SessionHistoryDrawer",
+    "session-history-loading": "../components/SessionHistoryLoading",
+    "weixin-claw-bind-dialog": "../components/WxClawBindDialog",
+    "weixin-claw-unbind-dialog": "../components/WxClawUnbindDialog",
+    "weixin-claw-hint-bubble": "../components/WxClawHintBubble",
+    "share-bar": "../node-modules/@tencent/st-act-ai-activity-plugins/components/sharebar/index",
+    "back-pop": "../node-modules/@tencent/st-act-ai-activity-plugins/components/backPop/index",
+    "thirteen-anniversary-task": "../node-modules/@tencent/st-act-ai-activity-plugins/task/index"
+  }
+}

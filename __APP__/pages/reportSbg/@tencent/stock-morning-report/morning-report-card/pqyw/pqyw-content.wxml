@@ -1,0 +1,95 @@
+<view
+  class="{{['_div','data-v-91cfeb7d',i,'speech-readable','_p']}}"
+  wx:if="{{a}}"
+>
+  <view
+    class="_div pqyw-content data-v-91cfeb7d"
+    wx:for="{{b}}"
+    wx:for-item="content"
+    wx:key="L"
+  >
+    <view class="_div clickable-span data-v-91cfeb7d" wx:if="{{content.a}}">
+      <label
+        bindtap="{{content.d}}"
+        class="{{['_span','news-link','data-v-91cfeb7d',content.c]}}"
+        >{{content.b}}</label
+      >
+    </view>
+    <view
+      class="_div clickable-span data-v-91cfeb7d"
+      hoverClass="{{content.j}}"
+      wx:if="{{content.e}}"
+    >
+      <label
+        bindtap="{{content.i}}"
+        class="{{['_span','data-v-91cfeb7d',content.g,content.h]}}"
+        >{{content.f}}</label
+      >
+    </view>
+    <block wx:if="{{content.k}}">
+      <label
+        class="{{['_span','data-v-91cfeb7d',content.n]}}"
+        wx:if="{{content.l}}"
+        >{{content.m}}</label
+      >
+      <view
+        class="_div clickable-span data-v-91cfeb7d"
+        hoverClass="{{content.r}}"
+        wx:else
+      >
+        <label
+          bindtap="{{content.q}}"
+          class="{{['_span','news-stock','data-v-91cfeb7d',content.p]}}"
+          >{{content.o}}</label
+        >
+      </view>
+    </block>
+    <block wx:if="{{content.s}}">
+      <label
+        bindtap="{{content.x}}"
+        class="{{['_span','news-stock','news-func','data-v-91cfeb7d',content.w]}}"
+        wx:if="{{content.t}}"
+        >{{content.v}}</label
+      >
+      <label
+        class="{{['_span','news-func','data-v-91cfeb7d',content.z]}}"
+        wx:else
+        >{{content.y}}</label
+      >
+    </block>
+    <block wx:if="{{content.A}}">
+      <label
+        class="{{['_span','data-v-91cfeb7d',content.D]}}"
+        wx:if="{{content.B}}"
+        >{{content.C}}</label
+      >
+      <label
+        bindtap="{{content.G}}"
+        class="{{['_span','news-link','data-v-91cfeb7d',content.F]}}"
+        wx:else
+        >{{content.E}}</label
+      >
+    </block>
+    <label
+      bindtap="{{content.K}}"
+      class="{{['_span','news-teach','data-v-91cfeb7d',content.J]}}"
+      wx:if="{{content.H}}"
+      >{{content.I}}</label
+    >
+  </view>
+  <st-modal
+    bind:__l="__l"
+    bindcancel="{{e}}"
+    bindconfirm="{{f}}"
+    bindupdateModelValue="{{g}}"
+    class="teach-modal data-v-91cfeb7d"
+    uI="91cfeb7d-0"
+    uP="{{h}}"
+    uS="{{['d']}}"
+    wx:if="{{c}}"
+  >
+    <view class="_div teach-content data-v-91cfeb7d">
+      <rich-text class="data-v-91cfeb7d" nodes="{{d}}"></rich-text>
+    </view>
+  </st-modal>
+</view>

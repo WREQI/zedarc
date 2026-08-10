@@ -1,0 +1,53 @@
+<view class="{{['_div','list-wrapper','data-v-76e4929c',l]}}">
+  <view
+    catchtap="{{b}}"
+    class="{{['_div','list-title-wrapper','data-v-76e4929c',a]}}"
+  >
+    <view class="_div list-title-text data-v-76e4929c">排行榜</view>
+    <view class="_div list-title-jump data-v-76e4929c"></view>
+  </view>
+  <tabbar
+    bind:__l="__l"
+    bindswitchTab="{{c}}"
+    class="tab-bar data-v-76e4929c"
+    uI="76e4929c-0"
+    uP="{{d}}"
+    wx:if="{{d}}"
+  ></tabbar>
+  <view
+    bindtouchend="{{k}}"
+    bindtouchstart="{{j}}"
+    class="_div ranklist data-v-76e4929c"
+  >
+    <swiper
+      bindchange="{{i}}"
+      class="data-v-76e4929c"
+      current="{{g}}"
+      duration="250"
+      ref="rankSwiper"
+      style="{{'height:'+h}}"
+    >
+      <swiper-item
+        class="swiper-item data-v-76e4929c"
+        wx:for="{{e}}"
+        wx:for-item="listItem"
+        wx:key="j"
+      >
+        <view class="_div ranktop-wrapper data-v-76e4929c" ref="{{listItem.i}}">
+          <etf-rank-top
+            bind:__l="__l"
+            bindonShowTeachPop="{{listItem.f}}"
+            bindonStockClick="{{listItem.d}}"
+            bindtoggleIndexFilter="{{listItem.e}}"
+            class="{{['r-i-f','data-v-76e4929c',listItem.c]}}"
+            key="{{listItem.b}}"
+            uI="{{listItem.g}}"
+            uP="{{listItem.h}}"
+            uR="etfrank"
+            wx:if="{{f}}"
+          ></etf-rank-top>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

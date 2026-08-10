@@ -1,0 +1,52 @@
+<view class="{{['_div','data-v-c90c0072',h,'platefund-item-wapper']}}">
+  <view
+    catchtap="{{b}}"
+    class="_div flex-justify-between title-wrapper data-v-c90c0072"
+  >
+    <view class="_div data-v-c90c0072">{{a}}主力净流入（亿）</view>
+    <view class="_div right-arrow-icon data-v-c90c0072"></view>
+  </view>
+  <view class="_div color-wapper flex flex-align-center data-v-c90c0072">
+    <view class="_div bar bg-theme-red data-v-c90c0072"></view>
+    <view class="_div name data-v-c90c0072">净流入</view>
+    <view class="_div bar bg-theme-green data-v-c90c0072"></view>
+    <view class="_div name data-v-c90c0072">净流出</view>
+  </view>
+  <view
+    catchtap="{{g}}"
+    class="_div plate-fund-item updown-graph-wrapper data-v-c90c0072"
+    wx:if="{{c}}"
+  >
+    <view class="_div updown-vertical-bar flex-1 data-v-c90c0072">
+      <view
+        class="{{['_div','data-v-c90c0072','bar-wrapper']}}"
+        wx:for="{{d}}"
+        wx:key="f"
+      >
+        <view class="_div number data-v-c90c0072" style="{{item.b}}"
+          >{{item.a}}</view
+        >
+        <view
+          catchtap="{{item.d}}"
+          class="_div bar data-v-c90c0072"
+          style="{{item.c}}"
+        ></view>
+        <view
+          catchtap="{{item.e}}"
+          class="_div bar-cover data-v-c90c0072"
+          style="{{e}}"
+        ></view>
+      </view>
+    </view>
+    <view class="_div updown-vertical-bar-label data-v-c90c0072">
+      <view
+        class="{{['_div','data-v-c90c0072','label-wrapper']}}"
+        wx:for="{{f}}"
+        wx:key="b"
+      >
+        <view class="_div data-v-c90c0072">{{item.a}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="_div plate-fund-blank data-v-c90c0072" wx:else></view>
+</view>

@@ -1,0 +1,102 @@
+.title {
+  color: #333;
+  font-size: 0.4rem;
+  font-weight: 700;
+  margin: 0.4rem 0;
+  text-align: center;
+}
+.business-container {
+  background: #fff;
+  border: 0.013333333333333334rem solid #eaeaea;
+  border-radius: 0.16rem;
+  box-shadow: 0 0.02666666666666667rem 0.10666666666666667rem
+    rgba(0, 0, 0, 0.05);
+  margin: 0.26666666666666666rem auto;
+  padding: 0.26666666666666666rem;
+}
+.business-name {
+  color: #333;
+  font-size: 0.36rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.button-group {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.13333333333333333rem;
+  justify-content: space-between;
+}
+.subscribe-button {
+  background: #fff;
+  border: 0.013333333333333334rem solid #07c160;
+  border-radius: 0.10666666666666667rem;
+  color: #07c160;
+  font-size: 0.32rem;
+  padding: 0.13333333333333333rem;
+  text-align: center;
+  transition: all 0.3s;
+  width: 1.6rem;
+}
+.subscribe-button:active {
+  background: #f0f9eb;
+}
+.msg,
+.num {
+  color: #666;
+  font-size: 0.32rem;
+  word-break: break-all;
+}
+.msg {
+  margin: 0.26666666666666666rem 0.5333333333333333rem;
+  text-align: center;
+}
+.red {
+  color: #ff4d4f;
+  font-size: 0.32rem;
+  margin: 0 0.06666666666666667rem;
+}
+.search-button {
+  background-color: #07c160;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  margin: 0.26666666666666666rem auto;
+  padding: 0.13333333333333333rem;
+  text-align: center;
+}
+.jump-buttons {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: 0.13333333333333333rem;
+  margin-top: 0.26666666666666666rem;
+}
+.jump-button {
+  background-color: #07c160;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  padding: 0.13333333333333333rem;
+  text-align: center;
+}
+.button-row.data-v-a573e25a {
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.10666666666666667rem;
+  justify-content: space-between;
+  padding: 0.10666666666666667rem 0.16rem;
+}
+.compact-btn.data-v-a573e25a {
+  background-color: #07c160;
+  border: none;
+  border-radius: 0.16rem;
+  box-shadow: 0 0.013333333333333334rem 0.04rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+  flex: 1;
+  font-size: 0.4266666666666667rem;
+  padding: 0.08rem 0;
+}
+.jump-buttons2.data-v-a573e25a {
+  display: -webkit-flex;
+  display: flex;
+  gap: 0.13333333333333333rem;
+}

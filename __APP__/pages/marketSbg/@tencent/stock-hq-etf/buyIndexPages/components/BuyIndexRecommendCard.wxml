@@ -1,0 +1,106 @@
+<view
+  bindtap="{{y}}"
+  class="{{['_div','etf-buy-index__fund-card','data-v-c57588aa',x]}}"
+>
+  <view class="_div etf-buy-index__fund-card-title data-v-c57588aa">{{a}}</view>
+  <view
+    class="{{['_div','etf-buy-index__fund-card-content','data-v-c57588aa',w]}}"
+  >
+    <view
+      class="{{['_div','etf-buy-index__fund-card-actions','data-v-c57588aa',e&&'etf-buy-index__fund-card-actions--only-buy']}}"
+    >
+      <view
+        catchtap="{{c}}"
+        class="_div etf-buy-index__fund-card-btn etf-buy-index__fund-card-btn--outline data-v-c57588aa"
+        wx:if="{{b}}"
+      >
+        <view
+          class="_div etf-buy-index__fund-card-btn-bg etf-buy-index__fund-card-btn-bg--outline data-v-c57588aa"
+        ></view>
+        <view
+          class="_div etf-buy-index__fund-card-btn-text etf-buy-index__fund-card-btn-text--outline data-v-c57588aa"
+          >开启定投</view
+        >
+      </view>
+      <view
+        catchtap="{{d}}"
+        class="_div etf-buy-index__fund-card-btn etf-buy-index__fund-card-btn--primary data-v-c57588aa"
+      >
+        <view
+          class="_div etf-buy-index__fund-card-btn-bg etf-buy-index__fund-card-btn-bg--primary data-v-c57588aa"
+        ></view>
+        <view
+          class="_div etf-buy-index__fund-card-btn-text etf-buy-index__fund-card-btn-text--primary data-v-c57588aa"
+          >立即买入</view
+        >
+      </view>
+    </view>
+    <view
+      class="{{['_div','etf-buy-index__fund-card-highlight','data-v-c57588aa',i]}}"
+      wx:if="{{f}}"
+    >
+      <label class="_span etf-buy-index__fund-card-tag data-v-c57588aa"
+        >产品亮点</label
+      >
+      <label
+        class="{{['_span','etf-buy-index__fund-card-desc','data-v-c57588aa',h]}}"
+        >{{g}}</label
+      >
+    </view>
+    <view
+      class="{{['_div','etf-buy-index__fund-card-info','data-v-c57588aa',v]}}"
+    >
+      <view class="_div etf-buy-index__fund-card-logo data-v-c57588aa">
+        <st-mini-mins
+          bind:__l="__l"
+          class="etf-buy-index__fund-card-logo-chart data-v-c57588aa"
+          uI="c57588aa-0"
+          uP="{{k}}"
+          wx:if="{{j}}"
+        ></st-mini-mins>
+      </view>
+      <view
+        class="{{['_div','etf-buy-index__fund-card-name-wrap','data-v-c57588aa',m]}}"
+      >
+        <view class="_div etf-buy-index__fund-card-name data-v-c57588aa"
+          >{{l}}</view
+        >
+      </view>
+      <image
+        alt="加自选"
+        catchtap="{{o}}"
+        class="_img etf-buy-index__fund-card-watchlist data-v-c57588aa"
+        src="{{n}}"
+      ></image>
+      <view
+        class="{{['_div','etf-buy-index__fund-card-stat','etf-buy-index__fund-card-stat--change','data-v-c57588aa',r]}}"
+      >
+        <view
+          class="_div etf-buy-index__fund-card-stat-value-wrap data-v-c57588aa"
+        >
+          <view
+            class="_div etf-buy-index__fund-card-stat-value-inner data-v-c57588aa"
+          >
+            <view
+              class="{{['_div','etf-buy-index__fund-card-stat-value','data-v-c57588aa',q]}}"
+              >{{p}}</view
+            >
+          </view>
+        </view>
+        <view class="_div etf-buy-index__fund-card-stat-label data-v-c57588aa"
+          >涨跌幅</view
+        >
+      </view>
+      <view
+        class="{{['_div','etf-buy-index__fund-card-stat','etf-buy-index__fund-card-stat--price','data-v-c57588aa',t]}}"
+      >
+        <view class="_div etf-buy-index__fund-card-stat-value data-v-c57588aa"
+          >{{s}}</view
+        >
+        <view class="_div etf-buy-index__fund-card-stat-label data-v-c57588aa"
+          >买一笔仅需</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="{{['_div','data-v-c7bc0981','functionKLinePluginBg']}}">
+  <k-line-card
+    bind:__l="__l"
+    bindgotoStockDetail="{{b}}"
+    class="data-v-c7bc0981"
+    uI="c7bc0981-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></k-line-card>
+  <stock-chart-panel
+    bind:__l="__l"
+    binddataReady="{{g}}"
+    bindgoToMockTrade="{{f}}"
+    bindgotoStockDetail="{{e}}"
+    class="data-v-c7bc0981"
+    uI="c7bc0981-1"
+    uP="{{h}}"
+    wx:elif="{{d}}"
+  ></stock-chart-panel>
+</view>

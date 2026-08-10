@@ -1,0 +1,9 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<hot-topic-search-page bind:__l="__l" uI="f25a86cc-0"></hot-topic-search-page>
+<mp-privacy-dialog bind:__l="__l" uI="f25a86cc-1"></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  uI="f25a86cc-2"
+  uP="{{b}}"
+  wx:if="{{b}}"
+></stock-privacy-dialog>

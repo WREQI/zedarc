@@ -1,0 +1,68 @@
+<view class="{{['_div','live-card-container-wrapper','data-v-c2bf738d',s]}}">
+  <view bindtap="{{r}}" class="_div live-card-container data-v-c2bf738d">
+    <view class="_div live-img-box data-v-c2bf738d">
+      <image class="_img live-poster data-v-c2bf738d" src="{{a}}"></image>
+      <view class="_div mask-box data-v-c2bf738d">
+        <view class="_div live-play-btn data-v-c2bf738d" wx:if="{{b}}">
+          <image
+            class="_img play-btn-icon data-v-c2bf738d"
+            src="https://wzq.gtimg.com/resources/shy/news/yaowen/white/video-big.png"
+          ></image>
+        </view>
+      </view>
+    </view>
+    <view class="_div live-right-box data-v-c2bf738d">
+      <view class="_div title-box data-v-c2bf738d">
+        <label class="_span live-title data-v-c2bf738d" style="{{'width:'+d}}"
+          >{{c}}</label
+        >
+      </view>
+      <view class="_div bottom-box data-v-c2bf738d">
+        <view class="_div status-bar data-v-c2bf738d">
+          <view
+            catchtap="{{g}}"
+            class="_div status-label booked data-v-c2bf738d"
+            wx:if="{{e}}"
+          >
+            <view class="_div booked-icon data-v-c2bf738d"></view>
+            <label class="{{['_span','data-v-c2bf738d','status-span',f]}}"
+              >已预约</label
+            >
+          </view>
+          <view
+            catchtap="{{j}}"
+            class="_div status-label book data-v-c2bf738d"
+            wx:elif="{{h}}"
+          >
+            <view class="_div book-icon data-v-c2bf738d"></view>
+            <label class="{{['_span','data-v-c2bf738d','status-span',i]}}"
+              >预约</label
+            >
+          </view>
+          <view
+            class="_div status-label living data-v-c2bf738d"
+            wx:elif="{{k}}"
+          >
+            <view class="_div living-icon data-v-c2bf738d"></view>
+            <label class="{{['_span','data-v-c2bf738d','status-span',l]}}"
+              >直播中</label
+            >
+          </view>
+          <view
+            class="_div status-label playback data-v-c2bf738d"
+            wx:elif="{{m}}"
+          >
+            <view class="_div playback-icon data-v-c2bf738d"></view>
+            <label class="{{['_span','data-v-c2bf738d','status-span',n]}}"
+              >回放</label
+            >
+          </view>
+          <view class="_div time-duration data-v-c2bf738d">{{o}}</view>
+        </view>
+        <view class="_div interested-people-text data-v-c2bf738d"
+          >{{p}}人{{q}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

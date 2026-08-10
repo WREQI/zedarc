@@ -1,0 +1,11 @@
+<page-meta rootFontSize="{{a}}"></page-meta>
+<view class="_div">
+  <mp-privacy-dialog bind:__l="__l" uI="9acd889a-0"></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    uI="9acd889a-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog
+  >这只是为了page.json用的，实际是pages/newsCon/video/</view
+>

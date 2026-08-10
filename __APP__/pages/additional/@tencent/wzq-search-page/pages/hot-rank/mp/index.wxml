@@ -1,0 +1,99 @@
+<view class="_div main-container data-v-d4f66496">
+  <tab-bar
+    bind:__l="__l"
+    bindswitchTab="{{b}}"
+    class="{{['data-v-d4f66496','fixed-bar',a]}}"
+    uI="d4f66496-0"
+    uP="{{c}}"
+    wx:if="{{c}}"
+  ></tab-bar>
+  <scroll-view
+    bindscroll="{{o}}"
+    class="scroll-box data-v-d4f66496"
+    scrollTop="{{n}}"
+    scrollY="{{true}}"
+  >
+    <view class="_div hot-container data-v-d4f66496">
+      <nav-title
+        bind:__l="__l"
+        class="data-v-d4f66496"
+        uI="d4f66496-1"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></nav-title>
+      <view class="_div top-image mp data-v-d4f66496" id="top-image">
+        <back-icon
+          bind:__l="__l"
+          class="data-v-d4f66496"
+          uI="d4f66496-2"
+        ></back-icon>
+        <view class="{{['_div','data-v-d4f66496','top-text',e]}}"></view>
+      </view>
+      <view class="_div content mp data-v-d4f66496">
+        <tab-bar
+          bind:__l="__l"
+          bindswitchTab="{{g}}"
+          class="{{['data-v-d4f66496','tab-bar',f]}}"
+          uI="d4f66496-3"
+          uP="{{h}}"
+          wx:if="{{h}}"
+        ></tab-bar>
+        <swiper
+          bindchange="{{l}}"
+          class="hot-wrapper data-v-d4f66496"
+          current="{{j}}"
+          duration="250"
+          ref="hotSwiper"
+          style="{{'height:'+k}}"
+        >
+          <swiper-item class="data-v-d4f66496" wx:for="{{i}}" wx:key="p">
+            <view class="{{['_div','data-v-d4f66496',item.o]}}">
+              <view class="_div hot-tips data-v-d4f66496" wx:if="{{item.a}}"
+                >{{item.b}}<view
+                  bindtap="{{item.e}}"
+                  class="_div check data-v-d4f66496"
+                  wx:if="{{item.c}}"
+                  >{{item.d}}<image
+                    class="_img more data-v-d4f66496"
+                    src="https://st.gtimg.com/design/5a57072ca15bc975fd6ba2d9d990973d.png"
+                  ></image>
+                </view>
+              </view>
+              <rank-news
+                bind:__l="__l"
+                bindviewNewsDetail="{{item.g}}"
+                class="data-v-d4f66496"
+                uI="{{item.h}}"
+                uP="{{item.i}}"
+                wx:if="{{item.f}}"
+              ></rank-news>
+              <rank-stock
+                bind:__l="__l"
+                bindrendered="{{item.k}}"
+                bindviewStockDetail="{{item.l}}"
+                class="data-v-d4f66496"
+                uI="{{item.m}}"
+                uP="{{item.n}}"
+                wx:elif="{{item.j}}"
+              ></rank-stock>
+            </view>
+          </swiper-item>
+        </swiper>
+        <rule-tip
+          bind:__l="__l"
+          bindtoggleRule="{{m}}"
+          class="data-v-d4f66496"
+          uI="d4f66496-6"
+        ></rule-tip>
+        <view class="_div zxg-logo data-v-d4f66496"></view>
+      </view>
+    </view>
+  </scroll-view>
+  <rule-model
+    bind:__l="__l"
+    bindtoggleRule="{{q}}"
+    class="data-v-d4f66496"
+    uI="d4f66496-7"
+    wx:if="{{p}}"
+  ></rule-model>
+</view>

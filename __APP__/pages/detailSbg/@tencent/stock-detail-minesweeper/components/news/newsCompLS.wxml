@@ -1,0 +1,23 @@
+<view class="_div comp-block data-v-6b52b960" wx:if="{{a}}">
+  <view
+    bindtap="{{item.g}}"
+    class="_div item data-v-6b52b960"
+    wx:for="{{b}}"
+    wx:key="f"
+  >
+    <view class="_div time-area data-v-6b52b960">
+      <view class="_div date data-v-6b52b960">{{item.a}}</view>
+      <view class="_div year data-v-6b52b960" wx:if="{{item.b}}"
+        >{{item.c}}</view
+      >
+    </view>
+    <view class="_div shape-area data-v-6b52b960">
+      <view class="_div circle data-v-6b52b960"></view>
+      <view class="_div line data-v-6b52b960"></view>
+    </view>
+    <view class="_div content-area data-v-6b52b960">
+      <view class="_div item-title data-v-6b52b960">{{item.d}}</view>
+      <label class="_span matter data-v-6b52b960">{{item.e}}</label>
+    </view>
+  </view>
+</view>

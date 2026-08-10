@@ -1,0 +1,159 @@
+<view class="quotes-chart data-v-7af2a226" ref="comp">
+  <view class="quotes-chart-bd data-v-7af2a226" ref="chartBody">
+    <st-loading
+      bind:__l="__l"
+      class="loading data-v-7af2a226"
+      uI="7af2a226-0"
+      wx:if="{{a}}"
+    ></st-loading>
+    <view class="quotes-chart-bd-left data-v-7af2a226" style="{{'width:'+s}}">
+      <kline
+        bind:__l="__l"
+        bindextraInfoSelected="{{o}}"
+        bindgetInitData="{{n}}"
+        bindgetMore="{{m}}"
+        bindonBarTap="{{h}}"
+        bindonChange="{{j}}"
+        bindonDoubleTap="{{g}}"
+        bindonPinch="{{k}}"
+        bindonPinchEnd="{{l}}"
+        bindonPopup="{{i}}"
+        bindonTouchCancle="{{e}}"
+        bindonTouchEnd="{{f}}"
+        bindonTouchMove="{{d}}"
+        bindqueryPriceRemind="{{p}}"
+        class="r data-v-7af2a226"
+        uI="7af2a226-1"
+        uP="{{q}}"
+        uR="chart"
+        wx:if="{{b}}"
+      ></kline>
+      <view class="data-exception data-v-7af2a226" wx:if="{{r}}">
+        <view class="no-data-container data-v-7af2a226">
+          <view class="no-data-bg data-v-7af2a226"></view>
+          <label class="data-v-7af2a226">暂时无法获取数据</label>
+        </view>
+      </view>
+    </view>
+    <view class="tool-tip data-v-7af2a226" hidden="{{!J}}">
+      <view class="time data-v-7af2a226">{{t}}</view>
+      <view class="hq flex-between data-v-7af2a226">
+        <value-color
+          bind:__l="__l"
+          class="data-v-7af2a226"
+          uI="7af2a226-2"
+          uP="{{x}}"
+          uS="{{['d']}}"
+          wx:if="{{x}}"
+        >
+          <label class="label data-v-7af2a226">{{v}}</label>{{w}}%</value-color
+        >
+        <view class="flex data-v-7af2a226">
+          <label class="label data-v-7af2a226">高</label>
+          <value-color
+            bind:__l="__l"
+            class="data-v-7af2a226"
+            uI="7af2a226-3"
+            uP="{{z}}"
+            uS="{{['d']}}"
+            wx:if="{{z}}"
+            >{{y}}</value-color
+          >
+        </view>
+        <view class="flex data-v-7af2a226">
+          <label class="label data-v-7af2a226">低</label>
+          <value-color
+            bind:__l="__l"
+            class="data-v-7af2a226"
+            uI="7af2a226-4"
+            uP="{{B}}"
+            uS="{{['d']}}"
+            wx:if="{{B}}"
+            >{{A}}</value-color
+          >
+        </view>
+        <view class="flex data-v-7af2a226">
+          <label class="label data-v-7af2a226">开</label>
+          <value-color
+            bind:__l="__l"
+            class="data-v-7af2a226"
+            uI="7af2a226-5"
+            uP="{{D}}"
+            uS="{{['d']}}"
+            wx:if="{{D}}"
+            >{{C}}</value-color
+          >
+        </view>
+      </view>
+      <view class="trade flex-between data-v-7af2a226" wx:if="{{E}}">
+        <view class="flex data-v-7af2a226">
+          <view
+            class="{{['fs-20','trade-one','data-v-7af2a226',G]}}"
+            wx:for="{{F}}"
+            wx:key="e"
+          >
+            <label class="{{['label','data-v-7af2a226',item.b]}}"
+              >{{item.a}}</label
+            >
+            <label class="data-v-7af2a226">{{item.c}}@{{item.d}}</label>
+          </view>
+        </view>
+        <view class="fs-20 data-v-7af2a226" wx:if="{{H}}">等{{I}}笔</view>
+      </view>
+    </view>
+  </view>
+  <view class="{{['legend','data-v-7af2a226',aa]}}">
+    <view class="legend-ai-wrapper data-v-7af2a226">
+      <view class="{{['legend-ai-tab','data-v-7af2a226',P]}}" wx:if="{{K}}">
+        <view bindtap="{{M}}" class="legend-ai-tab__text data-v-7af2a226"
+          >{{L}}</view
+        >
+        <block wx:if="{{N}}">
+          <view class="legend-ai-tab__divider data-v-7af2a226"></view>
+          <view bindtap="{{O}}" class="legend-ai-tab__icon data-v-7af2a226">
+            <label class="legend-ai-tab__gear data-v-7af2a226"></label>
+          </view>
+        </block>
+      </view>
+      <bubble-tip
+        bind:__l="__l"
+        bindclose="{{R}}"
+        class="legend-bubble-tip data-v-7af2a226"
+        uI="7af2a226-6"
+        uP="{{S}}"
+        wx:if="{{Q}}"
+      ></bubble-tip>
+    </view>
+    <view
+      bindtap="{{U}}"
+      class="legend-item legend-item--bst flex-vcenter data-v-7af2a226"
+    >
+      <view class="{{['legend-radio','data-v-7af2a226',T]}}"></view>
+      <view class="legend-markers flex-vcenter data-v-7af2a226">
+        <view class="marker-item marker-b data-v-7af2a226"></view>
+        <view class="marker-item marker-s data-v-7af2a226"></view>
+        <view class="marker-item marker-t data-v-7af2a226"></view>
+      </view>
+      <view class="legend-text data-v-7af2a226">买卖点</view>
+    </view>
+    <view class="setting data-v-7af2a226">
+      <view bindtap="{{V}}" class="label flex-vcenter data-v-7af2a226">
+        <view class="data-v-7af2a226">切换复权</view>
+        <view class="icon icon-triangle data-v-7af2a226"></view>
+      </view>
+      <view class="dropdown-wrapper data-v-7af2a226" wx:if="{{W}}">
+        <view bindtap="{{X}}" class="mask data-v-7af2a226"></view>
+        <view class="dropdown data-v-7af2a226">
+          <view
+            bindtap="{{key.d}}"
+            class="{{['dropdown-item','data-v-7af2a226',key.c,Z]}}"
+            wx:for="{{Y}}"
+            wx:for-item="key"
+            wx:key="b"
+            >{{key.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

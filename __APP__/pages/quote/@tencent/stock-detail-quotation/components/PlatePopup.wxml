@@ -1,0 +1,39 @@
+<view
+  catchtap="{{m}}"
+  class="{{['_div','mask-wrapper','data-v-5bfbbbb7',k&&'skin-black']}}"
+  style="{{'display:'+l}}"
+  wx:if="{{a}}"
+>
+  <view class="_div gray-mask data-v-5bfbbbb7" style="{{'top:'+b}}"></view>
+  <view
+    catchtap="{{i}}"
+    class="_div plate-wrapper data-v-5bfbbbb7"
+    style="{{'top:'+j}}"
+  >
+    <view catchtouchmove="{{d}}" class="_div item-title-board data-v-5bfbbbb7">
+      <view class="_div title-tips data-v-5bfbbbb7"
+        >所属板块<view
+          catchtap="{{c}}"
+          class="_div image-tip data-v-5bfbbbb7"
+        ></view>
+      </view>
+    </view>
+    <scroll-view
+      catchtouchmove="{{h}}"
+      class="content-area data-v-5bfbbbb7"
+      ref="scrollView"
+      refresherEnabled="{{false}}"
+      scrollY="{{true}}"
+    >
+      <brief-plate
+        bind:__l="__l"
+        bindloaded="{{f}}"
+        class="r data-v-5bfbbbb7"
+        uI="5bfbbbb7-0"
+        uP="{{g}}"
+        uR="plateboard"
+        wx:if="{{g}}"
+      ></brief-plate>
+    </scroll-view>
+  </view>
+</view>

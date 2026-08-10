@@ -1,0 +1,35 @@
+<action-sheet
+  bind:__l="__l"
+  bindinput="{{h}}"
+  class="action-sheet data-v-2ee5d2cb"
+  uI="2ee5d2cb-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{d}}" class="_div left-icon data-v-2ee5d2cb" wx:if="{{b}}">
+    <image
+      alt=""
+      class="_img left-icon-img data-v-2ee5d2cb"
+      src="https://st.gtimg.com/design/5a42de2479c07d88a36d03fd54519ae2.png"
+      wx:if="{{c}}"
+    ></image>
+    <label class="_span left-icon-text data-v-2ee5d2cb">在线客服</label>
+  </view>
+  <view bindscroll="{{g}}" class="_div action-sheet-container data-v-2ee5d2cb">
+    <view
+      class="_div action-sheet-container-item data-v-2ee5d2cb"
+      wx:for="{{e}}"
+      wx:key="e"
+    >
+      <view class="_div title data-v-2ee5d2cb">{{item.a}}. {{item.b}}</view>
+      <view class="_div rich-text-bg data-v-2ee5d2cb" wx:if="{{f}}">
+        <rich-text class="text data-v-2ee5d2cb" nodes="{{item.c}}"></rich-text>
+      </view>
+      <view class="_div text data-v-2ee5d2cb" wx:else>
+        <rich-text class="data-v-2ee5d2cb" nodes="{{item.d}}"></rich-text>
+      </view>
+    </view>
+    <view class="_div blank data-v-2ee5d2cb"></view>
+  </view>
+</action-sheet>

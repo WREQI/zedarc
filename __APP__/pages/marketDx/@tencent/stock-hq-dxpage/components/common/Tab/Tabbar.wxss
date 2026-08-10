@@ -1,0 +1,24 @@
+.tabbar-scroll-wrapper.data-v-0a4670a6 {
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  overflow: scroll;
+}
+.tabbar-row.data-v-0a4670a6,
+.tabbar-scroll-wrapper.data-v-0a4670a6 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.tabbar-row.data-v-0a4670a6 {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tabbar-indicator.data-v-0a4670a6 {
+  height: 0.04rem;
+  position: relative;
+}
+.data-v-0a4670a6 .tab,
+.tabbar-indicator.data-v-0a4670a6 {
+  transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}

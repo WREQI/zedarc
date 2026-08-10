@@ -1,0 +1,117 @@
+.follow-item.data-v-71204b63 {
+  background-color: var(--fill-2);
+  border-radius: 0.21333333333333335rem;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0.32rem 0.32rem;
+  padding: 0.32rem;
+}
+.follow-item .head-img-container.data-v-71204b63 {
+  height: 0.8533333333333334rem;
+  margin-right: 0.32rem;
+  position: relative;
+  width: 0.8533333333333334rem;
+}
+.follow-item .head-img-container .head-img.data-v-71204b63 {
+  border-radius: 0.10666666666666667rem;
+  flex-shrink: 0;
+  height: 0.8533333333333334rem;
+  object-fit: cover;
+  width: 0.8533333333333334rem;
+}
+.follow-item .head-img-container .icon-certified.data-v-71204b63 {
+  bottom: -0.10666666666666667rem;
+  height: 0.37333333333333335rem;
+  position: absolute;
+  right: -0.10666666666666667rem;
+  width: 0.37333333333333335rem;
+}
+.follow-item .follow-content-container.data-v-71204b63 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+.follow-item .follow-content-container .user-content.data-v-71204b63 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.10666666666666667rem;
+  overflow: hidden;
+  width: 100%;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .user-name.data-v-71204b63 {
+  color: var(--color-heavygray);
+  font-size: 0.4266666666666667rem;
+  font-weight: 500;
+  line-height: 0.5866666666666667rem;
+  margin-right: 0.21333333333333335rem;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .user-name.vip.data-v-71204b63 {
+  color: #af9863;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .medal-img-container.data-v-71204b63 {
+  display: -webkit-flex;
+  display: flex;
+  margin-right: 0.21333333333333335rem;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .medal-img-container
+  .medal-img.data-v-71204b63 {
+  flex-shrink: 0;
+  height: 0.4533333333333333rem;
+  margin-right: 0.10666666666666667rem;
+  object-fit: cover;
+  width: 0.4rem;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .medal-img-container
+  .medal-img.data-v-71204b63:last-child {
+  margin-right: 0;
+}
+.follow-item
+  .follow-content-container
+  .user-content
+  .user-description.data-v-71204b63 {
+  color: var(--color-lightgray-1);
+  flex: 1;
+  font-size: 0.32rem;
+  font-weight: 400;
+  line-height: 0.4533333333333333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.follow-item .follow-content-container .follow-message.data-v-71204b63 {
+  color: var(--color-heavygray);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+  margin-bottom: 0.21333333333333335rem;
+}
+.follow-item .follow-content-container .follow-date.data-v-71204b63 {
+  color: var(--color-lightgray-2);
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  line-height: 0.5333333333333333rem;
+}

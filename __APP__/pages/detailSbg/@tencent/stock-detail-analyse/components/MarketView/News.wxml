@@ -1,0 +1,41 @@
+<view class="_div zxg-sa-block data-v-5ae7fb82" ref="opinion" wx:if="{{a}}">
+  <view class="_div new-title data-v-5ae7fb82">
+    <label class="_span title-main data-v-5ae7fb82">资讯</label>
+    <label class="_span title-sub data-v-5ae7fb82">(最近两周)</label>
+  </view>
+  <view class="_div overview data-v-5ae7fb82">
+    <view class="_div analyze_yuqinglist data-v-5ae7fb82">
+      <view
+        catchtap="{{item.d}}"
+        class="_div analyze_yuqingitem data-v-5ae7fb82"
+        wx:for="{{b}}"
+        wx:key="c"
+      >
+        <view class="_div analyze_yuqingtime data-v-5ae7fb82">{{item.a}}</view>
+        <view class="_div analyze_yuqingmidline data-v-5ae7fb82">
+          <view class="_div analyze_yuqingdot data-v-5ae7fb82"></view>
+          <view class="_div analyze_yuqingline data-v-5ae7fb82"></view>
+        </view>
+        <view class="_div analyze_yuqingcontent data-v-5ae7fb82"
+          >{{item.b}}</view
+        >
+      </view>
+    </view>
+    <block wx:if="{{c}}">
+      <view class="_div subtitle-wrapper data-v-5ae7fb82">
+        <view class="_div subtitle data-v-5ae7fb82">机构调研</view>
+        <view class="_div time data-v-5ae7fb82">{{d}}</view>
+      </view>
+      <view class="_div inst-wrapper data-v-5ae7fb82">
+        <view class="_div ins-div data-v-5ae7fb82">机构调研次数</view>
+        <view class="_div ins-div data-v-5ae7fb82"
+          >{{e}}次，行业排名{{f}}/{{g}}</view
+        >
+      </view>
+      <view class="_div inst-wrapper data-v-5ae7fb82" wx:if="{{h}}">
+        <view class="_div ins-div data-v-5ae7fb82">重点调研机构</view>
+        <view class="_div ins-div data-v-5ae7fb82">{{i}}</view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,118 @@
+<view
+  class="{{['_div','data-v-20d2b4a3','valuation-index',z,A]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div data-content data-v-20d2b4a3">
+    <view class="_div first-item data-v-20d2b4a3" style="{{'width:'+g}}">
+      <view class="_div gzzb-title data-v-20d2b4a3" wx:if="{{b}}">
+        <view class="_div gzzb-title-item data-v-20d2b4a3">{{c}}</view>
+      </view>
+      <view class="{{['_div','data-v-20d2b4a3','gzzb-list',f]}}" wx:if="{{d}}">
+        <view
+          class="_div content-row data-v-20d2b4a3"
+          wx:for="{{e}}"
+          wx:for-item="val"
+          wx:key="d"
+        >
+          <view class="_div row-item cycle-item data-v-20d2b4a3"
+            >{{val.a}}<label
+              class="{{['_span','data-v-20d2b4a3','row-item-tag',val.c]}}"
+              >{{val.b}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtouchcancel="{{CustomScroll.touchend}}"
+      bindtouchend="{{CustomScroll.touchend}}"
+      bindtouchstart="{{CustomScroll.touchstart}}"
+      catchtouchmove="{{CustomScroll.touchmove}}"
+      change:scrollOptions="{{CustomScroll.setup}}"
+      class="_div right-item data-v-20d2b4a3"
+      scrollOptions="{{o}}"
+      wx:if="{{h}}"
+    >
+      <view
+        class="{{['_div','data-v-20d2b4a3','scroll-wrapper',n,'text-right']}}"
+      >
+        <view class="_div gzzb-title data-v-20d2b4a3" wx:if="{{i}}">
+          <view
+            class="_div gzzb-title-item data-v-20d2b4a3"
+            style="{{'width:'+title.c}}"
+            wx:for="{{j}}"
+            wx:for-item="title"
+            wx:key="b"
+            >{{title.a}}</view
+          >
+        </view>
+        <view
+          class="{{['_div','data-v-20d2b4a3','gzzb-list',m]}}"
+          wx:if="{{k}}"
+        >
+          <view
+            class="_div content-row data-v-20d2b4a3"
+            wx:for="{{l}}"
+            wx:for-item="val"
+            wx:key="b"
+          >
+            <view
+              class="{{['_div','data-v-20d2b4a3','row-item']}}"
+              style="{{'width:'+value.c}}"
+              wx:for="{{val.a}}"
+              wx:for-item="value"
+              wx:key="b"
+              >{{value.a}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div right-item data-v-20d2b4a3" wx:else>
+      <view
+        class="{{['_div','data-v-20d2b4a3','scroll-wrapper',v,'text-right']}}"
+      >
+        <view class="_div gzzb-title data-v-20d2b4a3" wx:if="{{p}}">
+          <view
+            class="_div gzzb-title-item data-v-20d2b4a3"
+            style="{{'width:'+title.c}}"
+            wx:for="{{q}}"
+            wx:for-item="title"
+            wx:key="b"
+            >{{title.a}}</view
+          >
+        </view>
+        <view
+          class="{{['_div','data-v-20d2b4a3','gzzb-list',t]}}"
+          wx:if="{{r}}"
+        >
+          <view
+            class="_div content-row data-v-20d2b4a3"
+            wx:for="{{s}}"
+            wx:for-item="val"
+            wx:key="b"
+          >
+            <view
+              class="{{['_div','data-v-20d2b4a3','row-item']}}"
+              style="{{'width:'+value.c}}"
+              wx:for="{{val.a}}"
+              wx:for-item="value"
+              wx:key="b"
+              >{{value.a}}</view
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    bindtap="{{y}}"
+    class="_div arrow-down-container data-v-20d2b4a3"
+    wx:if="{{w}}"
+  >
+    <image
+      class="{{['_img','data-v-20d2b4a3',x]}}"
+      src="https://st.gtimg.com/design/b4ff1663b417ab0664cb7c0708085a0f.png"
+    ></image>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="_div tabbar-top-wrapper data-v-9a8375d8">
+  <scroll-view
+    scrollX
+    class="tabbar-wrapper data-v-9a8375d8"
+    id="tabbar-scroll-view"
+    scrollIntoView="{{b}}"
+  >
+    <view class="_div tabbar-container data-v-9a8375d8">
+      <view
+        bindtap="{{tab.e}}"
+        class="{{['_div','data-v-9a8375d8','tab',tab.d]}}"
+        id="{{tab.b}}"
+        wx:for="{{a}}"
+        wx:for-item="tab"
+        wx:key="c"
+        >{{tab.a}}</view
+      >
+    </view>
+  </scroll-view>
+</view>

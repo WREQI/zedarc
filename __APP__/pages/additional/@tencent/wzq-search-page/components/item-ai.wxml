@@ -1,0 +1,10 @@
+<view catchtap="{{e}}" class="{{['_div','data-v-574b4138','info-item',c,d]}}">
+  <view class="_div skeleton-screen-item data-v-574b4138" wx:if="{{a}}"></view>
+  <highlight-text
+    bind:__l="__l"
+    class="info-item-title data-v-574b4138"
+    uI="574b4138-0"
+    uP="{{b||''}}"
+    wx:else
+  ></highlight-text>
+</view>

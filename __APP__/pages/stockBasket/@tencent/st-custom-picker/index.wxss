@@ -1,0 +1,57 @@
+.invest-cond-period.data-v-abd1ba32 {
+  background-color: var(--fill-2);
+  padding: 0 0.32rem 0.4rem;
+}
+.invest-cond-period .date-picker-view.data-v-abd1ba32 {
+  height: 6.293333333333333rem;
+  position: relative;
+}
+.invest-cond-period .date-picker-view.data-v-abd1ba32:before {
+  background-color: var(--fill-1);
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  height: 1.1733333333333333rem;
+  left: 0;
+  position: absolute;
+  top: calc(50% - 0.5866666666666667rem);
+  width: 100%;
+}
+.invest-cond-period .date-picker-view .item.data-v-abd1ba32 {
+  color: var(--text-color-1);
+  font-size: 0.4266666666666667rem;
+  line-height: 1.1733333333333333rem;
+}
+[data-theme="dark"]
+  .invest-cond-period
+  .date-picker-view
+  .item.unselected.data-v-abd1ba32 {
+  color: #7d88a1;
+}
+.invest-cond-period.data-v-abd1ba32 .indicator-class:after,
+.invest-cond-period.data-v-abd1ba32 .indicator-class:before {
+  border: none;
+}
+.invest-cond-period .confirm-btn.data-v-abd1ba32 {
+  background-color: var(--color-red) !important;
+  color: #fff;
+}
+.invest-cond-period .cancel-btn.data-v-abd1ba32,
+.invest-cond-period .confirm-btn.data-v-abd1ba32 {
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  margin-top: 0.32rem;
+  padding: 0;
+  text-align: center;
+}
+.invest-cond-period .cancel-btn.data-v-abd1ba32 {
+  background-color: var(--border-light) !important;
+  color: var(--text-color-1);
+}
+.invest-cond-period .cancel-btn.data-v-abd1ba32:after {
+  border: none;
+}
+.invest-cond-period .cancel-btn + button.data-v-abd1ba32 {
+  margin-left: 0.32rem;
+}

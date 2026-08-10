@@ -1,0 +1,416 @@
+<view
+  class="{{['_div','data-v-7ce49c94','scroll-wapper',ax]}}"
+  ref="scroll"
+  wx:if="{{a}}"
+>
+  <scroll-view
+    scrollY
+    bindrefresherpulling="{{al}}"
+    bindrefresherrefresh="{{an}}"
+    bindrefresherrestore="{{am}}"
+    bindscroll="{{ao}}"
+    bindscrolltolower="{{ap}}"
+    class="data-v-7ce49c94"
+    refresherEnabled="{{aj}}"
+    refresherThreshold="100"
+    refresherTriggered="{{ak}}"
+    style="{{ai}}"
+  >
+    <view class="_div data-v-7ce49c94">
+      <view
+        class="_div mod-bond-zxg data-v-7ce49c94"
+        ref="bontcontent"
+        wx:if="{{b}}"
+      >
+        <view class="_div data-v-7ce49c94">
+          <view class="_div basic-wrapper data-v-7ce49c94">
+            <view class="_div board data-v-7ce49c94">
+              <view
+                catchtap="{{d}}"
+                class="_div market-index-item data-v-7ce49c94"
+              >
+                <market-index
+                  bind:__l="__l"
+                  class="data-v-7ce49c94"
+                  uI="7ce49c94-0"
+                  uP="{{c}}"
+                  wx:if="{{c}}"
+                ></market-index>
+              </view>
+              <view
+                catchtap="{{f}}"
+                class="_div market-index-item data-v-7ce49c94"
+              >
+                <market-index
+                  bind:__l="__l"
+                  class="data-v-7ce49c94"
+                  uI="7ce49c94-1"
+                  uP="{{e}}"
+                  wx:if="{{e}}"
+                ></market-index>
+              </view>
+              <view class="_div block market-index-item data-v-7ce49c94">
+                <view class="_div block-item data-v-7ce49c94">
+                  <view class="_div block-text1 data-v-7ce49c94">{{g}}</view>
+                  <view class="_div block-text2 data-v-7ce49c94">平均价格</view>
+                </view>
+                <view class="_div block-item data-v-7ce49c94">
+                  <view class="{{['_div','block-text1','data-v-7ce49c94',i]}}"
+                    >{{h}}</view
+                  >
+                  <view class="_div block-text2 data-v-7ce49c94"
+                    >转股溢价率</view
+                  >
+                </view>
+              </view>
+            </view>
+            <view class="_div bar-text bar-text2 data-v-7ce49c94" wx:if="{{j}}">
+              <view bindtap="{{l}}" class="_div bar-text-left data-v-7ce49c94"
+                >成交额 {{k}}<image
+                  class="_img image-tip image-tip-left data-v-7ce49c94"
+                  src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+                ></image>
+              </view>
+              <view class="_div data-v-7ce49c94"
+                >较昨日放量<label class="{{['_span','data-v-7ce49c94',n]}}"
+                  >{{m}}</label
+                >
+              </view>
+            </view>
+            <compare
+              bind:__l="__l"
+              class="data-v-7ce49c94"
+              uI="7ce49c94-2"
+              uP="{{r}}"
+              uS="{{['d']}}"
+              wx:if="{{o}}"
+            >
+              <view class="_div bar-text data-v-7ce49c94">
+                <view class="_div red data-v-7ce49c94">
+                  <label class="_span data-v-7ce49c94">涨{{p}}家</label>
+                </view>
+                <view class="_div green data-v-7ce49c94">跌{{q}}家</view>
+              </view>
+            </compare>
+          </view>
+          <view class="_div seperate-line data-v-7ce49c94"></view>
+          <view class="_div title-wrapper title-wrapper-dx data-v-7ce49c94">
+            <label catchtap="{{s}}" class="_span title data-v-7ce49c94">
+              <label class="_span data-v-7ce49c94">打新日历</label>
+              <image
+                class="_img image-tip dx-tip-left dx-tip-top data-v-7ce49c94"
+                src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+              ></image>
+            </label>
+            <view catchtap="{{v}}" class="_div new-stock data-v-7ce49c94">
+              <view class="_div data-v-7ce49c94" wx:if="{{t}}"
+                >今日无新债可申购</view
+              >
+              <view class="_div data-v-7ce49c94" wx:else>查看更多</view>
+              <image
+                class="_img img-arrow arrow-mar data-v-7ce49c94"
+                src="https://st.gtimg.com/design/b38c8c4ed4fafb3db1caae0daa863794.png"
+              ></image>
+            </view>
+          </view>
+          <view class="_div saletip-wrapper data-v-7ce49c94">
+            <view
+              class="_div saletip-block subscribe-block data-v-7ce49c94"
+              wx:if="{{w}}"
+            >
+              <view
+                bindtap="{{A}}"
+                class="_div subscribe-title data-v-7ce49c94"
+              >
+                <view class="_div subscribe-title-left data-v-7ce49c94">
+                  <view class="_div saletip-title-tag data-v-7ce49c94"
+                    >今日申购</view
+                  >
+                  <view class="_div saletip-title-text data-v-7ce49c94"
+                    >近6月打新债平均赚<label
+                      class="{{['_span','data-v-7ce49c94',y]}}"
+                      >{{x}}元</label
+                    >
+                  </view>
+                </view>
+                <view class="_div subscribe-title-right data-v-7ce49c94">
+                  <image
+                    class="{{['_img','img-arrow','data-v-7ce49c94',z]}}"
+                    src="https://st.gtimg.com/design/b38c8c4ed4fafb3db1caae0daa863794.png"
+                  ></image>
+                </view>
+              </view>
+              <view class="_div subscribe-list data-v-7ce49c94" wx:if="{{B}}">
+                <view class="_div subscribe-list-row row-title data-v-7ce49c94">
+                  <view
+                    class="_div subscribe-list-column data-v-7ce49c94"
+                    wx:for="{{C}}"
+                    wx:for-item="titleitem"
+                    wx:key="d"
+                  >
+                    <label class="_span data-v-7ce49c94">{{titleitem.a}}</label>
+                    <image
+                      catchtap="{{titleitem.c}}"
+                      class="_img image-tip list-tip-left list-tip-top data-v-7ce49c94"
+                      src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+                      wx:if="{{titleitem.b}}"
+                    ></image>
+                  </view>
+                </view>
+                <view
+                  catchtap="{{item.c}}"
+                  class="_div subscribe-list-row data-v-7ce49c94"
+                  wx:for="{{D}}"
+                  wx:key="b"
+                >
+                  <view
+                    class="{{['_div','subscribe-list-column','data-v-7ce49c94',col.c,col.d]}}"
+                    wx:for="{{item.a}}"
+                    wx:for-item="col"
+                    wx:key="b"
+                    >{{col.a}}</view
+                  >
+                </view>
+              </view>
+              <view
+                catchtap="{{F}}"
+                class="_div subscribe-btn data-v-7ce49c94"
+                wx:if="{{E}}"
+                >一键打新</view
+              >
+            </view>
+            <view
+              class="_div saletip-block placement-block data-v-7ce49c94"
+              wx:if="{{G}}"
+            >
+              <view
+                bindtap="{{I}}"
+                class="_div subscribe-title data-v-7ce49c94"
+              >
+                <view class="_div subscribe-title-left data-v-7ce49c94">
+                  <view class="_div saletip-title-tag data-v-7ce49c94"
+                    >抢权配售</view
+                  >
+                  <view class="_div saletip-title-text data-v-7ce49c94">
+                    <label class="_span red-text data-v-7ce49c94">100%</label
+                    >可转债中签方法</view
+                  >
+                </view>
+                <view class="_div subscribe-title-right data-v-7ce49c94">
+                  <image
+                    class="{{['_img','img-arrow','data-v-7ce49c94',H]}}"
+                    src="https://st.gtimg.com/design/b38c8c4ed4fafb3db1caae0daa863794.png"
+                  ></image>
+                </view>
+              </view>
+              <view
+                class="_div placement-top-tip data-v-7ce49c94"
+                wx:if="{{J}}"
+              >
+                <view class="_div top-tip-block data-v-7ce49c94">提前配股</view>
+                <image
+                  class="_img blue-arrow-img data-v-7ce49c94"
+                  src="https://st.gtimg.com/design/259d9e79cc305062700e670806074a1c.png"
+                ></image>
+                <view class="_div top-tip-block block-big data-v-7ce49c94"
+                  >打新前一日，优先得新债</view
+                >
+              </view>
+              <view class="_div placement-list data-v-7ce49c94" wx:if="{{K}}">
+                <view
+                  class="_div placement-list-row data-v-7ce49c94"
+                  wx:for="{{L}}"
+                  wx:key="p"
+                >
+                  <view class="_div placement-list-row-item data-v-7ce49c94">
+                    <view
+                      catchtap="{{item.c}}"
+                      class="_div placement-list-column data-v-7ce49c94"
+                    >
+                      <view
+                        class="_div placement-list-column-left data-v-7ce49c94"
+                      >
+                        <view class="_div name-black data-v-7ce49c94"
+                          >{{item.a}}</view
+                        >
+                        <view class="_div data-v-7ce49c94">{{item.b}}股</view>
+                      </view>
+                      <image
+                        class="_img name-arrow data-v-7ce49c94"
+                        src="https://st.gtimg.com/design/b38c8c4ed4fafb3db1caae0daa863794.png"
+                      ></image>
+                    </view>
+                    <view
+                      catchtap="{{item.f}}"
+                      class="_div placement-list-column data-v-7ce49c94"
+                    >
+                      <view
+                        class="_div placement-list-column-left data-v-7ce49c94"
+                      >
+                        <view class="_div name-black data-v-7ce49c94"
+                          >{{item.d}}</view
+                        >
+                        <view class="_div data-v-7ce49c94">{{item.e}}张</view>
+                      </view>
+                      <image
+                        class="_img name-arrow data-v-7ce49c94"
+                        src="https://st.gtimg.com/design/b38c8c4ed4fafb3db1caae0daa863794.png"
+                      ></image>
+                    </view>
+                    <view class="_div line-colsep data-v-7ce49c94"></view>
+                    <view class="_div placement-list-column data-v-7ce49c94">
+                      <view class="_div price-text data-v-7ce49c94">
+                        <view
+                          catchtap="{{item.h}}"
+                          class="_div price-text-left data-v-7ce49c94"
+                        >
+                          <label class="_span data-v-7ce49c94"
+                            >参考上市价</label
+                          >
+                          <image
+                            class="_img image-tip list-tip-left data-v-7ce49c94"
+                            src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+                            wx:if="{{item.g}}"
+                          ></image>
+                        </view>
+                        <view
+                          class="{{['_div','price-text-right','data-v-7ce49c94',item.j]}}"
+                          >{{item.i}}元</view
+                        >
+                      </view>
+                      <view class="_div price-text data-v-7ce49c94">
+                        <view
+                          catchtap="{{item.l}}"
+                          class="_div price-text-left data-v-7ce49c94"
+                        >
+                          <label class="_span data-v-7ce49c94"
+                            >参考收益率</label
+                          >
+                          <image
+                            class="_img image-tip list-tip-left data-v-7ce49c94"
+                            src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+                            wx:if="{{item.k}}"
+                          ></image>
+                        </view>
+                        <view
+                          class="{{['_div','price-text-right','data-v-7ce49c94',item.n]}}"
+                          >{{item.m}}</view
+                        >
+                      </view>
+                    </view>
+                  </view>
+                  <view
+                    class="_div line-rowsep data-v-7ce49c94"
+                    wx:if="{{item.o}}"
+                  ></view>
+                </view>
+              </view>
+              <view
+                class="_div placement-bottom-tip data-v-7ce49c94"
+                wx:if="{{M}}"
+                >提示：抢权配售实际收益受正股股价影响，存在亏损风险</view
+              >
+            </view>
+          </view>
+          <view class="_div seperate-line data-v-7ce49c94" wx:if="{{N}}"></view>
+          <view class="_div teach-wrapper data-v-7ce49c94" wx:if="{{O}}">
+            <view bindtap="{{P}}" class="_div teach-text data-v-7ce49c94">
+              <view class="_div text-special data-v-7ce49c94">
+                <label class="_span data-v-7ce49c94">你了解可转债吗？</label>
+                <view class="_div jump-img data-v-7ce49c94"></view>
+              </view>
+              <view class="_div text-common data-v-7ce49c94"
+                >可转债兼具“股性”和“债性”</view
+              >
+            </view>
+            <view class="_div teach-show data-v-7ce49c94">
+              <view class="_div teach-img data-v-7ce49c94"></view>
+              <view class="_div teach-close data-v-7ce49c94"></view>
+              <view
+                bindtap="{{Q}}"
+                class="_div click-close data-v-7ce49c94"
+              ></view>
+            </view>
+          </view>
+          <view class="_div seperate-line data-v-7ce49c94"></view>
+          <view class="_div title-wrapper data-v-7ce49c94">
+            <label class="_span title data-v-7ce49c94">排行榜</label>
+            <view bindtap="{{R}}" class="_div tip-text data-v-7ce49c94"
+              >怎么用排行榜选可转债<image
+                class="_img image-tip data-v-7ce49c94"
+                src="https://st.gtimg.com/design/03a8745a45845bf9325415084fd28a6f.png"
+              ></image>
+            </view>
+          </view>
+        </view>
+        <view class="_div tab-wrapper data-v-7ce49c94" ref="stocktab">
+          <tabbar
+            bind:__l="__l"
+            bindswitchTab="{{S}}"
+            class="tab-bar data-v-7ce49c94"
+            uI="7ce49c94-3"
+            uP="{{T}}"
+            wx:if="{{T}}"
+          ></tabbar>
+        </view>
+        <view class="_div bond-tips data-v-7ce49c94">{{U}}</view>
+        <view
+          class="_div list-wrapper data-v-7ce49c94"
+          ref="stocklist"
+          style="{{'min-height:'+ae}}"
+        >
+          <scroll-list
+            bind:__l="__l"
+            bindchangeSort="{{X}}"
+            bindclickStockDetail="{{aa}}"
+            bindendScrollGuide="{{Z}}"
+            bindtouchHorizontalScrollList="{{Y}}"
+            class="stock-list-wrapper r data-v-7ce49c94"
+            uI="7ce49c94-4"
+            uP="{{ab}}"
+            uR="bondBlock"
+            wx:if="{{V}}"
+          ></scroll-list>
+          <view
+            bindtap="{{ad}}"
+            class="_div rank-more data-v-7ce49c94"
+            wx:if="{{ac}}"
+            >展开全部<view class="_div icon data-v-7ce49c94"></view>
+          </view>
+        </view>
+        <view
+          class="_div nodata-wrapper data-v-7ce49c94"
+          style="{{'min-height:'+ag}}"
+          wx:if="{{af}}"
+        >
+          <no-data
+            bind:__l="__l"
+            class="data-v-7ce49c94"
+            uI="7ce49c94-5"
+            uS="{{['d']}}"
+          >
+            <slot wx:if="{{$slots.d}}"></slot>
+            <block wx:else>暂无此类交易的可转债</block>
+          </no-data>
+        </view>
+      </view>
+      <view class="_div place-holder data-v-7ce49c94" wx:if="{{ah}}"></view>
+    </view>
+  </scroll-view>
+  <view
+    class="_div modal-wrapper data-v-7ce49c94"
+    style="{{'height:'+aw}}"
+    wx:if="{{aq}}"
+  >
+    <view class="_div modal-content data-v-7ce49c94">
+      <view class="_div modal-title data-v-7ce49c94">{{ar}}</view>
+      <view class="_div modal-box data-v-7ce49c94">
+        <view class="_div content data-v-7ce49c94">{{as}}</view>
+        <view class="_div tip data-v-7ce49c94">{{at}}</view>
+      </view>
+      <view bindtap="{{av}}" class="_div modal-btn data-v-7ce49c94"
+        >我知道了</view
+      >
+    </view>
+  </view>
+</view>

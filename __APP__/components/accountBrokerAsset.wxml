@@ -1,0 +1,24 @@
+<view class="plugin-wrap data-v-54149e55">
+  <zhao-shang
+    bind:__l="__l"
+    bindassetFinish="{{b}}"
+    class="data-v-54149e55"
+    uI="54149e55-0"
+    uP="{{c}}"
+    wx:if="{{a}}"
+  ></zhao-shang>
+  <hua-lin
+    bind:__l="__l"
+    bindassetFinish="{{e}}"
+    class="data-v-54149e55"
+    uI="54149e55-1"
+    uP="{{f}}"
+    wx:if="{{d}}"
+  ></hua-lin>
+  <broker-asset-plugin-place-holder
+    bind:__l="__l"
+    class="data-v-54149e55"
+    uI="54149e55-2"
+    wx:if="{{g}}"
+  ></broker-asset-plugin-place-holder>
+</view>

@@ -1,0 +1,55 @@
+<view class="_div gdtj-list data-v-de76055d" wx:if="{{a}}">
+  <view class="{{['_div','caption','data-v-de76055d',d&&'t-0']}}">
+    <view class="_div no-scroll data-v-de76055d" ref="fixHead">
+      <view class="_div item data-v-de76055d">
+        <view class="_div column data-v-de76055d">股东名称</view>
+      </view>
+    </view>
+    <view
+      bindtouchend="{{events.onTouchend}}"
+      bindtouchmove="{{events.onTouchmove}}"
+      bindtouchstart="{{events.onTouchstart}}"
+      bindtransitionend="{{events.onTransitionEnd}}"
+      class="_div horizontal-scroll grid-title data-v-de76055d"
+    >
+      <view class="_div item grid-title-inner data-v-de76055d">
+        <view
+          class="_div column data-v-de76055d"
+          wx:for="{{b}}"
+          wx:for-item="column"
+          wx:key="b"
+          >{{column.a}}</view
+        >
+      </view>
+    </view>
+    <view class="_div scroll-block data-v-de76055d" wx:if="{{c}}"></view>
+  </view>
+  <view class="_div list data-v-de76055d">
+    <view class="_div no-scroll name-column data-v-de76055d">
+      <view class="_div item data-v-de76055d" wx:for="{{e}}" wx:key="b">
+        <view class="_div column identifier data-v-de76055d">
+          <view class="_div identifier-name data-v-de76055d">{{item.a}}</view>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtouchend="{{events.onTouchend}}"
+      bindtouchmove="{{events.onTouchmove}}"
+      bindtouchstart="{{events.onTouchstart}}"
+      bindtransitionend="{{events.onTransitionEnd}}"
+      class="_div horizontal-scroll grid-body data-v-de76055d"
+    >
+      <view class="_div grid-body-inner data-v-de76055d">
+        <view class="_div item data-v-de76055d" wx:for="{{f}}" wx:key="b">
+          <view
+            class="{{['_div','column','data-v-de76055d',column.c,column.d]}}"
+            wx:for="{{item.a}}"
+            wx:for-item="column"
+            wx:key="b"
+            >{{column.a}}</view
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

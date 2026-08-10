@@ -1,0 +1,62 @@
+::-webkit-scrollbar {
+  display: none;
+}
+.tab-wrapper {
+  width: 100%;
+}
+.tab-wrapper .st-tab-bar {
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  display: -webkit-box;
+  font-size: 0.4rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+}
+.tab-wrapper .st-tab-bar.border-bottom {
+  border-bottom: 0.013333333333333334rem solid #e9ebf0;
+}
+.tab-wrapper .st-tab-bar.font .st-tab.active {
+  color: #3077ec;
+  font-size: 0.56rem;
+  font-weight: 500;
+  position: relative;
+  top: -0.02666666666666667rem;
+}
+.tab-wrapper .st-tab-bar.slider .st-tab.active {
+  color: #262e40;
+  font-weight: 500;
+}
+.tab-wrapper .st-tab-bar.slider .st-tab.active:before {
+  background-color: #3077ec;
+  border-radius: 0.08rem;
+  bottom: 0.05333333333333334rem;
+  content: "";
+  height: 0.08rem;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 0.32rem;
+}
+.tab-wrapper .st-tab {
+  -webkit-box-flex: 1;
+  color: #475166;
+  padding: 0 0.32rem;
+  position: relative;
+  text-align: center;
+}
+.tab-wrapper .st-tab:first-child {
+  padding-left: 0.4rem;
+}
+.tab-wrapper .st-tab-last {
+  padding-right: 0.08rem;
+}
+.skin-black .st-tab-bar {
+  background-color: #1d2228;
+  border-bottom-color: #1d2127;
+}
+.skin-black .st-tab-bar .st-tab {
+  color: #f0f1f5;
+}

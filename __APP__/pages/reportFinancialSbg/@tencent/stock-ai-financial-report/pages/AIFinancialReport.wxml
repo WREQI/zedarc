@@ -1,0 +1,32 @@
+<view class="{{['_div','ai-financial-report-container','data-v-999639af',l]}}" style="{{m}}">
+    <view class="_div ai-title data-v-999639af">
+        <view class="_div ai-title-left data-v-999639af">
+            <image class="_img ai-title-logo data-v-999639af" mode="aspectFit" src="https://st.gtimg.com/design/690c78a659215c944e0ee8aba996402f.png"></image>
+        </view>
+        <view class="_div ai-title-right data-v-999639af">
+            <view catchtap="{{a}}" class="_div ai-all-financial data-v-999639af">全部财报</view>
+            <view catchtap="{{c}}" class="_div ai-share data-v-999639af" wx:if="{{b}}">分享</view>
+            <view catchtap="{{e}}" class="_div share-containter data-v-999639af" wx:elif="{{d}}">
+                <button class="data-v-999639af" openType="share" plain="true" style="border:none;background-color:transparent;padding:0px">
+                    <view class="_div share-wrap data-v-999639af">
+                        <label class="_span data-v-999639af">分享</label>
+                    </view>
+                </button>
+            </view>
+        </view>
+    </view>
+    <view class="_div ai-content-container data-v-999639af">
+        <view catchtap="{{g}}" class="_div ai-search-container data-v-999639af">
+            <image class="_img ai-search-icon data-v-999639af" mode="aspectFit" src="{{f}}"></image>
+            <view class="_div ai-search-text data-v-999639af">搜索关注公司，查看财报速递</view>
+        </view>
+        <stock-content bind:__l="__l" class="ai-content data-v-999639af" uI="999639af-0" uP="{{i}}" wx:if="{{h}}"></stock-content>
+        <view class="_div ai-financial-no-container data-v-999639af" wx:if="{{j}}">
+            <view class="_div ai-financial-no-tip-container data-v-999639af">
+                <image class="_img ai-financial-no-img data-v-999639af" src="{{k}}"></image>
+                <view class="_div ai-financial-no-tip data-v-999639af">暂无相关数据</view>
+            </view>
+        </view>
+    </view>
+    <input class="temp-focus data-v-999639af" ref="tempFocus"></input>
+</view>

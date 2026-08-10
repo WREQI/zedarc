@@ -1,0 +1,13 @@
+<view class="_div guide-wrap data-v-c772ec7e" wx:if="{{a}}">
+  <view class="_div guide-box data-v-c772ec7e">
+    <view class="_div title data-v-c772ec7e">微信通知</view>
+    <view class="_div desc data-v-c772ec7e">暂未关注公众号，无法接受提醒</view>
+    <view class="_div img data-v-c772ec7e"></view>
+    <view class="_div guide-buttons data-v-c772ec7e">
+      <view bindtap="{{b}}" class="_div button cancel data-v-c772ec7e"
+        >取消</view
+      >
+      <view bindtap="{{c}}" class="_div button data-v-c772ec7e">立即关注</view>
+    </view>
+  </view>
+</view>

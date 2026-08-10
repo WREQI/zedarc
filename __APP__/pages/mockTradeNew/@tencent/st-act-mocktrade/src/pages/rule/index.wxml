@@ -1,0 +1,23 @@
+<view class="_div rule-wrapper scroll-view data-v-83b144b8">
+  <view class="_div data-v-83b144b8">
+    <view class="_div rule-container data-v-83b144b8">
+      <view class="_div rule-header data-v-83b144b8">
+        <label class="_span rule-header--text data-v-83b144b8">{{a}}</label>
+        <view class="_div rule-header--line data-v-83b144b8"></view>
+      </view>
+      <view class="_div rule-content data-v-83b144b8">
+        <view class="_div rule-content--text data-v-83b144b8">
+          <rich-text class="data-v-83b144b8" nodes="{{b}}"></rich-text>
+        </view>
+      </view>
+      <view class="_div rule-link data-v-83b144b8" wx:if="{{c}}">
+        <label bindtap="{{e}}" class="_span rule-link--text data-v-83b144b8"
+          >{{d}}</label
+        >
+        <label bindtap="{{g}}" class="_span rule-link--text data-v-83b144b8"
+          >{{f}}</label
+        >
+      </view>
+    </view>
+  </view>
+</view>

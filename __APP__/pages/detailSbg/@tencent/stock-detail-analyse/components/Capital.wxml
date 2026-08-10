@@ -1,0 +1,31 @@
+<view class="_div zxg-sa-block data-v-c630f590" ref="capital" wx:if="{{a}}">
+  <view class="_div zxg-sa-block-title data-v-c630f590">
+    <view class="_i vertical-line data-v-c630f590"></view>
+    <view class="vb data-v-c630f590">资金</view>
+    <view class="_div trend-tag-wrapper data-v-c630f590">
+      <view class="{{['_div','trend-tag','data-v-c630f590',c]}}">{{b}}</view>
+    </view>
+  </view>
+  <view class="_div overview data-v-c630f590">
+    <view class="_div cap-title data-v-c630f590">主力资金流向（万元）</view>
+    <view class="_div cap-caption data-v-c630f590">
+      <view class="_div cap-col-title data-v-c630f590">{{d}}更新</view>
+      <view class="_div cap-col-number data-v-c630f590">实际值</view>
+      <view class="_div cap-col-rank data-v-c630f590">行业排名</view>
+    </view>
+    <view class="_div cap-item data-v-c630f590">
+      <view class="_div cap-col-title data-v-c630f590">主力净流入</view>
+      <view class="{{['_div','cap-col-number','data-v-c630f590',f]}}"
+        >{{e}}</view
+      >
+      <view class="_div cap-col-rank data-v-c630f590">{{g}}</view>
+    </view>
+    <view class="_div cap-item data-v-c630f590">
+      <view class="_div cap-col-title data-v-c630f590">过去5日主力净流入</view>
+      <view class="{{['_div','cap-col-number','data-v-c630f590',i]}}"
+        >{{h}}</view
+      >
+      <view class="_div cap-col-rank data-v-c630f590">{{j}}</view>
+    </view>
+  </view>
+</view>

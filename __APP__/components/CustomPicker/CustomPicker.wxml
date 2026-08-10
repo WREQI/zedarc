@@ -1,0 +1,48 @@
+<action-sheet
+  bind:__l="__l"
+  bindcancel="{{o}}"
+  bindmaskClick="{{n}}"
+  class="data-v-2f56042f"
+  uI="2f56042f-0"
+  uP="{{p}}"
+  uS="{{['d']}}"
+  wx:if="{{a}}"
+>
+  <view class="{{['invest-cond-period','data-v-2f56042f',m&&'disabled']}}">
+    <picker-view
+      immediateChange
+      bindchange="{{e}}"
+      class="date-picker-view data-v-2f56042f"
+      indicatorClass="indicator-class"
+      indicatorStyle="{{c}}"
+      maskClass="mask-class"
+      value="{{d}}"
+    >
+      <picker-view-column class="data-v-2f56042f" wx:for="{{b}}" wx:key="b">
+        <view
+          class="{{['item','data-v-2f56042f',colValue.c]}}"
+          wx:for="{{item.a}}"
+          wx:for-item="colValue"
+          wx:key="b"
+          >{{colValue.a}}</view
+        >
+      </picker-view-column>
+    </picker-view>
+    <view class="disabled-mask data-v-2f56042f" wx:if="{{f}}"></view>
+    <view catchtap="{{g}}" class="data-v-2f56042f">
+      <slot name="footer"></slot>
+    </view>
+    <view class="button-wrap flex flex-v data-v-2f56042f">
+      <button
+        bindtap="{{j}}"
+        class="cancel-btn flex-1 data-v-2f56042f"
+        wx:if="{{h}}"
+      >
+        {{i}}
+      </button>
+      <button bindtap="{{l}}" class="confirm-btn flex-1 data-v-2f56042f">
+        {{k}}
+      </button>
+    </view>
+  </view>
+</action-sheet>

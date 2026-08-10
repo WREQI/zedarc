@@ -1,0 +1,12 @@
+<view class="_div label-wrapper data-v-d0e33c97">
+  <view class="{{['_div','label-container','data-v-d0e33c97',c]}}">
+    <label
+      bindtap="{{label.d}}"
+      class="{{['_span','data-v-d0e33c97','label-item-wrapper',b,label.c]}}"
+      wx:for="{{a}}"
+      wx:for-item="label"
+      wx:key="b"
+      >{{label.a}}</label
+    >
+  </view>
+</view>

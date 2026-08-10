@@ -1,0 +1,38 @@
+<view
+  catchtouchmove="{{h}}"
+  class="_div box-cont cont-details pannel data-v-22cdb189"
+>
+  <view class="_div top layout layout-align-space-between data-v-22cdb189">
+    <label class="_span block row-a data-v-22cdb189">时间</label>
+    <label class="_span block row-b data-v-22cdb189">成交价</label>
+    <label class="_span block row-c data-v-22cdb189">成交量</label>
+  </view>
+  <scroll-view
+    bindscroll="{{d}}"
+    bindscrolltolower="{{e}}"
+    bindtouchstart="{{f}}"
+    catchtouchmove="{{g}}"
+    class="list-details data-v-22cdb189"
+    ref="scrollView"
+    scrollY="true"
+    style="height: 100%"
+  >
+    <view
+      class="_li list-item layout layout-align-space-between data-v-22cdb189"
+      wx:for="{{a}}"
+      wx:key="g"
+    >
+      <view class="_div row-a data-v-22cdb189">{{item.a}}</view>
+      <view class="_div row-b data-v-22cdb189">{{item.b}}</view>
+      <view class="{{['_div','row-c','data-v-22cdb189',item.f]}}"
+        >{{item.c}}<label class="{{['_span','data-v-22cdb189',item.e]}}"
+          >{{item.d}}</label
+        >
+      </view>
+    </view>
+    <view class="_div no-data data-v-22cdb189" wx:if="{{b}}">暂无明细数据</view>
+    <view class="_div no-data no-more-data data-v-22cdb189" wx:elif="{{c}}"
+      >没有更多了</view
+    >
+  </scroll-view>
+</view>

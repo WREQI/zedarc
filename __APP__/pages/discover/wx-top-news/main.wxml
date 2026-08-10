@@ -1,0 +1,22 @@
+<page-meta class="data-v-2368b0fe" rootFontSize="{{a}}"></page-meta>
+<view class="_div wx-hot-news data-v-2368b0fe">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-2368b0fe"
+    uI="2368b0fe-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-2368b0fe"
+    uI="2368b0fe-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <weixin-tops
+    bind:__l="__l"
+    class="data-v-2368b0fe"
+    uI="2368b0fe-2"
+    uP="{{d}}"
+    wx:if="{{c}}"
+  ></weixin-tops>
+</view>

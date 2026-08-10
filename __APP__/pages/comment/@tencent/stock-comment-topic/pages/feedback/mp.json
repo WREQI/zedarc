@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "feedback-multi-list": "../../components/FeedbackMultiList/mp",
+    "reply-box": "../../components/replyBox/index",
+    "status": "../../../../../../node-modules/@tencent/st-status/mp/index",
+    "topic-area": "../../components/FeedbackArea/index",
+    "dropdown-vue": "../../components/FeedbackMultiList/dropdown",
+    "profile-pop": "../../../../../communitySbg/@tencent/stock-community-ui/components/profilePop/index"
+  },
+  "componentPlaceholder": { "profile-pop": "view" }
+}

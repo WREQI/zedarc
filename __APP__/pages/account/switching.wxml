@@ -1,0 +1,22 @@
+<page-meta class="data-v-56608987" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-56608987"
+  id="global-wrap"
+  uI="56608987-0"
+  uP="{{d}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{d}}"
+>
+  <view class="account-switching data-v-56608987">
+    <dialog
+      bind:__l="__l"
+      class="data-v-56608987"
+      id="mp-dialog"
+      uI="56608987-1,56608987-0"
+      uP="{{b}}"
+      wx:if="{{b}}"
+    ></dialog>
+  </view>
+</global-wrap>

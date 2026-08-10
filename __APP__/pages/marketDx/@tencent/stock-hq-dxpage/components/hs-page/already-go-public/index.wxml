@@ -1,0 +1,29 @@
+<view class="{{['_div','already-go-public-wrapper','data-v-62165471',l,m]}}">
+  <label-block
+    bind:__l="__l"
+    bindupdateLabelTab="{{b}}"
+    class="label-wrapper-outer r data-v-62165471"
+    uI="62165471-0"
+    uP="{{c}}"
+    uR="labelBlock"
+    wx:if="{{c}}"
+  ></label-block>
+  <common-list
+    bind:__l="__l"
+    bindloadFinished="{{f}}"
+    class="list-wrapper r data-v-62165471"
+    uI="62165471-1"
+    uP="{{g}}"
+    uR="stocklist"
+    wx:if="{{d}}"
+  ></common-list>
+  <common-list
+    bind:__l="__l"
+    bindloadFinished="{{j}}"
+    class="list-wrapper r data-v-62165471"
+    uI="62165471-2"
+    uP="{{k}}"
+    uR="bondlist"
+    wx:if="{{h}}"
+  ></common-list>
+</view>

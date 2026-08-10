@@ -1,0 +1,114 @@
+.skin {
+  background-color: #f5f6fa;
+  color: #000;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.4266666666666667rem;
+  height: 100%;
+}
+.skin .options {
+  background-color: #fff;
+  margin-top: 0.16rem;
+  padding: 0 0.4rem;
+}
+.skin .options .item {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.12rem;
+  justify-content: space-between;
+  position: relative;
+}
+.skin .options .item .icon-tick {
+  background: url(https://st.gtimg.com/design/0312c4d371be418bac4007f82a638f2e.svg);
+  color: #007aff;
+  font-size: 0.3466666666666667rem;
+  margin-right: 0.16rem;
+}
+.skin .skan {
+  flex-grow: 1;
+  margin: 0.5333333333333333rem 0.4rem 0;
+}
+.skin .skan .skin-img {
+  align-items: center;
+  background-color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.3066666666666666rem;
+  padding-top: 0.5333333333333333rem;
+}
+.skin .skan .skin-img .title {
+  color: #888;
+  font-size: 0.4rem;
+}
+.skin .skan .skin-img .skin-black {
+  background: url(https://wzq.gtimg.com/resource/weapp/skin/skin02.png);
+  background-size: 100% 100%;
+}
+.skin .skan .skin-img .skin-black,
+.skin .skan .skin-img .skin-white {
+  height: 7.413333333333333rem;
+  margin-top: 0.5333333333333333rem;
+  width: 8.666666666666666rem;
+}
+.skin .skan .skin-img .skin-white {
+  background: url(https://wzq.gtimg.com/resource/weapp/skin/skin01.png);
+  background-size: 100% 100%;
+}
+.skin .item:last-child:after {
+  border: none;
+}
+.skin-rows {
+  background-color: #fff;
+  height: 6.506666666666667rem;
+  justify-content: space-between;
+  padding-left: 1.6933333333333334rem;
+  padding-right: 1.6933333333333334rem;
+  padding-top: 0.6933333333333334rem;
+}
+.bg-white {
+  background: url(https://st.gtimg.com/design/adcb72f063a197ac74248a35ac320eef.png);
+  background-size: 100% 100%;
+}
+.bg-black,
+.bg-white {
+  height: 4.96rem;
+  width: 2.4rem;
+}
+.bg-black {
+  background: url(https://st.gtimg.com/design/0f1ad68854c58c3559197482c360fffa.png);
+  background-size: 100% 100%;
+}
+.status {
+  background: url(https://st.gtimg.com/design/6fd20a7035350086db5964494d1f5f44.png);
+  background-size: 100% 100%;
+}
+.status,
+.ticked .status {
+  height: 0.6666666666666666rem;
+  width: 0.6666666666666666rem;
+}
+.ticked .status {
+  background: url(https://st.gtimg.com/design/178a4253703f8cc73a04a44db41ca49b.png);
+  background-size: 100% 100%;
+}
+.btm-tip {
+  margin: 4.626666666666667rem auto 0;
+  text-align: center;
+}
+.status {
+  margin: 0 auto;
+}
+.desc {
+  color: #101419;
+  font-size: 0.37333333333333335rem;
+  font-weight: 400;
+  height: 0.37333333333333335rem;
+  line-height: 0.37333333333333335rem;
+  margin-top: 0.32rem;
+}
+.ticked .desc {
+  font-weight: 500;
+}

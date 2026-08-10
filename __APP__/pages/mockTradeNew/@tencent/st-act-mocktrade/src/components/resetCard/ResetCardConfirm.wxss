@@ -1,0 +1,145 @@
+.reset-card-confirm.data-v-b952c976 {
+  align-items: center;
+  bottom: 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1001;
+}
+.reset-card-confirm__mask.data-v-b952c976 {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.reset-card-confirm__content.data-v-b952c976 {
+  animation: fadeIn-b952c976 0.2s ease-out;
+  background-color: #fff;
+  border-radius: 0.21333333333333335rem;
+  overflow: hidden;
+  position: relative;
+  width: 8rem;
+}
+.reset-card-confirm__body.data-v-b952c976 {
+  padding: 0.64rem 0.64rem 0.5333333333333333rem;
+}
+.reset-card-confirm__title.data-v-b952c976 {
+  color: #262e40;
+  font-family: PingFang SC;
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.6666666666666666rem;
+  margin-bottom: 0.4266666666666667rem;
+  text-align: center;
+}
+.reset-card-confirm__desc.data-v-b952c976 {
+  color: #475166;
+  font-family: PingFang SC;
+  font-size: 0.37333333333333335rem;
+  line-height: 0.56rem;
+  text-align: left;
+}
+.reset-card-confirm__buttons.data-v-b952c976 {
+  align-items: center;
+  border-top: 0.013333333333333334rem solid #e9ebf0;
+  display: -webkit-flex;
+  display: flex;
+}
+.reset-card-confirm__divider.data-v-b952c976 {
+  background-color: #e9ebf0;
+  height: 100%;
+  min-height: 1.28rem;
+  width: 0.013333333333333334rem;
+}
+.reset-card-confirm__btn.data-v-b952c976 {
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-family: PingFang SC;
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  height: 1.28rem;
+  justify-content: center;
+}
+.reset-card-confirm__btn--cancel.data-v-b952c976 {
+  color: #262e40;
+}
+.reset-card-confirm__btn--cancel.data-v-b952c976:active {
+  background-color: #f5f5f5;
+}
+.reset-card-confirm__btn--confirm.reset-card-confirm__btn--light.data-v-b952c976 {
+  color: #e63535;
+}
+.reset-card-confirm__btn--confirm.reset-card-confirm__btn--classic.data-v-b952c976 {
+  color: #3077ec;
+}
+.reset-card-confirm__btn--confirm.data-v-b952c976:active {
+  background-color: #f5f5f5;
+}
+.reset-card-confirm__btn--disabled.data-v-b952c976 {
+  color: #ccc !important;
+  cursor: not-allowed;
+}
+.reset-card-confirm__btn--disabled.data-v-b952c976:active {
+  background-color: initial;
+}
+.reset-card-confirm--dark .reset-card-confirm__content.data-v-b952c976 {
+  background-color: #2a2a2a;
+}
+.reset-card-confirm--dark .reset-card-confirm__title.data-v-b952c976 {
+  color: #fff;
+}
+.reset-card-confirm--dark .reset-card-confirm__desc.data-v-b952c976 {
+  color: #b8becc;
+}
+.reset-card-confirm--dark .reset-card-confirm__buttons.data-v-b952c976 {
+  border-top-color: #3a3a3a;
+}
+.reset-card-confirm--dark .reset-card-confirm__divider.data-v-b952c976 {
+  background-color: #3a3a3a;
+}
+.reset-card-confirm--dark .reset-card-confirm__btn--cancel.data-v-b952c976 {
+  color: #fff;
+}
+.reset-card-confirm--dark
+  .reset-card-confirm__btn--cancel.data-v-b952c976:active {
+  background-color: #3a3a3a;
+}
+.reset-card-confirm--dark
+  .reset-card-confirm__btn--confirm.reset-card-confirm__btn--classic.data-v-b952c976,
+.reset-card-confirm--dark
+  .reset-card-confirm__btn--confirm.reset-card-confirm__btn--light.data-v-b952c976 {
+  color: #4da3ff;
+}
+.reset-card-confirm--dark
+  .reset-card-confirm__btn--confirm.data-v-b952c976:active {
+  background-color: #3a3a3a;
+}
+@-webkit-keyframes fadeIn-b952c976 {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn-b952c976 {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

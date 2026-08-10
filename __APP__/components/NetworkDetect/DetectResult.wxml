@@ -1,0 +1,54 @@
+<view>
+  <view
+    class="{{['network-detect-result-wrap',p&&'network-detect-result-wrap__embedded',q&&'network-detect-result-wrap__full',r&&'network-detect-result-wrap__navbar']}}"
+  >
+    <popup
+      bind:__l="__l"
+      uI="edba1742-0"
+      uP="{{o}}"
+      uS="{{['d']}}"
+      wx:if="{{o}}"
+    >
+      <view class="{{['network-detect-component',l,m]}}" style="{{n}}">
+        <view class="top-wrap">
+          <view class="top-wrap-center"></view>
+          <view bindtap="{{b}}" class="top-wrap-close">
+            <view class="close-bg" wx:if="{{a}}"></view>
+          </view>
+        </view>
+        <view class="tools-network">
+          <view class="tools-network__container">
+            <view class="tools-network__image-wrap">
+              <image class="icon" src="{{c}}"></image>
+            </view>
+            <view class="tools-network__tips">
+              <view class="title align-c">{{d}}</view>
+              <view wx:if="{{e}}"
+                >系统监测到当前处于境外网络，请刷新重试或联系当地网络运营商是否有限制。</view
+              >
+              <view wx:elif="{{f}}"
+                >当前访问IP为高风险IP，访问受限。建议您切换网络或联系客服。</view
+              >
+              <block wx:elif="{{g}}">
+                <view>建议你按下方步骤尝试修复：</view>
+                <view wx:if="{{h}}"
+                  >方案1：切换到4G/5G，若依然无法访问可以开启飞行模式3s后关闭再重试</view
+                >
+                <view wx:else
+                  >方案1：切换到wifi，若附近无wifi可以开启飞行模式3s后关闭再重试</view
+                >
+                <view>方案2：切换网络仍无法解决，请清除微信缓存后再尝试。</view>
+              </block>
+            </view>
+            <view class="tools-network__others border-top-1" wx:if="{{i}}"
+              >清除方法：打开微信，依次点击「我」-「设置」-「通用」-「存储空间」-「缓存清理」</view
+            >
+          </view>
+          <view bindtap="{{k}}" class="tools-network__fix--bottom align-c"
+            >{{j}}</view
+          >
+        </view>
+      </view>
+    </popup>
+  </view>
+</view>

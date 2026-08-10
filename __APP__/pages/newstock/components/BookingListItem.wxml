@@ -1,0 +1,60 @@
+<view class="booking-list-item data-v-244b07e7">
+  <view
+    class="booking-list-item-header flex-vcenter text-color-4 fs-24 data-v-244b07e7"
+  >
+    <view class="purchase-name data-v-244b07e7">{{a}}</view>
+    <view class="purchase-ratio flex-center data-v-244b07e7">
+      <label class="data-v-244b07e7">{{b}}</label>
+      <label
+        bindtap="{{c}}"
+        class="icon icon-info-sparse text-color-5 fs-20 data-v-244b07e7"
+      ></label>
+    </view>
+    <view class="purchase-amount flex-1 align-r data-v-244b07e7">申购数量</view>
+    <view class="purchase-date flex-1 align-r data-v-244b07e7">申购日期</view>
+  </view>
+  <view
+    bindtap="{{item.n}}"
+    class="{{['booking-list-item-body','flex','text-color-1','fs-30','data-v-244b07e7',item.m&&'border-bottom']}}"
+    wx:for="{{d}}"
+    wx:key="l"
+  >
+    <view class="item purchase-name flex-column data-v-244b07e7">
+      <label class="mb-7 stock-name-text data-v-244b07e7">{{item.a}}</label>
+      <label class="text-color-4 fs-22 data-v-244b07e7"
+        >{{item.b}}{{item.c}}</label
+      >
+    </view>
+    <view
+      class="item purchase-ratio align-c flex-column flex-hcenter data-v-244b07e7"
+    >
+      <block wx:if="{{e}}">
+        <label class="mb-7 data-v-244b07e7">{{item.d}}</label>
+        <label class="fs-22 text-color-4 data-v-244b07e7">{{item.e}}</label>
+      </block>
+      <view class="data-v-244b07e7" wx:else>{{item.f}}</view>
+    </view>
+    <view
+      class="item purchase-date flex-1 fs-28 flex-vcenter flex-end data-v-244b07e7"
+      >{{item.g}}</view
+    >
+    <view
+      class="item purchase-date flex-1 fs-28 flex-vcenter flex-end data-v-244b07e7"
+      >{{item.h}}</view
+    >
+    <view class="item cancel-button flex-vcenter flex-end data-v-244b07e7">
+      <label
+        catchtap="{{item.j}}"
+        class="fs-20 align-r data-v-244b07e7"
+        wx:if="{{item.i}}"
+        >申购中</label
+      >
+      <label
+        catchtap="{{item.k}}"
+        class="fs-24 align-r blue data-v-244b07e7"
+        wx:else
+        >取消</label
+      >
+    </view>
+  </view>
+</view>

@@ -1,0 +1,280 @@
+.details-btn.data-v-2dd5c1c1 {
+  background: #fff;
+  border-top: 0.013333333333333334rem solid var(--border-light-divider, #e9ebf0);
+  bottom: 0;
+  box-sizing: initial;
+  font-size: 0.26666666666666666rem;
+  height: 1.3066666666666666rem;
+  justify-content: space-between;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+[data-st-theme="black"] .details-btn.data-v-2dd5c1c1,
+[data-st-theme="dark"] .details-btn.data-v-2dd5c1c1 {
+  background: #000;
+}
+.details-btn.pyq-mode.data-v-2dd5c1c1 {
+  padding-bottom: 0;
+}
+.details-btn .detail-btn-left.data-v-2dd5c1c1 {
+  box-sizing: border-box;
+  flex: 1;
+  height: 100%;
+}
+.details-btn.hide-trade-area .detail-btn-left.data-v-2dd5c1c1 {
+  flex: 1;
+  width: 100%;
+}
+.details-btn .share-btn.data-v-2dd5c1c1 {
+  height: 100%;
+  line-height: 0.32rem !important;
+  padding: 0 !important;
+}
+.btn-col-set.data-v-2dd5c1c1 {
+  background: #fff;
+  border: 0;
+  color: #262e40;
+  flex: 1;
+  font-size: 0.26666666666666666rem;
+  text-align: center;
+}
+[data-st-theme="black"] .btn-col-set.data-v-2dd5c1c1,
+[data-st-theme="dark"] .btn-col-set.data-v-2dd5c1c1 {
+  background: #000;
+}
+.btn-col-set.left.data-v-2dd5c1c1 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.btn-col-set-right.data-v-2dd5c1c1 {
+  display: -webkit-flex;
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: flex-end;
+}
+.btn-col-set-right.btn-col-set-right-5.data-v-2dd5c1c1 {
+  width: 3.2rem;
+}
+.btn-col-set-right.btn-col-set-right-4.data-v-2dd5c1c1 {
+  width: 3.3333333333333335rem;
+}
+.btn-col-set-right.btn-col-set-right-3.data-v-2dd5c1c1 {
+  width: 5rem;
+}
+.btn-col-set-right.btn-col-set-right-2.data-v-2dd5c1c1 {
+  width: 6.6rem;
+}
+.btn-col-set-right .buy-zs-bk.data-v-2dd5c1c1 {
+  align-items: center;
+  background: var(--color-blue);
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.48rem;
+  height: 1.3066666666666666rem;
+  justify-content: center;
+  width: 100%;
+}
+.btn-col-set-trade.data-v-2dd5c1c1 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 0.37333333333333335rem;
+}
+.btn-col-set-trade .trade-button-wrapper.data-v-2dd5c1c1 {
+  display: -webkit-flex;
+  display: flex;
+  height: 1.3066666666666666rem;
+  margin-right: 0.26666666666666666rem;
+  position: relative;
+  width: 4.293333333333333rem;
+}
+.btn-col-set-trade .trade-button-wrapper .trade-btn.data-v-2dd5c1c1 {
+  align-items: center;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.37333333333333335rem;
+  font-weight: 600;
+  height: 0.96rem;
+  justify-content: center;
+  line-height: 0.96rem;
+  margin-top: 0.17333333333333334rem;
+  position: relative;
+  text-align: center;
+  width: calc(50% - 0.13333333333333333rem);
+}
+.btn-col-set-trade .trade-button-wrapper .trade-btn-loading.data-v-2dd5c1c1 {
+  background: url(https://st.gtimg.com/design/41538d5b8a281bf0c0b191a7cba2f9af.gif)
+    no-repeat;
+  background-size: 100% 100%;
+  height: 0.5333333333333333rem;
+  width: 0.5333333333333333rem;
+}
+.btn-col-set-trade .trade-button-wrapper .trade-btn.buy.data-v-2dd5c1c1 {
+  background: #3077ec;
+  margin-right: 0.26666666666666666rem;
+}
+.btn-col-set-trade .trade-button-wrapper .trade-btn.buy.data-v-2dd5c1c1:before {
+  background: #3077ec;
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(0.06666666666666667rem) skew(-10deg);
+  width: 0.5333333333333333rem;
+}
+.btn-col-set-trade .trade-button-wrapper .trade-btn.sell.data-v-2dd5c1c1 {
+  background: #ff891e;
+}
+.btn-col-set-trade
+  .trade-button-wrapper
+  .trade-btn.sell.data-v-2dd5c1c1:before {
+  background: #ff891e;
+  border-radius: 0.10666666666666667rem;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-0.06666666666666667rem) skew(-10deg);
+  width: 0.5333333333333333rem;
+}
+.btn-col-set-trade .trade-button-wrapper .trade-item-btn.data-v-2dd5c1c1 {
+  display: inline-block;
+  font-size: 0.48rem;
+  height: 1.3066666666666666rem;
+  position: relative;
+  z-index: 2;
+}
+.btn-col-set-trade .trade-button-wrapper-only-one.data-v-2dd5c1c1 {
+  width: 100%;
+}
+.btn-col-set-trade
+  .trade-button-wrapper-only-one
+  .trade-item-btn.data-v-2dd5c1c1 {
+  align-items: center;
+  background-color: #3077ec;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.48rem;
+  height: 1.3066666666666666rem;
+  justify-content: center;
+  width: 100%;
+}
+.btn-col-text.data-v-2dd5c1c1 {
+  font-size: 0.26666666666666666rem;
+  line-height: 0.38666666666666666rem;
+  margin-top: 0.05333333333333334rem;
+}
+.btn-col-text-icon.data-v-2dd5c1c1 {
+  color: #12161f;
+  font-weight: 400 !important;
+  line-height: 0.37333333333333335rem;
+  margin-top: 0.16rem;
+}
+[data-st-theme="black"] .btn-col-text-icon.data-v-2dd5c1c1,
+[data-st-theme="dark"] .btn-col-text-icon.data-v-2dd5c1c1 {
+  color: #98a0b3;
+}
+.btn-col-set label.data-v-2dd5c1c1 {
+  display: inline-block;
+}
+.icon-calculate-bar.data-v-2dd5c1c1,
+.icon-choose.data-v-2dd5c1c1,
+.icon-comment.data-v-2dd5c1c1,
+.icon-mocktrade.data-v-2dd5c1c1,
+.icon-more-dia.data-v-2dd5c1c1,
+.icon-remind.data-v-2dd5c1c1,
+.icon-share-bar.data-v-2dd5c1c1,
+.quote-choose.data-v-2dd5c1c1 {
+  background-size: 2.4rem 0.49333333333333335rem;
+  display: inline-block;
+}
+.icon-calculate-bar.data-v-2dd5c1c1,
+.icon-choose.data-v-2dd5c1c1,
+.icon-comment.data-v-2dd5c1c1,
+.icon-mocktrade.data-v-2dd5c1c1,
+.icon-more-dia.data-v-2dd5c1c1,
+.icon-remind.data-v-2dd5c1c1,
+.icon-share-bar.data-v-2dd5c1c1 {
+  background-size: 0.5866666666666667rem 0.5866666666666667rem;
+  height: 0.5866666666666667rem;
+  margin-top: 0.16rem;
+  width: 0.5866666666666667rem;
+}
+.a-stock.data-v-2dd5c1c1 {
+  margin-left: 1.0666666666666667rem;
+}
+.quote-choose.data-v-2dd5c1c1 {
+  background-size: 0.5866666666666667rem 0.5866666666666667rem;
+  height: 0.5866666666666667rem;
+  margin-top: 0.22666666666666666rem;
+  width: 0.5866666666666667rem;
+}
+.icon-comment.data-v-2dd5c1c1 {
+  background-color: #12161f;
+  height: 0.5866666666666667rem;
+  mask-image: url(https://st.gtimg.com/design/2c823dcd393f5b6a04cc6217752d7615.svg);
+  mask-size: 100% 100%;
+  width: 0.5866666666666667rem;
+}
+[data-st-theme="black"] .icon-comment.data-v-2dd5c1c1,
+[data-st-theme="dark"] .icon-comment.data-v-2dd5c1c1 {
+  background-color: #98a0b3;
+}
+.icon-share-bar.data-v-2dd5c1c1 {
+  background-color: #12161f;
+  height: 0.5866666666666667rem;
+  mask-image: url(https://st.gtimg.com/design/9c97ca6fc7e96156b18b7f9883d51ece.svg);
+  mask-size: 100% 100%;
+  width: 0.5866666666666667rem;
+}
+[data-st-theme="black"] .icon-share-bar.data-v-2dd5c1c1,
+[data-st-theme="dark"] .icon-share-bar.data-v-2dd5c1c1 {
+  background-color: #98a0b3;
+}
+.icon-remind.data-v-2dd5c1c1 {
+  background-color: #12161f;
+  height: 0.5866666666666667rem;
+  mask-image: url(https://st.gtimg.com/design/685016a020a4c5b4bf8e63beac4f0906.svg);
+  mask-size: 100% 100%;
+  width: 0.5866666666666667rem;
+}
+[data-st-theme="black"] .icon-remind.data-v-2dd5c1c1,
+[data-st-theme="dark"] .icon-remind.data-v-2dd5c1c1 {
+  background-color: #98a0b3;
+}
+.icon-remind.reminded.data-v-2dd5c1c1 {
+  mask-image: url(https://st.gtimg.com/design/c7193b36e44842df92f69b3e623c6520.svg);
+  mask-size: 100% 100%;
+}
+.icon-calculate-bar.data-v-2dd5c1c1 {
+  background: url(https://wzq.tenpay.com/mp/v2/img/calculate.28265433.svg)
+    no-repeat;
+  background-size: 0.5866666666666667rem 0.5866666666666667rem;
+  height: 0.5866666666666667rem;
+  width: 0.5866666666666667rem;
+}
+.icon-mocktrade.data-v-2dd5c1c1 {
+  background-color: #12161f;
+  height: 0.5866666666666667rem;
+  mask-image: url(https://st.gtimg.com/design/f80b56cbbb50dfd2b1499f402949d6a4.svg);
+  mask-size: 100% 100%;
+  width: 0.5866666666666667rem;
+}
+[data-st-theme="black"] .icon-mocktrade.data-v-2dd5c1c1,
+[data-st-theme="dark"] .icon-mocktrade.data-v-2dd5c1c1 {
+  background-color: #98a0b3;
+}

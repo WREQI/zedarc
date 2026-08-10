@@ -1,0 +1,8 @@
+<view class="_div mod-userModel data-v-4d2f13c6">
+  <view
+    class="{{['_div','icon','data-v-4d2f13c6',item.b]}}"
+    wx:for="{{a}}"
+    wx:key="a"
+  ></view>
+  <view class="{{['_div','data-v-4d2f13c6','icon',c]}}" wx:if="{{b}}"></view>
+</view>

@@ -1,0 +1,98 @@
+<view class="{{['_div','img-ocr','data-v-89b29d16',w&&'simple-mode']}}">
+  <view
+    class="_div content choose data-v-89b29d16"
+    style="{{'background:'+f}}"
+    wx:if="{{a}}"
+  >
+    <image
+      alt=""
+      class="_img demo-img data-v-89b29d16"
+      mode="widthFix"
+      src="{{b}}"
+    ></image>
+    <view class="_div bottom data-v-89b29d16">
+      <view bindtap="{{c}}" class="_div btn data-v-89b29d16">去相册中选择</view>
+    </view>
+    <view class="_div tip-wrapper data-v-89b29d16" wx:if="{{d}}"
+      >不需要批量导入?<view bindtap="{{e}}" class="_div tip data-v-89b29d16"
+        >点此可搜索并逐个添加自选</view
+      >
+    </view>
+  </view>
+  <view class="_div content update data-v-89b29d16" wx:elif="{{g}}">
+    <view class="_div review-wrap data-v-89b29d16">
+      <view class="_div review-img-wrap data-v-89b29d16">
+        <image
+          alt=""
+          class="_img review-img data-v-89b29d16"
+          mode="widthFix"
+          src="{{h}}"
+        ></image>
+      </view>
+      <view class="_div bottom data-v-89b29d16">
+        <view
+          bindtap="{{k}}"
+          class="{{['_div','btn','data-v-89b29d16',j&&'disabled']}}"
+          >{{i}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div content error data-v-89b29d16" wx:elif="{{l}}">
+    <view class="_div error-review-wrap data-v-89b29d16">
+      <view class="_div review-img-wrap data-v-89b29d16">
+        <image
+          alt=""
+          class="_img review-img data-v-89b29d16"
+          mode="widthFix"
+          src="{{m}}"
+        ></image>
+      </view>
+      <view class="_div error-tip data-v-89b29d16"></view>
+      <view class="_div bottom data-v-89b29d16">
+        <view bindtap="{{n}}" class="_div btn data-v-89b29d16"
+          >去相册中选择</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div content result data-v-89b29d16" wx:elif="{{o}}">
+    <view class="_div stock-list data-v-89b29d16">
+      <view
+        bindtap="{{item.f}}"
+        class="_div stock-item data-v-89b29d16"
+        index="{{item.e}}"
+        wx:for="{{p}}"
+      >
+        <view
+          class="{{['_div','left','data-v-89b29d16',item.a&&'checked']}}"
+        ></view>
+        <view class="_div right data-v-89b29d16">
+          <view class="_div name data-v-89b29d16">{{item.b}}</view>
+          <view class="_div scode data-v-89b29d16">
+            <image class="_img tag data-v-89b29d16" src="{{item.c}}"></image>
+            <view class="_div code data-v-89b29d16">{{item.d}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_div bottom data-v-89b29d16">
+      <view bindtap="{{q}}" class="_div btn data-v-89b29d16">一键添加</view>
+    </view>
+  </view>
+  <loading
+    bind:__l="__l"
+    class="data-v-89b29d16"
+    uI="89b29d16-0"
+    wx:if="{{r}}"
+  ></loading>
+  <group-pop
+    bind:__l="__l"
+    bindmoveStocks="{{t}}"
+    class="r data-v-89b29d16"
+    uI="89b29d16-1"
+    uP="{{v}}"
+    uR="groupPop"
+    wx:if="{{v}}"
+  ></group-pop>
+</view>

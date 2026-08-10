@@ -1,0 +1,119 @@
+.ams-modal-wrapper.data-v-a8f70200 {
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.ams-modal-overlay.data-v-a8f70200 {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.ams-mask-hidden.data-v-a8f70200 {
+  display: none;
+}
+.ams-modal-container.data-v-a8f70200 {
+  background: #fff;
+  border-radius: 0.32rem 0.32rem 0 0;
+  bottom: 0;
+  left: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  transform: translateY(100%);
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  z-index: 999;
+}
+.ams-modal-show.data-v-a8f70200 {
+  transform: translateY(0);
+}
+.ams-modal-content.data-v-a8f70200 {
+  padding: 0.4266666666666667rem 0.32rem
+    calc(0.32rem + env(safe-area-inset-bottom));
+  position: relative;
+}
+.ams-modal-content .logo-text.data-v-a8f70200 {
+  color: #98a0b3;
+  display: block;
+  font-size: 0.32rem;
+  line-height: 0.4533333333333333rem;
+  padding-top: 0.32rem;
+  text-align: center;
+  width: 9.36rem;
+}
+.ams-modal-close.data-v-a8f70200 {
+  height: 0.4266666666666667rem;
+  position: absolute;
+  right: 0.32rem;
+  top: 0.5466666666666666rem;
+  width: 0.4266666666666667rem;
+}
+.ams-modal-title.data-v-a8f70200 {
+  color: #000;
+  font-family: PingFang SC;
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0.6666666666666666rem;
+  text-align: center;
+}
+.ams-modal-button-box.data-v-a8f70200 {
+  position: relative;
+}
+.ams-modal-button-box .ams-button-gif.data-v-a8f70200 {
+  height: 1.6rem;
+  position: absolute;
+  right: 0.8rem;
+  top: -0.13333333333333333rem;
+  width: 1.6rem;
+}
+.ams-modal-button.data-v-a8f70200 {
+  background: #e63535;
+  border: none;
+  border-radius: 0.10666666666666667rem;
+  color: #fff;
+  font-size: 0.4266666666666667rem;
+  font-weight: 600;
+  height: 1.1733333333333333rem;
+  line-height: 1.1733333333333333rem;
+  width: 9.36rem;
+}
+.ams-modal-subtitle.data-v-a8f70200 {
+  color: #475166;
+  display: -webkit-flex;
+  display: flex;
+  font-family: PingFang SC;
+  font-size: 0.4266666666666667rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.64rem;
+  margin: 0.4266666666666667rem 0 0.32rem;
+}
+.ams-modal-illustration.data-v-a8f70200 {
+  border-radius: 0.10666666666666667rem;
+  height: 4.693333333333333rem;
+  margin-bottom: 0.32rem;
+  width: 9.36rem;
+}
+.ams-modal-footer.data-v-a8f70200 {
+  font-size: 0.37333333333333335rem;
+  line-height: 0.5333333333333333rem;
+  margin-top: 0.4266666666666667rem;
+  text-align: center;
+}
+.ams-modal-footer .ams-modal-hint.data-v-a8f70200 {
+  color: #7a8499;
+}
+.ams-modal-footer .ams-modal-action.data-v-a8f70200 {
+  color: #576b95;
+}

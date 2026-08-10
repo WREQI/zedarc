@@ -1,0 +1,185 @@
+<view class="_div stock-list data-v-450d0dce">
+  <view class="_div list-wrapper data-v-450d0dce" wx:if="{{a}}">
+    <view class="_div list-freeze data-v-450d0dce">
+      <view class="_div list-fth data-v-450d0dce">
+        <view class="_div th-item data-v-450d0dce">
+          <view class="_div column data-v-450d0dce">
+            <label
+              bindtap="{{e}}"
+              class="{{['_span','name-label','data-v-450d0dce',d]}}"
+              wx:if="{{b}}"
+              >{{c}}</label
+            >
+            <label class="_span name-label data-v-450d0dce" wx:else
+              >{{f}}</label
+            >
+            <view class="_div divider data-v-450d0dce" wx:if="{{g}}"></view>
+            <label
+              bindtap="{{j}}"
+              class="{{['_span','name-label','data-v-450d0dce',i]}}"
+              wx:if="{{h}}"
+              >全称</label
+            >
+          </view>
+        </view>
+      </view>
+      <view class="_div list-fcontent data-v-450d0dce">
+        <view
+          class="{{['_div','data-v-450d0dce','content-item',l]}}"
+          wx:for="{{k}}"
+          wx:key="B"
+        >
+          <view
+            catchtap="{{item.A}}"
+            class="_div data-v-450d0dce"
+            wx:if="{{item.a}}"
+          >
+            <view
+              class="_div column identifier data-v-450d0dce"
+              wx:if="{{item.b}}"
+            >
+              <view class="_div name-wrapper data-v-450d0dce">
+                <view
+                  class="_div identifier-name data-v-450d0dce"
+                  style="{{'font-size:'+item.e}}"
+                  wx:if="{{item.c}}"
+                >
+                  <view class="_div name-ellip data-v-450d0dce"
+                    >{{item.d}}</view
+                  >
+                </view>
+                <view
+                  class="_div identifier-name data-v-450d0dce"
+                  style="{{'font-size:'+item.g}}"
+                  wx:else
+                >
+                  <view class="_div name-ellip data-v-450d0dce"
+                    >{{item.f}}</view
+                  >
+                </view>
+              </view>
+              <view
+                class="_div identifier-code-wrapper data-v-450d0dce"
+                wx:if="{{item.h}}"
+              >
+                <market-icon
+                  bind:__l="__l"
+                  class="image-icon data-v-450d0dce"
+                  data-c-h="{{!item.i}}"
+                  uI="{{item.j}}"
+                  uP="{{item.k}}"
+                  wx:if="{{item.k}}"
+                ></market-icon>
+                <market-icon
+                  bind:__l="__l"
+                  class="image-icon data-v-450d0dce"
+                  data-c-h="{{!item.l}}"
+                  uI="{{item.m}}"
+                  uP="{{item.n}}"
+                  wx:if="{{item.n}}"
+                ></market-icon>
+                <market-icon
+                  bind:__l="__l"
+                  class="image-icon data-v-450d0dce"
+                  data-c-h="{{!item.o}}"
+                  uI="{{item.p}}"
+                  uP="{{item.q}}"
+                  wx:if="{{item.q}}"
+                ></market-icon>
+                <view class="_div identifier-code data-v-450d0dce"
+                  >{{item.r}}</view
+                >
+                <view
+                  class="{{['_div','data-v-450d0dce',item.v,item.w]}}"
+                  wx:if="{{item.s}}"
+                >
+                  <label class="_span data-v-450d0dce">{{item.t}}</label>
+                </view>
+                <view
+                  class="_div bond-tag-list data-v-450d0dce"
+                  wx:if="{{item.x}}"
+                >
+                  <label
+                    class="_span bond-tag tag-red data-v-450d0dce"
+                    wx:if="{{item.y}}"
+                    >正股涨停</label
+                  >
+                  <label
+                    class="_span bond-tag tag-blue data-v-450d0dce"
+                    wx:elif="{{item.z}}"
+                    >次新</label
+                  >
+                  <label
+                    class="_span bond-tag tag-green data-v-450d0dce"
+                    wx:if="{{false}}"
+                    >强赎</label
+                  >
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view
+      bindtouchcancel="{{CustomScroll.touchend}}"
+      bindtouchend="{{CustomScroll.touchend}}"
+      bindtouchstart="{{CustomScroll.touchstart}}"
+      catchtouchmove="{{CustomScroll.touchmove}}"
+      change:scrollOptions="{{CustomScroll.setup}}"
+      class="{{['_div','list-scroll','font-numeric-tabular','data-v-450d0dce',r]}}"
+      ref="listScroll"
+      scrollOptions="{{q}}"
+    >
+      <view class="_div list-inner-wrapper data-v-450d0dce">
+        <view class="_div list-sth data-v-450d0dce">
+          <view class="_div th-item data-v-450d0dce">
+            <view
+              class="{{['_div','column','data-v-450d0dce',column.g]}}"
+              wx:for="{{m}}"
+              wx:for-item="column"
+              wx:key="f"
+            >
+              <label
+                bindtap="{{column.d}}"
+                class="{{['_span','data-v-450d0dce','sort',column.c]}}"
+                wx:if="{{column.a}}"
+                >{{column.b}}</label
+              >
+              <label class="_span data-v-450d0dce" wx:else>{{column.e}}</label>
+            </view>
+            <view class="_div column data-v-450d0dce"></view>
+          </view>
+        </view>
+        <view class="_div list-scontent data-v-450d0dce">
+          <view
+            catchtap="{{item.d}}"
+            class="{{['_div','data-v-450d0dce','content-item',o,p]}}"
+            wx:for="{{n}}"
+            wx:key="c"
+          >
+            <block wx:if="{{item.a}}">
+              <view
+                class="{{['_div','column','data-v-450d0dce',column.c,column.d]}}"
+                wx:for="{{item.b}}"
+                wx:for-item="column"
+                wx:key="b"
+                >{{column.a}}</view
+              >
+              <view class="_div column data-v-450d0dce"></view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-450d0dce"
+    uI="450d0dce-3"
+    uS="{{['d']}}"
+    wx:else
+  >
+    <view class="_div data-v-450d0dce">暂无数据</view>
+  </no-data>
+</view>

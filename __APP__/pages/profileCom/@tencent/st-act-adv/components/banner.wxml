@@ -1,0 +1,9 @@
+<view class="_div banner-img-box data-v-22d1c97b">
+  <image
+    bindtap="{{c}}"
+    class="_img banner-img data-v-22d1c97b"
+    mode="widthFix"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+</view>

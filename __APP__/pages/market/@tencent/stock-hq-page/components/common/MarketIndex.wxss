@@ -1,0 +1,119 @@
+.color-rise.data-v-dc4b752f {
+  color: var(--color-rise) !important;
+}
+.color-drop.data-v-dc4b752f {
+  color: var(--color-drop) !important;
+}
+.color-equal.data-v-dc4b752f {
+  color: var(--color-equal) !important;
+}
+.color-rise-bg.data-v-dc4b752f {
+  background-color: var(--color-rise);
+}
+.color-drop-bg.data-v-dc4b752f {
+  background-color: var(--color-drop);
+}
+.layout.data-v-dc4b752f {
+  display: -webkit-flex;
+  display: flex;
+}
+.layout-align-center-center.data-v-dc4b752f,
+.layout-align-start-center.data-v-dc4b752f {
+  align-items: center;
+  justify-content: center;
+}
+.layout-align-start-center.data-v-dc4b752f {
+  justify-content: flex-start;
+}
+.layout-align-space-between.data-v-dc4b752f {
+  justify-content: space-between;
+}
+.layout-align-start.data-v-dc4b752f {
+  justify-content: flex-start;
+}
+.layout-column.data-v-dc4b752f {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.layout-row.data-v-dc4b752f {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.flex.data-v-dc4b752f {
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+}
+.market-index.data-v-dc4b752f {
+  background-color: var(--fill-2);
+  font-size: 0.37333333333333335rem;
+  position: relative;
+  text-align: center;
+}
+.market-index .opacity-bg.data-v-dc4b752f {
+  height: 100%;
+  opacity: 0.05;
+  position: absolute;
+  width: 100%;
+}
+.market-index .quote-rise.data-v-dc4b752f {
+  background-color: var(--color-rise);
+}
+.market-index .quote-drop.data-v-dc4b752f {
+  background-color: var(--color-drop);
+}
+.market-index .quote-equal.data-v-dc4b752f {
+  background-color: var(--color-equal);
+}
+.market-index .market-index-wrapper.data-v-dc4b752f {
+  padding: 0.26666666666666666rem 0;
+}
+.market-index .market-index-title.data-v-dc4b752f {
+  align-items: center;
+  color: var(--text-color-1);
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+}
+.market-index .market-index-title-name.data-v-dc4b752f {
+  max-width: 2.6666666666666665rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.market-index .market-index-value.data-v-dc4b752f {
+  font-size: 0.4533333333333333rem;
+  font-weight: 500;
+  margin: 0.14666666666666667rem 0;
+}
+.market-index .market-index-value .up-triangle.data-v-dc4b752f {
+  border-color: transparent transparent var(--color-rise);
+  border-style: solid;
+  border-width: 0 0.09333333333333334rem 0.12rem;
+  height: 0;
+  margin-right: 0.10666666666666667rem;
+  width: 0;
+}
+.market-index .market-index-value .down-triangle.data-v-dc4b752f {
+  border-color: var(--color-drop) transparent transparent;
+  border-style: solid;
+  border-width: 0.12rem 0.09333333333333334rem 0;
+  height: 0;
+  margin-right: 0.10666666666666667rem;
+  width: 0;
+}
+.market-index .market-index-change.data-v-dc4b752f {
+  font-size: 0.29333333333333333rem;
+}
+.sys-ios .market-index .market-index-change.data-v-dc4b752f {
+  font-weight: 500 !important;
+}
+.sys-android .market-index .market-index-change.data-v-dc4b752f {
+  -webkit-text-stroke-width: 0.002666666666666667rem !important;
+  font-weight: unset !important;
+}

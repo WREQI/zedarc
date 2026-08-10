@@ -1,0 +1,33 @@
+<view class="_div hg-wrapper data-v-05fcfa4d">
+  <st-loading
+    bind:__l="__l"
+    class="loading-warapper data-v-05fcfa4d"
+    uI="05fcfa4d-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></st-loading>
+  <view class="_div hg-title-bk data-v-05fcfa4d">
+    <view class="_div hg-title data-v-05fcfa4d" wx:if="{{c}}">
+      <view class="_div title-left data-v-05fcfa4d">日期</view>
+      <view class="_div title-mid data-v-05fcfa4d">数量 (股)</view>
+      <view itleRight class="t_div data-v-05fcfa4d">均价 (元)</view>
+    </view>
+  </view>
+  <view class="_div hg-list data-v-05fcfa4d" wx:if="{{d}}">
+    <view class="_div list-item data-v-05fcfa4d" wx:for="{{e}}" wx:key="d">
+      <view class="_div list-left data-v-05fcfa4d">{{item.a}}</view>
+      <view class="_div list-mid data-v-05fcfa4d">{{item.b}}</view>
+      <view class="_div list-right data-v-05fcfa4d">{{item.c}}</view>
+    </view>
+  </view>
+  <no-data
+    bind:__l="__l"
+    class="data-v-05fcfa4d"
+    uI="05fcfa4d-1"
+    uS="{{['d']}}"
+    wx:if="{{f}}"
+  >
+    <slot wx:if="{{$slots.d}}"></slot>
+    <block wx:else>暂无数据</block>
+  </no-data>
+</view>

@@ -1,0 +1,51 @@
+<view
+  bindtap="{{q}}"
+  class="_div hot-topic-list-item data-v-8103b6a9"
+  ref="rootRef"
+>
+  <view class="_div card-head data-v-8103b6a9">
+    <view class="_div rank-name data-v-8103b6a9">
+      <label
+        class="{{['_span','data-v-8103b6a9','rank-badge',c]}}"
+        wx:if="{{a}}"
+      >
+        <label
+          ariaHidden="true"
+          class="_span rank-deco rank-deco--left data-v-8103b6a9"
+        ></label>
+        <label class="_span rank-num data-v-8103b6a9">{{b}}</label>
+        <label
+          ariaHidden="true"
+          class="_span rank-deco rank-deco--right data-v-8103b6a9"
+        ></label>
+      </label>
+      <label class="_span rank-plain data-v-8103b6a9" wx:else>{{d}}.</label>
+      <label class="_span theme-name data-v-8103b6a9">{{e}}</label>
+      <label class="{{['_span','data-v-8103b6a9','theme-zdf',g]}}">{{f}}</label>
+      <label class="_span limit-up-tag data-v-8103b6a9" wx:if="{{h}}"
+        >{{i}}</label
+      >
+    </view>
+    <view class="_div change-wrap data-v-8103b6a9">
+      <view class="_div spark-card data-v-8103b6a9" wx:if="{{j}}">
+        <st-mini-mins
+          bind:__l="__l"
+          class="spark data-v-8103b6a9"
+          uI="8103b6a9-0"
+          uP="{{k}}"
+          wx:if="{{k}}"
+        ></st-mini-mins>
+      </view>
+    </view>
+  </view>
+  <view class="_div card-body data-v-8103b6a9" wx:if="{{l}}">
+    <view class="_div theme-desc data-v-8103b6a9" wx:if="{{m}}">{{n}}</view>
+    <etf-rolling-bar
+      bind:__l="__l"
+      class="etf-roller data-v-8103b6a9"
+      uI="8103b6a9-1"
+      uP="{{p}}"
+      wx:if="{{o}}"
+    ></etf-rolling-bar>
+  </view>
+</view>

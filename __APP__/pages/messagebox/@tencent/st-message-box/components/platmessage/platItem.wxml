@@ -1,0 +1,43 @@
+<view class="_div plat-item data-v-3f018f21">
+  <view class="_div top data-v-3f018f21">
+    <view class="_div title data-v-3f018f21">{{a}}</view>
+    <view class="_div time data-v-3f018f21" wx:if="{{b}}">{{c}}</view>
+  </view>
+  <view class="_div show_contents data-v-3f018f21">
+    <view class="_div kv-item data-v-3f018f21" wx:for="{{d}}" wx:key="h">
+      <view class="{{['_div','key-txt','data-v-3f018f21',e]}}">{{item.a}}</view>
+      <block wx:if="{{f}}">
+        <view class="_div value-txt data-v-3f018f21" wx:if="{{item.b}}">
+          <rich-text class="data-v-3f018f21" nodes="{{item.c}}"></rich-text>
+        </view>
+        <view class="_div value-txt data-v-3f018f21" wx:else>
+          <rich-text
+            class="data-v-3f018f21"
+            nodes="{{valueItem.b}}"
+            wx:for="{{item.d}}"
+            wx:for-item="valueItem"
+            wx:key="a"
+          ></rich-text>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="_div value-txt data-v-3f018f21" wx:if="{{item.e}}">
+          <rich-text class="data-v-3f018f21" nodes="{{item.f}}"></rich-text>
+        </view>
+        <view class="_div value-txt data-v-3f018f21" wx:else>
+          <view
+            class="_div data-v-3f018f21"
+            wx:for="{{item.g}}"
+            wx:for-item="valueItem"
+            wx:key="b"
+          >
+            <rich-text
+              class="data-v-3f018f21"
+              nodes="{{valueItem.a}}"
+            ></rich-text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

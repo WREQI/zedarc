@@ -1,0 +1,26 @@
+<view
+  catchtap="{{o}}"
+  class="{{['_div','plate-item','layout-column','flex','data-v-590d2bd0',m,n]}}"
+>
+  <view class="_div plate-name data-v-590d2bd0" style="{{'font-size:'+b}}"
+    >{{a}}</view
+  >
+  <view class="{{[e,'_div','plate-quote','data-v-590d2bd0']}}" wx:if="{{c}}"
+    >{{d}}%</view
+  >
+  <block wx:if="{{f}}">
+    <view class="_div plate-desc data-v-590d2bd0" wx:if="{{g}}">{{h}}</view>
+    <view
+      class="_div plate-feature-stock layout-column data-v-590d2bd0"
+      wx:else
+    >
+      <view class="_div plate-stock-name ellipsis-text data-v-590d2bd0"
+        >{{i}}</view
+      >
+      <view class="{{[l,'_div','plate-stock-quote','data-v-590d2bd0']}}">
+        <label class="_span price data-v-590d2bd0">{{j}}</label>
+        <label class="_span rise-fall-rate data-v-590d2bd0">{{k}}%</label>
+      </view>
+    </view>
+  </block>
+</view>

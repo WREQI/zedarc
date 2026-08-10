@@ -1,0 +1,129 @@
+<view
+  class="{{['_div','recom-bar','data-v-176c6b4f',w&&'recom-bar-classic',x&&'isLite']}}"
+  wx:if="{{a}}"
+>
+  <view class="_div separate data-v-176c6b4f" wx:if="{{b}}"></view>
+  <view class="_div title-wrapper data-v-176c6b4f">
+    <view class="_div data-v-176c6b4f" wx:for="{{c}}" wx:key="p">
+      <view
+        catchtap="{{item.o}}"
+        class="{{['_div','item','data-v-176c6b4f',item.n&&'animation']}}"
+        wx:if="{{item.a}}"
+      >
+        <image
+          class="{{['_img','image','data-v-176c6b4f',item.b]}}"
+          src="{{item.c}}"
+        ></image>
+        <view
+          class="{{['_div','title','title-news','data-v-176c6b4f',item.f]}}"
+          wx:if="{{item.d}}"
+          >{{item.e}}</view
+        >
+        <block wx:elif="{{item.g}}">
+          <view
+            class="{{['_div','title','title-event','data-v-176c6b4f',item.j]}}"
+            >{{item.h}}｜{{item.i}}</view
+          >
+          <image
+            class="_img triangle data-v-176c6b4f"
+            src="https://st.gtimg.com/design/2b320daaeb3f10b978cf90574830f53c.png"
+            wx:if="{{item.k}}"
+          ></image>
+        </block>
+        <view
+          class="_div title title-risk data-v-176c6b4f"
+          wx:elif="{{item.l}}"
+        >
+          <label class="_span title-risk-text data-v-176c6b4f"
+            >{{item.m}}</label
+          >
+          <label class="_span title-risk-arrow data-v-176c6b4f"></label>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view catchtap="{{d}}" class="_div close-wrapper data-v-176c6b4f">
+    <image
+      class="_img close data-v-176c6b4f"
+      src="https://st.gtimg.com/design/c88bacb6962581df77d488e45027061b.png"
+    ></image>
+  </view>
+  <view
+    catchtap="{{t}}"
+    catchtouchmove="{{v}}"
+    class="{{['_div','shadow-layer','data-v-176c6b4f',s]}}"
+    wx:if="{{e}}"
+  >
+    <view
+      catchtap="{{n}}"
+      class="{{['_div','content-layer','data-v-176c6b4f',m]}}"
+      wx:if="{{f}}"
+    >
+      <view class="_div close-wrapper data-v-176c6b4f">
+        <image
+          catchtap="{{g}}"
+          class="_img close data-v-176c6b4f"
+          src="https://st.gtimg.com/design/c88bacb6962581df77d488e45027061b.png"
+        ></image>
+      </view>
+      <view class="_div text-wrapper data-v-176c6b4f">
+        <block wx:if="{{h}}">
+          <view class="_div topic data-v-176c6b4f">新闻</view>
+          <view
+            catchtap="{{item.d}}"
+            class="_div item data-v-176c6b4f"
+            wx:for="{{i}}"
+            wx:key="c"
+          >
+            <image class="_img image data-v-176c6b4f" src="{{item.a}}"></image>
+            <view class="_div title data-v-176c6b4f"
+              >{{item.b}}<image
+                class="_img arrow data-v-176c6b4f"
+                src="https://st.gtimg.com/design/fd9a288e0a3511afe0ab85345f537373.svg"
+              ></image>
+            </view>
+          </view>
+          <view class="_div line data-v-176c6b4f"></view>
+        </block>
+        <block wx:if="{{j}}">
+          <view class="_div topic data-v-176c6b4f">大事</view>
+          <view class="_div item data-v-176c6b4f" wx:for="{{k}}" wx:key="h">
+            <image class="_img image data-v-176c6b4f" src="{{item.a}}"></image>
+            <view class="_div title data-v-176c6b4f"
+              >{{item.b}}｜{{item.c}}<view
+                catchtap="{{item.e}}"
+                class="_div notice data-v-176c6b4f"
+                wx:if="{{item.d}}"
+                >【查看公告】</view
+              >
+              <view
+                catchtap="{{item.g}}"
+                class="_div notice data-v-176c6b4f"
+                wx:elif="{{item.f}}"
+                >【查看研报】</view
+              >
+            </view>
+          </view>
+          <view catchtap="{{l}}" class="_div more-wrapper data-v-176c6b4f">
+            <view class="_div more-text data-v-176c6b4f">更多大事提醒</view>
+            <image
+              class="_img more-arrow data-v-176c6b4f"
+              src="https://st.gtimg.com/design/fd9a288e0a3511afe0ab85345f537373.svg"
+            ></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="_div dialog-position data-v-176c6b4f" wx:else>
+      <message-dialog
+        bind:__l="__l"
+        bindgoDetail="{{p}}"
+        bindonClose="{{q}}"
+        class="data-v-176c6b4f"
+        uI="176c6b4f-0"
+        uP="{{r}}"
+        wx:if="{{o}}"
+      ></message-dialog>
+    </view>
+  </view>
+</view>

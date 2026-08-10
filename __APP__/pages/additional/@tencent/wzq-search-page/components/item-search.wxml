@@ -1,0 +1,83 @@
+<view
+  catchtap="{{E}}"
+  class="{{['_div','data-v-d228c318','item-search-inner','item-search',C,D]}}"
+>
+  <view class="{{['_div','data-v-d228c318',c]}}" wx:if="{{a}}">{{b}}</view>
+  <view class="_div row-a data-v-d228c318">
+    <view class="_div stock-col data-v-d228c318">
+      <highlight-text
+        bind:__l="__l"
+        class="stock-name data-v-d228c318"
+        uI="d228c318-0"
+        uP="{{d}}"
+        wx:if="{{d}}"
+      ></highlight-text>
+      <view
+        class="{{['_div','data-v-d228c318','etf-hold-percent',g]}}"
+        wx:if="{{e}}"
+        >{{f}}</view
+      >
+    </view>
+    <view class="_div stock-col data-v-d228c318">
+      <view class="_div tag-wrapper data-v-d228c318">
+        <view class="{{['_i','data-v-d228c318',h]}}"></view>
+        <highlight-text
+          bind:__l="__l"
+          class="scode-code data-v-d228c318"
+          uI="d228c318-1"
+          uP="{{i}}"
+          wx:if="{{i}}"
+        ></highlight-text>
+        <view class="_div stock-label label-gray data-v-d228c318" wx:if="{{j}}">
+          <label class="_span stock-label-text data-v-d228c318">退市</label>
+        </view>
+        <view
+          class="_div stock-label label-gray data-v-d228c318"
+          wx:elif="{{k}}"
+        >
+          <label class="_span stock-label-text data-v-d228c318">已切换</label>
+        </view>
+        <view class="_div stock-label label-gray data-v-d228c318" wx:if="{{l}}">
+          <label class="_span stock-label-text data-v-d228c318">场外</label>
+        </view>
+        <block wx:elif="{{m}}">
+          <view
+            class="{{['_div','data-v-d228c318','stock-label',label.c]}}"
+            wx:for="{{n}}"
+            wx:for-item="label"
+            wx:key="b"
+          >
+            <label class="_span stock-label-text data-v-d228c318"
+              >{{label.a}}</label
+            >
+          </view>
+        </block>
+        <view class="_div former-name-box data-v-d228c318" wx:if="{{o}}">
+          <label class="_span former-name-label data-v-d228c318"
+            >｜曾用名:</label
+          >
+          <highlight-text
+            bind:__l="__l"
+            class="former-name-text data-v-d228c318"
+            uI="d228c318-2"
+            uP="{{p}}"
+            wx:if="{{p}}"
+          ></highlight-text>
+        </view>
+      </view>
+      <view class="_div scode-code data-v-d228c318" wx:if="{{q}}">{{r}}</view>
+    </view>
+  </view>
+  <view class="{{['_div','data-v-d228c318',v]}}" wx:if="{{s}}">{{t}}</view>
+  <view
+    class="{{['_div','data-v-d228c318',B&&'row-b-margin-left']}}"
+    wx:if="{{w}}"
+  >
+    <view catchtap="{{z}}" class="_div row-b data-v-d228c318" wx:if="{{x}}">
+      <image alt="" class="_img css-add data-v-d228c318" src="{{y}}"></image>
+    </view>
+    <view class="_div row-b data-v-d228c318" wx:else>
+      <image alt="" class="_img css-added data-v-d228c318" src="{{A}}"></image>
+    </view>
+  </view>
+</view>

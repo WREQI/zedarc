@@ -1,0 +1,68 @@
+<view catchtouchmove="{{l}}" class="_div dialog-wrapper data-v-5e11111c">
+  <view class="_div guide-dialog data-v-5e11111c">
+    <view class="_div popup-rank data-v-5e11111c">
+      <view class="_div rank-title data-v-5e11111c">
+        <label class="_span data-v-5e11111c">恭喜获得周榜</label>
+        <label class="_span data-v-5e11111c">{{a}}</label>
+      </view>
+      <view class="_div rank-reward data-v-5e11111c" wx:if="{{b}}">
+        <image
+          class="_img rank-reward-icon data-v-5e11111c"
+          src="https://st.gtimg.com/design/6ed05fbc6f864f9239701ea2ee8e3d14.png"
+          wx:if="{{c}}"
+        ></image>
+        <image
+          class="_img rank-reward-icon data-v-5e11111c"
+          src="https://st.gtimg.com/design/e00944856e453e7dd535038fbeededeb.png"
+          wx:if="{{d}}"
+        ></image>
+        <view class="_div rank-reward-text data-v-5e11111c">
+          <label class="_span data-v-5e11111c">获得</label>
+          <label class="_span data-v-5e11111c" wx:if="{{e}}">红包</label>
+          <reward
+            bind:__l="__l"
+            class="rank-reward-highlight data-v-5e11111c"
+            uI="5e11111c-0"
+            uP="{{f}}"
+            wx:if="{{f}}"
+          ></reward>
+        </view>
+      </view>
+      <view class="_div rank-content data-v-5e11111c">
+        <view class="_div rank-content-title data-v-5e11111c"
+          >你的上榜战绩</view
+        >
+        <view class="_div rank-content-ratio data-v-5e11111c">
+          <label class="_span rank-content-ratio-text data-v-5e11111c"
+            >+{{g}}%</label
+          >
+        </view>
+        <view class="_div rank-content-subtitle data-v-5e11111c"
+          >本周收益率</view
+        >
+        <view class="_div rank-content-stock data-v-5e11111c">
+          <view class="_div rank-content-stock-wrap data-v-5e11111c">
+            <view class="_div rank-content-stock-title data-v-5e11111c"
+              >最优个股</view
+            >
+            <view class="_div rank-content-stock-name data-v-5e11111c"
+              >{{h}}</view
+            >
+          </view>
+          <view class="_div rank-content-stock-wrap data-v-5e11111c">
+            <view class="_div rank-content-stock-title data-v-5e11111c"
+              >本周涨跌幅</view
+            >
+            <view class="_div rank-content-stock-ratio data-v-5e11111c"
+              >{{i}}</view
+            >
+          </view>
+        </view>
+      </view>
+      <view bindtap="{{j}}" class="_div rank-button data-v-5e11111c"
+        >去实战</view
+      >
+    </view>
+    <view bindtap="{{k}}" class="_div close-img data-v-5e11111c"></view>
+  </view>
+</view>

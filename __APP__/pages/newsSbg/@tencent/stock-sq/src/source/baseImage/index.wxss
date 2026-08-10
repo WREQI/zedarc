@@ -1,0 +1,82 @@
+@font-face {
+  font-family: tencent;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://wzq.gtimg.com/resources/mp/lite/fonts/sq/tencent/icomoon.eot?wxavk7);
+  src: url(https://wzq.gtimg.com/resources/mp/lite/fonts/sq/tencent/icomoon.eot?wxavk7#iefix)
+      format("embedded-opentype"),
+    url(https://wzq.gtimg.com/resources/mp/lite/fonts/sq/tencent/icomoon.ttf?wxavk7)
+      format("truetype"),
+    url(https://wzq.gtimg.com/resources/mp/lite/fonts/sq/tencent/icomoon.woff?wxavk7)
+      format("woff"),
+    url(https://st.gtimg.com/files/062bd50d_iBgfGt98DzN.svg) format("svg");
+}
+.community-scope [class^="tencent-"].data-v-12b3d8c4,
+[class*=" tencent-"].data-v-12b3d8c4 {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: tencent !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+.tencent-uniE900.data-v-12b3d8c4:before {
+  color: #e2e5f0;
+  content: "";
+  mask: -webkit-gradient(linear, 0 100%, 100% 100%, from(#dde1ea), to(#e2e5f0));
+}
+.black .image_item.empty.data-v-12b3d8c4,
+.dark .image_item.empty.data-v-12b3d8c4,
+.fund-black .image_item.empty.data-v-12b3d8c4,
+html.zxg_black .image_item.empty.data-v-12b3d8c4 {
+  background-color: #171d28 !important;
+}
+.image_item.data-v-12b3d8c4 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.image_item.circular ._img.data-v-12b3d8c4,
+.image_item.circular img.data-v-12b3d8c4 {
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.image_item.roundCorner.data-v-12b3d8c4 {
+  border-radius: 0.10666666666666667rem;
+  overflow: hidden;
+}
+.image_item.roundCorner ._img.data-v-12b3d8c4,
+.image_item.roundCorner img.data-v-12b3d8c4 {
+  height: 100%;
+  width: 100%;
+}
+.image_item.opacity.data-v-12b3d8c4 {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+.image_item.empty.E9EBF0.data-v-12b3d8c4 {
+  background-color: #e9ebf0;
+}
+.image_item.empty.DCDFE6.data-v-12b3d8c4 {
+  background-color: #dcdfe6;
+}
+.image_item ._img.data-v-12b3d8c4,
+.image_item img.data-v-12b3d8c4 {
+  max-height: 100%;
+  max-width: 100%;
+}
+.image_item ._image.data-v-12b3d8c4,
+.image_item image.data-v-12b3d8c4 {
+  height: 100%;
+  width: 100%;
+}

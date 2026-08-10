@@ -1,0 +1,107 @@
+@import "/app.wxss";
+.profile-input {
+  appearance: none;
+  background-color: var(--fill-1);
+  border: 0;
+  border-radius: 0.106667rem;
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  height: 1.173333rem;
+  line-height: 0.666667rem;
+  outline: none;
+  padding: 0 0.266667rem;
+  text-align: left;
+  width: 100%;
+}
+.profile-input::-webkit-input-placeholder {
+  color: var(--text-color-5);
+  line-height: 1.173333rem;
+}
+.profile-input::placeholder {
+  color: var(--text-color-5);
+  line-height: 1.173333rem;
+}
+.profile-input:disabled {
+  background-color: var(--fill-2);
+  color: #bbb;
+}
+.input-placeholder {
+  color: var(--text-color-5);
+}
+.profile-scroll-area {
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+.profile-scroll-area::-webkit-scrollbar {
+  display: none;
+}
+.profile-scroll-area .profile-confirm {
+  color: var(--text-color-5);
+  font-size: 0.4rem;
+  line-height: 1.28rem;
+  margin-left: 0.32rem;
+}
+.profile-scroll-area .isSubmitable {
+  color: var(--color-primary-1) !important;
+}
+.profile-scroll-area .disInputable {
+  color: var(--color-red) !important;
+}
+.profile-scroll-area .profile-content-length {
+  color: var(--text-color-5);
+  line-height: 1.28rem;
+}
+.profile-scroll-area .profile-input {
+  background: #f6f6f6;
+  font-size: 0.373333rem;
+  height: 1.28rem;
+  padding-left: 0.2rem;
+}
+[data-theme="dark"] .profile-scroll-area .profile-input {
+  background: #12161f;
+}
+.profile-scroll-area .popular-cities-title {
+  color: var(--text-color-3);
+  font-size: 500;
+  padding: 0.426667rem 0;
+  text-align: left;
+}
+.profile-scroll-area .profile-wrapper-input {
+  font-size: 0.373333rem;
+  padding: 0.026667rem 0;
+}
+.profile-scroll-area .profile-wrapper-input .initial-wrap {
+  color: var(--text-color-3);
+  margin-right: 0.613333rem;
+  width: 0.533333rem;
+}
+.profile-scroll-area .profile-wrapper {
+  font-size: 0.4rem;
+  line-height: 0.453333rem;
+  padding: 0.36rem 0;
+}
+.profile-scroll-area .profile-wrapper .initial-wrap {
+  color: var(--text-color-3);
+  margin-right: 0.613333rem;
+  width: 0.533333rem;
+}
+.profile-scroll-area .profile-wrapper .profile-item {
+  color: var(--text-color-1);
+  padding: 0 0.16rem 0.066667rem 0;
+  text-align: left;
+}
+.profile-scroll-area .profile-wrapper .icon {
+  color: var(--text-color-1);
+  font-size: 0.426667rem;
+  height: 0.506667rem;
+  width: 0.506667rem;
+}
+.profile-scroll-area .profile-wrapper .icon-checked {
+  color: var(--color-primary-1);
+  font-size: 0.506667rem;
+}
+.profile-scroll-area .profile-wrapper .st-checkbox-inner {
+  border-color: var(--text-color-5);
+}

@@ -1,0 +1,15 @@
+<mp-action-sheet bind:__l="__l" bindinput="{{w}}" class="{{['apply-profile-change-mobile__container','plugin-component-action-sheet','data-v-25a2396e',v&&'isUnSubmitable']}}" uI="25a2396e-0" uP="{{x}}" uS="{{['d']}}" wx:if="{{x}}">
+    <st-cell-group bind:__l="__l" class="actionsheet-content-container data-v-25a2396e" uI="25a2396e-1,25a2396e-0" uP="{{t}}" uS="{{['d']}}" wx:if="{{t}}">
+        <st-cell bind:__l="__l" class="phone-wrapper data-v-25a2396e" uI="25a2396e-2,25a2396e-1" uP="{{k}}" uS="{{['d']}}" wx:if="{{k}}">
+            <view class="mobile-container data-v-25a2396e">
+                <input holdKeyboard alwaysEmbed="{{true}}" bindfocus="{{b}}" bindinput="{{d}}" class="profile-input data-v-25a2396e" maxlength="11" placeholder="请输入手机号码" type="text" value="{{c}}" wx:if="{{a}}"></input>
+                <input holdKeyboard alwaysEmbed="{{true}}" bindfocus="{{f}}" bindinput="{{h}}" class="profile-input data-v-25a2396e" cursorSpacing="86" focus="{{e}}" id="profileMobileInputId" maxlength="11" placeholder="请输入手机号码" type="number" value="{{g}}" wx:else></input>
+                <label bindtap="{{j}}" class="icon icon-clear data-v-25a2396e" wx:if="{{i}}"></label>
+            </view>
+        </st-cell>
+        <st-cell bind:__l="__l" class="code-wrapper data-v-25a2396e" uI="25a2396e-3,25a2396e-1" uP="{{s}}" uS="{{['d']}}" wx:if="{{s}}">
+            <input alwaysEmbed="{{true}}" bindinput="{{o}}" class="sms-input data-v-25a2396e" cursorSpacing="40" focus="{{m}}" id="smsCodeInputId" maxlength="{{l}}" placeholder="请输入收到的验证码" type="number" value="{{n}}"></input>
+            <button borderRadius bindtap="{{r}}" class="sms-button fs-24 data-v-25a2396e" disabled="{{q}}" size="mini">{{p}}</button>
+        </st-cell>
+    </st-cell-group>
+</mp-action-sheet>

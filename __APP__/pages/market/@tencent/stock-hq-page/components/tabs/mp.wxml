@@ -1,0 +1,30 @@
+<view class="_div tabbar-top-wrapper data-v-633281da">
+  <scroll-view
+    scrollX
+    class="tabbar-wrapper data-v-633281da"
+    id="tabbar-scroll-view"
+    scrollIntoView="{{b}}"
+  >
+    <view class="_div tabbar-container data-v-633281da">
+      <view
+        bindtap="{{tab.e}}"
+        class="{{['_div','data-v-633281da','tab',tab.d]}}"
+        id="{{tab.b}}"
+        wx:for="{{a}}"
+        wx:for-item="tab"
+        wx:key="c"
+        >{{tab.a}}</view
+      >
+    </view>
+  </scroll-view>
+  <view
+    bindtap="{{d}}"
+    class="_div title-wrapper data-v-633281da"
+    wx:if="{{c}}"
+  >
+    <image
+      class="_img title-arrow data-v-633281da"
+      src="https://st.gtimg.com/design/c1c471d2b6a15459d1654f8cdb3a3c44.png"
+    ></image>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<view class="_div lhlk-wrapper data-v-0623c3eb">
+  <card-header
+    bind:__l="__l"
+    class="data-v-0623c3eb"
+    uI="0623c3eb-0"
+    uP="{{b}}"
+    wx:if="{{a}}"
+  ></card-header>
+  <view class="_div lhlk-content data-v-0623c3eb" wx:if="{{c}}">
+    <view class="_div data-v-0623c3eb" wx:for="{{d}}" wx:key="h">
+      <lhlk-item
+        bind:__l="__l"
+        bindgotoNewsDetail="{{item.b}}"
+        bindonHeaderToggleClick="{{item.c}}"
+        class="data-v-0623c3eb"
+        key="{{item.a}}"
+        uI="{{item.d}}"
+        uP="{{item.e}}"
+        wx:if="{{item.e}}"
+      ></lhlk-item>
+      <view
+        class="_div divider-line data-v-0623c3eb"
+        key="{{item.g}}"
+        wx:if="{{item.f}}"
+      ></view>
+    </view>
+  </view>
+  <image-link-item
+    bind:__l="__l"
+    class="data-v-0623c3eb"
+    uI="0623c3eb-2"
+    uP="{{f}}"
+    wx:if="{{e}}"
+  ></image-link-item>
+  <basket-guide-modal
+    bind:__l="__l"
+    bindclose="{{h}}"
+    bindconfirm="{{g}}"
+    class="data-v-0623c3eb"
+    uI="0623c3eb-3"
+    uP="{{i}}"
+    wx:if="{{i}}"
+  ></basket-guide-modal>
+</view>

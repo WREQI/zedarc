@@ -1,0 +1,102 @@
+<view class="comp__risk-question flex-column bg-color">
+  <view class="{{['question-ask','primary-color','fs-32',e&&'fold']}}"
+    >{{a}}. {{b}}{{c}}{{d}}</view
+  >
+  <view catchtap="{{i}}" class="fold-btn flex-center" wx:if="{{f}}">
+    <label>{{g}}</label>
+    <label class="{{['icon','icon-triangle',h]}}"></label>
+  </view>
+  <radio-group
+    bindchange="{{p}}"
+    class="question-answer-container flex-1"
+    wx:if="{{j}}"
+  >
+    <label
+      class="{{['answer-item','fs-32','border--top',answer.l]}}"
+      wx:for="{{k}}"
+      wx:for-item="answer"
+      wx:key="k"
+    >
+      <view class="flex-between">
+        <view class="answer-content">{{answer.a}}. {{answer.b}}</view>
+        <view class="empty-radio" wx:if="{{answer.c}}"></view>
+        <radio
+          checked="{{answer.f}}"
+          color="{{answer.d}}"
+          value="{{answer.e}}"
+          wx:else
+        ></radio>
+      </view>
+      <block wx:if="{{answer.g}}">
+        <view
+          class="weak-conflicts red fs-24"
+          wx:for="{{answer.h}}"
+          wx:for-item="tip"
+          wx:key="b"
+          >{{tip.a}}</view
+        >
+      </block>
+      <view class="weak-conflicts red fs-24" wx:if="{{answer.i}}"
+        >{{answer.j}}</view
+      >
+    </label>
+    <view
+      class="conflicts orange fs-24 border--top"
+      wx:for="{{l}}"
+      wx:for-item="tip"
+      wx:key="b"
+      >{{tip.a}}</view
+    >
+    <view class="{{['question-tips',o]}}" wx:if="{{m}}">
+      <label class="question-tips--bold">提示：</label>{{n}}</view
+    >
+  </radio-group>
+  <checkbox-group
+    bindchange="{{v}}"
+    class="question-answer-container flex-1"
+    wx:else
+  >
+    <label
+      class="{{['answer-item','fs-32','border--top',answer.l]}}"
+      wx:for="{{q}}"
+      wx:for-item="answer"
+      wx:key="k"
+    >
+      <view class="flex-between">
+        <view class="answer-content">{{answer.a}}. {{answer.b}}</view>
+        <view class="empty-checkbox" wx:if="{{answer.c}}"></view>
+        <checkbox
+          checked="{{answer.f}}"
+          color="{{answer.d}}"
+          value="{{answer.e}}"
+          wx:else
+        ></checkbox>
+      </view>
+      <block wx:if="{{answer.g}}">
+        <view
+          class="weak-conflicts red fs-24"
+          wx:for="{{answer.h}}"
+          wx:for-item="tip"
+          wx:key="b"
+          >{{tip.a}}</view
+        >
+      </block>
+      <view class="weak-conflicts red fs-24" wx:if="{{answer.i}}"
+        >{{answer.j}}</view
+      >
+    </label>
+    <view
+      class="conflicts orange fs-24 border--top"
+      wx:for="{{r}}"
+      wx:for-item="tip"
+      wx:key="b"
+      >{{tip.a}}</view
+    >
+    <view class="question-tips border--top" wx:if="{{s}}">
+      <label class="question-tips--bold">提示：</label>{{t}}</view
+    >
+  </checkbox-group>
+  <view class="answer-commit-btn" wx:if="{{w}}">
+    <button bindtap="{{x}}" disabled="{{y}}" type="primary">确定</button>
+  </view>
+</view>

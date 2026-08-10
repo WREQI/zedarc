@@ -1,0 +1,28 @@
+<page-meta class="data-v-7b293731" rootFontSize="{{a}}"></page-meta>
+<view class="_div cancellation-wrapper wrapper data-v-7b293731">
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-7b293731"
+    uI="7b293731-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-7b293731"
+    uI="7b293731-1"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></stock-privacy-dialog>
+  <view class="_div account-rights data-v-7b293731"
+    >{{c}}<view class="_div tips data-v-7b293731" wx:for="{{d}}" wx:key="b"
+      >{{item.a}}</view
+    >
+    <button
+      bindtap="{{f}}"
+      class="agree-btn data-v-7b293731"
+      type="primary"
+      wx:if="{{e}}"
+    >
+      继续注销
+    </button>
+  </view>
+</view>

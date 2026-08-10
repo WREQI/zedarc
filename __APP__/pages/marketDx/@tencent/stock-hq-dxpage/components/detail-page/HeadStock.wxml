@@ -1,0 +1,14 @@
+<view class="{{['_div','header-stock','data-v-ceb1eebb',g]}}">
+  <view class="_div header-stock-left data-v-ceb1eebb">
+    <label class="_span header-stock-left-name data-v-ceb1eebb">{{a}}</label>
+    <label class="{{['_span','data-v-ceb1eebb','header-stock-left-code',c]}}"
+      >{{b}}</label
+    >
+  </view>
+  <view catchtap="{{f}}" class="_div header-stock-right data-v-ceb1eebb">
+    <label class="{{['_span','data-v-ceb1eebb','header-stock-right-more',e]}}"
+      >{{d}}</label
+    >
+    <label class="_span header-stock-right-arrow data-v-ceb1eebb"></label>
+  </view>
+</view>

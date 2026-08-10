@@ -1,0 +1,15 @@
+<checkbox-group
+  bindchange="{{g}}"
+  class="protocol-container data-v-2eb393b5"
+  wx:if="{{a}}"
+>
+  <checkbox
+    checked="{{c}}"
+    class="protocol-checkbox data-v-2eb393b5"
+    color="{{b}}"
+  ></checkbox>
+  <label bindtap="{{d}}" class="text-color-4 data-v-2eb393b5"
+    >本人已详细阅读并同意签署</label
+  >
+  <label bindtap="{{f}}" class="all-protocol-text data-v-2eb393b5">{{e}}</label>
+</checkbox-group>

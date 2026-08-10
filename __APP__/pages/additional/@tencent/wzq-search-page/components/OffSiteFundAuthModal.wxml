@@ -1,0 +1,18 @@
+<layer-modal
+  bind:__l="__l"
+  bindcancel="{{e}}"
+  bindclose="{{f}}"
+  bindconfirm="{{d}}"
+  class="data-v-2f798da4"
+  uI="2f798da4-0"
+  uP="{{g}}"
+  uS="{{['d']}}"
+  wx:if="{{g}}"
+>
+  <view class="{{['_div','data-v-2f798da4','text-box',c]}}">
+    <view class="_div text-context data-v-2f798da4">{{a}}</view>
+    <view class="_div text-context text-context--tail data-v-2f798da4"
+      >{{b}}</view
+    >
+  </view>
+</layer-modal>

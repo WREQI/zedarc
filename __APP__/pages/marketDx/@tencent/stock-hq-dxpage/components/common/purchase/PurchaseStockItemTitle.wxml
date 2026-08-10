@@ -1,0 +1,68 @@
+<view class="{{['_div','data-v-0f5fe7a8','stock-item-title-container',F]}}">
+  <view class="_div stock-item-title data-v-0f5fe7a8">
+    <label class="{{['_span','data-v-0f5fe7a8','list-text',b]}}">{{a}}</label>
+  </view>
+  <view class="_div stock-item-title-list data-v-0f5fe7a8">
+    <view
+      class="{{['_div','stock-item-title-list-col1','text-align-right','data-v-0f5fe7a8',g,h]}}"
+    >
+      <label
+        catchtap="{{f}}"
+        class="{{['_span','data-v-0f5fe7a8','list-text',e]}}"
+      >
+        <label class="_span text data-v-0f5fe7a8">{{c}}</label>
+        <image
+          class="_img tip data-v-0f5fe7a8"
+          src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+          wx:if="{{d}}"
+        ></image>
+      </label>
+    </view>
+    <view
+      class="{{['_div','stock-item-title-list-col2','text-align-right','data-v-0f5fe7a8',n]}}"
+      wx:if="{{i}}"
+    >
+      <label
+        catchtap="{{m}}"
+        class="{{['_span','data-v-0f5fe7a8','list-text',l]}}"
+      >
+        <label class="_span text data-v-0f5fe7a8">{{j}}</label>
+        <image
+          class="_img tip data-v-0f5fe7a8"
+          src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+          wx:if="{{k}}"
+        ></image>
+      </label>
+    </view>
+    <view
+      class="{{['_div','stock-item-title-list-col2','data-v-0f5fe7a8',s]}}"
+      wx:else
+    >
+      <label class="{{['_span','data-v-0f5fe7a8','top',p]}}">{{o}}</label>
+      <label class="{{['_span','data-v-0f5fe7a8','bottom',r]}}">{{q}}</label>
+    </view>
+    <view
+      class="{{['_div','stock-item-title-list-col3','text-align-right','data-v-0f5fe7a8',z]}}"
+      wx:if="{{t}}"
+    >
+      <label
+        catchtap="{{y}}"
+        class="{{['_span','data-v-0f5fe7a8','list-text',x]}}"
+      >
+        <label class="_span text data-v-0f5fe7a8">{{v}}</label>
+        <image
+          class="_img tip data-v-0f5fe7a8"
+          src="https://st.gtimg.com/design/957f754a3ca216c9caa6165b04118f00.png"
+          wx:if="{{w}}"
+        ></image>
+      </label>
+    </view>
+    <view
+      class="{{['_div','stock-item-title-list-col3','data-v-0f5fe7a8',E]}}"
+      wx:else
+    >
+      <label class="{{['_span','data-v-0f5fe7a8','top',B]}}">{{A}}</label>
+      <label class="{{['_span','data-v-0f5fe7a8','bottom',D]}}">{{C}}</label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,66 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{q}}"
+  class="{{['data-v-fa6e1fc1',p&&'st-action-sheet_picker']}}"
+  uI="fa6e1fc1-0"
+  uP="{{r}}"
+  uS="{{['d']}}"
+  wx:if="{{r}}"
+>
+  <view class="_div data-v-fa6e1fc1" name="st-action-sheet-move">
+    <view
+      catchtap="{{o}}"
+      class="_div st-action-sheet-panel st-safe-area-pb data-v-fa6e1fc1"
+      hidden="{{!n}}"
+    >
+      <view
+        class="{{['_div','st-action-sheet-header','border--bottom','data-v-fa6e1fc1',i]}}"
+        hidden="{{!h}}"
+      >
+        <view
+          bindtap="{{b}}"
+          class="_div st-action-sheet-cancel data-v-fa6e1fc1"
+          wx:if="{{a}}"
+        >
+          <label class="_span icon icon-close data-v-fa6e1fc1"></label>
+        </view>
+        <label
+          bindtap="{{d}}"
+          class="_span st-action-sheet-confirm data-v-fa6e1fc1"
+          >{{c}}</label
+        >
+        <view class="_div st-action-sheet-title-group data-v-fa6e1fc1">
+          <view class="_div st-action-sheet-title data-v-fa6e1fc1">
+            <rich-text class="data-v-fa6e1fc1" nodes="{{e}}"></rich-text>
+          </view>
+          <view
+            class="_div st-action-sheet-subtitle data-v-fa6e1fc1"
+            wx:if="{{f}}"
+          >
+            <rich-text class="data-v-fa6e1fc1" nodes="{{g}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view class="_div st-action-sheet-content data-v-fa6e1fc1">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <view class="_div st-action-sheet-list data-v-fa6e1fc1" wx:else>
+          <view
+            bindtap="{{item.e}}"
+            class="{{['_div','st-action-sheet-item','border-bottom-1px','data-v-fa6e1fc1',item.c,item.d]}}"
+            wx:for="{{j}}"
+            wx:key="b"
+          >
+            <rich-text class="data-v-fa6e1fc1" nodes="{{item.a}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view class="_div st-action-sheet-space data-v-fa6e1fc1"></view>
+      <view
+        bindtap="{{m}}"
+        class="_div st-action-sheet-cancel data-v-fa6e1fc1"
+        wx:if="{{k}}"
+        >{{l}}</view
+      >
+    </view>
+  </view>
+</popup>

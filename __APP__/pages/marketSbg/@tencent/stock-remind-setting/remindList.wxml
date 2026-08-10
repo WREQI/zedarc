@@ -1,0 +1,62 @@
+<view class="{{['_div','data-v-b1e0903c','md-remind-list',s]}}" wx:if="{{a}}">
+  <view class="_div remind-title data-v-b1e0903c" wx:if="{{b}}">自选提醒</view>
+  <view class="_div set-item data-v-b1e0903c" wx:if="{{c}}">
+    <view class="_div text data-v-b1e0903c">自选智能盯盘</view>
+    <view bindtap="{{e}}" class="_div switch-box data-v-b1e0903c">
+      <view class="{{['_div','data-v-b1e0903c','switch',d]}}">
+        <view class="_div switch-block data-v-b1e0903c"></view>
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{f}}">
+    <view class="_div remind-title data-v-b1e0903c">个股提醒</view>
+    <view class="_div list-wrap data-v-b1e0903c">
+      <view class="_div list-box data-v-b1e0903c" wx:if="{{g}}">
+        <remind-item
+          bind:__l="__l"
+          bindrefresh="{{item.b}}"
+          class="data-v-b1e0903c"
+          uI="{{item.c}}"
+          uP="{{item.d}}"
+          wx:for="{{h}}"
+          wx:key="a"
+        ></remind-item>
+      </view>
+      <view class="_div zxg-logo data-v-b1e0903c"></view>
+    </view>
+    <view class="_div add-stock-wrap data-v-b1e0903c">
+      <view bindtap="{{i}}" class="_div add-stock-btn data-v-b1e0903c"
+        >添加股票提醒</view
+      >
+    </view>
+  </block>
+  <view class="{{['_div','data-v-b1e0903c',k]}}" wx:else>
+    <view class="_div nodata-wrap data-v-b1e0903c">
+      <image
+        class="_img nodata-img data-v-b1e0903c"
+        src="https://st.gtimg.com/design/5bbbe01fb0c0bc8f3017041334e19929.png"
+      ></image>
+      <view class="_div nodata-text data-v-b1e0903c">暂未设置提醒</view>
+      <view bindtap="{{j}}" class="_div add-btn data-v-b1e0903c"
+        >添加股票提醒</view
+      >
+    </view>
+  </view>
+  <monitoring-remind-pop
+    bind:__l="__l"
+    bindclose="{{m}}"
+    bindconfirm="{{n}}"
+    class="data-v-b1e0903c"
+    uI="b1e0903c-1"
+    wx:if="{{l}}"
+  ></monitoring-remind-pop>
+  <close-monitoring-pop
+    bind:__l="__l"
+    bindcancel="{{r}}"
+    bindconfirm="{{q}}"
+    class="r data-v-b1e0903c"
+    uI="b1e0903c-2"
+    uR="closeMonitoringPop"
+    wx:if="{{o}}"
+  ></close-monitoring-pop>
+</view>

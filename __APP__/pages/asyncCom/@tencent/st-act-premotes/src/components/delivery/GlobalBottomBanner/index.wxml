@@ -1,0 +1,60 @@
+<view class="_div data-v-f41be1a7" ref="deliveryglobalBottomBanner">
+  <view
+    class="{{['_div','delivery-choose-bottom-banner','data-v-f41be1a7',o&&'has-bottom',p&&'with-external-navbar',q&&'with-external-navbar-zx-replay',r&&'is-in-mina',s&&'animate-up',t&&'animate-down',v&&'lite-mode',w&&'is-mp',x&&'in-news-page']}}"
+    wx:if="{{a}}"
+  >
+    <view
+      bindtap="{{n}}"
+      class="_div content data-v-f41be1a7"
+      style="{{'background-color:'+m}}"
+    >
+      <view
+        class="_i icon data-v-f41be1a7"
+        style="{{'background-image:'+c}}"
+        wx:if="{{b}}"
+      ></view>
+      <view class="_div title data-v-f41be1a7">{{d}}</view>
+      <view class="_div btn data-v-f41be1a7" wx:if="{{e}}">{{f}}</view>
+      <view
+        catchtap="{{h}}"
+        class="_div close_con data-v-f41be1a7"
+        wx:if="{{g}}"
+      >
+        <view class="_i close data-v-f41be1a7"></view>
+      </view>
+      <weixin-launch-weapp-com
+        bind:__l="__l"
+        class="data-v-f41be1a7"
+        uI="f41be1a7-0"
+        uP="{{l}}"
+        uS="{{['d']}}"
+        wx:if="{{i}}"
+      >
+        <view
+          catchtap="{{k}}"
+          class="_div close_con_weapp data-v-f41be1a7"
+          wx:if="{{j}}"
+        ></view>
+      </weixin-launch-weapp-com>
+    </view>
+  </view>
+  <view class="_div curtain-type-img data-v-f41be1a7" hidden="{{!D}}">
+    <view
+      class="{{['_div','pop-adv','adv-pic','adv-popup-visible','data-v-f41be1a7',C&&'unadv-popup-visible']}}"
+    >
+      <view class="_div pop-cnt-adv data-v-f41be1a7">
+        <image
+          bindload="{{A}}"
+          class="_img pop-adv-img adv-animate data-v-f41be1a7"
+          src="{{z}}"
+          wx:if="{{y}}"
+        ></image>
+        <view
+          catchtap="{{B}}"
+          class="_div adv-close-bg3 adv-close-animate data-v-f41be1a7"
+        ></view>
+      </view>
+    </view>
+    <view class="_div pop-adv-mask data-v-f41be1a7"></view>
+  </view>
+</view>

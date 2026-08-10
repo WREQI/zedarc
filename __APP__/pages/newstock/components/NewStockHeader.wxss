@@ -1,0 +1,94 @@
+@import "/app.wxss";
+.newstock-header.data-v-2c2d47fb {
+  background: var(--color-primary-1);
+  box-sizing: border-box;
+  height: 3.066667rem;
+  padding: 0.266667rem 0.266667rem 0.4rem;
+  z-index: 1;
+}
+.newstock-header .tabs.data-v-2c2d47fb {
+  display: unset;
+  margin: 0.4rem 0 0 0.16rem;
+}
+.newstock-header .tabs .tab.data-v-2c2d47fb {
+  color: hsla(0, 0%, 100%, 0.6);
+  display: inline-block;
+  font-size: 0.4rem;
+  font-weight: 400;
+  line-height: 0.4rem;
+  margin-right: 0.64rem;
+  position: relative;
+}
+.newstock-header .tabs .tab.redpoint.data-v-2c2d47fb:after {
+  background: var(--color-red);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 0.186667rem;
+  position: absolute;
+  right: -0.186667rem;
+  top: -0.093333rem;
+  width: 0.186667rem;
+}
+.newstock-header .tabs .tab.data-v-2c2d47fb .bubble-tips {
+  left: -50%;
+  position: absolute;
+  top: calc(100% + 0.213333rem);
+  transform: translate(-18%, 0.053333rem);
+  width: 6.266667rem;
+  z-index: 1;
+}
+.newstock-header .tabs .tab.data-v-2c2d47fb .bubble-tips .content {
+  padding: 0.093333rem 0;
+  position: relative;
+}
+.newstock-header .tabs .tab.data-v-2c2d47fb .bubble-tips .content:after {
+  background-image: url(https://st.gtimg.com/image/mp-broker/trade/newstock/bixin.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+  display: block;
+  height: 1.24rem;
+  position: absolute;
+  top: -100%;
+  transform: translateY(0.133333rem);
+  width: 1.2rem;
+}
+.newstock-header .tabs .tab.data-v-2c2d47fb .bubble-tips.pos-0 {
+  left: 125%;
+}
+.newstock-header
+  .tabs
+  .tab.data-v-2c2d47fb
+  .bubble-tips.pos-0
+  ::v-deep
+  .content:after {
+  left: calc(100% - 0.666667rem);
+}
+.newstock-header .tabs .checked.data-v-2c2d47fb {
+  color: #fff;
+  font-size: 0.426667rem;
+  font-weight: 500;
+  line-height: 0.506667rem;
+}
+.newstock-header .right-top-contianer.data-v-2c2d47fb {
+  border: 0.013333rem solid hsla(0, 0%, 100%, 0.5);
+  border-radius: 0.106667rem;
+  height: 0.506667rem;
+  margin-right: 0.133333rem;
+  text-align: right;
+  width: 3.013333rem;
+}
+.newstock-header .right-top-contianer .item.data-v-2c2d47fb {
+  color: #fff;
+  font-size: 0.293333rem;
+  height: 0.506667rem;
+  line-height: 0.533333rem;
+  margin: 0 0.133333rem;
+}
+.newstock-header .right-top-contianer .divide-line.data-v-2c2d47fb {
+  background-color: #e9ebf0;
+  height: 0.266667rem;
+  opacity: 0.6;
+  width: 0.013333rem;
+}

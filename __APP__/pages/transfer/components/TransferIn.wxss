@@ -1,0 +1,110 @@
+@import "/app.wxss";
+.transfer-in .transfer-form-container {
+  padding: 0.64rem 0.426667rem 0.453333rem;
+}
+.transfer-in .transfer-form-container .section-tips {
+  margin-bottom: 0.853333rem;
+}
+.search-card-money {
+  color: var(--color-blue);
+}
+.card-balance {
+  color: #98a0b3;
+}
+.search-error-retry-text,
+[data-theme="dark"] .card-balance {
+  color: var(--text-color-5);
+}
+.simple-mode-search-card-money {
+  color: var(--color-red);
+}
+.button-wrapper,
+.tips {
+  padding: 0.426667rem 0.4rem 0;
+}
+.tips {
+  color: var(--text-color-5);
+  font-size: 0.373333rem;
+  line-height: 0.533333rem;
+  text-align: center;
+}
+.transfer-fixed-block {
+  background-color: var(--fill-2);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.form-popup {
+  position: absolute;
+}
+.pre-time-dialog {
+  padding: 0.64rem;
+}
+.pre-time-dialog .pre-time-title {
+  color: var(--text-color-1);
+  font-size: 0.48rem;
+  font-weight: 600;
+  line-height: 0.666667rem;
+  text-align: center;
+}
+.pre-time-dialog .pre-time-tips {
+  color: var(--text-color-2);
+  font-size: 0.373333rem;
+  line-height: 0.56rem;
+  margin: 0.426667rem 0 0;
+  text-align: justify;
+}
+.pre-time-dialog .pre-time-tips .pre-time-date {
+  color: var(--text-color-1);
+  font-weight: 500;
+}
+.loading,
+.loading > .loading-item {
+  box-sizing: border-box;
+  position: relative;
+}
+.loading {
+  color: #afafb3;
+  display: block;
+  font-size: 0;
+}
+.loading.la-dark {
+  color: #4c4c50;
+}
+.loading > .loading-item {
+  animation: ball-beat 0.7s linear -0.15s infinite;
+  background-color: currentColor;
+  border: 0 solid;
+  border-radius: 100%;
+  display: inline-block;
+  float: none;
+  height: 0.106667rem;
+  margin: 0.053333rem;
+  width: 0.106667rem;
+}
+.loading > .loading-item:nth-child(2n-1) {
+  animation-delay: -0.5s;
+}
+@-webkit-keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes ball-beat {
+  50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,345 @@
+<page-meta class="data-v-3842de17" rootFontSize="{{a}}"></page-meta>
+<global-wrap
+  bind:__l="__l"
+  class="r data-v-3842de17"
+  id="global-wrap"
+  uI="3842de17-0"
+  uP="{{aG}}"
+  uR="#global-wrap"
+  uS="{{['d']}}"
+  wx:if="{{aG}}"
+>
+  <view class="cond-grid data-v-3842de17">
+    <view class="cond-grid-search data-v-3842de17" hidden="{{!e}}">
+      <search-bar
+        bind:__l="__l"
+        bindsearchStateChange="{{c}}"
+        class="r data-v-3842de17"
+        uI="3842de17-1,3842de17-0"
+        uP="{{d}}"
+        uR="realSearchBar"
+        wx:if="{{d}}"
+      ></search-bar>
+    </view>
+    <view class="data-v-3842de17" hidden="{{!am}}">
+      <view class="cond-grid-form data-v-3842de17">
+        <view class="cond-grid-card grid-first-card data-v-3842de17">
+          <condition-quote
+            bind:__l="__l"
+            bindnameClick="{{h}}"
+            bindsearch="{{g}}"
+            class="data-v-3842de17"
+            uI="3842de17-2,3842de17-0"
+            uP="{{i}}"
+            uS="{{['label']}}"
+            wx:if="{{f}}"
+          >
+            <view class="data-v-3842de17" slot="label">网格交易</view>
+          </condition-quote>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3842de17"
+            uI="3842de17-3,3842de17-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-3842de17" slot="left">
+              <view class="cond-trigger-line1 data-v-3842de17">
+                <label class="data-v-3842de17">基准价</label>
+                <label
+                  bindtap="{{j}}"
+                  class="icon icon-italic-info data-v-3842de17"
+                ></label>
+              </view>
+              <popup-trigger
+                bind:__l="__l"
+                bindclick="{{k}}"
+                class="data-v-3842de17"
+                uI="3842de17-4,3842de17-3"
+                uP="{{l}}"
+                wx:if="{{l}}"
+              ></popup-trigger>
+            </view>
+            <view
+              class="{{['cond-grid-stepper','data-v-3842de17',q]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindchange="{{n}}"
+                bindnext="{{o}}"
+                class="r data-v-3842de17"
+                uI="3842de17-5,3842de17-3"
+                uP="{{p}}"
+                uR="basePriceStepper"
+                wx:if="{{p}}"
+              ></stepper>
+            </view>
+          </form-wrap>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3842de17"
+            uI="3842de17-6,3842de17-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-3842de17" slot="left">
+              <view class="cond-trigger-line1 data-v-3842de17">
+                <label class="data-v-3842de17">每上涨卖出</label>
+              </view>
+              <popup-trigger
+                bind:__l="__l"
+                bindclick="{{r}}"
+                class="data-v-3842de17"
+                uI="3842de17-7,3842de17-6"
+                uP="{{s}}"
+                wx:if="{{s}}"
+              ></popup-trigger>
+            </view>
+            <view
+              class="{{['cond-grid-stepper','cond-up-step','data-v-3842de17',A]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{y}}"
+                bindchange="{{w}}"
+                bindfocus="{{x}}"
+                bindnext="{{v}}"
+                class="r data-v-3842de17"
+                uI="3842de17-8,3842de17-6"
+                uP="{{z}}"
+                uR="upStepStepper"
+                wx:if="{{z}}"
+              ></stepper>
+            </view>
+          </form-wrap>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3842de17"
+            uI="3842de17-9,3842de17-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-trigger-wrap data-v-3842de17" slot="left">
+              <view class="cond-trigger-line1 data-v-3842de17">
+                <label class="data-v-3842de17">每下跌买入</label>
+              </view>
+              <popup-trigger
+                bind:__l="__l"
+                bindclick="{{B}}"
+                class="data-v-3842de17"
+                uI="3842de17-10,3842de17-9"
+                uP="{{C}}"
+                wx:if="{{C}}"
+              ></popup-trigger>
+            </view>
+            <view
+              class="{{['cond-grid-stepper','cond-down-step','data-v-3842de17',I]}}"
+              slot="right"
+            >
+              <stepper
+                bind:__l="__l"
+                bindblur="{{G}}"
+                bindchange="{{E}}"
+                bindfocus="{{F}}"
+                class="r data-v-3842de17"
+                uI="3842de17-11,3842de17-9"
+                uP="{{H}}"
+                uR="downStepStepper"
+                wx:if="{{H}}"
+              ></stepper>
+            </view>
+          </form-wrap>
+        </view>
+        <view class="cond-grid-triggertips data-v-3842de17"
+          >满足以上触发条件，系统将自动提交下列委托单</view
+        >
+        <view class="cond-grid-card last-card data-v-3842de17">
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3842de17"
+            uI="3842de17-12,3842de17-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-grid-simpleleft data-v-3842de17" slot="left"
+              >卖出委托</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{J}}"
+              class="data-v-3842de17"
+              slot="right"
+              uI="3842de17-13,3842de17-12"
+              uP="{{K}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <form-wrap
+            bind:__l="__l"
+            class="data-v-3842de17"
+            uI="3842de17-14,3842de17-0"
+            uS="{{['left','right']}}"
+          >
+            <view class="cond-grid-simpleleft data-v-3842de17" slot="left"
+              >买入委托</view
+            >
+            <bottom-selector-trigger
+              bind:__l="__l"
+              bindclick="{{L}}"
+              class="data-v-3842de17"
+              slot="right"
+              uI="3842de17-15,3842de17-14"
+              uP="{{M}}"
+            ></bottom-selector-trigger>
+          </form-wrap>
+          <view
+            class="cond-grid-form-withtips cond-grid-quatity-forscroll data-v-3842de17"
+          >
+            <form-wrap
+              bind:__l="__l"
+              class="data-v-3842de17"
+              uI="3842de17-16,3842de17-0"
+              uS="{{['left','right']}}"
+            >
+              <view class="cond-grid-simpleleft data-v-3842de17" slot="left"
+                >每笔委托股数</view
+              >
+              <view
+                class="{{['cond-grid-stepper','cond-grid-quantity','data-v-3842de17',U]}}"
+                slot="right"
+              >
+                <stepper
+                  bind:__l="__l"
+                  bindblur="{{Q}}"
+                  bindchange="{{O}}"
+                  bindfocus="{{P}}"
+                  class="r data-v-3842de17"
+                  uI="3842de17-17,3842de17-16"
+                  uP="{{R}}"
+                  uR="quatityStepper"
+                  wx:if="{{R}}"
+                ></stepper>
+                <view
+                  class="popover popover-error-bg grid-amount-pop data-v-3842de17"
+                  wx:if="{{S}}"
+                  >{{T}}</view
+                >
+              </view>
+            </form-wrap>
+            <view class="cond-grid-form-tips data-v-3842de17" wx:if="{{V}}"
+              >现金可买：<label class="data-v-3842de17" wx:if="{{W}}">--</label>
+              <label bindtap="{{Z}}" class="data-v-3842de17" wx:else
+                >{{X}}{{Y}}</label
+              >｜ 持仓可卖：<label class="data-v-3842de17" wx:if="{{aa}}"
+                >--</label
+              >
+              <label bindtap="{{ad}}" class="data-v-3842de17" wx:else
+                >{{ab}}{{ac}}</label
+              >
+            </view>
+          </view>
+          <view class="cond-grid-form-withtips data-v-3842de17">
+            <form-wrap
+              bind:__l="__l"
+              class="data-v-3842de17"
+              uI="3842de17-18,3842de17-0"
+              uS="{{['left','right']}}"
+            >
+              <view class="cond-grid-simpleleft data-v-3842de17" slot="left"
+                >订单有效期</view
+              >
+              <bottom-selector-trigger
+                bind:__l="__l"
+                bindclick="{{ae}}"
+                class="data-v-3842de17"
+                slot="right"
+                uI="3842de17-19,3842de17-18"
+                uP="{{af}}"
+              ></bottom-selector-trigger>
+            </form-wrap>
+            <view class="cond-grid-form-tips data-v-3842de17">{{ag}}</view>
+          </view>
+        </view>
+        <view bindtap="{{ah}}" class="cond-guide-btn data-v-3842de17"
+          >查看网格条件单说明</view
+        >
+        <view class="cond-grid-risk data-v-3842de17"
+          >风险提示：<view class="data-v-3842de17" wx:if="{{ai}}"
+            >网格交易条件单在截止时间前持续监控，将会触发多笔委托；当市场波动大、流动性不足等情形下，可能无法成交或无法完全成交；
+            网格交易的盯盘条件、委托参数的提交均由您的设置与交易所实际撮合决定。若区间设置的过小、交易标的盘中实际交易量过小、设置委托参数不合理等均有可能会导致高买低卖的情况。条件单不担保网格交易的运行一定为正收益。</view
+          >
+          <view
+            class="data-v-3842de17"
+            wx:for="{{aj}}"
+            wx:for-item="text"
+            wx:key="b"
+            >{{text.a}}</view
+          >
+        </view>
+      </view>
+      <view class="cond-grid-btnwrap data-v-3842de17">
+        <button
+          bindtap="{{al}}"
+          class="cond-grid-btn data-v-3842de17"
+          disabled="{{ak}}"
+        >
+          保存设置
+        </button>
+      </view>
+    </view>
+    <search-result-with-hold
+      bind:__l="__l"
+      bindclickItem="{{ao}}"
+      class="data-v-3842de17"
+      data-c-h="{{!an}}"
+      uI="3842de17-20,3842de17-0"
+    ></search-result-with-hold>
+    <bottom-selector
+      bind:__l="__l"
+      bindchange="{{ap}}"
+      bindclose="{{aq}}"
+      class="data-v-3842de17"
+      uI="3842de17-21,3842de17-0"
+      uP="{{ar}}"
+      wx:if="{{ar}}"
+    ></bottom-selector>
+    <popup-select
+      bind:__l="__l"
+      bindclick="{{at}}"
+      bindmaskClick="{{as}}"
+      class="data-v-3842de17"
+      uI="3842de17-22,3842de17-0"
+      uP="{{av}}"
+      wx:if="{{av}}"
+    ></popup-select>
+    <condition-protocol
+      bind:__l="__l"
+      class="r data-v-3842de17"
+      uI="3842de17-23,3842de17-0"
+      uR="condProtocol"
+    ></condition-protocol>
+    <mp-dialog
+      bind:__l="__l"
+      class="data-v-3842de17"
+      id="mp-dialog"
+      uI="3842de17-24,3842de17-0"
+      uP="{{ax}}"
+      wx:if="{{ax}}"
+    ></mp-dialog>
+    <grid-confirm
+      bind:__l="__l"
+      bindcancel="{{az}}"
+      bindconfirm="{{aA}}"
+      class="data-v-3842de17"
+      uI="3842de17-25,3842de17-0"
+      uP="{{aB}}"
+      wx:if="{{ay}}"
+    ></grid-confirm>
+    <cond-result
+      bind:__l="__l"
+      bindcancel="{{aD}}"
+      class="r data-v-3842de17"
+      uI="3842de17-26,3842de17-0"
+      uP="{{aE}}"
+      uR="condResult"
+      wx:if="{{aE}}"
+    ></cond-result>
+  </view>
+</global-wrap>

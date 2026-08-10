@@ -1,0 +1,39 @@
+<view class="{{['_div','data-v-8810be75','placeholder-container',p]}}">
+  <view class="{{['_div','data-v-8810be75','container',n,o]}}">
+    <view class="_div more-btn data-v-8810be75" wx:if="{{a}}">
+      <view bindtap="{{b}}" class="_div text data-v-8810be75">查看全部</view>
+      <image
+        class="_img arrow data-v-8810be75"
+        src="https://st.gtimg.com/design/911884d1ce3c43dd562fce90ec26a11a.svg"
+      ></image>
+    </view>
+    <view class="_div broker-trade-tag data-v-8810be75" wx:if="{{c}}"
+      >当前交易券商</view
+    >
+    <view bindtap="{{h}}" class="_div broker-info data-v-8810be75">
+      <view class="{{['_div','data-v-8810be75','broker-logo',d]}}"></view>
+      <view class="_div broker-name-wrap data-v-8810be75">
+        <view class="_div broker-name data-v-8810be75">{{e}}</view>
+        <view class="_div broker-tag data-v-8810be75" wx:if="{{f}}"
+          >合作券商</view
+        >
+        <view class="_div broker-tag data-v-8810be75" wx:if="{{g}}"
+          >当前交易券商</view
+        >
+      </view>
+    </view>
+    <view class="_div content-wrap data-v-8810be75">
+      <view class="_div oper-wrap data-v-8810be75">
+        <view class="_div oper-tips data-v-8810be75">
+          <rich-text class="data-v-8810be75" nodes="{{i}}"></rich-text>
+        </view>
+        <view
+          bindtap="{{m}}"
+          class="{{['_div','data-v-8810be75','oper-btn',l,'simple-mode']}}"
+          wx:if="{{j}}"
+          >{{k}}</view
+        >
+      </view>
+    </view>
+  </view>
+</view>

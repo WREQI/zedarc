@@ -1,0 +1,9 @@
+<view class="_div bubblewzqxcx-wrapper" hidden="{{!f}}" style="{{g}}">
+  <view class="_div bubble" style="{{d}}">
+    <view class="_div text">
+      <rich-text nodes="{{a}}"></rich-text>
+    </view>
+    <view bindtap="{{c}}" class="_div close" wx:if="{{b}}"></view>
+  </view>
+  <view class="_div arrow" style="{{e}}"></view>
+</view>

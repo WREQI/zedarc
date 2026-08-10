@@ -1,0 +1,178 @@
+<view class="{{['_div','skeleton','data-v-e11ec1c0',ad]}}">
+  <view class="_div info vc data-v-e11ec1c0">
+    <image
+      alt=""
+      class="_img data-v-e11ec1c0"
+      hidden="{{!false}}"
+      src="https://st.gtimg.com/image/mp-broker/trade/half-setting.png"
+    ></image>
+    <image
+      alt=""
+      class="_img data-v-e11ec1c0"
+      hidden="{{!false}}"
+      src="https://st.gtimg.com/image/mp-broker/trade/trade-tool-active.png"
+    ></image>
+    <image
+      alt=""
+      class="_img data-v-e11ec1c0"
+      hidden="{{!false}}"
+      src="https://st.gtimg.com/image/mp-broker/trade/trade-tool-dark-active.png"
+    ></image>
+    <image
+      alt=""
+      class="_img data-v-e11ec1c0"
+      hidden="{{!false}}"
+      src="https://st.gtimg.com/image/mp-broker/trade/half-close.png"
+    ></image>
+    <view class="_div header-start flex-center data-v-e11ec1c0" wx:if="{{a}}">
+      <view class="_div trade-setting data-v-e11ec1c0"></view>
+    </view>
+    <view class="_div broker-info flex-center data-v-e11ec1c0" wx:if="{{b}}">
+      <image
+        alt=""
+        class="_img broker-logo-img data-v-e11ec1c0"
+        src="{{c}}"
+      ></image>
+      <label class="_span broker-name data-v-e11ec1c0">{{d}} ******</label>
+    </view>
+    <view class="_div header-end data-v-e11ec1c0">
+      <view bindtap="{{e}}" class="_div close-bg data-v-e11ec1c0"></view>
+    </view>
+  </view>
+  <view class="{{['_div','tabbar-skeleton','data-v-e11ec1c0',m]}}">
+    <view class="_div tabbar-left data-v-e11ec1c0">
+      <view
+        class="{{['_div','tab-item','tab-item--active','data-v-e11ec1c0',j]}}"
+      >
+        <view class="{{['_div','tab-trade-tool','data-v-e11ec1c0',f]}}"></view>
+        <label class="_span tab-active-text data-v-e11ec1c0">智能下单</label>
+        <view class="{{['_div','tab-sub-label','data-v-e11ec1c0',h]}}"
+          >{{g}}</view
+        >
+        <view class="{{['_div','tab-slider-item','data-v-e11ec1c0',i]}}"></view>
+      </view>
+      <view class="_div tab-item-margin data-v-e11ec1c0"></view>
+      <view class="{{['_div','tab-item','data-v-e11ec1c0',k]}}"
+        >今日委托(0)</view
+      >
+      <view class="_div tab-item-margin data-v-e11ec1c0"></view>
+      <view class="{{['_div','tab-item','data-v-e11ec1c0',l]}}">持仓</view>
+    </view>
+    <view class="_div total-asset data-v-e11ec1c0"
+      >总资产<label class="_span icon icon-arrow data-v-e11ec1c0"></label>
+    </view>
+  </view>
+  <view class="_div data-v-e11ec1c0" wx:if="{{n}}">
+    <view class="{{['_div','row-2','flex-between','data-v-e11ec1c0',t]}}">
+      <view class="{{['_div','text','data-v-e11ec1c0',o]}}">限价</view>
+      <view class="{{['_div','row-right','flex-between','data-v-e11ec1c0',s]}}">
+        <view
+          class="{{['_div','stepper-button','minus','data-v-e11ec1c0',p]}}"
+        ></view>
+        <view class="_div num dqj-color data-v-e11ec1c0">{{q}}</view>
+        <view
+          class="{{['_div','stepper-button','plus','data-v-e11ec1c0',r]}}"
+        ></view>
+      </view>
+    </view>
+    <view class="{{['_div','row-3','vc','data-v-e11ec1c0',B]}}">
+      <view class="_div flex-between data-v-e11ec1c0">
+        <view class="{{['_div','text','data-v-e11ec1c0',v]}}">数量</view>
+        <view
+          class="{{['_div','row-right','flex-between','data-v-e11ec1c0',A]}}"
+        >
+          <view
+            class="{{['_div','stepper-button','minus','data-v-e11ec1c0',w]}}"
+          ></view>
+          <view class="{{['_div','num','data-v-e11ec1c0',y]}}">{{x}}</view>
+          <view
+            class="{{['_div','stepper-button','plus','data-v-e11ec1c0',z]}}"
+          ></view>
+        </view>
+      </view>
+    </view>
+    <view class="{{['_div','max-info','flex-between','data-v-e11ec1c0',I]}}">
+      <view class="{{['_div','label','border--surround','data-v-e11ec1c0',D]}}"
+        >{{C}}--</view
+      >
+      <view class="_div flex data-v-e11ec1c0">
+        <view
+          class="{{['_div','quick-amount','border--surround','data-v-e11ec1c0',E]}}"
+          >全仓</view
+        >
+        <view
+          class="{{['_div','quick-amount','border--surround','data-v-e11ec1c0',F]}}"
+          >1/2仓</view
+        >
+        <view
+          class="{{['_div','quick-amount','border--surround','data-v-e11ec1c0',G]}}"
+          >1/3仓</view
+        >
+        <view
+          class="{{['_div','quick-amount','border--surround','data-v-e11ec1c0',H]}}"
+          >1/4仓</view
+        >
+      </view>
+    </view>
+    <view class="{{['_div','row-4','flex-between','data-v-e11ec1c0',L]}}">
+      <view class="{{['_div','text','data-v-e11ec1c0',J]}}">订单金额</view>
+      <view class="_div total-money data-v-e11ec1c0">
+        <view class="_div canuse-money data-v-e11ec1c0">（可用资金--元）</view>
+        <view class="{{['_div','data-v-e11ec1c0',K]}}">0.00 元</view>
+      </view>
+    </view>
+    <view class="{{['_div','btns','data-v-e11ec1c0',O]}}">
+      <button class="{{['data-v-e11ec1c0',N]}}">{{M}}</button>
+    </view>
+  </view>
+  <view class="_div quick-trade-skeleton data-v-e11ec1c0" wx:else>
+    <view class="_div title-bar data-v-e11ec1c0">
+      <view class="_div data-v-e11ec1c0" wx:if="{{P}}">买入金额</view>
+      <view class="_div data-v-e11ec1c0" wx:else>卖出数量</view>
+      <view class="_div link data-v-e11ec1c0">交易规则</view>
+    </view>
+    <view class="_div input-wrap data-v-e11ec1c0">
+      <view class="_div prefix data-v-e11ec1c0" wx:if="{{Q}}">¥</view>
+      <view class="_div postfix data-v-e11ec1c0" wx:else>股</view>
+    </view>
+    <view class="_div gap-line data-v-e11ec1c0"></view>
+    <view class="_div can-use-wrap data-v-e11ec1c0">
+      <view
+        class="{{['_div','can-use','border--surround','data-v-e11ec1c0',S]}}"
+        >{{R}}--</view
+      >
+      <view class="_div quick-import money data-v-e11ec1c0" wx:if="{{T}}">
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',U]}}"
+          >全额买入</view
+        >
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',V]}}"
+          >最低买入</view
+        >
+      </view>
+      <view class="_div quick-import amount data-v-e11ec1c0" wx:else>
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',W]}}"
+          >全仓</view
+        >
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',X]}}"
+          >1/2仓</view
+        >
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',Y]}}"
+          >1/3仓</view
+        >
+        <view class="{{['_div','item','border--surround','data-v-e11ec1c0',Z]}}"
+          >1/4仓</view
+        >
+      </view>
+    </view>
+    <view class="_div order-info data-v-e11ec1c0">
+      <view class="_div label data-v-e11ec1c0">订单金额</view>
+      <view class="_div money-wrap data-v-e11ec1c0">
+        <view class="_div subinfo data-v-e11ec1c0">（价格-- 数量--）</view>
+        <view class="_div money data-v-e11ec1c0">0.00 元</view>
+      </view>
+    </view>
+    <view class="{{['_div','btns','no-padding','data-v-e11ec1c0',ac]}}">
+      <button class="{{['data-v-e11ec1c0',ab]}}">{{aa}}</button>
+    </view>
+  </view>
+</view>

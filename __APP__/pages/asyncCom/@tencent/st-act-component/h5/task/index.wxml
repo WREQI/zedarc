@@ -1,0 +1,79 @@
+<view
+  class="{{['_div','yy-task','data-v-d6158106',D&&'is-minapp',E&&'is-pcmina',F&&'wzq-app']}}"
+>
+  <count-down
+    bind:__l="__l"
+    bindclik="{{e}}"
+    bindtimeend="{{f}}"
+    class="yy-task-count-down data-v-d6158106"
+    uI="d6158106-0"
+    uP="{{g}}"
+    uS="{{['slot-text','slot-sub-text']}}"
+    wx:if="{{a}}"
+  >
+    <view slot="{{scope.c}}" wx:for="{{b}}" wx:for-item="scope" wx:key="b">
+      <view
+        class="{{['_div','yy-task-count-down-duration','data-v-d6158106',c&&'pending']}}"
+        >{{scope.a}}</view
+      >
+    </view>
+    <view
+      class="_div yy-task-count-down-award data-v-d6158106"
+      slot="slot-sub-text"
+      >{{d}}</view
+    >
+  </count-down>
+  <bubble
+    bind:__l="__l"
+    bindclose="{{j}}"
+    class="yy-task-bubble data-v-d6158106"
+    uI="d6158106-1"
+    uP="{{k}}"
+    uS="{{['yy-bubble-text']}}"
+    wx:if="{{h}}"
+  >
+    <view slot="yy-bubble-text">{{i}}</view>
+  </bubble>
+  <guide
+    bind:__l="__l"
+    bindtimeend="{{o}}"
+    class="{{['yy-task-guide','data-v-d6158106',n]}}"
+    uI="d6158106-2"
+    uP="{{p}}"
+    uS="{{['d']}}"
+    wx:if="{{l}}"
+    >{{m}}</guide
+  >
+  <snackbar
+    bind:__l="__l"
+    bindclik="{{w}}"
+    bindclose="{{v}}"
+    class="yy-task-snackbar data-v-d6158106"
+    uI="d6158106-3"
+    uP="{{x}}"
+    uS="{{['yy-snackbar-text','yy-snackbar-btn-text']}}"
+    wx:if="{{q}}"
+  >
+    <view slot="yy-snackbar-text">
+      <view class="_div snackbar-html data-v-d6158106" wx:if="{{r}}">
+        <rich-text class="data-v-d6158106" nodes="{{s}}"></rich-text>
+      </view>
+    </view>
+    <view slot="yy-snackbar-btn-text">{{t}}</view>
+  </snackbar>
+  <snackbar
+    bind:__l="__l"
+    bindclose="{{B}}"
+    class="yy-task-banner data-v-d6158106"
+    uI="d6158106-4"
+    uP="{{C}}"
+    uS="{{['yy-snackbar-text']}}"
+    wx:if="{{y}}"
+  >
+    <view slot="yy-snackbar-text">
+      <view class="_div snackbar-html data-v-d6158106" wx:if="{{z}}">
+        <rich-text class="data-v-d6158106" nodes="{{A}}"></rich-text>
+      </view>
+    </view>
+  </snackbar>
+</view>

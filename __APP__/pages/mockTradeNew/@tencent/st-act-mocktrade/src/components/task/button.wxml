@@ -1,0 +1,10 @@
+<view class="_div">
+  <view
+    bindtap="{{f}}"
+    class="{{['_div','buttonClass',c,d]}}"
+    disabled="{{b}}"
+    style="{{e}}"
+  >
+    <label class="_span text">{{a}}</label>
+  </view>
+</view>

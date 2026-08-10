@@ -1,0 +1,116 @@
+<view class="_div opinion-card data-v-57ad2638">
+  <view class="_div opinion-card__avatar-area data-v-57ad2638">
+    <view class="_div opinion-card__avatar-info data-v-57ad2638">
+      <view class="_div opinion-card__avatar data-v-57ad2638">
+        <view
+          class="{{['_div','data-v-57ad2638','opinion-card__avatar-img-wrap',g&&'opinion-card__avatar-img-wrap--empty']}}"
+        >
+          <image
+            binderror="{{d}}"
+            bindload="{{c}}"
+            class="_img opinion-card__avatar-img data-v-57ad2638"
+            hidden="{{!a}}"
+            ref="avatarImg"
+            src="{{b}}"
+          ></image>
+          <image
+            class="_img opinion-card__avatar-img data-v-57ad2638"
+            src="{{f}}"
+            wx:if="{{e}}"
+          ></image>
+        </view>
+      </view>
+      <view class="_div opinion-card__user-info data-v-57ad2638">
+        <view class="_div opinion-card__user-name data-v-57ad2638">{{h}}</view>
+        <view class="_div opinion-card__user-time data-v-57ad2638" wx:if="{{i}}"
+          >{{j}}</view
+        >
+      </view>
+    </view>
+  </view>
+  <block wx:if="{{k}}">
+    <view bindtap="{{m}}" class="_div opinion-card__content data-v-57ad2638">
+      <label
+        class="_span data-v-57ad2638"
+        wx:for="{{l}}"
+        wx:for-item="content"
+        wx:key="z"
+      >
+        <label
+          class="{{['_span','opinion-card__link','data-v-57ad2638',content.d]}}"
+          wx:if="{{content.a}}"
+        >
+          <view class="_i icon-gegu data-v-57ad2638"></view
+          >{{content.b}}.{{content.c}}</label
+        >
+        <label
+          class="{{['_span','opinion-card__emoji','data-v-57ad2638',content.f,content.g]}}"
+          data-name="{{content.h}}"
+          wx:elif="{{content.e}}"
+        ></label>
+        <label
+          class="{{['_span','opinion-card__link','data-v-57ad2638',content.k]}}"
+          wx:elif="{{content.i}}"
+          >#{{content.j}}</label
+        >
+        <label
+          class="{{['_span','opinion-card__link','data-v-57ad2638',content.n]}}"
+          wx:elif="{{content.l}}"
+        >
+          <view class="_i icon-xuangu data-v-57ad2638"></view
+          >{{content.m}}</label
+        >
+        <label
+          class="{{['_span','opinion-card__link','data-v-57ad2638',content.q]}}"
+          wx:elif="{{content.o}}"
+        >
+          <view class="_i icon-at data-v-57ad2638"></view>{{content.p}}</label
+        >
+        <label
+          class="{{['_span','opinion-card__link','data-v-57ad2638',content.t]}}"
+          wx:elif="{{content.r}}"
+        >
+          <view class="_i icon-zhibo data-v-57ad2638"></view
+          >{{content.s}}</label
+        >
+        <view class="data-v-57ad2638" wx:elif="{{content.v}}"></view>
+        <view
+          class="_div opinion-card__post-image data-v-57ad2638"
+          wx:elif="{{content.w}}"
+          >[图片]</view
+        >
+        <label
+          class="{{['_span','opinion-card__text','data-v-57ad2638',content.y]}}"
+          wx:else
+          >{{content.x}}</label
+        >
+      </label>
+    </view>
+    <view class="_div opinion-card__actions data-v-57ad2638">
+      <view class="_div opinion-card__like-users data-v-57ad2638" wx:if="{{n}}">
+        <view
+          class="_div opinion-card__like-user data-v-57ad2638"
+          wx:for="{{o}}"
+          wx:for-item="user"
+          wx:key="b"
+        >
+          <image
+            alt=""
+            class="_img opinion-card__like-user-img data-v-57ad2638"
+            src="{{user.a}}"
+          ></image>
+        </view>
+      </view>
+      <view catchtap="{{r}}" class="_div opinion-card__like data-v-57ad2638">
+        <opinion-niu-animation
+          bind:__l="__l"
+          class="r data-v-57ad2638"
+          uI="57ad2638-0"
+          uP="{{q}}"
+          uR="niu"
+          wx:if="{{q}}"
+        ></opinion-niu-animation>
+      </view>
+    </view>
+  </block>
+</view>

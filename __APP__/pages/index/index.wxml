@@ -1,0 +1,205 @@
+<page-meta class="data-v-93b72b54" rootFontSize="{{a}}"></page-meta>
+<mp-privacy-dialog
+  bind:__l="__l"
+  class="data-v-93b72b54"
+  uI="93b72b54-0"
+></mp-privacy-dialog>
+<stock-privacy-dialog
+  bind:__l="__l"
+  class="data-v-93b72b54"
+  uI="93b72b54-1"
+></stock-privacy-dialog>
+<view
+  class="{{['_div','data-v-93b72b54','index-wrapper',ad,ae]}}"
+  data-st-theme="{{ab}}"
+  data-theme="{{ac}}"
+>
+  <top-bar
+    bind:__l="__l"
+    bindgetBarHeight="{{c}}"
+    bindgetTitleHeight="{{d}}"
+    class="r data-v-93b72b54"
+    uI="93b72b54-2"
+    uP="{{e}}"
+    uR="topbar"
+    wx:if="{{e}}"
+  ></top-bar>
+  <view class="delivery-marquee-wzqxcx data-v-93b72b54">
+    <marquee-wzqxcx
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-3"
+      uP="{{i}}"
+      uS="{{['d']}}"
+      wx:if="{{f}}"
+    >
+      <view
+        slot="{{slotProps.d}}"
+        wx:for="{{g}}"
+        wx:for-item="slotProps"
+        wx:key="c"
+      >
+        <marquee-dialog-adv
+          bind:__l="__l"
+          class="data-v-93b72b54"
+          uI="{{slotProps.a}}"
+          uP="{{slotProps.b}}"
+          wx:if="{{h}}"
+        ></marquee-dialog-adv>
+      </view>
+    </marquee-wzqxcx>
+  </view>
+  <block wx:if="{{j}}">
+    <portfolio
+      bind:__l="__l"
+      bindafterSwitchTab="{{r}}"
+      bindcheckUserSubscribe="{{w}}"
+      bindportfolioPackageReady="{{v}}"
+      bindrefreshTabStatusForTrade="{{q}}"
+      bindreportQianjiGo="{{t}}"
+      bindsetSwiperHeight="{{s}}"
+      bindshowPolicyModal="{{p}}"
+      class="r data-v-93b72b54"
+      uI="93b72b54-5"
+      uP="{{x}}"
+      uR="portfolio"
+      uS="{{['yy-portrait-guideapply-card','trade-position']}}"
+      wx:if="{{k}}"
+    >
+      <view slot="{{v0.e}}" wx:for="{{l}}" wx:for-item="v0" wx:key="d">
+        <portrait-apply-guide-card
+          bind:__l="__l"
+          class="data-v-93b72b54"
+          uI="{{v0.b}}"
+          uP="{{v0.c}}"
+          wx:if="{{v0.a}}"
+        ></portrait-apply-guide-card>
+      </view>
+      <view slot="trade-position">
+        <broker-asset-hold-stock
+          bind:__l="__l"
+          class="data-v-93b72b54"
+          uI="93b72b54-7,93b72b54-5"
+          uP="{{n}}"
+          wx:if="{{m}}"
+        ></broker-asset-hold-stock>
+      </view>
+    </portfolio>
+  </block>
+  <privacy-browse-only
+    bind:__l="__l"
+    bindshowPolicyModal="{{z}}"
+    class="data-v-93b72b54"
+    uI="93b72b54-8"
+    wx:elif="{{y}}"
+  ></privacy-browse-only>
+  <st-status
+    bind:__l="__l"
+    bindhandleError="{{B}}"
+    class="portfolio-status data-v-93b72b54"
+    uI="93b72b54-9"
+    uP="{{C}}"
+    wx:if="{{A}}"
+  ></st-status>
+  <task
+    bind:__l="__l"
+    class="data-v-93b72b54"
+    uI="93b72b54-10"
+    wx:if="{{D}}"
+  ></task>
+  <block wx:if="{{E}}">
+    <preload-plugin
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-11"
+      wx:if="{{F}}"
+    ></preload-plugin>
+    <broker-password
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-12"
+      wx:if="{{G}}"
+    ></broker-password>
+  </block>
+  <view class="delivery-globalcurtainadv-wzqxcx data-v-93b72b54">
+    <global-curtain-adv
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-13"
+      uP="{{I}}"
+      wx:if="{{H}}"
+    ></global-curtain-adv>
+  </view>
+  <view class="delivery-globalcurtainadv-wzqxcx data-v-93b72b54">
+    <new-stock-curtain
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-14"
+      uP="{{K}}"
+      wx:if="{{J}}"
+    ></new-stock-curtain>
+  </view>
+  <view class="delivery-bottom-banner data-v-93b72b54">
+    <bottom-banner
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-15"
+      uP="{{M}}"
+      wx:if="{{L}}"
+    ></bottom-banner>
+  </view>
+  <tab-bar-place-holder
+    bind:__l="__l"
+    class="r data-v-93b72b54"
+    uI="93b72b54-16"
+    uR="vTabbar"
+  ></tab-bar-place-holder>
+  <view class="delivery-bubble-wzqxcx data-v-93b72b54">
+    <bubble-wzqxcx
+      bind:__l="__l"
+      class="data-v-93b72b54"
+      uI="93b72b54-17"
+      uP="{{P}}"
+      wx:if="{{O}}"
+    ></bubble-wzqxcx>
+  </view>
+  <placeholder
+    bind:__l="__l"
+    class="data-v-93b72b54"
+    uI="93b72b54-18"
+  ></placeholder>
+  <privacy-and-choose-policy-modal
+    bind:__l="__l"
+    bindinput="{{Q}}"
+    bindrefreshList="{{S}}"
+    bindshowErrorModal="{{T}}"
+    bindupdatePolicyType="{{R}}"
+    class="data-v-93b72b54"
+    uI="93b72b54-19"
+    uP="{{U}}"
+    wx:if="{{U}}"
+  ></privacy-and-choose-policy-modal>
+  <privacy-policy-bar
+    bind:__l="__l"
+    bindPrivacyPolicyBarClick="{{W}}"
+    class="data-v-93b72b54"
+    uI="93b72b54-20"
+    wx:if="{{V}}"
+  ></privacy-policy-bar>
+  <portfolio-sync-modal
+    bind:__l="__l"
+    bindinput="{{X}}"
+    class="data-v-93b72b54"
+    uI="93b72b54-21"
+    uP="{{Y}}"
+    wx:if="{{Y}}"
+  ></portfolio-sync-modal>
+  <follow-guide
+    bind:__l="__l"
+    bindclose="{{Z}}"
+    class="data-v-93b72b54"
+    uI="93b72b54-22"
+    uP="{{aa}}"
+    wx:if="{{aa}}"
+  ></follow-guide>
+</view>

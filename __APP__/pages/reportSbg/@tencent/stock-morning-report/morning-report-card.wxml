@@ -1,0 +1,66 @@
+<view
+  class="{{['_div','data-v-357473b1','morning-report-card-wrapper',x]}}"
+  id="morning-report-content-card"
+  style="{{y}}"
+  wx:if="{{a}}"
+>
+  <slot name="before-content" wx:if="{{b}}"></slot>
+  <hover-wrapper
+    bind:__l="__l"
+    class="data-v-357473b1"
+    uI="357473b1-0"
+    uS="{{['d']}}"
+  >
+    <news-brief-header
+      bind:__l="__l"
+      bindsubscribe="{{c}}"
+      bindwzqKeepPos="{{d}}"
+      class="data-v-357473b1"
+      uI="357473b1-1,357473b1-0"
+      uP="{{e}}"
+      wx:if="{{e}}"
+    ></news-brief-header>
+    <news-brief-content
+      bind:__l="__l"
+      bindgoToActivity="{{i}}"
+      bindhandleShowHalfAi="{{l}}"
+      bindmpScrollTop="{{k}}"
+      bindpqywSecondArticleFullyVisible="{{m}}"
+      bindrecommendToSubscribe="{{h}}"
+      bindshare="{{j}}"
+      bindwzqKeepPos="{{g}}"
+      class="r data-v-357473b1"
+      uI="357473b1-2,357473b1-0"
+      uP="{{n}}"
+      uR="briefContent"
+      wx:if="{{n}}"
+    ></news-brief-content>
+    <follow-guide
+      bind:__l="__l"
+      bindcancel="{{o}}"
+      bindconfirm="{{p}}"
+      class="data-v-357473b1"
+      uI="357473b1-3,357473b1-0"
+      uP="{{q}}"
+      wx:if="{{q}}"
+    ></follow-guide>
+  </hover-wrapper>
+  <root-portal class="data-v-357473b1" enable="{{true}}" wx:if="{{r}}">
+    <half-screen-ai-entry
+      bind:__l="__l"
+      bindonSubscribeTipsClose="{{s}}"
+      bindshareAiAnswer="{{t}}"
+      class="data-v-357473b1"
+      uI="357473b1-4"
+      uP="{{v}}"
+      wx:if="{{v}}"
+    ></half-screen-ai-entry>
+  </root-portal>
+  <speech-control-panel
+    bind:__l="__l"
+    class="data-v-357473b1"
+    uI="357473b1-5"
+    uP="{{w}}"
+    wx:if="{{w}}"
+  ></speech-control-panel>
+</view>

@@ -1,0 +1,47 @@
+.vote-checkbox.data-v-51c4b287 {
+  height: 0.4266666666666667rem;
+  position: relative;
+  width: 0.4266666666666667rem;
+}
+.vote-checkbox-input.data-v-51c4b287 {
+  border: 0;
+  display: none;
+  height: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+.vote-checkbox-inner.data-v-51c4b287 {
+  align-items: center;
+  background: var(--fill-content-layer);
+  border: 0.02666666666666667rem solid var(--border-heavy-divider2);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+[data-st-theme="black"] .vote-checkbox-inner.data-v-51c4b287,
+[data-st-theme="dark"] .vote-checkbox-inner.data-v-51c4b287 {
+  border: 0.02666666666666667rem solid var(--color-icon2);
+}
+.vote-checkbox-checked .vote-checkbox-inner.data-v-51c4b287 {
+  border: none;
+}
+.vote-checkbox-checked .vote-checkbox-inner.wzq-color.data-v-51c4b287 {
+  background: rgba(230, 53, 53, 0.1);
+}
+.vote-checkbox-checked .vote-checkbox-inner.zxg-color.data-v-51c4b287 {
+  background: rgba(48, 119, 236, 0.1);
+}
+.vote-checkbox-check.data-v-51c4b287 {
+  display: block;
+  height: 0.18666666666666668rem;
+  width: 0.26666666666666666rem;
+}

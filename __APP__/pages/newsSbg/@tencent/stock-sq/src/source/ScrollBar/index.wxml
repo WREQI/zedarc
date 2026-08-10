@@ -1,0 +1,48 @@
+<view class="_div data-v-b3555b14">
+  <swiper
+    class="scroll-bar data-v-b3555b14"
+    options="{{c}}"
+    ref="mySwiper"
+    style="{{'background-color:'+d}}"
+    wx:if="{{a}}"
+  >
+    <swiper-slide
+      bind:__l="__l"
+      class="data-v-b3555b14"
+      uI="{{item.f}}"
+      uS="{{['d']}}"
+      wx:for="{{b}}"
+      wx:key="e"
+    >
+      <view class="_div item-box data-v-b3555b14">
+        <base-image
+          bind:__l="__l"
+          class="avator data-v-b3555b14"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.a}}"
+        ></base-image>
+        <label class="_span content data-v-b3555b14">{{item.d}}</label>
+      </view>
+    </swiper-slide>
+  </swiper>
+  <swiper
+    class="scroll-bar data-v-b3555b14"
+    ref="mySwiper"
+    style="{{'background-color:'+f}}"
+    wx:else
+  >
+    <swiper-item class="data-v-b3555b14" wx:for="{{e}}" wx:key="e">
+      <view class="_div item-box data-v-b3555b14">
+        <base-image
+          bind:__l="__l"
+          class="avator data-v-b3555b14"
+          uI="{{item.b}}"
+          uP="{{item.c}}"
+          wx:if="{{item.a}}"
+        ></base-image>
+        <label class="_span content data-v-b3555b14">{{item.d}}</label>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,41 @@
+<view
+  class="_div base-modal data-v-1afb7bd9"
+  style="{{'z-index:'+i}}"
+  wx:if="{{a}}"
+>
+  <view bindtap="{{b}}" class="_div base-modal__mask data-v-1afb7bd9"></view>
+  <view class="_div base-modal__wrapper data-v-1afb7bd9">
+    <view
+      bindtap="{{d}}"
+      class="_div base-modal__close base-modal__close--outer data-v-1afb7bd9"
+      wx:if="{{c}}"
+    >
+      <image
+        alt="关闭"
+        class="_img base-modal__close-icon data-v-1afb7bd9"
+        src="https://st.gtimg.com/design/3f595154951e68c009daf087a1fc1b9d.png"
+      ></image>
+    </view>
+    <view class="_div base-modal__content data-v-1afb7bd9">
+      <view
+        bindtap="{{f}}"
+        class="_div base-modal__close base-modal__close--inner data-v-1afb7bd9"
+        wx:if="{{e}}"
+      >
+        <view class="_div base-modal__close-btn data-v-1afb7bd9"></view>
+      </view>
+      <slot></slot>
+    </view>
+    <view
+      bindtap="{{h}}"
+      class="_div base-modal__close base-modal__close--bottom data-v-1afb7bd9"
+      wx:if="{{g}}"
+    >
+      <image
+        alt="关闭"
+        class="_img base-modal__close-icon data-v-1afb7bd9"
+        src="https://st.gtimg.com/design/3f595154951e68c009daf087a1fc1b9d.png"
+      ></image>
+    </view>
+  </view>
+</view>

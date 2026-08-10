@@ -1,0 +1,54 @@
+<view
+  class="{{['_div','ams-content-section','stock-query-section','data-v-ad2023f6',m&&'etf-mode']}}"
+>
+  <image
+    class="_img ams-section-index data-v-ad2023f6"
+    src="{{b}}"
+    wx:if="{{a}}"
+  ></image>
+  <view class="_div header data-v-ad2023f6">
+    <view class="_div title-container data-v-ad2023f6">
+      <label class="_span main-title data-v-ad2023f6">{{c}}</label>
+      <label class="_span sub-title data-v-ad2023f6" wx:if="{{d}}">{{e}}</label>
+    </view>
+  </view>
+  <view class="_div stock-list data-v-ad2023f6">
+    <view class="_div stock-card data-v-ad2023f6" wx:for="{{f}}" wx:key="l">
+      <view class="_div stock-content data-v-ad2023f6">
+        <view class="_div stock-name data-v-ad2023f6">
+          <label class="{{['_span','name','data-v-ad2023f6',g&&'etf-name']}}"
+            >{{item.a}}</label
+          >
+          <view class="_div stock-code data-v-ad2023f6">
+            <view class="{{['_div','market-tag','data-v-ad2023f6',item.c]}}"
+              >{{item.b}}</view
+            >
+            <label class="_span code data-v-ad2023f6">{{item.d}}</label>
+          </view>
+        </view>
+        <view class="_div stock-price data-v-ad2023f6">
+          <label
+            class="{{['_span','price','data-v-ad2023f6',item.f]}}"
+            key="{{item.g}}"
+            wx:if="{{h}}"
+            >{{item.e}}</label
+          >
+          <label
+            class="{{['_span','change','data-v-ad2023f6',item.i,i]}}"
+            key="{{item.j}}"
+            >{{item.h}}</label
+          >
+        </view>
+        <view bindtap="{{item.k}}" class="_div ask-ai-btn data-v-ad2023f6"
+          >问元宝</view
+        >
+      </view>
+    </view>
+  </view>
+  <view class="_div sq-footer data-v-ad2023f6">
+    <view class="_div refresh-tip data-v-ad2023f6" wx:if="{{j}}">
+      <rich-text class="data-v-ad2023f6" nodes="{{k}}"></rich-text>
+    </view>
+    <view class="_div border-1px data-v-ad2023f6" wx:if="{{l}}"></view>
+  </view>
+</view>

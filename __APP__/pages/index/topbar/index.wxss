@@ -1,0 +1,174 @@
+.top-bar-container.data-v-1a86a5e7 {
+  background: var(--fill-2);
+  box-sizing: border-box;
+  width: 100%;
+}
+.top-bar-container .big-title.data-v-1a86a5e7,
+.top-bar-container .safe-area-padding-top.data-v-1a86a5e7 {
+  background: var(--fill-2);
+  box-sizing: border-box;
+  padding: 0 0.32rem;
+  width: 100%;
+}
+.top-bar-container .big-title.data-v-1a86a5e7 {
+  align-items: flex-start;
+  display: -webkit-flex;
+  display: flex;
+  height: 1.1733333333333333rem;
+  justify-content: flex-start;
+  opacity: 0;
+  overflow: hidden;
+}
+.top-bar-container .big-title.showBar.data-v-1a86a5e7 {
+  opacity: 1;
+}
+.top-bar-container .big-title .title-content.data-v-1a86a5e7 {
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.7466666666666667rem;
+  width: 100%;
+}
+.top-bar-container .big-title .logo-icon.data-v-1a86a5e7 {
+  height: 0.7466666666666667rem;
+  margin-right: 0.21333333333333335rem;
+  width: 0.7466666666666667rem;
+}
+.top-bar-container .big-title .logo-text.data-v-1a86a5e7 {
+  color: var(--color-heavygray);
+  font-size: 0.5333333333333333rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.7466666666666667rem;
+}
+.top-bar-container .big-title.appearBar.data-v-1a86a5e7 {
+  animation: appeAni-1a86a5e7 0.15s ease-in;
+  height: 1.1733333333333333rem;
+  transform: translateZ(0);
+  transition: height 0.15s;
+  transition-timing-function: linear;
+}
+@-webkit-keyframes appeAni-1a86a5e7 {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes appeAni-1a86a5e7 {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.top-bar-container .big-title.hidenbar.data-v-1a86a5e7 {
+  animation: hideAni-1a86a5e7 0.15s ease-out;
+  height: 0;
+  transform: translateZ(0);
+  transition: height 0.15s;
+  transition-timing-function: linear;
+}
+@-webkit-keyframes hideAni-1a86a5e7 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+@keyframes hideAni-1a86a5e7 {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+}
+.top-bar-container .big-title.hideBottom.data-v-1a86a5e7 {
+  padding-bottom: 0.16rem;
+}
+.top-bar-container .search-bar-container.data-v-1a86a5e7 {
+  align-items: center;
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 0.32rem 0.16rem;
+  transform: translateZ(0);
+  transition: width 0.15s;
+  transition-timing-function: linear;
+  width: 100%;
+}
+.top-bar-container .search-bar-container.pc.data-v-1a86a5e7 {
+  height: 1.12rem;
+  overflow: hidden;
+  padding-top: 0.16rem;
+  transition: height 0.2s, padding-bottom 0.2s, padding-top 0.2s;
+  transition-timing-function: linear;
+}
+.top-bar-container .search-bar-container.bar-hidden.data-v-1a86a5e7 {
+  height: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+.top-bar-container .search-bar-container .search-bar.data-v-1a86a5e7 {
+  align-items: center;
+  background: var(--fill-background);
+  border-radius: 0.10666666666666667rem;
+  color: var(--color-lightgray-1);
+  display: -webkit-flex;
+  display: flex;
+  flex: 1;
+  font-size: 0.37333333333333335rem;
+  height: 0.8rem;
+  justify-content: flex-start;
+  overflow: auto;
+  padding-left: 0.26666666666666666rem;
+  transform: translateZ(0);
+}
+.top-bar-container .search-bar-container .search-bar .line.data-v-1a86a5e7 {
+  margin-bottom: 0.05333333333333334rem;
+}
+.top-bar-container
+  .search-bar-container
+  .search-bar
+  .search-icon-new.data-v-1a86a5e7 {
+  height: 0.3466666666666667rem;
+  margin-right: 0.21333333333333335rem;
+  width: 0.3466666666666667rem;
+}
+.top-bar-container
+  .search-bar-container
+  .search-bar
+  .search-bar-placeholder.data-v-1a86a5e7 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top-bar-container .search-bar-container .topbar-icon-wrapper.data-v-1a86a5e7 {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.32rem;
+}
+.top-bar-container
+  .search-bar-container
+  .topbar-icon-entry
+  .ai-entry-text.data-v-1a86a5e7 {
+  color: #e63535;
+  font-size: 0.4rem;
+  font-weight: 500;
+  line-height: 0.8rem;
+  white-space: nowrap;
+}

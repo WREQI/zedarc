@@ -1,0 +1,117 @@
+<view bindtouchstart="{{y}}" class="_div order-list-container data-v-34c49e86">
+  <view class="_div left-container data-v-34c49e86">
+    <view class="_div column data-v-34c49e86">
+      <view class="_div column-title data-v-34c49e86" id="title-row"
+        >基金名称</view
+      >
+      <view class="_ul column-list data-v-34c49e86">
+        <view
+          bindtap="{{item.e}}"
+          class="_li list-item data-v-34c49e86"
+          id="item-row"
+          wx:for="{{a}}"
+          wx:key="d"
+        >
+          <view class="_div name data-v-34c49e86">{{item.a}}</view>
+          <view class="_div store-code data-v-34c49e86">
+            <label class="_span fund data-v-34c49e86"></label>{{item.b}}<label
+              class="_span t0tag data-v-34c49e86"
+              wx:for="{{item.c}}"
+              wx:for-item="it"
+              wx:key="b"
+              >{{it.a}}</label
+            >
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    bindtouchcancel="{{events.touchend}}"
+    bindtouchend="{{events.touchend}}"
+    bindtouchmove="{{events.touchmove}}"
+    bindtouchstart="{{events.touchstart}}"
+    change:scrollOptions="{{events.setup}}"
+    class="_div right-container data-v-34c49e86"
+    ref="rightContainer"
+    scrollOptions="{{x}}"
+  >
+    <view class="_div right-inner-wrapper data-v-34c49e86">
+      <view class="_div column data-v-34c49e86" key="current-col">
+        <view
+          bindtap="{{g}}"
+          class="{{['_div','data-v-34c49e86','column-title',f]}}"
+          >今日涨幅<view class="_div trend data-v-34c49e86">
+            <label
+              catchtap="{{c}}"
+              class="{{['_span','data-v-34c49e86','up',b]}}"
+            ></label>
+            <label
+              catchtap="{{e}}"
+              class="{{['_span','data-v-34c49e86','down',d]}}"
+            ></label>
+          </view>
+        </view>
+        <view class="_ul column-list data-v-34c49e86">
+          <view
+            class="_li list-item list-content data-v-34c49e86"
+            style="{{'color:'+item.c}}"
+            wx:for="{{h}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+      <view class="_div column data-v-34c49e86" key="ipo-col">
+        <view
+          bindtap="{{n}}"
+          class="{{['_div','data-v-34c49e86','column-title',m]}}"
+          >上市以来<view class="_div trend data-v-34c49e86">
+            <label
+              catchtap="{{j}}"
+              class="{{['_span','data-v-34c49e86','up',i]}}"
+            ></label>
+            <label
+              catchtap="{{l}}"
+              class="{{['_span','data-v-34c49e86','down',k]}}"
+            ></label>
+          </view>
+        </view>
+        <view class="_ul column-list data-v-34c49e86">
+          <view
+            class="_li list-item list-content data-v-34c49e86"
+            style="{{'color:'+item.c}}"
+            wx:for="{{o}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+      <view class="_div column data-v-34c49e86" key="listed-col">
+        <view
+          bindtap="{{v}}"
+          class="{{['_div','data-v-34c49e86','column-title',t]}}"
+          >上市时间<view class="_div trend data-v-34c49e86">
+            <label
+              bindtap="{{q}}"
+              class="{{['_span','data-v-34c49e86','up',p]}}"
+            ></label>
+            <label
+              bindtap="{{s}}"
+              class="{{['_span','data-v-34c49e86','down',r]}}"
+            ></label>
+          </view>
+        </view>
+        <view class="_ul column-list data-v-34c49e86">
+          <view
+            class="_li list-item list-content data-v-34c49e86"
+            wx:for="{{w}}"
+            wx:key="b"
+            >{{item.a}}</view
+          >
+        </view>
+      </view>
+      <view class="_div column data-v-34c49e86"></view>
+    </view>
+  </view>
+</view>

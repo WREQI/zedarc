@@ -1,0 +1,9 @@
+<view catchtap="{{c}}" class="{{['cond-reason-wrap','data-v-e8741057',b]}}">
+  <view class="cond-reason-row data-v-e8741057" wx:for="{{a}}" wx:key="c">
+    <view class="cond-reason-text data-v-e8741057">{{item.a}}</view>
+    <view
+      class="cond-reason-arrow icon icon-arrow data-v-e8741057"
+      wx:if="{{item.b}}"
+    ></view>
+  </view>
+</view>

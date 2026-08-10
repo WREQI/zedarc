@@ -1,0 +1,29 @@
+<view
+  class="{{['_div','daily-component-module-zxgpdt','data-v-a7e9e42d',c]}}"
+  wx:if="{{a}}"
+>
+  <view class="_div list-item data-v-a7e9e42d" wx:for="{{b}}" wx:key="f">
+    <view catchtap="{{item.d}}" class="_div list-item-top data-v-a7e9e42d">
+      <view class="_div stockname data-v-a7e9e42d">{{item.a}}</view>
+      <view class="{{['_div','data-v-a7e9e42d','stockzdf',item.c]}}"
+        >{{item.b}}</view
+      >
+      <view class="_div folder data-v-a7e9e42d">查看个股详情</view>
+    </view>
+    <view class="_div list-item-bottom data-v-a7e9e42d">
+      <view
+        class="{{['_div','tag-item','data-v-a7e9e42d',tag.e&&'hidden-gpdt']}}"
+        wx:for="{{item.e}}"
+        wx:for-item="tag"
+        wx:key="d"
+      >
+        <view class="_div tag-tag data-v-a7e9e42d">
+          <view class="_div data-v-a7e9e42d">{{tag.a}}</view>
+        </view>
+        <view catchtap="{{tag.c}}" class="_div tag-news data-v-a7e9e42d">
+          <rich-text class="data-v-a7e9e42d" nodes="{{tag.b}}"></rich-text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

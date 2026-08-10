@@ -1,0 +1,43 @@
+<page-meta class="data-v-38935c89" rootFontSize="{{a}}"></page-meta>
+<view
+  class="{{['data-v-38935c89','video-detail-mod',k]}}"
+  data-st-theme="{{l}}"
+>
+  <mp-privacy-dialog
+    bind:__l="__l"
+    class="data-v-38935c89"
+    uI="38935c89-0"
+  ></mp-privacy-dialog>
+  <stock-privacy-dialog
+    bind:__l="__l"
+    class="data-v-38935c89"
+    uI="38935c89-1"
+  ></stock-privacy-dialog>
+  <detail
+    bind:__l="__l"
+    bindshowProfilePop="{{d}}"
+    class="r data-v-38935c89"
+    uI="38935c89-2"
+    uP="{{e}}"
+    uR="detail"
+    wx:if="{{b}}"
+  ></detail>
+  <privacy-policy-modal
+    bind:__l="__l"
+    bindinput="{{f}}"
+    class="data-v-38935c89"
+    uI="38935c89-3"
+    uP="{{g}}"
+    wx:if="{{g}}"
+  ></privacy-policy-modal>
+  <block wx:if="{{h}}">
+    <profile-pop
+      bind:__l="__l"
+      bindhideProfilePop="{{i}}"
+      class="data-v-38935c89"
+      uI="38935c89-4"
+      uP="{{j}}"
+      wx:if="{{j}}"
+    ></profile-pop>
+  </block>
+</view>

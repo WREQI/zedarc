@@ -1,0 +1,19 @@
+<view class="{{['_div','data-v-042fa274','md-presetting-container']}}">
+  <view class="_div tip-text data-v-042fa274" wx:if="{{a}}">
+    <view class="_p guide-txt data-v-042fa274"
+      >开启后，智能识别股票异动，微信发送提醒; {{b}}</view
+    >
+  </view>
+  <view class="_div tip-text data-v-042fa274" wx:else>{{c}}</view>
+  <view class="_div presetting-content-box data-v-042fa274">
+    <view class="_div title data-v-042fa274">腾讯微证券</view>
+    <view class="_div content-info data-v-042fa274">
+      <view class="_div text-info data-v-042fa274">{{d}}</view>
+      <view class="_div stock-info data-v-042fa274">
+        <label class="_span stock-name data-v-042fa274">{{e}}</label>
+        <label class="_span data-v-042fa274">{{f}}</label>
+        <label class="_span data-v-042fa274">{{g}}</label>
+      </view>
+    </view>
+  </view>
+</view>

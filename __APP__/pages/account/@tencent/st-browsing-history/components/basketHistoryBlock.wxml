@@ -1,0 +1,36 @@
+<view class="_div basket-history-block data-v-cddbb460">
+  <view class="_div title data-v-cddbb460">{{a}}</view>
+  <view class="_div basket-list-wrapper data-v-cddbb460">
+    <view
+      bindtap="{{item.k}}"
+      class="{{['_div','data-v-cddbb460','basket-item',item.j]}}"
+      wx:for="{{b}}"
+      wx:key="i"
+    >
+      <view class="_div basket-header data-v-cddbb460">
+        <view class="_div basket-name data-v-cddbb460">{{item.a}}</view>
+        <view class="_div stock-amount data-v-cddbb460"
+          >{{item.b}}只股票<image
+            class="_img arrow-img data-v-cddbb460"
+            src="https://st.gtimg.com/design/9219b56ceedd2a0efc4536383a21e0bd.png"
+          ></image>
+        </view>
+      </view>
+      <view class="_div zdf-content data-v-cddbb460" wx:if="{{item.c}}">
+        <view class="_div day-zdf data-v-cddbb460"
+          >当日涨跌<label class="{{['_span','data-v-cddbb460',item.e]}}"
+            >{{item.d}}</label
+          >
+        </view>
+        <view class="_div month-zdf data-v-cddbb460"
+          >近一月涨跌<label class="{{['_span','data-v-cddbb460',item.g]}}"
+            >{{item.f}}</label
+          >
+        </view>
+      </view>
+      <view class="_div desc-content data-v-cddbb460">
+        <view class="_div desc-text data-v-cddbb460">{{item.h}}</view>
+      </view>
+    </view>
+  </view>
+</view>

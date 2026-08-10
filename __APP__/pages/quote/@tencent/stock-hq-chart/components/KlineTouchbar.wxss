@@ -1,0 +1,96 @@
+.kline-bar.data-v-32186a24 {
+  background-color: var(--fill-content-layer);
+  border-bottom: 0.013333333333333334rem solid var(--border-light-divider);
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.29333333333333333rem;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0.013333333333333334rem 0.4rem 0;
+  width: 100%;
+}
+.kline-bar .color-equal.data-v-32186a24 {
+  color: var(--color-gray) !important;
+}
+.kline-bar .color-rise.data-v-32186a24 {
+  color: var(--color-rise) !important;
+}
+.kline-bar .color-drop.data-v-32186a24 {
+  color: var(--color-drop) !important;
+}
+.kline-bar .weight.data-v-32186a24 {
+  font-weight: 600;
+}
+.kline-bar .heavy.data-v-32186a24 {
+  color: var(--color-heavygray);
+  font-weight: 600;
+}
+.kline-bar .block.data-v-32186a24 {
+  white-space: nowrap;
+}
+.kline-bar .col-1.data-v-32186a24 {
+  color: var(--color-heavygray);
+  width: 21.55%;
+}
+.kline-bar .col-1 .block-title.data-v-32186a24 {
+  color: var(--color-lightgray);
+  font-weight: 400;
+  margin-right: 0.13333333333333333rem;
+}
+.kline-bar .col-2.data-v-32186a24 {
+  color: var(--color-heavygray);
+  width: 27%;
+}
+.kline-bar .col-2 .block-title.data-v-32186a24 {
+  color: var(--color-lightgray);
+  font-weight: 400;
+  margin-right: 0.13333333333333333rem;
+}
+.kline-bar .col-4.data-v-32186a24 {
+  width: 35.34%;
+}
+.kline-bar .col-4.single.data-v-32186a24 {
+  align-items: center;
+  align-self: center;
+  display: -webkit-flex;
+  display: flex;
+}
+.kline-bar .col-4.single-vertical.data-v-32186a24 {
+  align-self: flex-start;
+  display: auto;
+}
+.kline-bar .row-2.data-v-32186a24 {
+  margin-top: 0.13333333333333333rem;
+}
+.kline-bar .single.col-1 .row-2.data-v-32186a24 {
+  margin-top: 0;
+}
+.kline-bar .special.data-v-32186a24 {
+  position: relative;
+}
+.kline-bar .special.block-title.data-v-32186a24 {
+  margin-right: 0.32rem;
+}
+.kline-bar .special .upper-text.data-v-32186a24 {
+  font-size: 0.18666666666666668rem;
+  font-style: normal;
+  position: absolute;
+  right: -0.21333333333333335rem;
+  top: -0.02666666666666667rem;
+}
+.kline-bar.landscape.data-v-32186a24 {
+  align-items: center;
+  font-size: 0.29333333333333333rem;
+  padding: 0 0.4rem 0.13333333333333333rem 0.8rem;
+}
+@media screen and (orientation: landscape) and (min-width: 700px) and (max-width: 800px) {
+  .touch-bar.landscape.data-v-32186a24 {
+    padding-left: 40px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 700px) {
+  .touch-bar.landscape.data-v-32186a24 {
+    padding-left: 40px;
+  }
+}

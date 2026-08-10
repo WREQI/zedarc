@@ -1,0 +1,245 @@
+@import "/app.wxss";
+.page-apply-progress.data-v-210cee12 {
+  height: 100%;
+  overflow-y: auto;
+}
+.page-apply-progress .content-container.data-v-210cee12 {
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+}
+.page-apply-progress .content-container .section-result.data-v-210cee12 {
+  padding-top: 3.333333rem;
+}
+.page-apply-progress .content-container .suc-container.data-v-210cee12 {
+  min-height: 6rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .status-container.data-v-210cee12 {
+  line-height: 1;
+  padding: 0.266667rem 0 0.4rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .status-container
+  .success.data-v-210cee12 {
+  height: 0.48rem;
+  margin-right: 0.106667rem;
+  width: 0.48rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container {
+  margin-top: 0.373333rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container
+  .st-steps-item
+  .st-steps-item-icon {
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 0.666667rem;
+  justify-content: center;
+  width: 0.666667rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container
+  .st-steps-item
+  .st-steps-item-icon
+  .icon {
+  font-size: 0.32rem;
+  top: 0.026667rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container
+  .st-steps-item:nth-child(2)
+  .icon {
+  font-size: 0.48rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container
+  .st-steps-item
+  .st-steps-item-content
+  .st-steps-item-title {
+  font-size: 0.32rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container.data-v-210cee12
+  .step-container
+  .st-steps-item
+  .st-steps-item-content
+  .st-steps-item-description {
+  color: var(--text-color-5);
+  font-size: 0.266667rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .visit-info
+  .icon-tel.data-v-210cee12 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_result_tel.png);
+  background-size: contain;
+  height: 1.6rem;
+  margin-bottom: 0.32rem;
+  width: 1.6rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .visit-info
+  .tel-number.data-v-210cee12 {
+  color: var(--color-orange);
+  font-size: 0.666667rem;
+  font-weight: 500;
+  line-height: 0.64rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .visit-info
+  .tel-label.data-v-210cee12 {
+  color: var(--text-color-1);
+  font-weight: 500;
+  line-height: 0.586667rem;
+  margin-top: 0.72rem;
+}
+.page-apply-progress
+  .content-container
+  .suc-container
+  .visit-info
+  .queue.data-v-210cee12 {
+  color: var(--text-color-1);
+  line-height: 0.56rem;
+  margin-top: 0.053333rem;
+}
+.page-apply-progress
+  .content-container
+  .result-container
+  .title.data-v-210cee12 {
+  display: block;
+  font-weight: 500;
+  padding: 0.64rem 0 0.266667rem;
+}
+.page-apply-progress
+  .content-container
+  .result-container
+  .text.data-v-210cee12 {
+  line-height: 1.25;
+  padding: 0 0.4rem;
+  text-align: justify;
+}
+.page-apply-progress .content-container .warning.data-v-210cee12 {
+  color: var(--color-orange);
+}
+.page-apply-progress .hasaccount.data-v-210cee12 {
+  min-height: 6rem;
+}
+.page-apply-progress .hasaccount.result-container .icon.data-v-210cee12 {
+  color: var(--color-orange);
+  font-size: 1.6rem;
+}
+.page-apply-progress .hasaccount.result-container .success.data-v-210cee12 {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.page-apply-progress .result-suc .icon-wrapper.data-v-210cee12 {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  color: #fff !important;
+  font-size: 0.733333rem;
+}
+.page-apply-progress .noaccount .visited .icon-fail.data-v-210cee12 {
+  color: var(--color-orange);
+  font-size: 1.6rem;
+}
+.page-apply-progress .noaccount .visited .success.data-v-210cee12 {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.page-apply-progress .supervision-tips.data-v-210cee12 {
+  margin-top: 0.533333rem;
+}
+.page-apply-progress .supervision-tips .icon.data-v-210cee12 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/apply_result_safe.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 0.4rem;
+  margin-right: 0.106667rem;
+  width: 0.32rem;
+}
+.page-apply-progress .supervision-tips .tips-text.data-v-210cee12 {
+  color: var(--text-color-1);
+  line-height: 0.56rem;
+}
+.page-apply-progress .button-container.data-v-210cee12 {
+  margin-top: 0.133333rem;
+  width: 4.586667rem;
+}
+.page-apply-progress .button-home uni-button.data-v-210cee12 {
+  background-color: initial !important;
+  border: 0.026667rem solid var(--color-blue);
+  color: var(--color-blue);
+  font-size: 0.48rem;
+}
+.page-apply-progress .tel-tip-container.data-v-210cee12 {
+  padding-top: 0.746667rem;
+}
+.page-apply-progress .link-home.data-v-210cee12 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+.page-apply-progress .subscribe-block.data-v-210cee12 {
+  margin-top: 0.133333rem;
+  width: 100%;
+}
+.page-apply-progress .subscribe-block .button-subcribe.data-v-210cee12 {
+  padding: 0 0.4rem;
+}
+.page-apply-progress .subscribe-block .subscribe-tips.data-v-210cee12 {
+  color: #7a8499;
+  font-size: 0.32rem;
+  line-height: 0.533333rem;
+  margin-top: 0.106667rem;
+  text-align: center;
+}
+.page-apply-progress .link-not-call.data-v-210cee12 {
+  margin-top: 0.133333rem;
+  text-align: center;
+}
+.page-apply-progress .bottom-text.data-v-210cee12 {
+  color: var(--text-color-5);
+  font-family: PingFangSC-Regular;
+  font-size: 0.346667rem;
+  font-weight: 400;
+  line-height: 0.533333rem;
+  margin-top: 1.066667rem;
+  opacity: 0.9;
+  padding: 0 0.4rem;
+}
+.page-apply-progress .success.data-v-210cee12 {
+  background-image: url(https://st.gtimg.com/image/mp-broker/apply/success.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.data-v-210cee12 .footprint {
+  margin-top: 0.64rem;
+  padding-bottom: 0.32rem;
+}
