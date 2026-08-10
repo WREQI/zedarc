@@ -3,6 +3,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { getNotifications, markNotificationsRead, type NotificationItem } from '@/services/notifications'
+import { sendCodeApi } from '@/services/api-client'
 
 const router = useRouter()
 const auth = useAuthStore()
@@ -12,6 +13,7 @@ const showLogin = ref(false)
 const phone = ref('')
 const code = ref('')
 const countdown = ref(0)
+const isSendingCode = ref(false)
 let countdownTimer: number | undefined
 const toast = ref('')
 const savedCount = ref(0)
@@ -52,17 +54,34 @@ function closeLogin() {
   code.value = ''
   stopCountdown()
 }
-function sendCode() {
+async function sendCode() {
+  if (countdown.value > 0 || isSendingCode.value) return
   if (!/^1\d{10}$/.test(phone.value)) { showToast('请输入有效的手机号'); return }
-  countdown.value = 60
-  window.clearInterval(countdownTimer)
-  countdownTimer = window.setInterval(() => { countdown.value -= 1; if (countdown.value <= 0) window.clearInterval(countdownTimer) }, 1000)
-  showToast('验证码已发送（演示验证码：123456）')
+  isSendingCode.value = true
+  try {
+    const result = await sendCodeApi(phone.value)
+    countdown.value = result.expiresIn > 0 ? Math.min(result.expiresIn, 60) : 60
+    window.clearInterval(countdownTimer)
+    countdownTimer = window.setInterval(() => {
+      countdown.value -= 1
+      if (countdown.value <= 0) { window.clearInterval(countdownTimer); countdownTimer = undefined }
+    }, 1000)
+    showToast('验证码已发送，请注意查收')
+  } catch (error) {
+    showToast(error instanceof Error ? error.message : '验证码发送失败，请稍后重试')
+  } finally {
+    isSendingCode.value = false
+  }
 }
 async function submitLogin() {
   if (!/^1\d{10}$/.test(phone.value)) { showToast('请输入有效的手机号'); return }
   if (code.value !== '123456') { showToast('请输入正确的验证码'); return }
-  await auth.login(phone.value, code.value)
+  try {
+    await auth.login(phone.value, code.value)
+  } catch {
+    showToast('登录失败，请稍后重试')
+    return
+  }
   if (auth.error.value) { showToast(auth.error.value); return }
   showLogin.value = false
   phone.value = ''
@@ -95,7 +114,7 @@ function showToast(message: string) {
     <section class="account-menu panel"><div v-for="item in menuItems" :key="item.title" class="account-menu-item" @click="handleMenu(item.title)"><span class="menu-icon">{{ item.icon }}</span><div><strong>{{ item.title }}</strong><b v-if="item.title === '消息中心' && unreadMessages" class="unread-badge">{{ unreadMessages }}</b><p>{{ item.title === '浏览历史' ? `${item.subtitle} · ${recentCount} 条` : item.title === '我的收藏' ? `${item.subtitle} · ${savedCount} 条` : item.subtitle }}</p></div><span class="menu-arrow">›</span></div></section>
     <p class="account-version">腾讯自选股 Web · MVP 预览版</p>
     <div v-if="showSettings" class="account-overlay" @click.self="showSettings = false"><section class="account-sheet panel"><div class="sheet-head"><h2>设置</h2><button @click="showSettings = false">×</button></div><div class="setting-row"><div><strong>资讯推送</strong><small>接收市场热点和重要资讯</small></div><button class="switch" :class="{ on: notifications }" @click="notifications = !notifications; persistSetting('zedarc-setting-notifications', notifications)"><i /></button></div><div class="setting-row"><div><strong>价格提醒</strong><small>自选股涨跌幅达到阈值时提醒</small></div><button class="switch" :class="{ on: priceAlerts }" @click="priceAlerts = !priceAlerts; persistSetting('zedarc-setting-price-alerts', priceAlerts)"><i /></button></div><div class="setting-row"><div><strong>主题模式</strong><small>当前使用浅色行情主题</small></div><span class="setting-value">浅色</span></div><button class="sheet-done" @click="showSettings = false">完成</button></section></div>
-    <div v-if="showLogin" class="account-overlay" @click.self="closeLogin"><section class="account-sheet panel login-sheet"><div class="sheet-head"><h2>登录账户</h2><button aria-label="关闭登录窗口" @click="closeLogin">×</button></div><p class="login-description">登录后可以同步自选股、收藏和交易偏好。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" placeholder="请输入手机号" /></label><label class="login-input"><span>验证码</span><input v-model="code" inputmode="numeric" maxlength="6" placeholder="请输入 6 位验证码" @keyup.enter="submitLogin" /><button class="code-button" :disabled="countdown > 0" @click="sendCode">{{ countdown > 0 ? `${countdown}s 后重发` : '获取验证码' }}</button></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
+    <div v-if="showLogin" class="account-overlay" @click.self="closeLogin"><section class="account-sheet panel login-sheet"><div class="sheet-head"><h2>登录账户</h2><button aria-label="关闭登录窗口" @click="closeLogin">×</button></div><p class="login-description">登录后可以同步自选股、收藏和交易偏好。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" autocomplete="tel" placeholder="请输入手机号" @keyup.enter="sendCode" /></label><label class="login-input"><span>验证码</span><input v-model="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="请输入 6 位验证码" @keyup.enter="submitLogin" /><button class="code-button" :disabled="countdown > 0 || isSendingCode" @click="sendCode">{{ isSendingCode ? '发送中…' : countdown > 0 ? `${countdown}s 后重发` : '获取验证码' }}</button></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
     <div v-if="showMessages" class="account-overlay" @click.self="showMessages = false"><section class="account-sheet panel message-sheet"><div class="sheet-head"><h2>消息中心</h2><button @click="showMessages = false">×</button></div><div v-for="message in messages" :key="message.id" class="message-item"><span class="message-dot" /><div><strong>{{ message.title }}</strong><p>{{ message.content }}</p><small>{{ new Date(message.createdAt).toLocaleString('zh-CN') }}</small></div></div><div v-if="!messages.length" class="message-empty">暂无消息</div></section></div>
     <Transition name="toast"><div v-if="toast" class="toast-message">{{ toast }}</div></Transition>
   </section>
