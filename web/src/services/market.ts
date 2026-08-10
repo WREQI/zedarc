@@ -1,5 +1,6 @@
 import { indexQuotes, marketBoards, marketStocks, type IndexQuote, type MarketBoardQuote, type StockQuote } from '@/mock/market'
 import { getRealIndexes, getRealStock, getRealStocks } from '@/services/stock-sdk-adapter'
+import { apiFetch } from '@/services/api-client'
 
 const latency = 180
 function clone<T>(value: T): T { return structuredClone(value) }
@@ -7,6 +8,7 @@ function clone<T>(value: T): T { return structuredClone(value) }
 export function getMarketStocksSnapshot(): StockQuote[] { return clone(marketStocks) }
 
 export async function getIndexQuotes(): Promise<IndexQuote[]> {
+  try { const result = await apiFetch<Array<{ code: string; name: string; value: number; change: number; changePercent: number }>>('/api/market/indices'); if (result.length) return result.map((item) => ({ code: item.code, name: item.name, value: item.value.toFixed(2), change: `${item.change >= 0 ? '+' : ''}${item.change.toFixed(2)}`, percent: `${item.changePercent >= 0 ? '+' : ''}${item.changePercent.toFixed(2)}%`, trend: item.changePercent >= 0 ? 'up' : 'down' })) } catch { /* provider fallback */ }
   try { return clone(await getRealIndexes()) } catch { await delay(); return clone(indexQuotes) }
 }
 
