@@ -1,24 +1,12 @@
-export class ApiError extends Error {
-  constructor(message: string, readonly status: number) {
-    super(message)
-    this.name = 'ApiError'
-  }
-}
-
 const tokenKey = 'zedarc-access-token'
 const refreshKey = 'zedarc-refresh-token'
 
 function storage() { return typeof window === 'undefined' ? null : window.localStorage }
 export function getAccessToken() { return storage()?.getItem(tokenKey) ?? null }
 export function getRefreshToken() { return storage()?.getItem(refreshKey) ?? null }
-
-type AuthStateListener = (token: string | null, previous: string | null) => void
-const authStateListeners = new Set<AuthStateListener>()
-export function onAuthStateChange(listener: AuthStateListener) { authStateListeners.add(listener); return () => authStateListeners.delete(listener) }
-function notifyAuthState(token: string | null, previous: string | null) { if (token !== previous) authStateListeners.forEach((listener) => listener(token, previous)) }
-export function setAccessToken(token: string) { const previous = getAccessToken(); storage()?.setItem(tokenKey, token); notifyAuthState(token, previous) }
+export function setAccessToken(token: string) { storage()?.setItem(tokenKey, token) }
 export function setRefreshToken(token: string) { storage()?.setItem(refreshKey, token) }
-export function clearAccessToken() { const previous = getAccessToken(); storage()?.removeItem(tokenKey); storage()?.removeItem(refreshKey); notifyAuthState(null, previous) }
+export function clearAccessToken() { storage()?.removeItem(tokenKey); storage()?.removeItem(refreshKey) }
 
 let refreshInFlight: Promise<string | null> | null = null
 async function refreshAccessToken() {
@@ -36,9 +24,6 @@ async function refreshAccessToken() {
   return refreshInFlight
 }
 
-export interface ApiSyncMeta { version: string; updatedAt: string | null }
-export interface ApiResult<T> { data: T; meta: ApiSyncMeta }
-
 export async function apiFetch<T>(path: string, options: RequestInit = {}): Promise<T> {
   const request = async () => {
     const headers = new Headers(options.headers)
@@ -55,33 +40,15 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
   if (!response.ok) {
     const text = await response.text(); let message = text || `请求失败 (${response.status})`
     try { const body = JSON.parse(text) as { message?: string | string[]; error?: { message?: string | string[] } }; const value = body.message ?? body.error?.message; message = Array.isArray(value) ? value.join('，') : value ?? message } catch { /* raw response */ }
-    throw new ApiError(message, response.status)
+    throw new Error(message)
   }
   if (response.status === 204) return undefined as T
   return response.json() as Promise<T>
 }
 export function sendCodeApi(phone: string) { return apiFetch<{ success: boolean; expiresIn: number }>('/api/auth/code', { method: 'POST', body: JSON.stringify({ phone }) }) }
 export async function loginApi(phone: string, code: string) { const result = await apiFetch<{ accessToken: string; refreshToken: string; user: { id: string; name?: string; phone: string } }>('/api/auth/login', { method: 'POST', body: JSON.stringify({ phone, code }) }); setAccessToken(result.accessToken); setRefreshToken(result.refreshToken); return result }
-export interface ApiUser { id: string; name?: string; phone: string; avatar?: string }
-export interface ApiSession { id: string; current: boolean; userAgent: string; ipAddress?: string; createdAt: string; lastUsedAt: string; expiresAt: string }
-export interface TokenStatus { accessToken: boolean; refreshToken: boolean; accessExpiresAt: number | null; refreshExpiresAt: number | null; accessExpired: boolean }
-export interface LoginHistoryItem { id: string; action: string; userAgent?: string; ipAddress?: string; createdAt: string }
-export function meApi() { return apiFetch<ApiUser>('/api/auth/me') }
-export function updateProfileApi(patch: { displayName?: string; avatar?: string | null }) { return apiFetch<ApiUser>('/api/auth/profile', { method: 'PATCH', body: JSON.stringify(patch) }) }
-export function getSessionsApi() { return apiFetch<ApiSession[]>('/api/auth/sessions') }
-export function revokeSessionApi(id: string) { return apiFetch<{ success: boolean }>(`/api/auth/sessions/${encodeURIComponent(id)}`, { method: 'DELETE' }) }
-export function revokeOtherSessionsApi() { return apiFetch<{ success: boolean }>('/api/auth/sessions/revoke-others', { method: 'POST' }) }
-export function getLoginHistoryApi() { return apiFetch<LoginHistoryItem[]>('/api/auth/login-history') }
+export function meApi() { return apiFetch<{ id: string; name?: string; phone: string }>('/api/auth/me') }
 export async function logoutApi() { const refreshToken = getRefreshToken(); try { if (refreshToken) await apiFetch<{ success: boolean }>('/api/auth/logout', { method: 'POST', body: JSON.stringify({ refreshToken }) }) } finally { clearAccessToken() } }
 
-export function getSettingsApi() { return apiFetch<Record<string, boolean | string | number> & { _sync?: ApiSyncMeta }>('/api/settings') }
-export function updateSettingsApi(patch: Record<string, boolean | string | number> & { version?: string; updatedAt?: string }) { return apiFetch<Record<string, boolean | string | number> & { _sync?: ApiSyncMeta }>('/api/settings', { method: 'PATCH', body: JSON.stringify(patch) }) }
-
-function tokenExpiry(token: string | null) {
-  if (!token) return null
-  try { const payload = JSON.parse(atob(token.split('.')[1] ?? '')) as { exp?: number }; return typeof payload.exp === 'number' ? payload.exp * 1000 : null } catch { return null }
-}
-export function getTokenStatus(): TokenStatus {
-  const access = getAccessToken(); const refresh = getRefreshToken(); const accessExpiresAt = tokenExpiry(access); const refreshExpiresAt = tokenExpiry(refresh)
-  return { accessToken: Boolean(access), refreshToken: Boolean(refresh), accessExpiresAt, refreshExpiresAt, accessExpired: Boolean(accessExpiresAt && accessExpiresAt <= Date.now()) }
-}
+export function getSettingsApi() { return apiFetch<Record<string, boolean | string | number>>('/api/settings') }
+export function updateSettingsApi(patch: Record<string, boolean | string | number>) { return apiFetch<Record<string, boolean | string | number>>('/api/settings', { method: 'PATCH', body: JSON.stringify(patch) }) }

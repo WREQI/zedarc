@@ -1,76 +1,163 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import { getMarketStocksSnapshot } from '@/services/market'
-import { loadDemoAccountPersistent, saveDemoAccountPersistent, type DemoAccount } from '@/services/trade'
+import type { StockQuote } from '@/services/market-types'
+import { cancelTrade, getTradeAccount, getTradeOrders, getTradePositions, getTradeStats, loadDemoAccount, placeTrade, saveDemoAccount, type DemoAccount } from '@/services/trade'
+import { getAccessToken } from '@/services/api-client'
 
-const router = useRouter()
-const activeTab = ref<'holdings' | 'orders' | 'conditions'>('holdings')
-const assetsVisible = ref(true)
-const noticeVisible = ref(true)
-const toast = ref('')
 const marketStocks = getMarketStocksSnapshot()
-
-const account = ref({ total: 397302.86, securities: 396405.40, cash: 897.46, todayProfit: 3999.70, todayPercent: 1.01, holdingProfit: -43445.54 })
+const demoMode = ref(false)
+const apiMode = ref(false)
+const showAccountModal = ref(false)
+const accountModalTitle = ref('')
+const tradeSide = ref<'buy' | 'sell'>('buy')
+const selectedStock = ref<StockQuote>(marketStocks[0])
+const stockKeyword = ref('')
+const price = ref(marketStocks[0].price.replace(',', ''))
+const quantity = ref(100)
+const toast = ref('')
 const holdings = ref([
-  { name: '黄金ETF华安', code: '518880', market: 'SH', cost: '3.42', today: '+2,227.80', todayPercent: '+1.04%', total: '-10,399.79', totalPercent: '-4.60%', quantity: '54,342', up: true, totalUp: false },
-  { name: '纳指ETF广发', code: '159941', market: 'SZ', cost: '19.77', today: '+423.90', todayPercent: '+0.54%', total: '+7,096.43', totalPercent: '+9.93%', quantity: '19,717', up: true, totalUp: true },
-  { name: '红利低波ETF华泰柏瑞', code: '512890', market: 'SH', cost: '4.82', today: '-66.00', todayPercent: '-0.34%', total: '-999.60', totalPercent: '-4.97%', quantity: '4,820', up: false, totalUp: false },
-  { name: '赛力斯', code: '601127', market: 'SH', cost: '42.33', today: '+186.00', todayPercent: '+1.12%', total: '-21,450.72', totalPercent: '-56.15%', quantity: '4,233', up: true, totalUp: false },
+  { ...marketStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' },
+  { ...marketStocks[2], quantity: 200, cost: '251.40', marketValue: '53,700.00' },
 ])
-
-const holdingsCount = computed(() => holdings.value.length + 6)
-const todayProfit = computed(() => `${account.value.todayProfit >= 0 ? '+' : ''}${account.value.todayProfit.toLocaleString('zh-CN', { minimumFractionDigits: 2 })}`)
-const holdingProfit = computed(() => `${account.value.holdingProfit >= 0 ? '+' : ''}${account.value.holdingProfit.toLocaleString('zh-CN', { minimumFractionDigits: 2 })}`)
-
-function showToast(message: string) {
-  toast.value = message
-  window.setTimeout(() => { toast.value = '' }, 1800)
-}
-function go(path: string) { void router.push(path) }
-function quickTrade() { showToast('模拟交易入口已开启，可在持仓页选择标的后下单') }
+interface PageOrder { id?: string; time: string; name: string; side: string; price: string; quantity: number; status: string }
+const orders = ref<PageOrder[]>([
+  { time: '14:26:08', name: '宁德时代', side: '买入', price: '196.80', quantity: 200, status: '已报' },
+  { time: '10:18:42', name: '比亚迪', side: '卖出', price: '270.20', quantity: 100, status: '已成' },
+])
+const filteredStocks = computed(() => {
+  const keyword = stockKeyword.value.trim()
+  return keyword ? marketStocks.filter((item) => item.name.includes(keyword) || item.code.includes(keyword)) : marketStocks.slice(0, 5)
+})
+const availableCash = ref(286420.56)
+const estimatedAmount = computed(() => Number(price.value || 0) * Math.max(0, quantity.value || 0))
+const maxBuy = computed(() => Math.floor(availableCash.value / Math.max(0.01, Number(price.value || 0)) / 100) * 100)
+const currentHolding = computed(() => holdings.value.find((holding) => holding.code === selectedStock.value.code))
+const holdingsMarketValue = computed(() => holdings.value.reduce((sum, holding) => sum + Number(holding.price.replace(',', '')) * holding.quantity, 0))
+const totalAssets = computed(() => availableCash.value + holdingsMarketValue.value)
+function holdingGain(holding: (typeof holdings.value)[number]) { return (Number(holding.price.replace(',', '')) - Number(holding.cost)) * holding.quantity }
+const todayPnL = computed(() => holdings.value.reduce((sum, holding) => sum + holdingGain(holding), 0))
+const tradeStats = ref({ orderCount: 0, buyAmount: 0, sellAmount: 0, fees: 0, realizedPnL: 0 })
 
 onMounted(async () => {
-  const persisted = await loadDemoAccountPersistent().catch(() => null)
-  if (!persisted) {
-    const snapshot: DemoAccount = { availableCash: account.value.cash, holdings: [], orders: [] }
-    void saveDemoAccountPersistent(snapshot)
+  if (getAccessToken()) {
+    try {
+      const [account, positions, remoteOrders, stats] = await Promise.all([getTradeAccount(), getTradePositions(), getTradeOrders(), getTradeStats()])
+      availableCash.value = account.availableCash
+            tradeStats.value = stats
+      holdings.value = positions.map((position) => {
+        const stock = marketStocks.find((item) => item.code === position.code) ?? { code: position.code, name: position.code, price: position.averagePrice.toFixed(2), change: '0.00', percent: '0.00%', volume: '-', trend: 'up' as const }
+        return { ...stock, quantity: position.quantity, cost: position.averagePrice.toFixed(2), marketValue: (position.quantity * position.averagePrice).toFixed(2) }
+      })
+      orders.value = remoteOrders.map((order) => ({ id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: marketStocks.find((item) => item.code === order.code)?.name ?? order.code, side: order.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' }))
+      apiMode.value = true
+      demoMode.value = true
+      return
+    } catch {
+      showToast('交易 API 暂不可用，已切换本地模拟')
+    }
   }
-  if (!marketStocks.length) showToast('行情快照加载中，当前展示模拟账户数据')
+  const data = loadDemoAccount()
+  if (!data) return
+  if (typeof data.availableCash === 'number') availableCash.value = data.availableCash
+  if (data.holdings) holdings.value = data.holdings
+  if (data.orders) orders.value = data.orders
 })
+
+function persistDemo() {
+  saveDemoAccount({ availableCash: availableCash.value, holdings: holdings.value, orders: orders.value } as DemoAccount)
+}
+function resetDemo() {
+  availableCash.value = 286420.56
+  holdings.value = [
+    { ...marketStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' },
+    { ...marketStocks[2], quantity: 200, cost: '251.40', marketValue: '53,700.00' },
+  ]
+  orders.value = [
+    { time: '14:26:08', name: '宁德时代', side: '买入', price: '196.80', quantity: 200, status: '已报' },
+    { time: '10:18:42', name: '比亚迪', side: '卖出', price: '270.20', quantity: 100, status: '已成' },
+  ]
+  persistDemo()
+  showToast('模拟账户已重置')
+}
+
+function openAccount(title: string) { accountModalTitle.value = title; showAccountModal.value = true }
+function enterDemo() { showAccountModal.value = false; demoMode.value = true }
+function selectStock(stock: StockQuote) { selectedStock.value = stock; price.value = stock.price.replace(',', ''); stockKeyword.value = '' }
+function showToast(message: string) { toast.value = message; window.setTimeout(() => { toast.value = '' }, 2200) }
+async function cancelOrder(index: number) {
+  const order = orders.value[index]
+  if (!order || order.status !== '已报') return
+  if (apiMode.value && order.id) {
+    try {
+      await cancelTrade(order.id)
+      order.status = '已撤'
+      showToast(`${order.name} 委托已撤销`)
+      return
+    } catch { apiMode.value = false; showToast('API 撤单失败，已切换本地模拟') }
+  }
+  order.status = '已撤'
+  persistDemo()
+  showToast(`${order.name} 委托已撤销`)
+}
+async function submitOrder() {
+  if (!selectedStock.value || quantity.value < 100 || quantity.value % 100 !== 0) { showToast('交易数量需为 100 股的整数倍'); return }
+  if (tradeSide.value === 'buy' && estimatedAmount.value > availableCash.value) { showToast('可用资金不足'); return }
+  if (tradeSide.value === 'sell' && (!currentHolding.value || quantity.value > currentHolding.value.quantity)) { showToast('持仓数量不足'); return }
+  if (apiMode.value) {
+    try {
+      const order = await placeTrade({ code: selectedStock.value.code, side: tradeSide.value, quantity: quantity.value, price: Number(price.value) })
+      orders.value.unshift({ id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: selectedStock.value.name, side: tradeSide.value === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' })
+      showToast(`${selectedStock.value.name} ${tradeSide.value === 'buy' ? '买入' : '卖出'}委托已提交`)
+      return
+    } catch { apiMode.value = false; showToast('API 下单失败，已切换本地模拟') }
+  }
+  orders.value.unshift({ time: new Date().toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: selectedStock.value.name, side: tradeSide.value === 'buy' ? '买入' : '卖出', price: Number(price.value).toFixed(2), quantity: quantity.value, status: '已报' })
+  if (tradeSide.value === 'buy') {
+    availableCash.value -= estimatedAmount.value
+    if (currentHolding.value) { currentHolding.value.quantity += quantity.value; currentHolding.value.marketValue = (currentHolding.value.quantity * Number(currentHolding.value.price.replace(',', ''))).toFixed(2) }
+    else holdings.value.push({ ...selectedStock.value, quantity: quantity.value, cost: Number(price.value).toFixed(2), marketValue: estimatedAmount.value.toFixed(2) })
+  } else {
+    availableCash.value += estimatedAmount.value
+    if (currentHolding.value) {
+      currentHolding.value.quantity -= quantity.value
+      currentHolding.value.marketValue = (currentHolding.value.quantity * Number(price.value)).toFixed(2)
+    }
+  }
+  persistDemo()
+  showToast(`${selectedStock.value.name} ${tradeSide.value === 'buy' ? '买入' : '卖出'}委托已提交`)
+}
 </script>
 
 <template>
-  <main class="trade-page">
-    <header class="trade-topbar">
-      <div class="trade-tabs"><button class="avatar" aria-label="模拟账户">模</button><button class="active">沪深</button><button>基金</button><button>模拟</button></div>
-      <button class="message-button" aria-label="消息">▱<b>99+</b></button>
-    </header>
+  <section class="trade-page">
+    <div class="trade-heading"><div><p class="eyebrow">TRADE / ACCOUNT</p><h1>交易</h1><p class="muted">连接证券账户，进行资产查看和交易操作。</p></div><span class="account-state"><i /> 未登录</span></div>
 
-    <section class="account-overview">
-      <div class="broker-line"><span class="broker-logo">招商</span><strong>招商证券</strong><i /> <span>牛牛号：0978950834</span><button aria-label="显示资产" @click="assetsVisible = !assetsVisible">{{ assetsVisible ? '◉' : '◎' }}</button></div>
-      <div class="profit-row"><div><small>今日盈亏 ↗</small><strong class="rise">{{ assetsVisible ? todayProfit : '••••••' }}</strong><b class="rise">{{ assetsVisible ? `+${account.todayPercent.toFixed(2)}%` : '••••' }}</b></div><div class="holding-profit"><small>持仓盈亏</small><strong :class="account.holdingProfit >= 0 ? 'rise' : 'fall'">{{ assetsVisible ? holdingProfit : '••••••' }}</strong></div></div>
-      <div class="asset-row"><div><small>总资产⌄</small><strong>{{ assetsVisible ? account.total.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div><div><small><i class="red-dot" />证券及理财</small><strong>{{ assetsVisible ? account.securities.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div><div><small><i class="gold-dot" />可用资金</small><strong>{{ assetsVisible ? account.cash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div></div>
-    </section>
+    <template v-if="!demoMode">
+      <section class="panel account-hero">
+        <div class="account-icon">◈</div>
+        <div class="account-copy"><p class="eyebrow">SECURITIES ACCOUNT</p><h2>开通证券账户，开启交易</h2><p>当前未检测到已绑定的证券账户。完成开户后，可查看资产、持仓并进行交易。</p><div class="account-actions"><button class="primary-button" @click="openAccount('在线开户')">立即开户</button><button class="secondary-button" @click="openAccount('绑定已有账户')">绑定已有账户</button><button class="demo-button" @click="enterDemo">体验模拟交易</button></div></div>
+      </section>
+      <section class="trade-grid">
+        <article class="panel trade-card" @click="openAccount('资产总览')"><span class="trade-card-icon blue">▣</span><div><h3>资产总览</h3><p>查看账户总资产、可用资金和持仓市值</p></div><span class="arrow">→</span></article>
+        <article class="panel trade-card" @click="enterDemo"><span class="trade-card-icon orange">↗</span><div><h3>买入 / 卖出</h3><p>使用模拟账户体验股票交易</p></div><span class="arrow">→</span></article>
+        <article class="panel trade-card" @click="openAccount('持仓与委托')"><span class="trade-card-icon green">▤</span><div><h3>持仓与委托</h3><p>查看当前持仓和历史委托记录</p></div><span class="arrow">→</span></article>
+      </section>
+    </template>
 
-    <section class="quick-actions" aria-label="交易快捷功能">
-      <button @click="quickTrade"><i>⇄</i><span>快速买卖</span></button><button @click="showToast('模拟账户暂不支持出入金')"><i>¥</i><span>出入金</span></button><button @click="go('/trade/orders')"><i>◷</i><span>交易记录</span></button><button @click="go('/trade/funds')"><i>▣</i><span>资金明细</span></button>
-      <button @click="showToast('模拟账户盈亏已统计')"><i>⌁</i><span>盈亏分析</span></button><button @click="showToast('模拟打新功能敬请期待')"><i>IPO</i><span>一键打新</span></button><button @click="showToast('模拟账户暂不支持回购')"><i>▱</i><span>通用回购</span></button><button @click="showToast('全部交易功能已展示')"><i>▦</i><span>全部</span></button>
-    </section>
+    <template v-else>
+      <section class="panel assets-card"><div><p class="eyebrow">SIMULATION ACCOUNT</p><h2>模拟账户资产</h2><strong class="assets-total mono">{{ totalAssets.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div class="asset-stats"><div><small>可用资金</small><strong class="mono">{{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>持仓市值</small><strong class="mono">{{ holdingsMarketValue.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>今日盈亏</small><strong class="mono" :class="todayPnL >= 0 ? 'text-up' : 'text-down'">{{ todayPnL >= 0 ? '+' : '' }}{{ todayPnL.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>累计手续费</small><strong class="mono">{{ tradeStats.fees.toFixed(2) }}</strong></div></div><div class="asset-actions"><button class="reset-button" @click="resetDemo">重置数据</button><button class="secondary-button" @click="demoMode = false">退出模拟</button></div></section>
+      <section class="trade-workbench"><article class="panel order-form"><div class="trade-side-tabs"><button :class="{ selected: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ selected: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><label class="form-label">股票</label><div class="stock-picker"><input v-model="stockKeyword" placeholder="输入名称或代码" /><span v-if="selectedStock">{{ selectedStock.name }} {{ selectedStock.code }}</span></div><div v-if="stockKeyword" class="stock-suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)">{{ stock.name }} <small>{{ stock.code }}</small><b>{{ stock.price }}</b></button></div><label class="form-label">价格</label><div class="number-input"><input v-model="price" inputmode="decimal" /><span>元</span></div><div class="price-hints"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="form-label">数量</label><div class="number-input"><input v-model.number="quantity" type="number" min="100" step="100" /><span>股</span></div><div class="quantity-hints"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = maxBuy">最大</button></div><div class="order-estimate"><span>预计金额</span><strong class="mono">{{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><button class="submit-order" :class="tradeSide" @click="submitOrder">{{ tradeSide === 'buy' ? '买入' : '卖出' }} {{ selectedStock.name }}</button></article><article class="panel holdings-panel"><div class="block-title"><h2>我的持仓</h2><span class="muted">{{ apiMode ? 'API 数据' : '本地模拟数据' }}</span></div><div v-for="holding in holdings" :key="holding.code" class="holding-row"><div><strong>{{ holding.name }}</strong><small>{{ holding.code }} · {{ holding.quantity }} 股</small></div><div class="holding-value"><strong class="mono">{{ (Number(holding.price.replace(',', '')) * holding.quantity).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong><span class="mono" :class="holdingGain(holding) >= 0 ? 'text-up' : 'text-down'">{{ holdingGain(holding) >= 0 ? '+' : '' }}{{ holdingGain(holding).toFixed(2) }}</span></div></div></article></section>
+      <section class="panel orders-panel"><div class="block-title"><h2>当日委托</h2><span class="muted">{{ orders.length }} 条记录</span></div><div class="orders-table"><div class="orders-header"><span>时间</span><span>股票</span><span>方向</span><span>价格 / 数量</span><span>状态</span><span>操作</span></div><div v-for="(order, index) in orders" :key="order.time + order.name + index" class="orders-row"><span class="mono muted">{{ order.time }}</span><strong>{{ order.name }}</strong><span :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</span><span class="mono">{{ order.price }} / {{ order.quantity }}</span><span class="order-status" :class="{ cancelled: order.status === '已撤' }">{{ order.status }}</span><button v-if="order.status === '已报'" class="cancel-order" @click="cancelOrder(index)">撤单</button><span v-else class="order-action-muted">—</span></div></div></section>
+    </template>
 
-    <button v-if="noticeVisible" class="trade-notice" @click="noticeVisible = false"><span>★</span><b>买一篮子高分红好公司，稳健更安心</b><em>去查看</em><i>×</i></button>
-
-    <section class="portfolio-section">
-      <nav class="portfolio-tabs"><button :class="{ active: activeTab === 'holdings' }" @click="activeTab = 'holdings'">持仓分布</button><button :class="{ active: activeTab === 'orders' }" @click="activeTab = 'orders'">今日委托(0/1)</button><button :class="{ active: activeTab === 'conditions' }" @click="activeTab = 'conditions'">条件单(1)</button></nav>
-      <template v-if="activeTab === 'holdings'"><div class="holding-head"><span>证券/代码({{ holdingsCount }})</span><span>成本</span><span>今日盈亏↕</span><span>持仓盈亏↕</span><span>仓位</span></div><div v-for="item in holdings" :key="item.code" class="holding-row"><div class="holding-name"><strong>{{ item.name }}</strong><small><i :class="item.market.toLowerCase()">{{ item.market }}</i>{{ item.code }}</small></div><b class="cost">{{ item.cost }}</b><span :class="item.up ? 'rise' : 'fall'">{{ item.today }}<small>{{ item.todayPercent }}</small></span><span :class="item.totalUp ? 'rise' : 'fall'">{{ item.total }}<small>{{ item.totalPercent }}</small></span><b class="quantity">{{ item.quantity }}</b></div></template>
-      <section v-else class="empty-panel"><span>{{ activeTab === 'orders' ? '◷' : '◇' }}</span><strong>{{ activeTab === 'orders' ? '暂无今日委托' : '暂无条件单' }}</strong><p>模拟账户的{{ activeTab === 'orders' ? '委托记录' : '条件单任务' }}会显示在这里</p></section>
-    </section>
-
-    <footer class="simulation-footer">当前为模拟证券账户 · 交易操作不会产生真实委托</footer>
-    <Transition name="toast"><div v-if="toast" class="trade-toast">{{ toast }}</div></Transition>
-  </main>
+    <section class="panel trade-notice"><span>ⓘ</span><div><strong>模拟交易规则</strong><p>工作日 09:30-11:30、13:00-15:00可交易；每笔数量须为100股整数倍。手续费按成交额万三计，最低5元，卖出另收千一印花税。</p><strong>交易能力迁移说明</strong><p>当前为演示交易，优先调用服务端模拟交易 API；API 不可用时自动回退到浏览器本地数据，不会产生真实券商委托。</p></div></section>
+    <div v-if="showAccountModal" class="account-modal-mask" @click.self="showAccountModal = false"><div class="account-modal panel"><button class="modal-close" @click="showAccountModal = false">×</button><span class="account-icon">◈</span><h2>{{ accountModalTitle }}</h2><p>Web 版本将通过券商 H5 或 OAuth 方式完成账户接入，当前可以先体验模拟交易。</p><button class="primary-button" @click="enterDemo">使用模拟账户</button></div></div><div v-if="toast" class="trade-toast">{{ toast }}</div>
+  </section>
 </template>
 
 <style scoped>
-.trade-page{--red:#df4d49;--green:#55ad61;--blue:#3e7ee6;max-width:720px;margin:0 auto;padding:0 0 36px;background:#fff;color:#2d3442;min-height:calc(100vh - 100px)}button{font:inherit}.trade-topbar{display:flex;align-items:center;justify-content:space-between;height:70px;padding:0 21px;border-bottom:1px solid #f2f3f5;background:#fff}.trade-tabs{display:flex;align-items:center;gap:30px}.trade-tabs button{border:0;background:transparent;color:#414957;font-size:20px}.trade-tabs .active{color:var(--blue);font-size:28px;font-weight:600}.avatar{display:grid;place-items:center;width:45px;height:45px;border-radius:50%!important;background:linear-gradient(145deg,#785738,#d0a36e)!important;color:#fff!important;font-size:13px!important}.message-button{position:relative;border:0;background:transparent;color:#1f2732;font-size:31px;line-height:1}.message-button b{position:absolute;top:-8px;right:-13px;padding:2px 5px;border-radius:10px;background:#e75b55;color:#fff;font-size:10px}.account-overview{padding:18px 28px 24px;background:#fff}.broker-line{display:flex;align-items:center;gap:8px;color:#969daa;font-size:15px}.broker-line strong{color:#353b48;font-size:20px}.broker-line>i{width:1px;height:16px;background:#dfe2e7}.broker-logo{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#bf3a37;color:#fff;font-size:8px;font-weight:600}.broker-line button{margin-left:auto;border:0;background:transparent;color:#4d5867;font-size:22px}.profit-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}.profit-row small,.asset-row small{display:block;color:#969eab;font-size:16px}.profit-row strong{display:inline-block;margin-top:10px;font:600 40px/1 'JetBrains Mono',monospace;letter-spacing:-.06em}.profit-row b{margin-left:10px;font:600 24px 'JetBrains Mono',monospace}.holding-profit{text-align:right}.holding-profit strong{font-size:31px}.rise{color:var(--red)!important}.fall{color:var(--green)!important}.asset-row{display:grid;grid-template-columns:1.08fr 1.35fr 1fr;gap:14px;margin-top:34px;padding-top:22px;border-top:1px solid #edf0f3}.asset-row strong{display:block;margin-top:8px;font:600 28px 'JetBrains Mono',monospace;letter-spacing:-.04em}.asset-row small i{display:inline-block;width:11px;height:11px;margin-right:7px;border-radius:3px}.red-dot{background:#db4d48}.gold-dot{background:#e7b64e}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);row-gap:22px;padding:27px 20px 25px;border-top:8px solid #f6f7fa;border-bottom:8px solid #f6f7fa;background:#fff}.quick-actions button{display:flex;align-items:center;flex-direction:column;gap:8px;border:0;background:transparent;color:#424b58;font-size:16px}.quick-actions i{display:grid;place-items:center;width:42px;height:42px;border:2px solid #252e3b;border-radius:50%;color:#2d3543;font-size:23px;font-style:normal;line-height:1}.quick-actions button:nth-child(4) i,.quick-actions button:nth-child(7) i{border-radius:5px}.quick-actions button:nth-child(6) i{font-size:12px;font-weight:700}.trade-notice{display:flex;align-items:center;gap:12px;width:100%;padding:14px 29px;border:0;background:linear-gradient(90deg,#eaf3ff,#fff);color:#495466;text-align:left}.trade-notice>span{display:grid;place-items:center;width:25px;height:25px;background:#4d87e5;color:#fff;font-size:13px}.trade-notice b{flex:1;font-size:16px;font-weight:400}.trade-notice em{padding:5px 11px;border:1px solid #4b83db;border-radius:5px;color:#3977d6;font-size:15px;font-style:normal}.trade-notice i{margin-left:8px;color:#aab2be;font-size:25px;font-style:normal}.portfolio-section{background:#fff}.portfolio-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #edf0f3}.portfolio-tabs button{position:relative;padding:17px 4px;border:0;background:#fff;color:#4b5564;font-size:21px}.portfolio-tabs button.active{color:#273140;font-weight:600}.portfolio-tabs button.active:after{position:absolute;right:50%;bottom:-1px;width:28px;height:4px;border-radius:4px;background:#4b83df;content:'';transform:translateX(50%)}.holding-head,.holding-row{display:grid;grid-template-columns:1.45fr .54fr 1.18fr 1.2fr .65fr;gap:7px;align-items:center;padding:0 20px}.holding-head{min-height:48px;color:#98a1ae;font-size:14px;white-space:nowrap}.holding-head span:not(:first-child),.holding-row>span,.cost,.quantity{text-align:right}.holding-row{min-height:96px;border-top:1px solid #edf0f3}.holding-name{display:flex;min-width:0;flex-direction:column;gap:8px}.holding-name strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:18px;font-weight:500}.holding-name small{color:#9ca4b0;font-size:14px}.holding-name i{display:inline-grid;place-items:center;min-width:23px;height:17px;margin-right:5px;border-radius:2px;background:#e85858;color:#fff;font-size:9px;font-style:normal}.holding-name i.sz{background:#e85858}.cost,.quantity{font:20px 'JetBrains Mono',monospace;font-weight:500}.holding-row>span{display:flex;flex-direction:column;font:21px 'JetBrains Mono',monospace;white-space:nowrap}.holding-row>span small{margin-top:7px;font-size:16px}.empty-panel{display:flex;align-items:center;flex-direction:column;padding:65px 20px;color:#98a2b0}.empty-panel span{font-size:36px}.empty-panel strong{margin-top:12px;color:#536174;font-size:17px}.empty-panel p{margin-top:7px;font-size:13px}.simulation-footer{padding:24px;color:#a2abb7;font-size:12px;text-align:center}.trade-toast{position:fixed;z-index:30;bottom:82px;left:50%;padding:10px 16px;border-radius:5px;background:#263040e8;color:#fff;font-size:12px;transform:translateX(-50%);white-space:nowrap}.toast-enter-active,.toast-leave-active{transition:opacity .18s,transform .18s}.toast-enter-from,.toast-leave-to{opacity:0;transform:translate(-50%,8px)}@media(max-width:520px){.trade-page{margin:0 -2px;min-height:calc(100vh - 120px)}.trade-topbar{height:60px;padding:0 14px}.trade-tabs{gap:23px}.trade-tabs button{font-size:17px}.trade-tabs .active{font-size:24px}.avatar{width:38px;height:38px}.account-overview{padding:16px 18px 21px}.broker-line{font-size:13px}.broker-line strong{font-size:17px}.profit-row{margin-top:28px}.profit-row small,.asset-row small{font-size:13px}.profit-row strong{font-size:31px}.profit-row b{font-size:19px}.holding-profit strong{font-size:25px}.asset-row{margin-top:27px;padding-top:18px}.asset-row strong{font-size:20px}.quick-actions{row-gap:20px;padding:22px 12px}.quick-actions button{font-size:14px}.quick-actions i{width:36px;height:36px;font-size:19px}.trade-notice{gap:8px;padding:12px 17px}.trade-notice b{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trade-notice em{padding:4px 8px;font-size:13px}.portfolio-tabs button{font-size:16px}.holding-head,.holding-row{grid-template-columns:1.36fr .44fr .95fr 1.05fr .46fr;gap:4px;padding:0 13px}.holding-head{min-height:44px;font-size:11px}.holding-name strong{font-size:15px}.holding-name small{font-size:12px}.cost,.quantity{font-size:15px}.holding-row>span{font-size:15px}.holding-row>span small{font-size:12px}.holding-row{min-height:84px}}
+.trade-page { max-width: 900px; margin: 0 auto; }.trade-heading { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 30px; }.trade-heading h1 { font-size: 28px; }.account-state { color: var(--muted); font-size: 11px; background: var(--card); border: 1px solid var(--border); padding: 7px 10px; }.account-state i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--muted); margin-right: 6px; }.account-hero { display: flex; align-items: center; gap: 26px; padding: 36px; background: linear-gradient(105deg, #fff 0%, #f8fbff 100%); }.account-icon { width: 72px; height: 72px; display: grid; place-items: center; background: #edf4ff; color: var(--primary); border-radius: 50%; font-size: 30px; flex-shrink: 0; }.account-copy h2 { font-size: 20px; color: var(--text); }.account-copy > p:not(.eyebrow) { color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 10px; }.account-actions { display: flex; gap: 10px; margin-top: 22px; }.trade-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }.trade-card { display: flex; align-items: center; gap: 12px; padding: 18px 15px; min-height: 104px; }.trade-card h3 { font-size: 13px; }.trade-card p { color: var(--muted); font-size: 10px; line-height: 1.6; margin-top: 7px; }.trade-card-icon { width: 32px; height: 32px; border-radius: 6px; display: grid; place-items: center; font-size: 16px; flex-shrink: 0; }.trade-card-icon.blue { color: var(--primary); background: #edf4ff; }.trade-card-icon.orange { color: var(--gold); background: #fff4e9; }.trade-card-icon.green { color: var(--down); background: #edf8ef; }.arrow { color: var(--muted); margin-left: auto; }.trade-notice { display: flex; gap: 12px; padding: 16px 18px; background: #fffaf3; border-color: #f8e3c8; }.trade-notice > span { color: var(--gold); font-size: 16px; }.trade-notice strong { font-size: 12px; }.trade-notice p { color: var(--muted); font-size: 11px; line-height: 1.7; margin-top: 5px; }
+.demo-button { color: var(--primary); border: 0; background: transparent; padding: 9px 3px; font-size: 12px; }.trade-card { cursor: pointer; transition: border-color .15s, background .15s; }.trade-card:hover { border-color: var(--primary); background: #fbfdff; }.assets-card { display: flex; align-items: center; gap: 28px; padding: 24px; margin-bottom: 14px; }.assets-card h2 { font-size: 15px; }.assets-total { display: block; color: var(--text); font-size: 28px; margin-top: 9px; }.asset-stats { display: flex; gap: 28px; margin-left: auto; }.asset-actions { display: flex; align-items: center; gap: 8px; }.reset-button { color: var(--muted); border: 0; background: transparent; padding: 9px 4px; font-size: 10px; }.asset-stats small, .asset-stats strong { display: block; }.asset-stats small { color: var(--muted); font-size: 10px; margin-bottom: 7px; }.asset-stats strong { font-size: 12px; }.trade-workbench { display: grid; grid-template-columns: 1fr 1.1fr; gap: 14px; margin-bottom: 14px; }.order-form, .holdings-panel, .orders-panel { padding: 20px; }.trade-side-tabs { display: flex; border-bottom: 1px solid var(--border); margin: -20px -20px 20px; }.trade-side-tabs button { flex: 1; color: var(--muted); border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 13px; font-size: 13px; }.trade-side-tabs button.selected { color: var(--up); border-color: var(--up); font-weight: 600; }.trade-side-tabs button:last-child.selected { color: var(--down); border-color: var(--down); }.form-label { display: block; color: var(--muted); font-size: 10px; margin: 13px 0 7px; }.stock-picker, .number-input { position: relative; display: flex; align-items: center; border: 1px solid var(--border); background: var(--bg); padding: 0 10px; }.stock-picker input, .number-input input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: var(--text); padding: 10px 0; font: 12px 'JetBrains Mono', monospace; }.stock-picker span { color: var(--text); font-size: 11px; }.number-input span { color: var(--muted); font-size: 11px; }.stock-suggestions { position: relative; z-index: 2; border: 1px solid var(--border); border-top: 0; background: var(--card); }.stock-suggestions button { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; width: 100%; border: 0; border-bottom: 1px solid var(--border); background: transparent; color: var(--text); padding: 9px; text-align: left; font-size: 11px; }.stock-suggestions small { color: var(--muted); }.stock-suggestions b { font: 11px 'JetBrains Mono', monospace; }.price-hints, .quantity-hints { display: flex; gap: 6px; margin-top: 6px; }.price-hints button, .quantity-hints button { flex: 1; color: var(--muted); border: 1px solid var(--border); background: var(--card); padding: 5px; font: 10px 'JetBrains Mono', monospace; }.order-estimate { display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; padding: 17px 0 12px; }.order-estimate strong { color: var(--text); }.submit-order { width: 100%; color: #fff; border: 0; padding: 11px; border-radius: 3px; font-size: 12px; }.submit-order.buy { background: var(--up); }.submit-order.sell { background: var(--down); }.block-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }.block-title h2 { font-size: 14px; }.holding-row { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border); }.holding-row:last-child { border-bottom: 0; }.holding-row strong, .holding-row small { display: block; }.holding-row strong { font-size: 12px; }.holding-row small { color: var(--muted); font: 10px 'JetBrains Mono', monospace; margin-top: 5px; }.holding-value { text-align: right; }.holding-value span { display: block; font-size: 10px; margin-top: 5px; }.orders-table { overflow-x: auto; }.orders-header, .orders-row { display: grid; grid-template-columns: 1fr 1fr .7fr 1.2fr .7fr .5fr; gap: 10px; align-items: center; min-width: 560px; }.orders-header { color: var(--muted); font-size: 10px; padding-bottom: 9px; border-bottom: 1px solid var(--border); }.orders-row { padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 11px; }.orders-row strong { font-size: 11px; }.order-status { color: var(--primary); background: #edf4ff; padding: 4px 6px; width: fit-content; font-size: 10px; }.order-status.cancelled { color: var(--muted); background: var(--bg); }.cancel-order { color: var(--primary); border: 0; background: transparent; font-size: 10px; padding: 0; }.order-action-muted { color: #b3bac7; font-size: 10px; }.account-modal-mask { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(38,46,64,.25); }.account-modal { position: relative; width: min(390px, 100%); padding: 30px; text-align: center; }.account-modal .account-icon { margin: 0 auto 15px; }.account-modal h2 { font-size: 18px; }.account-modal p { color: var(--muted); font-size: 11px; line-height: 1.7; margin: 12px 0 20px; }.account-modal .primary-button { width: 100%; }.modal-close { position: absolute; right: 14px; top: 10px; border: 0; background: transparent; color: var(--muted); font-size: 21px; }.trade-toast { position: fixed; z-index: 30; left: 50%; bottom: 92px; transform: translateX(-50%); color: #fff; background: rgba(38,46,64,.9); border-radius: 3px; padding: 10px 16px; font-size: 11px; white-space: nowrap; }
+@media (max-width: 720px) { .trade-heading { margin-bottom: 22px; }.account-hero { align-items: flex-start; flex-direction: column; padding: 24px 20px; gap: 17px; }.account-copy h2 { font-size: 18px; }.account-actions { flex-wrap: wrap; }.trade-grid { grid-template-columns: 1fr; }.trade-card { min-height: 80px; }.assets-card { align-items: flex-start; flex-wrap: wrap; gap: 16px; }.asset-actions { margin-left: auto; }.asset-stats { order: 3; width: 100%; justify-content: space-between; gap: 8px; margin-left: 0; }.trade-workbench { grid-template-columns: 1fr; }.orders-panel { padding: 15px; } }
 </style>

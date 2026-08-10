@@ -1,51 +1,36 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import DataState from '@/components/DataState.vue'
+import { useRoute } from 'vue-router'
 import EmptyState from '@/components/EmptyState.vue'
-import PageHeader from '@/components/PageHeader.vue'
-import HorizontalTabs from '@/components/HorizontalTabs.vue'
-import { getBoardQuotes } from '@/services/market'
+import ErrorState from '@/components/ErrorState.vue'
+import LoadingState from '@/components/LoadingState.vue'
 import type { MarketBoardQuote } from '@/services/market-types'
+import { getBoardQuotes } from '@/services/market'
 
-const kinds = [{ key: 'industry', label: '行业板块' }, { key: 'concept', label: '概念板块' }] as const
-const activeKind = ref<typeof kinds[number]['key']>('industry')
-const rows = ref<MarketBoardQuote[]>([])
+const route = useRoute()
+const boardName = computed(() => route.path.includes('etf') ? 'ETF' : '板块')
+const quotes = ref<MarketBoardQuote[]>([])
 const keyword = ref('')
-const loading = ref(true)
+const activeRank = ref<'全部' | '涨幅榜' | '跌幅榜'>('全部')
+const isLoading = ref(true)
 const error = ref('')
-const rank = ref<'全部' | '涨幅榜' | '跌幅榜' | '成交额'>('全部')
-const status = computed<'loading' | 'error' | 'ready'>(() => loading.value ? 'loading' : error.value ? 'error' : 'ready')
-const filteredRows = computed(() => {
-  const query = keyword.value.trim().toLowerCase()
-  const source = query ? rows.value.filter((item) => item.name.toLowerCase().includes(query) || item.code.toLowerCase().includes(query)) : rows.value
-  if (rank.value === '全部') return source
-  return [...source].sort((a, b) => rank.value === '跌幅榜'
-    ? (a.changePercent ?? Number.NEGATIVE_INFINITY) - (b.changePercent ?? Number.NEGATIVE_INFINITY)
-    : rank.value === '成交额'
-      ? (b.amount ?? Number.NEGATIVE_INFINITY) - (a.amount ?? Number.NEGATIVE_INFINITY)
-      : (b.changePercent ?? Number.NEGATIVE_INFINITY) - (a.changePercent ?? Number.NEGATIVE_INFINITY))
+const filteredQuotes = computed(() => {
+  const query = keyword.value.trim()
+  const source = query ? quotes.value.filter((item) => item.name.includes(query) || item.code.includes(query)) : quotes.value
+  return [...source].sort((a, b) => activeRank.value === '跌幅榜' ? Number.parseFloat(a.percent) - Number.parseFloat(b.percent) : Number.parseFloat(b.percent) - Number.parseFloat(a.percent))
 })
+function selectRank(rank: string) { activeRank.value = rank as '全部' | '涨幅榜' | '跌幅榜' }
 async function load() {
-  loading.value = true; error.value = ''
-  try { rows.value = await getBoardQuotes('板块', activeKind.value) } catch { error.value = '板块数据暂时无法加载，请稍后重试。' } finally { loading.value = false }
+  isLoading.value = true; error.value = ''
+  try { quotes.value = await getBoardQuotes(boardName.value) } catch { error.value = `${boardName.value}数据加载失败，请重试。` } finally { isLoading.value = false }
 }
-function selectKind(kind: typeof activeKind.value) { activeKind.value = kind; keyword.value = ''; rank.value = '全部'; void load() }
 onMounted(load)
 </script>
 
 <template>
-  <section class="sector-page">
-    <PageHeader eyebrow="MARKET / SECTORS" title="行业 / 概念板块" description="使用行情 provider 的实时板块快照；无数据时不会以 mock 结果代替。">
-      <template #actions><RouterLink class="secondary-button" to="/market">返回行情</RouterLink></template>
-    </PageHeader>
-    <HorizontalTabs :items="kinds.map((item) => ({ label: item.label, value: item.key }))" :model-value="activeKind" aria-label="板块类型" @update:model-value="selectKind($event as 'industry' | 'concept')" />
-    <section class="toolbar panel"><HorizontalTabs :items="['全部', '涨幅榜', '跌幅榜', '成交额'].map((item) => ({ label: item, value: item }))" :model-value="rank" aria-label="板块排行" @update:model-value="rank = $event as '全部' | '涨幅榜' | '跌幅榜' | '成交额'" /><label class="search">⌕<input v-model="keyword" type="search" placeholder="搜索板块名称或代码" /></label></section>
-    <DataState :status="status" loading-label="正在加载板块" error-title="板块加载失败" :message="error" :retry="load">
-      <section class="panel table"><div class="row header"><span>板块名称 / 代码</span><span>涨跌幅</span><span>领涨股</span></div><RouterLink v-for="(item, index) in filteredRows" :key="item.code" class="row" :to="`/sector/${item.code}?kind=${activeKind}`"><div><b class="index">{{ String(index + 1).padStart(2, '0') }}</b><strong>{{ item.name }}</strong><small>{{ item.code }}</small></div><span class="mono" :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.percent }}</span><span class="muted">{{ item.extra || '--' }}</span></RouterLink><EmptyState v-if="!filteredRows.length" :title="activeKind === 'concept' ? '暂无概念板块数据' : '暂无可展示的行业板块'" :message="activeKind === 'concept' ? '当前行情 provider 未提供概念板块接口，未使用行业数据代替。' : '数据源暂未返回内容，请稍后重试。'" /></section>
-    </DataState>
-  </section>
+  <section class="board-page"><div class="page-heading"><div><p class="eyebrow">{{ boardName }} / MARKET BOARD</p><h1>{{ boardName }}行情</h1><p class="muted">按涨跌幅和成交数据快速观察{{ boardName }}市场。</p></div><RouterLink class="secondary-button" to="/market">返回行情</RouterLink></div><section class="board-toolbar panel"><div class="board-tabs"><button v-for="rank in ['全部', '涨幅榜', '跌幅榜']" :key="rank" :class="{ selected: activeRank === rank }" @click="selectRank(rank)">{{ rank }}</button></div><label class="board-search">⌕<input v-model="keyword" :placeholder="`搜索${boardName}名称或代码`" /></label></section><LoadingState v-if="isLoading" :label="`正在加载${boardName}行情`" /><ErrorState v-else-if="error" title="行情加载失败" :message="error" :retry="load" /><section v-else class="panel board-table"><div class="board-row board-header"><span>名称 / 代码</span><span>最新价</span><span>涨跌额</span><span>涨跌幅</span><span>参考数据</span></div><div v-for="quote in filteredQuotes" :key="quote.code" class="board-row"><div><strong>{{ quote.name }}</strong><small>{{ quote.code }}</small></div><span class="mono">{{ quote.price }}</span><span class="mono" :class="quote.trend === 'up' ? 'text-up' : 'text-down'">{{ quote.change }}</span><span class="mono percent" :class="quote.trend === 'up' ? 'text-up' : 'text-down'">{{ quote.percent }}</span><span class="mono muted">{{ quote.extra }}</span></div><EmptyState v-if="!filteredQuotes.length" title="没有匹配标的" message="请尝试其他名称或代码。" /></section></section>
 </template>
 
 <style scoped>
-.sector-page{max-width:1100px;margin:0 auto}.kind-tabs{display:flex;gap:25px;margin:15px 0 10px;border-bottom:1px solid var(--border)}.kind-tabs button,.rank-tabs button{position:relative;padding:10px 0;border:0;background:transparent;color:var(--muted);font-size:12px}.kind-tabs button.selected,.rank-tabs button.selected{color:var(--primary);font-weight:600}.kind-tabs button.selected:after{position:absolute;right:0;bottom:-1px;left:0;height:2px;background:var(--primary);content:''}.toolbar{display:flex;align-items:center;justify-content:space-between;padding:0 18px;margin-bottom:10px}.rank-tabs{display:flex;gap:24px}.search{display:flex;align-items:center;gap:7px;width:220px;padding:7px 10px;color:var(--muted);background:var(--bg);border:1px solid var(--border)}.search input{min-width:0;flex:1;border:0;outline:0;background:transparent;color:var(--text);font-size:11px}.table{padding:0 18px}.row{display:grid;grid-template-columns:1.8fr .8fr 1fr;gap:12px;align-items:center;min-height:62px;border-bottom:1px solid var(--border);font-size:12px;color:inherit}.row>span{text-align:right}.header{min-height:42px;color:var(--muted);font-size:10px}.row>div{display:grid;grid-template-columns:28px 1fr;min-width:0}.row strong,.row small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.row small{grid-column:2;margin-top:4px;color:var(--muted);font:10px 'JetBrains Mono',monospace}.index{color:#a8b0bf;font:10px 'JetBrains Mono',monospace}@media(max-width:700px){.toolbar{align-items:stretch;flex-direction:column;gap:8px;padding:10px 14px}.search{width:100%}.table{padding:0 12px}.row{grid-template-columns:1.5fr .7fr .9fr;gap:8px}}
+.board-page { max-width: 1100px; margin: 0 auto; }.board-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 0 18px; margin-bottom: 10px; }.board-tabs { display: flex; gap: 24px; }.board-tabs button { position: relative; color: var(--muted); border: 0; background: transparent; padding: 13px 0; font-size: 12px; }.board-tabs button.selected { color: var(--primary); font-weight: 600; }.board-tabs button.selected::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--primary); }.board-search { display: flex; align-items: center; gap: 7px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); padding: 7px 10px; width: 220px; }.board-search input { min-width: 0; flex: 1; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 11px; }.board-table { padding: 0 18px; }.board-row { display: grid; grid-template-columns: 1.8fr .9fr .9fr .9fr 1fr; gap: 12px; align-items: center; min-height: 62px; border-bottom: 1px solid var(--border); font-size: 12px; }.board-header { min-height: 42px; color: var(--muted); font-size: 10px; }.board-row strong, .board-row small { display: block; }.board-row strong { font-size: 12px; }.board-row small { color: var(--muted); font: 10px 'JetBrains Mono', monospace; margin-top: 4px; }.percent { font-weight: 600; }@media (max-width: 700px) { .board-toolbar { align-items: stretch; flex-direction: column; gap: 9px; padding: 10px 14px; }.board-search { width: 100%; }.board-table { padding: 0 14px; overflow-x: auto; }.board-row { min-width: 600px; } }
 </style>
