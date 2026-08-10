@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS news (id varchar(128) PRIMARY KEY, title varchar(300) NOT NULL, summary varchar(2000) NOT NULL, source varchar(128) NOT NULL, published_at timestamptz NOT NULL, codes jsonb NOT NULL DEFAULT '[]'::jsonb, url varchar(1000));
+CREATE INDEX IF NOT EXISTS news_published_at_idx ON news (published_at);
+CREATE TABLE IF NOT EXISTS reports (id varchar(128) PRIMARY KEY, title varchar(300) NOT NULL, institution varchar(200) NOT NULL, rating varchar(64) NOT NULL, target_price numeric(18,4), published_at timestamptz NOT NULL, code varchar(32) NOT NULL, summary varchar(4000) NOT NULL);
+CREATE INDEX IF NOT EXISTS reports_code_idx ON reports (code);
+CREATE TABLE IF NOT EXISTS trade_accounts (user_id uuid PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, cash numeric(20,4) NOT NULL DEFAULT 1000000, created_at timestamptz NOT NULL DEFAULT now(), updated_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS trade_orders (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, code varchar(32) NOT NULL, side varchar(8) NOT NULL, quantity integer NOT NULL, price numeric(20,6) NOT NULL, status varchar(16) NOT NULL, created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS trade_orders_user_created_idx ON trade_orders (user_id, created_at);
+CREATE TABLE IF NOT EXISTS trade_positions (user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, code varchar(32) NOT NULL, quantity integer NOT NULL DEFAULT 0, available integer NOT NULL DEFAULT 0, average_price numeric(20,6) NOT NULL DEFAULT 0, updated_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY (user_id, code));
+CREATE TABLE IF NOT EXISTS user_settings (user_id uuid PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, settings jsonb NOT NULL DEFAULT '{}'::jsonb, updated_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS price_alerts (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, code varchar(32) NOT NULL, target_price numeric(20,6) NOT NULL, direction varchar(8) NOT NULL, enabled boolean NOT NULL DEFAULT true, created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS price_alerts_user_code_idx ON price_alerts (user_id, code);

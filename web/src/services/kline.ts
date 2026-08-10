@@ -35,3 +35,20 @@ export function calculateBOLL(candles: KlineCandle[], period = 20, multiplier = 
 }
 
 export function calculateMACD(candles: KlineCandle[]) { return candles.map((_, index) => calculateMA(candles, 5)[index] - calculateMA(candles, 10)[index]) }
+
+export async function getKlineSeries(code: string, period: 'daily' | 'weekly' | 'monthly' = 'daily', adjust: '' | 'qfq' | 'hfq' = 'qfq') {
+  try {
+    const response = await fetch(`/api/market/kline?code=${encodeURIComponent(code)}&period=${period}`)
+    if (response.ok) {
+      const rows = await response.json() as KlineCandle[]
+      if (rows.length) return rows
+    }
+  } catch { /* local development may run without the API container */ }
+  const { getRealKline } = await import('@/services/stock-sdk-adapter')
+  try { return await getRealKline(code, period, adjust) } catch { return createKlineSeries(code) }
+}
+
+export async function getMinuteSeries(code: string) {
+  const { getRealMinuteKline } = await import('@/services/stock-sdk-adapter')
+  try { return await getRealMinuteKline(code) } catch { return createKlineSeries(code, 48) }
+}

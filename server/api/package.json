@@ -1,0 +1,44 @@
+{
+  "name": "zedarc-api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "test": "node --test test/*.test.mjs", 
+    "test:smoke": "node --test test/smoke.test.mjs",
+    "test:build": "npm run build && npm test",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts",
+    "db:migrate": "node scripts/migrate.mjs"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.3",
+    "@nestjs/common": "^11.0.11",
+    "@nestjs/core": "^11.0.11",
+    "@nestjs/platform-fastify": "^11.0.11",
+    "@nestjs/platform-ws": "^11.1.29",
+    "@nestjs/swagger": "^11.2.0",
+    "@nestjs/websockets": "^11.1.29",
+    "@zedarc/shared": "file:../../packages/shared",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.4",
+    "pg": "^8.13.1",
+    "redis": "^4.7.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.21.0",
+    "@types/ws": "^8.18.1",
+    "drizzle-kit": "^0.30.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

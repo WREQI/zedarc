@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { getMarketStocksSnapshot } from '@/services/market'
-import { createKlineSeries, type KlineCandle } from '@/services/kline'
+import { getMarketStocksSnapshot, getStockQuote } from '@/services/market'
+import { createKlineSeries, getKlineSeries, getMinuteSeries, type KlineCandle } from '@/services/kline'
 import { useWatchlistStore } from '@/stores/watchlist'
+import { connectMarketSocket } from '@/services/market-socket'
 
 const marketStocks = getMarketStocksSnapshot()
 
 
 const route = useRoute()
 const watchlistStore = useWatchlistStore()
-const stock = computed(() => marketStocks.find((item) => item.code === route.params.code) ?? marketStocks[0])
+const realStock = ref<typeof marketStocks[number] | null>(null)
+const stock = computed(() => realStock.value ?? marketStocks.find((item) => item.code === route.params.code) ?? marketStocks[0])
 const stockStats = computed(() => {
   const price = Number(stock.value.price.replace(',', ''))
   const change = Number(stock.value.change.replace(',', ''))
@@ -32,6 +34,7 @@ const zoom = ref(1)
 const pan = ref(0)
 const selectedIndex = ref<number | null>(null)
 const candles = ref<KlineCandle[]>(createKlineSeries(stock.value.code))
+const isChartLoading = ref(false)
 const pointer = ref({ active: false, startX: 0, startPan: 0 })
 const touchPoints = new Map<number, number>()
 const pinch = ref({ active: false, startDistance: 0, startZoom: 1 })
@@ -41,6 +44,7 @@ const settings = ref({ trendLine: false, supportPressure: false, areaSelect: fal
 const drawPoints = ref<Array<{ x: number; y: number }>>([])
 const areaPoints = ref<Array<{ x: number; y: number }>>([])
 const isFollowed = ref(false)
+let disconnectMarketSocket: () => void = () => undefined
 
 const chartPreferencesKey = 'zedarc-kline-preferences'
 const orderBook = computed(() => {
@@ -71,7 +75,15 @@ const analysisMetrics = [
   { label: '机构关注度', value: '★★★★☆', note: '近一月新增 12 家', trend: 'up' },
 ]
 
-onMounted(() => {
+async function loadChartData() {
+  isChartLoading.value = true
+  try {
+    candles.value = activePeriod.value === '分时' ? await getMinuteSeries(stock.value.code) : await getKlineSeries(stock.value.code, activePeriod.value === '周K' ? 'weekly' : activePeriod.value === '月K' ? 'monthly' : 'daily', adjustment.value === '前复权' ? 'qfq' : adjustment.value === '后复权' ? 'hfq' : '')
+  } finally { isChartLoading.value = false }
+}
+
+onMounted(async () => {
+  try { realStock.value = await getStockQuote(String(route.params.code)) ?? null } catch { realStock.value = null }
   isFollowed.value = watchlistStore.has(stock.value.code)
   watchlistStore.addRecent(stock.value.code)
   const preferences = JSON.parse(window.localStorage.getItem(`${chartPreferencesKey}-${stock.value.code}`) ?? 'null') as { period?: string; indicator?: 'MA' | 'MACD' | 'BOLL'; adjustment?: string; settings?: typeof settings.value } | null
@@ -79,9 +91,19 @@ onMounted(() => {
   if (preferences?.indicator) indicator.value = preferences.indicator
   if (preferences?.adjustment) adjustment.value = preferences.adjustment
   if (preferences?.settings) settings.value = { ...settings.value, ...preferences.settings }
+  await loadChartData()
+  disconnectMarketSocket = connectMarketSocket([stock.value.code], (event) => {
+    if (event.type === 'quote' && event.data && typeof event.data === 'object') {
+      const quote = event.data as { code?: string; name?: string; price?: number; change?: number; changePercent?: number; volume?: number }
+      if (quote.code === stock.value.code && quote.price != null && quote.change != null && quote.changePercent != null) realStock.value = { ...stock.value, name: quote.name ?? stock.value.name, price: quote.price.toFixed(2), change: `${quote.change >= 0 ? '+' : ''}${quote.change.toFixed(2)}`, percent: `${quote.changePercent >= 0 ? '+' : ''}${quote.changePercent.toFixed(2)}%`, volume: String(quote.volume ?? 0), trend: quote.change >= 0 ? 'up' : 'down' }
+    }
+  })
 })
 
+watch([activePeriod, adjustment], () => { if (activePeriod.value || adjustment.value) void loadChartData() })
+
 onUnmounted(() => {
+  disconnectMarketSocket()
   window.localStorage.setItem(`${chartPreferencesKey}-${stock.value.code}`, JSON.stringify({ period: activePeriod.value, indicator: indicator.value, adjustment: adjustment.value, settings: settings.value }))
 })
 
@@ -187,7 +209,7 @@ function onChartWheel(event: WheelEvent) {
   zoom.value = Math.max(.5, Math.min(2.5, zoom.value + (event.deltaY < 0 ? .25 : -.25)))
 }
 function onChartLeave() { selectedIndex.value = null; pointer.value.active = false; touchPoints.clear(); pinch.value.active = false }
-function resetChart() { zoom.value = 1; pan.value = 0; selectedIndex.value = null; drawPoints.value = []; areaPoints.value = []; candles.value = createKlineSeries(stock.value.code) }
+function resetChart() { zoom.value = 1; pan.value = 0; selectedIndex.value = null; drawPoints.value = []; areaPoints.value = []; void loadChartData() }
 function toggleSetting(key: keyof typeof settings.value) { settings.value[key] = !settings.value[key] }
 function toggleSettingByName(key: string) { toggleSetting(key as keyof typeof settings.value); if (key === 'draw' && !settings.value.draw) drawPoints.value = []; if (key === 'areaSelect' && !settings.value.areaSelect) areaPoints.value = [] }
 function settingEnabled(key: string) { return settings.value[key as keyof typeof settings.value] }

@@ -1,0 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+CREATE TABLE IF NOT EXISTS users (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), phone varchar(32) NOT NULL UNIQUE, created_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS refresh_tokens (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, token_hash varchar(128) NOT NULL UNIQUE, expires_at timestamptz NOT NULL, created_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS watchlist_items (user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, code varchar(32) NOT NULL, name varchar(128), sort_order integer NOT NULL DEFAULT 0, created_at timestamptz NOT NULL DEFAULT now(), PRIMARY KEY (user_id, code));
+CREATE TABLE IF NOT EXISTS favorites (id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid NOT NULL REFERENCES users(id) ON DELETE CASCADE, code varchar(32) NOT NULL, note varchar(500), created_at timestamptz NOT NULL DEFAULT now(), UNIQUE (user_id, code));
