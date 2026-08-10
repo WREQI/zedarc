@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
+import { getNotifications, markNotificationsRead, type NotificationItem } from '@/services/notifications'
 
 const router = useRouter()
 const auth = useAuthStore()
@@ -16,7 +17,8 @@ const showSettings = ref(false)
 const showMessages = ref(false)
 const notifications = ref(true)
 const priceAlerts = ref(true)
-const unreadMessages = ref(2)
+const unreadMessages = ref(0)
+const messages = ref<NotificationItem[]>([])
 const menuItems = [
   { icon: '▣', title: '消息中心', subtitle: '查看系统通知和互动消息' },
   { icon: '◷', title: '浏览历史', subtitle: '查看最近浏览的股票和资讯' },
@@ -24,11 +26,12 @@ const menuItems = [
   { icon: '⚙', title: '设置', subtitle: '通知、主题和隐私设置' },
 ]
 
-onMounted(() => {
+onMounted(async () => {
   savedCount.value = (JSON.parse(window.localStorage.getItem('zedarc-saved-news') ?? '[]') as number[]).length
   recentCount.value = (JSON.parse(window.localStorage.getItem('zedarc-recent-stocks') ?? '[]') as string[]).length
   notifications.value = window.localStorage.getItem('zedarc-setting-notifications') !== 'false'
   priceAlerts.value = window.localStorage.getItem('zedarc-setting-price-alerts') !== 'false'
+  if (auth.user) { try { messages.value = await getNotifications(); unreadMessages.value = messages.value.filter((item) => !item.readAt).length } catch { /* anonymous demo keeps local shell */ } }
 })
 
 function persistSetting(key: string, value: boolean) {
@@ -45,7 +48,7 @@ async function submitLogin() {
 function handleMenu(title: string) {
   if (title === '浏览历史') { router.push('/watchlist'); return }
   if (title === '我的收藏') { router.push('/news?saved=1'); return }
-  if (title === '消息中心') { showMessages.value = true; unreadMessages.value = 0; return }
+  if (title === '消息中心') { showMessages.value = true; unreadMessages.value = 0; if (auth.user) void markNotificationsRead().catch(() => undefined); return }
   if (title === '设置') { showSettings.value = true; return }
   showToast(`${title}功能即将开放`)
 }
@@ -65,7 +68,7 @@ function showToast(message: string) {
     <p class="account-version">腾讯自选股 Web · MVP 预览版</p>
     <div v-if="showSettings" class="account-overlay" @click.self="showSettings = false"><section class="account-sheet panel"><div class="sheet-head"><h2>设置</h2><button @click="showSettings = false">×</button></div><div class="setting-row"><div><strong>资讯推送</strong><small>接收市场热点和重要资讯</small></div><button class="switch" :class="{ on: notifications }" @click="notifications = !notifications; persistSetting('zedarc-setting-notifications', notifications)"><i /></button></div><div class="setting-row"><div><strong>价格提醒</strong><small>自选股涨跌幅达到阈值时提醒</small></div><button class="switch" :class="{ on: priceAlerts }" @click="priceAlerts = !priceAlerts; persistSetting('zedarc-setting-price-alerts', priceAlerts)"><i /></button></div><div class="setting-row"><div><strong>主题模式</strong><small>当前使用浅色行情主题</small></div><span class="setting-value">浅色</span></div><button class="sheet-done" @click="showSettings = false">完成</button></section></div>
     <div v-if="showLogin" class="account-overlay" @click.self="showLogin = false"><section class="account-sheet panel login-sheet"><div class="sheet-head"><h2>登录账户</h2><button @click="showLogin = false">×</button></div><p class="login-description">登录后可以同步自选股、收藏和交易偏好。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" placeholder="请输入手机号" @keyup.enter="submitLogin" /></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
-    <div v-if="showMessages" class="account-overlay" @click.self="showMessages = false"><section class="account-sheet panel message-sheet"><div class="sheet-head"><h2>消息中心</h2><button @click="showMessages = false">×</button></div><div class="message-item"><span class="message-dot" /><div><strong>行情服务已连接</strong><p>模拟行情数据已于 14:32 更新</p><small>刚刚</small></div></div><div class="message-item"><span class="message-dot orange-dot" /><div><strong>欢迎使用 Web 版自选股</strong><p>你可以在行情页添加关注标的</p><small>今天 09:30</small></div></div><div class="message-empty">没有更多消息了</div></section></div>
+    <div v-if="showMessages" class="account-overlay" @click.self="showMessages = false"><section class="account-sheet panel message-sheet"><div class="sheet-head"><h2>消息中心</h2><button @click="showMessages = false">×</button></div><div v-for="message in messages" :key="message.id" class="message-item"><span class="message-dot" /><div><strong>{{ message.title }}</strong><p>{{ message.content }}</p><small>{{ new Date(message.createdAt).toLocaleString('zh-CN') }}</small></div></div><div v-if="!messages.length" class="message-empty">暂无消息</div></section></div>
     <Transition name="toast"><div v-if="toast" class="toast-message">{{ toast }}</div></Transition>
   </section>
 </template>

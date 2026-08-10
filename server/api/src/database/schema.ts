@@ -65,6 +65,7 @@ export const tradeOrders = pgTable('trade_orders', {
   side: varchar('side', { length: 8 }).notNull(),
   quantity: integer('quantity').notNull(),
   price: numeric('price', { precision: 20, scale: 6 }).notNull(),
+  fee: numeric('fee', { precision: 20, scale: 6 }).notNull().default('0'),
   status: varchar('status', { length: 16 }).notNull(),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCreatedIdx: index('trade_orders_user_created_idx').on(table.userId, table.createdAt) }))
@@ -90,8 +91,19 @@ export const priceAlerts = pgTable('price_alerts', {
   code: varchar('code', { length: 32 }).notNull(),
   targetPrice: numeric('target_price', { precision: 20, scale: 6 }).notNull(),
   direction: varchar('direction', { length: 8 }).notNull(),
+  repeat: boolean('repeat').notNull().default(false),
   enabled: boolean('enabled').notNull().default(true),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCodeIdx: index('price_alerts_user_code_idx').on(table.userId, table.code) }))
+
+export const notifications = pgTable('notifications', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  type: varchar('type', { length: 32 }).notNull(),
+  title: varchar('title', { length: 200 }).notNull(),
+  content: varchar('content', { length: 2000 }).notNull(),
+  readAt: timestamp('read_at', { withTimezone: true }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userCreatedIdx: index('notifications_user_created_idx').on(table.userId, table.createdAt) }))
 
 export type User = typeof users.$inferSelect

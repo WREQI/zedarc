@@ -2,10 +2,12 @@
 import { computed, onMounted, ref } from 'vue'
 import { getMarketStocksSnapshot } from '@/services/market'
 import type { StockQuote } from '@/mock/market'
-import { loadDemoAccount, saveDemoAccount, type DemoAccount } from '@/services/trade'
+import { cancelTrade, getTradeAccount, getTradeOrders, getTradePositions, getTradeStats, loadDemoAccount, placeTrade, saveDemoAccount, type DemoAccount } from '@/services/trade'
+import { getAccessToken } from '@/services/api-client'
 
 const marketStocks = getMarketStocksSnapshot()
 const demoMode = ref(false)
+const apiMode = ref(false)
 const showAccountModal = ref(false)
 const accountModalTitle = ref('')
 const tradeSide = ref<'buy' | 'sell'>('buy')
@@ -18,7 +20,8 @@ const holdings = ref([
   { ...marketStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' },
   { ...marketStocks[2], quantity: 200, cost: '251.40', marketValue: '53,700.00' },
 ])
-const orders = ref([
+interface PageOrder { id?: string; time: string; name: string; side: string; price: string; quantity: number; status: string }
+const orders = ref<PageOrder[]>([
   { time: '14:26:08', name: '宁德时代', side: '买入', price: '196.80', quantity: 200, status: '已报' },
   { time: '10:18:42', name: '比亚迪', side: '卖出', price: '270.20', quantity: 100, status: '已成' },
 ])
@@ -34,8 +37,26 @@ const holdingsMarketValue = computed(() => holdings.value.reduce((sum, holding) 
 const totalAssets = computed(() => availableCash.value + holdingsMarketValue.value)
 function holdingGain(holding: (typeof holdings.value)[number]) { return (Number(holding.price.replace(',', '')) - Number(holding.cost)) * holding.quantity }
 const todayPnL = computed(() => holdings.value.reduce((sum, holding) => sum + holdingGain(holding), 0))
+const tradeStats = ref({ orderCount: 0, buyAmount: 0, sellAmount: 0, fees: 0, realizedPnL: 0 })
 
-onMounted(() => {
+onMounted(async () => {
+  if (getAccessToken()) {
+    try {
+      const [account, positions, remoteOrders, stats] = await Promise.all([getTradeAccount(), getTradePositions(), getTradeOrders(), getTradeStats()])
+      availableCash.value = account.availableCash
+            tradeStats.value = stats
+      holdings.value = positions.map((position) => {
+        const stock = marketStocks.find((item) => item.code === position.code) ?? { code: position.code, name: position.code, price: position.averagePrice.toFixed(2), change: '0.00', percent: '0.00%', volume: '-', trend: 'up' as const }
+        return { ...stock, quantity: position.quantity, cost: position.averagePrice.toFixed(2), marketValue: (position.quantity * position.averagePrice).toFixed(2) }
+      })
+      orders.value = remoteOrders.map((order) => ({ id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: marketStocks.find((item) => item.code === order.code)?.name ?? order.code, side: order.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' }))
+      apiMode.value = true
+      demoMode.value = true
+      return
+    } catch {
+      showToast('交易 API 暂不可用，已切换本地模拟')
+    }
+  }
   const data = loadDemoAccount()
   if (!data) return
   if (typeof data.availableCash === 'number') availableCash.value = data.availableCash
@@ -64,17 +85,33 @@ function openAccount(title: string) { accountModalTitle.value = title; showAccou
 function enterDemo() { showAccountModal.value = false; demoMode.value = true }
 function selectStock(stock: StockQuote) { selectedStock.value = stock; price.value = stock.price.replace(',', ''); stockKeyword.value = '' }
 function showToast(message: string) { toast.value = message; window.setTimeout(() => { toast.value = '' }, 2200) }
-function cancelOrder(index: number) {
+async function cancelOrder(index: number) {
   const order = orders.value[index]
   if (!order || order.status !== '已报') return
+  if (apiMode.value && order.id) {
+    try {
+      await cancelTrade(order.id)
+      order.status = '已撤'
+      showToast(`${order.name} 委托已撤销`)
+      return
+    } catch { apiMode.value = false; showToast('API 撤单失败，已切换本地模拟') }
+  }
   order.status = '已撤'
   persistDemo()
   showToast(`${order.name} 委托已撤销`)
 }
-function submitOrder() {
+async function submitOrder() {
   if (!selectedStock.value || quantity.value < 100 || quantity.value % 100 !== 0) { showToast('交易数量需为 100 股的整数倍'); return }
   if (tradeSide.value === 'buy' && estimatedAmount.value > availableCash.value) { showToast('可用资金不足'); return }
   if (tradeSide.value === 'sell' && (!currentHolding.value || quantity.value > currentHolding.value.quantity)) { showToast('持仓数量不足'); return }
+  if (apiMode.value) {
+    try {
+      const order = await placeTrade({ code: selectedStock.value.code, side: tradeSide.value, quantity: quantity.value, price: Number(price.value) })
+      orders.value.unshift({ id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: selectedStock.value.name, side: tradeSide.value === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' })
+      showToast(`${selectedStock.value.name} ${tradeSide.value === 'buy' ? '买入' : '卖出'}委托已提交`)
+      return
+    } catch { apiMode.value = false; showToast('API 下单失败，已切换本地模拟') }
+  }
   orders.value.unshift({ time: new Date().toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: selectedStock.value.name, side: tradeSide.value === 'buy' ? '买入' : '卖出', price: Number(price.value).toFixed(2), quantity: quantity.value, status: '已报' })
   if (tradeSide.value === 'buy') {
     availableCash.value -= estimatedAmount.value
@@ -109,12 +146,12 @@ function submitOrder() {
     </template>
 
     <template v-else>
-      <section class="panel assets-card"><div><p class="eyebrow">SIMULATION ACCOUNT</p><h2>模拟账户资产</h2><strong class="assets-total mono">{{ totalAssets.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div class="asset-stats"><div><small>可用资金</small><strong class="mono">{{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>持仓市值</small><strong class="mono">{{ holdingsMarketValue.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>今日盈亏</small><strong class="mono" :class="todayPnL >= 0 ? 'text-up' : 'text-down'">{{ todayPnL >= 0 ? '+' : '' }}{{ todayPnL.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div></div><div class="asset-actions"><button class="reset-button" @click="resetDemo">重置数据</button><button class="secondary-button" @click="demoMode = false">退出模拟</button></div></section>
-      <section class="trade-workbench"><article class="panel order-form"><div class="trade-side-tabs"><button :class="{ selected: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ selected: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><label class="form-label">股票</label><div class="stock-picker"><input v-model="stockKeyword" placeholder="输入名称或代码" /><span v-if="selectedStock">{{ selectedStock.name }} {{ selectedStock.code }}</span></div><div v-if="stockKeyword" class="stock-suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)">{{ stock.name }} <small>{{ stock.code }}</small><b>{{ stock.price }}</b></button></div><label class="form-label">价格</label><div class="number-input"><input v-model="price" inputmode="decimal" /><span>元</span></div><div class="price-hints"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="form-label">数量</label><div class="number-input"><input v-model.number="quantity" type="number" min="100" step="100" /><span>股</span></div><div class="quantity-hints"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = maxBuy">最大</button></div><div class="order-estimate"><span>预计金额</span><strong class="mono">{{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><button class="submit-order" :class="tradeSide" @click="submitOrder">{{ tradeSide === 'buy' ? '买入' : '卖出' }} {{ selectedStock.name }}</button></article><article class="panel holdings-panel"><div class="block-title"><h2>我的持仓</h2><span class="muted">模拟数据</span></div><div v-for="holding in holdings" :key="holding.code" class="holding-row"><div><strong>{{ holding.name }}</strong><small>{{ holding.code }} · {{ holding.quantity }} 股</small></div><div class="holding-value"><strong class="mono">{{ (Number(holding.price.replace(',', '')) * holding.quantity).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong><span class="mono" :class="holdingGain(holding) >= 0 ? 'text-up' : 'text-down'">{{ holdingGain(holding) >= 0 ? '+' : '' }}{{ holdingGain(holding).toFixed(2) }}</span></div></div></article></section>
+      <section class="panel assets-card"><div><p class="eyebrow">SIMULATION ACCOUNT</p><h2>模拟账户资产</h2><strong class="assets-total mono">{{ totalAssets.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div class="asset-stats"><div><small>可用资金</small><strong class="mono">{{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>持仓市值</small><strong class="mono">{{ holdingsMarketValue.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>今日盈亏</small><strong class="mono" :class="todayPnL >= 0 ? 'text-up' : 'text-down'">{{ todayPnL >= 0 ? '+' : '' }}{{ todayPnL.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div><small>累计手续费</small><strong class="mono">{{ tradeStats.fees.toFixed(2) }}</strong></div></div><div class="asset-actions"><button class="reset-button" @click="resetDemo">重置数据</button><button class="secondary-button" @click="demoMode = false">退出模拟</button></div></section>
+      <section class="trade-workbench"><article class="panel order-form"><div class="trade-side-tabs"><button :class="{ selected: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ selected: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><label class="form-label">股票</label><div class="stock-picker"><input v-model="stockKeyword" placeholder="输入名称或代码" /><span v-if="selectedStock">{{ selectedStock.name }} {{ selectedStock.code }}</span></div><div v-if="stockKeyword" class="stock-suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)">{{ stock.name }} <small>{{ stock.code }}</small><b>{{ stock.price }}</b></button></div><label class="form-label">价格</label><div class="number-input"><input v-model="price" inputmode="decimal" /><span>元</span></div><div class="price-hints"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="form-label">数量</label><div class="number-input"><input v-model.number="quantity" type="number" min="100" step="100" /><span>股</span></div><div class="quantity-hints"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = maxBuy">最大</button></div><div class="order-estimate"><span>预计金额</span><strong class="mono">{{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><button class="submit-order" :class="tradeSide" @click="submitOrder">{{ tradeSide === 'buy' ? '买入' : '卖出' }} {{ selectedStock.name }}</button></article><article class="panel holdings-panel"><div class="block-title"><h2>我的持仓</h2><span class="muted">{{ apiMode ? 'API 数据' : '本地模拟数据' }}</span></div><div v-for="holding in holdings" :key="holding.code" class="holding-row"><div><strong>{{ holding.name }}</strong><small>{{ holding.code }} · {{ holding.quantity }} 股</small></div><div class="holding-value"><strong class="mono">{{ (Number(holding.price.replace(',', '')) * holding.quantity).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong><span class="mono" :class="holdingGain(holding) >= 0 ? 'text-up' : 'text-down'">{{ holdingGain(holding) >= 0 ? '+' : '' }}{{ holdingGain(holding).toFixed(2) }}</span></div></div></article></section>
       <section class="panel orders-panel"><div class="block-title"><h2>当日委托</h2><span class="muted">{{ orders.length }} 条记录</span></div><div class="orders-table"><div class="orders-header"><span>时间</span><span>股票</span><span>方向</span><span>价格 / 数量</span><span>状态</span><span>操作</span></div><div v-for="(order, index) in orders" :key="order.time + order.name + index" class="orders-row"><span class="mono muted">{{ order.time }}</span><strong>{{ order.name }}</strong><span :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</span><span class="mono">{{ order.price }} / {{ order.quantity }}</span><span class="order-status" :class="{ cancelled: order.status === '已撤' }">{{ order.status }}</span><button v-if="order.status === '已报'" class="cancel-order" @click="cancelOrder(index)">撤单</button><span v-else class="order-action-muted">—</span></div></div></section>
     </template>
 
-    <section class="panel trade-notice"><span>ⓘ</span><div><strong>交易能力迁移说明</strong><p>当前为前端模拟交易，不会产生真实委托。后续将根据券商能力接入 H5 交易或跳转券商 App。</p></div></section>
+    <section class="panel trade-notice"><span>ⓘ</span><div><strong>模拟交易规则</strong><p>工作日 09:30-11:30、13:00-15:00可交易；每笔数量须为100股整数倍。手续费按成交额万三计，最低5元，卖出另收千一印花税。</p><strong>交易能力迁移说明</strong><p>当前为演示交易，优先调用服务端模拟交易 API；API 不可用时自动回退到浏览器本地数据，不会产生真实券商委托。</p></div></section>
     <div v-if="showAccountModal" class="account-modal-mask" @click.self="showAccountModal = false"><div class="account-modal panel"><button class="modal-close" @click="showAccountModal = false">×</button><span class="account-icon">◈</span><h2>{{ accountModalTitle }}</h2><p>Web 版本将通过券商 H5 或 OAuth 方式完成账户接入，当前可以先体验模拟交易。</p><button class="primary-button" @click="enterDemo">使用模拟账户</button></div></div><div v-if="toast" class="trade-toast">{{ toast }}</div>
   </section>
 </template>

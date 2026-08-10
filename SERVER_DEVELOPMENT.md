@@ -42,9 +42,11 @@ docker compose up -d --build
 
 访问：
 
-- Web：`http://127.0.0.1:8080`
+- Web：`http://127.0.0.1:18080`
 - API：`http://127.0.0.1:3000`
 - Swagger：`http://127.0.0.1:3000/docs`
+
+生产部署请使用 `docker-compose.production.yml` overlay，配置域名、证书和真实短信 provider，详见 [`docs/production.md`](docs/production.md)。
 
 查看日志：
 
@@ -59,7 +61,11 @@ docker compose logs -f market-worker
 
 - `POSTGRES_PASSWORD`
 - `JWT_SECRET`
-- `MOCK_LOGIN_CODE`
+- `SMS_PROVIDER`（本地默认 `mock`，生产必须为 `http`）
+- `MOCK_LOGIN_CODE`（仅非生产环境）
+- `SMS_PROVIDER_URL` / `SMS_PROVIDER_API_KEY` / `SMS_TEMPLATE_ID`（真实短信 provider）
+- `SMS_CODE_TTL_SECONDS` / `SMS_SEND_INTERVAL_SECONDS` / `SMS_MAX_ATTEMPTS`
+- `REFRESH_TOKEN_TTL_SECONDS` / `ACCESS_TOKEN_TTL_SECONDS`
 - `MARKET_CODES`
 - `MARKET_INTERVAL_MS`
 
@@ -83,7 +89,7 @@ Redis 和 PostgreSQL 只通过 Docker 内网访问，不要把 `6379` 或 `5432`
 - worker：容器内 `GET http://127.0.0.1:9090/health`（含 Redis readiness）
 - web：`GET /health`
 
-基础 Prometheus 文本指标：API `GET /api/metrics`、worker `GET http://127.0.0.1:9090/metrics`、web `GET /metrics`。服务日志直接输出到 stdout/stderr，可用 `docker compose logs -f api market-worker` 查看。
+基础 Prometheus 文本指标：API `GET /api/metrics`、worker `GET http://127.0.0.1:9090/metrics`、web `GET /metrics`。服务日志直接输出到 stdout/stderr，可用 `docker compose logs -f api market-worker` 查看。备份、Redis AOF 和告警阈值见 [`docs/production.md`](docs/production.md)。
 
 ## 验证
 

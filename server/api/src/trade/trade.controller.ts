@@ -10,6 +10,7 @@ export class TradeController {
   @Get('account') account(@Req() req: { user: AuthUser }) { return this.service.account(req.user.id) }
   @Get('orders') orders(@Req() req: { user: AuthUser }) { return this.service.listOrders(req.user.id) }
   @Get('positions') positions(@Req() req: { user: AuthUser }) { return this.service.listPositions(req.user.id) }
+  @Get('stats') stats(@Req() req: { user: AuthUser }) { return this.service.stats(req.user.id) }
   @Post('orders') place(@Req() req: { user: AuthUser }, @Body() body: { code: string; side?: 'buy' | 'sell'; quantity: number; price: number }) { return this.service.place(req.user.id, body) }
   @Post('order') placeCompat(@Req() req: { user: AuthUser }, @Body() body: { code: string; side?: 'buy' | 'sell'; quantity: number; price: number }) { return this.service.place(req.user.id, body) }
   @Delete('orders/:id') cancel(@Req() req: { user: AuthUser }, @Param('id') id: string) { return this.service.cancel(req.user.id, id) }

@@ -1,5 +1,5 @@
 import { KlineCategory, TdxClient } from 'node-tdx-market'
-import type { KlineBar, NormalizedQuote } from '@zedarc/shared'
+import { normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type KlineBar, type NormalizedQuote } from '@zedarc/shared'
 
 function prefixed(code: string) {
   if (/^(sh|sz|bj)/i.test(code)) return code.toLowerCase()
@@ -8,23 +8,64 @@ function prefixed(code: string) {
 function yuan(value: number) { return value / 1000 }
 
 export class TdxProvider {
-  private readonly client = new TdxClient({ autoReconnect: false })
+  private readonly client = new TdxClient({ autoReconnect: true })
+  private connecting?: Promise<void>
+
+  constructor() {
+    this.client.on('error', (error) => console.warn('[market-worker] TDX connection error:', error instanceof Error ? error.message : error))
+  }
+
+  private async ensureConnected() {
+    if (this.client.isConnected) return
+    if (!this.connecting) {
+      this.connecting = this.client.connect().then(() => undefined).finally(() => { this.connecting = undefined })
+    }
+    await this.connecting
+  }
+
+  private async request<T>(operation: () => Promise<T>): Promise<T> {
+    await this.ensureConnected()
+    try {
+      return await operation()
+    } catch (error) {
+      // A request can race a socket failure. Let the library reconnect, then retry once.
+      await new Promise((resolve) => setTimeout(resolve, 150))
+      await this.ensureConnected()
+      return operation().catch(() => { throw error })
+    }
+  }
 
   async getQuotes(codes: string[]): Promise<NormalizedQuote[]> {
-    const rows = await this.client.getQuote(codes.map(prefixed))
-    return rows.map((row) => {
+    const rows = await this.request(() => this.client.getQuote(codes.map(prefixed)))
+    const values = rows.map((row) => {
       const price = yuan(row.price)
       const prevClose = yuan(row.lastClose)
       const change = price - prevClose
-      return { code: row.code, name: row.code, price, prevClose, change, changePercent: prevClose ? change / prevClose * 100 : 0, volume: row.volume, amount: row.amount, timestamp: Date.now(), source: 'tdx' }
+      return { code: normalizeMarketCode(row.code), name: row.code, price, prevClose, change, changePercent: prevClose ? change / prevClose * 100 : 0, volume: row.volume, amount: row.amount, timestamp: Date.now(), source: 'tdx' as const }
     })
+    const valid = validateNormalizedQuotes(values, codes)
+    if (!valid.length && rows.length) throw new Error('TDX returned invalid quote data')
+    return valid
   }
 
-  async getKline(code: string, count = 240): Promise<KlineBar[]> {
-    const response = await this.client.getKline({ code: prefixed(code), category: KlineCategory.Day, start: 0, count })
-    return response.bars.map((bar) => ({ date: bar.time.toISOString().slice(0, 10), timestamp: bar.time.getTime(), open: yuan(bar.open), close: yuan(bar.close), high: yuan(bar.high), low: yuan(bar.low), volume: bar.volume, amount: bar.amount, source: 'tdx' }))
+  async getKline(code: string, count = 240, start = 0, category: KlineCategory = KlineCategory.Day): Promise<KlineBar[]> {
+    const response = await this.request(() => this.client.getKline({ code: prefixed(code), category, start, count }))
+    const bars = response.bars.map((bar) => ({ date: bar.time.toISOString().slice(0, 10), timestamp: bar.time.getTime(), open: yuan(bar.open), close: yuan(bar.close), high: yuan(bar.high), low: yuan(bar.low), volume: bar.volume, amount: bar.amount, source: 'tdx' as const }))
+    const valid = validateKlineBars(bars)
+    if (!valid.length && response.bars.length) throw new Error(`TDX returned invalid K-line data for ${code}`)
+    return valid
   }
 
-  async connect() { await this.client.connect() }
+  async getMinute(code: string) {
+    return this.request(() => this.client.getMinute(prefixed(code)))
+  }
+
+  async getQuoteBook(code: string) {
+    const row = (await this.request(() => this.client.getQuote(prefixed(code))))[0]
+    if (!row) throw new Error(`TDX quote not found for ${code}`)
+    return { code, timestamp: Date.now(), bids: row.bid.map((level) => [yuan(level.price), level.volume] as [number, number]), asks: row.ask.map((level) => [yuan(level.price), level.volume] as [number, number]) }
+  }
+
+  async connect() { await this.ensureConnected() }
   disconnect() { this.client.disconnect() }
 }

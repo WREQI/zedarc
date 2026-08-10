@@ -6,13 +6,20 @@ export interface MarketEvent { type: string; channel: string; data: unknown; tim
 
 @Injectable()
 export class RealtimeService implements OnModuleInit, OnModuleDestroy {
-  private readonly subscriber: RedisClientType = createClient({ url: process.env.REDIS_URL ?? 'redis://localhost:6379' })
+  private readonly subscriber: RedisClientType = createClient({ url: process.env.REDIS_URL ?? 'redis://localhost:6379', socket: { connectTimeout: 500, reconnectStrategy: false } })
   private readonly eventsSubject = new Subject<MarketEvent>()
   private readonly logger = new Logger(RealtimeService.name)
   readonly events$ = this.eventsSubject.asObservable()
   private enabled = false
   private reconnectTimer?: ReturnType<typeof setTimeout>
+  private connectPromise?: Promise<void>
+  private reconnectAttempt = 0
   private stopping = false
+
+  constructor() {
+    this.subscriber.on('error', (error) => this.handleDisconnect(error))
+    this.subscriber.on('end', () => this.handleDisconnect())
+  }
 
   async onModuleInit() { await this.connect() }
   async onModuleDestroy() {
@@ -25,6 +32,12 @@ export class RealtimeService implements OnModuleInit, OnModuleDestroy {
 
   private async connect() {
     if (this.stopping || this.subscriber.isOpen) return
+    if (this.connectPromise) return this.connectPromise
+    this.connectPromise = this.openSubscription().finally(() => { this.connectPromise = undefined })
+    return this.connectPromise
+  }
+
+  private async openSubscription() {
     try {
       await this.subscriber.connect()
       await this.subscriber.pSubscribe('market:*', (message, channel) => {
@@ -34,13 +47,17 @@ export class RealtimeService implements OnModuleInit, OnModuleDestroy {
         } catch { this.eventsSubject.next({ type: 'market', channel, data: message, timestamp: Date.now() }) }
       })
       this.enabled = true
-      this.subscriber.once('error', (error) => this.handleDisconnect(error))
-      this.subscriber.once('end', () => this.handleDisconnect())
-    } catch (error) { this.handleDisconnect(error) }
+      this.reconnectAttempt = 0
+    } catch (error) {
+      this.handleDisconnect(error)
+    }
   }
   private handleDisconnect(error?: unknown) {
     this.enabled = false
     if (error) this.logger.warn(`Redis realtime disconnected: ${error instanceof Error ? error.message : String(error)}`)
-    if (!this.stopping && !this.reconnectTimer) this.reconnectTimer = setTimeout(() => { this.reconnectTimer = undefined; void this.connect() }, 2000)
+    if (!this.stopping && !this.reconnectTimer) {
+      const delay = Math.min(30000, 1000 * 2 ** Math.min(this.reconnectAttempt++, 5))
+      this.reconnectTimer = setTimeout(() => { this.reconnectTimer = undefined; void this.connect() }, delay)
+    }
   }
 }

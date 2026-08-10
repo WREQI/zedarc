@@ -22,8 +22,16 @@ export async function getMarketStocks(): Promise<StockQuote[]> {
 }
 
 export async function getBoardQuotes(board: string): Promise<MarketBoardQuote[]> {
-  // stock-sdk does not expose the same board ranking shape as the original mini-program.
-  // Keep the mock board data until a dedicated board endpoint is introduced.
+  const endpoint = board === '板块' ? '/api/market/sectors' : board === 'ETF' ? '/api/market/etfs?limit=50' : ''
+  if (endpoint) {
+    try {
+      const response = await fetch(endpoint)
+      if (response.ok) {
+        const values = await response.json() as Array<{ code: string; name: string; price?: number; changePercent: number; volume?: number; amount?: number; leadingStock?: string }>
+        if (values.length) return values.map((item) => ({ code: item.code, name: item.name, price: item.price == null ? '--' : item.price.toFixed(3), change: item.price == null ? '--' : `${item.changePercent >= 0 ? '+' : ''}${item.changePercent.toFixed(2)}`, percent: `${item.changePercent >= 0 ? '+' : ''}${item.changePercent.toFixed(2)}%`, extra: item.leadingStock ?? (item.amount == null ? '' : `成交 ${formatAmount(item.amount)}`), trend: item.changePercent >= 0 ? 'up' : 'down' }))
+      }
+    } catch { /* local development may run without the API container */ }
+  }
   await delay()
   return clone(marketBoards[board] ?? [])
 }
@@ -32,12 +40,19 @@ export async function searchStocks(keyword: string): Promise<StockQuote[]> {
   const query = keyword.trim().toLowerCase()
   if (!query) return []
   try {
+    const response = await fetch(`/api/market/search?q=${encodeURIComponent(query)}`)
+    if (response.ok) {
+      const results = await response.json() as Array<{ code: string; name: string; type?: string }>
+      if (results.length) return results.map((item) => ({ code: item.code, name: item.name, price: '--', change: '--', percent: '--', volume: item.type ?? '证券', trend: 'up' as const }))
+    }
+  } catch { /* local development may run without the API container */ }
+  try {
     const realStocks = await getRealStocks()
-    const matches = realStocks.filter((stock) => stock.name.includes(query) || stock.code.includes(query))
+    const matches = realStocks.filter((stock) => stock.name.toLowerCase().includes(query) || stock.code.toLowerCase().includes(query))
     if (matches.length) return matches
   } catch { /* fall through to the local catalogue */ }
   const stocks = await getMarketStocks()
-  return stocks.filter((stock) => stock.name.includes(query) || stock.code.includes(query))
+  return stocks.filter((stock) => stock.name.toLowerCase().includes(query) || stock.code.toLowerCase().includes(query))
 }
 
 export async function getStockQuote(code: string): Promise<StockQuote | undefined> {
@@ -58,6 +73,10 @@ export async function getStockQuote(code: string): Promise<StockQuote | undefine
 
 function toStockQuote(quote: { code: string; name: string; price: number; change: number; changePercent: number; volume: number }): StockQuote {
   return { code: quote.code, name: quote.name, price: quote.price.toFixed(2), change: `${quote.change >= 0 ? '+' : ''}${quote.change.toFixed(2)}`, percent: `${quote.changePercent >= 0 ? '+' : ''}${quote.changePercent.toFixed(2)}%`, volume: quote.volume >= 100000000 ? `${(quote.volume / 100000000).toFixed(1)}亿` : `${(quote.volume / 10000).toFixed(1)}万`, trend: quote.change >= 0 ? 'up' : 'down' }
+}
+
+function formatAmount(value: number) {
+  return value >= 100000000 ? `${(value / 100000000).toFixed(1)}亿` : `${(value / 10000).toFixed(1)}万`
 }
 
 function delay() {

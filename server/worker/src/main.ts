@@ -1,7 +1,10 @@
 import { createServer } from 'node:http'
 import { createClient, type RedisClientType } from 'redis'
 import { getSdkEtfs, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
+import { validateKlineBars, validateNormalizedQuotes } from '@zedarc/shared'
+import { KlineCategory } from 'node-tdx-market'
 import { TdxProvider } from './providers/tdx.provider.js'
+import { checkPriceAlerts } from './alerts/alert.worker.js'
 
 const redis: RedisClientType = createClient({ url: process.env.REDIS_URL ?? 'redis://localhost:6379' })
 const codes = (process.env.MARKET_CODES ?? '600519,000001,300750,600036').split(',').map((code) => code.trim()).filter(Boolean)
@@ -25,8 +28,10 @@ async function markProvider(name: string, ok: boolean, error?: unknown) {
   await cache('market:provider:status', { provider: ok ? name : 'unavailable', ok, lastSuccess, checkedAt: Date.now(), error: error instanceof Error ? error.message : undefined }, 300)
 }
 async function writeQuotes(quotes: Awaited<ReturnType<typeof getSdkQuotes>>) {
-  await Promise.all(quotes.map(async (quote) => { await cache(`quote:${quote.code}`, quote, 30); await publish(`market:quote:${quote.code}`, quote); await publish('market:quote', quote) }))
-  await publish('market:quotes', quotes)
+  const valid = validateNormalizedQuotes(quotes, codes)
+  if (!valid.length && quotes.length) throw new Error('refusing to cache invalid normalized quotes')
+  await Promise.all(valid.map(async (quote) => { await cache(`quote:${quote.code}`, quote, 30); await publish(`market:quote:${quote.code}`, quote); await publish('market:quote', quote) }))
+  await publish('market:quotes', valid)
   await publish('market:updates', quotes)
 }
 async function collectReferenceData() {
@@ -44,7 +49,22 @@ async function collect() {
     provider = 'tdx'
     await markProvider('tdx', true)
     await writeQuotes(quotes)
-    for (const code of codes) { try { const bars = await tdx.getKline(code); await cache(`kline:daily:${code}`, bars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars }) } catch (error) { console.warn(`[market-worker] TDX K-line unavailable for ${code}:`, error instanceof Error ? error.message : error) } }
+    for (const code of codes) {
+      try {
+        const periods = [['daily', KlineCategory.Day], ...(collections === 1 || collections % 12 === 0 ? [['weekly', KlineCategory.Week], ['monthly', KlineCategory.Month]] as const : [])] as const
+        for (const [period, category] of periods) {
+          const bars = await tdx.getKline(code, 240, 0, category)
+          const validBars = validateKlineBars(bars)
+          if (!validBars.length && bars.length) throw new Error(`refusing to cache invalid K-line data for ${code}`)
+          await cache(`kline:${period}:${code}`, validBars, 3600)
+          await publish(`market:kline:${code}`, { code, period, bars })
+        }
+        const minute = await tdx.getMinute(code)
+        await cache(`intraday:${code}`, minute.items.map((item) => ({ date: item.time, timestamp: Date.now(), open: item.price, close: item.price, high: item.price, low: item.price, volume: item.volume, amount: item.price * item.volume, source: 'tdx' })), 30)
+        await publish(`market:intraday:${code}`, { code, items: minute.items })
+        await cache(`orderbook:${code}`, await tdx.getQuoteBook(code), 15)
+      } catch (error) { console.warn(`[market-worker] TDX chart data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
+    }
     console.log(`[market-worker] TDX updated ${quotes.length} quotes`)
   } catch (error) {
     failures += 1
@@ -56,11 +76,12 @@ async function collect() {
       quotes = await getSdkQuotes(codes)
       await markProvider('stock-sdk', true)
       await writeQuotes(quotes)
-      for (const code of codes) { try { const bars = await getSdkKline(code); await cache(`kline:daily:${code}`, bars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars }) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
+      for (const code of codes) { try { const bars = await getSdkKline(code); const validBars = validateKlineBars(bars); if (!validBars.length && bars.length) throw new Error('invalid K-line data'); await cache(`kline:daily:${code}`, validBars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars: validBars }) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
       console.log(`[market-worker] stock-sdk updated ${quotes.length} quotes`)
     } catch (sdkError) { await markProvider('stock-sdk', false, sdkError); console.warn('[market-worker] all market providers unavailable:', sdkError instanceof Error ? sdkError.message : sdkError) }
   }
   if (quotes.length) await collectReferenceData()
+  try { const triggered = await checkPriceAlerts(redis); if (triggered) console.log(`[alert-worker] triggered ${triggered} price alerts`) } catch (error) { console.warn('[alert-worker] alert check failed:', error instanceof Error ? error.message : error) }
 }
 
 const healthPort = Number(process.env.HEALTH_PORT ?? 9090)
