@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { getNotifications, markNotificationsRead, type NotificationItem } from '@/services/notifications'
@@ -42,6 +42,16 @@ function persistSetting(key: string, value: boolean) {
   window.localStorage.setItem(key, String(value))
 }
 
+function stopCountdown() {
+  window.clearInterval(countdownTimer)
+  countdownTimer = undefined
+  countdown.value = 0
+}
+function closeLogin() {
+  showLogin.value = false
+  code.value = ''
+  stopCountdown()
+}
 function sendCode() {
   if (!/^1\d{10}$/.test(phone.value)) { showToast('请输入有效的手机号'); return }
   countdown.value = 60
@@ -57,10 +67,11 @@ async function submitLogin() {
   showLogin.value = false
   phone.value = ''
   code.value = ''
-  window.clearInterval(countdownTimer)
-  countdown.value = 0
+  stopCountdown()
   showToast('登录成功')
 }
+onUnmounted(stopCountdown)
+
 function handleMenu(title: string) {
   if (title === '浏览历史') { router.push('/watchlist'); return }
   if (title === '我的收藏') { router.push('/news?saved=1'); return }
@@ -84,7 +95,7 @@ function showToast(message: string) {
     <section class="account-menu panel"><div v-for="item in menuItems" :key="item.title" class="account-menu-item" @click="handleMenu(item.title)"><span class="menu-icon">{{ item.icon }}</span><div><strong>{{ item.title }}</strong><b v-if="item.title === '消息中心' && unreadMessages" class="unread-badge">{{ unreadMessages }}</b><p>{{ item.title === '浏览历史' ? `${item.subtitle} · ${recentCount} 条` : item.title === '我的收藏' ? `${item.subtitle} · ${savedCount} 条` : item.subtitle }}</p></div><span class="menu-arrow">›</span></div></section>
     <p class="account-version">腾讯自选股 Web · MVP 预览版</p>
     <div v-if="showSettings" class="account-overlay" @click.self="showSettings = false"><section class="account-sheet panel"><div class="sheet-head"><h2>设置</h2><button @click="showSettings = false">×</button></div><div class="setting-row"><div><strong>资讯推送</strong><small>接收市场热点和重要资讯</small></div><button class="switch" :class="{ on: notifications }" @click="notifications = !notifications; persistSetting('zedarc-setting-notifications', notifications)"><i /></button></div><div class="setting-row"><div><strong>价格提醒</strong><small>自选股涨跌幅达到阈值时提醒</small></div><button class="switch" :class="{ on: priceAlerts }" @click="priceAlerts = !priceAlerts; persistSetting('zedarc-setting-price-alerts', priceAlerts)"><i /></button></div><div class="setting-row"><div><strong>主题模式</strong><small>当前使用浅色行情主题</small></div><span class="setting-value">浅色</span></div><button class="sheet-done" @click="showSettings = false">完成</button></section></div>
-    <div v-if="showLogin" class="account-overlay" @click.self="showLogin = false"><section class="account-sheet panel login-sheet"><div class="sheet-head"><h2>登录账户</h2><button @click="showLogin = false">×</button></div><p class="login-description">登录后可以同步自选股、收藏和交易偏好。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" placeholder="请输入手机号" /></label><label class="login-input"><span>验证码</span><input v-model="code" inputmode="numeric" maxlength="6" placeholder="请输入 6 位验证码" @keyup.enter="submitLogin" /><button class="code-button" :disabled="countdown > 0" @click="sendCode">{{ countdown > 0 ? `${countdown}s 后重发` : '获取验证码' }}</button></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
+    <div v-if="showLogin" class="account-overlay" @click.self="closeLogin"><section class="account-sheet panel login-sheet"><div class="sheet-head"><h2>登录账户</h2><button aria-label="关闭登录窗口" @click="closeLogin">×</button></div><p class="login-description">登录后可以同步自选股、收藏和交易偏好。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" placeholder="请输入手机号" /></label><label class="login-input"><span>验证码</span><input v-model="code" inputmode="numeric" maxlength="6" placeholder="请输入 6 位验证码" @keyup.enter="submitLogin" /><button class="code-button" :disabled="countdown > 0" @click="sendCode">{{ countdown > 0 ? `${countdown}s 后重发` : '获取验证码' }}</button></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
     <div v-if="showMessages" class="account-overlay" @click.self="showMessages = false"><section class="account-sheet panel message-sheet"><div class="sheet-head"><h2>消息中心</h2><button @click="showMessages = false">×</button></div><div v-for="message in messages" :key="message.id" class="message-item"><span class="message-dot" /><div><strong>{{ message.title }}</strong><p>{{ message.content }}</p><small>{{ new Date(message.createdAt).toLocaleString('zh-CN') }}</small></div></div><div v-if="!messages.length" class="message-empty">暂无消息</div></section></div>
     <Transition name="toast"><div v-if="toast" class="toast-message">{{ toast }}</div></Transition>
   </section>
