@@ -1,4 +1,4 @@
-import type { StockQuote } from '@/mock/market'
+import type { StockQuote } from '@/services/market-types'
 
 export interface DemoHolding extends StockQuote {
   quantity: number

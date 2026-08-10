@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 import EmptyState from '@/components/EmptyState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
-import type { MarketBoardQuote } from '@/mock/market'
+import type { MarketBoardQuote } from '@/services/market-types'
 import { getBoardQuotes } from '@/services/market'
 
 const route = useRoute()
