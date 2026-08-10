@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import LoadingState from '@/components/LoadingState.vue'
 import ErrorState from '@/components/ErrorState.vue'
 import { getIndexQuotes, getMarketStocks } from '@/services/market'
 import { getNewsArticles } from '@/services/news'
 import type { IndexQuote, StockQuote } from '@/mock/market'
 import type { NewsArticle } from '@/mock/news'
+
+const router = useRouter()
 
 const indices = ref<IndexQuote[]>([])
 const stocks = ref<StockQuote[]>([])
