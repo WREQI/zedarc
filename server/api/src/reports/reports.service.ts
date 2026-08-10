@@ -11,14 +11,14 @@ export class ReportsService {
 
   constructor(private readonly database: DatabaseService) {}
 
-  async list(code?: string, keyword?: string) {
+  async list(code?: string, keyword?: string, page = 1, pageSize = 20) {
     if (this.database.db) {
       try {
         const rows = await this.database.db.select().from(reports).orderBy(desc(reports.publishedAt))
-        return rows.map(this.toReport).filter((item) => this.matches(item, code, keyword))
+        const filtered = rows.map(this.toReport).filter((item) => this.matches(item, code, keyword)); return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
       } catch { /* Database is optional in local/demo deployments. */ }
     }
-    return this.items.filter((item) => this.matches(item, code, keyword))
+    const filtered = this.items.filter((item) => this.matches(item, code, keyword)); return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
   }
 
   async find(id: string) {

@@ -4,6 +4,6 @@ import { ReportsService } from './reports.service.js'
 @ApiTags('reports') @Controller('api/reports')
 export class ReportsController {
   constructor(private readonly service: ReportsService) {}
-  @Get() list(@Query('code') code?: string, @Query('keyword') keyword?: string) { return this.service.list(code, keyword) }
+  @Get() list(@Query('code') code?: string, @Query('keyword') keyword?: string, @Query('page') page?: string, @Query('pageSize') pageSize?: string) { return this.service.list(code, keyword, Number(page) || 1, Number(pageSize) || 20) }
   @Get(':id') find(@Param('id') id: string) { return this.service.find(id) }
 }

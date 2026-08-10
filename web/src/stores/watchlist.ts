@@ -24,7 +24,11 @@ export function useWatchlistStore() {
     if (!getAccessToken()) return
     try {
       const items = await apiFetch<Array<{ code: string }>>('/api/watchlist')
-      if (items.length) { selectedCodes.value = items.map((item) => item.code); persist() }
+      const remote = items.map((item) => item.code)
+      const merged = [...new Set([...remote, ...selectedCodes.value])]
+      selectedCodes.value = merged
+      persist()
+      await Promise.all(selectedCodes.value.filter((code) => !remote.includes(code)).map((code) => apiFetch('/api/watchlist', { method: 'POST', body: JSON.stringify({ code }) })))
     } catch { /* keep the local watchlist when the API is unavailable */ }
   }
   function toggle(code: string) {

@@ -1,16 +1,7 @@
 import { newsArticles, type NewsArticle } from '@/mock/news'
 import { apiFetch } from '@/services/api-client'
-
-export async function getNewsArticles(): Promise<NewsArticle[]> {
-  try {
-    const result = await apiFetch<{ items: NewsArticle[] }>('/api/news')
-    if (result.items?.length) return result.items
-  } catch { /* fallback to mock while the content provider is not configured */ }
-  await new Promise((resolve) => window.setTimeout(resolve, 180))
-  return structuredClone(newsArticles)
-}
-
-export async function getNewsArticle(id: number): Promise<NewsArticle | undefined> {
-  const articles = await getNewsArticles()
-  return articles.find((article) => article.id === id)
-}
+export interface NewsPage { items: NewsArticle[]; total: number; page: number; pageSize: number }
+function normalize(item: NewsArticle & { id: string | number; publishedAt?: string; codes?: string[] }) { const date = item.time ?? item.publishedAt?.slice(11, 16) ?? ''; return { ...item, id: Number(item.id) || item.id, time: date, tag: item.tag ?? (item.codes?.length ? '自选动态' : '要闻'), content: item.content ?? item.summary } as NewsArticle }
+export async function getNewsPage(options: { page?: number; pageSize?: number; keyword?: string; code?: string } = {}): Promise<NewsPage> { const query = new URLSearchParams(); Object.entries(options).forEach(([key, value]) => value != null && query.set(key, String(value))); try { const result = await apiFetch<{ items: NewsArticle[]; total: number; page: number; pageSize: number }>(`/api/news?${query}`); if (result.items) return { ...result, items: result.items.map(normalize) } } catch { /* local fallback */ } const source = structuredClone(newsArticles).filter((item) => !options.keyword || `${item.title}${item.summary}`.includes(options.keyword)); const page = options.page ?? 1; const pageSize = options.pageSize ?? 20; return { items: source.slice((page - 1) * pageSize, page * pageSize), total: source.length, page, pageSize } }
+export async function getNewsArticles() { return (await getNewsPage()).items }
+export async function getNewsArticle(id: number) { try { return normalize(await apiFetch<NewsArticle>(`/api/news/${encodeURIComponent(String(id))}`) as NewsArticle & { id: string | number }) } catch { return (await getNewsArticles()).find((article) => String(article.id) === String(id)) } }

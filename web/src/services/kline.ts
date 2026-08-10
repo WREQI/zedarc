@@ -1,3 +1,5 @@
+import { apiFetch } from '@/services/api-client'
+
 export interface KlineIndicator { k: number; d: number; j: number; rsi: number; sar: number; direction: 'up' | 'down' }
 
 export interface KlineCandle {
@@ -42,7 +44,7 @@ export function calculateKDJ(candles: KlineCandle[], period = 9) { let k = 50; l
 export function calculateRSI(candles: KlineCandle[], period = 14) { return candles.map((_, index) => { const source = candles.slice(Math.max(0, index - period + 1), index + 1); let gain = 0; let loss = 0; source.forEach((item, offset) => { const previous = source[offset - 1]; if (previous) { const change = item.close - previous.close; if (change > 0) gain += change; else loss -= change } }); return loss === 0 ? 100 : 100 - 100 / (1 + gain / Math.max(loss, 1e-9)) }) }
 export function calculateSAR(candles: KlineCandle[], step = .02, maximum = .2) { let sar = candles[0]?.low ?? 0; let extreme = candles[0]?.high ?? 0; let acceleration = step; let rising = true; return candles.map((candle, index) => { const previous = candles[index - 1]; if (previous) { sar += acceleration * (extreme - sar); if (rising && candle.low < sar) { rising = false; sar = extreme; extreme = candle.low; acceleration = step } else if (!rising && candle.high > sar) { rising = true; sar = extreme; extreme = candle.high; acceleration = step } else if (rising && candle.high > extreme) { extreme = candle.high; acceleration = Math.min(maximum, acceleration + step) } else if (!rising && candle.low < extreme) { extreme = candle.low; acceleration = Math.min(maximum, acceleration + step) } } return sar }) }
 
-export async function getKlineIndicators(code: string, period = 'daily', params: Record<string, number> = {}) { const query = new URLSearchParams({ code, period, ...Object.fromEntries(Object.entries(params).map(([key, value]) => [key, String(value)])) }); const response = await fetch(`/api/kline/indicators?${query}`); if (!response.ok) throw new Error('指标请求失败'); return response.json() as Promise<{ bars: KlineCandle[]; indicators: KlineIndicator[] }> }
+export async function getKlineIndicators(code: string, period = 'daily', params: Record<string, number> = {}) { const query = new URLSearchParams({ code, period, ...Object.fromEntries(Object.entries(params).map(([key, value]) => [key, String(value)])) }); return apiFetch<{ bars: KlineCandle[]; indicators: KlineIndicator[] }>(`/api/kline/indicators?${query}`) }
 
 export async function getKlineSeries(code: string, period: 'daily' | 'weekly' | 'monthly' = 'daily', adjust: '' | 'qfq' | 'hfq' = 'qfq', start = 0, count = 800) {
   try {
