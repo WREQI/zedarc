@@ -1,65 +1,54 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { getMarketStocks } from '@/services/market'
-import type { StockQuote } from '@/mock/market'
-import { useWatchlistStore } from '@/stores/watchlist'
-import { connectMarketSocket } from '@/services/market-socket'
+import LoadingState from '@/components/LoadingState.vue'
+import ErrorState from '@/components/ErrorState.vue'
+import { getIndexQuotes, getMarketStocks } from '@/services/market'
+import { getNewsArticles } from '@/services/news'
+import type { IndexQuote, StockQuote } from '@/mock/market'
+import type { NewsArticle } from '@/mock/news'
 
 const router = useRouter()
-const watchlist = useWatchlistStore()
-const groups = ['自选股', '我的组合', '行业观察']
-const activeGroup = ref('自选股')
-const sortDescending = ref(false)
+const indices = ref<IndexQuote[]>([])
+const stocks = ref<StockQuote[]>([])
+const news = ref<NewsArticle[]>([])
+const isLoading = ref(true)
+const error = ref('')
 const isRefreshing = ref(false)
-const managing = ref(false)
-const marketStocks = ref<StockQuote[]>([])
-let disconnectSocket: () => void = () => undefined
-
-const groupCodes: Record<string, string[]> = { 我的组合: ['300750', '002594', '600519'], 行业观察: ['601012', '688981', '601318'] }
-const stocks = computed(() => watchlist.selectedCodes.value.map((code) => marketStocks.value.find((stock) => stock.code === code)).filter((stock): stock is StockQuote => Boolean(stock)))
-const groupStocks = computed(() => marketStocks.value.filter((stock) => (groupCodes[activeGroup.value] ?? []).includes(stock.code)))
-const visibleStocks = computed(() => {
-  const source = activeGroup.value === '自选股' ? stocks.value : groupStocks.value
-  return [...source].sort((a, b) => {
-    const first = Number.parseFloat(a.percent)
-    const second = Number.parseFloat(b.percent)
-    return sortDescending.value ? second - first : first - second
-  })
-})
+const updatedAt = ref('14:32')
+const rising = computed(() => [...stocks.value].filter((stock) => stock.trend === 'up').sort((a, b) => Number.parseFloat(b.percent) - Number.parseFloat(a.percent)).slice(0, 4))
+const falling = computed(() => [...stocks.value].filter((stock) => stock.trend === 'down').sort((a, b) => Number.parseFloat(a.percent) - Number.parseFloat(b.percent)).slice(0, 4))
 
 async function load() {
-  await watchlist.hydrate()
-  marketStocks.value = await getMarketStocks()
-  if (!watchlist.selectedCodes.value.length) watchlist.selectedCodes.value = marketStocks.value.slice(0, 3).map((stock) => stock.code)
-  disconnectSocket()
-  disconnectSocket = connectMarketSocket(watchlist.selectedCodes.value, (event) => {
-    if (event.type !== 'quote' || !event.data || typeof event.data !== 'object') return
-    const quote = event.data as { code?: string; name?: string; price?: number; change?: number; changePercent?: number; volume?: number }
-    if (!quote.code || quote.price == null || quote.change == null || quote.changePercent == null) return
-    const current = marketStocks.value.find((stock) => stock.code === quote.code)
-    if (!current) return
-    marketStocks.value = marketStocks.value.map((stock) => stock.code === quote.code ? { ...stock, name: quote.name ?? stock.name, price: quote.price!.toFixed(2), change: `${quote.change! >= 0 ? '+' : ''}${quote.change!.toFixed(2)}`, percent: `${quote.changePercent! >= 0 ? '+' : ''}${quote.changePercent!.toFixed(2)}%`, volume: String(quote.volume ?? stock.volume), trend: quote.change! >= 0 ? 'up' : 'down' } : stock)
-  })
+  isLoading.value = true
+  error.value = ''
+  try {
+    const [indexData, stockData, newsData] = await Promise.all([getIndexQuotes(), getMarketStocks(), getNewsArticles()])
+    indices.value = indexData
+    stocks.value = stockData
+    news.value = newsData.slice(0, 4)
+    updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
+  } catch { error.value = '首页数据暂时无法加载，请稍后重试。' } finally { isLoading.value = false }
 }
-onMounted(() => { void load() })
-onUnmounted(() => disconnectSocket())
-function toggleSort() { sortDescending.value = !sortDescending.value }
-function selectGroup(group: string) { activeGroup.value = group; managing.value = false }
-async function refreshList() { if (isRefreshing.value) return; isRefreshing.value = true; await load(); isRefreshing.value = false }
-function removeStock(code: string) { watchlist.remove(code) }
-function addStock() { const next = marketStocks.value.find((stock) => !watchlist.has(stock.code)); if (next) watchlist.toggle(next.code) }
-function openStock(code: string) { router.push(`/stock/${code}`) }
+function refresh() { if (isRefreshing.value) return; isRefreshing.value = true; load().finally(() => { isRefreshing.value = false }) }
+onMounted(load)
 </script>
 
 <template>
-  <section class="portfolio-page">
-    <div class="portfolio-header"><div class="portfolio-tabs" role="tablist" aria-label="自选组合"><button v-for="group in groups" :key="group" :class="{ selected: activeGroup === group }" role="tab" :aria-selected="activeGroup === group" @click="selectGroup(group)">{{ group }}<i v-if="group === '自选股'" /></button></div><div class="portfolio-actions"><button v-if="activeGroup === '自选股'" class="portfolio-action" :class="{ active: managing }" aria-label="管理组合" @click="managing = !managing">{{ managing ? '完成' : '☷' }}</button><button class="portfolio-action refresh-action" :class="{ loading: isRefreshing }" aria-label="刷新" @click="refreshList">↻</button></div></div>
-    <section class="portfolio-body"><div class="portfolio-caption"><button class="caption-name" @click="toggleSort">股票 <span class="filter-icon">⌄</span></button><div class="caption-columns"><button @click="toggleSort">最新价</button><button class="sort-active" @click="toggleSort">涨跌幅 {{ sortDescending ? '↓' : '↑' }}</button></div></div><div v-if="visibleStocks.length" class="portfolio-list"><article v-for="(stock, index) in visibleStocks" :key="stock.code" class="portfolio-row" @click="managing ? undefined : openStock(stock.code)"><button v-if="managing" class="remove-stock" :aria-label="`移除${stock.name}`" @click.stop="removeStock(stock.code)">−</button><div v-else class="row-index">{{ String(index + 1).padStart(2, '0') }}</div><div class="stock-identity" :class="{ 'managed-identity': managing }"><strong>{{ stock.name }}</strong><small>{{ stock.code }}</small></div><div class="stock-quote mono"><strong>{{ stock.price }}</strong><small>{{ stock.change }}</small></div><div class="stock-percent mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stock.percent }}</div><div class="stock-trend"><span v-for="bar in 7" :key="bar" :class="stock.trend === 'up' ? 'trend-up' : 'trend-down'" :style="{ height: `${26 + ((index + bar) % 5) * 13}%` }" /></div></article></div><div v-else class="portfolio-empty"><span>☆</span><strong>暂无自选股票</strong><p>添加股票后，它们会显示在这里。</p></div><button v-if="activeGroup === '自选股'" class="add-stock-row" @click="addStock"><span>＋</span> 添加股票</button></section>
-    <div class="portfolio-footer"><span>共 {{ visibleStocks.length }} 只股票</span><span class="refresh-tip">{{ isRefreshing ? '正在刷新…' : '点击刷新行情' }}</span></div>
+  <section class="home-page">
+    <div class="page-heading"><div><p class="eyebrow">MARKET DESK / TODAY</p><h1>市场工作台</h1><p class="muted">关注市场脉搏，快速发现今日机会。</p></div><button class="secondary-button refresh-home" :disabled="isRefreshing" @click="refresh">{{ isRefreshing ? '刷新中…' : '刷新行情 ↻' }}</button></div>
+    <LoadingState v-if="isLoading" label="正在加载市场数据" />
+    <ErrorState v-else-if="error" title="首页加载失败" :message="error" :retry="load" />
+    <template v-else>
+      <section class="index-grid"><article v-for="index in indices" :key="index.code" class="panel index-card"><div class="card-top"><span>{{ index.name }}</span><span class="code">{{ index.code }}</span></div><strong :class="index.trend === 'up' ? 'text-up' : 'text-down'">{{ index.value }}</strong><div class="quote-change" :class="index.trend === 'up' ? 'text-up' : 'text-down'"><span>{{ index.change }}</span><span>{{ index.percent }}</span></div><span class="sparkline">▁▃▂▅▄▆</span></article></section>
+      <div class="dashboard-grid"><section class="panel table-panel"><div class="panel-heading"><h2>涨幅榜</h2><RouterLink class="text-button" to="/market">查看全部 →</RouterLink></div><div class="table-header"><span>股票</span><span>最新价</span><span>涨跌幅</span><span>成交额</span></div><RouterLink v-for="(stock, index) in rising" :key="stock.code" class="stock-row" :to="`/stock/${stock.code}`"><span class="stock-name"><b>{{ String(index + 1).padStart(2, '0') }}</b><strong>{{ stock.name }}</strong><small>{{ stock.code }}</small></span><span class="mono">{{ stock.price }}</span><span class="mono text-up">{{ stock.percent }}</span><span class="mono muted">{{ stock.volume }}</span></RouterLink><div v-if="!rising.length" class="home-empty">暂无涨幅数据</div></section><section class="panel table-panel"><div class="panel-heading"><h2>跌幅榜</h2><RouterLink class="text-button" to="/market">查看全部 →</RouterLink></div><div class="table-header"><span>股票</span><span>最新价</span><span>涨跌幅</span><span>成交额</span></div><RouterLink v-for="(stock, index) in falling" :key="stock.code" class="stock-row" :to="`/stock/${stock.code}`"><span class="stock-name"><b>{{ String(index + 1).padStart(2, '0') }}</b><strong>{{ stock.name }}</strong><small>{{ stock.code }}</small></span><span class="mono">{{ stock.price }}</span><span class="mono text-down">{{ stock.percent }}</span><span class="mono muted">{{ stock.volume }}</span></RouterLink><div v-if="!falling.length" class="home-empty">暂无跌幅数据</div></section></div>
+      <section class="panel news-panel"><div class="panel-heading"><h2>市场快讯</h2><RouterLink class="text-button" to="/news">更多资讯 →</RouterLink></div><RouterLink v-for="item in news" :key="item.id" class="news-row" :to="`/news/${item.id}`"><time>{{ item.time }}</time><div><span class="news-tag">{{ item.tag }}</span><p>{{ item.title }}</p></div></RouterLink><div v-if="!news.length" class="home-empty">暂无市场资讯</div></section>
+      <p class="home-footer">数据更新于 {{ updatedAt }} · 行情仅供参考，投资需谨慎</p>
+    </template>
   </section>
 </template>
 
 <style scoped>
-.portfolio-page { min-height: calc(100vh - 164px); background: linear-gradient(180deg, rgba(255, 255, 255, .72), transparent 230px); padding: 16px 0 30px; }.portfolio-header { background: var(--card); border-radius: 8px 8px 0 0; display: flex; align-items: center; justify-content: space-between; padding-right: 16px; border-bottom: 1px solid var(--border); }.portfolio-tabs { display: flex; overflow-x: auto; }.portfolio-tabs::-webkit-scrollbar { display: none; }.portfolio-tabs button { position: relative; flex: none; color: var(--muted); background: transparent; border: 0; padding: 16px 18px; font-size: 14px; }.portfolio-tabs button:first-child { padding-left: 20px; }.portfolio-tabs button.selected { color: var(--text); font-weight: 600; }.portfolio-tabs button.selected::after { content: ''; position: absolute; bottom: 5px; left: 50%; width: 18px; height: 3px; border-radius: 3px; background: var(--primary); transform: translateX(-50%); }.portfolio-tabs button i { position: absolute; width: 5px; height: 5px; top: 12px; right: 10px; border-radius: 50%; background: var(--up); }.portfolio-actions { display: flex; gap: 13px; }.portfolio-action { background: transparent; border: 0; color: var(--muted); font-size: 20px; }.portfolio-action:hover, .portfolio-action.active { color: var(--primary); }.refresh-action.loading { animation: rotate .7s linear infinite; color: var(--primary); }.portfolio-body { background: var(--card); padding: 0 20px 12px; }.portfolio-caption { display: flex; align-items: center; justify-content: space-between; height: 42px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 11px; }.caption-name, .caption-columns button { color: var(--muted); background: transparent; border: 0; font-size: 11px; }.caption-name { padding: 0; }.filter-icon { color: var(--primary); font-size: 15px; margin-left: 3px; }.caption-columns { display: grid; grid-template-columns: 80px 76px; gap: 0; }.caption-columns button { text-align: right; }.caption-columns .sort-active { color: var(--primary); }.portfolio-row { display: grid; cursor: pointer; grid-template-columns: 28px 1.3fr .8fr .7fr 82px; align-items: center; min-height: 68px; border-bottom: 1px solid var(--border); }.row-index { color: #b3bac7; font: 10px 'JetBrains Mono', monospace; }.remove-stock { width: 20px; height: 20px; display: grid; place-items: center; color: var(--up); border: 0; border-radius: 50%; background: rgba(230,53,53,.09); font-size: 17px; line-height: 1; }.stock-identity strong, .stock-quote strong { display: block; font-size: 13px; }.stock-identity small, .stock-quote small { display: block; color: var(--muted); font: 10px 'JetBrains Mono', monospace; margin-top: 5px; }.stock-quote { text-align: right; }.stock-quote strong { font-size: 12px; }.stock-percent { text-align: right; font-size: 12px; }.stock-trend { height: 28px; display: flex; justify-content: flex-end; align-items: flex-end; gap: 3px; margin-left: 16px; }.stock-trend span { width: 5px; background: rgba(230, 53, 53, .6); }.stock-trend span.trend-down { background: rgba(28, 170, 60, .6); }.add-stock-row { width: 100%; background: transparent; border: 0; color: var(--primary); font-size: 12px; padding: 16px 0 6px; text-align: left; }.add-stock-row span { font-size: 18px; vertical-align: -1px; margin-right: 4px; }.portfolio-empty { min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--muted); }.portfolio-empty span { color: var(--primary); font-size: 28px; }.portfolio-empty strong { color: var(--text); font-size: 13px; margin-top: 10px; }.portfolio-empty p { font-size: 11px; margin-top: 6px; }.portfolio-footer { display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; padding: 13px 4px; }.refresh-tip { color: #a6adba; }@keyframes rotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }@media (max-width: 640px) { .portfolio-page { padding-top: 0; }.portfolio-body { padding: 0 14px 12px; }.portfolio-row { grid-template-columns: 22px 1.2fr .75fr .7fr 52px; }.stock-trend { margin-left: 8px; }.portfolio-tabs button { padding-left: 14px; padding-right: 14px; }.caption-columns { grid-template-columns: 66px 64px; } }
+.home-page { max-width: 1120px; margin: 0 auto; }.refresh-home:disabled { opacity: .6; cursor: wait; }.home-empty { color: var(--muted); text-align: center; padding: 28px 0; font-size: 11px; }.home-footer { color: var(--muted); font-size: 10px; text-align: right; margin-top: 12px; }
+@media (max-width: 820px) { .home-page .page-heading { flex-direction: row; align-items: center; }.home-page .page-heading h1 { font-size: 22px; }.refresh-home { white-space: nowrap; }.home-footer { text-align: center; } }
 </style>
