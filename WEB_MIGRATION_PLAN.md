@@ -82,17 +82,27 @@ Vue 3 + TypeScript + Vite + Vue Router + Pinia
 
 ### 2. 新旧项目关系
 
-不建议直接将 Web 代码混入当前小程序目录，建议创建独立 Web 工程：
+不建议直接将 Web 代码混入当前小程序目录，建议在 `zedarc` 根目录下创建独立 Web 工程。旧小程序位于 `__APP__` 目录，Web 项目位于同级的 `web` 目录：
 
 ```text
-__APP__/
-├── 原小程序代码
-└── web/
+zedarc/
+├── __APP__/                 # 旧微信小程序项目
+│   └── 原小程序代码
+└── web/                     # 新 Vue Web 项目，与 __APP__ 同级
     ├── package.json
     ├── vite.config.ts
     ├── src/
     └── public/
 ```
+
+也就是说，两个项目的目录关系为：
+
+```text
+zedarc/__APP__/
+zedarc/web/
+```
+
+Web 项目的所有开发、依赖安装和构建命令均在 `zedarc/web` 目录下执行，不要将 Web 代码放入 `zedarc/__APP__/web`。
 
 这样可以：
 
