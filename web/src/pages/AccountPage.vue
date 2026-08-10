@@ -75,7 +75,7 @@ async function sendCode() {
 }
 async function submitLogin() {
   if (!/^1\d{10}$/.test(phone.value)) { showToast('请输入有效的手机号'); return }
-  if (code.value !== '123456') { showToast('请输入正确的验证码'); return }
+  if (!/^\d{6}$/.test(code.value)) { showToast('请输入 6 位验证码'); return }
   try {
     await auth.login(phone.value, code.value)
   } catch {

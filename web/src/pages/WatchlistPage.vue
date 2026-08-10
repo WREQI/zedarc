@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useWatchlistStore } from '@/stores/watchlist'
 import { getMarketStocksSnapshot } from '@/services/market'
 import type { StockQuote } from '@/mock/market'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 
 const marketStocks = getMarketStocksSnapshot()
-const storageKey = 'zedarc-watchlist'
-const recentKey = 'zedarc-recent-stocks'
-const selectedCodes = ref<string[]>([])
-const recentCodes = ref<string[]>([])
+const watchlist = useWatchlistStore()
+const selectedCodes = watchlist.selectedCodes
+const recentCodes = watchlist.recentCodes
 const activeGroup = ref<'自选股' | '最近浏览'>('自选股')
 const isLoading = ref(true)
 const loadError = ref('')
@@ -18,39 +18,26 @@ const selectedStocks = computed(() => marketStocks.filter((stock) => selectedCod
 const availableStocks = computed(() => marketStocks.filter((stock) => !selectedCodes.value.includes(stock.code)))
 const recentStocks = computed(() => recentCodes.value.map((code) => marketStocks.find((stock) => stock.code === code)).filter((stock): stock is StockQuote => Boolean(stock)))
 
-function loadWatchlist() {
+async function loadWatchlist() {
   isLoading.value = true
   loadError.value = ''
   try {
-    const stored = window.localStorage.getItem(storageKey)
-    selectedCodes.value = stored ? JSON.parse(stored) : marketStocks.slice(0, 2).map((stock) => stock.code)
-    const recent = window.localStorage.getItem(recentKey)
-    recentCodes.value = recent ? JSON.parse(recent) : []
+    await watchlist.hydrate()
+    if (!selectedCodes.value.length) marketStocks.slice(0, 2).forEach((stock) => watchlist.toggle(stock.code))
   } catch { loadError.value = '自选数据读取失败，请重试。' } finally { isLoading.value = false }
 }
 onMounted(loadWatchlist)
 
-function persist() {
-  window.localStorage.setItem(storageKey, JSON.stringify(selectedCodes.value))
-}
+function removeStock(code: string) { watchlist.remove(code) }
 
-function removeStock(code: string) {
-  selectedCodes.value = selectedCodes.value.filter((item) => item !== code)
-  persist()
-}
-
-function addStock(stock: StockQuote) {
-  selectedCodes.value = [...selectedCodes.value, stock.code]
-  persist()
-}
+function addStock(stock: StockQuote) { if (!watchlist.has(stock.code)) watchlist.toggle(stock.code) }
 
 function addNextStock() {
   const next = availableStocks.value[0]
   if (next) addStock(next)
 }
 function clearRecent() {
-  recentCodes.value = []
-  window.localStorage.removeItem(recentKey)
+  watchlist.clearRecent()
 }
 </script>
 

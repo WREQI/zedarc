@@ -8,7 +8,7 @@ export function useAuthStore() {
   if (!initialized) {
     try {
       state.user = JSON.parse(window.localStorage.getItem('zedarc-user') ?? 'null') as UserProfile | null
-      if (!getAccessToken()) state.user = null
+      if (!getAccessToken() && !window.localStorage.getItem('zedarc-refresh-token')) state.user = null
     } catch { state.user = null }
     initialized = true
   }

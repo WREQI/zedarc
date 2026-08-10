@@ -2,9 +2,11 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { apiFetch } from '@/services/api-client'
 import { useRoute, useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
 
 const route = useRoute()
 const router = useRouter()
+const auth = useAuthStore()
 const providerLabel = ref('连接检查中')
 const providerTone = ref('pending')
 async function loadProviderStatus() {
@@ -46,7 +48,7 @@ function isSectionActive(section: string) {
                 <RouterLink :class="{ 'nav-section-active': route.path.startsWith('/reports') }" to="/reports">研报</RouterLink>
       </nav>
       <RouterLink class="global-search" to="/search"><span>⌕</span><span>搜索股票、资讯或代码</span><kbd>⌘K</kbd></RouterLink>
-      <div class="top-actions"><span class="market-status"><i /> 交易中</span><RouterLink class="icon-button" to="/search" aria-label="搜索">⌕</RouterLink><button class="avatar">研</button></div>
+      <div class="top-actions"><span class="market-status"><i /> 交易中</span><RouterLink class="icon-button" to="/search" aria-label="搜索">⌕</RouterLink><button class="avatar" aria-label="打开账户" @click="router.push('/account')">{{ auth.user.value?.name?.slice(0, 1) ?? '登' }}</button></div>
     </header>
     <div class="workspace">
       <aside class="sidebar">
