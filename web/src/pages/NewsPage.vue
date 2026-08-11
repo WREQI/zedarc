@@ -11,6 +11,7 @@ import NewsRecommendPage from './NewsRecommendPage.vue'
 import NewsTopicsPage from './NewsTopicsPage.vue'
 import NewsTopicDetailPage from './NewsTopicDetailPage.vue'
 import { useFavoritesStore } from '@/stores/favorites'
+import { useNewsRecommendationsStore } from '@/stores/news-recommendations'
 
 const route = useRoute()
 const router = useRouter()
@@ -22,6 +23,7 @@ const isRefreshing = ref(false)
 const isLoading = ref(true)
 const loadError = ref('')
 const favorites = useFavoritesStore()
+const recommendationStore = useNewsRecommendationsStore()
 const savedNews = favorites.savedIds
 const news = ref<NewsArticle[]>([])
 
@@ -44,7 +46,7 @@ function selectCategory(category: string) { activeCategory.value = category; sav
 async function loadNews() {
   isLoading.value = true
   loadError.value = ''
-  try { news.value = await getNewsArticles() } catch { loadError.value = '资讯暂时无法加载，请稍后重试。' } finally { isLoading.value = false }
+  try { await recommendationStore.hydrate(); news.value = (await getNewsArticles()).filter((item) => !recommendationStore.isBlocked(item)) } catch { loadError.value = '资讯暂时无法加载，请稍后重试。' } finally { isLoading.value = false }
 }
 function refresh() {
   if (isRefreshing.value) return
@@ -54,6 +56,8 @@ function refresh() {
 
 onMounted(() => { loadNews() })
 function toggleSave(id: string) { favorites.toggle(id) }
+async function hideArticle(id: string) { await recommendationStore.feedback({ newsId: id, action: 'dislike' }); news.value = news.value.filter((item) => item.id !== id) }
+async function resetPreferences() { await recommendationStore.reset(); await loadNews() }
 </script>
 
 <template>
@@ -68,7 +72,7 @@ function toggleSave(id: string) { favorites.toggle(id) }
           <p class="eyebrow">INFORMATION</p>
           <h1>资讯</h1>
         </div>
-        <button class="refresh-button" :class="{ loading: isRefreshing }" aria-label="刷新资讯" @click="refresh">↻</button>
+        <div class="heading-actions"><button v-if="recommendationStore.count" class="text-button" @click="resetPreferences">恢复屏蔽</button><button class="refresh-button" :class="{ loading: isRefreshing }" aria-label="刷新资讯" @click="refresh">↻</button></div>
       </div>
       <label class="search-box">
         <span aria-hidden="true">⌕</span>
@@ -95,7 +99,7 @@ function toggleSave(id: string) { favorites.toggle(id) }
           <p>{{ item.summary }}</p>
           <div v-if="item.video" class="video-mark"><span>▶</span>视频资讯 <small>03:28</small></div>
         </RouterLink>
-        <div class="news-item-footer"><span>阅读 1.2k</span><button :class="{ saved: savedNews.includes(item.id) }" @click="toggleSave(item.id)">{{ savedNews.includes(item.id) ? '★ 已收藏' : '☆ 收藏' }}</button><span class="arrow">›</span></div>
+        <div class="news-item-footer"><span>阅读 1.2k</span><button :class="{ saved: savedNews.includes(item.id) }" @click.stop="toggleSave(item.id)">{{ savedNews.includes(item.id) ? '★ 已收藏' : '☆ 收藏' }}</button><button class="feedback-button" @click.stop="hideArticle(item.id)">不感兴趣</button><span class="arrow">›</span></div>
       </article>
       <EmptyState v-if="!filteredNews.length" title="暂无相关资讯" message="换个关键词或切换栏目试试" icon="⌕" />
     </section>
@@ -108,7 +112,7 @@ function toggleSave(id: string) { favorites.toggle(id) }
 .news-heading { display: flex; align-items: center; justify-content: space-between; padding: 18px 16px 12px; }
 .eyebrow { color: var(--primary); font: 10px 'JetBrains Mono', monospace; letter-spacing: .14em; margin: 0 0 4px; }
 .news-heading h1 { font-size: 23px; font-weight: 600; }
-.refresh-button { width: 32px; height: 32px; color: var(--muted); border: 1px solid var(--border); border-radius: 50%; background: var(--card); font-size: 20px; line-height: 1; }
+.heading-actions { display: flex; align-items: center; gap: 8px; }.text-button, .feedback-button { border: 0; background: transparent; color: var(--muted); font-size: 10px; }.text-button { color: var(--primary); }.refresh-button { width: 32px; height: 32px; color: var(--muted); border: 1px solid var(--border); border-radius: 50%; background: var(--card); font-size: 20px; line-height: 1; }
 .refresh-button.loading { color: var(--primary); animation: rotate .7s linear infinite; }
 .search-box { display: flex; align-items: center; gap: 7px; height: 36px; margin: 0 14px 11px; padding: 0 10px; border-radius: 5px; background: #f5f6fa; color: #9aa3b1; font-size: 19px; }
 .search-box input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 12px; }

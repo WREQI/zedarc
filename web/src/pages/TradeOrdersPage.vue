@@ -19,7 +19,7 @@ const toast = ref('')
 const realtimeStatus = ref<TradeSocketStatus>('connecting')
 let disconnectRealtime: (() => void) | undefined
 const activeFilter = ref('全部')
-const filters = ['全部', '已报', '已成', '已撤']
+const filters = ['全部', '待处理', '已报', '部分成交', '已成', '已撤', '已拒']
 const filteredOrders = computed(() => activeFilter.value === '全部' ? orders.value : orders.value.filter((order) => order.status === activeFilter.value))
 
 function showToast(message: string) { toast.value = message; window.setTimeout(() => { toast.value = '' }, 2200) }
@@ -42,13 +42,14 @@ onMounted(async () => {
 
 onUnmounted(() => disconnectRealtime?.())
 
-function toPageOrder(order: { id: string; code: string; side: 'buy' | 'sell'; price: number; quantity: number; status: string; createdAt: string }): PageOrder {
-  return { id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: stocks.find((stock) => stock.code === order.code)?.name ?? order.code, side: order.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' }
+function displayStatus(status: string) { return ({ pending: '待处理', reported: '已报', placed: '已报', partial: '部分成交', filled: '已成', cancelled: '已撤', rejected: '已拒' } as Record<string, string>)[status] ?? status }
+function toPageOrder(order: { id: string; code: string; side: 'buy' | 'sell'; price: number; quantity: number; status: string; statusReason?: string | null; createdAt: string }): PageOrder {
+  return { id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: stocks.find((stock) => stock.code === order.code)?.name ?? order.code, side: order.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: displayStatus(order.status) }
 }
 
 function applyRealtimeEvent(event: TradeOrderRealtimeEvent) {
   const existing = orders.value.find((item) => item.id === event.orderId || (event.requestId && 'requestId' in item && item.requestId === event.requestId))
-  if (existing) { existing.status = event.status === 'cancelled' ? '已撤' : event.status === 'filled' ? '已成' : '已报'; return }
+  if (existing) { existing.status = displayStatus(event.status); return }
   orders.value.unshift(toPageOrder(event.order))
 }
 
@@ -69,7 +70,7 @@ async function cancelOrder(order: PageOrder) {
     <div v-if="isLoading" class="state-card"><span class="loading-dot" />正在加载委托…</div>
     <template v-else>
       <div v-if="loadError" class="error-banner"><b>!</b><span>{{ loadError }}</span><button @click="loadError = ''">×</button></div><div v-if="apiMode" class="realtime-banner"><i />{{ realtimeStatus === 'connected' ? '订单状态实时同步' : realtimeStatus === 'reconnecting' || realtimeStatus === 'connecting' ? '正在恢复实时连接…' : '实时连接已断开，HTTP 快照仍可用' }}</div>
-      <section class="list-card"><div class="section-title"><div><h2>今日委托</h2><small>交易日 · 实时状态</small></div><span>{{ orders.length }} 条</span></div><div class="filter-tabs"><button v-for="filter in filters" :key="filter" :class="{ active: activeFilter === filter }" @click="activeFilter = filter">{{ filter }}</button></div><div v-for="(order, index) in filteredOrders" :key="order.id ?? `${order.time}-${order.name}-${index}`" class="order-row"><div><RouterLink :to="`/trade/orders/${order.id ?? index}`" class="detail-link"><b>{{ order.name }} <em :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</em></b><small>{{ order.time }} · {{ order.price }} 元 × {{ order.quantity }} 股</small></RouterLink></div><div class="order-actions"><span class="status" :class="{ cancelled: order.status === '已撤', done: order.status === '已成' }">{{ order.status }}</span><button v-if="order.status === '已报'" @click="cancelOrder(order)">撤单</button><RouterLink :to="`/trade/orders/${order.id ?? index}`" class="detail-action">详情 ›</RouterLink></div></div><p v-if="!filteredOrders.length" class="empty-state">暂无{{ activeFilter === '全部' ? '' : activeFilter }}委托<br /><small>提交交易后将在这里展示</small></p></section>
+      <section class="list-card"><div class="section-title"><div><h2>今日委托</h2><small>交易日 · 实时状态</small></div><span>{{ orders.length }} 条</span></div><div class="filter-tabs"><button v-for="filter in filters" :key="filter" :class="{ active: activeFilter === filter }" @click="activeFilter = filter">{{ filter }}</button></div><div v-for="(order, index) in filteredOrders" :key="order.id ?? `${order.time}-${order.name}-${index}`" class="order-row"><div><RouterLink :to="`/trade/orders/${order.id ?? index}`" class="detail-link"><b>{{ order.name }} <em :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</em></b><small>{{ order.time }} · {{ order.price }} 元 × {{ order.quantity }} 股</small></RouterLink></div><div class="order-actions"><span class="status" :class="{ cancelled: order.status === '已撤' || order.status === '已拒', done: order.status === '已成', partial: order.status === '部分成交' }">{{ order.status }}</span><button v-if="order.status === '已报'" @click="cancelOrder(order)">撤单</button><RouterLink :to="`/trade/orders/${order.id ?? index}`" class="detail-action">详情 ›</RouterLink></div></div><p v-if="!filteredOrders.length" class="empty-state">暂无{{ activeFilter === '全部' ? '' : activeFilter }}委托<br /><small>提交交易后将在这里展示</small></p></section>
       <RouterLink to="/trade/positions" class="entry-link">查看我的持仓 <span>›</span></RouterLink>
     </template>
     <div v-if="toast" class="trade-toast">{{ toast }}</div>

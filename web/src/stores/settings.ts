@@ -23,11 +23,13 @@ export function useSettingsStore() {
   async function set(key: keyof UserSettings, value: boolean) {
     const previous = state[key]
     state[key] = value
-    if (!getAccessToken()) return
+    if (!getAccessToken()) return false
     try {
       await updateSettingsApi({ [key]: value })
+      return true
     } catch {
       state[key] = previous
+      return false
     }
   }
 

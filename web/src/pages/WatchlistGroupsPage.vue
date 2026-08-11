@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { getAccessToken } from '@/services/api-client'
-import { getMarketStocks } from '@/services/market'
+import { getMarketStocks, stockQuoteFromRealtime } from '@/services/market'
 import type { StockQuote } from '@/services/market-types'
 import EmptyState from '@/components/EmptyState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { useWatchlistStore } from '@/stores/watchlist'
+import { connectMarketSocket, type MarketSocketEvent } from '@/services/market-socket'
 
 const watchlist = useWatchlistStore()
 const stocks = ref<StockQuote[]>([])
@@ -17,6 +18,8 @@ const error = ref('')
 const editing = ref(false)
 const draggedGroup = ref<string | null>(null)
 const draggedCode = ref<string | null>(null)
+let disconnectRealtime: (() => void) | undefined
+const realtimeSequences = new Map<string, number>()
 const dialog = ref<'create' | 'rename' | null>(null)
 const draftName = ref('')
 
@@ -32,7 +35,9 @@ const isLocal = computed(() => !getAccessToken())
 
 function itemCount(id: string) { return (watchlist.itemsByGroup.value[id] ?? []).length }
 function groupStats(id: string) { const list = (watchlist.itemsByGroup.value[id] ?? []).map((item) => stockMap.value.get(item.code)); return { count: list.length, up: list.filter((stock) => stock?.trend === 'up').length, down: list.filter((stock) => stock?.trend === 'down').length } }
-async function load() { loading.value = true; error.value = ''; try { await Promise.all([watchlist.hydrate(), getMarketStocks().then((data) => { stocks.value = data })]) } catch { error.value = '数据加载失败，请重试。' } finally { loading.value = false } }
+async function load() { disconnectRealtime?.(); disconnectRealtime = undefined; loading.value = true; error.value = ''; try { await Promise.all([watchlist.hydrate(), getMarketStocks().then((data) => { stocks.value = data })]); startRealtime() } catch { error.value = '数据加载失败，请重试。' } finally { loading.value = false } }
+function startRealtime() { const codes = [...new Set(Object.values(watchlist.itemsByGroup.value).flat().map((item) => item.code))]; if (!codes.length) return; disconnectRealtime = connectMarketSocket(codes, applyRealtimeEvent, { types: ['quote'] }) }
+function applyRealtimeEvent(event: MarketSocketEvent) { const quote = stockQuoteFromRealtime(event.data); if (!quote) return; const sequence = typeof event.data === 'object' && event.data !== null && typeof (event.data as { sequence?: unknown }).sequence === 'number' ? (event.data as { sequence: number }).sequence : 0; if (sequence && sequence <= (realtimeSequences.get(quote.code) ?? 0)) return; realtimeSequences.set(quote.code, sequence); const index = stocks.value.findIndex((stock) => stock.code === quote.code); if (index < 0) return; stocks.value = stocks.value.map((stock, itemIndex) => itemIndex === index ? { ...stock, ...quote } : stock) }
 function selectGroup(id: string) { activeId.value = id; selected.value = []; editing.value = false }
 function openCreate() { draftName.value = ''; dialog.value = 'create' }
 function openRename() { if (activeId.value !== 'default') { draftName.value = activeGroup.value.name; dialog.value = 'rename' } }
@@ -46,6 +51,7 @@ async function dropGroup(id: string) { if (draggedCode.value && id !== activeId.
 async function dropStock(index: number) { if (!draggedCode.value) return; const codes = activeItems.value.map((item) => item.code).filter((code) => code !== draggedCode.value); codes.splice(index, 0, draggedCode.value); await watchlist.reorder(activeId.value === 'default' ? null : activeId.value, codes); draggedCode.value = null }
 function quoteClass(stock: StockQuote) { return stock.trend === 'up' ? 'text-up' : 'text-down' }
 onMounted(load)
+onUnmounted(() => disconnectRealtime?.())
 </script>
 
 <template>

@@ -30,6 +30,18 @@ export interface MarketRankQuote extends StockQuote {
   limitDown: number | null
 }
 
+export interface LimitBoardMetric<T = number> { value: T | null; available: boolean; reason?: string; source: string }
+export interface LimitBoardResponse {
+  direction: 'up' | 'down'
+  timestamp: number
+  source: string
+  items: MarketRankQuote[]
+  ladder: { firstBoard: LimitBoardMetric; secondBoard: LimitBoardMetric; aboveThirdBoard: LimitBoardMetric; maxStreak: LimitBoardMetric }
+  brokenBoard: { items: MarketRankQuote[]; available: boolean; reason?: string; source: string }
+  sealTime: LimitBoardMetric<string>
+  sealAmount: LimitBoardMetric<number>
+}
+
 export interface OrderBookLevel { price: number; volume: number }
 export interface TradeTick { time: string; timestamp: number; price: number; volume: number; direction: 'buy' | 'sell' | 'neutral'; source: string }
 export type CapitalFlowCategory = 'main' | 'extraLarge' | 'large' | 'medium' | 'small'
@@ -44,7 +56,11 @@ export interface StockDetailResponse {
   trades: { timestamp: number; source: string; items: TradeTick[]; availability: { available: boolean; source?: string; reason?: string; asOf?: number } }
   capitalFlow: CapitalFlowData
   financials: { items: Array<{ code: string; name: string; asOf: number; peTtm: number | null; peStatic: number | null; peDynamic: number | null; pb: number | null; circulatingMarketCap: number | null; totalMarketCap: number | null; circulatingShares: number | null; totalShares: number | null }>; availability: { available: boolean; source?: string; reason?: string } }
-  shareholders: { items: never[]; availability: { available: boolean; source?: string; reason?: string } }
+  financialStatements: { items: Array<{ code: string; name: string; reportDate: string; reportType: string | null; revenue: number | null; netProfit: number | null; netProfitYoy: number | null; eps: number | null; operatingCashFlow: number | null; totalAssets: number | null; totalLiabilities: number | null }>; availability: { available: boolean; source?: string; reason?: string } }
+  shareholders: { items: Array<{ code: string; name: string; shareholderName: string; shareholderType: string | null; shares: number | null; ownershipRatio: number | null; reportDate: string | null }>; availability: { available: boolean; source?: string; reason?: string } }
+  institutions: { items: Array<{ code: string; name: string; date: string; close: number | null; changePercent: number | null; buyOrgCount: number | null; sellOrgCount: number | null; orgBuyAmount: number | null; orgSellAmount: number | null; orgNetAmount: number | null }>; availability: { available: boolean; source?: string; reason?: string } }
+  unlocks: { items: Array<{ code: string; name: string; unlockDate: string; shares: number | null; ownershipRatio: number | null; shareholderName: string | null }>; availability: { available: boolean; source?: string; reason?: string } }
+  blockTrades: { items: Array<{ code: string; name: string; date: string; close: number | null; changePercent: number | null; dealPrice: number | null; dealVolume: number | null; dealAmount: number | null; premiumRate: number | null; buyBranch: string; sellBranch: string }>; availability: { available: boolean; source?: string; reason?: string } }
   dividends: { items: Array<{ code: string; name: string; reportDate: string | null; disclosureDate: string | null; equityRecordDate: string | null; exDividendDate: string | null; payDate: string | null; dividendPretax: number | null; dividendDesc: string | null; dividendYield: number | null; eps: number | null; bps: number | null; netProfitYoy: number | null }>; availability: { available: boolean; source?: string; reason?: string } }
 }
 
@@ -71,4 +87,13 @@ export interface MarketBoardQuote {
   percent: string
   extra: string
   trend: 'up' | 'down'
+}
+
+export interface SectorDetailResponse {
+  sector: { code: string; name: string; changePercent: number; leadingStock?: string; leadingChangePercent?: number; source?: string; kind?: 'industry' | 'concept' }
+  kind: 'industry' | 'concept'
+  members: Array<{ code: string; name: string; price: number; change: number; changePercent: number; amount?: number; source?: string }>
+  availability: { available: boolean; source: string; reason?: string; asOf?: number }
+  membersAvailability: { available: boolean; source: string; reason?: string; asOf?: number }
+  capitalFlowAvailability: { available: boolean; source: string; reason?: string; asOf?: number }
 }

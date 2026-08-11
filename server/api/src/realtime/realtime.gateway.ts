@@ -105,7 +105,7 @@ export class RealtimeGateway implements OnModuleDestroy {
     const channel = event.channel.toLowerCase()
     const isTrade = type.startsWith('trade.') || channel.startsWith('trade:')
     if (isTrade && event.userId && (!subscription || (client as LiveSocket).user?.id !== event.userId)) return false
-    const typeMatches = !subscription.types.size || [...subscription.types].some((item) => item === type || item === channel || (item === 'trade' && isTrade) || (item === 'trade.order' && type.startsWith('trade.order.')))
+    const typeMatches = !subscription.types.size || [...subscription.types].some((item) => item === type || item === channel || type.startsWith(`${item}:`) || channel.startsWith(`market:${item}:`) || (item === 'trade' && isTrade) || (item === 'trade.order' && type.startsWith('trade.order.')))
     return (!subscription.codes.size || subscription.codes.has(code)) && typeMatches
   }
 

@@ -1,5 +1,5 @@
 import { StockSDK } from 'stock-sdk'
-import { normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type CapitalFlowData, type CapitalFlowCategory, type NormalizedQuote, type KlineBar, type StockDividendRecord, type StockFinancialRecord } from '@zedarc/shared'
+import { normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type CapitalFlowData, type CapitalFlowCategory, type NormalizedQuote, type KlineBar, type StockBlockTradeRecord, type StockDividendRecord, type StockFinancialRecord, type StockInstitutionRecord } from '@zedarc/shared'
 
 export interface ProviderIndex { code: string; name: string; value: number; change: number; changePercent: number; timestamp: number }
 export interface ProviderSector { code: string; name: string; changePercent: number; leadingStock?: string; leadingChangePercent?: number }
@@ -42,6 +42,23 @@ export async function getSdkFundamentals(code: string): Promise<StockFinancialRe
 export async function getSdkDividends(code: string): Promise<StockDividendRecord[]> {
   const rows = await sdk.reference.dividendDetail(code)
   return rows.map((row) => ({ code: row.code, name: row.name, reportDate: row.reportDate, disclosureDate: row.disclosureDate, equityRecordDate: row.equityRecordDate, exDividendDate: row.exDividendDate, payDate: row.payDate, dividendPretax: row.dividendPretax, dividendDesc: row.dividendDesc, dividendYield: row.dividendYield, eps: row.eps, bps: row.bps, netProfitYoy: row.netProfitYoy, source: 'stock-sdk' }))
+}
+
+function dateDaysAgo(days: number) {
+  const date = new Date(Date.now() - days * 86400000)
+  return `${date.getUTCFullYear()}${String(date.getUTCMonth() + 1).padStart(2, '0')}${String(date.getUTCDate()).padStart(2, '0')}`
+}
+
+export async function getSdkInstitutions(code: string): Promise<StockInstitutionRecord[]> {
+  const normalized = normalizeMarketCode(code)
+  const rows = await sdk.dragonTiger.institution({ startDate: dateDaysAgo(180), endDate: dateDaysAgo(0) })
+  return rows.filter((row) => normalizeMarketCode(row.code) === normalized).map((row) => ({ ...row, code: normalized, source: 'stock-sdk' as const }))
+}
+
+export async function getSdkBlockTrades(code: string): Promise<StockBlockTradeRecord[]> {
+  const normalized = normalizeMarketCode(code)
+  const rows = await sdk.blockTrade.detail({ startDate: dateDaysAgo(180), endDate: dateDaysAgo(0) })
+  return rows.filter((row) => normalizeMarketCode(row.code) === normalized).map((row) => ({ ...row, code: normalized, source: 'stock-sdk' as const }))
 }
 
 const sdk = new StockSDK({ timeout: 8000, retry: { maxRetries: 2, baseDelay: 300 } })

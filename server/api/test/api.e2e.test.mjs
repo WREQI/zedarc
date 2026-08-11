@@ -82,6 +82,17 @@ test('auth, watchlist and trade contracts', async () => {
   const me = await request('/api/auth/me', { headers: auth })
   assert.equal(me.body.phone, '13800138000')
 
+  const profile = await request('/api/auth/profile', { method: 'PATCH', headers: auth, body: JSON.stringify({ displayName: '测试用户' }) })
+  assert.equal(profile.response.status, 200)
+  assert.equal(profile.body.name, '测试用户')
+  const sessions = await request('/api/auth/sessions', { headers: auth })
+  assert.equal(sessions.response.status, 200)
+  assert.ok(Array.isArray(sessions.body))
+  assert.ok(sessions.body.some((session) => session.current === true))
+  const history = await request('/api/auth/login-history', { headers: auth })
+  assert.equal(history.response.status, 200)
+  assert.ok(Array.isArray(history.body))
+
   const added = await request('/api/watchlist', { method: 'POST', headers: auth, body: JSON.stringify({ code: '600519', name: '贵州茅台' }) })
   assert.equal(added.response.status, 201)
   assert.equal(added.body.code, '600519')

@@ -22,7 +22,7 @@ const emit = defineEmits<{
     <section class="result-card" :class="{ failed: !success }">
       <div class="result-icon">{{ success ? '✓' : '!' }}</div>
       <h2>{{ success ? `${result.name} 委托已提交` : '委托未提交' }}</h2>
-      <p>{{ result.message || (success ? '交易服务已收到你的委托，请留意订单状态。' : '交易服务暂时不可用，请稍后重试。') }}</p>
+      <p class="result-message">{{ result.message || (success ? '交易服务已收到你的委托，请留意订单状态。' : '交易服务暂时不可用，请稍后重试。') }}</p>
       <div class="result-summary"><span>{{ result.side === 'buy' ? '买入' : '卖出' }} {{ result.quantity.toLocaleString() }} 股</span><b>¥ {{ result.price.toFixed(2) }}</b></div>
       <div v-if="success && result.orderId" class="order-id">委托编号：{{ result.orderId }}</div>
     </section>

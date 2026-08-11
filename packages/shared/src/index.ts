@@ -57,6 +57,8 @@ export interface MarketIndex {
   source?: MarketSource
 }
 
+export type MarketSectorKind = 'industry' | 'concept'
+
 export interface MarketSector {
   code: string
   name: string
@@ -65,6 +67,26 @@ export interface MarketSector {
   leadingChangePercent?: number
   timestamp?: number
   source?: MarketSource
+  kind?: MarketSectorKind
+}
+
+export interface MarketSectorMember {
+  code: string
+  name: string
+  price: number
+  change: number
+  changePercent: number
+  amount?: number
+  source?: MarketSource
+}
+
+export interface MarketSectorDetail {
+  sector: MarketSector
+  kind: MarketSectorKind
+  members: MarketSectorMember[]
+  availability: DataAvailability
+  membersAvailability: DataAvailability
+  capitalFlowAvailability: DataAvailability
 }
 
 export interface MarketEtf {
@@ -86,6 +108,12 @@ export interface MarketSearchResult {
 }
 
 export interface QuoteQuery { codes: string[] }
+export type QuoteRealtimeKind = 'snapshot' | 'delta'
+/** Per-symbol quote update sent on market:quote and market:quote:<code>. */
+export interface QuoteRealtimeMessage extends NormalizedQuote {
+  kind: QuoteRealtimeKind
+  sequence: number
+}
 export interface KlineQuery { code: string; period?: 'daily' | 'weekly' | 'monthly'; adjust?: '' | 'qfq' | 'hfq' }
 
 export interface OrderBookLevel { price: number; volume: number }
@@ -113,7 +141,9 @@ export interface TradesRealtimeMessage {
   items: TradeTick[]
 }
 
-export type TradeOrderEventStatus = 'placed' | 'filled' | 'cancelled'
+export type TradeOrderStatus = 'pending' | 'reported' | 'partial' | 'filled' | 'cancelled' | 'rejected'
+/** `placed` remains a wire-compatible alias for older clients. */
+export type TradeOrderEventStatus = TradeOrderStatus | 'placed'
 export interface TradeOrderRealtimeEvent {
   eventId: string
   type: `trade.order.${TradeOrderEventStatus}`
@@ -130,10 +160,20 @@ export interface TradeOrderRealtimeEvent {
     quantity: number
     price: number
     fee: number
-    status: 'filled' | 'cancelled'
+    status: TradeOrderStatus | 'filled' | 'cancelled'
     requestId?: string | null
+    statusReason?: string | null
+    statusUpdatedAt?: string
     createdAt: string
   }
+  reason?: string | null
+  timestamp: number
+}
+export interface TradeOrderStatusEvent {
+  eventId: string
+  orderId: string
+  status: TradeOrderEventStatus
+  reason?: string | null
   timestamp: number
 }
 export type CapitalFlowCategory = 'main' | 'extraLarge' | 'large' | 'medium' | 'small'
@@ -198,6 +238,71 @@ export interface StockFinancialRecord {
   source: StockDataSource
 }
 
+export interface StockFinancialStatementRecord {
+  code: string
+  name: string
+  reportDate: string
+  reportType: string | null
+  revenue: number | null
+  netProfit: number | null
+  netProfitYoy: number | null
+  eps: number | null
+  operatingCashFlow: number | null
+  totalAssets: number | null
+  totalLiabilities: number | null
+  source: StockDataSource
+}
+
+export interface StockShareholderRecord {
+  code: string
+  name: string
+  shareholderName: string
+  shareholderType: string | null
+  shares: number | null
+  ownershipRatio: number | null
+  reportDate: string | null
+  source: StockDataSource
+}
+
+export interface StockUnlockRecord {
+  code: string
+  name: string
+  unlockDate: string
+  shares: number | null
+  ownershipRatio: number | null
+  shareholderName: string | null
+  source: StockDataSource
+}
+
+export interface StockInstitutionRecord {
+  code: string
+  name: string
+  date: string
+  close: number | null
+  changePercent: number | null
+  buyOrgCount: number | null
+  sellOrgCount: number | null
+  orgBuyAmount: number | null
+  orgSellAmount: number | null
+  orgNetAmount: number | null
+  source: StockDataSource
+}
+
+export interface StockBlockTradeRecord {
+  code: string
+  name: string
+  date: string
+  close: number | null
+  changePercent: number | null
+  dealPrice: number | null
+  dealVolume: number | null
+  dealAmount: number | null
+  premiumRate: number | null
+  buyBranch: string
+  sellBranch: string
+  source: StockDataSource
+}
+
 export interface StockDividendRecord {
   code: string
   name: string
@@ -222,7 +327,11 @@ export interface StockDetailData {
   trades: { code: string; timestamp: number; source: MarketSource | 'unavailable'; items: TradeTick[]; availability: DataAvailability }
   capitalFlow: CapitalFlowData
   financials: { code: string; timestamp: number; source: StockDataSource; availability: DataAvailability; items: StockFinancialRecord[] }
-  shareholders: { code: string; timestamp: number; source: 'unavailable'; availability: DataAvailability; items: never[] }
+  financialStatements: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockFinancialStatementRecord[] }
+  shareholders: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockShareholderRecord[] }
+  institutions: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockInstitutionRecord[] }
+  unlocks: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockUnlockRecord[] }
+  blockTrades: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockBlockTradeRecord[] }
   dividends: { code: string; timestamp: number; source: StockDataSource; availability: DataAvailability; items: StockDividendRecord[] }
 }
 

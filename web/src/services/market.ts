@@ -1,6 +1,6 @@
 import { getRealIndexes, getRealStock, getRealStocks } from '@/services/stock-sdk-adapter'
 import { apiFetch } from '@/services/api-client'
-import type { CapitalFlowData, IndexQuote, MarketBoardQuote, MarketRankQuote, MarketSentiment, StockDetailResponse, StockQuote } from '@/services/market-types'
+import type { CapitalFlowData, IndexQuote, LimitBoardResponse, MarketBoardQuote, MarketRankQuote, MarketSentiment, SectorDetailResponse, StockDetailResponse, StockQuote } from '@/services/market-types'
 
 export function getMarketSentiment(): Promise<MarketSentiment> {
   return apiFetch<MarketSentiment>('/api/market/sentiment')
@@ -12,6 +12,10 @@ export async function getIndexQuotes(): Promise<IndexQuote[]> {
     if (result.length) return result.map((item) => ({ code: item.code, name: item.name, value: item.value.toFixed(2), change: signed(item.change), percent: `${signed(item.changePercent)}%`, trend: item.changePercent >= 0 ? 'up' : 'down' }))
   } catch { /* try the direct provider below */ }
   try { return await getRealIndexes() } catch { return [] }
+}
+
+export async function getLimitBoard(direction: 'up' | 'down'): Promise<LimitBoardResponse> {
+  return apiFetch<LimitBoardResponse>(`/api/market/limit-board?direction=${direction}`)
 }
 
 export async function getMarketRankings(type: string, keyword = ''): Promise<MarketRankQuote[]> {
@@ -29,12 +33,12 @@ export async function getMarketStocks(): Promise<StockQuote[]> {
   try { return await getRealStocks() } catch { return [] }
 }
 
-export async function getBoardQuotes(board: string): Promise<MarketBoardQuote[]> {
-  const endpoint = board === '板块' ? '/api/market/sectors' : board === 'ETF' ? '/api/market/etfs?limit=50' : ''
+export async function getBoardQuotes(board: string, kind: 'industry' | 'concept' = 'industry'): Promise<MarketBoardQuote[]> {
+  const endpoint = board === '板块' ? `/api/market/sectors?kind=${kind}` : board === 'ETF' ? '/api/market/etfs?limit=50' : ''
   if (!endpoint) return []
   try {
     const values = await apiFetch<Array<{ code: string; name: string; price?: number; changePercent: number; volume?: number; amount?: number; leadingStock?: string }>>(endpoint)
-    return values.map((item) => ({ code: item.code, name: item.name, price: item.price == null ? '--' : item.price.toFixed(3), change: item.price == null ? '--' : signed(item.changePercent), percent: `${signed(item.changePercent)}%`, extra: item.leadingStock ?? (item.amount == null ? '' : `成交 ${formatAmount(item.amount)}`), trend: item.changePercent >= 0 ? 'up' : 'down' }))
+    return values.map((item) => ({ code: item.code, name: item.name, price: item.price == null ? '--' : item.price.toFixed(3), change: item.price == null ? '--' : signed(item.changePercent), percent: `${signed(item.changePercent)}%`, extra: item.leadingStock ?? (item.amount == null || item.amount <= 0 ? '' : `成交 ${formatAmount(item.amount)}`), trend: item.changePercent >= 0 ? 'up' : 'down' }))
   } catch { return [] }
 }
 
@@ -46,6 +50,10 @@ export async function searchStocks(keyword: string): Promise<StockQuote[]> {
     return results.map((item) => ({ code: item.code, name: item.name, price: '--', change: '--', percent: '--', volume: item.type ?? '证券', trend: 'up' }))
   } catch { /* try the direct provider below */ }
   try { return (await getRealStocks()).filter((stock) => stock.name.toLowerCase().includes(query) || stock.code.toLowerCase().includes(query)) } catch { return [] }
+}
+
+export async function getSectorDetail(code: string, kind: 'industry' | 'concept' = 'industry'): Promise<SectorDetailResponse> {
+  return apiFetch<SectorDetailResponse>(`/api/market/sector-detail?code=${encodeURIComponent(code)}&kind=${kind}`)
 }
 
 export async function getStockDetail(code: string): Promise<StockDetailResponse> {
@@ -66,6 +74,14 @@ export async function getStockQuote(code: string): Promise<StockQuote | undefine
 
 function signed(value: number) { return `${value >= 0 ? '+' : ''}${value.toFixed(2)}` }
 function toStockQuote(quote: { code: string; name: string; price: number; change: number; changePercent: number; volume: number }): StockQuote { return { code: quote.code, name: quote.name, price: quote.price.toFixed(2), change: signed(quote.change), percent: `${signed(quote.changePercent)}%`, volume: formatAmount(quote.volume), trend: quote.change >= 0 ? 'up' : 'down' } }
+
+/** Convert one validated-enough socket quote into the display model without replacing other symbols. */
+export function stockQuoteFromRealtime(value: unknown): StockQuote | undefined {
+  if (!value || typeof value !== 'object') return undefined
+  const quote = value as Partial<{ code: string; name: string; price: number; change: number; changePercent: number; volume: number }>
+  if (typeof quote.code !== 'string' || typeof quote.name !== 'string' || ![quote.price, quote.change, quote.changePercent, quote.volume].every((item) => typeof item === 'number' && Number.isFinite(item))) return undefined
+  return toStockQuote(quote as { code: string; name: string; price: number; change: number; changePercent: number; volume: number })
+}
 function formatAmount(value: number) { return value >= 100000000 ? `${(value / 100000000).toFixed(1)}亿` : `${(value / 10000).toFixed(1)}万` }
 function percentOrUnavailable(value: number | null) { return value == null ? '不支持' : `${value.toFixed(2)}%` }
 function valueOrUnavailable(value: number | null) { return value == null ? '不支持' : value.toFixed(2) }

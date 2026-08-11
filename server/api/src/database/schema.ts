@@ -3,6 +3,8 @@ import { pgTable, uuid, varchar, integer, timestamp, uniqueIndex, primaryKey, nu
 export const users = pgTable('users', {
   id: uuid('id').defaultRandom().primaryKey(),
   phone: varchar('phone', { length: 32 }).notNull().unique(),
+  displayName: varchar('display_name', { length: 80 }),
+  avatar: varchar('avatar', { length: 1000 }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 })
 
@@ -10,9 +12,21 @@ export const refreshTokens = pgTable('refresh_tokens', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   tokenHash: varchar('token_hash', { length: 128 }).notNull().unique(),
+  userAgent: varchar('user_agent', { length: 500 }),
+  ipAddress: varchar('ip_address', { length: 64 }),
+  lastUsedAt: timestamp('last_used_at', { withTimezone: true }).defaultNow().notNull(),
   expiresAt: timestamp('expires_at', { withTimezone: true }).notNull(),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 })
+
+export const loginHistory = pgTable('login_history', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  action: varchar('action', { length: 32 }).notNull(),
+  userAgent: varchar('user_agent', { length: 500 }),
+  ipAddress: varchar('ip_address', { length: 64 }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userCreatedIdx: index('login_history_user_created_idx').on(table.userId, table.createdAt) }))
 
 export const watchlistGroups = pgTable('watchlist_groups', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -59,6 +73,16 @@ export const newsFavorites = pgTable('news_favorites', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userNews: uniqueIndex('news_favorites_user_news_idx').on(table.userId, table.newsId), userCreatedIdx: index('news_favorites_user_created_idx').on(table.userId, table.createdAt), userCategoryIdx: index('news_favorites_user_category_idx').on(table.userId, table.category) }))
 
+export const newsRecommendationPreferences = pgTable('news_recommendation_preferences', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  kind: varchar('kind', { length: 16 }).notNull(),
+  value: varchar('value', { length: 300 }).notNull(),
+  action: varchar('action', { length: 32 }).notNull(),
+  reason: varchar('reason', { length: 200 }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userPreference: uniqueIndex('news_recommendation_preferences_user_preference_idx').on(table.userId, table.kind, table.value), userCreatedIdx: index('news_recommendation_preferences_user_created_idx').on(table.userId, table.createdAt) }))
+
 export const reports = pgTable('reports', {
   id: varchar('id', { length: 128 }).primaryKey(),
   title: varchar('title', { length: 300 }).notNull(),
@@ -86,9 +110,20 @@ export const tradeOrders = pgTable('trade_orders', {
   price: numeric('price', { precision: 20, scale: 6 }).notNull(),
   fee: numeric('fee', { precision: 20, scale: 6 }).notNull().default('0'),
   status: varchar('status', { length: 16 }).notNull(),
+  statusReason: varchar('status_reason', { length: 500 }),
+  statusUpdatedAt: timestamp('status_updated_at', { withTimezone: true }).defaultNow().notNull(),
   requestId: varchar('request_id', { length: 128 }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCreatedIdx: index('trade_orders_user_created_idx').on(table.userId, table.createdAt), requestIdIdx: uniqueIndex('trade_orders_user_request_idx').on(table.userId, table.requestId) }))
+
+export const tradeOrderEvents = pgTable('trade_order_events', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  orderId: uuid('order_id').notNull().references(() => tradeOrders.id, { onDelete: 'cascade' }),
+  status: varchar('status', { length: 16 }).notNull(),
+  reason: varchar('reason', { length: 500 }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ orderCreatedIdx: index('trade_order_events_order_created_idx').on(table.orderId, table.createdAt), userCreatedIdx: index('trade_order_events_user_created_idx').on(table.userId, table.createdAt) }))
 
 export const tradeTransactions = pgTable('trade_transactions', {
   id: uuid('id').defaultRandom().primaryKey(),

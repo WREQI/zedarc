@@ -33,7 +33,7 @@ export function connectTradeSocket(options: TradeSocketOptions) {
         const event = (wrapper.data && typeof wrapper.data === 'object' ? wrapper.data : wrapper) as Partial<TradeOrderRealtimeEvent>
         if (!event.type?.startsWith('trade.order.') || !event.orderId || !event.order) return
         if (options.orderId && options.orderId !== event.orderId) return
-        if (!['placed', 'filled', 'cancelled'].includes(event.status as TradeOrderEventStatus)) return
+        if (!['pending', 'reported', 'partial', 'filled', 'cancelled', 'rejected', 'placed'].includes(event.status as TradeOrderEventStatus)) return
         options.onEvent(event as TradeOrderRealtimeEvent)
       } catch { /* Ignore malformed or market messages. */ }
     })

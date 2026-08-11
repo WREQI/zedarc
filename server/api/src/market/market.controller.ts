@@ -10,7 +10,9 @@ export class MarketController {
   @Get('sentiment') getSentiment() { return this.market.getSentiment() }
   @Get('indices') getIndices() { return this.market.getIndices() }
   @Get('rankings') @ApiQuery({ name: 'type', required: false }) @ApiQuery({ name: 'field', required: false }) @ApiQuery({ name: 'limit', required: false }) @ApiQuery({ name: 'keyword', required: false }) @ApiQuery({ name: 'status', required: false }) getRankings(@Query('type') type?: string, @Query('field') field?: string, @Query('limit') limit?: string, @Query('keyword') keyword?: string, @Query('q') q?: string, @Query('status') status?: 'up' | 'down') { return this.market.getRankings({ type, field, limit: Number(limit) || 20, keyword: (keyword ?? q)?.trim().slice(0, 64), status }) }
-  @Get('sectors') getSectors() { return this.market.getSectors() }
+  @Get('limit-board') @ApiQuery({ name: 'direction', required: true, enum: ['up', 'down'] }) getLimitBoard(@Query('direction') direction?: 'up' | 'down') { return this.market.getLimitBoard(direction === 'down' ? 'down' : 'up') }
+  @Get('sectors') getSectors(@Query('kind') kind?: 'industry' | 'concept') { return this.market.getSectors(kind === 'concept' ? 'concept' : 'industry') }
+  @Get('sector-detail') getSectorDetail(@Query('code') code: string, @Query('kind') kind?: 'industry' | 'concept') { return this.market.getSectorDetail(code, kind === 'concept' ? 'concept' : 'industry') }
   @Get('etf') getEtfs(@Query('limit') limit?: string) { return this.market.getEtfs(Number(limit) || 20) }
   @Get('etfs') getEtfsCompat(@Query('limit') limit?: string) { return this.market.getEtfs(Number(limit) || 20) }
   @Get('search') @ApiQuery({ name: 'q', required: false }) @ApiQuery({ name: 'keyword', required: false }) search(@Query('q') q?: string, @Query('keyword') keyword?: string) { return this.market.search((q ?? keyword ?? '').trim().slice(0, 64)) }

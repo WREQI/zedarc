@@ -23,6 +23,7 @@ const stockKeyword = ref('')
 const price = ref(availableStocks[0].price.replace(',', '') === '--' ? '0.00' : availableStocks[0].price.replace(',', ''))
 const quantity = ref(100)
 const toast = ref('')
+const validationError = ref('')
 const holdings = ref([{ ...availableStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' }])
 interface PageOrder { id?: string; time: string; name: string; side: string; price: string; quantity: number; status: string }
 const orders = ref<PageOrder[]>([
@@ -87,9 +88,14 @@ function enterDemo() { showAccountModal.value = false; demoMode.value = true; lo
 function selectStock(stock: StockQuote) { selectedStock.value = stock; price.value = stock.price.replace(',', ''); stockKeyword.value = '' }
 function showToast(message: string) { toast.value = message; window.setTimeout(() => { toast.value = '' }, 2200) }
 function validateOrder() {
-  if (!selectedStock.value || Number(price.value) <= 0 || !Number.isFinite(Number(price.value)) || quantity.value < 100 || quantity.value % 100 !== 0) { showToast('请输入有效价格，数量需为 100 股的整数倍'); return false }
-  if (tradeSide.value === 'buy' && estimatedAmount.value > availableCash.value) { showToast('可用资金不足'); return false }
-  if (tradeSide.value === 'sell' && (!currentHolding.value || quantity.value > currentHolding.value.quantity)) { showToast('持仓数量不足'); return false }
+  validationError.value = ''
+  const maxQuantity = 1000000
+  if (!selectedStock.value || Number(price.value) <= 0 || !Number.isFinite(Number(price.value))) validationError.value = '请输入有效委托价格'
+  else if (quantity.value < 100 || quantity.value % 100 !== 0) validationError.value = '数量必须是100股的整数倍'
+  else if (quantity.value > maxQuantity) validationError.value = `委托数量不能超过${maxQuantity.toLocaleString()}股`
+  else if (tradeSide.value === 'buy' && estimatedAmount.value > availableCash.value) validationError.value = '可用资金不足（已包含手续费的服务端校验）'
+  else if (tradeSide.value === 'sell' && (!currentHolding.value || quantity.value > currentHolding.value.quantity)) validationError.value = '可用持仓不足'
+  if (validationError.value) { showToast(validationError.value); return false }
   return true
 }
 function openConfirm() {
@@ -127,8 +133,8 @@ async function submitOrder() {
         orders.value.unshift({ id: order.id, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: draft.name, side: draft.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: order.status === 'cancelled' ? '已撤' : '已成' })
         showTradeResult(true, undefined, order.id)
         return
-      } catch {
-        showTradeResult(false, '交易服务未能完成本次委托，订单未提交。请检查网络后重试。')
+      } catch (error) {
+        showTradeResult(false, error instanceof Error ? error.message : '交易服务未能完成本次委托，订单未提交。')
         return
       }
     }
@@ -140,8 +146,8 @@ async function submitOrder() {
     } else if (currentHolding.value) { availableCash.value += draft.amount; currentHolding.value.quantity -= draft.quantity; currentHolding.value.marketValue = (currentHolding.value.quantity * draft.price).toFixed(2) }
     persistDemo()
     showTradeResult(true)
-  } catch {
-    showTradeResult(false, '下单过程中发生未知错误，请稍后重试。')
+  } catch (error) {
+    showTradeResult(false, error instanceof Error ? error.message : '下单过程中发生未知错误，请稍后重试。')
   } finally { isSubmitting.value = false }
 }
 </script>
@@ -158,7 +164,7 @@ async function submitOrder() {
       <div v-if="loadError" class="error-banner"><b>!</b><span>{{ loadError }}</span><button @click="loadError = ''">×</button></div>
       <section class="asset-card"><div class="asset-main"><span>总资产（元）</span><strong>{{ totalAssets.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong><small>{{ apiMode ? '实时账户数据' : '本地模拟数据' }}</small></div><div class="asset-grid"><div><span>可用资金</span><b>{{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div><div><span>持仓市值</span><b>{{ holdingsMarketValue.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div><div><span>今日盈亏</span><b :class="todayPnL >= 0 ? 'text-up' : 'text-down'">{{ todayPnL >= 0 ? '+' : '' }}{{ todayPnL.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div></div><button class="asset-link" @click="resetDemo">资产明细 ›</button></section>
       <section class="trade-entry-grid"><RouterLink to="/trade/positions"><b>我的持仓</b><small>查看持仓与盈亏</small><span>›</span></RouterLink><RouterLink to="/trade/orders"><b>当日委托</b><small>查看订单与撤单</small><span>›</span></RouterLink></section>
-      <section class="order-card"><div class="side-switch"><button :class="{ active: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ active: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><div class="selected-quote"><span>股票</span><div class="stock-input"><input v-model="stockKeyword" placeholder="输入名称或代码" /><b v-if="!stockKeyword">{{ selectedStock.name }}</b><small v-if="!stockKeyword">{{ selectedStock.code }}</small></div></div><div v-if="stockKeyword" class="suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)"><span>{{ stock.name }} <small>{{ stock.code }}</small></span><b>{{ stock.price }}</b></button></div><label class="field-row"><span>价格</span><div><input v-model="price" inputmode="decimal" /><em>元</em></div></label><div class="quick-row"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="field-row"><span>数量</span><div><input v-model.number="quantity" type="number" min="100" step="100" /><em>股</em></div></label><div class="quick-row"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = tradeSide === 'buy' ? maxBuy : maxSell">最大</button></div><div class="trade-summary"><span>订单金额</span><strong>¥ {{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div class="available-row"><span>{{ tradeSide === 'buy' ? '最大可买' : '最大可卖' }}</span><b>{{ (tradeSide === 'buy' ? maxBuy : maxSell).toLocaleString() }} 股</b><small>可用资金 {{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }} 元</small></div><button class="submit-button" :class="tradeSide" :disabled="isSubmitting" @click="openConfirm">{{ isSubmitting ? '提交中…' : `确认${tradeSide === 'buy' ? '买入' : '卖出'}` }}</button><p class="safe-tip">ⓘ 交易提交后不可随意撤回，请确认股票、价格和数量</p></section>
+      <section class="order-card"><div class="side-switch"><button :class="{ active: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ active: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><div class="selected-quote"><span>股票</span><div class="stock-input"><input v-model="stockKeyword" placeholder="输入名称或代码" /><b v-if="!stockKeyword">{{ selectedStock.name }}</b><small v-if="!stockKeyword">{{ selectedStock.code }}</small></div></div><div v-if="stockKeyword" class="suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)"><span>{{ stock.name }} <small>{{ stock.code }}</small></span><b>{{ stock.price }}</b></button></div><label class="field-row"><span>价格</span><div><input v-model="price" inputmode="decimal" /><em>元</em></div></label><div class="quick-row"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="field-row"><span>数量</span><div><input v-model.number="quantity" type="number" min="100" step="100" /><em>股</em></div></label><div class="quick-row"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = tradeSide === 'buy' ? maxBuy : maxSell">最大</button></div><div class="trade-summary"><span>订单金额</span><strong>¥ {{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><p v-if="validationError" class="validation-error">{{ validationError }}</p><div class="available-row"><span>{{ tradeSide === 'buy' ? '最大可买' : '最大可卖' }}</span><b>{{ (tradeSide === 'buy' ? maxBuy : maxSell).toLocaleString() }} 股</b><small>可用资金 {{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }} 元</small></div><button class="submit-button" :class="tradeSide" :disabled="isSubmitting" @click="openConfirm">{{ isSubmitting ? '提交中…' : `确认${tradeSide === 'buy' ? '买入' : '卖出'}` }}</button><p class="safe-tip">ⓘ 交易提交后不可随意撤回，请确认股票、价格和数量</p></section>
       <section class="list-card"><div class="section-title"><h2>我的持仓</h2><span>{{ holdings.length }} 只 · {{ apiMode ? 'API' : '模拟' }}</span></div><div v-for="holding in holdings" :key="holding.code" class="holding-row"><div><b>{{ holding.name }}</b><small>{{ holding.code }} · {{ holding.quantity }} 股</small></div><div><b>{{ (Number(holding.price.replace(',', '')) * holding.quantity).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b><small :class="holdingGain(holding) >= 0 ? 'text-up' : 'text-down'">{{ holdingGain(holding) >= 0 ? '+' : '' }}{{ holdingGain(holding).toFixed(2) }}</small></div></div><p v-if="!holdings.length" class="empty-state">暂无持仓</p></section>
       <section class="list-card orders-card"><div class="section-title"><h2>当日委托</h2><span>{{ orders.length }} 条</span></div><div v-for="(order, index) in orders" :key="order.time + order.name + index" class="order-row"><div><b>{{ order.name }} <em :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</em></b><small>{{ order.time }} · {{ order.price }} 元 × {{ order.quantity }} 股</small></div><div><span class="status" :class="{ cancelled: order.status === '已撤' }">{{ order.status }}</span><button v-if="order.status === '已报'" @click="cancelOrder(index)">撤单</button></div></div></section>
     </template>

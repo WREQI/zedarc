@@ -47,7 +47,14 @@ export async function apiFetch<T>(path: string, options: RequestInit = {}): Prom
 }
 export function sendCodeApi(phone: string) { return apiFetch<{ success: boolean; expiresIn: number }>('/api/auth/code', { method: 'POST', body: JSON.stringify({ phone }) }) }
 export async function loginApi(phone: string, code: string) { const result = await apiFetch<{ accessToken: string; refreshToken: string; user: { id: string; name?: string; phone: string } }>('/api/auth/login', { method: 'POST', body: JSON.stringify({ phone, code }) }); setAccessToken(result.accessToken); setRefreshToken(result.refreshToken); return result }
-export function meApi() { return apiFetch<{ id: string; name?: string; phone: string }>('/api/auth/me') }
+export interface ApiUser { id: string; name?: string; phone: string; avatar?: string }
+export interface ApiSession { id: string; current: boolean; userAgent: string; ipAddress?: string; createdAt: string; lastUsedAt: string; expiresAt: string }
+export interface LoginHistoryItem { id: string; action: string; userAgent?: string; ipAddress?: string; createdAt: string }
+export function meApi() { return apiFetch<ApiUser>('/api/auth/me') }
+export function updateProfileApi(patch: { displayName?: string; avatar?: string | null }) { return apiFetch<ApiUser>('/api/auth/profile', { method: 'PATCH', body: JSON.stringify(patch) }) }
+export function getSessionsApi() { return apiFetch<ApiSession[]>('/api/auth/sessions') }
+export function revokeSessionApi(id: string) { return apiFetch<{ success: boolean }>(`/api/auth/sessions/${encodeURIComponent(id)}`, { method: 'DELETE' }) }
+export function getLoginHistoryApi() { return apiFetch<LoginHistoryItem[]>('/api/auth/login-history') }
 export async function logoutApi() { const refreshToken = getRefreshToken(); try { if (refreshToken) await apiFetch<{ success: boolean }>('/api/auth/logout', { method: 'POST', body: JSON.stringify({ refreshToken }) }) } finally { clearAccessToken() } }
 
 export function getSettingsApi() { return apiFetch<Record<string, boolean | string | number>>('/api/settings') }

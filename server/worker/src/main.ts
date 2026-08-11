@@ -1,7 +1,7 @@
 import { createServer } from 'node:http'
 import { createClient, type RedisClientType } from 'redis'
-import { getSdkCapitalFlow, getSdkDividends, getSdkEtfs, getSdkFundamentals, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
-import { calculateMarketSentiment, validateKlineBars, validateNormalizedQuotes } from '@zedarc/shared'
+import { getSdkBlockTrades, getSdkCapitalFlow, getSdkDividends, getSdkEtfs, getSdkFundamentals, getSdkInstitutions, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
+import { calculateMarketSentiment, validateKlineBars, validateNormalizedQuotes, type QuoteRealtimeMessage } from '@zedarc/shared'
 import { KlineCategory } from 'node-tdx-market'
 import { TdxProvider } from './providers/tdx.provider.js'
 import { checkPriceAlerts } from './alerts/alert.worker.js'
@@ -17,6 +17,7 @@ let collections = 0
 let failures = 0
 const orderBookState = new Map<string, { sequence: number; bids: Map<number, number>; asks: Map<number, number> }>()
 const tradesState = new Map<string, { sequence: number; keys: Set<string> }>()
+const quoteSequences = new Map<string, number>()
 
 async function ensureRedis() {
   if (redis.isOpen) return true
@@ -54,7 +55,7 @@ async function markProvider(name: string, ok: boolean, error?: unknown) {
 async function writeQuotes(quotes: Awaited<ReturnType<typeof getSdkQuotes>>) {
   const valid = validateNormalizedQuotes(quotes, codes)
   if (!valid.length && quotes.length) throw new Error('refusing to cache invalid normalized quotes')
-  await Promise.all(valid.map(async (quote) => { await cache(`quote:${quote.code}`, quote, 30); await publish(`market:quote:${quote.code}`, quote); await publish('market:quote', quote) }))
+  await Promise.all(valid.map(async (quote) => { const sequence = (quoteSequences.get(quote.code) ?? 0) + 1; quoteSequences.set(quote.code, sequence); const update: QuoteRealtimeMessage = { ...quote, kind: 'delta', sequence }; await cache(`quote:${quote.code}`, quote, 30); await publish(`market:quote:${quote.code}`, update); await publish('market:quote', update) }))
   await cache('market:quotes', valid, 30)
   await cache('market:sentiment', calculateMarketSentiment(valid), 30)
   await publish('market:quotes', valid)
@@ -81,6 +82,14 @@ async function collectFundamentalData() {
       const records = await getSdkDividends(code)
       if (records.length) await cache(`stock-detail:dividends:${code}`, records, 86400)
     } catch (error) { console.warn(`[market-worker] dividend data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
+    try {
+      const records = await getSdkInstitutions(code)
+      await cache(`stock-detail:institutions:${code}`, records, 900)
+    } catch (error) { console.warn(`[market-worker] institution data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
+    try {
+      const records = await getSdkBlockTrades(code)
+      await cache(`stock-detail:block-trades:${code}`, records, 900)
+    } catch (error) { console.warn(`[market-worker] block-trade data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
   }
 }
 async function collectReferenceData() {

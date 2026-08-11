@@ -14,6 +14,7 @@ export function useAuthStore() {
     finally { state.ready = true }
   }
   async function login(phone: string, code = '123456') { state.loading = true; state.error = ''; try { if (!/^1\d{10}$/.test(phone)) throw new Error('请输入有效的手机号'); const result = await loginApi(phone, code); state.user = { ...result.user, name: result.user.name ?? result.user.phone }; window.localStorage.setItem('zedarc-user', JSON.stringify(state.user)); await Promise.all([useWatchlistStore().hydrate(), useFavoritesStore().hydrate()]) } catch (error) { state.error = error instanceof Error ? error.message : '登录失败'; throw error } finally { state.loading = false } }
+  function setUser(user: { id: string; name?: string; phone: string; avatar?: string }) { state.user = { ...user, name: user.name ?? user.phone }; window.localStorage.setItem('zedarc-user', JSON.stringify(state.user)) }
   async function logout() { await logoutApi(); state.user = null; window.localStorage.removeItem('zedarc-user') }
-  return { user: computed(() => state.user), isAuthenticated: computed(() => Boolean(state.user && (getAccessToken() || getRefreshToken()))), loading: computed(() => state.loading), ready: computed(() => state.ready), error: computed(() => state.error), restore, login, logout }
+  return { user: computed(() => state.user), isAuthenticated: computed(() => Boolean(state.user && (getAccessToken() || getRefreshToken()))), loading: computed(() => state.loading), ready: computed(() => state.ready), error: computed(() => state.error), restore, login, logout, setUser }
 }

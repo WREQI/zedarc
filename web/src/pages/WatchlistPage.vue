@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
@@ -7,6 +7,8 @@ import EmptyState from '@/components/EmptyState.vue'
 import { getMarketStocks } from '@/services/market'
 import type { StockQuote } from '@/services/market-types'
 import { useWatchlistStore } from '@/stores/watchlist'
+import { connectMarketSocket, type MarketSocketEvent } from '@/services/market-socket'
+import { stockQuoteFromRealtime } from '@/services/market'
 
 const watchlist = useWatchlistStore()
 const stocks = ref<StockQuote[]>([])
@@ -17,6 +19,8 @@ const editing = ref(false)
 const loading = ref(true)
 const error = ref('')
 const updatedAt = ref('—')
+let disconnectRealtime: (() => void) | undefined
+const realtimeSequences = new Map<string, number>()
 const stockMap = computed(() => new Map(stocks.value.map((stock) => [stock.code, stock])))
 const activeItems = computed(() => activeGroupId.value === 'recent' ? watchlist.recentCodes.value.map((code, sortOrder) => ({ code, sortOrder })) : watchlist.itemsByGroup.value[activeGroupId.value] ?? [])
 const currentStocks = computed(() => activeItems.value.map((item) => stockMap.value.get(item.code)).filter((stock): stock is StockQuote => Boolean(stock)))
@@ -29,7 +33,9 @@ function itemCount(id: string) { return (watchlist.itemsByGroup.value[id] ?? [])
 const selectedAll = computed(() => filteredStocks.value.length > 0 && filteredStocks.value.every((stock) => selected.value.includes(stock.code)))
 const summary = computed(() => ({ up: currentStocks.value.filter((stock) => stock.trend === 'up').length, down: currentStocks.value.filter((stock) => stock.trend === 'down').length }))
 
-async function load() { loading.value = true; error.value = ''; try { await Promise.all([watchlist.hydrate(), getMarketStocks().then((data) => { stocks.value = data })]); updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }) } catch { error.value = '自选数据读取失败，请重试。' } finally { loading.value = false } }
+async function load() { disconnectRealtime?.(); disconnectRealtime = undefined; loading.value = true; error.value = ''; try { await Promise.all([watchlist.hydrate(), getMarketStocks().then((data) => { stocks.value = data })]); updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }); startRealtime() } catch { error.value = '自选数据读取失败，请重试。' } finally { loading.value = false } }
+function startRealtime() { const codes = [...new Set([...Object.values(watchlist.itemsByGroup.value).flat().map((item) => item.code), ...watchlist.recentCodes.value])]; if (!codes.length) return; disconnectRealtime = connectMarketSocket(codes, applyRealtimeEvent, { types: ['quote'] }) }
+function applyRealtimeEvent(event: MarketSocketEvent) { const quote = stockQuoteFromRealtime(event.data); if (!quote) return; const sequence = typeof event.data === 'object' && event.data !== null && typeof (event.data as { sequence?: unknown }).sequence === 'number' ? (event.data as { sequence: number }).sequence : 0; if (sequence && sequence <= (realtimeSequences.get(quote.code) ?? 0)) return; realtimeSequences.set(quote.code, sequence); const index = stocks.value.findIndex((stock) => stock.code === quote.code); if (index < 0) return; stocks.value = stocks.value.map((stock, itemIndex) => itemIndex === index ? { ...stock, ...quote } : stock); updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }) }
 function selectGroup(id: string) { activeGroupId.value = id; selected.value = []; activeFilter.value = '全部'; editing.value = false }
 async function createGroup() { const name = window.prompt('请输入分组名称'); if (name?.trim()) { const group = await watchlist.createGroup(name); selectGroup(group.id) } }
 async function renameGroup() { if (!watchlist.groups.value.some((group) => group.id === activeGroupId.value)) return; const name = window.prompt('请输入新的分组名称', activeName.value); if (name?.trim()) await watchlist.renameGroup(activeGroupId.value, name) }
@@ -41,6 +47,7 @@ async function moveSelected(event: Event) { const groupId = (event.target as HTM
 function clearRecent() { watchlist.clearRecent(); selected.value = [] }
 function quoteClass(stock: StockQuote) { return stock.trend === 'up' ? 'text-up' : 'text-down' }
 onMounted(load)
+onUnmounted(() => disconnectRealtime?.())
 </script>
 
 <template>

@@ -1,12 +1,28 @@
 import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common'
 import { createClient, type RedisClientType } from 'redis'
-import { calculateMarketSentiment, normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type CapitalFlowData, type DataAvailability, type KlineBar, type MarketEtf, type MarketIndex as SharedMarketIndex, type MarketSearchResult, type MarketSector, type MarketSentiment, type NormalizedQuote, type OrderBook, type StockDetailData, type StockDividendRecord, type StockFinancialRecord, type TradeTick } from '@zedarc/shared'
+import { calculateMarketSentiment, normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type CapitalFlowData, type DataAvailability, type KlineBar, type MarketEtf, type MarketIndex as SharedMarketIndex, type MarketSearchResult, type MarketSector, type MarketSectorDetail, type MarketSectorKind, type MarketSentiment, type NormalizedQuote, type OrderBook, type StockDetailData, type StockDividendRecord, type StockFinancialRecord, type StockFinancialStatementRecord, type StockShareholderRecord, type StockUnlockRecord, type StockInstitutionRecord, type StockBlockTradeRecord, type TradeTick } from '@zedarc/shared'
 
 export type MarketIndex = SharedMarketIndex
 export type Sector = MarketSector
 export type RankingField = 'changePercent' | 'amount' | 'turnoverRate' | 'amplitude' | 'volumeRatio' | 'limitUp' | 'limitDown'
 export interface MarketRank extends Pick<NormalizedQuote, 'code' | 'name' | 'price' | 'change' | 'changePercent' | 'volume' | 'amount' | 'turnoverRate' | 'amplitude' | 'volumeRatio' | 'limitUp' | 'limitDown' | 'limitStatus'> {}
 export interface RankingOptions { type?: string; field?: string; limit?: number; keyword?: string; status?: 'up' | 'down' }
+export interface LimitBoardMetric<T = number> { value: T | null; available: boolean; reason?: string; source: string }
+export interface LimitBoardResponse {
+  direction: 'up' | 'down'
+  timestamp: number
+  source: string
+  items: MarketRank[]
+  ladder: {
+    firstBoard: LimitBoardMetric
+    secondBoard: LimitBoardMetric
+    aboveThirdBoard: LimitBoardMetric
+    maxStreak: LimitBoardMetric
+  }
+  brokenBoard: { items: MarketRank[]; available: boolean; reason?: string; source: string }
+  sealTime: LimitBoardMetric<string>
+  sealAmount: LimitBoardMetric<number>
+}
 
 
 const fallback: NormalizedQuote[] = [
@@ -40,7 +56,7 @@ export class MarketService implements OnModuleInit, OnModuleDestroy {
     const requested = codes.length ? codes.map(normalizeMarketCode) : fallback.map((item) => item.code)
     const values = validateNormalizedQuotes(await this.readMany<NormalizedQuote>(requested.map((code) => `quote:${code}`)), requested)
     const byCode = new Map(values.map((value) => [normalizeMarketCode(value.code), value]))
-    const result = requested.map((code) => byCode.get(code) ?? fallback.find((item) => item.code === code)).filter((value): value is NormalizedQuote => Boolean(value))
+    const result = requested.map((code) => byCode.get(code) ?? fallback.find((item) => normalizeMarketCode(item.code) === code)).filter((value): value is NormalizedQuote => Boolean(value))
     if (values.length) this.markSuccess(values[0].source)
     return result
   }
@@ -77,10 +93,25 @@ export class MarketService implements OnModuleInit, OnModuleDestroy {
     const orderBook = await this.getOrderBook(normalized)
     const trades = await this.getTrades(normalized)
     const capitalFlow = await this.getCapitalFlow(normalized)
-    const unavailable = <T extends never[]>(source: string, reason: string) => ({ code: normalized, timestamp: Date.now(), source: 'unavailable' as const, availability: availability(false, source, reason), items: [] as T })
+    const unavailable = <T>(source: string, reason: string) => ({ code: normalized, timestamp: Date.now(), source: 'unavailable' as const, availability: availability(false, source, reason), items: [] as T[] })
     const financials = await this.read<StockFinancialRecord[]>(`stock-detail:financials:${normalized}`)
+    const financialStatements = await this.read<StockFinancialStatementRecord[]>(`stock-detail:financial-statements:${normalized}`)
+    const shareholders = await this.read<StockShareholderRecord[]>(`stock-detail:shareholders:${normalized}`)
+    const institutions = await this.read<StockInstitutionRecord[]>(`stock-detail:institutions:${normalized}`)
+    const unlocks = await this.read<StockUnlockRecord[]>(`stock-detail:unlocks:${normalized}`)
+    const blockTrades = await this.read<StockBlockTradeRecord[]>(`stock-detail:block-trades:${normalized}`)
     const dividends = await this.read<StockDividendRecord[]>(`stock-detail:dividends:${normalized}`)
-    return { code: normalized, quote, orderBook, trades, capitalFlow, financials: financials?.length ? { code: normalized, timestamp: Date.now(), source: financials[0].source, availability: availability(true, financials[0].source), items: financials } : unavailable('stock-sdk', '上游行情接口未返回财务指标'), shareholders: unavailable('stock-sdk', '当前上游 provider 未提供上市公司股东名册'), dividends: dividends?.length ? { code: normalized, timestamp: Date.now(), source: dividends[0].source, availability: availability(true, dividends[0].source), items: dividends } : unavailable('stock-sdk', '上游接口未返回分红派息记录') }
+    const available = <T>(items: T[], source: string) => ({ code: normalized, timestamp: Date.now(), source: source as 'stock-sdk', availability: availability(true, source), items })
+    return {
+      code: normalized, quote, orderBook, trades, capitalFlow,
+      financials: financials?.length ? available(financials, financials[0].source) : unavailable<StockFinancialRecord>('stock-sdk', 'stock-sdk 仅提供估值快照，不提供财务报表明细'),
+      financialStatements: financialStatements?.length ? available(financialStatements, 'stock-sdk') : unavailable('stock-sdk', 'stock-sdk/TDX 未提供上市公司资产负债表、利润表或现金流量表接口'),
+      shareholders: shareholders?.length ? available(shareholders, 'stock-sdk') : unavailable('stock-sdk', 'stock-sdk/TDX 未提供上市公司前十大股东或股东名册接口'),
+      institutions: institutions?.length ? available(institutions, 'stock-sdk') : unavailable<StockInstitutionRecord>('stock-sdk', 'stock-sdk 未返回该股票近 180 天龙虎榜机构买卖数据'),
+      unlocks: unlocks?.length ? available(unlocks, 'stock-sdk') : unavailable('stock-sdk', 'stock-sdk/TDX 未提供限售股解禁日历接口'),
+      blockTrades: blockTrades?.length ? available(blockTrades, 'stock-sdk') : unavailable<StockBlockTradeRecord>('stock-sdk', 'stock-sdk 未返回该股票近 180 天大宗交易数据'),
+      dividends: dividends?.length ? available(dividends, dividends[0].source) : unavailable<StockDividendRecord>('stock-sdk', '上游接口未返回分红派息记录'),
+    }
   }
   async getSentiment(): Promise<MarketSentiment> {
     const quotes = validateNormalizedQuotes(await this.read<NormalizedQuote[]>('market:quotes'))
@@ -91,6 +122,27 @@ export class MarketService implements OnModuleInit, OnModuleDestroy {
     const valid = values?.filter(isValidIndex) ?? []
     return valid.length ? valid : fallbackIndices
   }
+  async getLimitBoard(direction: 'up' | 'down'): Promise<LimitBoardResponse> {
+    const items = await this.getRankings({ type: direction === 'up' ? 'limit-up' : 'limit-down', limit: 100 })
+    const source = items[0]?.limitStatus ? (await this.read<NormalizedQuote[]>('market:quotes'))?.[0]?.source ?? 'unavailable' : 'unavailable'
+    const unavailable = <T = number>(reason: string): LimitBoardMetric<T> => ({ value: null, available: false, source, reason })
+    return {
+      direction,
+      timestamp: Date.now(),
+      source,
+      items,
+      ladder: {
+        firstBoard: unavailable('当前行情 provider 未提供连板数'),
+        secondBoard: unavailable('当前行情 provider 未提供连板数'),
+        aboveThirdBoard: unavailable('当前行情 provider 未提供连板数'),
+        maxStreak: unavailable('当前行情 provider 未提供连板数'),
+      },
+      brokenBoard: { items: [], available: false, source, reason: '当前行情 provider 未提供炸板状态字段' },
+      sealTime: unavailable<string>('当前行情 provider 未提供封板时间'),
+      sealAmount: unavailable<number>('当前行情 provider 未提供封单金额'),
+    }
+  }
+
   async getRankings(options: RankingOptions | string = {}, legacyLimit = 20): Promise<MarketRank[]> {
     const query = typeof options === 'string' ? { type: options, limit: legacyLimit } : options
     const field = rankingField(query.field ?? query.type)
@@ -102,10 +154,29 @@ export class MarketService implements OnModuleInit, OnModuleDestroy {
     const descending = field !== 'changePercent' || query.type !== 'losers'
     return [...quotes].sort((a, b) => compareRank(a, b, field, descending)).slice(0, Math.max(1, Math.min(Number(query.limit) || 20, 100))).map(({ code, name, price, change, changePercent, volume, amount, turnoverRate, amplitude, volumeRatio, limitUp, limitDown, limitStatus }) => ({ code, name, price, change, changePercent, volume, amount, turnoverRate, amplitude, volumeRatio, limitUp, limitDown, limitStatus }))
   }
-  async getSectors(): Promise<Sector[]> {
+  async getSectors(kind: MarketSectorKind = 'industry'): Promise<Sector[]> {
     const values = await this.read<Sector[]>('market:sectors')
-    const valid = values?.filter(isValidSector) ?? []
+    const valid = values?.filter(isValidSector).filter((sector) => !sector.kind || sector.kind === kind) ?? []
+    // The worker currently publishes industry boards only. Never expose industry
+    // fallback rows as concept data: an empty result is more honest than fake data.
+    if (kind === 'concept') return valid
     return valid.length ? valid : fallbackSectors
+  }
+  async getSectorDetail(code: string, kind: MarketSectorKind = 'industry'): Promise<MarketSectorDetail> {
+    const normalized = code.trim().slice(0, 64)
+    const sector = (await this.getSectors(kind)).find((item) => item.code === normalized)
+    const cached = await this.read<{ memberCodes?: string[]; members?: NormalizedQuote[] }>(`market:sector-detail:${kind}:${normalized}`)
+    const cachedMembers = cached?.members?.filter((item) => validateNormalizedQuotes([item]).length) ?? []
+    const members = cachedMembers.length ? cachedMembers.map(toSectorMember) : []
+    const unavailable = { available: false, source: 'market-provider', reason: '当前行情 provider 未提供该板块的成分股快照' }
+    return {
+      sector: sector ?? { code: normalized, name: normalized, changePercent: 0, kind },
+      kind,
+      members,
+      availability: sector ? { available: true, source: sector.source ?? 'market-provider', ...(sector.timestamp ? { asOf: sector.timestamp } : {}) } : { available: false, source: 'market-provider', reason: '未找到该板块行情快照' },
+      membersAvailability: members.length ? { available: true, source: members[0].source ?? 'market-provider', asOf: Date.now() } : unavailable,
+      capitalFlowAvailability: { available: false, source: 'market-provider', reason: '当前行情 provider 未提供板块级资金流，未使用个股资金流替代' },
+    }
   }
   async getEtfs(limit = 20): Promise<MarketEtf[]> {
     const safeLimit = Math.max(1, Math.min(Number.isFinite(limit) ? Math.floor(limit) : 20, 100))
@@ -147,6 +218,10 @@ function isValidIndex(value: unknown): value is MarketIndex {
   const row = value as Partial<MarketIndex>
   return typeof row.code === 'string' && typeof row.name === 'string' && Number.isFinite(row.value) && Number.isFinite(row.change) && Number.isFinite(row.changePercent) && Number.isFinite(row.timestamp)
 }
+function toSectorMember(value: NormalizedQuote) {
+  return { code: value.code, name: value.name, price: value.price, change: value.change, changePercent: value.changePercent, amount: value.amount, source: value.source }
+}
+
 function isValidSector(value: unknown): value is Sector {
   if (!value || typeof value !== 'object') return false
   const row = value as Partial<Sector>

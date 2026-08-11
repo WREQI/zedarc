@@ -38,7 +38,9 @@ export function clearDemoAccount() {
 
 export interface TradeAccount { userId: string; cash: number; marketValue: number; availableCash: number }
 export interface TradePosition { code: string; quantity: number; available: number; averagePrice: number }
-export interface TradeOrder { id: string; userId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; status: 'filled' | 'cancelled'; requestId?: string | null; createdAt: string }
+export type TradeOrderStatus = 'pending' | 'reported' | 'partial' | 'filled' | 'cancelled' | 'rejected'
+export interface TradeOrderStatusEvent { eventId: string; orderId: string; status: TradeOrderStatus | 'placed'; reason?: string | null; timestamp: number }
+export interface TradeOrder { id: string; userId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; status: TradeOrderStatus; statusReason?: string | null; statusUpdatedAt?: string; requestId?: string | null; createdAt: string; timeline?: TradeOrderStatusEvent[] }
 export interface TradeTransaction { id: string; userId: string; orderId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; amount: number; createdAt: string }
 export interface TradeCashFlow { id: string; orderId: string; transactionId: string; type: 'trade' | 'fee'; amount: number; createdAt: string }
 export interface TradeFunds extends TradeAccount { flows: TradeCashFlow[] }

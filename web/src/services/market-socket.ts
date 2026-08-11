@@ -8,9 +8,11 @@ export interface MarketSocketOptions {
   onStatus?: (status: MarketSocketStatus) => void
 }
 
-export function connectMarketSocket(codes: string[], onEvent: (event: MarketSocketEvent) => void, options: Omit<MarketSocketOptions, 'codes'> = {}) {
+export type MarketSocketConnection = (() => void) & { setCodes: (codes: string[]) => void }
+
+export function connectMarketSocket(codes: string[], onEvent: (event: MarketSocketEvent) => void, options: Omit<MarketSocketOptions, 'codes'> = {}): MarketSocketConnection {
   const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
-  const subscribedCodes = [...new Set(codes.map((code) => code.trim().toLowerCase()).filter(Boolean))]
+  let subscribedCodes = [...new Set(codes.map((code) => code.trim().toLowerCase()).filter(Boolean))]
   const types = options.types ?? ['quote', 'kline', 'intraday', 'orderbook']
   const events = options.events ?? []
   const onStatus = options.onStatus ?? (() => undefined)
@@ -47,12 +49,26 @@ export function connectMarketSocket(codes: string[], onEvent: (event: MarketSock
   }
 
   connect()
-  return () => {
+  const disconnect = (() => {
     stopped = true
     if (reconnectTimer) clearTimeout(reconnectTimer)
     reconnectTimer = undefined
+    if (socket?.readyState === WebSocket.OPEN && subscribedCodes.length) {
+      socket.send(JSON.stringify({ event: 'unsubscribe', data: { codes: subscribedCodes, types, events } }))
+    }
     socket?.close()
     socket = undefined
     onStatus('closed')
+  }) as MarketSocketConnection
+  disconnect.setCodes = (nextCodes: string[]) => {
+    const next = [...new Set(nextCodes.map((code) => code.trim().toLowerCase()).filter(Boolean))]
+    if (socket?.readyState === WebSocket.OPEN) {
+      const removed = subscribedCodes.filter((code) => !next.includes(code))
+      const added = next.filter((code) => !subscribedCodes.includes(code))
+      if (removed.length) socket.send(JSON.stringify({ event: 'unsubscribe', data: { codes: removed } }))
+      if (added.length) socket.send(JSON.stringify({ event: 'subscribe', data: { codes: added, types, events } }))
+    }
+    subscribedCodes = next
   }
+  return disconnect
 }

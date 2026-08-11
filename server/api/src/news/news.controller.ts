@@ -1,4 +1,4 @@
-import { BadRequestException, Controller, Get, Param, Query, Req } from '@nestjs/common'
+import { BadRequestException, Body, Controller, Delete, Get, Param, Post, Query, Req } from '@nestjs/common'
 import { ApiTags } from '@nestjs/swagger'
 import { NewsService, type NewsListQuery } from './news.service.js'
 import { NewsRecommendationService } from './news-recommendation.service.js'
@@ -13,6 +13,18 @@ export class NewsController {
   list(@Query('code') code?: string, @Query('keyword') keyword?: string, @Query('source') source?: string, @Query('page') page?: string, @Query('pageSize') pageSize?: string) {
     return this.service.list({ code, keyword, source, ...this.parsePagination(page, pageSize) })
   }
+
+  @Post('recommendations/feedback')
+  feedback(@Body() body: { newsId?: string; keyword?: string; action?: 'dislike' | 'block'; reason?: string }, @Req() request?: { headers: { authorization?: string } }) { return this.recommendations.feedback(this.optionalUserId(request), body) }
+
+  @Get('recommendations/preferences')
+  preferences(@Req() request?: { headers: { authorization?: string } }) { return this.recommendations.preferences(this.optionalUserId(request)) }
+
+  @Delete('recommendations/preferences/:kind/:value')
+  restorePreference(@Param('kind') kind: string, @Param('value') value: string, @Req() request?: { headers: { authorization?: string } }) { return this.recommendations.restore(this.optionalUserId(request), kind, value) }
+
+  @Post('recommendations/preferences/reset')
+  resetPreferences(@Req() request?: { headers: { authorization?: string } }) { return this.recommendations.reset(this.optionalUserId(request)) }
 
   @Get('recommendations')
   recommendationsList(@Query('history') history?: string, @Query('limit') limit?: string, @Req() request?: { headers: { authorization?: string } }) {
@@ -33,6 +45,12 @@ export class NewsController {
 
   @Get(':id')
   find(@Param('id') id: string) { return this.service.find(id) }
+
+  private optionalUserId(request?: { headers: { authorization?: string } }) {
+    const token = request?.headers.authorization?.replace(/^Bearer\s+/i, '')
+    if (!token) return undefined
+    try { return this.auth.verifyAccess(token).id } catch { return undefined }
+  }
 
   private parsePagination(page?: string, pageSize?: string): Pick<NewsListQuery, 'page' | 'pageSize'> {
     return { page: this.parsePositiveInteger(page, 'page', 1), pageSize: this.parsePositiveInteger(pageSize, 'pageSize', 20, 100) }

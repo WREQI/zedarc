@@ -30,9 +30,9 @@ function valueFor(key: 'notifications' | 'priceAlerts') { return key === 'notifi
 async function toggle(key: 'notifications' | 'priceAlerts') {
   isSaving.value = key
   const value = !valueFor(key).value
-  await settings.set(key, value)
+  const saved = await settings.set(key, value)
   isSaving.value = ''
-  showToast(value ? '已开启' : '已关闭')
+  showToast(saved ? (value ? '已开启' : '已关闭') : '保存失败，请重试')
 }
 function showToast(message: string) {
   toast.value = message
