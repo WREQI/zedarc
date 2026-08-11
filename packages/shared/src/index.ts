@@ -1,5 +1,17 @@
 export type MarketSource = 'tdx' | 'stock-sdk' | 'mock'
 
+export interface PaginationQuery { page?: number; pageSize?: number }
+export interface PaginatedResult<T> {
+  items: T[]
+  total: number
+  page: number
+  pageSize: number
+  totalPages: number
+  hasNext: boolean
+}
+export interface NewsQuery extends PaginationQuery { code?: string; keyword?: string; source?: string }
+export interface ReportsQuery extends PaginationQuery { code?: string; keyword?: string; institution?: string; rating?: string }
+
 export interface NormalizedQuote {
   code: string
   name: string

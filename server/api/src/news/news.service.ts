@@ -4,6 +4,7 @@ import { DatabaseService } from '../database/database.service.js'
 import { news } from '../database/schema.js'
 
 export interface NewsItem { id: string; title: string; summary: string; source: string; publishedAt: string; codes: string[]; url?: string }
+export interface NewsListQuery { code?: string; keyword?: string; source?: string; page?: number; pageSize?: number }
 
 @Injectable()
 export class NewsService {
@@ -11,18 +12,23 @@ export class NewsService {
 
   constructor(private readonly database: DatabaseService) {}
 
-  async list(query?: { code?: string; keyword?: string; page?: number; pageSize?: number }) {
-    const page = Math.max(1, query?.page ?? 1)
-    const pageSize = Math.min(100, Math.max(1, query?.pageSize ?? 20))
+  async list(query: NewsListQuery = {}) {
+    const page = query.page ?? 1
+    const pageSize = query.pageSize ?? 20
+    const source = query.source?.trim().toLowerCase()
+    const filter = (item: NewsItem) => this.matches(item, query) && (!source || item.source.toLowerCase() === source)
+    let filtered: NewsItem[]
     if (this.database.db) {
       try {
-        const rows = await this.database.db.select().from(news).orderBy(desc(news.publishedAt))
-        const filtered = rows.map(this.toItem).filter((item) => this.matches(item, query))
-        return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
-      } catch { /* Database is optional in local/demo deployments. */ }
-    }
-    const filtered = this.items.filter((item) => this.matches(item, query))
-    return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
+        const rows = await this.database.db.select().from(news).orderBy(desc(news.publishedAt), desc(news.id))
+        filtered = rows.map(this.toItem).filter(filter)
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+        filtered = this.items.filter(filter)
+      }
+    } else filtered = this.items.filter(filter)
+    const start = (page - 1) * pageSize
+    return { items: filtered.slice(start, start + pageSize), total: filtered.length, page, pageSize, totalPages: Math.ceil(filtered.length / pageSize), hasNext: start + pageSize < filtered.length }
   }
 
   async find(id: string) {
@@ -30,7 +36,9 @@ export class NewsService {
       try {
         const [row] = await this.database.db.select().from(news).where(eq(news.id, id)).limit(1)
         if (row) return this.toItem(row)
-      } catch { /* fall through to the in-memory store */ }
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+      }
     }
     const item = this.items.find((value) => value.id === id)
     if (!item) throw new NotFoundException('资讯不存在')
@@ -38,5 +46,5 @@ export class NewsService {
   }
 
   private readonly toItem = (row: typeof news.$inferSelect): NewsItem => ({ id: row.id, title: row.title, summary: row.summary, source: row.source, publishedAt: row.publishedAt.toISOString(), codes: row.codes ?? [], ...(row.url ? { url: row.url } : {}) })
-  private matches(item: NewsItem, query?: { code?: string; keyword?: string }) { const q = (query?.keyword ?? '').toLowerCase(); return (!query?.code || item.codes.includes(query.code)) && (!q || `${item.title}${item.summary}`.toLowerCase().includes(q)) }
+  private matches(item: NewsItem, query: Pick<NewsListQuery, 'code' | 'keyword'>) { const q = (query.keyword ?? '').trim().toLowerCase(); const code = query.code?.trim().toLowerCase(); return (!code || item.codes.some((value) => value.toLowerCase() === code)) && (!q || `${item.title}${item.summary}`.toLowerCase().includes(q)) }
 }

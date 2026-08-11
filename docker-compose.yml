@@ -25,10 +25,11 @@ services:
       JWT_SECRET: ${JWT_SECRET:-zedarc-development-secret}
       SMS_PROVIDER: ${SMS_PROVIDER:-mock}
       MOCK_LOGIN_CODE: ${MOCK_LOGIN_CODE:-123456}
+      ALLOW_OUT_OF_SESSION: ${ALLOW_OUT_OF_SESSION:-false}
       REDIS_URL: redis://redis:6379
       DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/zedarc
     ports:
-      - "${API_PORT:-3000}:3000"
+      - "${API_HOST_PORT:-3001}:3000"
     restart: unless-stopped
     depends_on:
       migration-init:

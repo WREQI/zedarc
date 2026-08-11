@@ -7,7 +7,8 @@ export class KlineService {
   constructor(private readonly market: MarketService) {}
   async indicators(code: string, period = 'daily', params: IndicatorParams = {}) {
     const bars = await this.market.getKline(code, period)
-    return { code, period, params: normalize(params), bars, indicators: calculateIndicators(bars, params) }
+    const source: string = bars[0]?.source ?? 'unknown'
+    return { code, period, params: normalize(params), source, dataSource: source === 'mock' ? 'mock' : source === 'unknown' ? 'unknown' : 'api', bars, indicators: calculateIndicators(bars, params) }
   }
 }
 export function normalize(params: IndicatorParams) { return { kdjPeriod: clamp(params.kdjPeriod, 9, 2, 60), kdjSignal: clamp(params.kdjSignal, 3, 1, 20), rsiPeriod: clamp(params.rsiPeriod, 14, 2, 60), sarStep: clamp(params.sarStep, .02, .001, .2), sarMax: clamp(params.sarMax, .2, .02, 1) } }

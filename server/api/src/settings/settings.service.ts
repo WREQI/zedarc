@@ -17,6 +17,7 @@ export class SettingsService {
         if (row) return (row.settings ?? {}) as Settings
       } catch { /* use the local store when the database is unavailable */ }
     }
+    if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw new Error('数据库不可用，设置暂时无法读取')
     return this.memory.get(userId) ?? {}
   }
 
@@ -29,6 +30,7 @@ export class SettingsService {
         return row.settings as Settings
       } catch { /* preserve the in-memory result for degraded local deployments */ }
     }
+    if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw new Error('数据库不可用，设置暂时无法保存')
     return current
   }
 }

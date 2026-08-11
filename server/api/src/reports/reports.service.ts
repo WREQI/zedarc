@@ -4,6 +4,7 @@ import { DatabaseService } from '../database/database.service.js'
 import { reports } from '../database/schema.js'
 
 export interface Report { id: string; title: string; institution: string; rating: string; targetPrice?: number; publishedAt: string; code: string; summary: string }
+export interface ReportsListQuery { code?: string; keyword?: string; institution?: string; rating?: string; page?: number; pageSize?: number }
 
 @Injectable()
 export class ReportsService {
@@ -11,14 +12,21 @@ export class ReportsService {
 
   constructor(private readonly database: DatabaseService) {}
 
-  async list(code?: string, keyword?: string, page = 1, pageSize = 20) {
+  async list(query: ReportsListQuery = {}) {
+    const page = query.page ?? 1
+    const pageSize = query.pageSize ?? 20
+    let filtered: Report[]
     if (this.database.db) {
       try {
-        const rows = await this.database.db.select().from(reports).orderBy(desc(reports.publishedAt))
-        const filtered = rows.map(this.toReport).filter((item) => this.matches(item, code, keyword)); return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
-      } catch { /* Database is optional in local/demo deployments. */ }
-    }
-    const filtered = this.items.filter((item) => this.matches(item, code, keyword)); return { items: filtered.slice((page - 1) * pageSize, page * pageSize), total: filtered.length, page, pageSize }
+        const rows = await this.database.db.select().from(reports).orderBy(desc(reports.publishedAt), desc(reports.id))
+        filtered = rows.map(this.toReport).filter((item) => this.matches(item, query))
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+        filtered = this.items.filter((item) => this.matches(item, query))
+      }
+    } else filtered = this.items.filter((item) => this.matches(item, query))
+    const start = (page - 1) * pageSize
+    return { items: filtered.slice(start, start + pageSize), total: filtered.length, page, pageSize, totalPages: Math.ceil(filtered.length / pageSize), hasNext: start + pageSize < filtered.length }
   }
 
   async find(id: string) {
@@ -26,7 +34,9 @@ export class ReportsService {
       try {
         const [row] = await this.database.db.select().from(reports).where(eq(reports.id, id)).limit(1)
         if (row) return this.toReport(row)
-      } catch { /* fall through to the in-memory store */ }
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+      }
     }
     const item = this.items.find((value) => value.id === id)
     if (!item) throw new NotFoundException('研报不存在')
@@ -34,5 +44,11 @@ export class ReportsService {
   }
 
   private readonly toReport = (row: typeof reports.$inferSelect): Report => ({ ...row, targetPrice: row.targetPrice == null ? undefined : Number(row.targetPrice), publishedAt: row.publishedAt.toISOString() })
-  private matches(item: Report, code?: string, keyword?: string) { const q = (keyword ?? '').toLowerCase(); return (!code || item.code === code) && (!q || item.title.toLowerCase().includes(q)) }
+  private matches(item: Report, query: ReportsListQuery) {
+    const keyword = query.keyword?.trim().toLowerCase()
+    const code = query.code?.trim().toLowerCase()
+    const institution = query.institution?.trim().toLowerCase()
+    const rating = query.rating?.trim().toLowerCase()
+    return (!code || item.code.toLowerCase() === code) && (!institution || item.institution.toLowerCase() === institution) && (!rating || item.rating.toLowerCase() === rating) && (!keyword || `${item.title}${item.summary}`.toLowerCase().includes(keyword))
+  }
 }

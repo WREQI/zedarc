@@ -1,30 +1,32 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import LoadingState from '@/components/LoadingState.vue'
+import ErrorState from '@/components/ErrorState.vue'
+import EmptyState from '@/components/EmptyState.vue'
 import { getMarketStocksSnapshot, getStockQuote } from '@/services/market'
-import { calculateKDJ, calculateRSI, calculateSAR, createKlineSeries, getKlineSeries, getMinuteSeries, type KlineCandle } from '@/services/kline'
+import { calculateKDJ, calculateRSI, calculateSAR, createKlineSeries, getKlineDataSource, getKlineSeries, getMinuteSeries, type KlineCandle } from '@/services/kline'
 import { useWatchlistStore } from '@/stores/watchlist'
+import { useChartPreferencesStore } from '@/stores/chart-preferences'
 import { connectMarketSocket } from '@/services/market-socket'
 import { createPriceAlert } from '@/services/alerts'
 import { getAccessToken } from '@/services/api-client'
 
 const marketStocks = getMarketStocksSnapshot()
-
-
 const route = useRoute()
+const code = computed(() => String(route.params.code || '000001'))
+const fallbackStock = computed(() => ({ code: code.value, name: '加载中', price: '--', change: '--', percent: '--', volume: '--', trend: 'up' as const }))
 const watchlistStore = useWatchlistStore()
+const chartPreferences = useChartPreferencesStore()
 const realStock = ref<typeof marketStocks[number] | null>(null)
-const stock = computed(() => realStock.value ?? marketStocks.find((item) => item.code === route.params.code) ?? marketStocks[0])
+const isQuoteLoading = ref(true)
+const quoteError = ref('')
+const stock = computed(() => realStock.value ?? marketStocks.find((item) => item.code === code.value) ?? fallbackStock.value)
 const stockStats = computed(() => {
-  const price = Number(stock.value.price.replace(',', ''))
-  const change = Number(stock.value.change.replace(',', ''))
+  const price = Number(stock.value.price.replace(',', '')) || 0
+  const change = Number(stock.value.change.replace(',', '')) || 0
   const open = price - change * .42
-  return {
-    open: open.toFixed(2),
-    high: (Math.max(open, price) + Math.abs(change) * .18).toFixed(2),
-    low: (Math.min(open, price) - Math.abs(change) * .12).toFixed(2),
-    turnover: stock.value.volume,
-  }
+  return { open: open.toFixed(2), high: (Math.max(open, price) + Math.abs(change) * .18).toFixed(2), low: (Math.min(open, price) - Math.abs(change) * .12).toFixed(2), turnover: stock.value.volume }
 })
 const periods = ['分时', '5日', '日K', '周K', '月K']
 const activePeriod = ref('日K')
@@ -35,8 +37,10 @@ const showSignals = ref(true)
 const zoom = ref(1)
 const pan = ref(0)
 const selectedIndex = ref<number | null>(null)
-const candles = ref<KlineCandle[]>(createKlineSeries(stock.value.code))
+const candles = ref<KlineCandle[]>(createKlineSeries(code.value))
 const isChartLoading = ref(false)
+const chartError = ref('')
+const dataSource = ref<'api' | 'sdk' | 'mock'>('mock')
 const pointer = ref({ active: false, startX: 0, startPan: 0 })
 const touchPoints = new Map<number, number>()
 const pinch = ref({ active: false, startDistance: 0, startZoom: 1 })
@@ -54,50 +58,33 @@ const alertError = ref('')
 const alertSaved = ref(false)
 let disconnectMarketSocket: () => void = () => undefined
 
-const chartPreferencesKey = 'zedarc-kline-preferences'
 const orderBook = computed(() => {
-  const price = Number(stock.value.price.replace(',', ''))
+  const price = Number(stock.value.price.replace(',', '')) || 0
   const levels = [0.6, 0.4, 0.2, 0.1, 0.05]
   const amounts = [1204, 862, 2031, 1536, 4120, 4820, 3128, 2745, 1680, 936]
-  return [
-    ...levels.map((offset, index) => ({ label: `卖${5 - index}`, price: (price + offset).toFixed(2), amount: amounts[index].toLocaleString(), side: 'sell' })),
-    ...levels.map((offset, index) => ({ label: `买${index + 1}`, price: (price - offset).toFixed(2), amount: amounts[index + 5].toLocaleString(), side: 'buy' })),
-  ]
+  return [...levels.map((offset, index) => ({ label: `卖${5 - index}`, price: (price + offset).toFixed(2), amount: amounts[index].toLocaleString(), side: 'sell' })), ...levels.map((offset, index) => ({ label: `买${index + 1}`, price: (price - offset).toFixed(2), amount: amounts[index + 5].toLocaleString(), side: 'buy' }))]
 })
-const capitalFlow = [
-  { label: '主力净流入', value: '+2.86亿', percent: '+6.7%', trend: 'up' },
-  { label: '超大单净流入', value: '+1.42亿', percent: '+3.3%', trend: 'up' },
-  { label: '大单净流入', value: '+1.08亿', percent: '+2.5%', trend: 'up' },
-  { label: '中单净流出', value: '-0.32亿', percent: '-0.7%', trend: 'down' },
-  { label: '小单净流出', value: '-0.18亿', percent: '-0.4%', trend: 'down' },
-]
-const detailNews = [
-  { time: '14:32', tag: '公告', title: '公司发布最新业务进展，产业链订单保持稳定' },
-  { time: '13:58', tag: '市场', title: '新能源板块持续活跃，机构关注盈利修复' },
-  { time: '11:24', tag: '研报', title: '机构上调目标价，维持“推荐”评级' },
-]
-const latestKDJ = computed(() => calculateKDJ(visibleCandles.value)[visibleCandles.value.length - 1] ?? { k: 0, d: 0, j: 0 })
-const latestRSI = computed(() => calculateRSI(visibleCandles.value)[visibleCandles.value.length - 1] ?? 0)
-const latestSAR = computed(() => calculateSAR(visibleCandles.value)[visibleCandles.value.length - 1] ?? 0)
-const analysisMetrics = [
-  { label: '市盈率 TTM', value: '18.42', note: '低于行业均值', trend: 'up' },
-  { label: '市净率', value: '3.26', note: '处于历史中位', trend: 'neutral' },
-  { label: 'ROE', value: '16.80%', note: '连续三年提升', trend: 'up' },
-  { label: '机构关注度', value: '★★★★☆', note: '近一月新增 12 家', trend: 'up' },
-]
+const capitalFlow = [{ label: '主力净流入', value: '+2.86亿', percent: '+6.7%', trend: 'up' }, { label: '超大单净流入', value: '+1.42亿', percent: '+3.3%', trend: 'up' }, { label: '大单净流入', value: '+1.08亿', percent: '+2.5%', trend: 'up' }, { label: '中单净流出', value: '-0.32亿', percent: '-0.7%', trend: 'down' }, { label: '小单净流出', value: '-0.18亿', percent: '-0.4%', trend: 'down' }]
+const detailNews = [{ time: '14:32', tag: '公告', title: '公司发布最新业务进展，产业链订单保持稳定' }, { time: '13:58', tag: '市场', title: '新能源板块持续活跃，机构关注盈利修复' }, { time: '11:24', tag: '研报', title: '机构上调目标价，维持“推荐”评级' }]
+const analysisMetrics = [{ label: '市盈率 TTM', value: '18.42', note: '低于行业均值', trend: 'up' }, { label: '市净率', value: '3.26', note: '处于历史中位', trend: 'neutral' }, { label: 'ROE', value: '16.80%', note: '连续三年提升', trend: 'up' }, { label: '机构关注度', value: '★★★★☆', note: '近一月新增 12 家', trend: 'up' }]
 
+async function loadQuote() {
+  isQuoteLoading.value = true; quoteError.value = ''
+  try { realStock.value = await getStockQuote(code.value) ?? null; if (!realStock.value) quoteError.value = '暂未找到该股票行情，请返回行情页重试。' } catch { quoteError.value = '股票行情加载失败，请检查网络后重试。' } finally { isQuoteLoading.value = false }
+}
 async function loadChartData() {
-  isChartLoading.value = true
+  isChartLoading.value = true; chartError.value = ''
   try {
     candles.value = activePeriod.value === '分时' ? await getMinuteSeries(stock.value.code) : await getKlineSeries(stock.value.code, activePeriod.value === '周K' ? 'weekly' : activePeriod.value === '月K' ? 'monthly' : 'daily', adjustment.value === '前复权' ? 'qfq' : adjustment.value === '后复权' ? 'hfq' : '')
-  } finally { isChartLoading.value = false }
+    dataSource.value = getKlineDataSource(candles.value)
+    if (!candles.value.length) chartError.value = '暂无该周期的图表数据。'
+  } catch { chartError.value = 'K线数据加载失败，请稍后重试。' } finally { isChartLoading.value = false }
 }
-
 onMounted(async () => {
-  try { realStock.value = await getStockQuote(String(route.params.code)) ?? null } catch { realStock.value = null }
+  await loadQuote()
   isFollowed.value = watchlistStore.has(stock.value.code)
   watchlistStore.addRecent(stock.value.code)
-  const preferences = JSON.parse(window.localStorage.getItem(`${chartPreferencesKey}-${stock.value.code}`) ?? 'null') as { period?: string; indicator?: 'MA' | 'MACD' | 'BOLL' | 'KDJ' | 'RSI' | 'SAR'; adjustment?: string; settings?: typeof settings.value } | null
+  const preferences = chartPreferences.get(stock.value.code)
   if (preferences?.period && periods.includes(preferences.period)) activePeriod.value = preferences.period
   if (preferences?.indicator) indicator.value = preferences.indicator
   if (preferences?.adjustment) adjustment.value = preferences.adjustment
@@ -110,162 +97,76 @@ onMounted(async () => {
     }
   })
 })
+watch([activePeriod, adjustment], () => { if (activePeriod.value) void loadChartData() })
+onUnmounted(() => { disconnectMarketSocket(); chartPreferences.save(stock.value.code, { period: activePeriod.value, indicator: indicator.value, adjustment: adjustment.value, settings: settings.value }) })
 
-watch([activePeriod, adjustment], () => { if (activePeriod.value || adjustment.value) void loadChartData() })
-
-onUnmounted(() => {
-  disconnectMarketSocket()
-  window.localStorage.setItem(`${chartPreferencesKey}-${stock.value.code}`, JSON.stringify({ period: activePeriod.value, indicator: indicator.value, adjustment: adjustment.value, settings: settings.value }))
-})
-
-function toggleFollow() {
-  watchlistStore.toggle(stock.value.code)
-  isFollowed.value = watchlistStore.has(stock.value.code)
-}
-function openAlert() {
-  alertError.value = ''
-  alertSaved.value = false
-  alertPrice.value = Number(stock.value.price.replace(',', '')).toFixed(2)
-  showAlert.value = true
-}
+function toggleFollow() { watchlistStore.toggle(stock.value.code); isFollowed.value = watchlistStore.has(stock.value.code) }
+function openAlert() { alertError.value = ''; alertSaved.value = false; alertPrice.value = Number(stock.value.price.replace(',', '')).toFixed(2); showAlert.value = true }
 async function saveAlert() {
   if (!getAccessToken()) { alertError.value = '请先登录后设置价格提醒'; return }
   const targetPrice = Number(alertPrice.value)
   if (!Number.isFinite(targetPrice) || targetPrice <= 0) { alertError.value = '请输入有效的目标价格'; return }
   try { await createPriceAlert({ code: stock.value.code, targetPrice, direction: alertDirection.value, repeat: alertRepeat.value }); alertSaved.value = true; window.setTimeout(() => { showAlert.value = false; alertSaved.value = false }, 900) } catch { alertError.value = '保存失败，请稍后重试' }
 }
-
-
 const periodSize = computed(() => ({ '分时': 40, '5日': 25, '日K': 30, '周K': 24, '月K': 18 }[activePeriod.value] ?? 30))
-const visibleCandles = computed(() => {
-  const count = Math.min(candles.value.length, Math.max(8, Math.round(periodSize.value / zoom.value)))
-  const end = Math.max(count, Math.min(candles.value.length, candles.value.length - pan.value))
-  return candles.value.slice(end - count, end)
-})
-const bounds = computed(() => {
-  const values = visibleCandles.value.flatMap((item) => [item.high, item.low])
-  return { min: Math.min(...values) - 2, max: Math.max(...values) + 2 }
-})
-const maxVolume = computed(() => Math.max(...visibleCandles.value.map((item) => item.volume)))
-const chartHeight = 270
+const visibleCandles = computed(() => { const count = Math.min(candles.value.length, Math.max(8, Math.round(periodSize.value / zoom.value))); const end = Math.max(count, Math.min(candles.value.length, candles.value.length - pan.value)); return candles.value.slice(Math.max(0, end - count), end) })
+const bounds = computed(() => { const values = visibleCandles.value.flatMap((item) => [item.high, item.low]); return { min: (Math.min(...values) || 0) - 2, max: (Math.max(...values) || 2) + 2 } })
+const maxVolume = computed(() => Math.max(1, ...visibleCandles.value.map((item) => item.volume)))
+const latestKDJ = computed(() => { const values = calculateKDJ(visibleCandles.value); return values[values.length - 1] ?? { k: 0, d: 0, j: 0 } })
+const latestRSI = computed(() => { const values = calculateRSI(visibleCandles.value); return values[values.length - 1] ?? 0 })
+const latestSAR = computed(() => { const values = calculateSAR(visibleCandles.value); return values[values.length - 1] ?? 0 })
 const chartWidth = 880
-const candleWidth = computed(() => Math.max(7, (chartWidth / visibleCandles.value.length) * .52))
-
-function xFor(index: number) { return 25 + (index + .5) * (chartWidth - 45) / visibleCandles.value.length }
-function yFor(value: number) { return 20 + (bounds.value.max - value) / (bounds.value.max - bounds.value.min) * chartHeight }
-function ma(period: number, index: number) {
-  const source = visibleCandles.value.slice(Math.max(0, index - period + 1), index + 1)
-  return source.reduce((sum, item) => sum + item.close, 0) / source.length
-}
+const candleWidth = computed(() => Math.max(7, (chartWidth / Math.max(1, visibleCandles.value.length)) * .52))
+function xFor(index: number) { return 25 + (index + .5) * (chartWidth - 45) / Math.max(1, visibleCandles.value.length) }
+function yFor(value: number) { return 20 + (bounds.value.max - value) / (bounds.value.max - bounds.value.min) * 270 }
+function ma(period: number, index: number) { const source = visibleCandles.value.slice(Math.max(0, index - period + 1), index + 1); return source.reduce((sum, item) => sum + item.close, 0) / Math.max(1, source.length) }
 function linePath(period: number) { return visibleCandles.value.map((_, index) => `${index ? 'L' : 'M'} ${xFor(index)} ${yFor(ma(period, index))}`).join(' ') }
 function closePath() { return visibleCandles.value.map((candle, index) => `${index ? 'L' : 'M'} ${xFor(index)} ${yFor(candle.close)}`).join(' ') }
-function bollValue(period: number, index: number, direction: number) {
-  const source = visibleCandles.value.slice(Math.max(0, index - period + 1), index + 1)
-  const average = source.reduce((sum, item) => sum + item.close, 0) / source.length
-  const deviation = Math.sqrt(source.reduce((sum, item) => sum + (item.close - average) ** 2, 0) / source.length)
-  return average + direction * deviation * 2
-}
+function bollValue(period: number, index: number, direction: number) { const source = visibleCandles.value.slice(Math.max(0, index - period + 1), index + 1); const average = source.reduce((sum, item) => sum + item.close, 0) / source.length; const deviation = Math.sqrt(source.reduce((sum, item) => sum + (item.close - average) ** 2, 0) / source.length); return average + direction * deviation * 2 }
 function bollPath(direction: number) { return visibleCandles.value.map((_, index) => `${index ? 'L' : 'M'} ${xFor(index)} ${yFor(bollValue(20, index, direction))}`).join(' ') }
 function macdValue(index: number) { return ma(5, index) - ma(10, index) }
 const macdScale = computed(() => Math.max(.8, ...visibleCandles.value.map((_, index) => Math.abs(macdValue(index)))) * 1.2)
 function macdY(value: number) { return 312 - value / macdScale.value * 22 }
 function macdPath() { return visibleCandles.value.map((_, index) => `${index ? 'L' : 'M'} ${xFor(index)} ${macdY(macdValue(index))}`).join(' ') }
-const areaStats = computed(() => {
-  if (areaPoints.value.length !== 2) return null
-  const toIndex = (x: number) => Math.max(0, Math.min(visibleCandles.value.length - 1, Math.round((x - 25) / (chartWidth - 45) * visibleCandles.value.length - .5)))
-  const start = toIndex(Math.min(areaPoints.value[0].x, areaPoints.value[1].x))
-  const end = toIndex(Math.max(areaPoints.value[0].x, areaPoints.value[1].x))
-  const source = visibleCandles.value.slice(start, end + 1)
-  const first = source[0]?.open ?? 0
-  const last = source[source.length - 1]?.close ?? 0
-  const high = Math.max(...source.map((item) => item.high))
-  const low = Math.min(...source.map((item) => item.low))
-  return { start, end, change: last - first, percent: first ? (last - first) / first * 100 : 0, high, low }
-})
-function indexFromPointer(event: PointerEvent) {
-  const target = event.currentTarget as SVGElement
-  const rect = target.getBoundingClientRect()
-  return Math.max(0, Math.min(visibleCandles.value.length - 1, Math.floor(((event.clientX - rect.left) / rect.width) * visibleCandles.value.length)))
-}
-function onChartPointerDown(event: PointerEvent) {
-  if (settings.value.draw || settings.value.areaSelect) {
-    const target = event.currentTarget as SVGElement
-    const rect = target.getBoundingClientRect()
-    const point = { x: (event.clientX - rect.left) / rect.width * 930, y: (event.clientY - rect.top) / rect.height * 400 }
-    if (settings.value.draw) drawPoints.value = drawPoints.value.length >= 2 ? [point] : [...drawPoints.value, point]
-    if (settings.value.areaSelect) areaPoints.value = areaPoints.value.length >= 2 ? [point] : [...areaPoints.value, point]
-    return
-  }
-  touchPoints.set(event.pointerId, event.clientX)
-  ;(event.currentTarget as Element).setPointerCapture?.(event.pointerId)
-  if (touchPoints.size === 2) {
-    const points = [...touchPoints.values()]
-    pinch.value = { active: true, startDistance: Math.abs(points[1] - points[0]), startZoom: zoom.value }
-    pointer.value.active = false
-    return
-  }
-  pointer.value = { active: true, startX: event.clientX, startPan: pan.value }
-}
-function onChartPointerMove(event: PointerEvent) {
-  if (touchPoints.has(event.pointerId)) touchPoints.set(event.pointerId, event.clientX)
-  if (pinch.value.active && touchPoints.size >= 2) {
-    const points = [...touchPoints.values()]
-    const distance = Math.abs(points[1] - points[0])
-    zoom.value = Math.max(.5, Math.min(2.5, pinch.value.startZoom * distance / Math.max(1, pinch.value.startDistance)))
-    selectedIndex.value = null
-    return
-  }
-  if (pointer.value.active) {
-    const target = event.currentTarget as SVGElement
-    const rect = target.getBoundingClientRect()
-    const delta = Math.round((event.clientX - pointer.value.startX) / rect.width * candles.value.length)
-    pan.value = Math.max(0, Math.min(candles.value.length - 8, pointer.value.startPan + delta))
-  }
-  selectedIndex.value = indexFromPointer(event)
-}
-function onChartPointerUp(event: PointerEvent) {
-  touchPoints.delete(event.pointerId)
-  if (touchPoints.size < 2) pinch.value.active = false
-  pointer.value.active = false
-}
-function onChartWheel(event: WheelEvent) {
-  zoom.value = Math.max(.5, Math.min(2.5, zoom.value + (event.deltaY < 0 ? .25 : -.25)))
-}
-function onChartLeave() { selectedIndex.value = null; pointer.value.active = false; touchPoints.clear(); pinch.value.active = false }
+function indexFromPointer(event: PointerEvent) { const rect = (event.currentTarget as SVGElement).getBoundingClientRect(); return Math.max(0, Math.min(visibleCandles.value.length - 1, Math.floor(((event.clientX - rect.left) / rect.width) * visibleCandles.value.length))) }
+function onChartPointerDown(event: PointerEvent) { if (settings.value.draw || settings.value.areaSelect) { const rect = (event.currentTarget as SVGElement).getBoundingClientRect(); const point = { x: (event.clientX - rect.left) / rect.width * 930, y: (event.clientY - rect.top) / rect.height * 400 }; if (settings.value.draw) drawPoints.value = drawPoints.value.length >= 2 ? [point] : [...drawPoints.value, point]; if (settings.value.areaSelect) areaPoints.value = areaPoints.value.length >= 2 ? [point] : [...areaPoints.value, point]; return }; touchPoints.set(event.pointerId, event.clientX); (event.currentTarget as Element).setPointerCapture?.(event.pointerId); if (touchPoints.size === 1) pointer.value = { active: true, startX: event.clientX, startPan: pan.value } }
+function onChartPointerMove(event: PointerEvent) { if (touchPoints.has(event.pointerId)) touchPoints.set(event.pointerId, event.clientX); if (pointer.value.active) { const rect = (event.currentTarget as SVGElement).getBoundingClientRect(); const delta = Math.round((event.clientX - pointer.value.startX) / rect.width * candles.value.length); pan.value = Math.max(0, Math.min(Math.max(0, candles.value.length - 8), pointer.value.startPan + delta)) }; selectedIndex.value = indexFromPointer(event) }
+function onChartPointerUp(event: PointerEvent) { touchPoints.delete(event.pointerId); pointer.value.active = false }
+function onChartWheel(event: WheelEvent) { zoom.value = Math.max(.5, Math.min(2.5, zoom.value + (event.deltaY < 0 ? .25 : -.25))) }
+function onChartLeave() { selectedIndex.value = null; pointer.value.active = false; touchPoints.clear() }
 function resetChart() { zoom.value = 1; pan.value = 0; selectedIndex.value = null; drawPoints.value = []; areaPoints.value = []; void loadChartData() }
-function toggleSetting(key: keyof typeof settings.value) { settings.value[key] = !settings.value[key] }
-function toggleSettingByName(key: string) { toggleSetting(key as keyof typeof settings.value); if (key === 'draw' && !settings.value.draw) drawPoints.value = []; if (key === 'areaSelect' && !settings.value.areaSelect) areaPoints.value = [] }
+function toggleSettingByName(key: string) { const setting = key as keyof typeof settings.value; settings.value[setting] = !settings.value[setting]; if (key === 'draw' && !settings.value.draw) drawPoints.value = []; if (key === 'areaSelect' && !settings.value.areaSelect) areaPoints.value = [] }
 function settingEnabled(key: string) { return settings.value[key as keyof typeof settings.value] }
 </script>
 
 <template>
   <section class="detail-page">
-    <div class="detail-top"><RouterLink class="back-link" to="/market">‹ 返回行情</RouterLink><div class="detail-actions"><button @click="openAlert">⌁ 价格提醒</button><button @click="showSignals = !showSignals">{{ showSignals ? '隐藏买卖点' : '显示买卖点' }}</button><button @click="resetChart">刷新 ↻</button></div></div>
-    <section class="stock-header panel"><div><div class="stock-title"><h1>{{ stock.name }}</h1><span>{{ stock.code }} · 沪深 A 股</span></div><div class="stock-price mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stock.price }} <small>{{ stock.change }} {{ stock.percent }}</small></div></div><div class="stock-header-stats"><div><small>今开</small><strong>{{ stockStats.open }}</strong></div><div><small>最高</small><strong :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stockStats.high }}</strong></div><div><small>最低</small><strong>{{ stockStats.low }}</strong></div><div><small>成交额</small><strong>{{ stockStats.turnover }}</strong></div></div><button class="follow-button" :class="{ followed: isFollowed }" @click="toggleFollow">{{ isFollowed ? '★ 已自选' : '☆ 自选' }}</button></section>
-    <div class="detail-tabs"><button v-for="tab in ['分时 / K线', '盘口', '资金', '资讯', '分析']" :key="tab" :class="{ selected: activeDetailTab === tab }" @click="activeDetailTab = tab">{{ tab }}</button></div>
-
-    <section v-if="activeDetailTab === '分时 / K线'" class="chart-panel panel">
-      <div class="chart-toolbar"><div class="period-tabs"><button v-for="period in periods" :key="period" :class="{ selected: activePeriod === period }" @click="activePeriod = period">{{ period }}</button></div><div class="indicator-tabs"><button :class="{ selected: indicator === 'MA' }" @click="indicator = 'MA'">MA</button><button :class="{ selected: indicator === 'MACD' }" @click="indicator = 'MACD'">MACD</button><button :class="{ selected: indicator === 'BOLL' }" @click="indicator = 'BOLL'">BOLL</button><button :class="{ selected: indicator === 'KDJ' }" @click="indicator = 'KDJ'">KDJ</button><button :class="{ selected: indicator === 'RSI' }" @click="indicator = 'RSI'">RSI</button><button :class="{ selected: indicator === 'SAR' }" @click="indicator = 'SAR'">SAR</button><button class="settings-trigger" @click="showSettings = true">⚙ 设置</button></div></div>
-      <div class="chart-summary"><span v-if="selectedIndex !== null">{{ visibleCandles[selectedIndex].date }}　开 {{ visibleCandles[selectedIndex].open.toFixed(2) }}　高 {{ visibleCandles[selectedIndex].high.toFixed(2) }}　低 {{ visibleCandles[selectedIndex].low.toFixed(2) }}　收 {{ visibleCandles[selectedIndex].close.toFixed(2) }}</span><span v-else>日K · {{ adjustment }} · {{ visibleCandles.length }} 根</span><span class="chart-hint">滚动缩放 · 移动查看数据</span></div>
-      <div class="chart-wrap"><svg viewBox="0 0 930 400" preserveAspectRatio="none" @pointerdown="onChartPointerDown" @pointermove="onChartPointerMove" @pointerup="onChartPointerUp" @pointercancel="onChartPointerUp" @wheel.prevent="onChartWheel" @mouseleave="onChartLeave"><g class="grid-lines"><line v-for="line in 5" :key="`h-${line}`" x1="25" :y1="20 + (line - 1) * 67.5" x2="905" :y2="20 + (line - 1) * 67.5" /><line v-for="line in 6" :key="`v-${line}`" :x1="25 + (line - 1) * 176" y1="20" :x2="25 + (line - 1) * 176" y2="380" /></g><g class="price-labels"><text v-for="line in 5" :key="line" x="908" :y="24 + (line - 1) * 67.5">{{ (bounds.max - (line - 1) * (bounds.max - bounds.min) / 4).toFixed(2) }}</text></g><g v-if="activePeriod !== '分时'" class="candles"><g v-for="(candle, index) in visibleCandles" :key="candle.date" :class="candle.close >= candle.open ? 'rise' : 'fall'"><line :x1="xFor(index)" :x2="xFor(index)" :y1="yFor(candle.high)" :y2="yFor(candle.low)" /><rect :x="xFor(index) - candleWidth / 2" :y="Math.min(yFor(candle.open), yFor(candle.close))" :width="candleWidth" :height="Math.max(2, Math.abs(yFor(candle.open) - yFor(candle.close)))" /></g></g><path v-else class="intraday-line" :d="closePath()" /><path v-if="indicator === 'MA' && activePeriod !== '分时'" class="ma5" :d="linePath(5)" /><path v-if="indicator === 'MA' && activePeriod !== '分时'" class="ma10" :d="linePath(10)" /><path v-if="indicator === 'BOLL'" class="boll boll-mid" :d="linePath(20)" /><path v-if="indicator === 'BOLL'" class="boll boll-edge" :d="bollPath(1)" /><path v-if="indicator === 'BOLL'" class="boll boll-edge" :d="bollPath(-1)" /><path v-if="settings.trendLine" class="trend-line" d="M35 230 L895 105" /><path v-if="settings.supportPressure" class="pressure-line" d="M35 172 L895 172" /><line v-if="drawPoints.length === 2" class="user-draw-line" :x1="drawPoints[0].x" :y1="drawPoints[0].y" :x2="drawPoints[1].x" :y2="drawPoints[1].y" /><rect v-if="areaPoints.length === 2" class="area-select-rect" :x="Math.min(areaPoints[0].x, areaPoints[1].x)" y="20" :width="Math.abs(areaPoints[1].x - areaPoints[0].x)" height="270" /><g v-if="areaStats" class="area-stats"><text :x="Math.min(areaPoints[0].x, areaPoints[1].x) + 8" y="42">区间 {{ areaStats.percent >= 0 ? '+' : '' }}{{ areaStats.percent.toFixed(2) }}%</text><text :x="Math.min(areaPoints[0].x, areaPoints[1].x) + 8" y="58">高 {{ areaStats.high.toFixed(2) }} / 低 {{ areaStats.low.toFixed(2) }}</text></g><circle v-for="(point, index) in drawPoints" :key="`draw-point-${index}`" class="user-draw-point" :cx="point.x" :cy="point.y" r="4" /><g v-if="settings.magicNine" class="magic-nine"><text v-for="(candle, index) in visibleCandles" :key="`nine-${candle.date}`" :x="xFor(index)" :y="yFor(candle.high) - 8" :opacity="index % 9 === 8 ? 1 : 0">9</text></g><g v-if="indicator === 'MACD'" class="macd-subplot"><line x1="25" y1="312" x2="905" y2="312" /><rect v-for="(candle, index) in visibleCandles" :key="`macd-${candle.date}`" :x="xFor(index) - candleWidth / 2" :y="Math.min(312, macdY(macdValue(index)) )" :width="candleWidth" :height="Math.max(1, Math.abs(312 - macdY(macdValue(index))))" :class="macdValue(index) >= 0 ? 'rise-volume' : 'fall-volume'" /><path class="macd-line" :d="macdPath()" /></g><g class="volume-bars"><rect v-for="(candle, index) in visibleCandles" :key="`v-${candle.date}`" :x="xFor(index) - candleWidth / 2" :y="335 - candle.volume / maxVolume * 35" :width="candleWidth" :height="candle.volume / maxVolume * 35" :class="candle.close >= candle.open ? 'rise-volume' : 'fall-volume'" /></g><g v-if="showSignals" class="signals"><path d="M0 0 l5 8 l5-8" transform="translate(120 126)" /><path d="M0 8 l5-8 l5 8" transform="translate(520 185)" /></g><g v-if="selectedIndex !== null" class="crosshair"><line :x1="xFor(selectedIndex)" y1="20" :x2="xFor(selectedIndex)" y2="380" /><line x1="25" :y1="yFor(visibleCandles[selectedIndex].close)" x2="905" :y2="yFor(visibleCandles[selectedIndex].close)" /><circle :cx="xFor(selectedIndex)" :cy="yFor(visibleCandles[selectedIndex].close)" r="4" /></g></svg></div>
-      <div class="chart-legend"><span class="legend-item"><i class="legend-dot rise-dot" />MA5 <b>{{ ma(5, visibleCandles.length - 1).toFixed(2) }}</b></span><span class="legend-item"><i class="legend-dot yellow-dot" />MA10 <b>{{ ma(10, visibleCandles.length - 1).toFixed(2) }}</b></span><span class="legend-item"><i class="legend-dot purple-dot" />MA20 <b>{{ ma(20, visibleCandles.length - 1).toFixed(2) }}</b></span><span v-if="indicator === 'KDJ'" class="legend-item">K {{ latestKDJ.k.toFixed(2) }} / D {{ latestKDJ.d.toFixed(2) }} / J {{ latestKDJ.j.toFixed(2) }}</span><span v-if="indicator === 'RSI'" class="legend-item">RSI14 {{ latestRSI.toFixed(2) }}</span><span v-if="indicator === 'SAR'" class="legend-item">SAR {{ latestSAR.toFixed(2) }}</span><span class="legend-spacer" /><button class="adjustment-button" @click="showAdjustment = !showAdjustment">切换复权⌄</button><div v-if="showAdjustment" class="adjustment-menu"><button v-for="item in ['前复权', '后复权', '不复权']" :key="item" :class="{ selected: adjustment === item }" @click="adjustment = item; showAdjustment = false">{{ item }}</button></div></div>
-      <div class="chart-controls"><button @click="zoom = Math.min(2.5, zoom + .25)">＋ 放大</button><button @click="zoom = Math.max(.5, zoom - .25)">－ 缩小</button><button @click="pan = Math.min(candles.length - 8, pan + 5)">← 更早</button><button @click="pan = Math.max(0, pan - 5)">更新近端 →</button><span>成交量</span><span class="volume-key rise-key" />上涨<span class="volume-key fall-key" />下跌</div>
-    </section>
-    <section v-else class="detail-tab-panel">
-      <section v-if="activeDetailTab === '盘口'" class="order-book-grid">
-        <article class="panel detail-block order-book"><div class="block-title"><h2>五档盘口</h2><span class="muted">买卖委托</span></div><div v-for="row in orderBook" :key="row.label" class="order-row"><span>{{ row.label }}</span><span class="mono" :class="row.side === 'sell' ? 'text-up' : 'text-down'">{{ row.price }}</span><span class="mono muted">{{ row.amount }}</span><i :class="row.side === 'sell' ? 'sell-bar' : 'buy-bar'" /></div></article>
-        <article class="panel detail-block"><div class="block-title"><h2>盘口明细</h2><span class="muted">今日实时</span></div><div class="quote-stat-grid"><div><small>委比</small><strong class="text-up mono">+18.62%</strong></div><div><small>委差</small><strong class="text-up mono">+12,486</strong></div><div><small>量比</small><strong class="mono">1.86</strong></div><div><small>换手率</small><strong class="mono">2.74%</strong></div></div><div class="detail-note">买盘力量较强，当前买一至买三挂单相对集中。</div></article>
+    <header class="detail-nav"><RouterLink to="/market" class="back-link">‹</RouterLink><span>股票详情</span><div class="nav-actions"><button aria-label="设置价格提醒" @click="openAlert">♧</button><button aria-label="刷新行情" @click="resetChart">↻</button></div></header>
+    <LoadingState v-if="isQuoteLoading" label="正在加载股票行情" />
+    <ErrorState v-else-if="quoteError" title="行情暂时不可用" :message="quoteError" :retry="loadQuote" />
+    <template v-else>
+      <section class="stock-overview">
+        <div class="stock-brief"><div class="price-column"><div class="stock-name"><h1>{{ stock.name }}</h1><span>{{ stock.code }}</span></div><strong class="stock-price mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'">{{ stock.price }}</strong><div class="stock-change mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'"><span>{{ stock.change }}</span><span>{{ stock.percent }}</span></div></div><button class="favorite-button" :class="{ followed: isFollowed }" @click="toggleFollow"><b>{{ isFollowed ? '★' : '☆' }}</b><span>{{ isFollowed ? '已自选' : '自选' }}</span></button></div>
+        <div class="quote-meta"><div><small>今开</small><b>{{ stockStats.open }}</b></div><div><small>最高</small><b class="text-up">{{ stockStats.high }}</b></div><div><small>最低</small><b>{{ stockStats.low }}</b></div><div><small>成交额</small><b>{{ stockStats.turnover }}</b></div></div>
       </section>
-      <section v-else-if="activeDetailTab === '资金'" class="panel detail-block capital-panel"><div class="block-title"><h2>资金流向</h2><span class="muted">今日 · 亿元</span></div><div class="capital-list"><div v-for="item in capitalFlow" :key="item.label" class="capital-row"><span>{{ item.label }}</span><strong class="mono" :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.value }}</strong><span class="capital-percent mono" :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.percent }}</span><div class="capital-track"><i :class="item.trend === 'up' ? 'capital-in' : 'capital-out'" :style="{ width: `${Math.min(100, Math.abs(Number.parseFloat(item.percent)) * 12 + 18)}%` }" /></div></div></div></section>
-      <section v-else-if="activeDetailTab === '资讯'" class="panel detail-block news-detail-panel"><div class="block-title"><h2>相关资讯</h2><span class="muted">共 36 条</span></div><RouterLink v-for="item in detailNews" :key="item.time + item.title" to="/news" class="detail-news-row"><time class="mono">{{ item.time }}</time><span class="news-tag">{{ item.tag }}</span><strong>{{ item.title }}</strong><span class="result-arrow">›</span></RouterLink><RouterLink class="text-button more-detail-news" to="/news">查看全部资讯 →</RouterLink></section>
-      <section v-else class="panel detail-block analysis-panel"><div class="block-title"><h2>基本面与估值</h2><span class="muted">数据日期 08-10</span></div><div class="analysis-grid"><div v-for="item in analysisMetrics" :key="item.label" class="analysis-card"><small>{{ item.label }}</small><strong class="mono">{{ item.value }}</strong><span :class="item.trend === 'up' ? 'text-up' : 'muted'">{{ item.note }}</span></div></div><div class="analysis-summary"><span class="signal-icon">◆</span><p><strong>技术面偏强</strong> 短期均线呈多头排列，成交量较前一交易日放大。</p></div></section>
-    </section>
-    <section v-if="showAlert" class="settings-mask" @click.self="showAlert = false"><div class="settings-sheet alert-sheet"><div class="settings-sheet-head"><h2>设置价格提醒</h2><button @click="showAlert = false">×</button></div><p class="alert-stock">{{ stock.name }}（{{ stock.code }}）当前价 {{ stock.price }}</p><div class="alert-form"><label>目标价格<input v-model="alertPrice" inputmode="decimal" /></label><label>触发条件<select v-model="alertDirection"><option value="above">价格高于目标价</option><option value="below">价格低于目标价</option></select></label></div><label class="alert-repeat"><input v-model="alertRepeat" type="checkbox" /> 每次达到条件都提醒</label><p v-if="alertError" class="alert-error">{{ alertError }}</p><p v-if="alertSaved" class="alert-success">提醒已保存</p><button class="settings-done" :disabled="alertSaved" @click="saveAlert">{{ alertSaved ? '已保存' : '保存提醒' }}</button></div></section><section v-if="showSettings" class="settings-mask" @click.self="showSettings = false"><div class="settings-sheet"><div class="settings-sheet-head"><h2>K线设置</h2><button @click="showSettings = false">×</button></div><div class="setting-group"><h3>复权方式</h3><div class="setting-chips"><button v-for="item in ['不复权', '前复权', '后复权']" :key="item" :class="{ selected: adjustment === item }" @click="adjustment = item">{{ item }}</button></div></div><div class="setting-group"><h3>图表工具</h3><button v-for="item in [{ key: 'trendLine', label: '趋势线' }, { key: 'supportPressure', label: '支撑压力位' }, { key: 'draw', label: '画线工具' }, { key: 'areaSelect', label: '区间统计' }, { key: 'magicNine', label: '神奇九转' }, { key: 'tradeLine', label: '操盘线' }]" :key="item.key" class="setting-switch-row" @click="toggleSettingByName(item.key)"><span>{{ item.label }}</span><i :class="{ on: settingEnabled(item.key) }"><b /></i></button></div><button class="settings-done" @click="showSettings = false">完成</button></div></section>
-        <section class="detail-lower"><article class="panel detail-block"><div class="block-title"><h2>五档盘口</h2><button>更多 →</button></div><div v-for="row in orderBook.slice(0, 5)" :key="row.label" class="order-row"><span>{{ row.label }}</span><span class="mono" :class="row.side === 'sell' ? 'text-up' : 'text-down'">{{ row.price }}</span><span class="mono muted">{{ row.amount }}</span></div></article><article class="panel detail-block"><div class="block-title"><h2>相关资讯</h2><button>更多 →</button></div><p class="related-news">新能源板块持续活跃，机构关注盈利修复</p><p class="related-news">成交额快速放大，短线资金偏好明显</p><p class="related-news">公司发布最新业务进展公告</p></article></section>
+      <nav class="detail-tabs"><button v-for="tab in ['分时 / K线', '盘口', '资金', '资讯', '分析']" :key="tab" :class="{ selected: activeDetailTab === tab }" @click="activeDetailTab = tab">{{ tab }}</button></nav>
+      <section v-if="activeDetailTab === '分时 / K线'" class="chart-card">
+        <div class="period-tabs"><button v-for="period in periods" :key="period" :class="{ selected: activePeriod === period }" @click="activePeriod = period">{{ period }}</button><button class="chart-settings" @click="showSettings = true">⚙</button></div>
+        <div class="indicator-tabs"><button v-for="item in ['MA', 'MACD', 'BOLL', 'KDJ', 'RSI', 'SAR']" :key="item" :class="{ selected: indicator === item }" @click="indicator = item as typeof indicator">{{ item }}</button><button class="adjustment-button" @click="showAdjustment = !showAdjustment">{{ adjustment }}⌄</button><div v-if="showAdjustment" class="adjustment-menu"><button v-for="item in ['前复权', '后复权', '不复权']" :key="item" @click="adjustment = item; showAdjustment = false">{{ item }}</button></div></div>
+        <div class="chart-caption"><span v-if="selectedIndex !== null && visibleCandles[selectedIndex]">{{ visibleCandles[selectedIndex].date }}　开 {{ visibleCandles[selectedIndex].open.toFixed(2) }}　高 {{ visibleCandles[selectedIndex].high.toFixed(2) }}　低 {{ visibleCandles[selectedIndex].low.toFixed(2) }}　收 {{ visibleCandles[selectedIndex].close.toFixed(2) }}</span><span v-else>{{ activePeriod }} · {{ visibleCandles.length }} 根</span><small>数据源：{{ dataSource === 'api' ? '实时' : dataSource === 'sdk' ? '行情' : '本地' }}</small></div>
+        <LoadingState v-if="isChartLoading" label="正在加载图表" /><ErrorState v-else-if="chartError" title="图表暂无数据" :message="chartError" :retry="loadChartData" /><EmptyState v-else-if="!visibleCandles.length" title="暂无图表数据" message="当前周期暂时没有可展示的数据。" />
+        <div v-else class="chart-wrap"><svg viewBox="0 0 930 400" preserveAspectRatio="none" @pointerdown="onChartPointerDown" @pointermove="onChartPointerMove" @pointerup="onChartPointerUp" @pointercancel="onChartPointerUp" @wheel.prevent="onChartWheel" @mouseleave="onChartLeave"><g class="grid-lines"><line v-for="line in 5" :key="`h-${line}`" x1="25" :y1="20 + (line - 1) * 67.5" x2="905" :y2="20 + (line - 1) * 67.5" /><line v-for="line in 6" :key="`v-${line}`" :x1="25 + (line - 1) * 176" y1="20" :x2="25 + (line - 1) * 176" y2="380" /></g><g class="price-labels"><text v-for="line in 5" :key="line" x="908" :y="24 + (line - 1) * 67.5">{{ (bounds.max - (line - 1) * (bounds.max - bounds.min) / 4).toFixed(2) }}</text></g><g v-if="activePeriod !== '分时'" class="candles"><g v-for="(candle, index) in visibleCandles" :key="candle.date" :class="candle.close >= candle.open ? 'rise' : 'fall'"><line :x1="xFor(index)" :x2="xFor(index)" :y1="yFor(candle.high)" :y2="yFor(candle.low)" /><rect :x="xFor(index) - candleWidth / 2" :y="Math.min(yFor(candle.open), yFor(candle.close))" :width="candleWidth" :height="Math.max(2, Math.abs(yFor(candle.open) - yFor(candle.close)))" /></g></g><path v-else class="intraday-line" :d="closePath()" /><path v-if="indicator === 'MA' && activePeriod !== '分时'" class="ma5" :d="linePath(5)" /><path v-if="indicator === 'MA' && activePeriod !== '分时'" class="ma10" :d="linePath(10)" /><path v-if="indicator === 'BOLL'" class="boll" :d="linePath(20)" /><path v-if="indicator === 'BOLL'" class="boll boll-edge" :d="bollPath(1)" /><path v-if="indicator === 'BOLL'" class="boll boll-edge" :d="bollPath(-1)" /><g class="volume-bars"><rect v-for="(candle, index) in visibleCandles" :key="`v-${candle.date}`" :x="xFor(index) - candleWidth / 2" :y="335 - candle.volume / maxVolume * 35" :width="candleWidth" :height="candle.volume / maxVolume * 35" :class="candle.close >= candle.open ? 'rise-volume' : 'fall-volume'" /></g><g v-if="selectedIndex !== null && visibleCandles[selectedIndex]" class="crosshair"><line :x1="xFor(selectedIndex)" y1="20" :x2="xFor(selectedIndex)" y2="380" /><line x1="25" :y1="yFor(visibleCandles[selectedIndex].close)" x2="905" :y2="yFor(visibleCandles[selectedIndex].close)" /></g></svg></div>
+        <div class="chart-foot"><span>MA5 {{ ma(5, visibleCandles.length - 1).toFixed(2) }}</span><span>MA10 {{ ma(10, visibleCandles.length - 1).toFixed(2) }}</span><span v-if="indicator === 'KDJ'">K {{ latestKDJ.k.toFixed(1) }} / D {{ latestKDJ.d.toFixed(1) }}</span><span v-if="indicator === 'RSI'">RSI {{ latestRSI.toFixed(1) }}</span><span v-if="indicator === 'SAR'">SAR {{ latestSAR.toFixed(2) }}</span><button @click="zoom = Math.min(2.5, zoom + .25)">＋</button><button @click="zoom = Math.max(.5, zoom - .25)">－</button></div>
+      </section>
+      <section v-else class="detail-panel"><section v-if="activeDetailTab === '盘口'" class="panel-block"><div class="block-title"><h2>五档盘口</h2><small>买卖委托</small></div><div v-for="row in orderBook" :key="row.label" class="order-row"><span>{{ row.label }}</span><b class="mono" :class="row.side === 'sell' ? 'text-up' : 'text-down'">{{ row.price }}</b><small>{{ row.amount }}</small><i :class="row.side === 'sell' ? 'sell-bar' : 'buy-bar'" /></div></section><section v-else-if="activeDetailTab === '资金'" class="panel-block"><div class="block-title"><h2>资金流向</h2><small>今日 · 亿元</small></div><div v-for="item in capitalFlow" :key="item.label" class="flow-row"><span>{{ item.label }}</span><b :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.value }}</b><small>{{ item.percent }}</small><i><em :class="item.trend === 'up' ? 'flow-in' : 'flow-out'" /></i></div></section><section v-else-if="activeDetailTab === '资讯'" class="panel-block"><div class="block-title"><h2>相关资讯</h2><small>实时更新</small></div><RouterLink v-for="item in detailNews" :key="item.time" to="/news" class="news-row"><time>{{ item.time }}</time><em>{{ item.tag }}</em><strong>{{ item.title }}</strong><span>›</span></RouterLink></section><section v-else class="panel-block"><div class="block-title"><h2>基本面与估值</h2><small>数据日期 08-10</small></div><div class="analysis-grid"><div v-for="item in analysisMetrics" :key="item.label"><small>{{ item.label }}</small><b>{{ item.value }}</b><em :class="item.trend === 'up' ? 'text-up' : 'muted'">{{ item.note }}</em></div></div></section></section>
+    </template>
+    <footer class="bottom-bar"><button @click="toggleFollow"><b>{{ isFollowed ? '★' : '☆' }}</b><span>{{ isFollowed ? '已自选' : '自选' }}</span></button><button @click="openAlert"><b>♧</b><span>提醒</span></button><button><b>⌁</b><span>分享</span></button><RouterLink to="/trade" class="trade-button">交易</RouterLink></footer>
+    <section v-if="showAlert" class="sheet-mask" @click.self="showAlert = false"><div class="sheet"><div class="sheet-title"><h2>设置价格提醒</h2><button @click="showAlert = false">×</button></div><p>{{ stock.name }}（{{ stock.code }}）当前价 {{ stock.price }}</p><label>目标价格<input v-model="alertPrice" inputmode="decimal" /></label><label>触发条件<select v-model="alertDirection"><option value="above">价格高于目标价</option><option value="below">价格低于目标价</option></select></label><label class="check"><input v-model="alertRepeat" type="checkbox" /> 每次达到条件都提醒</label><p v-if="alertError" class="form-error">{{ alertError }}</p><p v-if="alertSaved" class="form-success">提醒已保存</p><button class="primary-button" :disabled="alertSaved" @click="saveAlert">{{ alertSaved ? '已保存' : '保存提醒' }}</button></div></section>
+    <section v-if="showSettings" class="sheet-mask" @click.self="showSettings = false"><div class="sheet"><div class="sheet-title"><h2>K线设置</h2><button @click="showSettings = false">×</button></div><h3>复权方式</h3><div class="setting-chips"><button v-for="item in ['不复权', '前复权', '后复权']" :key="item" :class="{ selected: adjustment === item }" @click="adjustment = item">{{ item }}</button></div><h3>图表工具</h3><button v-for="item in [{ key: 'trendLine', label: '趋势线' }, { key: 'supportPressure', label: '支撑压力位' }, { key: 'draw', label: '画线工具' }, { key: 'areaSelect', label: '区间统计' }, { key: 'magicNine', label: '神奇九转' }, { key: 'tradeLine', label: '操盘线' }]" :key="item.key" class="setting-row" @click="toggleSettingByName(item.key)"><span>{{ item.label }}</span><i :class="{ on: settingEnabled(item.key) }" /></button><button class="primary-button" @click="showSettings = false">完成</button></div></section>
   </section>
 </template>
 
 <style scoped>
-.detail-page { max-width: 1200px; margin: 0 auto; }.detail-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }.back-link { color: var(--primary); font-size: 12px; }.detail-actions { display: flex; gap: 10px; }.detail-actions button, .follow-button { color: var(--muted); background: transparent; border: 1px solid var(--border); padding: 7px 10px; font-size: 10px; }.stock-header { position: relative; display: flex; align-items: center; padding: 22px; margin-bottom: 10px; }.follow-button.followed { color: var(--gold); border-color: rgba(255,137,30,.4); background: rgba(255,137,30,.06); }.stock-title { display: flex; align-items: baseline; gap: 10px; }.stock-title h1 { font-size: 22px; }.stock-title span { color: var(--muted); font: 10px 'JetBrains Mono', monospace; }.stock-price { font-size: 28px; font-weight: 600; margin-top: 13px; }.stock-price small { font-size: 12px; margin-left: 9px; }.stock-header-stats { display: flex; gap: 30px; margin-left: auto; margin-right: 26px; }.stock-header-stats small { display: block; color: var(--muted); font-size: 10px; margin-bottom: 7px; }.stock-header-stats strong { font: 12px 'JetBrains Mono', monospace; }.detail-tabs { display: flex; gap: 25px; border-bottom: 1px solid var(--border); }.detail-tabs button { position: relative; color: var(--muted); background: transparent; border: 0; padding: 11px 2px; font-size: 12px; }.detail-tabs button.selected { color: var(--text); font-weight: 600; }.detail-tabs button.selected::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 2px; background: var(--primary); }.chart-panel { margin-top: 10px; padding: 0 18px 12px; }.chart-toolbar { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }.period-tabs, .indicator-tabs { display: flex; gap: 6px; }.period-tabs button, .indicator-tabs button { color: var(--muted); background: transparent; border: 0; padding: 12px 9px; font-size: 11px; }.period-tabs button.selected, .indicator-tabs button.selected { color: var(--primary); font-weight: 600; }.chart-summary { display: flex; justify-content: space-between; color: var(--muted); font: 10px 'JetBrains Mono', monospace; padding: 10px 5px 0; }.chart-hint { color: #adb4bf; }.chart-wrap { width: 100%; height: 390px; overscroll-behavior: contain; }.chart-wrap svg { width: 100%; height: 100%; overflow: visible; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }.chart-wrap svg:active { cursor: grabbing; }.grid-lines line { stroke: #edf0f4; stroke-width: 1; }.price-labels text { fill: #a5adbb; font: 10px 'JetBrains Mono', monospace; text-anchor: end; }.candles line { stroke-width: 1; }.candles rect { stroke-width: 1; }.candles .rise line, .candles .rise rect { stroke: var(--up); fill: rgba(230,53,53,.14); }.candles .fall line, .candles .fall rect { stroke: var(--down); fill: rgba(28,170,60,.14); }.ma5 { fill: none; stroke: #e63535; stroke-width: 1.5; }.ma10 { fill: none; stroke: #f2a600; stroke-width: 1.5; }.boll { fill: none; stroke: #8b64c7; stroke-width: 1.5; }.boll-edge { stroke-dasharray: 4 3; opacity: .65; }.macd-subplot line { stroke: #c7ced9; stroke-width: 1; stroke-dasharray: 3 3; }.macd-line { fill: none; stroke: #3077ec; stroke-width: 1.2; }.intraday-line { fill: none; stroke: var(--primary); stroke-width: 2; }.volume-bars rect { opacity: .48; }.rise-volume { fill: var(--up); }.fall-volume { fill: var(--down); }.signals path { fill: none; stroke: var(--primary); stroke-width: 2; }.user-draw-line { stroke: var(--primary); stroke-width: 1.5; stroke-dasharray: 6 3; }.area-select-rect { fill: rgba(48,119,236,.08); stroke: var(--primary); stroke-width: 1; stroke-dasharray: 4 3; }.area-stats text { fill: var(--primary); font: 10px 'JetBrains Mono', monospace; }.user-draw-point { fill: var(--card); stroke: var(--primary); stroke-width: 2; }.crosshair line { stroke: var(--primary); stroke-width: 1; stroke-dasharray: 4 3; opacity: .7; }.crosshair circle { fill: var(--card); stroke: var(--primary); stroke-width: 2; }.chart-legend, .chart-controls { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 10px; }.chart-legend { position: relative; border-top: 1px solid var(--border); padding: 11px 4px; }.legend-item { display: flex; align-items: center; gap: 5px; }.legend-item b { color: var(--text); font: 10px 'JetBrains Mono', monospace; }.legend-dot { width: 9px; height: 2px; display: inline-block; }.rise-dot { background: var(--up); }.yellow-dot { background: #f2a600; }.purple-dot { background: #8b64c7; }.legend-spacer { flex: 1; }.adjustment-button, .chart-controls button { color: var(--muted); background: transparent; border: 0; font-size: 10px; }.adjustment-menu { position: absolute; right: 0; bottom: 34px; z-index: 4; background: var(--card); border: 1px solid var(--border); box-shadow: 0 5px 16px rgba(38,46,64,.12); }.adjustment-menu button { display: block; width: 88px; padding: 9px; background: transparent; color: var(--muted); border: 0; font-size: 10px; }.adjustment-menu button.selected { color: var(--primary); background: #edf4ff; }.chart-controls { padding: 2px 4px; }.volume-key { width: 8px; height: 8px; display: inline-block; margin-left: -8px; }.rise-key { background: var(--up); }.fall-key { background: var(--down); }.detail-tab-panel { margin-top: 10px; }.order-book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }.order-book .order-row { position: relative; grid-template-columns: 1fr 1fr 1fr 1.4fr; align-items: center; }.order-row i { height: 5px; justify-self: end; border-radius: 1px; opacity: .55; }.sell-bar { background: var(--up); width: 72%; }.buy-bar { background: var(--down); width: 58%; }.quote-stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 10px; padding: 9px 0 19px; }.quote-stat-grid small, .analysis-card small { display: block; color: var(--muted); font-size: 10px; margin-bottom: 7px; }.quote-stat-grid strong { font-size: 13px; }.detail-note { color: var(--muted); background: var(--bg); padding: 12px; font-size: 11px; line-height: 1.6; }.capital-panel, .news-detail-panel, .analysis-panel { padding: 18px 20px; }.capital-list { display: grid; gap: 15px; }.capital-row { display: grid; grid-template-columns: 1.2fr .8fr .6fr 1.4fr; gap: 10px; align-items: center; font-size: 11px; }.capital-row strong, .capital-percent { font-size: 11px; }.capital-track { height: 5px; background: var(--bg); }.capital-track i { display: block; height: 100%; }.capital-in { background: var(--up); }.capital-out { background: var(--down); }.detail-news-row { display: grid; grid-template-columns: 45px 42px 1fr 15px; gap: 10px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }.detail-news-row time { color: var(--muted); font-size: 10px; }.detail-news-row strong { font-size: 12px; font-weight: 500; }.more-detail-news { display: block; margin-top: 15px; text-align: right; }.analysis-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }.analysis-card { background: var(--bg); padding: 15px; }.analysis-card strong { display: block; font-size: 17px; margin-bottom: 8px; }.analysis-card span { font-size: 10px; }.analysis-summary { display: flex; align-items: center; gap: 10px; margin-top: 15px; padding: 13px; background: rgba(255,137,30,.06); color: var(--muted); font-size: 11px; }.analysis-summary strong { color: var(--text); margin-right: 4px; }.tab-content-placeholder { min-height: 390px; margin-top: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; }.tab-content-placeholder .placeholder-icon { color: var(--primary); font-size: 34px; }.tab-content-placeholder h2 { margin-top: 12px; font-size: 17px; }.tab-content-placeholder p { color: var(--muted); font-size: 11px; margin-top: 8px; }.settings-mask { position: fixed; z-index: 30; inset: 0; display: flex; align-items: flex-end; justify-content: center; background: rgba(38,46,64,.28); }.settings-sheet { width: min(540px, 100%); padding: 20px 22px 24px; background: var(--card); border-radius: 10px 10px 0 0; box-shadow: 0 -8px 30px rgba(38,46,64,.14); }.settings-sheet-head { display: flex; align-items: center; justify-content: space-between; }.settings-sheet-head h2 { font-size: 16px; }.settings-sheet-head button { border: 0; background: transparent; color: var(--muted); font-size: 22px; }.setting-group { padding: 17px 0 5px; border-bottom: 1px solid var(--border); }.setting-group h3 { color: var(--muted); font-size: 11px; font-weight: 400; margin: 0 0 12px; }.setting-chips { display: flex; gap: 8px; }.setting-chips button { color: var(--muted); background: var(--bg); border: 0; border-radius: 4px; padding: 8px 18px; font-size: 11px; }.setting-chips button.selected { color: var(--primary); background: #edf4ff; }.setting-switch-row { width: 100%; display: flex; align-items: center; justify-content: space-between; color: var(--text); border: 0; background: transparent; padding: 10px 0; font-size: 12px; }.setting-switch-row i { position: relative; width: 34px; height: 20px; border-radius: 11px; background: #d9dee7; transition: background .15s; }.setting-switch-row i b { position: absolute; left: 2px; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: transform .15s; }.setting-switch-row i.on { background: var(--primary); }.setting-switch-row i.on b { transform: translateX(14px); }.settings-done { width: 100%; margin-top: 18px; padding: 11px; color: #fff; background: var(--primary); border: 0; border-radius: 4px; font-size: 12px; }.detail-lower { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }.detail-block { padding: 17px 20px; }.block-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }.block-title h2 { font-size: 14px; }.block-title button { color: var(--primary); background: transparent; border: 0; font-size: 10px; }.order-row { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 7px 0; color: var(--muted); font-size: 11px; }.related-news { padding: 9px 0; border-bottom: 1px solid var(--border); color: var(--text); font-size: 11px; }.related-news:last-child { border: 0; }
-@media (max-width: 760px) { .stock-header { align-items: flex-start; flex-wrap: wrap; gap: 18px; }.stock-header-stats { order: 3; width: 100%; justify-content: space-between; margin: 0; gap: 8px; }.follow-button { margin-left: auto; }.chart-toolbar { overflow-x: auto; }.period-tabs button, .indicator-tabs button { min-height: 42px; padding-left: 13px; padding-right: 13px; }.chart-wrap { height: 320px; }.detail-lower, .order-book-grid { grid-template-columns: 1fr; }.analysis-grid { grid-template-columns: repeat(2, 1fr); }.capital-row { grid-template-columns: 1.2fr .8fr .6fr 1fr; gap: 6px; }.chart-summary { font-size: 9px; }.chart-hint { display: none; }.chart-controls { overflow-x: auto; white-space: nowrap; padding-bottom: 6px; }.chart-controls button { min-height: 34px; padding: 0 7px; } }
+.detail-page{--rise:#e65353;--fall:#27a957;max-width:720px;margin:0 auto;padding-bottom:76px;background:#f5f6f8;color:var(--text);min-height:100vh}.detail-nav{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#fff;border-bottom:1px solid #edf0f4;position:sticky;top:0;z-index:10;font-size:15px;font-weight:600}.back-link,.nav-actions button{border:0;background:transparent;color:#3b4658;font-size:26px;line-height:1}.nav-actions{display:flex;gap:16px}.nav-actions button{font-size:19px}.stock-overview{padding:16px 14px 12px;background:#fff}.stock-brief{display:flex;justify-content:space-between;align-items:flex-start}.stock-name{display:flex;align-items:baseline;gap:8px}.stock-name h1{font-size:19px}.stock-name span,.quote-meta small,.chart-caption,.block-title small{color:#9aa3b1;font-size:11px}.stock-price{display:block;font-size:34px;line-height:1.15;margin-top:9px}.stock-change{display:flex;gap:14px;margin-top:5px;font-size:13px}.text-up{color:var(--rise)!important}.text-down{color:var(--fall)!important}.favorite-button{display:flex;flex-direction:column;gap:3px;align-items:center;border:0;background:transparent;color:#8c96a5;font-size:11px}.favorite-button b{font-size:25px;color:#bcc3cc}.favorite-button.followed b{color:#f2a22c}.favorite-button.followed{color:#d58a16}.quote-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:17px;padding-top:12px;border-top:1px solid #f0f1f4}.quote-meta div{display:flex;flex-direction:column;gap:5px}.quote-meta b{font:12px 'JetBrains Mono',monospace;color:#313b4b}.detail-tabs{display:flex;overflow:auto;background:#fff;border-top:1px solid #f0f1f4;border-bottom:1px solid #e6e9ee;scrollbar-width:none}.detail-tabs::-webkit-scrollbar,.period-tabs::-webkit-scrollbar,.indicator-tabs::-webkit-scrollbar{display:none}.detail-tabs button{position:relative;flex:1;min-width:76px;padding:13px 5px 11px;border:0;background:transparent;color:#8993a3;font-size:13px;white-space:nowrap}.detail-tabs button.selected{color:#256fdc;font-weight:600}.detail-tabs button.selected:after{content:'';position:absolute;bottom:-1px;left:50%;width:25px;height:2px;background:#256fdc;transform:translateX(-50%)}.chart-card,.detail-panel{margin-top:8px;background:#fff}.period-tabs,.indicator-tabs{display:flex;overflow:auto;align-items:center;border-bottom:1px solid #f0f1f4}.period-tabs button,.indicator-tabs button{padding:11px 13px;border:0;background:transparent;color:#8c96a5;font-size:12px;white-space:nowrap}.period-tabs button.selected,.indicator-tabs button.selected{color:#256fdc;font-weight:600}.chart-settings{margin-left:auto!important;font-size:17px!important}.indicator-tabs{border-bottom:0}.adjustment-button{margin-left:auto}.adjustment-menu{position:absolute;right:14px;z-index:3;padding:4px;background:#fff;border:1px solid #e5e8ee;box-shadow:0 5px 16px #2630401a}.adjustment-menu button{display:block;width:76px;padding:8px;border:0;background:#fff;color:#667184;font-size:11px}.chart-caption{display:flex;justify-content:space-between;gap:8px;padding:4px 13px 0;font:10px 'JetBrains Mono',monospace;white-space:nowrap;overflow:hidden}.chart-caption span{overflow:hidden;text-overflow:ellipsis}.chart-caption small{color:#b38a34}.chart-wrap{height:285px;padding:5px 8px 0}.chart-wrap svg{width:100%;height:100%;touch-action:none;cursor:crosshair}.grid-lines line{stroke:#edf0f4;stroke-width:1}.price-labels text{fill:#a5adbb;font:10px 'JetBrains Mono',monospace}.candles line{stroke-width:1}.candles rect{stroke-width:1}.candles .rise line,.candles .rise rect{stroke:var(--rise);fill:#e653531f}.candles .fall line,.candles .fall rect{stroke:var(--fall);fill:#27a9571f}.intraday-line,.ma5,.ma10,.boll{fill:none}.intraday-line{stroke:#3077ec;stroke-width:2}.ma5{stroke:#e65353;stroke-width:1.5}.ma10{stroke:#e7a516;stroke-width:1.5}.boll{stroke:#8164c4;stroke-width:1.3}.boll-edge{stroke-dasharray:4 3;opacity:.65}.volume-bars rect{opacity:.5}.rise-volume{fill:var(--rise)}.fall-volume{fill:var(--fall)}.crosshair line{stroke:#3077ec;stroke-dasharray:4 3;opacity:.7}.chart-foot{display:flex;align-items:center;gap:13px;overflow:auto;padding:10px 13px 12px;border-top:1px solid #f0f1f4;color:#8c96a5;font:10px 'JetBrains Mono',monospace;white-space:nowrap}.chart-foot button{margin-left:auto;border:0;background:#f3f6fb;color:#3077ec}.chart-foot button+button{margin-left:-8px}.panel-block{padding:16px 14px;background:#fff}.block-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}.block-title h2{font-size:15px}.order-row{display:grid;grid-template-columns:48px 1fr 74px 90px;align-items:center;padding:8px 0;color:#7d8796;font-size:12px;border-bottom:1px solid #f1f2f5}.order-row b,.order-row small{text-align:right}.order-row i{height:4px;margin-left:12px;border-radius:2px;opacity:.55}.sell-bar{background:var(--rise);width:70%}.buy-bar{background:var(--fall);width:55%}.flow-row{display:grid;grid-template-columns:1.3fr .8fr .6fr 1fr;gap:8px;align-items:center;padding:10px 0;font-size:12px;border-bottom:1px solid #f1f2f5}.flow-row small{text-align:right;color:#9aa3b1}.flow-row i{height:5px;background:#f1f3f6}.flow-row em{display:block;height:100%;width:62%}.flow-in{background:var(--rise)}.flow-out{background:var(--fall)}.news-row{display:grid;grid-template-columns:38px 36px 1fr 14px;gap:8px;align-items:center;padding:14px 0;border-bottom:1px solid #f1f2f5;color:inherit}.news-row time{color:#9aa3b1;font:10px 'JetBrains Mono',monospace}.news-row em{padding:3px 4px;background:#fff0f0;color:var(--rise);font-size:10px;font-style:normal}.news-row strong{font-size:12px;font-weight:400;line-height:1.4}.news-row span{color:#aab2be;font-size:18px}.analysis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.analysis-grid>div{display:flex;flex-direction:column;gap:7px;padding:13px;background:#f7f8fa}.analysis-grid small,.analysis-grid em{color:#909aa9;font-size:10px;font-style:normal}.analysis-grid b{font:17px 'JetBrains Mono',monospace}.bottom-bar{position:fixed;right:0;bottom:0;left:0;z-index:20;display:flex;height:58px;padding-bottom:env(safe-area-inset-bottom);background:#fff;border-top:1px solid #e4e7ec;box-shadow:0 -2px 10px #2630400a}.bottom-bar button{flex:1;border:0;background:#fff;color:#758093;font-size:10px}.bottom-bar button b{display:block;color:#596678;font-size:20px;line-height:22px}.trade-button{display:flex;align-items:center;justify-content:center;width:31%;background:#3077ec;color:#fff;font-size:15px}.sheet-mask{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end;background:#2630404d}.sheet{width:min(520px,100%);padding:18px 18px calc(20px + env(safe-area-inset-bottom));background:#fff;border-radius:14px 14px 0 0}.sheet-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.sheet-title h2{font-size:17px}.sheet-title button{border:0;background:transparent;color:#8d97a6;font-size:24px}.sheet p{color:#7d8796;font-size:12px}.sheet label{display:block;margin-top:14px;color:#697587;font-size:12px}.sheet input,.sheet select{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:10px;border:1px solid #e0e4eb;border-radius:5px;background:#fafbfd;color:#303c4c}.sheet .check{display:flex;gap:7px;align-items:center}.sheet .check input{width:auto;margin:0}.primary-button{width:100%;margin-top:18px;padding:11px;border:0;border-radius:5px;background:#3077ec;color:#fff}.form-error{color:var(--rise)!important;margin-top:10px}.form-success{color:var(--fall)!important;margin-top:10px}.sheet h3{margin:18px 0 10px;color:#8993a3;font-size:12px;font-weight:400}.setting-chips{display:flex;gap:8px}.setting-chips button{padding:8px 16px;border:0;border-radius:4px;background:#f4f6f9;color:#768194}.setting-chips button.selected{background:#edf4ff;color:#3077ec}.setting-row{display:flex;justify-content:space-between;width:100%;padding:12px 0;border:0;border-bottom:1px solid #f0f1f4;background:#fff;color:#3d4858;text-align:left}.setting-row i{width:31px;height:18px;border-radius:10px;background:#d9dee7}.setting-row i.on{background:#3077ec}
+@media (min-width:721px){.detail-page{box-shadow:0 0 24px #2630400d}.bottom-bar{left:50%;width:720px;transform:translateX(-50%)}}
 </style>

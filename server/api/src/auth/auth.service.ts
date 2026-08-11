@@ -61,12 +61,13 @@ export class AuthService {
     if (this.database.db) {
       try {
         const [row] = await this.database.db.insert(users).values({ phone }).onConflictDoUpdate({ target: users.phone, set: { phone } }).returning()
-        return this.issue({ id: row.id, phone: row.phone })
+        return await this.issue({ id: row.id, phone: row.phone })
       } catch { /* The in-memory store keeps local development usable without PostgreSQL. */ }
     }
+    if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw new UnauthorizedException('账户服务暂时不可用')
     let user = this.users.get(phone)
     if (!user) { user = { id: randomUUID(), phone }; this.users.set(phone, user) }
-    return this.issue(user)
+    return await this.issue(user)
   }
 
   async refresh(refreshToken: string) {
@@ -77,7 +78,7 @@ export class AuthService {
         const [row] = await this.database.db.select({ token: refreshTokens, user: users }).from(refreshTokens).innerJoin(users, eq(refreshTokens.userId, users.id)).where(eq(refreshTokens.tokenHash, tokenHash)).limit(1)
         if (!row || row.token.expiresAt.getTime() <= Date.now()) throw new UnauthorizedException('refresh token 已失效')
         await this.database.db.delete(refreshTokens).where(eq(refreshTokens.tokenHash, tokenHash))
-        return this.issue({ id: row.user.id, phone: row.user.phone })
+        return await this.issue({ id: row.user.id, phone: row.user.phone })
       } catch (error) {
         if (error instanceof UnauthorizedException) throw error
         throw new UnauthorizedException('refresh token 暂不可用')
@@ -86,7 +87,7 @@ export class AuthService {
     const session = this.sessions.get(tokenHash)
     if (!session || session.refreshExpiresAt <= Date.now()) throw new UnauthorizedException('refresh token 已失效')
     this.sessions.delete(tokenHash)
-    return this.issue(session.user)
+    return await this.issue(session.user)
   }
 
   async logout(refreshToken?: string) {
@@ -119,14 +120,20 @@ export class AuthService {
     } catch (error) { if (error instanceof UnauthorizedException) throw error; throw new UnauthorizedException('无效的访问令牌') }
   }
 
-  private issue(user: AuthUser) {
+  private async issue(user: AuthUser) {
     const now = Math.floor(Date.now() / 1000)
     const access = this.jwt({ sub: user.id, phone: user.phone, iat: now, exp: now + this.envNumber('ACCESS_TOKEN_TTL_SECONDS', 900) })
     const refresh = randomBytes(48).toString('base64url')
     const refreshHash = this.hash(refresh)
     const expiresAt = Date.now() + this.envNumber('REFRESH_TOKEN_TTL_SECONDS', 30 * 86400) * 1000
     this.sessions.set(refreshHash, { user, refreshExpiresAt: expiresAt })
-    if (this.database.db) void this.database.db.insert(refreshTokens).values({ userId: user.id, tokenHash: refreshHash, expiresAt: new Date(expiresAt) }).catch(() => undefined)
+    if (this.database.db) {
+      const write = this.database.db.insert(refreshTokens).values({ userId: user.id, tokenHash: refreshHash, expiresAt: new Date(expiresAt) })
+      if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') await write
+      else void write.catch(() => undefined)
+    } else if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') {
+      throw new UnauthorizedException('账户服务暂时不可用')
+    }
     return { accessToken: access, refreshToken: refresh, user }
   }
 

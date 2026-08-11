@@ -43,6 +43,8 @@ test('health and compatibility-first response contract', async () => {
   assert.equal(response.status, 200)
   assert.equal(body.status, 'ok')
   assert.equal(response.headers.get('x-api-contract-version'), '1')
+  assert.equal(response.headers.get('x-content-type-options'), 'nosniff')
+  assert.equal(response.headers.get('x-frame-options'), 'SAMEORIGIN')
 
   const quotes = await request('/api/market/quotes?codes=600519,000001')
   assert.equal(quotes.response.status, 200)
@@ -74,6 +76,15 @@ test('auth, watchlist and trade contracts', async () => {
   assert.equal(account.body.userId, login.body.user.id)
 })
 
+test('authentication rejects malformed credentials with a stable error', async () => {
+  const response = await request('/api/auth/login', {
+    method: 'POST', headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ phone: 'not-a-phone', code: '123456' }),
+  })
+  assert.equal(response.response.status, 401)
+  assert.equal(response.body.error.status, 401)
+})
+
 test('unauthorized and malformed token errors are stable', async () => {
   const missing = await request('/api/auth/me')
   assert.equal(missing.response.status, 401)
@@ -83,6 +94,32 @@ test('unauthorized and malformed token errors are stable', async () => {
   const malformed = await request('/api/auth/me', { headers: { authorization: 'Bearer a.b.not-json' } })
   assert.equal(malformed.response.status, 401)
   assert.equal(malformed.body.error.code, 'UNAUTHORIZED')
+})
+
+test('kline indicators expose the data source contract', async () => {
+  const kline = await request('/api/kline/indicators?code=600519&period=daily')
+  assert.equal(kline.response.status, 200)
+  assert.ok(['api', 'mock', 'unknown'].includes(kline.body.dataSource))
+  assert.equal(typeof kline.body.source, 'string')
+  assert.ok(Array.isArray(kline.body.indicators))
+})
+
+test('news and reports expose bounded pagination and filter contracts', async () => {
+  const news = await request('/api/news?page=1&pageSize=1&code=000001')
+  assert.equal(news.response.status, 200)
+  assert.equal(news.body.page, 1)
+  assert.equal(news.body.pageSize, 1)
+  assert.equal(news.body.totalPages, 1)
+  assert.equal(news.body.hasNext, false)
+  assert.ok(Array.isArray(news.body.items))
+
+  const reports = await request('/api/reports?rating=%E5%A2%9E%E6%8C%81&institution=Zedarc%20Research')
+  assert.equal(reports.response.status, 200)
+  assert.equal(reports.body.items[0].rating, '增持')
+
+  const invalid = await request('/api/news?page=0&pageSize=101')
+  assert.equal(invalid.response.status, 400)
+  assert.equal(invalid.body.error.code, 'BADREQUEST')
 })
 
 test('realtime contract exposes market websocket subscriptions', async () => {
@@ -99,6 +136,27 @@ test('realtime contract exposes market websocket subscriptions', async () => {
     socket.on('error', reject)
   })
   assert.equal(messages[0].type, 'connected')
+  assert.equal(messages[0].subscriptionRequired, true)
   assert.deepEqual(messages.at(-1).codes, ['600519'])
+
+  socket.send(JSON.stringify({ event: 'status', data: {} }))
+  const status = await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('WebSocket status timed out')), 5000)
+    socket.on('message', (value) => {
+      const message = JSON.parse(value.toString())
+      if (message.type === 'status') { clearTimeout(timer); resolve(message) }
+    })
+  })
+  assert.deepEqual(status.codes, ['600519'])
+
+  socket.send(JSON.stringify({ event: 'subscribe', data: { codes: [] } }))
+  const error = await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('WebSocket validation timed out')), 5000)
+    socket.on('message', (value) => {
+      const message = JSON.parse(value.toString())
+      if (message.type === 'error') { clearTimeout(timer); resolve(message) }
+    })
+  })
+  assert.equal(error.code, 'INVALID_SUBSCRIPTION')
   socket.close()
 })

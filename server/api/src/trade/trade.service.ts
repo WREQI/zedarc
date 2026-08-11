@@ -1,11 +1,11 @@
 import { Injectable, NotFoundException } from '@nestjs/common'
 import { and, desc, eq } from 'drizzle-orm'
 import { DatabaseService } from '../database/database.service.js'
-import { tradeAccounts, tradeOrders, tradePositions } from '../database/schema.js'
+import { tradeAccounts, tradeOrders, tradePositions, tradeTransactions } from '../database/schema.js'
 
-interface Order { id: string; userId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; status: 'filled' | 'cancelled'; createdAt: string }
+interface Order { id: string; userId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; status: 'filled' | 'cancelled'; requestId?: string | null; createdAt: string }
 interface Position { code: string; quantity: number; available: number; averagePrice: number }
-type TradeInput = { code: string; side?: 'buy' | 'sell'; quantity: number; price: number }
+type TradeInput = { code: string; side?: 'buy' | 'sell'; quantity: number; price: number; requestId?: string }
 
 @Injectable()
 export class TradeService {
@@ -22,7 +22,9 @@ export class TradeService {
         const positions = await this.dbPositions(userId)
         const cash = account ? Number(account.cash) : 1000000
         return { userId, cash, marketValue: positions.reduce((sum, item) => sum + item.quantity * item.averagePrice, 0), availableCash: cash }
-      } catch { /* fall through to the in-memory store */ }
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+      }
     }
     const positions = this.positions.get(userId) ?? []
     const cash = this.balances.get(userId) ?? 1000000
@@ -34,7 +36,9 @@ export class TradeService {
       try {
         const rows = await this.database.db.select().from(tradeOrders).where(eq(tradeOrders.userId, userId)).orderBy(desc(tradeOrders.createdAt))
         return rows.map((row): Order => ({ ...row, side: row.side as Order['side'], status: row.status as Order['status'], quantity: Number(row.quantity), price: Number(row.price), fee: Number(row.fee ?? 0), createdAt: row.createdAt.toISOString() }))
-      } catch { /* fall through to the in-memory store */ }
+      } catch (error) {
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+      }
     }
     return this.orders.get(userId) ?? []
   }
@@ -50,7 +54,7 @@ export class TradeService {
 
   async listPositions(userId: string) {
     if (this.database.db) {
-      try { return await this.dbPositions(userId) } catch { /* fall through to the in-memory store */ }
+      try { return await this.dbPositions(userId) } catch (error) { if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
     }
     return this.positions.get(userId) ?? []
   }
@@ -60,9 +64,9 @@ export class TradeService {
     if (!code || !Number.isFinite(quantity) || quantity <= 0 || quantity % 100 !== 0 || !Number.isFinite(price) || price <= 0) throw new Error('代码、价格或数量无效（数量须为100的整数倍）')
     if (!isTradingTime(new Date())) throw new Error('当前不在A股交易时间（工作日 09:30-11:30、13:00-15:00）')
     if (this.database.db) {
-      try { return await this.placeInDatabase(userId, { code, side, quantity, price }) } catch (error) {
+      try { return await this.placeInDatabase(userId, { code, side, quantity, price, requestId: input.requestId }) } catch (error) {
         if (error instanceof Error && (error.message === '可用资金不足' || error.message === '可用持仓不足')) throw error
-        // Database connectivity is optional for the local demo fallback.
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
       }
     }
     return this.placeInMemory(userId, { code, side, quantity, price })
@@ -75,8 +79,12 @@ export class TradeService {
         if (!order) throw new NotFoundException('订单不存在')
         if (order.status !== 'filled') await this.database.db.update(tradeOrders).set({ status: 'cancelled' }).where(eq(tradeOrders.id, id))
         return { ...order, side: order.side as Order['side'], status: order.status as Order['status'], quantity: Number(order.quantity), price: Number(order.price), fee: Number(order.fee ?? 0), createdAt: order.createdAt.toISOString() }
-      } catch (error) { if (error instanceof NotFoundException) throw error /* fallback below */ }
+      } catch (error) {
+        if (error instanceof NotFoundException) throw error
+        if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error
+      }
     }
+    if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw new Error('数据库不可用，订单暂时无法撤销')
     const order = (this.orders.get(userId) ?? []).find((item) => item.id === id)
     if (!order) throw new NotFoundException('订单不存在')
     if (order.status !== 'filled') order.status = 'cancelled'
@@ -88,26 +96,35 @@ export class TradeService {
     return rows.map((row) => ({ code: row.code, quantity: row.quantity, available: row.available, averagePrice: Number(row.averagePrice) }))
   }
 
-  private async placeInDatabase(userId: string, input: { code: string; side: 'buy' | 'sell'; quantity: number; price: number }): Promise<Order> {
+  private async placeInDatabase(userId: string, input: { code: string; side: 'buy' | 'sell'; quantity: number; price: number; requestId?: string }): Promise<Order> {
     const db = this.database.db!
-    const [account] = await db.select().from(tradeAccounts).where(eq(tradeAccounts.userId, userId)).limit(1)
-    const cash = account ? Number(account.cash) : 1000000
-    const fee = calculateFee(input.side, input.quantity * input.price)
-    const [position] = await db.select().from(tradePositions).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code))).limit(1)
-    if (input.side === 'buy' && cash < input.quantity * input.price + fee) throw new Error('可用资金不足')
-    if (input.side === 'sell' && (!position || position.available < input.quantity)) throw new Error('可用持仓不足')
-    const nextCash = input.side === 'buy' ? cash - input.quantity * input.price - fee : cash + input.quantity * input.price - fee
-    await db.insert(tradeAccounts).values({ userId, cash: String(nextCash) }).onConflictDoUpdate({ target: tradeAccounts.userId, set: { cash: String(nextCash), updatedAt: new Date() } })
-    if (input.side === 'buy') {
-      const nextQuantity = (position?.quantity ?? 0) + input.quantity
-      const nextAverage = ((position?.averagePrice ? Number(position.averagePrice) * (position.quantity) : 0) + input.price * input.quantity) / nextQuantity
-      await db.insert(tradePositions).values({ userId, code: input.code, quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() }).onConflictDoUpdate({ target: [tradePositions.userId, tradePositions.code], set: { quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() } })
-    } else if (position) {
-      await db.update(tradePositions).set({ quantity: position.quantity - input.quantity, available: position.available - input.quantity, updatedAt: new Date() }).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code)))
-    }
-    const [row] = await db.insert(tradeOrders).values({ userId, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), status: 'filled' }).returning()
-    return { ...row, side: row.side as Order['side'], status: row.status as Order['status'], quantity: Number(row.quantity), price: Number(row.price), fee: Number(row.fee ?? 0), createdAt: row.createdAt.toISOString() }
+    return db.transaction(async (tx) => {
+      if (input.requestId) {
+        const [existing] = await tx.select().from(tradeOrders).where(and(eq(tradeOrders.userId, userId), eq(tradeOrders.requestId, input.requestId))).limit(1)
+        if (existing) return this.toOrder(existing)
+      }
+      const [account] = await tx.select().from(tradeAccounts).where(eq(tradeAccounts.userId, userId)).limit(1)
+      const cash = account ? Number(account.cash) : 1000000
+      const fee = calculateFee(input.side, input.quantity * input.price)
+      const [position] = await tx.select().from(tradePositions).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code))).limit(1)
+      if (input.side === 'buy' && cash < input.quantity * input.price + fee) throw new Error('可用资金不足')
+      if (input.side === 'sell' && (!position || position.available < input.quantity)) throw new Error('可用持仓不足')
+      const nextCash = input.side === 'buy' ? cash - input.quantity * input.price - fee : cash + input.quantity * input.price - fee
+      await tx.insert(tradeAccounts).values({ userId, cash: String(nextCash) }).onConflictDoUpdate({ target: tradeAccounts.userId, set: { cash: String(nextCash), updatedAt: new Date() } })
+      if (input.side === 'buy') {
+        const nextQuantity = (position?.quantity ?? 0) + input.quantity
+        const nextAverage = ((position?.averagePrice ? Number(position.averagePrice) * position.quantity : 0) + input.price * input.quantity) / nextQuantity
+        await tx.insert(tradePositions).values({ userId, code: input.code, quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() }).onConflictDoUpdate({ target: [tradePositions.userId, tradePositions.code], set: { quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() } })
+      } else if (position) {
+        await tx.update(tradePositions).set({ quantity: position.quantity - input.quantity, available: position.available - input.quantity, updatedAt: new Date() }).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code)))
+      }
+      const [row] = await tx.insert(tradeOrders).values({ userId, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), status: 'filled', requestId: input.requestId }).returning()
+      await tx.insert(tradeTransactions).values({ userId, orderId: row.id, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), amount: String(input.quantity * input.price) })
+      return this.toOrder(row)
+    })
   }
+
+  private toOrder(row: typeof tradeOrders.$inferSelect): Order { return { ...row, side: row.side as Order['side'], status: row.status as Order['status'], quantity: Number(row.quantity), price: Number(row.price), fee: Number(row.fee ?? 0), createdAt: row.createdAt.toISOString() } }
 
   private placeInMemory(userId: string, input: { code: string; side: 'buy' | 'sell'; quantity: number; price: number }): Order {
     const cash = this.balances.get(userId) ?? 1000000; const list = this.positions.get(userId) ?? []; const position = list.find((item) => item.code === input.code); const fee = calculateFee(input.side, input.quantity * input.price)

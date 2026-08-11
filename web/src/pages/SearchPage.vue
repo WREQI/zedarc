@@ -4,12 +4,14 @@ import { useRoute, useRouter } from 'vue-router'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { searchStocks } from '@/services/market'
+import { useSearchHistoryStore } from '@/stores/search-history'
 
 const route = useRoute()
 const router = useRouter()
 const keyword = ref(typeof route.query.q === 'string' ? route.query.q : '')
 const activeTab = ref<'all' | 'stock' | 'news'>('all')
-const history = ref<string[]>(JSON.parse(window.localStorage.getItem('zedarc-search-history') ?? '[]'))
+const searchHistory = useSearchHistoryStore()
+const history = searchHistory.history
 const stockResults = ref<Awaited<ReturnType<typeof searchStocks>>>([])
 const isLoading = ref(false)
 const loadError = ref('')
@@ -35,16 +37,15 @@ const hasQuery = computed(() => Boolean(keyword.value.trim()))
 async function submitSearch() {
   const query = keyword.value.trim()
   if (!query) { stockResults.value = []; return }
-  history.value = [query, ...history.value.filter((item) => item !== query)].slice(0, 6)
-  window.localStorage.setItem('zedarc-search-history', JSON.stringify(history.value))
+  searchHistory.add(query)
   router.replace({ path: '/search', query: { q: query } })
   isLoading.value = true
   loadError.value = ''
   try { stockResults.value = await searchStocks(query) } catch { loadError.value = '搜索服务暂时不可用，请稍后重试。' } finally { isLoading.value = false }
 }
 function selectKeyword(value: string) { keyword.value = value; void submitSearch() }
-function clearHistory() { history.value = []; window.localStorage.removeItem('zedarc-search-history') }
-function removeHistory(item: string) { history.value = history.value.filter((entry) => entry !== item); window.localStorage.setItem('zedarc-search-history', JSON.stringify(history.value)) }
+function clearHistory() { searchHistory.clear() }
+function removeHistory(item: string) { searchHistory.remove(item) }
 function selectTab(tab: 'all' | 'stock' | 'news') { activeTab.value = tab }
 onMounted(() => { if (keyword.value) void submitSearch() })
 </script>

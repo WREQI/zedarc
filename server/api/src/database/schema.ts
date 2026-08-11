@@ -67,8 +67,22 @@ export const tradeOrders = pgTable('trade_orders', {
   price: numeric('price', { precision: 20, scale: 6 }).notNull(),
   fee: numeric('fee', { precision: 20, scale: 6 }).notNull().default('0'),
   status: varchar('status', { length: 16 }).notNull(),
+  requestId: varchar('request_id', { length: 128 }),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-}, (table) => ({ userCreatedIdx: index('trade_orders_user_created_idx').on(table.userId, table.createdAt) }))
+}, (table) => ({ userCreatedIdx: index('trade_orders_user_created_idx').on(table.userId, table.createdAt), requestIdIdx: uniqueIndex('trade_orders_user_request_idx').on(table.userId, table.requestId) }))
+
+export const tradeTransactions = pgTable('trade_transactions', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  orderId: uuid('order_id').notNull().references(() => tradeOrders.id, { onDelete: 'cascade' }),
+  code: varchar('code', { length: 32 }).notNull(),
+  side: varchar('side', { length: 8 }).notNull(),
+  quantity: integer('quantity').notNull(),
+  price: numeric('price', { precision: 20, scale: 6 }).notNull(),
+  fee: numeric('fee', { precision: 20, scale: 6 }).notNull().default('0'),
+  amount: numeric('amount', { precision: 20, scale: 6 }).notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userCreatedIdx: index('trade_transactions_user_created_idx').on(table.userId, table.createdAt) }))
 
 export const tradePositions = pgTable('trade_positions', {
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),

@@ -8,7 +8,11 @@ const recentCodes = ref<string[]>([])
 let initialized = false
 
 function read(keyName: string): string[] {
-  try { return JSON.parse(window.localStorage.getItem(keyName) ?? '[]') as string[] } catch { return [] }
+  if (typeof window === 'undefined') return []
+  try {
+    const value: unknown = JSON.parse(window.localStorage.getItem(keyName) ?? '[]')
+    return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : []
+  } catch { return [] }
 }
 function init() {
   if (initialized) return
@@ -38,7 +42,13 @@ export function useWatchlistStore() {
     if (getAccessToken()) void (removing ? apiFetch(`/api/watchlist/${code}`, { method: 'DELETE' }) : apiFetch('/api/watchlist', { method: 'POST', body: JSON.stringify({ code }) })).catch(() => undefined)
   }
   function remove(code: string) { selectedCodes.value = selectedCodes.value.filter((item) => item !== code); persist(); if (getAccessToken()) void apiFetch(`/api/watchlist/${code}`, { method: 'DELETE' }).catch(() => undefined) }
-  function addRecent(code: string) { recentCodes.value = [code, ...recentCodes.value.filter((item) => item !== code)].slice(0, 12); window.localStorage.setItem(recentKey, JSON.stringify(recentCodes.value)) }
-  function clearRecent() { recentCodes.value = []; window.localStorage.removeItem(recentKey) }
+  function addRecent(code: string) {
+    recentCodes.value = [code, ...recentCodes.value.filter((item) => item !== code)].slice(0, 12)
+    window.localStorage.setItem(recentKey, JSON.stringify(recentCodes.value))
+  }
+  function clearRecent() {
+    recentCodes.value = []
+    window.localStorage.removeItem(recentKey)
+  }
   return { selectedCodes, recentCodes, count: computed(() => selectedCodes.value.length), has, hydrate, toggle, remove, addRecent, clearRecent }
 }

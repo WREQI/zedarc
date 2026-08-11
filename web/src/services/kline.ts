@@ -11,6 +11,15 @@ export interface KlineCandle {
   low: number
   volume: number
   turnover: number
+  source?: string
+}
+
+export type KlineDataSource = 'api' | 'sdk' | 'mock'
+
+export function getKlineDataSource(candles: KlineCandle[]): KlineDataSource {
+  if (candles.some((candle) => candle.source && candle.source !== 'mock')) return 'api'
+  if (candles.some((candle) => candle.source === 'mock')) return 'mock'
+  return 'sdk'
 }
 
 function seedFromCode(code: string) { return [...code].reduce((sum, char) => sum + char.charCodeAt(0), 0) }
@@ -26,7 +35,7 @@ export function createKlineSeries(code: string, length = 96): KlineCandle[] {
     const low = Math.min(open, close) - 1.1 - (index % 2) * .55
     const volume = 40 + Math.abs(wave) * 12 + (index % 5) * 14
     previous = close
-    return { date: `08-${String((index % 30) + 1).padStart(2, '0')}`, timestamp: Date.now() - (length - index) * 86400000, open, close, high, low, volume, turnover: volume * close }
+    return { date: `08-${String((index % 30) + 1).padStart(2, '0')}`, timestamp: Date.now() - (length - index) * 86400000, open, close, high, low, volume, turnover: volume * close, source: 'mock' }
   })
 }
 
