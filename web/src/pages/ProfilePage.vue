@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { meApi, updateProfileApi } from '@/services/api-client'
+import { getAccessToken, meApi, updateProfileApi } from '@/services/api-client'
 import { useAuthStore } from '@/stores/auth'
 
 const auth = useAuthStore()
@@ -11,7 +11,8 @@ const saving = ref(false)
 const error = ref('')
 const message = ref('')
 onMounted(async () => {
-  if (!auth.user.value) return
+  if (!auth.user.value) { loading.value = false; return }
+  if (!getAccessToken()) { displayName.value = auth.user.value.name; avatar.value = auth.user.value.avatar ?? ''; loading.value = false; return }
   try { const user = await meApi(); displayName.value = user.name ?? user.phone; avatar.value = user.avatar ?? '' }
   catch (e) { error.value = e instanceof Error ? e.message : '资料读取失败' }
   finally { loading.value = false }
@@ -19,8 +20,10 @@ onMounted(async () => {
 async function save() {
   saving.value = true; error.value = ''; message.value = ''
   try {
-    const user = await updateProfileApi({ displayName: displayName.value, avatar: avatar.value || null })
-    auth.setUser(user); message.value = '资料已保存'
+    const user = getAccessToken()
+      ? await updateProfileApi({ displayName: displayName.value, avatar: avatar.value || null })
+      : { id: auth.user.value!.id, phone: auth.user.value!.phone ?? '', name: displayName.value.trim() || auth.user.value!.phone, avatar: avatar.value || undefined }
+    auth.setUser(user); message.value = getAccessToken() ? '资料已保存并同步' : '资料已保存（模拟登录）'
   } catch (e) { error.value = e instanceof Error ? e.message : '资料保存失败' }
   finally { saving.value = false }
 }
@@ -49,5 +52,5 @@ async function save() {
 </template>
 
 <style scoped>
-.account-subpage{max-width:720px;margin:0 auto}.subpage-heading{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px}.subpage-heading h1{font-size:24px;margin-top:5px}.eyebrow{color:var(--primary);font:500 10px 'JetBrains Mono',monospace;letter-spacing:.12em}.back-link{color:var(--primary);font-size:11px}.panel{background:var(--card);border:1px solid var(--border);border-radius:6px}.profile-summary{display:flex;align-items:center;gap:14px;padding:22px;margin-bottom:12px}.avatar-large{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#eaf2ff;color:var(--primary);font-size:21px;font-weight:600}.profile-summary h2{font-size:16px}.muted{color:var(--muted);font-size:11px;margin-top:7px}.detail-list{padding:0 16px}.detail-row{display:flex;align-items:center;justify-content:space-between;min-height:56px;border-bottom:1px solid var(--border);font-size:11px}.detail-row:last-child{border:0}.detail-row span{color:var(--muted)}.detail-row strong{font-size:11px;font-weight:500}.detail-row input{width:58%;border:1px solid var(--border);border-radius:4px;padding:8px;color:var(--text);font-size:11px;text-align:right}.faded{opacity:.65}.form-actions{padding:14px 0}.primary-button{border:0;cursor:pointer}.primary-button:disabled{opacity:.6}.error{color:#c85c5c;font-size:11px;margin-top:10px}.success{color:#4f9b70;font-size:11px;margin-top:10px}.mono{font-family:'JetBrains Mono',monospace}.empty-panel{padding:50px 24px;text-align:center;background:var(--card);border:1px dashed var(--border);border-radius:6px}.empty-icon{display:block;color:#9bbbe9;font-size:31px;margin-bottom:12px}.empty-panel h2{font-size:15px}.empty-panel p{max-width:260px;margin:8px auto 18px;color:var(--muted);font-size:11px;line-height:1.7}.primary-button{display:inline-block;padding:10px 24px;border-radius:4px;background:var(--primary);color:#fff;font-size:11px}.page-note{margin:16px 3px;color:var(--muted);font-size:10px;line-height:1.7}@media(max-width:520px){.subpage-heading h1{font-size:21px}}
+.account-subpage{max-width:720px;margin:0 auto}.subpage-heading{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px}.subpage-heading h1{font-size:23px;margin-top:5px;line-height:1.15}.eyebrow{color:var(--primary);font:500 10px 'JetBrains Mono',monospace;letter-spacing:.12em}.back-link{color:var(--primary);font-size:11px}.panel{background:var(--card);border:1px solid var(--border);border-radius:6px}.profile-summary{display:flex;align-items:center;gap:14px;padding:22px;margin-bottom:12px}.avatar-large{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#eaf2ff;color:var(--primary);font-size:21px;font-weight:600}.profile-summary h2{font-size:16px}.muted{color:var(--muted);font-size:11px;margin-top:7px}.detail-list{padding:0 16px}.detail-row{display:flex;align-items:center;justify-content:space-between;min-height:56px;border-bottom:1px solid var(--border);font-size:11px}.detail-row:last-child{border:0}.detail-row span{color:var(--muted)}.detail-row strong{font-size:11px;font-weight:500}.detail-row input{width:58%;border:1px solid var(--border);border-radius:4px;padding:8px;color:var(--text);font-size:11px;text-align:right}.faded{opacity:.65}.form-actions{padding:14px 0}.primary-button{border:0;cursor:pointer}.primary-button:disabled{opacity:.6}.error{color:#c85c5c;font-size:11px;margin-top:10px}.success{color:#4f9b70;font-size:11px;margin-top:10px}.mono{font-family:'JetBrains Mono',monospace}.empty-panel{padding:50px 24px;text-align:center;background:var(--card);border:1px dashed var(--border);border-radius:6px}.empty-icon{display:block;color:#9bbbe9;font-size:31px;margin-bottom:12px}.empty-panel h2{font-size:15px}.empty-panel p{max-width:260px;margin:8px auto 18px;color:var(--muted);font-size:11px;line-height:1.7}.primary-button{display:inline-block;padding:10px 24px;border-radius:4px;background:var(--primary);color:#fff;font-size:11px}.page-note{margin:16px 3px;color:var(--muted);font-size:10px;line-height:1.7}@media(max-width:520px){.subpage-heading h1{font-size:21px}}
 </style>

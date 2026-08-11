@@ -125,6 +125,27 @@ export const tradeOrderEvents = pgTable('trade_order_events', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ orderCreatedIdx: index('trade_order_events_order_created_idx').on(table.orderId, table.createdAt), userCreatedIdx: index('trade_order_events_user_created_idx').on(table.userId, table.createdAt) }))
 
+export const tradeExecutions = pgTable('trade_executions', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  orderId: uuid('order_id').notNull().references(() => tradeOrders.id, { onDelete: 'cascade' }),
+  requestId: varchar('request_id', { length: 128 }).notNull(),
+  quantity: integer('quantity').notNull(),
+  price: numeric('price', { precision: 20, scale: 6 }).notNull(),
+  fee: numeric('fee', { precision: 20, scale: 6 }).notNull().default('0'),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ requestIdx: uniqueIndex('trade_executions_order_request_idx').on(table.orderId, table.requestId), userCreatedIdx: index('trade_executions_user_created_idx').on(table.userId, table.createdAt) }))
+
+export const tradeLedgerEntries = pgTable('trade_ledger_entries', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  executionId: uuid('execution_id').notNull().references(() => tradeExecutions.id, { onDelete: 'cascade' }),
+  account: varchar('account', { length: 32 }).notNull(),
+  asset: varchar('asset', { length: 32 }).notNull(),
+  amount: numeric('amount', { precision: 20, scale: 6 }).notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ executionAccountIdx: uniqueIndex('trade_ledger_execution_account_idx').on(table.executionId, table.account), userCreatedIdx: index('trade_ledger_user_created_idx').on(table.userId, table.createdAt) }))
+
 export const tradeTransactions = pgTable('trade_transactions', {
   id: uuid('id').defaultRandom().primaryKey(),
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),

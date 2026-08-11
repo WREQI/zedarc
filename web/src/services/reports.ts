@@ -5,6 +5,7 @@ export interface ResearchReport {
   title: string
   institution: string
   date: string
+  publishedAt?: string
   rating: string
   summary: string
   tags: string[]
@@ -21,19 +22,19 @@ const reports: ResearchReport[] = [
 ]
 
 function normalize(item: ResearchReport & { publishedAt?: string; date?: string; content?: string }) {
-  return { ...item, date: item.date ?? item.publishedAt?.slice(0, 10) ?? '', tags: item.tags ?? [], content: item.content ?? `${item.summary}\n\n本报告围绕行业景气度、竞争格局与重点公司的经营质量展开分析。以上内容为研究摘要，投资决策请结合公开披露信息并注意风险。` }
+  return { ...item, id: String(item.id), publishedAt: item.publishedAt, date: item.date ?? item.publishedAt?.slice(0, 10) ?? '', tags: item.tags ?? [], content: item.content ?? '' }
 }
-export interface ReportsPage { items: ResearchReport[]; total: number; page: number; pageSize: number }
-export async function getReportsPage(options: { keyword?: string; code?: string; page?: number; pageSize?: number } = {}): Promise<ReportsPage> {
-  const query = new URLSearchParams(Object.entries(options).filter(([, value]) => value != null).map(([key, value]) => [key, String(value)]))
-  try { const result = await apiFetch<ResearchReport[] | ReportsPage>(`/api/reports?${query}`); const page = 'items' in result ? result : { items: result, total: result.length, page: 1, pageSize: result.length }; return { ...page, items: page.items.map(normalize) } } catch { /* fallback */ }
-  const source = structuredClone(reports).map(normalize).filter((item) => (!options.keyword || `${item.title}${item.institution}${item.tags.join('')}`.includes(options.keyword)) && (!options.code || item.code === options.code)); const page = options.page ?? 1; const pageSize = options.pageSize ?? 20; return { items: source.slice((page - 1) * pageSize, page * pageSize), total: source.length, page, pageSize }
+export interface ReportsPage { items: ResearchReport[]; total: number; page: number; pageSize: number; totalPages?: number; hasNext?: boolean }
+export async function getReportsPage(options: { keyword?: string; code?: string; institution?: string; rating?: string; page?: number; pageSize?: number } = {}): Promise<ReportsPage> {
+  const query = new URLSearchParams(Object.entries(options).filter(([, value]) => value != null && value !== '').map(([key, value]) => [key, String(value)]))
+  const result = await apiFetch<ResearchReport[] | ReportsPage>(`/api/reports?${query}`)
+  const page = Array.isArray(result) ? { items: result, total: result.length, page: options.page ?? 1, pageSize: options.pageSize ?? result.length } : result
+  return { ...page, items: page.items.map(normalize) }
 }
 export async function getReports(keyword?: string): Promise<ResearchReport[]> {
-  try { const result = await getReportsPage(keyword ? { keyword } : {}); if (result.items.length) return result.items } catch { /* fallback to mock while the research provider is not configured */ }
-  await new Promise((resolve) => window.setTimeout(resolve, 180))
-  return structuredClone(reports).map(normalize).filter((item) => !keyword || `${item.title}${item.institution}${item.tags.join('')}`.includes(keyword))
+  const result = await getReportsPage(keyword ? { keyword } : {})
+  return result.items
 }
 export async function getReport(id: string | number): Promise<ResearchReport> {
-  try { return normalize(await apiFetch<ResearchReport>(`/api/reports/${encodeURIComponent(String(id))}`)) } catch { const item = reports.find((report) => String(report.id) === String(id)); if (!item) throw new Error('研报不存在'); return normalize(structuredClone(item)) }
+  return normalize(await apiFetch<ResearchReport>(`/api/reports/${encodeURIComponent(String(id))}`))
 }

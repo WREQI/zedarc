@@ -6,6 +6,7 @@ import { priceAlerts } from '../database/schema.js'
 
 export type AlertInput = { code: string; targetPrice: number; direction: 'above' | 'below'; repeat?: boolean }
 export type AlertUpdate = { enabled?: boolean; targetPrice?: number; direction?: 'above' | 'below'; repeat?: boolean }
+export type AlertDto = { id: string; code: string; targetPrice: number; direction: 'above' | 'below'; repeat: boolean; enabled: boolean; lastTriggeredAt: string | null; createdAt: string }
 
 @Injectable()
 export class AlertsService {
@@ -14,7 +15,7 @@ export class AlertsService {
   constructor(private readonly database: DatabaseService) { void this.redis.connect().catch(() => undefined) }
   async list(userId: string) {
     if (this.database.db) try { return (await this.database.db.select().from(priceAlerts).where(eq(priceAlerts.userId, userId)).orderBy(desc(priceAlerts.createdAt))).map(this.toDto) } catch (error) { if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
-    return this.memory.get(userId) ?? []
+    return (this.memory.get(userId) ?? []).map(this.toMemoryDto)
   }
   async create(userId: string, input: AlertInput) {
     this.validate(input)
@@ -25,7 +26,7 @@ export class AlertsService {
       return this.toDto(row)
     } catch (error) { if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
     const row = { id: crypto.randomUUID(), userId, code, targetPrice: input.targetPrice, direction: input.direction, repeat: input.repeat ?? false, enabled: true, lastTriggeredAt: null, createdAt: new Date().toISOString() }
-    this.memory.set(userId, [row, ...(this.memory.get(userId) ?? [])]); await this.syncWorker(); return row
+    this.memory.set(userId, [row, ...(this.memory.get(userId) ?? [])]); await this.syncWorker(); return this.toMemoryDto(row)
   }
   async update(userId: string, id: string, input: AlertUpdate) {
     if (input.targetPrice != null && (!Number.isFinite(Number(input.targetPrice)) || Number(input.targetPrice) <= 0)) throw new BadRequestException('目标价格无效')
@@ -35,13 +36,16 @@ export class AlertsService {
       const [row] = await this.database.db.update(priceAlerts).set(values).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))).returning()
       if (!row) throw new NotFoundException('提醒不存在'); await this.syncWorker(); return this.toDto(row)
     } catch (error) { if (error instanceof NotFoundException) throw error; if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
-    const row = (this.memory.get(userId) ?? []).find((item) => item.id === id); if (!row) throw new NotFoundException('提醒不存在'); Object.assign(row, input); await this.syncWorker(); return row
+    const row = (this.memory.get(userId) ?? []).find((item) => item.id === id); if (!row) throw new NotFoundException('提醒不存在'); Object.assign(row, input, input.targetPrice == null ? {} : { targetPrice: Number(input.targetPrice) }); await this.syncWorker(); return this.toMemoryDto(row)
   }
   async remove(userId: string, id: string) {
-    if (this.database.db) try { await this.database.db.delete(priceAlerts).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))); await this.syncWorker(); return { deleted: true } } catch (error) { if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
-    this.memory.set(userId, (this.memory.get(userId) ?? []).filter((item) => item.id !== id)); await this.syncWorker(); return { deleted: true }
+    if (this.database.db) try { const deleted = await this.database.db.delete(priceAlerts).where(and(eq(priceAlerts.id, id), eq(priceAlerts.userId, userId))).returning({ id: priceAlerts.id }); if (!deleted.length) throw new NotFoundException('提醒不存在'); await this.syncWorker(); return { deleted: true } } catch (error) { if (error instanceof NotFoundException) throw error; if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw error }
+    const existing = this.memory.get(userId) ?? []
+    if (!existing.some((item) => item.id === id)) throw new NotFoundException('提醒不存在')
+    this.memory.set(userId, existing.filter((item) => item.id !== id)); await this.syncWorker(); return { deleted: true }
   }
   private validate(input: AlertInput) { if (!input.code?.trim() || !Number.isFinite(Number(input.targetPrice)) || Number(input.targetPrice) <= 0 || !['above', 'below'].includes(input.direction)) throw new BadRequestException('提醒参数无效') }
-  private toDto(row: typeof priceAlerts.$inferSelect) { return { ...row, targetPrice: Number(row.targetPrice), lastTriggeredAt: row.lastTriggeredAt?.toISOString() ?? null, createdAt: row.createdAt.toISOString() } }
+  private toDto(row: typeof priceAlerts.$inferSelect): AlertDto { return { id: row.id, code: row.code, targetPrice: Number(row.targetPrice), direction: row.direction as 'above' | 'below', repeat: row.repeat, enabled: row.enabled, lastTriggeredAt: row.lastTriggeredAt?.toISOString() ?? null, createdAt: row.createdAt.toISOString() } }
+  private toMemoryDto = (row: { id: string; code: string; targetPrice: number; direction: 'above' | 'below'; repeat: boolean; enabled: boolean; lastTriggeredAt: string | null; createdAt: string }): AlertDto => ({ id: row.id, code: row.code, targetPrice: Number(row.targetPrice), direction: row.direction, repeat: row.repeat, enabled: row.enabled, lastTriggeredAt: row.lastTriggeredAt, createdAt: row.createdAt })
   private async syncWorker() { if (!this.redis.isOpen) return; const all = this.database.db ? await this.database.db.select().from(priceAlerts).where(eq(priceAlerts.enabled, true)).catch(() => []) : [...this.memory.values()].flat().filter((item) => item.enabled); await this.redis.set('alerts:active', JSON.stringify(all.map((row) => ({ id: row.id, userId: row.userId, code: row.code, targetPrice: Number(row.targetPrice), direction: row.direction, repeat: row.repeat ?? false, lastTriggeredAt: row.lastTriggeredAt instanceof Date ? row.lastTriggeredAt.getTime() : (row.lastTriggeredAt ? Date.parse(row.lastTriggeredAt) : null) })))) }
 }

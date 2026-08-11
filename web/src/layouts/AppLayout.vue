@@ -12,7 +12,7 @@ const providerTone = ref('pending')
 
 const pageTitle = computed(() => {
   const path = route.path
-  if (path === '/') return '自选'
+  if (path === '/' || path === '/watchlist') return '自选'
   if (path.startsWith('/market') || path.startsWith('/stock') || path.startsWith('/sector') || path.startsWith('/etf') || path.startsWith('/bond') || path.startsWith('/star-market')) return '行情'
   if (path === '/market/calendar') return '行情'
   if (path.startsWith('/watchlist')) return '自选'
@@ -28,7 +28,7 @@ const tabs = [
   { label: '资讯', to: '/news', icon: '/nav/info.png', inactiveIcon: '/nav/info1.png', key: 'news' },
   { label: '自选', to: '/watchlist', icon: '/nav/zx.png', inactiveIcon: '/nav/zx1.png', key: 'watchlist' },
   { label: '行情', to: '/market', icon: '/nav/hq.png', inactiveIcon: '/nav/hq1.png', key: 'market' },
-  { label: '交易', to: '/trade', icon: '/nav/kh.png', inactiveIcon: '/nav/kh1.png', key: 'trade' },
+  { label: '交易', to: '/trade', icon: '/nav/zc.png', inactiveIcon: '/nav/zc1.png', key: 'trade' },
   { label: '我的', to: '/account', icon: '/nav/me.png', inactiveIcon: '/nav/me1.png', key: 'account' },
 ]
 
@@ -65,7 +65,7 @@ onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
   <div class="app-stage">
     <div class="app-shell">
       <header class="topbar">
-        <button v-if="route.path !== '/'" class="back-button" type="button" aria-label="返回" @click="router.back()">‹</button>
+
         <div class="brand-mark"><span class="brand-dot" /> <strong>{{ pageTitle }}</strong><small>ZEDARC</small></div>
         <nav class="top-nav" aria-label="快捷导航">
           <RouterLink to="/">自选</RouterLink>
@@ -82,8 +82,8 @@ onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
       <div class="workspace">
         <aside class="sidebar" aria-label="主导航">
           <div class="side-label">MARKET</div>
-          <RouterLink v-for="tab in tabs" :key="tab.key" class="side-link" :class="{ 'section-active': isSectionActive(tab.key) }" :to="tab.to">
-            <span class="nav-icon"><img class="nav-icon-active" :src="tab.icon" alt="" /><img class="nav-icon-inactive" :src="tab.inactiveIcon" alt="" /></span>{{ tab.label }}
+          <RouterLink v-for="tab in tabs" :key="tab.key" class="side-link" :class="{ 'section-active': isSectionActive(tab.key) }" :to="tab.to" :aria-current="isSectionActive(tab.key) ? 'page' : undefined" :data-nav-key="tab.key">
+            <span class="nav-icon" aria-hidden="true"><img class="nav-icon-active" :src="tab.icon" alt="" decoding="async" /><img class="nav-icon-inactive" :src="tab.inactiveIcon" alt="" decoding="async" /></span><span class="nav-label">{{ tab.label }}</span>
           </RouterLink>
           <div class="sidebar-footer"><span class="connection-dot" :class="providerTone" /> {{ providerTone === 'live' ? '实时数据' : providerTone === 'cache' ? '缓存数据' : '演示数据' }}</div>
         </aside>
@@ -91,8 +91,8 @@ onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
       </div>
 
       <nav class="tabbar" aria-label="底部导航">
-        <RouterLink v-for="tab in tabs" :key="tab.key" class="tabbar-item" :class="{ active: isSectionActive(tab.key) }" :to="tab.to">
-          <span class="tabbar-icon"><img :src="isSectionActive(tab.key) ? tab.icon : tab.inactiveIcon" alt="" /></span><span>{{ tab.label }}</span>
+        <RouterLink v-for="tab in tabs" :key="tab.key" class="tabbar-item" :class="{ active: isSectionActive(tab.key) }" :to="tab.to" :aria-current="isSectionActive(tab.key) ? 'page' : undefined" :data-nav-key="tab.key">
+          <span class="tabbar-icon" aria-hidden="true"><img :src="isSectionActive(tab.key) ? tab.icon : tab.inactiveIcon" :alt="`${tab.label}图标`" decoding="async" /></span><span>{{ tab.label }}</span>
         </RouterLink>
       </nav>
     </div>

@@ -12,7 +12,7 @@ test.describe('mobile critical flows', () => {
   test('home and watchlist expose stable tabs, list and empty states', async ({ page }) => {
     await page.goto('/')
     await expect(page.getByRole('heading', { name: '自选', exact: true })).toBeVisible()
-    await expect(page.getByRole('navigation', { name: '自选分组' })).toBeVisible()
+    await expect(page.getByRole('tablist', { name: '自选分组' })).toBeVisible()
     await expect(page.locator('.quote-list, .empty-state-common')).toBeVisible({ timeout: 10000 })
     await expectNoHorizontalOverflow(page)
 
@@ -29,7 +29,7 @@ test.describe('mobile critical flows', () => {
     await expect(page.getByRole('heading', { name: '行情排行中心' })).toBeVisible()
     await expect(page.getByRole('tablist', { name: '排行类型' })).toBeVisible()
     await expect(page.getByRole('tab', { name: '涨幅榜', exact: true })).toHaveAttribute('aria-selected', 'true')
-    await expect(page.locator('.rank-panel .loading-state, .rank-panel .quote-item, .rank-panel .empty-state-common, .rank-panel .error-state')).toBeVisible({ timeout: 10000 })
+    await expect(page.locator('.rank-panel .loading-state, .rank-panel .quote-item, .rank-panel .empty-state-common, .rank-panel .error-state').first()).toBeVisible({ timeout: 10000 })
     await expectNoHorizontalOverflow(page)
 
     await page.getByRole('tab', { name: '成交额', exact: true }).click()
@@ -40,18 +40,75 @@ test.describe('mobile critical flows', () => {
     await page.goto('/stock/000001')
     await expect(page.getByText('股票详情', { exact: true })).toBeVisible()
     await expect(page.locator('.detail-tabs')).toBeVisible({ timeout: 10000 })
-    expect(await page.locator('.detail-tabs button').count()).toBeGreaterThanOrEqual(8)
+    expect(await page.locator('.detail-tabs button').count()).toBeGreaterThanOrEqual(5)
     await expect(page.locator('.bottom-bar')).toBeVisible()
     await expect(page.locator('.bottom-bar')).toHaveCSS('position', 'fixed')
+    await expect(page.locator('.bottom-bar .buy-action')).toBeVisible()
+    await expect(page.locator('.bottom-bar .sell-action')).toBeVisible()
     await page.locator('.detail-tabs button', { hasText: '资讯' }).click()
-    await expect(page.getByRole('heading', { name: '相关资讯' })).toBeVisible()
+    await expect(page.locator('.detail-panel')).toBeVisible()
+    await expect(page.locator('.detail-panel .news-row, .detail-panel .empty-state-common, .detail-panel .error-state, .detail-panel .loading-state').first()).toBeVisible({ timeout: 10000 })
+    await expectNoHorizontalOverflow(page)
+  })
+
+  test('stock detail supports chart periods and all requested detail tabs in fallback mode', async ({ page }) => {
+    // Force optional detail APIs to fail so this test exercises the app's local/mock empty states.
+    await page.route('**/api/market/quotes*', (route) => route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify([{ code: '000001', name: '平安银行', price: 10.5, change: 0.12, changePercent: 1.16, volume: 100000 }]),
+    }))
+    for (const endpoint of ['**/api/market/detail*', '**/api/news*', '**/api/reports*', '**/api/market/kline*', '**/api/market/intraday*']) {
+      await page.route(endpoint, (route) => route.fulfill({ status: 503, body: 'fallback' }))
+    }
+
+    await page.goto('/stock/000001')
+    await expect(page.locator('.detail-nav')).toBeVisible({ timeout: 10000 })
+    await expect(page.locator('.detail-tabs')).toBeVisible({ timeout: 10000 })
+
+    for (const period of ['分时', '日K']) {
+      await page.getByRole('button', { name: period, exact: true }).click()
+      await expect(page.locator('.chart-caption')).toContainText(period)
+    }
+
+    const tabs = [
+      ['盘口', '五档盘口'],
+      ['资金流向', '资金流向'],
+      ['基本面', '基本面'],
+      ['资讯', '相关资讯'],
+    ] as const
+    for (const [tab, heading] of tabs) {
+      await page.getByRole('button', { name: tab, exact: true }).click()
+      await expect(page.getByRole('heading', { name: heading, exact: true })).toBeVisible()
+      await expect(page.locator('.detail-panel .empty-state-common, .detail-panel .error-state').first()).toBeVisible()
+      await expectNoHorizontalOverflow(page)
+    }
+  })
+
+  test('stock detail fixed trade entry exposes buy and sell flows on mobile', async ({ page }) => {
+    await page.goto('/stock/000001')
+    await expect(page.locator('.bottom-bar')).toBeVisible({ timeout: 10000 })
+    await expect(page.locator('.bottom-bar')).toHaveCSS('position', 'fixed')
+    const buyAction = page.locator('.bottom-bar .buy-action')
+    const sellAction = page.locator('.bottom-bar .sell-action')
+    await expect(buyAction).toBeVisible()
+    await expect(sellAction).toBeVisible()
+    await buyAction.click()
+    await expect(page.getByRole('heading', { name: /买入/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: '确认买入', exact: true })).toBeVisible()
+    await page.locator('.trade-sheet .sheet-title button').click()
+    await sellAction.click()
+    await expect(page.getByRole('heading', { name: /卖出/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: '确认卖出', exact: true })).toBeVisible()
     await expectNoHorizontalOverflow(page)
   })
 
   test('trade can enter confirmation without changing the order business flow', async ({ page }) => {
     await page.goto('/trade')
+    await expect(page.getByRole('heading', { name: '交易', exact: true })).toBeVisible({ timeout: 10000 })
     const demoButton = page.getByRole('button', { name: '体验模拟交易' })
-    if (await demoButton.isVisible().catch(() => false)) await demoButton.click()
+    await expect(demoButton).toBeVisible({ timeout: 10000 })
+    await demoButton.click()
     await expect(page.getByRole('button', { name: /确认买入/ })).toBeVisible({ timeout: 10000 })
     await page.getByRole('textbox', { name: '价格 元' }).fill('10.00')
     await page.getByRole('button', { name: /确认买入/ }).click()

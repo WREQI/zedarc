@@ -7,7 +7,7 @@ const router = createRouter({
       path: '/',
       component: () => import('../layouts/AppLayout.vue'),
       children: [
-        { path: '', name: 'home', component: () => import('../pages/HomePage.vue') },
+        { path: '', name: 'home', redirect: '/watchlist' },
         { path: 'market', name: 'market', component: () => import('../pages/MarketPage.vue') },
         { path: 'market/rank', name: 'market-rank', component: () => import('../pages/MarketRankPage.vue') },
         { path: 'market/sentiment', name: 'market-sentiment', component: () => import('../pages/MarketSentimentPage.vue') },
@@ -58,5 +58,5 @@ const router = createRouter({
 export default router
 
 router.beforeEach((to) => {
-  if (to.meta.requiresAuth && !window.localStorage.getItem('zedarc-access-token')) return { path: '/account', query: { redirect: to.fullPath } }
+  if (to.meta.requiresAuth && !window.localStorage.getItem('zedarc-access-token') && !window.localStorage.getItem('zedarc-user')) return { path: '/account', query: { redirect: to.fullPath } }
 })

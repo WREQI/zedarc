@@ -1,13 +1,18 @@
 import { createServer } from 'node:http'
 import { createClient, type RedisClientType } from 'redis'
 import { getSdkBlockTrades, getSdkCapitalFlow, getSdkDividends, getSdkEtfs, getSdkFundamentals, getSdkInstitutions, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
-import { calculateMarketSentiment, validateKlineBars, validateNormalizedQuotes, type QuoteRealtimeMessage } from '@zedarc/shared'
+import { calculateMarketSentiment, isValidCapitalFlowData, validateFinancialRecords, validateKlineBars, validateMarketEtfs, validateMarketSectors, validateNormalizedQuotes, type QuoteRealtimeMessage } from '@zedarc/shared'
 import { KlineCategory } from 'node-tdx-market'
-import { TdxProvider } from './providers/tdx.provider.js'
+import { TdxProvider, type TdxEtfConfig } from './providers/tdx.provider.js'
 import { checkPriceAlerts } from './alerts/alert.worker.js'
+import { workerLog } from './observability.js'
 
 const redis: RedisClientType = createClient({ url: process.env.REDIS_URL ?? 'redis://localhost:6379' })
 const codes = (process.env.MARKET_CODES ?? '600519,000001,300750,600036').split(',').map((code) => code.trim()).filter(Boolean)
+const etfConfig: TdxEtfConfig[] = (process.env.MARKET_ETFS ?? '').split(',').map((entry) => {
+  const [code, ...name] = entry.split(':')
+  return code && name.length ? { code: code.trim(), name: name.join(':').trim() } : null
+}).filter((item): item is TdxEtfConfig => Boolean(item?.code && item.name))
 const tdx = new TdxProvider()
 let tdxConnected = false
 let running = true
@@ -15,15 +20,26 @@ let provider = 'none'
 let lastSuccess = 0
 let collections = 0
 let failures = 0
+let lastProviderCheck = 0
+let lastProviderError: string | null = null
+const providerFailures = new Map<string, number>([['tdx', 0], ['stock-sdk', 0]])
 const orderBookState = new Map<string, { sequence: number; bids: Map<number, number>; asks: Map<number, number> }>()
 const tradesState = new Map<string, { sequence: number; keys: Set<string> }>()
 const quoteSequences = new Map<string, number>()
 
 async function ensureRedis() {
   if (redis.isOpen) return true
-  try { await redis.connect(); return true } catch (error) { console.warn('[market-worker] Redis unavailable:', error instanceof Error ? error.message : error); return false }
+  try { await redis.connect(); workerLog('info', 'redis.connected'); return true } catch (error) { workerLog('error', 'redis.unavailable', { error: error instanceof Error ? error.message : String(error) }); return false }
 }
 async function cache(key: string, value: unknown, ttl: number) { if (await ensureRedis()) await redis.set(key, JSON.stringify(value), { EX: ttl }) }
+async function appendHistory<T extends { timestamp: number }>(key: string, point: T, limit = 800) {
+  if (!(await ensureRedis())) return
+  try {
+    const existing = JSON.parse(await redis.get(key) ?? '[]') as T[]
+    const merged = [...existing.filter((item) => item.timestamp !== point.timestamp), point].sort((a, b) => a.timestamp - b.timestamp).slice(-limit)
+    await redis.set(key, JSON.stringify(merged), { EX: 90 * 86400 })
+  } catch (error) { console.warn(`[market-worker] history cache unavailable for ${key}:`, error instanceof Error ? error.message : error) }
+}
 async function publish(channel: string, data: unknown) { if (await ensureRedis()) await redis.publish(channel, JSON.stringify({ type: channel.replace(/^market:/, ''), channel, data, timestamp: Date.now() })) }
 function levelMap(levels: Array<{ price: number; volume: number }>) { return new Map(levels.map((level) => [level.price, level.volume])) }
 function changedLevels(previous: Map<number, number>, current: Map<number, number>) {
@@ -48,9 +64,11 @@ async function publishTrades(code: string, items: Awaited<ReturnType<typeof tdx.
   tradesState.set(code, { sequence, keys: currentKeys })
 }
 async function markProvider(name: string, ok: boolean, error?: unknown) {
-  provider = ok ? name : provider
-  if (ok) lastSuccess = Date.now()
-  await cache('market:provider:status', { provider: ok ? name : 'unavailable', ok, lastSuccess, checkedAt: Date.now(), error: error instanceof Error ? error.message : undefined }, 300)
+  const checkedAt = Date.now()
+  lastProviderCheck = checkedAt
+  if (ok) { provider = name; lastSuccess = checkedAt; lastProviderError = null; providerFailures.set(name, 0) }
+  else { lastProviderError = error instanceof Error ? error.message : String(error); providerFailures.set(name, (providerFailures.get(name) ?? 0) + 1) }
+  await cache('market:provider:status', { provider: ok ? name : 'unavailable', ok, lastSuccess, checkedAt, staleAfterMs: Number(process.env.MARKET_STALE_AFTER_MS ?? 30000), error: lastProviderError, providers: Object.fromEntries([...providerFailures].map(([providerName, failureCount]) => [providerName, { failureCount, healthy: providerName === name && ok }])) }, 300)
 }
 async function writeQuotes(quotes: Awaited<ReturnType<typeof getSdkQuotes>>) {
   const valid = validateNormalizedQuotes(quotes, codes)
@@ -65,6 +83,7 @@ async function writeQuotes(quotes: Awaited<ReturnType<typeof getSdkQuotes>>) {
 async function writeCapitalFlow(code: string) {
   try {
     const data = await getSdkCapitalFlow(code)
+    if (!isValidCapitalFlowData(data)) throw new Error('refusing to cache invalid capital-flow data')
     await cache(`capital-flow:${code}`, data, 300)
     await publish(`market:capital-flow:${code}`, data)
   } catch (error) {
@@ -75,8 +94,11 @@ async function writeCapitalFlow(code: string) {
 async function collectFundamentalData() {
   for (const code of codes) {
     try {
-      const records = await getSdkFundamentals(code)
-      if (records.length) await cache(`stock-detail:financials:${code}`, records, 900)
+      const records = validateFinancialRecords(await getSdkFundamentals(code))
+      if (records.length) {
+        await cache(`stock-detail:financials:${code}`, records, 900)
+        for (const record of records) await appendHistory(`stock-detail:financials-history:${code}`, { timestamp: record.asOf, record })
+      }
     } catch (error) { console.warn(`[market-worker] financial data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
     try {
       const records = await getSdkDividends(code)
@@ -95,8 +117,23 @@ async function collectFundamentalData() {
 async function collectReferenceData() {
   try { const keywords = (process.env.MARKET_SEARCH_KEYWORDS ?? '').split(',').map((item) => item.trim()).filter(Boolean); for (const keyword of keywords) { const results = await searchSdk(keyword); await cache(`market:search:${keyword.toLowerCase()}`, results, 300) } } catch (error) { console.warn('[market-worker] search unavailable:', error instanceof Error ? error.message : error) }
   try { const indices = await getSdkIndices(); await cache('market:indices', indices, 60); await publish('market:indices', indices) } catch (error) { console.warn('[market-worker] indices unavailable:', error instanceof Error ? error.message : error) }
-  try { const sectors = await getSdkSectors(); await cache('market:sectors', sectors, 300); await publish('market:sectors', sectors) } catch (error) { console.warn('[market-worker] sectors unavailable:', error instanceof Error ? error.message : error) }
-  try { const etfs = await getSdkEtfs(Number(process.env.MARKET_ETF_LIMIT ?? 100)); await cache('market:etfs', etfs, 300); await publish('market:etfs', etfs) } catch (error) { console.warn('[market-worker] ETFs unavailable:', error instanceof Error ? error.message : error) }
+  try {
+    const sectors = validateMarketSectors(await getSdkSectors())
+    if (sectors.length) {
+      await cache('market:sectors', sectors, 300)
+      await Promise.all(sectors.map((sector) => appendHistory(`market:sector-history:${sector.kind ?? 'industry'}:${sector.code}`, { timestamp: sector.timestamp ?? Date.now(), value: sector.changePercent, changePercent: sector.changePercent, source: sector.source ?? 'stock-sdk' })))
+      await publish('market:sectors', sectors)
+    }
+  } catch (error) { console.warn('[market-worker] sectors unavailable:', error instanceof Error ? error.message : error) }
+  try {
+    const tdxEtfs = validateMarketEtfs(tdxConnected ? await tdx.getEtfs(etfConfig) : [])
+    const etfs = tdxEtfs.length ? tdxEtfs : validateMarketEtfs(await getSdkEtfs(Number(process.env.MARKET_ETF_LIMIT ?? 100)))
+    if (etfs.length) {
+      await cache('market:etfs', etfs, 300)
+      await Promise.all(etfs.map((etf) => appendHistory(`market:etf-history:${etf.code}`, { timestamp: etf.timestamp ?? Date.now(), value: etf.price, changePercent: etf.changePercent, source: etf.source ?? 'tdx' })))
+      await publish('market:etfs', etfs)
+    }
+  } catch (error) { console.warn('[market-worker] ETFs unavailable:', error instanceof Error ? error.message : error) }
 }
 async function collect() {
   collections += 1
@@ -111,7 +148,7 @@ async function collect() {
       try {
         const periods = [['daily', KlineCategory.Day], ...(collections === 1 || collections % 12 === 0 ? [['weekly', KlineCategory.Week], ['monthly', KlineCategory.Month]] as const : [])] as const
         for (const [period, category] of periods) {
-          const bars = await tdx.getKline(code, 240, 0, category)
+          const bars = await tdx.getKline(code, Number(process.env.MARKET_KLINE_COUNT ?? 800), 0, category)
           const validBars = validateKlineBars(bars)
           if (!validBars.length && bars.length) throw new Error(`refusing to cache invalid K-line data for ${code}`)
           await cache(`kline:${period}:${code}`, validBars, 3600)
@@ -135,14 +172,14 @@ async function collect() {
     tdxConnected = false
     tdx.disconnect()
     await markProvider('tdx', false, error)
-    console.warn('[market-worker] TDX unavailable, trying stock-sdk:', error instanceof Error ? error.message : error)
+    workerLog('warn', 'provider.fallback', { from: 'tdx', to: 'stock-sdk', error: error instanceof Error ? error.message : String(error) })
     try {
       quotes = await getSdkQuotes(codes)
       await markProvider('stock-sdk', true)
       await writeQuotes(quotes)
-      for (const code of codes) { try { const bars = await getSdkKline(code); const validBars = validateKlineBars(bars); if (!validBars.length && bars.length) throw new Error('invalid K-line data'); await cache(`kline:daily:${code}`, validBars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars: validBars }); await writeCapitalFlow(code) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
+      for (const code of codes) { try { const periods = [['daily', getSdkKline] as const]; for (const [period, getBars] of periods) { const bars = await getBars(code, 'daily', Number(process.env.MARKET_KLINE_COUNT ?? 800)); const validBars = validateKlineBars(bars); if (!validBars.length && bars.length) throw new Error('invalid K-line data'); await cache(`kline:${period}:${code}`, validBars, 3600); await publish(`market:kline:${code}`, { code, period, bars: validBars }) } await writeCapitalFlow(code) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
       console.log(`[market-worker] stock-sdk updated ${quotes.length} quotes`)
-    } catch (sdkError) { await markProvider('stock-sdk', false, sdkError); console.warn('[market-worker] all market providers unavailable:', sdkError instanceof Error ? sdkError.message : sdkError) }
+    } catch (sdkError) { await markProvider('stock-sdk', false, sdkError); workerLog('error', 'provider.unavailable', { providers: ['tdx', 'stock-sdk'], error: sdkError instanceof Error ? sdkError.message : String(sdkError) }) }
   }
   if (quotes.length) {
     await collectReferenceData()
@@ -155,14 +192,19 @@ const healthPort = Number(process.env.HEALTH_PORT ?? 9090)
 const healthServer = createServer((request, response) => {
   if (request.url === '/health' || request.url === '/health/live') {
     const ready = redis.isOpen
-    response.statusCode = ready ? 200 : 503
+    const staleAfterMs = Number(process.env.MARKET_STALE_AFTER_MS ?? 30000)
+    const providerReady = lastSuccess > 0 && Date.now() - lastSuccess <= staleAfterMs
+    const fullyReady = ready && providerReady
+    response.statusCode = fullyReady ? 200 : 503
     response.setHeader('content-type', 'application/json')
-    response.end(JSON.stringify({ status: ready ? 'ok' : 'degraded', service: 'market-worker', redis: ready ? 'ok' : 'unavailable', lastSuccess }))
+    response.end(JSON.stringify({ status: fullyReady ? 'ok' : 'degraded', service: 'market-worker', redis: ready ? 'ok' : 'unavailable', provider, providerReady, lastSuccess, ageMs: lastSuccess ? Date.now() - lastSuccess : null, lastProviderCheck, lastProviderError }))
     return
   }
   if (request.url === '/metrics') {
     response.setHeader('content-type', 'text/plain; version=0.0.4')
-    response.end(`# HELP zedarc_worker_collections_total Collection attempts\\n# TYPE zedarc_worker_collections_total counter\\nzedarc_worker_collections_total ${collections}\\n# HELP zedarc_worker_failures_total Collection failures\\n# TYPE zedarc_worker_failures_total counter\\nzedarc_worker_failures_total ${failures}\\n`)
+    const staleAfterMs = Number(process.env.MARKET_STALE_AFTER_MS ?? 30000)
+    const providerAge = lastSuccess ? Date.now() - lastSuccess : -1
+    response.end(`# HELP zedarc_worker_collections_total Collection attempts\\n# TYPE zedarc_worker_collections_total counter\\nzedarc_worker_collections_total ${collections}\\n# HELP zedarc_worker_failures_total Collection failures\\n# TYPE zedarc_worker_failures_total counter\\nzedarc_worker_failures_total ${failures}\\n# HELP zedarc_worker_provider_last_success_timestamp_seconds Last successful provider update\\n# TYPE zedarc_worker_provider_last_success_timestamp_seconds gauge\\nzedarc_worker_provider_last_success_timestamp_seconds ${lastSuccess / 1000}\\n# HELP zedarc_worker_provider_stale Provider data is stale\\n# TYPE zedarc_worker_provider_stale gauge\\nzedarc_worker_provider_stale ${providerAge < 0 || providerAge > staleAfterMs ? 1 : 0}\\n# HELP zedarc_worker_provider_failures_total Provider failures\\n# TYPE zedarc_worker_provider_failures_total counter\\n${[...providerFailures].map(([name, count]) => `zedarc_worker_provider_failures_total{provider="${name}"} ${count}`).join('\\n')}\\n`)
     return
   }
   response.statusCode = 404

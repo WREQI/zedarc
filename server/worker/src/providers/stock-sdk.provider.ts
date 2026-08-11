@@ -1,5 +1,5 @@
 import { StockSDK } from 'stock-sdk'
-import { normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type CapitalFlowData, type CapitalFlowCategory, type NormalizedQuote, type KlineBar, type StockBlockTradeRecord, type StockDividendRecord, type StockFinancialRecord, type StockInstitutionRecord } from '@zedarc/shared'
+import { isValidCapitalFlowData, normalizeMarketCode, validateKlineBars, validateFinancialRecords, validateMarketEtfs, validateMarketSectors, validateNormalizedQuotes, type CapitalFlowData, type CapitalFlowCategory, type NormalizedQuote, type KlineBar, type StockBlockTradeRecord, type StockDividendRecord, type StockFinancialRecord, type StockInstitutionRecord } from '@zedarc/shared'
 
 export interface ProviderIndex { code: string; name: string; value: number; change: number; changePercent: number; timestamp: number }
 export interface ProviderSector { code: string; name: string; changePercent: number; leadingStock?: string; leadingChangePercent?: number }
@@ -30,13 +30,16 @@ export async function getSdkCapitalFlow(code: string): Promise<CapitalFlowData> 
   const items = capitalFlowCategories.map(({ category, field }) => ({ category, netAmount: latest[field] as number, inflow: null, outflow: null, timestamp }))
   const series = validHistory.map((row) => ({ timestamp: new Date(`${row.date}T23:59:59Z`).getTime(), date: row.date, netAmount: row.mainNetInflow as number, inflow: null, outflow: null }))
   const ranking = rank.filter((row) => row && typeof row.code === 'string' && typeof row.name === 'string').flatMap((row) => capitalFlowCategories.flatMap(({ category, field }) => Number.isFinite(row[field]) ? [{ code: normalizeMarketCode(row.code), name: row.name, category, netAmount: row[field] as number, timestamp }] : []))
-  return { code: normalized, timestamp, source: 'stock-sdk', availability: { available: true, source: 'stock-sdk', asOf: timestamp }, items, series, ranking }
+  const result = { code: normalized, timestamp, source: 'stock-sdk' as const, availability: { available: true, source: 'stock-sdk', asOf: timestamp }, items, series, ranking }
+  if (!isValidCapitalFlowData(result)) throw new Error(`stock-sdk returned invalid capital-flow data for ${normalized}`)
+  return result
 }
 
 export async function getSdkFundamentals(code: string): Promise<StockFinancialRecord[]> {
   const [row] = await sdk.quotes.cn([code])
   if (!row) return []
-  return [{ code: row.code, name: row.name, asOf: row.timestamp ?? Date.now(), peTtm: row.pe, peStatic: row.peStatic, peDynamic: row.peDynamic, pb: row.pb, circulatingMarketCap: row.circulatingMarketCap, totalMarketCap: row.totalMarketCap, circulatingShares: row.circulatingShares, totalShares: row.totalShares, source: 'stock-sdk' }]
+  const records = [{ code: row.code, name: row.name, asOf: row.timestamp ?? Date.now(), peTtm: row.pe, peStatic: row.peStatic, peDynamic: row.peDynamic, pb: row.pb, circulatingMarketCap: row.circulatingMarketCap, totalMarketCap: row.totalMarketCap, circulatingShares: row.circulatingShares, totalShares: row.totalShares, source: 'stock-sdk' as const }]
+  return validateFinancialRecords(records)
 }
 
 export async function getSdkDividends(code: string): Promise<StockDividendRecord[]> {
@@ -96,13 +99,15 @@ export async function getSdkIndices(): Promise<ProviderIndex[]> {
 
 export async function getSdkSectors(): Promise<ProviderSector[]> {
   const rows = await sdk.board.industry.list()
-  return rows.filter((row) => row.code && row.name && Number.isFinite(row.changePercent ?? 0)).map((row) => ({ code: row.code, name: row.name, changePercent: row.changePercent ?? 0, ...(row.leadingStock ? { leadingStock: row.leadingStock } : {}), ...(row.leadingStockChangePercent == null ? {} : { leadingChangePercent: row.leadingStockChangePercent }), source: 'stock-sdk' as const }))
+  const values = rows.filter((row) => row.code && row.name && Number.isFinite(row.changePercent)).map((row) => ({ code: row.code, name: row.name, changePercent: row.changePercent as number, ...(row.leadingStock ? { leadingStock: row.leadingStock } : {}), ...(row.leadingStockChangePercent == null ? {} : { leadingChangePercent: row.leadingStockChangePercent }), source: 'stock-sdk' as const, kind: 'industry' as const, timestamp: Date.now() }))
+  return validateMarketSectors(values)
 }
 
-export async function getSdkEtfs(limit = 100): Promise<ProviderEtf[]> {
-  const codes = (await sdk.codes.fund()).slice(0, Math.max(1, Math.min(limit, 200)))
-  const rows = await sdk.quotes.fund(codes)
-  return rows.filter((row) => row.code && row.name && Number.isFinite(row.nav) && Number.isFinite(row.change)).map((row) => ({ code: row.code, name: row.name, price: row.nav, changePercent: row.nav ? row.change / row.nav * 100 : 0, volume: 0, amount: 0, timestamp: Date.now(), source: 'stock-sdk' as const }))
+export async function getSdkEtfs(_limit = 100): Promise<ProviderEtf[]> {
+  // stock-sdk exposes public-fund NAV here, not ETF exchange quotes. NAV is not
+  // a tradable ETF price and the API does not publish volume/amount, so do not
+  // manufacture an ETF snapshot from it.
+  return validateMarketEtfs([])
 }
 
 export async function searchSdk(keyword: string): Promise<ProviderSearch[]> {

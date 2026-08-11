@@ -15,11 +15,40 @@ export interface KlineCandle {
 }
 
 export type KlineDataSource = 'api' | 'sdk' | 'mock'
+export type KlineAdjustment = '' | 'qfq' | 'hfq'
+export interface KlineIndicatorPreferences { maFast?: number; maSlow?: number; bollPeriod?: number }
+
+const indicatorPreferencesKey = 'zedarc-kline-indicator-parameters'
 
 export function getKlineDataSource(candles: KlineCandle[]): KlineDataSource {
   if (candles.some((candle) => candle.source && candle.source !== 'mock')) return 'api'
   if (candles.some((candle) => candle.source === 'mock')) return 'mock'
   return 'sdk'
+}
+
+export function supportsKlineAdjustment(period: 'intraday' | 'daily' | 'weekly' | 'monthly', adjustment: KlineAdjustment, source: KlineDataSource): boolean {
+  return adjustment === '' || (period !== 'intraday' && source !== 'mock')
+}
+
+export function readKlineIndicatorPreferences(code: string): KlineIndicatorPreferences | undefined {
+  if (typeof window === 'undefined') return undefined
+  try {
+    const value: unknown = JSON.parse(window.localStorage.getItem(indicatorPreferencesKey) ?? '{}')
+    const item = value && typeof value === 'object' ? (value as Record<string, unknown>)[code] : undefined
+    if (!item || typeof item !== 'object') return undefined
+    const parameters = item as Record<string, unknown>
+    return { maFast: Number(parameters.maFast), maSlow: Number(parameters.maSlow), bollPeriod: Number(parameters.bollPeriod) }
+  } catch { return undefined }
+}
+
+export function saveKlineIndicatorPreferences(code: string, preferences: KlineIndicatorPreferences) {
+  if (typeof window === 'undefined') return
+  try {
+    const value: unknown = JSON.parse(window.localStorage.getItem(indicatorPreferencesKey) ?? '{}')
+    const stored = value && typeof value === 'object' ? value as Record<string, KlineIndicatorPreferences> : {}
+    stored[code] = preferences
+    window.localStorage.setItem(indicatorPreferencesKey, JSON.stringify(stored))
+  } catch { /* Storage may be unavailable in private browsing. */ }
 }
 
 function seedFromCode(code: string) { return [...code].reduce((sum, char) => sum + char.charCodeAt(0), 0) }
@@ -55,27 +84,59 @@ export function calculateSAR(candles: KlineCandle[], step = .02, maximum = .2) {
 
 export async function getKlineIndicators(code: string, period = 'daily', params: Record<string, number> = {}) { const query = new URLSearchParams({ code, period, ...Object.fromEntries(Object.entries(params).map(([key, value]) => [key, String(value)])) }); return apiFetch<{ bars: KlineCandle[]; indicators: KlineIndicator[] }>(`/api/kline/indicators?${query}`) }
 
+type RawKlineCandle = Partial<KlineCandle> & { amount?: number; time?: string | number; datetime?: string | number }
+
+function normalizeCandle(row: RawKlineCandle): KlineCandle | undefined {
+  const timestamp = Number(row.timestamp ?? row.time ?? row.datetime)
+  const date = String(row.date ?? row.time ?? row.datetime ?? '')
+  const candle = {
+    ...row,
+    date,
+    timestamp: Number.isFinite(timestamp) ? timestamp : Date.parse(date),
+    open: Number(row.open),
+    close: Number(row.close),
+    high: Number(row.high),
+    low: Number(row.low),
+    volume: Number(row.volume),
+    turnover: Number(row.turnover ?? row.amount ?? 0),
+    source: row.source ?? 'api',
+  }
+  return isValidCandle(candle) ? candle : undefined
+}
+
+function normalizeResponse(payload: unknown) {
+  if (Array.isArray(payload)) return payload
+  if (!payload || typeof payload !== 'object') return []
+  const value = payload as Record<string, unknown>
+  for (const key of ['bars', 'data', 'items', 'rows']) if (Array.isArray(value[key])) return value[key]
+  return []
+}
+
+async function fetchKline(url: string) {
+  const response = await fetch(url)
+  if (!response.ok) return []
+  return normalizeResponse(await response.json()).map((row) => normalizeCandle(row as RawKlineCandle)).filter((row): row is KlineCandle => Boolean(row))
+}
+
 export async function getKlineSeries(code: string, period: 'daily' | 'weekly' | 'monthly' = 'daily', adjust: '' | 'qfq' | 'hfq' = 'qfq', start = 0, count = 800) {
   try {
     const query = new URLSearchParams({ code, period, start: String(start), count: String(count), adjust })
-    const response = await fetch(`/api/market/kline?${query}`)
-    if (response.ok) {
-      const rows = await response.json() as Array<KlineCandle & { amount?: number }>
-      if (rows.length) return rows.map((row) => ({ ...row, turnover: row.turnover ?? row.amount ?? 0 }))
-    }
+    const valid = await fetchKline(`/api/market/kline?${query}`)
+    if (valid.length) return valid
   } catch { /* local development may run without the API container */ }
   const { getRealKline } = await import('@/services/stock-sdk-adapter')
-  try { return await getRealKline(code, period, adjust) } catch { return createKlineSeries(code) }
+  try { return await getRealKline(code, period, adjust) } catch { return [] }
 }
 
 export async function getMinuteSeries(code: string) {
   try {
-    const response = await fetch(`/api/market/intraday?code=${encodeURIComponent(code)}`)
-    if (response.ok) {
-      const rows = await response.json() as Array<KlineCandle & { amount?: number }>
-      if (rows.length) return rows.map((row) => ({ ...row, turnover: row.turnover ?? row.amount ?? 0 }))
-    }
+    const valid = await fetchKline(`/api/market/intraday?code=${encodeURIComponent(code)}`)
+    if (valid.length) return valid
   } catch { /* local development may run without the API container */ }
   const { getRealMinuteKline } = await import('@/services/stock-sdk-adapter')
-  try { return await getRealMinuteKline(code) } catch { return createKlineSeries(code, 48) }
+  try { return await getRealMinuteKline(code) } catch { return [] }
+}
+
+function isValidCandle(value: KlineCandle) {
+  return typeof value.date === 'string' && value.date.length > 0 && Number.isFinite(value.timestamp) && [value.open, value.close, value.high, value.low, value.volume, value.turnover].every(Number.isFinite) && value.high >= Math.max(value.open, value.close) && value.low <= Math.min(value.open, value.close) && value.volume >= 0 && value.turnover >= 0
 }

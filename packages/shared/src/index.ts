@@ -96,8 +96,44 @@ export interface MarketEtf {
   changePercent: number
   volume: number
   amount: number
+  /** Optional fields are only present when the upstream provider publishes them. */
+  nav?: number | null
+  size?: number | null
+  premium?: number | null
+  indexName?: string | null
   timestamp?: number
   source?: MarketSource
+}
+
+export interface MarketCollection<T> {
+  items: T[]
+  total: number
+  availability: DataAvailability
+}
+
+export interface MarketHistoryPoint {
+  timestamp: number
+  value: number
+  changePercent: number
+  source: MarketSource
+}
+
+export interface MarketHistory<T extends MarketHistoryPoint = MarketHistoryPoint> {
+  code: string
+  kind?: MarketSectorKind
+  items: T[]
+  availability: DataAvailability
+}
+
+export interface MarketEtfDetail {
+  code: string
+  quote: MarketEtf | null
+  availability: DataAvailability
+  holdings: Array<{ code: string; name: string; weight?: number | null }>
+  holdingsAvailability: DataAvailability
+  size: number | null
+  premium: number | null
+  indexName: string | null
 }
 
 export interface MarketSearchResult {
@@ -115,6 +151,30 @@ export interface QuoteRealtimeMessage extends NormalizedQuote {
   sequence: number
 }
 export interface KlineQuery { code: string; period?: 'daily' | 'weekly' | 'monthly'; adjust?: '' | 'qfq' | 'hfq' }
+
+/** Intraday bars use the same OHLCV wire shape as K-lines. An empty array is a valid unavailable response. */
+export type IntradayBar = KlineBar
+
+export interface PreMarketQuote {
+  code: string
+  name: string
+  price: number | null
+  prevClose: number | null
+  change: number | null
+  changePercent: number | null
+  volume: number | null
+  amount: number | null
+  timestamp: number
+  source: StockDataSource
+}
+
+export interface PreMarketData {
+  code: string
+  timestamp: number
+  source: StockDataSource
+  availability: DataAvailability
+  quote: PreMarketQuote | null
+}
 
 export interface OrderBookLevel { price: number; volume: number }
 export interface OrderBook { code: string; timestamp: number; source: MarketSource | 'unavailable'; bids: OrderBookLevel[]; asks: OrderBookLevel[] }
@@ -144,6 +204,41 @@ export interface TradesRealtimeMessage {
 export type TradeOrderStatus = 'pending' | 'reported' | 'partial' | 'filled' | 'cancelled' | 'rejected'
 /** `placed` remains a wire-compatible alias for older clients. */
 export type TradeOrderEventStatus = TradeOrderStatus | 'placed'
+export interface TradeOrder {
+  id: string
+  userId: string
+  code: string
+  side: 'buy' | 'sell'
+  quantity: number
+  price: number
+  fee: number
+  status: TradeOrderStatus
+  requestId?: string | null
+  statusReason?: string | null
+  statusUpdatedAt?: string
+  createdAt: string
+}
+export interface TradeTransaction {
+  id: string
+  userId: string
+  orderId: string
+  code: string
+  side: 'buy' | 'sell'
+  quantity: number
+  price: number
+  fee: number
+  amount: number
+  createdAt: string
+}
+export interface TradeCashFlow {
+  id: string
+  userId: string
+  orderId: string
+  transactionId: string
+  type: 'trade' | 'fee'
+  amount: number
+  createdAt: string
+}
 export interface TradeOrderRealtimeEvent {
   eventId: string
   type: `trade.order.${TradeOrderEventStatus}`
@@ -152,23 +247,31 @@ export interface TradeOrderRealtimeEvent {
   orderId: string
   requestId?: string | null
   status: TradeOrderEventStatus
-  order: {
-    id: string
-    userId: string
-    code: string
-    side: 'buy' | 'sell'
-    quantity: number
-    price: number
-    fee: number
-    status: TradeOrderStatus | 'filled' | 'cancelled'
-    requestId?: string | null
-    statusReason?: string | null
-    statusUpdatedAt?: string
-    createdAt: string
-  }
+  order: TradeOrder
   reason?: string | null
   timestamp: number
 }
+export interface TradeExecutionRealtimeEvent {
+  eventId: string
+  type: 'trade.execution'
+  channel: 'trade.executions'
+  userId: string
+  orderId: string
+  requestId?: string | null
+  transaction: TradeTransaction
+  timestamp: number
+}
+export interface TradeCashFlowRealtimeEvent {
+  eventId: string
+  type: 'trade.cash-flow'
+  channel: 'trade.cash-flows'
+  userId: string
+  orderId: string
+  requestId?: string | null
+  flow: TradeCashFlow
+  timestamp: number
+}
+export type TradeRealtimeEvent = TradeOrderRealtimeEvent | TradeExecutionRealtimeEvent | TradeCashFlowRealtimeEvent
 export interface TradeOrderStatusEvent {
   eventId: string
   orderId: string
@@ -181,6 +284,19 @@ export interface CapitalFlowItem { category: CapitalFlowCategory; netAmount: num
 export interface CapitalFlowPoint { timestamp: number; date: string; netAmount: number; inflow: number | null; outflow: number | null }
 export interface CapitalFlowRank { code: string; name: string; category: CapitalFlowCategory; netAmount: number; timestamp: number }
 export interface CapitalFlowData { code: string; timestamp: number; source: MarketSource | 'unavailable'; availability: DataAvailability; items: CapitalFlowItem[]; series: CapitalFlowPoint[]; ranking: CapitalFlowRank[] }
+
+export function isValidCapitalFlowData(value: unknown): value is CapitalFlowData {
+  if (!value || typeof value !== 'object') return false
+  const row = value as Partial<CapitalFlowData>
+  if (!text(row.code) || !finite(row.timestamp) || !sourceOrUnavailable(row.source) || !row.availability || typeof row.availability.available !== 'boolean' || !Array.isArray(row.items) || !Array.isArray(row.series) || !Array.isArray(row.ranking)) return false
+  return row.items.every((item) => item && capitalFlowCategory((item as CapitalFlowItem).category) && finite((item as CapitalFlowItem).netAmount) && nullableFinite((item as CapitalFlowItem).inflow) && nullableFinite((item as CapitalFlowItem).outflow) && finite((item as CapitalFlowItem).timestamp))
+    && row.series.every((point) => point && text((point as CapitalFlowPoint).date) && finite((point as CapitalFlowPoint).timestamp) && finite((point as CapitalFlowPoint).netAmount) && nullableFinite((point as CapitalFlowPoint).inflow) && nullableFinite((point as CapitalFlowPoint).outflow))
+    && row.ranking.every((rank) => rank && text((rank as CapitalFlowRank).code) && text((rank as CapitalFlowRank).name) && capitalFlowCategory((rank as CapitalFlowRank).category) && finite((rank as CapitalFlowRank).netAmount) && finite((rank as CapitalFlowRank).timestamp))
+}
+
+function capitalFlowCategory(value: unknown): value is CapitalFlowCategory { return value === 'main' || value === 'extraLarge' || value === 'large' || value === 'medium' || value === 'small' }
+function nullableFinite(value: unknown): value is number | null { return value === null || finite(value) }
+function sourceOrUnavailable(value: unknown): value is MarketSource | 'unavailable' { return source(value) || value === 'unavailable' }
 export interface DataAvailability { available: boolean; source: string; reason?: string; asOf?: number }
 export interface MarketSentimentMetric { value: number | null; availability: DataAvailability }
 export interface MarketSentiment {
@@ -326,6 +442,7 @@ export interface StockDetailData {
   orderBook: OrderBook
   trades: { code: string; timestamp: number; source: MarketSource | 'unavailable'; items: TradeTick[]; availability: DataAvailability }
   capitalFlow: CapitalFlowData
+  preMarket: PreMarketData
   financials: { code: string; timestamp: number; source: StockDataSource; availability: DataAvailability; items: StockFinancialRecord[] }
   financialStatements: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockFinancialStatementRecord[] }
   shareholders: { code: string; timestamp: number; source: StockDataSource | 'unavailable'; availability: DataAvailability; items: StockShareholderRecord[] }
@@ -362,6 +479,22 @@ export function isValidKlineBar(value: unknown): value is KlineBar {
   if (!value || typeof value !== 'object') return false
   const bar = value as Partial<KlineBar>
   return text(bar.date) && Number.isFinite(bar.timestamp) && finite(bar.open) && finite(bar.close) && finite(bar.high) && finite(bar.low) && bar.high >= Math.max(bar.open, bar.close) && bar.low <= Math.min(bar.open, bar.close) && finite(bar.volume) && bar.volume >= 0 && finite(bar.amount) && bar.amount >= 0 && source(bar.source)
+}
+
+export function validateMarketSectors(values: unknown): MarketSector[] {
+  if (!Array.isArray(values)) return []
+  return values.filter((value): value is MarketSector => Boolean(value && typeof value === 'object' && text((value as MarketSector).code) && text((value as MarketSector).name) && finite((value as MarketSector).changePercent) && ((value as MarketSector).kind == null || (value as MarketSector).kind === 'industry' || (value as MarketSector).kind === 'concept')))
+}
+
+export function validateMarketEtfs(values: unknown): MarketEtf[] {
+  if (!Array.isArray(values)) return []
+  return values.filter((value): value is MarketEtf => Boolean(value && typeof value === 'object' && text((value as MarketEtf).code) && text((value as MarketEtf).name) && finite((value as MarketEtf).price) && finite((value as MarketEtf).changePercent) && nullableFinite((value as MarketEtf).volume) && nullableFinite((value as MarketEtf).amount)))
+}
+
+export function validateFinancialRecords(values: unknown): StockFinancialRecord[] {
+  if (!Array.isArray(values)) return []
+  const nullableFields = ['peTtm', 'peStatic', 'peDynamic', 'pb', 'circulatingMarketCap', 'totalMarketCap', 'circulatingShares', 'totalShares'] as const
+  return values.filter((value): value is StockFinancialRecord => Boolean(value && typeof value === 'object' && text((value as StockFinancialRecord).code) && text((value as StockFinancialRecord).name) && finite((value as StockFinancialRecord).asOf) && nullableFields.every((field) => nullableFinite((value as StockFinancialRecord)[field])) && sourceOrUnavailable((value as StockFinancialRecord).source)))
 }
 
 export function validateKlineBars(values: unknown): KlineBar[] {

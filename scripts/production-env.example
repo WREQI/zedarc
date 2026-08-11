@@ -1,0 +1,27 @@
+# Copy to a secret manager or deployment environment; do not commit real values.
+NODE_ENV=production
+SERVER_NAME=app.example.com
+HTTP_PORT=80
+HTTPS_PORT=443
+CORS_ORIGINS=https://app.example.com
+JWT_SECRET=CHANGE_ME_generate_at_least_32_random_characters
+POSTGRES_DB=zedarc
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=CHANGE_ME_generate_at_least_16_random_characters
+DATABASE_URL=postgresql://postgres:CHANGE_ME@postgres:5432/zedarc
+REDIS_PASSWORD=CHANGE_ME_generate_at_least_16_random_characters
+REDIS_URL=redis://:CHANGE_ME@redis:6379
+SMS_PROVIDER=http
+SMS_PROVIDER_URL=https://sms-provider.example/v1/send
+SMS_PROVIDER_API_KEY=CHANGE_ME
+SMS_TEMPLATE_ID=CHANGE_ME
+SMS_CODE_TTL_SECONDS=300
+SMS_SEND_INTERVAL_SECONDS=60
+SMS_MAX_ATTEMPTS=5
+ACCESS_TOKEN_TTL_SECONDS=900
+REFRESH_TOKEN_TTL_SECONDS=2592000
+MARKET_CODES=600519,000001,300750,600036
+MARKET_INTERVAL_MS=5000
+MARKET_STALE_AFTER_MS=30000
+ERROR_TRACKING_DSN=
+TLS_CERT_DIR=/etc/zedarc/tls

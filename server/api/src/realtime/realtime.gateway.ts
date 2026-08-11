@@ -100,7 +100,9 @@ export class RealtimeGateway implements OnModuleDestroy {
     if (!subscription || (!subscription.codes.size && !subscription.types.size)) return false
     const data = typeof event.data === 'object' && event.data !== null ? event.data as Record<string, unknown> : undefined
     const order = data?.order && typeof data.order === 'object' ? data.order as Record<string, unknown> : undefined
-    const code = String(data?.code ?? order?.code ?? event.channel.split(':').pop() ?? '').toLowerCase()
+    const transaction = data?.transaction && typeof data.transaction === 'object' ? data.transaction as Record<string, unknown> : undefined
+    const flow = data?.flow && typeof data.flow === 'object' ? data.flow as Record<string, unknown> : undefined
+    const code = String(data?.code ?? order?.code ?? transaction?.code ?? flow?.code ?? event.channel.split(':').pop() ?? '').toLowerCase()
     const type = event.type.toLowerCase()
     const channel = event.channel.toLowerCase()
     const isTrade = type.startsWith('trade.') || channel.startsWith('trade:')

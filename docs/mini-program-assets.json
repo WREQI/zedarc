@@ -1,0 +1,103 @@
+{
+  "generatedFrom": {
+    "root": "__APP__",
+    "routeRegistry": "__APP__/app.json",
+    "excludedDirectories": ["@babel", "node_modules", "miniprogram_npm"],
+    "excludedNonSourceFiles": ["__APP__/.easytool_summary.json"],
+    "note": "统计与路径均来自仓库当前文件；未把远程 URL、base64 data URI 或插件包内未提供的资源计入本地资源清单。"
+  },
+  "counts": {
+    "registeredMainPages": 6,
+    "subpackageCount": 53,
+    "registeredSubpackagePages": 551,
+    "registeredPagesTotal": 557,
+    "sourceFiles": {
+      "wxml": 1994,
+      "wxss": 2048,
+      "js": 4522,
+      "json": 1909
+    },
+    "imageLikeFiles": 257,
+    "staticNavImages": 19
+  },
+  "assetGroups": [
+    {
+      "id": "tabbar-navigation",
+      "status": "部分迁移",
+      "source": "__APP__/static/nav",
+      "files": [
+        "hq.png", "hq1.png", "hq2.png",
+        "info.png", "info1.png", "info2.png",
+        "kh.png", "kh1.png", "kh2.png",
+        "me.png", "me1.png", "me2.png",
+        "zc.png", "zc1.png", "zc2.png",
+        "zx-dot.png", "zx.png", "zx1.png", "zx2.png"
+      ],
+      "usage": "app.json tabBar 的新闻/自选/行情/交易/我的图标；Web 当前 App.vue 使用 /nav/info.png、zx.png、hq.png、zc.png、me.png 及对应非激活图标。",
+      "webReference": "web/src/App.vue"
+    },
+    {
+      "id": "app-local-assets",
+      "status": "待迁移",
+      "source": "__APP__/assets",
+      "files": [
+        "__APP__/assets/check.dfb3f1b1.png",
+        "__APP__/assets/close.2169866f.png"
+      ],
+      "usage": "仓库内存在，需在 Web 资源构建/组件使用前确认引用方。"
+    },
+    {
+      "id": "market-generated-assets",
+      "status": "待迁移",
+      "source": "__APP__/pages/market/hqPage_plugin_gen_assets_",
+      "files": ["arrow.c16a65cd.png", "arrow.f03127da.svg"],
+      "usage": "行情页生成/插件资源；不能与业务 SVG 图标混为一谈。"
+    },
+    {
+      "id": "quote-generated-assets",
+      "status": "待迁移",
+      "source": "__APP__/pages/quote/plugin_gen_assets_、__APP__/pages/stock-widget/quote_plugin_gen_assets_",
+      "fileFamilies": [
+        "arrow-black/blue/orange/purple/white",
+        "buy-down、buy-up、buy-sell-down、buy-sell-up",
+        "fold-arrow、remind-bell、sell-down、sell-up、show-arrow、signal、tip、trade-down、trade-up"
+      ],
+      "usage": "行情/交易信号、涨跌、提醒等 PNG 家族；同名 hash 资源在不同插件/页面目录重复出现。"
+    },
+    {
+      "id": "broker-plugin-assets",
+      "status": "待迁移",
+      "source": "__APP__/pages/{guangfa,guojin,guoxin,hualin,zhaoshang,zhongjincaifu,zhongxinjiantou}/__plugin__/*/assets",
+      "fileFamilies": [
+        "arrow-black/blue/orange/purple/white",
+        "buy-down、buy-up、buy-sell-down、buy-sell-up",
+        "fold-arrow、remind-bell、sell-down、sell-up、show-arrow、signal、tip、trade-down、trade-up"
+      ],
+      "usage": "七个券商插件目录的重复资源，依赖插件实现，Web 不应直接假设可复用。"
+    },
+    {
+      "id": "remote-and-inline-assets",
+      "status": "需确认",
+      "examples": [
+        "__APP__/pages/index/index.wxss 中的 https://st.gtimg.com/design/... 背景图",
+        "__APP__/pages/index/index.wxss 中的 data:image/png;base64,... 内联图"
+      ],
+      "usage": "不计入本地 imageLikeFiles；迁移前需确认网络可用性、版权和是否应下载固化。"
+    }
+  ],
+  "webAssets": {
+    "navReferences": [
+      "/nav/info.png", "/nav/info1.png", "/nav/zx.png", "/nav/zx1.png",
+      "/nav/hq.png", "/nav/hq1.png", "/nav/zc.png", "/nav/zc1.png",
+      "/nav/me.png", "/nav/me1.png"
+    ],
+    "source": "web/src/App.vue",
+    "status": "已接入导航资源；其他小程序图片/插件资源尚未建立一一映射。"
+  },
+  "executableChecklist": [
+    "[ ] 将 __APP__/static/nav 的 19 个文件与 web/public/nav 实际文件逐一核对，补齐缺失或确认不使用的 hq2/info2/kh*/me2/zc2/zx-dot/zx2。",
+    "[ ] 对 257 个本地图片按 static、业务 assets、plugin_gen_assets_、__plugin__ 建立去重清单，不按文件名去重。",
+    "[ ] 迁移行情与券商资源前先确认资源所属组件和插件授权，避免把同名 hash 文件误当作同一资源。",
+    "[ ] 对 WXSS 中远程背景图和 base64 图建立替代资源方案，并在 Web 构建中验证加载。"
+  ]
+}

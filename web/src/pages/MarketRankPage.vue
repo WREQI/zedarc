@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import DataState from '@/components/DataState.vue'
 import EmptyState from '@/components/EmptyState.vue'
-import ErrorState from '@/components/ErrorState.vue'
-import LoadingState from '@/components/LoadingState.vue'
 import { getMarketRankings } from '@/services/market'
 import type { MarketRankQuote } from '@/services/market-types'
 
@@ -21,18 +20,21 @@ const refreshing = ref(false)
 const error = ref('')
 const updatedAt = ref('--:--:--')
 
-function numeric(value: string) {
-  const parsed = Number.parseFloat(value.replace(/[,%+亿万]/g, ''))
-  return Number.isNaN(parsed) ? Number.NEGATIVE_INFINITY : parsed
-}
 function apiRankType(rank: RankTab) { return ({ '涨幅榜': 'gainers', '跌幅榜': 'losers', '成交额': 'amount', '换手率': 'turnoverRate', '振幅': 'amplitude', '量比': 'volumeRatio', '涨停': 'limitUp', '跌停': 'limitDown' })[rank] }
+function rankMetricLabel(rank: RankTab) { return ({ '涨幅榜': '涨跌幅', '跌幅榜': '涨跌幅', '成交额': '成交额', '换手率': '换手率', '振幅': '振幅', '量比': '量比', '涨停': '涨停状态', '跌停': '跌停状态' })[rank] }
 
-const isRankSupported = computed(() => supportedRanks.includes(activeRank.value))
+const isMarketSupported = computed(() => activeMarket.value === '沪深市场')
+const isRankSupported = computed(() => isMarketSupported.value && supportedRanks.includes(activeRank.value))
 
-const filteredStocks = computed(() => stocks.value)
+const filteredStocks = computed(() => {
+  const query = keyword.value.trim().toLowerCase()
+  if (!query) return stocks.value
+  return stocks.value.filter((stock) => stock.code.toLowerCase().includes(query) || stock.name.toLowerCase().includes(query))
+})
 
 const emptyTitle = computed(() => keyword.value.trim() ? '没有找到匹配标的' : '暂无排行数据')
-const emptyMessage = computed(() => keyword.value.trim() ? '请尝试其他名称或代码。' : '当前数据源暂未返回内容，请稍后重试。')
+const emptyMessage = computed(() => keyword.value.trim() ? '请尝试其他名称或代码。' : `当前行情源未提供可用的${rankMetricLabel(activeRank.value)}数据，不使用估算值。`)
+const status = computed<'loading' | 'error' | 'ready'>(() => loading.value ? 'loading' : error.value ? 'error' : 'ready')
 
 function updateTime() {
   updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour12: false })
@@ -44,6 +46,10 @@ async function loadQuotes(isRefresh = false) {
   error.value = ''
 
   try {
+    if (!isMarketSupported.value) {
+      stocks.value = []
+      return
+    }
     stocks.value = await getMarketRankings(apiRankType(activeRank.value), keyword.value)
     updateTime()
   } catch {
@@ -112,9 +118,8 @@ onMounted(() => void loadQuotes())
         </button>
       </nav>
 
-      <LoadingState v-if="loading" label="正在加载行情排行" />
-      <ErrorState v-else-if="error" title="行情加载失败" :message="error" :retry="() => loadQuotes()" />
-      <template v-else-if="isRankSupported">
+      <DataState :status="status" loading-label="正在加载行情排行" error-title="行情加载失败" :message="error" :retry="() => loadQuotes()">
+      <template v-if="isRankSupported">
         <div class="table-wrap">
           <div class="quote-row quote-head">
             <span>排名 / 名称</span><span>最新价</span><span>涨跌额</span><span>涨跌幅</span><span>{{ activeRank === '成交额' ? '成交额' : activeRank === '换手率' ? '换手率' : activeRank === '振幅' ? '振幅' : activeRank === '量比' ? '量比' : activeRank === '涨停' || activeRank === '跌停' ? '状态' : '成交量' }}</span>
@@ -129,7 +134,8 @@ onMounted(() => void loadQuotes())
         </div>
         <EmptyState v-if="!filteredStocks.length" :title="emptyTitle" :message="emptyMessage" />
       </template>
-      <EmptyState v-else title="当前数据源暂未提供该指标" message="该字段由上游行情源提供；无法提供时 API 返回 null/unsupported，不会使用估算值。" icon="—" />
+      <EmptyState v-else title="当前市场暂不支持排行" message="当前排行 API 仅提供沪深市场快照，未使用其他市场数据冒充排行。" icon="—" />
+      </DataState>
     </section>
 
     <footer class="rank-footer"><span class="mono">{{ isRankSupported ? filteredStocks.length : 0 }}</span> 个标的 · 数据来自当前行情服务</footer>
@@ -139,7 +145,7 @@ onMounted(() => void loadQuotes())
 <style scoped>
 .market-rank-page { width: min(1080px, 100%); margin: 0 auto; color: var(--text); }
 .rank-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
-.rank-header h1 { margin: 5px 0 0; font-size: 26px; letter-spacing: -.04em; }
+.rank-header h1 { margin: 5px 0 0; font-size: 23px; letter-spacing: -.02em; }
 .rank-subtitle { margin-top: 9px; color: var(--muted); font-size: 12px; }
 .eyebrow { margin: 0; color: var(--primary); font: 500 10px 'JetBrains Mono', monospace; letter-spacing: .12em; }
 .refresh-button { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; color: var(--primary); background: var(--card); border: 1px solid var(--border); border-radius: 5px; font-size: 12px; }

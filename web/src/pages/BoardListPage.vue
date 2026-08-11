@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import DataState from '@/components/DataState.vue'
 import EmptyState from '@/components/EmptyState.vue'
-import ErrorState from '@/components/ErrorState.vue'
-import LoadingState from '@/components/LoadingState.vue'
+import PageHeader from '@/components/PageHeader.vue'
+import HorizontalTabs from '@/components/HorizontalTabs.vue'
 import { getBoardQuotes } from '@/services/market'
 import type { MarketBoardQuote } from '@/services/market-types'
 
@@ -12,11 +13,17 @@ const rows = ref<MarketBoardQuote[]>([])
 const keyword = ref('')
 const loading = ref(true)
 const error = ref('')
-const rank = ref<'全部' | '涨幅榜' | '跌幅榜'>('全部')
+const rank = ref<'全部' | '涨幅榜' | '跌幅榜' | '成交额'>('全部')
+const status = computed<'loading' | 'error' | 'ready'>(() => loading.value ? 'loading' : error.value ? 'error' : 'ready')
 const filteredRows = computed(() => {
   const query = keyword.value.trim().toLowerCase()
   const source = query ? rows.value.filter((item) => item.name.toLowerCase().includes(query) || item.code.toLowerCase().includes(query)) : rows.value
-  return [...source].sort((a, b) => rank.value === '跌幅榜' ? Number.parseFloat(a.percent) - Number.parseFloat(b.percent) : Number.parseFloat(b.percent) - Number.parseFloat(a.percent))
+  if (rank.value === '全部') return source
+  return [...source].sort((a, b) => rank.value === '跌幅榜'
+    ? (a.changePercent ?? Number.NEGATIVE_INFINITY) - (b.changePercent ?? Number.NEGATIVE_INFINITY)
+    : rank.value === '成交额'
+      ? (b.amount ?? Number.NEGATIVE_INFINITY) - (a.amount ?? Number.NEGATIVE_INFINITY)
+      : (b.changePercent ?? Number.NEGATIVE_INFINITY) - (a.changePercent ?? Number.NEGATIVE_INFINITY))
 })
 async function load() {
   loading.value = true; error.value = ''
@@ -28,12 +35,14 @@ onMounted(load)
 
 <template>
   <section class="sector-page">
-    <header class="page-heading"><div><p class="eyebrow">MARKET / SECTORS</p><h1>行业 / 概念板块</h1><p class="muted">使用行情 provider 的实时板块快照；无数据时不会以 mock 结果替代。</p></div><RouterLink class="secondary-button" to="/market">返回行情</RouterLink></header>
-    <nav class="kind-tabs"><button v-for="item in kinds" :key="item.key" :class="{ selected: activeKind === item.key }" @click="selectKind(item.key)">{{ item.label }}</button></nav>
-    <section class="toolbar panel"><div class="rank-tabs"><button v-for="item in ['全部', '涨幅榜', '跌幅榜']" :key="item" :class="{ selected: rank === item }" @click="rank = item as typeof rank">{{ item }}</button></div><label class="search">⌕<input v-model="keyword" type="search" placeholder="搜索板块名称或代码" /></label></section>
-    <LoadingState v-if="loading" label="正在加载板块" />
-    <ErrorState v-else-if="error" title="板块加载失败" :message="error" :retry="load" />
-    <section v-else class="panel table"><div class="row header"><span>板块名称 / 代码</span><span>涨跌幅</span><span>领涨股</span></div><RouterLink v-for="(item, index) in filteredRows" :key="item.code" class="row" :to="`/sector/${item.code}?kind=${activeKind}`"><div><b class="index">{{ String(index + 1).padStart(2, '0') }}</b><strong>{{ item.name }}</strong><small>{{ item.code }}</small></div><span class="mono" :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.percent }}</span><span class="muted">{{ item.extra || '--' }}</span></RouterLink><EmptyState v-if="!filteredRows.length" :title="activeKind === 'concept' ? '暂无概念板块数据' : '暂无可展示的行业板块'" :message="activeKind === 'concept' ? '当前行情 provider 未提供概念板块接口，未使用行业数据代替。' : '数据源暂未返回内容，请稍后重试。'" /></section>
+    <PageHeader eyebrow="MARKET / SECTORS" title="行业 / 概念板块" description="使用行情 provider 的实时板块快照；无数据时不会以 mock 结果代替。">
+      <template #actions><RouterLink class="secondary-button" to="/market">返回行情</RouterLink></template>
+    </PageHeader>
+    <HorizontalTabs :items="kinds.map((item) => ({ label: item.label, value: item.key }))" :model-value="activeKind" aria-label="板块类型" @update:model-value="selectKind($event as 'industry' | 'concept')" />
+    <section class="toolbar panel"><HorizontalTabs :items="['全部', '涨幅榜', '跌幅榜', '成交额'].map((item) => ({ label: item, value: item }))" :model-value="rank" aria-label="板块排行" @update:model-value="rank = $event as '全部' | '涨幅榜' | '跌幅榜' | '成交额'" /><label class="search">⌕<input v-model="keyword" type="search" placeholder="搜索板块名称或代码" /></label></section>
+    <DataState :status="status" loading-label="正在加载板块" error-title="板块加载失败" :message="error" :retry="load">
+      <section class="panel table"><div class="row header"><span>板块名称 / 代码</span><span>涨跌幅</span><span>领涨股</span></div><RouterLink v-for="(item, index) in filteredRows" :key="item.code" class="row" :to="`/sector/${item.code}?kind=${activeKind}`"><div><b class="index">{{ String(index + 1).padStart(2, '0') }}</b><strong>{{ item.name }}</strong><small>{{ item.code }}</small></div><span class="mono" :class="item.trend === 'up' ? 'text-up' : 'text-down'">{{ item.percent }}</span><span class="muted">{{ item.extra || '--' }}</span></RouterLink><EmptyState v-if="!filteredRows.length" :title="activeKind === 'concept' ? '暂无概念板块数据' : '暂无可展示的行业板块'" :message="activeKind === 'concept' ? '当前行情 provider 未提供概念板块接口，未使用行业数据代替。' : '数据源暂未返回内容，请稍后重试。'" /></section>
+    </DataState>
   </section>
 </template>
 

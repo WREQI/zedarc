@@ -1,11 +1,14 @@
 import { getAccessToken } from './api-client'
-import type { TradeOrderEventStatus, TradeOrderRealtimeEvent } from '@zedarc/shared'
+import type { TradeCashFlowRealtimeEvent, TradeExecutionRealtimeEvent, TradeOrderEventStatus, TradeOrderRealtimeEvent, TradeRealtimeEvent } from '@zedarc/shared'
 
 export type TradeSocketStatus = 'connecting' | 'connected' | 'reconnecting' | 'closed' | 'error'
 export type TradeSocketOptions = {
   orderId?: string
   onEvent: (event: TradeOrderRealtimeEvent) => void
+  onExecution?: (event: TradeExecutionRealtimeEvent) => void
+  onCashFlow?: (event: TradeCashFlowRealtimeEvent) => void
   onStatus?: (status: TradeSocketStatus) => void
+  dedupeLimit?: number
 }
 
 export function connectTradeSocket(options: TradeSocketOptions) {
@@ -15,6 +18,8 @@ export function connectTradeSocket(options: TradeSocketOptions) {
   let stopped = false
   let reconnectTimer: ReturnType<typeof setTimeout> | undefined
   let reconnectAttempt = 0
+  const seen = new Set<string>()
+  const dedupeLimit = Math.max(50, options.dedupeLimit ?? 500)
 
   const subscribe = () => {
     if (socket?.readyState !== WebSocket.OPEN) return
@@ -31,10 +36,17 @@ export function connectTradeSocket(options: TradeSocketOptions) {
       try {
         const wrapper = JSON.parse(message.data as string) as { type?: string; data?: unknown }
         const event = (wrapper.data && typeof wrapper.data === 'object' ? wrapper.data : wrapper) as Partial<TradeOrderRealtimeEvent>
-        if (!event.type?.startsWith('trade.order.') || !event.orderId || !event.order) return
-        if (options.orderId && options.orderId !== event.orderId) return
-        if (!['pending', 'reported', 'partial', 'filled', 'cancelled', 'rejected', 'placed'].includes(event.status as TradeOrderEventStatus)) return
-        options.onEvent(event as TradeOrderRealtimeEvent)
+        const tradeEvent = event as Partial<TradeRealtimeEvent>
+        if (!tradeEvent.type?.startsWith('trade.') || !tradeEvent.eventId || !tradeEvent.orderId || typeof tradeEvent.userId !== 'string') return
+        if (options.orderId && options.orderId !== tradeEvent.orderId) return
+        if (seen.has(tradeEvent.eventId)) return
+        seen.add(tradeEvent.eventId)
+        if (seen.size > dedupeLimit) seen.delete(seen.values().next().value as string)
+        if (tradeEvent.type === 'trade.execution') { if ('transaction' in tradeEvent && tradeEvent.transaction) options.onExecution?.(tradeEvent as TradeExecutionRealtimeEvent); return }
+        if (tradeEvent.type === 'trade.cash-flow') { if ('flow' in tradeEvent && tradeEvent.flow) options.onCashFlow?.(tradeEvent as TradeCashFlowRealtimeEvent); return }
+        if (!tradeEvent.type.startsWith('trade.order.') || !('order' in tradeEvent) || !tradeEvent.order) return
+        if (!['pending', 'reported', 'partial', 'filled', 'cancelled', 'rejected', 'placed'].includes(tradeEvent.status as TradeOrderEventStatus)) return
+        options.onEvent(tradeEvent as TradeOrderRealtimeEvent)
       } catch { /* Ignore malformed or market messages. */ }
     })
     socket.addEventListener('error', () => { onStatus('error'); socket?.close() })

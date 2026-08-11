@@ -1,0 +1,81 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: server/api/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+  worker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server/worker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: server/worker/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run build
+
+  production-config:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-production-config.mjs --template
+      - run: docker compose -f docker-compose.yml -f docker-compose.production.yml config
+        env:
+          SERVER_NAME: app.example.com
+          TLS_CERT_DIR: /etc/zedarc/tls
+          JWT_SECRET: ci-only-not-a-production-secret
+          CORS_ORIGINS: https://app.example.com
+          SMS_PROVIDER: http
+          SMS_PROVIDER_URL: https://sms-provider.example/v1/send
+          SMS_PROVIDER_API_KEY: ci-placeholder
+          SMS_TEMPLATE_ID: ci-template
+          POSTGRES_PASSWORD: ci-placeholder-password
+          DATABASE_URL: postgresql://postgres:ci-placeholder-password@postgres:5432/zedarc
+          REDIS_PASSWORD: ci-placeholder-redis-password
+          REDIS_URL: redis://:ci-placeholder-redis-password@redis:6379
+          MARKET_CODES: 600519,000001

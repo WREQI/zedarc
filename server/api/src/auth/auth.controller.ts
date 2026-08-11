@@ -15,5 +15,6 @@ export class AuthController {
   @Patch('profile') @ApiBearerAuth() @UseGuards(AuthGuard) updateProfile(@Req() req: { user: AuthUser }, @Body() body: { displayName?: string; avatar?: string | null }) { return this.auth.updateProfile(req.user.id, body) }
   @Get('sessions') @ApiBearerAuth() @UseGuards(AuthGuard) sessions(@Req() req: { user: AuthUser }) { return this.auth.sessions(req.user.id, req.user.sessionId) }
   @Delete('sessions/:id') @ApiBearerAuth() @UseGuards(AuthGuard) revokeSession(@Req() req: { user: AuthUser }, @Param('id') id: string) { return this.auth.revokeSession(req.user.id, id) }
+  @Post('sessions/revoke-others') @ApiBearerAuth() @UseGuards(AuthGuard) revokeOtherSessions(@Req() req: { user: AuthUser }) { return this.auth.revokeOtherSessions(req.user.id, req.user.sessionId) }
   @Get('login-history') @ApiBearerAuth() @UseGuards(AuthGuard) history(@Req() req: { user: AuthUser }) { return this.auth.history(req.user.id) }
 }

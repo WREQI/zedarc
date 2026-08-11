@@ -160,3 +160,122 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 @media (prefers-reduced-motion: reduce) {
   .tabbar-item:active, :where(button, .side-link, .global-search, .icon-button):active { transform: none; }
 }
+
+@media (max-width: 820px) {
+  body:has(.detail-page) .tabbar { z-index: 1; pointer-events: none; }
+  body:has(.detail-page) .detail-page .bottom-bar { bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important; z-index: 100 !important; }
+}
+
+/* Cross-page visual contract used by the original mini-program viewport. */
+:root { --page-max: 1100px; --page-gutter: 14px; --control-height: 40px; --section-gap: 8px; --page-title-size: 23px; --page-title-size-mobile: 21px; }
+.page-heading, .subpage-heading, .header-row, .watchlist-page > .page-head, .home-page > .page-head { max-width: var(--page-max); margin-right: auto; margin-left: auto; }
+/* Canonical page-title size: fills the gap for pages that render a bare <h1> inside
+   `.page-heading`/`.subpage-heading`/`.page-head` without their own explicit font-size
+   (previously falling back to the browser's ~2em default and producing inconsistent sizes
+   across pages). Component-scoped rules with a matching value take precedence naturally. */
+.page-heading h1, .subpage-heading h1, .page-head h1, .header-row h1 { font-size: var(--page-title-size); line-height: 1.15; letter-spacing: -.02em; }
+@media (max-width: 820px) {
+  .main-content { padding-right: var(--page-gutter); padding-left: var(--page-gutter); }
+  .page-heading, .subpage-heading, .header-row, .watchlist-page > .page-head, .home-page > .page-head { margin-bottom: 16px; }
+  .page-heading h1, .subpage-heading h1, .page-head h1, .header-row h1 { font-size: var(--page-title-size-mobile); line-height: 1.25; }
+  .panel, .state-panel { border-radius: 6px; }
+  .horizontal-tabs, .group-tabs, .detail-tabs, .period-tabs, .indicator-tabs { min-height: var(--control-height); }
+  .horizontal-tabs button, .group-tabs button, .detail-tabs button, .period-tabs button, .indicator-tabs button { min-height: var(--control-height); }
+  .tabbar { z-index: 40; }
+  .bottom-action-bar.fixed, .bottom-bar { z-index: 35; }
+}
+
+/* Final navigation contract: values mirror the original mini-program tab bar. */
+:root {
+  --brand-blue: #3077ec;
+  --surface-page: #f5f6fa;
+  --surface-raised: #fff;
+  --text-primary: #262e40;
+  --text-secondary: #7a8499;
+  --line-subtle: #e9ebf0;
+  --nav-height: 56px;
+  --tabbar-content-height: 68px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --no-data-image: url('https://st.gtimg.com/design/8b9a993dae48a9fe2b108f8d56d55a5a.png');
+}
+
+html { background: var(--surface-page); scrollbar-width: thin; scrollbar-color: #c4ccd8 transparent; }
+html::-webkit-scrollbar { width: 7px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb { border: 2px solid transparent; border-radius: 8px; background: #c4ccd8; background-clip: padding-box; }
+body { min-height: 100%; background: var(--surface-page); }
+.app-shell { background: var(--surface-page); }
+.topbar { color: var(--text-primary); }
+
+/* The source MarketIcon is a 28 x 20-ish image with its own artwork; do not redraw it. */
+.market-img, .market-icon img, .new-market-icon img { width: 28px; height: 20px; margin-right: 8px; object-fit: contain; vertical-align: middle; }
+.nav-icon, .tabbar-icon { overflow: hidden; }
+.nav-icon img, .tabbar-icon img { display: block; }
+/* Desktop navigation has two source images per item: show exactly one state. */
+.nav-icon .nav-icon-active { display: none; }
+.nav-icon .nav-icon-inactive { display: block; }
+.side-link.router-link-exact-active .nav-icon .nav-icon-active,
+.side-link.section-active .nav-icon .nav-icon-active { display: block; }
+.side-link.router-link-exact-active .nav-icon .nav-icon-inactive,
+.side-link.section-active .nav-icon .nav-icon-inactive { display: none; }
+.nav-label { width: auto !important; text-align: left !important; }
+
+/* Reuse the confirmed NoData artwork from the source component instead of a text glyph. */
+.empty-state-common > span { display: none; }
+.empty-state-common::before {
+  content: '';
+  width: 80px;
+  height: 96px;
+  margin-bottom: 4px;
+  background: var(--no-data-image) center / contain no-repeat;
+  /* The source artwork is monochrome; tint it to the same blue used by the active tab. */
+  filter: brightness(0) saturate(100%) invert(42%) sepia(91%) saturate(1783%) hue-rotate(204deg) brightness(96%) contrast(91%);
+}
+
+:where(.side-link, .tabbar-item, .top-nav a, .global-search, .icon-button, .avatar, .back-button):focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+:where(.side-link, .tabbar-item):focus-visible { background: #edf4ff; }
+
+@media (max-width: 820px) {
+  .topbar {
+    height: calc(var(--nav-height) + var(--safe-top));
+    min-height: calc(var(--nav-height) + var(--safe-top));
+    padding-top: var(--safe-top);
+  }
+  .workspace { min-height: calc(100dvh - var(--nav-height) - var(--safe-top)); }
+  .main-content { padding-bottom: calc(var(--tabbar-content-height) + var(--safe-bottom) + 16px); }
+  .tabbar {
+    height: calc(var(--tabbar-content-height) + var(--safe-bottom));
+    min-height: calc(var(--tabbar-content-height) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    padding-left: max(8px, calc((100vw - 420px) / 2));
+    padding-right: max(8px, calc((100vw - 420px) / 2));
+    background: rgb(255 255 255 / 97%);
+    border-top-color: var(--line-subtle);
+    box-shadow: 0 -2px 10px rgb(38 46 64 / 5%);
+  }
+  .tabbar-item { width: 20%; max-width: 84px; min-width: 56px; min-height: var(--tabbar-content-height); padding: 6px 4px 2px; }
+  .tabbar-item.active { color: var(--brand-blue); }
+  .tabbar-item:active { background: #edf4ff; }
+  .tabbar-icon { width: 26px; height: 26px; }
+  .tabbar-icon img { width: 26px; height: 26px; object-fit: contain; }
+  body:has(.detail-page) .tabbar { z-index: 1; pointer-events: none; }
+  body:has(.detail-page) .detail-page .bottom-bar { bottom: calc(var(--tabbar-content-height) + var(--safe-bottom)) !important; }
+}
+
+@media (min-width: 821px) {
+  /* Do not leak the former dark-theme hover fill into the light mini-program shell. */
+  .side-link:hover:not(.section-active):not(.router-link-exact-active) {
+    color: var(--brand-blue);
+    background: #edf4ff;
+    border-left-color: transparent;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { --no-data-image: url('https://st.gtimg.com/design/b6c9bf772cc386fe67c81c23ac5d916a.png'); }
+}

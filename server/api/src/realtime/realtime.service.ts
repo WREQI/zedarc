@@ -1,7 +1,7 @@
 import { Injectable, Logger, OnModuleDestroy, OnModuleInit } from '@nestjs/common'
 import { createClient, type RedisClientType } from 'redis'
 import { Subject } from 'rxjs'
-import type { TradeOrderRealtimeEvent } from '@zedarc/shared'
+import type { TradeRealtimeEvent } from '@zedarc/shared'
 
 export interface MarketEvent { type: string; channel: string; data: unknown; timestamp: number; userId?: string }
 
@@ -35,7 +35,7 @@ export class RealtimeService implements OnModuleInit, OnModuleDestroy {
   }
   isEnabled() { return this.enabled && this.subscriber.isOpen }
 
-  async publishTradeEvent(event: TradeOrderRealtimeEvent) {
+  async publishTradeEvent(event: TradeRealtimeEvent) {
     if (this.stopping) return
     try {
       if (!this.publisher.isOpen) {

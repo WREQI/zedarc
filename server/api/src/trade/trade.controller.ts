@@ -15,6 +15,8 @@ export class TradeController {
   @Get('funds') funds(@Req() req: { user: AuthUser }) { return this.service.funds(req.user.id) }
   @Get('transactions') transactions(@Req() req: { user: AuthUser }) { return this.service.listTransactions(req.user.id) }
   @Get('stats') stats(@Req() req: { user: AuthUser }) { return this.service.stats(req.user.id) }
+  @Get('orders/:id/ledger') ledger(@Req() req: { user: AuthUser }, @Param('id') id: string) { return this.service.getOrderLedger(req.user.id, id) }
+  @Post('orders/preview') preview(@Req() req: { user: AuthUser }, @Body() body: { code: string; side?: 'buy' | 'sell'; quantity: number; price: number }) { return this.service.preview(req.user.id, body) }
   @Post('orders') place(@Req() req: { user: AuthUser }, @Body() body: { code: string; side?: 'buy' | 'sell'; quantity: number; price: number; requestId?: string }) { return this.service.place(req.user.id, body) }
   @Post('order') placeCompat(@Req() req: { user: AuthUser }, @Body() body: { code: string; side?: 'buy' | 'sell'; quantity: number; price: number; requestId?: string }) { return this.service.place(req.user.id, body) }
   @Delete('orders/:id') cancel(@Req() req: { user: AuthUser }, @Param('id') id: string) { return this.service.cancel(req.user.id, id) }

@@ -1,5 +1,5 @@
 import { HttpException, HttpStatus, Injectable, UnauthorizedException } from '@nestjs/common'
-import { desc, eq } from 'drizzle-orm'
+import { and, desc, eq, ne } from 'drizzle-orm'
 import { createHash, createHmac, randomBytes, randomUUID, timingSafeEqual } from 'node:crypto'
 import { DatabaseService } from '../database/database.service.js'
 import { loginHistory, refreshTokens, users } from '../database/schema.js'
@@ -7,13 +7,15 @@ import { createSmsProvider, type SmsProvider } from './sms.provider.js'
 
 export interface AuthUser { id: string; phone: string; displayName?: string; avatar?: string; sessionId?: string }
 export interface AuthContext { userAgent?: string; ipAddress?: string }
-interface Session { id: string; user: AuthUser; refreshExpiresAt: number; userAgent?: string; ipAddress?: string }
+interface Session { id: string; user: AuthUser; refreshExpiresAt: number; createdAt: Date; lastUsedAt: Date; userAgent?: string; ipAddress?: string }
+interface MemoryLoginHistory { id: string; userId: string; action: string; userAgent?: string; ipAddress?: string; createdAt: Date }
 interface Verification { hash: string; expiresAt: number; attempts: number; sentAt: number }
 
 @Injectable()
 export class AuthService {
   private readonly users = new Map<string, AuthUser>()
   private readonly memorySessions = new Map<string, Session>()
+  private readonly memoryHistory = new Map<string, MemoryLoginHistory[]>()
   private readonly verifications = new Map<string, Verification>()
   private readonly secret = process.env.JWT_SECRET ?? 'zedarc-development-secret'
   private readonly codeTtlMs = this.envNumber('SMS_CODE_TTL_SECONDS', 300) * 1000
@@ -126,7 +128,7 @@ export class AuthService {
   }
 
   async sessions(userId: string, currentSessionId?: string) {
-    if (!this.database.db) return [...this.memorySessions.values()].filter((item) => item.user.id === userId).map((item) => ({ id: item.id, current: item.id === currentSessionId, userAgent: item.userAgent ?? '未知设备', ipAddress: item.ipAddress, createdAt: new Date(), lastUsedAt: new Date(), expiresAt: new Date(item.refreshExpiresAt) }))
+    if (!this.database.db) return [...this.memorySessions.values()].filter((item) => item.user.id === userId).map((item) => ({ id: item.id, current: item.id === currentSessionId, userAgent: item.userAgent ?? '未知设备', ipAddress: item.ipAddress, createdAt: item.createdAt, lastUsedAt: item.lastUsedAt, expiresAt: new Date(item.refreshExpiresAt) }))
     const rows = await this.database.db.select().from(refreshTokens).where(eq(refreshTokens.userId, userId))
     return rows.filter((row) => row.expiresAt.getTime() > Date.now()).map((row) => ({ id: row.id, current: row.id === currentSessionId, userAgent: row.userAgent ?? '未知设备', ipAddress: row.ipAddress, createdAt: row.createdAt, lastUsedAt: row.lastUsedAt, expiresAt: row.expiresAt }))
   }
@@ -144,8 +146,18 @@ export class AuthService {
     return { success: true }
   }
 
+  async revokeOtherSessions(userId: string, currentSessionId?: string) {
+    if (!currentSessionId) throw new UnauthorizedException('当前会话无效')
+    if (this.database.db) {
+      await this.database.db.delete(refreshTokens).where(and(eq(refreshTokens.userId, userId), ne(refreshTokens.id, currentSessionId)))
+    } else {
+      for (const [hash, session] of this.memorySessions) if (session.user.id === userId && session.id !== currentSessionId) this.memorySessions.delete(hash)
+    }
+    return { success: true }
+  }
+
   async history(userId: string) {
-    if (!this.database.db) return []
+    if (!this.database.db) return (this.memoryHistory.get(userId) ?? []).slice(0, 50)
     return this.database.db.select().from(loginHistory).where(eq(loginHistory.userId, userId)).orderBy(desc(loginHistory.createdAt)).limit(50)
   }
 
@@ -168,7 +180,10 @@ export class AuthService {
     const refresh = randomBytes(48).toString('base64url')
     const refreshHash = this.hash(refresh)
     const expiresAt = Date.now() + this.envNumber('REFRESH_TOKEN_TTL_SECONDS', 30 * 86400) * 1000
-    this.memorySessions.set(refreshHash, { id: sessionId, user: { ...user, sessionId }, refreshExpiresAt: expiresAt, ...context })
+    const nowDate = new Date()
+    this.memorySessions.set(refreshHash, { id: sessionId, user: { ...user, sessionId }, refreshExpiresAt: expiresAt, createdAt: nowDate, lastUsedAt: nowDate, ...context })
+    const memoryEntry = { id: randomUUID(), userId: user.id, action: 'login', userAgent: context.userAgent, ipAddress: context.ipAddress, createdAt: nowDate }
+    this.memoryHistory.set(user.id, [memoryEntry, ...(this.memoryHistory.get(user.id) ?? [])].slice(0, 50))
     if (this.database.db) {
       const write = this.database.db.insert(refreshTokens).values({ id: sessionId, userId: user.id, tokenHash: refreshHash, userAgent: context.userAgent?.slice(0, 500), ipAddress: context.ipAddress?.slice(0, 64), expiresAt: new Date(expiresAt) })
       if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') await write

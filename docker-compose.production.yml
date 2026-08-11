@@ -13,14 +13,58 @@ services:
   api:
     environment:
       NODE_ENV: production
+      PORT: 3000
       JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET}
+      CORS_ORIGINS: ${CORS_ORIGINS:-https://${SERVER_NAME:?set SERVER_NAME}}
       SMS_PROVIDER: ${SMS_PROVIDER:?set SMS_PROVIDER=http}
       SMS_PROVIDER_URL: ${SMS_PROVIDER_URL:?set SMS_PROVIDER_URL}
       SMS_PROVIDER_API_KEY: ${SMS_PROVIDER_API_KEY:?set SMS_PROVIDER_API_KEY}
       SMS_TEMPLATE_ID: ${SMS_TEMPLATE_ID:?set SMS_TEMPLATE_ID}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      SMS_CODE_TTL_SECONDS: ${SMS_CODE_TTL_SECONDS:-300}
+      SMS_SEND_INTERVAL_SECONDS: ${SMS_SEND_INTERVAL_SECONDS:-60}
+      SMS_MAX_ATTEMPTS: ${SMS_MAX_ATTEMPTS:-5}
+      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/zedarc}
+      REDIS_URL: ${REDIS_URL:-redis://:${REDIS_PASSWORD:-${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}}@redis:6379}
+      ERROR_TRACKING_DSN: ${ERROR_TRACKING_DSN:-}
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '5'
     ports: !reset []
+  migration-init:
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/zedarc}
+  market-worker:
+    environment:
+      REDIS_URL: ${REDIS_URL:-redis://:${REDIS_PASSWORD:-${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}}@redis:6379}
+      HEALTH_PORT: 9090
+      MARKET_INTERVAL_MS: ${MARKET_INTERVAL_MS:-5000}
+      MARKET_STALE_AFTER_MS: ${MARKET_STALE_AFTER_MS:-30000}
+      MARKET_CODES: ${MARKET_CODES:-600519,000001,300750,600036}
   postgres:
     ports: !reset []
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-zedarc}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '5'
   redis:
     ports: !reset []
+    command: >-
+      redis-server --appendonly yes --appendfsync everysec
+      --save 900 1 --save 300 10
+      --requirepass ${REDIS_PASSWORD:-${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}}
+    environment:
+      REDISCLI_AUTH: ${REDIS_PASSWORD:-${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}}
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep -q PONG"]
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '5'

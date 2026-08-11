@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import ErrorState from '@/components/ErrorState.vue'
-import LoadingState from '@/components/LoadingState.vue'
+import DataState from '@/components/DataState.vue'
 import EmptyState from '@/components/EmptyState.vue'
 import { getIndexQuotes, getMarketStocks } from '@/services/market'
 import type { IndexQuote, StockQuote } from '@/services/market-types'
@@ -40,7 +39,8 @@ async function loadHome() {
   isLoading.value = true
   loadError.value = ''
   try {
-    const [indexData, stockData] = await Promise.all([getIndexQuotes(), getMarketStocks(), watchlist.hydrate()])
+    const [indexData, stockData] = await Promise.all([getIndexQuotes(), getMarketStocks()])
+    await watchlist.hydrate()
     indices.value = indexData
     stocks.value = stockData
     updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' })
@@ -106,9 +106,14 @@ onMounted(loadHome)
       </div>
     </header>
 
-    <LoadingState v-if="isLoading" label="正在加载自选数据" />
-    <ErrorState v-else-if="loadError" title="自选数据加载失败" :message="loadError" :retry="loadHome" />
-    <template v-else>
+    <nav class="group-tabs" aria-label="自选分组">
+      <button :class="{ active: activeGroup === '自选股' }" @click="changeGroup('自选股')">自选股 <b>{{ selectedStocks.length }}</b></button>
+      <button :class="{ active: activeGroup === '最近浏览' }" @click="changeGroup('最近浏览')">最近浏览 <b>{{ recentStocks.length }}</b></button>
+      <RouterLink to="/market" class="add-link">＋ 添加自选</RouterLink>
+    </nav>
+
+    <DataState :status="isLoading ? 'loading' : loadError ? 'error' : 'ready'" loading-label="正在加载自选数据" error-title="自选数据加载失败" :message="loadError" :retry="loadHome">
+    <template #default>
       <section class="market-summary" aria-label="行情摘要">
         <div class="summary-top"><span><i /> 今日行情</span><small>更新于 {{ updatedAt }}</small></div>
         <div class="summary-lead"><strong>{{ marketDirection }}</strong><span>主要指数表现</span></div>
@@ -119,12 +124,6 @@ onMounted(loadHome)
           <div v-if="!featuredIndices.length" class="summary-empty">暂无指数数据</div>
         </div>
       </section>
-
-      <nav class="group-tabs" aria-label="自选分组">
-        <button :class="{ active: activeGroup === '自选股' }" @click="changeGroup('自选股')">自选股 <b>{{ selectedStocks.length }}</b></button>
-        <button :class="{ active: activeGroup === '最近浏览' }" @click="changeGroup('最近浏览')">最近浏览 <b>{{ recentStocks.length }}</b></button>
-        <RouterLink to="/market" class="add-link">＋ 添加自选</RouterLink>
-      </nav>
 
       <section class="quote-section">
         <div class="section-bar">
@@ -148,6 +147,7 @@ onMounted(loadHome)
       <RouterLink class="market-link" to="/market">去行情列表查看更多股票 <span>›</span></RouterLink>
       <p class="disclaimer">行情数据仅供参考 · 投资有风险，入市需谨慎</p>
     </template>
+    </DataState>
   </section>
 </template>
 

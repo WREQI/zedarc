@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
-import type { TradeOrderEventStatus, TradeOrderRealtimeEvent, TradeOrderStatusEvent } from '@zedarc/shared'
-import { and, desc, eq } from 'drizzle-orm'
+import type { TradeCashFlowRealtimeEvent, TradeExecutionRealtimeEvent, TradeOrderEventStatus, TradeOrderRealtimeEvent, TradeOrderStatusEvent, TradeRealtimeEvent } from '@zedarc/shared'
+import { and, desc, eq, inArray, ne, sql } from 'drizzle-orm'
 import { DatabaseService } from '../database/database.service.js'
 import { MarketService } from '../market/market.service.js'
-import { tradeAccounts, tradeCashFlows, tradeOrderEvents, tradeOrders, tradePositions, tradeTransactions } from '../database/schema.js'
+import { tradeAccounts, tradeCashFlows, tradeExecutions, tradeLedgerEntries, tradeOrderEvents, tradeOrders, tradePositions, tradeTransactions } from '../database/schema.js'
 import { RealtimeService } from '../realtime/realtime.service.js'
 
 interface Order { id: string; userId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; status: 'pending' | 'reported' | 'partial' | 'filled' | 'cancelled' | 'rejected'; statusReason?: string | null; statusUpdatedAt?: string; requestId?: string | null; createdAt: string; timeline?: TradeOrderStatusEvent[] }
@@ -11,12 +11,21 @@ interface Position { code: string; quantity: number; available: number; averageP
 interface Transaction { id: string; userId: string; orderId: string; code: string; side: 'buy' | 'sell'; quantity: number; price: number; fee: number; amount: number; createdAt: string }
 interface CashFlow { id: string; orderId: string; transactionId: string; type: 'trade' | 'fee'; amount: number; createdAt: string }
 type TradeInput = { code: string; side?: 'buy' | 'sell'; quantity: number; price: number; requestId?: string }
+type ExecutionInput = { quantity: number; price?: number; requestId: string }
+const TERMINAL_STATUSES = new Set<Order['status']>(['filled', 'cancelled', 'rejected'])
+const ALLOWED_TRANSITIONS: Record<Order['status'], Order['status'][]> = {
+  pending: ['reported', 'cancelled', 'rejected'], reported: ['partial', 'filled', 'cancelled', 'rejected'], partial: ['partial', 'filled', 'cancelled'], filled: [], cancelled: [], rejected: [],
+}
+export interface TradePreview { code: string; side: 'buy' | 'sell'; quantity: number; price: number; amount: number; fee: number; total: number; availableCash: number; availablePosition: number; maxBuyQuantity: number; maxSellQuantity: number; tradingSession: { open: boolean; label: string; nextOpen?: string }; limitUp: number | null; limitDown: number | null; valid: boolean; errors: string[]; warnings: string[] }
 
 @Injectable()
 export class TradeService {
   private readonly orders = new Map<string, Order[]>()
   private readonly positions = new Map<string, Position[]>()
   private readonly balances = new Map<string, number>()
+  private readonly transactions = new Map<string, Transaction[]>()
+  private readonly cashFlows = new Map<string, CashFlow[]>()
+  private readonly executionRequests = new Map<string, string>()
 
   constructor(private readonly database: DatabaseService, private readonly realtime: RealtimeService, private readonly market: MarketService) {}
 
@@ -50,7 +59,7 @@ export class TradeService {
 
   async funds(userId: string) {
     const account = await this.account(userId)
-    if (!this.database.db) return { ...account, flows: [] as CashFlow[] }
+    if (!this.database.db) return { ...account, flows: this.cashFlows.get(userId) ?? [] }
     const rows = await this.database.db.select().from(tradeCashFlows).where(eq(tradeCashFlows.userId, userId)).orderBy(desc(tradeCashFlows.createdAt))
     return { ...account, flows: rows.map((row): CashFlow => ({ id: row.id, orderId: row.orderId, transactionId: row.transactionId, type: row.type as CashFlow['type'], amount: Number(row.amount), createdAt: row.createdAt.toISOString() })) }
   }
@@ -60,7 +69,7 @@ export class TradeService {
       const rows = await this.database.db.select().from(tradeTransactions).where(eq(tradeTransactions.userId, userId)).orderBy(desc(tradeTransactions.createdAt))
       return rows.map((row): Transaction => ({ id: row.id, userId: row.userId, orderId: row.orderId, code: row.code, side: row.side as Transaction['side'], quantity: row.quantity, price: Number(row.price), fee: Number(row.fee), amount: Number(row.amount), createdAt: row.createdAt.toISOString() }))
     }
-    return []
+    return this.transactions.get(userId) ?? []
   }
 
   async getOrder(userId: string, id: string) {
@@ -75,9 +84,21 @@ export class TradeService {
   }
 
   async getOrderTimeline(userId: string, orderId: string): Promise<TradeOrderStatusEvent[]> {
-    if (!this.database.db) return []
+    if (!this.database.db) {
+      const order = (this.orders.get(userId) ?? []).find((item) => item.id === orderId)
+      return order?.timeline ?? []
+    }
     const rows = await this.database.db.select().from(tradeOrderEvents).where(and(eq(tradeOrderEvents.userId, userId), eq(tradeOrderEvents.orderId, orderId))).orderBy(tradeOrderEvents.createdAt)
     return rows.map((row) => ({ eventId: row.id, orderId: row.orderId, status: row.status as TradeOrderEventStatus, reason: row.reason, timestamp: row.createdAt.getTime() }))
+  }
+
+  async getOrderLedger(userId: string, orderId: string) {
+    const order = await this.getOrder(userId, orderId)
+    const [transactions, flows] = await Promise.all([
+      (await this.listTransactions(userId)).filter((item) => item.orderId === orderId),
+      (await this.funds(userId)).flows.filter((item) => item.orderId === orderId),
+    ])
+    return { order, timeline: await this.getOrderTimeline(userId, orderId), transactions, cashFlows: flows, balanced: isLedgerBalanced(transactions, flows) }
   }
 
   async getPosition(userId: string, code: string) {
@@ -93,12 +114,11 @@ export class TradeService {
   }
 
   async stats(userId: string) {
-    const orders = await this.listOrders(userId)
-    const filled = orders.filter((order) => order.status === 'filled')
-    const fees = filled.reduce((sum, order) => sum + order.fee, 0)
-    const buys = filled.filter((order) => order.side === 'buy').reduce((sum, order) => sum + order.price * order.quantity, 0)
-    const sells = filled.filter((order) => order.side === 'sell').reduce((sum, order) => sum + order.price * order.quantity, 0)
-    return { orderCount: filled.length, buyAmount: buys, sellAmount: sells, fees, realizedPnL: sells - buys - fees }
+    const transactions = await this.listTransactions(userId)
+    const fees = transactions.reduce((sum, transaction) => sum + transaction.fee, 0)
+    const buys = transactions.filter((transaction) => transaction.side === 'buy').reduce((sum, transaction) => sum + transaction.amount, 0)
+    const sells = transactions.filter((transaction) => transaction.side === 'sell').reduce((sum, transaction) => sum + transaction.amount, 0)
+    return { orderCount: new Set(transactions.map((transaction) => transaction.orderId)).size, buyAmount: buys, sellAmount: sells, fees, realizedPnL: sells - buys - fees }
   }
 
   async listPositions(userId: string) {
@@ -108,13 +128,34 @@ export class TradeService {
     return this.positions.get(userId) ?? []
   }
 
+  async preview(userId: string, input: Omit<TradeInput, 'requestId'>): Promise<TradePreview> {
+    const quantity = Number(input.quantity); const price = Number(input.price); const side = input.side ?? 'buy'; const code = input.code?.trim().toUpperCase() ?? ''
+    const account = await this.account(userId)
+    const position = (await this.listPositions(userId)).find((item) => item.code === code)
+    const quote = code ? await this.market.getQuote(code) : null
+    const amount = Number.isFinite(quantity) && Number.isFinite(price) ? quantity * price : 0
+    const fee = Number.isFinite(amount) && amount > 0 ? calculateFee(side, amount) : 0
+    const maxBuyQuantity = maxAffordableQuantity(account.availableCash, price)
+    const maxSellQuantity = position?.available ?? 0
+    const errors: string[] = []
+    try { await this.validateOrderInput({ code, side, quantity, price }) } catch (error) { errors.push(error instanceof BadRequestException ? error.message : '当前行情或交易服务不可用') }
+    if (side === 'buy' && Number.isFinite(amount) && amount + fee > account.availableCash) errors.push('可用资金不足（含手续费）')
+    if (side === 'sell' && (!position || quantity > maxSellQuantity)) errors.push('可用持仓不足')
+    const session = tradingSession(new Date())
+    return { code, side, quantity, price, amount, fee, total: side === 'buy' ? amount + fee : amount - fee, availableCash: account.availableCash, availablePosition: maxSellQuantity, maxBuyQuantity, maxSellQuantity, tradingSession: session, limitUp: quote?.limitUp ?? null, limitDown: quote?.limitDown ?? null, valid: errors.length === 0, errors, warnings: ['模拟交易仅用于流程演示，不会产生真实券商委托。', ...(quote?.limitUp == null || quote?.limitDown == null ? ['当前行情未提供涨跌停价，最终委托仍以服务端风控为准。'] : [])] }
+  }
+
   async place(userId: string, input: TradeInput) {
     const quantity = Number(input.quantity); const price = Number(input.price); const side = input.side ?? 'buy'; const code = input.code?.trim().toUpperCase()
+    if (input.requestId) {
+      const existing = await this.findByRequestId(userId, input.requestId)
+      if (existing) return existing
+    }
     await this.validateOrderInput({ code, side, quantity, price })
     if (this.database.db) {
       try {
         const order = await this.placeInDatabase(userId, { code, side, quantity, price, requestId: input.requestId })
-        this.publishOrderEvents(order)
+        await this.publishTradeEvents(order)
         return order
       } catch (error) {
         if (error instanceof BadRequestException || (error instanceof Error && (error.message === '可用资金不足' || error.message === '可用持仓不足'))) throw error
@@ -122,7 +163,7 @@ export class TradeService {
       }
     }
     const order = this.placeInMemory(userId, { code, side, quantity, price, requestId: input.requestId })
-    this.publishOrderEvents(order)
+    await this.publishTradeEvents(order)
     return order
   }
 
@@ -131,13 +172,13 @@ export class TradeService {
       try {
         const [order] = await this.database.db.select().from(tradeOrders).where(and(eq(tradeOrders.id, id), eq(tradeOrders.userId, userId))).limit(1)
         if (!order) throw new NotFoundException('订单不存在')
-        if (order.status === 'filled') return this.toOrder(order)
+        if (!canTransition(order.status as Order['status'], 'cancelled')) throw new BadRequestException(`订单状态 ${order.status} 不允许撤单`)
         const statusUpdatedAt = new Date()
         await this.database.db.update(tradeOrders).set({ status: 'cancelled', statusUpdatedAt }).where(and(eq(tradeOrders.id, id), eq(tradeOrders.userId, userId)))
         await this.database.db.insert(tradeOrderEvents).values({ userId, orderId: id, status: 'cancelled', createdAt: statusUpdatedAt })
         const [cancelled] = await this.database.db.select().from(tradeOrders).where(and(eq(tradeOrders.id, id), eq(tradeOrders.userId, userId))).limit(1)
         const result = { ...this.toOrder(cancelled ?? order), timeline: await this.getOrderTimeline(userId, id) }
-        this.publishOrderEvent(result, 'cancelled')
+        await this.publishOrderEvent(result, 'cancelled')
         return result
       } catch (error) {
         if (error instanceof NotFoundException) throw error
@@ -147,21 +188,35 @@ export class TradeService {
     if (process.env.NODE_ENV === 'production' && process.env.DEMO_MODE !== 'true') throw new Error('数据库不可用，订单暂时无法撤销')
     const order = (this.orders.get(userId) ?? []).find((item) => item.id === id)
     if (!order) throw new NotFoundException('订单不存在')
-    if (order.status !== 'filled') {
+    if (canTransition(order.status, 'cancelled')) {
       order.status = 'cancelled'
-      this.publishOrderEvent(order, 'cancelled')
-    }
+      order.statusUpdatedAt = new Date().toISOString()
+      order.timeline = [...(order.timeline ?? []), { eventId: `trade.order:${order.id}:cancelled`, orderId: order.id, status: 'cancelled', timestamp: Date.now() }]
+      void this.publishOrderEvent(order, 'cancelled')
+    } else if (order.status !== 'cancelled') throw new BadRequestException(`订单状态 ${order.status} 不允许撤单`)
     return order
   }
 
-  private publishOrderEvents(order: Order) {
-    this.publishOrderEvent(order, 'reported')
-    if (order.status === 'filled') this.publishOrderEvent(order, 'filled')
+  private async publishTradeEvents(order: Order) {
+    await this.publishOrderEvent(order, 'reported')
+    if (order.status === 'filled') {
+      await this.publishOrderEvent(order, 'filled')
+      const transaction = (await this.listTransactions(order.userId)).find((item) => item.orderId === order.id)
+      if (transaction) {
+        const execution: TradeExecutionRealtimeEvent = { eventId: `trade.execution:${transaction.id}`, type: 'trade.execution', channel: 'trade.executions', userId: order.userId, orderId: order.id, requestId: order.requestId, transaction, timestamp: Date.now() }
+        await this.realtime.publishTradeEvent(execution)
+        const flows = (await this.funds(order.userId)).flows.filter((item) => item.orderId === order.id)
+        for (const flow of flows) {
+          const event: TradeCashFlowRealtimeEvent = { eventId: `trade.cash-flow:${flow.id}`, type: 'trade.cash-flow', channel: 'trade.cash-flows', userId: order.userId, orderId: order.id, requestId: order.requestId, flow: { ...flow, userId: order.userId }, timestamp: Date.now() }
+          await this.realtime.publishTradeEvent(event)
+        }
+      }
+    }
   }
 
-  private publishOrderEvent(order: Order, status: TradeOrderEventStatus) {
-    const event: TradeOrderRealtimeEvent = { eventId: `${order.id}:${status}`, type: `trade.order.${status}`, channel: 'trade.orders', userId: order.userId, orderId: order.id, requestId: order.requestId, status, reason: order.statusReason, order, timestamp: Date.now() }
-    void this.realtime.publishTradeEvent(event)
+  private async publishOrderEvent(order: Order, status: TradeOrderEventStatus) {
+    const event: TradeOrderRealtimeEvent = { eventId: `trade.order:${order.id}:${status}`, type: `trade.order.${status}`, channel: 'trade.orders', userId: order.userId, orderId: order.id, requestId: order.requestId, status, reason: order.statusReason, order, timestamp: Date.now() }
+    await this.realtime.publishTradeEvent(event)
   }
 
   private async dbPositions(userId: string): Promise<Position[]> {
@@ -180,34 +235,27 @@ export class TradeService {
       const cash = account ? Number(account.cash) : 1000000
       const fee = calculateFee(input.side, input.quantity * input.price)
       const [position] = await tx.select().from(tradePositions).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code))).limit(1)
-      if (input.side === 'buy' && cash < input.quantity * input.price + fee) throw new BadRequestException('可用资金不足（含手续费）')
-      if (input.side === 'sell' && (!position || position.available < input.quantity)) throw new BadRequestException('可用持仓不足')
-      const nextCash = input.side === 'buy' ? cash - input.quantity * input.price - fee : cash + input.quantity * input.price - fee
-      await tx.insert(tradeAccounts).values({ userId, cash: String(nextCash) }).onConflictDoUpdate({ target: tradeAccounts.userId, set: { cash: String(nextCash), updatedAt: new Date() } })
-      if (input.side === 'buy') {
-        const nextQuantity = (position?.quantity ?? 0) + input.quantity
-        const nextAverage = ((position?.averagePrice ? Number(position.averagePrice) * position.quantity : 0) + input.price * input.quantity) / nextQuantity
-        await tx.insert(tradePositions).values({ userId, code: input.code, quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() }).onConflictDoUpdate({ target: [tradePositions.userId, tradePositions.code], set: { quantity: nextQuantity, available: (position?.available ?? 0) + input.quantity, averagePrice: String(nextAverage), updatedAt: new Date() } })
-      } else if (position) {
-        await tx.update(tradePositions).set({ quantity: position.quantity - input.quantity, available: position.available - input.quantity, updatedAt: new Date() }).where(and(eq(tradePositions.userId, userId), eq(tradePositions.code, input.code)))
-      }
+      const openOrders = await tx.select().from(tradeOrders).where(and(eq(tradeOrders.userId, userId), ne(tradeOrders.status, 'filled'), ne(tradeOrders.status, 'cancelled'), ne(tradeOrders.status, 'rejected')))
+      const reservedCash = openOrders.filter((item) => item.side === 'buy').reduce((sum, item) => sum + Number(item.quantity) * Number(item.price) + Number(item.fee), 0)
+      const reservedPosition = openOrders.filter((item) => item.side === 'sell' && item.code === input.code).reduce((sum, item) => sum + item.quantity, 0)
+      if (input.side === 'buy' && cash - reservedCash < input.quantity * input.price + fee) throw new BadRequestException('可用资金不足（含未成交委托占用）')
+      if (input.side === 'sell' && (!position || position.available - reservedPosition < input.quantity)) throw new BadRequestException('可用持仓不足（含未成交委托占用）')
       const statusUpdatedAt = new Date()
-      const [row] = await tx.insert(tradeOrders).values({ userId, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), status: 'filled', statusUpdatedAt, requestId: input.requestId }).returning()
-      await tx.insert(tradeOrderEvents).values([
-        { userId, orderId: row.id, status: 'reported', createdAt: statusUpdatedAt },
-        { userId, orderId: row.id, status: 'filled', createdAt: new Date(statusUpdatedAt.getTime() + 1) },
-      ])
-      const [transaction] = await tx.insert(tradeTransactions).values({ userId, orderId: row.id, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), amount: String(input.quantity * input.price) }).returning()
-      const tradeAmount = input.side === 'buy' ? -(input.quantity * input.price) : input.quantity * input.price
-      await tx.insert(tradeCashFlows).values([
-        { userId, orderId: row.id, transactionId: transaction.id, type: 'trade', amount: String(tradeAmount) },
-        { userId, orderId: row.id, transactionId: transaction.id, type: 'fee', amount: String(-fee) },
-      ])
+      const [row] = await tx.insert(tradeOrders).values({ userId, code: input.code, side: input.side, quantity: input.quantity, price: String(input.price), fee: String(fee), status: 'pending', statusUpdatedAt, requestId: input.requestId }).returning()
+      await tx.insert(tradeOrderEvents).values({ userId, orderId: row.id, status: 'reported', reason: '委托已接收，等待成交', createdAt: statusUpdatedAt })
       return this.toOrder(row)
     })
   }
 
   private toOrder(row: typeof tradeOrders.$inferSelect): Order { return { ...row, side: row.side as Order['side'], status: row.status as Order['status'], quantity: Number(row.quantity), price: Number(row.price), fee: Number(row.fee ?? 0), statusUpdatedAt: row.statusUpdatedAt?.toISOString(), createdAt: row.createdAt.toISOString() } }
+
+  private async findByRequestId(userId: string, requestId: string): Promise<Order | null> {
+    if (this.database.db) {
+      const [row] = await this.database.db.select().from(tradeOrders).where(and(eq(tradeOrders.userId, userId), eq(tradeOrders.requestId, requestId))).limit(1)
+      if (row) return this.toOrder(row)
+    }
+    return (this.orders.get(userId) ?? []).find((item) => item.requestId === requestId) ?? null
+  }
 
   private async validateOrderInput(input: { code: string; side: 'buy' | 'sell'; quantity: number; price: number }) {
     const maxQuantity = Number(process.env.MAX_TRADE_QUANTITY ?? 1000000)
@@ -233,9 +281,62 @@ export class TradeService {
     this.balances.set(userId, input.side === 'buy' ? cash - input.quantity * input.price - fee : cash + input.quantity * input.price - fee)
     if (input.side === 'buy') { if (position) { position.averagePrice = (position.averagePrice * position.quantity + input.price * input.quantity) / (position.quantity + input.quantity); position.quantity += input.quantity; position.available += input.quantity } else list.push({ code: input.code, quantity: input.quantity, available: input.quantity, averagePrice: input.price }); this.positions.set(userId, list) }
     if (input.side === 'sell' && position) { position.quantity -= input.quantity; position.available -= input.quantity }
-    const order: Order = { id: crypto.randomUUID(), userId, ...input, fee, status: 'filled', createdAt: new Date().toISOString() }; const orderList = this.orders.get(userId) ?? []; orderList.unshift(order); this.orders.set(userId, orderList); return order
+    const now = new Date().toISOString()
+    const order: Order = { id: crypto.randomUUID(), userId, ...input, fee, status: 'filled', createdAt: now }
+    const transaction: Transaction = { id: crypto.randomUUID(), userId, orderId: order.id, code: input.code, side: input.side, quantity: input.quantity, price: input.price, fee, amount: input.quantity * input.price, createdAt: now }
+    const flows: CashFlow[] = [
+      { id: crypto.randomUUID(), orderId: order.id, transactionId: transaction.id, type: 'trade', amount: input.side === 'buy' ? -transaction.amount : transaction.amount, createdAt: now },
+      { id: crypto.randomUUID(), orderId: order.id, transactionId: transaction.id, type: 'fee', amount: -fee, createdAt: now },
+    ]
+    const orderList = this.orders.get(userId) ?? []; orderList.unshift(order); this.orders.set(userId, orderList)
+    this.transactions.set(userId, [transaction, ...(this.transactions.get(userId) ?? [])])
+    this.cashFlows.set(userId, [...flows, ...(this.cashFlows.get(userId) ?? [])])
+    return order
   }
 }
 
+function canTransition(from: Order['status'], to: Order['status']) {
+  if (from === to) return true
+  const transitions: Record<Order['status'], Order['status'][]> = {
+    pending: ['reported', 'cancelled', 'rejected'],
+    reported: ['partial', 'filled', 'cancelled', 'rejected'],
+    partial: ['partial', 'filled', 'cancelled', 'rejected'],
+    filled: [],
+    cancelled: [],
+    rejected: [],
+  }
+  return transitions[from].includes(to)
+}
+
+function isLedgerBalanced(transactions: Transaction[], flows: CashFlow[]) {
+  if (!transactions.length) return flows.length === 0
+  const transactionIds = new Set(transactions.map((item) => item.id))
+  if (flows.some((flow) => !transactionIds.has(flow.transactionId))) return false
+  return transactions.every((transaction) => {
+    const related = flows.filter((flow) => flow.transactionId === transaction.id)
+    const trade = related.find((flow) => flow.type === 'trade')
+    const fee = related.find((flow) => flow.type === 'fee')
+    const expectedTrade = transaction.side === 'buy' ? -transaction.amount : transaction.amount
+    return Boolean(trade && fee && Math.abs(trade.amount - expectedTrade) < 0.005 && Math.abs(fee.amount + transaction.fee) < 0.005)
+  })
+}
+
 export function calculateFee(side: 'buy' | 'sell', amount: number) { return Number(Math.max(5, amount * 0.0003 + (side === 'sell' ? amount * 0.001 : 0)).toFixed(2)) }
-export function isTradingTime(date: Date) { if (process.env.ALLOW_OUT_OF_SESSION === 'true') return true; const day = date.getDay(); if (day === 0 || day === 6) return false; const minutes = date.getHours() * 60 + date.getMinutes(); return (minutes >= 570 && minutes <= 690) || (minutes >= 780 && minutes <= 900) }
+export function isTradingTime(date: Date) { return tradingSession(date).open }
+
+export function tradingSession(date: Date) {
+  if (process.env.ALLOW_OUT_OF_SESSION === 'true') return { open: true, label: '交易时段（测试/模拟）' }
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Shanghai', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(date)
+  const day = parts.find((part) => part.type === 'weekday')?.value
+  const minutes = Number(parts.find((part) => part.type === 'hour')?.value ?? 0) * 60 + Number(parts.find((part) => part.type === 'minute')?.value ?? 0)
+  const weekday = day !== 'Sat' && day !== 'Sun'
+  const open = weekday && ((minutes >= 570 && minutes <= 690) || (minutes >= 780 && minutes <= 900))
+  return { open, label: open ? '交易中 · 09:30-11:30 / 13:00-15:00' : '非交易时段 · 09:30-11:30 / 13:00-15:00', nextOpen: '下一个工作日 09:30' }
+}
+
+function maxAffordableQuantity(cash: number, price: number) {
+  if (!Number.isFinite(cash) || !Number.isFinite(price) || price <= 0) return 0
+  let quantity = Math.floor(cash / price / 100) * 100
+  while (quantity >= 100 && quantity * price + calculateFee('buy', quantity * price) > cash) quantity -= 100
+  return Math.max(0, quantity)
+}
