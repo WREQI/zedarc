@@ -1,4 +1,4 @@
-import { KlineCategory, TdxClient } from 'node-tdx-market'
+import { KlineCategory, TdxClient, TradeDirection } from 'node-tdx-market'
 import { normalizeMarketCode, validateKlineBars, validateNormalizedQuotes, type KlineBar, type NormalizedQuote } from '@zedarc/shared'
 
 function prefixed(code: string) {
@@ -41,7 +41,7 @@ export class TdxProvider {
       const price = yuan(row.price)
       const prevClose = yuan(row.lastClose)
       const change = price - prevClose
-      return { code: normalizeMarketCode(row.code), name: row.code, price, prevClose, change, changePercent: prevClose ? change / prevClose * 100 : 0, volume: row.volume, amount: row.amount, timestamp: Date.now(), source: 'tdx' as const }
+      return { code: normalizeMarketCode(row.code), name: row.code, price, prevClose, open: yuan(row.open), high: yuan(row.high), low: yuan(row.low), change, changePercent: prevClose ? change / prevClose * 100 : 0, volume: row.volume, amount: row.amount, turnoverRate: null, amplitude: null, volumeRatio: null, limitUp: null, limitDown: null, limitStatus: 'unsupported' as const, timestamp: Date.now(), source: 'tdx' as const }
     })
     const valid = validateNormalizedQuotes(values, codes)
     if (!valid.length && rows.length) throw new Error('TDX returned invalid quote data')
@@ -63,7 +63,12 @@ export class TdxProvider {
   async getQuoteBook(code: string) {
     const row = (await this.request(() => this.client.getQuote(prefixed(code))))[0]
     if (!row) throw new Error(`TDX quote not found for ${code}`)
-    return { code, timestamp: Date.now(), bids: row.bid.map((level) => [yuan(level.price), level.volume] as [number, number]), asks: row.ask.map((level) => [yuan(level.price), level.volume] as [number, number]) }
+    return { code: normalizeMarketCode(code), timestamp: Date.now(), source: 'tdx' as const, bids: row.bid.map((level) => ({ price: yuan(level.price), volume: level.volume })), asks: row.ask.map((level) => ({ price: yuan(level.price), volume: level.volume })) }
+  }
+
+  async getTrades(code: string) {
+    const response = await this.request(() => this.client.getTrade(prefixed(code), 0, 500))
+    return response.items.map((item) => ({ time: item.time, timestamp: Date.now(), price: yuan(item.price), volume: item.volume, direction: item.direction === TradeDirection.Buy ? 'buy' as const : item.direction === TradeDirection.Sell ? 'sell' as const : 'neutral' as const, source: 'tdx' as const }))
   }
 
   async connect() { await this.ensureConnected() }

@@ -1,6 +1,10 @@
 import { getRealIndexes, getRealStock, getRealStocks } from '@/services/stock-sdk-adapter'
 import { apiFetch } from '@/services/api-client'
-import type { IndexQuote, MarketBoardQuote, StockQuote } from '@/services/market-types'
+import type { CapitalFlowData, IndexQuote, MarketBoardQuote, MarketRankQuote, MarketSentiment, StockDetailResponse, StockQuote } from '@/services/market-types'
+
+export function getMarketSentiment(): Promise<MarketSentiment> {
+  return apiFetch<MarketSentiment>('/api/market/sentiment')
+}
 
 export async function getIndexQuotes(): Promise<IndexQuote[]> {
   try {
@@ -8,6 +12,13 @@ export async function getIndexQuotes(): Promise<IndexQuote[]> {
     if (result.length) return result.map((item) => ({ code: item.code, name: item.name, value: item.value.toFixed(2), change: signed(item.change), percent: `${signed(item.changePercent)}%`, trend: item.changePercent >= 0 ? 'up' : 'down' }))
   } catch { /* try the direct provider below */ }
   try { return await getRealIndexes() } catch { return [] }
+}
+
+export async function getMarketRankings(type: string, keyword = ''): Promise<MarketRankQuote[]> {
+  const query = new URLSearchParams({ type, limit: '100' })
+  if (keyword.trim()) query.set('keyword', keyword.trim())
+  const values = await apiFetch<Array<{ code: string; name: string; price: number; change: number; changePercent: number; volume: number; amount: number; turnoverRate: number | null; amplitude: number | null; volumeRatio: number | null; limitUp: number | null; limitDown: number | null; limitStatus: 'up' | 'down' | 'none' | 'unsupported' }>>(`/api/market/rankings?${query}`)
+  return values.map((quote) => ({ code: quote.code, name: quote.name, price: quote.price.toFixed(2), change: signed(quote.change), percent: `${signed(quote.changePercent)}%`, volume: formatAmount(quote.volume), amount: formatAmount(quote.amount), turnoverRate: percentOrUnavailable(quote.turnoverRate), amplitude: percentOrUnavailable(quote.amplitude), volumeRatio: valueOrUnavailable(quote.volumeRatio), limitUp: quote.limitUp, limitDown: quote.limitDown, limitStatus: quote.limitStatus, trend: quote.change >= 0 ? 'up' : 'down' }))
 }
 
 export async function getMarketStocks(): Promise<StockQuote[]> {
@@ -37,6 +48,14 @@ export async function searchStocks(keyword: string): Promise<StockQuote[]> {
   try { return (await getRealStocks()).filter((stock) => stock.name.toLowerCase().includes(query) || stock.code.toLowerCase().includes(query)) } catch { return [] }
 }
 
+export async function getStockDetail(code: string): Promise<StockDetailResponse> {
+  return apiFetch<StockDetailResponse>(`/api/market/detail?code=${encodeURIComponent(code)}`)
+}
+
+export async function getCapitalFlow(code: string): Promise<CapitalFlowData> {
+  return apiFetch<CapitalFlowData>(`/api/market/capital-flow?code=${encodeURIComponent(code)}`)
+}
+
 export async function getStockQuote(code: string): Promise<StockQuote | undefined> {
   try {
     const [quote] = await apiFetch<Array<{ code: string; name: string; price: number; change: number; changePercent: number; volume: number }>>(`/api/market/quotes?codes=${encodeURIComponent(code)}`)
@@ -48,5 +67,7 @@ export async function getStockQuote(code: string): Promise<StockQuote | undefine
 function signed(value: number) { return `${value >= 0 ? '+' : ''}${value.toFixed(2)}` }
 function toStockQuote(quote: { code: string; name: string; price: number; change: number; changePercent: number; volume: number }): StockQuote { return { code: quote.code, name: quote.name, price: quote.price.toFixed(2), change: signed(quote.change), percent: `${signed(quote.changePercent)}%`, volume: formatAmount(quote.volume), trend: quote.change >= 0 ? 'up' : 'down' } }
 function formatAmount(value: number) { return value >= 100000000 ? `${(value / 100000000).toFixed(1)}亿` : `${(value / 10000).toFixed(1)}万` }
+function percentOrUnavailable(value: number | null) { return value == null ? '不支持' : `${value.toFixed(2)}%` }
+function valueOrUnavailable(value: number | null) { return value == null ? '不支持' : value.toFixed(2) }
 
 export function getMarketStocksSnapshot(): StockQuote[] { return [] }

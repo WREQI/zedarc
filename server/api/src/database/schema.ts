@@ -14,13 +14,22 @@ export const refreshTokens = pgTable('refresh_tokens', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 })
 
+export const watchlistGroups = pgTable('watchlist_groups', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  name: varchar('name', { length: 64 }).notNull(),
+  sortOrder: integer('sort_order').default(0).notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userName: uniqueIndex('watchlist_groups_user_name_idx').on(table.userId, table.name), userSort: index('watchlist_groups_user_sort_idx').on(table.userId, table.sortOrder, table.createdAt) }))
+
 export const watchlistItems = pgTable('watchlist_items', {
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
   code: varchar('code', { length: 32 }).notNull(),
   name: varchar('name', { length: 128 }),
+  groupId: uuid('group_id').references(() => watchlistGroups.id, { onDelete: 'set null' }),
   sortOrder: integer('sort_order').default(0).notNull(),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-}, (table) => ({ primary: primaryKey({ columns: [table.userId, table.code] }) }))
+}, (table) => ({ primary: primaryKey({ columns: [table.userId, table.code] }), groupSort: index('watchlist_items_group_sort_idx').on(table.userId, table.groupId, table.sortOrder, table.createdAt) }))
 
 export const favorites = pgTable('favorites', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -39,6 +48,16 @@ export const news = pgTable('news', {
   codes: jsonb('codes').$type<string[]>().notNull().default([]),
   url: varchar('url', { length: 1000 }),
 }, (table) => ({ publishedIdx: index('news_published_at_idx').on(table.publishedAt) }))
+
+export const newsFavorites = pgTable('news_favorites', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  newsId: varchar('news_id', { length: 128 }).notNull().references(() => news.id, { onDelete: 'cascade' }),
+  category: varchar('category', { length: 64 }).notNull().default('未分类'),
+  tags: jsonb('tags').$type<string[]>().notNull().default([]),
+  note: varchar('note', { length: 500 }),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userNews: uniqueIndex('news_favorites_user_news_idx').on(table.userId, table.newsId), userCreatedIdx: index('news_favorites_user_created_idx').on(table.userId, table.createdAt), userCategoryIdx: index('news_favorites_user_category_idx').on(table.userId, table.category) }))
 
 export const reports = pgTable('reports', {
   id: varchar('id', { length: 128 }).primaryKey(),
@@ -83,6 +102,16 @@ export const tradeTransactions = pgTable('trade_transactions', {
   amount: numeric('amount', { precision: 20, scale: 6 }).notNull(),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCreatedIdx: index('trade_transactions_user_created_idx').on(table.userId, table.createdAt) }))
+
+export const tradeCashFlows = pgTable('trade_cash_flows', {
+  id: uuid('id').defaultRandom().primaryKey(),
+  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  orderId: uuid('order_id').notNull().references(() => tradeOrders.id, { onDelete: 'cascade' }),
+  transactionId: uuid('transaction_id').notNull().references(() => tradeTransactions.id, { onDelete: 'cascade' }),
+  type: varchar('type', { length: 16 }).notNull(),
+  amount: numeric('amount', { precision: 20, scale: 6 }).notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
+}, (table) => ({ userCreatedIdx: index('trade_cash_flows_user_created_idx').on(table.userId, table.createdAt) }))
 
 export const tradePositions = pgTable('trade_positions', {
   userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),

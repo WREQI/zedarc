@@ -1,4 +1,5 @@
 export type MarketSource = 'tdx' | 'stock-sdk' | 'mock'
+export type StockDataSource = MarketSource | 'unavailable'
 
 export interface PaginationQuery { page?: number; pageSize?: number }
 export interface PaginatedResult<T> {
@@ -17,10 +18,19 @@ export interface NormalizedQuote {
   name: string
   price: number
   prevClose: number
+  open?: number
+  high?: number
+  low?: number
   change: number
   changePercent: number
   volume: number
   amount: number
+  turnoverRate: number | null
+  amplitude: number | null
+  volumeRatio: number | null
+  limitUp: number | null
+  limitDown: number | null
+  limitStatus: 'up' | 'down' | 'none' | 'unsupported'
   timestamp: number
   source: MarketSource
 }
@@ -78,6 +88,144 @@ export interface MarketSearchResult {
 export interface QuoteQuery { codes: string[] }
 export interface KlineQuery { code: string; period?: 'daily' | 'weekly' | 'monthly'; adjust?: '' | 'qfq' | 'hfq' }
 
+export interface OrderBookLevel { price: number; volume: number }
+export interface OrderBook { code: string; timestamp: number; source: MarketSource | 'unavailable'; bids: OrderBookLevel[]; asks: OrderBookLevel[] }
+export type TradeDirection = 'buy' | 'sell' | 'neutral'
+export interface TradeTick { time: string; timestamp: number; price: number; volume: number; direction: TradeDirection; source: MarketSource }
+
+/** The wire contract for market/orderbook and market/trades Pub/Sub -> WebSocket messages. */
+export type MarketRealtimeKind = 'snapshot' | 'delta'
+export interface OrderBookRealtimeMessage {
+  kind: MarketRealtimeKind
+  code: string
+  sequence: number
+  timestamp: number
+  source: MarketSource
+  bids: OrderBookLevel[]
+  asks: OrderBookLevel[]
+}
+export interface TradesRealtimeMessage {
+  kind: MarketRealtimeKind
+  code: string
+  sequence: number
+  timestamp: number
+  source: MarketSource
+  items: TradeTick[]
+}
+
+export type TradeOrderEventStatus = 'placed' | 'filled' | 'cancelled'
+export interface TradeOrderRealtimeEvent {
+  eventId: string
+  type: `trade.order.${TradeOrderEventStatus}`
+  channel: 'trade.orders'
+  userId: string
+  orderId: string
+  requestId?: string | null
+  status: TradeOrderEventStatus
+  order: {
+    id: string
+    userId: string
+    code: string
+    side: 'buy' | 'sell'
+    quantity: number
+    price: number
+    fee: number
+    status: 'filled' | 'cancelled'
+    requestId?: string | null
+    createdAt: string
+  }
+  timestamp: number
+}
+export type CapitalFlowCategory = 'main' | 'extraLarge' | 'large' | 'medium' | 'small'
+export interface CapitalFlowItem { category: CapitalFlowCategory; netAmount: number; inflow: number | null; outflow: number | null; timestamp: number }
+export interface CapitalFlowPoint { timestamp: number; date: string; netAmount: number; inflow: number | null; outflow: number | null }
+export interface CapitalFlowRank { code: string; name: string; category: CapitalFlowCategory; netAmount: number; timestamp: number }
+export interface CapitalFlowData { code: string; timestamp: number; source: MarketSource | 'unavailable'; availability: DataAvailability; items: CapitalFlowItem[]; series: CapitalFlowPoint[]; ranking: CapitalFlowRank[] }
+export interface DataAvailability { available: boolean; source: string; reason?: string; asOf?: number }
+export interface MarketSentimentMetric { value: number | null; availability: DataAvailability }
+export interface MarketSentiment {
+  timestamp: number
+  source: MarketSource | 'unavailable'
+  universe: { count: number; availability: DataAvailability }
+  advances: MarketSentimentMetric
+  declines: MarketSentimentMetric
+  unchanged: MarketSentimentMetric
+  total: MarketSentimentMetric
+  amount: MarketSentimentMetric
+  limitUp: MarketSentimentMetric
+  limitDown: MarketSentimentMetric
+  strength: MarketSentimentMetric
+}
+
+export function calculateMarketSentiment(quotes: readonly NormalizedQuote[], timestamp = Date.now()): MarketSentiment {
+  const source = quotes.length && quotes.every((quote) => quote.source === quotes[0].source) ? quotes[0].source : 'market-quotes'
+  const available = (value: number, reason?: string): MarketSentimentMetric => ({ value, availability: { available: true, source, asOf: timestamp, ...(reason ? { reason } : {}) } })
+  const unavailable = (reason: string): MarketSentimentMetric => ({ value: null, availability: { available: false, source, reason } })
+  const universeAvailability: DataAvailability = quotes.length
+    ? { available: true, source, asOf: timestamp }
+    : { available: false, source: 'market-quotes', reason: '当前行情快照为空' }
+  if (!quotes.length) {
+    const missing = unavailable('当前行情快照为空')
+    return { timestamp, source: 'unavailable', universe: { count: 0, availability: universeAvailability }, advances: missing, declines: missing, unchanged: missing, total: missing, amount: missing, limitUp: missing, limitDown: missing, strength: missing }
+  }
+  const advances = quotes.filter((quote) => quote.change > 0).length
+  const declines = quotes.filter((quote) => quote.change < 0).length
+  const unchanged = quotes.length - advances - declines
+  const limitsAvailable = quotes.every((quote) => quote.limitStatus !== 'unsupported')
+  const limitReason = '当前行情源未提供完整 limitStatus，无法计算涨跌停家数'
+  return {
+    timestamp, source: source === 'market-quotes' ? 'unavailable' : source,
+    universe: { count: quotes.length, availability: universeAvailability },
+    advances: available(advances), declines: available(declines), unchanged: available(unchanged), total: available(quotes.length),
+    amount: available(quotes.reduce((sum, quote) => sum + quote.amount, 0)),
+    limitUp: limitsAvailable ? available(quotes.filter((quote) => quote.limitStatus === 'up').length) : unavailable(limitReason),
+    limitDown: limitsAvailable ? available(quotes.filter((quote) => quote.limitStatus === 'down').length) : unavailable(limitReason),
+    strength: available((advances - declines) / quotes.length * 100),
+  }
+}
+export interface StockFinancialRecord {
+  code: string
+  name: string
+  asOf: number
+  peTtm: number | null
+  peStatic: number | null
+  peDynamic: number | null
+  pb: number | null
+  circulatingMarketCap: number | null
+  totalMarketCap: number | null
+  circulatingShares: number | null
+  totalShares: number | null
+  source: StockDataSource
+}
+
+export interface StockDividendRecord {
+  code: string
+  name: string
+  reportDate: string | null
+  disclosureDate: string | null
+  equityRecordDate: string | null
+  exDividendDate: string | null
+  payDate: string | null
+  dividendPretax: number | null
+  dividendDesc: string | null
+  dividendYield: number | null
+  eps: number | null
+  bps: number | null
+  netProfitYoy: number | null
+  source: StockDataSource
+}
+
+export interface StockDetailData {
+  code: string
+  quote: NormalizedQuote | null
+  orderBook: OrderBook
+  trades: { code: string; timestamp: number; source: MarketSource | 'unavailable'; items: TradeTick[]; availability: DataAvailability }
+  capitalFlow: CapitalFlowData
+  financials: { code: string; timestamp: number; source: StockDataSource; availability: DataAvailability; items: StockFinancialRecord[] }
+  shareholders: { code: string; timestamp: number; source: 'unavailable'; availability: DataAvailability; items: never[] }
+  dividends: { code: string; timestamp: number; source: StockDataSource; availability: DataAvailability; items: StockDividendRecord[] }
+}
+
 const finite = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value)
 const text = (value: unknown): value is string => typeof value === 'string' && value.trim().length > 0
 const source = (value: unknown): value is MarketSource => value === 'tdx' || value === 'stock-sdk' || value === 'mock'
@@ -85,7 +233,7 @@ const source = (value: unknown): value is MarketSource => value === 'tdx' || val
 export function isValidNormalizedQuote(value: unknown): value is NormalizedQuote {
   if (!value || typeof value !== 'object') return false
   const row = value as Partial<NormalizedQuote>
-  return text(row.code) && text(row.name) && finite(row.price) && finite(row.prevClose) && row.prevClose >= 0 && finite(row.change) && finite(row.changePercent) && finite(row.volume) && row.volume >= 0 && finite(row.amount) && row.amount >= 0 && Number.isFinite(row.timestamp) && source(row.source) && Math.abs(row.change - (row.price - row.prevClose)) <= Math.max(0.02, Math.abs(row.price) * 0.002) && (row.prevClose === 0 || Math.abs(row.changePercent - row.change / row.prevClose * 100) <= 0.2)
+  return text(row.code) && text(row.name) && finite(row.price) && finite(row.prevClose) && row.prevClose >= 0 && finite(row.change) && finite(row.changePercent) && finite(row.volume) && row.volume >= 0 && finite(row.amount) && row.amount >= 0 && (row.turnoverRate === null || finite(row.turnoverRate)) && (row.amplitude === null || finite(row.amplitude)) && (row.volumeRatio === null || finite(row.volumeRatio)) && (row.limitUp === null || finite(row.limitUp)) && (row.limitDown === null || finite(row.limitDown)) && (row.limitStatus === 'up' || row.limitStatus === 'down' || row.limitStatus === 'none' || row.limitStatus === 'unsupported') && Number.isFinite(row.timestamp) && source(row.source) && Math.abs(row.change - (row.price - row.prevClose)) <= Math.max(0.02, Math.abs(row.price) * 0.002) && (row.prevClose === 0 || Math.abs(row.changePercent - row.change / row.prevClose * 100) <= 0.2)
 }
 
 export function validateNormalizedQuotes(values: unknown, requestedCodes?: readonly string[]): NormalizedQuote[] {

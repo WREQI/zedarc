@@ -1,10 +1,12 @@
 import { Logger, OnModuleDestroy } from '@nestjs/common'
 import { SubscribeMessage, WebSocketGateway, WebSocketServer } from '@nestjs/websockets'
+import type { IncomingMessage } from 'node:http'
 import type { Server, WebSocket } from 'ws'
+import { AuthService, type AuthUser } from '../auth/auth.service.js'
 import { RealtimeService, type MarketEvent } from './realtime.service.js'
 
 type Subscription = { codes: Set<string>; types: Set<string> }
-type LiveSocket = WebSocket & { isAlive?: boolean }
+type LiveSocket = WebSocket & { isAlive?: boolean; user?: AuthUser }
 type SubscriptionPayload = { codes?: unknown; types?: unknown; events?: unknown }
 
 const MAX_CODES = 50
@@ -19,18 +21,20 @@ export class RealtimeGateway implements OnModuleDestroy {
   private readonly subscriptions = new Map<WebSocket, Subscription>()
   private readonly heartbeat = setInterval(() => this.checkConnections(), 30000)
 
-  constructor(private readonly realtime: RealtimeService) { this.realtime.events$.subscribe((event) => this.broadcast(event)) }
+  constructor(private readonly realtime: RealtimeService, private readonly auth: AuthService) { this.realtime.events$.subscribe((event) => this.broadcast(event)) }
   onModuleDestroy() { clearInterval(this.heartbeat); for (const client of this.clients) client.close(); this.clients.clear(); this.subscriptions.clear() }
 
-  handleConnection(client: WebSocket) {
+  handleConnection(client: WebSocket, request?: IncomingMessage) {
     const socket = client as LiveSocket
+    const token = this.accessToken(request)
+    if (token) { try { socket.user = this.auth.verifyAccess(token) } catch { /* market subscriptions may remain anonymous */ } }
     socket.isAlive = true
     this.clients.add(socket)
     this.subscriptions.set(socket, { codes: new Set(), types: new Set() })
     socket.on('pong', () => { socket.isAlive = true })
     socket.on('close', () => this.handleDisconnect(socket))
     socket.on('error', (error) => this.logger.debug(`WebSocket error: ${error.message}`))
-    this.send(socket, { type: 'connected', channel: 'market', realtime: this.realtime.isEnabled(), subscriptionRequired: true, limits: { maxCodes: MAX_CODES, maxTypes: MAX_TYPES }, timestamp: Date.now() })
+    this.send(socket, { type: 'connected', channel: 'market', realtime: this.realtime.isEnabled(), authenticated: Boolean(socket.user), subscriptionRequired: true, limits: { maxCodes: MAX_CODES, maxTypes: MAX_TYPES }, timestamp: Date.now() })
   }
 
   handleDisconnect(client: WebSocket) { this.clients.delete(client); this.subscriptions.delete(client) }
@@ -53,6 +57,7 @@ export class RealtimeGateway implements OnModuleDestroy {
     if (!subscription) return this.sendError(client, 'CONNECTION_NOT_REGISTERED', '连接尚未注册')
     const parsed = this.parsePayload(payload)
     if (!parsed.ok) return this.sendError(client, 'INVALID_SUBSCRIPTION', parsed.message)
+    if (parsed.types.some((type) => type === 'trade' || type.startsWith('trade.')) && !(client as LiveSocket).user) return this.sendError(client, 'TRADE_AUTH_REQUIRED', '订阅交易状态需要登录')
     const values = [...parsed.codes, ...parsed.types]
     const nextCodes = new Set(subscription.codes)
     const nextTypes = new Set(subscription.types)
@@ -89,14 +94,25 @@ export class RealtimeGateway implements OnModuleDestroy {
   private subscriptionMessage(type: string, subscription: Subscription) { return { type, channel: 'market', codes: [...subscription.codes], events: [...subscription.types], timestamp: Date.now() } }
   private sendError(client: WebSocket, code: string, message: string) { this.send(client, { type: 'error', channel: 'market', code, message, timestamp: Date.now() }) }
   private broadcast(event: MarketEvent) {
-    for (const client of this.clients) { if (client.readyState === 1 && this.matches(event, this.subscriptions.get(client))) this.send(client, event) }
+    for (const client of this.clients) { if (client.readyState === 1 && this.matches(event, client, this.subscriptions.get(client))) this.send(client, event) }
   }
-  private matches(event: MarketEvent, subscription?: Subscription) {
+  private matches(event: MarketEvent, client: WebSocket, subscription?: Subscription) {
     if (!subscription || (!subscription.codes.size && !subscription.types.size)) return false
-    const code = typeof event.data === 'object' && event.data !== null && 'code' in event.data ? String(event.data.code).toLowerCase() : event.channel.split(':').pop()?.toLowerCase()
-    const type = event.type.toLowerCase().split(':', 1)[0]
+    const data = typeof event.data === 'object' && event.data !== null ? event.data as Record<string, unknown> : undefined
+    const order = data?.order && typeof data.order === 'object' ? data.order as Record<string, unknown> : undefined
+    const code = String(data?.code ?? order?.code ?? event.channel.split(':').pop() ?? '').toLowerCase()
+    const type = event.type.toLowerCase()
     const channel = event.channel.toLowerCase()
-    return (!subscription.codes.size || (code ? subscription.codes.has(code) : false)) && (!subscription.types.size || subscription.types.has(type) || subscription.types.has(channel))
+    const isTrade = type.startsWith('trade.') || channel.startsWith('trade:')
+    if (isTrade && event.userId && (!subscription || (client as LiveSocket).user?.id !== event.userId)) return false
+    const typeMatches = !subscription.types.size || [...subscription.types].some((item) => item === type || item === channel || (item === 'trade' && isTrade) || (item === 'trade.order' && type.startsWith('trade.order.')))
+    return (!subscription.codes.size || subscription.codes.has(code)) && typeMatches
+  }
+
+  private accessToken(request?: IncomingMessage) {
+    const raw = request?.url
+    if (!raw) return undefined
+    try { return new URL(raw, 'http://localhost').searchParams.get('access_token') ?? undefined } catch { return undefined }
   }
   private send(client: WebSocket, value: unknown) { try { if (client.readyState === 1) client.send(JSON.stringify(value)) } catch { this.handleDisconnect(client) } }
   private checkConnections() {

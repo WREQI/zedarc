@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common'
 import { AuthModule } from '../auth/auth.module.js'
+import { RealtimeModule } from '../realtime/realtime.module.js'
 import { TradeController } from './trade.controller.js'
 import { TradeService } from './trade.service.js'
-@Module({ imports: [AuthModule], controllers: [TradeController], providers: [TradeService] })
+@Module({ imports: [AuthModule, RealtimeModule], controllers: [TradeController], providers: [TradeService] })
 export class TradeModule {}

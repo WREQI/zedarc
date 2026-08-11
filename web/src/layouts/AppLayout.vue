@@ -12,12 +12,13 @@ const providerTone = ref('pending')
 
 const pageTitle = computed(() => {
   const path = route.path
-  if (path === '/') return '首页'
-  if (path.startsWith('/market') || path.startsWith('/stock') || path === '/sector' || path === '/etf') return '行情'
+  if (path === '/') return '自选'
+  if (path.startsWith('/market') || path.startsWith('/stock') || path.startsWith('/sector') || path.startsWith('/etf') || path.startsWith('/bond') || path.startsWith('/star-market')) return '行情'
+  if (path === '/market/calendar') return '行情'
   if (path.startsWith('/watchlist')) return '自选'
-  if (path.startsWith('/news')) return '资讯'
+  if (path.startsWith('/news') || path === '/flash') return '资讯'
   if (path.startsWith('/trade')) return '交易'
-  if (path.startsWith('/account')) return '我的'
+  if (path.startsWith('/account') || path === '/notifications' || path === '/settings' || path === '/history' || path === '/profile' || path === '/security' || path === '/devices' || path === '/feedback') return '我的'
   if (path.startsWith('/reports')) return '研报'
   if (path.startsWith('/search')) return '搜索'
   return 'ZEDARC'
@@ -33,11 +34,11 @@ const tabs = [
 
 function isSectionActive(section: string) {
   const path = route.path
-  if (section === 'news') return path.startsWith('/news')
-  if (section === 'watchlist') return path === '/watchlist'
-  if (section === 'market') return path.startsWith('/market') || path.startsWith('/stock') || path === '/sector' || path === '/etf'
+  if (section === 'news') return path.startsWith('/news') || path === '/flash'
+  if (section === 'watchlist') return path === '/' || path.startsWith('/watchlist')
+  if (section === 'market') return path.startsWith('/market') || path.startsWith('/stock') || path.startsWith('/sector') || path.startsWith('/etf') || path.startsWith('/bond') || path.startsWith('/star-market')
   if (section === 'trade') return path.startsWith('/trade')
-  if (section === 'account') return path.startsWith('/account')
+  if (section === 'account') return path.startsWith('/account') || path === '/notifications' || path === '/settings' || path === '/history' || path === '/profile' || path === '/security' || path === '/devices' || path === '/feedback'
   return false
 }
 
@@ -67,7 +68,7 @@ onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
         <button v-if="route.path !== '/'" class="back-button" type="button" aria-label="返回" @click="router.back()">‹</button>
         <div class="brand-mark"><span class="brand-dot" /> <strong>{{ pageTitle }}</strong><small>ZEDARC</small></div>
         <nav class="top-nav" aria-label="快捷导航">
-          <RouterLink to="/">首页</RouterLink>
+          <RouterLink to="/">自选</RouterLink>
           <RouterLink to="/reports">研报</RouterLink>
         </nav>
         <RouterLink class="global-search" to="/search" aria-label="搜索"><span>⌕</span><span>搜索股票、资讯或代码</span><kbd>⌘K</kbd></RouterLink>

@@ -1,7 +1,7 @@
 import { createServer } from 'node:http'
 import { createClient, type RedisClientType } from 'redis'
-import { getSdkEtfs, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
-import { validateKlineBars, validateNormalizedQuotes } from '@zedarc/shared'
+import { getSdkCapitalFlow, getSdkDividends, getSdkEtfs, getSdkFundamentals, getSdkIndices, getSdkKline, getSdkQuotes, getSdkSectors, searchSdk } from './providers/stock-sdk.provider.js'
+import { calculateMarketSentiment, validateKlineBars, validateNormalizedQuotes } from '@zedarc/shared'
 import { KlineCategory } from 'node-tdx-market'
 import { TdxProvider } from './providers/tdx.provider.js'
 import { checkPriceAlerts } from './alerts/alert.worker.js'
@@ -15,6 +15,8 @@ let provider = 'none'
 let lastSuccess = 0
 let collections = 0
 let failures = 0
+const orderBookState = new Map<string, { sequence: number; bids: Map<number, number>; asks: Map<number, number> }>()
+const tradesState = new Map<string, { sequence: number; keys: Set<string> }>()
 
 async function ensureRedis() {
   if (redis.isOpen) return true
@@ -22,6 +24,28 @@ async function ensureRedis() {
 }
 async function cache(key: string, value: unknown, ttl: number) { if (await ensureRedis()) await redis.set(key, JSON.stringify(value), { EX: ttl }) }
 async function publish(channel: string, data: unknown) { if (await ensureRedis()) await redis.publish(channel, JSON.stringify({ type: channel.replace(/^market:/, ''), channel, data, timestamp: Date.now() })) }
+function levelMap(levels: Array<{ price: number; volume: number }>) { return new Map(levels.map((level) => [level.price, level.volume])) }
+function changedLevels(previous: Map<number, number>, current: Map<number, number>) {
+  return [...new Set([...previous.keys(), ...current.keys()])].filter((price) => previous.get(price) !== current.get(price)).map((price) => ({ price, volume: current.get(price) ?? 0 }))
+}
+async function publishOrderBook(code: string, orderBook: Awaited<ReturnType<typeof tdx.getQuoteBook>>) {
+  const previous = orderBookState.get(code)
+  const bids = levelMap(orderBook.bids)
+  const asks = levelMap(orderBook.asks)
+  const sequence = (previous?.sequence ?? 0) + 1
+  const kind = previous ? 'delta' : 'snapshot'
+  await publish(`market:orderbook:${code}`, { kind, code, sequence, timestamp: orderBook.timestamp, source: orderBook.source, bids: previous ? changedLevels(previous.bids, bids) : orderBook.bids, asks: previous ? changedLevels(previous.asks, asks) : orderBook.asks })
+  orderBookState.set(code, { sequence, bids, asks })
+}
+function tradeKey(item: { time: string; price: number; volume: number; direction: string }) { return `${item.time}|${item.price}|${item.volume}|${item.direction}` }
+async function publishTrades(code: string, items: Awaited<ReturnType<typeof tdx.getTrades>>) {
+  const previous = tradesState.get(code)
+  const currentKeys = new Set(items.map(tradeKey))
+  const delta = previous ? items.filter((item) => !previous.keys.has(tradeKey(item))) : items
+  const sequence = (previous?.sequence ?? 0) + 1
+  await publish(`market:trades:${code}`, { kind: previous ? 'delta' : 'snapshot', code, sequence, timestamp: Date.now(), source: 'tdx', items: delta })
+  tradesState.set(code, { sequence, keys: currentKeys })
+}
 async function markProvider(name: string, ok: boolean, error?: unknown) {
   provider = ok ? name : provider
   if (ok) lastSuccess = Date.now()
@@ -31,8 +55,33 @@ async function writeQuotes(quotes: Awaited<ReturnType<typeof getSdkQuotes>>) {
   const valid = validateNormalizedQuotes(quotes, codes)
   if (!valid.length && quotes.length) throw new Error('refusing to cache invalid normalized quotes')
   await Promise.all(valid.map(async (quote) => { await cache(`quote:${quote.code}`, quote, 30); await publish(`market:quote:${quote.code}`, quote); await publish('market:quote', quote) }))
+  await cache('market:quotes', valid, 30)
+  await cache('market:sentiment', calculateMarketSentiment(valid), 30)
   await publish('market:quotes', valid)
+  await publish('market:sentiment', calculateMarketSentiment(valid))
   await publish('market:updates', quotes)
+}
+async function writeCapitalFlow(code: string) {
+  try {
+    const data = await getSdkCapitalFlow(code)
+    await cache(`capital-flow:${code}`, data, 300)
+    await publish(`market:capital-flow:${code}`, data)
+  } catch (error) {
+    await cache(`capital-flow:${code}`, { code, timestamp: Date.now(), source: 'unavailable', availability: { available: false, source: 'tdx/stock-sdk', reason: '现有行情 provider 未提供主力、超大单、大单、中单、小单资金流及其时间序列/排行' }, items: [], series: [], ranking: [] }, 30)
+    console.warn(`[market-worker] capital-flow unavailable for ${code}:`, error instanceof Error ? error.message : error)
+  }
+}
+async function collectFundamentalData() {
+  for (const code of codes) {
+    try {
+      const records = await getSdkFundamentals(code)
+      if (records.length) await cache(`stock-detail:financials:${code}`, records, 900)
+    } catch (error) { console.warn(`[market-worker] financial data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
+    try {
+      const records = await getSdkDividends(code)
+      if (records.length) await cache(`stock-detail:dividends:${code}`, records, 86400)
+    } catch (error) { console.warn(`[market-worker] dividend data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
+  }
 }
 async function collectReferenceData() {
   try { const keywords = (process.env.MARKET_SEARCH_KEYWORDS ?? '').split(',').map((item) => item.trim()).filter(Boolean); for (const keyword of keywords) { const results = await searchSdk(keyword); await cache(`market:search:${keyword.toLowerCase()}`, results, 300) } } catch (error) { console.warn('[market-worker] search unavailable:', error instanceof Error ? error.message : error) }
@@ -62,7 +111,13 @@ async function collect() {
         const minute = await tdx.getMinute(code)
         await cache(`intraday:${code}`, minute.items.map((item) => ({ date: item.time, timestamp: Date.now(), open: item.price, close: item.price, high: item.price, low: item.price, volume: item.volume, amount: item.price * item.volume, source: 'tdx' })), 30)
         await publish(`market:intraday:${code}`, { code, items: minute.items })
-        await cache(`orderbook:${code}`, await tdx.getQuoteBook(code), 15)
+        const orderBook = await tdx.getQuoteBook(code)
+        await cache(`orderbook:${code}`, orderBook, 15)
+        await publishOrderBook(code, orderBook)
+        const trades = await tdx.getTrades(code)
+        await cache(`trades:${code}`, trades, 15)
+        await publishTrades(code, trades)
+        await writeCapitalFlow(code)
       } catch (error) { console.warn(`[market-worker] TDX chart data unavailable for ${code}:`, error instanceof Error ? error.message : error) }
     }
     console.log(`[market-worker] TDX updated ${quotes.length} quotes`)
@@ -76,11 +131,14 @@ async function collect() {
       quotes = await getSdkQuotes(codes)
       await markProvider('stock-sdk', true)
       await writeQuotes(quotes)
-      for (const code of codes) { try { const bars = await getSdkKline(code); const validBars = validateKlineBars(bars); if (!validBars.length && bars.length) throw new Error('invalid K-line data'); await cache(`kline:daily:${code}`, validBars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars: validBars }) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
+      for (const code of codes) { try { const bars = await getSdkKline(code); const validBars = validateKlineBars(bars); if (!validBars.length && bars.length) throw new Error('invalid K-line data'); await cache(`kline:daily:${code}`, validBars, 3600); await publish(`market:kline:${code}`, { code, period: 'daily', bars: validBars }); await writeCapitalFlow(code) } catch (klineError) { console.warn(`[market-worker] stock-sdk K-line unavailable for ${code}:`, klineError instanceof Error ? klineError.message : klineError) } }
       console.log(`[market-worker] stock-sdk updated ${quotes.length} quotes`)
     } catch (sdkError) { await markProvider('stock-sdk', false, sdkError); console.warn('[market-worker] all market providers unavailable:', sdkError instanceof Error ? sdkError.message : sdkError) }
   }
-  if (quotes.length) await collectReferenceData()
+  if (quotes.length) {
+    await collectReferenceData()
+    if (collections === 1 || collections % 60 === 0) await collectFundamentalData()
+  }
   try { const triggered = await checkPriceAlerts(redis); if (triggered) console.log(`[alert-worker] triggered ${triggered} price alerts`) } catch (error) { console.warn('[alert-worker] alert check failed:', error instanceof Error ? error.message : error) }
 }
 

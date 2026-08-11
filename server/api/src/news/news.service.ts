@@ -5,6 +5,8 @@ import { news } from '../database/schema.js'
 
 export interface NewsItem { id: string; title: string; summary: string; source: string; publishedAt: string; codes: string[]; url?: string }
 export interface NewsListQuery { code?: string; keyword?: string; source?: string; page?: number; pageSize?: number }
+export interface NewsTopicTimelineGroup { date: string; articles: NewsItem[] }
+export interface NewsTopic { id: string; code: string; title: string; count: number; earliestAt: string; latestAt: string; metadata: { code: string; title: string; count: number; earliestAt: string; latestAt: string }; articles: NewsItem[]; timeline: NewsTopicTimelineGroup[] }
 
 @Injectable()
 export class NewsService {
@@ -31,6 +33,20 @@ export class NewsService {
     return { items: filtered.slice(start, start + pageSize), total: filtered.length, page, pageSize, totalPages: Math.ceil(filtered.length / pageSize), hasNext: start + pageSize < filtered.length }
   }
 
+  async topics() {
+    const rows = (await this.list({ page: 1, pageSize: 100 })).items
+    const grouped = new Map<string, NewsItem[]>()
+    rows.forEach((item) => item.codes.forEach((code) => grouped.set(code, [...(grouped.get(code) ?? []), item])))
+    return [...grouped.entries()].map(([code, articles]) => this.toTopic(code, articles)).sort((a, b) => b.latestAt.localeCompare(a.latestAt))
+  }
+
+  async topic(id: string) {
+    const code = id.startsWith('code:') ? decodeURIComponent(id.slice(5)) : decodeURIComponent(id)
+    const topic = (await this.topics()).find((item) => item.code === code)
+    if (!topic) throw new NotFoundException('专题不存在')
+    return topic
+  }
+
   async find(id: string) {
     if (this.database.db) {
       try {
@@ -45,6 +61,7 @@ export class NewsService {
     return item
   }
 
+  private toTopic(code: string, articles: NewsItem[]): NewsTopic { const sorted = [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)); const grouped = new Map<string, NewsItem[]>(); sorted.forEach((article) => { const date = article.publishedAt.slice(0, 10); grouped.set(date, [...(grouped.get(date) ?? []), article]) }); const earliestAt = sorted[sorted.length - 1].publishedAt; const latestAt = sorted[0].publishedAt; const title = `${code} 相关资讯`; return { id: `code:${encodeURIComponent(code)}`, code, title, count: sorted.length, earliestAt, latestAt, metadata: { code, title, count: sorted.length, earliestAt, latestAt }, articles: sorted, timeline: [...grouped.entries()].map(([date, group]) => ({ date, articles: group })) } }
   private readonly toItem = (row: typeof news.$inferSelect): NewsItem => ({ id: row.id, title: row.title, summary: row.summary, source: row.source, publishedAt: row.publishedAt.toISOString(), codes: row.codes ?? [], ...(row.url ? { url: row.url } : {}) })
   private matches(item: NewsItem, query: Pick<NewsListQuery, 'code' | 'keyword'>) { const q = (query.keyword ?? '').trim().toLowerCase(); const code = query.code?.trim().toLowerCase(); return (!code || item.codes.some((value) => value.toLowerCase() === code)) && (!q || `${item.title}${item.summary}`.toLowerCase().includes(q)) }
 }

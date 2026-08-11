@@ -13,6 +13,7 @@ import { RealtimeModule } from './realtime/realtime.module.js'
 import { TradeModule } from './trade/trade.module.js'
 import { WatchlistModule } from './watchlist/watchlist.module.js'
 import { SettingsModule } from './settings/settings.module.js'
+import { CalendarModule } from './calendar/calendar.module.js'
 
-@Module({ imports: [DatabaseModule, AuthModule, AlertsModule, NotificationsModule, KlineModule, WatchlistModule, FavoritesModule, HealthModule, MarketModule, RealtimeModule, NewsModule, ReportsModule, TradeModule, SettingsModule] })
+@Module({ imports: [DatabaseModule, AuthModule, AlertsModule, NotificationsModule, KlineModule, WatchlistModule, FavoritesModule, HealthModule, MarketModule, RealtimeModule, NewsModule, ReportsModule, TradeModule, SettingsModule, CalendarModule] })
 export class AppModule {}

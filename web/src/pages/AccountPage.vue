@@ -1,26 +1,20 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
+
 import { useAuthStore } from '@/stores/auth'
-import { getNotifications, markNotificationsRead, type NotificationItem } from '@/services/notifications'
+
 import { sendCodeApi } from '@/services/api-client'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useWatchlistStore } from '@/stores/watchlist'
-import { useSettingsStore } from '@/stores/settings'
 
-const router = useRouter()
+
+
 const auth = useAuthStore()
 const currentUser = auth.user
 const isLoggingIn = auth.loading
 const favorites = useFavoritesStore()
 const watchlist = useWatchlistStore()
-const settings = useSettingsStore()
-const notifications = settings.notifications
-const priceAlerts = settings.priceAlerts
-
 const showLogin = ref(false)
-const showSettings = ref(false)
-const showMessages = ref(false)
 const phone = ref('')
 const code = ref('')
 const countdown = ref(0)
@@ -28,10 +22,7 @@ const isSendingCode = ref(false)
 const toast = ref('')
 const savedCount = ref(0)
 const recentCount = ref(0)
-const unreadMessages = ref(0)
-const messages = ref<NotificationItem[]>([])
-const messagesLoading = ref(false)
-const messagesError = ref('')
+
 let countdownTimer: number | undefined
 let toastTimer: number | undefined
 
@@ -39,33 +30,18 @@ const quickEntries = [
   { icon: '☆', title: '我的自选', note: '关注的股票', to: '/watchlist', tone: 'blue' },
   { icon: '▣', title: '交易账户', note: '开户 / 绑定', to: '/trade', tone: 'orange' },
   { icon: '▤', title: '我的研报', note: '机构观点', to: '/reports', tone: 'purple' },
-  { icon: '◷', title: '浏览历史', note: '最近浏览', to: '/watchlist', tone: 'green' },
+  { icon: '◷', title: '浏览历史', note: '最近浏览', to: '/history', tone: 'green' },
 ]
 
 const serviceEntries = [
-  { icon: '▣', title: '消息中心', note: '系统通知和互动消息', key: 'messages' },
-  { icon: '◉', title: '价格提醒', note: '管理目标价提醒', key: 'alerts' },
-  { icon: '⚙', title: '设置', note: '通知、主题和隐私', key: 'settings' },
+  { icon: '▣', title: '消息中心', note: '系统通知和互动消息', to: '/notifications' },
+  { icon: '◉', title: '价格提醒', note: '管理目标价提醒', to: '/alerts' },
+  { icon: '⚙', title: '设置', note: '通知、主题和隐私', to: '/settings' },
 ]
 
-async function loadMessages() {
-  if (!auth.user.value) return
-  messagesLoading.value = true
-  messagesError.value = ''
-  try {
-    messages.value = await getNotifications()
-    unreadMessages.value = messages.value.filter((item) => !item.readAt).length
-  } catch {
-    messagesError.value = '消息暂时无法加载，请稍后重试。'
-  } finally {
-    messagesLoading.value = false
-  }
-}
-
-onMounted(async () => {
+onMounted(() => {
   savedCount.value = favorites.count.value
   recentCount.value = watchlist.recentCodes.value.length
-  await Promise.all([settings.hydrate(), loadMessages()])
 })
 
 function showToast(message: string) {
@@ -74,18 +50,6 @@ function showToast(message: string) {
   toastTimer = window.setTimeout(() => { toast.value = '' }, 1800)
 }
 
-function persistSetting(key: 'notifications' | 'priceAlerts', value: boolean) {
-  void settings.set(key, value)
-}
-function toggleSetting(key: 'notifications' | 'priceAlerts') {
-  persistSetting(key, key === 'notifications' ? !notifications.value : !priceAlerts.value)
-}
-
-function handleService(key: string) {
-  if (key === 'messages') showMessages.value = true
-  else if (key === 'alerts') router.push('/alerts')
-  else showSettings.value = true
-}
 
 function stopCountdown() {
   window.clearInterval(countdownTimer)
@@ -120,22 +84,12 @@ async function submitLogin() {
   try { await auth.login(phone.value, code.value) } catch { showToast('登录失败，请稍后重试'); return }
   if (auth.error.value) { showToast(auth.error.value); return }
   closeLogin()
-  await loadMessages()
   showToast('登录成功')
 }
-async function markAllRead() {
-  if (!auth.user.value || !unreadMessages.value) return
-  try {
-    await markNotificationsRead()
-    messages.value.forEach((message) => { message.readAt = new Date().toISOString() })
-    unreadMessages.value = 0
-    showToast('已全部标记为已读')
-  } catch { showToast('操作失败，请稍后重试') }
-}
+
 function logout() {
   auth.logout()
-  messages.value = []
-  unreadMessages.value = 0
+
   showToast('已退出登录')
 }
 onUnmounted(() => { stopCountdown(); window.clearTimeout(toastTimer) })
@@ -143,7 +97,7 @@ onUnmounted(() => { stopCountdown(); window.clearTimeout(toastTimer) })
 
 <template>
   <main class="account-page">
-    <header class="page-header"><div><p class="header-kicker">自选股 · 账户中心</p><h1>我的</h1></div><button class="header-action" aria-label="打开设置" @click="showSettings = true">⚙</button></header>
+    <header class="page-header"><div><p class="header-kicker">自选股 · 账户中心</p><h1>我的</h1></div><RouterLink class="header-action" to="/settings" aria-label="打开设置">⚙</RouterLink></header>
 
     <section class="profile-card">
       <div class="profile-orb"><span>{{ currentUser ? currentUser.name.slice(0, 1) : '我' }}</span></div>
@@ -156,17 +110,16 @@ onUnmounted(() => { stopCountdown(); window.clearTimeout(toastTimer) })
     </section>
 
     <section class="service-section"><h2 class="section-title">我的服务</h2><div class="service-list">
-      <button v-for="entry in serviceEntries" :key="entry.title" class="service-row" @click="handleService(entry.key)"><span class="service-icon">{{ entry.icon }}</span><span class="service-copy"><strong>{{ entry.title }}</strong><small>{{ entry.note }}</small></span><b v-if="entry.key === 'messages' && unreadMessages" class="badge">{{ unreadMessages > 99 ? '99+' : unreadMessages }}</b><span class="chevron">›</span></button>
+      <RouterLink v-for="entry in serviceEntries" :key="entry.title" class="service-row" :to="entry.to"><span class="service-icon">{{ entry.icon }}</span><span class="service-copy"><strong>{{ entry.title }}</strong><small>{{ entry.note }}</small></span><span class="chevron">›</span></RouterLink>
     </div></section>
 
     <section class="account-note"><span>◇</span><p>行情、资讯与研报持续更新<br /><small>专业伴你成长，投资请理性决策</small></p></section>
     <p class="account-version">腾讯自选股 Web · MVP 预览版</p>
 
-    <div v-if="showSettings" class="account-overlay" @click.self="showSettings = false"><section class="account-sheet"><div class="sheet-head"><h2>设置</h2><button aria-label="关闭设置" @click="showSettings = false">×</button></div><div class="setting-row"><div><strong>资讯推送</strong><small>接收市场热点和重要资讯</small></div><button class="switch" :class="{ on: notifications }" @click="toggleSetting('notifications')"><i /></button></div><div class="setting-row"><div><strong>价格提醒</strong><small>自选股达到阈值时提醒</small></div><button class="switch" :class="{ on: priceAlerts }" @click="toggleSetting('priceAlerts')"><i /></button></div><div class="setting-row"><div><strong>主题模式</strong><small>当前使用浅色行情主题</small></div><span class="setting-value">浅色</span></div><button class="sheet-done" @click="showSettings = false">完成</button></section></div>
 
     <div v-if="showLogin" class="account-overlay" @click.self="closeLogin"><section class="account-sheet login-sheet"><div class="sheet-head"><h2>登录账户</h2><button aria-label="关闭登录" @click="closeLogin">×</button></div><p class="login-description">使用手机号登录，开启同步服务。</p><label class="login-input"><span>+86</span><input v-model="phone" inputmode="tel" maxlength="11" autocomplete="tel" placeholder="请输入手机号" @keyup.enter="sendCode" /></label><label class="login-input"><span>验证码</span><input v-model="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="请输入 6 位验证码" @keyup.enter="submitLogin" /><button class="code-button" :disabled="countdown > 0 || isSendingCode" @click="sendCode">{{ isSendingCode ? '发送中…' : countdown > 0 ? `${countdown}s` : '获取验证码' }}</button></label><button class="sheet-done" :disabled="isLoggingIn" @click="submitLogin">{{ isLoggingIn ? '登录中…' : '登录' }}</button></section></div>
 
-    <div v-if="showMessages" class="account-overlay" @click.self="showMessages = false"><section class="account-sheet message-sheet"><div class="sheet-head"><h2>消息中心</h2><button aria-label="关闭消息" @click="showMessages = false">×</button></div><div class="message-actions"><span v-if="unreadMessages">{{ unreadMessages }} 条未读</span><button v-if="unreadMessages" class="text-button" @click="markAllRead">全部已读</button></div><p v-if="messagesLoading" class="message-state">正在加载消息…</p><div v-else-if="messagesError" class="message-state error-state">{{ messagesError }} <button @click="loadMessages">重试</button></div><template v-else><div v-for="message in messages" :key="message.id" class="message-item" :class="{ unread: !message.readAt }"><i /><div><strong>{{ message.title }}</strong><p>{{ message.content }}</p><small>{{ new Date(message.createdAt).toLocaleString('zh-CN') }}</small></div></div><p v-if="!messages.length" class="message-state">暂无消息</p></template></section></div>
+
     <Transition name="toast"><div v-if="toast" class="toast-message" role="status">{{ toast }}</div></Transition>
   </main>
 </template>

@@ -6,6 +6,10 @@ import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { newsCategories, type NewsArticle } from '@/services/news-types'
 import { getNewsArticles } from '@/services/news'
+import NewsFavoritesPage from './NewsFavoritesPage.vue'
+import NewsRecommendPage from './NewsRecommendPage.vue'
+import NewsTopicsPage from './NewsTopicsPage.vue'
+import NewsTopicDetailPage from './NewsTopicDetailPage.vue'
 import { useFavoritesStore } from '@/stores/favorites'
 
 const route = useRoute()
@@ -33,7 +37,8 @@ const filteredNews = computed(() => {
 })
 
 function showAllNews() { savedOnly.value = false; activeCategory.value = '全部'; router.replace('/news') }
-function showSavedNews() { savedOnly.value = true; router.replace('/news?saved=1') }
+function showRecommendations() { savedOnly.value = false; router.replace('/news?view=recommendations') }
+function showSavedNews() { router.replace('/news?view=favorites') }
 function selectCategory(category: string) { activeCategory.value = category; savedOnly.value = false; router.replace('/news') }
 
 async function loadNews() {
@@ -48,11 +53,15 @@ function refresh() {
 }
 
 onMounted(() => { loadNews() })
-function toggleSave(id: number) { favorites.toggle(id) }
+function toggleSave(id: string) { favorites.toggle(id) }
 </script>
 
 <template>
-  <section class="news-page">
+  <NewsRecommendPage v-if="route.query.view === 'recommendations'" />
+  <NewsFavoritesPage v-else-if="route.query.view === 'favorites'" />
+  <NewsTopicsPage v-else-if="route.query.view === 'topics'" />
+  <NewsTopicDetailPage v-else-if="route.query.topic" :topic-id="String(route.query.topic)" />
+  <section v-else class="news-page">
     <header class="news-header">
       <div class="news-heading">
         <div>
@@ -67,9 +76,11 @@ function toggleSave(id: number) { favorites.toggle(id) }
         <button v-if="keyword" type="button" aria-label="清空搜索" @click="keyword = ''">×</button>
       </label>
       <nav class="category-bar" aria-label="资讯分类">
-        <button :class="{ selected: !savedOnly && activeCategory === '全部' }" @click="showAllNews">推荐</button>
+        <button :class="{ selected: route.query.view === 'recommendations' }" @click="showRecommendations">个性化推荐</button>
+        <button :class="{ selected: !savedOnly && activeCategory === '全部' && route.query.view !== 'recommendations' }" @click="showAllNews">全部</button>
         <button v-for="category in categories" :key="category" :class="{ selected: !savedOnly && activeCategory === category }" @click="selectCategory(category)">{{ category }}</button>
         <button :class="{ selected: savedOnly }" @click="showSavedNews">收藏<span v-if="savedNews.length">{{ savedNews.length }}</span></button>
+        <RouterLink class="category-link" to="/news?view=topics">专题</RouterLink>
       </nav>
     </header>
 

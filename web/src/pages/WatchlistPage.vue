@@ -1,163 +1,57 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { useWatchlistStore } from '@/stores/watchlist'
-import { getMarketStocksSnapshot } from '@/services/market'
-import type { StockQuote } from '@/services/market-types'
+import { RouterLink } from 'vue-router'
 import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
+import EmptyState from '@/components/EmptyState.vue'
+import { getMarketStocks } from '@/services/market'
+import type { StockQuote } from '@/services/market-types'
+import { useWatchlistStore } from '@/stores/watchlist'
 
-const marketStocks = getMarketStocksSnapshot()
 const watchlist = useWatchlistStore()
-const selectedCodes = watchlist.selectedCodes
-const recentCodes = watchlist.recentCodes
-const activeGroup = ref<'自选股' | '最近浏览'>('自选股')
+const stocks = ref<StockQuote[]>([])
+const activeGroupId = ref('default')
 const activeFilter = ref<'全部' | '上涨' | '下跌'>('全部')
-const isLoading = ref(true)
-const loadError = ref('')
+const selected = ref<string[]>([])
+const editing = ref(false)
+const loading = ref(true)
+const error = ref('')
+const updatedAt = ref('—')
+const stockMap = computed(() => new Map(stocks.value.map((stock) => [stock.code, stock])))
+const activeItems = computed(() => activeGroupId.value === 'recent' ? watchlist.recentCodes.value.map((code, sortOrder) => ({ code, sortOrder })) : watchlist.itemsByGroup.value[activeGroupId.value] ?? [])
+const currentStocks = computed(() => activeItems.value.map((item) => stockMap.value.get(item.code)).filter((stock): stock is StockQuote => Boolean(stock)))
+const filteredStocks = computed(() => activeFilter.value === '上涨' ? currentStocks.value.filter((stock) => stock.trend === 'up') : activeFilter.value === '下跌' ? currentStocks.value.filter((stock) => stock.trend === 'down') : currentStocks.value)
+const activeName = computed(() => activeGroupId.value === 'default' ? '默认自选' : activeGroupId.value === 'recent' ? '最近浏览' : watchlist.groups.value.find((group) => group.id === activeGroupId.value)?.name ?? '分组')
+const groupList = watchlist.groups
+const defaultCount = computed(() => watchlist.defaultItems.value.length)
+const recentCount = computed(() => watchlist.recentCodes.value.length)
+function itemCount(id: string) { return (watchlist.itemsByGroup.value[id] ?? []).length }
+const selectedAll = computed(() => filteredStocks.value.length > 0 && filteredStocks.value.every((stock) => selected.value.includes(stock.code)))
+const summary = computed(() => ({ up: currentStocks.value.filter((stock) => stock.trend === 'up').length, down: currentStocks.value.filter((stock) => stock.trend === 'down').length }))
 
-const selectedStocks = computed(() => selectedCodes.value
-  .map((code) => marketStocks.find((stock) => stock.code === code))
-  .filter((stock): stock is StockQuote => Boolean(stock)))
-const recentStocks = computed(() => recentCodes.value
-  .map((code) => marketStocks.find((stock) => stock.code === code))
-  .filter((stock): stock is StockQuote => Boolean(stock)))
-const currentStocks = computed(() => activeGroup.value === '自选股' ? selectedStocks.value : recentStocks.value)
-const filteredStocks = computed(() => {
-  if (activeFilter.value === '上涨') return currentStocks.value.filter((stock) => stock.trend === 'up')
-  if (activeFilter.value === '下跌') return currentStocks.value.filter((stock) => stock.trend === 'down')
-  return currentStocks.value
-})
-
-async function loadWatchlist() {
-  isLoading.value = true
-  loadError.value = ''
-  try {
-    await watchlist.hydrate()
-  } catch {
-    loadError.value = '自选数据读取失败，请重试。'
-  } finally {
-    isLoading.value = false
-  }
-}
-
-onMounted(loadWatchlist)
-
-function removeStock(code: string) {
-  watchlist.remove(code)
-}
-
-function clearRecent() {
-  watchlist.clearRecent()
-}
-
-function switchGroup(group: '自选股' | '最近浏览') {
-  activeGroup.value = group
-  activeFilter.value = '全部'
-}
+async function load() { loading.value = true; error.value = ''; try { await Promise.all([watchlist.hydrate(), getMarketStocks().then((data) => { stocks.value = data })]); updatedAt.value = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' }) } catch { error.value = '自选数据读取失败，请重试。' } finally { loading.value = false } }
+function selectGroup(id: string) { activeGroupId.value = id; selected.value = []; activeFilter.value = '全部'; editing.value = false }
+async function createGroup() { const name = window.prompt('请输入分组名称'); if (name?.trim()) { const group = await watchlist.createGroup(name); selectGroup(group.id) } }
+async function renameGroup() { if (!watchlist.groups.value.some((group) => group.id === activeGroupId.value)) return; const name = window.prompt('请输入新的分组名称', activeName.value); if (name?.trim()) await watchlist.renameGroup(activeGroupId.value, name) }
+async function deleteGroup() { if (!window.confirm(`删除“${activeName.value}”？其中股票会回到默认自选。`)) return; await watchlist.deleteGroup(activeGroupId.value); selectGroup('default') }
+function toggle(code: string) { selected.value = selected.value.includes(code) ? selected.value.filter((item) => item !== code) : [...selected.value, code] }
+function toggleAll() { selected.value = selectedAll.value ? [] : filteredStocks.value.map((stock) => stock.code) }
+async function removeSelected() { await watchlist.removeBatch(selected.value, activeGroupId.value === 'recent' || activeGroupId.value === 'default' ? null : activeGroupId.value); selected.value = []; editing.value = false }
+async function moveSelected(event: Event) { const groupId = (event.target as HTMLSelectElement).value; for (const code of selected.value) await watchlist.move(code, groupId === 'default' ? null : groupId); selected.value = [] }
+function clearRecent() { watchlist.clearRecent(); selected.value = [] }
+function quoteClass(stock: StockQuote) { return stock.trend === 'up' ? 'text-up' : 'text-down' }
+onMounted(load)
 </script>
 
 <template>
   <section class="watchlist-page">
-    <header class="watchlist-header">
-      <div>
-        <p class="eyebrow">MARKET / PERSONAL</p>
-        <h1>自选</h1>
-      </div>
-      <RouterLink class="header-action" to="/market" aria-label="添加自选股票">＋ 添加</RouterLink>
-    </header>
-
-    <nav class="watchlist-groups" aria-label="自选分组">
-      <button :class="{ selected: activeGroup === '自选股' }" @click="switchGroup('自选股')">
-        自选股 <b>{{ selectedStocks.length }}</b>
-      </button>
-      <button :class="{ selected: activeGroup === '最近浏览' }" @click="switchGroup('最近浏览')">
-        最近浏览 <b>{{ recentStocks.length }}</b>
-      </button>
-    </nav>
-
-    <LoadingState v-if="isLoading" label="正在加载自选数据" />
-    <ErrorState v-else-if="loadError" title="自选数据加载失败" :message="loadError" :retry="loadWatchlist" />
-    <template v-else>
-      <div class="watchlist-toolbar">
-        <div class="quote-filters" aria-label="行情筛选">
-          <button v-for="filter in ['全部', '上涨', '下跌']" :key="filter" :class="{ active: activeFilter === filter }" @click="activeFilter = filter as typeof activeFilter">
-            {{ filter }}
-          </button>
-        </div>
-        <button v-if="activeGroup === '最近浏览' && recentStocks.length" class="clear-button" @click="clearRecent">清空记录</button>
-      </div>
-
-      <section v-if="filteredStocks.length" class="quote-board panel" aria-label="股票行情列表">
-        <div class="quote-heading"><span>名称 / 代码</span><span>最新价</span><span>涨跌幅</span><span>成交额</span><span /></div>
-        <RouterLink v-for="(stock, index) in filteredStocks" :key="stock.code" class="quote-row" :to="`/stock/${stock.code}`">
-          <span class="quote-name"><i>{{ String(index + 1).padStart(2, '0') }}</i><strong>{{ stock.name }}</strong><small>{{ stock.code }}</small></span>
-          <span class="mono quote-price">{{ stock.price }}</span>
-          <span class="quote-change mono" :class="stock.trend === 'up' ? 'text-up' : 'text-down'"><b>{{ stock.percent }}</b><small>{{ stock.change }}</small></span>
-          <span class="mono quote-volume">{{ stock.volume }}</span>
-          <span class="quote-actions">
-            <button v-if="activeGroup === '自选股'" class="remove-button" :aria-label="`移除${stock.name}`" @click.prevent.stop="removeStock(stock.code)">×</button>
-            <span class="row-arrow">›</span>
-          </span>
-        </RouterLink>
-      </section>
-
-      <section v-else class="watchlist-empty panel">
-        <span class="empty-icon">{{ activeGroup === '自选股' ? '☆' : '◷' }}</span>
-        <h2>{{ activeGroup === '自选股' ? '还没有自选股票' : '暂无最近浏览' }}</h2>
-        <p v-if="activeFilter !== '全部'">当前筛选下暂无标的，换个筛选条件试试。</p>
-        <p v-else-if="activeGroup === '自选股'">从行情列表添加股票，建立你的观察列表。</p>
-        <p v-else>查看股票详情后，最近浏览的标的会显示在这里。</p>
-        <RouterLink class="primary-button" :to="activeGroup === '自选股' ? '/market' : '/market'">去行情列表</RouterLink>
-      </section>
-
-      <p v-if="filteredStocks.length" class="watchlist-footer">共 {{ filteredStocks.length }} 个标的 · 行情数据仅供参考</p>
-    </template>
+    <header class="page-head"><div><p class="eyebrow">MARKET · PERSONAL</p><h1>自选</h1><p class="subtitle">管理关注标的，掌握实时行情</p></div><div class="head-actions"><button class="refresh-action" :disabled="loading" @click="load">↻</button><button class="edit-action" @click="editing = !editing; selected = []">{{ editing ? '完成' : '编辑' }}</button></div></header>
+    <nav class="group-tabs" aria-label="自选分组"><button :class="{ active: activeGroupId === 'default' }" @click="selectGroup('default')">默认自选 <b>{{ defaultCount }}</b></button><button v-for="group in groupList" :key="group.id" :class="{ active: activeGroupId === group.id }" @click="selectGroup(group.id)">{{ group.name }} <b>{{ itemCount(group.id) }}</b></button><button :class="{ active: activeGroupId === 'recent' }" @click="selectGroup('recent')">最近浏览 <b>{{ recentCount }}</b></button><button class="add-group" @click="createGroup">＋ 新建分组</button><RouterLink class="add-link" to="/market">＋ 添加自选</RouterLink></nav>
+    <LoadingState v-if="loading" label="正在加载自选数据" /><ErrorState v-else-if="error" title="自选数据加载失败" :message="error" :retry="load" />
+    <template v-else><section class="quote-section"><div class="section-intro"><div><h2>{{ activeName }}</h2><p>{{ currentStocks.length }} 个标的 · <span class="text-up">{{ summary.up }} 上涨</span> · <span class="text-down">{{ summary.down }} 下跌</span></p></div><div class="group-actions"><button v-if="activeGroupId !== 'default' && activeGroupId !== 'recent'" @click="renameGroup">重命名</button><button v-if="activeGroupId !== 'default' && activeGroupId !== 'recent'" class="danger-link" @click="deleteGroup">删除分组</button><small>更新于 {{ updatedAt }}</small></div></div><div class="section-bar"><div class="filters"><button v-for="filter in ['全部', '上涨', '下跌']" :key="filter" :class="{ active: activeFilter === filter }" @click="activeFilter = filter as '全部' | '上涨' | '下跌'; selected = []">{{ filter }}</button></div><button v-if="activeGroupId === 'recent' && currentStocks.length" class="clear-link" @click="clearRecent">清空记录</button></div><div v-if="editing && filteredStocks.length" class="batch-bar"><button @click="toggleAll">{{ selectedAll ? '取消全选' : '全选' }}</button><span>已选 {{ selected.length }} 项</span><select :disabled="!selected.length || activeGroupId === 'recent'" @change="moveSelected"><option value="">移动到…</option><option value="default">默认自选</option><option v-for="group in groupList" :key="group.id" :value="group.id">{{ group.name }}</option></select><button class="danger-link" :disabled="!selected.length" @click="removeSelected">批量删除</button></div><div v-if="filteredStocks.length" class="quote-list"><div class="quote-heading"><span>名称 / 代码</span><span>最新价</span><span>涨跌幅</span><span>成交额</span><span /></div><RouterLink v-for="(stock, index) in filteredStocks" :key="stock.code" class="quote-row" :to="`/stock/${stock.code}`"><button v-if="editing" class="check-button" :class="{ checked: selected.includes(stock.code) }" @click.prevent.stop="toggle(stock.code)">{{ selected.includes(stock.code) ? '✓' : '' }}</button><span class="stock-name"><i>{{ String(index + 1).padStart(2, '0') }}</i><strong>{{ stock.name }}</strong><small>{{ stock.code }}</small></span><span class="mono quote-price">{{ stock.price }}</span><span class="quote-change mono" :class="quoteClass(stock)"><b>{{ stock.percent }}</b><small>{{ stock.change }}</small></span><span class="mono quote-volume">{{ stock.volume }}</span><span class="row-actions">›</span></RouterLink></div><EmptyState v-else :title="activeGroupId === 'recent' ? '暂无最近浏览' : '分组里还没有股票'" message="从行情列表添加股票，或在编辑模式中移动已有自选。" icon="☆" /></section><p v-if="filteredStocks.length" class="footer-note">共 {{ filteredStocks.length }} 个标的 · 行情数据仅供参考</p></template>
   </section>
 </template>
 
 <style scoped>
-.watchlist-page { min-height: calc(100vh - 120px); padding: 12px 0 24px; }
-.watchlist-header { display: flex; align-items: center; justify-content: space-between; padding: 0 4px 14px; }
-.watchlist-header h1 { margin-top: 3px; font-size: 22px; letter-spacing: .02em; }
-.header-action { color: var(--primary); font-size: 12px; font-weight: 600; }
-.watchlist-groups { display: flex; gap: 26px; border-bottom: 1px solid var(--border); }
-.watchlist-groups button { position: relative; padding: 12px 2px 11px; color: var(--muted); border: 0; background: transparent; font-size: 13px; }
-.watchlist-groups button.selected { color: var(--text); font-weight: 600; }
-.watchlist-groups button.selected::after { position: absolute; right: 0; bottom: -1px; left: 0; height: 2px; border-radius: 2px; background: var(--primary); content: ''; }
-.watchlist-groups b { margin-left: 4px; color: var(--primary); font: 10px 'JetBrains Mono', monospace; }
-.watchlist-toolbar { display: flex; align-items: center; justify-content: space-between; min-height: 48px; }
-.quote-filters { display: flex; gap: 5px; }
-.quote-filters button { padding: 6px 11px; color: var(--muted); border: 0; border-radius: 3px; background: transparent; font-size: 11px; }
-.quote-filters button.active { color: var(--primary); background: #edf4ff; font-weight: 600; }
-.clear-button { padding: 6px 0; color: var(--muted); border: 0; background: transparent; font-size: 11px; }
-.quote-board { overflow: hidden; padding: 0 14px; border-radius: 4px; }
-.quote-heading, .quote-row { display: grid; grid-template-columns: minmax(130px, 1.6fr) .85fr .85fr .85fr 24px; gap: 8px; align-items: center; }
-.quote-heading { min-height: 34px; color: var(--muted); border-bottom: 1px solid var(--border); font-size: 10px; }
-.quote-heading span:not(:first-child) { text-align: right; }
-.quote-row { min-height: 68px; color: var(--text); border-bottom: 1px solid var(--border); font-size: 12px; }
-.quote-row:last-child { border-bottom: 0; }
-.quote-name { display: grid; grid-template-columns: 22px 1fr; gap: 1px 0; align-items: center; min-width: 0; }
-.quote-name i { grid-row: span 2; color: #b3bac7; font: normal 9px 'JetBrains Mono', monospace; }
-.quote-name strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; }
-.quote-name small, .quote-change small { color: var(--muted); font: 9px 'JetBrains Mono', monospace; }
-.quote-price, .quote-volume, .quote-change { text-align: right; font-size: 11px; }
-.quote-change b, .quote-change small { display: block; font-weight: 500; }
-.quote-actions { display: flex; align-items: center; justify-content: flex-end; gap: 3px; }
-.remove-button { padding: 3px; color: var(--muted); border: 0; background: transparent; font-size: 18px; line-height: 1; }
-.remove-button:hover { color: var(--down); }
-.row-arrow { color: #aeb5c1; font-size: 18px; }
-.watchlist-empty { display: flex; min-height: 280px; flex-direction: column; align-items: center; justify-content: center; padding: 30px 20px; text-align: center; }
-.empty-icon { color: var(--primary); font-size: 30px; }
-.watchlist-empty h2 { margin-top: 12px; font-size: 15px; }
-.watchlist-empty p { max-width: 250px; margin: 8px 0 18px; color: var(--muted); font-size: 11px; line-height: 1.7; }
-.watchlist-footer { margin: 13px 0; color: var(--muted); text-align: center; font-size: 10px; }
-@media (max-width: 560px) {
-  .watchlist-page { padding-top: 0; }
-  .quote-board { margin: 0 -1px; padding: 0 10px; }
-  .quote-heading, .quote-row { grid-template-columns: minmax(112px, 1.4fr) .8fr .8fr 22px; gap: 5px; }
-  .quote-heading span:nth-child(4), .quote-volume { display: none; }
-  .quote-row { min-height: 64px; }
-  .quote-price { font-size: 12px; }
-  .quote-change { font-size: 11px; }
-}
+.watchlist-page{width:min(900px,100%);margin:0 auto;padding:0 0 28px}.page-head{display:flex;justify-content:space-between;padding:2px 2px 16px}.eyebrow{color:var(--primary);font:10px 'JetBrains Mono',monospace;letter-spacing:.12em}.page-head h1{margin-top:5px;font-size:23px}.subtitle,.section-intro p,.section-intro small{color:var(--muted);font-size:11px}.subtitle{margin-top:6px}.head-actions,.group-actions{display:flex;align-items:center;gap:8px}.refresh-action,.edit-action,.group-actions button{border:1px solid var(--border);background:var(--card);color:var(--primary);border-radius:5px}.refresh-action{width:32px;height:32px;font-size:20px}.edit-action,.group-actions button{padding:8px 12px;font-size:11px}.group-tabs{display:flex;align-items:center;gap:18px;overflow:auto;border-bottom:1px solid var(--border)}.group-tabs button{position:relative;flex:none;padding:11px 2px 10px;border:0;background:transparent;color:var(--muted);font-size:12px}.group-tabs button.active{color:var(--text);font-weight:600}.group-tabs button.active:after{position:absolute;right:0;bottom:-1px;left:0;height:2px;background:var(--primary);content:''}.group-tabs b{margin-left:3px;color:var(--primary);font:10px 'JetBrains Mono',monospace}.add-group,.add-link{color:var(--primary)!important;font-size:10px!important}.add-link{margin-left:auto;white-space:nowrap}.quote-section{margin-top:12px}.section-intro{display:flex;justify-content:space-between;align-items:flex-end;padding:5px 2px 8px}.section-intro h2{font-size:16px}.section-intro small{font:9px 'JetBrains Mono',monospace}.group-actions small{margin-left:4px}.section-bar{display:flex;justify-content:space-between;min-height:42px}.filters{display:flex;gap:4px}.filters button,.clear-link{padding:6px 10px;border:0;border-radius:4px;background:transparent;color:var(--muted);font-size:11px}.filters button.active{color:var(--primary);background:#edf4ff;font-weight:600}.batch-bar{display:flex;align-items:center;gap:12px;padding:8px 12px;background:#f7f9fc;border:1px solid var(--border);color:var(--muted);font-size:10px}.batch-bar span{flex:1}.batch-bar button{border:0;background:transparent;color:var(--primary);font-size:10px}.batch-bar select{padding:5px;border:1px solid var(--border);border-radius:4px;color:var(--muted);font-size:10px}.danger-link{color:var(--down)!important}.danger-link:disabled{opacity:.45}.quote-list{overflow:hidden;padding:0 14px;border:1px solid var(--border);border-radius:7px;background:var(--card)}.quote-heading,.quote-row{display:grid;grid-template-columns:minmax(150px,1.6fr) .85fr .85fr .85fr 28px;gap:8px;align-items:center}.quote-heading{min-height:36px;color:var(--muted);border-bottom:1px solid var(--border);font-size:10px}.quote-row{min-height:67px;border-bottom:1px solid var(--border);font-size:12px;text-decoration:none;color:inherit}.quote-row:last-child{border:0}.check-button{width:18px;height:18px;position:absolute;margin-left:0;border:1px solid #cfd7e4;border-radius:50%;background:#fff;color:#fff}.quote-row:has(.check-button){padding-left:25px}.check-button.checked{border-color:var(--primary);background:var(--primary)}.stock-name{display:grid;grid-template-columns:25px 1fr}.stock-name i{grid-row:span 2;color:#b3bac7;font:normal 9px 'JetBrains Mono',monospace}.stock-name strong{font-size:12px}.stock-name small,.quote-change small{color:var(--muted);font:9px 'JetBrains Mono',monospace}.stock-name small{margin-top:4px}.quote-price,.quote-volume,.quote-change{text-align:right;font-size:11px}.quote-change b,.quote-change small{display:block}.quote-change small{margin-top:4px}.row-actions{text-align:right;color:#b0bac7;font-size:18px}.text-up{color:var(--up)}.text-down{color:var(--down)}.footer-note{margin-top:13px;color:var(--muted);font-size:10px;text-align:center}@media(max-width:620px){.group-tabs{gap:12px}.add-link{display:none}.quote-list{padding:0 10px}.quote-heading,.quote-row{grid-template-columns:minmax(112px,1.45fr) .8fr .8fr 25px;gap:5px}.quote-heading span:nth-child(4),.quote-volume{display:none}.section-intro small{display:none}.group-actions button{padding:6px;font-size:10px}}
 </style>

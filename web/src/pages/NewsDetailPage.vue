@@ -21,7 +21,7 @@ async function loadArticle() {
   isLoading.value = true
   loadError.value = ''
   try {
-    const [current, articles] = await Promise.all([getNewsArticle(Number(route.params.id)), getNewsArticles()])
+    const [current, articles] = await Promise.all([getNewsArticle(String(route.params.id)), getNewsArticles()])
     if (!current) throw new Error('not-found')
     article.value = current
     allArticles.value = articles

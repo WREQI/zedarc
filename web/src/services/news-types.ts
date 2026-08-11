@@ -1,5 +1,5 @@
 export interface NewsArticle {
-  id: number
+  id: string
   time: string
   source: string
   title: string

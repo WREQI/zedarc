@@ -1,16 +1,35 @@
-import { BadRequestException, Controller, Get, Param, Query } from '@nestjs/common'
+import { BadRequestException, Controller, Get, Param, Query, Req } from '@nestjs/common'
 import { ApiTags } from '@nestjs/swagger'
 import { NewsService, type NewsListQuery } from './news.service.js'
+import { NewsRecommendationService } from './news-recommendation.service.js'
+import { AuthService } from '../auth/auth.service.js'
 
 @ApiTags('news')
 @Controller('api/news')
 export class NewsController {
-  constructor(private readonly service: NewsService) {}
+  constructor(private readonly service: NewsService, private readonly recommendations: NewsRecommendationService, private readonly auth: AuthService) {}
 
   @Get()
   list(@Query('code') code?: string, @Query('keyword') keyword?: string, @Query('source') source?: string, @Query('page') page?: string, @Query('pageSize') pageSize?: string) {
     return this.service.list({ code, keyword, source, ...this.parsePagination(page, pageSize) })
   }
+
+  @Get('recommendations')
+  recommendationsList(@Query('history') history?: string, @Query('limit') limit?: string, @Req() request?: { headers: { authorization?: string } }) {
+    const token = request?.headers.authorization?.replace(/^Bearer\s+/i, '')
+    let userId: string | undefined
+    if (token) {
+      try { userId = this.auth.verifyAccess(token).id } catch { userId = undefined }
+    }
+    const parsedLimit = limit === undefined || limit === '' ? 20 : this.parsePositiveInteger(limit, 'limit', 20, 50)
+    return this.recommendations.list({ userId, history: (history ?? '').split(',').map((value) => value.trim()).filter(Boolean), limit: parsedLimit })
+  }
+
+  @Get('topics')
+  topics() { return this.service.topics() }
+
+  @Get('topics/:id')
+  topic(@Param('id') id: string) { return this.service.topic(id) }
 
   @Get(':id')
   find(@Param('id') id: string) { return this.service.find(id) }

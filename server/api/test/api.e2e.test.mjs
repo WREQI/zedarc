@@ -52,6 +52,25 @@ test('health and compatibility-first response contract', async () => {
   assert.equal(quotes.body.length, 2)
 })
 
+test('limit board rankings use explicit limit status and prices', async () => {
+  const up = await request('/api/market/rankings?type=limit-up&limit=100')
+  const down = await request('/api/market/rankings?type=limit-down&limit=100')
+  assert.equal(up.response.status, 200)
+  assert.equal(down.response.status, 200)
+  assert.ok(Array.isArray(up.body))
+  assert.ok(Array.isArray(down.body))
+  for (const row of up.body) {
+    assert.equal(row.limitStatus, 'up')
+    assert.ok(row.limitUp === null || typeof row.limitUp === 'number')
+    assert.ok(row.limitDown === null || typeof row.limitDown === 'number')
+  }
+  for (const row of down.body) {
+    assert.equal(row.limitStatus, 'down')
+    assert.ok(row.limitUp === null || typeof row.limitUp === 'number')
+    assert.ok(row.limitDown === null || typeof row.limitDown === 'number')
+  }
+})
+
 test('auth, watchlist and trade contracts', async () => {
   const login = await request('/api/auth/login', {
     method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ phone: '13800138000', code: '123456' }),
