@@ -1411,7 +1411,7 @@ var B = { headers: { "Content-Type": "application/json" } },
         this.path = e.route;
       },
       initParams: function () {
-        this.appName = getApp().globalData.APPNAME;
+        this.appName = (k.safeGlobalData || {}).APPNAME || "wzqxcx";
         var t = getCurrentPages(),
           e = t[t.length - 1] || {},
           n = e.options || {},
@@ -1428,8 +1428,8 @@ var B = { headers: { "Content-Type": "application/json" } },
               done: !1,
               visible: !0,
             }),
-            (getApp().globalData.taskConfig = this.mpTask))
-          : (this.mpTask = getApp().globalData.taskConfig || "");
+            ((k.safeGlobalData || {}).taskConfig = this.mpTask))
+          : (this.mpTask = (k.safeGlobalData || {}).taskConfig || "");
         var o = e.options || {},
           c = o.share_code,
           u = o.share_type;
@@ -1853,7 +1853,7 @@ var B = { headers: { "Content-Type": "application/json" } },
                                           case 15:
                                             (t.t0 =
                                               (this.options.resetData &&
-                                                (getApp().globalData.taskConfig =
+                                                ((k.safeGlobalData || {}).taskConfig =
                                                   b(l({}, this.mpTask), {
                                                     done: !0,
                                                   })),

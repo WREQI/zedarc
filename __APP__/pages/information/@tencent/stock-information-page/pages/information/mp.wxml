@@ -130,26 +130,5 @@
       uI="6895b61a-8"
     ></yaowen-feedback-dialog>
   </view>
-  <block wx:if="{{w}}">
-    <profile-pop
-      bind:__l="__l"
-      bindhideProfilePop="{{x}}"
-      class="data-v-6895b61a"
-      uI="6895b61a-9"
-      uP="{{y}}"
-      wx:if="{{y}}"
-    ></profile-pop>
-  </block>
-  <block wx:if="{{z}}">
-    <nav-button
-      bind:__l="__l"
-      bindgoEdit="{{B}}"
-      bindshowProfilePop="{{C}}"
-      class="r data-v-6895b61a"
-      uI="6895b61a-10"
-      uP="{{D}}"
-      uR="navBtn"
-      wx:if="{{D}}"
-    ></nav-button>
-  </block>
+
 </view>

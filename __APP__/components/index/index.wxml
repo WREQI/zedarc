@@ -1,15 +1,5 @@
 <popup bindcancel="pCancel" bindconfirm="pConfirm" isShowPop="{{isShowPop}}">
   <view slot="after">
-    <captcha
-      aidEncrypted="{{aidEncrypted}}"
-      appId="{{appId||appid}}"
-      bind:close="handlerClose"
-      bind:error="handlerError"
-      bind:ready="handlerReady"
-      bind:verify="handlerVerify"
-      id="captcha"
-      lang="{{lang}}"
-      themeColor="{{themeColor}}"
-    ></captcha>
+    <view class="captcha-disabled">验证码校验已临时关闭</view>
   </view>
 </popup>

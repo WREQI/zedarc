@@ -1,0 +1,56 @@
+<view class="{{['fake-input-container','^fake-input-container',E,F]}}">
+  <view class="fake-input-placeholder ^fake-input-placeholder" wx:if="{{a}}">
+    <text>{{b}}</text>
+  </view>
+  <view
+    bindtap="{{e}}"
+    catchtouchmove="{{f}}"
+    class="mask"
+    hidden="{{!d}}"
+    wx:if="{{c}}"
+  ></view>
+  <view bindtap="{{h}}" class="mask" hidden="{{!g}}" wx:else></view>
+  <view
+    bindtap="{{s}}"
+    bindtouchend="{{v}}"
+    catchtouchmove="{{t}}"
+    class="{{['fake-input','^fake-input',r]}}"
+    ref="inputRef"
+  >
+    <label class="magnifying-glass" wx:if="{{i}}">
+      <text class="cursor" wx:if="{{j}}"></text>
+      <block wx:for="{{k}}" wx:for-item="i" wx:key="g">
+        <text class="{{['cursor',i.b]}}" wx:if="{{i.a}}"></text>
+        <text data-index="{{i.d}}" space="nbsp">{{i.c}}</text>
+        <text class="{{['cursor',i.f]}}" wx:if="{{i.e}}"></text>
+      </block>
+    </label>
+    <label class="custom-js-value-before ^custom-js-value-before" wx:if="{{l}}"
+      >{{m}}</label
+    >
+    <label class="js-value custom-js-value ^custom-js-value">
+      <text class="cursor" wx:if="{{n}}"></text>
+      <block wx:for="{{o}}" wx:for-item="i" wx:key="h">
+        <text class="{{['cursor',i.b]}}" wx:if="{{i.a}}"></text>
+        <text data-index="{{i.e}}" space="nbsp" wx:if="{{i.c}}">{{i.d}}</text>
+        <label class="fake-input-dot" wx:else></label>
+        <text class="{{['cursor',i.g]}}" wx:if="{{i.f}}"></text>
+      </block>
+    </label>
+    <label class="custom-js-value-after ^custom-js-value-after" wx:if="{{p}}"
+      >{{q}}</label
+    >
+  </view>
+  <st-keyboard
+    bind:__l="__l"
+    bindarrow="{{y}}"
+    bindclear="{{A}}"
+    bindclose="{{B}}"
+    bindconfirm="{{C}}"
+    binddelete="{{z}}"
+    bindinput="{{x}}"
+    uI="ef0755fc-0"
+    uP="{{D}}"
+    wx:if="{{w}}"
+  ></st-keyboard>
+</view>

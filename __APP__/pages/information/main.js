@@ -33,12 +33,11 @@ var e = require("../../@babel/runtime/helpers/createForOfIteratorHelper"),
   m = require("@tencent/stock-halfscreen-editor/hooks/outter/useHalfEditor.js"),
   f = {
     components: {
-      information: function () {
-        return "./@tencent/stock-information-page/pages/information/mp.js".then(
-          function (e) {
-            return e.L2RhdGEvd29ya3NwYWNlL3AtOTk2MDBkZTM0NmU5NDU4YTkwOTE1MjY2YjE1MzQzNDkvODQzNjQvbm9kZV9tb2R1bGVzL0B0ZW5jZW50L3N0b2NrLWluZm9ybWF0aW9uLXBhZ2UvcGFnZXMvaW5mb3JtYXRpb24vbXAudnVl;
-          }
-        );
+      information: {
+        methods: {
+          onMpPageShow: function () {},
+          onMpPageHide: function () {},
+        },
       },
       CommentPanel: function () {
         return "./@tencent/stock-information-page/components/commentPanel.js";

@@ -38,7 +38,17 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
       exposure: "discover.search.bar_exposure",
     },
   },
-  o = getApp().globalData,
+  o =
+    ((typeof getApp === "function" && getApp()) || {}).globalData || {
+      safeTop: 0,
+      actData: { isAddMyXcxEnable: !1 },
+      init: function (e) {
+        e && e();
+      },
+      navigateTo: function (e) {
+        wx.navigateTo(e || {});
+      },
+    },
   r = {
     components: {
       GuidePullDownAccess: function () {

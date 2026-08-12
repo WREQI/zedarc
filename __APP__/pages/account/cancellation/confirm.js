@@ -65,7 +65,7 @@ var e = require("../../../@babel/runtime/helpers/regeneratorRuntime"),
                 for (;;)
                   switch ((e.prev = e.next)) {
                     case 0:
-                      this.selectComponent("#captcha").show();
+                      this.handleCancelAccount("", "");
                     case 1:
                     case "end":
                       return e.stop();
@@ -167,8 +167,7 @@ Array ||
   (
     t.resolveComponent("mp-privacy-dialog") +
     t.resolveComponent("stock-privacy-dialog") +
-    t.resolveComponent("ConfirmModal") +
-    t.resolveComponent("t-captcha")
+    t.resolveComponent("ConfirmModal")
   )();
 var a = t._export_sfc(o, [
   [
@@ -191,7 +190,7 @@ var a = t._export_sfc(o, [
           "confirm-text": c.confirmModalOpt.confirmText,
           "cancel-text": c.confirmModalOpt.cancelText,
         }),
-        i: t.o(r.handlerCaptchaVerify, 256),
+
       };
     },
   ],

@@ -1,0 +1,37 @@
+<view class="st-keyboard data-v-ae6545fa">
+  <st-number-keyboard
+    bind:__l="__l"
+    bindclear="{{d}}"
+    bindconfirm="{{e}}"
+    binddelete="{{c}}"
+    bindinput="{{b}}"
+    bindswitchKeyboard="{{a}}"
+    class="data-v-ae6545fa"
+    uI="ae6545fa-0"
+    uP="{{f}}"
+    wx:if="{{f}}"
+  ></st-number-keyboard>
+  <st-letter-keyboard
+    bind:__l="__l"
+    bindconfirm="{{j}}"
+    binddelete="{{i}}"
+    bindinput="{{h}}"
+    bindswitchKeyboard="{{g}}"
+    class="data-v-ae6545fa"
+    uI="ae6545fa-1"
+    uP="{{k}}"
+    wx:if="{{k}}"
+  ></st-letter-keyboard>
+  <st-symbol-keyboard
+    bind:__l="__l"
+    bindconfirm="{{o}}"
+    binddelete="{{n}}"
+    bindinput="{{m}}"
+    bindsetSymbols="{{p}}"
+    bindswitchKeyboard="{{l}}"
+    class="data-v-ae6545fa"
+    uI="ae6545fa-2"
+    uP="{{q}}"
+    wx:if="{{q}}"
+  ></st-symbol-keyboard>
+</view>

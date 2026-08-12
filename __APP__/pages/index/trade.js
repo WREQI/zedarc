@@ -62,7 +62,15 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
             : e.handleResize) || t.call(e);
     },
   },
-  i = getApp().globalData,
+  i = (function () {
+    var app, fallback;
+    try {
+      app = typeof getApp === "function" && getApp();
+    } catch (e) {}
+    fallback =
+      (typeof global !== "undefined" && global.__SAFE_GLOBAL_DATA__) || {};
+    return (app && app.globalData) || fallback;
+  })(),
   r = {
     components: {
       Asset: function () {
@@ -96,7 +104,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
         }),
         p =
           (null ==
-          (n = null == (e = getApp().globalData.detect) ? void 0 : e.env)
+          (n = null == (e = i.detect) ? void 0 : e.env)
             ? void 0
             : n.IS_PCWEIXIN) || !1;
       p &&
@@ -175,7 +183,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
       var t = e.stat_data,
         n = e.stat;
       (this.statData = t || n || ""),
-        (getApp().globalData.__tradeTabTime = Date.now());
+        (i.__tradeTabTime = Date.now());
     },
     onShow: function () {
       var e = this;
@@ -215,7 +223,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
       (this.pageHide = !0),
         this.removeEvent(),
         this.clearParams(),
-        (getApp().globalData.__tradeTabTime = null);
+        (i.__tradeTabTime = null);
     },
     computed: {
       assetStyle: function () {
@@ -234,7 +242,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
     },
     onTabItemTap: function () {
       t.Request.reportMTAData({ eventName: "xcx_trade_click" }),
-        (getApp().globalData.__tradeTabTime = Date.now());
+        (i.__tradeTabTime = Date.now());
     },
     methods: {
       handleErrorRetry: function () {
@@ -317,7 +325,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
         if (this.isPc)
           return (
             (n.scrollHeight = o),
-            (getApp().globalData.tradeTabScrollHeight = n.scrollHeight),
+            (i.tradeTabScrollHeight = n.scrollHeight),
             void (
               0 === o &&
               i.mpReporter.reportEvent("SET_CONTAINER_HEIGHT_ZERO", { ext3: o })
@@ -334,7 +342,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
             }),
             (a = 0)),
             (n.scrollHeight = a),
-            (getApp().globalData.tradeTabScrollHeight = a);
+            (i.tradeTabScrollHeight = a);
         };
         try {
           this.createSelectorQuery()
@@ -363,7 +371,7 @@ var e = require("../../@babel/runtime/helpers/regeneratorRuntime"),
             });
         } catch (e) {
           (n.scrollHeight = 0),
-            (getApp().globalData.tradeTabScrollHeight = 0),
+            (i.tradeTabScrollHeight = 0),
             i.mpReporter.reportEvent("SCROLL_HEIGHT_ERROR", {
               ext1: o,
               ext2:

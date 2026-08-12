@@ -1,0 +1,14 @@
+<view class="{{['st-stepper','border--surround',N,O]}}">
+    <view bindtap="{{e}}" bindtouchcancel="{{h}}" bindtouchend="{{g}}" bindtouchstart="{{f}}" class="{{[b,c,d]}}" data-type="minus">
+        <label class="{{[a,'icon','icon-minus']}}"></label>
+    </view>
+    <view class="{{['stepper__input','stepper__input--pc',w]}}" wx:if="{{i}}">
+        <label class="stepper__input-prefix" wx:if="{{j}}">{{k}}</label>
+        <input bindblur="{{s}}" bindfocus="{{r}}" bindinput="{{q}}" class="input-class stepper__input-inner" disabled="{{n}}" maxlength="{{o}}" ref="input" style="{{'width:'+p}}" type="{{l}}" value="{{m}}" wx:if="{{r0}}"></input>
+        <label class="stepper__input-after" wx:if="{{t}}">{{v}}</label>
+    </view>
+    <custom-input bind:__l="__l" bindblur="{{A}}" bindbuy="{{C}}" bindfocus="{{y}}" bindinput="{{z}}" bindnext="{{B}}" bindsell="{{D}}" class="r" style="width:100%" uI="ee763b32-0" uP="{{E||''}}" uR="input" wx:else></custom-input>
+    <view bindtap="{{J}}" bindtouchcancel="{{M}}" bindtouchend="{{L}}" bindtouchstart="{{K}}" class="{{[G,H,I]}}" data-type="plus">
+        <label class="{{[F,'icon','icon-plus']}}"></label>
+    </view>
+</view>

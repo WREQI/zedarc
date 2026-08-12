@@ -5515,7 +5515,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/CommunityList.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/CommunityList.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/Empty";
 __wxRouteBegin = true;
@@ -5574,7 +5574,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/Empty.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/Empty.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/HKStocksList";
 __wxRouteBegin = true;
@@ -5789,7 +5789,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/HKStocksList.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/HKStocksList.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/RecomSpliter";
 __wxRouteBegin = true;
@@ -5852,7 +5852,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/RecomSpliter.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/RecomSpliter.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/Supporter";
 __wxRouteBegin = true;
@@ -5916,7 +5916,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/Supporter.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/Supporter.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/Tab/mp/index";
 __wxRouteBegin = true;
@@ -6003,7 +6003,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/Tab/mp/index.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/Tab/mp/index.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/choose/MyChooseList";
 __wxRouteBegin = true;
@@ -6318,7 +6318,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/choose/MyChooseList.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/choose/MyChooseList.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/choose/myChooseListContent";
 __wxRouteBegin = true;
@@ -6491,7 +6491,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/choose/myChooseListContent.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/choose/myChooseListContent.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/classBar";
 __wxRouteBegin = true;
@@ -6571,7 +6571,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/classBar.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/classBar.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/commentPanel";
 __wxRouteBegin = true;
@@ -6764,7 +6764,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/commentPanel.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/commentPanel.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/currentDay/CurrentDayList";
 __wxRouteBegin = true;
@@ -7000,7 +7000,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/currentDay/CurrentDayList.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/currentDay/CurrentDayList.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/currentDay/currentDayListContent";
 __wxRouteBegin = true;
@@ -7103,7 +7103,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/currentDay/currentDayListContent.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/currentDay/currentDayListContent.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/replyBox";
 __wxRouteBegin = true;
@@ -7274,7 +7274,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/replyBox.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/replyBox.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/video/customVideo";
 __wxRouteBegin = true;
@@ -8565,7 +8565,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/video/customVideo.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/video/customVideo.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/video/index";
 __wxRouteBegin = true;
@@ -9934,7 +9934,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/video/index.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/video/index.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/BigItem";
 __wxRouteBegin = true;
@@ -10047,7 +10047,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/BigItem.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/BigItem.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/GoodAndBadNews";
 __wxRouteBegin = true;
@@ -10288,7 +10288,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/GoodAndBadNews.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/GoodAndBadNews.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/TopHeadline";
 __wxRouteBegin = true;
@@ -10844,7 +10844,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/TopHeadline.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/TopHeadline.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/YaoWenList";
 __wxRouteBegin = true;
@@ -12129,7 +12129,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/YaoWenList.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/YaoWenList.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/videoCard";
 __wxRouteBegin = true;
@@ -12654,7 +12654,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/videoCard.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/videoCard.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/yaoWenListContent";
 __wxRouteBegin = true;
@@ -13041,7 +13041,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/yaoWenListContent.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/yaoWenListContent.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackDialog";
 __wxRouteBegin = true;
@@ -13208,7 +13208,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackDialog.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackDialog.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackItem";
 __wxRouteBegin = true;
@@ -13320,7 +13320,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackItem.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/yaowenFeedbackItem.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenItem";
 __wxRouteBegin = true;
@@ -13624,7 +13624,7 @@ define(
       "pages/information/@tencent/stock-information-page/components/yaoWen/yaowenItem.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/components/yaoWen/yaowenItem.js");
+
 __wxRoute =
   "pages/information/@tencent/stock-information-page/pages/information/mp";
 __wxRouteBegin = true;
@@ -17299,7 +17299,8 @@ define(
       "pages/information/@tencent/stock-information-page/pages/information/mp.js",
   }
 );
-require("pages/information/@tencent/stock-information-page/pages/information/mp.js");
+// Demo build: the extracted stock-information page has incomplete exports.
+// Keep the surrounding information page available without loading it.
 __wxRoute = "pages/information/@tencent/stock-news-community-list/Index";
 __wxRouteBegin = true;
 __wxAppCurrentFile__ =
@@ -18530,12 +18531,11 @@ define(
       m = require("@tencent/stock-halfscreen-editor/hooks/outter/useHalfEditor.js"),
       f = {
         components: {
-          information: function () {
-            return "./@tencent/stock-information-page/pages/information/mp.js".then(
-              function (e) {
-                return e.L2RhdGEvd29ya3NwYWNlL3AtOTk2MDBkZTM0NmU5NDU4YTkwOTE1MjY2YjE1MzQzNDkvODQzNjQvbm9kZV9tb2R1bGVzL0B0ZW5jZW50L3N0b2NrLWluZm9ybWF0aW9uLXBhZ2UvcGFnZXMvaW5mb3JtYXRpb24vbXAudnVl;
-              }
-            );
+          information: {
+            methods: {
+              onMpPageShow: function () {},
+              onMpPageHide: function () {},
+            },
           },
           CommentPanel: function () {
             return "./@tencent/stock-information-page/components/commentPanel.js";

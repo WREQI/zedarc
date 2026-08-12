@@ -1,0 +1,10 @@
+<view class="st-symbol-keyboard data-v-163f2578" hidden="{{!c}}">
+  <full-keyboard
+    bind:__l="__l"
+    bindpress="{{a}}"
+    class="data-v-163f2578"
+    uI="163f2578-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></full-keyboard>
+</view>

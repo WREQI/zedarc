@@ -1,0 +1,32 @@
+<view class="{{['st-pull-refresh',m]}}">
+  <view
+    bindtouchcancel="{{l}}"
+    bindtouchend="{{k}}"
+    bindtouchmove="{{j}}"
+    bindtouchstart="{{i}}"
+    class="st-pull-refresh__track"
+    style="{{h}}"
+  >
+    <view class="st-pull-refresh__head">
+      <slot name="pull-refresh" wx:if="{{$slots['pull-refresh']}}"></slot>
+      <view class="st-pull-refresh__pull-refresh-bar" wx:else>
+        <view class="st-pull-refresh__icon-container">
+          <view class="{{[b,'progress']}}" wx:if="{{a}}"></view>
+          <label class="icon icon-logo" wx:elif="{{c}}"></label>
+          <label class="finish icon icon-logo-stable" wx:elif="{{d}}"></label>
+          <block wx:else>
+            <label class="icon icon-logo"></label>
+            <view class="animation-icon">
+              <label
+                class="finish icon icon-logo-stable"
+                style="{{'width:'+e}}"
+              ></label>
+            </view>
+          </block>
+        </view>
+        <view class="st-pull-refresh__pull-refresh-text">{{f}}</view>
+      </view>
+    </view>
+    <slot></slot>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+@import "/app.wxss";
+[name="mp-scale"] .mp-popup {
+  z-index: 103;
+}
+.mp-dialog__confirm.active {
+  color: var(--color-primary-1);
+}
+.icon-close {
+  color: #d8d8d8;
+  display: block;
+  padding-left: 0.4rem;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.64rem;
+  z-index: 2;
+}

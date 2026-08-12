@@ -1,0 +1,9 @@
+<view class="mp-loading" style="{{d}}">
+  <label class="mp-loading__spinner mp-loading__spinner--spinner" wx:if="{{a}}">
+    <view class="item" wx:for="{{b}}" wx:key="a"></view>
+  </label>
+  <label
+    class="mp-loading__spinner mp-loading__spinner--circular"
+    wx:if="{{c}}"
+  ></label>
+</view>

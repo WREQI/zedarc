@@ -1,0 +1,36 @@
+<view
+  class="{{['data-v-66bbd1d3','st-full-keyboard',b&&'st-full-keyboard--embedded']}}"
+>
+  <view class="st-full-keyboard__body data-v-66bbd1d3">
+    <view class="st-full-keyboard__content data-v-66bbd1d3">
+      <view
+        class="{{['data-v-66bbd1d3','st-full-keyboard__row',row.b&&'st-full-keyboard__pl',row.c&&'st-full-keyboard__pr']}}"
+        wx:for="{{a}}"
+        wx:for-item="row"
+        wx:key="d"
+      >
+        <view
+          catchtap="{{v1.h}}"
+          class="{{['data-v-66bbd1d3','st-key',v1.g&&v1.f]}}"
+          wx:for="{{row.a}}"
+          wx:for-item="v1"
+          wx:key="e"
+        >
+          <label
+            class="icon icon-delete data-v-66bbd1d3"
+            wx:if="{{v1.a}}"
+          ></label>
+          <label
+            class="icon icon-shift-lowercase data-v-66bbd1d3"
+            wx:elif="{{v1.b}}"
+          ></label>
+          <label
+            class="icon icon-shift-uppercase data-v-66bbd1d3"
+            wx:elif="{{v1.c}}"
+          ></label>
+          <text class="data-v-66bbd1d3" wx:else>{{v1.d}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

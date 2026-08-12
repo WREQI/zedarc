@@ -7,8 +7,10 @@ var p = require("./platforms/setup.js"),
   t = require("./adapter/getApp.js"),
   s = require("./platforms/mp-weixin/setup.js");
 Math;
+var __sharedGlobalData =
+  (typeof global !== "undefined" && global.__SAFE_GLOBAL_DATA__) || {};
 var a = {
-  globalData: {
+  globalData: Object.assign(__sharedGlobalData, {
     from: "",
     login: {
       qluin: "",
@@ -24,7 +26,7 @@ var a = {
     skeySign: "",
     isSupportPlugin: !1,
     buildH5Ver: "",
-  },
+  }),
 };
 function u() {
   var t = e.createSSRApp(a);

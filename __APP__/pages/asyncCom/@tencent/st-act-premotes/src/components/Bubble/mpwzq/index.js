@@ -22,7 +22,7 @@ var t = require("../../../../../../../../@babel/runtime/helpers/regeneratorRunti
     });
   },
   o = require("../../../../../../../../common/vendor.js"),
-  i = getApp().globalData,
+  i = o.safeGlobalData || {},
   r = "growth-user.behavior.union",
   n = {
     inject: { hqBridge: {} },

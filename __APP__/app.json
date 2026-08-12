@@ -1,98 +1,5 @@
 {
-  "plugins": {
-    "captcha": {
-      "version": "2.1.3",
-      "provider": "wx1fe8d9a3cb067a75",
-      "subpackage": "/pages/account/"
-    },
-    "tencentvideo": {
-      "version": "2.6.1",
-      "provider": "wxa75efa648b60994b",
-      "subpackage": "/pages/information/"
-    },
-    "QCloudAIVoice": {
-      "version": "2.2.6",
-      "provider": "wx3e17776051baf153",
-      "subpackage": "/pages/searchAi/"
-    },
-    "zhaoshang-trade": {
-      "version": "0.3.50",
-      "provider": "wx821cd4a621f449e7",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/zhaoshang/"
-    },
-    "hualin-trade": {
-      "version": "0.3.45",
-      "provider": "wx8c0059a9f61679d1",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/hualin/"
-    },
-    "guoxin-trade": {
-      "version": "1.0.21",
-      "provider": "wx5e94b5ebebe246b0",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/guoxin/"
-    },
-    "guojin-trade": {
-      "version": "1.0.29",
-      "provider": "wx93273579df1046e3",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/guojin/"
-    },
-    "zhongjincaifu-trade": {
-      "version": "1.0.84",
-      "provider": "wxe1e9715c9b3f7904",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/zhongjincaifu/"
-    },
-    "guangfa-trade": {
-      "version": "1.0.17",
-      "provider": "wx8d36debd2261346f",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/guangfa/"
-    },
-    "zhongxinjiantou-trade": {
-      "version": "1.0.28",
-      "provider": "wx8182de72a1713fb5",
-      "export": "exports/plugin.js",
-      "genericsImplementation": {
-        "webview-index": {
-          "main-webview": "/components/webView"
-        }
-      },
-      "subpackage": "/pages/zhongxinjiantou/"
-    }
-  },
+
   "resizable": true,
   "preloadRule": {
     "pages/quote/quote": {
@@ -325,13 +232,7 @@
     },
     {
       "root": "pages/account/",
-      "plugins": {
-        "captcha": {
-          "version": "2.1.3",
-          "provider": "wx1fe8d9a3cb067a75",
-          "subpackage": "/pages/account/"
-        }
-      },
+
       "pages": [
         "about",
         "setting",
@@ -371,13 +272,7 @@
     },
     {
       "root": "pages/information/",
-      "plugins": {
-        "tencentvideo": {
-          "version": "2.6.1",
-          "provider": "wxa75efa648b60994b",
-          "subpackage": "/pages/information/"
-        }
-      },
+
       "pages": [
         "index",
         "NewsColumnEdit"
@@ -406,13 +301,7 @@
     },
     {
       "root": "pages/searchAi/",
-      "plugins": {
-        "QCloudAIVoice": {
-          "version": "2.2.6",
-          "provider": "wx3e17776051baf153",
-          "subpackage": "/pages/searchAi/"
-        }
-      },
+
       "pages": [
         "main",
         "share",
@@ -587,19 +476,7 @@
     },
     {
       "root": "pages/zhaoshang/",
-      "plugins": {
-        "zhaoshang-trade": {
-          "version": "0.3.50",
-          "provider": "wx821cd4a621f449e7",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/zhaoshang/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx821cd4a621f449e7/platforms/mp-weixin/plugin-component",
@@ -660,19 +537,7 @@
     },
     {
       "root": "pages/hualin/",
-      "plugins": {
-        "hualin-trade": {
-          "version": "0.3.45",
-          "provider": "wx8c0059a9f61679d1",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/hualin/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx8c0059a9f61679d1/platforms/mp-weixin/plugin-component",
@@ -733,19 +598,7 @@
     },
     {
       "root": "pages/guoxin/",
-      "plugins": {
-        "guoxin-trade": {
-          "version": "1.0.21",
-          "provider": "wx5e94b5ebebe246b0",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/guoxin/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx5e94b5ebebe246b0/platforms/mp-weixin/plugin-component",
@@ -807,19 +660,7 @@
     },
     {
       "root": "pages/guojin/",
-      "plugins": {
-        "guojin-trade": {
-          "version": "1.0.29",
-          "provider": "wx93273579df1046e3",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/guojin/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx93273579df1046e3/platforms/mp-weixin/plugin-component",
@@ -881,19 +722,7 @@
     },
     {
       "root": "pages/zhongjincaifu/",
-      "plugins": {
-        "zhongjincaifu-trade": {
-          "version": "1.0.84",
-          "provider": "wxe1e9715c9b3f7904",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/zhongjincaifu/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wxe1e9715c9b3f7904/platforms/mp-weixin/plugin-component",
@@ -955,19 +784,7 @@
     },
     {
       "root": "pages/guangfa/",
-      "plugins": {
-        "guangfa-trade": {
-          "version": "1.0.17",
-          "provider": "wx8d36debd2261346f",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/guangfa/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx8d36debd2261346f/platforms/mp-weixin/plugin-component",
@@ -1027,19 +844,7 @@
     },
     {
       "root": "pages/zhongxinjiantou/",
-      "plugins": {
-        "zhongxinjiantou-trade": {
-          "version": "1.0.28",
-          "provider": "wx8182de72a1713fb5",
-          "export": "exports/plugin.js",
-          "genericsImplementation": {
-            "webview-index": {
-              "main-webview": "/components/webView"
-            }
-          },
-          "subpackage": "/pages/zhongxinjiantou/"
-        }
-      },
+
       "pages": [
         "index",
         "__plugin__/wx8182de72a1713fb5/platforms/mp-weixin/plugin-component",

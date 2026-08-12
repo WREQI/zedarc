@@ -1,0 +1,12 @@
+@import "/app.wxss";
+.st-cell-group {
+  background-color: var(--fill-2);
+  padding: 0.026667rem 0 0;
+}
+.st-cell-group--noborder {
+  border: none;
+}
+.st-cell-group--noborder:after,
+.st-cell-group--noborder:before {
+  display: none;
+}

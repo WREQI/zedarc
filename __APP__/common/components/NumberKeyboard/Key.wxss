@@ -1,0 +1,85 @@
+@import "/app.wxss";
+.st-key {
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  align-items: center;
+  background-color: var(--fill-2);
+  border-radius: 0.106667rem;
+  color: var(--text-color-1);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.64rem;
+  height: 1.2rem;
+  justify-content: center;
+  line-height: 1.5;
+  outline: none;
+}
+.st-key--large {
+  -webkit-box-flex: 2;
+  bottom: 0.266667rem;
+  flex: 2;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0.266667rem;
+  top: 0;
+}
+.st-key--large.st-key--red {
+  background-color: var(--color-red);
+}
+.st-key--large.st-key--red:active {
+  background-color: #c43031;
+}
+.st-key--large.st-key--green {
+  background-color: var(--color-green);
+}
+.st-key--large.st-key--green:active {
+  background-color: #1a8a34;
+}
+.st-key--large.st-key--sell {
+  background-color: var(--color-sell);
+}
+.st-key--large.st-key--sell:active {
+  background-color: #e0791b;
+}
+.st-key--large.st-key--bottom-lite {
+  bottom: 0.213333rem;
+}
+.st-key--blue,
+.st-key--delete,
+.st-key--green,
+.st-key--red,
+.st-key--switch-keyboard {
+  font-size: 0.426667rem;
+}
+.st-key__num {
+  font-size: 0.64rem;
+  font-weight: 400;
+  line-height: 0.76rem;
+}
+.st-key:active {
+  background-color: #e9ebf0;
+}
+[data-theme="dark"] .st-key:active {
+  background: #191e27;
+}
+.st-key--blue {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+}
+.st-key--blue:active {
+  background-color: var(--color-primary-active);
+}
+.st-key__collapse-icon,
+.st-key__delete-icon {
+  font-size: 0.48rem;
+}
+.st-key--switch-keyboard {
+  background-color: rgba(152, 160, 179, 0.2);
+}
+[data-theme="dark"] .st-key--switch-keyboard {
+  background-color: rgba(105, 115, 140, 0.2);
+}

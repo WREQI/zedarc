@@ -1,6 +1,6 @@
 var e = require("../../../@babel/runtime/helpers/regeneratorRuntime"),
   t = require("../../../common/vendor.js");
-getApp().globalData;
+
 var n = {
   props: {
     visible: { type: Boolean },

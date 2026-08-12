@@ -199,42 +199,12 @@ $gwx6_XC_12 = (function (
         );
         _(a0E, oDF);
       }
-      var tAF = _v();
-      _(o8E, tAF);
-      if (_oz(z, 17, e, s, gg)) {
-        tAF.wxVkey = 1;
-        var xEF = _mz(
-          z,
-          "t-captcha",
-          [
-            "appId",
-            18,
-            "bind:__l",
-            1,
-            "bindverify",
-            2,
-            "class",
-            3,
-            "id",
-            4,
-            "uI",
-            5,
-            "uT",
-            6,
-          ],
-          [],
-          e,
-          s,
-          gg
-        );
-        _(tAF, xEF);
-      }
+
       l9E.wxXCkey = 1;
       l9E.wxXCkey = 3;
       a0E.wxXCkey = 1;
       a0E.wxXCkey = 3;
-      tAF.wxXCkey = 1;
-      tAF.wxXCkey = 3;
+
       _(r, o8E);
       return r;
     };
@@ -545,7 +515,7 @@ define(
                     for (;;)
                       switch ((e.prev = e.next)) {
                         case 0:
-                          this.selectComponent("#captcha").show();
+                          this.handleCancelAccount("", "");
                         case 1:
                         case "end":
                           return e.stop();
@@ -651,8 +621,7 @@ define(
       (
         t.resolveComponent("mp-privacy-dialog") +
         t.resolveComponent("stock-privacy-dialog") +
-        t.resolveComponent("ConfirmModal") +
-        t.resolveComponent("t-captcha")
+        t.resolveComponent("ConfirmModal")
       )();
     var a = t._export_sfc(o, [
       [
@@ -675,7 +644,7 @@ define(
               "confirm-text": c.confirmModalOpt.confirmText,
               "cancel-text": c.confirmModalOpt.cancelText,
             }),
-            i: t.o(r.handlerCaptchaVerify, 256),
+
           };
         },
       ],

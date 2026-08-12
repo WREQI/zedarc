@@ -1,0 +1,59 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{w}}"
+  uI="5ad2763c-0"
+  uP="{{x}}"
+  uS="{{['d']}}"
+  wx:if="{{x}}"
+>
+  <label
+    bindtap="{{b}}"
+    class="icon ^icon-close icon-close"
+    wx:if="{{a}}"
+  ></label>
+  <view class="{{['mp-dialog__header','^mp-dialog__header',g]}}" wx:if="{{c}}">
+    <slot name="title" wx:if="{{$slots.title}}"></slot>
+    <label class="mp-dialog__title ^mp-dialog__title" wx:else>{{d}}</label>
+    <slot name="subtitle" wx:if="{{$slots.subtitle}}"></slot>
+    <block wx:else>
+      <view class="mp-dialog__subtitle" wx:if="{{e}}">
+        <rich-text nodes="{{f}}"></rich-text>
+      </view>
+    </block>
+  </view>
+  <slot wx:if="{{$slots.d}}"></slot>
+  <view class="{{['^mp-dialog__message','mp-dialog__message',l]}}" wx:else>
+    <label
+      class="mp-dialog__message-text ^mp-dialog__message-text"
+      wx:if="{{h}}"
+      >{{i}}</label
+    >
+    <label
+      class="mp-dialog__message-text ^mp-dialog__message-text"
+      wx:if="{{j}}"
+    >
+      <rich-text nodes="{{k}}"></rich-text>
+    </label>
+  </view>
+  <view class="mp-dialog__footer ^mp-dialog__footer border--top ^border--top">
+    <slot name="btns" wx:if="{{$slots.btns}}"></slot>
+    <block wx:else>
+      <button
+        bindtap="{{p}}"
+        class="mp-dialog__button ^mp-dialog__button mp-dialog__cancel ^mp-dialog__cancel border--right"
+        loading="{{o}}"
+        wx:if="{{m}}"
+      >
+        {{n}}
+      </button>
+      <button
+        bindtap="{{v}}"
+        class="{{['mp-dialog__button','^mp-dialog__button','mp-dialog__confirm','^mp-dialog__confirm',t&&'active']}}"
+        loading="{{s}}"
+        wx:if="{{q}}"
+      >
+        {{r}}
+      </button>
+    </block>
+  </view>
+</popup>

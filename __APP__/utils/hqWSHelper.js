@@ -36,7 +36,21 @@ var e = require("../@babel/runtime/helpers/createForOfIteratorHelper"),
   s = !0,
   p = null,
   f = null,
-  v = getApp().globalData,
+  // DevTools may load this helper before the App instance is available.
+  v = (function () {
+    var app, fallback;
+    try {
+      app = typeof getApp === "function" && getApp();
+    } catch (e) {}
+    fallback =
+      (typeof global !== "undefined" && global.__SAFE_GLOBAL_DATA__) || {};
+    var data = (app && app.globalData) || fallback;
+    data.mpReporter = data.mpReporter || {
+      reportEvent: function () {},
+      log: function () {},
+    };
+    return data;
+  })(),
   d = {};
 function g(e, n) {
   return c(

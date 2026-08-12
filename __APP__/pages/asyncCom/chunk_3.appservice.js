@@ -283,7 +283,7 @@ define(
   ) {
     "use strict";
     var t = require("../../../../../../../../common/vendor.js");
-    getApp().globalData;
+
     var e = {
         props: ["premote"],
         data: function () {

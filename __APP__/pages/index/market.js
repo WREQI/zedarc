@@ -29,7 +29,15 @@ var e,
   a = require("../../module/delivery/deliveryMixin.js"),
   h = require("../../mixins/subpkg_reload.js"),
   u = n.useBrokerInfo().navigateToTrade,
-  c = getApp().globalData,
+  c = (function () {
+    var app, fallback;
+    try {
+      app = typeof getApp === "function" && getApp();
+    } catch (e) {}
+    fallback =
+      (typeof global !== "undefined" && global.__SAFE_GLOBAL_DATA__) || {};
+    return (app && app.globalData) || fallback;
+  })(),
   l = c.rpxToPx(208),
   g =
     (null == (t = null == (e = c.detect) ? void 0 : e.env)
@@ -130,9 +138,10 @@ var e,
       this.hqBridge.report(r),
         (this.skin = n.wx$1.getStorageSync("user/skin") || "white");
       try {
-        getApp().globalData.setSkin(function (e) {
-          i.skin = "black" === e ? "black" : "white";
-        });
+        c.setSkin &&
+          c.setSkin(function (e) {
+            i.skin = "black" === e ? "black" : "white";
+          });
       } catch (e) {}
       this.hqBridge.busOn("navigateToTrade", this.navigateToTrade),
         this.hqBridge.busOn("navigateToApplyIndex", this.navigateToApplyIndex);

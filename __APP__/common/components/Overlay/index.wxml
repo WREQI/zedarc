@@ -1,0 +1,10 @@
+<view
+  catch:touchmove
+  bindtap="{{d}}"
+  capture-bind:touchmove="{{e}}"
+  class="{{['^mp-overlay','^^mp-overlay','^^^mp-overlay','mp-overlay',b]}}"
+  hidden="{{!a}}"
+  style="{{c}}"
+>
+  <slot></slot>
+</view>

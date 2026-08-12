@@ -40,6 +40,23 @@ var e,
   },
   w = require("../../../common/vendor.js"),
   m = require("../../../mixins/subpkg_reload.js"),
+  safeGlobalData = (function (fallback) {
+    var app;
+    try {
+      app = typeof getApp === "function" ? getApp() : null;
+    } catch (e) {}
+    if (app && app.globalData) {
+      fallback = Object.assign({}, fallback, app.globalData, {
+        detect: Object.assign({}, fallback.detect, app.globalData.detect),
+        device: Object.assign({}, fallback.device, app.globalData.device),
+      });
+    }
+    return fallback;
+  })({
+    detect: { env: {} },
+    device: { windowHeight: 0 },
+    RequestApi: null,
+  }),
   S = new Date().getTime(),
   k = {
     fproduct_id: 10012,
@@ -155,7 +172,7 @@ var e,
           key: "getData",
           value: function (e, t) {
             var i = this,
-              n = getApp().globalData.RequestApi;
+              n = safeGlobalData.RequestApi;
             return n
               ? n.auth().then(function (n) {
                   return (i.userinfo = n), i.getDataWithAuth(e, t);
@@ -213,7 +230,7 @@ var e,
         {
           key: "getWindowHeight",
           value: function () {
-            return getApp().globalData.device.windowHeight;
+            return (safeGlobalData.device || {}).windowHeight || 0;
           },
         },
         {
@@ -289,7 +306,7 @@ var I = null,
       })())()),
     I),
   P =
-    (null == (t = null == (e = getApp().globalData.detect) ? void 0 : e.env)
+    (null == (t = null == (e = safeGlobalData.detect) ? void 0 : e.env)
       ? void 0
       : t.IS_PCWEIXIN) || !1,
   $ = {

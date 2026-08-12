@@ -408,40 +408,10 @@ $gwx6_XC_12 = (function (
       h1P.wxXCkey = 1;
       h1P.wxXCkey = 3;
       _(bUP, cZP);
-      var xWP = _v();
-      _(bUP, xWP);
-      if (_oz(z, 67, e, s, gg)) {
-        xWP.wxVkey = 1;
-        var h7Q = _mz(
-          z,
-          "t-captcha",
-          [
-            "appId",
-            68,
-            "bind:__l",
-            1,
-            "bindverify",
-            2,
-            "class",
-            3,
-            "id",
-            4,
-            "uI",
-            5,
-            "uT",
-            6,
-          ],
-          [],
-          e,
-          s,
-          gg
-        );
-        _(xWP, h7Q);
-      }
+
       oVP.wxXCkey = 1;
       oVP.wxXCkey = 3;
-      xWP.wxXCkey = 1;
-      xWP.wxXCkey = 3;
+
       _(r, bUP);
       return r;
     };

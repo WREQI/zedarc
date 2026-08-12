@@ -1,0 +1,26 @@
+<st-popup
+  bind:__l="__l"
+  class="st-notify st-notify-popup"
+  uI="7d5541c2-0"
+  uP="{{i}}"
+  uS="{{['d']}}"
+  wx:if="{{i}}"
+>
+  <view bindtap="{{g}}" catchtouchmove="{{h}}" class="st-notify__content">
+    <view class="st-notify__title" wx:if="{{a}}">
+      <slot name="icon" wx:if="{{$slots.icon}}"></slot>
+      <block wx:else>
+        <label
+          class="{{['st-notify__icon','order-notify-success',c]}}"
+          wx:if="{{b}}"
+        ></label>
+        <label
+          class="{{['st-notify__icon','order-notify-warning',d]}}"
+          wx:else
+        ></label> </block
+      >{{e}}</view
+    >
+    <view class="st-notify__msg">{{f}}</view>
+    <view class="st-notify__bar"></view>
+  </view>
+</st-popup>

@@ -17,17 +17,17 @@ Component({
   data: { isShowPop: !1 },
   methods: {
     show: function () {
-      var t = this.selectComponent("#captcha");
+      var t = this;
       this.setData({ isShowPop: !0 }, function () {
-        t.show();
+        // 本地调试临时跳过验证码插件，保持原有 verify 事件链路。
+        t.triggerEvent("verify", { ret: 0, ticket: "", randstr: "" });
       });
     },
     destroy: function () {
-      var t = this.selectComponent("#captcha");
-      this.setData({ isShowPop: !1 }), t.destroy();
+      this.setData({ isShowPop: !1 });
     },
     refresh: function () {
-      this.selectComponent("#captcha").refresh();
+      this.show();
     },
     handlerVerify: function (t) {
       this.triggerEvent("verify", t.detail);

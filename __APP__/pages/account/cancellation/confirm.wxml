@@ -78,14 +78,5 @@
       >
     </confirm-modal>
   </view>
-  <t-captcha
-    appId="199305359"
-    bind:__l="__l"
-    bindverify="{{i}}"
-    class="data-v-51146b7b"
-    id="captcha"
-    uI="51146b7b-3"
-    uT="m"
-    wx:if="{{r0}}"
-  ></t-captcha>
+
 </view>

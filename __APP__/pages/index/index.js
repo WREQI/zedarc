@@ -55,7 +55,15 @@ try {
   i.wx$1.getSystemInfoSync().platform;
 } catch (e) {}
 var p = i.userinfo || i.__CJS__import__0__,
-  v = getApp().globalData,
+  v = (function () {
+    var app, fallback;
+    try {
+      app = typeof getApp === "function" && getApp();
+    } catch (e) {}
+    fallback =
+      (typeof global !== "undefined" && global.__SAFE_GLOBAL_DATA__) || {};
+    return (app && app.globalData) || fallback;
+  })(),
   m = i.useBrokerInfo(),
   g = "portfolio_chart_hide";
 function y() {
@@ -188,7 +196,7 @@ var f = null,
         r = /(linux)/i.test(n.platform),
         a =
           (null ==
-          (t = null == (e = getApp().globalData.detect) ? void 0 : e.env)
+          (t = null == (e = v.detect) ? void 0 : e.env)
             ? void 0
             : t.IS_PCWEIXIN) || !1,
         s = y(),
@@ -566,7 +574,7 @@ var f = null,
           (this.isMiniChartHideSetting = i.wx$1.getStorageSync(g) || "0"),
           this.onChooseShow();
         try {
-          getApp().globalData.setSkin(function (t) {
+          v.setSkin && v.setSkin(function (t) {
             e.skin = "black" === t ? "black" : "white";
           });
         } catch (e) {}
@@ -841,7 +849,7 @@ var f = null,
       },
       activatePortfolioSubpkg: function () {
         var e = this,
-          t = getApp().globalData;
+          t = v;
         t.subpkgloadInfo || (t.subpkgloadInfo = {}),
           (this.subpkgName = "pages/indexSbg/"),
           (this.subpkgReady = !0),

@@ -1,0 +1,65 @@
+<popup
+  bind:__l="__l"
+  bindclickOverlay="{{t}}"
+  class="{{[s&&'st-action-sheet_picker']}}"
+  uI="ad379e42-0"
+  uP="{{v}}"
+  uS="{{['d']}}"
+  wx:if="{{v}}"
+>
+  <view name="st-action-sheet-move">
+    <view catchtap="{{r}}" class="st-action-sheet-panel st-safe-area-pb">
+      <view
+        class="{{['st-action-sheet-header','^st-action-sheet-header',k,l,m]}}"
+        hidden="{{!j}}"
+      >
+        <block wx:if="{{a}}">
+          <view
+            bindtap="{{b}}"
+            class="st-action-sheet-cancel ^st-action-sheet-cancel"
+          >
+            <label class="icon icon-close"></label>
+          </view>
+          <label
+            bindtap="{{d}}"
+            class="st-action-sheet-confirm ^st-action-sheet-confirm"
+          >
+            <rich-text nodes="{{c}}"></rich-text>
+          </label>
+        </block>
+        <view
+          bindtap="{{f}}"
+          class="st-action-sheet-cancel-right"
+          wx:elif="{{e}}"
+        >
+          <label class="icon icon-close"></label>
+        </view>
+        <view class="st-action-sheet-title-group">
+          <view class="st-action-sheet-title ^st-action-sheet-title">
+            <rich-text nodes="{{g}}"></rich-text>
+          </view>
+          <view class="st-action-sheet-subtitle" wx:if="{{h}}">
+            <rich-text nodes="{{i}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view class="st-action-sheet-content ^st-action-sheet-content">
+        <slot wx:if="{{$slots.d}}"></slot>
+        <view class="st-action-sheet-list" wx:else>
+          <view
+            bindtap="{{item.e}}"
+            class="{{['st-action-sheet-item','border--bottom',item.c,item.d]}}"
+            wx:for="{{n}}"
+            wx:key="b"
+          >
+            <rich-text nodes="{{item.a}}"></rich-text>
+          </view>
+        </view>
+      </view>
+      <view class="st-action-sheet-space"></view>
+      <view bindtap="{{q}}" class="st-action-sheet-cancel" wx:if="{{o}}"
+        >{{p}}</view
+      >
+    </view>
+  </view>
+</popup>

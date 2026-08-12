@@ -1,0 +1,63 @@
+@import "/app.wxss";
+.st-cell {
+  background-color: var(--fill-2);
+  box-sizing: border-box;
+  color: var(--text-color-1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0.426667rem;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 0.266667rem 0.4rem;
+  position: relative;
+  width: 100%;
+}
+.st-cell--noborder {
+  border: none;
+}
+.st-cell--noborder:after,
+.st-cell--noborder:before {
+  display: none;
+}
+.st-cell--label {
+  color: var(--text-color-3);
+  font-size: 0.32rem;
+  line-height: 1.2;
+}
+.st-cell--title {
+  max-width: 2.4rem;
+}
+.st-cell--title,
+.st-cell--value {
+  -webkit-box-flex: 1;
+  flex: 1;
+}
+.st-cell--value {
+  color: var(--text-color-2);
+  position: relative;
+  text-align: right;
+  vertical-align: middle;
+}
+.st-cell--value--alone {
+  text-align: left;
+}
+.st-cell--value uni-input {
+  height: 100%;
+  line-height: 100%;
+}
+.st-cell--right-icon.icon {
+  color: var(--text-color-3);
+  font-size: 0.426667rem;
+  line-height: 1.5;
+  margin-left: 0.066667rem;
+}
+.st-cell--right-icon.icon.left {
+  transform: rotate(180deg);
+}
+.st-cell--right-icon.icon.up {
+  transform: rotate(-90deg);
+}
+.st-cell--right-icon.icon.down {
+  transform: rotate(90deg);
+}

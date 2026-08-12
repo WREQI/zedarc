@@ -39,7 +39,23 @@ var t = require("../../../@babel/runtime/helpers/regeneratorRuntime"),
       exposure: "discover.search.bar_exposure",
     },
   },
-  o = getApp().globalData,
+  o =
+    ((typeof getApp === "function" && getApp()) || {}).globalData || {
+      safeTop: 0,
+      isPC: !1,
+      dynamicPlaceholder: "",
+      aiIndex: { allQuestion: [] },
+      actData: { isAddMyXcxEnable: !1 },
+      rpxToPx: function (e) {
+        return e;
+      },
+      init: function (e) {
+        e && e();
+      },
+      navigateTo: function (e) {
+        wx.navigateTo(e || {});
+      },
+    },
   a = "lite/search-ai-new-user",
   c = "lite/search-ai-displayed-text",
   s = 0,
@@ -59,7 +75,7 @@ var t = require("../../../@babel/runtime/helpers/regeneratorRuntime"),
         isAINewUser: n.StockBridge.getStorage(a) || { isNewUser: !0, time: 0 },
         isPC:
           (null ==
-          (t = null == (e = getApp().globalData.detect) ? void 0 : e.env)
+          (t = null == (e = o.detect) ? void 0 : e.env)
             ? void 0
             : t.IS_PCWEIXIN) || !1,
       };

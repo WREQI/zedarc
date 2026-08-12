@@ -1,0 +1,17 @@
+<view>
+  <view catchtap="{{k}}" class="{{['st-key',j]}}">
+    <block wx:if="{{a}}">
+      <block wx:if="{{b}}">{{c}}</block>
+      <text class="icon icon-delet st-key__delete-icon" wx:else></text>
+    </block>
+    <block wx:if="{{d}}">
+      <block wx:if="{{e}}">{{f}}</block>
+      <text class="icon icon-delet st-key__delete-icon" wx:else></text>
+    </block>
+    <text
+      class="icon icon-keyborad st-key__collapse-icon"
+      wx:elif="{{g}}"
+    ></text>
+    <text class="{{i}}" wx:else>{{h}}</text>
+  </view>
+</view>

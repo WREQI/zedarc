@@ -1,0 +1,10 @@
+<view class="st-letter-keyboard data-v-6a6fffbc" hidden="{{!c}}">
+  <full-keyboard
+    bind:__l="__l"
+    bindpress="{{a}}"
+    class="data-v-6a6fffbc"
+    uI="6a6fffbc-0"
+    uP="{{b}}"
+    wx:if="{{b}}"
+  ></full-keyboard>
+</view>

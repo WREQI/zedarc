@@ -1,0 +1,8 @@
+<view
+  bindtransitionend="{{e}}"
+  class="{{['transition',b,c]}}"
+  style="{{d}}"
+  wx:if="{{a}}"
+>
+  <slot></slot>
+</view>
