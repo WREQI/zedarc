@@ -46,7 +46,7 @@ async function save() {
       </section>
       <p v-if="error" class="error">{{ error }}</p><p v-if="message" class="success">{{ message }}</p>
     </template>
-    <section v-else class="empty-panel"><span class="empty-icon">◎</span><h2>请先登录</h2><p>登录后才能查看账户资料。当前没有可展示的用户信息。</p><RouterLink class="primary-button" to="/account">去登录</RouterLink></section>
+    <section v-else class="empty-panel"><span class="empty-icon">◎</span><h2>请先登录</h2><p>登录后才能查看账户资料。当前没有可展示的用户信息。</p><RouterLink class="primary-button" to="/settings">去设置</RouterLink></section>
     <p class="page-note">敏感字段（手机号）由验证码登录流程管理，资料更新会经过服务端校验。</p>
   </section>
 </template>

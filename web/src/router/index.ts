@@ -24,7 +24,7 @@ const router = createRouter({
         { path: 'reports', name: 'reports', component: () => import('../pages/ReportsPage.vue') },
         { path: 'reports/:id', name: 'report-detail', component: () => import('../pages/ReportDetailPage.vue') },
         { path: 'alerts', name: 'alerts', component: () => import('../pages/AlertsPage.vue'), meta: { requiresAuth: true } },
-        { path: 'flash', name: 'flash-news', component: () => import('../pages/FlashNewsPage.vue') },
+
         { path: 'notifications', name: 'notifications', component: () => import('../pages/NotificationsPage.vue'), meta: { requiresAuth: true } },
         { path: 'history', name: 'history', component: () => import('../pages/HistoryPage.vue') },
         { path: 'settings', name: 'settings', component: () => import('../pages/SettingsPage.vue'), meta: { requiresAuth: true } },
@@ -42,13 +42,10 @@ const router = createRouter({
         { path: 'trade/orders/:id', name: 'trade-order-detail', component: () => import('../pages/TradeOrderDetailPage.vue') },
         { path: 'trade/funds', name: 'trade-funds', component: () => import('../pages/TradeFundsPage.vue') },
         { path: 'trade/transactions', name: 'trade-transactions', component: () => import('../pages/TradeTransactionsPage.vue') },
-        { path: 'news', name: 'news', component: () => import('../pages/NewsPage.vue') },
-        { path: 'news/favorites', name: 'news-favorites', component: () => import('../pages/NewsFavoritesPage.vue'), meta: { requiresAuth: true } },
-        { path: 'news/topics', name: 'news-topics', component: () => import('../pages/NewsTopicsPage.vue') },
-        { path: 'news/topics/:id', name: 'news-topic-detail', component: () => import('../pages/NewsTopicDetailPage.vue') },
-        { path: 'news/:id', name: 'news-detail', component: () => import('../pages/NewsDetailPage.vue') },
-        { path: 'account', name: 'account', component: () => import('../pages/AccountPage.vue') },
+
+
         { path: 'search', name: 'search', component: () => import('../pages/SearchPage.vue') },
+        { path: 'research/tencent-stock', name: 'tencent-stock-analysis', component: () => import('../pages/TencentStockAnalysisPage.vue') },
         { path: ':pathMatch(.*)*', name: 'not-found', component: () => import('../pages/NotFoundPage.vue') },
       ],
     },
@@ -58,5 +55,5 @@ const router = createRouter({
 export default router
 
 router.beforeEach((to) => {
-  if (to.meta.requiresAuth && !window.localStorage.getItem('zedarc-access-token') && !window.localStorage.getItem('zedarc-user')) return { path: '/account', query: { redirect: to.fullPath } }
+  if (to.meta.requiresAuth && !window.localStorage.getItem('zedarc-access-token') && !window.localStorage.getItem('zedarc-user')) return { path: '/settings', query: { redirect: to.fullPath } }
 })

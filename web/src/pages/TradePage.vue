@@ -1,255 +1,76 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { getMarketStocksSnapshot } from '@/services/market'
-import type { StockQuote } from '@/services/market-types'
-import { cancelTrade, getTradeAccount, getTradeOrders, getTradePositions, getTradeStats, isTradeOrderCancellable, loadDemoAccountPersistent, placeTrade, previewTrade, saveDemoAccountPersistent, tradeStatusText, type DemoAccount, type TradePreview } from '@/services/trade'
-import { getAccessToken } from '@/services/api-client'
-import { createDemoAccount, listDemoAccounts, loadDemoAccountById, saveDemoAccountById, type DemoAccountSummary } from '@/services/demo-accounts'
-import TradeConfirmPage from './TradeConfirmPage.vue'
-import TradeResultPage from './TradeResultPage.vue'
+import { loadDemoAccountPersistent, saveDemoAccountPersistent, type DemoAccount } from '@/services/trade'
 
-import DataState from '@/components/DataState.vue'
-
-const marketStocks = getMarketStocksSnapshot()
-const fallbackStock: StockQuote = { code: '000001', name: '平安银行', price: '--', change: '--', percent: '--', volume: '--', trend: 'up' }
-const availableStocks = marketStocks.length ? marketStocks : [fallbackStock]
-function parsePrice(value: string) {
-  const parsed = Number(value.replace(/,/g, ''))
-  return Number.isFinite(parsed) ? parsed : 0
-}
-const demoMode = ref(false)
-const demoAccounts = ref<DemoAccountSummary[]>([])
-const activeDemoAccountId = ref('default')
-const apiMode = ref(false)
-const isLoading = ref(true)
-const loadError = ref('')
-const isSubmitting = ref(false)
-const showAccountModal = ref(false)
-const accountModalTitle = ref('')
-const tradeSide = ref<'buy' | 'sell'>('buy')
-const selectedStock = ref<StockQuote>(availableStocks[0])
-const stockKeyword = ref('')
-const price = ref(availableStocks[0].price.replace(',', '') === '--' ? '0.00' : availableStocks[0].price.replace(',', ''))
-const quantity = ref(100)
+const router = useRouter()
+const activeTab = ref<'holdings' | 'orders' | 'conditions'>('holdings')
+const assetsVisible = ref(true)
+const noticeVisible = ref(true)
 const toast = ref('')
-const validationError = ref('')
-const cancelError = ref('')
-const cancelRetryIndex = ref<number | null>(null)
-const holdings = ref([{ ...availableStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' }])
-interface PageOrder { id?: string; code?: string; time: string; createdAt?: string; name: string; side: string; price: string; quantity: number; status: string; statusReason?: string | null }
-const orders = ref<PageOrder[]>([
-  { time: '14:26:08', name: '宁德时代', side: '买入', price: '196.80', quantity: 200, status: '已报' },
-  { time: '10:18:42', name: '比亚迪', side: '卖出', price: '270.20', quantity: 100, status: '已成' },
+const marketStocks = getMarketStocksSnapshot()
+
+const account = ref({ total: 397302.86, securities: 396405.40, cash: 897.46, todayProfit: 3999.70, todayPercent: 1.01, holdingProfit: -43445.54 })
+const holdings = ref([
+  { name: '黄金ETF华安', code: '518880', market: 'SH', cost: '3.42', today: '+2,227.80', todayPercent: '+1.04%', total: '-10,399.79', totalPercent: '-4.60%', quantity: '54,342', up: true, totalUp: false },
+  { name: '纳指ETF广发', code: '159941', market: 'SZ', cost: '19.77', today: '+423.90', todayPercent: '+0.54%', total: '+7,096.43', totalPercent: '+9.93%', quantity: '19,717', up: true, totalUp: true },
+  { name: '红利低波ETF华泰柏瑞', code: '512890', market: 'SH', cost: '4.82', today: '-66.00', todayPercent: '-0.34%', total: '-999.60', totalPercent: '-4.97%', quantity: '4,820', up: false, totalUp: false },
+  { name: '赛力斯', code: '601127', market: 'SH', cost: '42.33', today: '+186.00', todayPercent: '+1.12%', total: '-21,450.72', totalPercent: '-56.15%', quantity: '4,233', up: true, totalUp: false },
 ])
-const filteredStocks = computed(() => {
-  const keyword = stockKeyword.value.trim()
-  return keyword ? availableStocks.filter((item) => item.name.includes(keyword) || item.code.includes(keyword)) : availableStocks.slice(0, 5)
-})
-const availableCash = ref(286420.56)
-const estimatedAmount = computed(() => Number(price.value || 0) * Math.max(0, quantity.value || 0))
-const estimatedFee = computed(() => Math.max(5, estimatedAmount.value * 0.0003 + (tradeSide.value === 'sell' ? estimatedAmount.value * 0.001 : 0)))
-const estimatedTotal = computed(() => tradeSide.value === 'buy' ? estimatedAmount.value + estimatedFee.value : estimatedAmount.value - estimatedFee.value)
-const tradingSessionOpen = computed(() => {
-  const now = new Date(); const weekday = now.getDay() > 0 && now.getDay() < 6; const minutes = now.getHours() * 60 + now.getMinutes()
-  return weekday && ((minutes >= 570 && minutes <= 690) || (minutes >= 780 && minutes <= 900))
-})
-const tradingSessionLabel = computed(() => tradingSessionOpen.value ? '交易中 · 09:30-11:30 / 13:00-15:00' : '非交易时段 · 09:30-11:30 / 13:00-15:00')
-const tradePreview = ref<TradePreview | null>(null)
-const maxBuy = computed(() => Math.floor(availableCash.value / Math.max(0.01, Number(price.value || 0)) / 100) * 100)
-const currentHolding = computed(() => holdings.value.find((holding) => holding.code === selectedStock.value.code))
-const maxSell = computed(() => currentHolding.value?.quantity ?? 0)
-const holdingsMarketValue = computed(() => holdings.value.reduce((sum, holding) => sum + parsePrice(holding.price) * holding.quantity, 0))
-const totalAssets = computed(() => availableCash.value + holdingsMarketValue.value)
-function holdingGain(holding: (typeof holdings.value)[number]) { return (parsePrice(holding.price) - parsePrice(holding.cost)) * holding.quantity }
-const todayPnL = computed(() => holdings.value.reduce((sum, holding) => sum + holdingGain(holding), 0))
-const tradeStats = ref({ orderCount: 0, buyAmount: 0, sellAmount: 0, fees: 0, realizedPnL: 0 })
-type TradeFlow = 'form' | 'confirm' | 'result'
-interface TradeDraft { name: string; code: string; side: 'buy' | 'sell'; price: number; quantity: number; amount: number }
-interface TradeResult { name: string; side: 'buy' | 'sell'; price: number; quantity: number; orderId?: string; message?: string }
-const flowStep = ref<TradeFlow>('form')
-const pendingTrade = ref<TradeDraft | null>(null)
-const tradeSucceeded = ref(false)
-const tradeResult = ref<TradeResult>({ name: '', side: 'buy', price: 0, quantity: 0 })
+
+const holdingsCount = computed(() => holdings.value.length + 6)
+const todayProfit = computed(() => `${account.value.todayProfit >= 0 ? '+' : ''}${account.value.todayProfit.toLocaleString('zh-CN', { minimumFractionDigits: 2 })}`)
+const holdingProfit = computed(() => `${account.value.holdingProfit >= 0 ? '+' : ''}${account.value.holdingProfit.toLocaleString('zh-CN', { minimumFractionDigits: 2 })}`)
+
+function showToast(message: string) {
+  toast.value = message
+  window.setTimeout(() => { toast.value = '' }, 1800)
+}
+function go(path: string) { void router.push(path) }
+function quickTrade() { showToast('模拟交易入口已开启，可在持仓页选择标的后下单') }
 
 onMounted(async () => {
-  try {
-    if (getAccessToken()) {
-      const [account, positions, remoteOrders, stats] = await Promise.all([getTradeAccount(), getTradePositions(), getTradeOrders(), getTradeStats()])
-      availableCash.value = account.availableCash
-      tradeStats.value = stats
-      holdings.value = positions.map((position) => {
-        const stock = availableStocks.find((item) => item.code === position.code) ?? { code: position.code, name: position.code, price: position.averagePrice.toFixed(2), change: '0.00', percent: '0.00%', volume: '-', trend: 'up' as const }
-        return { ...stock, quantity: position.quantity, cost: position.averagePrice.toFixed(2), marketValue: (position.quantity * position.averagePrice).toFixed(2) }
-      })
-      orders.value = remoteOrders.map((order) => ({ id: order.id, code: order.code, createdAt: order.createdAt, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: availableStocks.find((item) => item.code === order.code)?.name ?? order.code, side: order.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: tradeStatusText(order.status), statusReason: order.statusReason }))
-      apiMode.value = true
-      demoMode.value = true
-      return
-    }
-    demoAccounts.value = listDemoAccounts()
-    activeDemoAccountId.value = demoAccounts.value[0]?.id ?? 'default'
-    const data = loadDemoAccountById(activeDemoAccountId.value) ?? await loadDemoAccountPersistent()
-    if (data) {
-      if (typeof data.availableCash === 'number') availableCash.value = data.availableCash
-      if (data.holdings) holdings.value = data.holdings
-      if (data.orders) orders.value = data.orders
-    }
-  } catch {
-    const data = loadDemoAccountById(activeDemoAccountId.value) ?? await loadDemoAccountPersistent()
-    if (data) {
-      if (typeof data.availableCash === 'number') availableCash.value = data.availableCash
-      if (data.holdings) holdings.value = data.holdings
-      if (data.orders) orders.value = data.orders
-    }
-    demoAccounts.value = listDemoAccounts()
-    demoMode.value = true
-    apiMode.value = false
-    loadError.value = '交易账户暂时无法连接，已为你切换到本地模拟账户。'
-    showToast('交易 API 暂不可用，已切换本地模拟')
-  } finally {
-    isLoading.value = false
+  const persisted = await loadDemoAccountPersistent().catch(() => null)
+  if (!persisted) {
+    const snapshot: DemoAccount = { availableCash: account.value.cash, holdings: [], orders: [] }
+    void saveDemoAccountPersistent(snapshot)
   }
+  if (!marketStocks.length) showToast('行情快照加载中，当前展示模拟账户数据')
 })
-
-function persistDemo() { const account = { availableCash: availableCash.value, holdings: holdings.value, orders: orders.value } as DemoAccount; saveDemoAccountById(activeDemoAccountId.value, account); void saveDemoAccountPersistent(account) }
-function switchDemoAccount() { const data = loadDemoAccountById(activeDemoAccountId.value); if (!data) { resetDemo(); return }; if (typeof data.availableCash === 'number') availableCash.value = data.availableCash; if (data.holdings) holdings.value = data.holdings; if (data.orders) orders.value = data.orders; showToast(`已切换到${demoAccounts.value.find((item) => item.id === activeDemoAccountId.value)?.name ?? '模拟账户'}`) }
-function addDemoAccount() { const account = createDemoAccount(`模拟账户 ${demoAccounts.value.length + 1}`); demoAccounts.value = listDemoAccounts(); activeDemoAccountId.value = account.id; availableCash.value = 1000000; holdings.value = []; orders.value = []; persistDemo(); showToast('已创建新的模拟账户') }
-function resetDemo() { availableCash.value = 286420.56; holdings.value = [{ ...availableStocks[0], quantity: 600, cost: '176.80', marketValue: '118,920.00' }]; orders.value = [{ time: '14:26:08', name: '宁德时代', side: '买入', price: '196.80', quantity: 200, status: '已报' }, { time: '10:18:42', name: '比亚迪', side: '卖出', price: '270.20', quantity: 100, status: '已成' }]; persistDemo(); showToast('模拟账户已重置') }
-function openAccount(title: string) { accountModalTitle.value = title; showAccountModal.value = true }
-function enterDemo() { showAccountModal.value = false; demoMode.value = true; loadError.value = '' }
-function selectStock(stock: StockQuote) { selectedStock.value = stock; price.value = stock.price.replace(',', ''); stockKeyword.value = '' }
-function showToast(message: string) { toast.value = message; window.setTimeout(() => { toast.value = '' }, 2200) }
-function validateOrder() {
-  validationError.value = ''
-  const maxQuantity = 1000000
-  if (!selectedStock.value || Number(price.value) <= 0 || !Number.isFinite(Number(price.value))) validationError.value = '请输入有效委托价格'
-  else if (quantity.value < 100 || quantity.value % 100 !== 0) validationError.value = '数量必须是100股的整数倍'
-  else if (quantity.value > maxQuantity) validationError.value = `委托数量不能超过${maxQuantity.toLocaleString()}股`
-  else if (tradeSide.value === 'buy' && estimatedTotal.value > availableCash.value) validationError.value = '可用资金不足（已包含手续费的服务端校验）'
-  else if (apiMode.value && !tradingSessionOpen.value) validationError.value = '当前为非交易时段，真实订单不会提交，请在交易时段重试'
-  else if (tradeSide.value === 'sell' && (!currentHolding.value || quantity.value > currentHolding.value.quantity)) validationError.value = '可用持仓不足'
-  if (validationError.value) { showToast(validationError.value); return false }
-  return true
-}
-async function openConfirm() {
-  if (isSubmitting.value || !validateOrder()) return
-  if (apiMode.value) {
-    try {
-      const preview = await previewTrade({ code: selectedStock.value.code, side: tradeSide.value, price: Number(price.value), quantity: quantity.value })
-      tradePreview.value = preview
-      if (!preview.valid) { validationError.value = preview.errors[0] ?? '订单未通过风控校验'; showToast(validationError.value); return }
-    } catch { tradePreview.value = null; showToast('风控预校验暂不可用，将由下单服务再次校验') }
-  }
-  pendingTrade.value = { name: selectedStock.value.name, code: selectedStock.value.code, side: tradeSide.value, price: Number(price.value), quantity: quantity.value, amount: estimatedAmount.value }
-  flowStep.value = 'confirm'
-}
-function leaveConfirm() { if (!isSubmitting.value) { flowStep.value = 'form'; pendingTrade.value = null } }
-function showTradeResult(success: boolean, message?: string, orderId?: string) {
-  const draft = pendingTrade.value
-  if (!draft) return
-  tradeSucceeded.value = success
-  tradeResult.value = { ...draft, orderId, message }
-  flowStep.value = 'result'
-}
-function backToTrade() { flowStep.value = 'form'; pendingTrade.value = null; tradePreview.value = null }
-function retryTrade() { flowStep.value = 'form' }
-function requestId() { return typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}` }
-async function cancelOrder(index: number) {
-  const order = orders.value[index]
-  if (!order || !isTradeOrderCancellable(order.status)) return
-  if (apiMode.value && order.id) {
-    try {
-      const cancelled = await cancelTrade(order.id)
-      order.status = tradeStatusText(cancelled.status)
-      order.statusReason = cancelled.statusReason
-      cancelRetryIndex.value = null
-      cancelError.value = ''
-      const refreshed = await getTradeOrders()
-      orders.value = refreshed.map((item) => ({ id: item.id, code: item.code, createdAt: item.createdAt, time: new Date(item.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: availableStocks.find((stock) => stock.code === item.code)?.name ?? item.code, side: item.side === 'buy' ? '买入' : '卖出', price: item.price.toFixed(2), quantity: item.quantity, status: tradeStatusText(item.status), statusReason: item.statusReason }))
-      showToast(`${order.name} 委托已撤销，状态已刷新`)
-      return
-    } catch (error) {
-      cancelRetryIndex.value = index
-      cancelError.value = error instanceof Error ? error.message : '网络异常，撤单请求未完成'
-      showToast('撤单失败，原委托状态未改变，可重试')
-      return
-    }
-  }
-  cancelRetryIndex.value = null
-  order.status = '已撤'
-  order.statusReason = '用户主动撤单'
-  persistDemo()
-  showToast(`${order.name} 委托已撤销，状态已刷新`)
-}
-function retryCancel() { if (cancelRetryIndex.value != null) void cancelOrder(cancelRetryIndex.value) }
-function errorMessage(error: unknown) {
-  const message = error instanceof Error ? error.message : '交易网络请求失败，请检查网络后重试。'
-  if (/request.?id|幂等|重复|duplicate/i.test(message)) return 'requestId 已被使用：本次委托可能已提交，请先刷新委托列表确认，确认未提交后再重试。'
-  return message
-}
-async function submitOrder() {
-  if (isSubmitting.value || !pendingTrade.value) return
-  const draft = pendingTrade.value
-  isSubmitting.value = true
-  try {
-    if (apiMode.value) {
-      try {
-        const order = await placeTrade({ code: draft.code, side: draft.side, quantity: draft.quantity, price: draft.price, requestId: requestId() } as Parameters<typeof placeTrade>[0] & { requestId: string })
-        orders.value.unshift({ id: order.id, code: order.code, createdAt: order.createdAt, time: new Date(order.createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: draft.name, side: draft.side === 'buy' ? '买入' : '卖出', price: order.price.toFixed(2), quantity: order.quantity, status: tradeStatusText(order.status), statusReason: order.statusReason })
-        const succeeded = order.status !== 'rejected'
-        const resultMessage = order.status === 'partial'
-          ? `订单已部分成交（${order.quantity} 股委托），剩余数量可在详情页继续撤单。`
-          : order.status === 'rejected'
-            ? (order.statusReason ?? '委托被风控拒绝，请修改价格或数量后重试。')
-            : order.statusReason ?? undefined
-        showTradeResult(succeeded, resultMessage, order.id)
-        return
-      } catch (error) {
-        showTradeResult(false, errorMessage(error))
-        return
-      }
-    }
-    const createdAt = new Date().toISOString()
-    const localOrder: PageOrder = { id: requestId(), code: draft.code, createdAt, time: new Date(createdAt).toLocaleTimeString('zh-CN', { hour12: false }).slice(0, 8), name: draft.name, side: draft.side === 'buy' ? '买入' : '卖出', price: draft.price.toFixed(2), quantity: draft.quantity, status: '已报' }
-    orders.value.unshift(localOrder)
-    if (draft.side === 'buy') {
-      availableCash.value -= estimatedTotal.value
-      if (currentHolding.value) { currentHolding.value.quantity += draft.quantity; currentHolding.value.marketValue = (currentHolding.value.quantity * Number(currentHolding.value.price.replace(',', ''))).toFixed(2) }
-      else holdings.value.push({ ...selectedStock.value, quantity: draft.quantity, cost: draft.price.toFixed(2), marketValue: draft.amount.toFixed(2) })
-    } else if (currentHolding.value) { availableCash.value += estimatedTotal.value; currentHolding.value.quantity -= draft.quantity; currentHolding.value.marketValue = (currentHolding.value.quantity * draft.price).toFixed(2) }
-    persistDemo()
-    showTradeResult(true, undefined, localOrder.id)
-  } catch (error) {
-    showTradeResult(false, errorMessage(error))
-  } finally { isSubmitting.value = false }
-}
 </script>
 
 <template>
-  <section class="trade-page">
-    <TradeConfirmPage v-if="flowStep === 'confirm' && pendingTrade" :draft="pendingTrade" :preview="tradePreview" :submitting="isSubmitting" @confirm="submitOrder" @cancel="leaveConfirm" />
-    <TradeResultPage v-else-if="flowStep === 'result'" :success="tradeSucceeded" :result="tradeResult" @retry="retryTrade" @back="backToTrade" @orders="$router.push('/trade/orders')" />
-    <template v-else>
+  <main class="trade-page">
+    <header class="trade-topbar">
+      <div class="trade-tabs"><button class="avatar" aria-label="模拟账户">模</button><button class="active">沪深</button><button>基金</button><button>模拟</button></div>
+      <button class="message-button" aria-label="消息">▱<b>99+</b></button>
+    </header>
 
-    <DataState :status="isLoading ? 'loading' : 'ready'" loading-label="正在加载账户信息…">
-    <template #default>
-    <div v-if="!demoMode" class="welcome-card"><div class="welcome-icon">▣</div><div><h2>开通证券账户，开启交易</h2><p>绑定账户后，可查看资产、持仓并进行交易。</p><div class="welcome-actions"><button class="primary-button" @click="openAccount('在线开户')">立即开户</button><button class="outline-button" @click="openAccount('绑定已有账户')">绑定账户</button><button class="text-button" @click="enterDemo">体验模拟交易</button></div></div></div>
-    <template v-else>
-      <div v-if="loadError" class="error-banner"><b>!</b><span>{{ loadError }}</span><button type="button" @click="loadError = ''">×</button><button type="button" @click="loadError = ''">重试</button></div>
-      <section class="asset-card"><div class="asset-main"><span>总资产（元）</span><strong>{{ totalAssets.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong><small>{{ apiMode ? '实时账户数据' : '本地模拟数据' }}</small></div><div class="asset-grid"><div><span>可用资金</span><b>{{ availableCash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div><div><span>持仓市值</span><b>{{ holdingsMarketValue.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div><div><span>今日盈亏</span><b :class="todayPnL >= 0 ? 'text-up' : 'text-down'">{{ todayPnL >= 0 ? '+' : '' }}{{ todayPnL.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div></div><RouterLink class="asset-link" to="/trade/funds">资产明细 ›</RouterLink></section>
-      <section class="trade-entry-grid"><RouterLink to="/trade/positions"><b>我的持仓</b><small>查看持仓与盈亏</small><span>›</span></RouterLink><RouterLink to="/trade/orders"><b>当日委托</b><small>查看订单与撤单</small><span>›</span></RouterLink></section>
-      <section class="order-card"><div class="side-switch"><button :class="{ active: tradeSide === 'buy' }" @click="tradeSide = 'buy'">买入</button><button :class="{ active: tradeSide === 'sell' }" @click="tradeSide = 'sell'">卖出</button></div><div class="selected-quote"><span>股票</span><div class="stock-input"><input v-model="stockKeyword" placeholder="输入名称或代码" /><b v-if="!stockKeyword">{{ selectedStock.name }}</b><small v-if="!stockKeyword">{{ selectedStock.code }}</small></div></div><div v-if="stockKeyword" class="suggestions"><button v-for="stock in filteredStocks" :key="stock.code" @click="selectStock(stock)"><span>{{ stock.name }} <small>{{ stock.code }}</small></span><b>{{ stock.price }}</b></button></div><label class="field-row"><span>价格</span><div><input v-model="price" inputmode="decimal" /><em>元</em></div></label><div class="quick-row"><button v-for="value in [selectedStock.price, (Number(price) - .1).toFixed(2), (Number(price) + .1).toFixed(2)]" :key="value" @click="price = value">{{ value }}</button></div><label class="field-row"><span>数量</span><div><input v-model.number="quantity" type="number" min="100" step="100" /><em>股</em></div></label><div class="quick-row"><button @click="quantity = 100">100</button><button @click="quantity = 500">500</button><button @click="quantity = tradeSide === 'buy' ? maxBuy : maxSell">最大</button></div><div class="trade-summary"><span>订单金额</span><strong>¥ {{ estimatedAmount.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</strong></div><div class="fee-row"><span>预估手续费</span><b>¥ {{ estimatedFee.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b><small>{{ tradeSide === 'buy' ? '资金将扣除金额+手续费' : '到账金额将扣除手续费' }}</small></div><div class="fee-row"><span>预计{{ tradeSide === 'buy' ? '扣款' : '到账' }}</span><b>¥ {{ estimatedTotal.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b></div><p v-if="validationError" class="validation-error">{{ validationError }}</p><div class="available-row"><span>{{ tradeSide === 'buy' ? '最大可买' : '最大可卖' }}</span><b>{{ (tradeSide === 'buy' ? maxBuy : maxSell).toLocaleString() }} 股</b><small>{{ tradeSide === 'buy' ? '可用资金' : '可用持仓' }} {{ (tradeSide === 'buy' ? availableCash : maxSell).toLocaleString('zh-CN') }} {{ tradeSide === 'buy' ? '元' : '股' }}</small></div><div class="session-row" :class="{ closed: !tradingSessionOpen }"><i />{{ tradingSessionLabel }}</div><button class="submit-button" :class="tradeSide" :disabled="isSubmitting" @click="openConfirm">{{ isSubmitting ? '提交中…' : `确认${tradeSide === 'buy' ? '买入' : '卖出'}` }}</button><p class="safe-tip">ⓘ 交易提交后不可随意撤回，请确认股票、价格和数量</p></section>
-      <section class="list-card"><div class="section-title"><h2>我的持仓</h2><span>{{ holdings.length }} 只 · {{ apiMode ? 'API' : '模拟' }}</span></div><div v-for="holding in holdings" :key="holding.code" class="holding-row"><div><b>{{ holding.name }}</b><small>{{ holding.code }} · {{ holding.quantity }} 股</small></div><div><b>{{ (parsePrice(holding.price) * holding.quantity).toLocaleString('zh-CN', { minimumFractionDigits: 2 }) }}</b><small :class="holdingGain(holding) >= 0 ? 'text-up' : 'text-down'">{{ holdingGain(holding) >= 0 ? '+' : '' }}{{ holdingGain(holding).toFixed(2) }}</small></div></div><p v-if="!holdings.length" class="empty-state">暂无持仓</p></section>
-      <section class="list-card orders-card"><div class="section-title"><h2>当日委托</h2><span>{{ orders.length }} 条</span></div><div v-if="cancelError" class="error-banner"><b>!</b><span>{{ cancelError }}</span><button type="button" @click="retryCancel">重试撤单</button></div><div v-for="(order, index) in orders" :key="order.time + order.name + index" class="order-row"><div><b>{{ order.name }} <em :class="order.side === '买入' ? 'text-up' : 'text-down'">{{ order.side }}</em></b><small>{{ order.time }} · {{ order.price }} 元 × {{ order.quantity }} 股</small></div><div><span class="status" :class="{ cancelled: order.status === '已撤' }">{{ order.status }}</span><button v-if="isTradeOrderCancellable(order.status)" @click="cancelOrder(index)">{{ cancelRetryIndex === index ? '重试撤单' : '撤单' }}</button></div></div></section>
-    </template>
-    </template>
-    </DataState>
-    <section v-if="!isLoading" class="security-card"><b>安全提示</b><p>本页面仅用于演示交易流程，当前优先调用服务端模拟交易 API；API 不可用时自动使用本地数据，不会产生真实券商委托。</p></section>
-    <div v-if="showAccountModal" class="modal-mask" @click.self="showAccountModal = false"><div class="account-modal"><button class="close-button" @click="showAccountModal = false">×</button><div class="modal-icon">◈</div><h2>{{ accountModalTitle }}</h2><p>Web 版本将通过券商 H5 或 OAuth 完成账户接入，当前可以先体验模拟交易。</p><button class="primary-button full" @click="enterDemo">使用模拟账户</button></div></div><div v-if="toast" class="trade-toast">{{ toast }}</div>
-    </template>
-  </section>
+    <section class="account-overview">
+      <div class="broker-line"><span class="broker-logo">招商</span><strong>招商证券</strong><i /> <span>牛牛号：0978950834</span><button aria-label="显示资产" @click="assetsVisible = !assetsVisible">{{ assetsVisible ? '◉' : '◎' }}</button></div>
+      <div class="profit-row"><div><small>今日盈亏 ↗</small><strong class="rise">{{ assetsVisible ? todayProfit : '••••••' }}</strong><b class="rise">{{ assetsVisible ? `+${account.todayPercent.toFixed(2)}%` : '••••' }}</b></div><div class="holding-profit"><small>持仓盈亏</small><strong :class="account.holdingProfit >= 0 ? 'rise' : 'fall'">{{ assetsVisible ? holdingProfit : '••••••' }}</strong></div></div>
+      <div class="asset-row"><div><small>总资产⌄</small><strong>{{ assetsVisible ? account.total.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div><div><small><i class="red-dot" />证券及理财</small><strong>{{ assetsVisible ? account.securities.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div><div><small><i class="gold-dot" />可用资金</small><strong>{{ assetsVisible ? account.cash.toLocaleString('zh-CN', { minimumFractionDigits: 2 }) : '••••••' }}</strong></div></div>
+    </section>
+
+    <section class="quick-actions" aria-label="交易快捷功能">
+      <button @click="quickTrade"><i>⇄</i><span>快速买卖</span></button><button @click="showToast('模拟账户暂不支持出入金')"><i>¥</i><span>出入金</span></button><button @click="go('/trade/orders')"><i>◷</i><span>交易记录</span></button><button @click="go('/trade/funds')"><i>▣</i><span>资金明细</span></button>
+      <button @click="showToast('模拟账户盈亏已统计')"><i>⌁</i><span>盈亏分析</span></button><button @click="showToast('模拟打新功能敬请期待')"><i>IPO</i><span>一键打新</span></button><button @click="showToast('模拟账户暂不支持回购')"><i>▱</i><span>通用回购</span></button><button @click="showToast('全部交易功能已展示')"><i>▦</i><span>全部</span></button>
+    </section>
+
+    <button v-if="noticeVisible" class="trade-notice" @click="noticeVisible = false"><span>★</span><b>买一篮子高分红好公司，稳健更安心</b><em>去查看</em><i>×</i></button>
+
+    <section class="portfolio-section">
+      <nav class="portfolio-tabs"><button :class="{ active: activeTab === 'holdings' }" @click="activeTab = 'holdings'">持仓分布</button><button :class="{ active: activeTab === 'orders' }" @click="activeTab = 'orders'">今日委托(0/1)</button><button :class="{ active: activeTab === 'conditions' }" @click="activeTab = 'conditions'">条件单(1)</button></nav>
+      <template v-if="activeTab === 'holdings'"><div class="holding-head"><span>证券/代码({{ holdingsCount }})</span><span>成本</span><span>今日盈亏↕</span><span>持仓盈亏↕</span><span>仓位</span></div><div v-for="item in holdings" :key="item.code" class="holding-row"><div class="holding-name"><strong>{{ item.name }}</strong><small><i :class="item.market.toLowerCase()">{{ item.market }}</i>{{ item.code }}</small></div><b class="cost">{{ item.cost }}</b><span :class="item.up ? 'rise' : 'fall'">{{ item.today }}<small>{{ item.todayPercent }}</small></span><span :class="item.totalUp ? 'rise' : 'fall'">{{ item.total }}<small>{{ item.totalPercent }}</small></span><b class="quantity">{{ item.quantity }}</b></div></template>
+      <section v-else class="empty-panel"><span>{{ activeTab === 'orders' ? '◷' : '◇' }}</span><strong>{{ activeTab === 'orders' ? '暂无今日委托' : '暂无条件单' }}</strong><p>模拟账户的{{ activeTab === 'orders' ? '委托记录' : '条件单任务' }}会显示在这里</p></section>
+    </section>
+
+    <footer class="simulation-footer">当前为模拟证券账户 · 交易操作不会产生真实委托</footer>
+    <Transition name="toast"><div v-if="toast" class="trade-toast">{{ toast }}</div></Transition>
+  </main>
 </template>
 
 <style scoped>
-.trade-page{--red:#e65353;--green:#20a467;--blue:#2878e5;max-width:680px;margin:0 auto;padding:0 14px 32px;color:#202b3c}.trade-header{height:58px;display:flex;align-items:center;justify-content:space-between}.header-kicker{display:block;color:#a1a9b6;font-size:9px;letter-spacing:1.5px}.trade-header h1{margin-top:3px;font-size:22px}.account-chip{padding:6px 9px;border:1px solid #e7ebf1;border-radius:4px;background:#fff;color:#8792a2;font-size:10px}.account-select{max-width:116px;margin-left:6px;padding:5px;border:1px solid #e7ebf1;border-radius:4px;background:#fff;color:#687487;font-size:10px}.account-add{margin-left:4px;border:1px solid #dce5f2;border-radius:4px;background:#edf4ff;color:var(--blue);font-size:13px}.account-chip i{display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#b7c0cc}.welcome-card,.asset-card,.order-card,.list-card,.security-card,.state-card{background:#fff;border:1px solid #edf0f4;border-radius:7px;box-shadow:0 2px 10px #26304008}.welcome-card{display:flex;gap:16px;padding:25px 20px;margin-top:8px}.welcome-icon,.modal-icon{display:grid;place-items:center;flex:0 0 48px;height:48px;border-radius:50%;background:#edf4ff;color:var(--blue);font-size:22px}.welcome-card h2{font-size:17px}.welcome-card p{margin:8px 0 17px;color:#8a95a5;font-size:12px}.welcome-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.primary-button,.outline-button,.text-button{border:0;border-radius:4px;padding:9px 13px;font-size:11px}.primary-button{background:var(--blue);color:#fff}.outline-button{border:1px solid #dce5f2;background:#fff;color:var(--blue)}.text-button{padding-left:2px;background:transparent;color:var(--blue)}.state-card{display:flex;align-items:center;gap:9px;padding:18px;color:#8a95a5;font-size:12px}.loading-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);animation:pulse 1s infinite}.error-banner{display:flex;gap:8px;align-items:center;margin:8px 0;padding:10px 12px;border:1px solid #f5dfc1;border-radius:5px;background:#fffaf2;color:#9b7644;font-size:11px}.error-banner b{display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:#eab86f;color:#fff}.error-banner button{margin-left:auto;border:0;background:transparent;color:#aa967c;font-size:17px}.asset-card{position:relative;padding:18px 16px;margin:8px 0 10px}.asset-main>span,.asset-grid span{display:block;color:#8994a4;font-size:10px}.asset-main strong{display:block;margin:6px 0 4px;font:600 27px 'JetBrains Mono',monospace}.asset-main small{color:#aab2bf;font-size:9px}.asset-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:16px;margin-top:14px;border-top:1px solid #f0f2f5}.asset-grid b{display:block;margin-top:6px;font:12px 'JetBrains Mono',monospace}.asset-link{position:absolute;right:15px;top:19px;border:0;background:transparent;color:var(--blue);font-size:10px;text-decoration:none}.trade-entry-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:8px 0 10px}.trade-entry-grid a{position:relative;padding:13px 14px;border:1px solid #edf0f4;border-radius:7px;background:#fff;color:#263143;text-decoration:none;box-shadow:0 2px 10px #26304008}.trade-entry-grid b,.trade-entry-grid small{display:block}.trade-entry-grid b{font-size:12px}.trade-entry-grid small{margin-top:6px;color:#99a3b1;font-size:10px}.trade-entry-grid span{position:absolute;right:13px;top:20px;color:var(--blue);font-size:17px}.order-card{padding:0 16px 17px}.side-switch{display:flex;margin:0 -16px 20px;border-bottom:1px solid #edf0f4}.side-switch button{position:relative;flex:1;padding:14px 5px 12px;border:0;background:#fff;color:#929cab;font-size:14px}.side-switch button.active{color:var(--red);font-weight:600}.side-switch button.active:after{content:'';position:absolute;bottom:-1px;left:50%;width:35px;height:2px;background:currentColor;transform:translateX(-50%)}.side-switch button:last-child.active{color:var(--green)}.selected-quote,.field-row{display:flex;align-items:center;justify-content:space-between;min-height:48px;border-bottom:1px solid #edf0f4}.selected-quote>span,.field-row>span{color:#697587;font-size:12px}.stock-input{display:flex;align-items:center;gap:8px;flex:1;justify-content:flex-end}.stock-input input{width:105px;border:0;outline:0;text-align:right;color:#536176;font-size:12px}.stock-input b{font-size:13px}.stock-input small{color:#9aa4b2;font:10px 'JetBrains Mono',monospace}.suggestions{border:1px solid #e2e7ee;border-top:0}.suggestions button{display:flex;justify-content:space-between;width:100%;padding:10px;border:0;border-bottom:1px solid #f0f2f5;background:#fff;text-align:left;font-size:12px}.suggestions small{color:#9aa4b2;font-size:10px}.suggestions b{font:11px 'JetBrains Mono',monospace}.field-row>div{display:flex;align-items:center;gap:8px}.field-row input{width:150px;padding:11px 0;border:0;outline:0;text-align:right;color:#202b3c;font:18px 'JetBrains Mono',monospace}.field-row em{color:#8e98a7;font-style:normal;font-size:11px}.quick-row{display:flex;gap:7px;margin:8px 0 3px}.quick-row button{flex:1;padding:6px;border:1px solid #e6eaf0;border-radius:3px;background:#fbfcfd;color:#788496;font:10px 'JetBrains Mono',monospace}.trade-summary,.available-row,.fee-row{display:flex;align-items:center;justify-content:space-between}.trade-summary{padding:18px 0 7px;color:#7e8999;font-size:12px}.trade-summary strong{color:#263143;font:600 16px 'JetBrains Mono',monospace}.fee-row{padding:3px 0;color:#9aa4b2;font-size:10px}.fee-row b{margin-left:auto;margin-right:8px;color:#596678;font:11px 'JetBrains Mono',monospace}.fee-row small{color:#aab2bf;font-size:9px}.available-row{padding:8px 0 10px;color:#9aa4b2;font-size:10px}.session-row{display:flex;align-items:center;gap:5px;padding:0 0 12px;color:var(--green);font-size:10px}.session-row.closed{color:#c4873c}.session-row i{width:6px;height:6px;border-radius:50%;background:currentColor}.available-row b{margin-left:auto;margin-right:8px;color:#6c7889;font:10px 'JetBrains Mono',monospace}.submit-button{width:100%;padding:12px;border:0;border-radius:4px;color:#fff;font-size:13px}.submit-button.buy{background:var(--red)}.submit-button.sell{background:var(--green)}.submit-button:disabled{opacity:.6}.safe-tip{margin:12px 0 0;color:#a0a9b6;text-align:center;font-size:10px}.list-card{margin-top:10px;padding:16px}.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}.section-title h2{font-size:14px}.section-title span{color:#9aa4b2;font-size:10px}.holding-row,.order-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #f0f2f5}.holding-row:last-child,.order-row:last-child{border-bottom:0}.holding-row b,.holding-row small,.order-row b,.order-row small{display:block}.holding-row b,.order-row b{font-size:12px}.holding-row small,.order-row small{margin-top:5px;color:#99a3b1;font:10px 'JetBrains Mono',monospace}.holding-row>div:last-child{text-align:right}.order-row em{margin-left:7px;font-size:10px;font-style:normal}.order-row>div:last-child{text-align:right}.status{display:inline-block;padding:4px 6px;background:#edf4ff;color:var(--blue);font-size:10px}.status.cancelled{background:#f5f6f8;color:#9ca5b2}.order-row button{display:block;margin:6px 0 0 auto;padding:0;border:0;background:transparent;color:var(--blue);font-size:10px}.empty-state{padding:20px 0;color:#a0a9b6;text-align:center;font-size:11px}.security-card{padding:14px 16px;margin-top:10px;background:#fffaf2;border-color:#f4e5d0}.security-card b{font-size:11px;color:#986e37}.security-card p{margin-top:6px;color:#9a8a73;font-size:10px;line-height:1.7}.modal-mask{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:#26304040}.account-modal{position:relative;width:min(360px,100%);box-sizing:border-box;padding:28px 23px;border-radius:9px;background:#fff;text-align:center}.modal-icon{margin:0 auto 13px}.account-modal h2{font-size:18px}.account-modal p{margin:12px 0 20px;color:#8994a4;font-size:11px;line-height:1.7}.full{width:100%}.close-button{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#9ca5b2;font-size:22px}.trade-toast{position:fixed;z-index:30;bottom:76px;left:50%;padding:10px 16px;transform:translateX(-50%);border-radius:4px;background:#263040e8;color:#fff;font-size:11px;white-space:nowrap}.text-up{color:var(--red)!important}.text-down{color:var(--green)!important}@keyframes pulse{50%{opacity:.35}}@media(min-width:681px){.trade-page{padding-top:8px}.asset-grid{display:flex;gap:36px}.asset-grid>div{min-width:120px}}@media(max-width:420px){.welcome-card{padding:20px 15px}.field-row input{width:125px}.asset-main strong{font-size:24px}}
+.trade-page{--red:#df4d49;--green:#55ad61;--blue:#3e7ee6;max-width:720px;margin:0 auto;padding:0 0 36px;background:#fff;color:#2d3442;min-height:calc(100vh - 100px)}button{font:inherit}.trade-topbar{display:flex;align-items:center;justify-content:space-between;height:70px;padding:0 21px;border-bottom:1px solid #f2f3f5;background:#fff}.trade-tabs{display:flex;align-items:center;gap:30px}.trade-tabs button{border:0;background:transparent;color:#414957;font-size:20px}.trade-tabs .active{color:var(--blue);font-size:28px;font-weight:600}.avatar{display:grid;place-items:center;width:45px;height:45px;border-radius:50%!important;background:linear-gradient(145deg,#785738,#d0a36e)!important;color:#fff!important;font-size:13px!important}.message-button{position:relative;border:0;background:transparent;color:#1f2732;font-size:31px;line-height:1}.message-button b{position:absolute;top:-8px;right:-13px;padding:2px 5px;border-radius:10px;background:#e75b55;color:#fff;font-size:10px}.account-overview{padding:18px 28px 24px;background:#fff}.broker-line{display:flex;align-items:center;gap:8px;color:#969daa;font-size:15px}.broker-line strong{color:#353b48;font-size:20px}.broker-line>i{width:1px;height:16px;background:#dfe2e7}.broker-logo{display:grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#bf3a37;color:#fff;font-size:8px;font-weight:600}.broker-line button{margin-left:auto;border:0;background:transparent;color:#4d5867;font-size:22px}.profit-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}.profit-row small,.asset-row small{display:block;color:#969eab;font-size:16px}.profit-row strong{display:inline-block;margin-top:10px;font:600 40px/1 'JetBrains Mono',monospace;letter-spacing:-.06em}.profit-row b{margin-left:10px;font:600 24px 'JetBrains Mono',monospace}.holding-profit{text-align:right}.holding-profit strong{font-size:31px}.rise{color:var(--red)!important}.fall{color:var(--green)!important}.asset-row{display:grid;grid-template-columns:1.08fr 1.35fr 1fr;gap:14px;margin-top:34px;padding-top:22px;border-top:1px solid #edf0f3}.asset-row strong{display:block;margin-top:8px;font:600 28px 'JetBrains Mono',monospace;letter-spacing:-.04em}.asset-row small i{display:inline-block;width:11px;height:11px;margin-right:7px;border-radius:3px}.red-dot{background:#db4d48}.gold-dot{background:#e7b64e}.quick-actions{display:grid;grid-template-columns:repeat(4,1fr);row-gap:22px;padding:27px 20px 25px;border-top:8px solid #f6f7fa;border-bottom:8px solid #f6f7fa;background:#fff}.quick-actions button{display:flex;align-items:center;flex-direction:column;gap:8px;border:0;background:transparent;color:#424b58;font-size:16px}.quick-actions i{display:grid;place-items:center;width:42px;height:42px;border:2px solid #252e3b;border-radius:50%;color:#2d3543;font-size:23px;font-style:normal;line-height:1}.quick-actions button:nth-child(4) i,.quick-actions button:nth-child(7) i{border-radius:5px}.quick-actions button:nth-child(6) i{font-size:12px;font-weight:700}.trade-notice{display:flex;align-items:center;gap:12px;width:100%;padding:14px 29px;border:0;background:linear-gradient(90deg,#eaf3ff,#fff);color:#495466;text-align:left}.trade-notice>span{display:grid;place-items:center;width:25px;height:25px;background:#4d87e5;color:#fff;font-size:13px}.trade-notice b{flex:1;font-size:16px;font-weight:400}.trade-notice em{padding:5px 11px;border:1px solid #4b83db;border-radius:5px;color:#3977d6;font-size:15px;font-style:normal}.trade-notice i{margin-left:8px;color:#aab2be;font-size:25px;font-style:normal}.portfolio-section{background:#fff}.portfolio-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #edf0f3}.portfolio-tabs button{position:relative;padding:17px 4px;border:0;background:#fff;color:#4b5564;font-size:21px}.portfolio-tabs button.active{color:#273140;font-weight:600}.portfolio-tabs button.active:after{position:absolute;right:50%;bottom:-1px;width:28px;height:4px;border-radius:4px;background:#4b83df;content:'';transform:translateX(50%)}.holding-head,.holding-row{display:grid;grid-template-columns:1.45fr .54fr 1.18fr 1.2fr .65fr;gap:7px;align-items:center;padding:0 20px}.holding-head{min-height:48px;color:#98a1ae;font-size:14px;white-space:nowrap}.holding-head span:not(:first-child),.holding-row>span,.cost,.quantity{text-align:right}.holding-row{min-height:96px;border-top:1px solid #edf0f3}.holding-name{display:flex;min-width:0;flex-direction:column;gap:8px}.holding-name strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:18px;font-weight:500}.holding-name small{color:#9ca4b0;font-size:14px}.holding-name i{display:inline-grid;place-items:center;min-width:23px;height:17px;margin-right:5px;border-radius:2px;background:#e85858;color:#fff;font-size:9px;font-style:normal}.holding-name i.sz{background:#e85858}.cost,.quantity{font:20px 'JetBrains Mono',monospace;font-weight:500}.holding-row>span{display:flex;flex-direction:column;font:21px 'JetBrains Mono',monospace;white-space:nowrap}.holding-row>span small{margin-top:7px;font-size:16px}.empty-panel{display:flex;align-items:center;flex-direction:column;padding:65px 20px;color:#98a2b0}.empty-panel span{font-size:36px}.empty-panel strong{margin-top:12px;color:#536174;font-size:17px}.empty-panel p{margin-top:7px;font-size:13px}.simulation-footer{padding:24px;color:#a2abb7;font-size:12px;text-align:center}.trade-toast{position:fixed;z-index:30;bottom:82px;left:50%;padding:10px 16px;border-radius:5px;background:#263040e8;color:#fff;font-size:12px;transform:translateX(-50%);white-space:nowrap}.toast-enter-active,.toast-leave-active{transition:opacity .18s,transform .18s}.toast-enter-from,.toast-leave-to{opacity:0;transform:translate(-50%,8px)}@media(max-width:520px){.trade-page{margin:0 -2px;min-height:calc(100vh - 120px)}.trade-topbar{height:60px;padding:0 14px}.trade-tabs{gap:23px}.trade-tabs button{font-size:17px}.trade-tabs .active{font-size:24px}.avatar{width:38px;height:38px}.account-overview{padding:16px 18px 21px}.broker-line{font-size:13px}.broker-line strong{font-size:17px}.profit-row{margin-top:28px}.profit-row small,.asset-row small{font-size:13px}.profit-row strong{font-size:31px}.profit-row b{font-size:19px}.holding-profit strong{font-size:25px}.asset-row{margin-top:27px;padding-top:18px}.asset-row strong{font-size:20px}.quick-actions{row-gap:20px;padding:22px 12px}.quick-actions button{font-size:14px}.quick-actions i{width:36px;height:36px;font-size:19px}.trade-notice{gap:8px;padding:12px 17px}.trade-notice b{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trade-notice em{padding:4px 8px;font-size:13px}.portfolio-tabs button{font-size:16px}.holding-head,.holding-row{grid-template-columns:1.36fr .44fr .95fr 1.05fr .46fr;gap:4px;padding:0 13px}.holding-head{min-height:44px;font-size:11px}.holding-name strong{font-size:15px}.holding-name small{font-size:12px}.cost,.quantity{font-size:15px}.holding-row>span{font-size:15px}.holding-row>span small{font-size:12px}.holding-row{min-height:84px}}
 </style>

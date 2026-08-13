@@ -11,7 +11,7 @@ const transferKeys = [
   'zedarc-watchlist-group-items',
   'zedarc-kline-preferences',
   'zedarc-search-history',
-  'zedarc-news-recommendations',
+
   'zedarc-offline-sync-queue',
 ]
 

@@ -53,35 +53,6 @@ export const favorites = pgTable('favorites', {
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
 }, (table) => ({ userCode: uniqueIndex('favorites_user_code_idx').on(table.userId, table.code) }))
 
-export const news = pgTable('news', {
-  id: varchar('id', { length: 128 }).primaryKey(),
-  title: varchar('title', { length: 300 }).notNull(),
-  summary: varchar('summary', { length: 2000 }).notNull(),
-  source: varchar('source', { length: 128 }).notNull(),
-  publishedAt: timestamp('published_at', { withTimezone: true }).notNull(),
-  codes: jsonb('codes').$type<string[]>().notNull().default([]),
-  url: varchar('url', { length: 1000 }),
-}, (table) => ({ publishedIdx: index('news_published_at_idx').on(table.publishedAt) }))
-
-export const newsFavorites = pgTable('news_favorites', {
-  id: uuid('id').defaultRandom().primaryKey(),
-  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  newsId: varchar('news_id', { length: 128 }).notNull().references(() => news.id, { onDelete: 'cascade' }),
-  category: varchar('category', { length: 64 }).notNull().default('未分类'),
-  tags: jsonb('tags').$type<string[]>().notNull().default([]),
-  note: varchar('note', { length: 500 }),
-  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-}, (table) => ({ userNews: uniqueIndex('news_favorites_user_news_idx').on(table.userId, table.newsId), userCreatedIdx: index('news_favorites_user_created_idx').on(table.userId, table.createdAt), userCategoryIdx: index('news_favorites_user_category_idx').on(table.userId, table.category) }))
-
-export const newsRecommendationPreferences = pgTable('news_recommendation_preferences', {
-  id: uuid('id').defaultRandom().primaryKey(),
-  userId: uuid('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
-  kind: varchar('kind', { length: 16 }).notNull(),
-  value: varchar('value', { length: 300 }).notNull(),
-  action: varchar('action', { length: 32 }).notNull(),
-  reason: varchar('reason', { length: 200 }),
-  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow().notNull(),
-}, (table) => ({ userPreference: uniqueIndex('news_recommendation_preferences_user_preference_idx').on(table.userId, table.kind, table.value), userCreatedIdx: index('news_recommendation_preferences_user_created_idx').on(table.userId, table.createdAt) }))
 
 export const reports = pgTable('reports', {
   id: varchar('id', { length: 128 }).primaryKey(),

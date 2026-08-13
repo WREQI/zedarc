@@ -2,11 +2,8 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { apiFetch } from '@/services/api-client'
-import { useAuthStore } from '@/stores/auth'
-
 const route = useRoute()
 const router = useRouter()
-const auth = useAuthStore()
 const providerLabel = ref('连接检查中')
 const providerTone = ref('pending')
 
@@ -16,29 +13,24 @@ const pageTitle = computed(() => {
   if (path.startsWith('/market') || path.startsWith('/stock') || path.startsWith('/sector') || path.startsWith('/etf') || path.startsWith('/bond') || path.startsWith('/star-market')) return '行情'
   if (path === '/market/calendar') return '行情'
   if (path.startsWith('/watchlist')) return '自选'
-  if (path.startsWith('/news') || path === '/flash') return '资讯'
   if (path.startsWith('/trade')) return '交易'
-  if (path.startsWith('/account') || path === '/notifications' || path === '/settings' || path === '/history' || path === '/profile' || path === '/security' || path === '/devices' || path === '/feedback') return '我的'
+  if (path === '/notifications' || path === '/settings' || path === '/history' || path === '/profile' || path === '/security' || path === '/devices' || path === '/feedback') return '设置'
   if (path.startsWith('/reports')) return '研报'
   if (path.startsWith('/search')) return '搜索'
   return 'ZEDARC'
 })
 
 const tabs = [
-  { label: '资讯', to: '/news', icon: '/nav/info.png', inactiveIcon: '/nav/info1.png', key: 'news' },
   { label: '自选', to: '/watchlist', icon: '/nav/zx.png', inactiveIcon: '/nav/zx1.png', key: 'watchlist' },
   { label: '行情', to: '/market', icon: '/nav/hq.png', inactiveIcon: '/nav/hq1.png', key: 'market' },
   { label: '交易', to: '/trade', icon: '/nav/zc.png', inactiveIcon: '/nav/zc1.png', key: 'trade' },
-  { label: '我的', to: '/account', icon: '/nav/me.png', inactiveIcon: '/nav/me1.png', key: 'account' },
 ]
 
 function isSectionActive(section: string) {
   const path = route.path
-  if (section === 'news') return path.startsWith('/news') || path === '/flash'
   if (section === 'watchlist') return path === '/' || path.startsWith('/watchlist')
   if (section === 'market') return path.startsWith('/market') || path.startsWith('/stock') || path.startsWith('/sector') || path.startsWith('/etf') || path.startsWith('/bond') || path.startsWith('/star-market')
   if (section === 'trade') return path.startsWith('/trade')
-  if (section === 'account') return path.startsWith('/account') || path === '/notifications' || path === '/settings' || path === '/history' || path === '/profile' || path === '/security' || path === '/devices' || path === '/feedback'
   return false
 }
 
@@ -65,17 +57,16 @@ onUnmounted(() => window.removeEventListener('keydown', onGlobalShortcut))
   <div class="app-stage">
     <div class="app-shell">
       <header class="topbar">
-
         <div class="brand-mark"><span class="brand-dot" /> <strong>{{ pageTitle }}</strong><small>ZEDARC</small></div>
         <nav class="top-nav" aria-label="快捷导航">
           <RouterLink to="/">自选</RouterLink>
           <RouterLink to="/reports">研报</RouterLink>
+          <RouterLink to="/research/tencent-stock">技术分析</RouterLink>
         </nav>
-        <RouterLink class="global-search" to="/search" aria-label="搜索"><span>⌕</span><span>搜索股票、资讯或代码</span><kbd>⌘K</kbd></RouterLink>
+        <RouterLink class="global-search" to="/search" aria-label="搜索"><span>⌕</span><span>搜索股票或代码</span><kbd>⌘K</kbd></RouterLink>
         <div class="top-actions">
           <span class="market-status" :class="`status-${providerTone}`" aria-live="polite"><i />{{ providerLabel }}</span>
           <RouterLink class="icon-button" to="/search" aria-label="搜索">⌕</RouterLink>
-          <button class="avatar" aria-label="打开账户" @click="router.push('/account')">{{ auth.user.value?.name?.slice(0, 1) ?? '登' }}</button>
         </div>
       </header>
 

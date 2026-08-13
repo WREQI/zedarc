@@ -32,7 +32,7 @@ function formatDate(value: string) { return new Date(value).toLocaleString('zh-C
   <section class="account-subpage">
     <header class="subpage-heading"><div><p class="eyebrow">ACCOUNT / SECURITY</p><h1>安全中心</h1><p class="muted">管理登录状态与账户安全</p></div><RouterLink class="back-link" to="/settings">‹ 设置</RouterLink></header>
     <section v-if="auth.user.value" class="panel status-card"><span class="status-dot" /><div><strong>当前账户已登录</strong><p>{{ token.accessExpired ? '访问令牌已过期，将在需要时自动刷新。' : token.accessToken ? '访问令牌有效，账户会话受到保护。' : '当前为模拟登录，数据仅保存在本地。' }}</p></div></section>
-    <section v-else class="empty-panel"><span class="empty-icon">◇</span><h2>未登录</h2><p>登录后才能查看安全状态。请先完成手机号登录。</p><RouterLink class="primary-button" to="/account">去登录</RouterLink></section>
+    <section v-else class="empty-panel"><span class="empty-icon">◇</span><h2>未登录</h2><p>登录后才能查看安全状态。请先完成手机号登录。</p><RouterLink class="primary-button" to="/settings">去设置</RouterLink></section>
     <section v-if="auth.user.value" class="panel security-list">
       <div class="security-row"><div><strong>登录凭证</strong><small>当前账户采用手机号验证码登录，无密码可修改。</small></div><span class="available">验证码登录</span></div>
       <div class="security-row"><div><strong>Token 状态</strong><small>{{ token.refreshToken ? '刷新凭证已配置，可自动续期' : '未配置服务端 Token，当前使用模拟登录' }}</small></div><span :class="token.accessExpired ? 'warning' : 'available'">{{ token.accessExpired ? '待刷新' : token.accessToken ? '正常' : '模拟' }}</span></div>

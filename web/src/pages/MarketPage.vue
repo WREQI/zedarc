@@ -11,23 +11,15 @@ import { connectMarketSocket } from '@/services/market-socket'
 import type { MarketSocketEvent, MarketSocketStatus } from '@/services/market-socket'
 
 const mainTabs = ['行情', '板块', 'ETF', '债券', '科创', '港股']
-const marketLabels = ['沪深市场', '沪深港通', '美股']
+
 const rankTabs = ['涨幅榜', '跌幅榜', '成交额', '换手率']
 const boardRanks = ['全部', '涨幅榜', '跌幅榜', '成交额']
-const quickLinks = [
-  { label: '涨停', to: '/market/limit-up' },
-  { label: '跌停', to: '/market/limit-down' },
-  { label: '市场情绪', to: '/market/sentiment' },
-  { label: '排行中心', to: '/market/rank' },
-  { label: '板块', to: '/sector' },
-  { label: 'ETF', to: '/etf' },
-]
 
 const activeMainTab = ref('行情')
 const activeMarket = ref('沪深市场')
 const activeRank = ref('涨幅榜')
 const activeBoardRank = ref('全部')
-const search = ref('')
+
 const sortDescending = ref(true)
 const indexQuotes = ref<IndexQuote[]>([])
 const marketData = ref<StockQuote[]>([])
@@ -75,13 +67,9 @@ function applyLocalFilters(source: Array<MarketRankQuote | StockQuote>) {
 }
 
 const filteredStocks = computed(() => {
-  const keyword = search.value.trim().toLowerCase()
   if (!activeMarketSupported.value) return []
   const source = rankingData.value.length ? rankingData.value : marketData.value
-  const searched = keyword
-    ? source.filter((stock) => stock.name.toLowerCase().includes(keyword) || stock.code.toLowerCase().includes(keyword))
-    : source
-  const filtered = applyLocalFilters(searched)
+  const filtered = applyLocalFilters(source)
 
   // The API already orders ranking data by the selected field. Only apply the
   // local sort for the quote fallback used when the ranking endpoint is down.
@@ -95,10 +83,7 @@ const filteredStocks = computed(() => {
 })
 
 const filteredBoards = computed(() => {
-  const keyword = search.value.trim().toLowerCase()
-  const source = keyword
-    ? boardData.value.filter((item) => item.name.toLowerCase().includes(keyword) || item.code.toLowerCase().includes(keyword))
-    : boardData.value
+  const source = boardData.value
 
   return [...source].sort((a, b) => {
     if (activeBoardRank.value === '跌幅榜') return numeric(a.percent) - numeric(b.percent)
@@ -131,7 +116,7 @@ function applyRealtimeEvent(event: MarketSocketEvent) {
 
 async function loadRanking() {
   try {
-    rankingData.value = await getMarketRankings(rankingType(activeRank.value), search.value, activeMarket.value as MarketScope, rankingFilters())
+    rankingData.value = await getMarketRankings(rankingType(activeRank.value), '', activeMarket.value as MarketScope, rankingFilters())
   } catch {
     rankingData.value = []
   }
@@ -163,7 +148,7 @@ async function selectMainTab(tab: string) {
   if (activeMainTab.value === tab && !loadError.value) return
   activeMainTab.value = tab
   activeBoardRank.value = '全部'
-  search.value = ''
+
   if (tab === '行情') {
     loadError.value = ''
     void loadRanking()
@@ -181,12 +166,6 @@ async function selectMainTab(tab: string) {
   }
 }
 
-function selectMarket(market: string) {
-  activeMarket.value = market
-  rankingData.value = []
-  search.value = ''
-  void loadRanking()
-}
 
 function metricValue(stock: MarketRankQuote | StockQuote) {
   if (activeRank.value === '成交额') return 'amount' in stock ? stock.amount : '不支持'
@@ -246,24 +225,8 @@ onUnmounted(() => { disconnectMarketSocket() })
         </article>
       </section>
 
-      <div v-if="activeMainTab === '行情'" class="market-scope">
-        <div class="scope-tabs">
-          <button v-for="label in marketLabels" :key="label" :class="{ selected: activeMarket === label }" :aria-pressed="activeMarket === label" @click="selectMarket(label)">{{ label }}</button>
-        </div>
-        <button class="refresh-button" :class="{ loading: isRefreshing }" :disabled="isRefreshing" aria-label="刷新行情" @click="refresh">↻</button>
-      </div>
 
       <section class="quote-panel">
-        <div class="quote-heading">
-          <div>
-            <p class="eyebrow">{{ activeMainTab === '行情' ? activeMarket : activeMainTab }} / QUOTE BOARD</p>
-            <h2>{{ activeMainTab === '行情' ? '市场排行' : `${activeMainTab}排行` }}</h2>
-          </div>
-          <label class="search-field">
-            <span>⌕</span>
-            <input v-model="search" type="search" :placeholder="`搜索${activeMainTab === '行情' ? '股票' : activeMainTab}名称或代码`" @change="activeMainTab === '行情' && loadRanking()" />
-          </label>
-        </div>
 
         <div v-if="activeMainTab === '行情'" class="filter-tabs" role="tablist" aria-label="股票排行筛选">
           <button v-for="tab in rankTabs" :key="tab" :class="{ selected: activeRank === tab }" :aria-selected="activeRank === tab" role="tab" @click="selectRank(tab)">{{ tab }}</button>
@@ -305,11 +268,7 @@ onUnmounted(() => { disconnectMarketSocket() })
     </template>
     </DataState>
 
-    <nav class="quick-links" aria-label="行情快捷入口">
-          <span>快捷入口</span>
-          <RouterLink v-for="link in quickLinks" :key="link.to" :to="link.to">{{ link.label }} <b>›</b></RouterLink>
-        </nav>
-        <div class="market-footer"><span class="mono">{{ resultCount }}</span> 个标的 · 更新于 {{ lastUpdated }}<small class="realtime-status" :class="`status-${realtimeStatus}`"><i />{{ realtimeStatus === 'connected' ? '实时已连接' : realtimeStatus === 'connecting' || realtimeStatus === 'reconnecting' ? '实时连接中' : '实时不可用' }}</small></div>
+    <div class="market-footer"><span class="mono">{{ resultCount }}</span> 个标的 · 更新于 {{ lastUpdated }}<small class="realtime-status" :class="`status-${realtimeStatus}`"><i />{{ realtimeStatus === 'connected' ? '实时已连接' : realtimeStatus === 'connecting' || realtimeStatus === 'reconnecting' ? '实时连接中' : '实时不可用' }}</small></div>
   </section>
 </template>
 
@@ -319,9 +278,9 @@ onUnmounted(() => { disconnectMarketSocket() })
 .market-header h1 { margin: 4px 0 0; font-size: 24px; letter-spacing: -.04em; }
 .report-link { color: var(--primary); font-size: 12px; }.report-link span { font-size: 18px; vertical-align: -1px; }
 .market-main-tabs { display: flex; gap: 2px; overflow-x: auto; border-bottom: 1px solid var(--border); scrollbar-width: none; }.market-main-tabs::-webkit-scrollbar { display: none; }
-.market-main-tabs button, .scope-tabs button, .filter-tabs button { position: relative; border: 0; background: transparent; color: var(--muted); white-space: nowrap; cursor: pointer; }
+.market-main-tabs button, .filter-tabs button { position: relative; border: 0; background: transparent; color: var(--muted); white-space: nowrap; cursor: pointer; }
 .market-main-tabs button { padding: 10px 14px 11px; font-size: 13px; }.market-main-tabs button.selected { color: var(--text); font-weight: 600; }.market-main-tabs button.selected::after, .filter-tabs button.selected::after { position: absolute; right: 50%; bottom: -1px; left: 50%; height: 2px; content: ''; background: var(--primary); transform: translateX(-50%); }
-.index-strip { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0 2px; scrollbar-width: none; }.index-strip::-webkit-scrollbar { display: none; }.index-card { position: relative; min-width: 154px; flex: 1; padding: 11px 12px 10px; overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }.index-title { display: flex; align-items: baseline; gap: 5px; }.index-title strong { font-size: 12px; }.index-title small { color: var(--muted); font: 9px 'JetBrains Mono', monospace; }.index-value { display: block; margin: 10px 0 3px; color: var(--text); font: 600 19px 'JetBrains Mono', monospace; }.index-change { display: flex; gap: 8px; color: var(--up); font: 10px 'JetBrains Mono', monospace; }.index-card.down .index-change { color: var(--down); }.index-spark { position: absolute; right: 10px; bottom: 10px; color: currentColor; font: 16px 'JetBrains Mono', monospace; opacity: .25; }.market-scope { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; padding: 5px 8px; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }.scope-tabs { display: flex; gap: 4px; overflow-x: auto; }.scope-tabs button { padding: 7px 9px; border-radius: 3px; font-size: 11px; }.scope-tabs button.selected { color: var(--primary); background: #edf4ff; font-weight: 600; }.refresh-button, .sort-button { border: 0; background: transparent; color: var(--primary); cursor: pointer; }.refresh-button { padding: 5px 7px; font-size: 18px; }.loading { animation: rotate .7s linear infinite; }.quote-panel { margin-top: 10px; padding: 14px 16px 4px; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }.quote-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }.quote-heading h2 { margin-top: 4px; font-size: 17px; }.search-field { display: flex; align-items: center; gap: 6px; width: 200px; padding: 7px 9px; color: var(--muted); background: var(--bg); border: 1px solid var(--border); border-radius: 3px; }.search-field input { width: 100%; min-width: 0; color: var(--text); background: transparent; border: 0; outline: 0; font-size: 11px; }.filter-tabs { display: flex; align-items: center; gap: 19px; margin-top: 13px; border-bottom: 1px solid var(--border); }.condition-filters{margin-top:12px;padding:10px;background:var(--bg);border:1px solid var(--border);border-radius:4px}.condition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.condition-grid label{display:flex;align-items:center;gap:4px;color:var(--muted);font-size:10px}.condition-grid input{width:58px;min-width:0;padding:5px 4px;color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:3px;font-size:10px}.condition-actions{display:flex;align-items:center;gap:8px;margin-top:9px}.condition-actions button{padding:5px 9px;color:var(--primary);background:var(--card);border:1px solid var(--border);border-radius:3px;font-size:10px}.condition-actions small{color:var(--muted);font-size:9px}.filter-error{margin-top:6px;color:var(--down);font-size:10px}.filter-tabs button { padding: 9px 0 8px; font-size: 11px; }.filter-tabs button.selected { color: var(--text); font-weight: 600; }.sort-button { margin-left: auto; font-size: 14px !important; }.quote-table { display: grid; grid-template-columns: minmax(130px, 1.7fr) .8fr .8fr .9fr; gap: 8px; align-items: center; }.quote-table-header { padding: 10px 0 8px; color: var(--muted); border-bottom: 1px solid var(--border); font-size: 10px; }.quote-table-header span:not(:first-child) { text-align: right; }.quote-row { min-height: 56px; border-bottom: 1px solid var(--border); font-size: 11px; }.quote-row > span:not(:first-child) { text-align: right; }.quote-name { display: grid; grid-template-columns: 23px 1fr; gap: 2px; min-width: 0; }.quote-name b { grid-row: span 2; color: #b3bac7; font: 10px 'JetBrains Mono', monospace; }.quote-name strong, .quote-name small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }.quote-name strong { font-size: 12px; }.quote-name small { color: var(--muted); font: 9px 'JetBrains Mono', monospace; }.percent { width: fit-content; justify-self: end; padding: 4px 5px; }.rise { color: var(--up); background: rgba(230,53,53,.07); }.fall { color: var(--down); background: rgba(28,170,60,.08); }.unsupported-state { padding: 32px 20px; color: var(--muted); border-bottom: 1px solid var(--border); font-size: 11px; text-align: center; }.quick-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 7px; padding: 14px 0 0; color: var(--muted); font-size: 10px; }.quick-links a { padding: 5px 8px; color: var(--primary); background: var(--card); border: 1px solid var(--border); border-radius: 3px; }.quick-links b { font-size: 14px; vertical-align: -1px; }.empty-state { padding: 44px 20px; color: var(--muted); text-align: center; }.empty-state span { display: block; color: var(--primary); font-size: 27px; }.empty-state strong { display: block; margin-top: 8px; color: var(--text); font-size: 12px; }.empty-state p { margin-top: 5px; font-size: 11px; }.market-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 5px; padding-top: 12px; color: var(--muted); font-size: 10px; }.market-footer > span { color: var(--primary); }.market-footer a { margin-left: 8px; color: var(--primary); }.realtime-status { display: inline-flex; align-items: center; gap: 4px; margin-left: 5px; }.realtime-status i { width: 5px; height: 5px; border-radius: 50%; background: #aab2be; }.realtime-status.status-connected i { background: var(--up); }.realtime-status.status-connecting i, .realtime-status.status-reconnecting i { background: #e7a516; }.realtime-status.status-error i, .realtime-status.status-closed i { background: var(--down); }@keyframes rotate { to { transform: rotate(360deg); } }
-@media (max-width: 620px) { .market-page { padding-top: 0; }.market-header { margin-bottom: 8px; }.market-header h1 { font-size: 21px; }.market-main-tabs button { padding: 9px 13px 10px; }.index-card { min-width: 148px; }.index-card:nth-child(n+4) { display: none; }.quote-panel { padding: 12px 10px 3px; }.quote-heading { align-items: stretch; flex-direction: column; gap: 9px; }.search-field { width: 100%; height: 34px; }.filter-tabs { gap: 14px; margin-top: 10px; }.quote-table { grid-template-columns: minmax(112px, 1.7fr) .75fr .75fr .85fr; gap: 5px; }.quote-table-header { font-size: 9px; }.quote-row { min-height: 52px; font-size: 10px; }.quote-name strong { font-size: 11px; }.quote-name small { font-size: 8px; }.percent { padding: 3px 4px; }.market-footer { flex-wrap: wrap; padding-bottom: 3px; } }
+.index-strip { display: flex; gap: 8px; overflow-x: auto; padding: 10px 0 2px; scrollbar-width: none; }.index-strip::-webkit-scrollbar { display: none; }.index-card { position: relative; min-width: 154px; flex: 1; padding: 11px 12px 10px; overflow: hidden; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }.index-title { display: flex; align-items: baseline; gap: 5px; }.index-title strong { font-size: 12px; }.index-title small { color: var(--muted); font: 9px 'JetBrains Mono', monospace; }.index-value { display: block; margin: 10px 0 3px; color: var(--text); font: 600 19px 'JetBrains Mono', monospace; }.index-change { display: flex; gap: 8px; color: var(--up); font: 10px 'JetBrains Mono', monospace; }.index-card.down .index-change { color: var(--down); }.index-spark { position: absolute; right: 10px; bottom: 10px; color: currentColor; font: 16px 'JetBrains Mono', monospace; opacity: .25; }.sort-button { border: 0; background: transparent; color: var(--primary); cursor: pointer; }.loading { animation: rotate .7s linear infinite; }.quote-panel { margin-top: 10px; padding: 14px 16px 4px; background: var(--card); border: 1px solid var(--border); border-radius: 4px; }.filter-tabs { display: flex; align-items: center; gap: 19px; margin-top: 13px; border-bottom: 1px solid var(--border); }.condition-filters{margin-top:12px;padding:10px;background:var(--bg);border:1px solid var(--border);border-radius:4px}.condition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.condition-grid label{display:flex;align-items:center;gap:4px;color:var(--muted);font-size:10px}.condition-grid input{width:58px;min-width:0;padding:5px 4px;color:var(--text);background:var(--card);border:1px solid var(--border);border-radius:3px;font-size:10px}.condition-actions{display:flex;align-items:center;gap:8px;margin-top:9px}.condition-actions button{padding:5px 9px;color:var(--primary);background:var(--card);border:1px solid var(--border);border-radius:3px;font-size:10px}.condition-actions small{color:var(--muted);font-size:9px}.filter-error{margin-top:6px;color:var(--down);font-size:10px}.filter-tabs button { padding: 9px 0 8px; font-size: 11px; }.filter-tabs button.selected { color: var(--text); font-weight: 600; }.sort-button { margin-left: auto; font-size: 14px !important; }.quote-table { display: grid; grid-template-columns: minmax(130px, 1.7fr) .8fr .8fr .9fr; gap: 8px; align-items: center; }.quote-table-header { padding: 10px 0 8px; color: var(--muted); border-bottom: 1px solid var(--border); font-size: 10px; }.quote-table-header span:not(:first-child) { text-align: right; }.quote-row { min-height: 56px; border-bottom: 1px solid var(--border); font-size: 11px; }.quote-row > span:not(:first-child) { text-align: right; }.quote-name { display: grid; grid-template-columns: 23px 1fr; gap: 2px; min-width: 0; }.quote-name b { grid-row: span 2; color: #b3bac7; font: 10px 'JetBrains Mono', monospace; }.quote-name strong, .quote-name small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }.quote-name strong { font-size: 12px; }.quote-name small { color: var(--muted); font: 9px 'JetBrains Mono', monospace; }.percent { width: fit-content; justify-self: end; padding: 4px 5px; }.rise { color: var(--up); background: rgba(230,53,53,.07); }.fall { color: var(--down); background: rgba(28,170,60,.08); }.unsupported-state { padding: 32px 20px; color: var(--muted); border-bottom: 1px solid var(--border); font-size: 11px; text-align: center; }.empty-state { padding: 44px 20px; color: var(--muted); text-align: center; }.empty-state span { display: block; color: var(--primary); font-size: 27px; }.empty-state strong { display: block; margin-top: 8px; color: var(--text); font-size: 12px; }.empty-state p { margin-top: 5px; font-size: 11px; }.market-footer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 5px; padding-top: 12px; color: var(--muted); font-size: 10px; }.market-footer > span { color: var(--primary); }.market-footer a { margin-left: 8px; color: var(--primary); }.realtime-status { display: inline-flex; align-items: center; gap: 4px; margin-left: 5px; }.realtime-status i { width: 5px; height: 5px; border-radius: 50%; background: #aab2be; }.realtime-status.status-connected i { background: var(--up); }.realtime-status.status-connecting i, .realtime-status.status-reconnecting i { background: #e7a516; }.realtime-status.status-error i, .realtime-status.status-closed i { background: var(--down); }@keyframes rotate { to { transform: rotate(360deg); } }
+@media (max-width: 620px) { .market-page { padding-top: 0; }.market-header { margin-bottom: 8px; }.market-header h1 { font-size: 21px; }.market-main-tabs button { padding: 9px 13px 10px; }.index-card { min-width: 148px; }.index-card:nth-child(n+4) { display: none; }.quote-panel { padding: 12px 10px 3px; }.filter-tabs { gap: 14px; margin-top: 10px; }.quote-table { grid-template-columns: minmax(112px, 1.7fr) .75fr .75fr .85fr; gap: 5px; }.quote-table-header { font-size: 9px; }.quote-row { min-height: 52px; font-size: 10px; }.quote-name strong { font-size: 11px; }.quote-name small { font-size: 8px; }.percent { padding: 3px 4px; }.market-footer { flex-wrap: wrap; padding-bottom: 3px; } }
 @media (min-width: 821px) { .market-page { padding-top: 0; }.index-strip { overflow: visible; }.index-card { min-width: 0; }.quote-panel { padding-left: 20px; padding-right: 20px; } }
 </style>

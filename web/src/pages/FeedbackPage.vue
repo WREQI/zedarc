@@ -9,7 +9,7 @@ const message = ref('')
 <template>
   <section class="account-subpage">
     <header class="subpage-heading"><div><p class="eyebrow">ACCOUNT / FEEDBACK</p><h1>意见反馈</h1><p class="muted">告诉我们你的使用建议</p></div><RouterLink class="back-link" to="/settings">‹ 设置</RouterLink></header>
-    <section v-if="!auth.user.value" class="empty-panel"><span class="empty-icon">◇</span><h2>请先登录</h2><p>登录后才能提交与账户关联的反馈。</p><RouterLink class="primary-button" to="/account">去登录</RouterLink></section>
+    <section v-if="!auth.user.value" class="empty-panel"><span class="empty-icon">◇</span><h2>请先登录</h2><p>登录后才能提交与账户关联的反馈。</p><RouterLink class="primary-button" to="/settings">去设置</RouterLink></section>
     <section v-else class="panel feedback-form">
       <label for="feedback">反馈内容</label><textarea id="feedback" v-model="message" rows="6" maxlength="500" placeholder="请描述你遇到的问题或建议（当前仅供填写预览）" /><div class="form-footer"><span>{{ message.length }}/500</span><button disabled>提交反馈</button></div>
       <p class="unavailable-note">反馈提交接口尚未接入，当前不会发送或保存内容。</p>

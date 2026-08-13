@@ -28,7 +28,7 @@ let stopSyncSubscription: (() => void) | undefined
 let toastTimer: number | undefined
 
 const settingItems = [
-  { key: 'notifications' as const, title: '资讯推送', description: '接收市场热点和重要资讯' },
+
   { key: 'priceAlerts' as const, title: '价格提醒', description: '自选股达到目标价时提醒' },
   { key: 'pushNotifications' as const, title: '系统通知', description: '允许浏览器接收账户和安全提醒' },
   { key: 'privacyMode' as const, title: '隐私模式', description: '减少本地保存的账户展示信息' },
@@ -70,7 +70,7 @@ function showToast(message: string) {
     <section class="setting-group panel"><h2>消息与提醒</h2><div v-for="item in settingItems" :key="item.key" class="setting-row"><div><strong>{{ item.title }}</strong><small>{{ item.description }}</small></div><button class="switch" :class="{ on: valueFor(item.key).value }" :disabled="isSaving === item.key" :aria-label="`${item.title}${valueFor(item.key).value ? '已开启' : '已关闭'}`" @click="toggle(item.key)"><i /></button></div></section>
     <section class="setting-group panel"><h2>显示</h2><div class="setting-row"><div><strong>主题模式</strong><small>当前使用浅色行情主题</small></div><span class="setting-value">浅色</span></div><div class="setting-row"><div><strong>行情刷新</strong><small>行情数据实时更新</small></div><span class="setting-value active">实时</span></div></section>
     <section class="setting-group panel"><h2>本地数据</h2><div class="setting-row"><div><strong>导出本地数据</strong><small>备份自选、偏好、搜索历史和离线队列</small></div><button class="data-button" type="button" @click="exportData">导出</button></div><div class="setting-row"><div><strong>导入本地数据</strong><small>从 JSON 备份恢复浏览器数据</small></div><button class="data-button" type="button" @click="chooseImport">导入</button></div><div class="sync-summary"><span>离线队列 {{ syncSnapshot.pending }} 条 · 冲突 {{ syncSnapshot.conflicts }} 条</span><button class="data-button" type="button" :disabled="!syncSnapshot.pending" @click="retrySync">重试同步</button></div><input ref="importInput" class="visually-hidden" type="file" accept="application/json,.json" @change="importData" /></section>
-    <section class="about-card"><span>◇</span><div><strong>关于 Zedarc</strong><p>资讯、行情与研报一站式浏览<br />专业伴你成长，投资请理性决策</p></div></section>
+    <section class="about-card"><span>◇</span><div><strong>关于 Zedarc</strong><p>行情与研报一站式浏览<br />专业伴你成长，投资请理性决策</p></div></section>
     <Transition name="toast"><div v-if="toast" class="toast" role="status">{{ toast }}</div></Transition>
   </section>
   <component v-else :is="{ profile: ProfilePage, security: SecurityPage, devices: DevicesPage, feedback: FeedbackPage }[section] ?? ProfilePage" />

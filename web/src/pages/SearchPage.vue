@@ -5,8 +5,7 @@ import ErrorState from '@/components/ErrorState.vue'
 import LoadingState from '@/components/LoadingState.vue'
 import { getBoardQuotes, searchStocks } from '@/services/market'
 import type { MarketBoardQuote, StockQuote } from '@/services/market-types'
-import { getNewsPage } from '@/services/news'
-import type { NewsArticle } from '@/services/news-types'
+
 import { useSearchHistoryStore } from '@/stores/search-history'
 
 const route = useRoute()
@@ -14,11 +13,11 @@ const router = useRouter()
 const searchHistory = useSearchHistoryStore()
 
 const keyword = ref(typeof route.query.q === 'string' ? route.query.q : '')
-const activeTab = ref<'all' | 'stock' | 'sector' | 'etf' | 'news'>('all')
+const activeTab = ref<'all' | 'stock' | 'sector' | 'etf'>('all')
 const stockResults = ref<StockQuote[]>([])
 const sectorResults = ref<MarketBoardQuote[]>([])
 const etfResults = ref<MarketBoardQuote[]>([])
-const newsResults = ref<NewsArticle[]>([])
+
 const isLoading = ref(false)
 const loadError = ref('')
 let requestId = 0
@@ -30,12 +29,12 @@ const resultTabs = [
   { key: 'stock', label: '股票' },
   { key: 'sector', label: '板块' },
   { key: 'etf', label: 'ETF' },
-  { key: 'news', label: '资讯' },
+
 ] as const
 
 const hasQuery = computed(() => Boolean(keyword.value.trim()))
 const history = computed(() => searchHistory.history.value)
-const totalResults = computed(() => stockResults.value.length + sectorResults.value.length + etfResults.value.length + newsResults.value.length)
+const totalResults = computed(() => stockResults.value.length + sectorResults.value.length + etfResults.value.length)
 
 function filterBoards(items: MarketBoardQuote[], query: string) {
   const normalized = query.toLowerCase()
@@ -49,20 +48,17 @@ async function loadResults(query: string) {
   stockResults.value = []
   sectorResults.value = []
   etfResults.value = []
-  newsResults.value = []
 
   try {
-    const [stocks, sectors, etfs, news] = await Promise.all([
+    const [stocks, sectors, etfs] = await Promise.all([
       searchStocks(query),
       getBoardQuotes('板块'),
       getBoardQuotes('ETF'),
-      getNewsPage({ keyword: query, page: 1, pageSize: 20 }),
     ])
     if (currentRequest !== requestId) return
     stockResults.value = stocks
     sectorResults.value = filterBoards(sectors, query)
     etfResults.value = filterBoards(etfs, query)
-    newsResults.value = news.items
   } catch {
     if (currentRequest === requestId) loadError.value = '搜索服务暂时不可用，请稍后重试。'
   } finally {
@@ -77,7 +73,6 @@ function resetResults() {
   stockResults.value = []
   sectorResults.value = []
   etfResults.value = []
-  newsResults.value = []
 }
 
 function submitSearch() {
@@ -129,12 +124,12 @@ watch(() => route.query.q, (value) => {
         <p class="eyebrow">SEARCH</p>
         <h1>搜索</h1>
       </div>
-      <p class="search-hint">搜索股票、板块、ETF 或资讯</p>
+      <p class="search-hint">搜索股票、板块或 ETF</p>
     </header>
 
     <form class="search-box" @submit.prevent="submitSearch">
       <span class="search-icon" aria-hidden="true">⌕</span>
-      <input v-model="keyword" type="search" autofocus placeholder="输入名称、代码或关键词" aria-label="搜索股票、板块、ETF 或资讯">
+      <input v-model="keyword" type="search" autofocus placeholder="输入名称、代码或关键词" aria-label="搜索股票、板块或 ETF">
       <button v-if="keyword" type="button" class="clear-button" aria-label="清空搜索" @click="clearSearch">×</button>
       <button class="search-button" type="submit">搜索</button>
     </form>
@@ -167,11 +162,11 @@ watch(() => route.query.q, (value) => {
       <template v-else>
         <nav class="result-tabs" aria-label="搜索结果分类">
           <button v-for="tab in resultTabs" :key="tab.key" :class="{ selected: activeTab === tab.key }" @click="selectTab(tab.key)">
-            {{ tab.label }}<small>{{ tab.key === 'all' ? totalResults : tab.key === 'stock' ? stockResults.length : tab.key === 'sector' ? sectorResults.length : tab.key === 'etf' ? etfResults.length : newsResults.length }}</small>
+            {{ tab.label }}<small>{{ tab.key === 'all' ? totalResults : tab.key === 'stock' ? stockResults.length : tab.key === 'sector' ? sectorResults.length : etfResults.length }}</small>
           </button>
         </nav>
 
-        <div v-if="!totalResults" class="search-empty"><span>⌕</span><strong>没有找到相关结果</strong><p>请尝试搜索股票名称、代码或资讯关键词。</p></div>
+        <div v-if="!totalResults" class="search-empty"><span>⌕</span><strong>没有找到相关结果</strong><p>请尝试搜索股票名称、代码或关键词。</p></div>
         <div v-else class="results">
           <section v-if="(activeTab === 'all' || activeTab === 'stock') && stockResults.length" class="result-section">
             <div class="section-heading"><h2>股票</h2><span>{{ stockResults.length }} 个结果</span></div>
@@ -194,10 +189,7 @@ watch(() => route.query.q, (value) => {
             </RouterLink>
           </section>
 
-          <section v-if="(activeTab === 'all' || activeTab === 'news') && newsResults.length" class="result-section">
-            <div class="section-heading"><h2>资讯</h2><span>{{ newsResults.length }} 个结果</span></div>
-            <RouterLink v-for="item in newsResults" :key="item.id" class="news-row" :to="`/news/${item.id}`"><span class="news-tag">{{ item.tag }}</span><span class="news-copy"><strong>{{ item.title }}</strong><small>{{ item.time }} · {{ item.source }}</small></span><i>›</i></RouterLink>
-          </section>
+
         </div>
       </template>
     </template>

@@ -1,7 +1,8 @@
 services:
   web:
     build:
-      context: ./web
+      context: .
+      dockerfile: web/Dockerfile
     ports:
       - "${WEB_PORT:-18080}:80"
     restart: unless-stopped
